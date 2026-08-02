@@ -27,6 +27,18 @@ function labelTexts(chart) {
   return chart.children.filter(node => node.attributes.class?.includes("node-label")).map(node => node.textContent);
 }
 
+test("default graph includes every entity category at 95% confidence", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const config = JSON.parse(vm.runInContext("JSON.stringify(state.config)", context));
+
+  assert.deepEqual(config.categories, [
+    "person", "government_agency", "organization", "location", "program", "subject", "date"
+  ]);
+  assert.equal(config.minConfidence, 0.95);
+});
+
 test("significant entity presets configure scatters across all collections", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
