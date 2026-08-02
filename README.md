@@ -73,9 +73,10 @@ For GitHub Pages, publish this directory as the site root. `.nojekyll` is includ
 
 ## Automatic updates
 
-The `Rebuild graph from machine-data` GitHub Actions workflow checks the upstream
-`main` revision every 15 minutes. When it changes, the workflow rebuilds and tests
-the catalog, records the exact machine-data commit in the catalog metadata, commits
-the refreshed catalog, and deploys the static builder to GitHub Pages. It can also
-be run manually or triggered immediately with a `machine-data-updated`
-`repository_dispatch` event.
+Every push to `ufo-files/machine-data` updates `.machine-data-revision` through a
+builder-scoped deploy key. That rebuild request immediately starts the `Rebuild
+graph from machine-data` workflow, which rebuilds and tests the catalog, records
+the exact machine-data commit in the catalog metadata, commits the refreshed
+catalog, and deploys the static builder to GitHub Pages. The workflow can also be
+run manually or triggered with a `machine-data-updated` `repository_dispatch`
+event.
