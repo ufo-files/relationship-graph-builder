@@ -97,6 +97,25 @@ test("Default preset restores the complete initial view", () => {
   assert.equal(result.activeId, "default");
 });
 
+test("collections render selected when the empty filter means every collection", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`JSON.stringify({
+    implicitAll: sourceIsSelected("Collection A", []),
+    explicitSelected: sourceIsSelected("Collection A", ["Collection A"]),
+    explicitUnselected: sourceIsSelected("Collection B", ["Collection A"]),
+    normalizedAll: normalizeSourceSelection(["Collection A", "Collection B"], ["Collection A", "Collection B"]),
+    normalizedSubset: normalizeSourceSelection(["Collection A"], ["Collection A", "Collection B"])
+  })`, context));
+
+  assert.equal(result.implicitAll, true);
+  assert.equal(result.explicitSelected, true);
+  assert.equal(result.explicitUnselected, false);
+  assert.deepEqual(result.normalizedAll, []);
+  assert.deepEqual(result.normalizedSubset, ["Collection A"]);
+});
+
 test("significant entity presets configure scatters across all collections", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
