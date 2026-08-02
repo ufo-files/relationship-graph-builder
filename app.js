@@ -28,6 +28,11 @@ const TYPES = [
 ];
 const PRESETS = [
   {
+    id: "default",
+    label: "Default",
+    config: null
+  },
+  {
     id: "significant-people",
     label: "Significant People",
     config: { type: "scatter", x: "entity", y: "mentions", categories: ["person"], sources: [], title: "Significant People" }
@@ -113,18 +118,22 @@ function controlSelect(key, title, options) {
 function presetConfig(id) {
   const preset = PRESETS.find(item => item.id === id);
   if (!preset) return null;
+  const overrides = preset.config || {};
   return {
     ...DEFAULT,
-    ...preset.config,
-    categories: [...(preset.config.categories || DEFAULT.categories)],
-    sources: [...(preset.config.sources || DEFAULT.sources)]
+    ...overrides,
+    categories: [...(overrides.categories || DEFAULT.categories)],
+    sources: [...(overrides.sources || DEFAULT.sources)],
+    tableColumns: [...(overrides.tableColumns || DEFAULT.tableColumns)]
   };
 }
 
 function presetMatches(preset) {
-  return Object.entries(preset.config).every(([key, value]) => Array.isArray(value)
-    ? value.length === state.config[key]?.length && value.every((item, index) => item === state.config[key][index])
-    : state.config[key] === value);
+  const config = presetConfig(preset.id);
+  const keys = preset.config ? Object.keys(preset.config) : Object.keys(DEFAULT);
+  return keys.every(key => Array.isArray(config[key])
+    ? config[key].length === state.config[key]?.length && config[key].every((item, index) => item === state.config[key][index])
+    : state.config[key] === config[key]);
 }
 
 function activePresetId() {
