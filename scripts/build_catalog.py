@@ -324,6 +324,7 @@ def build(
     max_edges: int,
     input_repository: str | None = None,
     input_revision: str | None = None,
+    require_data: bool = False,
 ) -> dict:
     registry = load_registry(Path(__file__).resolve().parents[1] / "data" / "curated_entities.json")
     candidates: dict[str, Candidate] = {}
@@ -335,7 +336,9 @@ def build(
 
     paths = sorted(
         path for path in input_root.rglob("*")
-        if path.is_file() and path.suffix.lower() in {".txt", ".tsv"} and not (set(path.parts) & SKIP_PARTS)
+        if path.is_file()
+        and path.suffix.lower() in {".txt", ".tsv"}
+        and not (set(path.relative_to(input_root).parts) & SKIP_PARTS)
     )
     for path in paths:
         relative = path.relative_to(input_root).as_posix()
@@ -497,6 +500,11 @@ def build(
         "entities": entities,
         "edges": edges,
     }
+    if require_data and (not documents or not entities):
+        raise ValueError(
+            "Refusing to publish an empty catalog: "
+            f"found {len(documents)} documents and {len(entities)} entities in {input_root}"
+        )
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(catalog, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     return catalog
@@ -510,6 +518,11 @@ def main() -> None:
     parser.add_argument("--max-edges", type=int, default=4000)
     parser.add_argument("--input-repository")
     parser.add_argument("--input-revision")
+    parser.add_argument(
+        "--require-data",
+        action="store_true",
+        help="Fail without writing the catalog when no documents or entities are found.",
+    )
     args = parser.parse_args()
     catalog = build(
         args.input.resolve(),
@@ -518,6 +531,7 @@ def main() -> None:
         args.max_edges,
         args.input_repository,
         args.input_revision,
+        args.require_data,
     )
     print(json.dumps({"output": str(args.output), **catalog["counts"]}, indent=2))
 
