@@ -83,6 +83,20 @@ test("default graph includes every entity category at 95% confidence", () => {
   assert.equal(config.minConfidence, 0.95);
 });
 
+test("Default preset restores the complete initial view", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`JSON.stringify({
+    preset: presetConfig("default"),
+    defaults: DEFAULT,
+    activeId: activePresetId()
+  })`, context));
+
+  assert.deepEqual(result.preset, result.defaults);
+  assert.equal(result.activeId, "default");
+});
+
 test("significant entity presets configure scatters across all collections", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
