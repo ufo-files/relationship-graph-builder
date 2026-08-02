@@ -1,6 +1,7 @@
 /* UFO Files Graph Builder — dependency-free, GitHub Pages compatible. */
 
 const NS = "http://www.w3.org/2000/svg";
+const ENTITY_CATEGORIES = ["person", "government_agency", "organization", "location", "program", "subject", "date"];
 const LABELS = {
   person: "People", government_agency: "Government agencies", organization: "Organizations",
   location: "Locations", program: "Programs", subject: "Subjects", date: "Dates",
@@ -44,8 +45,8 @@ const PRESETS = [
 ];
 const DEFAULT = {
   type: "scatter", x: "entity", y: "mentions", size: "sourceCount", color: "category",
-  categories: ["person", "government_agency", "organization"], sources: [], relation: "all",
-  minEvidence: 2, minConfidence: 0.65, limit: 50, labels: "top", aggregation: "source",
+  categories: [...ENTITY_CATEGORIES], sources: [], relation: "all",
+  minEvidence: 2, minConfidence: 0.95, limit: 50, labels: "top", aggregation: "source",
   nodeRole: "entity", timelineRole: "document", matrixColumns: "category",
   tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"],
   tableSort: "mentions", tableDirection: "desc", tableSearch: "",
@@ -199,7 +200,7 @@ function renderControls() {
       : `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>`) + labelSizeControl + zoomControl;
   }
 
-  const categories = [...new Set(state.catalog?.entities.map(item => item.category) || ["person", "government_agency", "organization", "location", "program", "subject", "date"] )];
+  const categories = [...new Set(state.catalog?.entities.map(item => item.category) || ENTITY_CATEGORIES)];
   const categoryChecks = categories.map(category => `<label class="check-chip"><input type="checkbox" data-category="${category}" ${state.config.categories.includes(category) ? "checked" : ""}><span>${escapeHTML(label(category))}</span></label>`).join("");
   const sources = state.catalog?.sources || [];
   const sourceChecks = sources.map(source => `<label class="check-chip"><input type="checkbox" data-source="${escapeHTML(source.name)}" ${state.config.sources.includes(source.name) ? "checked" : ""}><span>${escapeHTML(source.name)}</span></label>`).join("");
