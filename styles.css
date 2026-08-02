@@ -94,7 +94,7 @@ h1, h2, h3, p { margin-top: 0; }
 .chart-empty[hidden] { display: none; }
 .loading span { width: 22px; height: 22px; border: 2px solid var(--line-strong); border-top-color: var(--green); border-radius: 50%; margin: 0 auto 10px; animation: spin .8s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
-.legend { position: absolute; left: 16px; bottom: 14px; display: flex; flex-wrap: wrap; gap: 12px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 4px; background: rgba(246,245,239,.94); color: var(--muted); font-size: 11px; }
+.legend { position: absolute; left: 50%; top: 14px; transform: translateX(-50%); max-width: calc(100% - 32px); display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 4px; background: rgba(246,245,239,.94); color: var(--muted); font-size: 11px; }
 .legend:empty { display: none; }
 .legend-item { display: flex; align-items: center; gap: 4px; }
 .legend-item i { width: 13px; height: 13px; display: inline-block; border: 1px solid var(--ink); border-radius: 0; background-color: var(--paper); }
