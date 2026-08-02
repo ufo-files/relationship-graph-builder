@@ -44,7 +44,7 @@ const PRESETS = [
   }
 ];
 const DEFAULT = {
-  type: "scatter", x: "entity", y: "mentions", size: "sourceCount", color: "category",
+  type: "scatter", x: "documentCount", y: "mentions", size: "sourceCount", color: "category",
   categories: [...ENTITY_CATEGORIES], sources: [], relation: "all",
   minEvidence: 2, minConfidence: 0.95, limit: 50, labels: "top", aggregation: "source",
   nodeRole: "entity", timelineRole: "document", matrixColumns: "category",
