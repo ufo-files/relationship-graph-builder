@@ -1,0 +1,183 @@
+name: Rebuild graph from machine-data
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/rebuild-graph.yml"
+      - ".nojekyll"
+      - "app.js"
+      - "assets/**"
+      - "data/curated_entities.json"
+      - "index.html"
+      - "scripts/**"
+      - "styles.css"
+      - "tests/**"
+  pull_request:
+    paths:
+      - ".github/workflows/rebuild-graph.yml"
+      - "data/curated_entities.json"
+      - "scripts/**"
+      - "tests/**"
+  schedule:
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [machine-data-updated]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: relationship-graph-pages
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out builder
+        uses: actions/checkout@v7
+
+      - name: Check out machine-data
+        uses: actions/checkout@v7
+        with:
+          repository: ufo-files/machine-data
+          path: _machine-data
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Build catalog
+        shell: bash
+        run: |
+          revision="$(git -C _machine-data rev-parse HEAD)"
+          python3 scripts/build_catalog.py \
+            --input _machine-data \
+            --input-repository ufo-files/machine-data \
+            --input-revision "$revision"
+
+      - name: Run tests
+        run: |
+          python3 -m unittest discover -s tests -v
+          node --check app.js
+          node --test tests/test_app.js
+
+  publish:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    outputs:
+      rebuild: ${{ steps.decision.outputs.rebuild }}
+    steps:
+      - name: Check out builder
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Resolve machine-data revision
+        id: upstream
+        shell: bash
+        run: |
+          revision="$(git ls-remote https://github.com/ufo-files/machine-data.git refs/heads/main | cut -f1)"
+          test -n "$revision"
+          echo "revision=$revision" >> "$GITHUB_OUTPUT"
+
+      - name: Decide whether to rebuild
+        id: decision
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          UPSTREAM_REVISION: ${{ steps.upstream.outputs.revision }}
+        shell: bash
+        run: |
+          current_revision="$(python3 -c 'import json; print(json.load(open("data/catalog.json")).get("input", {}).get("revision", ""))')"
+          if [[ "$EVENT_NAME" == "schedule" && "$current_revision" == "$UPSTREAM_REVISION" ]]; then
+            echo "rebuild=false" >> "$GITHUB_OUTPUT"
+            echo "machine-data is unchanged at $UPSTREAM_REVISION"
+          else
+            echo "rebuild=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check out machine-data
+        if: steps.decision.outputs.rebuild == 'true'
+        uses: actions/checkout@v7
+        with:
+          repository: ufo-files/machine-data
+          ref: ${{ steps.upstream.outputs.revision }}
+          path: _machine-data
+
+      - name: Set up Python
+        if: steps.decision.outputs.rebuild == 'true'
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Build catalog
+        if: steps.decision.outputs.rebuild == 'true'
+        env:
+          UPSTREAM_REVISION: ${{ steps.upstream.outputs.revision }}
+        run: |
+          python3 scripts/build_catalog.py \
+            --input _machine-data \
+            --input-repository ufo-files/machine-data \
+            --input-revision "$UPSTREAM_REVISION"
+
+      - name: Run tests
+        if: steps.decision.outputs.rebuild == 'true'
+        run: |
+          python3 -m unittest discover -s tests -v
+          node --check app.js
+          node --test tests/test_app.js
+
+      - name: Commit refreshed catalog
+        if: steps.decision.outputs.rebuild == 'true'
+        env:
+          UPSTREAM_REVISION: ${{ steps.upstream.outputs.revision }}
+        shell: bash
+        run: |
+          if git diff --quiet -- data/catalog.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/catalog.json
+          git commit -m "Rebuild graph from machine-data@${UPSTREAM_REVISION:0:7}"
+          git push origin HEAD:main
+
+      - name: Stage static site
+        if: steps.decision.outputs.rebuild == 'true'
+        run: |
+          mkdir -p _site
+          cp index.html app.js styles.css .nojekyll _site/
+          cp -R assets data _site/
+
+      - name: Configure Pages
+        if: steps.decision.outputs.rebuild == 'true'
+        uses: actions/configure-pages@v6
+
+      - name: Upload Pages artifact
+        if: steps.decision.outputs.rebuild == 'true'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    if: needs.publish.outputs.rebuild == 'true'
+    needs: publish
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
