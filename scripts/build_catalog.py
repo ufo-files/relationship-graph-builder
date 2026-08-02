@@ -317,7 +317,14 @@ def accepted(candidate: Candidate) -> bool:
     return candidate.mentions >= 2 and documents >= 2
 
 
-def build(input_root: Path, output: Path, max_entities: int, max_edges: int) -> dict:
+def build(
+    input_root: Path,
+    output: Path,
+    max_entities: int,
+    max_edges: int,
+    input_repository: str | None = None,
+    input_revision: str | None = None,
+) -> dict:
     registry = load_registry(Path(__file__).resolve().parents[1] / "data" / "curated_entities.json")
     candidates: dict[str, Candidate] = {}
     documents: list[dict] = []
@@ -458,10 +465,16 @@ def build(input_root: Path, output: Path, max_entities: int, max_edges: int) -> 
         {"id": stable_id("src", source), "name": source, "documents": source_counts[source], "words": source_words[source]}
         for source in sorted(source_counts)
     ]
+    input_name = input_repository.rsplit("/", 1)[-1] if input_repository else input_root.name
+    catalog_input = {"rootName": input_name, "transcriptsAreSourceOfTruth": True}
+    if input_repository:
+        catalog_input["repository"] = input_repository
+    if input_revision:
+        catalog_input["revision"] = input_revision
     catalog = {
         "schema": SCHEMA,
         "generatedAt": utc_now(),
-        "input": {"rootName": input_root.name, "transcriptsAreSourceOfTruth": True},
+        "input": catalog_input,
         "publicationPolicy": {
             "personEvidenceFloor": "3 mentions across 2 documents",
             "otherEvidenceFloor": "2 mentions across 2 documents (dates: 2 mentions)",
@@ -495,8 +508,17 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=Path(__file__).resolve().parents[1] / "data" / "catalog.json")
     parser.add_argument("--max-entities", type=int, default=1200)
     parser.add_argument("--max-edges", type=int, default=4000)
+    parser.add_argument("--input-repository")
+    parser.add_argument("--input-revision")
     args = parser.parse_args()
-    catalog = build(args.input.resolve(), args.output.resolve(), args.max_entities, args.max_edges)
+    catalog = build(
+        args.input.resolve(),
+        args.output.resolve(),
+        args.max_entities,
+        args.max_edges,
+        args.input_repository,
+        args.input_revision,
+    )
     print(json.dumps({"output": str(args.output), **catalog["counts"]}, indent=2))
 
 

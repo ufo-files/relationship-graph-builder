@@ -28,12 +28,17 @@ Open <http://localhost:4173>.
 
 ## Rebuild the catalog
 
-The catalog builder reads `/Volumes/OCR & Transcriptions` by default and writes
-`data/catalog.json` inside this repository:
+The deployed catalog is built from the public
+[`ufo-files/machine-data`](https://github.com/ufo-files/machine-data) repository.
+For a local rebuild, clone that repository and pass its path to the builder:
 
 ```sh
-python3 scripts/build_catalog.py
+git clone https://github.com/ufo-files/machine-data.git /tmp/ufo-files-machine-data
+python3 scripts/build_catalog.py --input /tmp/ufo-files-machine-data
 ```
+
+If `--input` is omitted, the builder continues to use `/Volumes/OCR & Transcriptions`
+for workstation builds. Output is written to `data/catalog.json` by default.
 
 Only files carrying the expected `ufo-files-archive-ocr/v1` or `ufo-files-archive-media-transcripts/v1` metadata schema are included. Hidden operational directories, logs, quarantine, and this app are excluded. Source transcript content is never rewritten or copied; the catalog stores metadata, derived entity records, and short evidence excerpts.
 
@@ -65,3 +70,12 @@ node --check app.js
 ```
 
 For GitHub Pages, publish this directory as the site root. `.nojekyll` is included.
+
+## Automatic updates
+
+The `Rebuild graph from machine-data` GitHub Actions workflow checks the upstream
+`main` revision every 15 minutes. When it changes, the workflow rebuilds and tests
+the catalog, records the exact machine-data commit in the catalog metadata, commits
+the refreshed catalog, and deploys the static builder to GitHub Pages. It can also
+be run manually or triggered immediately with a `machine-data-updated`
+`repository_dispatch` event.

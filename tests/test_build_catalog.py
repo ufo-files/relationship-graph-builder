@@ -31,8 +31,11 @@ class CatalogTests(unittest.TestCase):
                 body = "Federal Bureau of Investigation worked with Kelly Johnson.\nKelly Johnson discussed UFO reports.\n"
                 (collection / f"source-{number}.txt").write_text(json.dumps(metadata) + "\n\n" + body, encoding="utf-8")
             output = root / "catalog.json"
-            catalog = build(root, output, 100, 100)
+            catalog = build(root, output, 100, 100, "ufo-files/machine-data", "abc123")
             self.assertEqual(catalog["counts"]["documents"], 2)
+            self.assertEqual(catalog["input"]["rootName"], "machine-data")
+            self.assertEqual(catalog["input"]["repository"], "ufo-files/machine-data")
+            self.assertEqual(catalog["input"]["revision"], "abc123")
             self.assertTrue(any(entity["canonicalName"] == "Kelly Johnson" for entity in catalog["entities"]))
             self.assertTrue(all(edge["evidence"] for edge in catalog["edges"]))
             self.assertTrue(output.exists())
