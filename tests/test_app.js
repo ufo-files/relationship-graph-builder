@@ -36,6 +36,8 @@ test("default graph includes every entity category at 95% confidence", () => {
   assert.deepEqual(config.categories, [
     "person", "government_agency", "organization", "location", "program", "subject", "date"
   ]);
+  assert.equal(config.x, "documentCount");
+  assert.equal(config.y, "mentions");
   assert.equal(config.minConfidence, 0.95);
 });
 
