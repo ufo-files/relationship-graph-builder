@@ -749,10 +749,22 @@ function evidenceHTML(evidence = []) {
   }).join("");
 }
 
+function refreshGraphAfterInspectorResize() {
+  if (state.catalog) requestAnimationFrame(renderGraph);
+}
+
+function closeInspector() {
+  $("#builderView").classList.add("inspector-collapsed");
+  $("#inspector").classList.remove("has-selection");
+  refreshGraphAfterInspectorResize();
+}
+
 function showInspector(category, title, metrics, evidence, note = "") {
   const inspector = $("#inspector");
+  $("#builderView").classList.remove("inspector-collapsed");
   inspector.classList.add("has-selection");
-  inspector.innerHTML = `<p class="inspect-category">${escapeHTML(label(category))}</p><h3>${escapeHTML(title)}</h3>${note ? `<p>${escapeHTML(note)}</p>` : ""}<div class="metric-row">${metrics.map(([value, name]) => `<div class="metric"><strong>${escapeHTML(formatNumber(value))}</strong><small>${escapeHTML(name)}</small></div>`).join("")}</div><div class="evidence-list"><h4>Evidence</h4>${evidenceHTML(evidence)}</div>`;
+  $("#inspectorContent").innerHTML = `<p class="inspect-category">${escapeHTML(label(category))}</p><h3>${escapeHTML(title)}</h3>${note ? `<p>${escapeHTML(note)}</p>` : ""}<div class="metric-row">${metrics.map(([value, name]) => `<div class="metric"><strong>${escapeHTML(formatNumber(value))}</strong><small>${escapeHTML(name)}</small></div>`).join("")}</div><div class="evidence-list"><h4>Evidence</h4>${evidenceHTML(evidence)}</div>`;
+  refreshGraphAfterInspectorResize();
 }
 
 function inspectEntity(item) {
@@ -833,6 +845,7 @@ $("#graphTitle").addEventListener("blur", event => { state.config.title = event.
 $("#saveButton").addEventListener("click", () => { localStorage.setItem("ufo-files-graph-view", JSON.stringify(state.config)); toast("View saved in this browser"); });
 $("#shareButton").addEventListener("click", async () => { persistHash(); try { await navigator.clipboard.writeText(location.href); toast("Builder link copied"); } catch (_) { toast("Copy the URL from your browser"); } });
 $("#exportButton").addEventListener("click", exportCurrent);
+$("#closeInspector").addEventListener("click", closeInspector);
 $("#resetZoom").addEventListener("click", () => {
   state.config.zoom = 1;
   renderControls();

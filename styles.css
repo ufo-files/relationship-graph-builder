@@ -40,6 +40,8 @@ button:focus-visible, select:focus-visible, input:focus-visible, [contenteditabl
 .icon-button { width: 34px; height: 34px; font-size: 17px; }
 
 .app-shell { height: calc(100vh - 68px); height: calc(100dvh - 68px); min-height: 0; display: grid; grid-template-columns: 310px minmax(500px, 1fr) 290px; grid-template-rows: minmax(0, 1fr); overflow: hidden; }
+.app-shell.inspector-collapsed { grid-template-columns: 310px minmax(500px, 1fr); }
+.app-shell.inspector-collapsed .inspector { display: none; }
 .builder-panel, .inspector { background: var(--panel); overflow-y: auto; }
 .builder-panel { min-height: 0; border-right: 1px solid var(--line); }
 .inspector { min-height: 0; border-left: 1px solid var(--line); }
@@ -106,6 +108,8 @@ h1, h2, h3, p { margin-top: 0; }
 .edge { stroke: var(--ink); stroke-opacity: .28; }
 
 .inspector { padding: 22px; }
+.inspector-close { position: sticky; top: 0; z-index: 1; display: grid; place-items: center; margin: 0 0 -34px auto; background: var(--paper); }
+.inspect-category { padding-right: 42px; }
 .inspector-empty { min-height: 70%; display: grid; place-content: center; text-align: center; color: var(--muted); }
 .inspect-icon { display: grid; place-items: center; width: 42px; height: 42px; margin: 0 auto 12px; border-radius: 50%; color: var(--green); background: var(--mint); font-size: 21px; }
 .inspector h3 { font: 400 17px/1.2 var(--font); text-transform: uppercase; margin-bottom: 8px; color: var(--ink); }

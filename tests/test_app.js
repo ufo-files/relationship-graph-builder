@@ -7,7 +7,13 @@ class FakeElement {
   constructor() {
     this.attributes = {};
     this.children = [];
-    this.classList = { remove() {} };
+    const classes = new Set();
+    this.classList = {
+      add: (...names) => names.forEach(name => classes.add(name)),
+      remove: (...names) => names.forEach(name => classes.delete(name)),
+      contains: name => classes.has(name),
+      toggle: name => classes.has(name) ? (classes.delete(name), false) : (classes.add(name), true)
+    };
     this.style = { setProperty() {} };
   }
 
@@ -26,6 +32,32 @@ function labelCount(chart) {
 function labelTexts(chart) {
   return chart.children.filter(node => node.attributes.class?.includes("node-label")).map(node => node.textContent);
 }
+
+test("inspector defaults collapsed and a selected mark reopens it", () => {
+  const html = fs.readFileSync("index.html", "utf8");
+  assert.match(html, /id="builderView" class="app-shell inspector-collapsed"/);
+  assert.match(html, /id="closeInspector"[^>]+aria-label="Close inspector"/);
+
+  const elements = {
+    builderView: new FakeElement(),
+    inspector: new FakeElement(),
+    inspectorContent: new FakeElement()
+  };
+  elements.builderView.classList.add("inspector-collapsed");
+  const document = { querySelector: selector => elements[selector.slice(1)], querySelectorAll: () => [] };
+  const context = vm.createContext({ document, location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+
+  vm.runInContext("showInspector('person', 'Selected node', [], [])", context);
+  assert.equal(elements.builderView.classList.contains("inspector-collapsed"), false);
+  assert.equal(elements.inspector.classList.contains("has-selection"), true);
+  assert.match(elements.inspectorContent.innerHTML, /Selected node/);
+
+  vm.runInContext("closeInspector()", context);
+  assert.equal(elements.builderView.classList.contains("inspector-collapsed"), true);
+  assert.equal(elements.inspector.classList.contains("has-selection"), false);
+});
 
 test("default graph includes every entity category at 95% confidence", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
