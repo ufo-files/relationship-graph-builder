@@ -20,7 +20,7 @@
     </div>
   </header>
 
-  <main id="builderView" class="app-shell">
+  <main id="builderView" class="app-shell inspector-collapsed">
     <aside class="builder-panel" aria-label="Graph configuration">
       <section class="step open" data-step="1">
         <button class="step-heading" aria-expanded="true">
@@ -86,10 +86,13 @@
     </section>
 
     <aside class="inspector" id="inspector" aria-label="Evidence inspector">
-      <div class="inspector-empty">
-        <span class="inspect-icon">⌁</span>
-        <h3>Select a mark</h3>
-        <p>Choose a node, point, bar, cell, or table row to inspect the source records behind it.</p>
+      <button class="icon-button inspector-close" id="closeInspector" type="button" aria-label="Close inspector" title="Close inspector">×</button>
+      <div id="inspectorContent">
+        <div class="inspector-empty">
+          <span class="inspect-icon">⌁</span>
+          <h3>Select a mark</h3>
+          <p>Choose a node, point, bar, cell, or table row to inspect the source records behind it.</p>
+        </div>
       </div>
     </aside>
   </main>
