@@ -97,23 +97,44 @@ test("Default preset restores the complete initial view", () => {
   assert.equal(result.activeId, "default");
 });
 
-test("collections render selected when the empty filter means every collection", () => {
+test("collection selection distinguishes all collections from no collections", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
   vm.runInContext(source, context);
   const result = JSON.parse(vm.runInContext(`JSON.stringify({
-    implicitAll: sourceIsSelected("Collection A", []),
-    explicitSelected: sourceIsSelected("Collection A", ["Collection A"]),
-    explicitUnselected: sourceIsSelected("Collection B", ["Collection A"]),
-    normalizedAll: normalizeSourceSelection(["Collection A", "Collection B"], ["Collection A", "Collection B"]),
-    normalizedSubset: normalizeSourceSelection(["Collection A"], ["Collection A", "Collection B"])
+    allSelected: sourceIsSelected("Collection A", [], true),
+    noneSelected: sourceIsSelected("Collection A", [], false),
+    explicitSelected: sourceIsSelected("Collection A", ["Collection A"], false),
+    explicitUnselected: sourceIsSelected("Collection B", ["Collection A"], false),
+    normalizedAll: sourceSelectionConfig(["Collection A", "Collection B"], ["Collection A", "Collection B"]),
+    normalizedNone: sourceSelectionConfig([], ["Collection A", "Collection B"]),
+    normalizedSubset: sourceSelectionConfig(["Collection A"], ["Collection A", "Collection B"])
   })`, context));
 
-  assert.equal(result.implicitAll, true);
+  assert.equal(result.allSelected, true);
+  assert.equal(result.noneSelected, false);
   assert.equal(result.explicitSelected, true);
   assert.equal(result.explicitUnselected, false);
-  assert.deepEqual(result.normalizedAll, []);
-  assert.deepEqual(result.normalizedSubset, ["Collection A"]);
+  assert.deepEqual(result.normalizedAll, { sources: [], allSources: true });
+  assert.deepEqual(result.normalizedNone, { sources: [], allSources: false });
+  assert.deepEqual(result.normalizedSubset, { sources: ["Collection A"], allSources: false });
+});
+
+test("no selected collections produces no matching records", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    state.documentById.set("doc-1", { source: "Collection A" });
+    Object.assign(state.config, { categories: ["person"], minConfidence: 0, sources: [], allSources: false });
+    JSON.stringify({
+      sourceMatches: sourceMatches("Collection A"),
+      entityMatches: entityMatches({ category: "person", classificationConfidence: 1, documentIds: ["doc-1"] })
+    })
+  `, context));
+
+  assert.equal(result.sourceMatches, false);
+  assert.equal(result.entityMatches, false);
 });
 
 test("significant entity presets configure scatters across all collections", () => {

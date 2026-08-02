@@ -50,7 +50,7 @@ const PRESETS = [
 ];
 const DEFAULT = {
   type: "scatter", x: "documentCount", y: "mentions", size: "sourceCount", color: "category",
-  categories: [...ENTITY_CATEGORIES], sources: [], relation: "all",
+  categories: [...ENTITY_CATEGORIES], sources: [], allSources: true, relation: "all",
   minEvidence: 2, minConfidence: 0.95, limit: 50, labels: "top", aggregation: "source",
   nodeRole: "entity", timelineRole: "document", matrixColumns: "category",
   tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"],
@@ -64,7 +64,11 @@ const $$ = selector => [...document.querySelectorAll(selector)];
 function loadConfig() {
   try {
     const param = new URLSearchParams(location.hash.slice(1)).get("config");
-    if (param) return { ...DEFAULT, ...JSON.parse(decodeURIComponent(escape(atob(param)))) };
+    if (param) {
+      const saved = JSON.parse(decodeURIComponent(escape(atob(param))));
+      if (saved.allSources === undefined) saved.allSources = !saved.sources?.length;
+      return { ...DEFAULT, ...saved };
+    }
   } catch (_) {}
   return { ...DEFAULT };
 }
@@ -98,12 +102,13 @@ function escapeHTML(value = "") {
   return String(value).replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[char]);
 }
 
-function sourceIsSelected(sourceName, selectedSources) {
-  return selectedSources.length === 0 || selectedSources.includes(sourceName);
+function sourceIsSelected(sourceName, selectedSources, allSources) {
+  return allSources || selectedSources.includes(sourceName);
 }
 
-function normalizeSourceSelection(selectedSources, availableSources) {
-  return selectedSources.length === availableSources.length ? [] : selectedSources;
+function sourceSelectionConfig(selectedSources, availableSources) {
+  const allSources = selectedSources.length === availableSources.length;
+  return { sources: allSources ? [] : selectedSources, allSources };
 }
 
 function toast(message) {
@@ -221,8 +226,8 @@ function renderControls() {
   const categoryChecks = categories.map(category => `<label class="check-chip"><input type="checkbox" data-category="${category}" ${state.config.categories.includes(category) ? "checked" : ""}><span>${escapeHTML(label(category))}</span></label>`).join("");
   const sources = state.catalog?.sources || [];
   const sourceNames = sources.map(source => source.name);
-  const selectedSourceCount = state.config.sources.length || sourceNames.length;
-  const sourceChecks = sources.map(source => `<label class="check-chip"><input type="checkbox" data-source="${escapeHTML(source.name)}" ${sourceIsSelected(source.name, state.config.sources) ? "checked" : ""}><span>${escapeHTML(source.name)}</span></label>`).join("");
+  const selectedSourceCount = state.config.allSources ? sourceNames.length : sourceNames.filter(name => state.config.sources.includes(name)).length;
+  const sourceChecks = sources.map(source => `<label class="check-chip"><input type="checkbox" data-source="${escapeHTML(source.name)}" ${sourceIsSelected(source.name, state.config.sources, state.config.allSources) ? "checked" : ""}><span>${escapeHTML(source.name)}</span></label>`).join("");
   const usesEntities = state.config.type === "table" ? state.config.tableRole === "entity" : !["bars", "timeline"].includes(state.config.type) || state.config.aggregation === "entity" || state.config.timelineRole === "entity";
   $("#filterControls").innerHTML = `
     ${usesEntities ? `<div class="control"><div class="control-title">Entity categories</div><div class="check-grid">${categoryChecks}</div></div>` : ""}
@@ -248,7 +253,8 @@ function renderControls() {
   }));
   $$('[data-source]').forEach(node => node.addEventListener("change", () => {
     const selectedSources = $$('[data-source]:checked').map(input => input.dataset.source);
-    state.config.sources = normalizeSourceSelection(selectedSources, sourceNames);
+    Object.assign(state.config, sourceSelectionConfig(selectedSources, sourceNames));
+    renderControls();
     commitConfig();
   }));
   $$('[data-table-column]').forEach(node => node.addEventListener("change", () => {
@@ -336,16 +342,15 @@ function clearChart() {
   return { svg, width, height };
 }
 
-function selectedSources() {
-  return new Set(state.config.sources);
+function sourceMatches(sourceName) {
+  return state.config.allSources || state.config.sources.includes(sourceName);
 }
 
 function entityMatches(entity) {
   if (!state.config.categories.includes(entity.category)) return false;
   if (entity.classificationConfidence < state.config.minConfidence) return false;
-  const sources = selectedSources();
-  if (!sources.size) return true;
-  return entity.documentIds.some(id => sources.has(state.documentById.get(id)?.source));
+  if (state.config.allSources) return true;
+  return entity.documentIds.some(id => sourceMatches(state.documentById.get(id)?.source));
 }
 
 function valueExtent(data, key) {
@@ -381,14 +386,13 @@ function drawAxes(svg, width, height, xKey, yKey, xExtent, yExtent) {
 }
 
 function collectionNetworkData() {
-  const sourceFilter = selectedSources();
   const documentsBySource = new Map();
   state.catalog.documents.forEach(document => {
     if (!documentsBySource.has(document.source)) documentsBySource.set(document.source, []);
     documentsBySource.get(document.source).push(document);
   });
   const candidates = state.catalog.sources
-    .filter(source => !sourceFilter.size || sourceFilter.has(source.name))
+    .filter(source => sourceMatches(source.name))
     .map(source => {
       const documents = documentsBySource.get(source.name) || [];
       return {
@@ -572,8 +576,7 @@ function renderScatter() {
 }
 
 function aggregateDocuments() {
-  const sourceFilter = selectedSources();
-  const docs = state.catalog.documents.filter(doc => !sourceFilter.size || sourceFilter.has(doc.source));
+  const docs = state.catalog.documents.filter(doc => sourceMatches(doc.source));
   if (state.config.aggregation === "entity") {
     return state.catalog.entities.filter(entityMatches).map(entity => ({ ...entity, source: entity.category }));
   }
@@ -583,7 +586,7 @@ function aggregateDocuments() {
       return { name: label(format), source: format, documents: items.length, words: items.reduce((sum, item) => sum + item.words, 0), bytes: items.reduce((sum, item) => sum + item.bytes, 0), documentIds: items.map(item => item.id) };
     });
   }
-  return state.catalog.sources.filter(source => !sourceFilter.size || sourceFilter.has(source.name)).map(source => {
+  return state.catalog.sources.filter(source => sourceMatches(source.name)).map(source => {
     const items = docs.filter(doc => doc.source === source.name);
     return { name: source.name, source: source.name, documents: items.length, words: items.reduce((sum, item) => sum + item.words, 0), bytes: items.reduce((sum, item) => sum + item.bytes, 0), documentIds: items.map(item => item.id) };
   });
@@ -612,13 +615,12 @@ function renderBars() {
 
 function renderTimeline() {
   const { svg, width, height } = clearChart();
-  const sourceFilter = selectedSources();
   const data = (state.config.timelineRole === "entity"
     ? state.catalog.entities.filter(entityMatches).map(entity => {
-        const documents = entity.documentIds.map(id => state.documentById.get(id)).filter(document => document?.createdAt && (!sourceFilter.size || sourceFilter.has(document.source))).sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+        const documents = entity.documentIds.map(id => state.documentById.get(id)).filter(document => document?.createdAt && sourceMatches(document.source)).sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
         return documents.length ? { ...entity, title: entity.name, createdAt: documents[0].createdAt, source: documents[0].source, format: documents[0].format, entityRecord: entity } : null;
       }).filter(Boolean)
-    : state.catalog.documents.filter(item => item.createdAt && (!sourceFilter.size || sourceFilter.has(item.source))))
+    : state.catalog.documents.filter(item => item.createdAt && sourceMatches(item.source)))
     .sort((a, b) => (b[state.config.y] || 0) - (a[state.config.y] || 0)).slice(0, state.config.limit);
   if (!data.length) return showEmpty();
   const dates = data.map(item => new Date(item.createdAt).getTime());
@@ -641,7 +643,7 @@ function renderTimeline() {
 
 function renderMatrix() {
   const { svg, width, height } = clearChart();
-  const sources = state.catalog.sources.filter(item => !state.config.sources.length || state.config.sources.includes(item.name));
+  const sources = state.catalog.sources.filter(item => sourceMatches(item.name));
   const columns = state.config.matrixColumns === "entity"
     ? state.catalog.entities.filter(entityMatches).sort((a, b) => b.mentions - a.mentions).slice(0, Math.min(state.config.limit, 18)).map(entity => ({ id: entity.id, label: entity.name, category: entity.category, entity }))
     : state.config.categories.map(category => ({ id: category, label: label(category), category }));
@@ -669,13 +671,12 @@ function renderMatrix() {
 }
 
 function tableRecords() {
-  const sourceFilter = selectedSources();
   let records;
   if (state.config.tableRole === "document") {
-    records = state.catalog.documents.filter(item => !sourceFilter.size || sourceFilter.has(item.source));
+    records = state.catalog.documents.filter(item => sourceMatches(item.source));
   } else if (state.config.tableRole === "source") {
     records = state.catalog.sources
-      .filter(item => !sourceFilter.size || sourceFilter.has(item.name))
+      .filter(item => sourceMatches(item.name))
       .map(item => ({ ...item, documentIds: state.catalog.documents.filter(document => document.source === item.name).map(document => document.id) }));
   } else {
     records = state.catalog.entities.filter(entityMatches);
