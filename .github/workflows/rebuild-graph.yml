@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/rebuild-graph.yml"
+      - ".machine-data-revision"
       - ".nojekyll"
       - "app.js"
       - "assets/**"
@@ -19,8 +20,6 @@ on:
       - "data/curated_entities.json"
       - "scripts/**"
       - "tests/**"
-  schedule:
-    - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
   repository_dispatch:
     types: [machine-data-updated]
@@ -74,8 +73,6 @@ jobs:
       contents: write
       pages: write
       id-token: write
-    outputs:
-      rebuild: ${{ steps.decision.outputs.rebuild }}
     steps:
       - name: Check out builder
         uses: actions/checkout@v7
@@ -90,23 +87,7 @@ jobs:
           test -n "$revision"
           echo "revision=$revision" >> "$GITHUB_OUTPUT"
 
-      - name: Decide whether to rebuild
-        id: decision
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          UPSTREAM_REVISION: ${{ steps.upstream.outputs.revision }}
-        shell: bash
-        run: |
-          read -r current_revision current_documents current_entities < <(python3 -c 'import json; catalog=json.load(open("data/catalog.json")); print(catalog.get("input", {}).get("revision", ""), catalog.get("counts", {}).get("documents", 0), catalog.get("counts", {}).get("publishedEntities", 0))')
-          if [[ "$EVENT_NAME" == "schedule" && "$current_revision" == "$UPSTREAM_REVISION" && "$current_documents" -gt 0 && "$current_entities" -gt 0 ]]; then
-            echo "rebuild=false" >> "$GITHUB_OUTPUT"
-            echo "machine-data is unchanged at $UPSTREAM_REVISION"
-          else
-            echo "rebuild=true" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Check out machine-data
-        if: steps.decision.outputs.rebuild == 'true'
         uses: actions/checkout@v7
         with:
           repository: ufo-files/machine-data
@@ -114,13 +95,11 @@ jobs:
           path: _machine-data
 
       - name: Set up Python
-        if: steps.decision.outputs.rebuild == 'true'
         uses: actions/setup-python@v7
         with:
           python-version: "3.13"
 
       - name: Build catalog
-        if: steps.decision.outputs.rebuild == 'true'
         env:
           UPSTREAM_REVISION: ${{ steps.upstream.outputs.revision }}
         run: |
@@ -131,14 +110,12 @@ jobs:
             --require-data
 
       - name: Run tests
-        if: steps.decision.outputs.rebuild == 'true'
         run: |
           python3 -m unittest discover -s tests -v
           node --check app.js
           node --test tests/test_app.js
 
       - name: Commit refreshed catalog
-        if: steps.decision.outputs.rebuild == 'true'
         env:
           UPSTREAM_REVISION: ${{ steps.upstream.outputs.revision }}
         shell: bash
@@ -150,27 +127,32 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/catalog.json
           git commit -m "Rebuild graph from machine-data@${UPSTREAM_REVISION:0:7}"
-          git push origin HEAD:main
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo "Unable to publish the refreshed graph catalog" >&2
+          exit 1
 
       - name: Stage static site
-        if: steps.decision.outputs.rebuild == 'true'
         run: |
           mkdir -p _site
           cp index.html app.js styles.css .nojekyll _site/
           cp -R assets data _site/
 
       - name: Configure Pages
-        if: steps.decision.outputs.rebuild == 'true'
         uses: actions/configure-pages@v6
 
       - name: Upload Pages artifact
-        if: steps.decision.outputs.rebuild == 'true'
         uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
   deploy:
-    if: needs.publish.outputs.rebuild == 'true'
+    if: needs.publish.result == 'success'
     needs: publish
     runs-on: ubuntu-latest
     permissions:
