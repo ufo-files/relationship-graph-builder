@@ -58,7 +58,8 @@ jobs:
           python3 scripts/build_catalog.py \
             --input _machine-data \
             --input-repository ufo-files/machine-data \
-            --input-revision "$revision"
+            --input-revision "$revision" \
+            --require-data
 
       - name: Run tests
         run: |
@@ -96,8 +97,8 @@ jobs:
           UPSTREAM_REVISION: ${{ steps.upstream.outputs.revision }}
         shell: bash
         run: |
-          current_revision="$(python3 -c 'import json; print(json.load(open("data/catalog.json")).get("input", {}).get("revision", ""))')"
-          if [[ "$EVENT_NAME" == "schedule" && "$current_revision" == "$UPSTREAM_REVISION" ]]; then
+          read -r current_revision current_documents current_entities < <(python3 -c 'import json; catalog=json.load(open("data/catalog.json")); print(catalog.get("input", {}).get("revision", ""), catalog.get("counts", {}).get("documents", 0), catalog.get("counts", {}).get("publishedEntities", 0))')
+          if [[ "$EVENT_NAME" == "schedule" && "$current_revision" == "$UPSTREAM_REVISION" && "$current_documents" -gt 0 && "$current_entities" -gt 0 ]]; then
             echo "rebuild=false" >> "$GITHUB_OUTPUT"
             echo "machine-data is unchanged at $UPSTREAM_REVISION"
           else
@@ -126,7 +127,8 @@ jobs:
           python3 scripts/build_catalog.py \
             --input _machine-data \
             --input-repository ufo-files/machine-data \
-            --input-revision "$UPSTREAM_REVISION"
+            --input-revision "$UPSTREAM_REVISION" \
+            --require-data
 
       - name: Run tests
         if: steps.decision.outputs.rebuild == 'true'
