@@ -14,6 +14,7 @@ import datetime as dt
 import hashlib
 import json
 import re
+import unicodedata
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Iterable
@@ -53,6 +54,15 @@ KNOWN = {
     "UFOs": ("UFO", "subject"),
     "FOIA": ("FOIA", "subject"),
 }
+
+
+def known_lookup_key(value: str) -> str:
+    """Normalize Unicode OCR variants for stable known-entity lookup."""
+    decomposed = unicodedata.normalize("NFKD", value.casefold())
+    return "".join(character for character in decomposed if not unicodedata.combining(character))
+
+
+KNOWN_LOOKUP = {known_lookup_key(key): key for key in KNOWN}
 KNOWN_PATTERN = re.compile(
     r"(?<![\w-])(" + "|".join(sorted((re.escape(k) for k in KNOWN), key=len, reverse=True)) + r")(?![\w-])",
     re.IGNORECASE,
@@ -284,7 +294,9 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
     found: dict[str, tuple[str, str, str, float, bool]] = {}
     for match in KNOWN_PATTERN.finditer(segment):
         raw = match.group(0)
-        lookup = next((key for key in KNOWN if key.lower() == raw.lower()), raw)
+        lookup = KNOWN_LOOKUP.get(known_lookup_key(raw))
+        if lookup is None:
+            continue
         canonical, category = KNOWN[lookup]
         found[comparison_key(canonical)] = (raw, canonical, category, 0.99, True)
     for match in DATE_PATTERN.finditer(segment):

@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.build_catalog import build, classify_phrase, comparison_key
+from scripts.build_catalog import build, classify_phrase, comparison_key, extract_mentions
 
 
 class ClassificationTests(unittest.TestCase):
@@ -18,6 +18,14 @@ class ClassificationTests(unittest.TestCase):
         self.assertEqual(classify_phrase("Holloman Air Force Base")[0], "location")
         self.assertEqual(classify_phrase("University of Colorado")[0], "organization")
         self.assertEqual(classify_phrase("Kelly Johnson")[0], "person")
+
+    def test_normalizes_unicode_ocr_variants_of_known_entities(self):
+        mentions = extract_mentions("The FBİ reviewed the report.", {})
+
+        self.assertEqual(
+            mentions,
+            [("FBİ", "Federal Bureau of Investigation", "government_agency", 0.99, True)],
+        )
 
 
 class CatalogTests(unittest.TestCase):
