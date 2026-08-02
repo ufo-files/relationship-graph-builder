@@ -98,6 +98,14 @@ function escapeHTML(value = "") {
   return String(value).replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[char]);
 }
 
+function sourceIsSelected(sourceName, selectedSources) {
+  return selectedSources.length === 0 || selectedSources.includes(sourceName);
+}
+
+function normalizeSourceSelection(selectedSources, availableSources) {
+  return selectedSources.length === availableSources.length ? [] : selectedSources;
+}
+
 function toast(message) {
   const node = $("#toast");
   node.textContent = message;
@@ -212,11 +220,13 @@ function renderControls() {
   const categories = [...new Set(state.catalog?.entities.map(item => item.category) || ENTITY_CATEGORIES)];
   const categoryChecks = categories.map(category => `<label class="check-chip"><input type="checkbox" data-category="${category}" ${state.config.categories.includes(category) ? "checked" : ""}><span>${escapeHTML(label(category))}</span></label>`).join("");
   const sources = state.catalog?.sources || [];
-  const sourceChecks = sources.map(source => `<label class="check-chip"><input type="checkbox" data-source="${escapeHTML(source.name)}" ${state.config.sources.includes(source.name) ? "checked" : ""}><span>${escapeHTML(source.name)}</span></label>`).join("");
+  const sourceNames = sources.map(source => source.name);
+  const selectedSourceCount = state.config.sources.length || sourceNames.length;
+  const sourceChecks = sources.map(source => `<label class="check-chip"><input type="checkbox" data-source="${escapeHTML(source.name)}" ${sourceIsSelected(source.name, state.config.sources) ? "checked" : ""}><span>${escapeHTML(source.name)}</span></label>`).join("");
   const usesEntities = state.config.type === "table" ? state.config.tableRole === "entity" : !["bars", "timeline"].includes(state.config.type) || state.config.aggregation === "entity" || state.config.timelineRole === "entity";
   $("#filterControls").innerHTML = `
     ${usesEntities ? `<div class="control"><div class="control-title">Entity categories</div><div class="check-grid">${categoryChecks}</div></div>` : ""}
-    <div class="control"><div class="control-title">Collections <span>${state.config.sources.length || "all"}</span></div><div class="check-grid">${sourceChecks}</div></div>
+    <div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div>
     ${state.config.type === "table" ? `<div class="control"><label for="tableSearch">Search rows</label><input id="tableSearch" class="text-input" type="search" value="${escapeHTML(state.config.tableSearch)}" placeholder="Filter this list" data-table-search></div>` : ""}
     ${usesEntities ? `<div class="control"><label>Minimum confidence <span>${Math.round(state.config.minConfidence * 100)}%</span></label><input type="range" min="0.5" max="0.95" step="0.01" value="${state.config.minConfidence}" data-range="minConfidence"></div>` : ""}
     ${state.config.type === "network" ? `<div class="control"><label>${state.config.nodeRole === "collection" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
@@ -237,7 +247,8 @@ function renderControls() {
     commitConfig();
   }));
   $$('[data-source]').forEach(node => node.addEventListener("change", () => {
-    state.config.sources = $$('[data-source]:checked').map(input => input.dataset.source);
+    const selectedSources = $$('[data-source]:checked').map(input => input.dataset.source);
+    state.config.sources = normalizeSourceSelection(selectedSources, sourceNames);
     commitConfig();
   }));
   $$('[data-table-column]').forEach(node => node.addEventListener("change", () => {
