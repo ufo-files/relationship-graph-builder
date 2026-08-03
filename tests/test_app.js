@@ -166,6 +166,7 @@ test("Default preset restores the complete initial view", () => {
 test("Map is a first-class Three.js graph type with reviewed location data", () => {
   const html = fs.readFileSync("index.html", "utf8");
   const globe = fs.readFileSync("map-globe.js", "utf8");
+  const threeModule = fs.readFileSync("vendor/three.module.min.js", "utf8");
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
   vm.runInContext(source, context);
@@ -186,9 +187,19 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.equal(result.unmapped, 1);
   assert.equal(result.title, "Mentions — Mapped Locations");
   assert.match(html, /id="globeCanvas"/);
-  assert.match(html, /map-globe\.js/);
+  assert.match(html, /id="globeModule"[^>]+map-globe\.js/);
+  assert.match(html, /Map module failed to load/);
   assert.match(globe, /import \* as THREE/);
   assert.match(globe, /world-countries\.svg/);
+  assert.match(globe, /SVGLoader/);
+  assert.match(globe, /new THREE\.Line/);
+  assert.match(globe, /DEFAULT_GLOBE_COVERAGE = \.95/);
+  assert.match(globe, /DEFAULT_GLOBE_ROTATION = \{ x: \.66, y: \.11 \}/);
+  assert.match(globe, /AUTO_ROTATION_SPEED = \.000012/);
+  assert.match(globe, /prefers-reduced-motion/);
+  assert.ok(fs.statSync("vendor/addons/SVGLoader.js").size > 70_000);
+  assert.match(threeModule, /three\.core\.min\.js/);
+  assert.ok(fs.statSync("vendor/three.core.min.js").size > 300_000);
 });
 
 test("duplicate review opens the proactive identity queue", () => {

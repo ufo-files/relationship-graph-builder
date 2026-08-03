@@ -1,9 +1,18 @@
 import * as THREE from "./vendor/three.module.min.js";
+import { SVGLoader } from "./vendor/addons/SVGLoader.js";
 
 const canvas = document.querySelector("#globeCanvas");
 const container = document.querySelector("#mapView");
 const labelLayer = document.querySelector("#globeLabels");
 const status = document.querySelector("#mapStatus");
+const DEFAULT_GLOBE_COVERAGE = .95;
+const DEFAULT_GLOBE_ROTATION = { x: .66, y: .11 };
+const AUTO_ROTATION_SPEED = .000012;
+
+function cameraDistanceForCoverage(verticalFov, coverage) {
+  const halfFov = THREE.MathUtils.degToRad(verticalFov / 2);
+  return 1 / Math.sin(Math.atan(Math.tan(halfFov) * coverage));
+}
 
 class GlobeMap {
   constructor() {
@@ -12,9 +21,9 @@ class GlobeMap {
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(38, 1, .1, 100);
-    this.camera.position.z = 3.05;
+    this.camera.position.z = cameraDistanceForCoverage(this.camera.fov, DEFAULT_GLOBE_COVERAGE);
     this.globe = new THREE.Group();
-    this.globe.rotation.set(-.12, .08, 0);
+    this.globe.rotation.set(DEFAULT_GLOBE_ROTATION.x, DEFAULT_GLOBE_ROTATION.y, 0);
     this.scene.add(this.globe);
     this.raycaster = new THREE.Raycaster();
     this.pointer = new THREE.Vector2();
@@ -25,34 +34,83 @@ class GlobeMap {
     this.dragDistance = 0;
     this.visible = false;
     this.frame = null;
+    this.lastFrameTime = null;
+    this.autoRotate = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     this.addEarth();
     this.bindEvents();
     new ResizeObserver(() => this.resize()).observe(container);
   }
 
   addEarth() {
-    const texture = new THREE.TextureLoader().load(
-      "assets/map/world-countries.svg",
-      loaded => {
-        loaded.colorSpace = THREE.SRGBColorSpace;
-        loaded.anisotropy = Math.min(8, this.renderer.capabilities.getMaxAnisotropy());
-        status.textContent = "Drag to rotate · scroll to zoom";
-        this.draw();
-      },
-      undefined,
-      () => { status.textContent = "Country map unavailable"; }
-    );
+    const earthMaterial = new THREE.MeshBasicMaterial({ color: 0xf6f5ef });
     const earth = new THREE.Mesh(
       new THREE.SphereGeometry(1, 96, 64),
-      new THREE.MeshBasicMaterial({ map: texture, color: 0xffffff })
+      earthMaterial
     );
     earth.name = "countries";
     this.globe.add(earth);
     const atmosphere = new THREE.Mesh(
-      new THREE.SphereGeometry(1.025, 64, 48),
-      new THREE.MeshBasicMaterial({ color: 0x111111, transparent: true, opacity: .04, side: THREE.BackSide })
+      new THREE.SphereGeometry(1.003, 64, 48),
+      new THREE.MeshBasicMaterial({ color: 0x111111, transparent: true, opacity: .5, side: THREE.BackSide })
     );
     this.globe.add(atmosphere);
+    this.loadCountries(earthMaterial);
+  }
+
+  async loadCountries(earthMaterial) {
+    try {
+      const response = await fetch("assets/map/world-countries.svg");
+      if (!response.ok) throw new Error(`Country SVG returned ${response.status}`);
+      const svg = await response.text();
+      await this.applyLandFill(earthMaterial, svg);
+      const paths = new SVGLoader().parse(svg).paths;
+      const countryLines = new THREE.Group();
+      const material = new THREE.LineBasicMaterial({ color: 0x111111, transparent: true, opacity: .34 });
+      paths.forEach(path => path.subPaths.forEach(subPath => {
+        const points = subPath.getPoints(1);
+        if (points.length < 2) return;
+        const globePoints = points.map(point => this.coordinateVector(
+          90 - point.y / 1000 * 180,
+          point.x / 2000 * 360 - 180,
+          1.004
+        ));
+        countryLines.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(globePoints), material));
+      }));
+      countryLines.name = "country-outlines";
+      this.globe.add(countryLines);
+      status.textContent = "Drag to rotate · scroll to zoom";
+      this.draw();
+    } catch (_) {
+      status.textContent = "Country boundaries unavailable · nodes still mapped";
+      this.draw();
+    }
+  }
+
+  async applyLandFill(material, svg) {
+    const fillOnlySvg = svg
+      .replace('fill="#e2e1da"', 'fill="#ecebe4"')
+      .replace(/stroke="#111" stroke-width="[^"]+"/, 'stroke="none"');
+    const url = URL.createObjectURL(new Blob([fillOnlySvg], { type: "image/svg+xml" }));
+    try {
+      const image = new Image();
+      await new Promise((resolve, reject) => {
+        image.onload = resolve;
+        image.onerror = () => reject(new Error("Country fill could not be decoded"));
+        image.src = url;
+      });
+      const textureCanvas = document.createElement("canvas");
+      textureCanvas.width = 2048;
+      textureCanvas.height = 1024;
+      textureCanvas.getContext("2d").drawImage(image, 0, 0, textureCanvas.width, textureCanvas.height);
+      const texture = new THREE.CanvasTexture(textureCanvas);
+      texture.colorSpace = THREE.SRGBColorSpace;
+      texture.anisotropy = Math.min(8, this.renderer.capabilities.getMaxAnisotropy());
+      material.map = texture;
+      material.color.set(0xffffff);
+      material.needsUpdate = true;
+    } finally {
+      URL.revokeObjectURL(url);
+    }
   }
 
   bindEvents() {
@@ -201,14 +259,32 @@ class GlobeMap {
     this.updateLabels();
   }
 
+  animate(timestamp) {
+    if (!this.visible) {
+      this.frame = null;
+      this.lastFrameTime = null;
+      return;
+    }
+    if (this.autoRotate && !this.drag && this.lastFrameTime !== null) {
+      const elapsed = Math.min(50, timestamp - this.lastFrameTime);
+      this.globe.rotation.y += elapsed * AUTO_ROTATION_SPEED;
+    }
+    this.lastFrameTime = timestamp;
+    this.draw();
+    this.frame = requestAnimationFrame(nextTimestamp => this.animate(nextTimestamp));
+  }
+
   setVisible(visible) {
     this.visible = visible;
-    if (visible) this.resize();
+    if (visible) {
+      this.resize();
+      if (this.frame === null) this.frame = requestAnimationFrame(timestamp => this.animate(timestamp));
+    }
   }
 
   reset() {
-    this.globe.rotation.set(-.12, .08, 0);
-    this.camera.position.z = 3.05;
+    this.globe.rotation.set(DEFAULT_GLOBE_ROTATION.x, DEFAULT_GLOBE_ROTATION.y, 0);
+    this.camera.position.z = cameraDistanceForCoverage(this.camera.fov, DEFAULT_GLOBE_COVERAGE);
     this.draw();
   }
 
