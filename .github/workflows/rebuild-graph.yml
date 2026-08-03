@@ -11,17 +11,27 @@ on:
       - "assets/**"
       - "data/curated_entities.json"
       - "data/entity_aliases.json"
+      - "data/location_coordinates.json"
       - "index.html"
+      - "map-globe.js"
       - "scripts/**"
       - "styles.css"
       - "tests/**"
+      - "vendor/**"
   pull_request:
     paths:
       - ".github/workflows/rebuild-graph.yml"
+      - "app.js"
+      - "assets/**"
       - "data/curated_entities.json"
       - "data/entity_aliases.json"
+      - "data/location_coordinates.json"
+      - "index.html"
+      - "map-globe.js"
       - "scripts/**"
+      - "styles.css"
       - "tests/**"
+      - "vendor/**"
   workflow_dispatch:
   repository_dispatch:
     types: [machine-data-updated]
@@ -66,6 +76,7 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -v
           node --check app.js
+          node --check map-globe.js
           node --test tests/test_app.js
 
   publish:
@@ -115,6 +126,7 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -v
           node --check app.js
+          node --check map-globe.js
           node --test tests/test_app.js
 
       - name: Commit refreshed catalog
@@ -142,8 +154,8 @@ jobs:
       - name: Stage static site
         run: |
           mkdir -p _site
-          cp index.html app.js styles.css .nojekyll _site/
-          cp -R assets data _site/
+          cp index.html app.js map-globe.js styles.css .nojekyll _site/
+          cp -R assets data vendor _site/
 
       - name: Configure Pages
         uses: actions/configure-pages@v6

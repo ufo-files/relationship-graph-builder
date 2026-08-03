@@ -61,7 +61,7 @@ class CatalogTests(unittest.TestCase):
             collection.mkdir(parents=True)
             for number in (1, 2):
                 metadata = {"schema": "ufo-files-archive-ocr/v1", "source_file": f"source-{number}.pdf", "source_bytes": 100}
-                body = "Federal Bureau of Investigation worked with Kelly Johnson.\nKelly Johnson discussed UFO reports.\n"
+                body = "Federal Bureau of Investigation worked with Kelly Johnson in Roswell.\nKelly Johnson discussed UFO reports from Roswell.\n"
                 (collection / f"source-{number}.txt").write_text(json.dumps(metadata) + "\n\n" + body, encoding="utf-8")
             output = root / "catalog.json"
             catalog = build(root, output, 100, 100, "ufo-files/machine-data", "abc123", True)
@@ -70,10 +70,13 @@ class CatalogTests(unittest.TestCase):
             self.assertEqual(catalog["input"]["repository"], "ufo-files/machine-data")
             self.assertEqual(catalog["input"]["revision"], "abc123")
             entity = next(entity for entity in catalog["entities"] if entity["canonicalName"] == "Kelly Johnson")
+            location = next(entity for entity in catalog["entities"] if entity["canonicalName"] == "Roswell")
             self.assertEqual(entity["sourceMetrics"]["Example"]["mentions"], entity["mentions"])
             self.assertEqual(entity["sourceMetrics"]["Example"]["documentCount"], entity["documentCount"])
             self.assertTrue(all(edge["evidence"] for edge in catalog["edges"]))
             self.assertTrue(all(edge["sourceMetrics"]["Example"]["evidenceCount"] == edge["evidenceCount"] for edge in catalog["edges"]))
+            self.assertEqual(location["geo"], {"lat": 33.3943, "lon": -104.523, "precision": "city"})
+            self.assertEqual(catalog["counts"]["mappedLocations"], 1)
             self.assertTrue(output.exists())
 
     def test_merges_aliases_and_writes_a_duplicate_review_queue(self):

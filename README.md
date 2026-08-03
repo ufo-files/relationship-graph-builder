@@ -1,20 +1,22 @@
 # UFO Files Graph Builder
 
-A dependency-free, static graph builder for completed OCR and media transcripts in the UFO Files archive. It is designed for GitHub Pages: there is no server, database, CDN dependency, or runtime build step.
+A static graph builder for completed OCR and media transcripts in the UFO Files archive. It is designed for GitHub Pages: there is no server, database, CDN dependency, or runtime build step.
 
 ## Product model
 
 The builder asks for five decisions:
 
-1. **Graph type** — network, scatter, bars, timeline, matrix, or table.
+1. **Graph type** — network, map, scatter, bars, timeline, matrix, or table.
 2. **Data roles** — nodes/relationships or X and Y fields, depending on the shape.
 3. **Encoding** — size, monochrome value scales, and labels.
 4. **Refinement** — collections, entity types, confidence, evidence floor, and mark count.
-5. **Output** — a URL-addressable view, browser save, exported SVG, or table CSV.
+5. **Output** — a URL-addressable view, browser save, exported SVG, globe PNG, or table CSV.
 
 The default view is an ordinary builder configuration and uses the same rendering and data path as every saved view.
 
 Entities are a global data role: they can be network nodes, a Scatter axis, the Bar dimension, Timeline marks, Matrix columns, or Table rows. Network nodes can also be collections, connected by the published entities they share. The Table type also builds custom lists of transcript files and collections with selectable columns, sorting, search, row limits, evidence inspection, and CSV export. Entity-backed views share the same category, confidence, collection, evidence, label, and publication controls.
+
+The Map type renders a rotatable Three.js globe with SVG country boundaries and location-entity nodes. Node position comes only from the reviewed `data/location_coordinates.json` gazetteer; ambiguous and unmapped names are reported but never guessed onto the globe. Map nodes retain the same collection, confidence, prominence-inflation, size, label, and evidence-inspection controls as other entity views.
 
 ## Run locally
 
@@ -77,6 +79,7 @@ The catalog publishes the highest-evidence 1,200 accepted entities and up to 4,0
 ```sh
 python3 -m unittest discover -s tests
 node --check app.js
+node --check map-globe.js
 ```
 
 For GitHub Pages, publish this directory as the site root. `.nojekyll` is included.
@@ -90,3 +93,7 @@ the exact machine-data commit in the catalog metadata, commits the refreshed
 catalog, and deploys the static builder to GitHub Pages. The workflow can also be
 run manually or triggered with a `machine-data-updated` `repository_dispatch`
 event.
+
+## Map data and licenses
+
+The vendored Three.js module is version 0.185.1 and is distributed under the MIT license in `vendor/THREE-LICENSE.txt`. Country boundaries in `assets/map/world-countries.svg` are generated from Natural Earth’s public-domain 1:110m Admin 0 Countries dataset using `scripts/geojson_to_svg.py`.

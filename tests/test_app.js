@@ -98,6 +98,7 @@ test("pre-adjustment saved views migrate prominence metrics across entity graph 
     collectionNetwork: migrateEntityProminenceConfig({ type: "network", nodeRole: "collection", size: "documents" }),
     bars: migrateEntityProminenceConfig({ type: "bars", aggregation: "entity", y: "mentions" }),
     timeline: migrateEntityProminenceConfig({ type: "timeline", timelineRole: "entity", y: "mentions", size: "documentCount" }),
+    map: migrateEntityProminenceConfig({ type: "map", size: "mentions" }),
     table: migrateEntityProminenceConfig({ type: "table", tableSort: "mentions" })
   })`, context));
 
@@ -107,6 +108,7 @@ test("pre-adjustment saved views migrate prominence metrics across entity graph 
   assert.equal(result.bars.y, "contextAdjustedMentions");
   assert.equal(result.timeline.y, "contextAdjustedMentions");
   assert.equal(result.timeline.size, "independentDocumentCount");
+  assert.equal(result.map.size, "contextAdjustedMentions");
   assert.equal(result.table.tableSort, "mentions");
 });
 
@@ -159,6 +161,34 @@ test("Default preset restores the complete initial view", () => {
 
   assert.deepEqual(result.preset, result.defaults);
   assert.equal(result.activeId, "default");
+});
+
+test("Map is a first-class Three.js graph type with reviewed location data", () => {
+  const html = fs.readFileSync("index.html", "utf8");
+  const globe = fs.readFileSync("map-globe.js", "utf8");
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    state.catalog = { entities: [
+      { id: "mapped", name: "Roswell", category: "location", classificationConfidence: 1, mentions: 8, contextAdjustedMentions: 8, documentIds: [], geo: { lat: 33.3943, lon: -104.523 } },
+      { id: "unmapped", name: "Ambiguous Base", category: "location", classificationConfidence: 1, mentions: 12, contextAdjustedMentions: 12, documentIds: [] },
+      { id: "person", name: "Someone", category: "person", classificationConfidence: 1, mentions: 20, contextAdjustedMentions: 20, documentIds: [] }
+    ] };
+    Object.assign(state.config, { type: "map", categories: ["location"], allSources: true, minConfidence: 0, includeHighInflation: true, size: "contextAdjustedMentions", limit: 50 });
+    const result = mapLocationData();
+    JSON.stringify({ types: TYPES.map(type => type.id), mapped: result.mapped.map(item => item.id), data: result.data.map(item => item.id), unmapped: result.unmapped, title: dataAwareTitle(state.config) })
+  `, context));
+
+  assert.ok(result.types.includes("map"));
+  assert.deepEqual(result.mapped, ["mapped"]);
+  assert.deepEqual(result.data, ["mapped"]);
+  assert.equal(result.unmapped, 1);
+  assert.equal(result.title, "Mentions — Mapped Locations");
+  assert.match(html, /id="globeCanvas"/);
+  assert.match(html, /map-globe\.js/);
+  assert.match(globe, /import \* as THREE/);
+  assert.match(globe, /world-countries\.svg/);
 });
 
 test("duplicate review opens the proactive identity queue", () => {

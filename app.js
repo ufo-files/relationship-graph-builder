@@ -23,6 +23,7 @@ const TABLE_FIELDS = {
 };
 const TYPES = [
   { id: "network", label: "Network", icon: "<circle cx='6' cy='8' r='3'/><circle cx='24' cy='4' r='3'/><circle cx='22' cy='16' r='3'/><path d='M9 7l12-2M9 10l10 5M23 7l-1 6'/>" },
+  { id: "map", label: "Map", icon: "<circle cx='15.5' cy='10' r='8'/><path d='M7.5 10h16M15.5 2c3 3 3 13 0 16m0-16c-3 3-3 13 0 16'/>" },
   { id: "scatter", label: "Scatter", icon: "<path d='M3 2v16h25'/><circle cx='9' cy='13' r='2'/><circle cx='15' cy='9' r='2'/><circle cx='22' cy='5' r='2'/>" },
   { id: "bars", label: "Bars", icon: "<path d='M3 2v16h26M7 15h4V8H7zm8 0h4V4h-4zm8 0h4v-9h-4z'/>" },
   { id: "timeline", label: "Timeline", icon: "<path d='M3 10h25M8 5v10m7-7v7m8-12v12'/><circle cx='8' cy='10' r='2'/><circle cx='15' cy='10' r='2'/><circle cx='23' cy='10' r='2'/>" },
@@ -81,6 +82,8 @@ function migrateEntityProminenceConfig(config) {
     config.y = adjustedEntityMetric(config.y);
   } else if (config.type === "timeline" && config.timelineRole === "entity") {
     config.y = adjustedEntityMetric(config.y);
+    config.size = adjustedEntityMetric(config.size);
+  } else if (config.type === "map") {
     config.size = adjustedEntityMetric(config.size);
   }
   config.configVersion = CONFIG_VERSION;
@@ -187,6 +190,8 @@ function dataAwareTitle(config) {
       : `${label(config.y)} by ${label(config.x)} — ${entities}`;
   } else if (config.type === "network") {
     title = config.nodeRole === "collection" ? "Collection Relationships" : `${entities} Relationships`;
+  } else if (config.type === "map") {
+    title = `${label(config.size)} — Mapped Locations`;
   } else if (config.type === "bars") {
     title = config.aggregation === "entity" ? `${label(config.y)} by ${entities}` : `${label(config.y)} by ${label(config.aggregation)}`;
   } else if (config.type === "timeline") {
@@ -355,6 +360,8 @@ function renderControls() {
       ? `<div class="control"><label for="collectionRelationship">Relationship</label><select id="collectionRelationship" disabled><option>Shared published entities</option></select></div>`
       : controlSelect("relation", "Relationship", [{ value: "all", label: "Any published relationship" }, { value: "co_mentioned", label: "Repeated co-mention" }, { value: "affiliated_with", label: "Affiliation cue" }, { value: "investigated", label: "Investigation cue" }]);
     roles = controlSelect("nodeRole", "Nodes", [{ value: "entity", label: "Entities" }, { value: "collection", label: "Collections" }]) + relationshipControl;
+  } else if (state.config.type === "map") {
+    roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Geocoded locations</option></select></div><div class="control"><div class="control-title">Position</div><select disabled><option>Reviewed coordinates</option></select></div>`;
   } else if (state.config.type === "scatter") {
     roles = controlSelect("x", "X axis", ["entity", ...numericEntity]) + controlSelect("y", "Y axis", numericEntity);
   } else if (state.config.type === "bars") {
@@ -379,12 +386,14 @@ function renderControls() {
     const sortOptions = TABLE_FIELDS[state.config.tableRole];
     $("#encodeControls").innerHTML = controlSelect("tableSort", "Sort by", sortOptions) + controlSelect("tableDirection", "Direction", [{ value: "desc", label: "Descending" }, { value: "asc", label: "Ascending" }]) + labelSizeControl;
   } else {
-    $("#encodeControls").innerHTML = (["scatter", "network", "timeline"].includes(state.config.type)
+    $("#encodeControls").innerHTML = (["scatter", "network", "timeline", "map"].includes(state.config.type)
       ? controlSelect("size", "Size + shade", sizeOptions) + `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>` + controlSelect("labels", "Labels", [{ value: "top", label: "Most important" }, { value: "all", label: "All" }, { value: "none", label: "None" }])
       : `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>`) + labelSizeControl + zoomControl;
   }
 
-  const categories = [...new Set(state.catalog?.entities.map(item => item.category) || ENTITY_CATEGORIES)];
+  const categories = state.config.type === "map"
+    ? ["location"]
+    : [...new Set(state.catalog?.entities.map(item => item.category) || ENTITY_CATEGORIES)];
   const categoryChecks = categories.map(category => `<label class="check-chip"><input type="checkbox" data-category="${category}" ${state.config.categories.includes(category) ? "checked" : ""}><span>${escapeHTML(label(category))}</span></label>`).join("");
   const sources = state.catalog?.sources || [];
   const sourceNames = sources.map(source => source.name);
@@ -451,6 +460,7 @@ function setType(type) {
   if (type === "bars") Object.assign(state.config, { aggregation: "source", y: "words", color: "intensity" });
   if (type === "scatter") Object.assign(state.config, { x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", color: "category", limit: 50 });
   if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "independentDocumentCount", color: "category" });
+  if (type === "map") Object.assign(state.config, { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50 });
   if (type === "timeline") Object.assign(state.config, { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source" });
   if (type === "matrix") Object.assign(state.config, { matrixColumns: "category", color: "intensity" });
   if (type === "table") Object.assign(state.config, { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 });
@@ -500,6 +510,7 @@ function dimensions() {
 }
 
 function clearChart() {
+  hideMapView();
   const svg = $("#chart");
   svg.removeAttribute("hidden");
   $("#tableView").hidden = true;
@@ -510,6 +521,21 @@ function clearChart() {
   const { width, height } = dimensions();
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
   return { svg, width, height };
+}
+
+function hideMapView() {
+  const mapView = $("#mapView");
+  if (mapView) mapView.hidden = true;
+  if (typeof window !== "undefined") window.dispatchEvent?.(new CustomEvent("ufo-map-visibility", { detail: { visible: false } }));
+}
+
+function prepareMapView() {
+  const svg = $("#chart");
+  svg.setAttribute("hidden", "");
+  svg.replaceChildren();
+  $("#tableView").hidden = true;
+  $("#chartWrap").classList.remove("table-mode");
+  $("#mapView").hidden = false;
 }
 
 function sourceMatches(sourceName) {
@@ -814,6 +840,40 @@ function renderScatter() {
   setSummary(`${data.length} entities`, "scatter");
 }
 
+function renderMap() {
+  prepareMapView();
+  const { mapped, data, unmapped } = mapLocationData();
+  if (!data.length) {
+    hideMapView();
+    return showEmpty();
+  }
+  const extent = valueExtent(data, state.config.size);
+  const payload = {
+    labelSize: state.config.labelSize,
+    items: data.map((entity, index) => ({
+      id: entity.id,
+      name: entity.name,
+      lat: entity.geo.lat,
+      lon: entity.geo.lon,
+      intensity: Math.sqrt(Math.max(0, scale(entity[state.config.size], extent, [0, 1]))),
+      formattedValue: `${label(state.config.size)}: ${formatNumber(entity[state.config.size])}`,
+      showLabel: state.config.labels === "all" || (state.config.labels === "top" && index < 10)
+    }))
+  };
+  window.pendingGlobeRender = payload;
+  window.dispatchEvent(new CustomEvent("ufo-map-render", { detail: payload }));
+  window.dispatchEvent(new CustomEvent("ufo-map-visibility", { detail: { visible: true } }));
+  drawIntensityLegend();
+  setSummary(`${data.length} of ${mapped.length} mapped locations${unmapped ? ` · ${unmapped} unmapped` : ""}`, "map");
+}
+
+function mapLocationData() {
+  const locations = filteredEntities().filter(entity => entity.category === "location");
+  const mapped = locations.filter(entity => Number.isFinite(entity.geo?.lat) && Number.isFinite(entity.geo?.lon))
+    .sort((left, right) => (right[state.config.size] || 0) - (left[state.config.size] || 0));
+  return { mapped, data: mapped.slice(0, state.config.limit), unmapped: locations.length - mapped.length };
+}
+
 function aggregateDocuments() {
   const docs = state.catalog.documents.filter(doc => sourceMatches(doc.source));
   if (state.config.aggregation === "entity") {
@@ -943,6 +1003,7 @@ function tableDisplayValue(item, field) {
 }
 
 function renderTable() {
+  hideMapView();
   const svg = $("#chart"), tableView = $("#tableView");
   svg.setAttribute("hidden", "");
   svg.replaceChildren();
@@ -981,6 +1042,7 @@ function setSummary(text, type) {
   $("#graphKicker").textContent = label(type === "bars" ? "bar chart" : type);
   $("#policySummary").textContent = type === "network"
     ? state.config.nodeRole === "collection" ? `Links require ${state.config.minEvidence} shared published entities` : `Co-mentions require ${state.config.minEvidence} evidence segments · dense OCR sections excluded`
+    : type === "map" ? "Coordinates come from the reviewed local gazetteer · ambiguous names omitted"
     : `${formatNumber(state.catalog.counts.documents)} source files · transcript text unchanged`;
 }
 
@@ -988,17 +1050,18 @@ function renderGraph() {
   if (!state.catalog) return;
   $("#emptyState").hidden = true;
   $("#graphTitle").textContent = state.config.title;
-  $("#resetZoom").hidden = state.config.type !== "network";
-  $("#exportButton").textContent = state.config.type === "table" ? "Export CSV" : "Export SVG";
+  $("#resetZoom").hidden = !["network", "map"].includes(state.config.type);
+  $("#exportButton").textContent = state.config.type === "table" ? "Export CSV" : state.config.type === "map" ? "Export PNG" : "Export SVG";
   const descriptions = {
     network: state.config.nodeRole === "collection" ? "Collections connected by shared published entities." : "Evidence-backed connections across the local archive.", scatter: `${label(state.config.x)} compared with ${label(state.config.y)}.`,
+    map: `Geocoded location entities sized by ${label(state.config.size)}.`,
     bars: `${label(state.config.y)} grouped by ${label(state.config.aggregation)}.`,
     timeline: `${state.config.timelineRole === "entity" ? "Entities" : "Completed transcript files"} by cataloging time.`,
     matrix: `${state.config.matrixColumns === "entity" ? "Entity" : "Entity-type"} coverage across completed collections.`,
     table: `A custom list of ${state.config.tableRole === "entity" ? "entities" : state.config.tableRole === "document" ? "transcript files" : "collections"}.`
   };
   $("#graphSubtitle").textContent = descriptions[state.config.type];
-  ({ network: renderNetwork, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, matrix: renderMatrix, table: renderTable })[state.config.type]();
+  ({ network: renderNetwork, map: renderMap, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, matrix: renderMatrix, table: renderTable })[state.config.type]();
 }
 
 function evidenceHTML(evidence = []) {
@@ -1053,7 +1116,8 @@ function inspectEntity(item) {
   const inflationNote = item.inflationRisk === "low"
     ? `Low prominence-inflation risk. ${Math.round(mentionRate * 100)}% of raw mentions are context-adjusted without materially reducing document coverage${signalDetails ? ` (${signalDetails})` : ""}.`
     : `${label(item.inflationRisk)} prominence inflation risk: ${Math.round(prominenceRate * 100)}% of raw document appearances and ${Math.round(mentionRate * 100)}% of raw mentions are discounted by the context heuristic${signalDetails ? ` (${signalDetails})` : ""}.`;
-  showInspector(item.category, item.name, [[item.contextAdjustedMentions ?? item.mentions, "adjusted mentions"], [item.mentions, "raw mentions"], [item.independentDocumentCount ?? item.documentCount, "independent documents"], [item.sourceCount, "collections"]], item.evidence, `${inflationNote} ${label(item.reviewStatus)} · ${item.variants.length} observed name variant${item.variants.length === 1 ? "" : "s"}`);
+  const geographyNote = item.geo ? ` Mapped at ${item.geo.lat.toFixed(3)}, ${item.geo.lon.toFixed(3)} (${label(item.geo.precision)}).` : "";
+  showInspector(item.category, item.name, [[item.contextAdjustedMentions ?? item.mentions, "adjusted mentions"], [item.mentions, "raw mentions"], [item.independentDocumentCount ?? item.documentCount, "independent documents"], [item.sourceCount, "collections"]], item.evidence, `${inflationNote}${geographyNote} ${label(item.reviewStatus)} · ${item.variants.length} observed name variant${item.variants.length === 1 ? "" : "s"}`);
 }
 
 function inspectEdge(edge) {
@@ -1106,6 +1170,7 @@ function exportCSV() {
 
 function exportCurrent() {
   if (state.config.type === "table") exportCSV();
+  else if (state.config.type === "map") window.ufoGlobe?.exportPNG(state.config.title.toLowerCase().replace(/[^a-z0-9]+/g, "-"));
   else exportSVG();
 }
 
@@ -1138,9 +1203,14 @@ $("#shareButton").addEventListener("click", async () => { persistHash(); try { a
 $("#exportButton").addEventListener("click", exportCurrent);
 $("#closeInspector").addEventListener("click", closeInspector);
 $("#resetZoom").addEventListener("click", () => {
+  if (state.config.type === "map") return window.ufoGlobe?.reset();
   state.config.zoom = 1;
   renderControls();
   commitConfig(false);
+});
+window.addEventListener("ufo-map-select", event => {
+  const entity = state.catalog?.entities.find(item => item.id === event.detail.entityId);
+  if (entity) inspectEntity(filteredEntity(entity));
 });
 window.addEventListener("resize", () => { clearTimeout(window.resizeTimer); window.resizeTimer = setTimeout(renderGraph, 120); });
 
