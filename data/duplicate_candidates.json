@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "9236d329457bab119c1f90fbb8691f7fe94bb272"
+    "revision": "3e0209dadbe150f5a495983ce210b90efba6484e"
   },
-  "count": 122,
-  "totalCount": 122,
-  "shownCount": 122,
+  "count": 124,
+  "totalCount": 124,
+  "shownCount": 124,
   "candidates": [
     {
       "category": "organization",
@@ -343,6 +343,22 @@
         "documentCount": 2
       },
       "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Technical Intelligence Center",
+        "mentions": 17,
+        "documentCount": 12
+      },
+      "right": {
+        "name": "Iechnical Intelligence Center",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.966,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1102,8 +1118,8 @@
       "category": "organization",
       "left": {
         "name": "Air Intelligence",
-        "mentions": 47,
-        "documentCount": 16
+        "mentions": 49,
+        "documentCount": 17
       },
       "right": {
         "name": "Mir Intelligence",
@@ -1237,6 +1253,22 @@
         "name": "Technical Intelligence Center",
         "mentions": 17,
         "documentCount": 12
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Technical Intelligence Center",
+        "mentions": 48,
+        "documentCount": 23
+      },
+      "right": {
+        "name": "Iechnical Intelligence Center",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.935,
       "reason": "similar name",
