@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "bf61274c36eb92972ba0ab78cc549d970fa10b0c"
+    "revision": "03778d2ea867bdc9e2d5cd0ab3c6f6009f1fc40b"
   },
-  "count": 116,
-  "totalCount": 116,
-  "shownCount": 116,
+  "count": 117,
+  "totalCount": 117,
+  "shownCount": 117,
   "candidates": [
     {
       "category": "organization",
@@ -686,8 +686,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 648,
-        "documentCount": 120
+        "mentions": 650,
+        "documentCount": 121
       },
       "right": {
         "name": "Department of Detense",
@@ -798,8 +798,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 17,
-        "documentCount": 16
+        "mentions": 18,
+        "documentCount": 17
       },
       "right": {
         "name": "INTELLIGENCE CENTRE",
@@ -1134,8 +1134,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2384,
-        "documentCount": 154
+        "mentions": 2385,
+        "documentCount": 155
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -1182,8 +1182,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 56,
-        "documentCount": 23
+        "mentions": 57,
+        "documentCount": 24
       },
       "right": {
         "name": "Army Air Foroes",
@@ -1198,8 +1198,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 56,
-        "documentCount": 23
+        "mentions": 57,
+        "documentCount": 24
       },
       "right": {
         "name": "The Arny Air Forces",
@@ -1214,8 +1214,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 56,
-        "documentCount": 23
+        "mentions": 57,
+        "documentCount": 24
       },
       "right": {
         "name": "Army Air Forcas",
@@ -1341,14 +1341,30 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Central Intelligence Agency",
+        "mentions": 1490,
+        "documentCount": 260
+      },
+      "right": {
+        "name": "CIA Central Intelligence Agency",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.931,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 828,
-        "documentCount": 199
+        "mentions": 834,
+        "documentCount": 200
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.931,
       "reason": "similar name",
@@ -1811,8 +1827,8 @@
       },
       "right": {
         "name": "Institute of Technology",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.92,
       "reason": "similar name",
