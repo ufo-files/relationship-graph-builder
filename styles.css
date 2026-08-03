@@ -113,6 +113,8 @@ h1, h2, h3, p { margin-top: 0; }
 .stage-footer { padding: 13px 27px 16px; display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 11px; }
 .chart-label { fill: var(--ink); font-size: var(--graph-label-size, 12px); pointer-events: none; }
 .node-label { font-weight: 650; paint-order: stroke; stroke: var(--paper); stroke-width: 3px; stroke-linejoin: round; }
+.book-label { font-weight: 750; pointer-events: none; }
+.book-shelf { pointer-events: none; }
 .axis-label { fill: var(--muted); font-size: 11px; }
 .grid-line { stroke: var(--ink); stroke-width: 1; stroke-opacity: .12; }
 .mark { cursor: pointer; transition: opacity .15s, filter .15s; }

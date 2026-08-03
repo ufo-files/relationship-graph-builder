@@ -75,6 +75,18 @@ CAP_PHRASE = re.compile(
     r"\b(?:Dr\.|Mr\.|Mrs\.|Ms\.|Gen\.|General|Colonel|Col\.|Major|Maj\.|Captain|Capt\.|Lt\.|Lieutenant)?"
     r"\s*(?:[A-Z][A-Za-z'’-]{1,25}|[A-Z]{2,})(?:\s+(?:of|the|and|&|for|[A-Z][A-Za-z'’-]{1,25}|[A-Z]{2,})){1,5}\b"
 )
+BOOK_TITLE_WORD = r"(?:[A-Z0-9][A-Za-z0-9.'’:-]*|(?:of|the|and|to|in|on|at|from|for|is|a|an)\b)"
+BOOK_TITLE = rf"(?P<title>(?:[A-Z0-9][A-Za-z0-9.'’:-]{{1,}}|A)(?:\s+{BOOK_TITLE_WORD}){{0,11}})"
+BOOK_PATTERNS = [
+    re.compile(r"\b(?i:(?:book|novel|memoir)(?:\s+(?:called|titled|entitled))?)\s+[\"'“](?P<title>[^\"'”\n]{3,120})[\"'”]"),
+    re.compile(rf"\b(?i:(?:book|novel|memoir)(?:\s+by\b(?!\s*(?:an?\s+)?(?:guy|author|man|woman)\b)\s*[^.!?\n]{{0,100}}?)?\s+(?:called|titled|entitled))\s+(?![\"'“]){BOOK_TITLE}"),
+    re.compile(rf"\b(?i:author of (?:the\s+)?(?:(?:recently|newly)\s+published\s+)?(?:book|novel|memoir))\s+(?![\"'“]){BOOK_TITLE}"),
+    re.compile(rf"\b(?i:(?:in|from|read|reading|through)\s+(?:his|her|their|the|a|this)\s+(?:new\s+|classic\s+)?(?:book|novel|memoir))\s+(?![\"'“]){BOOK_TITLE}"),
+    re.compile(rf"\b(?i:classic\s+(?:book|novel|memoir))\s+(?![\"'“]){BOOK_TITLE}"),
+]
+BOOK_TITLE_REJECT = {
+    "a", "advanced", "an", "book", "brokers", "center", "extraterrestrial", "flying", "material", "project", "review", "service", "that", "the", "unidentified",
+}
 DATE_PATTERN = re.compile(
     r"\b(?:January|February|March|April|May|June|July|August|September|October|November|December)"
     r"\s+\d{1,2},?\s+(?:19|20)\d{2}\b|\b(?:19|20)\d{2}-\d{2}-\d{2}\b"
@@ -177,6 +189,24 @@ def entity_key(value: str, category: str) -> str:
 def title_from_path(path: Path) -> str:
     name = path.stem.replace("_", " ").replace("-", " ")
     return clean_space(re.sub(r"\s+", " ", name)).title()
+
+
+def clean_book_title(value: str) -> str:
+    title = clean_space(value).strip("\"'“”‘’.,;:!?- ")
+    title = re.split(r"(?<!\bMr)(?<!\bDr)(?<!\bMs)(?<!\bU\.S)(?<!\b[A-Z])\.\s+(?=[A-Z])", title, maxsplit=1)[0]
+    title = re.sub(r"\s+(?:a|an|and|for|from|in|of|on|the|to)$", "", title, flags=re.IGNORECASE)
+    title = re.sub(r"\s+in\s+(?:19|20)\d{2}$", "", title, flags=re.IGNORECASE)
+    return title.strip("\"'“”‘’.,;:!?- ")
+
+
+def plausible_book_title(value: str) -> bool:
+    key = comparison_key(value)
+    words = key.split()
+    if len(key) < 3 or not words or len(words) > 12:
+        return False
+    if key in BOOK_TITLE_REJECT or words[0] in {"chapter", "figure", "table"}:
+        return False
+    return True
 
 
 def sentence_segments(text: str) -> Iterable[str]:
@@ -416,6 +446,12 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
     for match in DATE_PATTERN.finditer(segment):
         raw = match.group(0)
         found[entity_key(raw, "date")] = (raw, raw, "date", 0.96, False)
+    for pattern in BOOK_PATTERNS:
+        for match in pattern.finditer(segment):
+            raw = clean_book_title(match.group("title"))
+            if not plausible_book_title(raw):
+                continue
+            found[entity_key(raw, "book")] = (raw, raw, "book", 0.97, False)
     for match in CAP_PHRASE.finditer(segment):
         raw = match.group(0)
         registry_match = registry.get(comparison_key(raw))
@@ -484,6 +520,8 @@ def accepted(candidate: Candidate) -> bool:
         return candidate.mentions >= 3 and documents >= 2
     if candidate.category == "date":
         return candidate.mentions >= 2
+    if candidate.category == "book":
+        return candidate.mentions >= 1
     return candidate.mentions >= 2 and documents >= 2
 
 
@@ -580,14 +618,20 @@ def build(
         key=lambda item: (item[1].mentions, len(item[1].documents), item[1].canonical),
         reverse=True,
     )
-    published_items = ranked[:max_entities]
+    book_items = [item for item in ranked if item[1].category == "book"][:min(250, max_entities)]
+    book_keys = {key for key, _ in book_items}
+    published_items = book_items + [item for item in ranked if item[0] not in book_keys][:max_entities - len(book_items)]
+    published_items.sort(
+        key=lambda item: (item[1].mentions, len(item[1].documents), item[1].canonical),
+        reverse=True,
+    )
     published = dict(published_items)
     entity_ids = {key: stable_id("ent", key) for key in published}
     entities = []
     for key, candidate in published_items:
         extraction = candidate.extraction_total / max(1, candidate.mentions)
         evidence_factor = min(1.0, 0.45 + len(candidate.documents) * 0.08 + candidate.mentions * 0.015)
-        classification = 0.99 if candidate.curated else min(0.94, extraction * evidence_factor)
+        classification = 0.99 if candidate.curated else (min(0.98, extraction) if candidate.category == "book" else min(0.94, extraction * evidence_factor))
         name = candidate.canonical if candidate.curated else candidate.variants.most_common(1)[0][0]
         metrics = significance_metrics(candidate)
         entity = {
@@ -688,12 +732,14 @@ def build(
         "input": catalog_input,
         "publicationPolicy": {
             "personEvidenceFloor": "3 mentions across 2 documents",
+            "bookEvidenceFloor": "1 explicit title cue in transcript text",
             "otherEvidenceFloor": "2 mentions across 2 documents (dates: 2 mentions)",
             "relationshipEvidenceFloor": "2 co-mentions or 1 same-segment typed cue",
             "contextAdjustment": "Exact context repeats within one document count once; requester metadata is excluded; exact contexts spanning 3+ documents count once",
             "locationCoordinates": "Reviewed local gazetteer; ambiguous and unmapped names are not plotted",
             "denseSegmentLimit": 30,
             "maxEntities": max_entities,
+            "maxBooks": min(250, max_entities),
             "maxEdges": max_edges,
         },
         "counts": {
@@ -706,6 +752,7 @@ def build(
             "publishedEdges": len(edges),
             "possibleDuplicates": possible_duplicate_count,
             "mappedLocations": sum(1 for entity in entities if entity.get("geo")),
+            "publishedBooks": sum(1 for entity in entities if entity["category"] == "book"),
         },
         "sources": sources,
         "documents": documents,

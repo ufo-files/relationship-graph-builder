@@ -79,7 +79,7 @@ test("default graph includes every entity category with globally adjusted promin
   const config = JSON.parse(vm.runInContext("JSON.stringify(state.config)", context));
 
   assert.deepEqual(config.categories, [
-    "person", "government_agency", "organization", "location", "program", "subject", "date"
+    "person", "government_agency", "organization", "location", "program", "subject", "book", "date"
   ]);
   assert.equal(config.configVersion, 2);
   assert.equal(config.x, "independentDocumentCount");
@@ -99,6 +99,7 @@ test("pre-adjustment saved views migrate prominence metrics across entity graph 
     bars: migrateEntityProminenceConfig({ type: "bars", aggregation: "entity", y: "mentions" }),
     timeline: migrateEntityProminenceConfig({ type: "timeline", timelineRole: "entity", y: "mentions", size: "documentCount" }),
     map: migrateEntityProminenceConfig({ type: "map", size: "mentions" }),
+    book: migrateEntityProminenceConfig({ type: "book", size: "mentions" }),
     table: migrateEntityProminenceConfig({ type: "table", tableSort: "mentions" })
   })`, context));
 
@@ -109,6 +110,7 @@ test("pre-adjustment saved views migrate prominence metrics across entity graph 
   assert.equal(result.timeline.y, "contextAdjustedMentions");
   assert.equal(result.timeline.size, "independentDocumentCount");
   assert.equal(result.map.size, "contextAdjustedMentions");
+  assert.equal(result.book.size, "contextAdjustedMentions");
   assert.equal(result.table.tableSort, "mentions");
 });
 
@@ -202,6 +204,38 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.ok(fs.statSync("vendor/addons/SVGLoader.js").size > 70_000);
   assert.match(threeModule, /three\.core\.min\.js/);
   assert.ok(fs.statSync("vendor/three.core.min.js").size > 300_000);
+});
+
+test("Book is a first-class area bookshelf for transcript-backed titles", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    (() => {
+      const items = [
+        { id: "one", name: "UFOs and Nukes", category: "book", contextAdjustedMentions: 12 },
+        { id: "two", name: "Contact", category: "book", contextAdjustedMentions: 4 },
+        { id: "three", name: "Journey of Souls", category: "book", contextAdjustedMentions: 2 }
+      ];
+      const layout = bookshelfLayout(items, 900, 600, "contextAdjustedMentions");
+      return JSON.stringify({
+        types: TYPES.map(type => type.id),
+        title: dataAwareTitle({ ...DEFAULT, type: "book", categories: ["book"] }),
+        blocks: layout.blocks.map(block => ({ id: block.item.id, area: block.width * block.height })),
+        shelves: layout.shelfYs.length,
+        narrowLabel: bookLabelLines("Extraterrestrial Intelligence", 8, 2)
+      });
+    })()
+  `, context));
+
+  assert.ok(result.types.includes("book"));
+  assert.equal(result.title, "Books Mentioned");
+  assert.equal(result.blocks.length, 3);
+  assert.ok(result.blocks[0].area > result.blocks[1].area);
+  assert.ok(result.blocks[1].area > result.blocks[2].area);
+  assert.ok(result.shelves >= 1);
+  assert.ok(result.narrowLabel.every(line => line.length <= 8));
+  assert.match(result.narrowLabel.at(-1), /…$/);
 });
 
 test("duplicate review opens the proactive identity queue", () => {

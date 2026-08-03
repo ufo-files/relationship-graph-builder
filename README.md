@@ -6,7 +6,7 @@ A static graph builder for completed OCR and media transcripts in the UFO Files 
 
 The builder asks for five decisions:
 
-1. **Graph type** — network, map, scatter, bars, timeline, matrix, or table.
+1. **Graph type** — network, map, book, scatter, bars, timeline, matrix, or table.
 2. **Data roles** — nodes/relationships or X and Y fields, depending on the shape.
 3. **Encoding** — size, monochrome value scales, and labels.
 4. **Refinement** — collections, entity types, confidence, evidence floor, and mark count.
@@ -15,6 +15,8 @@ The builder asks for five decisions:
 The default view is an ordinary builder configuration and uses the same rendering and data path as every saved view.
 
 Entities are a global data role: they can be network nodes, a Scatter axis, the Bar dimension, Timeline marks, Matrix columns, or Table rows. Network nodes can also be collections, connected by the published entities they share. The Table type also builds custom lists of transcript files and collections with selectable columns, sorting, search, row limits, evidence inspection, and CSV export. Entity-backed views share the same category, confidence, collection, evidence, label, and publication controls.
+
+The Book type is an area-proportional abstract bookshelf. Each block is a title explicitly identified in transcript text, with area and shade controlled by the selected prominence metric. Titles are extracted only from book, novel, or memoir cues; each mark opens its source evidence in the inspector.
 
 The Map type renders a rotatable Three.js globe with SVG country boundaries and location-entity nodes. Node position comes only from the reviewed `data/location_coordinates.json` gazetteer; ambiguous and unmapped names are reported but never guessed onto the globe. Map nodes retain the same collection, confidence, prominence-inflation, size, label, and evidence-inspection controls as other entity views.
 
@@ -62,6 +64,7 @@ python3 scripts/build_catalog.py
 - Curated identity matches take precedence over heuristics.
 - Extraction confidence and classification confidence remain separate.
 - Unreviewed people require at least three mentions across two documents.
+- Book titles require one explicit book, novel, or memoir cue and reserve space in the published catalog.
 - Other unreviewed entities require two mentions across two documents; dates require two mentions.
 - Generic roles, field labels, document headings, partial phrases, all-caps phrases, and common OCR artifacts are rejected rather than treated as people.
 - Typed relationships require both entities and a relation cue in the same segment.
@@ -72,7 +75,7 @@ Raw mention totals are retained, but entity-backed visualizations use context-ad
 
 The Significant People, Significant Places, and Significant Terms presets exclude high-inflation entities by default. The Refine panel can include them again for inspection; elevated and high-risk scatter points are marked with a dashed ring.
 
-The catalog publishes the highest-evidence 1,200 accepted entities and up to 4,000 accepted edges for a compact browser payload. The full accepted and published counts, along with those caps, are explicit in the catalog metadata.
+The catalog publishes up to 250 explicitly cued books plus the highest-evidence remaining entities, within the 1,200-entity payload cap, and up to 4,000 accepted edges. The full accepted and published counts, along with those caps, are explicit in the catalog metadata.
 
 ## Test
 
