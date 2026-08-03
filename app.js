@@ -6,6 +6,8 @@ const LABELS = {
   person: "People", government_agency: "Government agencies", organization: "Organizations",
   location: "Locations", program: "Programs", subject: "Subjects", date: "Dates",
   mentions: "Mentions", documentCount: "Documents", sourceCount: "Collections",
+  contextAdjustedMentions: "Context-adjusted mentions", independentDocumentCount: "Independent documents",
+  inflationRate: "Potential inflation", inflationRisk: "Inflation risk", inflatedMentionCount: "Potentially inflated mentions",
   classificationConfidence: "Classification confidence", extractionConfidence: "Extraction confidence",
   words: "Words", documents: "Documents", segments: "Segments", bytes: "Source bytes",
   createdAt: "Cataloged at", durationMs: "Duration", source: "Collection", format: "Format",
@@ -14,7 +16,7 @@ const LABELS = {
   table: "Table", collection: "Collections", shared_entities: "Shared entities"
 };
 const TABLE_FIELDS = {
-  entity: ["name", "category", "mentions", "documentCount", "sourceCount", "classificationConfidence", "extractionConfidence", "reviewStatus"],
+  entity: ["name", "category", "contextAdjustedMentions", "mentions", "inflationRate", "inflationRisk", "independentDocumentCount", "documentCount", "sourceCount", "classificationConfidence", "extractionConfidence", "reviewStatus"],
   document: ["title", "source", "format", "words", "segments", "bytes", "createdAt", "engine", "durationMs", "path"],
   source: ["name", "documents", "words"]
 };
@@ -35,17 +37,17 @@ const PRESETS = [
   {
     id: "significant-people",
     label: "Significant People",
-    config: { type: "scatter", x: "entity", y: "mentions", categories: ["person"], sources: [] }
+    config: { type: "scatter", x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", categories: ["person"], sources: [] }
   },
   {
     id: "significant-places",
     label: "Significant Places",
-    config: { type: "scatter", x: "entity", y: "mentions", categories: ["location"], sources: [] }
+    config: { type: "scatter", x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", categories: ["location"], sources: [] }
   },
   {
     id: "significant-terms",
     label: "Significant Terms",
-    config: { type: "scatter", x: "entity", y: "mentions", categories: ["subject"], sources: [] }
+    config: { type: "scatter", x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", categories: ["subject"], sources: [] }
   }
 ];
 const DEFAULT = {
@@ -137,7 +139,7 @@ function dataAwareTitle(config) {
   const entities = entityScopeTitle(config.categories);
   let title;
   if (config.type === "scatter") {
-    title = config.x === "entity" && config.y === "mentions"
+    title = config.x === "entity" && ["mentions", "contextAdjustedMentions"].includes(config.y)
       ? `Significant ${entities}`
       : `${label(config.y)} by ${label(config.x)} — ${entities}`;
   } else if (config.type === "network") {
@@ -152,6 +154,12 @@ function dataAwareTitle(config) {
     title = config.tableRole === "entity" ? `${entities} Table` : config.tableRole === "document" ? "Transcript Files" : "Collections";
   }
   return `${title}${collectionScopeTitle(config)}`;
+}
+
+function inflationRiskFor(rate, inflatedMentions) {
+  if (inflatedMentions >= 3 && rate >= .5) return "high";
+  if (inflatedMentions >= 3 && rate >= .2) return "elevated";
+  return "low";
 }
 
 function syncAutomaticTitle(force = false) {
@@ -172,6 +180,22 @@ function sourceIsSelected(sourceName, selectedSources, allSources) {
 function sourceSelectionConfig(selectedSources, availableSources) {
   const allSources = selectedSources.length === availableSources.length;
   return { sources: allSources ? [] : selectedSources, allSources };
+}
+
+function withSignificanceDefaults(entity) {
+  const normalizeMetrics = metrics => ({
+    ...metrics,
+    contextAdjustedMentions: metrics.contextAdjustedMentions ?? metrics.mentions ?? 0,
+    independentDocumentCount: metrics.independentDocumentCount ?? metrics.documentCount ?? 0,
+    inflatedMentionCount: metrics.inflatedMentionCount ?? 0,
+    inflationRate: metrics.inflationRate ?? 0,
+    inflationRisk: metrics.inflationRisk || "low",
+    inflationSignals: metrics.inflationSignals || { repeatedContextMentions: 0, administrativeMentions: 0, withinDocumentDuplicates: 0 }
+  });
+  return {
+    ...normalizeMetrics(entity),
+    sourceMetrics: Object.fromEntries(Object.entries(entity.sourceMetrics || {}).map(([source, metrics]) => [source, normalizeMetrics(metrics)]))
+  };
 }
 
 function toast(message) {
@@ -252,7 +276,7 @@ function renderTypeGrid() {
 function renderControls() {
   renderPresetControl();
   renderTypeGrid();
-  const numericEntity = ["documentCount", "mentions", "sourceCount", "classificationConfidence", "extractionConfidence"];
+  const numericEntity = ["contextAdjustedMentions", "mentions", "independentDocumentCount", "documentCount", "sourceCount", "inflationRate", "classificationConfidence", "extractionConfidence"];
   const numericDoc = ["words", "segments", "bytes", "durationMs"];
   let roles = "";
   if (state.config.type === "network") {
@@ -304,6 +328,7 @@ function renderControls() {
     ${usesEntities ? `<div class="control"><label>Minimum confidence <span>${Math.round(state.config.minConfidence * 100)}%</span></label><input type="range" min="0.5" max="0.95" step="0.01" value="${state.config.minConfidence}" data-range="minConfidence"></div>` : ""}
     ${state.config.type === "network" ? `<div class="control"><label>${state.config.nodeRole === "collection" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
     <div class="control"><label>Maximum ${state.config.type === "table" ? "rows" : "marks"} <span>${state.config.limit}</span></label><input type="range" min="20" max="${state.config.type === "network" ? 120 : 250}" step="10" value="${state.config.limit}" data-range="limit"></div>
+    ${usesEntities ? `<div class="control method-note"><div class="control-title">Context adjustment</div><p>Counts exact repeats within one document once, counts text repeated across 3+ documents once, and excludes requester metadata. Raw mentions remain available.</p></div>` : ""}
     <div class="control duplicate-review-control"><div class="control-title">Identity review <span>${duplicateCount} flagged</span></div><button class="button review-button" type="button" data-review-duplicates ${duplicateCount ? "" : "disabled"}>Review possible duplicates</button></div>`;
 
   $$('[data-config]').forEach(node => node.addEventListener("change", event => updateConfig(event.target.dataset.config, event.target.value)));
@@ -423,6 +448,7 @@ function entityMatches(entity) {
 }
 
 function filteredEntity(entity) {
+  entity = withSignificanceDefaults(entity);
   if (state.config.allSources) return entity;
   const documentIds = entity.documentIds.filter(id => sourceMatches(state.documentById.get(id)?.source));
   const selectedMetrics = Object.entries(entity.sourceMetrics || {})
@@ -431,9 +457,28 @@ function filteredEntity(entity) {
   const mentions = selectedMetrics.length
     ? selectedMetrics.reduce((sum, metrics) => sum + metrics.mentions, 0)
     : Math.round(entity.mentions * documentIds.length / Math.max(1, entity.documentCount));
+  const contextAdjustedMentions = selectedMetrics.length
+    ? selectedMetrics.reduce((sum, metrics) => sum + (metrics.contextAdjustedMentions ?? metrics.mentions), 0)
+    : Math.round((entity.contextAdjustedMentions ?? entity.mentions) * documentIds.length / Math.max(1, entity.documentCount));
+  const independentDocumentCount = selectedMetrics.length
+    ? selectedMetrics.reduce((sum, metrics) => sum + (metrics.independentDocumentCount ?? metrics.documentCount), 0)
+    : documentIds.length;
+  const inflatedMentionCount = Math.max(0, mentions - contextAdjustedMentions);
+  const inflationRate = inflatedMentionCount / Math.max(1, mentions);
+  const inflationSignals = selectedMetrics.reduce((signals, metrics) => {
+    const sourceSignals = metrics.inflationSignals || {};
+    Object.keys(signals).forEach(key => { signals[key] += sourceSignals[key] || 0; });
+    return signals;
+  }, { repeatedContextMentions: 0, administrativeMentions: 0, withinDocumentDuplicates: 0 });
   return {
     ...entity,
     mentions,
+    contextAdjustedMentions,
+    independentDocumentCount,
+    inflatedMentionCount,
+    inflationRate,
+    inflationRisk: inflationRiskFor(inflationRate, inflatedMentionCount),
+    inflationSignals,
     documentCount: documentIds.length,
     sourceCount: new Set(documentIds.map(id => state.documentById.get(id)?.source).filter(Boolean)).size,
     documentIds,
@@ -471,7 +516,8 @@ function scale(value, extent, range) {
 }
 
 function drawIntensityLegend() {
-  $("#legend").innerHTML = `<span class="legend-item"><i style="background:#111;opacity:.14"></i>Lower</span><span class="legend-item"><i style="background:#111;opacity:.48"></i>Medium</span><span class="legend-item"><i style="background:#111"></i>Higher</span>`;
+  const inflationKey = state.config.type === "scatter" ? `<span class="legend-item"><i class="risk-key"></i>Potential mention inflation</span>` : "";
+  $("#legend").innerHTML = `<span class="legend-item"><i style="background:#111;opacity:.14"></i>Lower</span><span class="legend-item"><i style="background:#111;opacity:.48"></i>Medium</span><span class="legend-item"><i style="background:#111"></i>Higher</span>${inflationKey}`;
 }
 
 function addTitle(node, text) {
@@ -669,8 +715,12 @@ function renderScatter() {
     const radius = scale(item[state.config.size], sizeExtent, [4, 15]);
     const shade = scale(item[state.config.size], sizeExtent, [.18, .96]);
     const dot = el("circle", { cx: x, cy: y, r: radius, fill: "#111", "fill-opacity": shade, stroke: "#111", "stroke-width": 1, class: "mark" });
-    addTitle(dot, `${item.name} · ${label(state.config.x)}: ${formatNumber(item[state.config.x])}`);
+    const rawMentionDetail = state.config.y === "contextAdjustedMentions" ? ` · Raw mentions: ${formatNumber(item.mentions)}` : "";
+    addTitle(dot, `${item.name} · ${label(state.config.y)}: ${formatNumber(item[state.config.y])}${rawMentionDetail}`);
     dot.addEventListener("click", () => inspectEntity(item)); svg.append(dot);
+    if (["elevated", "high"].includes(item.inflationRisk)) {
+      svg.append(el("circle", { cx: x, cy: y, r: radius + 3, fill: "none", stroke: "#111", "stroke-width": 1, "stroke-dasharray": "3 2", class: "inflation-ring", "pointer-events": "none" }));
+    }
     const showLabel = state.config.labels === "all"
       || (state.config.labels === "top" && (index < 10 || index % tickEvery === 0));
     if (categoricalX && showLabel) {
@@ -803,10 +853,10 @@ function tableRecords() {
 function tableDisplayValue(item, field) {
   const value = item[field];
   if (value == null || value === "") return "—";
-  if (["classificationConfidence", "extractionConfidence"].includes(field)) return `${Math.round(value * 100)}%`;
+  if (["classificationConfidence", "extractionConfidence", "inflationRate"].includes(field)) return `${Math.round(value * 100)}%`;
   if (field === "createdAt") return new Date(value).toLocaleString();
   if (field === "durationMs") return `${Number(value).toLocaleString()} ms`;
-  if (["category", "reviewStatus", "format"].includes(field)) return label(value);
+  if (["category", "reviewStatus", "inflationRisk", "format"].includes(field)) return label(value);
   if (typeof value === "number") return value.toLocaleString();
   return String(value);
 }
@@ -910,7 +960,17 @@ function inspectDuplicateCandidates() {
 
 function inspectEntity(item) {
   state.selected = item;
-  showInspector(item.category, item.name, [[item.mentions, "mentions"], [item.documentCount, "documents"], [item.sourceCount, "collections"], [`${Math.round(item.classificationConfidence * 100)}%`, "classification"]], item.evidence, `${label(item.reviewStatus)} · ${item.variants.length} observed name variant${item.variants.length === 1 ? "" : "s"}`);
+  const rate = item.inflationRate || 0;
+  const signals = item.inflationSignals || {};
+  const signalDetails = [
+    signals.repeatedContextMentions ? `${formatNumber(signals.repeatedContextMentions)} repeated-text mentions` : "",
+    signals.administrativeMentions ? `${formatNumber(signals.administrativeMentions)} requester-metadata mentions` : "",
+    signals.withinDocumentDuplicates ? `${formatNumber(signals.withinDocumentDuplicates)} within-document repeats` : ""
+  ].filter(Boolean).join("; ");
+  const inflationNote = item.inflationRisk === "low"
+    ? "Low repeated-context inflation detected."
+    : `${label(item.inflationRisk)} potential inflation: ${Math.round(rate * 100)}% of raw mentions are discounted by the context heuristic${signalDetails ? ` (${signalDetails})` : ""}.`;
+  showInspector(item.category, item.name, [[item.contextAdjustedMentions ?? item.mentions, "adjusted mentions"], [item.mentions, "raw mentions"], [item.independentDocumentCount ?? item.documentCount, "independent documents"], [item.sourceCount, "collections"]], item.evidence, `${inflationNote} ${label(item.reviewStatus)} · ${item.variants.length} observed name variant${item.variants.length === 1 ? "" : "s"}`);
 }
 
 function inspectEdge(edge) {
@@ -971,6 +1031,7 @@ async function init() {
     const response = await fetch("data/catalog.json");
     if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
     state.catalog = await response.json();
+    state.catalog.entities = state.catalog.entities.map(withSignificanceDefaults);
     state.catalog.documents.forEach(item => state.documentById.set(item.id, item));
     $("#loadingState").remove();
     syncAutomaticTitle();
