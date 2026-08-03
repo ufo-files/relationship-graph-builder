@@ -71,6 +71,24 @@ function loadConfig() {
       const saved = JSON.parse(decodeURIComponent(escape(atob(param))));
       if (saved.allSources === undefined) saved.allSources = !saved.sources?.length;
       const config = { ...DEFAULT, ...saved };
+      const legacySignificantCategory = {
+        "Significant People": "person",
+        "Significant Places": "location",
+        "Significant Terms": "subject"
+      }[saved.title];
+      const isLegacySignificantView = legacySignificantCategory
+        && saved.type === "scatter"
+        && saved.x === "entity"
+        && ["mentions", "contextAdjustedMentions"].includes(saved.y)
+        && saved.categories?.length === 1
+        && saved.categories[0] === legacySignificantCategory;
+      if (isLegacySignificantView) {
+        Object.assign(config, {
+          y: "contextAdjustedMentions",
+          size: "independentDocumentCount",
+          includeHighInflation: false
+        });
+      }
       if (!saved.titleMode) {
         const formerAutomaticTitles = new Set([
           "Evidence map", "Significant People", "Significant Places", "Significant Terms",
