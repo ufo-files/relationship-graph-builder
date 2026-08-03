@@ -3,10 +3,15 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.build_catalog import build, classify_phrase, comparison_key, entity_key, extract_mentions, load_registry
+from scripts.build_catalog import build, classify_phrase, comparison_key, entity_key, extract_mentions, inflation_risk, load_registry
 
 
 class ClassificationTests(unittest.TestCase):
+    def test_prominence_inflation_risk_requires_lost_document_coverage(self):
+        self.assertEqual(inflation_risk(0.98, 870), "high")
+        self.assertEqual(inflation_risk(0.35, 1), "low")
+        self.assertEqual(inflation_risk(0.08, 13), "low")
+
     def test_normalizes_identity_keys(self):
         self.assertEqual(comparison_key("Dr. J. Allen Hynek"), "j allen hynek")
         self.assertEqual(entity_key("The Department of Defense", "government_agency"), "department of defense")
@@ -121,6 +126,8 @@ class CatalogTests(unittest.TestCase):
             self.assertEqual(entity["contextAdjustedMentions"], 2)
             self.assertEqual(entity["independentDocumentCount"], 1)
             self.assertEqual(entity["inflatedMentionCount"], 5)
+            self.assertEqual(entity["inflatedDocumentCount"], 2)
+            self.assertAlmostEqual(entity["documentInflationRate"], 0.667)
             self.assertEqual(entity["inflationRisk"], "high")
             self.assertEqual(entity["inflationSignals"]["repeatedContextMentions"], 3)
             self.assertEqual(entity["inflationSignals"]["administrativeMentions"], 3)
