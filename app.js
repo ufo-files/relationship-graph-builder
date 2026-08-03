@@ -621,9 +621,23 @@ function valueExtent(data, key) {
   return [Math.min(...values, 0), Math.max(...values, 1)];
 }
 
+function robustValueExtent(data, key, percentile = .95) {
+  const values = data.map(item => Number(item[key]) || 0).sort((a, b) => a - b);
+  const extent = [Math.min(...values, 0), Math.max(...values, 1)];
+  if (values.length < 20) return { extent, capped: false };
+  const index = Math.min(values.length - 1, Math.max(0, Math.ceil(values.length * percentile) - 1));
+  const cap = values[index];
+  if (cap <= extent[0] || extent[1] <= cap * 1.5) return { extent, capped: false };
+  return { extent: [extent[0], cap], capped: true };
+}
+
 function scale(value, extent, range) {
   const span = extent[1] - extent[0] || 1;
   return range[0] + ((Number(value) || 0) - extent[0]) / span * (range[1] - range[0]);
+}
+
+function clampedScale(value, extent, range) {
+  return scale(Math.max(extent[0], Math.min(extent[1], Number(value) || 0)), extent, range);
 }
 
 function drawIntensityLegend() {
@@ -635,13 +649,14 @@ function addTitle(node, text) {
   node.append(el("title", {}, text));
 }
 
-function drawAxes(svg, width, height, xKey, yKey, xExtent, yExtent) {
+function drawAxes(svg, width, height, xKey, yKey, xExtent, yExtent, capped = {}) {
   const margin = { left: 58, right: 28, top: 22, bottom: 48 };
   for (let i = 0; i <= 4; i++) {
     const y = margin.top + i * (height - margin.top - margin.bottom) / 4;
     svg.append(el("line", { x1: margin.left, y1: y, x2: width - margin.right, y2: y, class: "grid-line" }));
     const value = yExtent[1] - i * (yExtent[1] - yExtent[0]) / 4;
-    svg.append(el("text", { x: margin.left - 8, y: y + 3, "text-anchor": "end", class: "axis-label" }, formatNumber(value)));
+    const tick = capped.y && i === 0 ? `${formatNumber(value)}+` : formatNumber(value);
+    svg.append(el("text", { x: margin.left - 8, y: y + 3, "text-anchor": "end", class: "axis-label" }, tick));
   }
   svg.append(el("text", { x: (margin.left + width - margin.right) / 2, y: height - 13, "text-anchor": "middle", class: "axis-label" }, label(xKey)));
   const yLabel = el("text", { x: 15, y: height / 2, transform: `rotate(-90 15 ${height / 2})`, "text-anchor": "middle", class: "axis-label" }, label(yKey));
@@ -802,8 +817,9 @@ function renderScatter() {
   const data = filteredEntities().sort((a, b) => b[state.config.y] - a[state.config.y]).slice(0, state.config.limit);
   if (!data.length) return showEmpty();
   const categoricalX = state.config.x === "entity";
-  const xExtent = categoricalX ? [0, Math.max(1, data.length - 1)] : valueExtent(data, state.config.x);
-  const yExtent = valueExtent(data, state.config.y), sizeExtent = valueExtent(data, state.config.size);
+  const xAxis = categoricalX ? { extent: [0, Math.max(1, data.length - 1)], capped: false } : robustValueExtent(data, state.config.x);
+  const yAxis = robustValueExtent(data, state.config.y);
+  const xExtent = xAxis.extent, yExtent = yAxis.extent, sizeExtent = valueExtent(data, state.config.size);
   let margin;
   if (categoricalX) {
     margin = { left: 58, right: 28, top: 22, bottom: 55 };
@@ -811,25 +827,27 @@ function renderScatter() {
       const y = margin.top + i * (height - margin.top - margin.bottom) / 4;
       svg.append(el("line", { x1: margin.left, y1: y, x2: width - margin.right, y2: y, class: "grid-line" }));
       const value = yExtent[1] - i * (yExtent[1] - yExtent[0]) / 4;
-      svg.append(el("text", { x: margin.left - 8, y: y + 3, "text-anchor": "end", class: "axis-label" }, formatNumber(value)));
+      const tick = yAxis.capped && i === 0 ? `${formatNumber(value)}+` : formatNumber(value);
+      svg.append(el("text", { x: margin.left - 8, y: y + 3, "text-anchor": "end", class: "axis-label" }, tick));
     }
     svg.append(el("text", { x: (margin.left + width - margin.right) / 2, y: height - 12, "text-anchor": "middle", class: "axis-label" }, label("entity")));
     svg.append(el("text", { x: 15, y: height / 2, transform: `rotate(-90 15 ${height / 2})`, "text-anchor": "middle", class: "axis-label" }, label(state.config.y)));
   } else {
-    margin = drawAxes(svg, width, height, state.config.x, state.config.y, xExtent, yExtent);
+    margin = drawAxes(svg, width, height, state.config.x, state.config.y, xExtent, yExtent, { x: xAxis.capped, y: yAxis.capped });
   }
   const plotWidth = width - margin.left - margin.right;
   const tickEvery = Math.max(1, Math.ceil(data.length / Math.max(1, Math.floor(plotWidth / 62))));
   data.forEach((item, index) => {
     const x = categoricalX
       ? margin.left + (index + .5) * plotWidth / data.length
-      : scale(item[state.config.x], xExtent, [margin.left, width - margin.right]);
-    const y = scale(item[state.config.y], yExtent, [height - margin.bottom, margin.top]);
+      : clampedScale(item[state.config.x], xExtent, [margin.left, width - margin.right]);
+    const y = clampedScale(item[state.config.y], yExtent, [height - margin.bottom, margin.top]);
     const radius = scale(item[state.config.size], sizeExtent, [4, 15]);
     const shade = scale(item[state.config.size], sizeExtent, [.18, .96]);
-    const dot = el("circle", { cx: x, cy: y, r: radius, fill: "#111", "fill-opacity": shade, stroke: "#111", "stroke-width": 1, class: "mark" });
+    const isOutlier = (!categoricalX && xAxis.capped && item[state.config.x] > xExtent[1]) || (yAxis.capped && item[state.config.y] > yExtent[1]);
+    const dot = el("circle", { cx: x, cy: y, r: radius, fill: "#111", "fill-opacity": shade, stroke: "#111", "stroke-width": isOutlier ? 3 : 1, class: `mark${isOutlier ? " outlier-mark" : ""}` });
     const rawMentionDetail = state.config.y === "contextAdjustedMentions" ? ` · Raw mentions: ${formatNumber(item.mentions)}` : "";
-    addTitle(dot, `${item.name} · ${label(state.config.y)}: ${formatNumber(item[state.config.y])}${rawMentionDetail}`);
+    addTitle(dot, `${item.name} · ${label(state.config.y)}: ${formatNumber(item[state.config.y])}${rawMentionDetail}${isOutlier ? " · positioned at robust axis cap" : ""}`);
     dot.addEventListener("click", () => inspectEntity(item)); svg.append(dot);
     if (["elevated", "high"].includes(item.inflationRisk)) {
       svg.append(el("circle", { cx: x, cy: y, r: radius + 3, fill: "none", stroke: "#111", "stroke-width": 1, "stroke-dasharray": "3 2", class: "inflation-ring", "pointer-events": "none" }));

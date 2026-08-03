@@ -12,7 +12,7 @@ The builder asks for five decisions:
 4. **Refinement** — collections, entity types, confidence, evidence floor, and mark count.
 5. **Output** — a URL-addressable view, browser save, exported SVG, globe PNG, or table CSV.
 
-The default view is an ordinary builder configuration and uses the same rendering and data path as every saved view.
+The default view is an ordinary builder configuration and uses the same rendering and data path as every saved view. Numeric scatter axes use a robust 95th-percentile cap only when the maximum is at least 50% beyond that cap; capped marks stay visible at the plot edge with a heavier outline and retain their exact values in the inspector and tooltip.
 
 Entities are a global data role: they can be network nodes, a Scatter axis, the Bar dimension, Timeline marks, Matrix columns, or Table rows. Network nodes can also be collections, connected by the published entities they share. The Table type also builds custom lists of transcript files and collections with selectable columns, sorting, search, row limits, evidence inspection, and CSV export. Entity-backed views share the same category, confidence, collection, evidence, label, and publication controls.
 
