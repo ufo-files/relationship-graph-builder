@@ -4,7 +4,7 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "1e32b04490247366806dac5ae70f229292442ad4"
+    "revision": "37226ee4775cbc10c8b4b2da5a818b2f04806fc2"
   },
   "count": 125,
   "totalCount": 125,
@@ -302,8 +302,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 129,
-        "documentCount": 60
+        "mentions": 130,
+        "documentCount": 61
       },
       "right": {
         "name": "Fright-Patterson Air Force Base",
@@ -654,8 +654,8 @@
       "category": "person",
       "left": {
         "name": "David Grush",
-        "mentions": 59,
-        "documentCount": 30
+        "mentions": 60,
+        "documentCount": 31
       },
       "right": {
         "name": "David Grusch",
@@ -779,6 +779,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Deputy Director for Intelligence",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Deputy Director of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Contral Ticket Office",
@@ -789,22 +805,6 @@
         "name": "Central Ticket Office",
         "mentions": 5,
         "documentCount": 4
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Deputy Director for Intelligence",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Deputy Director of Intelligence",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -1230,8 +1230,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2416,
-        "documentCount": 176
+        "mentions": 2417,
+        "documentCount": 177
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -1246,8 +1246,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 129,
-        "documentCount": 60
+        "mentions": 130,
+        "documentCount": 61
       },
       "right": {
         "name": "Fright-Petterson Air Force Base",
@@ -1454,8 +1454,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1651,
-        "documentCount": 319
+        "mentions": 1673,
+        "documentCount": 323
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -1550,8 +1550,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 68,
-        "documentCount": 25
+        "mentions": 69,
+        "documentCount": 26
       },
       "right": {
         "name": "Snlt Lake City",
@@ -2003,8 +2003,8 @@
       },
       "right": {
         "name": "Alan Dulles",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.87,
       "reason": "similar person name",
