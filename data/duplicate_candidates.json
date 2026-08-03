@@ -1,0 +1,1582 @@
+{
+  "schema": "ufo-files-entity-duplicate-candidates/v1",
+  "input": {
+    "rootName": "machine-data",
+    "transcriptsAreSourceOfTruth": true,
+    "repository": "ufo-files/machine-data",
+    "revision": "3a7042a8c1416bbcc050099131360f803fd124f6"
+  },
+  "count": 98,
+  "totalCount": 98,
+  "shownCount": 98,
+  "candidates": [
+    {
+      "category": "organization",
+      "left": {
+        "name": "The Defense Intelligence Reference Document",
+        "mentions": 13,
+        "documentCount": 11
+      },
+      "right": {
+        "name": "Defense Intelligence Reference Documents",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.987,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "District Intelligence Officer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "District Intelligence Office",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.982,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "program",
+      "left": {
+        "name": "Project Preserved Destiny",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Project Preserve Destiny",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.98,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Investigating Officer",
+        "mentions": 47,
+        "documentCount": 16
+      },
+      "right": {
+        "name": "Investigating Officers",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.977,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Public Affairs Office",
+        "mentions": 15,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Public Affairs Officer",
+        "mentions": 27,
+        "documentCount": 12
+      },
+      "similarity": 0.977,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Research Organizations",
+        "mentions": 18,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Research Organization",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.977,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Post Office Inspectors",
+        "mentions": 12,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Post Office Inspector",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.977,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Intelligence Officers",
+        "mentions": 8,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "The Intelligence Officer",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "similarity": 0.976,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "San Francisco Office",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "San Francisco Offices",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.976,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "SAINT GERMAIN FOUNDATION and SAINT GERMAIN",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "SAINT GERMAIN FOUNDATION and SAINI GERMAIN",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.976,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Intelligence Office",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "The Intelligence Officer",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "similarity": 0.974,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Intelligence Reports",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Intelligence Report",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.974,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Milwaukee Office",
+        "mentions": 8,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Milwaukee Officer",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Defense UAP Program",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "The Department of Defence UAP Program",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office Memorandam",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Office Memorandm",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office Memorandm",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Office Memorandim",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "GVSC FOIA Office",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "GVSC FOIA Officer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "District Office",
+        "mentions": 7,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "District Officer",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Name of Investigating Officer",
+        "mentions": 13,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Neme of Investigating Officer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "BUREAU WILL BE ADVISED OF ANY",
+        "mentions": 5,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "BUREAU VILL BE ADVISED OF ANY",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Mar Department Goneral Staff",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Mar Department Coneral Staff",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.964,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Safety Officer",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Safety Office",
+        "mentions": 10,
+        "documentCount": 2
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "First Officers",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "First Officer",
+        "mentions": 10,
+        "documentCount": 7
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Signal Officer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Signal Office",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Bureau Agents",
+        "mentions": 11,
+        "documentCount": 10
+      },
+      "right": {
+        "name": "Bureau Agent",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office Memore",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Office Memor",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Inited States Department",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "United States Department",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "The Director of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Direetor of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "FOIA Office",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "FOIA Officer",
+        "mentions": 78,
+        "documentCount": 3
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Inclosed for the Bureau",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Enclosed for the Bureau",
+        "mentions": 8,
+        "documentCount": 6
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office Memor",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Office Memo",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Irited States Department of Justice",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "NITED STATES DEPARTMENT OF JUSTICE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Post Office Inspectors",
+        "mentions": 12,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Post Office Inspeotors",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.955,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Defense",
+        "mentions": 646,
+        "documentCount": 118
+      },
+      "right": {
+        "name": "Department of Detense",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Contral Ticket Office",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Central Ticket Office",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Deputy Director for Intelligence",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Deputy Director of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "House Appropriations Committee",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "House Appropriations Subcommittee",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Defense Intelligence",
+        "mentions": 12,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Defence Intelligence",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.95,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Intelligence Officers",
+        "mentions": 8,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Intelligence Office",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "similarity": 0.95,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Intelligenco Officer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "The Intelligence Officer",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "similarity": 0.95,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Intelligence Center",
+        "mentions": 17,
+        "documentCount": 16
+      },
+      "right": {
+        "name": "INTELLIGENCE CENTRE",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.947,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Army Intelligence",
+        "mentions": 45,
+        "documentCount": 11
+      },
+      "right": {
+        "name": "Army Intelligence A-",
+        "mentions": 5,
+        "documentCount": 3
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Bureau Bulletin No",
+        "mentions": 16,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Bureau Bullatin No",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Germain Foundation",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Gersain Foundation",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Comnanding Officer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Conmanding Officer",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Greenville AF Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Greenville AT Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "STAFF COMMUNICATIONS OFFICE",
+        "mentions": 14,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "STAFF COMMUNICATUNS OFFICE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.943,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of War",
+        "mentions": 19,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Department of Air",
+        "mentions": 299,
+        "documentCount": 33
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Air",
+        "mentions": 299,
+        "documentCount": 33
+      },
+      "right": {
+        "name": "Department of Mir",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Directorate of Intelligence",
+        "mentions": 80,
+        "documentCount": 14
+      },
+      "right": {
+        "name": "The Director of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Army Intelligence",
+        "mentions": 45,
+        "documentCount": 11
+      },
+      "right": {
+        "name": "Army Intelligerce",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office Memorundum",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Office Memorindum",
+        "mentions": 7,
+        "documentCount": 7
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office Memorandam",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Office Memorandim",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "FAA Flight Standards District Office",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Flight Standards District Office",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Director for Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "The Director of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.939,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Intelligence",
+        "mentions": 45,
+        "documentCount": 15
+      },
+      "right": {
+        "name": "Mir Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "program",
+      "left": {
+        "name": "Project Daedalus",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Project Deadalus",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office Memorandm",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Office Memoradum",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office Memoradum",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Office Memor-dum",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Intelligence Community",
+        "mentions": 40,
+        "documentCount": 12
+      },
+      "right": {
+        "name": "Intelligence Community In",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.936,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Public Affairs Officer",
+        "mentions": 27,
+        "documentCount": 12
+      },
+      "right": {
+        "name": "To Public Affairs Officer",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.936,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Federal Bureau of Investigation",
+        "mentions": 2381,
+        "documentCount": 153
+      },
+      "right": {
+        "name": "FEDERAL BUREAU DE INVESTIGATION",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patterson Air Force Base",
+        "mentions": 115,
+        "documentCount": 49
+      },
+      "right": {
+        "name": "Fright-Petterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Technical Intelligence Center",
+        "mentions": 48,
+        "documentCount": 23
+      },
+      "right": {
+        "name": "Technical Intelligence Center",
+        "mentions": 15,
+        "documentCount": 11
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Army Air Forces",
+        "mentions": 54,
+        "documentCount": 22
+      },
+      "right": {
+        "name": "Army Air Foroes",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Army Air Forces",
+        "mentions": 54,
+        "documentCount": 22
+      },
+      "right": {
+        "name": "Arny Air Forces",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Army Air Forces",
+        "mentions": 54,
+        "documentCount": 22
+      },
+      "right": {
+        "name": "Army Air Forcas",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Bureau Bulletin",
+        "mentions": 21,
+        "documentCount": 15
+      },
+      "right": {
+        "name": "Bureau Bulletia",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Post Office Box",
+        "mentions": 20,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Post Office Bor",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "This Department",
+        "mentions": 19,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Thia Department",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "LOS ALAMOS SCIENTIFIC LABORATORY",
+        "mentions": 17,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Alamos Scientific Laboratory",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "program",
+      "left": {
+        "name": "Project Twinkle",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Project Iwinkle",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Federal Emergency Management Agency",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "FEMA Federal Emergency Management Agency",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office of the Secretary of Defense",
+        "mentions": 138,
+        "documentCount": 13
+      },
+      "right": {
+        "name": "Office of the Undersecretary of Defense",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.932,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Defense Intelligence Agency",
+        "mentions": 825,
+        "documentCount": 197
+      },
+      "right": {
+        "name": "DIA Defense Intelligence Agency",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.931,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of the Air",
+        "mentions": 26,
+        "documentCount": 20
+      },
+      "right": {
+        "name": "Department of the Army",
+        "mentions": 32,
+        "documentCount": 13
+      },
+      "similarity": 0.93,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Post Office Inspeotors",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Post Office Inspector",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.93,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Salt Lake City",
+        "mentions": 66,
+        "documentCount": 23
+      },
+      "right": {
+        "name": "Snlt Lake City",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Phoenix Office",
+        "mentions": 28,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Phoenis Office",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "George Adamski",
+        "mentions": 22,
+        "documentCount": 11
+      },
+      "right": {
+        "name": "George ADANSKI",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Detroit Office",
+        "mentions": 20,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Detrolt Office",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Crumunity Relations Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Community Relations Division",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "LIBRARY SUBJECT & AREA CODES",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "LIBRARY SUBJECT AND AREA CODES",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Far Department",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Air Department",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Far Department",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Mar Department",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Air Department",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Mar Department",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Intelligenco Officer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Intelligence Officers",
+        "mentions": 8,
+        "documentCount": 5
+      },
+      "similarity": 0.927,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Under Secretary of Defense for Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Secretary of Defense for Intelligence",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.925,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office of Special Investigationa",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "If Office of Special Investigations",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.925,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Diana Pasolka",
+        "mentions": 10,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Diana Pasulka",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Bruce Maccabee",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Bruce McAbee",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Intelligenco Officer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Intelligence Office",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "SUBCOMMITTEE CHAIRMAN",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Committee Chairman",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Range Space Propulsion Options",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Long-Range Space Propulsion Options",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "GOVERNMENI PRINTING OFFICE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "GOVERMMENT PRINTING OFFICE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Joseph McMoneagle",
+        "mentions": 28,
+        "documentCount": 14
+      },
+      "right": {
+        "name": "Joe McMoneagle's",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.903,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Joe Pyne TV Show",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Joe Pyne Show",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.897,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Stephen Greer",
+        "mentions": 17,
+        "documentCount": 12
+      },
+      "right": {
+        "name": "Steven Greer",
+        "mentions": 17,
+        "documentCount": 11
+      },
+      "similarity": 0.88,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    }
+  ]
+}
