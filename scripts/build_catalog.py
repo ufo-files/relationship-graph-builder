@@ -451,12 +451,19 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
             raw = clean_book_title(match.group("title"))
             if not plausible_book_title(raw):
                 continue
-            found[entity_key(raw, "book")] = (raw, raw, "book", 0.97, False)
+            registry_match = registry.get(comparison_key(raw))
+            if registry_match and registry_match[1] == "book":
+                canonical, category = registry_match
+                found[entity_key(canonical, category)] = (raw, canonical, category, 0.98, True)
+            else:
+                found[entity_key(raw, "book")] = (raw, raw, "book", 0.97, False)
     for match in CAP_PHRASE.finditer(segment):
         raw = match.group(0)
         registry_match = registry.get(comparison_key(raw))
         if registry_match:
             canonical, category = registry_match
+            if category == "book":
+                continue
             found[entity_key(canonical, category)] = (raw, canonical, category, 0.98, True)
             continue
         classification = classify_phrase(raw)

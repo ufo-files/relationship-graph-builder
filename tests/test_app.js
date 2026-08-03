@@ -220,6 +220,7 @@ test("Book is a first-class area bookshelf for transcript-backed titles", () => 
       const layout = bookshelfLayout(items, 900, 600, "contextAdjustedMentions");
       return JSON.stringify({
         types: TYPES.map(type => type.id),
+        bookTypeLabel: TYPES.find(type => type.id === "book").label,
         title: dataAwareTitle({ ...DEFAULT, type: "book", categories: ["book"] }),
         blocks: layout.blocks.map(block => ({ id: block.item.id, area: block.width * block.height })),
         shelves: layout.shelfYs.length,
@@ -229,6 +230,7 @@ test("Book is a first-class area bookshelf for transcript-backed titles", () => 
   `, context));
 
   assert.ok(result.types.includes("book"));
+  assert.equal(result.bookTypeLabel, "Books");
   assert.equal(result.title, "Books Mentioned");
   assert.equal(result.blocks.length, 3);
   assert.ok(result.blocks[0].area > result.blocks[1].area);
@@ -236,6 +238,8 @@ test("Book is a first-class area bookshelf for transcript-backed titles", () => 
   assert.ok(result.shelves >= 1);
   assert.ok(result.narrowLabel.every(line => line.length <= 8));
   assert.match(result.narrowLabel.at(-1), /…$/);
+  assert.match(source, /if \(type === "book"\).*labels: "all"/);
+  assert.match(source, /const shouldLabel = state\.config\.labels !== "none"/);
 });
 
 test("duplicate review opens the proactive identity queue", () => {
