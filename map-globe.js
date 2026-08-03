@@ -7,7 +7,7 @@ const labelLayer = document.querySelector("#globeLabels");
 const status = document.querySelector("#mapStatus");
 const DEFAULT_GLOBE_COVERAGE = .95;
 const DEFAULT_GLOBE_ROTATION = { x: .66, y: .11 };
-const AUTO_ROTATION_SPEED = .000012;
+const AUTO_ROTATION_SPEED = .000025;
 
 function cameraDistanceForCoverage(verticalFov, coverage) {
   const halfFov = THREE.MathUtils.degToRad(verticalFov / 2);
@@ -167,7 +167,6 @@ class GlobeMap {
   }
 
   render(payload) {
-    this.visible = true;
     this.clearNodes();
     payload.items.forEach(item => {
       const material = new THREE.MeshBasicMaterial({
@@ -191,7 +190,7 @@ class GlobeMap {
       }
     });
     status.textContent = "Drag to rotate · scroll to zoom";
-    this.resize();
+    this.setVisible(true);
   }
 
   clearNodes() {

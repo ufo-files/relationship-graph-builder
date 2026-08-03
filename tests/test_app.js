@@ -195,8 +195,9 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /new THREE\.Line/);
   assert.match(globe, /DEFAULT_GLOBE_COVERAGE = \.95/);
   assert.match(globe, /DEFAULT_GLOBE_ROTATION = \{ x: \.66, y: \.11 \}/);
-  assert.match(globe, /AUTO_ROTATION_SPEED = \.000012/);
+  assert.match(globe, /AUTO_ROTATION_SPEED = \.000025/);
   assert.match(globe, /prefers-reduced-motion/);
+  assert.match(globe, /render\(payload\)[\s\S]*this\.setVisible\(true\)/);
   assert.ok(fs.statSync("vendor/addons/SVGLoader.js").size > 70_000);
   assert.match(threeModule, /three\.core\.min\.js/);
   assert.ok(fs.statSync("vendor/three.core.min.js").size > 300_000);
