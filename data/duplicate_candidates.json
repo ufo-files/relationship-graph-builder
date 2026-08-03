@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "1908cb001f45372797319d7c60336be87eecff5d"
+    "revision": "1e32b04490247366806dac5ae70f229292442ad4"
   },
-  "count": 124,
-  "totalCount": 124,
-  "shownCount": 124,
+  "count": 125,
+  "totalCount": 125,
+  "shownCount": 125,
   "candidates": [
     {
       "category": "organization",
@@ -302,8 +302,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 128,
-        "documentCount": 59
+        "mentions": 129,
+        "documentCount": 60
       },
       "right": {
         "name": "Fright-Patterson Air Force Base",
@@ -455,6 +455,22 @@
         "documentCount": 2
       },
       "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Mount Rainier",
+        "mentions": 14,
+        "documentCount": 12
+      },
+      "right": {
+        "name": "Mount Rainer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -734,8 +750,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 711,
-        "documentCount": 148
+        "mentions": 715,
+        "documentCount": 149
       },
       "right": {
         "name": "Department of Detense",
@@ -1214,8 +1230,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2415,
-        "documentCount": 175
+        "mentions": 2416,
+        "documentCount": 176
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -1230,8 +1246,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 128,
-        "documentCount": 59
+        "mentions": 129,
+        "documentCount": 60
       },
       "right": {
         "name": "Fright-Petterson Air Force Base",
@@ -1438,8 +1454,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1650,
-        "documentCount": 318
+        "mentions": 1651,
+        "documentCount": 319
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
