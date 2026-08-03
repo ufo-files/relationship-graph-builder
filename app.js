@@ -999,22 +999,33 @@ function aggregateDocuments() {
   });
 }
 
+function barChartLayout(height, itemCount) {
+  const margin = { top: 20, bottom: 20 };
+  const row = itemCount ? (height - margin.top - margin.bottom) / itemCount : 0;
+  return {
+    margin,
+    row,
+    barY: index => margin.top + index * row + 2,
+    barHeight: Math.max(5, row - 5),
+    labelY: index => margin.top + (index + .62) * row
+  };
+}
+
 function renderBars() {
   const { svg, width, height } = clearChart();
   const data = aggregateDocuments().sort((a, b) => b[state.config.y] - a[state.config.y]).slice(0, state.config.limit);
   if (!data.length) return showEmpty();
-  const margin = { left: Math.min(190, width * .28), right: 45, top: 20, bottom: 60 };
-  const row = (height - margin.top - margin.bottom) / data.length;
+  const layout = barChartLayout(height, data.length);
+  const margin = { left: Math.min(190, width * .28), right: 45, ...layout.margin };
   const max = Math.max(...data.map(item => item[state.config.y]), 1);
   data.forEach((item, index) => {
-    const y = margin.top + index * row;
     const barWidth = (width - margin.left - margin.right) * item[state.config.y] / max;
-    svg.append(el("text", { x: margin.left - 8, y: y + row * .62, "text-anchor": "end", class: "chart-label" }, item.name.slice(0, 27)));
+    svg.append(el("text", { x: margin.left - 8, y: layout.labelY(index), "text-anchor": "end", class: "chart-label" }, item.name.slice(0, 27)));
     const opacity = .14 + item[state.config.y] / max * .86;
-    const rect = el("rect", { x: margin.left, y: y + 2, width: Math.max(2, barWidth), height: Math.max(5, row - 5), rx: 1, fill: "#111", "fill-opacity": opacity, stroke: "#111", "stroke-width": 1, class: "mark" });
+    const rect = el("rect", { x: margin.left, y: layout.barY(index), width: Math.max(2, barWidth), height: layout.barHeight, rx: 1, fill: "#111", "fill-opacity": opacity, stroke: "#111", "stroke-width": 1, class: "mark" });
     addTitle(rect, `${item.name} · ${formatNumber(item[state.config.y])} ${label(state.config.y)}`);
     rect.addEventListener("click", () => state.config.aggregation === "entity" ? inspectEntity(item) : inspectGroup(item)); svg.append(rect);
-    svg.append(el("text", { x: Math.min(width - 5, margin.left + barWidth + 6), y: y + row * .62, class: "axis-label" }, formatNumber(item[state.config.y])));
+    svg.append(el("text", { x: Math.min(width - 5, margin.left + barWidth + 6), y: layout.labelY(index), class: "axis-label" }, formatNumber(item[state.config.y])));
   });
   drawIntensityLegend();
   setSummary(`${data.length} ${state.config.aggregation === "entity" ? "entities" : state.config.aggregation === "source" ? "collections" : "formats"}`, "bars");
