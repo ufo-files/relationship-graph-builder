@@ -35,17 +35,17 @@ const PRESETS = [
   {
     id: "significant-people",
     label: "Significant People",
-    config: { type: "scatter", x: "entity", y: "mentions", categories: ["person"], sources: [], title: "Significant People" }
+    config: { type: "scatter", x: "entity", y: "mentions", categories: ["person"], sources: [] }
   },
   {
     id: "significant-places",
     label: "Significant Places",
-    config: { type: "scatter", x: "entity", y: "mentions", categories: ["location"], sources: [], title: "Significant Places" }
+    config: { type: "scatter", x: "entity", y: "mentions", categories: ["location"], sources: [] }
   },
   {
     id: "significant-terms",
     label: "Significant Terms",
-    config: { type: "scatter", x: "entity", y: "mentions", categories: ["subject"], sources: [], title: "Significant Terms" }
+    config: { type: "scatter", x: "entity", y: "mentions", categories: ["subject"], sources: [] }
   }
 ];
 const DEFAULT = {
@@ -55,7 +55,7 @@ const DEFAULT = {
   nodeRole: "entity", timelineRole: "document", matrixColumns: "category",
   tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"],
   tableSort: "mentions", tableDirection: "desc", tableSearch: "",
-  labelSize: 12, zoom: 1, title: "Evidence map"
+  labelSize: 12, zoom: 1, title: "Mentions by Documents — Entities", titleMode: "auto"
 };
 const state = { catalog: null, config: loadConfig(), selected: null, documentById: new Map() };
 const $ = selector => document.querySelector(selector);
@@ -67,10 +67,22 @@ function loadConfig() {
     if (param) {
       const saved = JSON.parse(decodeURIComponent(escape(atob(param))));
       if (saved.allSources === undefined) saved.allSources = !saved.sources?.length;
-      return { ...DEFAULT, ...saved };
+      const config = { ...DEFAULT, ...saved };
+      if (!saved.titleMode) {
+        const formerAutomaticTitles = new Set([
+          "Evidence map", "Significant People", "Significant Places", "Significant Terms",
+          "Collection coverage", "People and institutions", "Collection relationships",
+          "Transcription activity", "Collections × entity types", "Archive entities"
+        ]);
+        config.titleMode = formerAutomaticTitles.has(saved.title) ? "auto" : "custom";
+      }
+      if (config.titleMode === "auto") config.title = dataAwareTitle(config);
+      return config;
     }
   } catch (_) {}
-  return { ...DEFAULT };
+  const config = { ...DEFAULT };
+  config.title = dataAwareTitle(config);
+  return config;
 }
 
 function persistHash() {
@@ -96,6 +108,57 @@ function formatNumber(value) {
 
 function label(value) {
   return LABELS[value] || String(value).replaceAll("_", " ").replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function titleCase(value) {
+  return String(value).replace(/\b\w/g, character => character.toUpperCase());
+}
+
+function entityScopeTitle(categories = []) {
+  const selected = ENTITY_CATEGORIES.filter(category => categories.includes(category));
+  if (!selected.length) return "No Entities";
+  if (selected.length === ENTITY_CATEGORIES.length) return "Entities";
+  const friendlyNames = { location: "Places", subject: "Terms" };
+  const names = selected.map(category => friendlyNames[category] || titleCase(label(category)));
+  if (names.length === 1) return names[0];
+  if (names.length === 2) return `${names[0]} and ${names[1]}`;
+  if (names.length === 3) return `${names[0]}, ${names[1]}, and ${names[2]}`;
+  return `${names[0]}, ${names[1]} + ${names.length - 2} More Types`;
+}
+
+function collectionScopeTitle(config) {
+  if (config.allSources) return "";
+  if (!config.sources.length) return " — No Collections";
+  if (config.sources.length === 1) return ` — ${config.sources[0]}`;
+  return ` — ${config.sources.length} Collections`;
+}
+
+function dataAwareTitle(config) {
+  const entities = entityScopeTitle(config.categories);
+  let title;
+  if (config.type === "scatter") {
+    title = config.x === "entity" && config.y === "mentions"
+      ? `Significant ${entities}`
+      : `${label(config.y)} by ${label(config.x)} — ${entities}`;
+  } else if (config.type === "network") {
+    title = config.nodeRole === "collection" ? "Collection Relationships" : `${entities} Relationships`;
+  } else if (config.type === "bars") {
+    title = config.aggregation === "entity" ? `${label(config.y)} by ${entities}` : `${label(config.y)} by ${label(config.aggregation)}`;
+  } else if (config.type === "timeline") {
+    title = config.timelineRole === "entity" ? `${entities} Over Time` : "Transcription Activity";
+  } else if (config.type === "matrix") {
+    title = `Collections × ${config.matrixColumns === "entity" ? "Entities" : "Entity Types"}`;
+  } else {
+    title = config.tableRole === "entity" ? `${entities} Table` : config.tableRole === "document" ? "Transcript Files" : "Collections";
+  }
+  return `${title}${collectionScopeTitle(config)}`;
+}
+
+function syncAutomaticTitle(force = false) {
+  if (force) state.config.titleMode = "auto";
+  if (state.config.titleMode === "custom") return;
+  state.config.titleMode = "auto";
+  state.config.title = dataAwareTitle(state.config);
 }
 
 function escapeHTML(value = "") {
@@ -132,18 +195,21 @@ function presetConfig(id) {
   const preset = PRESETS.find(item => item.id === id);
   if (!preset) return null;
   const overrides = preset.config || {};
-  return {
+  const config = {
     ...DEFAULT,
     ...overrides,
     categories: [...(overrides.categories || DEFAULT.categories)],
     sources: [...(overrides.sources || DEFAULT.sources)],
     tableColumns: [...(overrides.tableColumns || DEFAULT.tableColumns)]
   };
+  config.titleMode = "auto";
+  config.title = dataAwareTitle(config);
+  return config;
 }
 
 function presetMatches(preset) {
   const config = presetConfig(preset.id);
-  const keys = preset.config ? Object.keys(preset.config) : Object.keys(DEFAULT);
+  const keys = (preset.config ? Object.keys(preset.config) : Object.keys(DEFAULT)).filter(key => !["title", "titleMode"].includes(key));
   return keys.every(key => Array.isArray(config[key])
     ? config[key].length === state.config[key]?.length && config[key].every((item, index) => item === state.config[key][index])
     : state.config[key] === config[key]);
@@ -169,6 +235,7 @@ function applyPreset(id) {
   const preset = PRESETS.find(item => item.id === id);
   if (!config || !preset) return;
   state.config = config;
+  syncAutomaticTitle(true);
   state.selected = null;
   renderControls();
   commitConfig();
@@ -280,12 +347,12 @@ function renderControls() {
 
 function setType(type) {
   state.config.type = type;
-  if (type === "bars") Object.assign(state.config, { aggregation: "source", y: "words", color: "intensity", title: "Collection coverage" });
-  if (type === "scatter") Object.assign(state.config, { x: "entity", y: "mentions", size: "documentCount", color: "category", limit: 50, title: "Evidence map" });
-  if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "mentions", color: "category", title: "People and institutions" });
-  if (type === "timeline") Object.assign(state.config, { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source", title: "Transcription activity" });
-  if (type === "matrix") Object.assign(state.config, { matrixColumns: "category", color: "intensity", title: "Collections × entity types" });
-  if (type === "table") Object.assign(state.config, { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60, title: "Archive entities" });
+  if (type === "bars") Object.assign(state.config, { aggregation: "source", y: "words", color: "intensity" });
+  if (type === "scatter") Object.assign(state.config, { x: "entity", y: "mentions", size: "documentCount", color: "category", limit: 50 });
+  if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "mentions", color: "category" });
+  if (type === "timeline") Object.assign(state.config, { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source" });
+  if (type === "matrix") Object.assign(state.config, { matrixColumns: "category", color: "intensity" });
+  if (type === "table") Object.assign(state.config, { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 });
   state.selected = null;
   renderControls();
   commitConfig();
@@ -304,8 +371,6 @@ function updateConfig(key, value, rerenderControls = false) {
   }
   if (key === "nodeRole") {
     state.config.size = value === "collection" ? "documents" : "mentions";
-    state.config.title = value === "collection" ? "Collection relationships" : "People and institutions";
-    $("#graphTitle").textContent = state.config.title;
   }
   if (key === "tableRole") {
     const defaults = {
@@ -321,6 +386,7 @@ function updateConfig(key, value, rerenderControls = false) {
 }
 
 function commitConfig(updateTitle = true) {
+  syncAutomaticTitle();
   if (updateTitle) $("#graphTitle").textContent = state.config.title;
   renderPresetStatus();
   persistHash();
@@ -907,6 +973,7 @@ async function init() {
     state.catalog = await response.json();
     state.catalog.documents.forEach(item => state.documentById.set(item.id, item));
     $("#loadingState").remove();
+    syncAutomaticTitle();
     renderControls(); renderGraph();
   } catch (error) {
     $("#loadingState").innerHTML = `<strong>Catalog unavailable</strong><br><small>${escapeHTML(error.message)}. Serve this folder over HTTP.</small>`;
@@ -916,7 +983,12 @@ async function init() {
 $$('.step-heading').forEach(button => button.addEventListener("click", () => {
   const step = button.closest(".step"); step.classList.toggle("open"); button.setAttribute("aria-expanded", String(step.classList.contains("open")));
 }));
-$("#graphTitle").addEventListener("blur", event => { state.config.title = event.target.textContent.trim() || "Untitled graph"; persistHash(); });
+$("#graphTitle").addEventListener("blur", event => {
+  state.config.title = event.target.textContent.trim() || "Untitled graph";
+  state.config.titleMode = "custom";
+  renderPresetStatus();
+  persistHash();
+});
 $("#saveButton").addEventListener("click", () => { localStorage.setItem("ufo-files-graph-view", JSON.stringify(state.config)); toast("View saved in this browser"); });
 $("#shareButton").addEventListener("click", async () => { persistHash(); try { await navigator.clipboard.writeText(location.href); toast("Builder link copied"); } catch (_) { toast("Copy the URL from your browser"); } });
 $("#exportButton").addEventListener("click", exportCurrent);

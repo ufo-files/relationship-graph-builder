@@ -241,6 +241,45 @@ test("significant entity presets configure scatters across all collections", () 
   }
 });
 
+test("automatic titles follow active entity categories, axes, and collections", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    state.config = presetConfig("significant-people");
+    const presetTitle = state.config.title;
+    state.config.categories.push("government_agency");
+    syncAutomaticTitle();
+    const expandedTitle = state.config.title;
+    Object.assign(state.config, { x: "documentCount", sources: ["Army reports"], allSources: false });
+    syncAutomaticTitle();
+    const refinedTitle = state.config.title;
+    JSON.stringify({ presetTitle, expandedTitle, refinedTitle })
+  `, context));
+
+  assert.equal(result.presetTitle, "Significant People");
+  assert.equal(result.expandedTitle, "Significant People and Government Agencies");
+  assert.equal(result.refinedTitle, "Mentions by Documents — People and Government Agencies — Army reports");
+});
+
+test("an explicitly edited title remains custom until a preset is applied", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    Object.assign(state.config, { title: "My research view", titleMode: "custom", categories: ["person"] });
+    syncAutomaticTitle();
+    const preservedTitle = state.config.title;
+    state.config = presetConfig("significant-places");
+    syncAutomaticTitle(true);
+    JSON.stringify({ preservedTitle, presetTitle: state.config.title, titleMode: state.config.titleMode })
+  `, context));
+
+  assert.equal(result.preservedTitle, "My research view");
+  assert.equal(result.presetTitle, "Significant Places");
+  assert.equal(result.titleMode, "auto");
+});
+
 test("network layout fits node positions to 90% of the canvas", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
