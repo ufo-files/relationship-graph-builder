@@ -64,18 +64,29 @@ class GlobeMap {
       const svg = await response.text();
       await this.applyLandFill(earthMaterial, svg);
       const paths = new SVGLoader().parse(svg).paths;
-      const countryLines = new THREE.Group();
-      const material = new THREE.LineBasicMaterial({ color: 0x111111, transparent: true, opacity: .34 });
+      const segments = new Map();
       paths.forEach(path => path.subPaths.forEach(subPath => {
         const points = subPath.getPoints(1);
-        if (points.length < 2) return;
-        const globePoints = points.map(point => this.coordinateVector(
-          90 - point.y / 1000 * 180,
-          point.x / 2000 * 360 - 180,
-          1.004
-        ));
-        countryLines.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(globePoints), material));
+        for (let index = 1; index < points.length; index += 1) {
+          const start = points[index - 1];
+          const end = points[index];
+          const startKey = `${start.x.toFixed(2)},${start.y.toFixed(2)}`;
+          const endKey = `${end.x.toFixed(2)},${end.y.toFixed(2)}`;
+          const edgeKey = startKey < endKey ? `${startKey}|${endKey}` : `${endKey}|${startKey}`;
+          if (!segments.has(edgeKey)) segments.set(edgeKey, [start, end]);
+        }
       }));
+      const globePoints = [];
+      segments.forEach(segment => segment.forEach(point => globePoints.push(this.coordinateVector(
+        90 - point.y / 1000 * 180,
+        point.x / 2000 * 360 - 180,
+        1.004
+      ))));
+      const material = new THREE.LineBasicMaterial({ color: 0x111111, transparent: true, opacity: .34 });
+      const countryLines = new THREE.LineSegments(
+        new THREE.BufferGeometry().setFromPoints(globePoints),
+        material
+      );
       countryLines.name = "country-outlines";
       this.globe.add(countryLines);
       status.textContent = "Drag to rotate · scroll to zoom";

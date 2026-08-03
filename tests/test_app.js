@@ -192,7 +192,8 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /import \* as THREE/);
   assert.match(globe, /world-countries\.svg/);
   assert.match(globe, /SVGLoader/);
-  assert.match(globe, /new THREE\.Line/);
+  assert.match(globe, /new THREE\.LineSegments/);
+  assert.match(globe, /if \(!segments\.has\(edgeKey\)\)/);
   assert.match(globe, /DEFAULT_GLOBE_COVERAGE = \.95/);
   assert.match(globe, /DEFAULT_GLOBE_ROTATION = \{ x: \.66, y: \.11 \}/);
   assert.match(globe, /AUTO_ROTATION_SPEED = \.000025/);
