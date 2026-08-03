@@ -98,6 +98,33 @@ test("Default preset restores the complete initial view", () => {
   assert.equal(result.activeId, "default");
 });
 
+test("duplicate review opens the proactive identity queue", () => {
+  const elements = {
+    builderView: new FakeElement(),
+    inspector: new FakeElement(),
+    inspectorContent: new FakeElement()
+  };
+  elements.builderView.classList.add("inspector-collapsed");
+  const document = { querySelector: selector => elements[selector.slice(1)], querySelectorAll: () => [] };
+  const context = vm.createContext({ document, location: { hash: "" }, URLSearchParams, requestAnimationFrame() {} });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  vm.runInContext(`state.catalog = {
+    counts: { possibleDuplicates: 1 },
+    duplicateCandidates: [{
+      category: "person", similarity: .966, reason: "similar person name",
+      left: { name: "John Greenewald", mentions: 20 },
+      right: { name: "John Greenwald", mentions: 4 }
+    }]
+  }; inspectDuplicateCandidates();`, context);
+
+  assert.equal(elements.builderView.classList.contains("inspector-collapsed"), false);
+  assert.match(elements.inspectorContent.innerHTML, /Possible duplicates/);
+  assert.match(elements.inspectorContent.innerHTML, /John Greenewald/);
+  assert.match(elements.inspectorContent.innerHTML, /John Greenwald/);
+  assert.match(elements.inspectorContent.innerHTML, /entity_aliases\.json/);
+});
+
 test("collection selection distinguishes all collections from no collections", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];

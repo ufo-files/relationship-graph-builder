@@ -73,6 +73,8 @@ h1, h2, h3, p { margin-top: 0; }
 .check-chip input { position: absolute; opacity: 0; pointer-events: none; }
 .check-chip span { display: inline-block; padding: 7px 9px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); color: var(--muted); font-size: 11px; cursor: pointer; }
 .check-chip input:checked + span { color: var(--ink); border-color: var(--ink); background-color: var(--paper); background-image: repeating-linear-gradient(135deg, transparent 0 5px, rgba(17,17,17,.12) 5px 6px); font-weight: 700; }
+.review-button { width: 100%; text-align: left; }
+.review-button:disabled { cursor: default; opacity: .5; }
 
 .stage { min-width: 0; min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; overflow: hidden; background: var(--paper); }
 .stage-header { display: flex; justify-content: space-between; gap: 20px; padding: 24px 28px; }
@@ -125,6 +127,12 @@ h1, h2, h3, p { margin-top: 0; }
 .evidence-card { padding: 10px 0; border-bottom: 1px solid var(--line); }
 .evidence-card p { margin-bottom: 5px; color: var(--ink); }
 .evidence-card small { color: var(--faint); font-size: 11px; word-break: break-all; }
+.duplicate-card { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.duplicate-card small, .duplicate-card strong, .duplicate-card span { display: block; }
+.duplicate-card small { margin-bottom: 7px; color: var(--faint); font-size: 10px; text-transform: uppercase; letter-spacing: .04em; }
+.duplicate-card strong { font-size: 11px; }
+.duplicate-card span { color: var(--muted); font-size: 12px; line-height: 1.2; }
+.duplicate-card p { margin: 7px 0 0; color: var(--muted); }
 
 .toast { position: fixed; left: 50%; bottom: 24px; z-index: 20; transform: translate(-50%,20px); opacity: 0; padding: 10px 15px; border-radius: 7px; color: #fff; background: var(--ink); font-size: 11px; pointer-events: none; transition: .2s; }
 .toast.show { transform: translate(-50%,0); opacity: 1; }

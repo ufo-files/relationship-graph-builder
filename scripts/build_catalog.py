@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import collections
 import datetime as dt
+import difflib
 import hashlib
 import json
 import re
@@ -157,6 +158,19 @@ def comparison_key(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
 
 
+def entity_key(value: str, category: str) -> str:
+    """Collapse harmless display variants without fuzzy-merging distinct entities."""
+    normalized = clean_space(value)
+    if category != "date":
+        normalized = re.sub(r"['’]s$", "", normalized, flags=re.IGNORECASE)
+    if category == "person":
+        normalized = ROLE_PREFIX.sub("", normalized)
+    key = comparison_key(normalized)
+    if category != "date":
+        key = re.sub(r"^the\s+", "", key)
+    return key
+
+
 def title_from_path(path: Path) -> str:
     name = path.stem.replace("_", " ").replace("-", " ")
     return clean_space(re.sub(r"\s+", " ", name)).title()
@@ -255,14 +269,23 @@ def classify_phrase(raw: str) -> tuple[str, float] | None:
     return None
 
 
-def load_registry(path: Path) -> dict[str, tuple[str, str]]:
-    if not path.exists():
-        return {}
-    records = json.loads(path.read_text(encoding="utf-8"))
+def load_registry(paths: Iterable[Path]) -> dict[str, tuple[str, str]]:
     registry = {}
-    for record in records:
-        canonical = clean_space(record["name"])
-        registry[comparison_key(canonical)] = (canonical, record["category"])
+    for path in paths:
+        if not path.exists():
+            continue
+        records = json.loads(path.read_text(encoding="utf-8"))
+        file_registry = {}
+        for record in records:
+            canonical = clean_space(record.get("canonicalName") or record["name"])
+            category = record["category"]
+            for value in [canonical, *record.get("aliases", [])]:
+                key = comparison_key(value)
+                target = (canonical, category)
+                if key in file_registry and file_registry[key] != target:
+                    raise ValueError(f"Conflicting entity alias {value!r}: {file_registry[key]} vs {target}")
+                file_registry[key] = target
+        registry.update(file_registry)
     return registry
 
 
@@ -302,24 +325,68 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
         if lookup is None:
             continue
         canonical, category = KNOWN[lookup]
-        found[comparison_key(canonical)] = (raw, canonical, category, 0.99, True)
+        found[entity_key(canonical, category)] = (raw, canonical, category, 0.99, True)
     for match in DATE_PATTERN.finditer(segment):
         raw = match.group(0)
-        found[comparison_key(raw)] = (raw, raw, "date", 0.96, False)
+        found[entity_key(raw, "date")] = (raw, raw, "date", 0.96, False)
     for match in CAP_PHRASE.finditer(segment):
         raw = match.group(0)
         registry_match = registry.get(comparison_key(raw))
         if registry_match:
             canonical, category = registry_match
-            found[comparison_key(canonical)] = (raw, canonical, category, 0.98, True)
+            found[entity_key(canonical, category)] = (raw, canonical, category, 0.98, True)
             continue
         classification = classify_phrase(raw)
         if not classification:
             continue
         category, confidence = classification
-        key = comparison_key(raw)
+        key = entity_key(raw, category)
         found.setdefault(key, (raw, HONORIFIC.sub("", clean_space(raw)), category, confidence, False))
     return list(found.values())
+
+
+def duplicate_candidates(candidates: dict[str, Candidate], limit: int = 200) -> tuple[list[dict], int]:
+    """Return likely but unresolved duplicates for human review; never merge them here."""
+    items = [candidate for candidate in candidates.values() if candidate.category != "date"]
+    matches = []
+    for index, left in enumerate(items):
+        left_name = left.canonical if left.curated else left.variants.most_common(1)[0][0]
+        left_identity = entity_key(left_name, left.category)
+        left_words = left_identity.split()
+        for right in items[index + 1:]:
+            if left.category != right.category:
+                continue
+            right_name = right.canonical if right.curated else right.variants.most_common(1)[0][0]
+            right_identity = entity_key(right_name, right.category)
+            right_words = right_identity.split()
+            similarity = difflib.SequenceMatcher(None, left_identity, right_identity).ratio()
+            left_initials = "".join(word[0] for word in left_words if word not in {"and", "of", "the"})
+            right_initials = "".join(word[0] for word in right_words if word not in {"and", "of", "the"})
+            reason = None
+            if len(left_words) >= 3 and left_initials == right_identity.replace(" ", ""):
+                reason = "acronym"
+            elif len(right_words) >= 3 and right_initials == left_identity.replace(" ", ""):
+                reason = "acronym"
+            elif left.category == "person" and left_words and right_words and left_words[-1] == right_words[-1] and similarity >= 0.86:
+                reason = "similar person name"
+            elif max(len(left_identity), len(right_identity)) >= 12 and similarity >= 0.92:
+                reason = "similar name"
+            if not reason:
+                continue
+            matches.append({
+                "category": left.category,
+                "left": {"name": left_name, "mentions": left.mentions, "documentCount": len(left.documents)},
+                "right": {"name": right_name, "mentions": right.mentions, "documentCount": len(right.documents)},
+                "similarity": round(similarity, 3),
+                "reason": reason,
+                "aliasFile": "data/entity_aliases.json",
+            })
+    ranked = sorted(
+        matches,
+        key=lambda item: (item["similarity"], item["left"]["mentions"] + item["right"]["mentions"]),
+        reverse=True,
+    )
+    return ranked[:limit], len(ranked)
 
 
 def accepted(candidate: Candidate) -> bool:
@@ -341,8 +408,10 @@ def build(
     input_repository: str | None = None,
     input_revision: str | None = None,
     require_data: bool = False,
+    duplicate_report: Path | None = None,
 ) -> dict:
-    registry = load_registry(Path(__file__).resolve().parents[1] / "data" / "curated_entities.json")
+    data_dir = Path(__file__).resolve().parents[1] / "data"
+    registry = load_registry([data_dir / "curated_entities.json", data_dir / "entity_aliases.json"])
     candidates: dict[str, Candidate] = {}
     documents: list[dict] = []
     segment_entities: dict[str, list[str]] = {}
@@ -402,11 +471,13 @@ def build(
             mentions = extract_mentions(segment, registry)
             keys = []
             for raw, canonical, category, confidence, curated in mentions:
-                key = f"{category}:{comparison_key(canonical)}"
+                key = f"{category}:{entity_key(canonical, category)}"
                 candidate = candidates.get(key)
                 if candidate is None:
                     candidate = candidates[key] = Candidate(canonical, category, curated)
                 else:
+                    if curated and not candidate.curated:
+                        candidate.canonical = canonical
                     candidate.curated = candidate.curated or curated
                 candidate.add(raw, doc_id, source, sid, segment, confidence)
                 keys.append(key)
@@ -415,6 +486,7 @@ def build(
                 segment_text[sid] = segment
 
     accepted_candidates = {key: value for key, value in candidates.items() if accepted(value)}
+    possible_duplicates, possible_duplicate_count = duplicate_candidates(accepted_candidates)
     ranked = sorted(
         accepted_candidates.items(),
         key=lambda item: (item[1].mentions, len(item[1].documents), item[1].canonical),
@@ -432,7 +504,7 @@ def build(
         entities.append({
             "id": entity_ids[key],
             "name": name,
-            "canonicalName": candidate.canonical,
+            "canonicalName": name,
             "category": candidate.category,
             "mentions": candidate.mentions,
             "documentCount": len(candidate.documents),
@@ -536,11 +608,13 @@ def build(
             "publishedEntities": len(entities),
             "acceptedEdges": all_edge_count,
             "publishedEdges": len(edges),
+            "possibleDuplicates": possible_duplicate_count,
         },
         "sources": sources,
         "documents": documents,
         "entities": entities,
         "edges": edges,
+        "duplicateCandidates": possible_duplicates,
     }
     if require_data and (not documents or not entities):
         raise ValueError(
@@ -549,6 +623,16 @@ def build(
         )
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(catalog, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    if duplicate_report:
+        duplicate_report.parent.mkdir(parents=True, exist_ok=True)
+        duplicate_report.write_text(json.dumps({
+            "schema": "ufo-files-entity-duplicate-candidates/v1",
+            "input": catalog_input,
+            "count": possible_duplicate_count,
+            "totalCount": possible_duplicate_count,
+            "shownCount": len(possible_duplicates),
+            "candidates": possible_duplicates,
+        }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return catalog
 
 
@@ -560,6 +644,12 @@ def main() -> None:
     parser.add_argument("--max-edges", type=int, default=4000)
     parser.add_argument("--input-repository")
     parser.add_argument("--input-revision")
+    parser.add_argument(
+        "--duplicate-report",
+        type=Path,
+        default=Path(__file__).resolve().parents[1] / "data" / "duplicate_candidates.json",
+        help="Write unresolved likely duplicate pairs for review.",
+    )
     parser.add_argument(
         "--require-data",
         action="store_true",
@@ -574,6 +664,7 @@ def main() -> None:
         args.input_repository,
         args.input_revision,
         args.require_data,
+        args.duplicate_report.resolve(),
     )
     print(json.dumps({"output": str(args.output), **catalog["counts"]}, indent=2))
 

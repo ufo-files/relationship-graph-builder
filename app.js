@@ -228,6 +228,7 @@ function renderControls() {
   const sourceNames = sources.map(source => source.name);
   const selectedSourceCount = state.config.allSources ? sourceNames.length : sourceNames.filter(name => state.config.sources.includes(name)).length;
   const sourceChecks = sources.map(source => `<label class="check-chip"><input type="checkbox" data-source="${escapeHTML(source.name)}" ${sourceIsSelected(source.name, state.config.sources, state.config.allSources) ? "checked" : ""}><span>${escapeHTML(source.name)}</span></label>`).join("");
+  const duplicateCount = state.catalog?.counts?.possibleDuplicates || state.catalog?.duplicateCandidates?.length || 0;
   const usesEntities = state.config.type === "table" ? state.config.tableRole === "entity" : !["bars", "timeline"].includes(state.config.type) || state.config.aggregation === "entity" || state.config.timelineRole === "entity";
   $("#filterControls").innerHTML = `
     ${usesEntities ? `<div class="control"><div class="control-title">Entity categories</div><div class="check-grid">${categoryChecks}</div></div>` : ""}
@@ -235,7 +236,8 @@ function renderControls() {
     ${state.config.type === "table" ? `<div class="control"><label for="tableSearch">Search rows</label><input id="tableSearch" class="text-input" type="search" value="${escapeHTML(state.config.tableSearch)}" placeholder="Filter this list" data-table-search></div>` : ""}
     ${usesEntities ? `<div class="control"><label>Minimum confidence <span>${Math.round(state.config.minConfidence * 100)}%</span></label><input type="range" min="0.5" max="0.95" step="0.01" value="${state.config.minConfidence}" data-range="minConfidence"></div>` : ""}
     ${state.config.type === "network" ? `<div class="control"><label>${state.config.nodeRole === "collection" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
-    <div class="control"><label>Maximum ${state.config.type === "table" ? "rows" : "marks"} <span>${state.config.limit}</span></label><input type="range" min="20" max="${state.config.type === "network" ? 120 : 250}" step="10" value="${state.config.limit}" data-range="limit"></div>`;
+    <div class="control"><label>Maximum ${state.config.type === "table" ? "rows" : "marks"} <span>${state.config.limit}</span></label><input type="range" min="20" max="${state.config.type === "network" ? 120 : 250}" step="10" value="${state.config.limit}" data-range="limit"></div>
+    <div class="control duplicate-review-control"><div class="control-title">Identity review <span>${duplicateCount} flagged</span></div><button class="button review-button" type="button" data-review-duplicates ${duplicateCount ? "" : "disabled"}>Review possible duplicates</button></div>`;
 
   $$('[data-config]').forEach(node => node.addEventListener("change", event => updateConfig(event.target.dataset.config, event.target.value)));
   $$('[data-range]').forEach(node => node.addEventListener("input", event => {
@@ -264,6 +266,7 @@ function renderControls() {
     renderControls();
     commitConfig(false);
   }));
+  $("[data-review-duplicates]")?.addEventListener("click", inspectDuplicateCandidates);
   $("[data-table-search]")?.addEventListener("input", event => {
     state.config.tableSearch = event.target.value;
     persistHash();
@@ -824,6 +827,18 @@ function showInspector(category, title, metrics, evidence, note = "") {
   $("#builderView").classList.remove("inspector-collapsed");
   inspector.classList.add("has-selection");
   $("#inspectorContent").innerHTML = `<p class="inspect-category">${escapeHTML(label(category))}</p><h3>${escapeHTML(title)}</h3>${note ? `<p>${escapeHTML(note)}</p>` : ""}<div class="metric-row">${metrics.map(([value, name]) => `<div class="metric"><strong>${escapeHTML(formatNumber(value))}</strong><small>${escapeHTML(name)}</small></div>`).join("")}</div><div class="evidence-list"><h4>Evidence</h4>${evidenceHTML(evidence)}</div>`;
+  refreshGraphAfterInspectorResize();
+}
+
+function inspectDuplicateCandidates() {
+  const candidates = state.catalog?.duplicateCandidates || [];
+  const total = state.catalog?.counts?.possibleDuplicates || candidates.length;
+  const inspector = $("#inspector");
+  state.selected = null;
+  $("#builderView").classList.remove("inspector-collapsed");
+  inspector.classList.add("has-selection");
+  const cards = candidates.map(item => `<div class="duplicate-card"><small>${escapeHTML(label(item.category))} · ${Math.round(item.similarity * 100)}% similar · ${escapeHTML(item.reason)}</small><strong>${escapeHTML(item.left.name)}</strong><span>↕</span><strong>${escapeHTML(item.right.name)}</strong><p>${formatNumber(item.left.mentions)} + ${formatNumber(item.right.mentions)} mentions</p></div>`).join("");
+  $("#inspectorContent").innerHTML = `<p class="inspect-category">Identity review</p><h3>Possible duplicates</h3><p>${formatNumber(total)} likely pair${total === 1 ? "" : "s"} flagged during the latest rebuild. Similarity never merges entities automatically; confirmed matches belong in <code>data/entity_aliases.json</code>.</p><div class="evidence-list"><h4>Review queue</h4>${cards || "<p>No unresolved duplicate candidates.</p>"}</div>`;
   refreshGraphAfterInspectorResize();
 }
 
