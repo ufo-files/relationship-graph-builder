@@ -353,6 +353,44 @@ function entityMatches(entity) {
   return entity.documentIds.some(id => sourceMatches(state.documentById.get(id)?.source));
 }
 
+function filteredEntity(entity) {
+  if (state.config.allSources) return entity;
+  const documentIds = entity.documentIds.filter(id => sourceMatches(state.documentById.get(id)?.source));
+  const selectedMetrics = Object.entries(entity.sourceMetrics || {})
+    .filter(([source]) => sourceMatches(source))
+    .map(([, metrics]) => metrics);
+  const mentions = selectedMetrics.length
+    ? selectedMetrics.reduce((sum, metrics) => sum + metrics.mentions, 0)
+    : Math.round(entity.mentions * documentIds.length / Math.max(1, entity.documentCount));
+  return {
+    ...entity,
+    mentions,
+    documentCount: documentIds.length,
+    sourceCount: new Set(documentIds.map(id => state.documentById.get(id)?.source).filter(Boolean)).size,
+    documentIds,
+    evidence: entity.evidence.filter(item => documentIds.includes(item.documentId))
+  };
+}
+
+function filteredEntities() {
+  return state.catalog.entities.filter(entityMatches).map(filteredEntity);
+}
+
+function filteredEdge(edge, visibleDocumentIds = null) {
+  if (state.config.allSources) return edge;
+  const selectedMetrics = Object.entries(edge.sourceMetrics || {})
+    .filter(([source]) => sourceMatches(source))
+    .map(([, metrics]) => metrics);
+  if (!selectedMetrics.length) return null;
+  const documentIds = visibleDocumentIds || new Set(state.catalog.documents.filter(document => sourceMatches(document.source)).map(document => document.id));
+  return {
+    ...edge,
+    evidenceCount: selectedMetrics.reduce((sum, metrics) => sum + metrics.evidenceCount, 0),
+    documentCount: selectedMetrics.reduce((sum, metrics) => sum + metrics.documentCount, 0),
+    evidence: edge.evidence.filter(item => documentIds.has(item.documentId))
+  };
+}
+
 function valueExtent(data, key) {
   const values = data.map(item => Number(item[key]) || 0);
   return [Math.min(...values, 0), Math.max(...values, 1)];
@@ -404,7 +442,7 @@ function collectionNetworkData() {
     });
   const sourceByName = new Map(candidates.map(source => [source.name, source]));
   const pairs = new Map();
-  state.catalog.entities.filter(entityMatches).forEach(entity => {
+  filteredEntities().forEach(entity => {
     const names = [...new Set(entity.documentIds.map(id => state.documentById.get(id)?.source).filter(name => sourceByName.has(name)))].sort();
     for (let leftIndex = 0; leftIndex < names.length; leftIndex++) for (let rightIndex = leftIndex + 1; rightIndex < names.length; rightIndex++) {
       const left = sourceByName.get(names[leftIndex]), right = sourceByName.get(names[rightIndex]);
@@ -450,9 +488,10 @@ function renderNetwork() {
   if (collectionMode) {
     ({ candidates, edges } = collectionNetworkData());
   } else {
-    candidates = state.catalog.entities.filter(entityMatches);
+    candidates = filteredEntities();
     const candidateIds = new Set(candidates.map(item => item.id));
-    edges = state.catalog.edges.filter(edge => candidateIds.has(edge.source) && candidateIds.has(edge.target) && edge.evidenceCount >= state.config.minEvidence && (state.config.relation === "all" || edge.relationship === state.config.relation));
+    const visibleDocumentIds = new Set(state.catalog.documents.filter(document => sourceMatches(document.source)).map(document => document.id));
+    edges = state.catalog.edges.map(edge => filteredEdge(edge, visibleDocumentIds)).filter(edge => edge && candidateIds.has(edge.source) && candidateIds.has(edge.target) && edge.evidenceCount >= state.config.minEvidence && (state.config.relation === "all" || edge.relationship === state.config.relation));
   }
   const degree = new Map();
   edges.forEach(edge => { degree.set(edge.source, (degree.get(edge.source) || 0) + edge.evidenceCount); degree.set(edge.target, (degree.get(edge.target) || 0) + edge.evidenceCount); });
@@ -532,7 +571,7 @@ function renderNetwork() {
 
 function renderScatter() {
   const { svg, width, height } = clearChart();
-  const data = state.catalog.entities.filter(entityMatches).sort((a, b) => b[state.config.y] - a[state.config.y]).slice(0, state.config.limit);
+  const data = filteredEntities().sort((a, b) => b[state.config.y] - a[state.config.y]).slice(0, state.config.limit);
   if (!data.length) return showEmpty();
   const categoricalX = state.config.x === "entity";
   const xExtent = categoricalX ? [0, Math.max(1, data.length - 1)] : valueExtent(data, state.config.x);
@@ -578,7 +617,7 @@ function renderScatter() {
 function aggregateDocuments() {
   const docs = state.catalog.documents.filter(doc => sourceMatches(doc.source));
   if (state.config.aggregation === "entity") {
-    return state.catalog.entities.filter(entityMatches).map(entity => ({ ...entity, source: entity.category }));
+    return filteredEntities().map(entity => ({ ...entity, source: entity.category }));
   }
   if (state.config.aggregation === "format") {
     return [...new Set(docs.map(doc => doc.format))].map(format => {
@@ -616,7 +655,7 @@ function renderBars() {
 function renderTimeline() {
   const { svg, width, height } = clearChart();
   const data = (state.config.timelineRole === "entity"
-    ? state.catalog.entities.filter(entityMatches).map(entity => {
+    ? filteredEntities().map(entity => {
         const documents = entity.documentIds.map(id => state.documentById.get(id)).filter(document => document?.createdAt && sourceMatches(document.source)).sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
         return documents.length ? { ...entity, title: entity.name, createdAt: documents[0].createdAt, source: documents[0].source, format: documents[0].format, entityRecord: entity } : null;
       }).filter(Boolean)
@@ -645,7 +684,7 @@ function renderMatrix() {
   const { svg, width, height } = clearChart();
   const sources = state.catalog.sources.filter(item => sourceMatches(item.name));
   const columns = state.config.matrixColumns === "entity"
-    ? state.catalog.entities.filter(entityMatches).sort((a, b) => b.mentions - a.mentions).slice(0, Math.min(state.config.limit, 18)).map(entity => ({ id: entity.id, label: entity.name, category: entity.category, entity }))
+    ? filteredEntities().sort((a, b) => b.mentions - a.mentions).slice(0, Math.min(state.config.limit, 18)).map(entity => ({ id: entity.id, label: entity.name, category: entity.category, entity }))
     : state.config.categories.map(category => ({ id: category, label: label(category), category }));
   if (!sources.length || !columns.length) return showEmpty();
   const counts = [];
@@ -679,7 +718,7 @@ function tableRecords() {
       .filter(item => sourceMatches(item.name))
       .map(item => ({ ...item, documentIds: state.catalog.documents.filter(document => document.source === item.name).map(document => document.id) }));
   } else {
-    records = state.catalog.entities.filter(entityMatches);
+    records = filteredEntities();
   }
   const query = state.config.tableSearch.trim().toLocaleLowerCase();
   if (query) records = records.filter(item => TABLE_FIELDS[state.config.tableRole].some(field => String(item[field] ?? "").toLocaleLowerCase().includes(query)));

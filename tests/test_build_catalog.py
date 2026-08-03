@@ -45,8 +45,11 @@ class CatalogTests(unittest.TestCase):
             self.assertEqual(catalog["input"]["rootName"], "machine-data")
             self.assertEqual(catalog["input"]["repository"], "ufo-files/machine-data")
             self.assertEqual(catalog["input"]["revision"], "abc123")
-            self.assertTrue(any(entity["canonicalName"] == "Kelly Johnson" for entity in catalog["entities"]))
+            entity = next(entity for entity in catalog["entities"] if entity["canonicalName"] == "Kelly Johnson")
+            self.assertEqual(entity["sourceMetrics"]["Example"]["mentions"], entity["mentions"])
+            self.assertEqual(entity["sourceMetrics"]["Example"]["documentCount"], entity["documentCount"])
             self.assertTrue(all(edge["evidence"] for edge in catalog["edges"]))
+            self.assertTrue(all(edge["sourceMetrics"]["Example"]["evidenceCount"] == edge["evidenceCount"] for edge in catalog["edges"]))
             self.assertTrue(output.exists())
 
     def test_refuses_to_write_an_empty_required_catalog(self):

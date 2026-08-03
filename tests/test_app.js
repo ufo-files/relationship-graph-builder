@@ -137,6 +137,61 @@ test("no selected collections produces no matching records", () => {
   assert.equal(result.entityMatches, false);
 });
 
+test("entity and relationship metrics are recomputed for selected collections", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    state.catalog = {
+      documents: [
+        { id: "doc-a", source: "Collection A" },
+        { id: "doc-b", source: "Collection B" }
+      ],
+      entities: []
+    };
+    state.documentById.set("doc-a", state.catalog.documents[0]);
+    state.documentById.set("doc-b", state.catalog.documents[1]);
+    Object.assign(state.config, { sources: ["Collection A"], allSources: false });
+    const entity = filteredEntity({
+      id: "entity-1", mentions: 12, documentCount: 2, sourceCount: 2,
+      documentIds: ["doc-a", "doc-b"], evidence: [{ documentId: "doc-a" }, { documentId: "doc-b" }],
+      sourceMetrics: {
+        "Collection A": { mentions: 2, documentCount: 1 },
+        "Collection B": { mentions: 10, documentCount: 1 }
+      }
+    });
+    const edge = filteredEdge({
+      evidenceCount: 7, documentCount: 2,
+      evidence: [{ documentId: "doc-a" }, { documentId: "doc-b" }],
+      sourceMetrics: {
+        "Collection A": { evidenceCount: 1, documentCount: 1 },
+        "Collection B": { evidenceCount: 6, documentCount: 1 }
+      }
+    });
+    const comparison = filteredEntity({
+      id: "entity-2", mentions: 10, documentCount: 2, sourceCount: 2,
+      documentIds: ["doc-a", "doc-b"], evidence: [],
+      sourceMetrics: {
+        "Collection A": { mentions: 9, documentCount: 1 },
+        "Collection B": { mentions: 1, documentCount: 1 }
+      }
+    });
+    const filteredExtent = valueExtent([entity, comparison], "mentions");
+    const filteredRadius = scale(entity.mentions, filteredExtent, [5, 17]);
+    const catalogRadius = scale(12, valueExtent([{ mentions: 12 }, { mentions: 10 }], "mentions"), [5, 17]);
+    JSON.stringify({ entity, edge, filteredRadius, catalogRadius })
+  `, context));
+
+  assert.equal(result.entity.mentions, 2);
+  assert.equal(result.entity.documentCount, 1);
+  assert.equal(result.entity.sourceCount, 1);
+  assert.deepEqual(result.entity.documentIds, ["doc-a"]);
+  assert.equal(result.edge.evidenceCount, 1);
+  assert.equal(result.edge.documentCount, 1);
+  assert.deepEqual(result.edge.evidence, [{ documentId: "doc-a" }]);
+  assert.ok(result.filteredRadius < result.catalogRadius);
+});
+
 test("significant entity presets configure scatters across all collections", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
