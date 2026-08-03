@@ -394,7 +394,7 @@ function commitConfig(updateTitle = true) {
 }
 
 function dimensions() {
-  const box = $("#chartWrap").getBoundingClientRect();
+  const box = $("#chart").getBoundingClientRect();
   return { width: Math.max(460, box.width), height: Math.max(420, box.height) };
 }
 
@@ -405,9 +405,9 @@ function clearChart() {
   $("#chartWrap").classList.remove("table-mode");
   svg.replaceChildren();
   svg.style.setProperty("--graph-label-size", `${state.config.labelSize}px`);
+  drawIntensityLegend();
   const { width, height } = dimensions();
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
-  $("#legend").innerHTML = "";
   return { svg, width, height };
 }
 
