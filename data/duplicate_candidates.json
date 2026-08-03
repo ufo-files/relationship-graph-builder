@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "3a7042a8c1416bbcc050099131360f803fd124f6"
+    "revision": "bf61274c36eb92972ba0ab78cc549d970fa10b0c"
   },
-  "count": 98,
-  "totalCount": 98,
-  "shownCount": 98,
+  "count": 116,
+  "totalCount": 116,
+  "shownCount": 116,
   "candidates": [
     {
       "category": "organization",
@@ -51,8 +51,8 @@
       },
       "right": {
         "name": "Project Preserve Destiny",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.98,
       "reason": "similar name",
@@ -283,6 +283,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patterson Air Force Base",
+        "mentions": 117,
+        "documentCount": 50
+      },
+      "right": {
+        "name": "Fright-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "District Office",
@@ -292,6 +308,22 @@
       "right": {
         "name": "District Officer",
         "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Fright-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Fright-Petterson Air Force Base",
+        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.968,
@@ -427,6 +459,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Patterson Air Force Base",
+        "mentions": 10,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "Patterson Air Forco Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Inited States Department",
@@ -435,6 +483,86 @@
       },
       "right": {
         "name": "United States Department",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Direotor of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Direator of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Direotor of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "The Director of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Direotor of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Direetor of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Direator of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "The Director of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Direator of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Direetor of Intelligence",
         "mentions": 2,
         "documentCount": 2
       },
@@ -461,14 +589,14 @@
     {
       "category": "government_agency",
       "left": {
-        "name": "FOIA Office",
-        "mentions": 5,
+        "name": "FOIA Officer",
+        "mentions": 79,
         "documentCount": 4
       },
       "right": {
-        "name": "FOIA Officer",
-        "mentions": 78,
-        "documentCount": 3
+        "name": "FOIA Office",
+        "mentions": 5,
+        "documentCount": 4
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -525,6 +653,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Department of the Army",
+        "mentions": 33,
+        "documentCount": 14
+      },
+      "right": {
+        "name": "Department of the Arny",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.955,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Post Office Inspectors",
         "mentions": 12,
         "documentCount": 2
@@ -542,8 +686,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 646,
-        "documentCount": 118
+        "mentions": 648,
+        "documentCount": 120
       },
       "right": {
         "name": "Department of Detense",
@@ -766,8 +910,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of War",
-        "mentions": 19,
-        "documentCount": 9
+        "mentions": 20,
+        "documentCount": 10
       },
       "right": {
         "name": "Department of Air",
@@ -798,8 +942,8 @@
       "category": "organization",
       "left": {
         "name": "Directorate of Intelligence",
-        "mentions": 80,
-        "documentCount": 14
+        "mentions": 86,
+        "documentCount": 16
       },
       "right": {
         "name": "The Director of Intelligence",
@@ -990,8 +1134,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2381,
-        "documentCount": 153
+        "mentions": 2384,
+        "documentCount": 154
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -1006,8 +1150,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 115,
-        "documentCount": 49
+        "mentions": 117,
+        "documentCount": 50
       },
       "right": {
         "name": "Fright-Petterson Air Force Base",
@@ -1038,8 +1182,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 54,
-        "documentCount": 22
+        "mentions": 56,
+        "documentCount": 23
       },
       "right": {
         "name": "Army Air Foroes",
@@ -1054,13 +1198,13 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 54,
-        "documentCount": 22
+        "mentions": 56,
+        "documentCount": 23
       },
       "right": {
-        "name": "Arny Air Forces",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "The Arny Air Forces",
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.933,
       "reason": "similar name",
@@ -1070,8 +1214,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 54,
-        "documentCount": 22
+        "mentions": 56,
+        "documentCount": 23
       },
       "right": {
         "name": "Army Air Forcas",
@@ -1198,8 +1342,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 825,
-        "documentCount": 197
+        "mentions": 828,
+        "documentCount": 199
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -1214,13 +1358,45 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 26,
-        "documentCount": 20
+        "mentions": 27,
+        "documentCount": 21
       },
       "right": {
         "name": "Department of the Army",
-        "mentions": 32,
-        "documentCount": 13
+        "mentions": 33,
+        "documentCount": 14
+      },
+      "similarity": 0.93,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of the Air",
+        "mentions": 27,
+        "documentCount": 21
+      },
+      "right": {
+        "name": "Department of the Arny",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.93,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Intelligence Requirements Division",
+        "mentions": 11,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Air Intelligence Requirements Div",
+        "mentions": 5,
+        "documentCount": 2
       },
       "similarity": 0.93,
       "reason": "similar name",
@@ -1405,6 +1581,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Directorate of Intelligence",
+        "mentions": 86,
+        "documentCount": 16
+      },
+      "right": {
+        "name": "Directorate of Intelligenoo",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.926,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Under Secretary of Defense for Intelligence",
         "mentions": 2,
         "documentCount": 2
@@ -1499,6 +1691,54 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "GOVEaNMENT PRINTING OFFICE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "COVERNMENT PRINTING OFFICE",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "COVERNMENT PRINTING OFFICE",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "GOVERNMENI PRINTING OFFICE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "COVERNMENT PRINTING OFFICE",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "GOVERMMENT PRINTING OFFICE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Range Space Propulsion Options",
@@ -1507,6 +1747,38 @@
       },
       "right": {
         "name": "Long-Range Space Propulsion Options",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "GOVEaNMENT PRINTING OFFICE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "GOVERNMENI PRINTING OFFICE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "GOVEaNMENT PRINTING OFFICE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "GOVERMMENT PRINTING OFFICE",
         "mentions": 2,
         "documentCount": 2
       },
@@ -1531,11 +1803,27 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Air Institute of Technology",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Institute of Technology",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.92,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Joseph McMoneagle",
-        "mentions": 28,
-        "documentCount": 14
+        "mentions": 31,
+        "documentCount": 16
       },
       "right": {
         "name": "Joe McMoneagle's",
