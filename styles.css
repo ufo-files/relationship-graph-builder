@@ -109,6 +109,7 @@ h1, h2, h3, p { margin-top: 0; }
 .legend:empty { display: none; }
 .legend-item { display: flex; align-items: center; gap: 4px; }
 .legend-item i { width: 13px; height: 13px; display: inline-block; border: 1px solid var(--ink); border-radius: 0; background-color: var(--paper); }
+.legend-item i.outlier-key { border-width: 3px; background: transparent; }
 .legend-item i.risk-key { border-style: dashed; background: transparent; }
 .stage-footer { padding: 13px 27px 16px; display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 11px; }
 .chart-label { fill: var(--ink); font-size: var(--graph-label-size, 12px); pointer-events: none; }

@@ -124,6 +124,21 @@ test("legend sits below and outside the chart canvas", () => {
   assert.match(html, /<\/div>\s*<div class="legend" id="legend"><\/div>\s*<footer class="stage-footer">/);
 });
 
+test("scatter legend distinguishes capped outliers from mention inflation", () => {
+  const legend = new FakeElement();
+  const document = { querySelector: selector => selector === "#legend" ? legend : null, querySelectorAll: () => [] };
+  const context = vm.createContext({ document, location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+
+  vm.runInContext('state.config.type = "scatter"; drawIntensityLegend();', context);
+  assert.match(legend.innerHTML, /outlier-key[^>]*><\/i>Axis-capped outlier/);
+  assert.match(legend.innerHTML, /risk-key[^>]*><\/i>Potential mention inflation/);
+
+  vm.runInContext('state.config.type = "bars"; drawIntensityLegend();', context);
+  assert.doesNotMatch(legend.innerHTML, /Axis-capped outlier|Potential mention inflation/);
+});
+
 test("inspector defaults collapsed and a selected mark reopens it", () => {
   const html = fs.readFileSync("index.html", "utf8");
   assert.match(html, /id="builderView" class="app-shell inspector-collapsed"/);
