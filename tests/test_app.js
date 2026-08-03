@@ -671,6 +671,27 @@ test("network layout fits node positions to 90% of the canvas", () => {
   assert.ok(Math.abs(Math.max(...ys) - 600 * .95) < .001);
 });
 
+test("robust scatter extents cap material outliers without changing ordinary ranges", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    (() => {
+      const ordinary = Array.from({ length: 20 }, (_, index) => ({ value: index + 1 }));
+      const skewed = [...ordinary.slice(0, 19), { value: 1000 }];
+      return JSON.stringify({
+        ordinary: robustValueExtent(ordinary, "value"),
+        skewed: robustValueExtent(skewed, "value"),
+        outlierPosition: clampedScale(1000, robustValueExtent(skewed, "value").extent, [0, 100])
+      });
+    })()
+  `, context));
+
+  assert.deepEqual(result.ordinary, { extent: [0, 20], capped: false });
+  assert.deepEqual(result.skewed, { extent: [0, 19], capped: true });
+  assert.equal(result.outlierPosition, 100);
+});
+
 test("scatter label modes render the expected ranked entities", () => {
   const elements = {
     chart: new FakeElement(),
