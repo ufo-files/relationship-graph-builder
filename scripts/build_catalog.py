@@ -338,10 +338,10 @@ def context_key(value: str) -> str:
     return clean_space(normalized)
 
 
-def inflation_risk(rate: float, inflated_mentions: int) -> str:
-    if inflated_mentions >= 3 and rate >= 0.5:
+def inflation_risk(rate: float, inflated_documents: int) -> str:
+    if inflated_documents >= 2 and rate >= 0.5:
         return "high"
-    if inflated_mentions >= 3 and rate >= 0.2:
+    if inflated_documents >= 2 and rate >= 0.2:
         return "elevated"
     return "low"
 
@@ -354,23 +354,25 @@ def significance_metrics(candidate: Candidate, source: str | None = None) -> dic
     }
     if source is None:
         mentions = candidate.mentions
+        coverage_documents = candidate.documents
         context_mentions = candidate.context_mentions
         context_documents = candidate.context_documents
     else:
         mentions = candidate.source_mentions[source]
+        coverage_documents = candidate.source_documents[source]
         context_mentions = candidate.source_context_mentions[source]
         context_documents = candidate.source_context_documents[source]
 
     adjusted_mentions = 0
     independent_documents: set[str] = set()
-    for context, documents in context_documents.items():
+    for context, context_document_ids in context_documents.items():
         if context in candidate.administrative_contexts:
             continue
         if context in repeated_contexts:
             adjusted_mentions += 1
             continue
-        adjusted_mentions += len(documents)
-        independent_documents.update(documents)
+        adjusted_mentions += len(context_document_ids)
+        independent_documents.update(context_document_ids)
 
     repeated_mentions = sum(
         context_mentions[context]
@@ -384,12 +386,16 @@ def significance_metrics(candidate: Candidate, source: str | None = None) -> dic
     )
     inflated_mentions = max(0, mentions - adjusted_mentions)
     rate = inflated_mentions / max(1, mentions)
+    inflated_documents = max(0, len(coverage_documents) - len(independent_documents))
+    document_rate = inflated_documents / max(1, len(coverage_documents))
     return {
         "contextAdjustedMentions": adjusted_mentions,
         "independentDocumentCount": len(independent_documents),
         "inflatedMentionCount": inflated_mentions,
         "inflationRate": round(rate, 3),
-        "inflationRisk": inflation_risk(rate, inflated_mentions),
+        "inflatedDocumentCount": inflated_documents,
+        "documentInflationRate": round(document_rate, 3),
+        "inflationRisk": inflation_risk(document_rate, inflated_documents),
         "inflationSignals": {
             "repeatedContextMentions": repeated_mentions,
             "administrativeMentions": administrative_mentions,

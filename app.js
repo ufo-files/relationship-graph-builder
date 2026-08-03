@@ -1,13 +1,14 @@
 /* UFO Files Graph Builder — dependency-free, GitHub Pages compatible. */
 
 const NS = "http://www.w3.org/2000/svg";
+const CONFIG_VERSION = 2;
 const ENTITY_CATEGORIES = ["person", "government_agency", "organization", "location", "program", "subject", "date"];
 const LABELS = {
   person: "People", government_agency: "Government agencies", organization: "Organizations",
   location: "Locations", program: "Programs", subject: "Subjects", date: "Dates",
-  mentions: "Mentions", documentCount: "Documents", sourceCount: "Collections",
-  contextAdjustedMentions: "Context-adjusted mentions", independentDocumentCount: "Independent documents",
-  inflationRate: "Potential inflation", inflationRisk: "Inflation risk", inflatedMentionCount: "Potentially inflated mentions",
+  mentions: "Raw mentions", documentCount: "Raw documents", sourceCount: "Collections",
+  contextAdjustedMentions: "Mentions", independentDocumentCount: "Documents",
+  inflationRate: "Mention adjustment", documentInflationRate: "Potential prominence inflation", inflationRisk: "Prominence inflation risk", inflatedMentionCount: "Adjusted mentions", inflatedDocumentCount: "Adjusted documents",
   classificationConfidence: "Classification confidence", extractionConfidence: "Extraction confidence",
   words: "Words", documents: "Documents", segments: "Segments", bytes: "Source bytes",
   createdAt: "Cataloged at", durationMs: "Duration", source: "Collection", format: "Format",
@@ -16,7 +17,7 @@ const LABELS = {
   table: "Table", collection: "Collections", shared_entities: "Shared entities"
 };
 const TABLE_FIELDS = {
-  entity: ["name", "category", "contextAdjustedMentions", "mentions", "inflationRate", "inflationRisk", "independentDocumentCount", "documentCount", "sourceCount", "classificationConfidence", "extractionConfidence", "reviewStatus"],
+  entity: ["name", "category", "contextAdjustedMentions", "mentions", "inflationRate", "documentInflationRate", "inflationRisk", "independentDocumentCount", "documentCount", "sourceCount", "classificationConfidence", "extractionConfidence", "reviewStatus"],
   document: ["title", "source", "format", "words", "segments", "bytes", "createdAt", "engine", "durationMs", "path"],
   source: ["name", "documents", "words"]
 };
@@ -51,7 +52,8 @@ const PRESETS = [
   }
 ];
 const DEFAULT = {
-  type: "scatter", x: "documentCount", y: "mentions", size: "documentCount", color: "category",
+  configVersion: CONFIG_VERSION,
+  type: "scatter", x: "independentDocumentCount", y: "contextAdjustedMentions", size: "independentDocumentCount", color: "category",
   categories: [...ENTITY_CATEGORIES], sources: [], allSources: true, relation: "all",
   includeHighInflation: true,
   minEvidence: 2, minConfidence: 0.95, limit: 50, labels: "top", aggregation: "source",
@@ -64,6 +66,27 @@ const state = { catalog: null, config: loadConfig(), selected: null, documentByI
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 
+function adjustedEntityMetric(metric) {
+  return ({ mentions: "contextAdjustedMentions", documentCount: "independentDocumentCount" })[metric] || metric;
+}
+
+function migrateEntityProminenceConfig(config) {
+  if (config.type === "scatter") {
+    config.x = adjustedEntityMetric(config.x);
+    config.y = adjustedEntityMetric(config.y);
+    config.size = adjustedEntityMetric(config.size);
+  } else if (config.type === "network" && config.nodeRole !== "collection") {
+    config.size = adjustedEntityMetric(config.size);
+  } else if (config.type === "bars" && config.aggregation === "entity") {
+    config.y = adjustedEntityMetric(config.y);
+  } else if (config.type === "timeline" && config.timelineRole === "entity") {
+    config.y = adjustedEntityMetric(config.y);
+    config.size = adjustedEntityMetric(config.size);
+  }
+  config.configVersion = CONFIG_VERSION;
+  return config;
+}
+
 function loadConfig() {
   try {
     const param = new URLSearchParams(location.hash.slice(1)).get("config");
@@ -71,6 +94,7 @@ function loadConfig() {
       const saved = JSON.parse(decodeURIComponent(escape(atob(param))));
       if (saved.allSources === undefined) saved.allSources = !saved.sources?.length;
       const config = { ...DEFAULT, ...saved };
+      if ((Number(saved.configVersion) || 0) < CONFIG_VERSION) migrateEntityProminenceConfig(config);
       const legacySignificantCategory = {
         "Significant People": "person",
         "Significant Places": "location",
@@ -175,10 +199,13 @@ function dataAwareTitle(config) {
   return `${title}${collectionScopeTitle(config)}`;
 }
 
-function inflationRiskFor(rate, inflatedMentions) {
-  if (inflatedMentions >= 3 && rate >= .5) return "high";
-  if (inflatedMentions >= 3 && rate >= .2) return "elevated";
-  return "low";
+function prominenceInflationFor(documentCount, independentDocumentCount) {
+  const inflatedDocumentCount = Math.max(0, (documentCount || 0) - (independentDocumentCount || 0));
+  const documentInflationRate = inflatedDocumentCount / Math.max(1, documentCount || 0);
+  const inflationRisk = inflatedDocumentCount >= 2 && documentInflationRate >= .5
+    ? "high"
+    : inflatedDocumentCount >= 2 && documentInflationRate >= .2 ? "elevated" : "low";
+  return { inflatedDocumentCount, documentInflationRate, inflationRisk };
 }
 
 function syncAutomaticTitle(force = false) {
@@ -202,15 +229,20 @@ function sourceSelectionConfig(selectedSources, availableSources) {
 }
 
 function withSignificanceDefaults(entity) {
-  const normalizeMetrics = metrics => ({
-    ...metrics,
-    contextAdjustedMentions: metrics.contextAdjustedMentions ?? metrics.mentions ?? 0,
-    independentDocumentCount: metrics.independentDocumentCount ?? metrics.documentCount ?? 0,
-    inflatedMentionCount: metrics.inflatedMentionCount ?? 0,
-    inflationRate: metrics.inflationRate ?? 0,
-    inflationRisk: metrics.inflationRisk || "low",
-    inflationSignals: metrics.inflationSignals || { repeatedContextMentions: 0, administrativeMentions: 0, withinDocumentDuplicates: 0 }
-  });
+  const normalizeMetrics = metrics => {
+    const documentCount = metrics.documentCount ?? metrics.documentIds?.length ?? 0;
+    const independentDocumentCount = metrics.independentDocumentCount ?? documentCount;
+    return {
+      ...metrics,
+      documentCount,
+      contextAdjustedMentions: metrics.contextAdjustedMentions ?? metrics.mentions ?? 0,
+      independentDocumentCount,
+      inflatedMentionCount: metrics.inflatedMentionCount ?? 0,
+      inflationRate: metrics.inflationRate ?? 0,
+      ...prominenceInflationFor(documentCount, independentDocumentCount),
+      inflationSignals: metrics.inflationSignals || { repeatedContextMentions: 0, administrativeMentions: 0, withinDocumentDuplicates: 0 }
+    };
+  };
   const sourceMetrics = Object.fromEntries(Object.entries(entity.sourceMetrics || {}).map(([source, metrics]) => [source, normalizeMetrics(metrics)]));
   const normalized = { ...normalizeMetrics(entity), sourceMetrics };
   if (entity.contextAdjustedMentions != null) return normalized;
@@ -225,13 +257,14 @@ function withSignificanceDefaults(entity) {
 
   const adjusted = Math.max(1, Math.round(sources.reduce((sum, metrics) => sum + Math.log2(1 + (metrics.mentions || 0)), 0) * 3));
   const inflated = Math.max(0, entity.mentions - adjusted);
+  const independentDocumentCount = Math.min(entity.documentCount, adjusted);
   return {
     ...normalized,
     contextAdjustedMentions: Math.min(entity.mentions, adjusted),
-    independentDocumentCount: Math.min(entity.documentCount, adjusted),
+    independentDocumentCount,
     inflatedMentionCount: inflated,
     inflationRate: inflated / Math.max(1, entity.mentions),
-    inflationRisk: "high",
+    ...prominenceInflationFor(entity.documentCount, independentDocumentCount),
     inflationSignals: { ...normalized.inflationSignals, legacySourceConcentration: inflated }
   };
 }
@@ -314,7 +347,7 @@ function renderTypeGrid() {
 function renderControls() {
   renderPresetControl();
   renderTypeGrid();
-  const numericEntity = ["contextAdjustedMentions", "mentions", "independentDocumentCount", "documentCount", "sourceCount", "inflationRate", "classificationConfidence", "extractionConfidence"];
+  const numericEntity = ["contextAdjustedMentions", "mentions", "independentDocumentCount", "documentCount", "sourceCount", "inflationRate", "documentInflationRate", "classificationConfidence", "extractionConfidence"];
   const numericDoc = ["words", "segments", "bytes", "durationMs"];
   let roles = "";
   if (state.config.type === "network") {
@@ -416,8 +449,8 @@ function renderControls() {
 function setType(type) {
   state.config.type = type;
   if (type === "bars") Object.assign(state.config, { aggregation: "source", y: "words", color: "intensity" });
-  if (type === "scatter") Object.assign(state.config, { x: "entity", y: "mentions", size: "documentCount", color: "category", limit: 50 });
-  if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "mentions", color: "category" });
+  if (type === "scatter") Object.assign(state.config, { x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", color: "category", limit: 50 });
+  if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "independentDocumentCount", color: "category" });
   if (type === "timeline") Object.assign(state.config, { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source" });
   if (type === "matrix") Object.assign(state.config, { matrixColumns: "category", color: "intensity" });
   if (type === "table") Object.assign(state.config, { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 });
@@ -429,16 +462,16 @@ function setType(type) {
 function updateConfig(key, value, rerenderControls = false) {
   state.config[key] = value;
   if (key === "aggregation") {
-    state.config.y = value === "entity" ? "mentions" : "words";
+    state.config.y = value === "entity" ? "contextAdjustedMentions" : "words";
     state.config.color = "intensity";
   }
   if (key === "timelineRole") {
-    state.config.y = value === "entity" ? "mentions" : "words";
-    state.config.size = value === "entity" ? "sourceCount" : "words";
+    state.config.y = value === "entity" ? "contextAdjustedMentions" : "words";
+    state.config.size = value === "entity" ? "independentDocumentCount" : "words";
     state.config.color = value === "entity" ? "category" : "source";
   }
   if (key === "nodeRole") {
-    state.config.size = value === "collection" ? "documents" : "mentions";
+    state.config.size = value === "collection" ? "documents" : "independentDocumentCount";
   }
   if (key === "tableRole") {
     const defaults = {
@@ -484,11 +517,12 @@ function sourceMatches(sourceName) {
 }
 
 function entityMatches(entity) {
+  entity = withSignificanceDefaults(entity);
   if (!state.config.categories.includes(entity.category)) return false;
-  if (!state.config.includeHighInflation && entity.inflationRisk === "high") return false;
   if (entity.classificationConfidence < state.config.minConfidence) return false;
-  if (state.config.allSources) return true;
-  return entity.documentIds.some(id => sourceMatches(state.documentById.get(id)?.source));
+  if (!state.config.allSources && !entity.documentIds.some(id => sourceMatches(state.documentById.get(id)?.source))) return false;
+  const scopedEntity = state.config.allSources ? entity : filteredEntity(entity);
+  return state.config.includeHighInflation || scopedEntity.inflationRisk !== "high";
 }
 
 function filteredEntity(entity) {
@@ -509,6 +543,7 @@ function filteredEntity(entity) {
     : documentIds.length;
   const inflatedMentionCount = Math.max(0, mentions - contextAdjustedMentions);
   const inflationRate = inflatedMentionCount / Math.max(1, mentions);
+  const documentCount = documentIds.length;
   const inflationSignals = selectedMetrics.reduce((signals, metrics) => {
     const sourceSignals = metrics.inflationSignals || {};
     Object.keys(signals).forEach(key => { signals[key] += sourceSignals[key] || 0; });
@@ -521,9 +556,9 @@ function filteredEntity(entity) {
     independentDocumentCount,
     inflatedMentionCount,
     inflationRate,
-    inflationRisk: inflationRiskFor(inflationRate, inflatedMentionCount),
+    ...prominenceInflationFor(documentCount, independentDocumentCount),
     inflationSignals,
-    documentCount: documentIds.length,
+    documentCount,
     sourceCount: new Set(documentIds.map(id => state.documentById.get(id)?.source).filter(Boolean)).size,
     documentIds,
     evidence: entity.evidence.filter(item => documentIds.includes(item.documentId))
@@ -709,7 +744,9 @@ function renderNetwork() {
     const radius = radii.get(node.id);
     const shade = scale(node[state.config.size], sizeExtent, [.18, .96]);
     const circle = el("circle", { cx: point.x, cy: point.y, r: radius, fill: "#111", "fill-opacity": shade, stroke: "#111", "stroke-width": 1, class: "mark" });
-    addTitle(circle, `${node.name} · ${collectionMode ? `${node.documents} documents` : `${node.mentions} mentions`}`);
+    addTitle(circle, collectionMode
+      ? `${node.name} · ${node.documents} documents`
+      : `${node.name} · ${label(state.config.size)}: ${formatNumber(node[state.config.size])}${state.config.size === "contextAdjustedMentions" ? ` · Raw mentions: ${formatNumber(node.mentions)}` : ""}`);
     circle.addEventListener("click", () => collectionMode ? inspectGroup(node) : inspectEntity(node));
     svg.append(circle);
     if (state.config.labels === "all" || (state.config.labels === "top" && index < 16)) {
@@ -847,7 +884,7 @@ function renderMatrix() {
   const { svg, width, height } = clearChart();
   const sources = state.catalog.sources.filter(item => sourceMatches(item.name));
   const columns = state.config.matrixColumns === "entity"
-    ? filteredEntities().sort((a, b) => b.mentions - a.mentions).slice(0, Math.min(state.config.limit, 18)).map(entity => ({ id: entity.id, label: entity.name, category: entity.category, entity }))
+    ? filteredEntities().sort((a, b) => b.contextAdjustedMentions - a.contextAdjustedMentions).slice(0, Math.min(state.config.limit, 18)).map(entity => ({ id: entity.id, label: entity.name, category: entity.category, entity }))
     : state.config.categories.map(category => ({ id: category, label: label(category), category }));
   if (!sources.length || !columns.length) return showEmpty();
   const counts = [];
@@ -897,7 +934,7 @@ function tableRecords() {
 function tableDisplayValue(item, field) {
   const value = item[field];
   if (value == null || value === "") return "—";
-  if (["classificationConfidence", "extractionConfidence", "inflationRate"].includes(field)) return `${Math.round(value * 100)}%`;
+  if (["classificationConfidence", "extractionConfidence", "inflationRate", "documentInflationRate"].includes(field)) return `${Math.round(value * 100)}%`;
   if (field === "createdAt") return new Date(value).toLocaleString();
   if (field === "durationMs") return `${Number(value).toLocaleString()} ms`;
   if (["category", "reviewStatus", "inflationRisk", "format"].includes(field)) return label(value);
@@ -1004,7 +1041,8 @@ function inspectDuplicateCandidates() {
 
 function inspectEntity(item) {
   state.selected = item;
-  const rate = item.inflationRate || 0;
+  const mentionRate = item.inflationRate || 0;
+  const prominenceRate = item.documentInflationRate || 0;
   const signals = item.inflationSignals || {};
   const signalDetails = [
     signals.repeatedContextMentions ? `${formatNumber(signals.repeatedContextMentions)} repeated-text mentions` : "",
@@ -1013,8 +1051,8 @@ function inspectEntity(item) {
     signals.legacySourceConcentration ? `${formatNumber(signals.legacySourceConcentration)} mentions concentrated in one legacy-catalog source` : ""
   ].filter(Boolean).join("; ");
   const inflationNote = item.inflationRisk === "low"
-    ? "Low repeated-context inflation detected."
-    : `${label(item.inflationRisk)} potential inflation: ${Math.round(rate * 100)}% of raw mentions are discounted by the context heuristic${signalDetails ? ` (${signalDetails})` : ""}.`;
+    ? `Low prominence-inflation risk. ${Math.round(mentionRate * 100)}% of raw mentions are context-adjusted without materially reducing document coverage${signalDetails ? ` (${signalDetails})` : ""}.`
+    : `${label(item.inflationRisk)} prominence inflation risk: ${Math.round(prominenceRate * 100)}% of raw document appearances and ${Math.round(mentionRate * 100)}% of raw mentions are discounted by the context heuristic${signalDetails ? ` (${signalDetails})` : ""}.`;
   showInspector(item.category, item.name, [[item.contextAdjustedMentions ?? item.mentions, "adjusted mentions"], [item.mentions, "raw mentions"], [item.independentDocumentCount ?? item.documentCount, "independent documents"], [item.sourceCount, "collections"]], item.evidence, `${inflationNote} ${label(item.reviewStatus)} · ${item.variants.length} observed name variant${item.variants.length === 1 ? "" : "s"}`);
 }
 
