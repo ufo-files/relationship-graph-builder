@@ -187,8 +187,8 @@ test("entity and relationship metrics are recomputed for selected collections", 
       id: "entity-1", mentions: 12, documentCount: 2, sourceCount: 2,
       documentIds: ["doc-a", "doc-b"], evidence: [{ documentId: "doc-a" }, { documentId: "doc-b" }],
       sourceMetrics: {
-        "Collection A": { mentions: 2, documentCount: 1 },
-        "Collection B": { mentions: 10, documentCount: 1 }
+        "Collection A": { mentions: 2, contextAdjustedMentions: 1, independentDocumentCount: 1, documentCount: 1, inflationSignals: { repeatedContextMentions: 2 } },
+        "Collection B": { mentions: 10, contextAdjustedMentions: 8, independentDocumentCount: 1, documentCount: 1, inflationSignals: { withinDocumentDuplicates: 2 } }
       }
     });
     const edge = filteredEdge({
@@ -203,8 +203,8 @@ test("entity and relationship metrics are recomputed for selected collections", 
       id: "entity-2", mentions: 10, documentCount: 2, sourceCount: 2,
       documentIds: ["doc-a", "doc-b"], evidence: [],
       sourceMetrics: {
-        "Collection A": { mentions: 9, documentCount: 1 },
-        "Collection B": { mentions: 1, documentCount: 1 }
+        "Collection A": { mentions: 9, contextAdjustedMentions: 9, independentDocumentCount: 1, documentCount: 1 },
+        "Collection B": { mentions: 1, contextAdjustedMentions: 1, independentDocumentCount: 1, documentCount: 1 }
       }
     });
     const filteredExtent = valueExtent([entity, comparison], "mentions");
@@ -214,6 +214,10 @@ test("entity and relationship metrics are recomputed for selected collections", 
   `, context));
 
   assert.equal(result.entity.mentions, 2);
+  assert.equal(result.entity.contextAdjustedMentions, 1);
+  assert.equal(result.entity.independentDocumentCount, 1);
+  assert.equal(result.entity.inflationRate, 0.5);
+  assert.equal(result.entity.inflationRisk, "low");
   assert.equal(result.entity.documentCount, 1);
   assert.equal(result.entity.sourceCount, 1);
   assert.deepEqual(result.entity.documentIds, ["doc-a"]);
@@ -237,7 +241,9 @@ test("significant entity presets configure scatters across all collections", () 
     const config = JSON.parse(vm.runInContext(`JSON.stringify(presetConfig("${id}"))`, context));
     assert.equal(config.type, "scatter");
     assert.equal(config.x, "entity");
-    assert.equal(config.y, "mentions");
+    assert.equal(config.y, "contextAdjustedMentions");
+    assert.equal(config.size, "independentDocumentCount");
+    assert.equal(config.includeHighInflation, false);
     assert.deepEqual(config.categories, [category]);
     assert.deepEqual(config.sources, []);
     assert.equal(config.title, title);
@@ -262,7 +268,78 @@ test("automatic titles follow active entity categories, axes, and collections", 
 
   assert.equal(result.presetTitle, "Significant People");
   assert.equal(result.expandedTitle, "Significant People and Government Agencies");
-  assert.equal(result.refinedTitle, "Mentions by Documents — People and Government Agencies — Army reports");
+  assert.equal(result.refinedTitle, "Context-adjusted mentions by Documents — People and Government Agencies — Army reports");
+});
+
+test("adjusted significance falls back safely for an older catalog", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const entity = JSON.parse(vm.runInContext(`JSON.stringify(withSignificanceDefaults({
+    name: "Legacy entity", mentions: 42, documentCount: 9,
+    sourceMetrics: { Archive: { mentions: 40, documentCount: 8 } }
+  }))`, context));
+
+  assert.equal(entity.contextAdjustedMentions, 42);
+  assert.equal(entity.independentDocumentCount, 9);
+  assert.equal(entity.inflationRate, 0);
+  assert.equal(entity.inflationRisk, "low");
+  assert.equal(entity.sourceMetrics.Archive.contextAdjustedMentions, 40);
+  assert.equal(entity.sourceMetrics.Archive.independentDocumentCount, 8);
+});
+
+test("legacy source concentration cannot restore a high-inflation entity to Significant People", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    state.config = presetConfig("significant-people");
+    const entity = withSignificanceDefaults({
+      name: "John Greenewald", category: "person", classificationConfidence: .99,
+      mentions: 934, documentCount: 874, documentIds: [],
+      sourceMetrics: {
+        "Black-Vault-UFO": { mentions: 932, documentCount: 872 },
+        "American-Alchemy": { mentions: 2, documentCount: 2 }
+      }
+    });
+    JSON.stringify({
+      adjusted: entity.contextAdjustedMentions,
+      rate: entity.inflationRate,
+      risk: entity.inflationRisk,
+      visible: entityMatches(entity)
+    })
+  `, context));
+
+  assert.equal(result.adjusted, 34);
+  assert.ok(result.rate > .95);
+  assert.equal(result.risk, "high");
+  assert.equal(result.visible, false);
+});
+
+test("entity inspection explains potential mention inflation", () => {
+  const elements = {
+    builderView: new FakeElement(),
+    inspector: new FakeElement(),
+    inspectorContent: new FakeElement()
+  };
+  elements.builderView.classList.add("inspector-collapsed");
+  const document = { querySelector: selector => elements[selector.slice(1)], querySelectorAll: () => [] };
+  const context = vm.createContext({ document, location: { hash: "" }, URLSearchParams, requestAnimationFrame() {} });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  vm.runInContext(`inspectEntity({
+    name: "John Greenewald", category: "person", contextAdjustedMentions: 29, mentions: 934,
+    independentDocumentCount: 3, documentCount: 874, sourceCount: 2, inflationRate: .969,
+    inflationRisk: "high", classificationConfidence: .99, reviewStatus: "curated",
+    variants: ["John Greenewald"], evidence: [],
+    inflationSignals: { repeatedContextMentions: 871, administrativeMentions: 34, withinDocumentDuplicates: 20 }
+  })`, context);
+
+  assert.match(elements.inspectorContent.innerHTML, /adjusted mentions/);
+  assert.match(elements.inspectorContent.innerHTML, /raw mentions/);
+  assert.match(elements.inspectorContent.innerHTML, /High potential inflation/);
+  assert.match(elements.inspectorContent.innerHTML, /repeated-text mentions/);
+  assert.match(elements.inspectorContent.innerHTML, /requester-metadata mentions/);
 });
 
 test("an explicitly edited title remains custom until a preset is applied", () => {
@@ -327,7 +404,7 @@ test("scatter label modes render the expected ranked entities", () => {
       entities: Array.from({ length: 20 }, (_, index) => ({
         id: String(index), name: "Entity " + index, category: "person",
         classificationConfidence: 1, mentions: 20 - index, sourceCount: 1,
-        documentIds: []
+        inflationRisk: index === 0 ? "high" : "low", documentIds: []
       }))
     };
     Object.assign(state.config, {
@@ -340,6 +417,7 @@ test("scatter label modes render the expected ranked entities", () => {
   const importantLabels = labelTexts(elements.chart);
   assert.deepEqual(importantLabels.slice(0, 10), Array.from({ length: 10 }, (_, index) => `Entity ${index}`));
   assert.ok(importantLabels.length > 10, "lower-ranked entities should be sampled");
+  assert.equal(elements.chart.children.filter(node => node.attributes.class === "inflation-ring").length, 1);
   assert.ok(importantLabels.length < 20, "lower-ranked entities should not all be labeled");
 
   vm.runInContext('state.config.labels = "all"; renderScatter();', context);

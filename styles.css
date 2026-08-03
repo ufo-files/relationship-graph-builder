@@ -75,6 +75,8 @@ h1, h2, h3, p { margin-top: 0; }
 .check-chip input:checked + span { color: var(--ink); border-color: var(--ink); background-color: var(--paper); background-image: repeating-linear-gradient(135deg, transparent 0 5px, rgba(17,17,17,.12) 5px 6px); font-weight: 700; }
 .review-button { width: 100%; text-align: left; }
 .review-button:disabled { cursor: default; opacity: .5; }
+.method-note { padding: 10px; border: 1px solid var(--line); background: var(--mint); }
+.method-note p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.45; }
 
 .stage { min-width: 0; min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; overflow: hidden; background: var(--paper); }
 .stage-header { display: flex; justify-content: space-between; gap: 20px; padding: 24px 28px; }
@@ -100,6 +102,7 @@ h1, h2, h3, p { margin-top: 0; }
 .legend:empty { display: none; }
 .legend-item { display: flex; align-items: center; gap: 4px; }
 .legend-item i { width: 13px; height: 13px; display: inline-block; border: 1px solid var(--ink); border-radius: 0; background-color: var(--paper); }
+.legend-item i.risk-key { border-style: dashed; background: transparent; }
 .stage-footer { padding: 13px 27px 16px; display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 11px; }
 .chart-label { fill: var(--ink); font-size: var(--graph-label-size, 12px); pointer-events: none; }
 .node-label { font-weight: 650; paint-order: stroke; stroke: var(--paper); stroke-width: 3px; stroke-linejoin: round; }

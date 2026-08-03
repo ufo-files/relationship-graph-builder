@@ -66,6 +66,10 @@ python3 scripts/build_catalog.py
 - Generic co-mentions require at least two distinct segments.
 - Sections containing more than 30 entities are not expanded into a clique.
 
+Raw mention totals are retained, but the builder also publishes a context-adjusted mention count for judging significance. The adjustment counts an exact context once per document, counts an exact context repeated across three or more documents once overall, and excludes `Requester:` metadata. Each entity includes the adjusted count, independent-document count, potential-inflation rate and risk level, plus the contributing repetition signals. This is a transparent corpus-quality heuristic, not a claim about a person or entity's real-world importance.
+
+The Significant People, Significant Places, and Significant Terms presets exclude high-inflation entities by default. The Refine panel can include them again for inspection; elevated and high-risk scatter points are marked with a dashed ring.
+
 The catalog publishes the highest-evidence 1,200 accepted entities and up to 4,000 accepted edges for a compact browser payload. The full accepted and published counts, along with those caps, are explicit in the catalog metadata.
 
 ## Test

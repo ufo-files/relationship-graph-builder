@@ -99,6 +99,32 @@ class CatalogTests(unittest.TestCase):
             ))
             self.assertTrue(report.exists())
 
+    def test_flags_repeated_and_administrative_context_that_inflates_mentions(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "machine-data"
+            collection = root / "Example"
+            collection.mkdir(parents=True)
+            repeated_credit = "and research of John Greenewald, Jr., creator of"
+            bodies = [
+                f"{repeated_credit}\nRequester: John Greenewald\nJohn Greenewald discussed the released records.",
+                f"{repeated_credit}\nRequester: John Greenewald",
+                f"{repeated_credit}\nRequester: John Greenewald",
+            ]
+            for number, body in enumerate(bodies, 1):
+                metadata = {"schema": "ufo-files-archive-ocr/v1", "source_file": f"source-{number}.pdf", "source_bytes": 100}
+                (collection / f"source-{number}.txt").write_text(json.dumps(metadata) + "\n\n" + body, encoding="utf-8")
+
+            catalog = build(root, Path(directory) / "catalog.json", 100, 100, require_data=True)
+            entity = next(entity for entity in catalog["entities"] if entity["canonicalName"] == "John Greenewald")
+
+            self.assertEqual(entity["mentions"], 7)
+            self.assertEqual(entity["contextAdjustedMentions"], 2)
+            self.assertEqual(entity["independentDocumentCount"], 1)
+            self.assertEqual(entity["inflatedMentionCount"], 5)
+            self.assertEqual(entity["inflationRisk"], "high")
+            self.assertEqual(entity["inflationSignals"]["repeatedContextMentions"], 3)
+            self.assertEqual(entity["inflationSignals"]["administrativeMentions"], 3)
+
     def test_refuses_to_write_an_empty_required_catalog(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / "machine-data"

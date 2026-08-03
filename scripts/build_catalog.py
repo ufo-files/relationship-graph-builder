@@ -22,6 +22,7 @@ from typing import Iterable
 
 
 SCHEMA = "ufo-files-relationship-catalog/v1"
+REPEATED_CONTEXT_DOCUMENT_FLOOR = 3
 DEFAULT_INPUT = Path("/Volumes/OCR & Transcriptions 1")
 SKIP_PARTS = {
     ".git", ".state", ".tmp", ".Spotlight-V100", ".Trashes",
@@ -55,6 +56,8 @@ KNOWN = {
     "UFOs": ("UFO", "subject"),
     "FOIA": ("FOIA", "subject"),
 }
+
+ADMINISTRATIVE_CONTEXT = re.compile(r"^\s*(?:foia\s+)?requester\s*:", re.IGNORECASE)
 
 
 def known_lookup_key(value: str) -> str:
@@ -301,20 +304,98 @@ class Candidate:
     examples: list[dict] = field(default_factory=list)
     source_mentions: collections.Counter = field(default_factory=collections.Counter)
     source_documents: dict[str, set[str]] = field(default_factory=lambda: collections.defaultdict(set))
+    context_mentions: collections.Counter = field(default_factory=collections.Counter)
+    context_documents: dict[str, set[str]] = field(default_factory=lambda: collections.defaultdict(set))
+    source_context_mentions: dict[str, collections.Counter] = field(default_factory=lambda: collections.defaultdict(collections.Counter))
+    source_context_documents: dict[str, dict[str, set[str]]] = field(default_factory=lambda: collections.defaultdict(lambda: collections.defaultdict(set)))
+    administrative_contexts: set[str] = field(default_factory=set)
     mentions: int = 0
     extraction_total: float = 0.0
 
     def add(self, raw: str, doc_id: str, source: str, segment_id: str, excerpt: str, confidence: float) -> None:
+        context = context_key(excerpt)
         self.variants[clean_space(raw)] += 1
         self.documents.add(doc_id)
         self.sources.add(source)
         self.segments.add(segment_id)
         self.source_mentions[source] += 1
         self.source_documents[source].add(doc_id)
+        self.context_mentions[context] += 1
+        self.context_documents[context].add(doc_id)
+        self.source_context_mentions[source][context] += 1
+        self.source_context_documents[source][context].add(doc_id)
+        if ADMINISTRATIVE_CONTEXT.search(excerpt):
+            self.administrative_contexts.add(context)
         self.mentions += 1
         self.extraction_total += confidence
         if len(self.examples) < 4:
             self.examples.append({"documentId": doc_id, "excerpt": excerpt[:280]})
+
+
+def context_key(value: str) -> str:
+    normalized = unicodedata.normalize("NFKC", value).casefold()
+    normalized = re.sub(r"\d+", "#", normalized)
+    return clean_space(normalized)
+
+
+def inflation_risk(rate: float, inflated_mentions: int) -> str:
+    if inflated_mentions >= 3 and rate >= 0.5:
+        return "high"
+    if inflated_mentions >= 3 and rate >= 0.2:
+        return "elevated"
+    return "low"
+
+
+def significance_metrics(candidate: Candidate, source: str | None = None) -> dict:
+    repeated_contexts = {
+        context
+        for context, documents in candidate.context_documents.items()
+        if len(documents) >= REPEATED_CONTEXT_DOCUMENT_FLOOR
+    }
+    if source is None:
+        mentions = candidate.mentions
+        context_mentions = candidate.context_mentions
+        context_documents = candidate.context_documents
+    else:
+        mentions = candidate.source_mentions[source]
+        context_mentions = candidate.source_context_mentions[source]
+        context_documents = candidate.source_context_documents[source]
+
+    adjusted_mentions = 0
+    independent_documents: set[str] = set()
+    for context, documents in context_documents.items():
+        if context in candidate.administrative_contexts:
+            continue
+        if context in repeated_contexts:
+            adjusted_mentions += 1
+            continue
+        adjusted_mentions += len(documents)
+        independent_documents.update(documents)
+
+    repeated_mentions = sum(
+        context_mentions[context]
+        for context in repeated_contexts
+        if context not in candidate.administrative_contexts
+    )
+    administrative_mentions = sum(context_mentions[context] for context in candidate.administrative_contexts)
+    within_document_duplicates = sum(
+        max(0, context_mentions[context] - len(documents))
+        for context, documents in context_documents.items()
+    )
+    inflated_mentions = max(0, mentions - adjusted_mentions)
+    rate = inflated_mentions / max(1, mentions)
+    return {
+        "contextAdjustedMentions": adjusted_mentions,
+        "independentDocumentCount": len(independent_documents),
+        "inflatedMentionCount": inflated_mentions,
+        "inflationRate": round(rate, 3),
+        "inflationRisk": inflation_risk(rate, inflated_mentions),
+        "inflationSignals": {
+            "repeatedContextMentions": repeated_mentions,
+            "administrativeMentions": administrative_mentions,
+            "withinDocumentDuplicates": within_document_duplicates,
+        },
+    }
 
 
 def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list[tuple[str, str, str, float, bool]]:
@@ -501,6 +582,7 @@ def build(
         evidence_factor = min(1.0, 0.45 + len(candidate.documents) * 0.08 + candidate.mentions * 0.015)
         classification = 0.99 if candidate.curated else min(0.94, extraction * evidence_factor)
         name = candidate.canonical if candidate.curated else candidate.variants.most_common(1)[0][0]
+        metrics = significance_metrics(candidate)
         entities.append({
             "id": entity_ids[key],
             "name": name,
@@ -509,6 +591,7 @@ def build(
             "mentions": candidate.mentions,
             "documentCount": len(candidate.documents),
             "sourceCount": len(candidate.sources),
+            **metrics,
             "extractionConfidence": round(extraction, 3),
             "classificationConfidence": round(classification, 3),
             "reviewStatus": "curated" if candidate.curated else ("review" if classification < 0.72 else "evidence_backed"),
@@ -518,6 +601,7 @@ def build(
                 source: {
                     "mentions": candidate.source_mentions[source],
                     "documentCount": len(candidate.source_documents[source]),
+                    **significance_metrics(candidate, source),
                 }
                 for source in sorted(candidate.sources)
             },
@@ -596,6 +680,7 @@ def build(
             "personEvidenceFloor": "3 mentions across 2 documents",
             "otherEvidenceFloor": "2 mentions across 2 documents (dates: 2 mentions)",
             "relationshipEvidenceFloor": "2 co-mentions or 1 same-segment typed cue",
+            "contextAdjustment": "Exact context repeats within one document count once; requester metadata is excluded; exact contexts spanning 3+ documents count once",
             "denseSegmentLimit": 30,
             "maxEntities": max_entities,
             "maxEdges": max_edges,
