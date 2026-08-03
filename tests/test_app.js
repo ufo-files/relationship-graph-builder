@@ -33,14 +33,17 @@ function labelTexts(chart) {
   return chart.children.filter(node => node.attributes.class?.includes("node-label")).map(node => node.textContent);
 }
 
-test("legend is anchored at the top center of the chart", () => {
+test("legend sits below and outside the chart canvas", () => {
   const styles = fs.readFileSync("styles.css", "utf8");
+  const html = fs.readFileSync("index.html", "utf8");
   const legendRule = styles.match(/\.legend \{([^}]+)\}/)?.[1] || "";
 
-  assert.match(legendRule, /left: 50%/);
-  assert.match(legendRule, /top: 14px/);
-  assert.match(legendRule, /transform: translateX\(-50%\)/);
-  assert.doesNotMatch(legendRule, /bottom:/);
+  assert.doesNotMatch(legendRule, /(?:^|;)\s*position\s*:/);
+  assert.doesNotMatch(legendRule, /(?:^|;)\s*left\s*:/);
+  assert.doesNotMatch(legendRule, /(?:^|;)\s*top\s*:/);
+  assert.doesNotMatch(legendRule, /(?:^|;)\s*transform\s*:/);
+  assert.doesNotMatch(legendRule, /(?:^|;)\s*bottom\s*:/);
+  assert.match(html, /<\/div>\s*<div class="legend" id="legend"><\/div>\s*<footer class="stage-footer">/);
 });
 
 test("inspector defaults collapsed and a selected mark reopens it", () => {
