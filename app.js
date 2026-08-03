@@ -49,7 +49,7 @@ const PRESETS = [
   }
 ];
 const DEFAULT = {
-  type: "scatter", x: "documentCount", y: "mentions", size: "sourceCount", color: "category",
+  type: "scatter", x: "documentCount", y: "mentions", size: "documentCount", color: "category",
   categories: [...ENTITY_CATEGORIES], sources: [], allSources: true, relation: "all",
   minEvidence: 2, minConfidence: 0.95, limit: 50, labels: "top", aggregation: "source",
   nodeRole: "entity", timelineRole: "document", matrixColumns: "category",
@@ -278,7 +278,7 @@ function renderControls() {
 function setType(type) {
   state.config.type = type;
   if (type === "bars") Object.assign(state.config, { aggregation: "source", y: "words", color: "intensity", title: "Collection coverage" });
-  if (type === "scatter") Object.assign(state.config, { x: "entity", y: "mentions", size: "sourceCount", color: "category", limit: 50, title: "Evidence map" });
+  if (type === "scatter") Object.assign(state.config, { x: "entity", y: "mentions", size: "documentCount", color: "category", limit: 50, title: "Evidence map" });
   if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "mentions", color: "category", title: "People and institutions" });
   if (type === "timeline") Object.assign(state.config, { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source", title: "Transcription activity" });
   if (type === "matrix") Object.assign(state.config, { matrixColumns: "category", color: "intensity", title: "Collections × entity types" });
