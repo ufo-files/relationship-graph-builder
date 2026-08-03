@@ -75,6 +75,11 @@
       <div class="chart-wrap" id="chartWrap">
         <div class="loading" id="loadingState"><span></span>Reading local catalog…</div>
         <svg id="chart" role="img" aria-labelledby="graphTitle graphSubtitle"></svg>
+        <div id="mapView" class="map-view" role="img" aria-labelledby="graphTitle graphSubtitle" hidden>
+          <canvas id="globeCanvas" tabindex="0" aria-label="Interactive globe. Drag or use arrow keys to rotate; scroll or use plus and minus to zoom."></canvas>
+          <div id="globeLabels" class="globe-labels" aria-hidden="true"></div>
+          <span id="mapStatus" class="map-status">Loading country map…</span>
+        </div>
         <div id="tableView" class="table-view" aria-labelledby="graphTitle graphSubtitle" hidden></div>
         <div class="chart-empty" id="emptyState" hidden>No records match these settings.</div>
       </div>
@@ -99,5 +104,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="app.js" defer></script>
+  <script src="map-globe.js" type="module"></script>
 </body>
 </html>

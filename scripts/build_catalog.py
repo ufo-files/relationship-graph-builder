@@ -499,6 +499,7 @@ def build(
 ) -> dict:
     data_dir = Path(__file__).resolve().parents[1] / "data"
     registry = load_registry([data_dir / "curated_entities.json", data_dir / "entity_aliases.json"])
+    location_coordinates = json.loads((data_dir / "location_coordinates.json").read_text(encoding="utf-8"))
     candidates: dict[str, Candidate] = {}
     documents: list[dict] = []
     segment_entities: dict[str, list[str]] = {}
@@ -589,7 +590,7 @@ def build(
         classification = 0.99 if candidate.curated else min(0.94, extraction * evidence_factor)
         name = candidate.canonical if candidate.curated else candidate.variants.most_common(1)[0][0]
         metrics = significance_metrics(candidate)
-        entities.append({
+        entity = {
             "id": entity_ids[key],
             "name": name,
             "canonicalName": name,
@@ -612,7 +613,10 @@ def build(
                 for source in sorted(candidate.sources)
             },
             "evidence": candidate.examples,
-        })
+        }
+        if candidate.category == "location" and name in location_coordinates:
+            entity["geo"] = location_coordinates[name]
+        entities.append(entity)
 
     edge_stats: dict[tuple[str, str, str], dict] = {}
     for sid, keys in segment_entities.items():
@@ -687,6 +691,7 @@ def build(
             "otherEvidenceFloor": "2 mentions across 2 documents (dates: 2 mentions)",
             "relationshipEvidenceFloor": "2 co-mentions or 1 same-segment typed cue",
             "contextAdjustment": "Exact context repeats within one document count once; requester metadata is excluded; exact contexts spanning 3+ documents count once",
+            "locationCoordinates": "Reviewed local gazetteer; ambiguous and unmapped names are not plotted",
             "denseSegmentLimit": 30,
             "maxEntities": max_entities,
             "maxEdges": max_edges,
@@ -700,6 +705,7 @@ def build(
             "acceptedEdges": all_edge_count,
             "publishedEdges": len(edges),
             "possibleDuplicates": possible_duplicate_count,
+            "mappedLocations": sum(1 for entity in entities if entity.get("geo")),
         },
         "sources": sources,
         "documents": documents,
