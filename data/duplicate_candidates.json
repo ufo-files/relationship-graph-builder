@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "3e6e9e5ec9ed799ae8920aa7aee7fbecf0dc3135"
+    "revision": "0f7bde101315e472924f322e9dc2c6551e17c934"
   },
-  "count": 119,
-  "totalCount": 119,
-  "shownCount": 119,
+  "count": 120,
+  "totalCount": 120,
+  "shownCount": 120,
   "candidates": [
     {
       "category": "organization",
@@ -1374,8 +1374,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1587,
-        "documentCount": 290
+        "mentions": 1588,
+        "documentCount": 291
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -1911,6 +1911,22 @@
         "documentCount": 12
       },
       "similarity": 0.88,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Allen Dulles",
+        "mentions": 13,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Alan Dulles",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.87,
       "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     }
