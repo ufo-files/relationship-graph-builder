@@ -33,17 +33,17 @@ function labelTexts(chart) {
   return chart.children.filter(node => node.attributes.class?.includes("node-label")).map(node => node.textContent);
 }
 
-test("legend participates in chart layout instead of covering the chart", () => {
+test("legend sits below the chart without covering it", () => {
   const styles = fs.readFileSync("styles.css", "utf8");
   const html = fs.readFileSync("index.html", "utf8");
   const legendRule = styles.match(/\.legend \{([^}]+)\}/)?.[1] || "";
 
-  assert.doesNotMatch(legendRule, /position:/);
-  assert.doesNotMatch(legendRule, /left:/);
-  assert.doesNotMatch(legendRule, /top:/);
-  assert.doesNotMatch(legendRule, /transform:/);
+  assert.doesNotMatch(legendRule, /(?:^|;)\s*position\s*:/);
+  assert.doesNotMatch(legendRule, /(?:^|;)\s*left\s*:/);
+  assert.doesNotMatch(legendRule, /(?:^|;)\s*top\s*:/);
+  assert.doesNotMatch(legendRule, /(?:^|;)\s*transform\s*:/);
   assert.doesNotMatch(legendRule, /(?:^|;)\s*bottom\s*:/);
-  assert.ok(html.indexOf('id="legend"') < html.indexOf('id="chart"'));
+  assert.ok(html.indexOf('id="legend"') > html.indexOf('id="chart"'));
 });
 
 test("inspector defaults collapsed and a selected mark reopens it", () => {
