@@ -24,6 +24,12 @@ From this directory:
 python3 -m http.server 4173
 ```
 
+## Entity identity review
+
+Catalog rebuilds apply confirmed identity merges from `data/entity_aliases.json`. Each entry names one canonical entity and the exact aliases—acronyms, OCR variants, possessives, or alternate spellings—that should resolve to it. Similar names are never merged solely because they look alike.
+
+Every rebuild also writes `data/duplicate_candidates.json` and includes the ranked queue in `data/catalog.json`. In the builder, open **Refine → Review possible duplicates** to inspect that queue. After confirming a pair refers to the same real entity, add the non-canonical spelling to the canonical record in `data/entity_aliases.json`; the next rebuild merges its mentions, documents, evidence, and edges.
+
 Open <http://localhost:4173>.
 
 ## Rebuild the catalog
