@@ -104,6 +104,14 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="app.js" defer></script>
-  <script src="map-globe.js" type="module"></script>
+  <script>
+    window.addEventListener("error", event => {
+      if (event.target?.id === "globeModule") {
+        const status = document.getElementById("mapStatus");
+        if (status) status.textContent = "Map module failed to load";
+      }
+    }, true);
+  </script>
+  <script id="globeModule" src="map-globe.js" type="module"></script>
 </body>
 </html>
