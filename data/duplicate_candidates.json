@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "07115be39cacd888954bbdddae729292dce9c12b"
+    "revision": "8119cb2f6582d68400bf370c02df5db49874253d"
   },
-  "count": 122,
-  "totalCount": 122,
-  "shownCount": 122,
+  "count": 118,
+  "totalCount": 118,
+  "shownCount": 118,
   "candidates": [
     {
       "category": "organization",
@@ -331,38 +331,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "book",
-      "left": {
-        "name": "The Immortality Keys",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "right": {
-        "name": "The Immortality Key",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "similarity": 0.968,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "book",
-      "left": {
-        "name": "he Brother of the Third Degree",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "right": {
-        "name": "ho/Brother of the third Degree",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "similarity": 0.967,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "government_agency",
       "left": {
         "name": "Name of Investigating Officer",
@@ -635,6 +603,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "David Grush",
+        "mentions": 59,
+        "documentCount": 30
+      },
+      "right": {
+        "name": "David Grusch",
+        "mentions": 6,
+        "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Inclosed for the Bureau",
@@ -718,8 +702,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 668,
-        "documentCount": 131
+        "mentions": 672,
+        "documentCount": 134
       },
       "right": {
         "name": "Department of Detense",
@@ -827,22 +811,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "book",
-      "left": {
-        "name": "They Knew Too Huch About Flying Baucers",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "right": {
-        "name": "They Knew Too Much About Flying Saucers",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "similarity": 0.949,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
@@ -933,22 +901,6 @@
         "name": "Greenville AT Base",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.944,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "book",
-      "left": {
-        "name": "Unvoiled Mysteries",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "right": {
-        "name": "Unveiled Mysteries",
-        "mentions": 1,
-        "documentCount": 1
       },
       "similarity": 0.944,
       "reason": "similar name",
@@ -1166,8 +1118,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Community",
-        "mentions": 41,
-        "documentCount": 13
+        "mentions": 42,
+        "documentCount": 14
       },
       "right": {
         "name": "Intelligence Community In",
@@ -1406,8 +1358,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1585,
-        "documentCount": 288
+        "mentions": 1586,
+        "documentCount": 289
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -1422,8 +1374,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 841,
-        "documentCount": 207
+        "mentions": 845,
+        "documentCount": 208
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -1637,22 +1589,6 @@
         "name": "Mar Department",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "book",
-      "left": {
-        "name": "I AN DISCOURSE",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "right": {
-        "name": "I AM DISCOURSE",
-        "mentions": 1,
-        "documentCount": 1
       },
       "similarity": 0.929,
       "reason": "similar name",
