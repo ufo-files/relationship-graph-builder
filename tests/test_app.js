@@ -33,7 +33,7 @@ function labelTexts(chart) {
   return chart.children.filter(node => node.attributes.class?.includes("node-label")).map(node => node.textContent);
 }
 
-test("legend sits below the chart without covering it", () => {
+test("legend sits below and outside the chart canvas", () => {
   const styles = fs.readFileSync("styles.css", "utf8");
   const html = fs.readFileSync("index.html", "utf8");
   const legendRule = styles.match(/\.legend \{([^}]+)\}/)?.[1] || "";
@@ -43,7 +43,7 @@ test("legend sits below the chart without covering it", () => {
   assert.doesNotMatch(legendRule, /(?:^|;)\s*top\s*:/);
   assert.doesNotMatch(legendRule, /(?:^|;)\s*transform\s*:/);
   assert.doesNotMatch(legendRule, /(?:^|;)\s*bottom\s*:/);
-  assert.ok(html.indexOf('id="legend"') > html.indexOf('id="chart"'));
+  assert.match(html, /<\/div>\s*<div class="legend" id="legend"><\/div>\s*<footer class="stage-footer">/);
 });
 
 test("inspector defaults collapsed and a selected mark reopens it", () => {
