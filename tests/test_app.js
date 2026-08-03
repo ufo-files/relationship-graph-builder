@@ -80,6 +80,7 @@ test("default graph includes every entity category at 95% confidence", () => {
   ]);
   assert.equal(config.x, "documentCount");
   assert.equal(config.y, "mentions");
+  assert.equal(config.size, "documentCount");
   assert.equal(config.minConfidence, 0.95);
 });
 
