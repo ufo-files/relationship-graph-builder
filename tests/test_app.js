@@ -243,6 +243,7 @@ test("significant entity presets configure scatters across all collections", () 
     assert.equal(config.x, "entity");
     assert.equal(config.y, "contextAdjustedMentions");
     assert.equal(config.size, "independentDocumentCount");
+    assert.equal(config.includeHighInflation, false);
     assert.deepEqual(config.categories, [category]);
     assert.deepEqual(config.sources, []);
     assert.equal(config.title, title);
@@ -285,6 +286,34 @@ test("adjusted significance falls back safely for an older catalog", () => {
   assert.equal(entity.inflationRisk, "low");
   assert.equal(entity.sourceMetrics.Archive.contextAdjustedMentions, 40);
   assert.equal(entity.sourceMetrics.Archive.independentDocumentCount, 8);
+});
+
+test("legacy source concentration cannot restore a high-inflation entity to Significant People", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    state.config = presetConfig("significant-people");
+    const entity = withSignificanceDefaults({
+      name: "John Greenewald", category: "person", classificationConfidence: .99,
+      mentions: 934, documentCount: 874, documentIds: [],
+      sourceMetrics: {
+        "Black-Vault-UFO": { mentions: 932, documentCount: 872 },
+        "American-Alchemy": { mentions: 2, documentCount: 2 }
+      }
+    });
+    JSON.stringify({
+      adjusted: entity.contextAdjustedMentions,
+      rate: entity.inflationRate,
+      risk: entity.inflationRisk,
+      visible: entityMatches(entity)
+    })
+  `, context));
+
+  assert.equal(result.adjusted, 34);
+  assert.ok(result.rate > .95);
+  assert.equal(result.risk, "high");
+  assert.equal(result.visible, false);
 });
 
 test("entity inspection explains potential mention inflation", () => {

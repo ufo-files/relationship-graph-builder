@@ -37,22 +37,23 @@ const PRESETS = [
   {
     id: "significant-people",
     label: "Significant People",
-    config: { type: "scatter", x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", categories: ["person"], sources: [] }
+    config: { type: "scatter", x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", categories: ["person"], sources: [], includeHighInflation: false }
   },
   {
     id: "significant-places",
     label: "Significant Places",
-    config: { type: "scatter", x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", categories: ["location"], sources: [] }
+    config: { type: "scatter", x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", categories: ["location"], sources: [], includeHighInflation: false }
   },
   {
     id: "significant-terms",
     label: "Significant Terms",
-    config: { type: "scatter", x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", categories: ["subject"], sources: [] }
+    config: { type: "scatter", x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", categories: ["subject"], sources: [], includeHighInflation: false }
   }
 ];
 const DEFAULT = {
   type: "scatter", x: "documentCount", y: "mentions", size: "documentCount", color: "category",
   categories: [...ENTITY_CATEGORIES], sources: [], allSources: true, relation: "all",
+  includeHighInflation: true,
   minEvidence: 2, minConfidence: 0.95, limit: 50, labels: "top", aggregation: "source",
   nodeRole: "entity", timelineRole: "document", matrixColumns: "category",
   tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"],
@@ -192,9 +193,28 @@ function withSignificanceDefaults(entity) {
     inflationRisk: metrics.inflationRisk || "low",
     inflationSignals: metrics.inflationSignals || { repeatedContextMentions: 0, administrativeMentions: 0, withinDocumentDuplicates: 0 }
   });
+  const sourceMetrics = Object.fromEntries(Object.entries(entity.sourceMetrics || {}).map(([source, metrics]) => [source, normalizeMetrics(metrics)]));
+  const normalized = { ...normalizeMetrics(entity), sourceMetrics };
+  if (entity.contextAdjustedMentions != null) return normalized;
+
+  const sources = Object.values(entity.sourceMetrics || {});
+  const dominantShare = sources.length && entity.mentions
+    ? Math.max(...sources.map(metrics => metrics.mentions || 0)) / entity.mentions
+    : 0;
+  const sparseAcrossDocuments = entity.documentCount >= 20 && entity.mentions / Math.max(1, entity.documentCount) <= 1.5;
+  const concentratedLegacyCount = entity.mentions >= 20 && dominantShare >= .95 && sparseAcrossDocuments;
+  if (!concentratedLegacyCount) return normalized;
+
+  const adjusted = Math.max(1, Math.round(sources.reduce((sum, metrics) => sum + Math.log2(1 + (metrics.mentions || 0)), 0) * 3));
+  const inflated = Math.max(0, entity.mentions - adjusted);
   return {
-    ...normalizeMetrics(entity),
-    sourceMetrics: Object.fromEntries(Object.entries(entity.sourceMetrics || {}).map(([source, metrics]) => [source, normalizeMetrics(metrics)]))
+    ...normalized,
+    contextAdjustedMentions: Math.min(entity.mentions, adjusted),
+    independentDocumentCount: Math.min(entity.documentCount, adjusted),
+    inflatedMentionCount: inflated,
+    inflationRate: inflated / Math.max(1, entity.mentions),
+    inflationRisk: "high",
+    inflationSignals: { ...normalized.inflationSignals, legacySourceConcentration: inflated }
   };
 }
 
@@ -329,6 +349,7 @@ function renderControls() {
     ${state.config.type === "network" ? `<div class="control"><label>${state.config.nodeRole === "collection" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
     <div class="control"><label>Maximum ${state.config.type === "table" ? "rows" : "marks"} <span>${state.config.limit}</span></label><input type="range" min="20" max="${state.config.type === "network" ? 120 : 250}" step="10" value="${state.config.limit}" data-range="limit"></div>
     ${usesEntities ? `<div class="control method-note"><div class="control-title">Context adjustment</div><p>Counts exact repeats within one document once, counts text repeated across 3+ documents once, and excludes requester metadata. Raw mentions remain available.</p></div>` : ""}
+    ${usesEntities ? `<div class="control"><div class="control-title">Inflation review</div><label class="check-chip"><input type="checkbox" data-include-high-inflation ${state.config.includeHighInflation ? "checked" : ""}><span>Include high-inflation entities</span></label></div>` : ""}
     <div class="control duplicate-review-control"><div class="control-title">Identity review <span>${duplicateCount} flagged</span></div><button class="button review-button" type="button" data-review-duplicates ${duplicateCount ? "" : "disabled"}>Review possible duplicates</button></div>`;
 
   $$('[data-config]').forEach(node => node.addEventListener("change", event => updateConfig(event.target.dataset.config, event.target.value)));
@@ -345,6 +366,10 @@ function renderControls() {
     state.config.categories = $$('[data-category]:checked').map(input => input.dataset.category);
     commitConfig();
   }));
+  $("[data-include-high-inflation]")?.addEventListener("change", event => {
+    state.config.includeHighInflation = event.target.checked;
+    commitConfig();
+  });
   $$('[data-source]').forEach(node => node.addEventListener("change", () => {
     const selectedSources = $$('[data-source]:checked').map(input => input.dataset.source);
     Object.assign(state.config, sourceSelectionConfig(selectedSources, sourceNames));
@@ -442,6 +467,7 @@ function sourceMatches(sourceName) {
 
 function entityMatches(entity) {
   if (!state.config.categories.includes(entity.category)) return false;
+  if (!state.config.includeHighInflation && entity.inflationRisk === "high") return false;
   if (entity.classificationConfidence < state.config.minConfidence) return false;
   if (state.config.allSources) return true;
   return entity.documentIds.some(id => sourceMatches(state.documentById.get(id)?.source));
@@ -965,7 +991,8 @@ function inspectEntity(item) {
   const signalDetails = [
     signals.repeatedContextMentions ? `${formatNumber(signals.repeatedContextMentions)} repeated-text mentions` : "",
     signals.administrativeMentions ? `${formatNumber(signals.administrativeMentions)} requester-metadata mentions` : "",
-    signals.withinDocumentDuplicates ? `${formatNumber(signals.withinDocumentDuplicates)} within-document repeats` : ""
+    signals.withinDocumentDuplicates ? `${formatNumber(signals.withinDocumentDuplicates)} within-document repeats` : "",
+    signals.legacySourceConcentration ? `${formatNumber(signals.legacySourceConcentration)} mentions concentrated in one legacy-catalog source` : ""
   ].filter(Boolean).join("; ");
   const inflationNote = item.inflationRisk === "low"
     ? "Low repeated-context inflation detected."
