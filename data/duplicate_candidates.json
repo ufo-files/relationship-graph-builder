@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "f98fe0c2dfd3b3a32bda87d59049f4f0cd12fc0a"
+    "revision": "0830530f67d64861f0be46f73c40a1e595705308"
   },
-  "count": 121,
-  "totalCount": 121,
-  "shownCount": 121,
+  "count": 122,
+  "totalCount": 122,
+  "shownCount": 122,
   "candidates": [
     {
       "category": "organization",
@@ -718,8 +718,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 677,
-        "documentCount": 139
+        "mentions": 678,
+        "documentCount": 140
       },
       "right": {
         "name": "Department of Detense",
@@ -837,6 +837,22 @@
         "name": "The Intelligence Officer",
         "mentions": 5,
         "documentCount": 4
+      },
+      "similarity": 0.95,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "UAPTF and the ODNI National Intelligence",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "VAPTE and the ODNI National Intelligence",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.95,
       "reason": "similar name",
@@ -1150,8 +1166,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Community",
-        "mentions": 42,
-        "documentCount": 14
+        "mentions": 43,
+        "documentCount": 15
       },
       "right": {
         "name": "Intelligence Community In",
@@ -1182,8 +1198,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2402,
-        "documentCount": 165
+        "mentions": 2404,
+        "documentCount": 166
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -1390,8 +1406,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1606,
-        "documentCount": 294
+        "mentions": 1610,
+        "documentCount": 298
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -1406,8 +1422,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 850,
-        "documentCount": 212
+        "mentions": 851,
+        "documentCount": 213
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
