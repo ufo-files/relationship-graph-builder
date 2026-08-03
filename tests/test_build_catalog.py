@@ -51,8 +51,42 @@ class ClassificationTests(unittest.TestCase):
             for raw, canonical, category, confidence, curated in mentions
         ))
 
+    def test_extracts_explicit_book_titles_without_reclassifying_project_blue_book(self):
+        mentions = extract_mentions(
+            "Robert Hastings, author of the book UFOs and Nukes, discussed Project Blue Book. "
+            "I bought a book by Stanton Friedman called Top Secret. "
+            "A book by a guy called Dr. David Jacobs led to his book called Walking Among Us. "
+            "I came across a book titled Mr. Kant is Dead.",
+            {},
+        )
+
+        books = {(canonical, category) for _, canonical, category, _, _ in mentions if category == "book"}
+        self.assertEqual(books, {
+            ("UFOs and Nukes", "book"), ("Top Secret", "book"),
+            ("Walking Among Us", "book"), ("Mr. Kant is Dead", "book"),
+        })
+        self.assertNotIn(("Dr. David Jacobs", "book"), books)
+        self.assertIn(("Project Blue Book", "program"), {(canonical, category) for _, canonical, category, _, _ in mentions})
+
 
 class CatalogTests(unittest.TestCase):
+    def test_publishes_single_explicit_book_mentions_with_high_confidence(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "machine-data"
+            collection = root / "Example"
+            collection.mkdir(parents=True)
+            metadata = {"schema": "ufo-files-archive-ocr/v1", "source_file": "source.pdf", "source_bytes": 100}
+            body = "Robert Hastings is the author of the book UFOs and Nukes. Federal Bureau of Investigation reviewed it."
+            (collection / "source.txt").write_text(json.dumps(metadata) + "\n\n" + body, encoding="utf-8")
+
+            catalog = build(root, Path(directory) / "catalog.json", 1, 100, require_data=True)
+            book = next(entity for entity in catalog["entities"] if entity["category"] == "book")
+
+            self.assertEqual(book["canonicalName"], "UFOs and Nukes")
+            self.assertEqual(book["mentions"], 1)
+            self.assertGreaterEqual(book["classificationConfidence"], 0.95)
+            self.assertEqual(catalog["counts"]["publishedBooks"], 1)
+
     def test_reads_supported_sources_and_keeps_evidence(self):
         with tempfile.TemporaryDirectory() as directory:
             workspace = Path(directory) / "relationship-graph-builder"

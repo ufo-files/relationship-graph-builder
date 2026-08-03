@@ -2,10 +2,10 @@
 
 const NS = "http://www.w3.org/2000/svg";
 const CONFIG_VERSION = 2;
-const ENTITY_CATEGORIES = ["person", "government_agency", "organization", "location", "program", "subject", "date"];
+const ENTITY_CATEGORIES = ["person", "government_agency", "organization", "location", "program", "subject", "book", "date"];
 const LABELS = {
   person: "People", government_agency: "Government agencies", organization: "Organizations",
-  location: "Locations", program: "Programs", subject: "Subjects", date: "Dates",
+  location: "Locations", program: "Programs", subject: "Subjects", book: "Books", date: "Dates",
   mentions: "Raw mentions", documentCount: "Raw documents", sourceCount: "Collections",
   contextAdjustedMentions: "Mentions", independentDocumentCount: "Documents",
   inflationRate: "Mention adjustment", documentInflationRate: "Potential prominence inflation", inflationRisk: "Prominence inflation risk", inflatedMentionCount: "Adjusted mentions", inflatedDocumentCount: "Adjusted documents",
@@ -24,6 +24,7 @@ const TABLE_FIELDS = {
 const TYPES = [
   { id: "network", label: "Network", icon: "<circle cx='6' cy='8' r='3'/><circle cx='24' cy='4' r='3'/><circle cx='22' cy='16' r='3'/><path d='M9 7l12-2M9 10l10 5M23 7l-1 6'/>" },
   { id: "map", label: "Map", icon: "<circle cx='15.5' cy='10' r='8'/><path d='M7.5 10h16M15.5 2c3 3 3 13 0 16m0-16c-3 3-3 13 0 16'/>" },
+  { id: "book", label: "Book", icon: "<path d='M3 3h5v14H3zM9 5h4v12H9zM14 2h6v15h-6zM21 6h7v11h-7zM2 18h27'/>" },
   { id: "scatter", label: "Scatter", icon: "<path d='M3 2v16h25'/><circle cx='9' cy='13' r='2'/><circle cx='15' cy='9' r='2'/><circle cx='22' cy='5' r='2'/>" },
   { id: "bars", label: "Bars", icon: "<path d='M3 2v16h26M7 15h4V8H7zm8 0h4V4h-4zm8 0h4v-9h-4z'/>" },
   { id: "timeline", label: "Timeline", icon: "<path d='M3 10h25M8 5v10m7-7v7m8-12v12'/><circle cx='8' cy='10' r='2'/><circle cx='15' cy='10' r='2'/><circle cx='23' cy='10' r='2'/>" },
@@ -83,7 +84,7 @@ function migrateEntityProminenceConfig(config) {
   } else if (config.type === "timeline" && config.timelineRole === "entity") {
     config.y = adjustedEntityMetric(config.y);
     config.size = adjustedEntityMetric(config.size);
-  } else if (config.type === "map") {
+  } else if (["map", "book"].includes(config.type)) {
     config.size = adjustedEntityMetric(config.size);
   }
   config.configVersion = CONFIG_VERSION;
@@ -192,6 +193,8 @@ function dataAwareTitle(config) {
     title = config.nodeRole === "collection" ? "Collection Relationships" : `${entities} Relationships`;
   } else if (config.type === "map") {
     title = `${label(config.size)} — Mapped Locations`;
+  } else if (config.type === "book") {
+    title = "Books Mentioned";
   } else if (config.type === "bars") {
     title = config.aggregation === "entity" ? `${label(config.y)} by ${entities}` : `${label(config.y)} by ${label(config.aggregation)}`;
   } else if (config.type === "timeline") {
@@ -362,6 +365,8 @@ function renderControls() {
     roles = controlSelect("nodeRole", "Nodes", [{ value: "entity", label: "Entities" }, { value: "collection", label: "Collections" }]) + relationshipControl;
   } else if (state.config.type === "map") {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Geocoded locations</option></select></div><div class="control"><div class="control-title">Position</div><select disabled><option>Reviewed coordinates</option></select></div>`;
+  } else if (state.config.type === "book") {
+    roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Book titles</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Area-proportional shelves</option></select></div>`;
   } else if (state.config.type === "scatter") {
     roles = controlSelect("x", "X axis", ["entity", ...numericEntity]) + controlSelect("y", "Y axis", numericEntity);
   } else if (state.config.type === "bars") {
@@ -386,13 +391,13 @@ function renderControls() {
     const sortOptions = TABLE_FIELDS[state.config.tableRole];
     $("#encodeControls").innerHTML = controlSelect("tableSort", "Sort by", sortOptions) + controlSelect("tableDirection", "Direction", [{ value: "desc", label: "Descending" }, { value: "asc", label: "Ascending" }]) + labelSizeControl;
   } else {
-    $("#encodeControls").innerHTML = (["scatter", "network", "timeline", "map"].includes(state.config.type)
+    $("#encodeControls").innerHTML = (["scatter", "network", "timeline", "map", "book"].includes(state.config.type)
       ? controlSelect("size", "Size + shade", sizeOptions) + `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>` + controlSelect("labels", "Labels", [{ value: "top", label: "Most important" }, { value: "all", label: "All" }, { value: "none", label: "None" }])
       : `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>`) + labelSizeControl + zoomControl;
   }
 
-  const categories = state.config.type === "map"
-    ? ["location"]
+  const categories = ["map", "book"].includes(state.config.type)
+    ? [state.config.type === "map" ? "location" : "book"]
     : [...new Set(state.catalog?.entities.map(item => item.category) || ENTITY_CATEGORIES)];
   const categoryChecks = categories.map(category => `<label class="check-chip"><input type="checkbox" data-category="${category}" ${state.config.categories.includes(category) ? "checked" : ""}><span>${escapeHTML(label(category))}</span></label>`).join("");
   const sources = state.catalog?.sources || [];
@@ -461,6 +466,7 @@ function setType(type) {
   if (type === "scatter") Object.assign(state.config, { x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", color: "category", limit: 50 });
   if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "independentDocumentCount", color: "category" });
   if (type === "map") Object.assign(state.config, { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50 });
+  if (type === "book") Object.assign(state.config, { categories: ["book"], size: "contextAdjustedMentions", color: "intensity", labels: "top", includeHighInflation: true, limit: 250 });
   if (type === "timeline") Object.assign(state.config, { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source" });
   if (type === "matrix") Object.assign(state.config, { matrixColumns: "category", color: "intensity" });
   if (type === "table") Object.assign(state.config, { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 });
@@ -867,6 +873,108 @@ function renderMap() {
   setSummary(`${data.length} of ${mapped.length} mapped locations${unmapped ? ` · ${unmapped} unmapped` : ""}`, "map");
 }
 
+function bookshelfLayout(items, width, height, valueKey) {
+  if (!items.length) return { blocks: [], shelfYs: [] };
+  const inset = 14;
+  const shelfGap = 10;
+  const blockGap = 3;
+  const weighted = items.map(item => ({ item, weight: Math.max(1, Number(item[valueKey]) || 0) }));
+  const total = weighted.reduce((sum, entry) => sum + entry.weight, 0);
+  const targetRows = Math.max(1, Math.min(items.length, Math.round(Math.sqrt(items.length * height / width))));
+  const targetWeight = total / targetRows;
+  const rows = [];
+  let row = [];
+  let rowWeight = 0;
+  weighted.forEach(entry => {
+    if (row.length && rowWeight >= targetWeight && rows.length < targetRows - 1) {
+      rows.push({ entries: row, weight: rowWeight });
+      row = [];
+      rowWeight = 0;
+    }
+    row.push(entry);
+    rowWeight += entry.weight;
+  });
+  if (row.length) rows.push({ entries: row, weight: rowWeight });
+
+  const usableWidth = width - inset * 2;
+  const usableHeight = height - inset * 2 - shelfGap * (rows.length - 1);
+  const blocks = [];
+  const shelfYs = [];
+  let y = inset;
+  rows.forEach((shelf, shelfIndex) => {
+    const shelfHeight = shelfIndex === rows.length - 1
+      ? height - inset - y
+      : usableHeight * shelf.weight / total;
+    const rowWidth = usableWidth - blockGap * (shelf.entries.length - 1);
+    let x = inset;
+    shelf.entries.forEach((entry, entryIndex) => {
+      const blockWidth = entryIndex === shelf.entries.length - 1
+        ? width - inset - x
+        : rowWidth * entry.weight / shelf.weight;
+      blocks.push({ item: entry.item, x, y, width: blockWidth, height: shelfHeight, shelf: shelfIndex });
+      x += blockWidth + blockGap;
+    });
+    shelfYs.push(y + shelfHeight + shelfGap / 2);
+    y += shelfHeight + shelfGap;
+  });
+  return { blocks, shelfYs };
+}
+
+function bookLabelLines(title, maxCharacters, maxLines) {
+  const lines = [];
+  let remaining = title.trim();
+  while (remaining && lines.length < maxLines) {
+    if (remaining.length <= maxCharacters) {
+      lines.push(remaining);
+      remaining = "";
+      break;
+    }
+    let splitAt = remaining.lastIndexOf(" ", maxCharacters + 1);
+    if (splitAt < Math.floor(maxCharacters * .55)) splitAt = maxCharacters;
+    lines.push(remaining.slice(0, splitAt).trim());
+    remaining = remaining.slice(splitAt).trim();
+  }
+  if (remaining && lines.length) lines[lines.length - 1] = `${lines.at(-1).slice(0, Math.max(1, maxCharacters - 1))}…`;
+  return lines;
+}
+
+function renderBook() {
+  const { svg, width, height } = clearChart();
+  const data = filteredEntities()
+    .filter(entity => entity.category === "book")
+    .sort((left, right) => (right[state.config.size] || 0) - (left[state.config.size] || 0))
+    .slice(0, state.config.limit);
+  if (!data.length) return showEmpty();
+  const extent = valueExtent(data, state.config.size);
+  const { blocks, shelfYs } = bookshelfLayout(data, width, height, state.config.size);
+  shelfYs.forEach(y => svg.append(el("line", { x1: 8, y1: y, x2: width - 8, y2: y, stroke: "#111", "stroke-opacity": .55, "stroke-width": 2, class: "book-shelf" })));
+  blocks.forEach((block, index) => {
+    const shade = scale(block.item[state.config.size], extent, [.16, .94]);
+    const rect = el("rect", {
+      x: block.x, y: block.y, width: Math.max(1, block.width), height: Math.max(1, block.height),
+      fill: "#111", "fill-opacity": shade, stroke: "#111", "stroke-width": 1, class: "mark book-spine"
+    });
+    addTitle(rect, `${block.item.name} · ${label(state.config.size)}: ${formatNumber(block.item[state.config.size])}`);
+    rect.addEventListener("click", () => inspectEntity(block.item));
+    svg.append(rect);
+    const shouldLabel = state.config.labels === "all" || (state.config.labels === "top" && index < 24);
+    if (!shouldLabel || block.width < 42 || block.height < state.config.labelSize + 10) return;
+    const maxCharacters = Math.max(4, Math.floor((block.width - 12) / (state.config.labelSize * .62)));
+    const maxLines = Math.max(1, Math.min(3, Math.floor((block.height - 12) / (state.config.labelSize * 1.15))));
+    const text = el("text", {
+      x: block.x + 6, y: block.y + state.config.labelSize + 3,
+      fill: shade > .55 ? "#f6f5ef" : "#111", class: "book-label", style: `font-size:${state.config.labelSize}px`
+    });
+    bookLabelLines(block.item.name, maxCharacters, maxLines).forEach((line, lineIndex) => text.append(el("tspan", {
+      x: block.x + 6, dy: lineIndex ? "1.15em" : 0
+    }, line)));
+    svg.append(text);
+  });
+  drawIntensityLegend();
+  const mentions = data.reduce((sum, item) => sum + (item[state.config.size] || 0), 0);
+  setSummary(`${data.length} books · ${formatNumber(mentions)} ${label(state.config.size).toLowerCase()}`, "book");
+}
+
 function mapLocationData() {
   const locations = filteredEntities().filter(entity => entity.category === "location");
   const mapped = locations.filter(entity => Number.isFinite(entity.geo?.lat) && Number.isFinite(entity.geo?.lon))
@@ -1043,6 +1151,7 @@ function setSummary(text, type) {
   $("#policySummary").textContent = type === "network"
     ? state.config.nodeRole === "collection" ? `Links require ${state.config.minEvidence} shared published entities` : `Co-mentions require ${state.config.minEvidence} evidence segments · dense OCR sections excluded`
     : type === "map" ? "Coordinates come from the reviewed local gazetteer · ambiguous names omitted"
+    : type === "book" ? "Titles require an explicit book, novel, or memoir cue in transcript text"
     : `${formatNumber(state.catalog.counts.documents)} source files · transcript text unchanged`;
 }
 
@@ -1055,13 +1164,14 @@ function renderGraph() {
   const descriptions = {
     network: state.config.nodeRole === "collection" ? "Collections connected by shared published entities." : "Evidence-backed connections across the local archive.", scatter: `${label(state.config.x)} compared with ${label(state.config.y)}.`,
     map: `Geocoded location entities sized by ${label(state.config.size)}.`,
+    book: `Transcript-mentioned books arranged as an area-proportional shelf, sized by ${label(state.config.size)}.`,
     bars: `${label(state.config.y)} grouped by ${label(state.config.aggregation)}.`,
     timeline: `${state.config.timelineRole === "entity" ? "Entities" : "Completed transcript files"} by cataloging time.`,
     matrix: `${state.config.matrixColumns === "entity" ? "Entity" : "Entity-type"} coverage across completed collections.`,
     table: `A custom list of ${state.config.tableRole === "entity" ? "entities" : state.config.tableRole === "document" ? "transcript files" : "collections"}.`
   };
   $("#graphSubtitle").textContent = descriptions[state.config.type];
-  ({ network: renderNetwork, map: renderMap, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, matrix: renderMatrix, table: renderTable })[state.config.type]();
+  ({ network: renderNetwork, map: renderMap, book: renderBook, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, matrix: renderMatrix, table: renderTable })[state.config.type]();
 }
 
 function evidenceHTML(evidence = []) {
