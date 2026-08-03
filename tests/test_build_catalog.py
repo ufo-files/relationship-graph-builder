@@ -51,6 +51,43 @@ class ClassificationTests(unittest.TestCase):
             for raw, canonical, category, confidence, curated in mentions
         ))
 
+        expected_book_aliases = {
+            "The Immortality Keys": "The Immortality Key",
+            "ho/Brother of the third Degree": "The Brother of the Third Degree",
+            "They Knew Too Huch About Flying Baucers": "They Knew Too Much About Flying Saucers",
+            "Unvoiled Mysteries": "Unveiled Mysteries",
+            "I AN DISCOURSE": "The I AM Discourses",
+            "Flying Saucers From Outer": "Flying Saucers from Outer Space",
+            "Ino UPO Btory": "The UFO Story",
+            "Lo Matin das Magicians": "Le Matin des Magiciens",
+            "Proce For A dig-sam": "Piece for a Jig-Saw",
+            "nesial I ls leorees": "Special I AM Decrees",
+            "Extraterrestrial Intelligence: The Evidence and Implications": "Extraterrestrial Contact: The Evidence and Implications",
+            "Blank Check: The Pentagon's Black Budger": "Blank Check: The Pentagon's Black Budget",
+            "They Are Aiready Here: UFO Culture and Why We See Saucers": "They Are Already Here: UFO Culture and Why We See Saucers",
+            "Flying Seucers": "Flying Saucers",
+            "Top Secret Slash Magic": "Top Secret/Majic",
+        }
+        for alias, canonical in expected_book_aliases.items():
+            self.assertEqual(registry[comparison_key(alias)], (canonical, "book"))
+
+        book_mentions = extract_mentions(
+            "I read the book Unvoiled Mysteries. I read the book called The Immortality Keys.",
+            registry,
+        )
+        resolved_books = {canonical for _, canonical, category, _, _ in book_mentions if category == "book"}
+        self.assertIn("Unveiled Mysteries", resolved_books)
+        self.assertIn("The Immortality Key", resolved_books)
+
+        flying_saucers = extract_mentions(
+            'Flying Saucers crossed the sky. One source cited the book "Flying Seucers" by Donald Menzel.',
+            registry,
+        )
+        flying_saucer_books = [
+            (raw, canonical) for raw, canonical, category, _, _ in flying_saucers if category == "book"
+        ]
+        self.assertEqual(flying_saucer_books, [("Flying Seucers", "Flying Saucers")])
+
     def test_extracts_explicit_book_titles_without_reclassifying_project_blue_book(self):
         mentions = extract_mentions(
             "Robert Hastings, author of the book UFOs and Nukes, discussed Project Blue Book. "
