@@ -250,6 +250,28 @@ test("significant entity presets configure scatters across all collections", () 
   }
 });
 
+test("an existing Significant People URL migrates away from raw mentions", () => {
+  const saved = {
+    type: "scatter", x: "entity", y: "mentions", size: "documentCount",
+    categories: ["person"], sources: [], allSources: true, title: "Significant People"
+  };
+  const encoded = Buffer.from(JSON.stringify(saved), "utf8").toString("base64");
+  const context = vm.createContext({
+    location: { hash: `#config=${encodeURIComponent(encoded)}` },
+    URLSearchParams,
+    atob: value => Buffer.from(value, "base64").toString("binary"),
+    escape,
+    decodeURIComponent
+  });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const config = JSON.parse(vm.runInContext("JSON.stringify(state.config)", context));
+
+  assert.equal(config.y, "contextAdjustedMentions");
+  assert.equal(config.size, "independentDocumentCount");
+  assert.equal(config.includeHighInflation, false);
+});
+
 test("automatic titles follow active entity categories, axes, and collections", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
