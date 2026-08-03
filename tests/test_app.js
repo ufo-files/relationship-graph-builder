@@ -7,6 +7,7 @@ class FakeElement {
   constructor() {
     this.attributes = {};
     this.children = [];
+    this.listeners = {};
     const classes = new Set();
     this.classList = {
       add: (...names) => names.forEach(name => classes.add(name)),
@@ -21,7 +22,7 @@ class FakeElement {
   removeAttribute(key) { delete this.attributes[key]; }
   append(child) { this.children.push(child); }
   replaceChildren(...children) { this.children = children; }
-  addEventListener() {}
+  addEventListener(type, listener) { this.listeners[type] = listener; }
   getBoundingClientRect() { return { width: 900, height: 600 }; }
 }
 
@@ -32,6 +33,83 @@ function labelCount(chart) {
 function labelTexts(chart) {
   return chart.children.filter(node => node.attributes.class?.includes("node-label")).map(node => node.textContent);
 }
+
+test("bar rows use the plot height through the balanced bottom margin", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const layouts = JSON.parse(vm.runInContext(`JSON.stringify([420, 600].map(height => {
+    const layout = barChartLayout(height, 8);
+    const finalBarBottom = layout.barY(7) + layout.barHeight;
+    return { height, top: layout.margin.top, bottom: layout.margin.bottom, row: layout.row, finalBarBottom };
+  }))`, context));
+
+  layouts.forEach(layout => {
+    assert.equal(layout.top, layout.bottom);
+    assert.ok(layout.finalBarBottom > layout.height - layout.bottom - 4);
+    assert.ok(layout.finalBarBottom <= layout.height - layout.bottom);
+  });
+  assert.ok(layouts[1].row > layouts[0].row, "rows should expand with the responsive chart height");
+});
+
+test("bar layout remains safe for empty, single-item, and dense datasets", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const layouts = JSON.parse(vm.runInContext(`JSON.stringify({
+    empty: { row: barChartLayout(420, 0).row },
+    single: (() => { const layout = barChartLayout(420, 1); return { row: layout.row, barHeight: layout.barHeight, labelY: layout.labelY(0) }; })(),
+    dense: (() => { const layout = barChartLayout(420, 250); return { row: layout.row, barHeight: layout.barHeight }; })()
+  })`, context));
+
+  assert.equal(layouts.empty.row, 0);
+  assert.equal(layouts.single.row, 380);
+  assert.equal(layouts.single.barHeight, 375);
+  assert.ok(layouts.single.labelY > 20 && layouts.single.labelY < 400);
+  assert.equal(layouts.dense.barHeight, 5);
+  assert.ok(layouts.dense.row > 0);
+});
+
+test("rendered bars retain labels and clickable marks at the new bottom edge", () => {
+  const elements = {
+    chart: new FakeElement(), chartWrap: new FakeElement(), tableView: new FakeElement(),
+    legend: new FakeElement(), resultSummary: new FakeElement(), graphKicker: new FakeElement(),
+    policySummary: new FakeElement()
+  };
+  const document = {
+    createElementNS: () => new FakeElement(),
+    querySelector: selector => elements[selector.slice(1)],
+    querySelectorAll: () => []
+  };
+  const context = vm.createContext({ document, location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  vm.runInContext(`
+    state.catalog = {
+      counts: { documents: 3 },
+      documents: [
+        { id: "a", source: "One", words: 300 },
+        { id: "b", source: "Two", words: 200 },
+        { id: "c", source: "Three", words: 100 }
+      ],
+      sources: [{ name: "One" }, { name: "Two" }, { name: "Three" }]
+    };
+    Object.assign(state.config, { aggregation: "source", y: "words", allSources: true, limit: 50 });
+    renderBars();
+  `, context);
+
+  const marks = elements.chart.children.filter(node => node.attributes.class === "mark");
+  const categoryLabels = elements.chart.children.filter(node => node.attributes.class === "chart-label");
+  const valueLabels = elements.chart.children.filter(node => node.attributes.class === "axis-label");
+  const finalMark = marks.at(-1);
+
+  assert.equal(marks.length, 3);
+  assert.equal(categoryLabels.length, 3);
+  assert.equal(valueLabels.length, 3);
+  assert.equal(typeof finalMark.listeners.click, "function");
+  assert.ok(Number(finalMark.attributes.y) + Number(finalMark.attributes.height) >= 577);
+  assert.ok(Number(finalMark.attributes.y) + Number(finalMark.attributes.height) <= 580);
+});
 
 test("legend sits below and outside the chart canvas", () => {
   const styles = fs.readFileSync("styles.css", "utf8");
