@@ -37,7 +37,7 @@ git clone https://github.com/ufo-files/machine-data.git /tmp/ufo-files-machine-d
 python3 scripts/build_catalog.py --input /tmp/ufo-files-machine-data
 ```
 
-If `--input` is omitted, the builder continues to use `/Volumes/OCR & Transcriptions`
+If `--input` is omitted, the builder continues to use `/Volumes/OCR & Transcriptions 1`
 for workstation builds. Output is written to `data/catalog.json` by default.
 
 Only files carrying the expected `ufo-files-archive-ocr/v1` or `ufo-files-archive-media-transcripts/v1` metadata schema are included. Hidden operational directories, logs, quarantine, and this app are excluded. Source transcript content is never rewritten or copied; the catalog stores metadata, derived entity records, and short evidence excerpts.

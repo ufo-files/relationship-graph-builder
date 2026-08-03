@@ -21,7 +21,7 @@ from typing import Iterable
 
 
 SCHEMA = "ufo-files-relationship-catalog/v1"
-DEFAULT_INPUT = Path("/Volumes/OCR & Transcriptions")
+DEFAULT_INPUT = Path("/Volumes/OCR & Transcriptions 1")
 SKIP_PARTS = {
     ".git", ".state", ".tmp", ".Spotlight-V100", ".Trashes",
     "relationship-graph-builder", "logs", "quarantine",
@@ -276,6 +276,8 @@ class Candidate:
     sources: set[str] = field(default_factory=set)
     segments: set[str] = field(default_factory=set)
     examples: list[dict] = field(default_factory=list)
+    source_mentions: collections.Counter = field(default_factory=collections.Counter)
+    source_documents: dict[str, set[str]] = field(default_factory=lambda: collections.defaultdict(set))
     mentions: int = 0
     extraction_total: float = 0.0
 
@@ -284,6 +286,8 @@ class Candidate:
         self.documents.add(doc_id)
         self.sources.add(source)
         self.segments.add(segment_id)
+        self.source_mentions[source] += 1
+        self.source_documents[source].add(doc_id)
         self.mentions += 1
         self.extraction_total += confidence
         if len(self.examples) < 4:
@@ -345,6 +349,7 @@ def build(
     segment_text: dict[str, str] = {}
     source_counts: collections.Counter = collections.Counter()
     source_words: collections.Counter = collections.Counter()
+    document_sources: dict[str, str] = {}
 
     paths = sorted(
         path for path in input_root.rglob("*")
@@ -389,6 +394,7 @@ def build(
             "durationMs": duration,
         }
         documents.append(document)
+        document_sources[doc_id] = source
         source_counts[source] += 1
         source_words[source] += words
         for number, segment in enumerate(segments):
@@ -436,6 +442,13 @@ def build(
             "reviewStatus": "curated" if candidate.curated else ("review" if classification < 0.72 else "evidence_backed"),
             "variants": [name for name, _ in candidate.variants.most_common(6)],
             "documentIds": sorted(candidate.documents),
+            "sourceMetrics": {
+                source: {
+                    "mentions": candidate.source_mentions[source],
+                    "documentCount": len(candidate.source_documents[source]),
+                }
+                for source in sorted(candidate.sources)
+            },
             "evidence": candidate.examples,
         })
 
@@ -451,11 +464,21 @@ def build(
                 if published[left].category == "date" and published[right].category == "date":
                     continue
                 edge_key = (left, right, relation)
-                stat = edge_stats.setdefault(edge_key, {"segments": set(), "documents": set(), "examples": []})
+                stat = edge_stats.setdefault(edge_key, {
+                    "segments": set(),
+                    "documents": set(),
+                    "source_segments": collections.defaultdict(set),
+                    "source_documents": collections.defaultdict(set),
+                    "examples": [],
+                })
+                document_id = sid.split(":", 1)[0]
+                source = document_sources[document_id]
                 stat["segments"].add(sid)
-                stat["documents"].add(sid.split(":", 1)[0])
+                stat["documents"].add(document_id)
+                stat["source_segments"][source].add(sid)
+                stat["source_documents"][source].add(document_id)
                 if len(stat["examples"]) < 3:
-                    stat["examples"].append({"documentId": sid.split(":", 1)[0], "excerpt": text[:280]})
+                    stat["examples"].append({"documentId": document_id, "excerpt": text[:280]})
     edges = []
     for (left, right, relation), stat in edge_stats.items():
         evidence_count = len(stat["segments"])
@@ -470,6 +493,13 @@ def build(
             "evidenceCount": evidence_count,
             "documentCount": document_count,
             "confidence": round(min(0.98, 0.48 + evidence_count * 0.06 + document_count * 0.05 + (0.12 if relation != "co_mentioned" else 0)), 3),
+            "sourceMetrics": {
+                source: {
+                    "evidenceCount": len(stat["source_segments"][source]),
+                    "documentCount": len(stat["source_documents"][source]),
+                }
+                for source in sorted(stat["source_segments"])
+            },
             "evidence": stat["examples"],
         })
     edges.sort(key=lambda edge: (edge["evidenceCount"], edge["documentCount"]), reverse=True)
