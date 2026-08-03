@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "6b80818e27328764cf6efe48cbe6c6e5f7ee280d"
+    "revision": "f98fe0c2dfd3b3a32bda87d59049f4f0cd12fc0a"
   },
-  "count": 120,
-  "totalCount": 120,
-  "shownCount": 120,
+  "count": 121,
+  "totalCount": 121,
+  "shownCount": 121,
   "candidates": [
     {
       "category": "organization",
@@ -23,6 +23,22 @@
         "documentCount": 3
       },
       "similarity": 0.987,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "National Investigations Committee",
+        "mentions": 31,
+        "documentCount": 17
+      },
+      "right": {
+        "name": "ATIONAL INVESTIGATIONS COMMITTEE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.985,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1374,8 +1390,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1605,
-        "documentCount": 293
+        "mentions": 1606,
+        "documentCount": 294
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
