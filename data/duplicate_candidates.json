@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "d385c3442b184231138b224b39733aa002424163"
+    "revision": "c685c1f422094b66278d0085c6fedae3a6720949"
   },
-  "count": 129,
-  "totalCount": 129,
-  "shownCount": 129,
+  "count": 130,
+  "totalCount": 130,
+  "shownCount": 130,
   "candidates": [
     {
       "category": "organization",
@@ -423,6 +423,22 @@
         "documentCount": 2
       },
       "similarity": 0.964,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Central Intelligence Agency",
+        "mentions": 1745,
+        "documentCount": 362
+      },
+      "right": {
+        "name": "CENIRAL INTELLIGENCE AGENCY",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.963,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1278,8 +1294,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2456,
-        "documentCount": 190
+        "mentions": 2457,
+        "documentCount": 191
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -1502,8 +1518,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1744,
-        "documentCount": 361
+        "mentions": 1745,
+        "documentCount": 362
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -1518,8 +1534,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 868,
-        "documentCount": 230
+        "mentions": 869,
+        "documentCount": 231
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
