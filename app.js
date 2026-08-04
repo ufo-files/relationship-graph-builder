@@ -474,7 +474,7 @@ function setType(type) {
   state.config.type = type;
   if (type === "bars") Object.assign(state.config, { aggregation: "source", y: "words", color: "intensity" });
   if (type === "scatter") Object.assign(state.config, { x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", color: "category", limit: 50 });
-  if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "independentDocumentCount", color: "category" });
+  if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "independentDocumentCount", color: "category", categories: [...ENTITY_CATEGORIES], sources: [], allSources: true });
   if (type === "map") Object.assign(state.config, { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50 });
   if (type === "book") Object.assign(state.config, { size: "contextAdjustedMentions", color: "intensity", labels: "all", includeHighInflation: true, limit: 250 });
   if (type === "timeline") Object.assign(state.config, { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source" });

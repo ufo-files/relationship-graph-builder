@@ -340,6 +340,7 @@ test("graph type is the first builder section and cards explain their data scope
   assert.match(source, /label: "Bars", scope: "All collections"/);
   assert.match(source, /label: "Timeline", scope: "Documents \+ events"/);
   assert.match(source, /label: "Network", scope: "All"/);
+  assert.match(source, /if \(type === "network"\).*categories: \[\.\.\.ENTITY_CATEGORIES\].*sources: \[\].*allSources: true/);
   assert.match(source, /label: "Matrix", scope: "Collections × top entities"/);
   assert.match(source, /if \(type === "matrix"\).*matrixColumns: "entity"/);
 });
