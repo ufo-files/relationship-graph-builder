@@ -14,6 +14,8 @@ The builder asks for five decisions:
 
 The default view is an ordinary builder configuration and uses the same rendering and data path as every saved view. Numeric scatter axes use a robust 95th-percentile cap only when the maximum is at least 50% beyond that cap; capped marks stay visible at the plot edge with a heavier outline and retain their exact values in the inspector and tooltip.
 
+Numeric scatter plots can add a deduplicated relationship layer through Graph Properties. The layer can be off, hover-only, or always visible; it also exposes the strongest-connections limit, evidence floor, relationship type, secondary-node sizing, and line strength. Secondary entities retain their scatter position and appear only once even when several primary entities connect to them. The default shows one strongest connection per node with an always-visible subtle line. These choices persist in saved-view URLs.
+
 Entities are a global data role: they can be network nodes, a Scatter axis, the Bar dimension, Timeline marks, Matrix columns, or Table rows. Network nodes can also be collections, connected by the published entities they share. The Table type also builds custom lists of transcript files and collections with selectable columns, sorting, search, row limits, evidence inspection, and CSV export. Entity-backed views share the same category, confidence, collection, evidence, label, and publication controls.
 
 The Book type is an area-proportional abstract bookshelf. Each block is a title explicitly identified in transcript text, with area and shade controlled by the selected prominence metric. Titles are extracted only from book, novel, or memoir cues; each mark opens its source evidence in the inspector.

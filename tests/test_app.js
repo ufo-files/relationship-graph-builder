@@ -134,9 +134,76 @@ test("scatter legend distinguishes capped outliers from mention inflation", () =
   vm.runInContext('state.config.type = "scatter"; drawIntensityLegend();', context);
   assert.match(legend.innerHTML, /outlier-key[^>]*><\/i>Axis-capped outlier/);
   assert.match(legend.innerHTML, /risk-key[^>]*><\/i>Potential mention inflation/);
+  assert.match(legend.innerHTML, /ego-key[^>]*><\/i>Strongest relationships/);
 
   vm.runInContext('state.config.type = "bars"; drawIntensityLegend();', context);
-  assert.doesNotMatch(legend.innerHTML, /Axis-capped outlier|Potential mention inflation/);
+  assert.doesNotMatch(legend.innerHTML, /Axis-capped outlier|Potential mention inflation|Strongest relationships/);
+});
+
+test("scatter ego networks retain the strongest visible relationships", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    (() => {
+      const entities = ["a", "b", "c", "d"].map(id => ({ id, name: id.toUpperCase(), documentIds: [] }));
+      state.catalog = {
+        documents: [],
+        edges: [
+          { source: "a", target: "b", relationship: "co_mentioned", evidenceCount: 2 },
+          { source: "a", target: "c", relationship: "co_mentioned", evidenceCount: 8 },
+          { source: "a", target: "d", relationship: "co_mentioned", evidenceCount: 4 }
+        ]
+      };
+      Object.assign(state.config, { allSources: true, minEvidence: 2, relation: "all" });
+      const network = scatterEgoNetworks(entities, [entities[0]], 2).get("a");
+      return JSON.stringify({ total: network.total, neighbors: network.neighbors.map(neighbor => neighbor.entity.id) });
+    })()
+  `, context));
+
+  assert.equal(result.total, 3);
+  assert.deepEqual(result.neighbors, ["c", "d"]);
+});
+
+test("scatter relationship overlay deduplicates shared secondary nodes and edges", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    (() => {
+      const shared = { id: "shared", name: "Shared" };
+      const edgeA = { evidenceCount: 3 };
+      const edgeB = { evidenceCount: 5 };
+      const networks = new Map([
+        ["a", { neighbors: [{ entity: shared, edge: edgeA }] }],
+        ["b", { neighbors: [{ entity: shared, edge: edgeB }, { entity: { id: "a", name: "A" }, edge: edgeA }] }]
+      ]);
+      const overlay = scatterRelationshipOverlay(networks, [{ id: "a" }, { id: "b" }]);
+      return JSON.stringify({ nodes: overlay.nodes.map(node => node.id), edges: overlay.edges.map(edge => edge.source + "|" + edge.target) });
+    })()
+  `, context));
+
+  assert.deepEqual(result.nodes, ["shared"]);
+  assert.deepEqual(result.edges.sort(), ["a|b", "a|shared", "b|shared"]);
+});
+
+test("categorical scatter anchors shared secondary nodes between their primaries", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const anchors = JSON.parse(vm.runInContext(`
+    (() => {
+      const shared = { id: "shared" };
+      const networks = new Map([
+        ["a", { neighbors: [{ entity: shared }] }],
+        ["b", { neighbors: [{ entity: shared }] }],
+        ["c", { neighbors: [{ entity: { id: "a" } }] }]
+      ]);
+      return JSON.stringify([...scatterSecondaryAnchors(networks, new Map([["a", 0], ["b", 4], ["c", 8]]))]);
+    })()
+  `, context));
+
+  assert.deepEqual(anchors, [["shared", 2]]);
 });
 
 test("inspector defaults collapsed and a selected mark reopens it", () => {
@@ -179,6 +246,10 @@ test("default graph includes every entity category with globally adjusted promin
   assert.equal(config.y, "contextAdjustedMentions");
   assert.equal(config.size, "independentDocumentCount");
   assert.equal(config.minConfidence, 0.95);
+  assert.equal(config.relationshipLayer, "always");
+  assert.equal(config.relationshipNeighbors, 1);
+  assert.equal(config.relationshipNodeSize, "inherit");
+  assert.equal(config.relationshipStrength, "subtle");
 });
 
 test("pre-adjustment saved views migrate prominence metrics across entity graph types", () => {
