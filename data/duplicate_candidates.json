@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "94b5e6475a0d873cec5d0f5923a5a400969019ff"
+    "revision": "adec6289386ce0e9ff26811f3a31842c1508efa4"
   },
-  "count": 220,
-  "totalCount": 220,
+  "count": 228,
+  "totalCount": 228,
   "shownCount": 200,
   "candidates": [
     {
@@ -222,6 +222,22 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Justico",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "DEPARTMENT OF JUSTIC",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.976,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Justice's",
         "mentions": 2,
         "documentCount": 2
       },
@@ -734,8 +750,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2313,
-        "documentCount": 557
+        "mentions": 2325,
+        "documentCount": 561
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -750,8 +766,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2313,
-        "documentCount": 557
+        "mentions": 2325,
+        "documentCount": 561
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -766,8 +782,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2313,
-        "documentCount": 557
+        "mentions": 2325,
+        "documentCount": 561
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -782,8 +798,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2313,
-        "documentCount": 557
+        "mentions": 2325,
+        "documentCount": 561
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1326,8 +1342,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 874,
-        "documentCount": 220
+        "mentions": 879,
+        "documentCount": 223
       },
       "right": {
         "name": "Department of Detense",
@@ -1397,6 +1413,22 @@
         "name": "Central Ticket Office",
         "mentions": 5,
         "documentCount": 4
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Justico",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of Justice's",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -1517,6 +1549,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Department of Justice's",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "DEPARTMENT OF JUSTI",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.95,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "DEPARTMENT OF JUSTIC",
         "mentions": 2,
         "documentCount": 2
@@ -1534,8 +1582,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 187,
-        "documentCount": 44
+        "mentions": 188,
+        "documentCount": 45
       },
       "right": {
         "name": "Department of Stale",
@@ -1550,8 +1598,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 187,
-        "documentCount": 44
+        "mentions": 188,
+        "documentCount": 45
       },
       "right": {
         "name": "Department of Staie",
@@ -1726,8 +1774,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2313,
-        "documentCount": 557
+        "mentions": 2325,
+        "documentCount": 561
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -1790,8 +1838,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of War",
-        "mentions": 22,
-        "documentCount": 11
+        "mentions": 23,
+        "documentCount": 12
       },
       "right": {
         "name": "Department of Air",
@@ -1981,6 +2029,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "The Nation Institute",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "National Institute",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Intelligence of the House of Representatives",
         "mentions": 14,
         "documentCount": 2
@@ -2155,6 +2219,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Office of Special Investigationa",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Office of Spectal Investigations",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Chart Showing Balloon Lausching Sites Ln",
@@ -2222,8 +2302,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2824,
-        "documentCount": 268
+        "mentions": 2838,
+        "documentCount": 271
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -2574,8 +2654,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2313,
-        "documentCount": 557
+        "mentions": 2325,
+        "documentCount": 561
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2590,8 +2670,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 1034,
-        "documentCount": 330
+        "mentions": 1035,
+        "documentCount": 331
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -2622,8 +2702,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 32,
-        "documentCount": 26
+        "mentions": 33,
+        "documentCount": 27
       },
       "right": {
         "name": "Department of the Army",
@@ -2638,8 +2718,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 32,
-        "documentCount": 26
+        "mentions": 33,
+        "documentCount": 27
       },
       "right": {
         "name": "Department of the Aruy",
@@ -2654,8 +2734,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 32,
-        "documentCount": 26
+        "mentions": 33,
+        "documentCount": 27
       },
       "right": {
         "name": "Department of the Arny",
@@ -2718,8 +2798,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 78,
-        "documentCount": 33
+        "mentions": 79,
+        "documentCount": 34
       },
       "right": {
         "name": "Snlt Lake City",
@@ -2805,6 +2885,22 @@
         "name": "LIBRARY SUBJECT AND AREA CODES",
         "mentions": 6,
         "documentCount": 6
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "George Bush Sr",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "George Bush Jr",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -2973,9 +3069,25 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Department of Justice's",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "DEPARTMENT OF XUSTIC",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.927,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2313,
-        "documentCount": 557
+        "mentions": 2325,
+        "documentCount": 561
       },
       "right": {
         "name": "GENTRAL INTELLIGENGE AGENCY",
@@ -2990,8 +3102,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2313,
-        "documentCount": 557
+        "mentions": 2325,
+        "documentCount": 561
       },
       "right": {
         "name": "CENTRAL INTELLIGZACE AGENCY",
@@ -3095,118 +3207,6 @@
         "documentCount": 2
       },
       "similarity": 0.926,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "CENTRAL INTELLIDENCE AGENCY",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Central Inteliigence Agency",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.926,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "CINTRAL INTELLIGENCE AGENCY",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Central Inteliigence Agency",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.926,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Under Secretary of Defense for Intelligence",
-        "mentions": 11,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "Secretary of Defense for Intelligence",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "similarity": 0.925,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Office of Special Investigationa",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "If Office of Special Investigations",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.925,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Diana Pasolka",
-        "mentions": 31,
-        "documentCount": 21
-      },
-      "right": {
-        "name": "Diana Pasulka",
-        "mentions": 10,
-        "documentCount": 10
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Re Bureau Bulletin No",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Bureau Bulletin No",
-        "mentions": 20,
-        "documentCount": 11
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Bruce Maccabee",
-        "mentions": 4,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Bruce McAbee",
-        "mentions": 7,
-        "documentCount": 4
-      },
-      "similarity": 0.923,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     }
