@@ -55,6 +55,111 @@ KNOWN = {
     "UFO": ("UFO", "subject"),
     "UFOs": ("UFO", "subject"),
     "FOIA": ("FOIA", "subject"),
+    "Nonviolent ETI": ("Nonviolent ETI", "subject"),
+    "ETI": ("Extraterrestrial Intelligence", "subject"),
+    "Extraterrestrial Intelligence": ("Extraterrestrial Intelligence", "subject"),
+    "extraterrestrial beings": ("Extraterrestrial Intelligence", "subject"),
+    "extraterrestrial life": ("Extraterrestrial Intelligence", "subject"),
+    "alien intelligent life": ("Extraterrestrial Intelligence", "subject"),
+    "contiguous universe": ("Contiguous Universe", "subject"),
+    "Treaty on the Prevention of the Placement of Weapons in Outer Space": (
+        "Treaty on the Prevention of the Placement of Weapons in Outer Space", "subject"
+    ),
+    "War in Space": ("War in Space", "subject"),
+    "zero point energy": ("Zero-Point Energy", "subject"),
+    "Defense Support Program": ("Defense Support Program", "program"),
+    "USAF DSP satellite program": ("Defense Support Program", "program"),
+    "DSP satellite program": ("Defense Support Program", "program"),
+    "DSP": ("Defense Support Program", "program"),
+    "Fastwalker": ("Fastwalker", "program"),
+    "Fastwalkers": ("Fastwalker", "program"),
+    "Sentry Eagle": ("Sentry Eagle", "program"),
+    "Operation Desert Shield": ("Operation Desert Shield", "program"),
+    "Operation Desert Storm": ("Operation Desert Storm", "program"),
+    "Desert Storm": ("Operation Desert Storm", "program"),
+    "Apollo 14": ("Apollo 14", "program"),
+    "RC-135": ("RC-135", "program"),
+    "WC-135": ("WC-135", "program"),
+    "Star Wars missile-defense system": ("Strategic Defense Initiative", "program"),
+    "anti-satellite weapons": ("Anti-Satellite Weapons", "subject"),
+    "Scientific Study of Unidentified Flying Objects": (
+        "Scientific Study of Unidentified Flying Objects", "book"
+    ),
+    "Scientific Study of Unidentified Flying": ("Scientific Study of Unidentified Flying Objects", "book"),
+    "Colorado University Study on UFOs": ("Scientific Study of Unidentified Flying Objects", "book"),
+    "Blue Book Project": ("Project Blue Book", "program"),
+    "Grenadian UFO Resolution": ("Grenadian UFO Resolution", "subject"),
+    "Grenadian resolution": ("Grenadian UFO Resolution", "subject"),
+    "First International Congress on the UFO Phenomenon": (
+        "First International Congress on the UFO Phenomenon", "organization"
+    ),
+    "First International Congress on UFO Phenomenon": (
+        "First International Congress on the UFO Phenomenon", "organization"
+    ),
+    "First International Congress": ("First International Congress on the UFO Phenomenon", "organization"),
+    "Special Political Committee": ("UN Special Political Committee", "government_agency"),
+    "Committee on the Peaceful Uses of Outer Space": (
+        "UN Committee on the Peaceful Uses of Outer Space", "government_agency"
+    ),
+    "Outer Space Committee": ("UN Committee on the Peaceful Uses of Outer Space", "government_agency"),
+    "Outerspace Committee": ("UN Committee on the Peaceful Uses of Outer Space", "government_agency"),
+    "Intercontinental UFO Galactic Spacecraft-Research and Analytic Network": (
+        "Intercontinental UFO Galactic Spacecraft-Research and Analytic Network", "organization"
+    ),
+    "ICUFON": ("Intercontinental UFO Galactic Spacecraft-Research and Analytic Network", "organization"),
+    "Quantrek": ("Quantrek", "organization"),
+    "UN clearinghouse": ("UN UFO Clearinghouse", "organization"),
+    "Smithsonian Astrophysical Observatory": ("Smithsonian Astrophysical Observatory", "organization"),
+    "National Academy of Sciences": ("National Academy of Sciences", "organization"),
+    "Academy of Sciences": ("National Academy of Sciences", "organization"),
+    "United Nations Educational, Scientific and Cultural Organization": ("UNESCO", "government_agency"),
+    "Educational, Scientific and Cultural Organization": ("UNESCO", "government_agency"),
+    "World Health Organization": ("World Health Organization", "government_agency"),
+    "Health Orgzniazation": ("World Health Organization", "government_agency"),
+    "International Atomic Energy Agency": ("International Atomic Energy Agency", "government_agency"),
+    "International Atomic Energy": ("International Atomic Energy Agency", "government_agency"),
+    "United Nations Environment Programme": ("United Nations Environment Programme", "government_agency"),
+    "Committee on Science and Technology": ("UN Committee on Science and Technology", "government_agency"),
+    "Alberta Fireball": ("Alberta Fireball", "subject"),
+    "Edgar Mitchell": ("Edgar Mitchell", "person"),
+    "Edgar D. Mitchell": ("Edgar Mitchell", "person"),
+    "Carol Rosin": ("Carol Rosin", "person"),
+    "Wernher von Braun": ("Wernher von Braun", "person"),
+    "Bob Fish": ("Bob Fish", "person"),
+    "Dan Sherman": ("Dan Sherman", "person"),
+    "Ahsan Iqbal": ("Ahsan Iqbal", "person"),
+    "J. Allen Hynek": ("J. Allen Hynek", "person"),
+    "Jacques Vallee": ("Jacques Vallee", "person"),
+    "Larry Coyne": ("Larry Coyne", "person"),
+    "Gordon Cooper": ("Gordon Cooper", "person"),
+    "Stanton Friedman": ("Stanton Friedman", "person"),
+    "James Cornell": ("James Cornell", "person"),
+    "E.U. Condon": ("Edward U. Condon", "person"),
+    "Sir Eric Gairy": ("Eric Gairy", "person"),
+    "PM Gairy": ("Eric Gairy", "person"),
+    "L. Gordon Cooper": ("Gordon Cooper", "person"),
+    "LT.COL. Larry Coyne": ("Larry Coyne", "person"),
+    "Morocco": ("Morocco", "location"),
+    "Moroccan": ("Morocco", "location"),
+    "Grenada": ("Grenada", "location"),
+    "Acapulco": ("Acapulco", "location"),
+    "Bermuda": ("Bermuda", "location"),
+    "El Segundo": ("El Segundo", "location"),
+    "MacDill AFB": ("MacDill Air Force Base", "location"),
+    "Phoenix": ("Phoenix", "location"),
+    "China": ("China", "location"),
+    "Russia": ("Russia", "location"),
+    "Pakistan": ("Pakistan", "location"),
+    "Australia": ("Australia", "location"),
+    "Spain": ("Spain", "location"),
+    "Canada": ("Canada", "location"),
+    "Alberta": ("Alberta", "location"),
+    "Ohio": ("Ohio", "location"),
+    "Florida": ("Florida", "location"),
+    "Miami": ("Miami", "location"),
+    "Dayton": ("Dayton", "location"),
+    "Cambridge": ("Cambridge", "location"),
+    "Massachusetts": ("Massachusetts", "location"),
 }
 
 ADMINISTRATIVE_CONTEXT = re.compile(r"^\s*(?:foia\s+)?requester\s*:", re.IGNORECASE)
@@ -106,6 +211,7 @@ GENERIC = {
     "executive officer", "flying object", "general public", "intelligence officer",
     "national security", "press release", "project officer", "public affairs",
     "secretary of defense", "special agent", "the united states", "united states",
+    "chief science officer founder",
     "unidentified aerial phenomena", "unidentified flying object",
 }
 NON_NAME_WORDS = {
@@ -211,8 +317,13 @@ def plausible_book_title(value: str) -> bool:
 
 def sentence_segments(text: str) -> Iterable[str]:
     for block in re.split(r"(?:===== PAGE \d+ =====|\n{2,})", text):
-        for item in re.split(r"(?<=[.!?])\s+(?=[A-Z0-9])|\n", block):
+        for item in re.split(
+            r"(?<!\b[A-Z]\.)(?<!\b[A-Za-z]{2}\.)(?<!\b[A-Za-z]{3}\.)(?<=[.!?])\s+(?=[A-Z0-9])|\n",
+            block,
+        ):
             item = clean_space(item)
+            if "Declassified/Released US Department of State" in item:
+                continue
             if 24 <= len(item) <= 1600:
                 yield item
 
@@ -270,6 +381,8 @@ def classify_phrase(raw: str) -> tuple[str, float] | None:
     if len(words) > 6 or any(len(word) == 1 for word in words[1:-1]):
         return None
     lower = raw.lower()
+    if key == "extraterrestrial intelligence":
+        return "subject", 0.99
     if key in KNOWN_LOCATIONS:
         return "location", 0.9
     if key.startswith("uss "):
