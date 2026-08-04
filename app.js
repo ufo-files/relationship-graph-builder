@@ -358,6 +358,7 @@ function renderControls() {
   renderTypeGrid();
   const numericEntity = ["contextAdjustedMentions", "mentions", "independentDocumentCount", "documentCount", "sourceCount", "inflationRate", "documentInflationRate", "classificationConfidence", "extractionConfidence"];
   const numericDoc = ["words", "segments", "bytes", "durationMs"];
+  const relationshipTypeControl = () => controlSelect("relation", "Relationship type", [{ value: "all", label: "Any published relationship" }, { value: "co_mentioned", label: "Repeated co-mention" }, { value: "affiliated_with", label: "Affiliation cue" }, { value: "investigated", label: "Investigation cue" }]);
   let roles = "";
   if (state.config.type === "network") {
     const relationshipControl = state.config.nodeRole === "collection"
@@ -370,11 +371,14 @@ function renderControls() {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Book titles</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Area-proportional shelves</option></select></div>`;
   } else if (state.config.type === "scatter") {
     roles = controlSelect("x", "X axis", ["entity", ...numericEntity]) + controlSelect("y", "Y axis", numericEntity)
-      + controlSelect("relation", "Relationship type", [{ value: "all", label: "Any published relationship" }, { value: "co_mentioned", label: "Repeated co-mention" }, { value: "affiliated_with", label: "Affiliation cue" }, { value: "investigated", label: "Investigation cue" }]);
+      + relationshipTypeControl();
   } else if (state.config.type === "bars") {
     roles = controlSelect("aggregation", "Group by", [{ value: "entity", label: "Entities" }, { value: "source", label: "Collection" }, { value: "format", label: "Transcript format" }]) + controlSelect("y", "Measure", state.config.aggregation === "entity" ? numericEntity : ["words", "documents", "bytes"]);
   } else if (state.config.type === "timeline") {
     roles = controlSelect("timelineRole", "Marks", [{ value: "entity", label: "Entities" }, { value: "document", label: "Completed transcript files" }]) + controlSelect("x", "X axis", [{ value: "createdAt", label: "Transcription date" }]) + controlSelect("y", "Y axis", state.config.timelineRole === "entity" ? numericEntity : numericDoc);
+    roles += state.config.timelineRole === "entity"
+      ? relationshipTypeControl()
+      : `<div class="control"><div class="control-title">Relationship</div><select disabled><option>Shared published entities</option></select></div>`;
   } else if (state.config.type === "matrix") {
     roles = `<div class="control"><div class="control-title">Rows</div><select disabled><option>Collections</option></select></div>` + controlSelect("matrixColumns", "Columns", [{ value: "entity", label: "Entities" }, { value: "category", label: "Entity categories" }]);
   } else {
@@ -389,7 +393,8 @@ function renderControls() {
     : state.config.type === "timeline" && state.config.timelineRole !== "entity" ? numericDoc : numericEntity;
   const labelSizeControl = `<div class="control"><label>Label size <span>${state.config.labelSize}px</span></label><input type="range" min="11" max="18" step="1" value="${state.config.labelSize}" data-range="labelSize"></div>`;
   const zoomControl = state.config.type === "network" ? `<div class="control"><label>Zoom <span>${state.config.zoom.toFixed(1)}×</span></label><input type="range" min="0.5" max="2.5" step="0.1" value="${state.config.zoom}" data-range="zoom"></div>` : "";
-  const relationshipControls = state.config.type === "scatter" ? controlSelect("relationshipLayer", "Relationship layer", [{ value: "off", label: "Off" }, { value: "hover", label: "On hover" }, { value: "always", label: "Always" }])
+  const supportsRelationships = ["scatter", "timeline"].includes(state.config.type);
+  const relationshipControls = supportsRelationships ? controlSelect("relationshipLayer", "Relationship layer", [{ value: "off", label: "Off" }, { value: "hover", label: "On hover" }, { value: "always", label: "Always" }])
     + `<div class="control"><label>Connections per node <span>${state.config.relationshipNeighbors}</span></label><input type="range" min="1" max="5" step="1" value="${state.config.relationshipNeighbors}" data-range="relationshipNeighbors"></div>`
     + controlSelect("relationshipNodeSize", "Secondary-node size", [{ value: "inherit", label: "Inherit size metric" }, { value: "fixed", label: "Fixed" }])
     + controlSelect("relationshipStrength", "Line strength", [{ value: "subtle", label: "Subtle" }, { value: "medium", label: "Medium" }, { value: "strong", label: "Strong" }]) : "";
@@ -417,7 +422,7 @@ function renderControls() {
     <div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div>
     ${state.config.type === "table" ? `<div class="control"><label for="tableSearch">Search rows</label><input id="tableSearch" class="text-input" type="search" value="${escapeHTML(state.config.tableSearch)}" placeholder="Filter this list" data-table-search></div>` : ""}
     ${usesEntities ? `<div class="control"><label>Minimum confidence <span>${Math.round(state.config.minConfidence * 100)}%</span></label><input type="range" min="0.5" max="0.95" step="0.01" value="${state.config.minConfidence}" data-range="minConfidence"></div>` : ""}
-    ${state.config.type === "network" || (state.config.type === "scatter" && state.config.relationshipLayer !== "off") ? `<div class="control"><label>${state.config.type === "network" && state.config.nodeRole === "collection" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
+    ${state.config.type === "network" || (supportsRelationships && state.config.relationshipLayer !== "off") ? `<div class="control"><label>${state.config.type === "network" && state.config.nodeRole === "collection" || state.config.type === "timeline" && state.config.timelineRole === "document" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
     <div class="control"><label>Maximum ${state.config.type === "table" ? "rows" : "marks"} <span>${state.config.limit}</span></label><input type="range" min="20" max="${state.config.type === "network" ? 120 : 250}" step="10" value="${state.config.limit}" data-range="limit"></div>
     ${usesEntities ? `<div class="control method-note"><div class="control-title">Context adjustment</div><p>Counts exact repeats within one document once, counts text repeated across 3+ documents once, and excludes requester metadata. Raw mentions remain available.</p></div>` : ""}
     ${usesEntities ? `<div class="control"><div class="control-title">Inflation review</div><label class="check-chip"><input type="checkbox" data-include-high-inflation ${state.config.includeHighInflation ? "checked" : ""}><span>Include high-inflation entities</span></label></div>` : ""}
@@ -644,6 +649,35 @@ function scatterEgoNetworks(entities, displayedEntities, maximumNeighbors = 3) {
   return networks;
 }
 
+function documentRelationshipNetworks(documents, displayedDocuments, maximumNeighbors = 3) {
+  const documentById = new Map(documents.map(document => [document.id, document]));
+  const displayedIds = new Set(displayedDocuments.map(document => document.id));
+  const scores = new Map(displayedDocuments.map(document => [document.id, new Map()]));
+  (state.catalog.entities || []).forEach(entity => {
+    const memberIds = (entity.documentIds || []).filter(id => documentById.has(id));
+    memberIds.forEach(sourceId => {
+      if (!displayedIds.has(sourceId)) return;
+      memberIds.forEach(targetId => {
+        if (sourceId === targetId) return;
+        const previous = scores.get(sourceId).get(targetId) || { count: 0, names: [] };
+        previous.count += 1;
+        previous.names.push(entity.name);
+        scores.get(sourceId).set(targetId, previous);
+      });
+    });
+  });
+  return new Map([...scores].map(([documentId, neighbors]) => {
+    const ranked = [...neighbors]
+      .filter(([, shared]) => shared.count >= state.config.minEvidence)
+      .map(([neighborId, shared]) => ({
+        entity: documentById.get(neighborId),
+        edge: { relationship: "shared_entities", evidenceCount: shared.count, sharedEntities: shared.names }
+      }))
+      .sort((left, right) => right.edge.evidenceCount - left.edge.evidenceCount || left.entity.title.localeCompare(right.entity.title));
+    return [documentId, { total: ranked.length, neighbors: ranked.slice(0, maximumNeighbors) }];
+  }));
+}
+
 function valueExtent(data, key) {
   const values = data.map(item => Number(item[key]) || 0);
   return [Math.min(...values, 0), Math.max(...values, 1)];
@@ -697,7 +731,8 @@ function scatterSecondaryAnchors(egoNetworks, displayedIndex) {
 }
 
 function drawIntensityLegend() {
-  const egoKey = state.config.type === "scatter" && state.config.relationshipLayer !== "off" ? `<span class="legend-item"><i class="ego-key"></i>Strongest relationships</span>` : "";
+  const relationshipView = ["scatter", "timeline"].includes(state.config.type);
+  const egoKey = relationshipView && state.config.relationshipLayer !== "off" ? `<span class="legend-item"><i class="ego-key"></i>Strongest relationships</span>` : "";
   const outlierKey = state.config.type === "scatter" ? `<span class="legend-item"><i class="outlier-key"></i>Axis-capped outlier</span>` : "";
   const inflationKey = state.config.type === "scatter" ? `<span class="legend-item"><i class="risk-key"></i>Potential mention inflation</span>` : "";
   $("#legend").innerHTML = `<span class="legend-item"><i style="background:#111;opacity:.14"></i>Lower</span><span class="legend-item"><i style="background:#111;opacity:.48"></i>Medium</span><span class="legend-item"><i style="background:#111"></i>Higher</span>${egoKey}${outlierKey}${inflationKey}`;
@@ -1163,24 +1198,73 @@ function renderBars() {
 
 function renderTimeline() {
   const { svg, width, height } = clearChart();
-  const data = (state.config.timelineRole === "entity"
+  const candidates = (state.config.timelineRole === "entity"
     ? filteredEntities().map(entity => {
         const documents = entity.documentIds.map(id => state.documentById.get(id)).filter(document => document?.createdAt && sourceMatches(document.source)).sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
         return documents.length ? { ...entity, title: entity.name, createdAt: documents[0].createdAt, source: documents[0].source, format: documents[0].format, entityRecord: entity } : null;
       }).filter(Boolean)
-    : state.catalog.documents.filter(item => item.createdAt && sourceMatches(item.source)))
-    .sort((a, b) => (b[state.config.y] || 0) - (a[state.config.y] || 0)).slice(0, state.config.limit);
+    : state.catalog.documents.filter(item => item.createdAt && sourceMatches(item.source)));
+  const data = candidates.sort((a, b) => (b[state.config.y] || 0) - (a[state.config.y] || 0)).slice(0, state.config.limit);
   if (!data.length) return showEmpty();
   const dates = data.map(item => new Date(item.createdAt).getTime());
   const xExtent = [Math.min(...dates), Math.max(...dates) + 1], yExtent = valueExtent(data, state.config.y), sizeExtent = valueExtent(data, state.config.size);
   const margin = drawAxes(svg, width, height, "createdAt", state.config.y, xExtent, yExtent);
+  const positionFor = item => ({
+    x: clampedScale(new Date(item.createdAt).getTime(), xExtent, [margin.left, width - margin.right]),
+    y: clampedScale(item[state.config.y], yExtent, [height - margin.bottom, margin.top])
+  });
+  let relationshipLayer = null;
+  const relationshipLines = new Map();
+  const relationshipNodes = new Map();
+  let egoNetworks = new Map();
+  if (state.config.relationshipLayer !== "off") {
+    egoNetworks = state.config.timelineRole === "entity"
+      ? scatterEgoNetworks(candidates, data, state.config.relationshipNeighbors)
+      : documentRelationshipNetworks(candidates, data, state.config.relationshipNeighbors);
+    const overlay = scatterRelationshipOverlay(egoNetworks, data);
+    const entityById = new Map([...candidates, ...overlay.nodes].map(entity => [entity.id, entity]));
+    relationshipLayer = el("g", { class: `scatter-relationship-layer relationship-${state.config.relationshipLayer} strength-${state.config.relationshipStrength}` });
+    overlay.edges.forEach(relationship => {
+      const source = entityById.get(relationship.source), target = entityById.get(relationship.target);
+      if (!source || !target) return;
+      const a = positionFor(source), b = positionFor(target);
+      const line = el("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, class: "scatter-relationship-line", "stroke-width": Math.min(2, .4 + Math.sqrt(relationship.edge.evidenceCount) * .22) });
+      [relationship.source, relationship.target].forEach(id => {
+        if (!relationshipLines.has(id)) relationshipLines.set(id, []);
+        relationshipLines.get(id).push(line);
+      });
+      relationshipLayer.append(line);
+    });
+    overlay.nodes.forEach(node => {
+      const point = positionFor(node);
+      const radius = state.config.relationshipNodeSize === "fixed" ? 4 : scale(node[state.config.size], sizeExtent, [2.5, 8]);
+      const secondary = el("circle", { cx: point.x, cy: point.y, r: radius, class: "scatter-secondary-node mark" });
+      secondary.addEventListener("click", () => state.config.timelineRole === "entity" ? inspectEntity(node.entityRecord || node) : inspectDocument(node));
+      relationshipNodes.set(node.id, secondary);
+      relationshipLayer.append(secondary);
+    });
+    svg.append(relationshipLayer);
+  }
   data.forEach((item, index) => {
-    const x = scale(new Date(item.createdAt).getTime(), xExtent, [margin.left, width - margin.right]);
-    const y = scale(item[state.config.y], yExtent, [height - margin.bottom, margin.top]);
+    const { x, y } = positionFor(item);
     const radius = scale(item[state.config.size], sizeExtent, [3, 12]);
     const shade = scale(item[state.config.size], sizeExtent, [.18, .96]);
     const dot = el("circle", { cx: x, cy: y, r: radius, fill: "#111", "fill-opacity": shade, stroke: "#111", "stroke-width": 1, class: "mark" });
-    addTitle(dot, `${item.title} · ${new Date(item.createdAt).toLocaleDateString()}`); dot.addEventListener("click", () => item.entityRecord ? inspectEntity(item.entityRecord) : inspectDocument(item)); svg.append(dot);
+    addTitle(dot, `${item.title} · ${new Date(item.createdAt).toLocaleDateString()}`);
+    dot.addEventListener("click", () => item.entityRecord ? inspectEntity(item.entityRecord) : inspectDocument(item));
+    dot.addEventListener("mouseenter", () => {
+      if (!relationshipLayer) return;
+      relationshipLayer.classList.add("has-focus");
+      (relationshipLines.get(item.id) || []).forEach(line => line.classList.add("is-focused"));
+      (egoNetworks.get(item.id)?.neighbors || []).forEach(neighbor => relationshipNodes.get(neighbor.entity.id)?.classList.add("is-focused"));
+    });
+    dot.addEventListener("mouseleave", () => {
+      if (!relationshipLayer) return;
+      relationshipLayer.classList.remove("has-focus");
+      (relationshipLines.get(item.id) || []).forEach(line => line.classList.remove("is-focused"));
+      (egoNetworks.get(item.id)?.neighbors || []).forEach(neighbor => relationshipNodes.get(neighbor.entity.id)?.classList.remove("is-focused"));
+    });
+    svg.append(dot);
     if (state.config.labels === "all" || (state.config.labels === "top" && index < 12)) {
       svg.append(el("text", { x, y: Math.min(height - margin.bottom + 18, y + radius + state.config.labelSize), "text-anchor": "middle", class: "chart-label node-label" }, item.title.slice(0, 22)));
     }

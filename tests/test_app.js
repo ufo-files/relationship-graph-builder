@@ -370,6 +370,15 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.ok(fs.statSync("vendor/three.core.min.js").size > 300_000);
 });
 
+test("timeline exposes relationship controls while map keeps its production renderer", () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  assert.match(source, /\["scatter", "timeline"\]\.includes\(state\.config\.type\)/);
+  assert.match(source, /function documentRelationshipNetworks/);
+  assert.match(source, /Shared published entities/);
+  assert.match(source, /state\.config\.timelineRole === "entity"[\s\S]*documentRelationshipNetworks/);
+  assert.doesNotMatch(source, /relationships: overlay\.edges\.map/);
+});
+
 test("Book is a first-class area bookshelf for transcript-backed titles", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
