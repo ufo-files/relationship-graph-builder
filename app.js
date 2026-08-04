@@ -22,14 +22,14 @@ const TABLE_FIELDS = {
   source: ["name", "documents", "words"]
 };
 const TYPES = [
-  { id: "network", label: "Network", icon: "<circle cx='6' cy='8' r='3'/><circle cx='24' cy='4' r='3'/><circle cx='22' cy='16' r='3'/><path d='M9 7l12-2M9 10l10 5M23 7l-1 6'/>" },
-  { id: "map", label: "Map", icon: "<circle cx='15.5' cy='10' r='8'/><path d='M7.5 10h16M15.5 2c3 3 3 13 0 16m0-16c-3 3-3 13 0 16'/>" },
-  { id: "book", label: "Bookshelf", icon: "<path d='M3 3h5v14H3zM9 5h4v12H9zM14 2h6v15h-6zM21 6h7v11h-7zM2 18h27'/>" },
-  { id: "scatter", label: "Scatter", icon: "<path d='M3 2v16h25'/><circle cx='9' cy='13' r='2'/><circle cx='15' cy='9' r='2'/><circle cx='22' cy='5' r='2'/>" },
-  { id: "bars", label: "Bars", icon: "<path d='M3 2v16h26M7 15h4V8H7zm8 0h4V4h-4zm8 0h4v-9h-4z'/>" },
-  { id: "timeline", label: "Timeline", icon: "<path d='M3 10h25M8 5v10m7-7v7m8-12v12'/><circle cx='8' cy='10' r='2'/><circle cx='15' cy='10' r='2'/><circle cx='23' cy='10' r='2'/>" },
-  { id: "matrix", label: "Matrix", icon: "<path d='M4 3h22v15H4zM11 3v15m8-15v15M4 8h22m-22 5h22'/>" },
-  { id: "table", label: "Table", icon: "<path d='M3 3h25v15H3zM3 8h25M3 13h25M12 3v15'/>" }
+  { id: "network", label: "Network", scope: "All", icon: "<circle cx='6' cy='8' r='3'/><circle cx='24' cy='4' r='3'/><circle cx='22' cy='16' r='3'/><path d='M9 7l12-2M9 10l10 5M23 7l-1 6'/>" },
+  { id: "map", label: "Map", scope: "Locations", icon: "<circle cx='15.5' cy='10' r='8'/><path d='M7.5 10h16M15.5 2c3 3 3 13 0 16m0-16c-3 3-3 13 0 16'/>" },
+  { id: "book", label: "Bookshelf", scope: "Books", icon: "<path d='M3 3h5v14H3zM9 5h4v12H9zM14 2h6v15h-6zM21 6h7v11h-7zM2 18h27'/>" },
+  { id: "scatter", label: "Scatter", scope: "All", icon: "<path d='M3 2v16h25'/><circle cx='9' cy='13' r='2'/><circle cx='15' cy='9' r='2'/><circle cx='22' cy='5' r='2'/>" },
+  { id: "bars", label: "Bars", scope: "All collections", icon: "<path d='M3 2v16h26M7 15h4V8H7zm8 0h4V4h-4zm8 0h4v-9h-4z'/>" },
+  { id: "timeline", label: "Timeline", scope: "Documents + events", icon: "<path d='M3 10h25M8 5v10m7-7v7m8-12v12'/><circle cx='8' cy='10' r='2'/><circle cx='15' cy='10' r='2'/><circle cx='23' cy='10' r='2'/>" },
+  { id: "matrix", label: "Matrix", scope: "Collections × top entities", icon: "<path d='M4 3h22v15H4zM11 3v15m8-15v15M4 8h22m-22 5h22'/>" },
+  { id: "table", label: "Table", scope: "All", icon: "<path d='M3 3h25v15H3zM3 8h25M3 13h25M12 3v15'/>" }
 ];
 const PRESETS = [
   {
@@ -60,7 +60,7 @@ const DEFAULT = {
   includeHighInflation: true,
   minEvidence: 2, minConfidence: 0.95, limit: 50, labels: "top", aggregation: "source",
   relationshipLayer: "always", relationshipNeighbors: 1, relationshipNodeSize: "inherit", relationshipStrength: "subtle",
-  nodeRole: "entity", timelineRole: "document", matrixColumns: "category",
+  nodeRole: "entity", timelineRole: "document", matrixColumns: "entity",
   tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"],
   tableSort: "mentions", tableDirection: "desc", tableSearch: "",
   labelSize: 12, zoom: 1, title: "Mentions by Documents — Entities", titleMode: "auto"
@@ -349,12 +349,11 @@ function applyPreset(id) {
 function renderTypeGrid() {
   $("#typeGrid").innerHTML = TYPES.map(type => `
     <button class="type-card ${state.config.type === type.id ? "active" : ""}" data-type="${type.id}">
-      <svg viewBox="0 0 31 20" fill="none" stroke="currentColor" stroke-width="1.5">${type.icon}</svg><span>${type.label}</span>
+      <svg viewBox="0 0 31 20" fill="none" stroke="currentColor" stroke-width="1.5">${type.icon}</svg><span class="type-card-copy"><strong>${type.label}</strong><small>${type.scope}</small></span>
     </button>`).join("");
 }
 
 function renderControls() {
-  renderPresetControl();
   renderTypeGrid();
   const numericEntity = ["contextAdjustedMentions", "mentions", "independentDocumentCount", "documentCount", "sourceCount", "inflationRate", "documentInflationRate", "classificationConfidence", "extractionConfidence"];
   const numericDoc = ["words", "segments", "bytes", "durationMs"];
@@ -407,16 +406,20 @@ function renderControls() {
       : `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>`) + relationshipControls + labelSizeControl + zoomControl;
   }
 
-  const categories = ["map", "book"].includes(state.config.type)
-    ? [state.config.type === "map" ? "location" : "book"]
+  const categories = state.config.type === "map"
+    ? ["location"]
     : [...new Set(state.catalog?.entities.map(item => item.category) || ENTITY_CATEGORIES)];
-  const categoryChecks = categories.map(category => `<label class="check-chip"><input type="checkbox" data-category="${category}" ${state.config.type === "book" || state.config.categories.includes(category) ? "checked" : ""} ${state.config.type === "book" ? "disabled" : ""}><span>${escapeHTML(label(category))}</span></label>`).join("");
+  const categoryChecks = categories.map(category => {
+    const bookshelf = state.config.type === "book";
+    const checked = bookshelf ? category === "book" : state.config.categories.includes(category);
+    return `<label class="check-chip"><input type="checkbox" data-category="${category}" ${checked ? "checked" : ""} ${bookshelf ? "disabled" : ""}><span>${escapeHTML(label(category))}</span></label>`;
+  }).join("");
   const sources = state.catalog?.sources || [];
   const sourceNames = sources.map(source => source.name);
   const selectedSourceCount = state.config.allSources ? sourceNames.length : sourceNames.filter(name => state.config.sources.includes(name)).length;
   const sourceChecks = sources.map(source => `<label class="check-chip"><input type="checkbox" data-source="${escapeHTML(source.name)}" ${sourceIsSelected(source.name, state.config.sources, state.config.allSources) ? "checked" : ""}><span>${escapeHTML(source.name)}</span></label>`).join("");
   const duplicateCount = state.catalog?.counts?.possibleDuplicates || state.catalog?.duplicateCandidates?.length || 0;
-  const usesEntities = state.config.type === "table" ? state.config.tableRole === "entity" : !["bars", "timeline"].includes(state.config.type) || state.config.aggregation === "entity" || state.config.timelineRole === "entity";
+  const usesEntities = state.config.type === "table" ? state.config.tableRole === "entity" : state.config.type === "timeline" || !["bars", "timeline"].includes(state.config.type) || state.config.aggregation === "entity" || state.config.timelineRole === "entity";
   $("#filterControls").innerHTML = `
     ${usesEntities ? `<div class="control"><div class="control-title">Entity categories</div><div class="check-grid">${categoryChecks}</div></div>` : ""}
     <div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div>
@@ -474,13 +477,13 @@ function renderControls() {
 function setType(type) {
   state.config.type = type;
   if (type === "bars") Object.assign(state.config, { aggregation: "source", y: "words", color: "intensity" });
-  if (type === "scatter") Object.assign(state.config, { x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", color: "category", limit: 50 });
-  if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "independentDocumentCount", color: "category" });
+  if (type === "scatter") Object.assign(state.config, { x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", color: "category", limit: 50, categories: [...ENTITY_CATEGORIES], sources: [], allSources: true });
+  if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "independentDocumentCount", color: "category", categories: [...ENTITY_CATEGORIES], sources: [], allSources: true });
   if (type === "map") Object.assign(state.config, { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50 });
   if (type === "book") Object.assign(state.config, { size: "contextAdjustedMentions", color: "intensity", labels: "all", includeHighInflation: true, limit: 250 });
-  if (type === "timeline") Object.assign(state.config, { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source" });
-  if (type === "matrix") Object.assign(state.config, { matrixColumns: "category", color: "intensity" });
-  if (type === "table") Object.assign(state.config, { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 });
+  if (type === "timeline") Object.assign(state.config, { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source", categories: ["date"] });
+  if (type === "matrix") Object.assign(state.config, { matrixColumns: "entity", color: "intensity" });
+  if (type === "table") Object.assign(state.config, { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60, categories: [...ENTITY_CATEGORIES], sources: [], allSources: true, includeHighInflation: true });
   state.selected = null;
   renderControls();
   commitConfig();
@@ -870,12 +873,17 @@ function renderNetwork() {
   const networkCenterX = (bounds.left + bounds.right) / 2;
   const networkCenterY = (bounds.top + bounds.bottom) / 2;
   svg.setAttribute("viewBox", `${networkCenterX - width / (2 * zoom)} ${networkCenterY - height / (2 * zoom)} ${width / zoom} ${height / zoom}`);
-  const edgeGroup = el("g");
+  const edgeGroup = el("g", { class: "network-relationship-layer" });
+  const networkLines = new Map();
   edges.forEach(edge => {
     const a = positions.get(edge.source), b = positions.get(edge.target);
-    const line = el("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, class: "edge mark", "stroke-width": Math.min(4, .5 + Math.sqrt(edge.evidenceCount) * .35) });
+    const line = el("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, class: "network-relationship-line mark", "stroke-width": Math.min(2, .4 + Math.sqrt(edge.evidenceCount) * .22) });
     addTitle(line, `${label(edge.relationship)} · ${edge.evidenceCount} ${collectionMode ? "entities" : "evidence segments"}`);
     line.addEventListener("click", () => collectionMode ? inspectCollectionEdge(edge, nodes) : inspectEdge(edge));
+    [edge.source, edge.target].forEach(id => {
+      if (!networkLines.has(id)) networkLines.set(id, []);
+      networkLines.get(id).push(line);
+    });
     edgeGroup.append(line);
   });
   svg.append(edgeGroup);
@@ -888,6 +896,14 @@ function renderNetwork() {
       ? `${node.name} · ${node.documents} documents`
       : `${node.name} · ${label(state.config.size)}: ${formatNumber(node[state.config.size])}${state.config.size === "contextAdjustedMentions" ? ` · Raw mentions: ${formatNumber(node.mentions)}` : ""}`);
     circle.addEventListener("click", () => collectionMode ? inspectGroup(node) : inspectEntity(node));
+    circle.addEventListener("mouseenter", () => {
+      edgeGroup.classList.add("has-focus");
+      (networkLines.get(node.id) || []).forEach(line => line.classList.add("is-focused"));
+    });
+    circle.addEventListener("mouseleave", () => {
+      edgeGroup.classList.remove("has-focus");
+      (networkLines.get(node.id) || []).forEach(line => line.classList.remove("is-focused"));
+    });
     svg.append(circle);
     if (state.config.labels === "all" || (state.config.labels === "top" && index < 16)) {
       const textAnchor = point.x < width * .2 ? "start" : point.x > width * .8 ? "end" : "middle";
@@ -1280,11 +1296,22 @@ function renderTimeline() {
   setSummary(`${data.length} ${state.config.timelineRole === "entity" ? "entities" : "completed transcripts"}`, "timeline");
 }
 
+function matrixEntityInterest(entity, sources) {
+  const counts = sources.map(source => entity.documentIds.filter(id => state.documentById.get(id)?.source === source.name).length);
+  const total = counts.reduce((sum, count) => sum + count, 0);
+  if (!total) return 0;
+  const strongestCollection = Math.max(...counts);
+  const activeCollections = counts.filter(Boolean).length;
+  const concentration = strongestCollection / total;
+  const distinctiveness = 1 + (sources.length - activeCollections) / Math.max(1, sources.length);
+  return Math.log1p(total) * concentration * distinctiveness;
+}
+
 function renderMatrix() {
   const { svg, width, height } = clearChart();
   const sources = state.catalog.sources.filter(item => sourceMatches(item.name));
   const columns = state.config.matrixColumns === "entity"
-    ? filteredEntities().sort((a, b) => b.contextAdjustedMentions - a.contextAdjustedMentions).slice(0, Math.min(state.config.limit, 18)).map(entity => ({ id: entity.id, label: entity.name, category: entity.category, entity }))
+    ? filteredEntities().map(entity => ({ entity, interest: matrixEntityInterest(entity, sources) })).sort((a, b) => b.interest - a.interest || b.entity.contextAdjustedMentions - a.entity.contextAdjustedMentions).slice(0, Math.min(state.config.limit, 12)).map(({ entity }) => ({ id: entity.id, label: entity.name, category: entity.category, entity }))
     : state.config.categories.map(category => ({ id: category, label: label(category), category }));
   if (!sources.length || !columns.length) return showEmpty();
   const counts = [];
@@ -1501,7 +1528,7 @@ function inspectMatrix(item) {
 function exportSVG() {
   const svg = $("#chart").cloneNode(true);
   svg.setAttribute("xmlns", NS);
-  svg.insertAdjacentHTML("afterbegin", `<style>.chart-label{fill:#111;font-family:"SF Mono","IBM Plex Mono",ui-monospace,monospace;font-size:var(--graph-label-size,12px);font-weight:650;paint-order:stroke;stroke:#f6f5ef;stroke-width:3px;stroke-linejoin:round}.axis-label{fill:#555;font:11px "SF Mono",ui-monospace,monospace}.grid-line{stroke:#111;stroke-opacity:.12}.edge{stroke:#111;stroke-opacity:.28}</style>`);
+  svg.insertAdjacentHTML("afterbegin", `<style>.chart-label{fill:#111;font-family:"SF Mono","IBM Plex Mono",ui-monospace,monospace;font-size:var(--graph-label-size,12px);font-weight:650;paint-order:stroke;stroke:#f6f5ef;stroke-width:3px;stroke-linejoin:round}.axis-label{fill:#555;font:11px "SF Mono",ui-monospace,monospace}.grid-line{stroke:#111;stroke-opacity:.12}.network-relationship-line{stroke:#111;opacity:.07}</style>`);
   const blob = new Blob([new XMLSerializer().serializeToString(svg)], { type: "image/svg+xml" });
   const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = `${state.config.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}.svg`; link.click(); URL.revokeObjectURL(link.href);
 }

@@ -329,6 +329,31 @@ test("Default preset restores the complete initial view", () => {
   assert.equal(result.activeId, "default");
 });
 
+test("graph type is the first builder section and cards explain their data scope", () => {
+  const html = fs.readFileSync("index.html", "utf8");
+  const source = fs.readFileSync("app.js", "utf8");
+  assert.doesNotMatch(html, /id="presetControls"/);
+  assert.match(html, /data-step="1"[\s\S]*<strong>Graph type<\/strong>/);
+  assert.match(source, /label: "Map", scope: "Locations"/);
+  assert.match(source, /label: "Bookshelf", scope: "Books"/);
+  assert.match(source, /label: "Scatter", scope: "All"/);
+  assert.match(source, /if \(type === "scatter"\).*categories: \[\.\.\.ENTITY_CATEGORIES\].*sources: \[\].*allSources: true/);
+  assert.match(source, /label: "Bars", scope: "All collections"/);
+  assert.match(source, /label: "Timeline", scope: "Documents \+ events"/);
+  assert.match(source, /if \(type === "timeline"\).*categories: \["date"\]/);
+  assert.match(source, /state\.config\.type === "timeline" \|\|/);
+  assert.match(source, /function documentRelationshipNetworks[\s\S]*\(state\.catalog\.entities \|\| \[\]\)\.forEach/);
+  assert.match(source, /label: "Network", scope: "All"/);
+  assert.match(source, /if \(type === "network"\).*categories: \[\.\.\.ENTITY_CATEGORIES\].*sources: \[\].*allSources: true/);
+  assert.match(source, /label: "Matrix", scope: "Collections × top entities"/);
+  assert.match(source, /label: "Table", scope: "All"/);
+  assert.match(source, /if \(type === "table"\).*categories: \[\.\.\.ENTITY_CATEGORIES\].*sources: \[\].*allSources: true/);
+  assert.match(source, /if \(type === "matrix"\).*matrixColumns: "entity"/);
+  assert.match(source, /Math\.min\(state\.config\.limit, 12\)/);
+  assert.match(source, /function matrixEntityInterest/);
+  assert.match(source, /interest: matrixEntityInterest\(entity, sources\)/);
+});
+
 test("Map is a first-class Three.js graph type with reviewed location data", () => {
   const html = fs.readFileSync("index.html", "utf8");
   const globe = fs.readFileSync("map-globe.js", "utf8");
@@ -417,6 +442,9 @@ test("Book is a first-class area bookshelf for transcript-backed titles", () => 
   assert.match(source, /if \(type === "book"\).*labels: "all"/);
   assert.doesNotMatch(source, /if \(type === "book"\).*categories: \["book"\]/);
   assert.match(source, /const data = filteredEntities\(\["book"\]\)/);
+  assert.match(source, /const bookshelf = state\.config\.type === "book"/);
+  assert.match(source, /const checked = bookshelf \? category === "book"/);
+  assert.match(source, /bookshelf \? "disabled"/);
   assert.match(source, /const shouldLabel = state\.config\.labels !== "none"/);
 });
 
@@ -769,6 +797,16 @@ test("network layout fits node positions to 90% of the canvas", () => {
   assert.ok(Math.abs(Math.max(...xs) - 900 * .95) < .001);
   assert.ok(Math.abs(Math.min(...ys) - 600 * .05) < .001);
   assert.ok(Math.abs(Math.max(...ys) - 600 * .95) < .001);
+});
+
+test("network edges use the same restrained rendering as relationship overlays", () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const styles = fs.readFileSync("styles.css", "utf8");
+  assert.match(source, /class: "network-relationship-line mark"/);
+  assert.match(source, /Math\.min\(2, \.4 \+ Math\.sqrt\(edge\.evidenceCount\) \* \.22\)/);
+  assert.match(source, /networkLines\.get\(node\.id\)[\s\S]*line\.classList\.add\("is-focused"\)/);
+  assert.match(styles, /\.network-relationship-line \{[^}]*opacity: \.07/);
+  assert.match(styles, /\.network-relationship-layer\.has-focus \.network-relationship-line\.is-focused \{ opacity: \.8/);
 });
 
 test("robust scatter extents cap material outliers without changing ordinary ranges", () => {

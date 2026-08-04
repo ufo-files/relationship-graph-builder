@@ -62,7 +62,9 @@ h1, h2, h3, p { margin-top: 0; }
 .type-card:hover { border-color: var(--ink); }
 .type-card.active { background-color: var(--paper); background-image: repeating-linear-gradient(135deg, transparent 0 6px, rgba(17,17,17,.12) 6px 7px); border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
 .type-card svg { display: block; width: 29px; height: 18px; margin-bottom: 5px; color: var(--green-2); }
-.type-card span { font-size: 12px; font-weight: 750; }
+.type-card-copy { display: block; }
+.type-card-copy strong { display: block; font-size: 12px; font-weight: 750; }
+.type-card-copy small { display: block; margin-top: 2px; color: var(--muted); font-size: 10px; line-height: 1.25; }
 .control { margin-top: 11px; }
 .control:first-child { margin-top: 0; }
 .control label, .control-title { display: flex; justify-content: space-between; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 5px; }
@@ -131,7 +133,10 @@ h1, h2, h3, p { margin-top: 0; }
 .scatter-secondary-node { fill: var(--paper); fill-opacity: .72; stroke: var(--ink); stroke-width: 1; opacity: .45; }
 .scatter-relationship-layer.has-focus .scatter-secondary-node { opacity: .08; }
 .scatter-relationship-layer.has-focus .scatter-secondary-node.is-focused { opacity: .85; }
-.edge { stroke: var(--ink); stroke-opacity: .28; }
+.network-relationship-line { stroke: var(--ink); opacity: .07; transition: opacity .15s; }
+.network-relationship-line:hover { opacity: .8; }
+.network-relationship-layer.has-focus .network-relationship-line { opacity: .025; }
+.network-relationship-layer.has-focus .network-relationship-line.is-focused { opacity: .8; }
 
 .inspector { padding: 22px; }
 .inspector-close { position: sticky; top: 0; z-index: 1; display: grid; place-items: center; margin: 0 0 -34px auto; background: var(--paper); }
