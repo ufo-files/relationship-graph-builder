@@ -195,7 +195,7 @@ function dataAwareTitle(config) {
   } else if (config.type === "map") {
     title = `${label(config.size)} — Mapped Locations`;
   } else if (config.type === "book") {
-    title = `Bookshelf — ${entities}`;
+    title = "Books Mentioned";
   } else if (config.type === "bars") {
     title = config.aggregation === "entity" ? `${label(config.y)} by ${entities}` : `${label(config.y)} by ${label(config.aggregation)}`;
   } else if (config.type === "timeline") {
@@ -406,10 +406,10 @@ function renderControls() {
       : `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>`) + relationshipControls + labelSizeControl + zoomControl;
   }
 
-  const categories = state.config.type === "map"
-    ? ["location"]
+  const categories = ["map", "book"].includes(state.config.type)
+    ? [state.config.type === "map" ? "location" : "book"]
     : [...new Set(state.catalog?.entities.map(item => item.category) || ENTITY_CATEGORIES)];
-  const categoryChecks = categories.map(category => `<label class="check-chip"><input type="checkbox" data-category="${category}" ${state.config.categories.includes(category) ? "checked" : ""}><span>${escapeHTML(label(category))}</span></label>`).join("");
+  const categoryChecks = categories.map(category => `<label class="check-chip"><input type="checkbox" data-category="${category}" ${state.config.type === "book" || state.config.categories.includes(category) ? "checked" : ""} ${state.config.type === "book" ? "disabled" : ""}><span>${escapeHTML(label(category))}</span></label>`).join("");
   const sources = state.catalog?.sources || [];
   const sourceNames = sources.map(source => source.name);
   const selectedSourceCount = state.config.allSources ? sourceNames.length : sourceNames.filter(name => state.config.sources.includes(name)).length;
@@ -558,9 +558,9 @@ function sourceMatches(sourceName) {
   return state.config.allSources || state.config.sources.includes(sourceName);
 }
 
-function entityMatches(entity) {
+function entityMatches(entity, categories = state.config.categories) {
   entity = withSignificanceDefaults(entity);
-  if (!state.config.categories.includes(entity.category)) return false;
+  if (!categories.includes(entity.category)) return false;
   if (entity.classificationConfidence < state.config.minConfidence) return false;
   if (!state.config.allSources && !entity.documentIds.some(id => sourceMatches(state.documentById.get(id)?.source))) return false;
   const scopedEntity = state.config.allSources ? entity : filteredEntity(entity);
@@ -607,8 +607,8 @@ function filteredEntity(entity) {
   };
 }
 
-function filteredEntities() {
-  return state.catalog.entities.filter(entityMatches).map(filteredEntity);
+function filteredEntities(categories = state.config.categories) {
+  return state.catalog.entities.filter(entity => entityMatches(entity, categories)).map(filteredEntity);
 }
 
 function filteredEdge(edge, visibleDocumentIds = null) {
@@ -1112,7 +1112,7 @@ function bookLabelLines(title, maxCharacters, maxLines) {
 
 function renderBook() {
   const { svg, width, height } = clearChart();
-  const data = filteredEntities()
+  const data = filteredEntities(["book"])
     .sort((left, right) => (right[state.config.size] || 0) - (left[state.config.size] || 0))
     .slice(0, state.config.limit);
   if (!data.length) return showEmpty();
@@ -1143,7 +1143,7 @@ function renderBook() {
   });
   drawIntensityLegend();
   const mentions = data.reduce((sum, item) => sum + (item[state.config.size] || 0), 0);
-  setSummary(`${data.length} entities · ${formatNumber(mentions)} ${label(state.config.size).toLowerCase()}`, "book");
+  setSummary(`${data.length} books · ${formatNumber(mentions)} ${label(state.config.size).toLowerCase()}`, "book");
 }
 
 function mapLocationData() {
