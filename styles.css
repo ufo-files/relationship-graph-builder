@@ -133,7 +133,8 @@ h1, h2, h3, p { margin-top: 0; }
 .scatter-secondary-node { fill: var(--paper); fill-opacity: .72; stroke: var(--ink); stroke-width: 1; opacity: .45; }
 .scatter-relationship-layer.has-focus .scatter-secondary-node { opacity: .08; }
 .scatter-relationship-layer.has-focus .scatter-secondary-node.is-focused { opacity: .85; }
-.edge { stroke: var(--ink); stroke-opacity: .28; }
+.network-relationship-line { stroke: var(--ink); opacity: .07; transition: opacity .15s; }
+.network-relationship-line:hover { opacity: .8; }
 
 .inspector { padding: 22px; }
 .inspector-close { position: sticky; top: 0; z-index: 1; display: grid; place-items: center; margin: 0 0 -34px auto; background: var(--paper); }

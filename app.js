@@ -876,7 +876,7 @@ function renderNetwork() {
   const edgeGroup = el("g");
   edges.forEach(edge => {
     const a = positions.get(edge.source), b = positions.get(edge.target);
-    const line = el("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, class: "edge mark", "stroke-width": Math.min(4, .5 + Math.sqrt(edge.evidenceCount) * .35) });
+    const line = el("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, class: "network-relationship-line mark", "stroke-width": Math.min(2, .4 + Math.sqrt(edge.evidenceCount) * .22) });
     addTitle(line, `${label(edge.relationship)} · ${edge.evidenceCount} ${collectionMode ? "entities" : "evidence segments"}`);
     line.addEventListener("click", () => collectionMode ? inspectCollectionEdge(edge, nodes) : inspectEdge(edge));
     edgeGroup.append(line);
@@ -1515,7 +1515,7 @@ function inspectMatrix(item) {
 function exportSVG() {
   const svg = $("#chart").cloneNode(true);
   svg.setAttribute("xmlns", NS);
-  svg.insertAdjacentHTML("afterbegin", `<style>.chart-label{fill:#111;font-family:"SF Mono","IBM Plex Mono",ui-monospace,monospace;font-size:var(--graph-label-size,12px);font-weight:650;paint-order:stroke;stroke:#f6f5ef;stroke-width:3px;stroke-linejoin:round}.axis-label{fill:#555;font:11px "SF Mono",ui-monospace,monospace}.grid-line{stroke:#111;stroke-opacity:.12}.edge{stroke:#111;stroke-opacity:.28}</style>`);
+  svg.insertAdjacentHTML("afterbegin", `<style>.chart-label{fill:#111;font-family:"SF Mono","IBM Plex Mono",ui-monospace,monospace;font-size:var(--graph-label-size,12px);font-weight:650;paint-order:stroke;stroke:#f6f5ef;stroke-width:3px;stroke-linejoin:round}.axis-label{fill:#555;font:11px "SF Mono",ui-monospace,monospace}.grid-line{stroke:#111;stroke-opacity:.12}.network-relationship-line{stroke:#111;opacity:.07}</style>`);
   const blob = new Blob([new XMLSerializer().serializeToString(svg)], { type: "image/svg+xml" });
   const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = `${state.config.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}.svg`; link.click(); URL.revokeObjectURL(link.href);
 }

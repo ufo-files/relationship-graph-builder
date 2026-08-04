@@ -799,6 +799,14 @@ test("network layout fits node positions to 90% of the canvas", () => {
   assert.ok(Math.abs(Math.max(...ys) - 600 * .95) < .001);
 });
 
+test("network edges use the same restrained rendering as relationship overlays", () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const styles = fs.readFileSync("styles.css", "utf8");
+  assert.match(source, /class: "network-relationship-line mark"/);
+  assert.match(source, /Math\.min\(2, \.4 \+ Math\.sqrt\(edge\.evidenceCount\) \* \.22\)/);
+  assert.match(styles, /\.network-relationship-line \{[^}]*opacity: \.07/);
+});
+
 test("robust scatter extents cap material outliers without changing ordinary ranges", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
