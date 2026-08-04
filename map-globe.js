@@ -60,26 +60,31 @@ class GlobeMap {
     this.moonOrbit = new THREE.Group();
     orbitPlane.add(this.moonOrbit);
 
-    const material = new THREE.MeshBasicMaterial({ color: 0xc4c2ba });
-    new THREE.TextureLoader().load(
-      "assets/map/moon-lroc-color.jpg",
-      texture => {
-        texture.colorSpace = THREE.SRGBColorSpace;
-        texture.anisotropy = Math.min(8, this.renderer.capabilities.getMaxAnisotropy());
-        material.map = texture;
-        material.color.set(0xffffff);
-        material.needsUpdate = true;
-        this.draw();
-      }
-    );
+    this.moonMaterial = new THREE.MeshBasicMaterial({ color: 0xc4c2ba });
     const moon = new THREE.Mesh(
       new THREE.SphereGeometry(MOON_RADIUS, 64, 48),
-      material
+      this.moonMaterial
     );
     moon.name = "moon";
     moon.position.x = MOON_DISPLAY_ORBIT_RADIUS;
     // As the orbit group turns, the Moon turns with it so the same face stays toward Earth.
     this.moonOrbit.add(moon);
+  }
+
+  loadMoonTexture() {
+    if (this.moonTextureRequested) return;
+    this.moonTextureRequested = true;
+    new THREE.TextureLoader().load(
+      "assets/map/moon-lroc-color.jpg",
+      texture => {
+        texture.colorSpace = THREE.SRGBColorSpace;
+        texture.anisotropy = Math.min(8, this.renderer.capabilities.getMaxAnisotropy());
+        this.moonMaterial.map = texture;
+        this.moonMaterial.color.set(0xffffff);
+        this.moonMaterial.needsUpdate = true;
+        this.draw();
+      }
+    );
   }
 
   addEarth() {
@@ -355,6 +360,7 @@ class GlobeMap {
   setVisible(visible) {
     this.visible = visible;
     if (visible) {
+      this.loadMoonTexture();
       this.resize();
       if (this.frame === null) this.frame = requestAnimationFrame(timestamp => this.animate(timestamp));
     }

@@ -452,6 +452,9 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /MOON_ORBIT_DAYS = 27\.322/);
   assert.match(globe, /MOON_ORBIT_SPEED = AUTO_ROTATION_SPEED \/ MOON_ORBIT_DAYS/);
   assert.match(globe, /moon-lroc-color\.jpg/);
+  assert.match(globe, /loadMoonTexture\(\) \{[\s\S]*new THREE\.TextureLoader\(\)\.load\([\s\S]*moon-lroc-color\.jpg/);
+  assert.match(globe, /setVisible\(visible\) \{[\s\S]*if \(visible\) \{[\s\S]*this\.loadMoonTexture\(\)/);
+  assert.doesNotMatch(globe.slice(globe.indexOf("  addMoon()"), globe.indexOf("  loadMoonTexture()")), /TextureLoader/);
   assert.match(globe, /this\.moonOrbit\.rotation\.y \+= elapsed \* MOON_ORBIT_SPEED/);
   assert.match(html, /The Moon is sized to scale and rotates synchronously as it orbits/);
   assert.match(globe, /QuadraticBezierCurve3/);
