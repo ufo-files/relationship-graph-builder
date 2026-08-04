@@ -438,6 +438,8 @@ function renderControls() {
     ${state.config.type === "network" || (supportsRelationships && state.config.relationshipLayer !== "off") ? `<div class="control"><label>${state.config.type === "network" && state.config.nodeRole === "collection" || state.config.type === "timeline" && state.config.timelineRole === "document" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
     ${state.config.type === "document"
       ? `<div class="control"><div class="control-title">Search scope <span>${state.catalog?.documents.filter(document => sourceMatches(document.source)).length || 0}</span></div><select disabled><option>Every completed file</option></select></div>`
+      : state.config.type === "table"
+        ? `<div class="control"><div class="control-title">Rows included</div><select disabled><option>All matching rows</option></select></div>`
       : `<div class="control"><label>Maximum ${state.config.type === "table" ? "rows" : "marks"} <span>${state.config.limit}</span></label><input type="range" min="20" max="${state.config.type === "network" ? 120 : 250}" step="10" value="${state.config.limit}" data-range="limit"></div>`}
     ${usesEntities ? `<div class="control method-note"><div class="control-title">Context adjustment</div><p>Counts exact repeats within one document once, counts text repeated across 3+ documents once, and excludes requester metadata. Raw mentions remain available.</p></div>` : ""}
     ${usesEntities ? `<div class="control"><div class="control-title">Inflation review</div><label class="check-chip"><input type="checkbox" data-include-high-inflation ${state.config.includeHighInflation ? "checked" : ""}><span>Include high-inflation entities</span></label></div>` : ""}
@@ -1444,7 +1446,7 @@ function tableRecords() {
     const left = a[sortField] ?? "", right = b[sortField] ?? "";
     if (typeof left === "number" && typeof right === "number") return (left - right) * direction;
     return String(left).localeCompare(String(right), undefined, { numeric: true, sensitivity: "base" }) * direction;
-  }).slice(0, state.config.limit);
+  });
 }
 
 function tableDisplayValue(item, field) {
@@ -1473,19 +1475,38 @@ function renderTable() {
     return showEmpty();
   }
   tableView.style.setProperty("--table-font-size", `${state.config.labelSize}px`);
-  tableView.innerHTML = `<table class="builder-table"><thead><tr>${fields.map(field => `<th scope="col">${escapeHTML(label(field))}</th>`).join("")}</tr></thead><tbody>${records.map((item, index) => `<tr tabindex="0" data-table-row="${index}">${fields.map(field => `<td>${escapeHTML(tableDisplayValue(item, field))}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
-  $$('[data-table-row]').forEach(row => {
-    const inspect = () => {
-      const item = records[Number(row.dataset.tableRow)];
-      if (state.config.tableRole === "entity") inspectEntity(item);
-      else if (state.config.tableRole === "document") inspectDocument(item);
-      else inspectGroup(item);
-    };
-    row.addEventListener("click", inspect);
-    row.addEventListener("keydown", event => { if (["Enter", " "].includes(event.key)) { event.preventDefault(); inspect(); } });
-  });
   const rowLabel = state.config.tableRole === "entity" ? "entities" : state.config.tableRole === "document" ? "transcript files" : "collections";
-  setSummary(`${records.length} ${rowLabel} · ${fields.length} columns`, "table");
+  tableView.innerHTML = `<table class="builder-table"><thead><tr>${fields.map(field => `<th scope="col">${escapeHTML(label(field))}</th>`).join("")}</tr></thead><tbody data-table-body></tbody></table>`;
+  const body = $("[data-table-body]");
+  let shown = 0;
+  const inspectRow = row => {
+    const item = records[Number(row.dataset.tableRow)];
+    if (state.config.tableRole === "entity") inspectEntity(item);
+    else if (state.config.tableRole === "document") inspectDocument(item);
+    else inspectGroup(item);
+  };
+  body.addEventListener("click", event => {
+    const row = event.target.closest("[data-table-row]");
+    if (row) inspectRow(row);
+  });
+  body.addEventListener("keydown", event => {
+    if (!["Enter", " "].includes(event.key)) return;
+    const row = event.target.closest("[data-table-row]");
+    if (!row) return;
+    event.preventDefault();
+    inspectRow(row);
+  });
+  const appendBatch = () => {
+    const batch = records.slice(shown, shown + 100);
+    if (!batch.length) return;
+    body.insertAdjacentHTML("beforeend", batch.map((item, index) => `<tr tabindex="0" data-table-row="${shown + index}">${fields.map(field => `<td>${escapeHTML(tableDisplayValue(item, field))}</td>`).join("")}</tr>`).join(""));
+    shown += batch.length;
+    setSummary(`${records.length} ${rowLabel} · showing ${shown} · ${fields.length} columns`, "table");
+  };
+  appendBatch();
+  tableView.onscroll = () => {
+    if (shown < records.length && tableView.scrollTop + tableView.clientHeight >= tableView.scrollHeight - 240) appendBatch();
+  };
 }
 
 function showEmpty() {
