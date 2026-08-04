@@ -25,6 +25,7 @@ const TYPES = [
   { id: "network", label: "Network", scope: "All", icon: "<circle cx='6' cy='8' r='3'/><circle cx='24' cy='4' r='3'/><circle cx='22' cy='16' r='3'/><path d='M9 7l12-2M9 10l10 5M23 7l-1 6'/>" },
   { id: "map", label: "Map", scope: "Locations", icon: "<circle cx='15.5' cy='10' r='8'/><path d='M7.5 10h16M15.5 2c3 3 3 13 0 16m0-16c-3 3-3 13 0 16'/>" },
   { id: "book", label: "Bookshelf", scope: "Books", icon: "<path d='M3 3h5v14H3zM9 5h4v12H9zM14 2h6v15h-6zM21 6h7v11h-7zM2 18h27'/>" },
+  { id: "document", label: "Documents", scope: "All corpus files", icon: "<path d='M7 2h12l5 5v11H7zM19 2v5h5M11 11h9M11 14h9'/><path d='M4 5H2v15h17v-2'/>" },
   { id: "scatter", label: "Scatter", scope: "All", icon: "<path d='M3 2v16h25'/><circle cx='9' cy='13' r='2'/><circle cx='15' cy='9' r='2'/><circle cx='22' cy='5' r='2'/>" },
   { id: "bars", label: "Bars", scope: "All collections", icon: "<path d='M3 2v16h26M7 15h4V8H7zm8 0h4V4h-4zm8 0h4v-9h-4z'/>" },
   { id: "timeline", label: "Timeline", scope: "Documents + events", icon: "<path d='M3 10h25M8 5v10m7-7v7m8-12v12'/><circle cx='8' cy='10' r='2'/><circle cx='15' cy='10' r='2'/><circle cx='23' cy='10' r='2'/>" },
@@ -196,6 +197,8 @@ function dataAwareTitle(config) {
     title = `${label(config.size)} — Mapped Locations`;
   } else if (config.type === "book") {
     title = "Books Mentioned";
+  } else if (config.type === "document") {
+    title = "Document Archive";
   } else if (config.type === "bars") {
     title = config.aggregation === "entity" ? `${label(config.y)} by ${entities}` : `${label(config.y)} by ${label(config.aggregation)}`;
   } else if (config.type === "timeline") {
@@ -369,6 +372,8 @@ function renderControls() {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Geocoded locations</option></select></div><div class="control"><div class="control-title">Position</div><select disabled><option>Reviewed coordinates</option></select></div>` + relationshipTypeControl();
   } else if (state.config.type === "book") {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Book titles</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Area-proportional shelves</option></select></div>`;
+  } else if (state.config.type === "document") {
+    roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Completed transcript files</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Area-proportional archive</option></select></div>`;
   } else if (state.config.type === "scatter") {
     roles = controlSelect("x", "X axis", ["entity", ...numericEntity]) + controlSelect("y", "Y axis", numericEntity)
       + relationshipTypeControl();
@@ -390,7 +395,7 @@ function renderControls() {
 
   const sizeOptions = state.config.type === "network" && state.config.nodeRole === "collection"
     ? ["documents", "words"]
-    : state.config.type === "timeline" && state.config.timelineRole !== "entity" ? numericDoc : numericEntity;
+    : state.config.type === "document" || state.config.type === "timeline" && state.config.timelineRole !== "entity" ? numericDoc : numericEntity;
   const labelSizeControl = `<div class="control"><label>Label size <span>${state.config.labelSize}px</span></label><input type="range" min="11" max="18" step="1" value="${state.config.labelSize}" data-range="labelSize"></div>`;
   const zoomControl = state.config.type === "network" ? `<div class="control"><label>Zoom <span>${state.config.zoom.toFixed(1)}×</span></label><input type="range" min="0.5" max="2.5" step="0.1" value="${state.config.zoom}" data-range="zoom"></div>` : "";
   const supportsRelationships = ["scatter", "map", "timeline"].includes(state.config.type);
@@ -402,7 +407,7 @@ function renderControls() {
     const sortOptions = TABLE_FIELDS[state.config.tableRole];
     $("#encodeControls").innerHTML = controlSelect("tableSort", "Sort by", sortOptions) + controlSelect("tableDirection", "Direction", [{ value: "desc", label: "Descending" }, { value: "asc", label: "Ascending" }]) + labelSizeControl;
   } else {
-    $("#encodeControls").innerHTML = (["scatter", "network", "timeline", "map", "book"].includes(state.config.type)
+    $("#encodeControls").innerHTML = (["scatter", "network", "timeline", "map", "book", "document"].includes(state.config.type)
       ? controlSelect("size", "Size + shade", sizeOptions) + `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>` + controlSelect("labels", "Labels", [{ value: "top", label: "Most important" }, { value: "all", label: "All" }, { value: "none", label: "None" }])
       : `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>`) + relationshipControls + labelSizeControl + zoomControl;
   }
@@ -411,23 +416,26 @@ function renderControls() {
     ? ["location"]
     : [...new Set(state.catalog?.entities.map(item => item.category) || ENTITY_CATEGORIES)];
   const categoryChecks = categories.map(category => {
-    const bookshelf = state.config.type === "book";
-    const checked = bookshelf ? category === "book" : state.config.categories.includes(category);
-    return `<label class="check-chip"><input type="checkbox" data-category="${category}" ${checked ? "checked" : ""} ${bookshelf ? "disabled" : ""}><span>${escapeHTML(label(category))}</span></label>`;
+    const fixedCategories = state.config.type === "book" || state.config.type === "document";
+    const checked = state.config.type === "book" ? category === "book" : state.config.type === "document" || state.config.categories.includes(category);
+    return `<label class="check-chip"><input type="checkbox" data-category="${category}" ${checked ? "checked" : ""} ${fixedCategories ? "disabled" : ""}><span>${escapeHTML(label(category))}</span></label>`;
   }).join("");
   const sources = state.catalog?.sources || [];
   const sourceNames = sources.map(source => source.name);
   const selectedSourceCount = state.config.allSources ? sourceNames.length : sourceNames.filter(name => state.config.sources.includes(name)).length;
   const sourceChecks = sources.map(source => `<label class="check-chip"><input type="checkbox" data-source="${escapeHTML(source.name)}" ${sourceIsSelected(source.name, state.config.sources, state.config.allSources) ? "checked" : ""}><span>${escapeHTML(source.name)}</span></label>`).join("");
   const duplicateCount = state.catalog?.counts?.possibleDuplicates || state.catalog?.duplicateCandidates?.length || 0;
-  const usesEntities = state.config.type === "table" ? state.config.tableRole === "entity" : state.config.type === "timeline" || !["bars", "timeline"].includes(state.config.type) || state.config.aggregation === "entity" || state.config.timelineRole === "entity";
+  const usesEntities = state.config.type === "table" ? state.config.tableRole === "entity" : state.config.type !== "document" && (state.config.type === "timeline" || !["bars", "timeline"].includes(state.config.type) || state.config.aggregation === "entity" || state.config.timelineRole === "entity");
+  const showsEntityCategories = usesEntities || state.config.type === "document";
   $("#filterControls").innerHTML = `
-    ${usesEntities ? `<div class="control"><div class="control-title">Entity categories</div><div class="check-grid">${categoryChecks}</div></div>` : ""}
+    ${showsEntityCategories ? `<div class="control"><div class="control-title">Entity categories</div><div class="check-grid">${categoryChecks}</div></div>` : ""}
     <div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div>
     ${state.config.type === "table" ? `<div class="control"><label for="tableSearch">Search rows</label><input id="tableSearch" class="text-input" type="search" value="${escapeHTML(state.config.tableSearch)}" placeholder="Filter this list" data-table-search></div>` : ""}
     ${usesEntities ? `<div class="control"><label>Minimum confidence <span>${Math.round(state.config.minConfidence * 100)}%</span></label><input type="range" min="0.5" max="0.95" step="0.01" value="${state.config.minConfidence}" data-range="minConfidence"></div>` : ""}
     ${state.config.type === "network" || (supportsRelationships && state.config.relationshipLayer !== "off") ? `<div class="control"><label>${state.config.type === "network" && state.config.nodeRole === "collection" || state.config.type === "timeline" && state.config.timelineRole === "document" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
-    <div class="control"><label>Maximum ${state.config.type === "table" ? "rows" : "marks"} <span>${state.config.limit}</span></label><input type="range" min="20" max="${state.config.type === "network" ? 120 : 250}" step="10" value="${state.config.limit}" data-range="limit"></div>
+    ${state.config.type === "document"
+      ? `<div class="control"><div class="control-title">Documents included <span>${state.catalog?.documents.filter(document => sourceMatches(document.source)).length || 0}</span></div><select disabled><option>Every completed file</option></select></div>`
+      : `<div class="control"><label>Maximum ${state.config.type === "table" ? "rows" : "marks"} <span>${state.config.limit}</span></label><input type="range" min="20" max="${state.config.type === "network" ? 120 : 250}" step="10" value="${state.config.limit}" data-range="limit"></div>`}
     ${usesEntities ? `<div class="control method-note"><div class="control-title">Context adjustment</div><p>Counts exact repeats within one document once, counts text repeated across 3+ documents once, and excludes requester metadata. Raw mentions remain available.</p></div>` : ""}
     ${usesEntities ? `<div class="control"><div class="control-title">Inflation review</div><label class="check-chip"><input type="checkbox" data-include-high-inflation ${state.config.includeHighInflation ? "checked" : ""}><span>Include high-inflation entities</span></label></div>` : ""}
     <div class="control duplicate-review-control"><div class="control-title">Identity review <span>${duplicateCount} flagged</span></div><button class="button review-button" type="button" data-review-duplicates ${duplicateCount ? "" : "disabled"}>Review possible duplicates</button></div>`;
@@ -481,6 +489,7 @@ function setType(type) {
     network: { nodeRole: "entity", size: "independentDocumentCount", color: "category" },
     map: { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50 },
     book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 250 },
+    document: { size: "words", color: "source", labels: "top" },
     bars: { aggregation: "source", y: "words", color: "intensity" },
     timeline: { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source", categories: ["date"], labels: "top", limit: 50 },
     matrix: { matrixColumns: "entity", color: "intensity" },
@@ -1166,6 +1175,56 @@ function renderBook() {
   setSummary(`${data.length} books · ${formatNumber(mentions)} ${label(state.config.size).toLowerCase()}`, "book");
 }
 
+function machineDataDocumentURL(document) {
+  const input = state.catalog?.input || {};
+  const repository = input.repository || "ufo-files/machine-data";
+  const revision = input.revision || "main";
+  const path = String(document.path || "").split("/").map(encodeURIComponent).join("/");
+  return `https://github.com/${repository}/blob/${encodeURIComponent(revision)}/${path}`;
+}
+
+function renderDocument() {
+  const { svg, width, height } = clearChart();
+  const data = state.catalog.documents
+    .filter(document => sourceMatches(document.source))
+    .map(document => ({ ...document, name: document.title || document.path }))
+    .sort((left, right) => (right[state.config.size] || 0) - (left[state.config.size] || 0));
+  if (!data.length) return showEmpty();
+  const extent = valueExtent(data, state.config.size);
+  const { blocks, shelfYs } = bookshelfLayout(data, width, height, state.config.size);
+  shelfYs.forEach(y => svg.append(el("line", { x1: 8, y1: y, x2: width - 8, y2: y, stroke: "#111", "stroke-opacity": .42, "stroke-width": 1, class: "book-shelf document-shelf" })));
+  blocks.forEach((block, index) => {
+    const shade = scale(block.item[state.config.size], extent, [.14, .92]);
+    const link = el("a", {
+      href: machineDataDocumentURL(block.item), target: "_blank", rel: "noopener noreferrer",
+      "aria-label": `Open ${block.item.name} in machine-data`
+    });
+    const rect = el("rect", {
+      x: block.x, y: block.y, width: Math.max(1, block.width), height: Math.max(1, block.height),
+      fill: "#111", "fill-opacity": shade, stroke: "#111", "stroke-width": .65, class: "mark document-tile"
+    });
+    addTitle(rect, `${block.item.name} · ${label(state.config.size)}: ${formatNumber(block.item[state.config.size])} · Open source file`);
+    link.append(rect);
+    const shouldLabel = state.config.labels === "all" || state.config.labels === "top" && index < 40;
+    if (shouldLabel && block.width >= 42 && block.height >= state.config.labelSize + 10) {
+      const maxCharacters = Math.max(4, Math.floor((block.width - 12) / (state.config.labelSize * .62)));
+      const maxLines = Math.max(1, Math.min(3, Math.floor((block.height - 12) / (state.config.labelSize * 1.15))));
+      const text = el("text", {
+        x: block.x + 6, y: block.y + state.config.labelSize + 3,
+        fill: shade > .55 ? "#f6f5ef" : "#111", class: "book-label document-label", style: `font-size:${state.config.labelSize}px`
+      });
+      bookLabelLines(block.item.name, maxCharacters, maxLines).forEach((line, lineIndex) => text.append(el("tspan", {
+        x: block.x + 6, dy: lineIndex ? "1.15em" : 0
+      }, line)));
+      link.append(text);
+    }
+    svg.append(link);
+  });
+  drawIntensityLegend();
+  const total = data.reduce((sum, item) => sum + (item[state.config.size] || 0), 0);
+  setSummary(`${data.length} documents · ${formatNumber(total)} ${label(state.config.size).toLowerCase()}`, "document");
+}
+
 function mapLocationData() {
   const locations = filteredEntities().filter(entity => entity.category === "location");
   const mapped = locations.filter(entity => Number.isFinite(entity.geo?.lat) && Number.isFinite(entity.geo?.lon))
@@ -1409,11 +1468,12 @@ function showEmpty() {
 
 function setSummary(text, type) {
   $("#resultSummary").textContent = text;
-  $("#graphKicker").textContent = label(type === "bars" ? "bar chart" : type);
+  $("#graphKicker").textContent = type === "document" ? "Documents" : label(type === "bars" ? "bar chart" : type);
   $("#policySummary").textContent = type === "network"
     ? state.config.nodeRole === "collection" ? `Links require ${state.config.minEvidence} shared published entities` : `Co-mentions require ${state.config.minEvidence} evidence segments · dense OCR sections excluded`
     : type === "map" ? "Coordinates come from the reviewed local gazetteer · ambiguous names omitted"
     : type === "book" ? "Titles require an explicit book, novel, or memoir cue in transcript text"
+    : type === "document" ? "Every tile opens the exact OCR or transcript file in the machine-data repository"
     : `${formatNumber(state.catalog.counts.documents)} source files · transcript text unchanged`;
 }
 
@@ -1427,13 +1487,14 @@ function renderGraph() {
     network: state.config.nodeRole === "collection" ? "Collections connected by shared published entities." : "Evidence-backed connections across the local archive.", scatter: `${label(state.config.x)} compared with ${label(state.config.y)}.`,
     map: `Geocoded location entities sized by ${label(state.config.size)}.`,
     book: `Transcript-mentioned books arranged as an area-proportional shelf, sized by ${label(state.config.size)}.`,
+    document: `Every completed OCR and transcript file arranged as an area-proportional archive, sized by ${label(state.config.size)}.`,
     bars: `${label(state.config.y)} grouped by ${label(state.config.aggregation)}.`,
     timeline: `${state.config.timelineRole === "entity" ? "Entities" : "Completed transcript files"} by cataloging time.`,
     matrix: `${state.config.matrixColumns === "entity" ? "Entity" : "Entity-type"} coverage across completed collections.`,
     table: `A custom list of ${state.config.tableRole === "entity" ? "entities" : state.config.tableRole === "document" ? "transcript files" : "collections"}.`
   };
   $("#graphSubtitle").textContent = descriptions[state.config.type];
-  ({ network: renderNetwork, map: renderMap, book: renderBook, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, matrix: renderMatrix, table: renderTable })[state.config.type]();
+  ({ network: renderNetwork, map: renderMap, book: renderBook, document: renderDocument, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, matrix: renderMatrix, table: renderTable })[state.config.type]();
 }
 
 function evidenceHTML(evidence = []) {
