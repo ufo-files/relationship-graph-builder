@@ -109,6 +109,7 @@ h1, h2, h3, p { margin-top: 0; }
 .legend:empty { display: none; }
 .legend-item { display: flex; align-items: center; gap: 4px; }
 .legend-item i { width: 13px; height: 13px; display: inline-block; border: 1px solid var(--ink); border-radius: 0; background-color: var(--paper); }
+.legend-item i.ego-key { border: 0; background: radial-gradient(circle at 50% 50%, var(--ink) 0 2px, transparent 2.5px), radial-gradient(circle at 15% 20%, var(--ink) 0 1px, transparent 1.5px), radial-gradient(circle at 85% 25%, var(--ink) 0 1px, transparent 1.5px), radial-gradient(circle at 75% 90%, var(--ink) 0 1px, transparent 1.5px); }
 .legend-item i.outlier-key { border-width: 3px; background: transparent; }
 .legend-item i.risk-key { border-style: dashed; background: transparent; }
 .stage-footer { padding: 13px 27px 16px; display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 11px; }
@@ -120,6 +121,16 @@ h1, h2, h3, p { margin-top: 0; }
 .grid-line { stroke: var(--ink); stroke-width: 1; stroke-opacity: .12; }
 .mark { cursor: pointer; transition: opacity .15s, filter .15s; }
 .mark:hover { filter: brightness(.88); }
+.scatter-relationship-line { stroke: var(--ink); opacity: .07; transition: opacity .15s; }
+.scatter-relationship-layer.strength-medium .scatter-relationship-line { opacity: .14; }
+.scatter-relationship-layer.strength-strong .scatter-relationship-line { opacity: .24; }
+.scatter-relationship-layer.relationship-hover .scatter-relationship-line,
+.scatter-relationship-layer.relationship-hover .scatter-secondary-node { opacity: 0; }
+.scatter-relationship-layer.has-focus .scatter-relationship-line { opacity: .025; }
+.scatter-relationship-layer.has-focus .scatter-relationship-line.is-focused { opacity: .8; }
+.scatter-secondary-node { fill: var(--paper); fill-opacity: .72; stroke: var(--ink); stroke-width: 1; opacity: .45; }
+.scatter-relationship-layer.has-focus .scatter-secondary-node { opacity: .08; }
+.scatter-relationship-layer.has-focus .scatter-secondary-node.is-focused { opacity: .85; }
 .edge { stroke: var(--ink); stroke-opacity: .28; }
 
 .inspector { padding: 22px; }

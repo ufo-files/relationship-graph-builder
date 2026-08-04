@@ -59,6 +59,7 @@ const DEFAULT = {
   categories: [...ENTITY_CATEGORIES], sources: [], allSources: true, relation: "all",
   includeHighInflation: true,
   minEvidence: 2, minConfidence: 0.95, limit: 50, labels: "top", aggregation: "source",
+  relationshipLayer: "always", relationshipNeighbors: 1, relationshipNodeSize: "inherit", relationshipStrength: "subtle",
   nodeRole: "entity", timelineRole: "document", matrixColumns: "category",
   tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"],
   tableSort: "mentions", tableDirection: "desc", tableSearch: "",
@@ -368,7 +369,8 @@ function renderControls() {
   } else if (state.config.type === "book") {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Book titles</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Area-proportional shelves</option></select></div>`;
   } else if (state.config.type === "scatter") {
-    roles = controlSelect("x", "X axis", ["entity", ...numericEntity]) + controlSelect("y", "Y axis", numericEntity);
+    roles = controlSelect("x", "X axis", ["entity", ...numericEntity]) + controlSelect("y", "Y axis", numericEntity)
+      + controlSelect("relation", "Relationship type", [{ value: "all", label: "Any published relationship" }, { value: "co_mentioned", label: "Repeated co-mention" }, { value: "affiliated_with", label: "Affiliation cue" }, { value: "investigated", label: "Investigation cue" }]);
   } else if (state.config.type === "bars") {
     roles = controlSelect("aggregation", "Group by", [{ value: "entity", label: "Entities" }, { value: "source", label: "Collection" }, { value: "format", label: "Transcript format" }]) + controlSelect("y", "Measure", state.config.aggregation === "entity" ? numericEntity : ["words", "documents", "bytes"]);
   } else if (state.config.type === "timeline") {
@@ -387,13 +389,17 @@ function renderControls() {
     : state.config.type === "timeline" && state.config.timelineRole !== "entity" ? numericDoc : numericEntity;
   const labelSizeControl = `<div class="control"><label>Label size <span>${state.config.labelSize}px</span></label><input type="range" min="11" max="18" step="1" value="${state.config.labelSize}" data-range="labelSize"></div>`;
   const zoomControl = state.config.type === "network" ? `<div class="control"><label>Zoom <span>${state.config.zoom.toFixed(1)}×</span></label><input type="range" min="0.5" max="2.5" step="0.1" value="${state.config.zoom}" data-range="zoom"></div>` : "";
+  const relationshipControls = state.config.type === "scatter" ? controlSelect("relationshipLayer", "Relationship layer", [{ value: "off", label: "Off" }, { value: "hover", label: "On hover" }, { value: "always", label: "Always" }])
+    + `<div class="control"><label>Connections per node <span>${state.config.relationshipNeighbors}</span></label><input type="range" min="1" max="5" step="1" value="${state.config.relationshipNeighbors}" data-range="relationshipNeighbors"></div>`
+    + controlSelect("relationshipNodeSize", "Secondary-node size", [{ value: "inherit", label: "Inherit size metric" }, { value: "fixed", label: "Fixed" }])
+    + controlSelect("relationshipStrength", "Line strength", [{ value: "subtle", label: "Subtle" }, { value: "medium", label: "Medium" }, { value: "strong", label: "Strong" }]) : "";
   if (state.config.type === "table") {
     const sortOptions = TABLE_FIELDS[state.config.tableRole];
     $("#encodeControls").innerHTML = controlSelect("tableSort", "Sort by", sortOptions) + controlSelect("tableDirection", "Direction", [{ value: "desc", label: "Descending" }, { value: "asc", label: "Ascending" }]) + labelSizeControl;
   } else {
     $("#encodeControls").innerHTML = (["scatter", "network", "timeline", "map", "book"].includes(state.config.type)
       ? controlSelect("size", "Size + shade", sizeOptions) + `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>` + controlSelect("labels", "Labels", [{ value: "top", label: "Most important" }, { value: "all", label: "All" }, { value: "none", label: "None" }])
-      : `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>`) + labelSizeControl + zoomControl;
+      : `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>`) + relationshipControls + labelSizeControl + zoomControl;
   }
 
   const categories = ["map", "book"].includes(state.config.type)
@@ -411,7 +417,7 @@ function renderControls() {
     <div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div>
     ${state.config.type === "table" ? `<div class="control"><label for="tableSearch">Search rows</label><input id="tableSearch" class="text-input" type="search" value="${escapeHTML(state.config.tableSearch)}" placeholder="Filter this list" data-table-search></div>` : ""}
     ${usesEntities ? `<div class="control"><label>Minimum confidence <span>${Math.round(state.config.minConfidence * 100)}%</span></label><input type="range" min="0.5" max="0.95" step="0.01" value="${state.config.minConfidence}" data-range="minConfidence"></div>` : ""}
-    ${state.config.type === "network" ? `<div class="control"><label>${state.config.nodeRole === "collection" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
+    ${state.config.type === "network" || (state.config.type === "scatter" && state.config.relationshipLayer !== "off") ? `<div class="control"><label>${state.config.type === "network" && state.config.nodeRole === "collection" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
     <div class="control"><label>Maximum ${state.config.type === "table" ? "rows" : "marks"} <span>${state.config.limit}</span></label><input type="range" min="20" max="${state.config.type === "network" ? 120 : 250}" step="10" value="${state.config.limit}" data-range="limit"></div>
     ${usesEntities ? `<div class="control method-note"><div class="control-title">Context adjustment</div><p>Counts exact repeats within one document once, counts text repeated across 3+ documents once, and excludes requester metadata. Raw mentions remain available.</p></div>` : ""}
     ${usesEntities ? `<div class="control"><div class="control-title">Inflation review</div><label class="check-chip"><input type="checkbox" data-include-high-inflation ${state.config.includeHighInflation ? "checked" : ""}><span>Include high-inflation entities</span></label></div>` : ""}
@@ -498,7 +504,7 @@ function updateConfig(key, value, rerenderControls = false) {
     Object.assign(state.config, defaults[value]);
   }
   if (rerenderControls) renderControls();
-  if (["aggregation", "timelineRole", "matrixColumns", "tableRole", "nodeRole"].includes(key)) renderControls();
+  if (["aggregation", "timelineRole", "matrixColumns", "tableRole", "nodeRole", "relationshipLayer"].includes(key)) renderControls();
   commitConfig(false);
 }
 
@@ -616,6 +622,28 @@ function filteredEdge(edge, visibleDocumentIds = null) {
   };
 }
 
+function scatterEgoNetworks(entities, displayedEntities, maximumNeighbors = 3) {
+  const entityById = new Map(entities.map(entity => [entity.id, entity]));
+  const displayedIds = new Set(displayedEntities.map(entity => entity.id));
+  const networks = new Map(displayedEntities.map(entity => [entity.id, []]));
+  const visibleDocumentIds = state.config.allSources
+    ? null
+    : new Set(state.catalog.documents.filter(document => sourceMatches(document.source)).map(document => document.id));
+  (state.catalog.edges || []).forEach(rawEdge => {
+    const edge = filteredEdge(rawEdge, visibleDocumentIds);
+    if (!edge || edge.evidenceCount < state.config.minEvidence || (state.config.relation !== "all" && edge.relationship !== state.config.relation)) return;
+    [[edge.source, edge.target], [edge.target, edge.source]].forEach(([entityId, neighborId]) => {
+      if (!displayedIds.has(entityId) || !entityById.has(neighborId)) return;
+      networks.get(entityId).push({ entity: entityById.get(neighborId), edge });
+    });
+  });
+  networks.forEach((neighbors, entityId) => {
+    neighbors.sort((left, right) => right.edge.evidenceCount - left.edge.evidenceCount || left.entity.name.localeCompare(right.entity.name));
+    networks.set(entityId, { total: neighbors.length, neighbors: neighbors.slice(0, maximumNeighbors) });
+  });
+  return networks;
+}
+
 function valueExtent(data, key) {
   const values = data.map(item => Number(item[key]) || 0);
   return [Math.min(...values, 0), Math.max(...values, 1)];
@@ -640,10 +668,39 @@ function clampedScale(value, extent, range) {
   return scale(Math.max(extent[0], Math.min(extent[1], Number(value) || 0)), extent, range);
 }
 
+function scatterRelationshipOverlay(egoNetworks, displayedEntities) {
+  const displayedIds = new Set(displayedEntities.map(entity => entity.id));
+  const nodes = new Map();
+  const edges = new Map();
+  egoNetworks.forEach((network, entityId) => network.neighbors.forEach(neighbor => {
+    if (!displayedIds.has(neighbor.entity.id)) {
+      nodes.set(neighbor.entity.id, neighbor.entity);
+    }
+    const ids = [entityId, neighbor.entity.id].sort();
+    const key = ids.join("|");
+    const existing = edges.get(key);
+    if (!existing || neighbor.edge.evidenceCount > existing.edge.evidenceCount) {
+      edges.set(key, { source: ids[0], target: ids[1], edge: neighbor.edge });
+    }
+  }));
+  return { nodes: [...nodes.values()], edges: [...edges.values()] };
+}
+
+function scatterSecondaryAnchors(egoNetworks, displayedIndex) {
+  const positions = new Map();
+  egoNetworks.forEach((network, entityId) => network.neighbors.forEach(neighbor => {
+    if (displayedIndex.has(neighbor.entity.id)) return;
+    if (!positions.has(neighbor.entity.id)) positions.set(neighbor.entity.id, []);
+    positions.get(neighbor.entity.id).push(displayedIndex.get(entityId));
+  }));
+  return new Map([...positions].map(([id, indexes]) => [id, indexes.reduce((sum, index) => sum + index, 0) / indexes.length]));
+}
+
 function drawIntensityLegend() {
+  const egoKey = state.config.type === "scatter" && state.config.relationshipLayer !== "off" ? `<span class="legend-item"><i class="ego-key"></i>Strongest relationships</span>` : "";
   const outlierKey = state.config.type === "scatter" ? `<span class="legend-item"><i class="outlier-key"></i>Axis-capped outlier</span>` : "";
   const inflationKey = state.config.type === "scatter" ? `<span class="legend-item"><i class="risk-key"></i>Potential mention inflation</span>` : "";
-  $("#legend").innerHTML = `<span class="legend-item"><i style="background:#111;opacity:.14"></i>Lower</span><span class="legend-item"><i style="background:#111;opacity:.48"></i>Medium</span><span class="legend-item"><i style="background:#111"></i>Higher</span>${outlierKey}${inflationKey}`;
+  $("#legend").innerHTML = `<span class="legend-item"><i style="background:#111;opacity:.14"></i>Lower</span><span class="legend-item"><i style="background:#111;opacity:.48"></i>Medium</span><span class="legend-item"><i style="background:#111"></i>Higher</span>${egoKey}${outlierKey}${inflationKey}`;
 }
 
 function addTitle(node, text) {
@@ -815,8 +872,12 @@ function renderNetwork() {
 
 function renderScatter() {
   const { svg, width, height } = clearChart();
-  const data = filteredEntities().sort((a, b) => b[state.config.y] - a[state.config.y]).slice(0, state.config.limit);
+  const candidates = filteredEntities();
+  const data = candidates.sort((a, b) => b[state.config.y] - a[state.config.y]).slice(0, state.config.limit);
   if (!data.length) return showEmpty();
+  const egoNetworks = state.config.relationshipLayer === "off"
+    ? new Map(data.map(entity => [entity.id, { total: 0, neighbors: [] }]))
+    : scatterEgoNetworks(candidates, data, state.config.relationshipNeighbors);
   const categoricalX = state.config.x === "entity";
   const xAxis = categoricalX ? { extent: [0, Math.max(1, data.length - 1)], capped: false } : robustValueExtent(data, state.config.x);
   const yAxis = robustValueExtent(data, state.config.y);
@@ -838,18 +899,68 @@ function renderScatter() {
   }
   const plotWidth = width - margin.left - margin.right;
   const tickEvery = Math.max(1, Math.ceil(data.length / Math.max(1, Math.floor(plotWidth / 62))));
+  const displayedIndex = new Map(data.map((item, index) => [item.id, index]));
+  const secondaryAnchors = scatterSecondaryAnchors(egoNetworks, displayedIndex);
+  const positionFor = item => ({
+    x: categoricalX
+      ? margin.left + ((displayedIndex.get(item.id) ?? secondaryAnchors.get(item.id) ?? 0) + .5) * plotWidth / data.length
+      : clampedScale(item[state.config.x], xExtent, [margin.left, width - margin.right]),
+    y: clampedScale(item[state.config.y], yExtent, [height - margin.bottom, margin.top])
+  });
+  let relationshipLayer = null;
+  const relationshipLines = new Map();
+  const relationshipNodes = new Map();
+  if (state.config.relationshipLayer !== "off") {
+    const overlay = scatterRelationshipOverlay(egoNetworks, data);
+    const entityById = new Map([...candidates, ...overlay.nodes].map(entity => [entity.id, entity]));
+    relationshipLayer = el("g", { class: `scatter-relationship-layer relationship-${state.config.relationshipLayer} strength-${state.config.relationshipStrength}` });
+    overlay.edges.forEach(relationship => {
+      const source = entityById.get(relationship.source), target = entityById.get(relationship.target);
+      if (!source || !target) return;
+      const sourcePosition = positionFor(source), targetPosition = positionFor(target);
+      const line = el("line", { x1: sourcePosition.x, y1: sourcePosition.y, x2: targetPosition.x, y2: targetPosition.y, class: "scatter-relationship-line", "stroke-width": Math.min(2, .4 + Math.sqrt(relationship.edge.evidenceCount) * .22) });
+      [relationship.source, relationship.target].forEach(id => {
+        if (!relationshipLines.has(id)) relationshipLines.set(id, []);
+        relationshipLines.get(id).push(line);
+      });
+      relationshipLayer.append(line);
+    });
+    overlay.nodes.forEach(node => {
+      const position = positionFor(node);
+      const secondaryRadius = state.config.relationshipNodeSize === "fixed" ? 4 : scale(node[state.config.size], sizeExtent, [2.5, 9]);
+      const secondary = el("circle", { cx: position.x, cy: position.y, r: secondaryRadius, class: "scatter-secondary-node mark" });
+      addTitle(secondary, `${node.name} · shared secondary entity`);
+      secondary.addEventListener("click", () => inspectEntity(node));
+      relationshipNodes.set(node.id, secondary);
+      relationshipLayer.append(secondary);
+    });
+    svg.append(relationshipLayer);
+  }
   data.forEach((item, index) => {
-    const x = categoricalX
-      ? margin.left + (index + .5) * plotWidth / data.length
-      : clampedScale(item[state.config.x], xExtent, [margin.left, width - margin.right]);
-    const y = clampedScale(item[state.config.y], yExtent, [height - margin.bottom, margin.top]);
+    const { x, y } = positionFor(item);
     const radius = scale(item[state.config.size], sizeExtent, [4, 15]);
     const shade = scale(item[state.config.size], sizeExtent, [.18, .96]);
     const isOutlier = (!categoricalX && xAxis.capped && item[state.config.x] > xExtent[1]) || (yAxis.capped && item[state.config.y] > yExtent[1]);
+    const egoNetwork = egoNetworks.get(item.id);
     const dot = el("circle", { cx: x, cy: y, r: radius, fill: "#111", "fill-opacity": shade, stroke: "#111", "stroke-width": isOutlier ? 3 : 1, class: `mark${isOutlier ? " outlier-mark" : ""}` });
     const rawMentionDetail = state.config.y === "contextAdjustedMentions" ? ` · Raw mentions: ${formatNumber(item.mentions)}` : "";
-    addTitle(dot, `${item.name} · ${label(state.config.y)}: ${formatNumber(item[state.config.y])}${rawMentionDetail}${isOutlier ? " · positioned at robust axis cap" : ""}`);
-    dot.addEventListener("click", () => inspectEntity(item)); svg.append(dot);
+    const neighborDetail = egoNetwork.neighbors.length ? ` · Strongest relationships: ${egoNetwork.neighbors.map(neighbor => neighbor.entity.name).join(", ")}` : "";
+    addTitle(dot, `${item.name} · ${label(state.config.y)}: ${formatNumber(item[state.config.y])}${rawMentionDetail}${neighborDetail}${isOutlier ? " · positioned at robust axis cap" : ""}`);
+    item.egoNetwork = egoNetwork;
+    dot.addEventListener("click", () => inspectEntity(item));
+    dot.addEventListener("mouseenter", () => {
+      if (!relationshipLayer) return;
+      relationshipLayer.classList.add("has-focus");
+      (relationshipLines.get(item.id) || []).forEach(line => line.classList.add("is-focused"));
+      egoNetwork.neighbors.forEach(neighbor => relationshipNodes.get(neighbor.entity.id)?.classList.add("is-focused"));
+    });
+    dot.addEventListener("mouseleave", () => {
+      if (!relationshipLayer) return;
+      relationshipLayer.classList.remove("has-focus");
+      (relationshipLines.get(item.id) || []).forEach(line => line.classList.remove("is-focused"));
+      egoNetwork.neighbors.forEach(neighbor => relationshipNodes.get(neighbor.entity.id)?.classList.remove("is-focused"));
+    });
+    svg.append(dot);
     if (["elevated", "high"].includes(item.inflationRisk)) {
       svg.append(el("circle", { cx: x, cy: y, r: radius + 3, fill: "none", stroke: "#111", "stroke-width": 1, "stroke-dasharray": "3 2", class: "inflation-ring", "pointer-events": "none" }));
     }
@@ -1257,7 +1368,11 @@ function inspectEntity(item) {
     ? `Low prominence-inflation risk. ${Math.round(mentionRate * 100)}% of raw mentions are context-adjusted without materially reducing document coverage${signalDetails ? ` (${signalDetails})` : ""}.`
     : `${label(item.inflationRisk)} prominence inflation risk: ${Math.round(prominenceRate * 100)}% of raw document appearances and ${Math.round(mentionRate * 100)}% of raw mentions are discounted by the context heuristic${signalDetails ? ` (${signalDetails})` : ""}.`;
   const geographyNote = item.geo ? ` Mapped at ${item.geo.lat.toFixed(3)}, ${item.geo.lon.toFixed(3)} (${label(item.geo.precision)}).` : "";
-  showInspector(item.category, item.name, [[item.contextAdjustedMentions ?? item.mentions, "adjusted mentions"], [item.mentions, "raw mentions"], [item.independentDocumentCount ?? item.documentCount, "independent documents"], [item.sourceCount, "collections"]], item.evidence, `${inflationNote}${geographyNote} ${label(item.reviewStatus)} · ${item.variants.length} observed name variant${item.variants.length === 1 ? "" : "s"}`);
+  const egoStats = item.egoNetwork ? [[item.egoNetwork.total, "connected entities"]] : [];
+  const egoNote = item.egoNetwork?.neighbors.length
+    ? ` Strongest visible relationships: ${item.egoNetwork.neighbors.map(neighbor => `${neighbor.entity.name} (${neighbor.edge.evidenceCount})`).join(", ")}.`
+    : "";
+  showInspector(item.category, item.name, [...egoStats, [item.contextAdjustedMentions ?? item.mentions, "adjusted mentions"], [item.mentions, "raw mentions"], [item.independentDocumentCount ?? item.documentCount, "independent documents"], [item.sourceCount, "collections"]], item.evidence, `${inflationNote}${geographyNote}${egoNote} ${label(item.reviewStatus)} · ${item.variants.length} observed name variant${item.variants.length === 1 ? "" : "s"}`);
 }
 
 function inspectEdge(edge) {
