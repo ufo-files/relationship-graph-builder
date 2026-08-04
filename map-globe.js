@@ -336,13 +336,100 @@ class GlobeMap {
   }
 }
 
-try {
-  const globe = new GlobeMap();
+class SvgGlobeMap {
+  constructor(error) {
+    this.visible = false;
+    this.payload = null;
+    canvas.hidden = true;
+    container.classList.add("globe-svg-fallback");
+    this.host = container.querySelector(".globe-fallback");
+    this.host.replaceChildren();
+    status.textContent = "SVG globe fallback · WebGL unavailable";
+    console.warn("Using SVG globe fallback", error);
+    new ResizeObserver(() => this.draw()).observe(container);
+  }
+
+  project(item, width, height) {
+    const radius = Math.min(width, height) * .43;
+    const latitude = THREE.MathUtils.degToRad(item.lat);
+    const longitude = THREE.MathUtils.degToRad(item.lon + 100);
+    const centerLatitude = THREE.MathUtils.degToRad(20);
+    const visibility = Math.sin(centerLatitude) * Math.sin(latitude) + Math.cos(centerLatitude) * Math.cos(latitude) * Math.cos(longitude);
+    return {
+      x: width / 2 + radius * Math.cos(latitude) * Math.sin(longitude),
+      y: height / 2 - radius * (Math.cos(centerLatitude) * Math.sin(latitude) - Math.sin(centerLatitude) * Math.cos(latitude) * Math.cos(longitude)),
+      visible: visibility >= 0
+    };
+  }
+
+  element(name, attributes = {}) {
+    const node = document.createElementNS("http://www.w3.org/2000/svg", name);
+    Object.entries(attributes).forEach(([key, value]) => node.setAttribute(key, value));
+    return node;
+  }
+
+  render(payload) {
+    this.payload = payload;
+    this.draw();
+  }
+
+  draw() {
+    if (!this.visible || !this.payload || container.hidden) return;
+    const width = Math.max(460, container.clientWidth), height = Math.max(440, container.clientHeight);
+    const radius = Math.min(width, height) * .43, centerX = width / 2, centerY = height / 2;
+    const svg = this.element("svg", { viewBox: `0 0 ${width} ${height}`, "aria-label": "Globe map rendered without WebGL" });
+    svg.append(this.element("circle", { cx: centerX, cy: centerY, r: radius, fill: "#ecebe4", stroke: "#111", "stroke-width": 2 }));
+    [-60, -30, 0, 30, 60].forEach(latitude => {
+      const band = Math.cos(THREE.MathUtils.degToRad(latitude));
+      svg.append(this.element("ellipse", { cx: centerX, cy: centerY - radius * Math.sin(THREE.MathUtils.degToRad(latitude)), rx: radius * band, ry: radius * band * .18, fill: "none", stroke: "#111", "stroke-opacity": .16 }));
+    });
+    [-60, -30, 0, 30, 60].forEach(longitude => svg.append(this.element("ellipse", { cx: centerX, cy: centerY, rx: radius * Math.max(.12, Math.cos(THREE.MathUtils.degToRad(longitude))), ry: radius, fill: "none", stroke: "#111", "stroke-opacity": .13 })));
+    const itemById = new Map(this.payload.items.map(item => [item.id, item]));
+    const points = new Map(this.payload.items.map(item => [item.id, this.project(item, width, height)]));
+    (this.payload.relationships || []).forEach(relationship => {
+      const a = points.get(relationship.source), b = points.get(relationship.target);
+      if (!a?.visible || !b?.visible) return;
+      const line = this.element("path", { d: `M ${a.x} ${a.y} Q ${centerX} ${centerY - radius * .35} ${b.x} ${b.y}`, fill: "none", stroke: "#111", "stroke-opacity": this.payload.relationshipLayer === "always" ? this.payload.relationshipStrength : 0, "stroke-width": 1.2 });
+      svg.append(line);
+    });
+    this.payload.items.forEach(item => {
+      const point = points.get(item.id);
+      if (!point.visible) return;
+      const dot = this.element("circle", { cx: point.x, cy: point.y, r: (item.secondary ? 3 : 4) + item.intensity * 6, fill: "#111", "fill-opacity": .35 + item.intensity * .65, stroke: "#111" });
+      dot.style.cursor = "pointer";
+      dot.addEventListener("click", () => window.dispatchEvent(new CustomEvent("ufo-map-select", { detail: { entityId: item.id } })));
+      const title = this.element("title"); title.textContent = `${item.name} · ${item.formattedValue}`; dot.append(title); svg.append(dot);
+      if (item.showLabel) {
+        const text = this.element("text", { x: point.x + 8, y: point.y - 7, "font-size": this.payload.labelSize, fill: "#111" });
+        text.textContent = item.name; svg.append(text);
+      }
+    });
+    this.host.replaceChildren(svg);
+  }
+
+  setVisible(visible) { this.visible = visible; if (visible) this.draw(); }
+  reset() { this.draw(); }
+  exportPNG(filename) {
+    const svg = this.host.querySelector("svg");
+    if (!svg) return;
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(new Blob([svg.outerHTML], { type: "image/svg+xml" }));
+    link.download = `${filename}.svg`; link.click(); setTimeout(() => URL.revokeObjectURL(link.href), 0);
+  }
+}
+
+function connectGlobe(globe) {
   window.ufoGlobe = globe;
   window.addEventListener("ufo-map-render", event => globe.render(event.detail));
   window.addEventListener("ufo-map-visibility", event => globe.setVisible(event.detail.visible));
   if (window.pendingGlobeRender) globe.render(window.pendingGlobeRender);
+  if (!container.hidden) globe.setVisible(true);
+}
+
+try {
+  const globe = new GlobeMap();
+  connectGlobe(globe);
 } catch (error) {
   console.error("Interactive globe initialization failed", error);
-  status.textContent = `Interactive WebGL unavailable · ${error?.message || "unknown error"}`;
+  connectGlobe(new SvgGlobeMap(error));
 }
