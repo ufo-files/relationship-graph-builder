@@ -629,7 +629,7 @@ function scatterEgoNetworks(entities, displayedEntities, maximumNeighbors = 3) {
   const visibleDocumentIds = state.config.allSources
     ? null
     : new Set(state.catalog.documents.filter(document => sourceMatches(document.source)).map(document => document.id));
-  state.catalog.edges.forEach(rawEdge => {
+  (state.catalog.edges || []).forEach(rawEdge => {
     const edge = filteredEdge(rawEdge, visibleDocumentIds);
     if (!edge || edge.evidenceCount < state.config.minEvidence || (state.config.relation !== "all" && edge.relationship !== state.config.relation)) return;
     [[edge.source, edge.target], [edge.target, edge.source]].forEach(([entityId, neighborId]) => {
