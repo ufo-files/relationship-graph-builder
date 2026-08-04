@@ -69,6 +69,14 @@
         </div>
         <div class="stage-tools">
           <button class="icon-button" id="resetZoom" title="Reset view" aria-label="Reset view" hidden>↺</button>
+          <button class="icon-button fullscreen-button" id="fullScreenButton" type="button" title="View full screen" aria-label="View full screen" aria-pressed="false">
+            <svg class="fullscreen-expand-icon" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M8 3H3v5M12 3h5v5M8 17H3v-5M12 17h5v-5"/>
+            </svg>
+            <svg class="fullscreen-collapse-icon" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M3 8h5V3M17 8h-5V3M3 12h5v5M17 12h-5v5"/>
+            </svg>
+          </button>
           <button class="button quiet" id="exportButton">Export SVG</button>
         </div>
       </header>
