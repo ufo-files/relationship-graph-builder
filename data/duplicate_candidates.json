@@ -4,7 +4,7 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "2405f2be6a121a629cd16f299ecde49525ca1f79"
+    "revision": "1de46e34fee2987984dee3940a997a375a403cca"
   },
   "count": 199,
   "totalCount": 199,
@@ -587,6 +587,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Rocky Mountain",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Rocky Mountains",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "BUREAU WILL BE ADVISED OF ANY",
@@ -597,22 +613,6 @@
         "name": "BUREAU VILL BE ADVISED OF ANY",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.966,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Rocky Mountain",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Rocky Mountains",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -638,8 +638,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2119,
-        "documentCount": 507
+        "mentions": 2121,
+        "documentCount": 508
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -654,8 +654,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2119,
-        "documentCount": 507
+        "mentions": 2121,
+        "documentCount": 508
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -670,8 +670,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2119,
-        "documentCount": 507
+        "mentions": 2121,
+        "documentCount": 508
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -686,8 +686,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2119,
-        "documentCount": 507
+        "mentions": 2121,
+        "documentCount": 508
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1214,8 +1214,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 844,
-        "documentCount": 202
+        "mentions": 848,
+        "documentCount": 204
       },
       "right": {
         "name": "Department of Detense",
@@ -1582,8 +1582,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2119,
-        "documentCount": 507
+        "mentions": 2121,
+        "documentCount": 508
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -1757,6 +1757,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "OF DEFENSE FOR INTELLIGENCE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Defense for Intelligence",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Intelligence Com",
         "mentions": 2,
         "documentCount": 2
@@ -1779,22 +1795,6 @@
       },
       "right": {
         "name": "Flight Standards District Office",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "OF DEFENSE FOR INTELLIGENCE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Defense for Intelligence",
         "mentions": 2,
         "documentCount": 2
       },
@@ -1998,8 +1998,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2642,
-        "documentCount": 242
+        "mentions": 2643,
+        "documentCount": 243
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -2302,8 +2302,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2119,
-        "documentCount": 507
+        "mentions": 2121,
+        "documentCount": 508
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2318,8 +2318,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 996,
-        "documentCount": 303
+        "mentions": 998,
+        "documentCount": 304
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -2670,8 +2670,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2119,
-        "documentCount": 507
+        "mentions": 2121,
+        "documentCount": 508
       },
       "right": {
         "name": "CENTRAL INTELLIGZACE AGENCY",
@@ -3118,13 +3118,13 @@
       "category": "person",
       "left": {
         "name": "J. Allen Hynek",
-        "mentions": 69,
-        "documentCount": 44
+        "mentions": 70,
+        "documentCount": 45
       },
       "right": {
         "name": "Allen Hynek",
-        "mentions": 62,
-        "documentCount": 44
+        "mentions": 63,
+        "documentCount": 45
       },
       "similarity": 0.917,
       "reason": "similar person name",
@@ -3171,8 +3171,8 @@
       },
       "right": {
         "name": "Dr. Steven Greer",
-        "mentions": 44,
-        "documentCount": 30
+        "mentions": 45,
+        "documentCount": 31
       },
       "similarity": 0.88,
       "reason": "similar person name",
