@@ -341,7 +341,7 @@ test("graph type is the first builder section and cards explain their data scope
   assert.match(source, /if \(type === "scatter"\) \{\s*state\.config = presetConfig\("default"\)/);
   assert.match(source, /label: "Bars", scope: "All collections"/);
   assert.match(source, /label: "Timeline", scope: "Documents \+ events"/);
-  assert.match(source, /if \(type === "timeline"\).*categories: \["date"\]/);
+  assert.match(source, /else if \(type === "timeline"\) \{[\s\S]*\.\.\.presetConfig\("default"\)[\s\S]*categories: \["date"\][\s\S]*limit: 50/);
   assert.match(source, /state\.config\.type === "timeline" \|\|/);
   assert.match(source, /function documentRelationshipNetworks[\s\S]*\(state\.catalog\.entities \|\| \[\]\)\.forEach/);
   assert.match(source, /label: "Network", scope: "All"/);

@@ -477,13 +477,20 @@ function renderControls() {
 function setType(type) {
   if (type === "scatter") {
     state.config = presetConfig("default");
+  } else if (type === "timeline") {
+    state.config = {
+      ...presetConfig("default"),
+      type: "timeline", timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source",
+      categories: ["date"], labels: "top", limit: 50,
+      relationshipLayer: "always", relationshipNeighbors: 1, relationshipNodeSize: "inherit", relationshipStrength: "subtle",
+      minEvidence: 2, title: "Transcription Activity", titleMode: "auto"
+    };
   } else {
     state.config.type = type;
     if (type === "bars") Object.assign(state.config, { aggregation: "source", y: "words", color: "intensity" });
     if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "independentDocumentCount", color: "category", categories: [...ENTITY_CATEGORIES], sources: [], allSources: true });
     if (type === "map") Object.assign(state.config, { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50 });
     if (type === "book") Object.assign(state.config, { size: "contextAdjustedMentions", color: "intensity", labels: "all", includeHighInflation: true, limit: 250 });
-    if (type === "timeline") Object.assign(state.config, { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source", categories: ["date"] });
     if (type === "matrix") Object.assign(state.config, { matrixColumns: "entity", color: "intensity" });
     if (type === "table") Object.assign(state.config, { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60, categories: [...ENTITY_CATEGORIES], sources: [], allSources: true, includeHighInflation: true });
   }
