@@ -232,6 +232,36 @@ test("inspector defaults collapsed and a selected mark reopens it", () => {
   assert.equal(elements.inspector.classList.contains("has-selection"), false);
 });
 
+test("full-screen control expands the shared graph stage and restores app chrome", () => {
+  const html = fs.readFileSync("index.html", "utf8");
+  const styles = fs.readFileSync("styles.css", "utf8");
+  assert.match(html, /id="fullScreenButton"[^>]+aria-label="View full screen"[^>]+aria-pressed="false"/);
+  assert.match(html, /id="fullScreenButton"[\s\S]*?<\/button>\s*<button class="button quiet" id="exportButton"/);
+  assert.match(styles, /body\.graph-fullscreen \.app-shell \{[^}]*height: 100dvh;[^}]*grid-template-columns: minmax\(0, 1fr\)/);
+  assert.match(styles, /body\.graph-fullscreen \.chart-wrap \{[^}]*margin: 0;[^}]*border: 0;/);
+  assert.match(styles, /body\.graph-fullscreen #chart \{[^}]*min-height: 0;/);
+
+  const elements = { fullScreenButton: new FakeElement() };
+  const document = {
+    body: new FakeElement(),
+    querySelector: selector => elements[selector.slice(1)],
+    querySelectorAll: () => []
+  };
+  const context = vm.createContext({ document, location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+
+  vm.runInContext("toggleGraphFullScreen()", context);
+  assert.equal(document.body.classList.contains("graph-fullscreen"), true);
+  assert.equal(elements.fullScreenButton.attributes["aria-pressed"], "true");
+  assert.equal(elements.fullScreenButton.attributes["aria-label"], "Exit full screen");
+
+  vm.runInContext("toggleGraphFullScreen()", context);
+  assert.equal(document.body.classList.contains("graph-fullscreen"), false);
+  assert.equal(elements.fullScreenButton.attributes["aria-pressed"], "false");
+  assert.equal(elements.fullScreenButton.attributes["aria-label"], "View full screen");
+});
+
 test("default graph includes every entity category with globally adjusted prominence", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];

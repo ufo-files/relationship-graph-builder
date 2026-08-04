@@ -1558,6 +1558,20 @@ function refreshGraphAfterInspectorResize() {
   if (state.catalog) requestAnimationFrame(renderGraph);
 }
 
+function setGraphFullScreen(enabled) {
+  const button = $("#fullScreenButton");
+  const label = enabled ? "Exit full screen" : "View full screen";
+  document.body.classList[enabled ? "add" : "remove"]("graph-fullscreen");
+  button.setAttribute("aria-pressed", String(enabled));
+  button.setAttribute("aria-label", label);
+  button.setAttribute("title", label);
+  if (state.catalog) requestAnimationFrame(renderGraph);
+}
+
+function toggleGraphFullScreen() {
+  setGraphFullScreen(!document.body.classList.contains("graph-fullscreen"));
+}
+
 function closeInspector() {
   $("#builderView").classList.add("inspector-collapsed");
   $("#inspector").classList.remove("has-selection");
@@ -1698,6 +1712,7 @@ $("#graphTitle").addEventListener("blur", event => {
 });
 $("#saveButton").addEventListener("click", () => { localStorage.setItem("ufo-files-graph-view", JSON.stringify(state.config)); toast("View saved in this browser"); });
 $("#shareButton").addEventListener("click", async () => { persistHash(); try { await navigator.clipboard.writeText(location.href); toast("Builder link copied"); } catch (_) { toast("Copy the URL from your browser"); } });
+$("#fullScreenButton").addEventListener("click", toggleGraphFullScreen);
 $("#exportButton").addEventListener("click", exportCurrent);
 $("#closeInspector").addEventListener("click", closeInspector);
 $("#resetZoom").addEventListener("click", () => {
