@@ -195,7 +195,7 @@ function dataAwareTitle(config) {
   } else if (config.type === "map") {
     title = `${label(config.size)} — Mapped Locations`;
   } else if (config.type === "book") {
-    title = "Books Mentioned";
+    title = `Bookshelf — ${entities}`;
   } else if (config.type === "bars") {
     title = config.aggregation === "entity" ? `${label(config.y)} by ${entities}` : `${label(config.y)} by ${label(config.aggregation)}`;
   } else if (config.type === "timeline") {
@@ -407,8 +407,8 @@ function renderControls() {
       : `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>`) + relationshipControls + labelSizeControl + zoomControl;
   }
 
-  const categories = ["map", "book"].includes(state.config.type)
-    ? [state.config.type === "map" ? "location" : "book"]
+  const categories = state.config.type === "map"
+    ? ["location"]
     : [...new Set(state.catalog?.entities.map(item => item.category) || ENTITY_CATEGORIES)];
   const categoryChecks = categories.map(category => `<label class="check-chip"><input type="checkbox" data-category="${category}" ${state.config.categories.includes(category) ? "checked" : ""}><span>${escapeHTML(label(category))}</span></label>`).join("");
   const sources = state.catalog?.sources || [];
@@ -477,7 +477,7 @@ function setType(type) {
   if (type === "scatter") Object.assign(state.config, { x: "entity", y: "contextAdjustedMentions", size: "independentDocumentCount", color: "category", limit: 50 });
   if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "independentDocumentCount", color: "category" });
   if (type === "map") Object.assign(state.config, { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50 });
-  if (type === "book") Object.assign(state.config, { categories: ["book"], size: "contextAdjustedMentions", color: "intensity", labels: "all", includeHighInflation: true, limit: 250 });
+  if (type === "book") Object.assign(state.config, { size: "contextAdjustedMentions", color: "intensity", labels: "all", includeHighInflation: true, limit: 250 });
   if (type === "timeline") Object.assign(state.config, { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source" });
   if (type === "matrix") Object.assign(state.config, { matrixColumns: "category", color: "intensity" });
   if (type === "table") Object.assign(state.config, { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 });
@@ -1114,7 +1114,6 @@ function bookLabelLines(title, maxCharacters, maxLines) {
 function renderBook() {
   const { svg, width, height } = clearChart();
   const data = filteredEntities()
-    .filter(entity => entity.category === "book")
     .sort((left, right) => (right[state.config.size] || 0) - (left[state.config.size] || 0))
     .slice(0, state.config.limit);
   if (!data.length) return showEmpty();
@@ -1145,7 +1144,7 @@ function renderBook() {
   });
   drawIntensityLegend();
   const mentions = data.reduce((sum, item) => sum + (item[state.config.size] || 0), 0);
-  setSummary(`${data.length} books · ${formatNumber(mentions)} ${label(state.config.size).toLowerCase()}`, "book");
+  setSummary(`${data.length} entities · ${formatNumber(mentions)} ${label(state.config.size).toLowerCase()}`, "book");
 }
 
 function mapLocationData() {
