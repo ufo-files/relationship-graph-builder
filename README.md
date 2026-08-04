@@ -78,7 +78,7 @@ Scatter plots, maps, and entity timelines can add a deduplicated relationship la
 
 Entities are a global data role: they can be network nodes, a Scatter axis, the Bar dimension, Timeline marks, Matrix columns, or Table rows. Network nodes can also be collections, connected by the published entities they share. The Table type also builds custom lists of transcript files and collections with selectable columns, sorting, search, row limits, evidence inspection, and CSV export. Entity-backed views share the same category, confidence, collection, evidence, label, and publication controls.
 
-The Book type is an abstract bookshelf of evenly spaced, upright 2:3 book shapes. Each block is a title explicitly identified in transcript text, and the selected prominence metric controls its shade without distorting the book grid. Titles are extracted only from book, novel, or memoir cues; each mark opens its source evidence in the inspector.
+The Book type is an abstract bookshelf of upright 2:3 book shapes snapped to integer grid dimensions. Each block is a title explicitly identified in transcript text, with area proportional to its raw mention count and shade controlled independently by the selected prominence metric. Titles are extracted only from book, novel, or memoir cues; each mark opens its source evidence in the inspector.
 
 The Map type renders a rotatable Three.js globe with SVG country boundaries and location-entity nodes. Node position comes only from the reviewed `data/location_coordinates.json` gazetteer; ambiguous and unmapped names are reported but never guessed onto the globe. Map nodes retain the same collection, confidence, prominence-inflation, size, label, and evidence-inspection controls as other entity views.
 

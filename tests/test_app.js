@@ -472,23 +472,21 @@ test("Book is a first-class proportional bookshelf for transcript-backed titles"
   const result = JSON.parse(vm.runInContext(`
     (() => {
       const items = [
-        { id: "one", name: "UFOs and Nukes", category: "book", contextAdjustedMentions: 12 },
-        { id: "two", name: "Contact", category: "book", contextAdjustedMentions: 4 },
-        { id: "three", name: "Journey of Souls", category: "book", contextAdjustedMentions: 2 }
+        { id: "one", name: "UFOs and Nukes", category: "book", mentions: 18, contextAdjustedMentions: 12 },
+        { id: "two", name: "Contact", category: "book", mentions: 8, contextAdjustedMentions: 4 },
+        { id: "three", name: "Journey of Souls", category: "book", mentions: 2, contextAdjustedMentions: 2 }
       ];
       const layout = bookshelfLayout(items, 900, 600);
-      const denseItems = Array.from({ length: 132 }, (_, index) => ({ id: String(index) }));
+      const denseItems = Array.from({ length: 132 }, (_, index) => ({ id: String(index), mentions: (index % 9 + 1) ** 2 }));
       const denseLayout = bookshelfLayout(denseItems, 970, 732);
       return JSON.stringify({
         types: TYPES.map(type => type.id),
         bookTypeLabel: TYPES.find(type => type.id === "book").label,
         title: dataAwareTitle({ ...DEFAULT, type: "book", categories: ["book"] }),
-        blocks: layout.blocks.map(block => ({ id: block.item.id, x: block.x, y: block.y, width: block.width, height: block.height })),
+        blocks: layout.blocks.map(block => ({ id: block.item.id, mentions: block.item.mentions, x: block.x, y: block.y, width: block.width, height: block.height })),
         shelves: layout.shelfYs.length,
-        columns: layout.columns,
         rows: layout.rows,
         dense: {
-          columns: denseLayout.columns,
           rows: denseLayout.rows,
           blocks: denseLayout.blocks.map(block => ({ x: block.x, y: block.y, width: block.width, height: block.height })),
           labelSize: bookSpineLabelSize(denseLayout.blocks[0], 12),
@@ -503,16 +501,23 @@ test("Book is a first-class proportional bookshelf for transcript-backed titles"
   assert.equal(result.bookTypeLabel, "Bookshelf");
   assert.equal(result.title, "Books Mentioned");
   assert.equal(result.blocks.length, 3);
-  assert.ok(result.blocks.every(block => block.width === result.blocks[0].width));
-  assert.ok(result.blocks.every(block => block.height === result.blocks[0].height));
+  const bookById = Object.fromEntries(result.blocks.map(block => [block.id, block]));
+  const areaRatio = bookById.one.width * bookById.one.height / (bookById.three.width * bookById.three.height);
+  const mentionRatio = bookById.one.mentions / bookById.three.mentions;
+  assert.ok(Math.abs(areaRatio - mentionRatio) / mentionRatio < .08);
+  assert.ok(bookById.one.width > bookById.two.width && bookById.two.width > bookById.three.width);
   assert.ok(result.blocks.every(block => block.width * 3 === block.height * 2));
+  assert.ok(result.blocks.every(block => block.width % 2 === 0 && block.height % 3 === 0));
   assert.ok(result.shelves >= 1);
-  assert.equal(result.columns * result.rows >= result.blocks.length, true);
-  assert.equal(result.dense.columns * result.dense.rows >= result.dense.blocks.length, true);
   assert.ok(result.dense.blocks.every(block => block.width * 3 === block.height * 2));
+  assert.ok(result.dense.blocks.every(block => block.width % 2 === 0 && block.height % 3 === 0));
   assert.ok(result.dense.blocks.every(block => block.x >= 0 && block.y >= 0 && block.x + block.width <= 970 && block.y + block.height <= 732));
-  assert.equal(new Set(result.dense.blocks.map(block => block.width)).size, 1);
-  assert.equal(new Set(result.dense.blocks.map(block => block.height)).size, 1);
+  assert.ok(new Set(result.dense.blocks.map(block => block.width)).size > 1);
+  assert.ok(result.dense.rows >= 1);
+  result.dense.blocks.forEach((block, index) => result.dense.blocks.slice(index + 1).forEach(other => {
+    const separated = block.x + block.width <= other.x || other.x + other.width <= block.x || block.y + block.height <= other.y || other.y + other.height <= block.y;
+    assert.equal(separated, true);
+  }));
   assert.equal(result.dense.label.vertical, true);
   assert.ok(result.dense.labelSize >= 8 && result.dense.labelSize <= 12);
   assert.match(result.dense.label.transform, /^rotate\(90 /);
@@ -523,7 +528,9 @@ test("Book is a first-class proportional bookshelf for transcript-backed titles"
   assert.match(source, /book: \{[^}]*labels: "all"/);
   assert.doesNotMatch(source, /if \(type === "book"\).*categories: \["book"\]/);
   assert.match(source, /const data = filteredEntities\(\["book"\]\)/);
-  assert.match(source, /Even 2:3 book grid/);
+  assert.match(source, /Mention-proportional 2:3 grid/);
+  assert.match(source, /Math\.sqrt\(entry\.weight\) \* scaleValue/);
+  assert.match(source, /Number\(item\.mentions\)/);
   assert.match(source, /state\.config\.type === "book" \? "Shade" : "Size \+ shade"/);
   assert.match(source, /const fixedCategories = state\.config\.type === "book" \|\| state\.config\.type === "document"/);
   assert.match(source, /state\.config\.type === "book" \? category === "book"/);
