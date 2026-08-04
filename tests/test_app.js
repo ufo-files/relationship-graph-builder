@@ -450,13 +450,18 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /MOON_EQUATORIAL_RADIUS_KM = 1737\.4/);
   assert.match(globe, /MOON_RADIUS = MOON_EQUATORIAL_RADIUS_KM \/ EARTH_EQUATORIAL_RADIUS_KM/);
   assert.match(globe, /MOON_ORBIT_DAYS = 27\.322/);
-  assert.match(globe, /MOON_ORBIT_SPEED = AUTO_ROTATION_SPEED \/ MOON_ORBIT_DAYS/);
-  assert.match(globe, /moon-lroc-color\.jpg/);
-  assert.match(globe, /loadMoonTexture\(\) \{[\s\S]*new THREE\.TextureLoader\(\)\.load\([\s\S]*moon-lroc-color\.jpg/);
+  assert.match(globe, /MOON_DISPLAY_ORBIT_PERIOD_MS = 30_000/);
+  assert.match(globe, /MOON_ORBIT_SPEED = Math\.PI \* 2 \/ MOON_DISPLAY_ORBIT_PERIOD_MS/);
+  assert.match(globe, /moon-paper\.png/);
+  assert.match(globe, /loadMoonTexture\(\) \{[\s\S]*new THREE\.TextureLoader\(\)\.load\([\s\S]*moon-paper\.png/);
   assert.match(globe, /setVisible\(visible\) \{[\s\S]*if \(visible\) \{[\s\S]*this\.loadMoonTexture\(\)/);
   assert.doesNotMatch(globe.slice(globe.indexOf("  addMoon()"), globe.indexOf("  loadMoonTexture()")), /TextureLoader/);
+  assert.match(globe, /new THREE\.LineLoop/);
+  assert.match(globe, /moon\.rotation\.y = Math\.PI/);
+  assert.match(globe, /this\.earthMoonSystem\.add\(orbitPlane\)/);
+  assert.match(globe, /this\.earthMoonSystem\.rotation\.y \+= dx \* \.006/);
   assert.match(globe, /this\.moonOrbit\.rotation\.y \+= elapsed \* MOON_ORBIT_SPEED/);
-  assert.match(html, /The Moon is sized to scale and rotates synchronously as it orbits/);
+  assert.match(html, /Drag or use arrow keys to rotate the Earth and Moon together/);
   assert.match(globe, /QuadraticBezierCurve3/);
   assert.match(globe, /payload\.relationships/);
   assert.match(globe, /relationshipLayer === "always"/);
@@ -466,6 +471,7 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(threeModule, /three\.core\.min\.js/);
   assert.ok(fs.statSync("vendor/three.core.min.js").size > 300_000);
   assert.ok(fs.statSync("assets/map/moon-lroc-color.jpg").size > 400_000);
+  assert.ok(fs.statSync("assets/map/moon-paper.png").size > 20_000);
   assert.match(fs.readFileSync("assets/map/moon-texture-source.txt", "utf8"), /NASA Scientific Visualization Studio/);
 });
 

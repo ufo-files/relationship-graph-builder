@@ -1,18 +1,27 @@
 Moon texture source and credit
 
-Asset: moon-lroc-color.jpg (2048 × 1024 JPEG)
+Source asset: moon-lroc-color.jpg (2048 × 1024 JPEG)
+Rendered asset: moon-paper.png (1024 × 512 PNG)
 Source asset: https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_2k.jpg
 Source page: https://svs.gsfc.nasa.gov/4720
 Credit: NASA Scientific Visualization Studio
 
 NASA's CGI Moon Kit color map is assembled from Lunar Reconnaissance Orbiter
 Camera Wide Angle Camera data. The checked-in JPEG is the unmodified 2K asset
-published by NASA.
+published by NASA. The rendered PNG is a resized grayscale edge-map derivative
+used to match the globe's flat paper-and-ink visual style.
+
+ImageMagick generation command:
+magick moon-lroc-color.jpg -resize 1024x512! -colorspace Gray -gaussian-blur 0x1 -edge 1 -normalize -threshold 28% -negate +level-colors '#777777','#ecebe4' -colorspace sRGB moon-paper.png
 
 Physical values used by the map renderer:
 - Moon equatorial radius: 1,737.4 km
 - Earth equatorial radius: 6,371.0 km
 - Moon orbital period and synchronous rotation period: 27.322 Earth days
 - Moon orbit inclination: 5.145 degrees
+
+The interactive map visually compresses the orbital period to 30 seconds and the
+displayed Earth–Moon gap so the motion and map remain usable. These display values
+are not presented as physical scale.
 
 Physical data reference: https://science.nasa.gov/moon/by-the-numbers/
