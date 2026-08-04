@@ -13,6 +13,10 @@ const updateReadme = process.env.GRAPH_SCREENSHOT_UPDATE_README !== "false";
 const readmePath = path.join(repositoryRoot, "README.md");
 const galleryStart = "<!-- graph-screenshots:start -->";
 const galleryEnd = "<!-- graph-screenshots:end -->";
+const defaultScreenshot = {
+  id: "default-view",
+  label: "Default view"
+};
 
 function escapeHTML(value) {
   return String(value)
@@ -32,7 +36,12 @@ function galleryMarkup(graphTypes) {
     if (cells.length === 1) cells.push('    <td width="50%"></td>');
     rows.push(`  <tr>\n${cells.join("\n")}\n  </tr>`);
   }
-  return `${galleryStart}\n<table>\n${rows.join("\n")}\n</table>\n${galleryEnd}`;
+  return `${galleryStart}
+<p align="center">
+  <strong>${defaultScreenshot.label}</strong><br>
+  <a href="assets/screenshots/${defaultScreenshot.id}.png"><img src="assets/screenshots/${defaultScreenshot.id}.png" alt="Default graph builder view screenshot" width="100%"></a>
+</p>
+<table>\n${rows.join("\n")}\n</table>\n${galleryEnd}`;
 }
 
 async function updateGallery(graphTypes) {
@@ -66,9 +75,19 @@ try {
   await page.locator("#loadingState").waitFor({ state: "detached" });
   await page.evaluate(() => document.fonts.ready);
   await page.addStyleTag({
-    content: `body::after {
+    content: `body.screenshot-default::after {
         content: "";
         position: fixed;
+        inset: 0;
+        z-index: 2147483647;
+        box-sizing: border-box;
+        border: 1px solid #000;
+        pointer-events: none;
+      }
+      body.screenshot-graph .stage { position: relative !important; }
+      body.screenshot-graph .stage::after {
+        content: "";
+        position: absolute;
         inset: 0;
         z-index: 2147483647;
         box-sizing: border-box;
@@ -89,12 +108,27 @@ try {
     throw new Error("Graph type IDs must be unique");
   }
 
-  const expectedFiles = new Set(graphTypes.map(({ id }) => `${id}.png`));
+  const expectedFiles = new Set([
+    `${defaultScreenshot.id}.png`,
+    ...graphTypes.map(({ id }) => `${id}.png`)
+  ]);
   for (const existingFile of await readdir(outputDirectory)) {
     if (existingFile.endsWith(".png") && !expectedFiles.has(existingFile)) {
       await rm(path.join(outputDirectory, existingFile));
     }
   }
+
+  await page.evaluate(() => document.body.classList.add("screenshot-default"));
+  await page.screenshot({
+    animations: "disabled",
+    fullPage: false,
+    path: path.join(outputDirectory, `${defaultScreenshot.id}.png`),
+    type: "png"
+  });
+  await page.evaluate(() => {
+    document.body.classList.remove("screenshot-default");
+    document.body.classList.add("screenshot-graph");
+  });
 
   for (const { id } of graphTypes) {
     await page.locator(`[data-type="${id}"]`).click();
@@ -103,10 +137,8 @@ try {
       await page.waitForFunction(() => !document.querySelector("#mapStatus")?.textContent?.startsWith("Loading"));
     }
     await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
-    await page.evaluate(() => window.scrollTo(0, 0));
-    await page.screenshot({
+    await page.locator(".stage").screenshot({
       animations: "disabled",
-      fullPage: false,
       path: path.join(outputDirectory, `${id}.png`),
       type: "png"
     });

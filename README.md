@@ -4,9 +4,13 @@ A static graph builder for completed OCR and media transcripts in the UFO Files 
 
 ## Graph types
 
-These full-viewport previews are regenerated from the latest machine-data catalog after every successful rebuild. Each image includes a 1px black border for contrast against light backgrounds.
+These previews are regenerated from the latest machine-data catalog after every successful rebuild. The default view includes the full app chrome, while each graph-type preview focuses on the graph itself. Every image includes a 1px black border for contrast against light backgrounds.
 
 <!-- graph-screenshots:start -->
+<p align="center">
+  <strong>Default view</strong><br>
+  <a href="assets/screenshots/default-view.png"><img src="assets/screenshots/default-view.png" alt="Default graph builder view screenshot" width="100%"></a>
+</p>
 <table>
   <tr>
     <td width="50%" align="center">
