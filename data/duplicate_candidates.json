@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "80ffde7340449be1a219065615c7dd768470dfce"
+    "revision": "004dde8fab3e32a37de97439a5aaefb71c7e84e7"
   },
-  "count": 125,
-  "totalCount": 125,
-  "shownCount": 125,
+  "count": 126,
+  "totalCount": 126,
+  "shownCount": 126,
   "candidates": [
     {
       "category": "organization",
@@ -1211,6 +1211,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Edwards Air Force Base",
+        "mentions": 29,
+        "documentCount": 19
+      },
+      "right": {
+        "name": "EDWARDS AIR FORCE BASE CA",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.936,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Public Affairs Officer",
@@ -1230,8 +1246,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2421,
-        "documentCount": 179
+        "mentions": 2424,
+        "documentCount": 180
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
