@@ -9,11 +9,14 @@ on:
       - ".nojekyll"
       - "app.js"
       - "assets/**"
+      - "!assets/screenshots/**"
       - "data/curated_entities.json"
       - "data/entity_aliases.json"
       - "data/location_coordinates.json"
       - "index.html"
       - "map-globe.js"
+      - "package-lock.json"
+      - "package.json"
       - "scripts/**"
       - "styles.css"
       - "tests/**"
@@ -28,6 +31,8 @@ on:
       - "data/location_coordinates.json"
       - "index.html"
       - "map-globe.js"
+      - "package-lock.json"
+      - "package.json"
       - "scripts/**"
       - "styles.css"
       - "tests/**"
@@ -79,6 +84,43 @@ jobs:
           node --check map-globe.js
           node --test tests/test_app.js
 
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install screenshot dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Validate graph screenshots
+        env:
+          GRAPH_SCREENSHOT_OUTPUT_DIR: ${{ runner.temp }}/graph-screenshots
+        shell: bash
+        run: |
+          server_log="$RUNNER_TEMP/graph-builder-http.log"
+          python3 -m http.server 4173 --bind 127.0.0.1 >"$server_log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for attempt in {1..30}; do
+            if curl --fail --silent --show-error http://127.0.0.1:4173/ >/dev/null; then
+              break
+            fi
+            if [ "$attempt" -eq 30 ]; then
+              cat "$server_log"
+              exit 1
+            fi
+            sleep 1
+          done
+          npm run screenshots
+          if ! git diff --quiet -- README.md; then
+            git diff -- README.md
+            echo "README graph screenshots are out of date" >&2
+            exit 1
+          fi
+
   publish:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
@@ -129,17 +171,47 @@ jobs:
           node --check map-globe.js
           node --test tests/test_app.js
 
-      - name: Commit refreshed catalog
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install screenshot dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Refresh graph screenshots
+        shell: bash
+        run: |
+          server_log="$RUNNER_TEMP/graph-builder-http.log"
+          python3 -m http.server 4173 --bind 127.0.0.1 >"$server_log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for attempt in {1..30}; do
+            if curl --fail --silent --show-error http://127.0.0.1:4173/ >/dev/null; then
+              break
+            fi
+            if [ "$attempt" -eq 30 ]; then
+              cat "$server_log"
+              exit 1
+            fi
+            sleep 1
+          done
+          npm run screenshots
+
+      - name: Commit refreshed catalog and screenshots
         env:
           UPSTREAM_REVISION: ${{ steps.upstream.outputs.revision }}
         shell: bash
         run: |
-          if git diff --quiet -- data/catalog.json data/duplicate_candidates.json; then
+          if [ -z "$(git status --porcelain -- README.md assets/screenshots data/catalog.json data/duplicate_candidates.json)" ]; then
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/catalog.json data/duplicate_candidates.json
+          git add README.md assets/screenshots data/catalog.json data/duplicate_candidates.json
           git commit -m "Rebuild graph from machine-data@${UPSTREAM_REVISION:0:7}"
           for attempt in 1 2 3; do
             git pull --rebase origin main

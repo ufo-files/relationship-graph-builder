@@ -2,6 +2,62 @@
 
 A static graph builder for completed OCR and media transcripts in the UFO Files archive. It is designed for GitHub Pages: there is no server, database, CDN dependency, or runtime build step.
 
+## Graph types
+
+These previews are regenerated from the latest machine-data catalog after every successful rebuild. Each image includes a 1px black border for contrast against light backgrounds.
+
+<!-- graph-screenshots:start -->
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <strong>Network</strong><br>
+      <a href="assets/screenshots/network.png"><img src="assets/screenshots/network.png" alt="Network graph type screenshot" width="100%"></a>
+    </td>
+    <td width="50%" align="center">
+      <strong>Map</strong><br>
+      <a href="assets/screenshots/map.png"><img src="assets/screenshots/map.png" alt="Map graph type screenshot" width="100%"></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <strong>Bookshelf</strong><br>
+      <a href="assets/screenshots/book.png"><img src="assets/screenshots/book.png" alt="Bookshelf graph type screenshot" width="100%"></a>
+    </td>
+    <td width="50%" align="center">
+      <strong>Documents</strong><br>
+      <a href="assets/screenshots/document.png"><img src="assets/screenshots/document.png" alt="Documents graph type screenshot" width="100%"></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <strong>Scatter</strong><br>
+      <a href="assets/screenshots/scatter.png"><img src="assets/screenshots/scatter.png" alt="Scatter graph type screenshot" width="100%"></a>
+    </td>
+    <td width="50%" align="center">
+      <strong>Bars</strong><br>
+      <a href="assets/screenshots/bars.png"><img src="assets/screenshots/bars.png" alt="Bars graph type screenshot" width="100%"></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <strong>Timeline</strong><br>
+      <a href="assets/screenshots/timeline.png"><img src="assets/screenshots/timeline.png" alt="Timeline graph type screenshot" width="100%"></a>
+    </td>
+    <td width="50%" align="center">
+      <strong>Matrix</strong><br>
+      <a href="assets/screenshots/matrix.png"><img src="assets/screenshots/matrix.png" alt="Matrix graph type screenshot" width="100%"></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <strong>Table</strong><br>
+      <a href="assets/screenshots/table.png"><img src="assets/screenshots/table.png" alt="Table graph type screenshot" width="100%"></a>
+    </td>
+    <td width="50%"></td>
+  </tr>
+</table>
+<!-- graph-screenshots:end -->
+
 ## Product model
 
 The builder asks for five decisions:
@@ -95,9 +151,9 @@ Every push to `ufo-files/machine-data` updates `.machine-data-revision` through 
 builder-scoped deploy key. That rebuild request immediately starts the `Rebuild
 graph from machine-data` workflow, which rebuilds and tests the catalog, records
 the exact machine-data commit in the catalog metadata, commits the refreshed
-catalog, and deploys the static builder to GitHub Pages. The workflow can also be
-run manually or triggered with a `machine-data-updated` `repository_dispatch`
-event.
+catalog and graph-type screenshots, updates the README gallery, and deploys the
+static builder to GitHub Pages. The workflow can also be run manually or triggered
+with a `machine-data-updated` `repository_dispatch` event.
 
 ## Map data and licenses
 
