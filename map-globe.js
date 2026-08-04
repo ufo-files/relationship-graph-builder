@@ -39,6 +39,7 @@ class GlobeMap {
     this.autoRotate = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     this.addEarth();
     this.bindEvents();
+    container.classList.add("globe-ready");
     new ResizeObserver(() => this.resize()).observe(container);
   }
 
@@ -341,6 +342,7 @@ try {
   window.addEventListener("ufo-map-render", event => globe.render(event.detail));
   window.addEventListener("ufo-map-visibility", event => globe.setVisible(event.detail.visible));
   if (window.pendingGlobeRender) globe.render(window.pendingGlobeRender);
-} catch (_) {
-  status.textContent = "Interactive WebGL map unavailable";
+} catch (error) {
+  console.error("Interactive globe initialization failed", error);
+  status.textContent = `Interactive WebGL unavailable · ${error?.message || "unknown error"}`;
 }

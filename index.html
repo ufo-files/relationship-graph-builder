@@ -76,6 +76,7 @@
         <div class="loading" id="loadingState"><span></span>Reading local catalog…</div>
         <svg id="chart" role="img" aria-labelledby="graphTitle graphSubtitle"></svg>
         <div id="mapView" class="map-view" role="img" aria-labelledby="graphTitle graphSubtitle" hidden>
+          <div class="globe-fallback" aria-hidden="true"></div>
           <canvas id="globeCanvas" tabindex="0" aria-label="Interactive globe. Drag or use arrow keys to rotate; scroll or use plus and minus to zoom."></canvas>
           <div id="globeLabels" class="globe-labels" aria-hidden="true"></div>
           <span id="mapStatus" class="map-status">Loading country map…</span>
@@ -108,10 +109,10 @@
     window.addEventListener("error", event => {
       if (event.target?.id === "globeModule") {
         const status = document.getElementById("mapStatus");
-        if (status) status.textContent = "Map module failed to load";
+        if (status) status.textContent = "Map module failed to load · refresh this page";
       }
     }, true);
   </script>
-  <script id="globeModule" src="map-globe.js?v=relationships-2" type="module"></script>
+  <script id="globeModule" src="map-globe.js?v=relationships-3" type="module"></script>
 </body>
 </html>
