@@ -327,6 +327,7 @@ test("Default preset restores the complete initial view", () => {
 
   assert.deepEqual(result.preset, result.defaults);
   assert.equal(result.activeId, "default");
+  assert.equal(result.defaults.x, "independentDocumentCount");
 });
 
 test("graph type is the first builder section and cards explain their data scope", () => {
@@ -337,7 +338,7 @@ test("graph type is the first builder section and cards explain their data scope
   assert.match(source, /label: "Map", scope: "Locations"/);
   assert.match(source, /label: "Bookshelf", scope: "Books"/);
   assert.match(source, /label: "Scatter", scope: "All"/);
-  assert.match(source, /if \(type === "scatter"\).*categories: \[\.\.\.ENTITY_CATEGORIES\].*sources: \[\].*allSources: true/);
+  assert.match(source, /if \(type === "scatter"\) \{\s*state\.config = presetConfig\("default"\)/);
   assert.match(source, /label: "Bars", scope: "All collections"/);
   assert.match(source, /label: "Timeline", scope: "Documents \+ events"/);
   assert.match(source, /if \(type === "timeline"\).*categories: \["date"\]/);
