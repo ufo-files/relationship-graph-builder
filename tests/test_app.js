@@ -440,7 +440,7 @@ test("Book is a first-class area bookshelf for transcript-backed titles", () => 
   assert.ok(result.shelves >= 1);
   assert.ok(result.narrowLabel.every(line => line.length <= 8));
   assert.match(result.narrowLabel.at(-1), /…$/);
-  assert.match(source, /if \(type === "book"\).*labels: "all"/);
+  assert.match(source, /book: \{[^}]*labels: "all"/);
   assert.doesNotMatch(source, /if \(type === "book"\).*categories: \["book"\]/);
   assert.match(source, /const data = filteredEntities\(\["book"\]\)/);
   assert.match(source, /const bookshelf = state\.config\.type === "book"/);
