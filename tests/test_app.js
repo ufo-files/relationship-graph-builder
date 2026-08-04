@@ -329,6 +329,18 @@ test("Default preset restores the complete initial view", () => {
   assert.equal(result.activeId, "default");
 });
 
+test("graph type is the first builder section and cards explain their data scope", () => {
+  const html = fs.readFileSync("index.html", "utf8");
+  const source = fs.readFileSync("app.js", "utf8");
+  assert.doesNotMatch(html, /id="presetControls"/);
+  assert.match(html, /data-step="1"[\s\S]*<strong>Graph type<\/strong>/);
+  assert.match(source, /label: "Map", scope: "Locations"/);
+  assert.match(source, /label: "Bookshelf", scope: "Books"/);
+  assert.match(source, /label: "Scatter", scope: "Entities"/);
+  assert.match(source, /label: "Bars", scope: "All categories"/);
+  assert.match(source, /label: "Timeline", scope: "Documents"/);
+});
+
 test("Map is a first-class Three.js graph type with reviewed location data", () => {
   const html = fs.readFileSync("index.html", "utf8");
   const globe = fs.readFileSync("map-globe.js", "utf8");
