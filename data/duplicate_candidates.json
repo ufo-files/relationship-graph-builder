@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "5fc68e08bcf85eec25c5b969c5b5462716dbb6f2"
+    "revision": "a3ac323492dfe7ea1f3acfd2f60226b24e052272"
   },
-  "count": 147,
-  "totalCount": 147,
-  "shownCount": 147,
+  "count": 148,
+  "totalCount": 148,
+  "shownCount": 148,
   "candidates": [
     {
       "category": "organization",
@@ -462,8 +462,8 @@
       "category": "organization",
       "left": {
         "name": "Technical Intelligence Center",
-        "mentions": 17,
-        "documentCount": 12
+        "mentions": 18,
+        "documentCount": 13
       },
       "right": {
         "name": "Iechnical Intelligence Center",
@@ -910,8 +910,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 789,
-        "documentCount": 180
+        "mentions": 790,
+        "documentCount": 181
       },
       "right": {
         "name": "Department of Detense",
@@ -1163,6 +1163,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Estimates Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Estinates Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Greenville AF Base",
@@ -1326,13 +1342,13 @@
       "category": "organization",
       "left": {
         "name": "Air Intelligence",
-        "mentions": 49,
-        "documentCount": 17
+        "mentions": 53,
+        "documentCount": 18
       },
       "right": {
         "name": "Mir Intelligence",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.938,
       "reason": "similar name",
@@ -1491,8 +1507,8 @@
       },
       "right": {
         "name": "Technical Intelligence Center",
-        "mentions": 17,
-        "documentCount": 12
+        "mentions": 18,
+        "documentCount": 13
       },
       "similarity": 0.935,
       "reason": "similar name",
@@ -1726,8 +1742,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 27,
-        "documentCount": 21
+        "mentions": 28,
+        "documentCount": 22
       },
       "right": {
         "name": "Department of the Army",
@@ -1742,8 +1758,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 27,
-        "documentCount": 21
+        "mentions": 28,
+        "documentCount": 22
       },
       "right": {
         "name": "Department of the Arny",
