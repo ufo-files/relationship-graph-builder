@@ -493,6 +493,18 @@ test("Documents provides a searchable finder linked to immutable machine-data so
   assert.match(source, /document: renderDocument/);
 });
 
+test("Table renders all matching records in infinite-scroll batches of 100", () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const tableRecordsSource = source.match(/function tableRecords\(\)[\s\S]*?\n\}/)?.[0] || "";
+  const renderTableSource = source.match(/function renderTable\(\)[\s\S]*?\n\}/)?.[0] || "";
+
+  assert.doesNotMatch(tableRecordsSource, /\.slice\(0, state\.config\.limit\)/);
+  assert.match(renderTableSource, /const batch = records\.slice\(shown, shown \+ 100\)/);
+  assert.match(renderTableSource, /tableView\.scrollTop \+ tableView\.clientHeight >= tableView\.scrollHeight - 240/);
+  assert.match(renderTableSource, /data-table-body/);
+  assert.match(source, /All matching rows/);
+});
+
 test("duplicate review opens the proactive identity queue", () => {
   const elements = {
     builderView: new FakeElement(),
