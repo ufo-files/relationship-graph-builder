@@ -29,12 +29,13 @@ jobs:
       group: relationship-graph-pages
       cancel-in-progress: ${{ github.event_name == 'workflow_run' }}
     permissions:
-      contents: write
+      contents: read
     steps:
       - name: Check out builder
         uses: actions/checkout@v7
         with:
           ref: main
+          ssh-key: ${{ secrets.MAIN_AUTOMATION_DEPLOY_KEY }}
 
       - name: Set up Node
         uses: actions/setup-node@v6

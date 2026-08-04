@@ -87,7 +87,7 @@ jobs:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
       pages: write
       id-token: write
     steps:
@@ -95,6 +95,7 @@ jobs:
         uses: actions/checkout@v7
         with:
           ref: main
+          ssh-key: ${{ secrets.MAIN_AUTOMATION_DEPLOY_KEY }}
 
       - name: Resolve machine-data revision
         id: upstream
