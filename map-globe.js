@@ -28,6 +28,7 @@ class GlobeMap {
     this.raycaster = new THREE.Raycaster();
     this.pointer = new THREE.Vector2();
     this.nodes = [];
+    this.relationships = [];
     this.nodeGeometry = new THREE.SphereGeometry(1, 18, 12);
     this.labels = [];
     this.drag = null;
@@ -179,6 +180,23 @@ class GlobeMap {
 
   render(payload) {
     this.clearNodes();
+    const itemById = new Map(payload.items.map(item => [item.id, item]));
+    (payload.relationships || []).forEach(relationship => {
+      const source = itemById.get(relationship.source);
+      const target = itemById.get(relationship.target);
+      if (!source || !target) return;
+      const start = this.coordinateVector(source.lat, source.lon, 1.022);
+      const end = this.coordinateVector(target.lat, target.lon, 1.022);
+      const midpoint = start.clone().add(end);
+      if (midpoint.lengthSq() < .01) midpoint.copy(start).add(new THREE.Vector3(0, .25, 0));
+      midpoint.normalize().multiplyScalar(1.055 + Math.min(.08, start.distanceTo(end) * .035));
+      const geometry = new THREE.BufferGeometry().setFromPoints(new THREE.QuadraticBezierCurve3(start, midpoint, end).getPoints(28));
+      const material = new THREE.LineBasicMaterial({ color: 0x111111, transparent: true, opacity: payload.relationshipLayer === "always" ? payload.relationshipStrength : 0 });
+      const line = new THREE.Line(geometry, material);
+      line.userData = { ...relationship, baseOpacity: payload.relationshipStrength, mode: payload.relationshipLayer };
+      this.globe.add(line);
+      this.relationships.push(line);
+    });
     payload.items.forEach(item => {
       const material = new THREE.MeshBasicMaterial({
         color: 0x111111,
@@ -187,7 +205,7 @@ class GlobeMap {
       });
       const node = new THREE.Mesh(this.nodeGeometry, material);
       node.position.copy(this.coordinateVector(item.lat, item.lon));
-      node.scale.setScalar(.012 + item.intensity * .026);
+      node.scale.setScalar((item.secondary ? .009 : .012) + item.intensity * (item.secondary ? .018 : .026));
       node.userData = item;
       this.globe.add(node);
       this.nodes.push(node);
@@ -210,6 +228,12 @@ class GlobeMap {
       node.material.dispose();
     });
     this.nodes = [];
+    this.relationships.forEach(line => {
+      this.globe.remove(line);
+      line.geometry.dispose();
+      line.material.dispose();
+    });
+    this.relationships = [];
     this.labels = [];
     labelLayer.replaceChildren();
   }
@@ -230,6 +254,10 @@ class GlobeMap {
 
   updateHover(event) {
     const node = this.intersectionAt(event);
+    this.relationships.forEach(line => {
+      const connected = node && [line.userData.source, line.userData.target].includes(node.userData.id);
+      line.material.opacity = node ? (connected ? .8 : .015) : (line.userData.mode === "always" ? line.userData.baseOpacity : 0);
+    });
     canvas.classList.toggle("has-map-target", Boolean(node));
     canvas.title = node ? `${node.userData.name} · ${node.userData.formattedValue}` : "";
   }
