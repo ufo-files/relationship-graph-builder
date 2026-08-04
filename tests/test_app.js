@@ -485,6 +485,8 @@ test("Documents provides a searchable finder linked to immutable machine-data so
   assert.match(source, /query \? "Search results" : "All documents"/);
   assert.match(source, /class="document-card-main"[^>]*data-document-inspect/);
   assert.match(source, /class="document-source-link"[^>]*href="\$\{escapeHTML\(machineDataDocumentURL\(document\)\)\}"/);
+  assert.match(source, /robustValueExtent\(matching, "words"\)/);
+  assert.match(source, /--document-intensity:\$\{clampedScale\(document\.words, wordExtent, \[\.14, \.94\]\)\}/);
   assert.match(source, /Every completed file/);
   assert.match(source, /document: renderDocument/);
 });

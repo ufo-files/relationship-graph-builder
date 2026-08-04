@@ -1211,16 +1211,18 @@ function renderDocument() {
   }
   browser.style.setProperty("--table-font-size", `${state.config.labelSize}px`);
   const visible = matching.slice(0, 100);
+  const { extent: wordExtent } = robustValueExtent(matching, "words");
   browser.innerHTML = `<div class="document-browser-status"><strong>${query ? "Search results" : "All documents"}</strong><span>${formatNumber(matching.length)} files · showing ${formatNumber(visible.length)}</span></div><div class="document-browser">${visible.map(document => `
     <article class="document-card">
       <button class="document-card-main" type="button" data-document-inspect="${escapeHTML(document.id)}">
-        <span class="document-file-icon" aria-hidden="true">TXT</span>
+        <span class="document-file-icon" aria-hidden="true" title="${formatNumber(document.words)} words" style="--document-intensity:${clampedScale(document.words, wordExtent, [.14, .94])};--document-icon-ink:${clampedScale(document.words, wordExtent, [.14, .94]) > .56 ? "#f6f5ef" : "#111"}">TXT</span>
         <span class="document-file-copy"><strong>${escapeHTML(document.title || document.path)}</strong><small>${escapeHTML(document.path)}</small></span>
       </button>
       <div class="document-card-meta"><span>${escapeHTML(document.source)}</span><span>${escapeHTML(label(document.format))} · ${formatNumber(document.words)} words</span></div>
       <a class="document-source-link" href="${escapeHTML(machineDataDocumentURL(document))}" target="_blank" rel="noopener noreferrer">Open transcript ↗</a>
     </article>`).join("")}</div>`;
   $$('[data-document-inspect]').forEach(node => node.addEventListener("click", () => inspectDocument(state.documentById.get(node.dataset.documentInspect))));
+  drawIntensityLegend();
   setSummary(`${formatNumber(matching.length)} matching documents · showing ${formatNumber(visible.length)}`, "document");
 }
 
