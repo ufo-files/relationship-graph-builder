@@ -107,11 +107,11 @@ h1, h2, h3, p { margin-top: 0; }
 .document-browser { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; padding: 12px; }
 .document-card { min-width: 0; padding: 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--paper); }
 .document-card:hover { border-color: var(--line-strong); }
-.document-card-main { display: grid; grid-template-columns: 38px minmax(0, 1fr); align-items: center; gap: 10px; width: 100%; padding: 0; border: 0; background: none; color: var(--ink); font-size: var(--table-font-size, 13px); text-align: left; cursor: pointer; }
+.document-card-main { display: grid; grid-template-columns: 38px minmax(0, 1fr); align-items: center; gap: 10px; width: 100%; padding: 0; border: 0; background: none; color: var(--ink); text-align: left; cursor: pointer; }
 .document-card-main:focus { outline: 2px solid var(--ink); outline-offset: 3px; }
 .document-card-meta { display: flex; justify-content: space-between; gap: 10px; margin-top: 10px; color: var(--muted); font-size: 10px; }
 .document-card-meta span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.document-source-link { display: inline-block; margin-top: 11px; color: var(--ink); font-size: 10px; font-weight: 650; text-decoration: underline; text-underline-offset: 2px; }
+.document-source-link { display: inline-block; margin-top: 11px; color: var(--ink); font-size: 11px; font-weight: 650; text-decoration: underline; text-underline-offset: 2px; }
 .document-row { display: grid; grid-template-columns: 38px minmax(220px, 1fr) minmax(130px, .45fr) minmax(120px, auto) 24px; align-items: center; gap: 12px; min-height: 58px; padding: 8px 13px; border-bottom: 1px solid var(--line); color: var(--ink); font-size: var(--table-font-size, 12px); text-decoration: none; }
 .document-row:hover, .document-row:focus { background: #e8e7e0; outline: none; }
 .document-file-icon { display: grid; place-content: center; width: 34px; height: 38px; border: 1px solid var(--line-strong); border-radius: 3px; background: rgba(17,17,17,var(--document-intensity,.14)); color: var(--document-icon-ink,#111); font-size: 9px; font-weight: 750; letter-spacing: .06em; }
