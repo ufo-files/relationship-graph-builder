@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "4ba5a4a584be28c80e8c1d26e1f79942436a10b3"
+    "revision": "5fc68e08bcf85eec25c5b969c5b5462716dbb6f2"
   },
-  "count": 145,
-  "totalCount": 145,
-  "shownCount": 145,
+  "count": 147,
+  "totalCount": 147,
+  "shownCount": 147,
   "candidates": [
     {
       "category": "organization",
@@ -379,6 +379,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "EXECUTIVE OFFICE OF THE PRESIDENT",
+        "mentions": 22,
+        "documentCount": 13
+      },
+      "right": {
+        "name": "XECUTIVE OFFICE OF THE PRESIDEN",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.969,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "The Director of Central Intelligence",
@@ -398,8 +414,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 145,
-        "documentCount": 74
+        "mentions": 147,
+        "documentCount": 75
       },
       "right": {
         "name": "Fright-Patterson Air Force Base",
@@ -510,8 +526,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1920,
-        "documentCount": 414
+        "mentions": 1934,
+        "documentCount": 415
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -579,8 +595,8 @@
       },
       "right": {
         "name": "Project Signa",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -862,8 +878,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Army",
-        "mentions": 35,
-        "documentCount": 16
+        "mentions": 36,
+        "documentCount": 17
       },
       "right": {
         "name": "Department of the Arny",
@@ -894,8 +910,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 787,
-        "documentCount": 179
+        "mentions": 789,
+        "documentCount": 180
       },
       "right": {
         "name": "Department of Detense",
@@ -910,8 +926,8 @@
       "category": "organization",
       "left": {
         "name": "Search for Extraterrestrial Intelligence",
-        "mentions": 18,
-        "documentCount": 14
+        "mentions": 20,
+        "documentCount": 15
       },
       "right": {
         "name": "SET Search for ExtraTerrestrial Intelligence",
@@ -1438,8 +1454,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2567,
-        "documentCount": 211
+        "mentions": 2592,
+        "documentCount": 212
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -1454,8 +1470,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 145,
-        "documentCount": 74
+        "mentions": 147,
+        "documentCount": 75
       },
       "right": {
         "name": "Fright-Petterson Air Force Base",
@@ -1502,8 +1518,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 60,
-        "documentCount": 25
+        "mentions": 62,
+        "documentCount": 26
       },
       "right": {
         "name": "Army Air Foroes",
@@ -1518,8 +1534,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 60,
-        "documentCount": 25
+        "mentions": 62,
+        "documentCount": 26
       },
       "right": {
         "name": "The Arny Air Forces",
@@ -1534,8 +1550,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 60,
-        "documentCount": 25
+        "mentions": 62,
+        "documentCount": 26
       },
       "right": {
         "name": "Army Air Forcas",
@@ -1678,8 +1694,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1920,
-        "documentCount": 414
+        "mentions": 1934,
+        "documentCount": 415
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -1715,8 +1731,8 @@
       },
       "right": {
         "name": "Department of the Army",
-        "mentions": 35,
-        "documentCount": 16
+        "mentions": 36,
+        "documentCount": 17
       },
       "similarity": 0.93,
       "reason": "similar name",
@@ -1923,6 +1939,22 @@
       },
       "right": {
         "name": "Mar Department",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "TELEPHONISALLX ADVISED THIS OFFICE THAT AN",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "TELEPHONICALLX ARVISED THIS OFFICE THAI AN",
         "mentions": 2,
         "documentCount": 2
       },
