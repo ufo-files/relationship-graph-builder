@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "23013c8b11769a4e863ebc49d085eb58dee02dec"
+    "revision": "75fb60dae1695ea22407df259e2802141f077fee"
   },
-  "count": 149,
-  "totalCount": 149,
-  "shownCount": 149,
+  "count": 150,
+  "totalCount": 150,
+  "shownCount": 150,
   "candidates": [
     {
       "category": "organization",
@@ -659,6 +659,22 @@
       },
       "right": {
         "name": "CSET Website",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "STRANGE OBJECT WAS FILMED",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "STRANGE OBJECT WAS FILKED",
         "mentions": 2,
         "documentCount": 2
       },
@@ -1822,8 +1838,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 72,
-        "documentCount": 29
+        "mentions": 73,
+        "documentCount": 30
       },
       "right": {
         "name": "Snlt Lake City",
