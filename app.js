@@ -366,7 +366,7 @@ function renderControls() {
       : controlSelect("relation", "Relationship", [{ value: "all", label: "Any published relationship" }, { value: "co_mentioned", label: "Repeated co-mention" }, { value: "affiliated_with", label: "Affiliation cue" }, { value: "investigated", label: "Investigation cue" }]);
     roles = controlSelect("nodeRole", "Nodes", [{ value: "entity", label: "Entities" }, { value: "collection", label: "Collections" }]) + relationshipControl;
   } else if (state.config.type === "map") {
-    roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Geocoded locations</option></select></div><div class="control"><div class="control-title">Position</div><select disabled><option>Reviewed coordinates</option></select></div>`;
+    roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Geocoded locations</option></select></div><div class="control"><div class="control-title">Position</div><select disabled><option>Reviewed coordinates</option></select></div>` + relationshipTypeControl();
   } else if (state.config.type === "book") {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Book titles</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Area-proportional shelves</option></select></div>`;
   } else if (state.config.type === "scatter") {
@@ -393,7 +393,7 @@ function renderControls() {
     : state.config.type === "timeline" && state.config.timelineRole !== "entity" ? numericDoc : numericEntity;
   const labelSizeControl = `<div class="control"><label>Label size <span>${state.config.labelSize}px</span></label><input type="range" min="11" max="18" step="1" value="${state.config.labelSize}" data-range="labelSize"></div>`;
   const zoomControl = state.config.type === "network" ? `<div class="control"><label>Zoom <span>${state.config.zoom.toFixed(1)}×</span></label><input type="range" min="0.5" max="2.5" step="0.1" value="${state.config.zoom}" data-range="zoom"></div>` : "";
-  const supportsRelationships = ["scatter", "timeline"].includes(state.config.type);
+  const supportsRelationships = ["scatter", "map", "timeline"].includes(state.config.type);
   const relationshipControls = supportsRelationships ? controlSelect("relationshipLayer", "Relationship layer", [{ value: "off", label: "Off" }, { value: "hover", label: "On hover" }, { value: "always", label: "Always" }])
     + `<div class="control"><label>Connections per node <span>${state.config.relationshipNeighbors}</span></label><input type="range" min="1" max="5" step="1" value="${state.config.relationshipNeighbors}" data-range="relationshipNeighbors"></div>`
     + controlSelect("relationshipNodeSize", "Secondary-node size", [{ value: "inherit", label: "Inherit size metric" }, { value: "fixed", label: "Fixed" }])
@@ -731,7 +731,7 @@ function scatterSecondaryAnchors(egoNetworks, displayedIndex) {
 }
 
 function drawIntensityLegend() {
-  const relationshipView = ["scatter", "timeline"].includes(state.config.type);
+  const relationshipView = ["scatter", "map", "timeline"].includes(state.config.type);
   const egoKey = relationshipView && state.config.relationshipLayer !== "off" ? `<span class="legend-item"><i class="ego-key"></i>Strongest relationships</span>` : "";
   const outlierKey = state.config.type === "scatter" ? `<span class="legend-item"><i class="outlier-key"></i>Axis-capped outlier</span>` : "";
   const inflationKey = state.config.type === "scatter" ? `<span class="legend-item"><i class="risk-key"></i>Potential mention inflation</span>` : "";
@@ -1019,16 +1019,24 @@ function renderMap() {
     return showEmpty();
   }
   const extent = valueExtent(data, state.config.size);
+  const networks = state.config.relationshipLayer === "off" ? new Map() : scatterEgoNetworks(mapped, data, state.config.relationshipNeighbors);
+  const overlay = state.config.relationshipLayer === "off" ? { nodes: [], edges: [] } : scatterRelationshipOverlay(networks, data);
+  const primaryIds = new Set(data.map(entity => entity.id));
+  const visibleItems = [...new Map([...data, ...overlay.nodes].map(entity => [entity.id, entity])).values()];
   const payload = {
     labelSize: state.config.labelSize,
-    items: data.map((entity, index) => ({
+    relationshipLayer: state.config.relationshipLayer,
+    relationshipStrength: ({ subtle: .12, medium: .24, strong: .42 })[state.config.relationshipStrength] || .12,
+    relationships: overlay.edges.map(relationship => ({ source: relationship.source, target: relationship.target, evidenceCount: relationship.edge.evidenceCount })),
+    items: visibleItems.map((entity, index) => ({
       id: entity.id,
       name: entity.name,
       lat: entity.geo.lat,
       lon: entity.geo.lon,
-      intensity: Math.sqrt(Math.max(0, scale(entity[state.config.size], extent, [0, 1]))),
+      intensity: Math.sqrt(Math.max(0, clampedScale(entity[state.config.size], extent, [0, 1]))),
       formattedValue: `${label(state.config.size)}: ${formatNumber(entity[state.config.size])}`,
-      showLabel: state.config.labels === "all" || (state.config.labels === "top" && index < 10)
+      secondary: !primaryIds.has(entity.id),
+      showLabel: primaryIds.has(entity.id) && (state.config.labels === "all" || (state.config.labels === "top" && index < 10))
     }))
   };
   window.pendingGlobeRender = payload;
