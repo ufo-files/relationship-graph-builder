@@ -328,6 +328,7 @@ test("Default preset restores the complete initial view", () => {
   assert.deepEqual(result.preset, result.defaults);
   assert.equal(result.activeId, "default");
   assert.equal(result.defaults.x, "independentDocumentCount");
+  assert.equal(result.defaults.matrixColumns, "category");
 });
 
 test("graph type stays first while quick presets remain available", () => {
@@ -351,7 +352,7 @@ test("graph type stays first while quick presets remain available", () => {
   assert.match(source, /label: "Matrix", scope: "Collections × top entities"/);
   assert.match(source, /label: "Table", scope: "All"/);
   assert.match(source, /table: \{ tableRole: "entity"/);
-  assert.match(source, /matrix: \{ matrixColumns: "entity"/);
+  assert.match(source, /matrix: \{ matrixColumns: "category"/);
   assert.match(source, /Math\.min\(state\.config\.limit, 12\)/);
   assert.match(source, /function matrixEntityInterest/);
   assert.match(source, /interest: matrixEntityInterest\(entity, sources\)/);

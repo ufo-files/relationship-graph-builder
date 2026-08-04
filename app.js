@@ -61,7 +61,7 @@ const DEFAULT = {
   includeHighInflation: true,
   minEvidence: 2, minConfidence: 0.95, limit: 50, labels: "top", aggregation: "source",
   relationshipLayer: "always", relationshipNeighbors: 1, relationshipNodeSize: "inherit", relationshipStrength: "subtle",
-  nodeRole: "entity", timelineRole: "document", matrixColumns: "entity",
+  nodeRole: "entity", timelineRole: "document", matrixColumns: "category",
   tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"],
   tableSort: "mentions", tableDirection: "desc", tableSearch: "", documentSearch: "",
   labelSize: 12, zoom: 1, title: "Mentions by Documents — Entities", titleMode: "auto"
@@ -502,7 +502,7 @@ function setType(type) {
     document: { size: "words", color: "source", labels: "top", documentSearch: "" },
     bars: { aggregation: "source", y: "words", color: "intensity" },
     timeline: { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source", categories: ["date"], labels: "top", limit: 50 },
-    matrix: { matrixColumns: "entity", color: "intensity" },
+    matrix: { matrixColumns: "category", color: "intensity" },
     table: { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 }
   };
   state.config = { ...presetConfig("default"), type, ...(viewDefaults[type] || {}) };
