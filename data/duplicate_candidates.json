@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "15a682958492c23f2e48c7379dbf77aa51f5b320"
+    "revision": "c88499d0692fd71eb66280675603b0097ff0a8a0"
   },
-  "count": 202,
-  "totalCount": 202,
+  "count": 203,
+  "totalCount": 203,
   "shownCount": 200,
   "candidates": [
     {
@@ -461,9 +461,9 @@
     {
       "category": "government_agency",
       "left": {
-        "name": "Executive Office of the President",
-        "mentions": 23,
-        "documentCount": 14
+        "name": "EXECUTIVE OFFICE OF THE PRESIDENT",
+        "mentions": 25,
+        "documentCount": 16
       },
       "right": {
         "name": "XECUTIVE OFFICE OF THE PRESIDEN",
@@ -494,8 +494,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 155,
-        "documentCount": 80
+        "mentions": 156,
+        "documentCount": 81
       },
       "right": {
         "name": "Fright-Patterson Air Force Base",
@@ -670,8 +670,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2188,
-        "documentCount": 517
+        "mentions": 2193,
+        "documentCount": 519
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -686,8 +686,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2188,
-        "documentCount": 517
+        "mentions": 2193,
+        "documentCount": 519
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -702,8 +702,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2188,
-        "documentCount": 517
+        "mentions": 2193,
+        "documentCount": 519
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -718,8 +718,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2188,
-        "documentCount": 517
+        "mentions": 2193,
+        "documentCount": 519
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1614,8 +1614,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2188,
-        "documentCount": 517
+        "mentions": 2193,
+        "documentCount": 519
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -1749,6 +1749,22 @@
         "name": "California Institute of Technology",
         "mentions": 11,
         "documentCount": 9
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Robert Sarbacher",
+        "mentions": 8,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Robert Sauerbacher",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -2046,8 +2062,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 155,
-        "documentCount": 80
+        "mentions": 156,
+        "documentCount": 81
       },
       "right": {
         "name": "Fright-Petterson Air Force Base",
@@ -2334,8 +2350,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2188,
-        "documentCount": 517
+        "mentions": 2193,
+        "documentCount": 519
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2350,8 +2366,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 1004,
-        "documentCount": 309
+        "mentions": 1005,
+        "documentCount": 310
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -2702,8 +2718,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2188,
-        "documentCount": 517
+        "mentions": 2193,
+        "documentCount": 519
       },
       "right": {
         "name": "GENTRAL INTELLIGENGE AGENCY",
@@ -2718,8 +2734,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2188,
-        "documentCount": 517
+        "mentions": 2193,
+        "documentCount": 519
       },
       "right": {
         "name": "CENTRAL INTELLIGZACE AGENCY",
@@ -2899,8 +2915,8 @@
       },
       "right": {
         "name": "Diana Pasulka",
-        "mentions": 9,
-        "documentCount": 9
+        "mentions": 10,
+        "documentCount": 10
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -3191,22 +3207,6 @@
         "documentCount": 2
       },
       "similarity": 0.903,
-      "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Joe Pyne TV Show",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Joe Pyne Show",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.897,
       "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     }
