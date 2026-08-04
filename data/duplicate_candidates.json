@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "c685c1f422094b66278d0085c6fedae3a6720949"
+    "revision": "c22333e50eea2b0c65a5a935e7e6675bdc17039a"
   },
-  "count": 130,
-  "totalCount": 130,
-  "shownCount": 130,
+  "count": 143,
+  "totalCount": 143,
+  "shownCount": 143,
   "candidates": [
     {
       "category": "organization",
@@ -115,8 +115,8 @@
       },
       "right": {
         "name": "Research Organization",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.977,
       "reason": "similar name",
@@ -133,6 +133,22 @@
         "name": "Post Office Inspector",
         "mentions": 4,
         "documentCount": 2
+      },
+      "similarity": 0.977,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Re Bureau Bulletin No",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Re Bureau Bulletins No",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.977,
       "reason": "similar name",
@@ -163,6 +179,22 @@
       },
       "right": {
         "name": "San Francisco Offices",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.976,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Justico",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "DEPARTMENT OF JUSTIC",
         "mentions": 2,
         "documentCount": 2
       },
@@ -215,6 +247,54 @@
         "documentCount": 3
       },
       "similarity": 0.974,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "DEPARTMENT OF JUSTIC",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "DEPARTMENT OF JUSTI",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.974,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Germain Foundation",
+        "mentions": 5,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Gerain Foundation",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Gerain Foundation",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Gersain Foundation",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.971,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -430,8 +510,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1745,
-        "documentCount": 362
+        "mentions": 1762,
+        "documentCount": 363
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -467,8 +547,8 @@
       },
       "right": {
         "name": "First Officer",
-        "mentions": 10,
-        "documentCount": 7
+        "mentions": 11,
+        "documentCount": 8
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -494,7 +574,7 @@
       "category": "location",
       "left": {
         "name": "Mount Rainier",
-        "mentions": 14,
+        "mentions": 15,
         "documentCount": 12
       },
       "right": {
@@ -525,14 +605,14 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Office Memor",
+        "mentions": 10,
+        "documentCount": 8
+      },
+      "right": {
         "name": "Office Memore",
         "mentions": 3,
         "documentCount": 3
-      },
-      "right": {
-        "name": "Office Memor",
-        "mentions": 6,
-        "documentCount": 6
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -717,14 +797,14 @@
     {
       "category": "government_agency",
       "left": {
-        "name": "Inclosed for the Bureau",
-        "mentions": 2,
-        "documentCount": 2
+        "name": "Office Memor",
+        "mentions": 10,
+        "documentCount": 8
       },
       "right": {
-        "name": "Enclosed for the Bureau",
-        "mentions": 8,
-        "documentCount": 6
+        "name": "Office Memo",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -733,14 +813,14 @@
     {
       "category": "government_agency",
       "left": {
-        "name": "Office Memor",
-        "mentions": 6,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "Office Memo",
+        "name": "Inclosed for the Bureau",
         "mentions": 2,
         "documentCount": 2
+      },
+      "right": {
+        "name": "Enclosed for the Bureau",
+        "mentions": 8,
+        "documentCount": 6
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -798,8 +878,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 753,
-        "documentCount": 163
+        "mentions": 757,
+        "documentCount": 165
       },
       "right": {
         "name": "Department of Detense",
@@ -939,6 +1019,38 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Justico",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "DEPARTMENT OF JUSTI",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.95,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "DEPARTMENT OF JUSTIC",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "DEPARTMENT OF XUSTIC",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.95,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
@@ -974,8 +1086,8 @@
       "category": "government_agency",
       "left": {
         "name": "Bureau Bulletin No",
-        "mentions": 16,
-        "documentCount": 9
+        "mentions": 20,
+        "documentCount": 11
       },
       "right": {
         "name": "Bureau Bullatin No",
@@ -990,7 +1102,7 @@
       "category": "organization",
       "left": {
         "name": "Germain Foundation",
-        "mentions": 4,
+        "mentions": 5,
         "documentCount": 2
       },
       "right": {
@@ -1054,7 +1166,7 @@
       "category": "government_agency",
       "left": {
         "name": "Department of War",
-        "mentions": 21,
+        "mentions": 22,
         "documentCount": 11
       },
       "right": {
@@ -1198,7 +1310,7 @@
       "category": "program",
       "left": {
         "name": "Project Daedalus",
-        "mentions": 4,
+        "mentions": 6,
         "documentCount": 4
       },
       "right": {
@@ -1294,8 +1406,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2457,
-        "documentCount": 191
+        "mentions": 2471,
+        "documentCount": 193
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -1358,7 +1470,7 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 57,
+        "mentions": 58,
         "documentCount": 24
       },
       "right": {
@@ -1374,7 +1486,7 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 57,
+        "mentions": 58,
         "documentCount": 24
       },
       "right": {
@@ -1390,7 +1502,7 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 57,
+        "mentions": 58,
         "documentCount": 24
       },
       "right": {
@@ -1501,6 +1613,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Department of Justico",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "So Department of Justico",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Office of the Undersecretary of Defense",
         "mentions": 3,
         "documentCount": 3
@@ -1518,8 +1646,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1745,
-        "documentCount": 362
+        "mentions": 1762,
+        "documentCount": 363
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -1534,8 +1662,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 869,
-        "documentCount": 231
+        "mentions": 876,
+        "documentCount": 236
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -1646,13 +1774,13 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 23,
+        "mentions": 24,
         "documentCount": 12
       },
       "right": {
-        "name": "George ADANSKI",
-        "mentions": 3,
-        "documentCount": 2
+        "name": "George Adanski",
+        "mentions": 5,
+        "documentCount": 4
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -1672,6 +1800,22 @@
       },
       "similarity": 0.929,
       "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Edward Condon",
+        "mentions": 16,
+        "documentCount": 11
+      },
+      "right": {
+        "name": "Edward U. Condon",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -1771,6 +1915,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Justico",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "DEPARTMENT OF XUSTIC",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.927,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Directorate of Intelligence",
@@ -1819,6 +1979,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Re Bureau Bulletin No",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Bureau Bulletin No",
+        "mentions": 20,
+        "documentCount": 11
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Diana Pasolka",
@@ -1838,7 +2014,7 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 3,
+        "mentions": 4,
         "documentCount": 2
       },
       "right": {
@@ -1997,6 +2173,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "DEPARTMENT OF XUSTIC",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "DEPARTMENT OF JUSTI",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "GOVERNMENI PRINTING OFFICE",
         "mentions": 2,
         "documentCount": 2
@@ -2024,6 +2216,22 @@
       },
       "similarity": 0.92,
       "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "J. Allen Hynek",
+        "mentions": 56,
+        "documentCount": 37
+      },
+      "right": {
+        "name": "Allen Hynek",
+        "mentions": 51,
+        "documentCount": 37
+      },
+      "similarity": 0.917,
+      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -2066,9 +2274,9 @@
         "documentCount": 12
       },
       "right": {
-        "name": "Steven Greer",
-        "mentions": 21,
-        "documentCount": 15
+        "name": "Dr. Steven Greer",
+        "mentions": 35,
+        "documentCount": 22
       },
       "similarity": 0.88,
       "reason": "similar person name",
