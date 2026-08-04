@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "e1150fc7d5e15f023f752ed9faf22a1e34dae64b"
+    "revision": "b100602e404524a7b01568b3602b2e6285ee3e8c"
   },
-  "count": 219,
-  "totalCount": 219,
+  "count": 220,
+  "totalCount": 220,
   "shownCount": 200,
   "candidates": [
     {
@@ -494,8 +494,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 170,
-        "documentCount": 89
+        "mentions": 171,
+        "documentCount": 90
       },
       "right": {
         "name": "Fright-Patterson Air Force Base",
@@ -510,8 +510,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 170,
-        "documentCount": 89
+        "mentions": 171,
+        "documentCount": 90
       },
       "right": {
         "name": "Wright-pattorson AIr Force Base",
@@ -734,8 +734,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2309,
-        "documentCount": 554
+        "mentions": 2312,
+        "documentCount": 556
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -750,8 +750,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2309,
-        "documentCount": 554
+        "mentions": 2312,
+        "documentCount": 556
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -766,8 +766,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2309,
-        "documentCount": 554
+        "mentions": 2312,
+        "documentCount": 556
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -782,8 +782,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2309,
-        "documentCount": 554
+        "mentions": 2312,
+        "documentCount": 556
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -869,6 +869,22 @@
         "name": "Mount Rainer",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Mr. Donald Kehoe",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Donald Keyhoe",
+        "mentions": 13,
+        "documentCount": 9
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -1710,8 +1726,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2309,
-        "documentCount": 554
+        "mentions": 2312,
+        "documentCount": 556
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2206,8 +2222,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2803,
-        "documentCount": 265
+        "mentions": 2808,
+        "documentCount": 266
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -2222,8 +2238,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 170,
-        "documentCount": 89
+        "mentions": 171,
+        "documentCount": 90
       },
       "right": {
         "name": "Fright-Petterson Air Force Base",
@@ -2558,8 +2574,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2309,
-        "documentCount": 554
+        "mentions": 2312,
+        "documentCount": 556
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2574,8 +2590,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 1032,
-        "documentCount": 328
+        "mentions": 1034,
+        "documentCount": 330
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -2958,8 +2974,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2309,
-        "documentCount": 554
+        "mentions": 2312,
+        "documentCount": 556
       },
       "right": {
         "name": "GENTRAL INTELLIGENGE AGENCY",
@@ -2974,8 +2990,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2309,
-        "documentCount": 554
+        "mentions": 2312,
+        "documentCount": 556
       },
       "right": {
         "name": "CENTRAL INTELLIGZACE AGENCY",
@@ -3189,22 +3205,6 @@
         "name": "Bruce McAbee",
         "mentions": 7,
         "documentCount": 4
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Forcien Intelligence",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Forces Intelligence",
-        "mentions": 7,
-        "documentCount": 6
       },
       "similarity": 0.923,
       "reason": "similar name",
