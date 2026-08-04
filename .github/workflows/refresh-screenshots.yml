@@ -8,25 +8,6 @@ on:
       - "package-lock.json"
       - "package.json"
       - "scripts/capture_graph_screenshots.mjs"
-  pull_request:
-    paths:
-      - ".github/workflows/refresh-screenshots.yml"
-      - "README.md"
-      - "app.js"
-      - "assets/**"
-      - "!assets/screenshots/**"
-      - "data/catalog.json"
-      - "data/curated_entities.json"
-      - "data/entity_aliases.json"
-      - "data/location_coordinates.json"
-      - "index.html"
-      - "map-globe.js"
-      - "package-lock.json"
-      - "package.json"
-      - "scripts/build_catalog.py"
-      - "scripts/capture_graph_screenshots.mjs"
-      - "styles.css"
-      - "vendor/**"
   workflow_run:
     workflows: ["Rebuild graph from machine-data"]
     types: [completed]
@@ -37,75 +18,10 @@ permissions:
   contents: read
 
 concurrency:
-  group: ${{ github.event_name == 'pull_request' && format('graph-screenshots-pr-{0}', github.event.pull_request.number) || 'relationship-graph-pages' }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' || github.event_name == 'workflow_run' }}
+  group: relationship-graph-pages
+  cancel-in-progress: ${{ github.event_name == 'workflow_run' }}
 
 jobs:
-  validate:
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out builder
-        uses: actions/checkout@v7
-
-      - name: Check out machine-data
-        uses: actions/checkout@v7
-        with:
-          repository: ufo-files/machine-data
-          path: _machine-data
-
-      - name: Set up Python
-        uses: actions/setup-python@v7
-        with:
-          python-version: "3.13"
-
-      - name: Build catalog
-        shell: bash
-        run: |
-          revision="$(git -C _machine-data rev-parse HEAD)"
-          python3 scripts/build_catalog.py \
-            --input _machine-data \
-            --input-repository ufo-files/machine-data \
-            --input-revision "$revision" \
-            --require-data
-
-      - name: Set up Node
-        uses: actions/setup-node@v6
-        with:
-          node-version: "24"
-          cache: npm
-
-      - name: Install screenshot dependencies
-        run: |
-          npm ci
-          npx playwright install --with-deps chromium
-
-      - name: Validate graph screenshots
-        env:
-          GRAPH_SCREENSHOT_OUTPUT_DIR: ${{ runner.temp }}/graph-screenshots
-        shell: bash
-        run: |
-          server_log="$RUNNER_TEMP/graph-builder-http.log"
-          python3 -m http.server 4173 --bind 127.0.0.1 >"$server_log" 2>&1 &
-          server_pid=$!
-          trap 'kill "$server_pid"' EXIT
-          for attempt in {1..30}; do
-            if curl --fail --silent --show-error http://127.0.0.1:4173/ >/dev/null; then
-              break
-            fi
-            if [ "$attempt" -eq 30 ]; then
-              cat "$server_log"
-              exit 1
-            fi
-            sleep 1
-          done
-          npm run screenshots
-          if ! git diff --quiet -- README.md; then
-            git diff -- README.md
-            echo "README graph screenshots are out of date" >&2
-            exit 1
-          fi
-
   refresh:
     if: >-
       github.event_name == 'push' ||

@@ -159,8 +159,7 @@ After a completed rebuild, the separate `Refresh README graph screenshots`
 workflow captures every top-level graph type, commits the refreshed previews, and
 updates the README gallery. It also runs after late rebuild failures in case the
 catalog commit completed before deployment failed, runs when screenshot tooling
-changes on `main`, and can be started manually. On relevant pull requests it
-rebuilds the catalog before validating screenshot generation independently.
+changes on `main`, and can be started manually. It does not run for pull requests.
 
 ## Map data and licenses
 
