@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "a2c59f46b2d937807839a97f4c3f84c3e7a502c5"
+    "revision": "324ac26f8bfd9ab6d602c9bff40e831201094ac2"
   },
-  "count": 163,
-  "totalCount": 163,
-  "shownCount": 163,
+  "count": 164,
+  "totalCount": 164,
+  "shownCount": 164,
   "candidates": [
     {
       "category": "organization",
@@ -1006,8 +1006,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 814,
-        "documentCount": 187
+        "mentions": 815,
+        "documentCount": 188
       },
       "right": {
         "name": "Department of Detense",
@@ -1675,6 +1675,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "REPORT ON SOVIET ISLAND IN ARCTIC",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "REPORT ON SOV ISLAND IN ARTIC",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Iechnical Intelligence Center",
@@ -1902,8 +1918,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 923,
-        "documentCount": 271
+        "mentions": 937,
+        "documentCount": 273
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -2254,8 +2270,8 @@
       "category": "organization",
       "left": {
         "name": "Under Secretary of Defense for Intelligence",
-        "mentions": 4,
-        "documentCount": 4
+        "mentions": 5,
+        "documentCount": 5
       },
       "right": {
         "name": "Secretary of Defense for Intelligence",
