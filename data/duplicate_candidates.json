@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "31a679acee72096596015d7ab8b5e526a4989c3e"
+    "revision": "bacb144e19026d28b296318243c55bc5227a31e4"
   },
-  "count": 144,
-  "totalCount": 144,
-  "shownCount": 144,
+  "count": 145,
+  "totalCount": 145,
+  "shownCount": 145,
   "candidates": [
     {
       "category": "organization",
@@ -398,8 +398,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 143,
-        "documentCount": 73
+        "mentions": 145,
+        "documentCount": 74
       },
       "right": {
         "name": "Fright-Patterson Air Force Base",
@@ -510,8 +510,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1903,
-        "documentCount": 410
+        "mentions": 1918,
+        "documentCount": 412
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -567,6 +567,22 @@
         "documentCount": 2
       },
       "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "program",
+      "left": {
+        "name": "Project Sign",
+        "mentions": 27,
+        "documentCount": 15
+      },
+      "right": {
+        "name": "Project Signa",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -846,8 +862,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Army",
-        "mentions": 34,
-        "documentCount": 15
+        "mentions": 35,
+        "documentCount": 16
       },
       "right": {
         "name": "Department of the Arny",
@@ -878,8 +894,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 785,
-        "documentCount": 178
+        "mentions": 787,
+        "documentCount": 179
       },
       "right": {
         "name": "Department of Detense",
@@ -1422,8 +1438,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2542,
-        "documentCount": 210
+        "mentions": 2567,
+        "documentCount": 211
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -1438,8 +1454,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 143,
-        "documentCount": 73
+        "mentions": 145,
+        "documentCount": 74
       },
       "right": {
         "name": "Fright-Petterson Air Force Base",
@@ -1486,8 +1502,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 58,
-        "documentCount": 24
+        "mentions": 60,
+        "documentCount": 25
       },
       "right": {
         "name": "Army Air Foroes",
@@ -1502,8 +1518,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 58,
-        "documentCount": 24
+        "mentions": 60,
+        "documentCount": 25
       },
       "right": {
         "name": "The Arny Air Forces",
@@ -1518,8 +1534,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 58,
-        "documentCount": 24
+        "mentions": 60,
+        "documentCount": 25
       },
       "right": {
         "name": "Army Air Forcas",
@@ -1662,8 +1678,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1903,
-        "documentCount": 410
+        "mentions": 1918,
+        "documentCount": 412
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -1699,8 +1715,8 @@
       },
       "right": {
         "name": "Department of the Army",
-        "mentions": 34,
-        "documentCount": 15
+        "mentions": 35,
+        "documentCount": 16
       },
       "similarity": 0.93,
       "reason": "similar name",
