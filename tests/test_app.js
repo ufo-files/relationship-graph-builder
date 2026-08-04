@@ -448,7 +448,9 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /DEFAULT_GLOBE_ROTATION = \{ x: \.66, y: \.11 \}/);
   assert.match(globe, /AUTO_ROTATION_SPEED = \.000025/);
   assert.match(globe, /MOON_EQUATORIAL_RADIUS_KM = 1737\.4/);
+  assert.match(globe, /MOON_MEAN_ORBIT_RADIUS_KM = 384_400/);
   assert.match(globe, /MOON_RADIUS = MOON_EQUATORIAL_RADIUS_KM \/ EARTH_EQUATORIAL_RADIUS_KM/);
+  assert.match(globe, /MOON_ORBIT_RADIUS = MOON_MEAN_ORBIT_RADIUS_KM \/ EARTH_EQUATORIAL_RADIUS_KM/);
   assert.match(globe, /MOON_ORBIT_DAYS = 27\.322/);
   assert.match(globe, /MOON_DISPLAY_ORBIT_PERIOD_MS = 30_000/);
   assert.match(globe, /MOON_ORBIT_SPEED = Math\.PI \* 2 \/ MOON_DISPLAY_ORBIT_PERIOD_MS/);
@@ -456,10 +458,13 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /loadMoonTexture\(\) \{[\s\S]*new THREE\.TextureLoader\(\)\.load\([\s\S]*moon-paper\.png/);
   assert.match(globe, /setVisible\(visible\) \{[\s\S]*if \(visible\) \{[\s\S]*this\.loadMoonTexture\(\)/);
   assert.doesNotMatch(globe.slice(globe.indexOf("  addMoon()"), globe.indexOf("  loadMoonTexture()")), /TextureLoader/);
-  assert.match(globe, /new THREE\.LineLoop/);
+  assert.doesNotMatch(globe, /moon-orbit-path|new THREE\.LineLoop/);
   assert.match(globe, /moon\.rotation\.y = Math\.PI/);
   assert.match(globe, /this\.earthMoonSystem\.add\(orbitPlane\)/);
   assert.match(globe, /this\.earthMoonSystem\.rotation\.y \+= dx \* \.006/);
+  assert.match(globe, /MAX_CAMERA_DISTANCE = 180/);
+  assert.match(globe, /new THREE\.PerspectiveCamera\(38, 1, \.1, 500\)/);
+  assert.match(globe, /this\.camera\.position\.z \* zoomFactor/);
   assert.match(globe, /this\.moonOrbit\.rotation\.y \+= elapsed \* MOON_ORBIT_SPEED/);
   assert.match(html, /Drag or use arrow keys to rotate the Earth and Moon together/);
   assert.match(globe, /QuadraticBezierCurve3/);

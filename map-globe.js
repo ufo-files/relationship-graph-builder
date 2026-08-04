@@ -11,14 +11,15 @@ const DEFAULT_GLOBE_ROTATION = { x: .66, y: .11 };
 const AUTO_ROTATION_SPEED = .000025;
 const EARTH_EQUATORIAL_RADIUS_KM = 6371;
 const MOON_EQUATORIAL_RADIUS_KM = 1737.4;
+const MOON_MEAN_ORBIT_RADIUS_KM = 384_400;
 const MOON_ORBIT_DAYS = 27.322;
 const MOON_ORBIT_INCLINATION = 5.145;
 const MOON_RADIUS = MOON_EQUATORIAL_RADIUS_KM / EARTH_EQUATORIAL_RADIUS_KM;
-// The true average separation is about 60 Earth radii; this display-only gap keeps the map usable.
-const MOON_DISPLAY_ORBIT_RADIUS = 1.42;
+const MOON_ORBIT_RADIUS = MOON_MEAN_ORBIT_RADIUS_KM / EARTH_EQUATORIAL_RADIUS_KM;
 // Physical time is compressed so a complete orbit is observable in the interactive view.
 const MOON_DISPLAY_ORBIT_PERIOD_MS = 30_000;
 const MOON_ORBIT_SPEED = Math.PI * 2 / MOON_DISPLAY_ORBIT_PERIOD_MS;
+const MAX_CAMERA_DISTANCE = 180;
 
 function cameraDistanceForCoverage(verticalFov, coverage) {
   const halfFov = THREE.MathUtils.degToRad(verticalFov / 2);
@@ -31,7 +32,7 @@ class GlobeMap {
     this.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(38, 1, .1, 100);
+    this.camera = new THREE.PerspectiveCamera(38, 1, .1, 500);
     this.camera.position.set(DEFAULT_CAMERA_TARGET_X, 0, cameraDistanceForCoverage(this.camera.fov, DEFAULT_GLOBE_COVERAGE));
     this.camera.lookAt(DEFAULT_CAMERA_TARGET_X, 0, 0);
     this.earthMoonSystem = new THREE.Group();
@@ -61,27 +62,13 @@ class GlobeMap {
     const orbitPlane = new THREE.Group();
     orbitPlane.rotation.z = THREE.MathUtils.degToRad(MOON_ORBIT_INCLINATION);
     this.earthMoonSystem.add(orbitPlane);
-    const orbitPoints = Array.from({ length: 128 }, (_, index) => {
-      const angle = index / 128 * Math.PI * 2;
-      return new THREE.Vector3(
-        Math.cos(angle) * MOON_DISPLAY_ORBIT_RADIUS,
-        0,
-        Math.sin(angle) * MOON_DISPLAY_ORBIT_RADIUS
-      );
-    });
-    const orbitPath = new THREE.LineLoop(
-      new THREE.BufferGeometry().setFromPoints(orbitPoints),
-      new THREE.LineBasicMaterial({ color: 0x111111, transparent: true, opacity: .18 })
-    );
-    orbitPath.name = "moon-orbit-path";
-    orbitPlane.add(orbitPath);
     this.moonOrbit = new THREE.Group();
     orbitPlane.add(this.moonOrbit);
 
     this.moonMaterial = new THREE.MeshBasicMaterial({ color: 0xd0cec7 });
     const moon = new THREE.Group();
     moon.name = "moon";
-    moon.position.x = MOON_DISPLAY_ORBIT_RADIUS;
+    moon.position.x = MOON_ORBIT_RADIUS;
     // SphereGeometry maps the source's central near-side meridian to +X. At the
     // starting +X orbital position, rotate it toward Earth (-X). Inheriting the
     // orbit group's rotation then keeps that same face Earth-facing at every angle.
@@ -226,7 +213,8 @@ class GlobeMap {
     canvas.addEventListener("pointercancel", () => { this.drag = null; });
     canvas.addEventListener("wheel", event => {
       event.preventDefault();
-      this.camera.position.z = THREE.MathUtils.clamp(this.camera.position.z + event.deltaY * .002, 1.75, 5);
+      const zoomFactor = Math.exp(event.deltaY * .0015);
+      this.camera.position.z = THREE.MathUtils.clamp(this.camera.position.z * zoomFactor, 1.75, MAX_CAMERA_DISTANCE);
       this.draw();
     }, { passive: false });
     canvas.addEventListener("dblclick", () => this.reset());
@@ -237,7 +225,7 @@ class GlobeMap {
       else if (event.key === "ArrowUp") this.earthMoonSystem.rotation.x = Math.max(-1.15, this.earthMoonSystem.rotation.x - step);
       else if (event.key === "ArrowDown") this.earthMoonSystem.rotation.x = Math.min(1.15, this.earthMoonSystem.rotation.x + step);
       else if (["+", "="].includes(event.key)) this.camera.position.z = Math.max(1.75, this.camera.position.z - .2);
-      else if (event.key === "-") this.camera.position.z = Math.min(5, this.camera.position.z + .2);
+      else if (event.key === "-") this.camera.position.z = Math.min(MAX_CAMERA_DISTANCE, this.camera.position.z * 1.35);
       else return;
       event.preventDefault();
       this.draw();

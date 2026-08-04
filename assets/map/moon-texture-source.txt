@@ -17,11 +17,12 @@ magick moon-lroc-color.jpg -resize 1024x512! -colorspace Gray -gaussian-blur 0x1
 Physical values used by the map renderer:
 - Moon equatorial radius: 1,737.4 km
 - Earth equatorial radius: 6,371.0 km
+- Mean Earth–Moon center-to-center distance: 384,400 km
 - Moon orbital period and synchronous rotation period: 27.322 Earth days
 - Moon orbit inclination: 5.145 degrees
 
-The interactive map visually compresses the orbital period to 30 seconds and the
-displayed Earth–Moon gap so the motion and map remain usable. These display values
-are not presented as physical scale.
+The interactive map visually compresses the orbital period to 30 seconds but keeps
+the mean center-to-center distance at physical scale. The default camera preserves
+Earth's map scale; zoom out to inspect the complete Earth–Moon spacing.
 
 Physical data reference: https://science.nasa.gov/moon/by-the-numbers/
