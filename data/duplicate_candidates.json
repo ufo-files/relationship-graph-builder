@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "f634e50546b46c17410bd36ceed288406298e31b"
+    "revision": "b4198728b2aa8f1bb0079bd58e360389999ddc29"
   },
-  "count": 157,
-  "totalCount": 157,
-  "shownCount": 157,
+  "count": 160,
+  "totalCount": 160,
+  "shownCount": 160,
   "candidates": [
     {
       "category": "organization",
@@ -542,8 +542,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1967,
-        "documentCount": 434
+        "mentions": 1972,
+        "documentCount": 436
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -909,9 +909,25 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Department of the Aruy",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
         "name": "Department of the Army",
-        "mentions": 36,
-        "documentCount": 17
+        "mentions": 37,
+        "documentCount": 18
+      },
+      "similarity": 0.955,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of the Army",
+        "mentions": 37,
+        "documentCount": 18
       },
       "right": {
         "name": "Department of the Arny",
@@ -931,6 +947,22 @@
       },
       "right": {
         "name": "Post Office Inspeotors",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.955,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of the Aruy",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of the Arny",
         "mentions": 2,
         "documentCount": 2
       },
@@ -987,6 +1019,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "House Appropriations Committee",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "House Appropriations Subcommittee",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Contral Ticket Office",
@@ -997,22 +1045,6 @@
         "name": "Central Ticket Office",
         "mentions": 5,
         "documentCount": 4
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "House Appropriations Committee",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "House Appropriations Subcommittee",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -1534,8 +1566,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2603,
-        "documentCount": 220
+        "mentions": 2604,
+        "documentCount": 221
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -1742,8 +1774,8 @@
       "category": "program",
       "left": {
         "name": "PROGRAM SUMMARY",
-        "mentions": 10,
-        "documentCount": 10
+        "mentions": 11,
+        "documentCount": 11
       },
       "right": {
         "name": "Program Sunmary",
@@ -1822,8 +1854,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1967,
-        "documentCount": 434
+        "mentions": 1972,
+        "documentCount": 436
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -1838,8 +1870,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 916,
-        "documentCount": 264
+        "mentions": 917,
+        "documentCount": 265
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -1859,8 +1891,24 @@
       },
       "right": {
         "name": "Department of the Army",
-        "mentions": 36,
-        "documentCount": 17
+        "mentions": 37,
+        "documentCount": 18
+      },
+      "similarity": 0.93,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of the Air",
+        "mentions": 28,
+        "documentCount": 22
+      },
+      "right": {
+        "name": "Department of the Aruy",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.93,
       "reason": "similar name",
@@ -2126,8 +2174,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1967,
-        "documentCount": 434
+        "mentions": 1972,
+        "documentCount": 436
       },
       "right": {
         "name": "CENTRAL INTELLIGZACE AGENCY",
