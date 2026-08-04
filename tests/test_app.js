@@ -339,6 +339,9 @@ test("graph type is the first builder section and cards explain their data scope
   assert.match(source, /label: "Scatter", scope: "Entities"/);
   assert.match(source, /label: "Bars", scope: "All collections"/);
   assert.match(source, /label: "Timeline", scope: "Documents \+ events"/);
+  assert.match(source, /if \(type === "timeline"\).*categories: \["date"\]/);
+  assert.match(source, /state\.config\.type === "timeline" \|\|/);
+  assert.match(source, /\(state\.catalog\.entities \|\| \[\]\)\.filter\(entity => entityMatches\(entity\)\)/);
   assert.match(source, /label: "Network", scope: "All"/);
   assert.match(source, /if \(type === "network"\).*categories: \[\.\.\.ENTITY_CATEGORIES\].*sources: \[\].*allSources: true/);
   assert.match(source, /label: "Matrix", scope: "Collections × top entities"/);

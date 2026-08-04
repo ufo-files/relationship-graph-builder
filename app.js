@@ -419,7 +419,7 @@ function renderControls() {
   const selectedSourceCount = state.config.allSources ? sourceNames.length : sourceNames.filter(name => state.config.sources.includes(name)).length;
   const sourceChecks = sources.map(source => `<label class="check-chip"><input type="checkbox" data-source="${escapeHTML(source.name)}" ${sourceIsSelected(source.name, state.config.sources, state.config.allSources) ? "checked" : ""}><span>${escapeHTML(source.name)}</span></label>`).join("");
   const duplicateCount = state.catalog?.counts?.possibleDuplicates || state.catalog?.duplicateCandidates?.length || 0;
-  const usesEntities = state.config.type === "table" ? state.config.tableRole === "entity" : !["bars", "timeline"].includes(state.config.type) || state.config.aggregation === "entity" || state.config.timelineRole === "entity";
+  const usesEntities = state.config.type === "table" ? state.config.tableRole === "entity" : state.config.type === "timeline" || !["bars", "timeline"].includes(state.config.type) || state.config.aggregation === "entity" || state.config.timelineRole === "entity";
   $("#filterControls").innerHTML = `
     ${usesEntities ? `<div class="control"><div class="control-title">Entity categories</div><div class="check-grid">${categoryChecks}</div></div>` : ""}
     <div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div>
@@ -481,7 +481,7 @@ function setType(type) {
   if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "independentDocumentCount", color: "category", categories: [...ENTITY_CATEGORIES], sources: [], allSources: true });
   if (type === "map") Object.assign(state.config, { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50 });
   if (type === "book") Object.assign(state.config, { size: "contextAdjustedMentions", color: "intensity", labels: "all", includeHighInflation: true, limit: 250 });
-  if (type === "timeline") Object.assign(state.config, { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source" });
+  if (type === "timeline") Object.assign(state.config, { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source", categories: ["date"] });
   if (type === "matrix") Object.assign(state.config, { matrixColumns: "entity", color: "intensity" });
   if (type === "table") Object.assign(state.config, { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 });
   state.selected = null;
@@ -656,7 +656,7 @@ function documentRelationshipNetworks(documents, displayedDocuments, maximumNeig
   const documentById = new Map(documents.map(document => [document.id, document]));
   const displayedIds = new Set(displayedDocuments.map(document => document.id));
   const scores = new Map(displayedDocuments.map(document => [document.id, new Map()]));
-  (state.catalog.entities || []).forEach(entity => {
+  (state.catalog.entities || []).filter(entity => entityMatches(entity)).forEach(entity => {
     const memberIds = (entity.documentIds || []).filter(id => documentById.has(id));
     memberIds.forEach(sourceId => {
       if (!displayedIds.has(sourceId)) return;
