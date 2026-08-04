@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "5db28fc9d58af78ba20ce9b8f08437da9c3ca4ac"
+    "revision": "80ce7b0d64ad459360a0b14c444dc7472046ef2b"
   },
-  "count": 208,
-  "totalCount": 208,
+  "count": 210,
+  "totalCount": 210,
   "shownCount": 200,
   "candidates": [
     {
@@ -494,8 +494,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 157,
-        "documentCount": 82
+        "mentions": 158,
+        "documentCount": 83
       },
       "right": {
         "name": "Fright-Patterson Air Force Base",
@@ -580,6 +580,22 @@
       "right": {
         "name": "Iechnical Intelligence Center",
         "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "James McDonald",
+        "mentions": 13,
+        "documentCount": 11
+      },
+      "right": {
+        "name": "James MacDonald",
+        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.966,
@@ -702,8 +718,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2236,
-        "documentCount": 534
+        "mentions": 2244,
+        "documentCount": 535
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -718,8 +734,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2236,
-        "documentCount": 534
+        "mentions": 2244,
+        "documentCount": 535
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -734,8 +750,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2236,
-        "documentCount": 534
+        "mentions": 2244,
+        "documentCount": 535
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -750,8 +766,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2236,
-        "documentCount": 534
+        "mentions": 2244,
+        "documentCount": 535
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1198,8 +1214,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 146,
-        "documentCount": 54
+        "mentions": 147,
+        "documentCount": 55
       },
       "right": {
         "name": "University of Colcrado",
@@ -1278,8 +1294,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 859,
-        "documentCount": 210
+        "mentions": 860,
+        "documentCount": 211
       },
       "right": {
         "name": "Department of Detense",
@@ -1662,8 +1678,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2236,
-        "documentCount": 534
+        "mentions": 2244,
+        "documentCount": 535
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2029,6 +2045,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Radio Nave Propagation Institute",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Badio Vave Propagation Institute",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Intelligence Com",
         "mentions": 2,
         "documentCount": 2
@@ -2110,8 +2142,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2755,
-        "documentCount": 257
+        "mentions": 2761,
+        "documentCount": 258
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -2126,8 +2158,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 157,
-        "documentCount": 82
+        "mentions": 158,
+        "documentCount": 83
       },
       "right": {
         "name": "Fright-Petterson Air Force Base",
@@ -2414,8 +2446,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2236,
-        "documentCount": 534
+        "mentions": 2244,
+        "documentCount": 535
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2430,8 +2462,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 1020,
-        "documentCount": 318
+        "mentions": 1021,
+        "documentCount": 319
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -2603,6 +2635,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Edward Condon",
+        "mentions": 21,
+        "documentCount": 13
+      },
+      "right": {
+        "name": "Edward U. Condon",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Detroit Office",
@@ -2616,22 +2664,6 @@
       },
       "similarity": 0.929,
       "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Edward Condon",
-        "mentions": 18,
-        "documentCount": 12
-      },
-      "right": {
-        "name": "Edward U. Condon",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -2798,8 +2830,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2236,
-        "documentCount": 534
+        "mentions": 2244,
+        "documentCount": 535
       },
       "right": {
         "name": "GENTRAL INTELLIGENGE AGENCY",
@@ -2814,8 +2846,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2236,
-        "documentCount": 534
+        "mentions": 2244,
+        "documentCount": 535
       },
       "right": {
         "name": "CENTRAL INTELLIGZACE AGENCY",
@@ -3171,38 +3203,6 @@
       },
       "right": {
         "name": "Long-Range Space Propulsion Options",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "GOVEaNMENT PRINTING OFFICE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "GOVERNMENI PRINTING OFFICE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "GOVEaNMENT PRINTING OFFICE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "GOVERMMENT PRINTING OFFICE",
         "mentions": 2,
         "documentCount": 2
       },
