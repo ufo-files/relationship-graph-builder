@@ -465,7 +465,7 @@ test("map and timeline expose relationship controls", () => {
   assert.match(source, /relationships: overlay\.edges\.map/);
 });
 
-test("Book is a first-class area bookshelf for transcript-backed titles", () => {
+test("Book is a first-class proportional bookshelf for transcript-backed titles", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
   vm.runInContext(source, context);
@@ -476,13 +476,24 @@ test("Book is a first-class area bookshelf for transcript-backed titles", () => 
         { id: "two", name: "Contact", category: "book", contextAdjustedMentions: 4 },
         { id: "three", name: "Journey of Souls", category: "book", contextAdjustedMentions: 2 }
       ];
-      const layout = bookshelfLayout(items, 900, 600, "contextAdjustedMentions");
+      const layout = bookshelfLayout(items, 900, 600);
+      const denseItems = Array.from({ length: 132 }, (_, index) => ({ id: String(index) }));
+      const denseLayout = bookshelfLayout(denseItems, 970, 732);
       return JSON.stringify({
         types: TYPES.map(type => type.id),
         bookTypeLabel: TYPES.find(type => type.id === "book").label,
         title: dataAwareTitle({ ...DEFAULT, type: "book", categories: ["book"] }),
-        blocks: layout.blocks.map(block => ({ id: block.item.id, area: block.width * block.height })),
+        blocks: layout.blocks.map(block => ({ id: block.item.id, x: block.x, y: block.y, width: block.width, height: block.height })),
         shelves: layout.shelfYs.length,
+        columns: layout.columns,
+        rows: layout.rows,
+        dense: {
+          columns: denseLayout.columns,
+          rows: denseLayout.rows,
+          blocks: denseLayout.blocks.map(block => ({ x: block.x, y: block.y, width: block.width, height: block.height })),
+          labelSize: bookSpineLabelSize(denseLayout.blocks[0], 12),
+          label: bookLabelGeometry(denseLayout.blocks[0], bookSpineLabelSize(denseLayout.blocks[0], 12))
+        },
         narrowLabel: bookLabelLines("Extraterrestrial Intelligence", 8, 2)
       });
     })()
@@ -492,14 +503,28 @@ test("Book is a first-class area bookshelf for transcript-backed titles", () => 
   assert.equal(result.bookTypeLabel, "Bookshelf");
   assert.equal(result.title, "Books Mentioned");
   assert.equal(result.blocks.length, 3);
-  assert.ok(result.blocks[0].area > result.blocks[1].area);
-  assert.ok(result.blocks[1].area > result.blocks[2].area);
+  assert.ok(result.blocks.every(block => block.width === result.blocks[0].width));
+  assert.ok(result.blocks.every(block => block.height === result.blocks[0].height));
+  assert.ok(result.blocks.every(block => block.width * 3 === block.height * 2));
   assert.ok(result.shelves >= 1);
+  assert.equal(result.columns * result.rows >= result.blocks.length, true);
+  assert.equal(result.dense.columns * result.dense.rows >= result.dense.blocks.length, true);
+  assert.ok(result.dense.blocks.every(block => block.width * 3 === block.height * 2));
+  assert.ok(result.dense.blocks.every(block => block.x >= 0 && block.y >= 0 && block.x + block.width <= 970 && block.y + block.height <= 732));
+  assert.equal(new Set(result.dense.blocks.map(block => block.width)).size, 1);
+  assert.equal(new Set(result.dense.blocks.map(block => block.height)).size, 1);
+  assert.equal(result.dense.label.vertical, true);
+  assert.ok(result.dense.labelSize >= 8 && result.dense.labelSize <= 12);
+  assert.match(result.dense.label.transform, /^rotate\(90 /);
+  assert.ok(result.dense.label.maxCharacters >= 4);
+  assert.ok(result.dense.label.maxLines >= 1);
   assert.ok(result.narrowLabel.every(line => line.length <= 8));
   assert.match(result.narrowLabel.at(-1), /…$/);
   assert.match(source, /book: \{[^}]*labels: "all"/);
   assert.doesNotMatch(source, /if \(type === "book"\).*categories: \["book"\]/);
   assert.match(source, /const data = filteredEntities\(\["book"\]\)/);
+  assert.match(source, /Even 2:3 book grid/);
+  assert.match(source, /state\.config\.type === "book" \? "Shade" : "Size \+ shade"/);
   assert.match(source, /const fixedCategories = state\.config\.type === "book" \|\| state\.config\.type === "document"/);
   assert.match(source, /state\.config\.type === "book" \? category === "book"/);
   assert.match(source, /fixedCategories \? "disabled"/);

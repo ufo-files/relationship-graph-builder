@@ -372,7 +372,7 @@ function renderControls() {
   } else if (state.config.type === "map") {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Geocoded locations</option></select></div><div class="control"><div class="control-title">Position</div><select disabled><option>Reviewed coordinates</option></select></div>` + relationshipTypeControl();
   } else if (state.config.type === "book") {
-    roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Book titles</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Area-proportional shelves</option></select></div>`;
+    roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Book titles</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Even 2:3 book grid</option></select></div>`;
   } else if (state.config.type === "document") {
     roles = `<div class="control"><div class="control-title">Rows</div><select disabled><option>Completed transcript files</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Searchable file browser</option></select></div>`;
   } else if (state.config.type === "scatter") {
@@ -411,7 +411,7 @@ function renderControls() {
     $("#encodeControls").innerHTML = labelSizeControl;
   } else {
     $("#encodeControls").innerHTML = (["scatter", "network", "timeline", "map", "book"].includes(state.config.type)
-      ? controlSelect("size", "Size + shade", sizeOptions) + `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>` + controlSelect("labels", "Labels", [{ value: "top", label: "Most important" }, { value: "all", label: "All" }, { value: "none", label: "None" }])
+      ? controlSelect("size", state.config.type === "book" ? "Shade" : "Size + shade", sizeOptions) + `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>` + controlSelect("labels", "Labels", [{ value: "top", label: "Most important" }, { value: "all", label: "All" }, { value: "none", label: "None" }])
       : `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>`) + relationshipControls + labelSizeControl + zoomControl;
   }
 
@@ -1085,51 +1085,54 @@ function renderMap() {
   setSummary(`${data.length} of ${mapped.length} mapped locations${unmapped ? ` · ${unmapped} unmapped` : ""}`, "map");
 }
 
-function bookshelfLayout(items, width, height, valueKey) {
-  if (!items.length) return { blocks: [], shelfYs: [] };
+function bookshelfLayout(items, width, height) {
+  if (!items.length) return { blocks: [], shelfYs: [], columns: 0, rows: 0 };
   const inset = 14;
-  const shelfGap = 10;
-  const blockGap = 3;
-  const weighted = items.map(item => ({ item, weight: Math.max(1, Number(item[valueKey]) || 0) }));
-  const total = weighted.reduce((sum, entry) => sum + entry.weight, 0);
-  const targetRows = Math.max(1, Math.min(items.length, Math.round(Math.sqrt(items.length * height / width))));
-  const targetWeight = total / targetRows;
-  const rows = [];
-  let row = [];
-  let rowWeight = 0;
-  weighted.forEach(entry => {
-    if (row.length && rowWeight >= targetWeight && rows.length < targetRows - 1) {
-      rows.push({ entries: row, weight: rowWeight });
-      row = [];
-      rowWeight = 0;
-    }
-    row.push(entry);
-    rowWeight += entry.weight;
-  });
-  if (row.length) rows.push({ entries: row, weight: rowWeight });
+  const gap = 4;
+  const bookUnits = { width: 2, height: 3 };
+  let best = null;
 
-  const usableWidth = width - inset * 2;
-  const usableHeight = height - inset * 2 - shelfGap * (rows.length - 1);
-  const blocks = [];
-  const shelfYs = [];
-  let y = inset;
-  rows.forEach((shelf, shelfIndex) => {
-    const shelfHeight = shelfIndex === rows.length - 1
-      ? height - inset - y
-      : usableHeight * shelf.weight / total;
-    const rowWidth = usableWidth - blockGap * (shelf.entries.length - 1);
-    let x = inset;
-    shelf.entries.forEach((entry, entryIndex) => {
-      const blockWidth = entryIndex === shelf.entries.length - 1
-        ? width - inset - x
-        : rowWidth * entry.weight / shelf.weight;
-      blocks.push({ item: entry.item, x, y, width: blockWidth, height: shelfHeight, shelf: shelfIndex });
-      x += blockWidth + blockGap;
-    });
-    shelfYs.push(y + shelfHeight + shelfGap / 2);
-    y += shelfHeight + shelfGap;
+  for (let columns = 1; columns <= items.length; columns += 1) {
+    const rows = Math.ceil(items.length / columns);
+    const availableWidth = width - inset * 2 - gap * (columns - 1);
+    const availableHeight = height - inset * 2 - gap * (rows - 1);
+    if (availableWidth <= 0 || availableHeight <= 0) continue;
+    const unit = Math.floor(Math.min(
+      availableWidth / columns / bookUnits.width,
+      availableHeight / rows / bookUnits.height
+    ));
+    if (unit < 1) continue;
+    const bookWidth = unit * bookUnits.width;
+    const bookHeight = unit * bookUnits.height;
+    const area = bookWidth * bookHeight;
+    const emptySlots = columns * rows - items.length;
+    if (!best || area > best.area || (area === best.area && emptySlots < best.emptySlots)) {
+      best = { columns, rows, bookWidth, bookHeight, area, emptySlots };
+    }
+  }
+
+  if (!best) return { blocks: [], shelfYs: [], columns: 0, rows: 0 };
+  const gridWidth = best.columns * best.bookWidth + (best.columns - 1) * gap;
+  const gridHeight = best.rows * best.bookHeight + (best.rows - 1) * gap;
+  const startX = Math.floor((width - gridWidth) / 2);
+  const startY = Math.floor((height - gridHeight) / 2);
+  const blocks = items.map((item, index) => {
+    const column = index % best.columns;
+    const row = Math.floor(index / best.columns);
+    return {
+      item,
+      x: startX + column * (best.bookWidth + gap),
+      y: startY + row * (best.bookHeight + gap),
+      width: best.bookWidth,
+      height: best.bookHeight,
+      shelf: row,
+      column
+    };
   });
-  return { blocks, shelfYs };
+  const shelfYs = Array.from({ length: best.rows }, (_, row) => (
+    startY + (row + 1) * best.bookHeight + row * gap + gap / 2
+  ));
+  return { blocks, shelfYs, columns: best.columns, rows: best.rows };
 }
 
 function bookLabelLines(title, maxCharacters, maxLines) {
@@ -1150,6 +1153,26 @@ function bookLabelLines(title, maxCharacters, maxLines) {
   return lines;
 }
 
+function bookLabelGeometry(block, labelSize) {
+  const vertical = block.height > block.width;
+  const lineLength = vertical ? block.height : block.width;
+  const lineSpace = vertical ? block.width : block.height;
+  const x = vertical ? block.x + block.width - 6 : block.x + 6;
+  const y = block.y + (vertical ? 6 : labelSize + 3);
+  return {
+    vertical,
+    x,
+    y,
+    maxCharacters: Math.max(4, Math.floor((lineLength - 12) / (labelSize * .62))),
+    maxLines: Math.max(1, Math.min(3, Math.floor((lineSpace - 12) / (labelSize * 1.15)))),
+    transform: vertical ? `rotate(90 ${x} ${y})` : ""
+  };
+}
+
+function bookSpineLabelSize(block, requestedSize) {
+  return Math.min(requestedSize, Math.max(8, Math.floor(block.width / 5)));
+}
+
 function renderBook() {
   const { svg, width, height } = clearChart();
   const data = filteredEntities(["book"])
@@ -1157,7 +1180,7 @@ function renderBook() {
     .slice(0, state.config.limit);
   if (!data.length) return showEmpty();
   const extent = valueExtent(data, state.config.size);
-  const { blocks, shelfYs } = bookshelfLayout(data, width, height, state.config.size);
+  const { blocks, shelfYs } = bookshelfLayout(data, width, height);
   shelfYs.forEach(y => svg.append(el("line", { x1: 8, y1: y, x2: width - 8, y2: y, stroke: "#111", "stroke-opacity": .55, "stroke-width": 2, class: "book-shelf" })));
   blocks.forEach(block => {
     const shade = scale(block.item[state.config.size], extent, [.16, .94]);
@@ -1169,15 +1192,16 @@ function renderBook() {
     rect.addEventListener("click", () => inspectEntity(block.item));
     svg.append(rect);
     const shouldLabel = state.config.labels !== "none";
-    if (!shouldLabel || block.width < 42 || block.height < state.config.labelSize + 10) return;
-    const maxCharacters = Math.max(4, Math.floor((block.width - 12) / (state.config.labelSize * .62)));
-    const maxLines = Math.max(1, Math.min(3, Math.floor((block.height - 12) / (state.config.labelSize * 1.15))));
+    const labelSize = bookSpineLabelSize(block, state.config.labelSize);
+    if (!shouldLabel || block.width < 24 || block.height < labelSize + 10) return;
+    const labelGeometry = bookLabelGeometry(block, labelSize);
     const text = el("text", {
-      x: block.x + 6, y: block.y + state.config.labelSize + 3,
-      fill: shade > .55 ? "#f6f5ef" : "#111", class: "book-label", style: `font-size:${state.config.labelSize}px`
+      x: labelGeometry.x, y: labelGeometry.y,
+      fill: shade > .55 ? "#f6f5ef" : "#111", class: "book-label", style: `font-size:${labelSize}px`,
+      ...(labelGeometry.transform ? { transform: labelGeometry.transform } : {})
     });
-    bookLabelLines(block.item.name, maxCharacters, maxLines).forEach((line, lineIndex) => text.append(el("tspan", {
-      x: block.x + 6, dy: lineIndex ? "1.15em" : 0
+    bookLabelLines(block.item.name, labelGeometry.maxCharacters, labelGeometry.maxLines).forEach((line, lineIndex) => text.append(el("tspan", {
+      x: labelGeometry.x, dy: lineIndex ? "1.15em" : 0
     }, line)));
     svg.append(text);
   });
@@ -1535,7 +1559,7 @@ function renderGraph() {
   const descriptions = {
     network: state.config.nodeRole === "collection" ? "Collections connected by shared published entities." : "Evidence-backed connections across the local archive.", scatter: `${label(state.config.x)} compared with ${label(state.config.y)}.`,
     map: `Geocoded location entities sized by ${label(state.config.size)}.`,
-    book: `Transcript-mentioned books arranged as an area-proportional shelf, sized by ${label(state.config.size)}.`,
+    book: `Transcript-mentioned books arranged in an even grid of upright book proportions; shade represents ${label(state.config.size)}.`,
     document: "Find completed OCR and transcript files across the selected collections.",
     bars: `${label(state.config.y)} grouped by ${label(state.config.aggregation)}.`,
     timeline: `${state.config.timelineRole === "entity" ? "Entities" : "Completed transcript files"} by cataloging time.`,
