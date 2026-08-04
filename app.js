@@ -1199,6 +1199,18 @@ function documentEntityCounts() {
   return counts;
 }
 
+function documentCardHTML(document, wordExtent) {
+  const intensity = clampedScale(document.words, wordExtent, [.14, .94]);
+  return `<article class="document-card">
+    <button class="document-card-main" type="button" data-document-inspect="${escapeHTML(document.id)}">
+      <span class="document-file-icon" aria-hidden="true" title="${formatNumber(document.words)} words" style="--document-intensity:${intensity};--document-icon-ink:${intensity > .56 ? "#f6f5ef" : "#111"}">TXT</span>
+      <span class="document-file-copy"><strong>${escapeHTML(document.title || document.path)}</strong><small>${escapeHTML(document.path)}</small></span>
+    </button>
+    <div class="document-card-meta"><span>${escapeHTML(document.source)}</span><span>${formatNumber(document.entityCount)} published entities · ${formatNumber(document.words)} words</span></div>
+    <a class="document-source-link" href="${escapeHTML(machineDataDocumentURL(document))}" target="_blank" rel="noopener noreferrer">Open transcript ↗</a>
+  </article>`;
+}
+
 function renderDocument() {
   hideMapView();
   const svg = $("#chart"), browser = $("#tableView");
@@ -1219,20 +1231,25 @@ function renderDocument() {
     return showEmpty();
   }
   browser.style.setProperty("--table-font-size", `${state.config.labelSize}px`);
-  const visible = matching.slice(0, 100);
   const { extent: wordExtent } = robustValueExtent(matching, "words");
-  browser.innerHTML = `<div class="document-browser-status"><strong>${query ? "Search results" : "All documents"}</strong><span>${formatNumber(matching.length)} files · showing ${formatNumber(visible.length)}</span></div><div class="document-browser">${visible.map(document => `
-    <article class="document-card">
-      <button class="document-card-main" type="button" data-document-inspect="${escapeHTML(document.id)}">
-        <span class="document-file-icon" aria-hidden="true" title="${formatNumber(document.words)} words" style="--document-intensity:${clampedScale(document.words, wordExtent, [.14, .94])};--document-icon-ink:${clampedScale(document.words, wordExtent, [.14, .94]) > .56 ? "#f6f5ef" : "#111"}">TXT</span>
-        <span class="document-file-copy"><strong>${escapeHTML(document.title || document.path)}</strong><small>${escapeHTML(document.path)}</small></span>
-      </button>
-      <div class="document-card-meta"><span>${escapeHTML(document.source)}</span><span>${formatNumber(document.entityCount)} published entities · ${formatNumber(document.words)} words</span></div>
-      <a class="document-source-link" href="${escapeHTML(machineDataDocumentURL(document))}" target="_blank" rel="noopener noreferrer">Open transcript ↗</a>
-    </article>`).join("")}</div>`;
-  $$('[data-document-inspect]').forEach(node => node.addEventListener("click", () => inspectDocument(state.documentById.get(node.dataset.documentInspect))));
+  browser.innerHTML = `<div class="document-browser-status"><strong>${query ? "Search results" : "All documents"}</strong><span data-document-count></span></div><div class="document-browser" data-document-grid></div>`;
+  const grid = $("[data-document-grid]");
+  const count = $("[data-document-count]");
+  let shown = 0;
+  const appendBatch = () => {
+    const batch = matching.slice(shown, shown + 100);
+    if (!batch.length) return;
+    grid.insertAdjacentHTML("beforeend", batch.map(document => documentCardHTML(document, wordExtent)).join(""));
+    shown += batch.length;
+    batch.forEach(document => $(`[data-document-inspect="${document.id}"]`)?.addEventListener("click", () => inspectDocument(state.documentById.get(document.id))));
+    count.textContent = `${formatNumber(matching.length)} files · showing ${formatNumber(shown)}`;
+    setSummary(`${formatNumber(matching.length)} documents · sorted by published entities · showing ${formatNumber(shown)}`, "document");
+  };
+  appendBatch();
+  browser.onscroll = () => {
+    if (shown < matching.length && browser.scrollTop + browser.clientHeight >= browser.scrollHeight - 240) appendBatch();
+  };
   drawIntensityLegend();
-  setSummary(`${formatNumber(matching.length)} documents · sorted by published entities · showing ${formatNumber(visible.length)}`, "document");
 }
 
 function mapLocationData() {

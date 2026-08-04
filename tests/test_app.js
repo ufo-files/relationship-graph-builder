@@ -480,13 +480,14 @@ test("Documents provides a searchable finder linked to immutable machine-data so
   assert.equal(result.url, "https://github.com/ufo-files/machine-data/blob/abc123/Collection%20A/pdfs/a%20file.txt");
   assert.match(source, /document: \{ size: "words", color: "source", labels: "top", documentSearch: "" \}/);
   assert.match(source, /Search title, path, collection, or format/);
-  assert.match(source, /const visible = matching\.slice\(0, 100\)/);
+  assert.match(source, /const batch = matching\.slice\(shown, shown \+ 100\)/);
+  assert.match(source, /browser\.scrollTop \+ browser\.clientHeight >= browser\.scrollHeight - 240/);
   assert.doesNotMatch(source, /data-document-folder/);
   assert.match(source, /query \? "Search results" : "All documents"/);
   assert.match(source, /class="document-card-main"[^>]*data-document-inspect/);
   assert.match(source, /class="document-source-link"[^>]*href="\$\{escapeHTML\(machineDataDocumentURL\(document\)\)\}"/);
   assert.match(source, /robustValueExtent\(matching, "words"\)/);
-  assert.match(source, /--document-intensity:\$\{clampedScale\(document\.words, wordExtent, \[\.14, \.94\]\)\}/);
+  assert.match(source, /const intensity = clampedScale\(document\.words, wordExtent, \[\.14, \.94\]\)/);
   assert.match(source, /sort\(\(left, right\) => right\.entityCount - left\.entityCount/);
   assert.match(source, /Every completed file/);
   assert.match(source, /document: renderDocument/);
