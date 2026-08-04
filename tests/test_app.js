@@ -444,7 +444,7 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /new THREE\.LineSegments/);
   assert.match(globe, /if \(!segments\.has\(edgeKey\)\)/);
   assert.match(globe, /DEFAULT_GLOBE_COVERAGE = \.72/);
-  assert.match(globe, /DEFAULT_CAMERA_TARGET_X = \.2/);
+  assert.match(globe, /DEFAULT_CAMERA_TARGET_X = 0/);
   assert.match(globe, /DEFAULT_GLOBE_ROTATION = \{ x: \.66, y: \.11 \}/);
   assert.match(globe, /AUTO_ROTATION_SPEED = \.000025/);
   assert.match(globe, /MOON_EQUATORIAL_RADIUS_KM = 1737\.4/);
