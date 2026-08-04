@@ -17,10 +17,6 @@ on:
 permissions:
   contents: read
 
-concurrency:
-  group: relationship-graph-pages
-  cancel-in-progress: ${{ github.event_name == 'workflow_run' }}
-
 jobs:
   refresh:
     if: >-
@@ -29,6 +25,9 @@ jobs:
       github.event.workflow_run.conclusion == 'success' ||
       github.event.workflow_run.conclusion == 'failure'
     runs-on: ubuntu-latest
+    concurrency:
+      group: relationship-graph-pages
+      cancel-in-progress: ${{ github.event_name == 'workflow_run' }}
     permissions:
       contents: write
     steps:
