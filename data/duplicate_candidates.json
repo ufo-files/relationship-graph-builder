@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "846f0334d4757b6488562d1d01fe12a750d1af8d"
+    "revision": "051dbf49a1aa1ddb54e18bbebc63652e72536027"
   },
-  "count": 128,
-  "totalCount": 128,
-  "shownCount": 128,
+  "count": 129,
+  "totalCount": 129,
+  "shownCount": 129,
   "candidates": [
     {
       "category": "organization",
@@ -295,6 +295,22 @@
         "documentCount": 2
       },
       "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "The Director of Central Intelligence",
+        "mentions": 9,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "The Direetor of Central Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.969,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
