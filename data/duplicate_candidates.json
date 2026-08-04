@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "863feaed46070ac2a1ec4b1f91457113978b0356"
+    "revision": "3653dea42b52e142456be252585b2461b3171c74"
   },
-  "count": 150,
-  "totalCount": 150,
-  "shownCount": 150,
+  "count": 151,
+  "totalCount": 151,
+  "shownCount": 151,
   "candidates": [
     {
       "category": "organization",
@@ -1029,6 +1029,22 @@
         "name": "Intelligence Office",
         "mentions": 5,
         "documentCount": 5
+      },
+      "similarity": 0.95,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Eglin Air Force Base",
+        "mentions": 7,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Elgin Air Force Base",
+        "mentions": 4,
+        "documentCount": 2
       },
       "similarity": 0.95,
       "reason": "similar name",
