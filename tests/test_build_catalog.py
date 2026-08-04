@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.build_catalog import build, classify_phrase, comparison_key, entity_key, extract_mentions, inflation_risk, load_registry
+from scripts.build_catalog import build, classify_phrase, comparison_key, entity_key, extract_mentions, inflation_risk, load_registry, sentence_segments
 
 
 class ClassificationTests(unittest.TestCase):
@@ -104,6 +104,46 @@ class ClassificationTests(unittest.TestCase):
         })
         self.assertNotIn(("Dr. David Jacobs", "book"), books)
         self.assertIn(("Project Blue Book", "program"), {(canonical, category) for _, canonical, category, _, _ in mentions})
+
+    def test_extracts_curated_wikileaks_ufo_entities(self):
+        mentions = extract_mentions(
+            "Our nonviolent ETI from the contiguous universe are helping bring zero point energy to Earth. "
+            "Carol Rosin worked on the Treaty on the Prevention of the Placement of Weapons in Outer Space. "
+            "War in Space reporting discussed anti-satellite weapons. "
+            "The USAF DSP satellite program tracked Fastwalkers, while Sentry Eagle shared data. "
+            "The First International Congress on UFO Phenomenon supported the Grenadian UFO Resolution. "
+            "ICUFON asked the Outer Space Committee to study Extraterrestrial Intelligence.",
+            {},
+        )
+
+        entities = {(canonical, category) for _, canonical, category, _, _ in mentions}
+        self.assertTrue({
+            ("Nonviolent ETI", "subject"),
+            ("Contiguous Universe", "subject"),
+            ("Zero-Point Energy", "subject"),
+            ("Treaty on the Prevention of the Placement of Weapons in Outer Space", "subject"),
+            ("War in Space", "subject"),
+            ("Anti-Satellite Weapons", "subject"),
+            ("Defense Support Program", "program"),
+            ("Fastwalker", "program"),
+            ("Sentry Eagle", "program"),
+            ("First International Congress on the UFO Phenomenon", "organization"),
+            ("Grenadian UFO Resolution", "subject"),
+            ("Intercontinental UFO Galactic Spacecraft-Research and Analytic Network", "organization"),
+            ("UN Committee on the Peaceful Uses of Outer Space", "government_agency"),
+            ("Extraterrestrial Intelligence", "subject"),
+        }.issubset(entities))
+        self.assertNotIn(("Extraterrestrial Intelligence", "organization"), entities)
+
+    def test_preserves_initials_and_ignores_declassification_boilerplate(self):
+        segments = list(sentence_segments(
+            "Scientific Study of Unidentified Flying Objects, E.U. Condon, published in New York.\n"
+            "Sheryl P. Walter Declassified/Released US Department of State EO Systematic Review 20 Mar 2014"
+        ))
+
+        self.assertEqual(segments, [
+            "Scientific Study of Unidentified Flying Objects, E.U. Condon, published in New York.",
+        ])
 
 
 class CatalogTests(unittest.TestCase):
