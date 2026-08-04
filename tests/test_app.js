@@ -478,7 +478,7 @@ test("Documents provides a searchable finder linked to immutable machine-data so
   });
   assert.equal(result.title, "Document Finder");
   assert.equal(result.url, "https://github.com/ufo-files/machine-data/blob/abc123/Collection%20A/pdfs/a%20file.txt");
-  assert.match(source, /document: \{ size: "words", color: "source", labels: "top", documentSearch: "" \}/);
+  assert.match(source, /document: \{ size: "words", color: "source", labels: "top", documentSearch: "", labelSize: 13 \}/);
   assert.match(source, /Search title, path, collection, or format/);
   assert.match(source, /const batch = matching\.slice\(shown, shown \+ 100\)/);
   assert.match(source, /browser\.scrollTop \+ browser\.clientHeight >= browser\.scrollHeight - 240/);

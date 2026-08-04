@@ -497,7 +497,7 @@ function setType(type) {
     network: { nodeRole: "entity", size: "independentDocumentCount", color: "category" },
     map: { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50 },
     book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 250 },
-    document: { size: "words", color: "source", labels: "top", documentSearch: "" },
+    document: { size: "words", color: "source", labels: "top", documentSearch: "", labelSize: 13 },
     bars: { aggregation: "source", y: "words", color: "intensity" },
     timeline: { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source", categories: ["date"], labels: "top", limit: 50 },
     matrix: { matrixColumns: "entity", color: "intensity" },
@@ -1207,7 +1207,7 @@ function documentCardHTML(document, wordExtent) {
       <span class="document-file-copy"><strong>${escapeHTML(document.title || document.path)}</strong><small>${escapeHTML(document.path)}</small></span>
     </button>
     <div class="document-card-meta"><span>${escapeHTML(document.source)}</span><span>${formatNumber(document.entityCount)} published entities · ${formatNumber(document.words)} words</span></div>
-    <a class="document-source-link" href="${escapeHTML(machineDataDocumentURL(document))}" target="_blank" rel="noopener noreferrer">Open transcript ↗</a>
+    <a class="document-source-link" href="${escapeHTML(machineDataDocumentURL(document))}" target="_blank" rel="noopener noreferrer">Open ↗</a>
   </article>`;
 }
 
