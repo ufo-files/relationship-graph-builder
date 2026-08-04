@@ -337,7 +337,7 @@ test("graph type is the first builder section and cards explain their data scope
   assert.match(source, /label: "Map", scope: "Locations"/);
   assert.match(source, /label: "Bookshelf", scope: "Books"/);
   assert.match(source, /label: "Scatter", scope: "Entities"/);
-  assert.match(source, /label: "Bars", scope: "All categories"/);
+  assert.match(source, /label: "Bars", scope: "All collections"/);
   assert.match(source, /label: "Timeline", scope: "Documents \+ events"/);
   assert.match(source, /label: "Network", scope: "All"/);
   assert.match(source, /label: "Matrix", scope: "Collections × top entities"/);
