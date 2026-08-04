@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "c9c022c6ae90c986e7fb999ec98406adc07832b6"
+    "revision": "23013c8b11769a4e863ebc49d085eb58dee02dec"
   },
-  "count": 148,
-  "totalCount": 148,
-  "shownCount": 148,
+  "count": 149,
+  "totalCount": 149,
+  "shownCount": 149,
   "candidates": [
     {
       "category": "organization",
@@ -1643,6 +1643,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "program",
+      "left": {
+        "name": "PROGRAM SUMMARY",
+        "mentions": 8,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "Program Sunmary",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Federal Emergency Management Agency",
@@ -1726,8 +1742,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 905,
-        "documentCount": 255
+        "mentions": 909,
+        "documentCount": 258
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
