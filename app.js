@@ -1191,6 +1191,14 @@ function machineDataDocumentURL(document) {
   return `https://github.com/${repository}/blob/${encodeURIComponent(revision)}/${path}`;
 }
 
+function documentEntityCounts() {
+  const counts = new Map(state.catalog.documents.map(document => [document.id, 0]));
+  state.catalog.entities.forEach(entity => {
+    (entity.documentIds || []).forEach(documentId => counts.set(documentId, (counts.get(documentId) || 0) + 1));
+  });
+  return counts;
+}
+
 function renderDocument() {
   hideMapView();
   const svg = $("#chart"), browser = $("#tableView");
@@ -1200,11 +1208,12 @@ function renderDocument() {
   $("#chartWrap").classList.add("table-mode");
   $("#legend").innerHTML = "";
   const query = state.config.documentSearch.trim().toLocaleLowerCase();
-  const scoped = state.catalog.documents.filter(document => sourceMatches(document.source));
+  const entityCounts = documentEntityCounts();
+  const scoped = state.catalog.documents.filter(document => sourceMatches(document.source)).map(document => ({ ...document, entityCount: entityCounts.get(document.id) || 0 }));
   const matching = scoped
     .filter(document => !query || [document.title, document.path, document.source, document.format, document.engine]
       .some(value => String(value || "").toLocaleLowerCase().includes(query)))
-    .sort((left, right) => String(left.source).localeCompare(String(right.source)) || String(left.title || left.path).localeCompare(String(right.title || right.path), undefined, { numeric: true }));
+    .sort((left, right) => right.entityCount - left.entityCount || String(left.title || left.path).localeCompare(String(right.title || right.path), undefined, { numeric: true }));
   if (!matching.length) {
     browser.replaceChildren();
     return showEmpty();
@@ -1218,12 +1227,12 @@ function renderDocument() {
         <span class="document-file-icon" aria-hidden="true" title="${formatNumber(document.words)} words" style="--document-intensity:${clampedScale(document.words, wordExtent, [.14, .94])};--document-icon-ink:${clampedScale(document.words, wordExtent, [.14, .94]) > .56 ? "#f6f5ef" : "#111"}">TXT</span>
         <span class="document-file-copy"><strong>${escapeHTML(document.title || document.path)}</strong><small>${escapeHTML(document.path)}</small></span>
       </button>
-      <div class="document-card-meta"><span>${escapeHTML(document.source)}</span><span>${escapeHTML(label(document.format))} · ${formatNumber(document.words)} words</span></div>
+      <div class="document-card-meta"><span>${escapeHTML(document.source)}</span><span>${formatNumber(document.entityCount)} published entities · ${formatNumber(document.words)} words</span></div>
       <a class="document-source-link" href="${escapeHTML(machineDataDocumentURL(document))}" target="_blank" rel="noopener noreferrer">Open transcript ↗</a>
     </article>`).join("")}</div>`;
   $$('[data-document-inspect]').forEach(node => node.addEventListener("click", () => inspectDocument(state.documentById.get(node.dataset.documentInspect))));
   drawIntensityLegend();
-  setSummary(`${formatNumber(matching.length)} matching documents · showing ${formatNumber(visible.length)}`, "document");
+  setSummary(`${formatNumber(matching.length)} documents · sorted by published entities · showing ${formatNumber(visible.length)}`, "document");
 }
 
 function mapLocationData() {
@@ -1474,7 +1483,7 @@ function setSummary(text, type) {
     ? state.config.nodeRole === "collection" ? `Links require ${state.config.minEvidence} shared published entities` : `Co-mentions require ${state.config.minEvidence} evidence segments · dense OCR sections excluded`
     : type === "map" ? "Coordinates come from the reviewed local gazetteer · ambiguous names omitted"
     : type === "book" ? "Titles require an explicit book, novel, or memoir cue in transcript text"
-    : type === "document" ? "Every tile opens the exact OCR or transcript file in the machine-data repository"
+    : type === "document" ? "Sorted by published-entity count · TXT shade represents document length · source links open the exact machine-data file"
     : `${formatNumber(state.catalog.counts.documents)} source files · transcript text unchanged`;
 }
 
