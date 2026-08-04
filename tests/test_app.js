@@ -443,9 +443,17 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /SVGLoader/);
   assert.match(globe, /new THREE\.LineSegments/);
   assert.match(globe, /if \(!segments\.has\(edgeKey\)\)/);
-  assert.match(globe, /DEFAULT_GLOBE_COVERAGE = \.95/);
+  assert.match(globe, /DEFAULT_GLOBE_COVERAGE = \.72/);
+  assert.match(globe, /DEFAULT_CAMERA_TARGET_X = \.2/);
   assert.match(globe, /DEFAULT_GLOBE_ROTATION = \{ x: \.66, y: \.11 \}/);
   assert.match(globe, /AUTO_ROTATION_SPEED = \.000025/);
+  assert.match(globe, /MOON_EQUATORIAL_RADIUS_KM = 1737\.4/);
+  assert.match(globe, /MOON_RADIUS = MOON_EQUATORIAL_RADIUS_KM \/ EARTH_EQUATORIAL_RADIUS_KM/);
+  assert.match(globe, /MOON_ORBIT_DAYS = 27\.322/);
+  assert.match(globe, /MOON_ORBIT_SPEED = AUTO_ROTATION_SPEED \/ MOON_ORBIT_DAYS/);
+  assert.match(globe, /moon-lroc-color\.jpg/);
+  assert.match(globe, /this\.moonOrbit\.rotation\.y \+= elapsed \* MOON_ORBIT_SPEED/);
+  assert.match(html, /The Moon is sized to scale and rotates synchronously as it orbits/);
   assert.match(globe, /QuadraticBezierCurve3/);
   assert.match(globe, /payload\.relationships/);
   assert.match(globe, /relationshipLayer === "always"/);
@@ -454,6 +462,8 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.ok(fs.statSync("vendor/addons/SVGLoader.js").size > 70_000);
   assert.match(threeModule, /three\.core\.min\.js/);
   assert.ok(fs.statSync("vendor/three.core.min.js").size > 300_000);
+  assert.ok(fs.statSync("assets/map/moon-lroc-color.jpg").size > 400_000);
+  assert.match(fs.readFileSync("assets/map/moon-texture-source.txt", "utf8"), /NASA Scientific Visualization Studio/);
 });
 
 test("map and timeline expose relationship controls", () => {

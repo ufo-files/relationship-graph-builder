@@ -5,9 +5,18 @@ const canvas = document.querySelector("#globeCanvas");
 const container = document.querySelector("#mapView");
 const labelLayer = document.querySelector("#globeLabels");
 const status = document.querySelector("#mapStatus");
-const DEFAULT_GLOBE_COVERAGE = .95;
+const DEFAULT_GLOBE_COVERAGE = .72;
+const DEFAULT_CAMERA_TARGET_X = .2;
 const DEFAULT_GLOBE_ROTATION = { x: .66, y: .11 };
 const AUTO_ROTATION_SPEED = .000025;
+const EARTH_EQUATORIAL_RADIUS_KM = 6371;
+const MOON_EQUATORIAL_RADIUS_KM = 1737.4;
+const MOON_ORBIT_DAYS = 27.322;
+const MOON_ORBIT_INCLINATION = 5.145;
+const MOON_RADIUS = MOON_EQUATORIAL_RADIUS_KM / EARTH_EQUATORIAL_RADIUS_KM;
+// The true average separation is about 60 Earth radii; this display-only gap keeps the map usable.
+const MOON_DISPLAY_ORBIT_RADIUS = 1.42;
+const MOON_ORBIT_SPEED = AUTO_ROTATION_SPEED / MOON_ORBIT_DAYS;
 
 function cameraDistanceForCoverage(verticalFov, coverage) {
   const halfFov = THREE.MathUtils.degToRad(verticalFov / 2);
@@ -21,7 +30,8 @@ class GlobeMap {
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(38, 1, .1, 100);
-    this.camera.position.z = cameraDistanceForCoverage(this.camera.fov, DEFAULT_GLOBE_COVERAGE);
+    this.camera.position.set(DEFAULT_CAMERA_TARGET_X, 0, cameraDistanceForCoverage(this.camera.fov, DEFAULT_GLOBE_COVERAGE));
+    this.camera.lookAt(DEFAULT_CAMERA_TARGET_X, 0, 0);
     this.globe = new THREE.Group();
     this.globe.rotation.set(DEFAULT_GLOBE_ROTATION.x, DEFAULT_GLOBE_ROTATION.y, 0);
     this.scene.add(this.globe);
@@ -38,8 +48,38 @@ class GlobeMap {
     this.lastFrameTime = null;
     this.autoRotate = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     this.addEarth();
+    this.addMoon();
     this.bindEvents();
     new ResizeObserver(() => this.resize()).observe(container);
+  }
+
+  addMoon() {
+    const orbitPlane = new THREE.Group();
+    orbitPlane.rotation.z = THREE.MathUtils.degToRad(MOON_ORBIT_INCLINATION);
+    this.scene.add(orbitPlane);
+    this.moonOrbit = new THREE.Group();
+    orbitPlane.add(this.moonOrbit);
+
+    const material = new THREE.MeshBasicMaterial({ color: 0xc4c2ba });
+    new THREE.TextureLoader().load(
+      "assets/map/moon-lroc-color.jpg",
+      texture => {
+        texture.colorSpace = THREE.SRGBColorSpace;
+        texture.anisotropy = Math.min(8, this.renderer.capabilities.getMaxAnisotropy());
+        material.map = texture;
+        material.color.set(0xffffff);
+        material.needsUpdate = true;
+        this.draw();
+      }
+    );
+    const moon = new THREE.Mesh(
+      new THREE.SphereGeometry(MOON_RADIUS, 64, 48),
+      material
+    );
+    moon.name = "moon";
+    moon.position.x = MOON_DISPLAY_ORBIT_RADIUS;
+    // As the orbit group turns, the Moon turns with it so the same face stays toward Earth.
+    this.moonOrbit.add(moon);
   }
 
   addEarth() {
@@ -267,7 +307,7 @@ class GlobeMap {
   }
 
   updateLabels() {
-    const cameraDirection = this.camera.position.clone().normalize();
+    const cameraDirection = this.camera.getWorldDirection(new THREE.Vector3()).negate();
     const bounds = canvas.getBoundingClientRect();
     this.labels.forEach(({ node, label }) => {
       const world = node.getWorldPosition(new THREE.Vector3());
@@ -302,9 +342,10 @@ class GlobeMap {
       this.lastFrameTime = null;
       return;
     }
-    if (this.autoRotate && !this.drag && this.lastFrameTime !== null) {
+    if (this.autoRotate && this.lastFrameTime !== null) {
       const elapsed = Math.min(50, timestamp - this.lastFrameTime);
-      this.globe.rotation.y += elapsed * AUTO_ROTATION_SPEED;
+      this.moonOrbit.rotation.y += elapsed * MOON_ORBIT_SPEED;
+      if (!this.drag) this.globe.rotation.y += elapsed * AUTO_ROTATION_SPEED;
     }
     this.lastFrameTime = timestamp;
     this.draw();
@@ -321,7 +362,8 @@ class GlobeMap {
 
   reset() {
     this.globe.rotation.set(DEFAULT_GLOBE_ROTATION.x, DEFAULT_GLOBE_ROTATION.y, 0);
-    this.camera.position.z = cameraDistanceForCoverage(this.camera.fov, DEFAULT_GLOBE_COVERAGE);
+    this.camera.position.set(DEFAULT_CAMERA_TARGET_X, 0, cameraDistanceForCoverage(this.camera.fov, DEFAULT_GLOBE_COVERAGE));
+    this.camera.lookAt(DEFAULT_CAMERA_TARGET_X, 0, 0);
     this.draw();
   }
 
