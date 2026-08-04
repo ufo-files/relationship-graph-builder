@@ -376,7 +376,9 @@ function renderControls() {
     roles = controlSelect("aggregation", "Group by", [{ value: "entity", label: "Entities" }, { value: "source", label: "Collection" }, { value: "format", label: "Transcript format" }]) + controlSelect("y", "Measure", state.config.aggregation === "entity" ? numericEntity : ["words", "documents", "bytes"]);
   } else if (state.config.type === "timeline") {
     roles = controlSelect("timelineRole", "Marks", [{ value: "entity", label: "Entities" }, { value: "document", label: "Completed transcript files" }]) + controlSelect("x", "X axis", [{ value: "createdAt", label: "Transcription date" }]) + controlSelect("y", "Y axis", state.config.timelineRole === "entity" ? numericEntity : numericDoc);
-    if (state.config.timelineRole === "entity") roles += relationshipTypeControl();
+    roles += state.config.timelineRole === "entity"
+      ? relationshipTypeControl()
+      : `<div class="control"><div class="control-title">Relationship</div><select disabled><option>Shared published entities</option></select></div>`;
   } else if (state.config.type === "matrix") {
     roles = `<div class="control"><div class="control-title">Rows</div><select disabled><option>Collections</option></select></div>` + controlSelect("matrixColumns", "Columns", [{ value: "entity", label: "Entities" }, { value: "category", label: "Entity categories" }]);
   } else {
@@ -391,7 +393,7 @@ function renderControls() {
     : state.config.type === "timeline" && state.config.timelineRole !== "entity" ? numericDoc : numericEntity;
   const labelSizeControl = `<div class="control"><label>Label size <span>${state.config.labelSize}px</span></label><input type="range" min="11" max="18" step="1" value="${state.config.labelSize}" data-range="labelSize"></div>`;
   const zoomControl = state.config.type === "network" ? `<div class="control"><label>Zoom <span>${state.config.zoom.toFixed(1)}×</span></label><input type="range" min="0.5" max="2.5" step="0.1" value="${state.config.zoom}" data-range="zoom"></div>` : "";
-  const supportsRelationships = ["scatter", "map"].includes(state.config.type) || (state.config.type === "timeline" && state.config.timelineRole === "entity");
+  const supportsRelationships = ["scatter", "map", "timeline"].includes(state.config.type);
   const relationshipControls = supportsRelationships ? controlSelect("relationshipLayer", "Relationship layer", [{ value: "off", label: "Off" }, { value: "hover", label: "On hover" }, { value: "always", label: "Always" }])
     + `<div class="control"><label>Connections per node <span>${state.config.relationshipNeighbors}</span></label><input type="range" min="1" max="5" step="1" value="${state.config.relationshipNeighbors}" data-range="relationshipNeighbors"></div>`
     + controlSelect("relationshipNodeSize", "Secondary-node size", [{ value: "inherit", label: "Inherit size metric" }, { value: "fixed", label: "Fixed" }])
@@ -420,7 +422,7 @@ function renderControls() {
     <div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div>
     ${state.config.type === "table" ? `<div class="control"><label for="tableSearch">Search rows</label><input id="tableSearch" class="text-input" type="search" value="${escapeHTML(state.config.tableSearch)}" placeholder="Filter this list" data-table-search></div>` : ""}
     ${usesEntities ? `<div class="control"><label>Minimum confidence <span>${Math.round(state.config.minConfidence * 100)}%</span></label><input type="range" min="0.5" max="0.95" step="0.01" value="${state.config.minConfidence}" data-range="minConfidence"></div>` : ""}
-    ${state.config.type === "network" || (supportsRelationships && state.config.relationshipLayer !== "off") ? `<div class="control"><label>${state.config.type === "network" && state.config.nodeRole === "collection" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
+    ${state.config.type === "network" || (supportsRelationships && state.config.relationshipLayer !== "off") ? `<div class="control"><label>${state.config.type === "network" && state.config.nodeRole === "collection" || state.config.type === "timeline" && state.config.timelineRole === "document" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
     <div class="control"><label>Maximum ${state.config.type === "table" ? "rows" : "marks"} <span>${state.config.limit}</span></label><input type="range" min="20" max="${state.config.type === "network" ? 120 : 250}" step="10" value="${state.config.limit}" data-range="limit"></div>
     ${usesEntities ? `<div class="control method-note"><div class="control-title">Context adjustment</div><p>Counts exact repeats within one document once, counts text repeated across 3+ documents once, and excludes requester metadata. Raw mentions remain available.</p></div>` : ""}
     ${usesEntities ? `<div class="control"><div class="control-title">Inflation review</div><label class="check-chip"><input type="checkbox" data-include-high-inflation ${state.config.includeHighInflation ? "checked" : ""}><span>Include high-inflation entities</span></label></div>` : ""}
@@ -476,7 +478,7 @@ function setType(type) {
   if (type === "network") Object.assign(state.config, { nodeRole: "entity", size: "independentDocumentCount", color: "category" });
   if (type === "map") Object.assign(state.config, { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50 });
   if (type === "book") Object.assign(state.config, { categories: ["book"], size: "contextAdjustedMentions", color: "intensity", labels: "all", includeHighInflation: true, limit: 250 });
-  if (type === "timeline") Object.assign(state.config, { timelineRole: "entity", x: "createdAt", y: "contextAdjustedMentions", size: "independentDocumentCount", color: "category" });
+  if (type === "timeline") Object.assign(state.config, { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source" });
   if (type === "matrix") Object.assign(state.config, { matrixColumns: "category", color: "intensity" });
   if (type === "table") Object.assign(state.config, { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 });
   state.selected = null;
@@ -647,6 +649,35 @@ function scatterEgoNetworks(entities, displayedEntities, maximumNeighbors = 3) {
   return networks;
 }
 
+function documentRelationshipNetworks(documents, displayedDocuments, maximumNeighbors = 3) {
+  const documentById = new Map(documents.map(document => [document.id, document]));
+  const displayedIds = new Set(displayedDocuments.map(document => document.id));
+  const scores = new Map(displayedDocuments.map(document => [document.id, new Map()]));
+  (state.catalog.entities || []).forEach(entity => {
+    const memberIds = (entity.documentIds || []).filter(id => documentById.has(id));
+    memberIds.forEach(sourceId => {
+      if (!displayedIds.has(sourceId)) return;
+      memberIds.forEach(targetId => {
+        if (sourceId === targetId) return;
+        const previous = scores.get(sourceId).get(targetId) || { count: 0, names: [] };
+        previous.count += 1;
+        previous.names.push(entity.name);
+        scores.get(sourceId).set(targetId, previous);
+      });
+    });
+  });
+  return new Map([...scores].map(([documentId, neighbors]) => {
+    const ranked = [...neighbors]
+      .filter(([, shared]) => shared.count >= state.config.minEvidence)
+      .map(([neighborId, shared]) => ({
+        entity: documentById.get(neighborId),
+        edge: { relationship: "shared_entities", evidenceCount: shared.count, sharedEntities: shared.names }
+      }))
+      .sort((left, right) => right.edge.evidenceCount - left.edge.evidenceCount || left.entity.title.localeCompare(right.entity.title));
+    return [documentId, { total: ranked.length, neighbors: ranked.slice(0, maximumNeighbors) }];
+  }));
+}
+
 function valueExtent(data, key) {
   const values = data.map(item => Number(item[key]) || 0);
   return [Math.min(...values, 0), Math.max(...values, 1)];
@@ -700,7 +731,7 @@ function scatterSecondaryAnchors(egoNetworks, displayedIndex) {
 }
 
 function drawIntensityLegend() {
-  const relationshipView = ["scatter", "map"].includes(state.config.type) || (state.config.type === "timeline" && state.config.timelineRole === "entity");
+  const relationshipView = ["scatter", "map", "timeline"].includes(state.config.type);
   const egoKey = relationshipView && state.config.relationshipLayer !== "off" ? `<span class="legend-item"><i class="ego-key"></i>Strongest relationships</span>` : "";
   const outlierKey = state.config.type === "scatter" ? `<span class="legend-item"><i class="outlier-key"></i>Axis-capped outlier</span>` : "";
   const inflationKey = state.config.type === "scatter" ? `<span class="legend-item"><i class="risk-key"></i>Potential mention inflation</span>` : "";
@@ -1194,8 +1225,10 @@ function renderTimeline() {
   const relationshipLines = new Map();
   const relationshipNodes = new Map();
   let egoNetworks = new Map();
-  if (state.config.timelineRole === "entity" && state.config.relationshipLayer !== "off") {
-    egoNetworks = scatterEgoNetworks(candidates, data, state.config.relationshipNeighbors);
+  if (state.config.relationshipLayer !== "off") {
+    egoNetworks = state.config.timelineRole === "entity"
+      ? scatterEgoNetworks(candidates, data, state.config.relationshipNeighbors)
+      : documentRelationshipNetworks(candidates, data, state.config.relationshipNeighbors);
     const overlay = scatterRelationshipOverlay(egoNetworks, data);
     const entityById = new Map([...candidates, ...overlay.nodes].map(entity => [entity.id, entity]));
     relationshipLayer = el("g", { class: `scatter-relationship-layer relationship-${state.config.relationshipLayer} strength-${state.config.relationshipStrength}` });
@@ -1214,7 +1247,7 @@ function renderTimeline() {
       const point = positionFor(node);
       const radius = state.config.relationshipNodeSize === "fixed" ? 4 : scale(node[state.config.size], sizeExtent, [2.5, 8]);
       const secondary = el("circle", { cx: point.x, cy: point.y, r: radius, class: "scatter-secondary-node mark" });
-      secondary.addEventListener("click", () => inspectEntity(node.entityRecord || node));
+      secondary.addEventListener("click", () => state.config.timelineRole === "entity" ? inspectEntity(node.entityRecord || node) : inspectDocument(node));
       relationshipNodes.set(node.id, secondary);
       relationshipLayer.append(secondary);
     });
