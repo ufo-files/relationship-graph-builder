@@ -407,7 +407,7 @@ test("Book is a first-class area bookshelf for transcript-backed titles", () => 
 
   assert.ok(result.types.includes("book"));
   assert.equal(result.bookTypeLabel, "Bookshelf");
-  assert.equal(result.title, "Books Mentioned");
+  assert.equal(result.title, "Bookshelf — Books");
   assert.equal(result.blocks.length, 3);
   assert.ok(result.blocks[0].area > result.blocks[1].area);
   assert.ok(result.blocks[1].area > result.blocks[2].area);
@@ -415,6 +415,8 @@ test("Book is a first-class area bookshelf for transcript-backed titles", () => 
   assert.ok(result.narrowLabel.every(line => line.length <= 8));
   assert.match(result.narrowLabel.at(-1), /…$/);
   assert.match(source, /if \(type === "book"\).*labels: "all"/);
+  assert.doesNotMatch(source, /if \(type === "book"\).*categories: \["book"\]/);
+  assert.doesNotMatch(source, /filteredEntities\(\)\s*\.filter\(entity => entity\.category === "book"\)/);
   assert.match(source, /const shouldLabel = state\.config\.labels !== "none"/);
 });
 
