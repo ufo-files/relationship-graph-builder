@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "caf5fd38c11fb3470dc969dd641cd321638007cb"
+    "revision": "f746b212c08515917823d725eb23dd3c914ecb2f"
   },
-  "count": 165,
-  "totalCount": 165,
-  "shownCount": 165,
+  "count": 166,
+  "totalCount": 166,
+  "shownCount": 166,
   "candidates": [
     {
       "category": "organization",
@@ -299,6 +299,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Office of Research and Development",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Office of Research and Developnent",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
@@ -478,8 +494,8 @@
       "category": "organization",
       "left": {
         "name": "Technical Intelligence Center",
-        "mentions": 18,
-        "documentCount": 13
+        "mentions": 19,
+        "documentCount": 14
       },
       "right": {
         "name": "Iechnical Intelligence Center",
@@ -542,8 +558,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1981,
-        "documentCount": 439
+        "mentions": 1994,
+        "documentCount": 444
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1326,8 +1342,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1981,
-        "documentCount": 439
+        "mentions": 1994,
+        "documentCount": 444
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -1614,8 +1630,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2604,
-        "documentCount": 221
+        "mentions": 2605,
+        "documentCount": 222
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -1651,8 +1667,8 @@
       },
       "right": {
         "name": "Technical Intelligence Center",
-        "mentions": 18,
-        "documentCount": 13
+        "mentions": 19,
+        "documentCount": 14
       },
       "similarity": 0.935,
       "reason": "similar name",
@@ -1678,8 +1694,8 @@
       "category": "organization",
       "left": {
         "name": "Technical Intelligence Center",
-        "mentions": 18,
-        "documentCount": 13
+        "mentions": 19,
+        "documentCount": 14
       },
       "right": {
         "name": "The Ait Technical Intelligence Center",
@@ -1838,8 +1854,8 @@
       "category": "program",
       "left": {
         "name": "PROGRAM SUMMARY",
-        "mentions": 11,
-        "documentCount": 11
+        "mentions": 12,
+        "documentCount": 12
       },
       "right": {
         "name": "Program Sunmary",
@@ -1918,8 +1934,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1981,
-        "documentCount": 439
+        "mentions": 1994,
+        "documentCount": 444
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2254,8 +2270,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1981,
-        "documentCount": 439
+        "mentions": 1994,
+        "documentCount": 444
       },
       "right": {
         "name": "CENTRAL INTELLIGZACE AGENCY",
@@ -2643,8 +2659,8 @@
       },
       "right": {
         "name": "Alan Dulles",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 6,
+        "documentCount": 6
       },
       "similarity": 0.87,
       "reason": "similar person name",
