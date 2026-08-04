@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "a4ac4a24f24d2a129f71014b3d1ff4e6bceaef69"
+    "revision": "16caeaacccd8a368a2f8207adf794b2d1e81e78e"
   },
-  "count": 207,
-  "totalCount": 207,
+  "count": 208,
+  "totalCount": 208,
   "shownCount": 200,
   "candidates": [
     {
@@ -635,6 +635,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Johnston Island",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Johnson Island",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Community Relations Division",
@@ -686,8 +702,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2233,
-        "documentCount": 533
+        "mentions": 2236,
+        "documentCount": 534
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -702,8 +718,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2233,
-        "documentCount": 533
+        "mentions": 2236,
+        "documentCount": 534
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -718,8 +734,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2233,
-        "documentCount": 533
+        "mentions": 2236,
+        "documentCount": 534
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -734,8 +750,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2233,
-        "documentCount": 533
+        "mentions": 2236,
+        "documentCount": 534
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1454,8 +1470,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 183,
-        "documentCount": 41
+        "mentions": 185,
+        "documentCount": 42
       },
       "right": {
         "name": "Department of Stale",
@@ -1470,8 +1486,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 183,
-        "documentCount": 41
+        "mentions": 185,
+        "documentCount": 42
       },
       "right": {
         "name": "Department of Staie",
@@ -1646,8 +1662,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2233,
-        "documentCount": 533
+        "mentions": 2236,
+        "documentCount": 534
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2206,8 +2222,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 63,
-        "documentCount": 27
+        "mentions": 64,
+        "documentCount": 28
       },
       "right": {
         "name": "Army Air Foroes",
@@ -2222,8 +2238,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 63,
-        "documentCount": 27
+        "mentions": 64,
+        "documentCount": 28
       },
       "right": {
         "name": "The Arny Air Forces",
@@ -2238,8 +2254,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 63,
-        "documentCount": 27
+        "mentions": 64,
+        "documentCount": 28
       },
       "right": {
         "name": "Army Air Forcas",
@@ -2398,8 +2414,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2233,
-        "documentCount": 533
+        "mentions": 2236,
+        "documentCount": 534
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2782,8 +2798,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2233,
-        "documentCount": 533
+        "mentions": 2236,
+        "documentCount": 534
       },
       "right": {
         "name": "GENTRAL INTELLIGENGE AGENCY",
@@ -2798,8 +2814,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2233,
-        "documentCount": 533
+        "mentions": 2236,
+        "documentCount": 534
       },
       "right": {
         "name": "CENTRAL INTELLIGZACE AGENCY",
@@ -3187,22 +3203,6 @@
       },
       "right": {
         "name": "GOVERMMENT PRINTING OFFICE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "DEPARTMENT OF XUSTIC",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "DEPARTMENT OF JUSTI",
         "mentions": 2,
         "documentCount": 2
       },
