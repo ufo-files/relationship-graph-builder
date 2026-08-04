@@ -406,7 +406,7 @@ test("Book is a first-class area bookshelf for transcript-backed titles", () => 
   `, context));
 
   assert.ok(result.types.includes("book"));
-  assert.equal(result.bookTypeLabel, "Books");
+  assert.equal(result.bookTypeLabel, "Bookshelf");
   assert.equal(result.title, "Books Mentioned");
   assert.equal(result.blocks.length, 3);
   assert.ok(result.blocks[0].area > result.blocks[1].area);
