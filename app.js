@@ -63,7 +63,7 @@ const DEFAULT = {
   relationshipLayer: "always", relationshipNeighbors: 1, relationshipNodeSize: "inherit", relationshipStrength: "subtle",
   nodeRole: "entity", timelineRole: "document", matrixColumns: "entity",
   tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"],
-  tableSort: "mentions", tableDirection: "desc", tableSearch: "", documentSearch: "",
+  tableSort: "mentions", tableDirection: "desc", tableSearch: "", documentSearch: "", documentFolder: "",
   labelSize: 12, zoom: 1, title: "Mentions by Documents — Entities", titleMode: "auto"
 };
 const state = { catalog: null, config: loadConfig(), selected: null, documentById: new Map() };
@@ -464,6 +464,7 @@ function renderControls() {
   $$('[data-source]').forEach(node => node.addEventListener("change", () => {
     const selectedSources = $$('[data-source]:checked').map(input => input.dataset.source);
     Object.assign(state.config, sourceSelectionConfig(selectedSources, sourceNames));
+    if (state.config.documentFolder && !sourceIsSelected(state.config.documentFolder, state.config.sources, state.config.allSources)) state.config.documentFolder = "";
     renderControls();
     commitConfig();
   }));
@@ -497,7 +498,7 @@ function setType(type) {
     network: { nodeRole: "entity", size: "independentDocumentCount", color: "category" },
     map: { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50 },
     book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 250 },
-    document: { size: "words", color: "source", labels: "top", documentSearch: "" },
+    document: { size: "words", color: "source", labels: "top", documentSearch: "", documentFolder: "" },
     bars: { aggregation: "source", y: "words", color: "intensity" },
     timeline: { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source", categories: ["date"], labels: "top", limit: 50 },
     matrix: { matrixColumns: "entity", color: "intensity" },
@@ -1200,25 +1201,54 @@ function renderDocument() {
   $("#chartWrap").classList.add("table-mode");
   $("#legend").innerHTML = "";
   const query = state.config.documentSearch.trim().toLocaleLowerCase();
-  const matching = state.catalog.documents
-    .filter(document => sourceMatches(document.source))
+  const scoped = state.catalog.documents.filter(document => sourceMatches(document.source));
+  const folder = query ? "" : state.config.documentFolder;
+  const matching = scoped
+    .filter(document => !folder || document.source === folder)
     .filter(document => !query || [document.title, document.path, document.source, document.format, document.engine]
       .some(value => String(value || "").toLocaleLowerCase().includes(query)))
     .sort((left, right) => String(left.source).localeCompare(String(right.source)) || String(left.title || left.path).localeCompare(String(right.title || right.path), undefined, { numeric: true }));
-  const visible = matching.slice(0, 100);
-  if (!matching.length) {
+  const folders = state.catalog.sources
+    .filter(source => sourceMatches(source.name))
+    .map(source => ({ ...source, files: scoped.filter(document => document.source === source.name).length }))
+    .filter(source => source.files)
+    .sort((left, right) => left.name.localeCompare(right.name));
+  if (!matching.length && (query || folder)) {
     browser.replaceChildren();
     return showEmpty();
   }
   browser.style.setProperty("--table-font-size", `${state.config.labelSize}px`);
-  browser.innerHTML = `<div class="document-browser-status">${query ? `${formatNumber(matching.length)} matches` : `${formatNumber(matching.length)} files indexed`} · showing ${formatNumber(visible.length)}</div><div class="document-browser">${visible.map(document => `
-    <a class="document-row" href="${escapeHTML(machineDataDocumentURL(document))}" target="_blank" rel="noopener noreferrer">
-      <span class="document-file-icon" aria-hidden="true">TXT</span>
-      <span class="document-file-copy"><strong>${escapeHTML(document.title || document.path)}</strong><small>${escapeHTML(document.path)}</small></span>
-      <span class="document-collection">${escapeHTML(document.source)}</span>
-      <span class="document-meta">${escapeHTML(label(document.format))} · ${formatNumber(document.words)} words</span>
-      <span class="document-open" aria-hidden="true">↗</span>
-    </a>`).join("")}</div>`;
+  if (!query && !folder) {
+    browser.innerHTML = `<div class="document-browser-status"><strong>Corpus</strong><span>${formatNumber(scoped.length)} files in ${folders.length} collections</span></div><div class="document-folder-grid">${folders.map(source => `
+      <button class="document-folder" type="button" data-document-folder="${escapeHTML(source.name)}">
+        <span class="document-folder-icon" aria-hidden="true"></span>
+        <strong>${escapeHTML(source.name)}</strong>
+        <small>${formatNumber(source.files)} files · ${formatNumber(source.words)} words</small>
+      </button>`).join("")}</div>`;
+    $$('[data-document-folder]').forEach(node => node.addEventListener("click", () => {
+      state.config.documentFolder = node.dataset.documentFolder;
+      persistHash();
+      renderGraph();
+    }));
+    setSummary(`${formatNumber(scoped.length)} documents · ${folders.length} collection folders`, "document");
+    return;
+  }
+  const visible = matching.slice(0, 100);
+  browser.innerHTML = `<div class="document-browser-status"><span class="document-breadcrumb">${folder ? `<button type="button" data-document-home>Corpus</button><span>/</span><strong>${escapeHTML(folder)}</strong>` : `<strong>Search results</strong>`}</span><span>${formatNumber(matching.length)} files · showing ${formatNumber(visible.length)}</span></div><div class="document-browser">${visible.map(document => `
+    <article class="document-card">
+      <button class="document-card-main" type="button" data-document-inspect="${escapeHTML(document.id)}">
+        <span class="document-file-icon" aria-hidden="true">TXT</span>
+        <span class="document-file-copy"><strong>${escapeHTML(document.title || document.path)}</strong><small>${escapeHTML(document.path)}</small></span>
+      </button>
+      <div class="document-card-meta"><span>${escapeHTML(document.source)}</span><span>${escapeHTML(label(document.format))} · ${formatNumber(document.words)} words</span></div>
+      <a class="document-source-link" href="${escapeHTML(machineDataDocumentURL(document))}" target="_blank" rel="noopener noreferrer">Open transcript ↗</a>
+    </article>`).join("")}</div>`;
+  $("[data-document-home]")?.addEventListener("click", () => {
+    state.config.documentFolder = "";
+    persistHash();
+    renderGraph();
+  });
+  $$('[data-document-inspect]').forEach(node => node.addEventListener("click", () => inspectDocument(state.documentById.get(node.dataset.documentInspect))));
   setSummary(`${formatNumber(matching.length)} matching documents · showing ${formatNumber(visible.length)}`, "document");
 }
 
