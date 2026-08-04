@@ -330,13 +330,15 @@ test("Default preset restores the complete initial view", () => {
   assert.equal(result.defaults.x, "independentDocumentCount");
 });
 
-test("graph type is the first builder section and cards explain their data scope", () => {
+test("graph type stays first while quick presets remain available", () => {
   const html = fs.readFileSync("index.html", "utf8");
   const source = fs.readFileSync("app.js", "utf8");
-  assert.doesNotMatch(html, /id="presetControls"/);
   assert.match(html, /data-step="1"[\s\S]*<strong>Graph type<\/strong>/);
+  assert.match(html, /data-step="2"[\s\S]*<strong>Presets<\/strong>[\s\S]*id="presetControls"/);
+  assert.match(source, /function renderControls\(\) \{\s*renderPresetControl\(\)/);
   assert.match(source, /label: "Map", scope: "Locations"/);
   assert.match(source, /label: "Bookshelf", scope: "Books"/);
+  assert.match(source, /label: "Documents", scope: "All corpus files"/);
   assert.match(source, /label: "Scatter", scope: "All"/);
   assert.match(source, /state\.config = \{ \.\.\.presetConfig\("default"\), type, \.\.\.\(viewDefaults\[type\] \|\| \{\}\) \}/);
   assert.match(source, /label: "Bars", scope: "All collections"/);
@@ -443,10 +445,52 @@ test("Book is a first-class area bookshelf for transcript-backed titles", () => 
   assert.match(source, /book: \{[^}]*labels: "all"/);
   assert.doesNotMatch(source, /if \(type === "book"\).*categories: \["book"\]/);
   assert.match(source, /const data = filteredEntities\(\["book"\]\)/);
-  assert.match(source, /const bookshelf = state\.config\.type === "book"/);
-  assert.match(source, /const checked = bookshelf \? category === "book"/);
-  assert.match(source, /bookshelf \? "disabled"/);
+  assert.match(source, /const fixedCategories = state\.config\.type === "book" \|\| state\.config\.type === "document"/);
+  assert.match(source, /state\.config\.type === "book" \? category === "book"/);
+  assert.match(source, /fixedCategories \? "disabled"/);
   assert.match(source, /const shouldLabel = state\.config\.labels !== "none"/);
+});
+
+test("Documents provides a searchable finder linked to immutable machine-data sources", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    (() => {
+      state.catalog = {
+        input: { repository: "ufo-files/machine-data", revision: "abc123" },
+        documents: [{ id: "one", title: "A File", source: "Collection A", path: "Collection A/pdfs/a file.txt", words: 12 }]
+      };
+      Object.assign(state.config, { type: "document", size: "words", allSources: true });
+      return JSON.stringify({
+        type: TYPES.find(type => type.id === "document"),
+        title: dataAwareTitle(state.config),
+        url: machineDataDocumentURL(state.catalog.documents[0])
+      });
+    })()
+  `, context));
+
+  assert.deepEqual(result.type, {
+    id: "document",
+    label: "Documents",
+    scope: "All corpus files",
+    icon: "<path d='M7 2h12l5 5v11H7zM19 2v5h5M11 11h9M11 14h9'/><path d='M4 5H2v15h17v-2'/>"
+  });
+  assert.equal(result.title, "Document Finder");
+  assert.equal(result.url, "https://github.com/ufo-files/machine-data/blob/abc123/Collection%20A/pdfs/a%20file.txt");
+  assert.match(source, /document: \{ size: "words", color: "source", labels: "top", documentSearch: "" \}/);
+  assert.match(source, /Search title, path, collection, or format/);
+  assert.match(source, /const batch = matching\.slice\(shown, shown \+ 100\)/);
+  assert.match(source, /browser\.scrollTop \+ browser\.clientHeight >= browser\.scrollHeight - 240/);
+  assert.doesNotMatch(source, /data-document-folder/);
+  assert.match(source, /query \? "Search results" : "All documents"/);
+  assert.match(source, /class="document-card-main"[^>]*data-document-inspect/);
+  assert.match(source, /class="document-source-link"[^>]*href="\$\{escapeHTML\(machineDataDocumentURL\(document\)\)\}"/);
+  assert.match(source, /robustValueExtent\(matching, "words"\)/);
+  assert.match(source, /const intensity = clampedScale\(document\.words, wordExtent, \[\.14, \.94\]\)/);
+  assert.match(source, /sort\(\(left, right\) => right\.entityCount - left\.entityCount/);
+  assert.match(source, /Every completed file/);
+  assert.match(source, /document: renderDocument/);
 });
 
 test("duplicate review opens the proactive identity queue", () => {
