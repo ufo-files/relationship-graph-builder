@@ -804,7 +804,9 @@ test("network edges use the same restrained rendering as relationship overlays",
   const styles = fs.readFileSync("styles.css", "utf8");
   assert.match(source, /class: "network-relationship-line mark"/);
   assert.match(source, /Math\.min\(2, \.4 \+ Math\.sqrt\(edge\.evidenceCount\) \* \.22\)/);
+  assert.match(source, /networkLines\.get\(node\.id\)[\s\S]*line\.classList\.add\("is-focused"\)/);
   assert.match(styles, /\.network-relationship-line \{[^}]*opacity: \.07/);
+  assert.match(styles, /\.network-relationship-layer\.has-focus \.network-relationship-line\.is-focused \{ opacity: \.8/);
 });
 
 test("robust scatter extents cap material outliers without changing ordinary ranges", () => {

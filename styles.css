@@ -135,6 +135,8 @@ h1, h2, h3, p { margin-top: 0; }
 .scatter-relationship-layer.has-focus .scatter-secondary-node.is-focused { opacity: .85; }
 .network-relationship-line { stroke: var(--ink); opacity: .07; transition: opacity .15s; }
 .network-relationship-line:hover { opacity: .8; }
+.network-relationship-layer.has-focus .network-relationship-line { opacity: .025; }
+.network-relationship-layer.has-focus .network-relationship-line.is-focused { opacity: .8; }
 
 .inspector { padding: 22px; }
 .inspector-close { position: sticky; top: 0; z-index: 1; display: grid; place-items: center; margin: 0 0 -34px auto; background: var(--paper); }

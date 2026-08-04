@@ -873,12 +873,17 @@ function renderNetwork() {
   const networkCenterX = (bounds.left + bounds.right) / 2;
   const networkCenterY = (bounds.top + bounds.bottom) / 2;
   svg.setAttribute("viewBox", `${networkCenterX - width / (2 * zoom)} ${networkCenterY - height / (2 * zoom)} ${width / zoom} ${height / zoom}`);
-  const edgeGroup = el("g");
+  const edgeGroup = el("g", { class: "network-relationship-layer" });
+  const networkLines = new Map();
   edges.forEach(edge => {
     const a = positions.get(edge.source), b = positions.get(edge.target);
     const line = el("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, class: "network-relationship-line mark", "stroke-width": Math.min(2, .4 + Math.sqrt(edge.evidenceCount) * .22) });
     addTitle(line, `${label(edge.relationship)} · ${edge.evidenceCount} ${collectionMode ? "entities" : "evidence segments"}`);
     line.addEventListener("click", () => collectionMode ? inspectCollectionEdge(edge, nodes) : inspectEdge(edge));
+    [edge.source, edge.target].forEach(id => {
+      if (!networkLines.has(id)) networkLines.set(id, []);
+      networkLines.get(id).push(line);
+    });
     edgeGroup.append(line);
   });
   svg.append(edgeGroup);
@@ -891,6 +896,14 @@ function renderNetwork() {
       ? `${node.name} · ${node.documents} documents`
       : `${node.name} · ${label(state.config.size)}: ${formatNumber(node[state.config.size])}${state.config.size === "contextAdjustedMentions" ? ` · Raw mentions: ${formatNumber(node.mentions)}` : ""}`);
     circle.addEventListener("click", () => collectionMode ? inspectGroup(node) : inspectEntity(node));
+    circle.addEventListener("mouseenter", () => {
+      edgeGroup.classList.add("has-focus");
+      (networkLines.get(node.id) || []).forEach(line => line.classList.add("is-focused"));
+    });
+    circle.addEventListener("mouseleave", () => {
+      edgeGroup.classList.remove("has-focus");
+      (networkLines.get(node.id) || []).forEach(line => line.classList.remove("is-focused"));
+    });
     svg.append(circle);
     if (state.config.labels === "all" || (state.config.labels === "top" && index < 16)) {
       const textAnchor = point.x < width * .2 ? "start" : point.x > width * .8 ? "end" : "middle";
