@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "c841453c3c1ee86d252cfc3bb8d87c1f8a69e01c"
+    "revision": "262fc12fe77d793aca8f23d8248c41543558ed52"
   },
-  "count": 151,
-  "totalCount": 151,
-  "shownCount": 151,
+  "count": 154,
+  "totalCount": 154,
+  "shownCount": 154,
   "candidates": [
     {
       "category": "organization",
@@ -295,6 +295,22 @@
         "documentCount": 2
       },
       "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Technical Intelligence Center",
+        "mentions": 48,
+        "documentCount": 23
+      },
+      "right": {
+        "name": "The Ait Technical Intelligence Center",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.97,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1374,8 +1390,8 @@
       "category": "organization",
       "left": {
         "name": "Air Intelligence",
-        "mentions": 53,
-        "documentCount": 18
+        "mentions": 54,
+        "documentCount": 19
       },
       "right": {
         "name": "Mir Intelligence",
@@ -1555,6 +1571,38 @@
       },
       "right": {
         "name": "Iechnical Intelligence Center",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Technical Intelligence Center",
+        "mentions": 18,
+        "documentCount": 13
+      },
+      "right": {
+        "name": "The Ait Technical Intelligence Center",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Iechnical Intelligence Center",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "The Ait Technical Intelligence Center",
         "mentions": 2,
         "documentCount": 2
       },
@@ -1774,8 +1822,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 915,
-        "documentCount": 263
+        "mentions": 916,
+        "documentCount": 264
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
