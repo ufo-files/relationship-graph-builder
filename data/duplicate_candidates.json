@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "80ce7b0d64ad459360a0b14c444dc7472046ef2b"
+    "revision": "851423e969d72e1936539c592dd2e65f03f6c472"
   },
-  "count": 210,
-  "totalCount": 210,
+  "count": 214,
+  "totalCount": 214,
   "shownCount": 200,
   "candidates": [
     {
@@ -366,8 +366,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 51,
-        "documentCount": 26
+        "mentions": 53,
+        "documentCount": 27
       },
       "right": {
         "name": "The Ait Technical Intelligence Center",
@@ -494,8 +494,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 158,
-        "documentCount": 83
+        "mentions": 162,
+        "documentCount": 84
       },
       "right": {
         "name": "Fright-Patterson Air Force Base",
@@ -507,11 +507,27 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patterson Air Force Base",
+        "mentions": 162,
+        "documentCount": 84
+      },
+      "right": {
+        "name": "Wright-pattorson AIr Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Intelligence Advisory Committee",
-        "mentions": 17,
-        "documentCount": 8
+        "mentions": 18,
+        "documentCount": 9
       },
       "right": {
         "name": "Intelligence Advisory Cosmittee",
@@ -718,8 +734,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2244,
-        "documentCount": 535
+        "mentions": 2249,
+        "documentCount": 539
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -734,8 +750,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2244,
-        "documentCount": 535
+        "mentions": 2249,
+        "documentCount": 539
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -750,8 +766,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2244,
-        "documentCount": 535
+        "mentions": 2249,
+        "documentCount": 539
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -766,8 +782,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2244,
-        "documentCount": 535
+        "mentions": 2249,
+        "documentCount": 539
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -958,8 +974,8 @@
       "category": "location",
       "left": {
         "name": "Patterson Air Force Base",
-        "mentions": 12,
-        "documentCount": 10
+        "mentions": 13,
+        "documentCount": 11
       },
       "right": {
         "name": "Patterson Air Forco Base",
@@ -1123,8 +1139,8 @@
       },
       "right": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 51,
-        "documentCount": 26
+        "mentions": 53,
+        "documentCount": 27
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -1678,8 +1694,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2244,
-        "documentCount": 535
+        "mentions": 2249,
+        "documentCount": 539
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2091,6 +2107,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Chart Showing Balloon Lausching Sites Ln",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Chart Showing Balloon Lunching Sites In",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.937,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Intelligence Community",
@@ -2142,8 +2174,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2761,
-        "documentCount": 258
+        "mentions": 2763,
+        "documentCount": 259
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -2158,8 +2190,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 158,
-        "documentCount": 83
+        "mentions": 162,
+        "documentCount": 84
       },
       "right": {
         "name": "Fright-Petterson Air Force Base",
@@ -2174,8 +2206,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 51,
-        "documentCount": 26
+        "mentions": 53,
+        "documentCount": 27
       },
       "right": {
         "name": "Technical Intelligence Center",
@@ -2190,8 +2222,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 51,
-        "documentCount": 26
+        "mentions": 53,
+        "documentCount": 27
       },
       "right": {
         "name": "Iechnical Intelligence Center",
@@ -2213,6 +2245,38 @@
         "name": "The Ait Technical Intelligence Center",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Chart Showing Balloon Lausching Sites Ln",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Chart Showing Balloon Launching Sites",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-pattorson AIr Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Fright-Patterson Air Force Base",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.935,
       "reason": "similar name",
@@ -2446,8 +2510,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2244,
-        "documentCount": 535
+        "mentions": 2249,
+        "documentCount": 539
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2830,8 +2894,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2244,
-        "documentCount": 535
+        "mentions": 2249,
+        "documentCount": 539
       },
       "right": {
         "name": "GENTRAL INTELLIGENGE AGENCY",
@@ -2846,8 +2910,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2244,
-        "documentCount": 535
+        "mentions": 2249,
+        "documentCount": 539
       },
       "right": {
         "name": "CENTRAL INTELLIGZACE AGENCY",
@@ -3140,70 +3204,6 @@
       "right": {
         "name": "COVERNMENT PRINTING OFFICE",
         "mentions": 4,
-        "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "COVERNMENT PRINTING OFFICE",
-        "mentions": 4,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "GOVERNMENI PRINTING OFFICE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "COVERNMENT PRINTING OFFICE",
-        "mentions": 4,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "GOVERMMENT PRINTING OFFICE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Base Command",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Base Commander",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Range Space Propulsion Options",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Long-Range Space Propulsion Options",
-        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.923,
