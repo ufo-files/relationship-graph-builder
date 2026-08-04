@@ -296,6 +296,30 @@ test("versioned saved views preserve an explicit raw-metric choice", () => {
   assert.equal(config.size, "documentCount");
 });
 
+test("saved views normalize the former Matrix default only when Matrix is inactive", () => {
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  const defaultsContext = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  vm.runInContext(source, defaultsContext);
+  const previousDefault = JSON.parse(vm.runInContext('JSON.stringify({ ...DEFAULT, matrixColumns: "entity" })', defaultsContext));
+
+  function loadSaved(saved) {
+    const encoded = Buffer.from(JSON.stringify(saved), "utf8").toString("base64");
+    const context = vm.createContext({
+      location: { hash: `#config=${encodeURIComponent(encoded)}` }, URLSearchParams,
+      atob: value => Buffer.from(value, "base64").toString("binary"), escape, decodeURIComponent
+    });
+    vm.runInContext(source, context);
+    return JSON.parse(vm.runInContext('JSON.stringify({ config: state.config, activeId: activePresetId() })', context));
+  }
+
+  const inactive = loadSaved(previousDefault);
+  const active = loadSaved({ ...previousDefault, type: "matrix" });
+
+  assert.equal(inactive.config.matrixColumns, "category");
+  assert.equal(inactive.activeId, "default");
+  assert.equal(active.config.matrixColumns, "entity");
+});
+
 test("an existing default URL migrates away from inflated raw prominence", () => {
   const saved = {
     type: "scatter", x: "entity", y: "mentions", size: "documentCount",
@@ -328,6 +352,7 @@ test("Default preset restores the complete initial view", () => {
   assert.deepEqual(result.preset, result.defaults);
   assert.equal(result.activeId, "default");
   assert.equal(result.defaults.x, "independentDocumentCount");
+  assert.equal(result.defaults.matrixColumns, "category");
 });
 
 test("graph type stays first while quick presets remain available", () => {
@@ -348,10 +373,10 @@ test("graph type stays first while quick presets remain available", () => {
   assert.match(source, /function documentRelationshipNetworks[\s\S]*\(state\.catalog\.entities \|\| \[\]\)\.forEach/);
   assert.match(source, /label: "Network", scope: "All"/);
   assert.match(source, /network: \{ nodeRole: "entity"/);
-  assert.match(source, /label: "Matrix", scope: "Collections × top entities"/);
+  assert.match(source, /label: "Matrix", scope: "Collections × entity types"/);
   assert.match(source, /label: "Table", scope: "All"/);
   assert.match(source, /table: \{ tableRole: "entity"/);
-  assert.match(source, /matrix: \{ matrixColumns: "entity"/);
+  assert.match(source, /matrix: \{ matrixColumns: "category"/);
   assert.match(source, /Math\.min\(state\.config\.limit, 12\)/);
   assert.match(source, /function matrixEntityInterest/);
   assert.match(source, /interest: matrixEntityInterest\(entity, sources\)/);

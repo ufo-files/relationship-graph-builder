@@ -29,7 +29,7 @@ const TYPES = [
   { id: "scatter", label: "Scatter", scope: "All", icon: "<path d='M3 2v16h25'/><circle cx='9' cy='13' r='2'/><circle cx='15' cy='9' r='2'/><circle cx='22' cy='5' r='2'/>" },
   { id: "bars", label: "Bars", scope: "All collections", icon: "<path d='M3 2v16h26M7 15h4V8H7zm8 0h4V4h-4zm8 0h4v-9h-4z'/>" },
   { id: "timeline", label: "Timeline", scope: "Documents + events", icon: "<path d='M3 10h25M8 5v10m7-7v7m8-12v12'/><circle cx='8' cy='10' r='2'/><circle cx='15' cy='10' r='2'/><circle cx='23' cy='10' r='2'/>" },
-  { id: "matrix", label: "Matrix", scope: "Collections × top entities", icon: "<path d='M4 3h22v15H4zM11 3v15m8-15v15M4 8h22m-22 5h22'/>" },
+  { id: "matrix", label: "Matrix", scope: "Collections × entity types", icon: "<path d='M4 3h22v15H4zM11 3v15m8-15v15M4 8h22m-22 5h22'/>" },
   { id: "table", label: "Table", scope: "All", icon: "<path d='M3 3h25v15H3zM3 8h25M3 13h25M12 3v15'/>" }
 ];
 const PRESETS = [
@@ -61,7 +61,7 @@ const DEFAULT = {
   includeHighInflation: true,
   minEvidence: 2, minConfidence: 0.95, limit: 50, labels: "top", aggregation: "source",
   relationshipLayer: "always", relationshipNeighbors: 1, relationshipNodeSize: "inherit", relationshipStrength: "subtle",
-  nodeRole: "entity", timelineRole: "document", matrixColumns: "entity",
+  nodeRole: "entity", timelineRole: "document", matrixColumns: "category",
   tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"],
   tableSort: "mentions", tableDirection: "desc", tableSearch: "", documentSearch: "",
   labelSize: 12, zoom: 1, title: "Mentions by Documents — Entities", titleMode: "auto"
@@ -101,6 +101,7 @@ function loadConfig() {
       if (saved.allSources === undefined) saved.allSources = !saved.sources?.length;
       const config = { ...DEFAULT, ...saved };
       if ((Number(saved.configVersion) || 0) < CONFIG_VERSION) migrateEntityProminenceConfig(config);
+      if (saved.matrixColumns === "entity" && config.type !== "matrix") config.matrixColumns = DEFAULT.matrixColumns;
       const legacySignificantCategory = {
         "Significant People": "person",
         "Significant Places": "location",
@@ -502,7 +503,7 @@ function setType(type) {
     document: { size: "words", color: "source", labels: "top", documentSearch: "" },
     bars: { aggregation: "source", y: "words", color: "intensity" },
     timeline: { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source", categories: ["date"], labels: "top", limit: 50 },
-    matrix: { matrixColumns: "entity", color: "intensity" },
+    matrix: { matrixColumns: "category", color: "intensity" },
     table: { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 }
   };
   state.config = { ...presetConfig("default"), type, ...(viewDefaults[type] || {}) };
