@@ -349,6 +349,9 @@ test("graph type is the first builder section and cards explain their data scope
   assert.match(source, /label: "Table", scope: "All"/);
   assert.match(source, /if \(type === "table"\).*categories: \[\.\.\.ENTITY_CATEGORIES\].*sources: \[\].*allSources: true/);
   assert.match(source, /if \(type === "matrix"\).*matrixColumns: "entity"/);
+  assert.match(source, /Math\.min\(state\.config\.limit, 12\)/);
+  assert.match(source, /function matrixEntityInterest/);
+  assert.match(source, /interest: matrixEntityInterest\(entity, sources\)/);
 });
 
 test("Map is a first-class Three.js graph type with reviewed location data", () => {

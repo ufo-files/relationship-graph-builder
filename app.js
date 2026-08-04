@@ -1283,11 +1283,22 @@ function renderTimeline() {
   setSummary(`${data.length} ${state.config.timelineRole === "entity" ? "entities" : "completed transcripts"}`, "timeline");
 }
 
+function matrixEntityInterest(entity, sources) {
+  const counts = sources.map(source => entity.documentIds.filter(id => state.documentById.get(id)?.source === source.name).length);
+  const total = counts.reduce((sum, count) => sum + count, 0);
+  if (!total) return 0;
+  const strongestCollection = Math.max(...counts);
+  const activeCollections = counts.filter(Boolean).length;
+  const concentration = strongestCollection / total;
+  const distinctiveness = 1 + (sources.length - activeCollections) / Math.max(1, sources.length);
+  return Math.log1p(total) * concentration * distinctiveness;
+}
+
 function renderMatrix() {
   const { svg, width, height } = clearChart();
   const sources = state.catalog.sources.filter(item => sourceMatches(item.name));
   const columns = state.config.matrixColumns === "entity"
-    ? filteredEntities().sort((a, b) => b.contextAdjustedMentions - a.contextAdjustedMentions).slice(0, Math.min(state.config.limit, 18)).map(entity => ({ id: entity.id, label: entity.name, category: entity.category, entity }))
+    ? filteredEntities().map(entity => ({ entity, interest: matrixEntityInterest(entity, sources) })).sort((a, b) => b.interest - a.interest || b.entity.contextAdjustedMentions - a.entity.contextAdjustedMentions).slice(0, Math.min(state.config.limit, 12)).map(({ entity }) => ({ id: entity.id, label: entity.name, category: entity.category, entity }))
     : state.config.categories.map(category => ({ id: category, label: label(category), category }));
   if (!sources.length || !columns.length) return showEmpty();
   const counts = [];
