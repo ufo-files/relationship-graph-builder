@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "b4198728b2aa8f1bb0079bd58e360389999ddc29"
+    "revision": "0540353d8d6fb3736e9795152259648a2cc0f5f5"
   },
-  "count": 160,
-  "totalCount": 160,
-  "shownCount": 160,
+  "count": 162,
+  "totalCount": 162,
+  "shownCount": 162,
   "candidates": [
     {
       "category": "organization",
@@ -853,6 +853,22 @@
         "name": "David Grusch",
         "mentions": 9,
         "documentCount": 4
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "IS AIR TECHNICAL INTELLIGENCE CENTER",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Air Technical Intelligence Center",
+        "mentions": 48,
+        "documentCount": 23
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -1870,8 +1886,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 917,
-        "documentCount": 265
+        "mentions": 918,
+        "documentCount": 266
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -2135,6 +2151,22 @@
         "documentCount": 2
       },
       "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "IS AIR TECHNICAL INTELLIGENCE CENTER",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "The Ait Technical Intelligence Center",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.928,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
