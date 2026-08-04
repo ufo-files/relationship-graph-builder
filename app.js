@@ -406,10 +406,14 @@ function renderControls() {
       : `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>`) + relationshipControls + labelSizeControl + zoomControl;
   }
 
-  const categories = ["map", "book"].includes(state.config.type)
-    ? [state.config.type === "map" ? "location" : "book"]
+  const categories = state.config.type === "map"
+    ? ["location"]
     : [...new Set(state.catalog?.entities.map(item => item.category) || ENTITY_CATEGORIES)];
-  const categoryChecks = categories.map(category => `<label class="check-chip"><input type="checkbox" data-category="${category}" ${state.config.type === "book" || state.config.categories.includes(category) ? "checked" : ""} ${state.config.type === "book" ? "disabled" : ""}><span>${escapeHTML(label(category))}</span></label>`).join("");
+  const categoryChecks = categories.map(category => {
+    const bookshelf = state.config.type === "book";
+    const checked = bookshelf ? category === "book" : state.config.categories.includes(category);
+    return `<label class="check-chip"><input type="checkbox" data-category="${category}" ${checked ? "checked" : ""} ${bookshelf ? "disabled" : ""}><span>${escapeHTML(label(category))}</span></label>`;
+  }).join("");
   const sources = state.catalog?.sources || [];
   const sourceNames = sources.map(source => source.name);
   const selectedSourceCount = state.config.allSources ? sourceNames.length : sourceNames.filter(name => state.config.sources.includes(name)).length;
