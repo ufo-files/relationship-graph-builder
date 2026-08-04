@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "94c619fa88c9e6ed3e6c6e8052308fe8f296c101"
+    "revision": "a2c59f46b2d937807839a97f4c3f84c3e7a502c5"
   },
-  "count": 162,
-  "totalCount": 162,
-  "shownCount": 162,
+  "count": 163,
+  "totalCount": 163,
+  "shownCount": 163,
   "candidates": [
     {
       "category": "organization",
@@ -907,6 +907,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "COUNTER INTELLIGENCE CORPS REGION IV",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "COUNTER INTELLIGENCE CORPS REGION",
+        "mentions": 5,
+        "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Irited States Department of Justice",
@@ -990,8 +1006,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 813,
-        "documentCount": 186
+        "mentions": 814,
+        "documentCount": 187
       },
       "right": {
         "name": "Department of Detense",
@@ -1454,8 +1470,8 @@
       "category": "organization",
       "left": {
         "name": "Air Intelligence",
-        "mentions": 54,
-        "documentCount": 19
+        "mentions": 58,
+        "documentCount": 20
       },
       "right": {
         "name": "Mir Intelligence",
@@ -1886,8 +1902,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 921,
-        "documentCount": 269
+        "mentions": 923,
+        "documentCount": 271
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
