@@ -353,7 +353,7 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.equal(result.unmapped, 1);
   assert.equal(result.title, "Mentions — Mapped Locations");
   assert.match(html, /id="globeCanvas"/);
-  assert.match(html, /id="globeModule"[^>]+map-globe\.js\?v=relationships-1/);
+  assert.match(html, /id="globeModule"[^>]+map-globe\.js/);
   assert.match(html, /Map module failed to load/);
   assert.match(globe, /import \* as THREE/);
   assert.match(globe, /world-countries\.svg/);
@@ -363,9 +363,6 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /DEFAULT_GLOBE_COVERAGE = \.95/);
   assert.match(globe, /DEFAULT_GLOBE_ROTATION = \{ x: \.66, y: \.11 \}/);
   assert.match(globe, /AUTO_ROTATION_SPEED = \.000025/);
-  assert.match(globe, /QuadraticBezierCurve3/);
-  assert.match(globe, /payload\.relationships/);
-  assert.match(globe, /relationshipLayer === "always"/);
   assert.match(globe, /prefers-reduced-motion/);
   assert.match(globe, /render\(payload\)[\s\S]*this\.setVisible\(true\)/);
   assert.ok(fs.statSync("vendor/addons/SVGLoader.js").size > 70_000);
@@ -373,12 +370,13 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.ok(fs.statSync("vendor/three.core.min.js").size > 300_000);
 });
 
-test("map and entity timeline expose the shared relationship controls", () => {
+test("timeline exposes relationship controls while map keeps its production renderer", () => {
   const source = fs.readFileSync("app.js", "utf8");
-  assert.match(source, /\["scatter", "map"\]\.includes\(state\.config\.type\)/);
-  assert.match(source, /state\.config\.type === "timeline" && state\.config\.timelineRole === "entity"/);
-  assert.match(source, /relationships: overlay\.edges\.map/);
-  assert.match(source, /state\.config\.timelineRole === "entity" && state\.config\.relationshipLayer !== "off"/);
+  assert.match(source, /\["scatter", "timeline"\]\.includes\(state\.config\.type\)/);
+  assert.match(source, /function documentRelationshipNetworks/);
+  assert.match(source, /Shared published entities/);
+  assert.match(source, /state\.config\.timelineRole === "entity"[\s\S]*documentRelationshipNetworks/);
+  assert.doesNotMatch(source, /relationships: overlay\.edges\.map/);
 });
 
 test("Book is a first-class area bookshelf for transcript-backed titles", () => {
