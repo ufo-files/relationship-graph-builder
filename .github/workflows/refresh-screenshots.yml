@@ -1,0 +1,92 @@
+name: Refresh README graph screenshots
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/refresh-screenshots.yml"
+      - "package-lock.json"
+      - "package.json"
+      - "scripts/capture_graph_screenshots.mjs"
+  workflow_run:
+    workflows: ["Rebuild graph from machine-data"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: relationship-graph-pages
+  cancel-in-progress: ${{ github.event_name == 'workflow_run' }}
+
+jobs:
+  refresh:
+    if: >-
+      github.event_name == 'push' ||
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success' ||
+      github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out builder
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install screenshot dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Refresh graph screenshots
+        shell: bash
+        run: |
+          server_log="$RUNNER_TEMP/graph-builder-http.log"
+          python3 -m http.server 4173 --bind 127.0.0.1 >"$server_log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for attempt in {1..30}; do
+            if curl --fail --silent --show-error http://127.0.0.1:4173/ >/dev/null; then
+              break
+            fi
+            if [ "$attempt" -eq 30 ]; then
+              cat "$server_log"
+              exit 1
+            fi
+            sleep 1
+          done
+          npm run screenshots
+
+      - name: Commit refreshed screenshots
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- README.md assets/screenshots)" ]; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md assets/screenshots
+          git commit -m "Refresh README graph screenshots"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD^)" ]; then
+              echo "Main advanced after capture; refusing to publish stale screenshots"
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo "Unable to publish the refreshed graph screenshots" >&2
+          exit 1

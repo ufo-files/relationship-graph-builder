@@ -66,10 +66,9 @@ try {
   await page.locator("#loadingState").waitFor({ state: "detached" });
   await page.evaluate(() => document.fonts.ready);
   await page.addStyleTag({
-    content: `.stage { position: relative !important; }
-      .stage::after {
+    content: `body::after {
         content: "";
-        position: absolute;
+        position: fixed;
         inset: 0;
         z-index: 2147483647;
         box-sizing: border-box;
@@ -104,8 +103,10 @@ try {
       await page.waitForFunction(() => !document.querySelector("#mapStatus")?.textContent?.startsWith("Loading"));
     }
     await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
-    await page.locator(".stage").screenshot({
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.screenshot({
       animations: "disabled",
+      fullPage: false,
       path: path.join(outputDirectory, `${id}.png`),
       type: "png"
     });

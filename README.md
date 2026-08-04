@@ -4,7 +4,7 @@ A static graph builder for completed OCR and media transcripts in the UFO Files 
 
 ## Graph types
 
-These previews are regenerated from the latest machine-data catalog after every successful rebuild. Each image includes a 1px black border for contrast against light backgrounds.
+These full-viewport previews are regenerated from the latest machine-data catalog after every successful rebuild. Each image includes a 1px black border for contrast against light backgrounds.
 
 <!-- graph-screenshots:start -->
 <table>
@@ -151,9 +151,15 @@ Every push to `ufo-files/machine-data` updates `.machine-data-revision` through 
 builder-scoped deploy key. That rebuild request immediately starts the `Rebuild
 graph from machine-data` workflow, which rebuilds and tests the catalog, records
 the exact machine-data commit in the catalog metadata, commits the refreshed
-catalog and graph-type screenshots, updates the README gallery, and deploys the
-static builder to GitHub Pages. The workflow can also be run manually or triggered
-with a `machine-data-updated` `repository_dispatch` event.
+catalog, and deploys the static builder to GitHub Pages. The workflow can also be
+run manually or triggered with a `machine-data-updated` `repository_dispatch`
+event.
+
+After a completed rebuild, the separate `Refresh README graph screenshots`
+workflow captures every top-level graph type, commits the refreshed previews, and
+updates the README gallery. It also runs after late rebuild failures in case the
+catalog commit completed before deployment failed, runs when screenshot tooling
+changes on `main`, and can be started manually. It does not run for pull requests.
 
 ## Map data and licenses
 
