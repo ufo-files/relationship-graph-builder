@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "df9e1d8e76fbaa87e5cd3cdf79d3ae420cb43265"
+    "revision": "6c8f102c5d2874caade9deb227146cd98edc6e62"
   },
-  "count": 217,
-  "totalCount": 217,
+  "count": 219,
+  "totalCount": 219,
   "shownCount": 200,
   "candidates": [
     {
@@ -2507,6 +2507,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Intelligence I-",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Intelligence Div",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Department of Justico",
@@ -2558,8 +2574,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 1030,
-        "documentCount": 326
+        "mentions": 1031,
+        "documentCount": 327
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -2789,6 +2805,22 @@
         "name": "Community Relations Division",
         "mentions": 5,
         "documentCount": 4
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Intelligence T-",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Intelligence I-",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -3173,38 +3205,6 @@
         "name": "Forces Intelligence",
         "mentions": 7,
         "documentCount": 6
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Intelligenco Officer",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Intelligence Office",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "program",
-      "left": {
-        "name": "Project Signa",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "PROJECT SIGMA",
-        "mentions": 4,
-        "documentCount": 2
       },
       "similarity": 0.923,
       "reason": "similar name",
