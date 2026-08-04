@@ -103,6 +103,18 @@ h1, h2, h3, p { margin-top: 0; }
 .builder-table td:not(:first-child), .builder-table th:not(:first-child) { text-align: right; }
 .builder-table tbody tr { cursor: pointer; }
 .builder-table tbody tr:hover, .builder-table tbody tr:focus { background: #e8e7e0; outline: none; }
+.document-browser-status { position: sticky; top: 0; z-index: 2; padding: 10px 14px; border-bottom: 1px solid var(--line-strong); background: rgba(246,245,239,.96); color: var(--muted); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+.document-browser { display: grid; }
+.document-row { display: grid; grid-template-columns: 38px minmax(220px, 1fr) minmax(130px, .45fr) minmax(120px, auto) 24px; align-items: center; gap: 12px; min-height: 58px; padding: 8px 13px; border-bottom: 1px solid var(--line); color: var(--ink); font-size: var(--table-font-size, 12px); text-decoration: none; }
+.document-row:hover, .document-row:focus { background: #e8e7e0; outline: none; }
+.document-file-icon { display: grid; place-content: center; width: 34px; height: 38px; border: 1px solid var(--line-strong); border-radius: 3px; background: var(--paper); font-size: 9px; font-weight: 750; letter-spacing: .06em; }
+.document-file-copy { min-width: 0; }
+.document-file-copy strong, .document-file-copy small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.document-file-copy strong { font-weight: 680; }
+.document-file-copy small, .document-meta { margin-top: 4px; color: var(--muted); font-size: max(10px, calc(var(--table-font-size, 12px) - 2px)); }
+.document-collection, .document-meta { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.document-open { color: var(--muted); font-size: 15px; }
+@media (max-width: 760px) { .document-row { grid-template-columns: 38px minmax(0, 1fr) 24px; } .document-collection, .document-meta { display: none; } }
 .loading, .chart-empty { position: absolute; inset: 0; z-index: 2; display: grid; place-content: center; color: var(--muted); font-size: 12px; background: rgba(246,245,239,.92); }
 .chart-empty[hidden] { display: none; }
 .loading span { width: 22px; height: 22px; border: 2px solid var(--line-strong); border-top-color: var(--green); border-radius: 50%; margin: 0 auto 10px; animation: spin .8s linear infinite; }

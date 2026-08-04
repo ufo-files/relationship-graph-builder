@@ -451,7 +451,7 @@ test("Book is a first-class area bookshelf for transcript-backed titles", () => 
   assert.match(source, /const shouldLabel = state\.config\.labels !== "none"/);
 });
 
-test("Documents maps every completed corpus file to its immutable machine-data source", () => {
+test("Documents provides a searchable finder linked to immutable machine-data sources", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
   vm.runInContext(source, context);
@@ -476,11 +476,12 @@ test("Documents maps every completed corpus file to its immutable machine-data s
     scope: "All corpus files",
     icon: "<path d='M7 2h12l5 5v11H7zM19 2v5h5M11 11h9M11 14h9'/><path d='M4 5H2v15h17v-2'/>"
   });
-  assert.equal(result.title, "Document Archive");
+  assert.equal(result.title, "Document Finder");
   assert.equal(result.url, "https://github.com/ufo-files/machine-data/blob/abc123/Collection%20A/pdfs/a%20file.txt");
-  assert.match(source, /document: \{ size: "words", color: "source", labels: "top" \}/);
-  assert.match(source, /const data = state\.catalog\.documents\s*\.filter\(document => sourceMatches\(document\.source\)\)/);
-  assert.doesNotMatch(source.match(/function renderDocument\(\)[\s\S]*?\n\}/)?.[0] || "", /\.slice\(/);
+  assert.match(source, /document: \{ size: "words", color: "source", labels: "top", documentSearch: "" \}/);
+  assert.match(source, /Search title, path, collection, or format/);
+  assert.match(source, /const visible = matching\.slice\(0, 100\)/);
+  assert.match(source, /class="document-row"[^>]*href="\$\{escapeHTML\(machineDataDocumentURL\(document\)\)\}"/);
   assert.match(source, /Every completed file/);
   assert.match(source, /document: renderDocument/);
 });
