@@ -1,6 +1,13 @@
 name: Refresh README graph screenshots
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/refresh-screenshots.yml"
+      - "package-lock.json"
+      - "package.json"
+      - "scripts/capture_graph_screenshots.mjs"
   pull_request:
     paths:
       - ".github/workflows/refresh-screenshots.yml"
@@ -9,10 +16,14 @@ on:
       - "assets/**"
       - "!assets/screenshots/**"
       - "data/catalog.json"
+      - "data/curated_entities.json"
+      - "data/entity_aliases.json"
+      - "data/location_coordinates.json"
       - "index.html"
       - "map-globe.js"
       - "package-lock.json"
       - "package.json"
+      - "scripts/build_catalog.py"
       - "scripts/capture_graph_screenshots.mjs"
       - "styles.css"
       - "vendor/**"
@@ -26,8 +37,8 @@ permissions:
   contents: read
 
 concurrency:
-  group: graph-screenshots-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'main' }}
-  cancel-in-progress: true
+  group: ${{ github.event_name == 'pull_request' && format('graph-screenshots-pr-{0}', github.event.pull_request.number) || 'relationship-graph-pages' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' || github.event_name == 'workflow_run' }}
 
 jobs:
   validate:
@@ -36,6 +47,27 @@ jobs:
     steps:
       - name: Check out builder
         uses: actions/checkout@v7
+
+      - name: Check out machine-data
+        uses: actions/checkout@v7
+        with:
+          repository: ufo-files/machine-data
+          path: _machine-data
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Build catalog
+        shell: bash
+        run: |
+          revision="$(git -C _machine-data rev-parse HEAD)"
+          python3 scripts/build_catalog.py \
+            --input _machine-data \
+            --input-repository ufo-files/machine-data \
+            --input-revision "$revision" \
+            --require-data
 
       - name: Set up Node
         uses: actions/setup-node@v6
@@ -75,7 +107,11 @@ jobs:
           fi
 
   refresh:
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    if: >-
+      github.event_name == 'push' ||
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success' ||
+      github.event.workflow_run.conclusion == 'failure'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -126,8 +162,12 @@ jobs:
           git add README.md assets/screenshots
           git commit -m "Refresh README graph screenshots"
           for attempt in 1 2 3; do
-            git pull --rebase origin main
             if git push origin HEAD:main; then
+              exit 0
+            fi
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD^)" ]; then
+              echo "Main advanced after capture; refusing to publish stale screenshots"
               exit 0
             fi
             sleep $((attempt * 2))

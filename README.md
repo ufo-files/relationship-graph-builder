@@ -155,10 +155,12 @@ catalog, and deploys the static builder to GitHub Pages. The workflow can also b
 run manually or triggered with a `machine-data-updated` `repository_dispatch`
 event.
 
-After a successful rebuild, the separate `Refresh README graph screenshots`
+After a completed rebuild, the separate `Refresh README graph screenshots`
 workflow captures every top-level graph type, commits the refreshed previews, and
-updates the README gallery. It can also be run manually and validates screenshot
-generation independently on relevant pull requests.
+updates the README gallery. It also runs after late rebuild failures in case the
+catalog commit completed before deployment failed, runs when screenshot tooling
+changes on `main`, and can be started manually. On relevant pull requests it
+rebuilds the catalog before validating screenshot generation independently.
 
 ## Map data and licenses
 
