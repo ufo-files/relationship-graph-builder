@@ -354,6 +354,7 @@ function renderTypeGrid() {
 }
 
 function renderControls() {
+  renderPresetControl();
   renderTypeGrid();
   const numericEntity = ["contextAdjustedMentions", "mentions", "independentDocumentCount", "documentCount", "sourceCount", "inflationRate", "documentInflationRate", "classificationConfidence", "extractionConfidence"];
   const numericDoc = ["words", "segments", "bytes", "durationMs"];

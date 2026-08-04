@@ -330,11 +330,12 @@ test("Default preset restores the complete initial view", () => {
   assert.equal(result.defaults.x, "independentDocumentCount");
 });
 
-test("graph type is the first builder section and cards explain their data scope", () => {
+test("graph type stays first while quick presets remain available", () => {
   const html = fs.readFileSync("index.html", "utf8");
   const source = fs.readFileSync("app.js", "utf8");
-  assert.doesNotMatch(html, /id="presetControls"/);
   assert.match(html, /data-step="1"[\s\S]*<strong>Graph type<\/strong>/);
+  assert.match(html, /data-step="2"[\s\S]*<strong>Presets<\/strong>[\s\S]*id="presetControls"/);
+  assert.match(source, /function renderControls\(\) \{\s*renderPresetControl\(\)/);
   assert.match(source, /label: "Map", scope: "Locations"/);
   assert.match(source, /label: "Bookshelf", scope: "Books"/);
   assert.match(source, /label: "Scatter", scope: "All"/);
