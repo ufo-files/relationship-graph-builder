@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "262fc12fe77d793aca8f23d8248c41543558ed52"
+    "revision": "27eb036da4909853ade171d6693b4945cd95c6ff"
   },
-  "count": 154,
-  "totalCount": 154,
-  "shownCount": 154,
+  "count": 155,
+  "totalCount": 155,
+  "shownCount": 155,
   "candidates": [
     {
       "category": "organization",
@@ -542,8 +542,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1962,
-        "documentCount": 432
+        "mentions": 1964,
+        "documentCount": 433
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1518,8 +1518,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2601,
-        "documentCount": 219
+        "mentions": 2603,
+        "documentCount": 220
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -1806,8 +1806,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1962,
-        "documentCount": 432
+        "mentions": 1964,
+        "documentCount": 433
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2103,6 +2103,22 @@
         "documentCount": 2
       },
       "similarity": 0.927,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Central Intelligence Agency",
+        "mentions": 1964,
+        "documentCount": 433
+      },
+      "right": {
+        "name": "CENTRAL INTELLIGZACE AGENCY",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.926,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
