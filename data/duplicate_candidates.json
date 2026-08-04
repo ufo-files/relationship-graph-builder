@@ -4,7 +4,7 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "661ce34818759cc4e249af3b6cb8633fb8c9a94f"
+    "revision": "577cae9d05bf9a77ec7cb5ab3b4fd4b41f6b23e1"
   },
   "count": 151,
   "totalCount": 151,
@@ -526,8 +526,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1951,
-        "documentCount": 425
+        "mentions": 1953,
+        "documentCount": 427
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -830,8 +830,8 @@
       "category": "person",
       "left": {
         "name": "David Grush",
-        "mentions": 75,
-        "documentCount": 35
+        "mentions": 76,
+        "documentCount": 36
       },
       "right": {
         "name": "David Grusch",
@@ -926,13 +926,13 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 794,
-        "documentCount": 183
+        "mentions": 812,
+        "documentCount": 185
       },
       "right": {
         "name": "Department of Detense",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -1051,6 +1051,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "UAPTF and the ODNI National Intelligence",
+        "mentions": 5,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "VAPTE and the ODNI National Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.95,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Intelligenco Officer",
@@ -1061,22 +1077,6 @@
         "name": "The Intelligence Officer",
         "mentions": 5,
         "documentCount": 4
-      },
-      "similarity": 0.95,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "UAPTF and the ODNI National Intelligence",
-        "mentions": 4,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "VAPTE and the ODNI National Intelligence",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.95,
       "reason": "similar name",
@@ -1454,8 +1454,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Community",
-        "mentions": 59,
-        "documentCount": 21
+        "mentions": 60,
+        "documentCount": 22
       },
       "right": {
         "name": "Intelligence Community In",
@@ -1502,8 +1502,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2598,
-        "documentCount": 217
+        "mentions": 2600,
+        "documentCount": 218
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -1747,8 +1747,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 148,
-        "documentCount": 20
+        "mentions": 149,
+        "documentCount": 21
       },
       "similarity": 0.932,
       "reason": "similar name",
@@ -1758,8 +1758,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1951,
-        "documentCount": 425
+        "mentions": 1953,
+        "documentCount": 427
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -1774,8 +1774,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 911,
-        "documentCount": 260
+        "mentions": 914,
+        "documentCount": 262
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
