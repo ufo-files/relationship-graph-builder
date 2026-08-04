@@ -4,11 +4,11 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "27eb036da4909853ade171d6693b4945cd95c6ff"
+    "revision": "f634e50546b46c17410bd36ceed288406298e31b"
   },
-  "count": 155,
-  "totalCount": 155,
-  "shownCount": 155,
+  "count": 157,
+  "totalCount": 157,
+  "shownCount": 157,
   "candidates": [
     {
       "category": "organization",
@@ -542,8 +542,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1964,
-        "documentCount": 433
+        "mentions": 1967,
+        "documentCount": 434
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1127,6 +1127,22 @@
         "documentCount": 2
       },
       "similarity": 0.95,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "United States Navy",
+        "mentions": 62,
+        "documentCount": 29
+      },
+      "right": {
+        "name": "United States Navy F-",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.947,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1806,8 +1822,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1964,
-        "documentCount": 433
+        "mentions": 1967,
+        "documentCount": 434
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2110,8 +2126,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 1964,
-        "documentCount": 433
+        "mentions": 1967,
+        "documentCount": 434
       },
       "right": {
         "name": "CENTRAL INTELLIGZACE AGENCY",
@@ -2213,6 +2229,22 @@
         "name": "Bruce McAbee",
         "mentions": 7,
         "documentCount": 4
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Forcien Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Forces Intelligence",
+        "mentions": 7,
+        "documentCount": 6
       },
       "similarity": 0.923,
       "reason": "similar name",
