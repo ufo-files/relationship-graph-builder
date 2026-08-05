@@ -4,7 +4,7 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "0b39877166ee5151f8967c61d1b6d83f35b1cfcf"
+    "revision": "fb7ad65b49abe0b637b11871676524d9d621efc6"
   },
   "count": 237,
   "totalCount": 237,
@@ -205,6 +205,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Department of Justice's",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "DEPARTMENT OF JUSTIC",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.976,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "San Francisco Office",
         "mentions": 4,
         "documentCount": 2
@@ -222,22 +238,6 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Justico",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "DEPARTMENT OF JUSTIC",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.976,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of Justice's",
         "mentions": 2,
         "documentCount": 2
       },
@@ -814,8 +814,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2350,
-        "documentCount": 567
+        "mentions": 2371,
+        "documentCount": 570
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -830,8 +830,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2350,
-        "documentCount": 567
+        "mentions": 2371,
+        "documentCount": 570
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -846,8 +846,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2350,
-        "documentCount": 567
+        "mentions": 2371,
+        "documentCount": 570
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -862,8 +862,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2350,
-        "documentCount": 567
+        "mentions": 2371,
+        "documentCount": 570
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1539,8 +1539,8 @@
       },
       "right": {
         "name": "Department of Justice's",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -1627,6 +1627,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Justice's",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "DEPARTMENT OF JUSTI",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.95,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "National Institute of Discovery Sciences",
@@ -1646,22 +1662,6 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Justico",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "DEPARTMENT OF JUSTI",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.95,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of Justice's",
         "mentions": 2,
         "documentCount": 2
       },
@@ -1886,8 +1886,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2350,
-        "documentCount": 567
+        "mentions": 2371,
+        "documentCount": 570
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2430,8 +2430,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2887,
-        "documentCount": 276
+        "mentions": 2888,
+        "documentCount": 277
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -2782,8 +2782,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2350,
-        "documentCount": 567
+        "mentions": 2371,
+        "documentCount": 570
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -3197,9 +3197,9 @@
     {
       "category": "government_agency",
       "left": {
-        "name": "Department of Justico",
-        "mentions": 2,
-        "documentCount": 2
+        "name": "Department of Justice's",
+        "mentions": 4,
+        "documentCount": 4
       },
       "right": {
         "name": "DEPARTMENT OF XUSTIC",
