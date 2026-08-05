@@ -31,11 +31,22 @@ function escapeHTML(value) {
 }
 
 function galleryMarkup(graphTypes) {
+  const galleryItems = [
+    ...graphTypes.map(({ id, label }) => ({
+      id,
+      label,
+      alt: `${label} graph type screenshot`
+    })),
+    {
+      ...farSideScreenshot,
+      alt: "Far Side of the Moon map screenshot"
+    }
+  ];
   const rows = [];
-  for (let index = 0; index < graphTypes.length; index += 2) {
-    const cells = graphTypes.slice(index, index + 2).map(({ id, label }) => `    <td width="50%" align="center">
+  for (let index = 0; index < galleryItems.length; index += 2) {
+    const cells = galleryItems.slice(index, index + 2).map(({ id, label, alt }) => `    <td width="50%" align="center">
       <strong>${escapeHTML(label)}</strong><br>
-      <a href="assets/screenshots/${escapeHTML(id)}.png"><img src="assets/screenshots/${escapeHTML(id)}.png" alt="${escapeHTML(label)} graph type screenshot" width="100%"></a>
+      <a href="assets/screenshots/${escapeHTML(id)}.png"><img src="assets/screenshots/${escapeHTML(id)}.png" alt="${escapeHTML(alt)}" width="100%"></a>
     </td>`);
     if (cells.length === 1) cells.push('    <td width="50%"></td>');
     rows.push(`  <tr>\n${cells.join("\n")}\n  </tr>`);
@@ -44,10 +55,6 @@ function galleryMarkup(graphTypes) {
 <p align="center">
   <strong>${defaultScreenshot.label}</strong><br>
   <a href="assets/screenshots/${defaultScreenshot.id}.png"><img src="assets/screenshots/${defaultScreenshot.id}.png" alt="Default graph builder view screenshot" width="100%"></a>
-</p>
-<p align="center">
-  <strong>${farSideScreenshot.label}</strong><br>
-  <a href="assets/screenshots/${farSideScreenshot.id}.png"><img src="assets/screenshots/${farSideScreenshot.id}.png" alt="Far Side of the Moon map screenshot" width="100%"></a>
 </p>
 <table>\n${rows.join("\n")}\n</table>\n${galleryEnd}`;
 }
