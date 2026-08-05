@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "df83e3c961d2b1f23b8f8f150c492afb5934b0b5"
+    "revision": "b9d0ec67db89237af9679eb15b3760f801be7050"
   },
-  "count": 302,
-  "totalCount": 302,
+  "count": 303,
+  "totalCount": 303,
   "shownCount": 200,
   "candidates": [
     {
@@ -23,6 +23,22 @@
         "documentCount": 2
       },
       "similarity": 0.989,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Defense Advanced Research Projects Agency",
+        "mentions": 56,
+        "documentCount": 11
+      },
+      "right": {
+        "name": "The Defense Advanced Research Project Agency",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.988,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -110,8 +126,8 @@
       "category": "government_agency",
       "left": {
         "name": "National Reconnaissance Office",
-        "mentions": 292,
-        "documentCount": 114
+        "mentions": 312,
+        "documentCount": 115
       },
       "right": {
         "name": "The National Reconnaisance Office",
@@ -590,8 +606,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 70,
-        "documentCount": 37
+        "mentions": 71,
+        "documentCount": 38
       },
       "right": {
         "name": "Air Iechnical Intelligence Center",
@@ -606,8 +622,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 70,
-        "documentCount": 37
+        "mentions": 71,
+        "documentCount": 38
       },
       "right": {
         "name": "The Ait Technical Intelligence Center",
@@ -1182,8 +1198,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3020,
-        "documentCount": 680
+        "mentions": 3110,
+        "documentCount": 682
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1198,8 +1214,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3020,
-        "documentCount": 680
+        "mentions": 3110,
+        "documentCount": 682
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1214,8 +1230,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3020,
-        "documentCount": 680
+        "mentions": 3110,
+        "documentCount": 682
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1230,8 +1246,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3020,
-        "documentCount": 680
+        "mentions": 3110,
+        "documentCount": 682
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1357,9 +1373,9 @@
     {
       "category": "program",
       "left": {
-        "name": "Project Sign",
-        "mentions": 51,
-        "documentCount": 24
+        "name": "Project SIGN",
+        "mentions": 61,
+        "documentCount": 25
       },
       "right": {
         "name": "Project Signa",
@@ -1715,8 +1731,8 @@
       },
       "right": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 70,
-        "documentCount": 37
+        "mentions": 71,
+        "documentCount": 38
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -1838,8 +1854,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 162,
-        "documentCount": 64
+        "mentions": 164,
+        "documentCount": 65
       },
       "right": {
         "name": "University of Colcrado",
@@ -1950,8 +1966,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1052,
-        "documentCount": 278
+        "mentions": 1060,
+        "documentCount": 279
       },
       "right": {
         "name": "Department of Detense",
@@ -2286,8 +2302,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 201,
-        "documentCount": 55
+        "mentions": 203,
+        "documentCount": 57
       },
       "right": {
         "name": "Department of Stale",
@@ -2302,8 +2318,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 201,
-        "documentCount": 55
+        "mentions": 203,
+        "documentCount": 57
       },
       "right": {
         "name": "Department of Staie",
@@ -2398,8 +2414,8 @@
       "category": "person",
       "left": {
         "name": "Dwight D. Eisenhower",
-        "mentions": 124,
-        "documentCount": 39
+        "mentions": 127,
+        "documentCount": 40
       },
       "right": {
         "name": "President Dwight Eisenhower",
@@ -2542,11 +2558,27 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3020,
-        "documentCount": 680
+        "mentions": 3110,
+        "documentCount": 682
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.943,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office of Scientific Intelligence",
+        "mentions": 13,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "CIA Office of Scientific Intelligence's",
         "mentions": 3,
         "documentCount": 3
       },
@@ -2563,22 +2595,6 @@
       },
       "right": {
         "name": "STAFF COMMUNICATUNS OFFICE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.943,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Office of Scientific Intelligence",
-        "mentions": 13,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "CIA Office of Scientific Intelligence's",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2707,8 +2723,8 @@
       },
       "right": {
         "name": "California Institute of Technology",
-        "mentions": 15,
-        "documentCount": 13
+        "mentions": 16,
+        "documentCount": 14
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -2765,14 +2781,14 @@
     {
       "category": "organization",
       "left": {
-        "name": "APPROPRIATIONS SUBCOMMITTEE",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Appropriations Committee",
+        "name": "OF DEFENSE FOR INTELLIGENCE",
         "mentions": 3,
         "documentCount": 3
+      },
+      "right": {
+        "name": "Defense for Intelligence",
+        "mentions": 5,
+        "documentCount": 5
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -2781,14 +2797,14 @@
     {
       "category": "organization",
       "left": {
-        "name": "OF DEFENSE FOR INTELLIGENCE",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Defense for Intelligence",
+        "name": "APPROPRIATIONS SUBCOMMITTEE",
         "mentions": 4,
         "documentCount": 4
+      },
+      "right": {
+        "name": "Appropriations Committee",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -3118,8 +3134,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Community",
-        "mentions": 88,
-        "documentCount": 42
+        "mentions": 89,
+        "documentCount": 43
       },
       "right": {
         "name": "Intelligence Community In",
@@ -3166,8 +3182,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 3183,
-        "documentCount": 326
+        "mentions": 3186,
+        "documentCount": 327
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -3189,22 +3205,6 @@
         "name": "Fright-Petterson Air Force Base",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.935,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Air Technical Intelligence Center",
-        "mentions": 70,
-        "documentCount": 37
-      },
-      "right": {
-        "name": "Technical Intelligence Center",
-        "mentions": 22,
-        "documentCount": 17
       },
       "similarity": 0.935,
       "reason": "similar name",
