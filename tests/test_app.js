@@ -479,7 +479,9 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /new THREE\.PerspectiveCamera\(DEFAULT_CAMERA_FOV, 1, 10, 1_500\)/);
   assert.match(globe, /this\.camera\.position\.z \* zoomFactor/);
   assert.match(globe, /animationSpeeds\(\)[\s\S]*moonInViewport[\s\S]*visibleMoonTransitArc\(angle\)[\s\S]*return \{ moon: MOON_OFFSCREEN_ORBIT_SPEED, earth: AUTO_ROTATION_SPEED \}/);
-  assert.match(globe, /this\.moonOrbit\.rotation\.y \+= elapsed \* speed\.moon;[\s\S]*this\.globe\.rotation\.y \+= elapsed \* speed\.earth/);
+  assert.match(globe, /moonViewportEntryAngle\(hiddenAngle, visibleAngle\)[\s\S]*if \(this\.moonVisibleAtAngle\(midpoint\)\) inside = midpoint/);
+  assert.match(globe, /if \(!this\.moonWasInViewport && this\.moonVisibleAtAngle\(nextMoonAngle\)\) \{[\s\S]*nextMoonAngle = this\.moonViewportEntryAngle\(currentMoonAngle, nextMoonAngle\)/);
+  assert.match(globe, /this\.moonOrbit\.rotation\.y = nextMoonAngle;[\s\S]*this\.globe\.rotation\.y \+= elapsed \* speed\.earth/);
   assert.match(globe, /earthSlowdown = MIN_MOON_TRANSIT_SECONDS \/ this\.moonTransitSeconds[\s\S]*AUTO_ROTATION_SPEED \* earthSlowdown/);
   assert.match(globe, /setMoonTransitSeconds\(seconds\)[\s\S]*THREE\.MathUtils\.clamp\(Number\(seconds\) \|\| DEFAULT_MOON_TRANSIT_SECONDS, MIN_MOON_TRANSIT_SECONDS, MAX_MOON_TRANSIT_SECONDS\)/);
   assert.match(html, /Drag or use arrow keys to rotate the Earth and Moon together/);

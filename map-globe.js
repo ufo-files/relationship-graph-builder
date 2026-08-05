@@ -481,6 +481,17 @@ class GlobeMap {
     return start === null || end === null ? Math.PI * 2 : end - start;
   }
 
+  moonViewportEntryAngle(hiddenAngle, visibleAngle) {
+    let outside = hiddenAngle;
+    let inside = visibleAngle;
+    for (let refinement = 0; refinement < 16; refinement += 1) {
+      const midpoint = (outside + inside) / 2;
+      if (this.moonVisibleAtAngle(midpoint)) inside = midpoint;
+      else outside = midpoint;
+    }
+    return inside;
+  }
+
   animationSpeeds() {
     this.updateViewFrustum();
     const angle = this.moonOrbit.rotation.y;
@@ -526,7 +537,12 @@ class GlobeMap {
     if (this.autoRotate && this.lastFrameTime !== null && !this.drag) {
       const elapsed = Math.min(50, timestamp - this.lastFrameTime);
       const speed = this.animationSpeeds();
-      this.moonOrbit.rotation.y += elapsed * speed.moon;
+      const currentMoonAngle = this.moonOrbit.rotation.y;
+      let nextMoonAngle = currentMoonAngle + elapsed * speed.moon;
+      if (!this.moonWasInViewport && this.moonVisibleAtAngle(nextMoonAngle)) {
+        nextMoonAngle = this.moonViewportEntryAngle(currentMoonAngle, nextMoonAngle);
+      }
+      this.moonOrbit.rotation.y = nextMoonAngle;
       this.globe.rotation.y += elapsed * speed.earth;
     }
     this.lastFrameTime = timestamp;
