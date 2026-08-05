@@ -36,6 +36,16 @@ class ClassificationTests(unittest.TestCase):
             [("FBİ", "Federal Bureau of Investigation", "government_agency", 0.99, True)],
         )
 
+    def test_extracts_moon_as_a_curated_location(self):
+        mentions = extract_mentions(
+            "Witnesses described objects on the Moon and across the lunar surface.",
+            {},
+        )
+
+        moon_mentions = [mention for mention in mentions if mention[1] == "Moon"]
+        self.assertEqual({mention[2] for mention in moon_mentions}, {"location"})
+        self.assertTrue(all(mention[4] for mention in moon_mentions))
+
     def test_resolves_confirmed_entity_aliases(self):
         data_dir = Path(__file__).resolve().parents[1] / "data"
         registry = load_registry([data_dir / "curated_entities.json", data_dir / "entity_aliases.json"])
