@@ -51,6 +51,7 @@ KNOWN = {
     "MJ-12": ("Majestic 12", "program"),
     "Area 51": ("Area 51", "location"),
     "Roswell": ("Roswell", "location"),
+    "Project Moon Dust": ("Project Moon Dust", "program"),
     "Moon": ("Moon", "location"),
     "the Moon": ("Moon", "location"),
     "lunar surface": ("Moon", "location"),
