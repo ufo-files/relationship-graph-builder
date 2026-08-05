@@ -5,14 +5,36 @@ const canvas = document.querySelector("#globeCanvas");
 const container = document.querySelector("#mapView");
 const labelLayer = document.querySelector("#globeLabels");
 const status = document.querySelector("#mapStatus");
-const DEFAULT_GLOBE_COVERAGE = .95;
-const DEFAULT_GLOBE_ROTATION = { x: .66, y: .11 };
+const DEFAULT_GLOBE_COVERAGE = .72;
+const DEFAULT_CAMERA_TARGET_X = 0;
+const DEFAULT_GLOBE_ROTATION = { x: .01375, y: 0 };
 const AUTO_ROTATION_SPEED = .000025;
+const EARTH_EQUATORIAL_RADIUS_KM = 6371;
+const MOON_EQUATORIAL_RADIUS_KM = 1737.4;
+const MOON_MEAN_ORBIT_RADIUS_KM = 384_400;
+const MOON_ORBIT_DAYS = 27.322;
+const MOON_ORBIT_INCLINATION = 5.145;
+const MOON_RADIUS = MOON_EQUATORIAL_RADIUS_KM / EARTH_EQUATORIAL_RADIUS_KM;
+const MOON_ORBIT_RADIUS = MOON_MEAN_ORBIT_RADIUS_KM / EARTH_EQUATORIAL_RADIUS_KM;
+// Physical time is compressed so a complete orbit is observable in the interactive view.
+const MOON_DISPLAY_ORBIT_PERIOD_MS = 300_000;
+const MOON_ORBIT_SPEED = Math.PI * 2 / MOON_DISPLAY_ORBIT_PERIOD_MS;
+const DEFAULT_MOON_ORBIT_ANGLE = 1.545;
+const DEFAULT_CAMERA_DISTANCE = 600;
+const MIN_CAMERA_DISTANCE = 70;
+const MAX_CAMERA_DISTANCE = 1_200;
 
 function cameraDistanceForCoverage(verticalFov, coverage) {
   const halfFov = THREE.MathUtils.degToRad(verticalFov / 2);
   return 1 / Math.sin(Math.atan(Math.tan(halfFov) * coverage));
 }
+
+function verticalFovForCoverageAtDistance(distance, coverage) {
+  const apparentHalfAngle = Math.asin(1 / distance);
+  return THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(apparentHalfAngle) / coverage));
+}
+
+const DEFAULT_CAMERA_FOV = verticalFovForCoverageAtDistance(DEFAULT_CAMERA_DISTANCE, DEFAULT_GLOBE_COVERAGE);
 
 class GlobeMap {
   constructor() {
@@ -20,11 +42,14 @@ class GlobeMap {
     this.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(38, 1, .1, 100);
-    this.camera.position.z = cameraDistanceForCoverage(this.camera.fov, DEFAULT_GLOBE_COVERAGE);
+    this.camera = new THREE.PerspectiveCamera(DEFAULT_CAMERA_FOV, 1, 10, 1_500);
+    this.camera.position.set(DEFAULT_CAMERA_TARGET_X, 0, cameraDistanceForCoverage(this.camera.fov, DEFAULT_GLOBE_COVERAGE));
+    this.camera.lookAt(DEFAULT_CAMERA_TARGET_X, 0, 0);
+    this.earthMoonSystem = new THREE.Group();
+    this.earthMoonSystem.rotation.set(DEFAULT_GLOBE_ROTATION.x, DEFAULT_GLOBE_ROTATION.y, 0);
+    this.scene.add(this.earthMoonSystem);
     this.globe = new THREE.Group();
-    this.globe.rotation.set(DEFAULT_GLOBE_ROTATION.x, DEFAULT_GLOBE_ROTATION.y, 0);
-    this.scene.add(this.globe);
+    this.earthMoonSystem.add(this.globe);
     this.raycaster = new THREE.Raycaster();
     this.pointer = new THREE.Vector2();
     this.nodes = [];
@@ -38,8 +63,57 @@ class GlobeMap {
     this.lastFrameTime = null;
     this.autoRotate = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     this.addEarth();
+    this.addMoon();
     this.bindEvents();
     new ResizeObserver(() => this.resize()).observe(container);
+  }
+
+  addMoon() {
+    const orbitPlane = new THREE.Group();
+    orbitPlane.rotation.z = THREE.MathUtils.degToRad(MOON_ORBIT_INCLINATION);
+    this.earthMoonSystem.add(orbitPlane);
+    this.moonOrbit = new THREE.Group();
+    this.moonOrbit.rotation.y = DEFAULT_MOON_ORBIT_ANGLE;
+    orbitPlane.add(this.moonOrbit);
+
+    this.moonMaterial = new THREE.MeshBasicMaterial({ color: 0xd0cec7 });
+    const moon = new THREE.Group();
+    moon.name = "moon";
+    moon.position.x = MOON_ORBIT_RADIUS;
+    // SphereGeometry maps the source's central near-side meridian to +X. At the
+    // starting +X orbital position, rotate it toward Earth (-X). Inheriting the
+    // orbit group's rotation then keeps that same face Earth-facing at every angle.
+    moon.rotation.y = Math.PI;
+    const surface = new THREE.Mesh(
+      new THREE.SphereGeometry(MOON_RADIUS, 64, 48),
+      this.moonMaterial
+    );
+    surface.name = "moon-surface";
+    moon.add(surface);
+    const outline = new THREE.Mesh(
+      new THREE.SphereGeometry(MOON_RADIUS * 1.012, 64, 48),
+      new THREE.MeshBasicMaterial({ color: 0x111111, transparent: true, opacity: .5, side: THREE.BackSide })
+    );
+    outline.name = "moon-outline";
+    moon.add(outline);
+    this.moon = moon;
+    this.moonOrbit.add(moon);
+  }
+
+  loadMoonTexture() {
+    if (this.moonTextureRequested) return;
+    this.moonTextureRequested = true;
+    new THREE.TextureLoader().load(
+      "assets/map/moon-paper.png",
+      texture => {
+        texture.colorSpace = THREE.SRGBColorSpace;
+        texture.anisotropy = Math.min(8, this.renderer.capabilities.getMaxAnisotropy());
+        this.moonMaterial.map = texture;
+        this.moonMaterial.color.set(0xffffff);
+        this.moonMaterial.needsUpdate = true;
+        this.draw();
+      }
+    );
   }
 
   addEarth() {
@@ -136,8 +210,8 @@ class GlobeMap {
         const dx = event.clientX - this.drag.x;
         const dy = event.clientY - this.drag.y;
         this.dragDistance += Math.abs(dx) + Math.abs(dy);
-        this.globe.rotation.y += dx * .006;
-        this.globe.rotation.x = THREE.MathUtils.clamp(this.globe.rotation.x + dy * .004, -1.15, 1.15);
+        this.earthMoonSystem.rotation.y += dx * .006;
+        this.earthMoonSystem.rotation.x = THREE.MathUtils.clamp(this.earthMoonSystem.rotation.x + dy * .004, -1.15, 1.15);
         this.drag = { x: event.clientX, y: event.clientY };
         this.draw();
       }
@@ -150,18 +224,19 @@ class GlobeMap {
     canvas.addEventListener("pointercancel", () => { this.drag = null; });
     canvas.addEventListener("wheel", event => {
       event.preventDefault();
-      this.camera.position.z = THREE.MathUtils.clamp(this.camera.position.z + event.deltaY * .002, 1.75, 5);
+      const zoomFactor = Math.exp(event.deltaY * .0015);
+      this.camera.position.z = THREE.MathUtils.clamp(this.camera.position.z * zoomFactor, MIN_CAMERA_DISTANCE, MAX_CAMERA_DISTANCE);
       this.draw();
     }, { passive: false });
     canvas.addEventListener("dblclick", () => this.reset());
     canvas.addEventListener("keydown", event => {
       const step = event.shiftKey ? .25 : .1;
-      if (event.key === "ArrowLeft") this.globe.rotation.y -= step;
-      else if (event.key === "ArrowRight") this.globe.rotation.y += step;
-      else if (event.key === "ArrowUp") this.globe.rotation.x = Math.max(-1.15, this.globe.rotation.x - step);
-      else if (event.key === "ArrowDown") this.globe.rotation.x = Math.min(1.15, this.globe.rotation.x + step);
-      else if (["+", "="].includes(event.key)) this.camera.position.z = Math.max(1.75, this.camera.position.z - .2);
-      else if (event.key === "-") this.camera.position.z = Math.min(5, this.camera.position.z + .2);
+      if (event.key === "ArrowLeft") this.earthMoonSystem.rotation.y -= step;
+      else if (event.key === "ArrowRight") this.earthMoonSystem.rotation.y += step;
+      else if (event.key === "ArrowUp") this.earthMoonSystem.rotation.x = Math.max(-1.15, this.earthMoonSystem.rotation.x - step);
+      else if (event.key === "ArrowDown") this.earthMoonSystem.rotation.x = Math.min(1.15, this.earthMoonSystem.rotation.x + step);
+      else if (["+", "="].includes(event.key)) this.camera.position.z = Math.max(MIN_CAMERA_DISTANCE, this.camera.position.z / 1.35);
+      else if (event.key === "-") this.camera.position.z = Math.min(MAX_CAMERA_DISTANCE, this.camera.position.z * 1.35);
       else return;
       event.preventDefault();
       this.draw();
@@ -267,7 +342,7 @@ class GlobeMap {
   }
 
   updateLabels() {
-    const cameraDirection = this.camera.position.clone().normalize();
+    const cameraDirection = this.camera.getWorldDirection(new THREE.Vector3()).negate();
     const bounds = canvas.getBoundingClientRect();
     this.labels.forEach(({ node, label }) => {
       const world = node.getWorldPosition(new THREE.Vector3());
@@ -302,9 +377,10 @@ class GlobeMap {
       this.lastFrameTime = null;
       return;
     }
-    if (this.autoRotate && !this.drag && this.lastFrameTime !== null) {
+    if (this.autoRotate && this.lastFrameTime !== null) {
       const elapsed = Math.min(50, timestamp - this.lastFrameTime);
-      this.globe.rotation.y += elapsed * AUTO_ROTATION_SPEED;
+      this.moonOrbit.rotation.y += elapsed * MOON_ORBIT_SPEED;
+      if (!this.drag) this.globe.rotation.y += elapsed * AUTO_ROTATION_SPEED;
     }
     this.lastFrameTime = timestamp;
     this.draw();
@@ -314,14 +390,18 @@ class GlobeMap {
   setVisible(visible) {
     this.visible = visible;
     if (visible) {
+      this.loadMoonTexture();
       this.resize();
       if (this.frame === null) this.frame = requestAnimationFrame(timestamp => this.animate(timestamp));
     }
   }
 
   reset() {
-    this.globe.rotation.set(DEFAULT_GLOBE_ROTATION.x, DEFAULT_GLOBE_ROTATION.y, 0);
-    this.camera.position.z = cameraDistanceForCoverage(this.camera.fov, DEFAULT_GLOBE_COVERAGE);
+    this.earthMoonSystem.rotation.set(DEFAULT_GLOBE_ROTATION.x, DEFAULT_GLOBE_ROTATION.y, 0);
+    this.globe.rotation.set(0, 0, 0);
+    this.moonOrbit.rotation.set(0, DEFAULT_MOON_ORBIT_ANGLE, 0);
+    this.camera.position.set(DEFAULT_CAMERA_TARGET_X, 0, cameraDistanceForCoverage(this.camera.fov, DEFAULT_GLOBE_COVERAGE));
+    this.camera.lookAt(DEFAULT_CAMERA_TARGET_X, 0, 0);
     this.draw();
   }
 
