@@ -1648,11 +1648,21 @@ function setSummary(text, type) {
     : `${formatNumber(state.catalog.counts.documents)} source files · transcript text unchanged`;
 }
 
+function syncMapAnimationButton(playing = window.ufoGlobe?.autoRotate || false) {
+  const button = $("#mapAnimationButton");
+  const action = playing ? "Pause" : "Play";
+  button.textContent = action;
+  button.setAttribute("aria-label", `${action} map animation`);
+  button.setAttribute("aria-pressed", String(playing));
+}
+
 function renderGraph() {
   if (!state.catalog) return;
   $("#emptyState").hidden = true;
   $("#graphTitle").textContent = state.config.title;
   $("#resetZoom").hidden = !["network", "map"].includes(state.config.type);
+  $("#mapAnimationButton").hidden = state.config.type !== "map";
+  if (state.config.type === "map") syncMapAnimationButton();
   $("#exportButton").textContent = ["table", "document"].includes(state.config.type) ? "Export CSV" : state.config.type === "map" ? "Export PNG" : "Export SVG";
   const descriptions = {
     network: state.config.nodeRole === "collection" ? "Collections connected by shared published entities." : "Evidence-backed connections across the local archive.", scatter: `${label(state.config.x)} compared with ${label(state.config.y)}.`,
@@ -1835,6 +1845,11 @@ $("#graphTitle").addEventListener("blur", event => {
 $("#saveButton").addEventListener("click", () => { localStorage.setItem("ufo-files-graph-view", JSON.stringify(state.config)); toast("View saved in this browser"); });
 $("#shareButton").addEventListener("click", async () => { persistHash(); try { await navigator.clipboard.writeText(location.href); toast("Builder link copied"); } catch (_) { toast("Copy the URL from your browser"); } });
 $("#fullScreenButton").addEventListener("click", toggleGraphFullScreen);
+$("#mapAnimationButton").addEventListener("click", () => {
+  const playing = window.ufoGlobe?.setPlaying(!window.ufoGlobe.autoRotate) || false;
+  syncMapAnimationButton(playing);
+});
+window.addEventListener("ufo-map-playback", event => syncMapAnimationButton(event.detail.playing));
 $("#exportButton").addEventListener("click", exportCurrent);
 $("#closeInspector").addEventListener("click", closeInspector);
 $("#resetZoom").addEventListener("click", () => {
