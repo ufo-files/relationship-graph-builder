@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "6b367eb23716be7cb8faa523871e13fb4fa61b17"
+    "revision": "0b39877166ee5151f8967c61d1b6d83f35b1cfcf"
   },
-  "count": 233,
-  "totalCount": 233,
+  "count": 237,
+  "totalCount": 237,
   "shownCount": 200,
   "candidates": [
     {
@@ -539,11 +539,43 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Office of Special Investigationa",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "THE OFFICE OF SPECIAL INVESTIGATIONS",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.969,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office of Spectal Investigations",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "THE OFFICE OF SPECIAL INVESTIGATIONS",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.969,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 172,
-        "documentCount": 91
+        "mentions": 173,
+        "documentCount": 92
       },
       "right": {
         "name": "Fright-Patterson Air Force Base",
@@ -558,8 +590,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 172,
-        "documentCount": 91
+        "mentions": 173,
+        "documentCount": 92
       },
       "right": {
         "name": "Wright-pattorson AIr Force Base",
@@ -1035,6 +1067,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of California",
+        "mentions": 35,
+        "documentCount": 22
+      },
+      "right": {
+        "name": "University of Californla's",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Patterson Air Force Base",
@@ -1243,6 +1291,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Inclosed for the Bureau",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Enclosed for the Bureau",
+        "mentions": 10,
+        "documentCount": 8
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "COUNTER INTELLIGENCE CORPS REGION IV",
@@ -1253,22 +1317,6 @@
         "name": "COUNTER INTELLIGENCE CORPS REGION",
         "mentions": 9,
         "documentCount": 6
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Inclosed for the Bureau",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Enclosed for the Bureau",
-        "mentions": 9,
-        "documentCount": 7
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -1310,8 +1358,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 149,
-        "documentCount": 56
+        "mentions": 151,
+        "documentCount": 57
       },
       "right": {
         "name": "University of Colcrado",
@@ -1389,6 +1437,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "If Office of Special Investigations",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "THE OFFICE OF SPECIAL INVESTIGATIONS",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.955,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Department of Defense",
         "mentions": 884,
         "documentCount": 226
@@ -1406,8 +1470,8 @@
       "category": "organization",
       "left": {
         "name": "Search for Extraterrestrial Intelligence",
-        "mentions": 23,
-        "documentCount": 17
+        "mentions": 25,
+        "documentCount": 18
       },
       "right": {
         "name": "SET Search for ExtraTerrestrial Intelligence",
@@ -1971,8 +2035,8 @@
       },
       "right": {
         "name": "California Institute of Technology",
-        "mentions": 11,
-        "documentCount": 9
+        "mentions": 12,
+        "documentCount": 10
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -2366,8 +2430,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2883,
-        "documentCount": 275
+        "mentions": 2887,
+        "documentCount": 276
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -2382,8 +2446,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 172,
-        "documentCount": 91
+        "mentions": 173,
+        "documentCount": 92
       },
       "right": {
         "name": "Fright-Petterson Air Force Base",
@@ -2862,8 +2926,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 80,
-        "documentCount": 35
+        "mentions": 81,
+        "documentCount": 36
       },
       "right": {
         "name": "Snlt Lake City",
@@ -3143,70 +3207,6 @@
         "documentCount": 2
       },
       "similarity": 0.927,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of Justice's",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "DEPARTMENT OF XUSTIC",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.927,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Central Intelligence Agency",
-        "mentions": 2350,
-        "documentCount": 567
-      },
-      "right": {
-        "name": "GENTRAL INTELLIGENGE AGENCY",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.926,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Central Intelligence Agency",
-        "mentions": 2350,
-        "documentCount": 567
-      },
-      "right": {
-        "name": "CENTRAL INTELLIGZACE AGENCY",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.926,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Directorate of Intelligence",
-        "mentions": 90,
-        "documentCount": 19
-      },
-      "right": {
-        "name": "Directorate of Intelligenoo",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.926,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     }
