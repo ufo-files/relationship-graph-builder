@@ -459,8 +459,8 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /MOON_RADIUS = MOON_EQUATORIAL_RADIUS_KM \/ EARTH_EQUATORIAL_RADIUS_KM/);
   assert.match(globe, /MOON_ORBIT_RADIUS = MOON_MEAN_ORBIT_RADIUS_KM \/ EARTH_EQUATORIAL_RADIUS_KM/);
   assert.match(globe, /MOON_ORBIT_DAYS = 27\.322/);
-  assert.match(globe, /MOON_DISPLAY_ORBIT_PERIOD_MS = 300_000/);
-  assert.match(globe, /MOON_ORBIT_SPEED = Math\.PI \* 2 \/ MOON_DISPLAY_ORBIT_PERIOD_MS/);
+  assert.match(globe, /MOON_OFFSCREEN_HALF_ORBIT_MS = 5_000/);
+  assert.match(globe, /MOON_OFFSCREEN_ORBIT_SPEED = Math\.PI \/ MOON_OFFSCREEN_HALF_ORBIT_MS/);
   assert.match(globe, /DEFAULT_MOON_ORBIT_ANGLE = 1\.545/);
   assert.match(globe, /this\.moonOrbit\.rotation\.y = DEFAULT_MOON_ORBIT_ANGLE/);
   assert.match(globe, /this\.moonOrbit\.rotation\.set\(0, DEFAULT_MOON_ORBIT_ANGLE, 0\)/);
@@ -478,7 +478,7 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /verticalFovForCoverageAtDistance/);
   assert.match(globe, /new THREE\.PerspectiveCamera\(DEFAULT_CAMERA_FOV, 1, 10, 1_500\)/);
   assert.match(globe, /this\.camera\.position\.z \* zoomFactor/);
-  assert.match(globe, /animationSpeeds\(\)[\s\S]*moonInViewport[\s\S]*visibleMoonTransitArc\(angle\)[\s\S]*return \{ moon: MOON_ORBIT_SPEED, earth: AUTO_ROTATION_SPEED \}/);
+  assert.match(globe, /animationSpeeds\(\)[\s\S]*moonInViewport[\s\S]*visibleMoonTransitArc\(angle\)[\s\S]*return \{ moon: MOON_OFFSCREEN_ORBIT_SPEED, earth: AUTO_ROTATION_SPEED \}/);
   assert.match(globe, /this\.moonOrbit\.rotation\.y \+= elapsed \* speed\.moon;[\s\S]*this\.globe\.rotation\.y \+= elapsed \* speed\.earth/);
   assert.match(globe, /earthSlowdown = MIN_MOON_TRANSIT_SECONDS \/ this\.moonTransitSeconds[\s\S]*AUTO_ROTATION_SPEED \* earthSlowdown/);
   assert.match(globe, /setMoonTransitSeconds\(seconds\)[\s\S]*THREE\.MathUtils\.clamp\(Number\(seconds\) \|\| DEFAULT_MOON_TRANSIT_SECONDS, MIN_MOON_TRANSIT_SECONDS, MAX_MOON_TRANSIT_SECONDS\)/);

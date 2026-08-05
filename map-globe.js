@@ -17,9 +17,9 @@ const MOON_ORBIT_DAYS = 27.322;
 const MOON_ORBIT_INCLINATION = 5.145;
 const MOON_RADIUS = MOON_EQUATORIAL_RADIUS_KM / EARTH_EQUATORIAL_RADIUS_KM;
 const MOON_ORBIT_RADIUS = MOON_MEAN_ORBIT_RADIUS_KM / EARTH_EQUATORIAL_RADIUS_KM;
-// Physical time is compressed so a complete orbit is observable in the interactive view.
-const MOON_DISPLAY_ORBIT_PERIOD_MS = 300_000;
-const MOON_ORBIT_SPEED = Math.PI * 2 / MOON_DISPLAY_ORBIT_PERIOD_MS;
+// Hidden travel is compressed so the next front- or far-side transit returns promptly.
+const MOON_OFFSCREEN_HALF_ORBIT_MS = 5_000;
+const MOON_OFFSCREEN_ORBIT_SPEED = Math.PI / MOON_OFFSCREEN_HALF_ORBIT_MS;
 const MIN_MOON_TRANSIT_SECONDS = 2;
 const MAX_MOON_TRANSIT_SECONDS = 10;
 const DEFAULT_MOON_TRANSIT_SECONDS = 5;
@@ -492,7 +492,7 @@ class GlobeMap {
     }
     this.moonWasInViewport = moonInViewport;
     if (!moonInViewport || !this.activeMoonTransitArc) {
-      return { moon: MOON_ORBIT_SPEED, earth: AUTO_ROTATION_SPEED };
+      return { moon: MOON_OFFSCREEN_ORBIT_SPEED, earth: AUTO_ROTATION_SPEED };
     }
     const moon = this.activeMoonTransitArc / (this.moonTransitSeconds * 1_000);
     const earthSlowdown = MIN_MOON_TRANSIT_SECONDS / this.moonTransitSeconds;
