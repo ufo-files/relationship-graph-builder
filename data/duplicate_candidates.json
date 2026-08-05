@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "209ebacf5e2830f9318e9735cceb71d931ec403a"
+    "revision": "139bb82f69eb9b539f17945381cc88de70003157"
   },
-  "count": 247,
-  "totalCount": 247,
+  "count": 248,
+  "totalCount": 248,
   "shownCount": 200,
   "candidates": [
     {
@@ -846,8 +846,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2710,
-        "documentCount": 620
+        "mentions": 2732,
+        "documentCount": 622
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -862,8 +862,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2710,
-        "documentCount": 620
+        "mentions": 2732,
+        "documentCount": 622
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -878,8 +878,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2710,
-        "documentCount": 620
+        "mentions": 2732,
+        "documentCount": 622
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -894,8 +894,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2710,
-        "documentCount": 620
+        "mentions": 2732,
+        "documentCount": 622
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1278,8 +1278,8 @@
       "category": "person",
       "left": {
         "name": "David Grush",
-        "mentions": 95,
-        "documentCount": 46
+        "mentions": 96,
+        "documentCount": 47
       },
       "right": {
         "name": "David Grusch",
@@ -1317,6 +1317,22 @@
         "name": "Air Technical Intelligence Center",
         "mentions": 61,
         "documentCount": 31
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Northwestern University",
+        "mentions": 11,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Northeastern University",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -1982,8 +1998,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2710,
-        "documentCount": 620
+        "mentions": 2732,
+        "documentCount": 622
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2510,13 +2526,13 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 52,
-        "documentCount": 33
+        "mentions": 53,
+        "documentCount": 34
       },
       "right": {
         "name": "EDWARDS AIR FORCE BASE CA",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.936,
       "reason": "similar name",
@@ -2542,8 +2558,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 3070,
-        "documentCount": 299
+        "mentions": 3075,
+        "documentCount": 300
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -2894,8 +2910,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2710,
-        "documentCount": 620
+        "mentions": 2732,
+        "documentCount": 622
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2910,8 +2926,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 1085,
-        "documentCount": 360
+        "mentions": 1087,
+        "documentCount": 362
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -3187,22 +3203,6 @@
       },
       "right": {
         "name": "Intelligence I-",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "DoD Intelligence Community",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "DoD and Intelligence Community",
         "mentions": 2,
         "documentCount": 2
       },
