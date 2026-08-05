@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "f9421b9316fcaa0bdd3b517634097da6fd2784e8"
+    "revision": "53529b1462310cec5035ea354d3a5b43e58b99af"
   },
-  "count": 243,
-  "totalCount": 243,
+  "count": 244,
+  "totalCount": 244,
   "shownCount": 200,
   "candidates": [
     {
@@ -830,8 +830,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2579,
-        "documentCount": 601
+        "mentions": 2580,
+        "documentCount": 602
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -846,8 +846,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2579,
-        "documentCount": 601
+        "mentions": 2580,
+        "documentCount": 602
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -862,8 +862,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2579,
-        "documentCount": 601
+        "mentions": 2580,
+        "documentCount": 602
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -878,8 +878,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2579,
-        "documentCount": 601
+        "mentions": 2580,
+        "documentCount": 602
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -981,6 +981,22 @@
         "name": "Mount Rainer",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Dr. Robert Schock",
+        "mentions": 6,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Robert Shock",
+        "mentions": 11,
+        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -1486,8 +1502,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 904,
-        "documentCount": 239
+        "mentions": 905,
+        "documentCount": 240
       },
       "right": {
         "name": "Department of Detense",
@@ -1582,8 +1598,8 @@
       "category": "organization",
       "left": {
         "name": "Defense Intelligence",
-        "mentions": 20,
-        "documentCount": 15
+        "mentions": 21,
+        "documentCount": 16
       },
       "right": {
         "name": "Defence Intelligence",
@@ -1742,8 +1758,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 190,
-        "documentCount": 47
+        "mentions": 192,
+        "documentCount": 48
       },
       "right": {
         "name": "Department of Stale",
@@ -1758,8 +1774,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 190,
-        "documentCount": 47
+        "mentions": 192,
+        "documentCount": 48
       },
       "right": {
         "name": "Department of Staie",
@@ -1774,8 +1790,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 74,
-        "documentCount": 36
+        "mentions": 75,
+        "documentCount": 37
       },
       "right": {
         "name": "United States Navy F-",
@@ -1934,8 +1950,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2579,
-        "documentCount": 601
+        "mentions": 2580,
+        "documentCount": 602
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2846,8 +2862,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2579,
-        "documentCount": 601
+        "mentions": 2580,
+        "documentCount": 602
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2862,8 +2878,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 1060,
-        "documentCount": 350
+        "mentions": 1072,
+        "documentCount": 351
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -3003,6 +3019,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "George Adamski",
+        "mentions": 25,
+        "documentCount": 13
+      },
+      "right": {
+        "name": "George Adanski",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Phoenix Office",
@@ -3013,22 +3045,6 @@
         "name": "Phoenis Office",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "George Adamski",
-        "mentions": 24,
-        "documentCount": 12
-      },
-      "right": {
-        "name": "George Adanski",
-        "mentions": 5,
-        "documentCount": 4
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -3187,22 +3203,6 @@
       },
       "right": {
         "name": "Air Department",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Far Department",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Mar Department",
         "mentions": 2,
         "documentCount": 2
       },
