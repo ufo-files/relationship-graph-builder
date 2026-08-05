@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "3ecec31c708096963b1987e85dba155c91224eee"
+    "revision": "53382261ccbe900acf6104bd9991d5b6bcb7d265"
   },
-  "count": 306,
-  "totalCount": 306,
+  "count": 308,
+  "totalCount": 308,
   "shownCount": 200,
   "candidates": [
     {
@@ -62,8 +62,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 199,
-        "documentCount": 33
+        "mentions": 200,
+        "documentCount": 34
       },
       "right": {
         "name": "Offices of the Secretary of Defense",
@@ -126,8 +126,8 @@
       "category": "government_agency",
       "left": {
         "name": "National Reconnaissance Office",
-        "mentions": 320,
-        "documentCount": 118
+        "mentions": 325,
+        "documentCount": 119
       },
       "right": {
         "name": "The National Reconnaisance Office",
@@ -238,8 +238,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1066,
-        "documentCount": 282
+        "mentions": 1072,
+        "documentCount": 285
       },
       "right": {
         "name": "Departments of Defense",
@@ -1230,8 +1230,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3241,
-        "documentCount": 694
+        "mentions": 3245,
+        "documentCount": 696
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1246,8 +1246,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3241,
-        "documentCount": 694
+        "mentions": 3245,
+        "documentCount": 696
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1262,8 +1262,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3241,
-        "documentCount": 694
+        "mentions": 3245,
+        "documentCount": 696
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1278,8 +1278,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3241,
-        "documentCount": 694
+        "mentions": 3245,
+        "documentCount": 696
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1771,6 +1771,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Post Office",
+        "mentions": 23,
+        "documentCount": 14
+      },
+      "right": {
+        "name": "Post Offices",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Northwestern University",
@@ -1886,8 +1902,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 165,
-        "documentCount": 66
+        "mentions": 167,
+        "documentCount": 68
       },
       "right": {
         "name": "University of Colcrado",
@@ -1998,8 +2014,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1066,
-        "documentCount": 282
+        "mentions": 1072,
+        "documentCount": 285
       },
       "right": {
         "name": "Department of Detense",
@@ -2334,8 +2350,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 204,
-        "documentCount": 58
+        "mentions": 205,
+        "documentCount": 59
       },
       "right": {
         "name": "Department of Stale",
@@ -2350,8 +2366,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 204,
-        "documentCount": 58
+        "mentions": 205,
+        "documentCount": 59
       },
       "right": {
         "name": "Department of Staie",
@@ -2590,8 +2606,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3241,
-        "documentCount": 694
+        "mentions": 3245,
+        "documentCount": 696
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -3166,8 +3182,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Community",
-        "mentions": 90,
-        "documentCount": 44
+        "mentions": 91,
+        "documentCount": 45
       },
       "right": {
         "name": "Intelligence Community In",
@@ -3189,22 +3205,6 @@
         "name": "EDWARDS AIR FORCE BASE CA",
         "mentions": 5,
         "documentCount": 5
-      },
-      "similarity": 0.936,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Public Affairs Officer",
-        "mentions": 29,
-        "documentCount": 14
-      },
-      "right": {
-        "name": "To Public Affairs Officer",
-        "mentions": 3,
-        "documentCount": 2
       },
       "similarity": 0.936,
       "reason": "similar name",
