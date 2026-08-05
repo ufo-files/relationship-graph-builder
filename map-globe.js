@@ -377,10 +377,10 @@ class GlobeMap {
       this.lastFrameTime = null;
       return;
     }
-    if (this.autoRotate && this.lastFrameTime !== null) {
+    if (this.autoRotate && this.lastFrameTime !== null && !this.drag) {
       const elapsed = Math.min(50, timestamp - this.lastFrameTime);
       this.moonOrbit.rotation.y += elapsed * MOON_ORBIT_SPEED;
-      if (!this.drag) this.globe.rotation.y += elapsed * AUTO_ROTATION_SPEED;
+      this.globe.rotation.y += elapsed * AUTO_ROTATION_SPEED;
     }
     this.lastFrameTime = timestamp;
     this.draw();
