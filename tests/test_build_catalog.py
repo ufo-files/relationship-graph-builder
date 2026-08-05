@@ -46,6 +46,14 @@ class ClassificationTests(unittest.TestCase):
         self.assertEqual({mention[2] for mention in moon_mentions}, {"location"})
         self.assertTrue(all(mention[4] for mention in moon_mentions))
 
+    def test_project_moon_dust_does_not_emit_nested_moon_location(self):
+        mentions = extract_mentions("Project Moon Dust was active.", {})
+
+        self.assertEqual(
+            mentions,
+            [("Project Moon Dust", "Project Moon Dust", "program", 0.99, True)],
+        )
+
     def test_resolves_confirmed_entity_aliases(self):
         data_dir = Path(__file__).resolve().parents[1] / "data"
         registry = load_registry([data_dir / "curated_entities.json", data_dir / "entity_aliases.json"])
