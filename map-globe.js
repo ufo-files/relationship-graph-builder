@@ -51,6 +51,7 @@ class GlobeMap {
     this.globe = new THREE.Group();
     this.earthMoonSystem.add(this.globe);
     this.raycaster = new THREE.Raycaster();
+    this.labelRaycaster = new THREE.Raycaster();
     this.pointer = new THREE.Vector2();
     this.nodes = [];
     this.relationships = [];
@@ -123,6 +124,7 @@ class GlobeMap {
       earthMaterial
     );
     earth.name = "countries";
+    this.earth = earth;
     this.globe.add(earth);
     const atmosphere = new THREE.Mesh(
       new THREE.SphereGeometry(1.003, 64, 48),
@@ -392,6 +394,16 @@ class GlobeMap {
     if (node) window.dispatchEvent(new CustomEvent("ufo-map-select", { detail: { entityId: node.userData.id } }));
   }
 
+  labelOccludedByEarth(world) {
+    const cameraWorld = this.camera.getWorldPosition(new THREE.Vector3());
+    const direction = world.clone().sub(cameraWorld);
+    const labelDistance = direction.length();
+    if (!labelDistance) return false;
+    this.labelRaycaster.set(cameraWorld, direction.normalize());
+    const earthHit = this.labelRaycaster.intersectObject(this.earth, false)[0];
+    return Boolean(earthHit && earthHit.distance < labelDistance - .001);
+  }
+
   updateLabels() {
     const cameraDirection = this.camera.getWorldDirection(new THREE.Vector3()).negate();
     const bounds = canvas.getBoundingClientRect();
@@ -400,7 +412,8 @@ class GlobeMap {
       const surfaceNormal = node.position.clone().normalize().transformDirection(node.parent.matrixWorld);
       const visible = surfaceNormal.dot(cameraDirection) > .15;
       const projected = world.clone().project(this.camera);
-      label.hidden = !visible || projected.z < -1 || projected.z > 1;
+      const occluded = this.labelOccludedByEarth(world);
+      label.hidden = !visible || occluded || projected.z < -1 || projected.z > 1;
       if (!label.hidden) {
         label.style.transform = `translate(-50%, -50%) translate(${(projected.x * .5 + .5) * bounds.width}px, ${(-projected.y * .5 + .5) * bounds.height}px)`;
       }

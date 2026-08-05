@@ -480,6 +480,9 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /itemParent\(item\) \{[\s\S]*item\.body === "moon" \? this\.moon : this\.globe/);
   assert.match(globe, /this\.itemParent\(item\)\.add\(node\)/);
   assert.match(globe, /updateMoonNodes\(\)[\s\S]*this\.moon\.worldToLocal\(world\)/);
+  assert.match(globe, /this\.earth = earth/);
+  assert.match(globe, /labelOccludedByEarth\(world\)[\s\S]*intersectObject\(this\.earth, false\)/);
+  assert.match(globe, /label\.hidden = !visible \|\| occluded \|\| projected\.z < -1 \|\| projected\.z > 1/);
   assert.match(globe, /setPlaying\(playing\)/);
   assert.match(globe, /payload\.relationships/);
   assert.match(globe, /relationshipLayer === "always"/);
