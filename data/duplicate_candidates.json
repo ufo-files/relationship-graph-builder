@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "553b78fc0a57718065d3a9d6fe697db70ab449c2"
+    "revision": "4ed185805929422b68602c916e6ddb861433d39f"
   },
-  "count": 335,
-  "totalCount": 335,
+  "count": 336,
+  "totalCount": 336,
   "shownCount": 200,
   "candidates": [
     {
@@ -62,8 +62,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 212,
-        "documentCount": 36
+        "mentions": 218,
+        "documentCount": 37
       },
       "right": {
         "name": "Offices of the Secretary of Defense",
@@ -270,8 +270,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1104,
-        "documentCount": 299
+        "mentions": 1105,
+        "documentCount": 300
       },
       "right": {
         "name": "Departments of Defense",
@@ -1294,8 +1294,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3565,
-        "documentCount": 727
+        "mentions": 3566,
+        "documentCount": 728
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1310,8 +1310,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3565,
-        "documentCount": 727
+        "mentions": 3566,
+        "documentCount": 728
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1326,8 +1326,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3565,
-        "documentCount": 727
+        "mentions": 3566,
+        "documentCount": 728
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1342,8 +1342,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3565,
-        "documentCount": 727
+        "mentions": 3566,
+        "documentCount": 728
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -2011,6 +2011,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Mark Sanders",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Mark Sander's",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Irited States Department of Justice",
@@ -2158,8 +2174,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1104,
-        "documentCount": 299
+        "mentions": 1105,
+        "documentCount": 300
       },
       "right": {
         "name": "Department of Detense",
@@ -2542,8 +2558,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 94,
-        "documentCount": 48
+        "mentions": 97,
+        "documentCount": 49
       },
       "right": {
         "name": "United States Navy F-",
@@ -2782,8 +2798,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3565,
-        "documentCount": 727
+        "mentions": 3566,
+        "documentCount": 728
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -3188,22 +3204,6 @@
       "right": {
         "name": "Nevada Tent Site",
         "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "William Steinman",
-        "mentions": 20,
-        "documentCount": 12
-      },
-      "right": {
-        "name": "William Stienman",
-        "mentions": 4,
         "documentCount": 2
       },
       "similarity": 0.938,
