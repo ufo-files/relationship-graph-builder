@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "1cdd758b6baed6af3b9bacceaa2b34a30a662c5e"
+    "revision": "fe4bf9eeef6a515b13de047e73972634f180713b"
   },
-  "count": 328,
-  "totalCount": 328,
+  "count": 332,
+  "totalCount": 332,
   "shownCount": 200,
   "candidates": [
     {
@@ -987,6 +987,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Hyperlens Based",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Hyper-Lens Based",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Technical Intelligence Center",
@@ -1246,8 +1262,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3451,
-        "documentCount": 714
+        "mentions": 3465,
+        "documentCount": 717
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1262,8 +1278,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3451,
-        "documentCount": 714
+        "mentions": 3465,
+        "documentCount": 717
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1278,8 +1294,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3451,
-        "documentCount": 714
+        "mentions": 3465,
+        "documentCount": 717
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1294,8 +1310,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3451,
-        "documentCount": 714
+        "mentions": 3465,
+        "documentCount": 717
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1693,6 +1709,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Applied Solence Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Applied Sclence Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Direotor of Intelligence",
         "mentions": 2,
         "documentCount": 2
@@ -1853,6 +1885,38 @@
     {
       "category": "organization",
       "left": {
+        "name": "COUNTER INTELLIGENCE CORPS REGION IV",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "COUNTER INTELLIGENCE CORPS REGION",
+        "mentions": 11,
+        "documentCount": 8
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "COUNTER INTELLIGENCE CORPS REGION",
+        "mentions": 11,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "COUNTER INTELLIGENCE CORPS REGION VI",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Northwestern University",
         "mentions": 12,
         "documentCount": 10
@@ -1869,29 +1933,13 @@
     {
       "category": "organization",
       "left": {
-        "name": "COUNTER INTELLIGENCE CORPS REGION IV",
-        "mentions": 4,
-        "documentCount": 3
+        "name": "COUNTER INTELLIGENCE CORPS REGION",
+        "mentions": 11,
+        "documentCount": 8
       },
       "right": {
-        "name": "COUNTER INTELLIGENCE CORPS REGION",
-        "mentions": 10,
-        "documentCount": 7
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "COUNTER INTELLIGENCE CORPS REGION",
-        "mentions": 10,
-        "documentCount": 7
-      },
-      "right": {
-        "name": "COUNTER INTELLIGENCE CORPS REGION VI",
-        "mentions": 4,
+        "name": "COUNTER INTELLIGENCE CORPS REGION IX",
+        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.957,
@@ -1925,22 +1973,6 @@
         "name": "Enclosed for the Bureau",
         "mentions": 10,
         "documentCount": 8
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "COUNTER INTELLIGENCE CORPS REGION",
-        "mentions": 10,
-        "documentCount": 7
-      },
-      "right": {
-        "name": "COUNTER INTELLIGENCE CORPS REGION IX",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2035,6 +2067,22 @@
       },
       "right": {
         "name": "Department of the Arny",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.955,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Assistant Director for Scientific Intelligence",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Assistant Director Scientific Intelligence",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2702,8 +2750,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3451,
-        "documentCount": 714
+        "mentions": 3465,
+        "documentCount": 717
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -3053,6 +3101,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Applied Sciences Division",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Applied Sclence Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.939,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Director for Intelligence",
         "mentions": 3,
         "documentCount": 3
@@ -3140,70 +3204,6 @@
       "right": {
         "name": "Michael Hesemann",
         "mentions": 7,
-        "documentCount": 2
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Contact Division",
-        "mentions": 8,
-        "documentCount": 7
-      },
-      "right": {
-        "name": "Contace Division",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "USAF Intelligence",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "AF Intelligence",
-        "mentions": 5,
-        "documentCount": 3
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "program",
-      "left": {
-        "name": "Project Daedalus",
-        "mentions": 6,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Project Deadalus",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Intelligence Com",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Intelligence Con",
-        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.938,
