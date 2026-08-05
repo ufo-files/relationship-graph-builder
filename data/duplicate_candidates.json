@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "1ddf869ac48e7e9038e572628a1a207e0b60a037"
+    "revision": "e712494f5433b4ee6711051ceca56946346b28de"
   },
-  "count": 322,
-  "totalCount": 322,
+  "count": 325,
+  "totalCount": 325,
   "shownCount": 200,
   "candidates": [
     {
@@ -78,8 +78,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 40,
-        "documentCount": 26
+        "mentions": 41,
+        "documentCount": 27
       },
       "right": {
         "name": "ATIONAL INVESTIGATIONS COMMITTEE",
@@ -963,8 +963,8 @@
       },
       "right": {
         "name": "AF Intelligence",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 5,
+        "documentCount": 3
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -1246,8 +1246,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3378,
-        "documentCount": 705
+        "mentions": 3397,
+        "documentCount": 706
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1262,8 +1262,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3378,
-        "documentCount": 705
+        "mentions": 3397,
+        "documentCount": 706
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1278,8 +1278,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3378,
-        "documentCount": 705
+        "mentions": 3397,
+        "documentCount": 706
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1294,8 +1294,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3378,
-        "documentCount": 705
+        "mentions": 3397,
+        "documentCount": 706
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1325,14 +1325,14 @@
     {
       "category": "government_agency",
       "left": {
-        "name": "Safety Officer",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "First Officers",
+        "mentions": 2,
+        "documentCount": 2
       },
       "right": {
-        "name": "Safety Office",
-        "mentions": 10,
-        "documentCount": 2
+        "name": "First Officer",
+        "mentions": 12,
+        "documentCount": 9
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -1341,14 +1341,14 @@
     {
       "category": "government_agency",
       "left": {
-        "name": "First Officers",
-        "mentions": 2,
-        "documentCount": 2
+        "name": "Safety Officer",
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
-        "name": "First Officer",
-        "mentions": 11,
-        "documentCount": 8
+        "name": "Safety Office",
+        "mentions": 10,
+        "documentCount": 2
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -1458,9 +1458,9 @@
         "documentCount": 5
       },
       "right": {
-        "name": "Donald Keyhoe",
-        "mentions": 17,
-        "documentCount": 13
+        "name": "Major Donald Keyhoe",
+        "mentions": 24,
+        "documentCount": 14
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -1950,8 +1950,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 168,
-        "documentCount": 69
+        "mentions": 169,
+        "documentCount": 70
       },
       "right": {
         "name": "University of Colcrado",
@@ -2462,8 +2462,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 27,
-        "documentCount": 26
+        "mentions": 28,
+        "documentCount": 27
       },
       "right": {
         "name": "INTELLIGENCE CENTRE",
@@ -2670,8 +2670,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3378,
-        "documentCount": 705
+        "mentions": 3397,
+        "documentCount": 706
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -3099,6 +3099,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Michael Hesseman",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Michael Hesemann",
+        "mentions": 7,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Contact Division",
@@ -3109,6 +3125,22 @@
         "name": "Contace Division",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "USAF Intelligence",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "AF Intelligence",
+        "mentions": 5,
+        "documentCount": 3
       },
       "similarity": 0.938,
       "reason": "similar name",
@@ -3163,22 +3195,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "organization",
-      "left": {
-        "name": "USAF Intelligence",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "AF Intelligence",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "government_agency",
       "left": {
         "name": "Anatolian Agency",
@@ -3189,22 +3205,6 @@
         "name": "Anatollan Agency",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Palonar Mountain",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Palomar Mountain",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.938,
       "reason": "similar name",
