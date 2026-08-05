@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "41bc2bd87f764c37455b31e7fc246f463547de11"
+    "revision": "c2ba7f9d25ce93777a61b6035265596201ff8573"
   },
-  "count": 340,
-  "totalCount": 340,
+  "count": 341,
+  "totalCount": 341,
   "shownCount": 200,
   "candidates": [
     {
@@ -187,6 +187,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Counter-Intelligence Division",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Counterintelligence Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.982,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "District Intelligence Officer",
@@ -318,8 +334,8 @@
       "category": "organization",
       "left": {
         "name": "Research Organizations",
-        "mentions": 18,
-        "documentCount": 2
+        "mentions": 19,
+        "documentCount": 3
       },
       "right": {
         "name": "RESEARCH ORGANIZATION",
@@ -899,8 +915,8 @@
       },
       "right": {
         "name": "Fright-Patterson Air Force Base",
-        "mentions": 4,
-        "documentCount": 4
+        "mentions": 5,
+        "documentCount": 5
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -990,8 +1006,8 @@
       "category": "government_agency",
       "left": {
         "name": "District Office",
-        "mentions": 7,
-        "documentCount": 6
+        "mentions": 8,
+        "documentCount": 7
       },
       "right": {
         "name": "District Officer",
@@ -1022,8 +1038,8 @@
       "category": "location",
       "left": {
         "name": "Fright-Patterson Air Force Base",
-        "mentions": 4,
-        "documentCount": 4
+        "mentions": 5,
+        "documentCount": 5
       },
       "right": {
         "name": "Fright-Petterson Air Force Base",
@@ -1550,8 +1566,8 @@
       "category": "program",
       "left": {
         "name": "Project SIGN",
-        "mentions": 63,
-        "documentCount": 26
+        "mentions": 64,
+        "documentCount": 27
       },
       "right": {
         "name": "Project Signa",
@@ -2299,6 +2315,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Fright-Patterson Air Force Base",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Wrighat-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Department of Justico",
@@ -2309,22 +2341,6 @@
         "name": "Department of Justice's",
         "mentions": 4,
         "documentCount": 4
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Fright-Patterson Air Force Base",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Wrighat-Patterson Air Force Base",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -3191,22 +3207,6 @@
         "documentCount": 2
       },
       "similarity": 0.94,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Air Iechnical Intelligence Center",
-        "mentions": 4,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "The Ait Technical Intelligence Center",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.939,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     }
