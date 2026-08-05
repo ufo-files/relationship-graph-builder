@@ -4,7 +4,7 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "b9d0ec67db89237af9679eb15b3760f801be7050"
+    "revision": "326821c6c73124ebdaf967bccb5a9b09a8281075"
   },
   "count": 303,
   "totalCount": 303,
@@ -126,8 +126,8 @@
       "category": "government_agency",
       "left": {
         "name": "National Reconnaissance Office",
-        "mentions": 312,
-        "documentCount": 115
+        "mentions": 317,
+        "documentCount": 116
       },
       "right": {
         "name": "The National Reconnaisance Office",
@@ -1019,6 +1019,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Johnston Island",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Johnson Island",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "BUREAU WILL BE ADVISED OF ANY",
@@ -1029,22 +1045,6 @@
         "name": "BUREAU VILL BE ADVISED OF ANY",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.966,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Johnston Island",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Johnson Island",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -1198,8 +1198,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3110,
-        "documentCount": 682
+        "mentions": 3134,
+        "documentCount": 683
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1214,8 +1214,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3110,
-        "documentCount": 682
+        "mentions": 3134,
+        "documentCount": 683
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1230,8 +1230,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3110,
-        "documentCount": 682
+        "mentions": 3134,
+        "documentCount": 683
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1246,8 +1246,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3110,
-        "documentCount": 682
+        "mentions": 3134,
+        "documentCount": 683
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1483,6 +1483,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "RUSSIAN ARMYM",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Russian Army",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "CSETI Website",
@@ -1493,22 +1509,6 @@
         "name": "CSET Website",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "RUSSIAN ARMYM",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Russian Army",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2558,8 +2558,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3110,
-        "documentCount": 682
+        "mentions": 3134,
+        "documentCount": 683
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2958,8 +2958,8 @@
       "category": "person",
       "left": {
         "name": "William Steinman",
-        "mentions": 18,
-        "documentCount": 11
+        "mentions": 20,
+        "documentCount": 12
       },
       "right": {
         "name": "William Stienman",
@@ -3150,8 +3150,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 54,
-        "documentCount": 35
+        "mentions": 55,
+        "documentCount": 36
       },
       "right": {
         "name": "EDWARDS AIR FORCE BASE CA",
@@ -3182,8 +3182,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 3186,
-        "documentCount": 327
+        "mentions": 3189,
+        "documentCount": 328
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
