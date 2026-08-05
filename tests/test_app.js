@@ -422,6 +422,7 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   const result = JSON.parse(vm.runInContext(`
     state.catalog = { entities: [
       { id: "mapped", name: "Roswell", category: "location", classificationConfidence: 1, mentions: 8, contextAdjustedMentions: 8, documentIds: [], geo: { lat: 33.3943, lon: -104.523 } },
+      { id: "moon", name: "Moon", category: "location", classificationConfidence: 1, mentions: 18, contextAdjustedMentions: 18, documentIds: [], geo: { lat: 18, lon: -28, body: "moon" } },
       { id: "unmapped", name: "Ambiguous Base", category: "location", classificationConfidence: 1, mentions: 12, contextAdjustedMentions: 12, documentIds: [] },
       { id: "person", name: "Someone", category: "person", classificationConfidence: 1, mentions: 20, contextAdjustedMentions: 20, documentIds: [] }
     ] };
@@ -431,8 +432,8 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   `, context));
 
   assert.ok(result.types.includes("map"));
-  assert.deepEqual(result.mapped, ["mapped"]);
-  assert.deepEqual(result.data, ["mapped"]);
+  assert.deepEqual(result.mapped, ["moon", "mapped"]);
+  assert.deepEqual(result.data, ["moon", "mapped"]);
   assert.equal(result.unmapped, 1);
   assert.equal(result.title, "Mentions — Mapped Locations");
   assert.match(html, /id="globeCanvas"/);
@@ -474,6 +475,7 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /if \(this\.autoRotate && this\.lastFrameTime !== null && !this\.drag\) \{[\s\S]*this\.moonOrbit\.rotation\.y \+= elapsed \* MOON_ORBIT_SPEED;[\s\S]*this\.globe\.rotation\.y \+= elapsed \* AUTO_ROTATION_SPEED/);
   assert.match(html, /Drag or use arrow keys to rotate the Earth and Moon together/);
   assert.match(globe, /QuadraticBezierCurve3/);
+  assert.match(globe, /item\.body === "moon"/);
   assert.match(globe, /payload\.relationships/);
   assert.match(globe, /relationshipLayer === "always"/);
   assert.match(globe, /prefers-reduced-motion/);

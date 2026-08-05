@@ -253,14 +253,19 @@ class GlobeMap {
     );
   }
 
+  itemVector(item, surfaceOffset = 0) {
+    const radius = item.body === "moon" ? 1.24 + surfaceOffset : 1.018 + surfaceOffset;
+    return this.coordinateVector(item.lat, item.lon, radius);
+  }
+
   render(payload) {
     this.clearNodes();
     const itemById = new Map(payload.items.map(item => [item.id, item]));
     (payload.relationships || []).forEach(relationship => {
       const source = itemById.get(relationship.source), target = itemById.get(relationship.target);
       if (!source || !target) return;
-      const start = this.coordinateVector(source.lat, source.lon, 1.022);
-      const end = this.coordinateVector(target.lat, target.lon, 1.022);
+      const start = this.itemVector(source, .004);
+      const end = this.itemVector(target, .004);
       const midpoint = start.clone().add(end);
       if (midpoint.lengthSq() < .01) midpoint.copy(start).add(new THREE.Vector3(0, .25, 0));
       midpoint.normalize().multiplyScalar(1.055 + Math.min(.08, start.distanceTo(end) * .035));
@@ -278,8 +283,10 @@ class GlobeMap {
         opacity: .35 + item.intensity * .65
       });
       const node = new THREE.Mesh(this.nodeGeometry, material);
-      node.position.copy(this.coordinateVector(item.lat, item.lon));
-      node.scale.setScalar((item.secondary ? .009 : .012) + item.intensity * (item.secondary ? .018 : .026));
+      node.position.copy(this.itemVector(item));
+      node.scale.setScalar(item.body === "moon"
+        ? .055 + item.intensity * .025
+        : (item.secondary ? .009 : .012) + item.intensity * (item.secondary ? .018 : .026));
       node.userData = item;
       this.globe.add(node);
       this.nodes.push(node);

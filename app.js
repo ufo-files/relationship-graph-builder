@@ -1073,6 +1073,7 @@ function renderMap() {
       name: entity.name,
       lat: entity.geo.lat,
       lon: entity.geo.lon,
+      body: entity.geo.body || "earth",
       intensity: Math.sqrt(Math.max(0, clampedScale(entity[state.config.size], extent, [0, 1]))),
       formattedValue: `${label(state.config.size)}: ${formatNumber(entity[state.config.size])}`,
       secondary: !primaryIds.has(entity.id),
