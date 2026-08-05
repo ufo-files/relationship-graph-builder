@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "738d7fac5023bc12e0239131238ec8b714e1e67a"
+    "revision": "e677bbfdfc3ec8cf12678dfef6a1a6a4e0f556c9"
   },
-  "count": 310,
-  "totalCount": 310,
+  "count": 321,
+  "totalCount": 321,
   "shownCount": 200,
   "candidates": [
     {
@@ -866,6 +866,22 @@
         "documentCount": 108
       },
       "right": {
+        "name": "Wright-Parterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patterson Air Force Base",
+        "mentions": 199,
+        "documentCount": 108
+      },
+      "right": {
         "name": "Wright-pattorson AIr Force Base",
         "mentions": 2,
         "documentCount": 2
@@ -1230,8 +1246,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3284,
-        "documentCount": 701
+        "mentions": 3372,
+        "documentCount": 704
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1246,8 +1262,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3284,
-        "documentCount": 701
+        "mentions": 3372,
+        "documentCount": 704
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1262,8 +1278,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3284,
-        "documentCount": 701
+        "mentions": 3372,
+        "documentCount": 704
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1278,8 +1294,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3284,
-        "documentCount": 701
+        "mentions": 3372,
+        "documentCount": 704
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1406,8 +1422,8 @@
       "category": "program",
       "left": {
         "name": "Project SIGN",
-        "mentions": 61,
-        "documentCount": 25
+        "mentions": 63,
+        "documentCount": 26
       },
       "right": {
         "name": "Project Signa",
@@ -1611,6 +1627,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Invescigations Committee",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Investigations Committee",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Inited States Department",
@@ -1726,8 +1758,8 @@
       "category": "person",
       "left": {
         "name": "David Grush",
-        "mentions": 109,
-        "documentCount": 52
+        "mentions": 113,
+        "documentCount": 53
       },
       "right": {
         "name": "David Grusch",
@@ -2112,6 +2144,22 @@
         "name": "Fright-Patterson Air Force Base",
         "mentions": 3,
         "documentCount": 3
+      },
+      "right": {
+        "name": "Wrighat-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Parterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
       },
       "right": {
         "name": "Wrighat-Patterson Air Force Base",
@@ -2606,8 +2654,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3284,
-        "documentCount": 701
+        "mentions": 3372,
+        "documentCount": 704
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2622,8 +2670,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of Scientific Intelligence",
-        "mentions": 13,
-        "documentCount": 9
+        "mentions": 14,
+        "documentCount": 10
       },
       "right": {
         "name": "CIA Office of Scientific Intelligence's",
@@ -2845,14 +2893,14 @@
     {
       "category": "organization",
       "left": {
-        "name": "APPROPRIATIONS SUBCOMMITTEE",
-        "mentions": 4,
-        "documentCount": 4
+        "name": "Intelligence Com",
+        "mentions": 5,
+        "documentCount": 5
       },
       "right": {
-        "name": "Appropriations Committee",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "Intelligence Commu",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -2861,14 +2909,14 @@
     {
       "category": "organization",
       "left": {
-        "name": "Intelligence Com",
+        "name": "APPROPRIATIONS SUBCOMMITTEE",
         "mentions": 4,
         "documentCount": 4
       },
       "right": {
-        "name": "Intelligence Commu",
-        "mentions": 2,
-        "documentCount": 2
+        "name": "Appropriations Committee",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -3019,6 +3067,38 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Contact Division",
+        "mentions": 8,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Concact Division",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Contact Division",
+        "mentions": 8,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Contace Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "Project Daedalus",
@@ -3035,14 +3115,14 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
+      "category": "organization",
       "left": {
-        "name": "Office Memorandm",
-        "mentions": 4,
-        "documentCount": 4
+        "name": "Intelligence Com",
+        "mentions": 5,
+        "documentCount": 5
       },
       "right": {
-        "name": "Office Memoradum",
+        "name": "Intelligence Con",
         "mentions": 2,
         "documentCount": 2
       },
@@ -3051,14 +3131,14 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "organization",
+      "category": "government_agency",
       "left": {
-        "name": "Intelligence Com",
+        "name": "Office Memorandm",
         "mentions": 4,
         "documentCount": 4
       },
       "right": {
-        "name": "Intelligence Con",
+        "name": "Office Memoradum",
         "mentions": 2,
         "documentCount": 2
       },
@@ -3127,86 +3207,6 @@
         "documentCount": 2
       },
       "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Office Memoradum",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Office Memor-dum",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Office of Special Investigationa",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Office of Spectal Investigations",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "ANO ORGANIZATION",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "AND ORGANIZATION",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Chart Showing Balloon Lausching Sites Ln",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Chart Showing Balloon Lunching Sites In",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.937,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Intelligence Community",
-        "mentions": 96,
-        "documentCount": 46
-      },
-      "right": {
-        "name": "Intelligence Community In",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.936,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     }
