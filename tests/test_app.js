@@ -452,7 +452,7 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /DEFAULT_GLOBE_COVERAGE = \.72/);
   assert.match(globe, /DEFAULT_CAMERA_TARGET_X = 0/);
   assert.match(globe, /DEFAULT_GLOBE_ROTATION = \{ x: \.01375, y: 0 \}/);
-  assert.match(globe, /EARTH_NORMAL_ROTATION_PERIOD_MS = 60_000/);
+  assert.match(globe, /EARTH_NORMAL_ROTATION_PERIOD_MS = 30_000/);
   assert.match(globe, /AUTO_ROTATION_SPEED = Math\.PI \* 2 \/ EARTH_NORMAL_ROTATION_PERIOD_MS/);
   assert.match(globe, /MOON_EQUATORIAL_RADIUS_KM = 1737\.4/);
   assert.match(globe, /MOON_MEAN_ORBIT_RADIUS_KM = 384_400/);
