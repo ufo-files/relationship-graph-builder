@@ -449,6 +449,7 @@ test("graph type stays first while quick presets remain available", () => {
 test("Map is a first-class Three.js graph type with reviewed location data", () => {
   const html = fs.readFileSync("index.html", "utf8");
   const globe = fs.readFileSync("map-globe.js", "utf8");
+  const styles = fs.readFileSync("styles.css", "utf8");
   const threeModule = fs.readFileSync("vendor/three.module.min.js", "utf8");
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
@@ -532,6 +533,7 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /this\.earth = earth/);
   assert.match(globe, /labelOccludedByEarth\(world\)[\s\S]*intersectObject\(this\.earth, false\)/);
   assert.match(globe, /label\.hidden = !visible \|\| occluded \|\| projected\.z < -1 \|\| projected\.z > 1/);
+  assert.match(styles, /\.globe-label \{[^}]*max-width: 180px;[^}]*overflow: hidden;[^}]*white-space: nowrap;[^}]*text-overflow: ellipsis;/);
   assert.match(globe, /setPlaying\(playing\)/);
   assert.match(globe, /payload\.relationships/);
   assert.match(globe, /relationshipLayer === "always"/);
