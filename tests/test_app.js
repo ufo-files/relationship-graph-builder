@@ -471,7 +471,7 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /verticalFovForCoverageAtDistance/);
   assert.match(globe, /new THREE\.PerspectiveCamera\(DEFAULT_CAMERA_FOV, 1, 10, 1_500\)/);
   assert.match(globe, /this\.camera\.position\.z \* zoomFactor/);
-  assert.match(globe, /this\.moonOrbit\.rotation\.y \+= elapsed \* MOON_ORBIT_SPEED/);
+  assert.match(globe, /if \(this\.autoRotate && this\.lastFrameTime !== null && !this\.drag\) \{[\s\S]*this\.moonOrbit\.rotation\.y \+= elapsed \* MOON_ORBIT_SPEED;[\s\S]*this\.globe\.rotation\.y \+= elapsed \* AUTO_ROTATION_SPEED/);
   assert.match(html, /Drag or use arrow keys to rotate the Earth and Moon together/);
   assert.match(globe, /QuadraticBezierCurve3/);
   assert.match(globe, /payload\.relationships/);
