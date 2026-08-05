@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "83f949547181978e620bf2b4779875348cd9b4e6"
+    "revision": "be579f7479768136934cb5f227d4ac505d97c99d"
   },
-  "count": 303,
-  "totalCount": 303,
+  "count": 304,
+  "totalCount": 304,
   "shownCount": 200,
   "candidates": [
     {
@@ -62,8 +62,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 198,
-        "documentCount": 32
+        "mentions": 199,
+        "documentCount": 33
       },
       "right": {
         "name": "Offices of the Secretary of Defense",
@@ -1085,6 +1085,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Projects Agency",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Project Agency",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Liaison Officer",
         "mentions": 2,
         "documentCount": 2
@@ -1198,8 +1214,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3207,
-        "documentCount": 687
+        "mentions": 3208,
+        "documentCount": 688
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1214,8 +1230,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3207,
-        "documentCount": 687
+        "mentions": 3208,
+        "documentCount": 688
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1230,8 +1246,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3207,
-        "documentCount": 687
+        "mentions": 3208,
+        "documentCount": 688
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1246,8 +1262,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3207,
-        "documentCount": 687
+        "mentions": 3208,
+        "documentCount": 688
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -2558,8 +2574,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3207,
-        "documentCount": 687
+        "mentions": 3208,
+        "documentCount": 688
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -3134,8 +3150,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Community",
-        "mentions": 89,
-        "documentCount": 43
+        "mentions": 90,
+        "documentCount": 44
       },
       "right": {
         "name": "Intelligence Community In",
@@ -3187,22 +3203,6 @@
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.935,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Wright-Patterson Air Force Base",
-        "mentions": 194,
-        "documentCount": 103
-      },
-      "right": {
-        "name": "Fright-Petterson Air Force Base",
         "mentions": 2,
         "documentCount": 2
       },
