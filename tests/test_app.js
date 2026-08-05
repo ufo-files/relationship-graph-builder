@@ -111,6 +111,40 @@ test("rendered bars retain labels and clickable marks at the new bottom edge", (
   assert.ok(Number(finalMark.attributes.y) + Number(finalMark.attributes.height) <= 580);
 });
 
+test("Significant People renders people rather than collections in Bars", () => {
+  const elements = {
+    chart: new FakeElement(), chartWrap: new FakeElement(), tableView: new FakeElement(),
+    legend: new FakeElement(), resultSummary: new FakeElement(), graphKicker: new FakeElement(),
+    policySummary: new FakeElement()
+  };
+  const document = {
+    createElementNS: () => new FakeElement(),
+    querySelector: selector => elements[selector.slice(1)],
+    querySelectorAll: () => []
+  };
+  const context = vm.createContext({ document, location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  vm.runInContext(`
+    state.catalog = {
+      counts: { documents: 0 }, documents: [], sources: [],
+      entities: [
+        { id: "alice", name: "Alice Example", category: "person", classificationConfidence: .99, mentions: 12, contextAdjustedMentions: 10, documentCount: 3, independentDocumentCount: 3, sourceCount: 2, documentIds: [], evidence: [] },
+        { id: "nevada", name: "Nevada", category: "location", classificationConfidence: .99, mentions: 20, contextAdjustedMentions: 18, documentCount: 4, independentDocumentCount: 4, sourceCount: 2, documentIds: [], evidence: [] }
+      ]
+    };
+    state.config = presetConfig("significant-people", "bars");
+    renderBars();
+  `, context);
+
+  const labels = elements.chart.children
+    .filter(node => node.attributes.class === "chart-label")
+    .map(node => node.textContent);
+  assert.deepEqual(labels, ["Alice Example"]);
+  assert.equal(elements.resultSummary.textContent, "1 entities");
+  assert.equal(vm.runInContext("state.config.aggregation", context), "entity");
+});
+
 test("legend sits below and outside the chart canvas", () => {
   const styles = fs.readFileSync("styles.css", "utf8");
   const html = fs.readFileSync("index.html", "utf8");
@@ -395,7 +429,7 @@ test("graph type stays first while quick presets remain available", () => {
   assert.match(source, /label: "Bookshelf", scope: "Books"/);
   assert.match(source, /label: "Documents", scope: "All corpus files"/);
   assert.match(source, /label: "Scatter", scope: "All"/);
-  assert.match(source, /state\.config = \{ \.\.\.presetConfig\("default"\), type, \.\.\.\(viewDefaults\[type\] \|\| \{\}\) \}/);
+  assert.match(source, /state\.config = presetConfig\("default", type\)/);
   assert.match(source, /label: "Bars", scope: "All collections"/);
   assert.match(source, /label: "Timeline", scope: "Documents \+ events"/);
   assert.match(source, /timeline: \{[^}]*categories: \["date"\][^}]*limit: 50/);
@@ -832,6 +866,49 @@ test("significant entity presets configure scatters across all collections", () 
     assert.deepEqual(config.sources, []);
     assert.equal(config.title, title);
   }
+});
+
+test("presets refine the selected graph type instead of replacing it", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`JSON.stringify({
+    network: presetConfig("significant-people", "network"),
+    map: presetConfig("significant-people", "map"),
+    bars: presetConfig("significant-people", "bars"),
+    defaultMap: presetConfig("default", "map"),
+    activeNetwork: (() => {
+      state.config = presetConfig("significant-people", "network");
+      return activePresetId();
+    })(),
+    activeMap: (() => {
+      state.config = presetConfig("significant-people", "map");
+      return activePresetId();
+    })(),
+    activeBars: (() => {
+      state.config = presetConfig("significant-people", "bars");
+      return activePresetId();
+    })()
+  })`, context));
+
+  assert.equal(result.network.type, "network");
+  assert.equal(result.network.nodeRole, "entity");
+  assert.deepEqual(result.network.categories, ["person"]);
+  assert.equal(result.network.includeHighInflation, false);
+  assert.equal(result.network.title, "People Relationships");
+  assert.equal(result.map.type, "map");
+  assert.deepEqual(result.map.categories, ["person"]);
+  assert.equal(result.map.includeHighInflation, false);
+  assert.equal(result.bars.type, "bars");
+  assert.equal(result.bars.aggregation, "entity");
+  assert.equal(result.bars.y, "contextAdjustedMentions");
+  assert.deepEqual(result.bars.categories, ["person"]);
+  assert.equal(result.bars.title, "Mentions by People");
+  assert.equal(result.defaultMap.type, "map");
+  assert.deepEqual(result.defaultMap.categories, ["location"]);
+  assert.equal(result.activeNetwork, "significant-people");
+  assert.equal(result.activeMap, "significant-people");
+  assert.equal(result.activeBars, "significant-people");
 });
 
 test("an existing Significant People URL migrates away from raw mentions", () => {

@@ -66,6 +66,24 @@ const DEFAULT = {
   tableSort: "mentions", tableDirection: "desc", tableSearch: "", documentSearch: "",
   labelSize: 12, zoom: 1, moonTransitSeconds: 5, title: "Mentions by Documents — Entities", titleMode: "auto"
 };
+const VIEW_DEFAULTS = {
+  scatter: {},
+  network: { nodeRole: "entity", size: "independentDocumentCount", color: "category" },
+  map: { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50, moonTransitSeconds: 5 },
+  book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 20 },
+  document: { size: "words", color: "source", labels: "top", documentSearch: "" },
+  bars: { aggregation: "source", y: "words", color: "intensity" },
+  timeline: { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source", categories: ["date"], labels: "top", limit: 50 },
+  matrix: { matrixColumns: "category", color: "intensity" },
+  table: { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 }
+};
+const ENTITY_PRESET_DEFAULTS = {
+  network: { nodeRole: "entity" },
+  bars: { aggregation: "entity" },
+  timeline: { timelineRole: "entity" },
+  matrix: { matrixColumns: "entity" },
+  table: { tableRole: "entity" }
+};
 const state = { catalog: null, config: loadConfig(), selected: null, documentById: new Map() };
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -300,16 +318,21 @@ function controlSelect(key, title, options) {
   return `<div class="control"><label for="control-${key}">${escapeHTML(title)}</label><select id="control-${key}" data-config="${key}">${choices}</select></div>`;
 }
 
-function presetConfig(id) {
+function presetConfig(id, type = DEFAULT.type) {
   const preset = PRESETS.find(item => item.id === id);
   if (!preset) return null;
-  const overrides = preset.config || {};
+  const { type: _presetType, ...overrides } = preset.config || {};
+  const viewDefaults = VIEW_DEFAULTS[type] || {};
+  const presetDefaults = overrides.x === "entity" ? (ENTITY_PRESET_DEFAULTS[type] || {}) : {};
   const config = {
     ...DEFAULT,
+    type,
+    ...viewDefaults,
+    ...presetDefaults,
     ...overrides,
-    categories: [...(overrides.categories || DEFAULT.categories)],
-    sources: [...(overrides.sources || DEFAULT.sources)],
-    tableColumns: [...(overrides.tableColumns || DEFAULT.tableColumns)]
+    categories: [...(overrides.categories || viewDefaults.categories || DEFAULT.categories)],
+    sources: [...(overrides.sources || viewDefaults.sources || DEFAULT.sources)],
+    tableColumns: [...(overrides.tableColumns || viewDefaults.tableColumns || DEFAULT.tableColumns)]
   };
   config.titleMode = "auto";
   config.title = dataAwareTitle(config);
@@ -317,8 +340,10 @@ function presetConfig(id) {
 }
 
 function presetMatches(preset) {
-  const config = presetConfig(preset.id);
-  const keys = (preset.config ? Object.keys(preset.config) : Object.keys(DEFAULT)).filter(key => !["title", "titleMode"].includes(key));
+  const config = presetConfig(preset.id, state.config.type);
+  const presetDefaults = preset.config?.x === "entity" ? (ENTITY_PRESET_DEFAULTS[state.config.type] || {}) : {};
+  const keys = (preset.config ? [...Object.keys(preset.config), ...Object.keys(presetDefaults)] : [...Object.keys(DEFAULT), ...Object.keys(VIEW_DEFAULTS[state.config.type] || {})])
+    .filter(key => !["type", "title", "titleMode"].includes(key));
   return keys.every(key => Array.isArray(config[key])
     ? config[key].length === state.config[key]?.length && config[key].every((item, index) => item === state.config[key][index])
     : state.config[key] === config[key]);
@@ -340,7 +365,7 @@ function renderPresetStatus() {
 }
 
 function applyPreset(id) {
-  const config = presetConfig(id);
+  const config = presetConfig(id, state.config.type);
   const preset = PRESETS.find(item => item.id === id);
   if (!config || !preset) return;
   state.config = config;
@@ -499,18 +524,7 @@ function renderControls() {
 }
 
 function setType(type) {
-  const viewDefaults = {
-    scatter: {},
-    network: { nodeRole: "entity", size: "independentDocumentCount", color: "category" },
-    map: { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50, moonTransitSeconds: 5 },
-    book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 20 },
-    document: { size: "words", color: "source", labels: "top", documentSearch: "" },
-    bars: { aggregation: "source", y: "words", color: "intensity" },
-    timeline: { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source", categories: ["date"], labels: "top", limit: 50 },
-    matrix: { matrixColumns: "category", color: "intensity" },
-    table: { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 }
-  };
-  state.config = { ...presetConfig("default"), type, ...(viewDefaults[type] || {}) };
+  state.config = presetConfig("default", type);
   state.selected = null;
   renderControls();
   commitConfig();
