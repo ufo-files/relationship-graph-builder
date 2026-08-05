@@ -4,7 +4,7 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "30f38d06d1ef3f4a71efa0c73a5cf014784a67f2"
+    "revision": "fbb0773fa33db47e198f81637fe704330cff22d1"
   },
   "count": 251,
   "totalCount": 251,
@@ -350,8 +350,8 @@
       "category": "organization",
       "left": {
         "name": "COUNTER INTELLIGENCE CORPS REGION IV",
-        "mentions": 3,
-        "documentCount": 2
+        "mentions": 4,
+        "documentCount": 3
       },
       "right": {
         "name": "COUNTER INTELLIGENCE CORPS REGION VI",
@@ -365,9 +365,9 @@
     {
       "category": "organization",
       "left": {
-        "name": "COUNTER INTELLIGENCE CORPS REGION VI",
+        "name": "COUNTER INTELLIGENCE CORPS REGION IV",
         "mentions": 4,
-        "documentCount": 2
+        "documentCount": 3
       },
       "right": {
         "name": "COUNTER INTELLIGENCE CORPS REGION IX",
@@ -381,8 +381,8 @@
     {
       "category": "organization",
       "left": {
-        "name": "COUNTER INTELLIGENCE CORPS REGION IV",
-        "mentions": 3,
+        "name": "COUNTER INTELLIGENCE CORPS REGION VI",
+        "mentions": 4,
         "documentCount": 2
       },
       "right": {
@@ -894,8 +894,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2737,
-        "documentCount": 624
+        "mentions": 2749,
+        "documentCount": 628
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -910,8 +910,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2737,
-        "documentCount": 624
+        "mentions": 2749,
+        "documentCount": 628
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -926,8 +926,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2737,
-        "documentCount": 624
+        "mentions": 2749,
+        "documentCount": 628
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -942,8 +942,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2737,
-        "documentCount": 624
+        "mentions": 2749,
+        "documentCount": 628
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1182,8 +1182,8 @@
       "category": "organization",
       "left": {
         "name": "University of California",
-        "mentions": 37,
-        "documentCount": 24
+        "mentions": 38,
+        "documentCount": 25
       },
       "right": {
         "name": "University of Californla's",
@@ -1389,6 +1389,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "COUNTER INTELLIGENCE CORPS REGION IV",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "COUNTER INTELLIGENCE CORPS REGION",
+        "mentions": 9,
+        "documentCount": 6
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "COUNTER INTELLIGENCE CORPS REGION",
         "mentions": 9,
         "documentCount": 6
@@ -1437,22 +1453,6 @@
     {
       "category": "organization",
       "left": {
-        "name": "COUNTER INTELLIGENCE CORPS REGION IV",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "COUNTER INTELLIGENCE CORPS REGION",
-        "mentions": 9,
-        "documentCount": 6
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
         "name": "COUNTER INTELLIGENCE CORPS REGION",
         "mentions": 9,
         "documentCount": 6
@@ -1486,8 +1486,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 153,
-        "documentCount": 59
+        "mentions": 156,
+        "documentCount": 60
       },
       "right": {
         "name": "University of Colcrado",
@@ -1582,8 +1582,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 921,
-        "documentCount": 248
+        "mentions": 924,
+        "documentCount": 250
       },
       "right": {
         "name": "Department of Detense",
@@ -1870,8 +1870,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 84,
-        "documentCount": 42
+        "mentions": 87,
+        "documentCount": 44
       },
       "right": {
         "name": "United States Navy F-",
@@ -2046,8 +2046,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2737,
-        "documentCount": 624
+        "mentions": 2749,
+        "documentCount": 628
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2958,8 +2958,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2737,
-        "documentCount": 624
+        "mentions": 2749,
+        "documentCount": 628
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2974,8 +2974,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 1091,
-        "documentCount": 363
+        "mentions": 1092,
+        "documentCount": 364
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
