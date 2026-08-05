@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "25b7f28a73b5cbad6ee75b43e5dc5fa1dfbbb3f4"
+    "revision": "df83e3c961d2b1f23b8f8f150c492afb5934b0b5"
   },
-  "count": 300,
-  "totalCount": 300,
+  "count": 302,
+  "totalCount": 302,
   "shownCount": 200,
   "candidates": [
     {
@@ -123,11 +123,27 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "COMMONWEALTH SCIENTIFIG AND INDUSTRIAL RESEARCH ORGANIZATION",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "COMMONWEALTH SCIENTIFIC AND INDUSTRIAL RESEARCH ORGANIZATION",
+        "mentions": 28,
+        "documentCount": 7
+      },
+      "similarity": 0.983,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 228,
-        "documentCount": 44
+        "mentions": 230,
+        "documentCount": 46
       },
       "right": {
         "name": "DEPARTMENT OF CIVIL AVITION",
@@ -488,6 +504,22 @@
       },
       "similarity": 0.972,
       "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "General Rgrmrmy The Lesser",
+        "mentions": 6,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "General Rgrrmy The Lesser",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.971,
+      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -1150,8 +1182,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3009,
-        "documentCount": 679
+        "mentions": 3020,
+        "documentCount": 680
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1166,8 +1198,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3009,
-        "documentCount": 679
+        "mentions": 3020,
+        "documentCount": 680
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1182,8 +1214,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3009,
-        "documentCount": 679
+        "mentions": 3020,
+        "documentCount": 680
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1198,8 +1230,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3009,
-        "documentCount": 679
+        "mentions": 3020,
+        "documentCount": 680
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1646,8 +1678,8 @@
       "category": "person",
       "left": {
         "name": "David Grush",
-        "mentions": 106,
-        "documentCount": 51
+        "mentions": 109,
+        "documentCount": 52
       },
       "right": {
         "name": "David Grusch",
@@ -1918,8 +1950,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1044,
-        "documentCount": 277
+        "mentions": 1052,
+        "documentCount": 278
       },
       "right": {
         "name": "Department of Detense",
@@ -2254,8 +2286,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 200,
-        "documentCount": 54
+        "mentions": 201,
+        "documentCount": 55
       },
       "right": {
         "name": "Department of Stale",
@@ -2270,8 +2302,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 200,
-        "documentCount": 54
+        "mentions": 201,
+        "documentCount": 55
       },
       "right": {
         "name": "Department of Staie",
@@ -2302,8 +2334,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 25,
-        "documentCount": 24
+        "mentions": 26,
+        "documentCount": 25
       },
       "right": {
         "name": "INTELLIGENCE CENTRE",
@@ -2510,8 +2542,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3009,
-        "documentCount": 679
+        "mentions": 3020,
+        "documentCount": 680
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -3134,8 +3166,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 3177,
-        "documentCount": 325
+        "mentions": 3183,
+        "documentCount": 326
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -3173,38 +3205,6 @@
         "name": "Technical Intelligence Center",
         "mentions": 22,
         "documentCount": 17
-      },
-      "similarity": 0.935,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Air Technical Intelligence Center",
-        "mentions": 70,
-        "documentCount": 37
-      },
-      "right": {
-        "name": "Iechnical Intelligence Center",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.935,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Technical Intelligence Center",
-        "mentions": 22,
-        "documentCount": 17
-      },
-      "right": {
-        "name": "The Ait Technical Intelligence Center",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.935,
       "reason": "similar name",
