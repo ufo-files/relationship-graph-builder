@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "0264834d3be8cb13eec6a056fbf34ca05bac25ae"
+    "revision": "41f52b26c489f96b8ccb9b693e8d35181bd24b17"
   },
-  "count": 268,
-  "totalCount": 268,
+  "count": 269,
+  "totalCount": 269,
   "shownCount": 200,
   "candidates": [
     {
@@ -923,6 +923,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Liaison Officer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Liaison Office",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Community Relations Division",
@@ -1022,8 +1038,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2779,
-        "documentCount": 637
+        "mentions": 2781,
+        "documentCount": 638
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1038,8 +1054,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2779,
-        "documentCount": 637
+        "mentions": 2781,
+        "documentCount": 638
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1054,8 +1070,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2779,
-        "documentCount": 637
+        "mentions": 2781,
+        "documentCount": 638
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1070,8 +1086,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2779,
-        "documentCount": 637
+        "mentions": 2781,
+        "documentCount": 638
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -2206,8 +2222,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2779,
-        "documentCount": 637
+        "mentions": 2781,
+        "documentCount": 638
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2430,8 +2446,8 @@
       "category": "organization",
       "left": {
         "name": "OF DEFENSE FOR INTELLIGENCE",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
         "name": "Defense for Intelligence",
@@ -3191,22 +3207,6 @@
         "documentCount": 2
       },
       "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Office of the Undersecretary of Defense",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Office of the Secretary of Defense",
-        "mentions": 161,
-        "documentCount": 28
-      },
-      "similarity": 0.932,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     }
