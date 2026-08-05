@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "42a4cf17e5effb180dbe29741383663abcc892c7"
+    "revision": "f3cc66984b00706f270f0348017349e1617acfe9"
   },
-  "count": 262,
-  "totalCount": 262,
+  "count": 267,
+  "totalCount": 267,
   "shownCount": 200,
   "candidates": [
     {
@@ -317,6 +317,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Signals Intelligence",
+        "mentions": 8,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Signal Intelligence",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.974,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Intelligence Reports",
         "mentions": 2,
         "documentCount": 2
@@ -445,9 +461,25 @@
     {
       "category": "organization",
       "left": {
+        "name": "Organization Joint Chief Of Staffs",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Organization Joint Chiefs of Staff",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 62,
-        "documentCount": 32
+        "mentions": 63,
+        "documentCount": 33
       },
       "right": {
         "name": "The Ait Technical Intelligence Center",
@@ -843,22 +875,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "organization",
-      "left": {
-        "name": "Sol Foundation",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Soul Foundation",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.966,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "location",
       "left": {
         "name": "Johnston Island",
@@ -867,6 +883,22 @@
       },
       "right": {
         "name": "Johnson Island",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Sol Foundation",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Soul Foundation",
         "mentions": 2,
         "documentCount": 2
       },
@@ -909,6 +941,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Community Relations Division",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Cormunity Relations Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.964,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Crumunity Relations Division",
         "mentions": 2,
         "documentCount": 2
@@ -917,6 +965,22 @@
         "name": "Coumunity Relations Division",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.964,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Coumunity Relations Division",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Cormunity Relations Division",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.964,
       "reason": "similar name",
@@ -939,11 +1003,27 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Crumunity Relations Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Cormunity Relations Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.964,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2760,
-        "documentCount": 632
+        "mentions": 2762,
+        "documentCount": 634
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -958,8 +1038,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2760,
-        "documentCount": 632
+        "mentions": 2762,
+        "documentCount": 634
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -974,8 +1054,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2760,
-        "documentCount": 632
+        "mentions": 2762,
+        "documentCount": 634
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -990,8 +1070,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2760,
-        "documentCount": 632
+        "mentions": 2762,
+        "documentCount": 634
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1427,8 +1507,8 @@
       },
       "right": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 62,
-        "documentCount": 32
+        "mentions": 63,
+        "documentCount": 33
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -1571,8 +1651,8 @@
       },
       "right": {
         "name": "Department of the Army",
-        "mentions": 40,
-        "documentCount": 21
+        "mentions": 41,
+        "documentCount": 22
       },
       "similarity": 0.955,
       "reason": "similar name",
@@ -1582,8 +1662,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Army",
-        "mentions": 40,
-        "documentCount": 21
+        "mentions": 41,
+        "documentCount": 22
       },
       "right": {
         "name": "Department of the Arny",
@@ -1646,8 +1726,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 927,
-        "documentCount": 252
+        "mentions": 929,
+        "documentCount": 254
       },
       "right": {
         "name": "Department of Detense",
@@ -2110,8 +2190,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2760,
-        "documentCount": 632
+        "mentions": 2762,
+        "documentCount": 634
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2318,8 +2398,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Com",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "right": {
         "name": "Intelligence Commu",
@@ -2493,6 +2573,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Intelligence Com",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Intelligence Con",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "USAF Intelligence",
         "mentions": 4,
         "documentCount": 4
@@ -2515,22 +2611,6 @@
       },
       "right": {
         "name": "Anatollan Agency",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Intelligence Com",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Intelligence Con",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2622,8 +2702,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Community",
-        "mentions": 80,
-        "documentCount": 35
+        "mentions": 82,
+        "documentCount": 36
       },
       "right": {
         "name": "Intelligence Community In",
@@ -2702,8 +2782,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 62,
-        "documentCount": 32
+        "mentions": 63,
+        "documentCount": 33
       },
       "right": {
         "name": "Technical Intelligence Center",
@@ -2718,8 +2798,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 62,
-        "documentCount": 32
+        "mentions": 63,
+        "documentCount": 33
       },
       "right": {
         "name": "Iechnical Intelligence Center",
@@ -2894,8 +2974,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 69,
-        "documentCount": 32
+        "mentions": 70,
+        "documentCount": 33
       },
       "right": {
         "name": "Army Air Foroes",
@@ -2910,8 +2990,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 69,
-        "documentCount": 32
+        "mentions": 70,
+        "documentCount": 33
       },
       "right": {
         "name": "The Arny Air Forces",
@@ -2926,8 +3006,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 69,
-        "documentCount": 32
+        "mentions": 70,
+        "documentCount": 33
       },
       "right": {
         "name": "Army Air Forcas",
@@ -3107,8 +3187,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 160,
-        "documentCount": 27
+        "mentions": 161,
+        "documentCount": 28
       },
       "similarity": 0.932,
       "reason": "similar name",
@@ -3118,8 +3198,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2760,
-        "documentCount": 632
+        "mentions": 2762,
+        "documentCount": 634
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -3127,86 +3207,6 @@
         "documentCount": 3
       },
       "similarity": 0.931,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Defense Intelligence Agency",
-        "mentions": 1093,
-        "documentCount": 365
-      },
-      "right": {
-        "name": "DIA Defense Intelligence Agency",
-        "mentions": 6,
-        "documentCount": 6
-      },
-      "similarity": 0.931,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "CINTRAL INTELLIGENCE AGENCY",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "CIA Central Intelligence Agency",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.931,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of the Air",
-        "mentions": 33,
-        "documentCount": 27
-      },
-      "right": {
-        "name": "Department of the Army",
-        "mentions": 40,
-        "documentCount": 21
-      },
-      "similarity": 0.93,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of the Air",
-        "mentions": 33,
-        "documentCount": 27
-      },
-      "right": {
-        "name": "Department of the Aruy",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.93,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of the Air",
-        "mentions": 33,
-        "documentCount": 27
-      },
-      "right": {
-        "name": "Department of the Arny",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.93,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     }
