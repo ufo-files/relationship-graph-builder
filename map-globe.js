@@ -61,7 +61,7 @@ class GlobeMap {
     this.visible = false;
     this.frame = null;
     this.lastFrameTime = null;
-    this.autoRotate = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    this.autoRotate = false;
     this.addEarth();
     this.addMoon();
     this.bindEvents();
@@ -254,28 +254,51 @@ class GlobeMap {
   }
 
   itemVector(item, surfaceOffset = 0) {
-    const radius = item.body === "moon" ? 1.24 + surfaceOffset : 1.018 + surfaceOffset;
+    const radius = item.body === "moon" ? MOON_RADIUS + surfaceOffset : 1.018 + surfaceOffset;
     return this.coordinateVector(item.lat, item.lon, radius);
+  }
+
+  itemParent(item) {
+    return item.body === "moon" ? this.moon : this.globe;
+  }
+
+  updateMoonNodes() {
+    const moonCenter = this.moon.getWorldPosition(new THREE.Vector3());
+    const towardCamera = this.camera.position.clone().sub(moonCenter).normalize();
+    this.nodes.filter(node => node.userData.body === "moon").forEach(node => {
+      const world = moonCenter.clone().add(towardCamera.clone().multiplyScalar(MOON_RADIUS + .006));
+      node.position.copy(this.moon.worldToLocal(world));
+    });
+  }
+
+  nodeSystemVector(node) {
+    const world = node.getWorldPosition(new THREE.Vector3());
+    return this.earthMoonSystem.worldToLocal(world);
+  }
+
+  updateRelationshipGeometry(line) {
+    const start = this.nodeSystemVector(line.userData.sourceNode);
+    const end = this.nodeSystemVector(line.userData.targetNode);
+    const midpoint = start.clone().add(end);
+    if (line.userData.celestial) {
+      midpoint.multiplyScalar(.5);
+      midpoint.y += Math.min(4, start.distanceTo(end) * .06);
+    } else {
+      if (midpoint.lengthSq() < .01) midpoint.copy(start).add(new THREE.Vector3(0, .25, 0));
+      midpoint.normalize().multiplyScalar(1.055 + Math.min(.08, start.distanceTo(end) * .035));
+    }
+    line.geometry.setFromPoints(new THREE.QuadraticBezierCurve3(start, midpoint, end).getPoints(28));
+  }
+
+  updateDynamicObjects() {
+    this.scene.updateMatrixWorld(true);
+    this.updateMoonNodes();
+    this.scene.updateMatrixWorld(true);
+    this.relationships.forEach(line => this.updateRelationshipGeometry(line));
   }
 
   render(payload) {
     this.clearNodes();
-    const itemById = new Map(payload.items.map(item => [item.id, item]));
-    (payload.relationships || []).forEach(relationship => {
-      const source = itemById.get(relationship.source), target = itemById.get(relationship.target);
-      if (!source || !target) return;
-      const start = this.itemVector(source, .004);
-      const end = this.itemVector(target, .004);
-      const midpoint = start.clone().add(end);
-      if (midpoint.lengthSq() < .01) midpoint.copy(start).add(new THREE.Vector3(0, .25, 0));
-      midpoint.normalize().multiplyScalar(1.055 + Math.min(.08, start.distanceTo(end) * .035));
-      const geometry = new THREE.BufferGeometry().setFromPoints(new THREE.QuadraticBezierCurve3(start, midpoint, end).getPoints(28));
-      const material = new THREE.LineBasicMaterial({ color: 0x111111, transparent: true, opacity: payload.relationshipLayer === "always" ? payload.relationshipStrength : 0 });
-      const line = new THREE.Line(geometry, material);
-      line.userData = { ...relationship, baseOpacity: payload.relationshipStrength, mode: payload.relationshipLayer };
-      this.globe.add(line);
-      this.relationships.push(line);
-    });
     payload.items.forEach(item => {
       const material = new THREE.MeshBasicMaterial({
         color: 0x111111,
@@ -288,7 +311,7 @@ class GlobeMap {
         ? .055 + item.intensity * .025
         : (item.secondary ? .009 : .012) + item.intensity * (item.secondary ? .018 : .026));
       node.userData = item;
-      this.globe.add(node);
+      this.itemParent(item).add(node);
       this.nodes.push(node);
       if (item.showLabel) {
         const label = document.createElement("span");
@@ -299,18 +322,39 @@ class GlobeMap {
         this.labels.push({ node, label });
       }
     });
+    this.scene.updateMatrixWorld(true);
+    this.updateMoonNodes();
+    this.scene.updateMatrixWorld(true);
+    const nodeById = new Map(this.nodes.map(node => [node.userData.id, node]));
+    (payload.relationships || []).forEach(relationship => {
+      const sourceNode = nodeById.get(relationship.source), targetNode = nodeById.get(relationship.target);
+      if (!sourceNode || !targetNode) return;
+      const material = new THREE.LineBasicMaterial({ color: 0x111111, transparent: true, opacity: payload.relationshipLayer === "always" ? payload.relationshipStrength : 0 });
+      const line = new THREE.Line(new THREE.BufferGeometry(), material);
+      line.userData = {
+        ...relationship,
+        sourceNode,
+        targetNode,
+        celestial: sourceNode.userData.body === "moon" || targetNode.userData.body === "moon",
+        baseOpacity: payload.relationshipStrength,
+        mode: payload.relationshipLayer
+      };
+      this.earthMoonSystem.add(line);
+      this.relationships.push(line);
+      this.updateRelationshipGeometry(line);
+    });
     status.textContent = "Drag to rotate · scroll to zoom";
     this.setVisible(true);
   }
 
   clearNodes() {
     this.nodes.forEach(node => {
-      this.globe.remove(node);
+      node.parent?.remove(node);
       node.material.dispose();
     });
     this.nodes = [];
     this.relationships.forEach(line => {
-      this.globe.remove(line);
+      line.parent?.remove(line);
       line.geometry.dispose();
       line.material.dispose();
     });
@@ -353,7 +397,8 @@ class GlobeMap {
     const bounds = canvas.getBoundingClientRect();
     this.labels.forEach(({ node, label }) => {
       const world = node.getWorldPosition(new THREE.Vector3());
-      const visible = world.clone().normalize().dot(cameraDirection) > .15;
+      const surfaceNormal = node.position.clone().normalize().transformDirection(node.parent.matrixWorld);
+      const visible = surfaceNormal.dot(cameraDirection) > .15;
       const projected = world.clone().project(this.camera);
       label.hidden = !visible || projected.z < -1 || projected.z > 1;
       if (!label.hidden) {
@@ -374,6 +419,7 @@ class GlobeMap {
 
   draw() {
     if (!this.visible || container.hidden) return;
+    this.updateDynamicObjects();
     this.renderer.render(this.scene, this.camera);
     this.updateLabels();
   }
@@ -401,6 +447,13 @@ class GlobeMap {
       this.resize();
       if (this.frame === null) this.frame = requestAnimationFrame(timestamp => this.animate(timestamp));
     }
+  }
+
+  setPlaying(playing) {
+    this.autoRotate = Boolean(playing);
+    this.lastFrameTime = null;
+    window.dispatchEvent(new CustomEvent("ufo-map-playback", { detail: { playing: this.autoRotate } }));
+    return this.autoRotate;
   }
 
   reset() {

@@ -437,6 +437,7 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.equal(result.unmapped, 1);
   assert.equal(result.title, "Mentions — Mapped Locations");
   assert.match(html, /id="globeCanvas"/);
+  assert.match(html, /id="mapAnimationButton"[^>]+aria-label="Play map animation"[^>]+aria-pressed="false"[^>]+hidden>Play<\/button>[\s\S]*id="exportButton"/);
   assert.match(html, /id="globeModule"[^>]+map-globe\.js/);
   assert.match(html, /Map module failed to load/);
   assert.match(globe, /import \* as THREE/);
@@ -475,10 +476,16 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /if \(this\.autoRotate && this\.lastFrameTime !== null && !this\.drag\) \{[\s\S]*this\.moonOrbit\.rotation\.y \+= elapsed \* MOON_ORBIT_SPEED;[\s\S]*this\.globe\.rotation\.y \+= elapsed \* AUTO_ROTATION_SPEED/);
   assert.match(html, /Drag or use arrow keys to rotate the Earth and Moon together/);
   assert.match(globe, /QuadraticBezierCurve3/);
-  assert.match(globe, /item\.body === "moon"/);
+  assert.match(globe, /this\.autoRotate = false/);
+  assert.match(globe, /itemParent\(item\) \{[\s\S]*item\.body === "moon" \? this\.moon : this\.globe/);
+  assert.match(globe, /this\.itemParent\(item\)\.add\(node\)/);
+  assert.match(globe, /updateMoonNodes\(\)[\s\S]*this\.moon\.worldToLocal\(world\)/);
+  assert.match(globe, /setPlaying\(playing\)/);
   assert.match(globe, /payload\.relationships/);
   assert.match(globe, /relationshipLayer === "always"/);
-  assert.match(globe, /prefers-reduced-motion/);
+  assert.doesNotMatch(globe, /prefers-reduced-motion/);
+  assert.match(source, /mapAnimationButton/);
+  assert.match(source, /syncMapAnimationButton/);
   assert.match(globe, /render\(payload\)[\s\S]*this\.setVisible\(true\)/);
   assert.ok(fs.statSync("vendor/addons/SVGLoader.js").size > 70_000);
   assert.match(threeModule, /three\.core\.min\.js/);
