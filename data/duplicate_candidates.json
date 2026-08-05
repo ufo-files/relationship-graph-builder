@@ -4,7 +4,7 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "a8d7d742f6d29e70f3a946d88a4e69af41129cc1"
+    "revision": "ccf72c0a7bdd01fcff724672170c9720f039f355"
   },
   "count": 284,
   "totalCount": 284,
@@ -78,8 +78,8 @@
       "category": "government_agency",
       "left": {
         "name": "National Reconnaissance Office",
-        "mentions": 262,
-        "documentCount": 111
+        "mentions": 271,
+        "documentCount": 112
       },
       "right": {
         "name": "The National Reconnaisance Office",
@@ -1838,8 +1838,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1031,
-        "documentCount": 272
+        "mentions": 1032,
+        "documentCount": 273
       },
       "right": {
         "name": "Department of Detense",
@@ -2027,6 +2027,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "National Institute of Discovery Sciences",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "National Institute for Discovery Science",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.95,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Department of Justice's",
@@ -2037,22 +2053,6 @@
         "name": "DEPARTMENT OF JUSTI",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.95,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "National Institute of Discovery Sciences",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "National Institute for Discovery Science",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.95,
       "reason": "similar name",
@@ -2942,8 +2942,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 3154,
-        "documentCount": 322
+        "mentions": 3155,
+        "documentCount": 323
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
