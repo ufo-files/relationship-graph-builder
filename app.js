@@ -372,7 +372,7 @@ function renderControls() {
   } else if (state.config.type === "map") {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Geocoded locations</option></select></div><div class="control"><div class="control-title">Position</div><select disabled><option>Reviewed coordinates</option></select></div>` + relationshipTypeControl();
   } else if (state.config.type === "book") {
-    roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Book titles</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Mention-proportional 2:3 grid</option></select></div>`;
+    roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Book titles</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Mention-proportional 2:3 area</option></select></div>`;
   } else if (state.config.type === "document") {
     roles = `<div class="control"><div class="control-title">Rows</div><select disabled><option>Completed transcript files</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Searchable file browser</option></select></div>`;
   } else if (state.config.type === "scatter") {
@@ -1086,7 +1086,7 @@ function renderMap() {
 }
 
 function bookshelfLayout(items, width, height) {
-  if (!items.length) return { blocks: [], shelfYs: [], rows: 0 };
+  if (!items.length) return { blocks: [], occupancy: 0 };
   const inset = 14;
   const gap = 4;
   const availableWidth = width - inset * 2;
@@ -1096,23 +1096,65 @@ function bookshelfLayout(items, width, height) {
     .sort((left, right) => right.weight - left.weight || left.index - right.index);
 
   const packAtScale = scaleValue => {
-    const shelves = [];
+    let freeRectangles = [{ x: 0, y: 0, width: availableWidth + gap, height: availableHeight + gap }];
+    const placements = [];
+    const contains = (outer, inner) => (
+      inner.x >= outer.x && inner.y >= outer.y
+      && inner.x + inner.width <= outer.x + outer.width
+      && inner.y + inner.height <= outer.y + outer.height
+    );
+    const overlaps = (left, right) => !(
+      left.x + left.width <= right.x || right.x + right.width <= left.x
+      || left.y + left.height <= right.y || right.y + right.height <= left.y
+    );
+
     for (const entry of weighted) {
       const unit = Math.max(2, Math.round(Math.sqrt(entry.weight) * scaleValue));
       const book = { ...entry, unit, width: unit * 2, height: unit * 3 };
       if (book.width > availableWidth || book.height > availableHeight) return null;
-      let shelf = shelves.find(candidate => candidate.width + gap + book.width <= availableWidth);
-      if (!shelf) {
-        shelf = { entries: [], width: 0, height: book.height };
-        shelves.push(shelf);
-      }
-      if (shelf.entries.length) shelf.width += gap;
-      shelf.entries.push(book);
-      shelf.width += book.width;
-      shelf.height = Math.max(shelf.height, book.height);
+      const outerWidth = book.width + gap;
+      const outerHeight = book.height + gap;
+      const target = freeRectangles
+        .filter(rectangle => outerWidth <= rectangle.width && outerHeight <= rectangle.height)
+        .map(rectangle => ({
+          rectangle,
+          shortSide: Math.min(rectangle.width - outerWidth, rectangle.height - outerHeight),
+          longSide: Math.max(rectangle.width - outerWidth, rectangle.height - outerHeight)
+        }))
+        .sort((left, right) => (
+          left.shortSide - right.shortSide || left.longSide - right.longSide
+          || left.rectangle.y - right.rectangle.y || left.rectangle.x - right.rectangle.x
+        ))[0]?.rectangle;
+      if (!target) return null;
+
+      const used = { x: target.x, y: target.y, width: outerWidth, height: outerHeight };
+      placements.push({ ...book, x: used.x, y: used.y });
+      const splitRectangles = [];
+      freeRectangles.forEach(rectangle => {
+        if (!overlaps(rectangle, used)) {
+          splitRectangles.push(rectangle);
+          return;
+        }
+        const rectangleRight = rectangle.x + rectangle.width;
+        const rectangleBottom = rectangle.y + rectangle.height;
+        const usedRight = used.x + used.width;
+        const usedBottom = used.y + used.height;
+        if (used.x > rectangle.x) splitRectangles.push({ x: rectangle.x, y: rectangle.y, width: used.x - rectangle.x, height: rectangle.height });
+        if (usedRight < rectangleRight) splitRectangles.push({ x: usedRight, y: rectangle.y, width: rectangleRight - usedRight, height: rectangle.height });
+        if (used.y > rectangle.y) splitRectangles.push({ x: rectangle.x, y: rectangle.y, width: rectangle.width, height: used.y - rectangle.y });
+        if (usedBottom < rectangleBottom) splitRectangles.push({ x: rectangle.x, y: usedBottom, width: rectangle.width, height: rectangleBottom - usedBottom });
+      });
+      freeRectangles = [];
+      splitRectangles
+        .filter(rectangle => rectangle.width > 0 && rectangle.height > 0)
+        .sort((left, right) => right.width * right.height - left.width * left.height)
+        .forEach(rectangle => {
+          if (freeRectangles.some(existing => contains(existing, rectangle))) return;
+          freeRectangles = freeRectangles.filter(existing => !contains(rectangle, existing));
+          freeRectangles.push(rectangle);
+        });
     }
-    const packedHeight = shelves.reduce((sum, shelf) => sum + shelf.height, 0) + gap * Math.max(0, shelves.length - 1);
-    return packedHeight <= availableHeight ? { shelves, packedHeight } : null;
+    return { placements };
   };
 
   const largestRoot = Math.sqrt(weighted[0].weight);
@@ -1129,30 +1171,22 @@ function bookshelfLayout(items, width, height) {
       upperScale = candidateScale;
     }
   }
-  if (!best) return { blocks: [], shelfYs: [], rows: 0 };
+  if (!best) return { blocks: [], occupancy: 0 };
 
-  const blocks = [];
-  const shelfYs = [];
-  let shelfTop = Math.floor((height - best.packedHeight) / 2);
-  best.shelves.forEach((shelf, shelfIndex) => {
-    let x = Math.floor((width - shelf.width) / 2);
-    shelf.entries.forEach((book, column) => {
-      blocks.push({
-        item: book.item,
-        x,
-        y: shelfTop + shelf.height - book.height,
-        width: book.width,
-        height: book.height,
-        shelf: shelfIndex,
-        column,
-        mentions: book.weight
-      });
-      x += book.width + gap;
-    });
-    shelfYs.push(Math.min(height - inset, shelfTop + shelf.height + gap / 2));
-    shelfTop += shelf.height + gap;
-  });
-  return { blocks, shelfYs, rows: best.shelves.length };
+  const usedWidth = Math.max(...best.placements.map(book => book.x + book.width));
+  const usedHeight = Math.max(...best.placements.map(book => book.y + book.height));
+  const offsetX = inset + Math.floor((availableWidth - usedWidth) / 2);
+  const offsetY = inset + Math.floor((availableHeight - usedHeight) / 2);
+  const blocks = best.placements.map(book => ({
+    item: book.item,
+    x: offsetX + book.x,
+    y: offsetY + book.y,
+    width: book.width,
+    height: book.height,
+    mentions: book.weight
+  }));
+  const occupiedArea = blocks.reduce((sum, block) => sum + block.width * block.height, 0);
+  return { blocks, occupancy: occupiedArea / (availableWidth * availableHeight) };
 }
 
 function bookLabelLines(title, maxCharacters, maxLines) {
@@ -1173,24 +1207,18 @@ function bookLabelLines(title, maxCharacters, maxLines) {
   return lines;
 }
 
-function bookLabelGeometry(block, labelSize) {
-  const vertical = block.height > block.width;
-  const lineLength = vertical ? block.height : block.width;
-  const lineSpace = vertical ? block.width : block.height;
-  const x = vertical ? block.x + block.width - 6 : block.x + 6;
-  const y = block.y + (vertical ? 6 : labelSize + 3);
+function bookTitleLayout(block, requestedSize) {
+  const labelSize = Math.min(requestedSize, Math.max(8, Math.floor(Math.min(block.width / 7, block.height / 6))));
+  const maxCharacters = Math.max(4, Math.floor((block.width - 14) / (labelSize * .57)));
+  const maxLines = Math.max(1, Math.min(4, Math.floor((block.height - 14) / (labelSize * 1.15))));
+  const lines = bookLabelLines(block.item.name, maxCharacters, maxLines);
+  const lineHeight = labelSize * 1.15;
   return {
-    vertical,
-    x,
-    y,
-    maxCharacters: Math.max(4, Math.floor((lineLength - 12) / (labelSize * .62))),
-    maxLines: Math.max(1, Math.min(3, Math.floor((lineSpace - 12) / (labelSize * 1.15)))),
-    transform: vertical ? `rotate(90 ${x} ${y})` : ""
+    labelSize,
+    lines,
+    x: block.x + block.width / 2,
+    y: block.y + block.height / 2 - (lines.length - 1) * lineHeight / 2 + labelSize * .35
   };
-}
-
-function bookSpineLabelSize(block, requestedSize) {
-  return Math.min(requestedSize, Math.max(8, Math.floor(block.width / 5)));
 }
 
 function renderBook() {
@@ -1200,8 +1228,7 @@ function renderBook() {
     .slice(0, state.config.limit);
   if (!data.length) return showEmpty();
   const extent = valueExtent(data, state.config.size);
-  const { blocks, shelfYs } = bookshelfLayout(data, width, height);
-  shelfYs.forEach(y => svg.append(el("line", { x1: 8, y1: y, x2: width - 8, y2: y, stroke: "#111", "stroke-opacity": .55, "stroke-width": 2, class: "book-shelf" })));
+  const { blocks } = bookshelfLayout(data, width, height);
   blocks.forEach(block => {
     const shade = scale(block.item[state.config.size], extent, [.16, .94]);
     const rect = el("rect", {
@@ -1212,16 +1239,15 @@ function renderBook() {
     rect.addEventListener("click", () => inspectEntity(block.item));
     svg.append(rect);
     const shouldLabel = state.config.labels !== "none";
-    const labelSize = bookSpineLabelSize(block, state.config.labelSize);
-    if (!shouldLabel || block.width < 24 || block.height < labelSize + 10) return;
-    const labelGeometry = bookLabelGeometry(block, labelSize);
+    if (!shouldLabel || block.width < 36 || block.height < 32) return;
+    const titleLayout = bookTitleLayout(block, state.config.labelSize);
     const text = el("text", {
-      x: labelGeometry.x, y: labelGeometry.y,
-      fill: shade > .55 ? "#f6f5ef" : "#111", class: "book-label", style: `font-size:${labelSize}px`,
-      ...(labelGeometry.transform ? { transform: labelGeometry.transform } : {})
+      x: titleLayout.x, y: titleLayout.y,
+      fill: shade > .55 ? "#f6f5ef" : "#111", class: "book-label", "text-anchor": "middle",
+      style: `font-size:${titleLayout.labelSize}px;font-family:Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:.025em`
     });
-    bookLabelLines(block.item.name, labelGeometry.maxCharacters, labelGeometry.maxLines).forEach((line, lineIndex) => text.append(el("tspan", {
-      x: labelGeometry.x, dy: lineIndex ? "1.15em" : 0
+    titleLayout.lines.forEach((line, lineIndex) => text.append(el("tspan", {
+      x: titleLayout.x, dy: lineIndex ? "1.15em" : 0
     }, line)));
     svg.append(text);
   });
