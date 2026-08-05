@@ -651,7 +651,11 @@ test("Book is a first-class mention-weighted area view for transcript-backed tit
   assert.match(source, /const rowScore = row =>/);
   assert.match(source, /Number\(item\.mentions\)/);
   assert.match(source, /font-family:Georgia,'Times New Roman',serif/);
-  assert.match(source, /"text-anchor": "middle"/);
+  assert.match(source, /"text-anchor": "start"/);
+  assert.match(source, /class: "mark book-volume"/);
+  assert.match(source, /class: "book-spine"/);
+  assert.match(source, /class: "book-author"/);
+  assert.match(source, /function bookAuthor/);
   assert.match(source, /if \(!titleLayout\.complete\) return/);
   assert.doesNotMatch(source, /class: "book-shelf"/);
   assert.match(source, /state\.config\.type === "book" \? "Shade" : "Size \+ shade"/);
@@ -1069,6 +1073,20 @@ test("entity inspection explains potential mention inflation", () => {
   assert.match(elements.inspectorContent.innerHTML, /High prominence inflation risk/);
   assert.match(elements.inspectorContent.innerHTML, /repeated-text mentions/);
   assert.match(elements.inspectorContent.innerHTML, /requester-metadata mentions/);
+});
+
+test("book inspection places the author beneath the title", () => {
+  const elements = { builderView: new FakeElement(), inspector: new FakeElement(), inspectorContent: new FakeElement() };
+  const document = { querySelector: selector => elements[selector.slice(1)], querySelectorAll: () => [] };
+  const context = vm.createContext({ document, location: { hash: "" }, URLSearchParams, requestAnimationFrame() {} });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  vm.runInContext(`inspectEntity({
+    name: "UFOs and Nukes", category: "book", contextAdjustedMentions: 7, mentions: 8,
+    independentDocumentCount: 4, documentCount: 4, sourceCount: 2, inflationRate: 0, documentInflationRate: 0,
+    inflationRisk: "low", reviewStatus: "curated", variants: ["UFOs and Nukes"], evidence: [], inflationSignals: {}
+  })`, context);
+  assert.match(elements.inspectorContent.innerHTML, /<h3>UFOs and Nukes<\/h3><p class="inspect-subtitle">Robert Hastings<\/p>/);
 });
 
 test("an explicitly edited title remains custom until a preset is applied", () => {

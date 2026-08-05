@@ -142,7 +142,11 @@ h1, h2, h3, p { margin-top: 0; }
 .chart-label { fill: var(--ink); font-size: var(--graph-label-size, 12px); pointer-events: none; }
 .node-label { font-weight: 650; paint-order: stroke; stroke: var(--paper); stroke-width: 3px; stroke-linejoin: round; }
 .book-label { font-weight: 750; pointer-events: none; }
-.book-shelf { pointer-events: none; }
+.book-author { opacity: .78; pointer-events: none; }
+.book-volume { transform-box: fill-box; transform-origin: center; filter: drop-shadow(1px 1px 0 rgba(17,17,17,.16)); }
+.book-volume:hover, .book-volume:focus-visible { filter: brightness(.9) drop-shadow(2px 2px 0 rgba(17,17,17,.22)); outline: none; }
+.book-cover-light, .book-spine-light { pointer-events: none; }
+.book-spine-seam { stroke: #f6f5ef; stroke-width: .55; pointer-events: none; }
 .axis-label { fill: var(--muted); font-size: 11px; }
 .grid-line { stroke: var(--ink); stroke-width: 1; stroke-opacity: .12; }
 .mark { cursor: pointer; transition: opacity .15s, filter .15s; }
@@ -168,6 +172,7 @@ h1, h2, h3, p { margin-top: 0; }
 .inspector-empty { min-height: 70%; display: grid; place-content: center; text-align: center; color: var(--muted); }
 .inspect-icon { display: grid; place-items: center; width: 42px; height: 42px; margin: 0 auto 12px; border-radius: 50%; color: var(--green); background: var(--mint); font-size: 21px; }
 .inspector h3 { font: 400 17px/1.2 var(--font); text-transform: uppercase; margin-bottom: 8px; color: var(--ink); }
+.inspector .inspect-subtitle { margin: -2px 0 12px; color: var(--muted); font-size: 12px; font-weight: 600; }
 .inspector p { font-size: 11px; line-height: 1.55; }
 .inspect-category { color: var(--green-2); font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .metric-row { display: grid; grid-template-columns: repeat(2,1fr); gap: 7px; margin: 18px 0; }

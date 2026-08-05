@@ -16,6 +16,29 @@ const LABELS = {
   category: "Entity type", reviewStatus: "Review status", engine: "Engine", path: "Path",
   table: "Table", collection: "Collections", shared_entities: "Shared entities"
 };
+const BOOK_AUTHORS = new Map(Object.entries({
+  "Scientific Study of Unidentified Flying Objects": "Edward U. Condon",
+  "Disclosure": "Steven M. Greer",
+  "UFOs and Nukes": "Robert Hastings",
+  "The Immortality Key": "Brian C. Muraresku",
+  "Extraterrestrial Contact: The Evidence and Implications": "Steven M. Greer",
+  "Unveiled Mysteries": "Godfré Ray King",
+  "UFO of God": "Chris Bledsoe",
+  "Time Loops": "Eric Wargo",
+  "They Knew Too Much About Flying Saucers": "Gray Barker",
+  "They Are Already Here: UFO Culture and Why We See Saucers": "Sarah Scoles",
+  "The Tools": "Phil Stutz & Barry Michels",
+  "The I AM Discourses": "Godfré Ray King",
+  "The Day After Roswell": "Philip J. Corso & William J. Birnes",
+  "Penetration": "Ingo Swann",
+  "Le Matin des Magiciens": "Louis Pauwels & Jacques Bergier",
+  "Flying Saucers from Outer Space": "Donald E. Keyhoe"
+}));
+
+function bookAuthor(item) {
+  const supplied = item.author || item.authors || item.creator;
+  return Array.isArray(supplied) ? supplied.join(" & ") : supplied || BOOK_AUTHORS.get(item.canonicalName || item.name) || "";
+}
 const TABLE_FIELDS = {
   entity: ["name", "category", "contextAdjustedMentions", "mentions", "inflationRate", "documentInflationRate", "inflationRisk", "independentDocumentCount", "documentCount", "sourceCount", "classificationConfidence", "extractionConfidence", "reviewStatus"],
   document: ["title", "source", "format", "words", "segments", "bytes", "createdAt", "engine", "durationMs", "path"],
@@ -1270,24 +1293,38 @@ function bookLabelLines(title, maxCharacters, maxLines) {
 function bookTitleLayout(block, requestedSize) {
   const areaScale = Math.min(1.5, Math.max(1, Math.sqrt(block.width * block.height) / 130));
   const maximumSize = Math.max(8, Math.floor(requestedSize * areaScale));
+  const spineWidth = Math.min(18, Math.max(6, block.width * .11));
+  const horizontalPadding = Math.min(18, Math.max(7, block.width * .055));
+  const textWidth = block.width - spineWidth - horizontalPadding * 2;
   let labelSize = maximumSize;
   let lines = [];
+  let authorLine = "";
   let complete = false;
+  const author = bookAuthor(block.item);
   while (labelSize >= 8) {
-    const maxCharacters = Math.max(4, Math.floor((block.width - 14) / (labelSize * .62)));
-    const maxLines = Math.max(1, Math.min(4, Math.floor((block.height - 14) / (labelSize * 1.15))));
+    const maxCharacters = Math.max(4, Math.floor(textWidth / (labelSize * .62)));
+    const authorSize = Math.max(7, labelSize * .72);
+    const maxLines = Math.max(1, Math.min(4, Math.floor((block.height - 14 - (author ? authorSize * 1.65 : 0)) / (labelSize * 1.15))));
     lines = bookLabelLines(block.item.name, maxCharacters, maxLines);
+    authorLine = author ? bookLabelLines(author, Math.max(5, Math.floor(textWidth / (authorSize * .58))), 1)[0] : "";
     complete = Boolean(lines.length) && !lines.at(-1).endsWith("…") && lines.every(line => line.length <= maxCharacters);
     if (complete || labelSize === 8) break;
     labelSize -= 1;
   }
   const lineHeight = labelSize * 1.15;
+  const authorSize = Math.max(7, labelSize * .72);
+  const titleHeight = Math.max(labelSize, lines.length * lineHeight);
+  const groupHeight = titleHeight + (authorLine ? authorSize * 1.65 : 0);
+  const y = block.y + block.height / 2 - groupHeight / 2 + labelSize;
   return {
     labelSize,
     lines,
+    authorLine,
+    authorSize,
     complete,
-    x: block.x + block.width / 2,
-    y: block.y + block.height / 2 - (lines.length - 1) * lineHeight / 2 + labelSize * .35
+    x: block.x + spineWidth + horizontalPadding,
+    y,
+    authorY: y + (lines.length - 1) * lineHeight + authorSize * 1.55
   };
 }
 
@@ -1299,28 +1336,81 @@ function renderBook() {
   if (!data.length) return showEmpty();
   const extent = valueExtent(data, state.config.size);
   const { blocks } = bookshelfLayout(data, width, height);
+  const defs = el("defs");
+  const coverLight = el("linearGradient", { id: "book-cover-light", x1: "0", y1: "0", x2: "1", y2: "0" });
+  coverLight.append(el("stop", { offset: "0", "stop-color": "#fff", "stop-opacity": ".08" }));
+  coverLight.append(el("stop", { offset: "1", "stop-color": "#000", "stop-opacity": ".05" }));
+  const spineLight = el("linearGradient", { id: "book-spine-light", x1: "0", y1: "0", x2: "1", y2: "0" });
+  spineLight.append(el("stop", { offset: "0", "stop-color": "#000", "stop-opacity": ".34" }));
+  spineLight.append(el("stop", { offset: ".48", "stop-color": "#fff", "stop-opacity": ".2" }));
+  spineLight.append(el("stop", { offset: "1", "stop-color": "#000", "stop-opacity": ".16" }));
+  defs.append(coverLight, spineLight);
+  svg.append(defs);
   blocks.forEach(block => {
     const shade = scale(block.item[state.config.size], extent, [.16, .94]);
-    const rect = el("rect", {
-      x: block.x, y: block.y, width: Math.max(1, block.width), height: Math.max(1, block.height),
-      fill: "#111", "fill-opacity": shade, stroke: "#111", "stroke-width": 1, class: "mark book-spine"
+    const gap = Math.min(3, Math.max(1, Math.min(block.width, block.height) * .025));
+    const x = block.x + gap;
+    const y = block.y + gap;
+    const bookWidth = Math.max(1, block.width - gap * 2);
+    const bookHeight = Math.max(1, block.height - gap * 2);
+    const spineWidth = Math.min(18, Math.max(6, bookWidth * .11));
+    const radius = Math.min(2, bookWidth * .02, bookHeight * .02);
+    const group = el("g", {
+      class: "mark book-volume", tabindex: "0", role: "button",
+      "aria-label": `${block.item.name}${bookAuthor(block.item) ? ` by ${bookAuthor(block.item)}` : ""}. ${formatNumber(block.item.mentions)} mentions.`
     });
-    addTitle(rect, `${block.item.name} · Mentions: ${formatNumber(block.item.mentions)} · ${label(state.config.size)} shade: ${formatNumber(block.item[state.config.size])}`);
-    rect.addEventListener("click", () => inspectEntity(block.item));
-    svg.append(rect);
+    const cover = el("rect", {
+      x, y, width: bookWidth, height: bookHeight, rx: radius,
+      fill: "#111", "fill-opacity": shade, stroke: "#111", "stroke-width": 1,
+      class: "book-cover"
+    });
+    group.append(cover);
+    group.append(el("rect", {
+      x, y, width: bookWidth, height: bookHeight, rx: radius,
+      fill: "url(#book-cover-light)", class: "book-cover-light"
+    }));
+    group.append(el("rect", {
+      x, y, width: spineWidth, height: bookHeight, rx: radius,
+      fill: "#111", "fill-opacity": shade, stroke: "none",
+      class: "book-spine"
+    }));
+    group.append(el("rect", {
+      x, y, width: spineWidth, height: bookHeight, rx: radius,
+      fill: "url(#book-spine-light)", opacity: .16 + shade * .5, class: "book-spine-light"
+    }));
+    group.append(el("line", {
+      x1: x + spineWidth, y1: y + 2, x2: x + spineWidth, y2: y + bookHeight - 2,
+      "stroke-opacity": .16 + shade * .32, class: "book-spine-seam"
+    }));
+    addTitle(group, `${block.item.name} · Mentions: ${formatNumber(block.item.mentions)} · ${label(state.config.size)} shade: ${formatNumber(block.item[state.config.size])}`);
+    group.addEventListener("click", () => inspectEntity(block.item));
+    group.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        inspectEntity(block.item);
+      }
+    });
+    svg.append(group);
     const shouldLabel = state.config.labels !== "none";
     if (!shouldLabel || block.width < 36 || block.height < 32) return;
     const titleLayout = bookTitleLayout(block, state.config.labelSize);
     if (!titleLayout.complete) return;
     const text = el("text", {
       x: titleLayout.x, y: titleLayout.y,
-      fill: shade > .55 ? "#f6f5ef" : "#111", class: "book-label", "text-anchor": "middle",
-      style: `font-size:${titleLayout.labelSize}px;font-family:Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:.025em`
+      fill: shade > .55 ? "#f6f5ef" : "#111", class: "book-label", "text-anchor": "start",
+      style: `font-size:${titleLayout.labelSize}px;font-family:Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:.015em`
     });
     titleLayout.lines.forEach((line, lineIndex) => text.append(el("tspan", {
       x: titleLayout.x, dy: lineIndex ? "1.15em" : 0
     }, line)));
     svg.append(text);
+    if (titleLayout.authorLine) {
+      svg.append(el("text", {
+        x: titleLayout.x, y: titleLayout.authorY,
+        fill: shade > .55 ? "#f6f5ef" : "#111", class: "book-author", "text-anchor": "start",
+        style: `font-size:${titleLayout.authorSize}px;font-family:var(--font);font-weight:500;letter-spacing:.01em`
+      }, titleLayout.authorLine));
+    }
   });
   drawIntensityLegend();
   const mentions = data.reduce((sum, item) => sum + (item.mentions || 0), 0);
@@ -1733,11 +1823,11 @@ function closeInspector() {
   refreshGraphAfterInspectorResize();
 }
 
-function showInspector(category, title, metrics, evidence, note = "") {
+function showInspector(category, title, metrics, evidence, note = "", subtitle = "") {
   const inspector = $("#inspector");
   $("#builderView").classList.remove("inspector-collapsed");
   inspector.classList.add("has-selection");
-  $("#inspectorContent").innerHTML = `<p class="inspect-category">${escapeHTML(label(category))}</p><h3>${escapeHTML(title)}</h3>${note ? `<p>${escapeHTML(note)}</p>` : ""}<div class="metric-row">${metrics.map(([value, name]) => `<div class="metric"><strong>${escapeHTML(formatNumber(value))}</strong><small>${escapeHTML(name)}</small></div>`).join("")}</div><div class="evidence-list"><h4>Evidence</h4>${evidenceHTML(evidence)}</div>`;
+  $("#inspectorContent").innerHTML = `<p class="inspect-category">${escapeHTML(label(category))}</p><h3>${escapeHTML(title)}</h3>${subtitle ? `<p class="inspect-subtitle">${escapeHTML(subtitle)}</p>` : ""}${note ? `<p>${escapeHTML(note)}</p>` : ""}<div class="metric-row">${metrics.map(([value, name]) => `<div class="metric"><strong>${escapeHTML(formatNumber(value))}</strong><small>${escapeHTML(name)}</small></div>`).join("")}</div><div class="evidence-list"><h4>Evidence</h4>${evidenceHTML(evidence)}</div>`;
   refreshGraphAfterInspectorResize();
 }
 
@@ -1772,7 +1862,7 @@ function inspectEntity(item) {
   const egoNote = item.egoNetwork?.neighbors.length
     ? ` Strongest visible relationships: ${item.egoNetwork.neighbors.map(neighbor => `${neighbor.entity.name} (${neighbor.edge.evidenceCount})`).join(", ")}.`
     : "";
-  showInspector(item.category, item.name, [...egoStats, [item.contextAdjustedMentions ?? item.mentions, "adjusted mentions"], [item.mentions, "raw mentions"], [item.independentDocumentCount ?? item.documentCount, "independent documents"], [item.sourceCount, "collections"]], item.evidence, `${inflationNote}${geographyNote}${egoNote} ${label(item.reviewStatus)} · ${item.variants.length} observed name variant${item.variants.length === 1 ? "" : "s"}`);
+  showInspector(item.category, item.name, [...egoStats, [item.contextAdjustedMentions ?? item.mentions, "adjusted mentions"], [item.mentions, "raw mentions"], [item.independentDocumentCount ?? item.documentCount, "independent documents"], [item.sourceCount, "collections"]], item.evidence, `${inflationNote}${geographyNote}${egoNote} ${label(item.reviewStatus)} · ${item.variants.length} observed name variant${item.variants.length === 1 ? "" : "s"}`, item.category === "book" ? bookAuthor(item) : "");
 }
 
 function inspectEdge(edge) {
