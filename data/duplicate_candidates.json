@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "70b1f92df8702addeb204ec658a410214a9004bf"
+    "revision": "e77a068fd87ccf661b788e613f3044db67ab9038"
   },
-  "count": 270,
-  "totalCount": 270,
+  "count": 279,
+  "totalCount": 279,
   "shownCount": 200,
   "candidates": [
     {
@@ -77,9 +77,25 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "National Reconnaissance Office",
+        "mentions": 231,
+        "documentCount": 109
+      },
+      "right": {
+        "name": "The National Reconnaisance Office",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.983,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 222,
-        "documentCount": 41
+        "mentions": 226,
+        "documentCount": 43
       },
       "right": {
         "name": "DEPARTMENT OF CIVIL AVITION",
@@ -487,6 +503,22 @@
         "documentCount": 2
       },
       "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Technical Intelligence Center",
+        "mentions": 64,
+        "documentCount": 34
+      },
+      "right": {
+        "name": "Air Iechnical Intelligence Center",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.97,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1054,8 +1086,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2839,
-        "documentCount": 657
+        "mentions": 2860,
+        "documentCount": 661
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1070,8 +1102,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2839,
-        "documentCount": 657
+        "mentions": 2860,
+        "documentCount": 661
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1086,8 +1118,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2839,
-        "documentCount": 657
+        "mentions": 2860,
+        "documentCount": 661
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1102,8 +1134,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2839,
-        "documentCount": 657
+        "mentions": 2860,
+        "documentCount": 661
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1175,6 +1207,22 @@
         "documentCount": 2
       },
       "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Senate Select Committee of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Senate Select Committee for Intelligence",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.962,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1358,8 +1406,8 @@
       "category": "organization",
       "left": {
         "name": "University of California",
-        "mentions": 45,
-        "documentCount": 28
+        "mentions": 47,
+        "documentCount": 29
       },
       "right": {
         "name": "University of Californla's",
@@ -1758,8 +1806,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1019,
-        "documentCount": 264
+        "mentions": 1021,
+        "documentCount": 266
       },
       "right": {
         "name": "Department of Detense",
@@ -1806,8 +1854,8 @@
       "category": "organization",
       "left": {
         "name": "House Appropriations Committee",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 6,
+        "documentCount": 6
       },
       "right": {
         "name": "House Appropriations Subcommittee",
@@ -2139,6 +2187,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Dwight D. Eisenhower",
+        "mentions": 116,
+        "documentCount": 34
+      },
+      "right": {
+        "name": "President Dwight Eisenhower",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.944,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Army Intelligence",
@@ -2238,8 +2302,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2839,
-        "documentCount": 657
+        "mentions": 2860,
+        "documentCount": 661
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2302,13 +2366,13 @@
       "category": "government_agency",
       "left": {
         "name": "Department of War",
-        "mentions": 26,
-        "documentCount": 13
+        "mentions": 30,
+        "documentCount": 14
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 299,
-        "documentCount": 33
+        "mentions": 303,
+        "documentCount": 35
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -2318,8 +2382,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Air",
-        "mentions": 299,
-        "documentCount": 33
+        "mentions": 303,
+        "documentCount": 35
       },
       "right": {
         "name": "Department of Mir",
@@ -2461,6 +2525,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "APPROPRIATIONS SUBCOMMITTEE",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Appropriations Committee",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "OF DEFENSE FOR INTELLIGENCE",
         "mentions": 3,
         "documentCount": 3
@@ -2535,6 +2615,22 @@
         "documentCount": 2
       },
       "similarity": 0.94,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Iechnical Intelligence Center",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "The Ait Technical Intelligence Center",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.939,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -2798,8 +2894,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 3121,
-        "documentCount": 313
+        "mentions": 3122,
+        "documentCount": 314
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -2885,6 +2981,22 @@
         "name": "Chart Showing Balloon Launching Sites",
         "mentions": 4,
         "documentCount": 4
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Iechnical Intelligence Center",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Air Iechnical Intelligence Center",
+        "mentions": 4,
+        "documentCount": 2
       },
       "similarity": 0.935,
       "reason": "similar name",
@@ -3093,118 +3205,6 @@
         "name": "Bureau Bulletia",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "This Department",
-        "mentions": 19,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "Thia Department",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "LOS ALAMOS SCIENTIFIC LABORATORY",
-        "mentions": 17,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Alamos Scientific Laboratory",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "program",
-      "left": {
-        "name": "PROGRAM SUMMARY",
-        "mentions": 16,
-        "documentCount": 16
-      },
-      "right": {
-        "name": "Program Sunmary",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "program",
-      "left": {
-        "name": "Project Twinkle",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Project IWINKLE",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Federal Emergency Management Agency",
-        "mentions": 5,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "FEMA Federal Emergency Management Agency",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "program",
-      "left": {
-        "name": "ProJect IVINKLE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Project IWINKLE",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Intelligence I-",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Intelligence Div",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.933,
       "reason": "similar name",
