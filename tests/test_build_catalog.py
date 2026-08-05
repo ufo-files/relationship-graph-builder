@@ -46,6 +46,17 @@ class ClassificationTests(unittest.TestCase):
         self.assertEqual({mention[2] for mention in moon_mentions}, {"location"})
         self.assertTrue(all(mention[4] for mention in moon_mentions))
 
+    def test_extracts_far_side_as_a_distinct_curated_lunar_location(self):
+        mentions = extract_mentions(
+            "A source described the far side of the Moon and later called it the lunar far side.",
+            {},
+        )
+
+        far_side_mentions = [mention for mention in mentions if mention[1] == "Far Side of the Moon"]
+        self.assertEqual({mention[2] for mention in far_side_mentions}, {"location"})
+        self.assertTrue(all(mention[4] for mention in far_side_mentions))
+        self.assertFalse(any(mention[1] == "Moon" for mention in mentions))
+
     def test_project_moon_dust_does_not_emit_nested_moon_location(self):
         mentions = extract_mentions("Project Moon Dust was active.", {})
 
@@ -165,6 +176,26 @@ class ClassificationTests(unittest.TestCase):
 
 
 class CatalogTests(unittest.TestCase):
+    def test_maps_far_side_to_the_anti_earth_lunar_hemisphere(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "machine-data"
+            collection = root / "Example"
+            collection.mkdir(parents=True)
+            metadata = {"schema": "ufo-files-archive-ocr/v1", "source_file": "source.pdf", "source_bytes": 100}
+            body = "Researchers compared the far side of the Moon with the lunar far side."
+            (collection / "source.txt").write_text(json.dumps(metadata) + "\n\n" + body, encoding="utf-8")
+
+            catalog = build(root, Path(directory) / "catalog.json", 100, 100, require_data=True)
+            far_side = next(entity for entity in catalog["entities"] if entity["canonicalName"] == "Far Side of the Moon")
+
+            self.assertEqual(far_side["category"], "location")
+            self.assertEqual(far_side["geo"], {
+                "lat": 0,
+                "lon": 180,
+                "body": "moon",
+                "precision": "selenographic-region",
+            })
+
     def test_publishes_single_explicit_book_mentions_with_high_confidence(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / "machine-data"

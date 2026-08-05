@@ -1092,6 +1092,7 @@ function renderMap() {
       lat: entity.geo.lat,
       lon: entity.geo.lon,
       body: entity.geo.body || "earth",
+      precision: entity.geo.precision,
       intensity: Math.sqrt(Math.max(0, clampedScale(entity[state.config.size], extent, [0, 1]))),
       formattedValue: `${label(state.config.size)}: ${formatNumber(entity[state.config.size])}`,
       secondary: !primaryIds.has(entity.id),
@@ -1399,7 +1400,11 @@ function mapLocationData() {
   const locations = filteredEntities().filter(entity => entity.category === "location");
   const mapped = locations.filter(entity => Number.isFinite(entity.geo?.lat) && Number.isFinite(entity.geo?.lon))
     .sort((left, right) => (right[state.config.size] || 0) - (left[state.config.size] || 0));
-  return { mapped, data: mapped.slice(0, state.config.limit), unmapped: locations.length - mapped.length };
+  const lunar = mapped.filter(entity => entity.geo.body === "moon");
+  const terrestrial = mapped.filter(entity => entity.geo.body !== "moon");
+  const data = [...lunar, ...terrestrial.slice(0, Math.max(0, state.config.limit - lunar.length))]
+    .slice(0, state.config.limit);
+  return { mapped, data, unmapped: locations.length - mapped.length };
 }
 
 function aggregateDocuments() {
