@@ -372,7 +372,7 @@ function renderControls() {
   } else if (state.config.type === "map") {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Geocoded locations</option></select></div><div class="control"><div class="control-title">Position</div><select disabled><option>Reviewed coordinates</option></select></div>` + relationshipTypeControl();
   } else if (state.config.type === "book") {
-    roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Book titles</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Mention-proportional 2:3 area</option></select></div>`;
+    roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Book titles</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Mention-weighted cover area</option></select></div>`;
   } else if (state.config.type === "document") {
     roles = `<div class="control"><div class="control-title">Rows</div><select disabled><option>Completed transcript files</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Searchable file browser</option></select></div>`;
   } else if (state.config.type === "scatter") {
@@ -1088,103 +1088,88 @@ function renderMap() {
 function bookshelfLayout(items, width, height) {
   if (!items.length) return { blocks: [], occupancy: 0 };
   const inset = 14;
-  const gap = 4;
   const availableWidth = width - inset * 2;
   const availableHeight = height - inset * 2;
   const weighted = items
     .map((item, index) => ({ item, index, weight: Math.max(1, Number(item.mentions) || 0) }))
     .sort((left, right) => right.weight - left.weight || left.index - right.index);
+  const totalWeight = weighted.reduce((sum, entry) => sum + entry.weight, 0);
+  const leadArea = availableWidth * availableHeight * weighted[0].weight / totalWeight;
+  const naturalLeadWidth = Math.sqrt(leadArea * 2 / 3);
+  const leadScale = Math.min(1, availableWidth / naturalLeadWidth, availableHeight / (naturalLeadWidth * 3 / 2));
+  const leadWidth = naturalLeadWidth * leadScale;
+  const leadHeight = leadWidth * 3 / 2;
+  const blocks = [{
+    item: weighted[0].item,
+    x: inset,
+    y: inset,
+    width: leadWidth,
+    height: leadHeight,
+    mentions: weighted[0].weight
+  }];
 
-  const packAtScale = scaleValue => {
-    let freeRectangles = [{ x: 0, y: 0, width: availableWidth + gap, height: availableHeight + gap }];
-    const placements = [];
-    const contains = (outer, inner) => (
-      inner.x >= outer.x && inner.y >= outer.y
-      && inner.x + inner.width <= outer.x + outer.width
-      && inner.y + inner.height <= outer.y + outer.height
-    );
-    const overlaps = (left, right) => !(
-      left.x + left.width <= right.x || right.x + right.width <= left.x
-      || left.y + left.height <= right.y || right.y + right.height <= left.y
-    );
-
-    for (const entry of weighted) {
-      const unit = Math.max(2, Math.round(Math.sqrt(entry.weight) * scaleValue));
-      const book = { ...entry, unit, width: unit * 2, height: unit * 3 };
-      if (book.width > availableWidth || book.height > availableHeight) return null;
-      const outerWidth = book.width + gap;
-      const outerHeight = book.height + gap;
-      const target = freeRectangles
-        .filter(rectangle => outerWidth <= rectangle.width && outerHeight <= rectangle.height)
-        .map(rectangle => ({
-          rectangle,
-          shortSide: Math.min(rectangle.width - outerWidth, rectangle.height - outerHeight),
-          longSide: Math.max(rectangle.width - outerWidth, rectangle.height - outerHeight)
-        }))
-        .sort((left, right) => (
-          left.shortSide - right.shortSide || left.longSide - right.longSide
-          || left.rectangle.y - right.rectangle.y || left.rectangle.x - right.rectangle.x
-        ))[0]?.rectangle;
-      if (!target) return null;
-
-      const used = { x: target.x, y: target.y, width: outerWidth, height: outerHeight };
-      placements.push({ ...book, x: used.x, y: used.y });
-      const splitRectangles = [];
-      freeRectangles.forEach(rectangle => {
-        if (!overlaps(rectangle, used)) {
-          splitRectangles.push(rectangle);
-          return;
-        }
-        const rectangleRight = rectangle.x + rectangle.width;
-        const rectangleBottom = rectangle.y + rectangle.height;
-        const usedRight = used.x + used.width;
-        const usedBottom = used.y + used.height;
-        if (used.x > rectangle.x) splitRectangles.push({ x: rectangle.x, y: rectangle.y, width: used.x - rectangle.x, height: rectangle.height });
-        if (usedRight < rectangleRight) splitRectangles.push({ x: usedRight, y: rectangle.y, width: rectangleRight - usedRight, height: rectangle.height });
-        if (used.y > rectangle.y) splitRectangles.push({ x: rectangle.x, y: rectangle.y, width: rectangle.width, height: used.y - rectangle.y });
-        if (usedBottom < rectangleBottom) splitRectangles.push({ x: rectangle.x, y: usedBottom, width: rectangle.width, height: rectangleBottom - usedBottom });
-      });
-      freeRectangles = [];
-      splitRectangles
-        .filter(rectangle => rectangle.width > 0 && rectangle.height > 0)
-        .sort((left, right) => right.width * right.height - left.width * left.height)
-        .forEach(rectangle => {
-          if (freeRectangles.some(existing => contains(existing, rectangle))) return;
-          freeRectangles = freeRectangles.filter(existing => !contains(rectangle, existing));
-          freeRectangles.push(rectangle);
-        });
+  const tile = (entries, rectangle) => {
+    if (!entries.length || rectangle.width <= 0 || rectangle.height <= 0) return;
+    if (entries.length === 1) {
+      blocks.push({ item: entries[0].item, mentions: entries[0].weight, ...rectangle });
+      return;
     }
-    return { placements };
+    const entriesWeight = entries.reduce((sum, entry) => sum + entry.weight, 0);
+    let firstWeight = 0;
+    let splitIndex = 1;
+    for (let index = 1; index < entries.length; index += 1) {
+      const candidateWeight = firstWeight + entries[index - 1].weight;
+      if (index > 1 && Math.abs(entriesWeight / 2 - firstWeight) <= Math.abs(entriesWeight / 2 - candidateWeight)) break;
+      firstWeight = candidateWeight;
+      splitIndex = index;
+    }
+    const ratio = firstWeight / entriesWeight;
+    if (rectangle.width >= rectangle.height) {
+      const firstWidth = rectangle.width * ratio;
+      tile(entries.slice(0, splitIndex), { ...rectangle, width: firstWidth });
+      tile(entries.slice(splitIndex), { ...rectangle, x: rectangle.x + firstWidth, width: rectangle.width - firstWidth });
+    } else {
+      const firstHeight = rectangle.height * ratio;
+      tile(entries.slice(0, splitIndex), { ...rectangle, height: firstHeight });
+      tile(entries.slice(splitIndex), { ...rectangle, y: rectangle.y + firstHeight, height: rectangle.height - firstHeight });
+    }
   };
 
-  const largestRoot = Math.sqrt(weighted[0].weight);
-  let lowerScale = 0;
-  let upperScale = Math.min(availableWidth / 2, availableHeight / 3) / largestRoot;
-  let best = packAtScale(0);
-  for (let iteration = 0; iteration < 32; iteration += 1) {
-    const candidateScale = (lowerScale + upperScale) / 2;
-    const candidate = packAtScale(candidateScale);
-    if (candidate) {
-      best = candidate;
-      lowerScale = candidateScale;
-    } else {
-      upperScale = candidateScale;
+  const remaining = weighted.slice(1);
+  if (remaining.length) {
+    const rightRectangle = {
+      x: inset + leadWidth,
+      y: inset,
+      width: availableWidth - leadWidth,
+      height: availableHeight
+    };
+    const lowerRectangle = {
+      x: inset,
+      y: inset + leadHeight,
+      width: leadWidth,
+      height: availableHeight - leadHeight
+    };
+    const remainingArea = rightRectangle.width * rightRectangle.height + lowerRectangle.width * lowerRectangle.height;
+    const targetLowerWeight = remaining.reduce((sum, entry) => sum + entry.weight, 0)
+      * lowerRectangle.width * lowerRectangle.height / remainingArea;
+    let lowerCount = 0;
+    let lowerWeight = 0;
+    for (let index = remaining.length - 1; index >= 0; index -= 1) {
+      const candidateWeight = lowerWeight + remaining[index].weight;
+      if (lowerCount && Math.abs(targetLowerWeight - lowerWeight) <= Math.abs(targetLowerWeight - candidateWeight)) break;
+      lowerWeight = candidateWeight;
+      lowerCount += 1;
     }
+    if (lowerRectangle.width <= 0 || lowerRectangle.height <= 0) {
+      lowerCount = 0;
+    } else if (remaining.length > 1) {
+      lowerCount = Math.max(1, Math.min(lowerCount, remaining.length - 1));
+    }
+    const rightEntries = lowerCount ? remaining.slice(0, -lowerCount) : remaining;
+    const lowerEntries = lowerCount ? remaining.slice(-lowerCount) : [];
+    tile(rightEntries, rightRectangle);
+    tile(lowerEntries, lowerRectangle);
   }
-  if (!best) return { blocks: [], occupancy: 0 };
-
-  const usedWidth = Math.max(...best.placements.map(book => book.x + book.width));
-  const usedHeight = Math.max(...best.placements.map(book => book.y + book.height));
-  const offsetX = inset + Math.floor((availableWidth - usedWidth) / 2);
-  const offsetY = inset + Math.floor((availableHeight - usedHeight) / 2);
-  const blocks = best.placements.map(book => ({
-    item: book.item,
-    x: offsetX + book.x,
-    y: offsetY + book.y,
-    width: book.width,
-    height: book.height,
-    mentions: book.weight
-  }));
   const occupiedArea = blocks.reduce((sum, block) => sum + block.width * block.height, 0);
   return { blocks, occupancy: occupiedArea / (availableWidth * availableHeight) };
 }
@@ -1605,7 +1590,7 @@ function renderGraph() {
   const descriptions = {
     network: state.config.nodeRole === "collection" ? "Collections connected by shared published entities." : "Evidence-backed connections across the local archive.", scatter: `${label(state.config.x)} compared with ${label(state.config.y)}.`,
     map: `Geocoded location entities sized by ${label(state.config.size)}.`,
-    book: `Transcript-mentioned books with area proportional to Mentions; shade represents ${label(state.config.size)}.`,
+    book: `Transcript-mentioned books with area weighted by Mentions; shade represents ${label(state.config.size)}.`,
     document: "Find completed OCR and transcript files across the selected collections.",
     bars: `${label(state.config.y)} grouped by ${label(state.config.aggregation)}.`,
     timeline: `${state.config.timelineRole === "entity" ? "Entities" : "Completed transcript files"} by cataloging time.`,

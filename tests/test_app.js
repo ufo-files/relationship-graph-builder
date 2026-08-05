@@ -465,7 +465,7 @@ test("map and timeline expose relationship controls", () => {
   assert.match(source, /relationships: overlay\.edges\.map/);
 });
 
-test("Book is a first-class proportional bookshelf for transcript-backed titles", () => {
+test("Book is a first-class mention-weighted area view for transcript-backed titles", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
   vm.runInContext(source, context);
@@ -500,20 +500,16 @@ test("Book is a first-class proportional bookshelf for transcript-backed titles"
   assert.equal(result.title, "Books Mentioned");
   assert.equal(result.blocks.length, 3);
   const bookById = Object.fromEntries(result.blocks.map(block => [block.id, block]));
-  const areaRatio = bookById.one.width * bookById.one.height / (bookById.three.width * bookById.three.height);
-  const mentionRatio = bookById.one.mentions / bookById.three.mentions;
-  assert.ok(Math.abs(areaRatio - mentionRatio) / mentionRatio < .08);
-  assert.ok(bookById.one.width > bookById.two.width && bookById.two.width > bookById.three.width);
-  assert.ok(result.blocks.every(block => block.width * 3 === block.height * 2));
-  assert.ok(result.blocks.every(block => block.width % 2 === 0 && block.height % 3 === 0));
-  assert.ok(result.occupancy > .5);
-  assert.ok(result.dense.blocks.every(block => block.width * 3 === block.height * 2));
-  assert.ok(result.dense.blocks.every(block => block.width % 2 === 0 && block.height % 3 === 0));
+  assert.ok(Math.abs(bookById.one.width * 3 - bookById.one.height * 2) < .001);
+  assert.ok(result.occupancy > .999);
   assert.ok(result.dense.blocks.every(block => block.x >= 0 && block.y >= 0 && block.x + block.width <= 970 && block.y + block.height <= 732));
-  assert.ok(new Set(result.dense.blocks.map(block => block.width)).size > 1);
-  assert.ok(result.dense.occupancy > .5);
+  assert.ok(Math.abs(result.dense.blocks[0].width * 3 - result.dense.blocks[0].height * 2) < .001);
+  assert.ok(new Set(result.dense.blocks.map(block => block.width.toFixed(2))).size > 1);
+  assert.ok(result.dense.occupancy > .999);
   result.dense.blocks.forEach((block, index) => result.dense.blocks.slice(index + 1).forEach(other => {
-    const separated = block.x + block.width <= other.x || other.x + other.width <= block.x || block.y + block.height <= other.y || other.y + other.height <= block.y;
+    const epsilon = .000001;
+    const separated = block.x + block.width <= other.x + epsilon || other.x + other.width <= block.x + epsilon
+      || block.y + block.height <= other.y + epsilon || other.y + other.height <= block.y + epsilon;
     assert.equal(separated, true);
   }));
   assert.ok(result.dense.title.labelSize >= 8 && result.dense.title.labelSize <= 12);
@@ -523,8 +519,8 @@ test("Book is a first-class proportional bookshelf for transcript-backed titles"
   assert.match(source, /book: \{[^}]*labels: "all"/);
   assert.doesNotMatch(source, /if \(type === "book"\).*categories: \["book"\]/);
   assert.match(source, /const data = filteredEntities\(\["book"\]\)/);
-  assert.match(source, /Mention-proportional 2:3 area/);
-  assert.match(source, /Math\.sqrt\(entry\.weight\) \* scaleValue/);
+  assert.match(source, /Mention-weighted cover area/);
+  assert.match(source, /Math\.sqrt\(leadArea \* 2 \/ 3\)/);
   assert.match(source, /Number\(item\.mentions\)/);
   assert.match(source, /font-family:Georgia,'Times New Roman',serif/);
   assert.match(source, /"text-anchor": "middle"/);
