@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "8c8ce6307c4797bea2e0e2c7a247ff1ee6bc39ef"
+    "revision": "fc333487c6990e56bbe14262f656f39df49c8143"
   },
-  "count": 260,
-  "totalCount": 260,
+  "count": 262,
+  "totalCount": 262,
   "shownCount": 200,
   "candidates": [
     {
@@ -302,8 +302,8 @@
       "category": "government_agency",
       "left": {
         "name": "Intelligence Office",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 6,
+        "documentCount": 6
       },
       "right": {
         "name": "The Intelligence Officer",
@@ -446,8 +446,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 61,
-        "documentCount": 31
+        "mentions": 62,
+        "documentCount": 32
       },
       "right": {
         "name": "The Ait Technical Intelligence Center",
@@ -869,6 +869,22 @@
         "name": "Johnson Island",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Intelligence Reports Relatiag",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Intelligence Reports Relating",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -1411,8 +1427,8 @@
       },
       "right": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 61,
-        "documentCount": 31
+        "mentions": 62,
+        "documentCount": 32
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -1422,8 +1438,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 11,
-        "documentCount": 9
+        "mentions": 12,
+        "documentCount": 10
       },
       "right": {
         "name": "Northeastern University",
@@ -1747,8 +1763,8 @@
       },
       "right": {
         "name": "Intelligence Office",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 6,
+        "documentCount": 6
       },
       "similarity": 0.95,
       "reason": "similar name",
@@ -1950,8 +1966,8 @@
       "category": "location",
       "left": {
         "name": "Chart Showing Balloon Launching Sites",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "right": {
         "name": "Chart Showing Balloon Lunching Sites In",
@@ -2686,8 +2702,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 61,
-        "documentCount": 31
+        "mentions": 62,
+        "documentCount": 32
       },
       "right": {
         "name": "Technical Intelligence Center",
@@ -2702,8 +2718,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 61,
-        "documentCount": 31
+        "mentions": 62,
+        "documentCount": 32
       },
       "right": {
         "name": "Iechnical Intelligence Center",
@@ -2739,8 +2755,8 @@
       },
       "right": {
         "name": "Chart Showing Balloon Launching Sites",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.935,
       "reason": "similar name",
@@ -3051,6 +3067,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "program",
+      "left": {
+        "name": "ProJect IVINKLE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Project Iwinkle",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Department of Justico",
@@ -3075,8 +3107,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 159,
-        "documentCount": 26
+        "mentions": 160,
+        "documentCount": 27
       },
       "similarity": 0.932,
       "reason": "similar name",
@@ -3172,38 +3204,6 @@
       "right": {
         "name": "Department of the Arny",
         "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.93,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Air Intelligence Requirements Division",
-        "mentions": 11,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Air Intelligence Requirements Div",
-        "mentions": 5,
-        "documentCount": 2
-      },
-      "similarity": 0.93,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "National Institute of Standards and Technology",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "National Institute of Standards and Tech",
-        "mentions": 5,
         "documentCount": 2
       },
       "similarity": 0.93,
