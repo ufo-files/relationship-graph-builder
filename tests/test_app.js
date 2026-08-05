@@ -438,6 +438,10 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.equal(result.title, "Mentions — Mapped Locations");
   assert.match(html, /id="globeCanvas"/);
   assert.match(html, /id="mapAnimationButton"[^>]+aria-label="Play map animation"[^>]+aria-pressed="false"[^>]+hidden>Play<\/button>[\s\S]*id="exportButton"/);
+  assert.match(source, /moonTransitSeconds: 5/);
+  assert.match(source, /On-screen Moon transit <span>\$\{state\.config\.moonTransitSeconds\}s<\/span>[\s\S]*min="2" max="10"[^>]+data-range="moonTransitSeconds"/);
+  assert.match(source, /moonTransitSeconds: state\.config\.moonTransitSeconds/);
+  assert.match(source, /key === "moonTransitSeconds"[\s\S]*setMoonTransitSeconds\(value\)/);
   assert.match(html, /id="globeModule"[^>]+map-globe\.js/);
   assert.match(html, /Map module failed to load/);
   assert.match(globe, /import \* as THREE/);
@@ -473,7 +477,10 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /verticalFovForCoverageAtDistance/);
   assert.match(globe, /new THREE\.PerspectiveCamera\(DEFAULT_CAMERA_FOV, 1, 10, 1_500\)/);
   assert.match(globe, /this\.camera\.position\.z \* zoomFactor/);
-  assert.match(globe, /if \(this\.autoRotate && this\.lastFrameTime !== null && !this\.drag\) \{[\s\S]*this\.moonOrbit\.rotation\.y \+= elapsed \* MOON_ORBIT_SPEED;[\s\S]*this\.globe\.rotation\.y \+= elapsed \* AUTO_ROTATION_SPEED/);
+  assert.match(globe, /animationSpeeds\(\)[\s\S]*moonInViewport[\s\S]*visibleMoonTransitArc\(angle\)[\s\S]*return \{ moon: MOON_ORBIT_SPEED, earth: AUTO_ROTATION_SPEED \}/);
+  assert.match(globe, /this\.moonOrbit\.rotation\.y \+= elapsed \* speed\.moon;[\s\S]*this\.globe\.rotation\.y \+= elapsed \* speed\.earth/);
+  assert.match(globe, /earthSlowdown = MIN_MOON_TRANSIT_SECONDS \/ this\.moonTransitSeconds[\s\S]*AUTO_ROTATION_SPEED \* earthSlowdown/);
+  assert.match(globe, /setMoonTransitSeconds\(seconds\)[\s\S]*THREE\.MathUtils\.clamp\(Number\(seconds\) \|\| DEFAULT_MOON_TRANSIT_SECONDS, MIN_MOON_TRANSIT_SECONDS, MAX_MOON_TRANSIT_SECONDS\)/);
   assert.match(html, /Drag or use arrow keys to rotate the Earth and Moon together/);
   assert.match(globe, /QuadraticBezierCurve3/);
   assert.match(globe, /this\.autoRotate = false/);

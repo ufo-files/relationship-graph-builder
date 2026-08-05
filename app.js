@@ -64,7 +64,7 @@ const DEFAULT = {
   nodeRole: "entity", timelineRole: "document", matrixColumns: "category",
   tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"],
   tableSort: "mentions", tableDirection: "desc", tableSearch: "", documentSearch: "",
-  labelSize: 12, zoom: 1, title: "Mentions by Documents — Entities", titleMode: "auto"
+  labelSize: 12, zoom: 1, moonTransitSeconds: 5, title: "Mentions by Documents — Entities", titleMode: "auto"
 };
 const state = { catalog: null, config: loadConfig(), selected: null, documentById: new Map() };
 const $ = selector => document.querySelector(selector);
@@ -100,6 +100,7 @@ function loadConfig() {
       const saved = JSON.parse(decodeURIComponent(escape(atob(param))));
       if (saved.allSources === undefined) saved.allSources = !saved.sources?.length;
       const config = { ...DEFAULT, ...saved };
+      config.moonTransitSeconds = Math.min(10, Math.max(2, Number(config.moonTransitSeconds) || DEFAULT.moonTransitSeconds));
       if ((Number(saved.configVersion) || 0) < CONFIG_VERSION) migrateEntityProminenceConfig(config);
       if (saved.matrixColumns === "entity" && config.type !== "matrix") config.matrixColumns = DEFAULT.matrixColumns;
       const legacySignificantCategory = {
@@ -399,6 +400,7 @@ function renderControls() {
     : state.config.type === "document" || state.config.type === "timeline" && state.config.timelineRole !== "entity" ? numericDoc : numericEntity;
   const labelSizeControl = `<div class="control"><label>Label size <span>${state.config.labelSize}px</span></label><input type="range" min="11" max="18" step="1" value="${state.config.labelSize}" data-range="labelSize"></div>`;
   const zoomControl = state.config.type === "network" ? `<div class="control"><label>Zoom <span>${state.config.zoom.toFixed(1)}×</span></label><input type="range" min="0.5" max="2.5" step="0.1" value="${state.config.zoom}" data-range="zoom"></div>` : "";
+  const moonTransitControl = state.config.type === "map" ? `<div class="control"><label for="moonTransitSeconds">On-screen Moon transit <span>${state.config.moonTransitSeconds}s</span></label><input id="moonTransitSeconds" type="range" min="2" max="10" step="1" value="${state.config.moonTransitSeconds}" data-range="moonTransitSeconds"></div>` : "";
   const supportsRelationships = ["scatter", "map", "timeline"].includes(state.config.type);
   const relationshipControls = supportsRelationships ? controlSelect("relationshipLayer", "Relationship layer", [{ value: "off", label: "Off" }, { value: "hover", label: "On hover" }, { value: "always", label: "Always" }])
     + `<div class="control"><label>Connections per node <span>${state.config.relationshipNeighbors}</span></label><input type="range" min="1" max="5" step="1" value="${state.config.relationshipNeighbors}" data-range="relationshipNeighbors"></div>`
@@ -412,7 +414,7 @@ function renderControls() {
   } else {
     $("#encodeControls").innerHTML = (["scatter", "network", "timeline", "map", "book"].includes(state.config.type)
       ? controlSelect("size", state.config.type === "book" ? "Shade" : "Size + shade", sizeOptions) + `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>` + controlSelect("labels", "Labels", [{ value: "top", label: "Most important" }, { value: "all", label: "All" }, { value: "none", label: "None" }])
-      : `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>`) + relationshipControls + labelSizeControl + zoomControl;
+      : `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>`) + relationshipControls + moonTransitControl + labelSizeControl + zoomControl;
   }
 
   const categories = state.config.type === "map"
@@ -453,8 +455,9 @@ function renderControls() {
     state.config[key] = value;
     if (key === "limit") syncAutomaticTitle();
     const output = event.target.closest(".control")?.querySelector("label span");
-    if (output) output.textContent = key === "minConfidence" ? `${Math.round(value * 100)}%` : key === "minEvidence" ? `${value}×` : key === "labelSize" ? `${value}px` : key === "zoom" ? `${value.toFixed(1)}×` : String(value);
+    if (output) output.textContent = key === "minConfidence" ? `${Math.round(value * 100)}%` : key === "minEvidence" ? `${value}×` : key === "labelSize" ? `${value}px` : key === "zoom" ? `${value.toFixed(1)}×` : key === "moonTransitSeconds" ? `${value}s` : String(value);
     persistHash();
+    if (key === "moonTransitSeconds") return window.ufoGlobe?.setMoonTransitSeconds(value);
     renderGraph();
   }));
   $$('[data-category]').forEach(node => node.addEventListener("change", () => {
@@ -499,7 +502,7 @@ function setType(type) {
   const viewDefaults = {
     scatter: {},
     network: { nodeRole: "entity", size: "independentDocumentCount", color: "category" },
-    map: { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50 },
+    map: { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50, moonTransitSeconds: 5 },
     book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 20 },
     document: { size: "words", color: "source", labels: "top", documentSearch: "" },
     bars: { aggregation: "source", y: "words", color: "intensity" },
@@ -1065,6 +1068,7 @@ function renderMap() {
   const visibleItems = [...new Map([...data, ...overlay.nodes].map(entity => [entity.id, entity])).values()];
   const payload = {
     labelSize: state.config.labelSize,
+    moonTransitSeconds: state.config.moonTransitSeconds,
     relationshipLayer: state.config.relationshipLayer,
     relationshipStrength: ({ subtle: .12, medium: .24, strong: .42 })[state.config.relationshipStrength] || .12,
     relationships: overlay.edges.map(relationship => ({ source: relationship.source, target: relationship.target, evidenceCount: relationship.edge.evidenceCount })),
