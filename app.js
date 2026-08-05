@@ -197,7 +197,7 @@ function dataAwareTitle(config) {
   } else if (config.type === "map") {
     title = `${label(config.size)} — Mapped Locations`;
   } else if (config.type === "book") {
-    title = "Books Mentioned";
+    title = `Top ${config.limit} Books Mentioned`;
   } else if (config.type === "document") {
     title = "Document Finder";
   } else if (config.type === "bars") {
@@ -451,6 +451,7 @@ function renderControls() {
     const key = event.target.dataset.range;
     const value = Number(event.target.value);
     state.config[key] = value;
+    if (key === "limit") syncAutomaticTitle();
     const output = event.target.closest(".control")?.querySelector("label span");
     if (output) output.textContent = key === "minConfidence" ? `${Math.round(value * 100)}%` : key === "minEvidence" ? `${value}×` : key === "labelSize" ? `${value}px` : key === "zoom" ? `${value.toFixed(1)}×` : String(value);
     persistHash();
@@ -499,7 +500,7 @@ function setType(type) {
     scatter: {},
     network: { nodeRole: "entity", size: "independentDocumentCount", color: "category" },
     map: { categories: ["location"], size: "contextAdjustedMentions", color: "intensity", labels: "top", limit: 50 },
-    book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 250 },
+    book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 20 },
     document: { size: "words", color: "source", labels: "top", documentSearch: "" },
     bars: { aggregation: "source", y: "words", color: "intensity" },
     timeline: { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source", categories: ["date"], labels: "top", limit: 50 },

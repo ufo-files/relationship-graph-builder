@@ -512,7 +512,7 @@ test("Book is a first-class mention-weighted area view for transcript-backed tit
       return JSON.stringify({
         types: TYPES.map(type => type.id),
         bookTypeLabel: TYPES.find(type => type.id === "book").label,
-        title: dataAwareTitle({ ...DEFAULT, type: "book", categories: ["book"] }),
+        titles: [20, 40].map(limit => dataAwareTitle({ ...DEFAULT, type: "book", categories: ["book"], limit })),
         blocks: layout.blocks.map(block => ({ id: block.item.id, mentions: block.item.mentions, x: block.x, y: block.y, width: block.width, height: block.height })),
         occupancy: layout.occupancy,
         dense: {
@@ -536,7 +536,7 @@ test("Book is a first-class mention-weighted area view for transcript-backed tit
 
   assert.ok(result.types.includes("book"));
   assert.equal(result.bookTypeLabel, "Bookshelf");
-  assert.equal(result.title, "Books Mentioned");
+  assert.deepEqual(result.titles, ["Top 20 Books Mentioned", "Top 40 Books Mentioned"]);
   assert.equal(result.blocks.length, 3);
   const bookById = Object.fromEntries(result.blocks.map(block => [block.id, block]));
   assert.ok(Math.abs(bookById.one.width * 3 - bookById.one.height * 2) < .001);
@@ -561,6 +561,8 @@ test("Book is a first-class mention-weighted area view for transcript-backed tit
   assert.equal(result.titleScale.cramped.complete, false);
   assert.deepEqual(result.narrowLabel, ["Extraterrestrial", "Intelligence"]);
   assert.match(source, /book: \{[^}]*labels: "all"/);
+  assert.match(source, /book: \{[^}]*limit: 20/);
+  assert.match(source, /state\.config\[key\] = value;\s+if \(key === "limit"\) syncAutomaticTitle\(\)/);
   assert.doesNotMatch(source, /if \(type === "book"\).*categories: \["book"\]/);
   assert.match(source, /const data = filteredEntities\(\["book"\]\)/);
   assert.match(source, /Mention-weighted cover area/);
