@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "41f52b26c489f96b8ccb9b693e8d35181bd24b17"
+    "revision": "49d2f257cb5cf236e0b0c048ee76b928a96a7412"
   },
-  "count": 269,
-  "totalCount": 269,
+  "count": 270,
+  "totalCount": 270,
   "shownCount": 200,
   "candidates": [
     {
@@ -39,6 +39,22 @@
         "documentCount": 3
       },
       "similarity": 0.987,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office of the Secretary of Defense",
+        "mentions": 162,
+        "documentCount": 29
+      },
+      "right": {
+        "name": "Offices of the Secretary of Defense",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.986,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1038,8 +1054,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2781,
-        "documentCount": 638
+        "mentions": 2785,
+        "documentCount": 639
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1054,8 +1070,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2781,
-        "documentCount": 638
+        "mentions": 2785,
+        "documentCount": 639
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1070,8 +1086,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2781,
-        "documentCount": 638
+        "mentions": 2785,
+        "documentCount": 639
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1086,8 +1102,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2781,
-        "documentCount": 638
+        "mentions": 2785,
+        "documentCount": 639
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1342,8 +1358,8 @@
       "category": "organization",
       "left": {
         "name": "University of California",
-        "mentions": 38,
-        "documentCount": 25
+        "mentions": 39,
+        "documentCount": 26
       },
       "right": {
         "name": "University of Californla's",
@@ -1742,8 +1758,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 937,
-        "documentCount": 259
+        "mentions": 939,
+        "documentCount": 260
       },
       "right": {
         "name": "Department of Detense",
@@ -2222,8 +2238,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2781,
-        "documentCount": 638
+        "mentions": 2785,
+        "documentCount": 639
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2286,8 +2302,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of War",
-        "mentions": 23,
-        "documentCount": 12
+        "mentions": 26,
+        "documentCount": 13
       },
       "right": {
         "name": "Department of Air",
@@ -2734,8 +2750,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Community",
-        "mentions": 83,
-        "documentCount": 37
+        "mentions": 84,
+        "documentCount": 38
       },
       "right": {
         "name": "Intelligence Community In",
@@ -3187,22 +3203,6 @@
       },
       "right": {
         "name": "Project Iwinkle",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of Justico",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "So Department of Justico",
         "mentions": 2,
         "documentCount": 2
       },
