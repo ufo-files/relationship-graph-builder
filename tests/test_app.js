@@ -495,24 +495,31 @@ test("map and timeline expose relationship controls", () => {
   assert.match(source, /relationships: overlay\.edges\.map/);
 });
 
-test("Book is a first-class area bookshelf for transcript-backed titles", () => {
+test("Book is a first-class mention-weighted area view for transcript-backed titles", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
   vm.runInContext(source, context);
   const result = JSON.parse(vm.runInContext(`
     (() => {
       const items = [
-        { id: "one", name: "UFOs and Nukes", category: "book", contextAdjustedMentions: 12 },
-        { id: "two", name: "Contact", category: "book", contextAdjustedMentions: 4 },
-        { id: "three", name: "Journey of Souls", category: "book", contextAdjustedMentions: 2 }
+        { id: "one", name: "UFOs and Nukes", category: "book", mentions: 18, contextAdjustedMentions: 12 },
+        { id: "two", name: "Contact", category: "book", mentions: 8, contextAdjustedMentions: 4 },
+        { id: "three", name: "Journey of Souls", category: "book", mentions: 2, contextAdjustedMentions: 2 }
       ];
-      const layout = bookshelfLayout(items, 900, 600, "contextAdjustedMentions");
+      const layout = bookshelfLayout(items, 900, 600);
+      const denseItems = Array.from({ length: 132 }, (_, index) => ({ id: String(index), name: "Book " + index, mentions: (index % 9 + 1) ** 2 }));
+      const denseLayout = bookshelfLayout(denseItems, 970, 732);
       return JSON.stringify({
         types: TYPES.map(type => type.id),
         bookTypeLabel: TYPES.find(type => type.id === "book").label,
         title: dataAwareTitle({ ...DEFAULT, type: "book", categories: ["book"] }),
-        blocks: layout.blocks.map(block => ({ id: block.item.id, area: block.width * block.height })),
-        shelves: layout.shelfYs.length,
+        blocks: layout.blocks.map(block => ({ id: block.item.id, mentions: block.item.mentions, x: block.x, y: block.y, width: block.width, height: block.height })),
+        occupancy: layout.occupancy,
+        dense: {
+          occupancy: denseLayout.occupancy,
+          blocks: denseLayout.blocks.map(block => ({ x: block.x, y: block.y, width: block.width, height: block.height })),
+          title: bookTitleLayout(denseLayout.blocks[0], 12)
+        },
         narrowLabel: bookLabelLines("Extraterrestrial Intelligence", 8, 2)
       });
     })()
@@ -522,14 +529,33 @@ test("Book is a first-class area bookshelf for transcript-backed titles", () => 
   assert.equal(result.bookTypeLabel, "Bookshelf");
   assert.equal(result.title, "Books Mentioned");
   assert.equal(result.blocks.length, 3);
-  assert.ok(result.blocks[0].area > result.blocks[1].area);
-  assert.ok(result.blocks[1].area > result.blocks[2].area);
-  assert.ok(result.shelves >= 1);
+  const bookById = Object.fromEntries(result.blocks.map(block => [block.id, block]));
+  assert.ok(Math.abs(bookById.one.width * 3 - bookById.one.height * 2) < .001);
+  assert.ok(result.occupancy > .999);
+  assert.ok(result.dense.blocks.every(block => block.x >= 0 && block.y >= 0 && block.x + block.width <= 970 && block.y + block.height <= 732));
+  assert.ok(Math.abs(result.dense.blocks[0].width * 3 - result.dense.blocks[0].height * 2) < .001);
+  assert.ok(new Set(result.dense.blocks.map(block => block.width.toFixed(2))).size > 1);
+  assert.ok(result.dense.occupancy > .999);
+  result.dense.blocks.forEach((block, index) => result.dense.blocks.slice(index + 1).forEach(other => {
+    const epsilon = .000001;
+    const separated = block.x + block.width <= other.x + epsilon || other.x + other.width <= block.x + epsilon
+      || block.y + block.height <= other.y + epsilon || other.y + other.height <= block.y + epsilon;
+    assert.equal(separated, true);
+  }));
+  assert.ok(result.dense.title.labelSize >= 8 && result.dense.title.labelSize <= 12);
+  assert.ok(result.dense.title.lines.length >= 1);
   assert.ok(result.narrowLabel.every(line => line.length <= 8));
   assert.match(result.narrowLabel.at(-1), /…$/);
   assert.match(source, /book: \{[^}]*labels: "all"/);
   assert.doesNotMatch(source, /if \(type === "book"\).*categories: \["book"\]/);
   assert.match(source, /const data = filteredEntities\(\["book"\]\)/);
+  assert.match(source, /Mention-weighted cover area/);
+  assert.match(source, /Math\.sqrt\(leadArea \* 2 \/ 3\)/);
+  assert.match(source, /Number\(item\.mentions\)/);
+  assert.match(source, /font-family:Georgia,'Times New Roman',serif/);
+  assert.match(source, /"text-anchor": "middle"/);
+  assert.doesNotMatch(source, /class: "book-shelf"/);
+  assert.match(source, /state\.config\.type === "book" \? "Shade" : "Size \+ shade"/);
   assert.match(source, /const fixedCategories = state\.config\.type === "book" \|\| state\.config\.type === "document"/);
   assert.match(source, /state\.config\.type === "book" \? category === "book"/);
   assert.match(source, /fixedCategories \? "disabled"/);

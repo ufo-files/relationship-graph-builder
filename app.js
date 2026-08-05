@@ -372,7 +372,7 @@ function renderControls() {
   } else if (state.config.type === "map") {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Geocoded locations</option></select></div><div class="control"><div class="control-title">Position</div><select disabled><option>Reviewed coordinates</option></select></div>` + relationshipTypeControl();
   } else if (state.config.type === "book") {
-    roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Book titles</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Area-proportional shelves</option></select></div>`;
+    roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Book titles</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Mention-weighted cover area</option></select></div>`;
   } else if (state.config.type === "document") {
     roles = `<div class="control"><div class="control-title">Rows</div><select disabled><option>Completed transcript files</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Searchable file browser</option></select></div>`;
   } else if (state.config.type === "scatter") {
@@ -411,7 +411,7 @@ function renderControls() {
     $("#encodeControls").innerHTML = labelSizeControl;
   } else {
     $("#encodeControls").innerHTML = (["scatter", "network", "timeline", "map", "book"].includes(state.config.type)
-      ? controlSelect("size", "Size + shade", sizeOptions) + `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>` + controlSelect("labels", "Labels", [{ value: "top", label: "Most important" }, { value: "all", label: "All" }, { value: "none", label: "None" }])
+      ? controlSelect("size", state.config.type === "book" ? "Shade" : "Size + shade", sizeOptions) + `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>` + controlSelect("labels", "Labels", [{ value: "top", label: "Most important" }, { value: "all", label: "All" }, { value: "none", label: "None" }])
       : `<div class="control"><div class="control-title">Shade scale</div><select disabled><option>Monochrome value scale</option></select></div>`) + relationshipControls + labelSizeControl + zoomControl;
   }
 
@@ -1085,51 +1085,93 @@ function renderMap() {
   setSummary(`${data.length} of ${mapped.length} mapped locations${unmapped ? ` · ${unmapped} unmapped` : ""}`, "map");
 }
 
-function bookshelfLayout(items, width, height, valueKey) {
-  if (!items.length) return { blocks: [], shelfYs: [] };
+function bookshelfLayout(items, width, height) {
+  if (!items.length) return { blocks: [], occupancy: 0 };
   const inset = 14;
-  const shelfGap = 10;
-  const blockGap = 3;
-  const weighted = items.map(item => ({ item, weight: Math.max(1, Number(item[valueKey]) || 0) }));
-  const total = weighted.reduce((sum, entry) => sum + entry.weight, 0);
-  const targetRows = Math.max(1, Math.min(items.length, Math.round(Math.sqrt(items.length * height / width))));
-  const targetWeight = total / targetRows;
-  const rows = [];
-  let row = [];
-  let rowWeight = 0;
-  weighted.forEach(entry => {
-    if (row.length && rowWeight >= targetWeight && rows.length < targetRows - 1) {
-      rows.push({ entries: row, weight: rowWeight });
-      row = [];
-      rowWeight = 0;
-    }
-    row.push(entry);
-    rowWeight += entry.weight;
-  });
-  if (row.length) rows.push({ entries: row, weight: rowWeight });
+  const availableWidth = width - inset * 2;
+  const availableHeight = height - inset * 2;
+  const weighted = items
+    .map((item, index) => ({ item, index, weight: Math.max(1, Number(item.mentions) || 0) }))
+    .sort((left, right) => right.weight - left.weight || left.index - right.index);
+  const totalWeight = weighted.reduce((sum, entry) => sum + entry.weight, 0);
+  const leadArea = availableWidth * availableHeight * weighted[0].weight / totalWeight;
+  const naturalLeadWidth = Math.sqrt(leadArea * 2 / 3);
+  const leadScale = Math.min(1, availableWidth / naturalLeadWidth, availableHeight / (naturalLeadWidth * 3 / 2));
+  const leadWidth = naturalLeadWidth * leadScale;
+  const leadHeight = leadWidth * 3 / 2;
+  const blocks = [{
+    item: weighted[0].item,
+    x: inset,
+    y: inset,
+    width: leadWidth,
+    height: leadHeight,
+    mentions: weighted[0].weight
+  }];
 
-  const usableWidth = width - inset * 2;
-  const usableHeight = height - inset * 2 - shelfGap * (rows.length - 1);
-  const blocks = [];
-  const shelfYs = [];
-  let y = inset;
-  rows.forEach((shelf, shelfIndex) => {
-    const shelfHeight = shelfIndex === rows.length - 1
-      ? height - inset - y
-      : usableHeight * shelf.weight / total;
-    const rowWidth = usableWidth - blockGap * (shelf.entries.length - 1);
-    let x = inset;
-    shelf.entries.forEach((entry, entryIndex) => {
-      const blockWidth = entryIndex === shelf.entries.length - 1
-        ? width - inset - x
-        : rowWidth * entry.weight / shelf.weight;
-      blocks.push({ item: entry.item, x, y, width: blockWidth, height: shelfHeight, shelf: shelfIndex });
-      x += blockWidth + blockGap;
-    });
-    shelfYs.push(y + shelfHeight + shelfGap / 2);
-    y += shelfHeight + shelfGap;
-  });
-  return { blocks, shelfYs };
+  const tile = (entries, rectangle) => {
+    if (!entries.length || rectangle.width <= 0 || rectangle.height <= 0) return;
+    if (entries.length === 1) {
+      blocks.push({ item: entries[0].item, mentions: entries[0].weight, ...rectangle });
+      return;
+    }
+    const entriesWeight = entries.reduce((sum, entry) => sum + entry.weight, 0);
+    let firstWeight = 0;
+    let splitIndex = 1;
+    for (let index = 1; index < entries.length; index += 1) {
+      const candidateWeight = firstWeight + entries[index - 1].weight;
+      if (index > 1 && Math.abs(entriesWeight / 2 - firstWeight) <= Math.abs(entriesWeight / 2 - candidateWeight)) break;
+      firstWeight = candidateWeight;
+      splitIndex = index;
+    }
+    const ratio = firstWeight / entriesWeight;
+    if (rectangle.width >= rectangle.height) {
+      const firstWidth = rectangle.width * ratio;
+      tile(entries.slice(0, splitIndex), { ...rectangle, width: firstWidth });
+      tile(entries.slice(splitIndex), { ...rectangle, x: rectangle.x + firstWidth, width: rectangle.width - firstWidth });
+    } else {
+      const firstHeight = rectangle.height * ratio;
+      tile(entries.slice(0, splitIndex), { ...rectangle, height: firstHeight });
+      tile(entries.slice(splitIndex), { ...rectangle, y: rectangle.y + firstHeight, height: rectangle.height - firstHeight });
+    }
+  };
+
+  const remaining = weighted.slice(1);
+  if (remaining.length) {
+    const rightRectangle = {
+      x: inset + leadWidth,
+      y: inset,
+      width: availableWidth - leadWidth,
+      height: availableHeight
+    };
+    const lowerRectangle = {
+      x: inset,
+      y: inset + leadHeight,
+      width: leadWidth,
+      height: availableHeight - leadHeight
+    };
+    const remainingArea = rightRectangle.width * rightRectangle.height + lowerRectangle.width * lowerRectangle.height;
+    const targetLowerWeight = remaining.reduce((sum, entry) => sum + entry.weight, 0)
+      * lowerRectangle.width * lowerRectangle.height / remainingArea;
+    let lowerCount = 0;
+    let lowerWeight = 0;
+    for (let index = remaining.length - 1; index >= 0; index -= 1) {
+      const candidateWeight = lowerWeight + remaining[index].weight;
+      if (lowerCount && Math.abs(targetLowerWeight - lowerWeight) <= Math.abs(targetLowerWeight - candidateWeight)) break;
+      lowerWeight = candidateWeight;
+      lowerCount += 1;
+    }
+    if (lowerRectangle.width <= 0 || lowerRectangle.height <= 0) {
+      lowerCount = 0;
+    } else if (remaining.length > 1) {
+      lowerCount = Math.max(1, Math.min(lowerCount, remaining.length - 1));
+    }
+    const rightEntries = lowerCount ? remaining.slice(0, -lowerCount) : remaining;
+    const lowerEntries = lowerCount ? remaining.slice(-lowerCount) : [];
+    tile(rightEntries, rightRectangle);
+    tile(lowerEntries, lowerRectangle);
+  }
+  const occupiedArea = blocks.reduce((sum, block) => sum + block.width * block.height, 0);
+  return { blocks, occupancy: occupiedArea / (availableWidth * availableHeight) };
 }
 
 function bookLabelLines(title, maxCharacters, maxLines) {
@@ -1150,6 +1192,20 @@ function bookLabelLines(title, maxCharacters, maxLines) {
   return lines;
 }
 
+function bookTitleLayout(block, requestedSize) {
+  const labelSize = Math.min(requestedSize, Math.max(8, Math.floor(Math.min(block.width / 7, block.height / 6))));
+  const maxCharacters = Math.max(4, Math.floor((block.width - 14) / (labelSize * .57)));
+  const maxLines = Math.max(1, Math.min(4, Math.floor((block.height - 14) / (labelSize * 1.15))));
+  const lines = bookLabelLines(block.item.name, maxCharacters, maxLines);
+  const lineHeight = labelSize * 1.15;
+  return {
+    labelSize,
+    lines,
+    x: block.x + block.width / 2,
+    y: block.y + block.height / 2 - (lines.length - 1) * lineHeight / 2 + labelSize * .35
+  };
+}
+
 function renderBook() {
   const { svg, width, height } = clearChart();
   const data = filteredEntities(["book"])
@@ -1157,33 +1213,32 @@ function renderBook() {
     .slice(0, state.config.limit);
   if (!data.length) return showEmpty();
   const extent = valueExtent(data, state.config.size);
-  const { blocks, shelfYs } = bookshelfLayout(data, width, height, state.config.size);
-  shelfYs.forEach(y => svg.append(el("line", { x1: 8, y1: y, x2: width - 8, y2: y, stroke: "#111", "stroke-opacity": .55, "stroke-width": 2, class: "book-shelf" })));
+  const { blocks } = bookshelfLayout(data, width, height);
   blocks.forEach(block => {
     const shade = scale(block.item[state.config.size], extent, [.16, .94]);
     const rect = el("rect", {
       x: block.x, y: block.y, width: Math.max(1, block.width), height: Math.max(1, block.height),
       fill: "#111", "fill-opacity": shade, stroke: "#111", "stroke-width": 1, class: "mark book-spine"
     });
-    addTitle(rect, `${block.item.name} · ${label(state.config.size)}: ${formatNumber(block.item[state.config.size])}`);
+    addTitle(rect, `${block.item.name} · Mentions: ${formatNumber(block.item.mentions)} · ${label(state.config.size)} shade: ${formatNumber(block.item[state.config.size])}`);
     rect.addEventListener("click", () => inspectEntity(block.item));
     svg.append(rect);
     const shouldLabel = state.config.labels !== "none";
-    if (!shouldLabel || block.width < 42 || block.height < state.config.labelSize + 10) return;
-    const maxCharacters = Math.max(4, Math.floor((block.width - 12) / (state.config.labelSize * .62)));
-    const maxLines = Math.max(1, Math.min(3, Math.floor((block.height - 12) / (state.config.labelSize * 1.15))));
+    if (!shouldLabel || block.width < 36 || block.height < 32) return;
+    const titleLayout = bookTitleLayout(block, state.config.labelSize);
     const text = el("text", {
-      x: block.x + 6, y: block.y + state.config.labelSize + 3,
-      fill: shade > .55 ? "#f6f5ef" : "#111", class: "book-label", style: `font-size:${state.config.labelSize}px`
+      x: titleLayout.x, y: titleLayout.y,
+      fill: shade > .55 ? "#f6f5ef" : "#111", class: "book-label", "text-anchor": "middle",
+      style: `font-size:${titleLayout.labelSize}px;font-family:Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:.025em`
     });
-    bookLabelLines(block.item.name, maxCharacters, maxLines).forEach((line, lineIndex) => text.append(el("tspan", {
-      x: block.x + 6, dy: lineIndex ? "1.15em" : 0
+    titleLayout.lines.forEach((line, lineIndex) => text.append(el("tspan", {
+      x: titleLayout.x, dy: lineIndex ? "1.15em" : 0
     }, line)));
     svg.append(text);
   });
   drawIntensityLegend();
-  const mentions = data.reduce((sum, item) => sum + (item[state.config.size] || 0), 0);
-  setSummary(`${data.length} books · ${formatNumber(mentions)} ${label(state.config.size).toLowerCase()}`, "book");
+  const mentions = data.reduce((sum, item) => sum + (item.mentions || 0), 0);
+  setSummary(`${data.length} books · ${formatNumber(mentions)} mentions · shade by ${label(state.config.size).toLowerCase()}`, "book");
 }
 
 function machineDataDocumentURL(document) {
@@ -1535,7 +1590,7 @@ function renderGraph() {
   const descriptions = {
     network: state.config.nodeRole === "collection" ? "Collections connected by shared published entities." : "Evidence-backed connections across the local archive.", scatter: `${label(state.config.x)} compared with ${label(state.config.y)}.`,
     map: `Geocoded location entities sized by ${label(state.config.size)}.`,
-    book: `Transcript-mentioned books arranged as an area-proportional shelf, sized by ${label(state.config.size)}.`,
+    book: `Transcript-mentioned books with area weighted by Mentions; shade represents ${label(state.config.size)}.`,
     document: "Find completed OCR and transcript files across the selected collections.",
     bars: `${label(state.config.y)} grouped by ${label(state.config.aggregation)}.`,
     timeline: `${state.config.timelineRole === "entity" ? "Entities" : "Completed transcript files"} by cataloging time.`,
