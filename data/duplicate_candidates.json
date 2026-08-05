@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "c2ba7f9d25ce93777a61b6035265596201ff8573"
+    "revision": "af097e5624ee9821fd336731f6835437ab010d5e"
   },
-  "count": 341,
-  "totalCount": 341,
+  "count": 360,
+  "totalCount": 360,
   "shownCount": 200,
   "candidates": [
     {
@@ -94,8 +94,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 206,
-        "documentCount": 113
+        "mentions": 208,
+        "documentCount": 114
       },
       "right": {
         "name": "Wrighat-Patterson Air Force Base",
@@ -195,8 +195,8 @@
       },
       "right": {
         "name": "Counterintelligence Division",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.982,
       "reason": "similar name",
@@ -269,6 +269,38 @@
     {
       "category": "organization",
       "left": {
+        "name": "Spot Intelligence Reports",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "SPOT INTELLIGENCE REPORT",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.98,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Intelligence Department",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Intelligence Departmenty",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.979,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Non-Human Intelligence",
         "mentions": 2,
         "documentCount": 2
@@ -286,8 +318,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1106,
-        "documentCount": 301
+        "mentions": 1112,
+        "documentCount": 302
       },
       "right": {
         "name": "Departments of Defense",
@@ -334,8 +366,8 @@
       "category": "organization",
       "left": {
         "name": "Research Organizations",
-        "mentions": 19,
-        "documentCount": 3
+        "mentions": 20,
+        "documentCount": 4
       },
       "right": {
         "name": "RESEARCH ORGANIZATION",
@@ -391,6 +423,22 @@
         "documentCount": 3
       },
       "similarity": 0.977,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "DISTRICT OFFICE OF SPECIAL INVESTIGATIONS",
+        "mentions": 13,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "DISTRICT OFFICE OF SPECIAL INYESTIGATIONS",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.976,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -910,13 +958,13 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 206,
-        "documentCount": 113
+        "mentions": 208,
+        "documentCount": 114
       },
       "right": {
         "name": "Fright-Patterson Air Force Base",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 6,
+        "documentCount": 6
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -926,8 +974,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 206,
-        "documentCount": 113
+        "mentions": 208,
+        "documentCount": 114
       },
       "right": {
         "name": "Wright-Parterson Air Force Base",
@@ -942,8 +990,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 206,
-        "documentCount": 113
+        "mentions": 208,
+        "documentCount": 114
       },
       "right": {
         "name": "Wright-pattorson AIr Force Base",
@@ -958,8 +1006,24 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 206,
-        "documentCount": 113
+        "mentions": 208,
+        "documentCount": 114
+      },
+      "right": {
+        "name": "Wright-Patterson Air Foree Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patterson Air Force Base",
+        "mentions": 208,
+        "documentCount": 114
       },
       "right": {
         "name": "WRIGHT-PATTERION AIR FORCE BASE",
@@ -974,8 +1038,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 206,
-        "documentCount": 113
+        "mentions": 208,
+        "documentCount": 114
       },
       "right": {
         "name": "WRIGHT-PATTERSON AIM FORCE BASE",
@@ -1006,8 +1070,8 @@
       "category": "government_agency",
       "left": {
         "name": "District Office",
-        "mentions": 8,
-        "documentCount": 7
+        "mentions": 9,
+        "documentCount": 8
       },
       "right": {
         "name": "District Officer",
@@ -1038,8 +1102,8 @@
       "category": "location",
       "left": {
         "name": "Fright-Patterson Air Force Base",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 6,
+        "documentCount": 6
       },
       "right": {
         "name": "Fright-Petterson Air Force Base",
@@ -1358,8 +1422,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3601,
-        "documentCount": 733
+        "mentions": 3606,
+        "documentCount": 734
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1374,8 +1438,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3601,
-        "documentCount": 733
+        "mentions": 3606,
+        "documentCount": 734
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1390,8 +1454,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3601,
-        "documentCount": 733
+        "mentions": 3606,
+        "documentCount": 734
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1406,8 +1470,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3601,
-        "documentCount": 733
+        "mentions": 3606,
+        "documentCount": 734
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1549,6 +1613,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Counter Intelligence Corps",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Counter Intelligence Coros",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.962,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Senate Select Committee of Intelligence",
         "mentions": 3,
         "documentCount": 3
@@ -1566,8 +1646,8 @@
       "category": "program",
       "left": {
         "name": "Project SIGN",
-        "mentions": 64,
-        "documentCount": 27
+        "mentions": 65,
+        "documentCount": 28
       },
       "right": {
         "name": "Project Signa",
@@ -1867,6 +1947,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Patterson Air Forco Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Patterson Air Porco Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Direator of Intelligence",
@@ -1957,6 +2053,22 @@
         "name": "FOIA Office",
         "mentions": 10,
         "documentCount": 9
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Bureau of Investigation",
+        "mentions": 57,
+        "documentCount": 30
+      },
+      "right": {
+        "name": "Bureau of Investination",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2107,6 +2219,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Vicinity of Provo River",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Vicirity of Provo River",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "University of Colorado",
@@ -2238,8 +2366,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1106,
-        "documentCount": 301
+        "mentions": 1112,
+        "documentCount": 302
       },
       "right": {
         "name": "Department of Detense",
@@ -2318,8 +2446,8 @@
       "category": "location",
       "left": {
         "name": "Fright-Patterson Air Force Base",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 6,
+        "documentCount": 6
       },
       "right": {
         "name": "Wrighat-Patterson Air Force Base",
@@ -2371,6 +2499,22 @@
       },
       "right": {
         "name": "Wrighat-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wrighat-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Wright-Patterson Air Foree Base",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2878,8 +3022,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3601,
-        "documentCount": 733
+        "mentions": 3606,
+        "documentCount": 734
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -3063,150 +3207,6 @@
         "documentCount": 10
       },
       "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Office Memorundum",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Office Memorindum",
-        "mentions": 7,
-        "documentCount": 7
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Office Memorandam",
-        "mentions": 6,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "Office Memorandim",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "OF DEFENSE FOR INTELLIGENCE",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Defense for Intelligence",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Intelligence Com",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Intelligence Commu",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "APPROPRIATIONS SUBCOMMITTEE",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Appropriations Committee",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "FAA Flight Standards District Office",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Flight Standards District Office",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "The Nation Institute",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "National Institute",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Intelligence of the House of Representatives",
-        "mentions": 14,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Intelligence of the House of Representa",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "similarity": 0.94,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "National Oceanic and Atmospheric Administration",
-        "mentions": 8,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "National Oceanographic and Atmospheric Administration",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.94,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     }
