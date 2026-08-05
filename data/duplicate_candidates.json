@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "4ed185805929422b68602c916e6ddb861433d39f"
+    "revision": "89d46902f9b727405659d9626aec19b815612a4e"
   },
-  "count": 336,
-  "totalCount": 336,
+  "count": 337,
+  "totalCount": 337,
   "shownCount": 200,
   "candidates": [
     {
@@ -323,8 +323,8 @@
       },
       "right": {
         "name": "RESEARCH ORGANIZATION",
-        "mentions": 4,
-        "documentCount": 4
+        "mentions": 6,
+        "documentCount": 5
       },
       "similarity": 0.977,
       "reason": "similar name",
@@ -1147,6 +1147,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Police Officers",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "The Police Officer",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Sol Foundation",
@@ -1294,8 +1310,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3566,
-        "documentCount": 728
+        "mentions": 3567,
+        "documentCount": 729
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1310,8 +1326,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3566,
-        "documentCount": 728
+        "mentions": 3567,
+        "documentCount": 729
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1326,8 +1342,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3566,
-        "documentCount": 728
+        "mentions": 3567,
+        "documentCount": 729
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1342,8 +1358,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3566,
-        "documentCount": 728
+        "mentions": 3567,
+        "documentCount": 729
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1486,8 +1502,8 @@
       "category": "organization",
       "left": {
         "name": "Senate Select Committee of Intelligence",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
         "name": "Senate Select Committee for Intelligence",
@@ -2222,8 +2238,8 @@
       "category": "organization",
       "left": {
         "name": "House Appropriations Committee",
-        "mentions": 6,
-        "documentCount": 6
+        "mentions": 7,
+        "documentCount": 7
       },
       "right": {
         "name": "House Appropriations Subcommittee",
@@ -2798,8 +2814,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3566,
-        "documentCount": 728
+        "mentions": 3567,
+        "documentCount": 729
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -3189,22 +3205,6 @@
         "name": "Mir Intelligence",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Nevada Test Site",
-        "mentions": 24,
-        "documentCount": 14
-      },
-      "right": {
-        "name": "Nevada Tent Site",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.938,
       "reason": "similar name",
