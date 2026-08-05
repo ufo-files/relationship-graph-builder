@@ -4,7 +4,7 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "f3cc66984b00706f270f0348017349e1617acfe9"
+    "revision": "77c5bf1746f3ffca7d776942786e3c2022e579ce"
   },
   "count": 267,
   "totalCount": 267,
@@ -46,8 +46,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 37,
-        "documentCount": 23
+        "mentions": 38,
+        "documentCount": 24
       },
       "right": {
         "name": "ATIONAL INVESTIGATIONS COMMITTEE",
@@ -299,6 +299,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Signals Intelligence",
+        "mentions": 9,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "Signal Intelligence",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.974,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Intelligence Office",
@@ -309,22 +325,6 @@
         "name": "The Intelligence Officer",
         "mentions": 5,
         "documentCount": 4
-      },
-      "similarity": 0.974,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Signals Intelligence",
-        "mentions": 8,
-        "documentCount": 7
-      },
-      "right": {
-        "name": "Signal Intelligence",
-        "mentions": 3,
-        "documentCount": 2
       },
       "similarity": 0.974,
       "reason": "similar name",
@@ -1726,8 +1726,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 929,
-        "documentCount": 254
+        "mentions": 932,
+        "documentCount": 256
       },
       "right": {
         "name": "Department of Detense",
@@ -2702,8 +2702,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Community",
-        "mentions": 82,
-        "documentCount": 36
+        "mentions": 83,
+        "documentCount": 37
       },
       "right": {
         "name": "Intelligence Community In",
@@ -2750,8 +2750,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 3098,
-        "documentCount": 304
+        "mentions": 3103,
+        "documentCount": 307
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
