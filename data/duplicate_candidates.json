@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "fb7ad65b49abe0b637b11871676524d9d621efc6"
+    "revision": "9744c6b5af2c9a9bea7ea59b1ab16a861718e9e9"
   },
-  "count": 237,
-  "totalCount": 237,
+  "count": 239,
+  "totalCount": 239,
   "shownCount": 200,
   "candidates": [
     {
@@ -670,8 +670,8 @@
       "category": "organization",
       "left": {
         "name": "Technical Intelligence Center",
-        "mentions": 21,
-        "documentCount": 16
+        "mentions": 22,
+        "documentCount": 17
       },
       "right": {
         "name": "Iechnical Intelligence Center",
@@ -814,8 +814,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2371,
-        "documentCount": 570
+        "mentions": 2377,
+        "documentCount": 572
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -830,8 +830,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2371,
-        "documentCount": 570
+        "mentions": 2377,
+        "documentCount": 572
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -846,8 +846,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2371,
-        "documentCount": 570
+        "mentions": 2377,
+        "documentCount": 572
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -862,8 +862,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2371,
-        "documentCount": 570
+        "mentions": 2377,
+        "documentCount": 572
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1454,8 +1454,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 884,
-        "documentCount": 226
+        "mentions": 888,
+        "documentCount": 228
       },
       "right": {
         "name": "Department of Detense",
@@ -1588,6 +1588,22 @@
       "right": {
         "name": "Elgin Air Force Base",
         "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.95,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Traffic Division",
+        "mentions": 7,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Air Iraffic Division",
+        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.95,
@@ -1886,8 +1902,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2371,
-        "documentCount": 570
+        "mentions": 2377,
+        "documentCount": 572
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2173,6 +2189,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "National Oceanic and Atmospheric Administration",
+        "mentions": 8,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "National Oceanographic and Atmospheric Administration",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.94,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Director for Intelligence",
         "mentions": 2,
         "documentCount": 2
@@ -2382,8 +2414,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Community",
-        "mentions": 77,
-        "documentCount": 33
+        "mentions": 79,
+        "documentCount": 34
       },
       "right": {
         "name": "Intelligence Community In",
@@ -2430,8 +2462,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2888,
-        "documentCount": 277
+        "mentions": 2889,
+        "documentCount": 278
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -2467,8 +2499,8 @@
       },
       "right": {
         "name": "Technical Intelligence Center",
-        "mentions": 21,
-        "documentCount": 16
+        "mentions": 22,
+        "documentCount": 17
       },
       "similarity": 0.935,
       "reason": "similar name",
@@ -2494,8 +2526,8 @@
       "category": "organization",
       "left": {
         "name": "Technical Intelligence Center",
-        "mentions": 21,
-        "documentCount": 16
+        "mentions": 22,
+        "documentCount": 17
       },
       "right": {
         "name": "The Ait Technical Intelligence Center",
@@ -2782,8 +2814,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2371,
-        "documentCount": 570
+        "mentions": 2377,
+        "documentCount": 572
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2798,8 +2830,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 1043,
-        "documentCount": 338
+        "mentions": 1049,
+        "documentCount": 342
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
@@ -3175,38 +3207,6 @@
         "documentCount": 2
       },
       "similarity": 0.928,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Intelligenco Officer",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Intelligence Officers",
-        "mentions": 9,
-        "documentCount": 6
-      },
-      "similarity": 0.927,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of Justice's",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "DEPARTMENT OF XUSTIC",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.927,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     }
