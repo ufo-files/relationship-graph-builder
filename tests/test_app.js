@@ -520,6 +520,15 @@ test("Book is a first-class mention-weighted area view for transcript-backed tit
           blocks: denseLayout.blocks.map(block => ({ x: block.x, y: block.y, width: block.width, height: block.height })),
           title: bookTitleLayout(denseLayout.blocks[0], 12)
         },
+        titleAspects: {
+          short: preferredBookTitleAspect({ name: "Contact" }),
+          long: preferredBookTitleAspect({ name: "Extraterrestrial Contact: The Evidence and Implications" })
+        },
+        titleScale: {
+          large: bookTitleLayout({ item: { name: "Contact" }, x: 0, y: 0, width: 240, height: 240 }, 12),
+          small: bookTitleLayout({ item: { name: "Contact" }, x: 0, y: 0, width: 80, height: 60 }, 12),
+          cramped: bookTitleLayout({ item: { name: "Extraterrestrial Contact: The Evidence and Implications" }, x: 0, y: 0, width: 40, height: 32 }, 12)
+        },
         narrowLabel: bookLabelLines("Extraterrestrial Intelligence", 8, 2)
       });
     })()
@@ -542,18 +551,26 @@ test("Book is a first-class mention-weighted area view for transcript-backed tit
       || block.y + block.height <= other.y + epsilon || other.y + other.height <= block.y + epsilon;
     assert.equal(separated, true);
   }));
-  assert.ok(result.dense.title.labelSize >= 8 && result.dense.title.labelSize <= 12);
+  assert.ok(result.dense.title.labelSize >= 8 && result.dense.title.labelSize <= 18);
   assert.ok(result.dense.title.lines.length >= 1);
-  assert.ok(result.narrowLabel.every(line => line.length <= 8));
-  assert.match(result.narrowLabel.at(-1), /…$/);
+  assert.ok(result.titleAspects.long > result.titleAspects.short);
+  assert.ok(result.titleAspects.short >= 1 && result.titleAspects.long <= 2.2);
+  assert.ok(result.titleScale.large.labelSize > result.titleScale.small.labelSize);
+  assert.equal(result.titleScale.large.complete, true);
+  assert.equal(result.titleScale.small.complete, true);
+  assert.equal(result.titleScale.cramped.complete, false);
+  assert.deepEqual(result.narrowLabel, ["Extraterrestrial", "Intelligence"]);
   assert.match(source, /book: \{[^}]*labels: "all"/);
   assert.doesNotMatch(source, /if \(type === "book"\).*categories: \["book"\]/);
   assert.match(source, /const data = filteredEntities\(\["book"\]\)/);
   assert.match(source, /Mention-weighted cover area/);
   assert.match(source, /Math\.sqrt\(leadArea \* 2 \/ 3\)/);
+  assert.match(source, /function preferredBookTitleAspect/);
+  assert.match(source, /const rowScore = row =>/);
   assert.match(source, /Number\(item\.mentions\)/);
   assert.match(source, /font-family:Georgia,'Times New Roman',serif/);
   assert.match(source, /"text-anchor": "middle"/);
+  assert.match(source, /if \(!titleLayout\.complete\) return/);
   assert.doesNotMatch(source, /class: "book-shelf"/);
   assert.match(source, /state\.config\.type === "book" \? "Shade" : "Size \+ shade"/);
   assert.match(source, /const fixedCategories = state\.config\.type === "book" \|\| state\.config\.type === "document"/);

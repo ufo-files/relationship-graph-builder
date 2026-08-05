@@ -1085,6 +1085,11 @@ function renderMap() {
   setSummary(`${data.length} of ${mapped.length} mapped locations${unmapped ? ` · ${unmapped} unmapped` : ""}`, "map");
 }
 
+function preferredBookTitleAspect(item) {
+  const titleLength = String(item.name || "").replace(/\s+/g, " ").trim().length;
+  return Math.min(2.2, Math.max(1, .75 + titleLength / 32));
+}
+
 function bookshelfLayout(items, width, height) {
   if (!items.length) return { blocks: [], occupancy: 0 };
   const inset = 14;
@@ -1108,31 +1113,77 @@ function bookshelfLayout(items, width, height) {
     mentions: weighted[0].weight
   }];
 
-  const tile = (entries, rectangle) => {
+  const squarify = (entries, rectangle) => {
     if (!entries.length || rectangle.width <= 0 || rectangle.height <= 0) return;
-    if (entries.length === 1) {
-      blocks.push({ item: entries[0].item, mentions: entries[0].weight, ...rectangle });
-      return;
-    }
     const entriesWeight = entries.reduce((sum, entry) => sum + entry.weight, 0);
-    let firstWeight = 0;
-    let splitIndex = 1;
-    for (let index = 1; index < entries.length; index += 1) {
-      const candidateWeight = firstWeight + entries[index - 1].weight;
-      if (index > 1 && Math.abs(entriesWeight / 2 - firstWeight) <= Math.abs(entriesWeight / 2 - candidateWeight)) break;
-      firstWeight = candidateWeight;
-      splitIndex = index;
+    const areaScale = rectangle.width * rectangle.height / entriesWeight;
+    const remainingEntries = entries.map(entry => ({ ...entry, area: entry.weight * areaScale }));
+    let remainingRectangle = { ...rectangle };
+
+    const rowRectangles = (row, target) => {
+      const rowArea = row.reduce((sum, entry) => sum + entry.area, 0);
+      if (target.width >= target.height) {
+        const rowWidth = rowArea / target.height;
+        let y = target.y;
+        return row.map(entry => {
+          const height = entry.area / rowWidth;
+          const result = { entry, x: target.x, y, width: rowWidth, height };
+          y += height;
+          return result;
+        });
+      }
+      const rowHeight = rowArea / target.width;
+      let x = target.x;
+      return row.map(entry => {
+        const width = entry.area / rowHeight;
+        const result = { entry, x, y: target.y, width, height: rowHeight };
+        x += width;
+        return result;
+      });
+    };
+    const rowScore = row => Math.max(...rowRectangles(row, remainingRectangle).map(result => {
+      const aspect = result.width / result.height;
+      const preferred = preferredBookTitleAspect(result.entry.item);
+      return Math.max(aspect / preferred, preferred / aspect);
+    }));
+    const commitRow = row => {
+      const results = rowRectangles(row, remainingRectangle);
+      results.forEach(result => blocks.push({
+        item: result.entry.item,
+        mentions: result.entry.weight,
+        x: result.x,
+        y: result.y,
+        width: result.width,
+        height: result.height
+      }));
+      if (remainingRectangle.width >= remainingRectangle.height) {
+        const usedWidth = results[0].width;
+        remainingRectangle = {
+          ...remainingRectangle,
+          x: remainingRectangle.x + usedWidth,
+          width: Math.max(0, remainingRectangle.width - usedWidth)
+        };
+      } else {
+        const usedHeight = results[0].height;
+        remainingRectangle = {
+          ...remainingRectangle,
+          y: remainingRectangle.y + usedHeight,
+          height: Math.max(0, remainingRectangle.height - usedHeight)
+        };
+      }
+    };
+
+    let row = [];
+    while (remainingEntries.length) {
+      const candidate = remainingEntries[0];
+      if (!row.length || rowScore([...row, candidate]) <= rowScore(row)) {
+        row.push(remainingEntries.shift());
+      } else {
+        commitRow(row);
+        row = [];
+      }
     }
-    const ratio = firstWeight / entriesWeight;
-    if (rectangle.width >= rectangle.height) {
-      const firstWidth = rectangle.width * ratio;
-      tile(entries.slice(0, splitIndex), { ...rectangle, width: firstWidth });
-      tile(entries.slice(splitIndex), { ...rectangle, x: rectangle.x + firstWidth, width: rectangle.width - firstWidth });
-    } else {
-      const firstHeight = rectangle.height * ratio;
-      tile(entries.slice(0, splitIndex), { ...rectangle, height: firstHeight });
-      tile(entries.slice(splitIndex), { ...rectangle, y: rectangle.y + firstHeight, height: rectangle.height - firstHeight });
-    }
+    if (row.length) commitRow(row);
   };
 
   const remaining = weighted.slice(1);
@@ -1167,8 +1218,8 @@ function bookshelfLayout(items, width, height) {
     }
     const rightEntries = lowerCount ? remaining.slice(0, -lowerCount) : remaining;
     const lowerEntries = lowerCount ? remaining.slice(-lowerCount) : [];
-    tile(rightEntries, rightRectangle);
-    tile(lowerEntries, lowerRectangle);
+    squarify(rightEntries, rightRectangle);
+    squarify(lowerEntries, lowerRectangle);
   }
   const occupiedArea = blocks.reduce((sum, block) => sum + block.width * block.height, 0);
   return { blocks, occupancy: occupiedArea / (availableWidth * availableHeight) };
@@ -1184,7 +1235,10 @@ function bookLabelLines(title, maxCharacters, maxLines) {
       break;
     }
     let splitAt = remaining.lastIndexOf(" ", maxCharacters + 1);
-    if (splitAt < Math.floor(maxCharacters * .55)) splitAt = maxCharacters;
+    if (splitAt < Math.floor(maxCharacters * .55)) {
+      const nextSpace = remaining.indexOf(" ");
+      splitAt = nextSpace === -1 ? remaining.length : nextSpace;
+    }
     lines.push(remaining.slice(0, splitAt).trim());
     remaining = remaining.slice(splitAt).trim();
   }
@@ -1193,14 +1247,24 @@ function bookLabelLines(title, maxCharacters, maxLines) {
 }
 
 function bookTitleLayout(block, requestedSize) {
-  const labelSize = Math.min(requestedSize, Math.max(8, Math.floor(Math.min(block.width / 7, block.height / 6))));
-  const maxCharacters = Math.max(4, Math.floor((block.width - 14) / (labelSize * .57)));
-  const maxLines = Math.max(1, Math.min(4, Math.floor((block.height - 14) / (labelSize * 1.15))));
-  const lines = bookLabelLines(block.item.name, maxCharacters, maxLines);
+  const areaScale = Math.min(1.5, Math.max(1, Math.sqrt(block.width * block.height) / 130));
+  const maximumSize = Math.max(8, Math.floor(requestedSize * areaScale));
+  let labelSize = maximumSize;
+  let lines = [];
+  let complete = false;
+  while (labelSize >= 8) {
+    const maxCharacters = Math.max(4, Math.floor((block.width - 14) / (labelSize * .62)));
+    const maxLines = Math.max(1, Math.min(4, Math.floor((block.height - 14) / (labelSize * 1.15))));
+    lines = bookLabelLines(block.item.name, maxCharacters, maxLines);
+    complete = Boolean(lines.length) && !lines.at(-1).endsWith("…") && lines.every(line => line.length <= maxCharacters);
+    if (complete || labelSize === 8) break;
+    labelSize -= 1;
+  }
   const lineHeight = labelSize * 1.15;
   return {
     labelSize,
     lines,
+    complete,
     x: block.x + block.width / 2,
     y: block.y + block.height / 2 - (lines.length - 1) * lineHeight / 2 + labelSize * .35
   };
@@ -1226,6 +1290,7 @@ function renderBook() {
     const shouldLabel = state.config.labels !== "none";
     if (!shouldLabel || block.width < 36 || block.height < 32) return;
     const titleLayout = bookTitleLayout(block, state.config.labelSize);
+    if (!titleLayout.complete) return;
     const text = el("text", {
       x: titleLayout.x, y: titleLayout.y,
       fill: shade > .55 ? "#f6f5ef" : "#111", class: "book-label", "text-anchor": "middle",
