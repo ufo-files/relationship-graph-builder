@@ -456,18 +456,19 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   const result = JSON.parse(vm.runInContext(`
     state.catalog = { entities: [
       { id: "mapped", name: "Roswell", category: "location", classificationConfidence: 1, mentions: 8, contextAdjustedMentions: 8, documentIds: [], geo: { lat: 33.3943, lon: -104.523 } },
-      { id: "moon", name: "Moon", category: "location", classificationConfidence: 1, mentions: 18, contextAdjustedMentions: 18, documentIds: [], geo: { lat: 18, lon: -28, body: "moon" } },
+      { id: "moon", name: "Moon", category: "location", classificationConfidence: 1, mentions: 18, contextAdjustedMentions: 18, documentIds: [], geo: { lat: 18, lon: -28, body: "moon", precision: "celestial-body" } },
+      { id: "far-side", name: "Far Side of the Moon", category: "location", classificationConfidence: 1, mentions: 1, contextAdjustedMentions: 1, documentIds: [], geo: { lat: 0, lon: 180, body: "moon", precision: "selenographic-region" } },
       { id: "unmapped", name: "Ambiguous Base", category: "location", classificationConfidence: 1, mentions: 12, contextAdjustedMentions: 12, documentIds: [] },
       { id: "person", name: "Someone", category: "person", classificationConfidence: 1, mentions: 20, contextAdjustedMentions: 20, documentIds: [] }
     ] };
-    Object.assign(state.config, { type: "map", categories: ["location"], allSources: true, minConfidence: 0, includeHighInflation: true, size: "contextAdjustedMentions", limit: 50 });
+    Object.assign(state.config, { type: "map", categories: ["location"], allSources: true, minConfidence: 0, includeHighInflation: true, size: "contextAdjustedMentions", limit: 2 });
     const result = mapLocationData();
     JSON.stringify({ types: TYPES.map(type => type.id), mapped: result.mapped.map(item => item.id), data: result.data.map(item => item.id), unmapped: result.unmapped, title: dataAwareTitle(state.config) })
   `, context));
 
   assert.ok(result.types.includes("map"));
-  assert.deepEqual(result.mapped, ["moon", "mapped"]);
-  assert.deepEqual(result.data, ["moon", "mapped"]);
+  assert.deepEqual(result.mapped, ["moon", "mapped", "far-side"]);
+  assert.deepEqual(result.data, ["moon", "far-side"]);
   assert.equal(result.unmapped, 1);
   assert.equal(result.title, "Mentions — Mapped Locations");
   assert.match(html, /id="globeCanvas"/);
@@ -523,7 +524,11 @@ test("Map is a first-class Three.js graph type with reviewed location data", () 
   assert.match(globe, /this\.autoRotate = false/);
   assert.match(globe, /itemParent\(item\) \{[\s\S]*item\.body === "moon" \? this\.moon : this\.globe/);
   assert.match(globe, /this\.itemParent\(item\)\.add\(node\)/);
-  assert.match(globe, /updateMoonNodes\(\)[\s\S]*this\.moon\.worldToLocal\(world\)/);
+  assert.match(source, /precision: entity\.geo\.precision/);
+  assert.match(globe, /updateMoonNodes\(\)[\s\S]*node\.userData\.precision === "celestial-body"[\s\S]*this\.moon\.worldToLocal\(world\)/);
+  assert.match(globe, /itemVector\(item, surfaceOffset = 0\)[\s\S]*MOON_RADIUS \+ \.006 \+ surfaceOffset/);
+  assert.match(globe, /intersectionAt\(event\)[\s\S]*intersections\.find\(\(\{ object \}\) => this\.moonSurfaceNodeVisible\(object\)\)[\s\S]*lunarSurface\?\.object/);
+  assert.match(globe, /moonSurfaceNodeVisible\(node\)[\s\S]*precision === "celestial-body"[\s\S]*outward\.dot\(towardCamera\) > \.15[\s\S]*!this\.labelOccludedByEarth\(world\)/);
   assert.match(globe, /this\.earth = earth/);
   assert.match(globe, /labelOccludedByEarth\(world\)[\s\S]*intersectObject\(this\.earth, false\)/);
   assert.match(globe, /label\.hidden = !visible \|\| occluded \|\| projected\.z < -1 \|\| projected\.z > 1/);
@@ -549,6 +554,20 @@ test("map and timeline expose relationship controls", () => {
   assert.match(source, /Shared published entities/);
   assert.match(source, /state\.config\.timelineRole === "entity"[\s\S]*documentRelationshipNetworks/);
   assert.match(source, /relationships: overlay\.edges\.map/);
+});
+
+test("README screenshots capture the Far Side during its foreground transit", () => {
+  const script = fs.readFileSync("scripts/capture_graph_screenshots.mjs", "utf8");
+  const workflow = fs.readFileSync(".github/workflows/refresh-screenshots.yml", "utf8");
+
+  assert.match(script, /id: "far-side-moon"[\s\S]*label: "Far Side of the Moon"/);
+  assert.match(script, /alt="Far Side of the Moon map screenshot"/);
+  assert.match(script, /precision: "selenographic-region"/);
+  assert.match(script, /moonOrbit\.rotation\.y = Math\.PI \* 3 \/ 2/);
+  assert.match(script, /nodes\.find\(item => item\.userData\.name === "Far Side of the Moon"\)/);
+  assert.match(script, /label && !label\.hidden/);
+  assert.match(script, /page\.locator\("\.stage"\)\.screenshot/);
+  assert.match(workflow, /npm run screenshots/);
 });
 
 test("Book is a first-class mention-weighted area view for transcript-backed titles", () => {

@@ -17,6 +17,10 @@ const defaultScreenshot = {
   id: "default-view",
   label: "Default view"
 };
+const farSideScreenshot = {
+  id: "far-side-moon",
+  label: "Far Side of the Moon"
+};
 
 function escapeHTML(value) {
   return String(value)
@@ -40,6 +44,10 @@ function galleryMarkup(graphTypes) {
 <p align="center">
   <strong>${defaultScreenshot.label}</strong><br>
   <a href="assets/screenshots/${defaultScreenshot.id}.png"><img src="assets/screenshots/${defaultScreenshot.id}.png" alt="Default graph builder view screenshot" width="100%"></a>
+</p>
+<p align="center">
+  <strong>${farSideScreenshot.label}</strong><br>
+  <a href="assets/screenshots/${farSideScreenshot.id}.png"><img src="assets/screenshots/${farSideScreenshot.id}.png" alt="Far Side of the Moon map screenshot" width="100%"></a>
 </p>
 <table>\n${rows.join("\n")}\n</table>\n${galleryEnd}`;
 }
@@ -110,6 +118,7 @@ try {
 
   const expectedFiles = new Set([
     `${defaultScreenshot.id}.png`,
+    `${farSideScreenshot.id}.png`,
     ...graphTypes.map(({ id }) => `${id}.png`)
   ]);
   for (const existingFile of await readdir(outputDirectory)) {
@@ -143,6 +152,42 @@ try {
       type: "png"
     });
   }
+
+  await page.locator('[data-type="map"]').click();
+  await page.waitForFunction(() => Boolean(window.ufoGlobe));
+  await page.evaluate(() => {
+    const farSideName = "Far Side of the Moon";
+    const current = window.pendingGlobeRender;
+    if (!window.ufoGlobe.nodes.some(node => node.userData.name === farSideName)) {
+      const items = current.items.filter(item => item.name !== farSideName);
+      items.splice(1, 0, {
+        id: "far-side-moon-preview",
+        name: farSideName,
+        lat: 0,
+        lon: 180,
+        body: "moon",
+        precision: "selenographic-region",
+        intensity: .2,
+        formattedValue: "Mapped lunar hemisphere",
+        secondary: false,
+        showLabel: true
+      });
+      window.dispatchEvent(new CustomEvent("ufo-map-render", { detail: { ...current, items } }));
+    }
+    window.ufoGlobe.moonOrbit.rotation.y = Math.PI * 3 / 2;
+    window.ufoGlobe.draw();
+  });
+  await page.waitForFunction(() => {
+    const node = window.ufoGlobe?.nodes.find(item => item.userData.name === "Far Side of the Moon");
+    const label = window.ufoGlobe?.labels.find(item => item.node === node)?.label;
+    return Boolean(node && label && !label.hidden);
+  });
+  await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+  await page.locator(".stage").screenshot({
+    animations: "disabled",
+    path: path.join(outputDirectory, `${farSideScreenshot.id}.png`),
+    type: "png"
+  });
 
   if (pageErrors.length) throw pageErrors[0];
   if (updateReadme) await updateGallery(graphTypes);

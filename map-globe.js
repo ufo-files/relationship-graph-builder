@@ -272,7 +272,7 @@ class GlobeMap {
   }
 
   itemVector(item, surfaceOffset = 0) {
-    const radius = item.body === "moon" ? MOON_RADIUS + surfaceOffset : 1.018 + surfaceOffset;
+    const radius = item.body === "moon" ? MOON_RADIUS + .006 + surfaceOffset : 1.018 + surfaceOffset;
     return this.coordinateVector(item.lat, item.lon, radius);
   }
 
@@ -283,7 +283,7 @@ class GlobeMap {
   updateMoonNodes() {
     const moonCenter = this.moon.getWorldPosition(new THREE.Vector3());
     const towardCamera = this.camera.position.clone().sub(moonCenter).normalize();
-    this.nodes.filter(node => node.userData.body === "moon").forEach(node => {
+    this.nodes.filter(node => node.userData.body === "moon" && node.userData.precision === "celestial-body").forEach(node => {
       const world = moonCenter.clone().add(towardCamera.clone().multiplyScalar(MOON_RADIUS + .006));
       node.position.copy(this.moon.worldToLocal(world));
     });
@@ -393,7 +393,18 @@ class GlobeMap {
 
   intersectionAt(event) {
     this.pointerFromEvent(event);
-    return this.raycaster.intersectObjects(this.nodes, false)[0]?.object || null;
+    const intersections = this.raycaster.intersectObjects(this.nodes, false);
+    const lunarSurface = intersections.find(({ object }) => this.moonSurfaceNodeVisible(object));
+    return lunarSurface?.object || intersections[0]?.object || null;
+  }
+
+  moonSurfaceNodeVisible(node) {
+    if (node.userData.body !== "moon" || node.userData.precision === "celestial-body") return false;
+    const moonCenter = this.moon.getWorldPosition(new THREE.Vector3());
+    const world = node.getWorldPosition(new THREE.Vector3());
+    const outward = world.clone().sub(moonCenter).normalize();
+    const towardCamera = this.camera.position.clone().sub(moonCenter).normalize();
+    return outward.dot(towardCamera) > .15 && !this.labelOccludedByEarth(world);
   }
 
   updateHover(event) {
