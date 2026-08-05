@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "4a4d6d56729538d50d12062e2394077175bedd23"
+    "revision": "61d1331b82fe65a4a01c35031769d5cbcee5d130"
   },
-  "count": 338,
-  "totalCount": 338,
+  "count": 340,
+  "totalCount": 340,
   "shownCount": 200,
   "candidates": [
     {
@@ -270,8 +270,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1105,
-        "documentCount": 300
+        "mentions": 1106,
+        "documentCount": 301
       },
       "right": {
         "name": "Departments of Defense",
@@ -339,6 +339,22 @@
       },
       "right": {
         "name": "Post Office Inspector",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.977,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Environmental and Natural Resources Division",
+        "mentions": 5,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Environment and Natural Resources Division",
         "mentions": 4,
         "documentCount": 2
       },
@@ -1326,8 +1342,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3576,
-        "documentCount": 731
+        "mentions": 3598,
+        "documentCount": 732
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1342,8 +1358,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3576,
-        "documentCount": 731
+        "mentions": 3598,
+        "documentCount": 732
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1358,8 +1374,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3576,
-        "documentCount": 731
+        "mentions": 3598,
+        "documentCount": 732
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1374,8 +1390,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3576,
-        "documentCount": 731
+        "mentions": 3598,
+        "documentCount": 732
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -2206,8 +2222,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1105,
-        "documentCount": 300
+        "mentions": 1106,
+        "documentCount": 301
       },
       "right": {
         "name": "Department of Detense",
@@ -2395,6 +2411,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Eglin Air Force Base",
+        "mentions": 11,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Elgin Air Force Base",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.95,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Intelligence Officers",
@@ -2405,22 +2437,6 @@
         "name": "Intelligence Office",
         "mentions": 6,
         "documentCount": 6
-      },
-      "similarity": 0.95,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Eglin Air Force Base",
-        "mentions": 9,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "Elgin Air Force Base",
-        "mentions": 4,
-        "documentCount": 2
       },
       "similarity": 0.95,
       "reason": "similar name",
@@ -2613,6 +2629,22 @@
         "name": "INTELLIGENCE CENTRE",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.947,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "National Laboratory",
+        "mentions": 10,
+        "documentCount": 10
+      },
+      "right": {
+        "name": "Natlonal Laboratory",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.947,
       "reason": "similar name",
@@ -2830,8 +2862,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3576,
-        "documentCount": 731
+        "mentions": 3598,
+        "documentCount": 732
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -3171,38 +3203,6 @@
       },
       "right": {
         "name": "The Ait Technical Intelligence Center",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.939,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Applied Sciences Division",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Applied Sclence Division",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.939,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Director for Intelligence",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "The Director of Intelligence",
         "mentions": 2,
         "documentCount": 2
       },
