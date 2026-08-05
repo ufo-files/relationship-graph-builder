@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "be579f7479768136934cb5f227d4ac505d97c99d"
+    "revision": "5352e75da63d016e76ac5f7d7f0f1dbce0c24247"
   },
-  "count": 304,
-  "totalCount": 304,
+  "count": 306,
+  "totalCount": 306,
   "shownCount": 200,
   "candidates": [
     {
@@ -126,8 +126,8 @@
       "category": "government_agency",
       "left": {
         "name": "National Reconnaissance Office",
-        "mentions": 318,
-        "documentCount": 117
+        "mentions": 320,
+        "documentCount": 118
       },
       "right": {
         "name": "The National Reconnaisance Office",
@@ -231,6 +231,22 @@
         "documentCount": 2
       },
       "similarity": 0.978,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Defense",
+        "mentions": 1066,
+        "documentCount": 282
+      },
+      "right": {
+        "name": "Departments of Defense",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.977,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1214,8 +1230,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3208,
-        "documentCount": 688
+        "mentions": 3230,
+        "documentCount": 690
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1230,8 +1246,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3208,
-        "documentCount": 688
+        "mentions": 3230,
+        "documentCount": 690
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1246,8 +1262,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3208,
-        "documentCount": 688
+        "mentions": 3230,
+        "documentCount": 690
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1262,8 +1278,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3208,
-        "documentCount": 688
+        "mentions": 3230,
+        "documentCount": 690
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1726,8 +1742,8 @@
       "category": "government_agency",
       "left": {
         "name": "FOIA Officer",
-        "mentions": 80,
-        "documentCount": 5
+        "mentions": 81,
+        "documentCount": 6
       },
       "right": {
         "name": "FOIA Office",
@@ -1982,8 +1998,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1063,
-        "documentCount": 281
+        "mentions": 1066,
+        "documentCount": 282
       },
       "right": {
         "name": "Department of Detense",
@@ -2318,8 +2334,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 203,
-        "documentCount": 57
+        "mentions": 204,
+        "documentCount": 58
       },
       "right": {
         "name": "Department of Stale",
@@ -2334,8 +2350,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 203,
-        "documentCount": 57
+        "mentions": 204,
+        "documentCount": 58
       },
       "right": {
         "name": "Department of Staie",
@@ -2366,8 +2382,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 26,
-        "documentCount": 25
+        "mentions": 27,
+        "documentCount": 26
       },
       "right": {
         "name": "INTELLIGENCE CENTRE",
@@ -2574,8 +2590,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3208,
-        "documentCount": 688
+        "mentions": 3230,
+        "documentCount": 690
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -3191,22 +3207,6 @@
         "documentCount": 2
       },
       "similarity": 0.936,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Federal Bureau of Investigation",
-        "mentions": 3202,
-        "documentCount": 331
-      },
-      "right": {
-        "name": "FEDERAL BUREAU DE INVESTIGATION",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.935,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     }
