@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "43ba55a5bfb994f62e966ea8997604b6ad2b2d15"
+    "revision": "3f08dd29c27228d66dc9029289bca7254e6a7b57"
   },
-  "count": 280,
-  "totalCount": 280,
+  "count": 281,
+  "totalCount": 281,
   "shownCount": 200,
   "candidates": [
     {
@@ -46,8 +46,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 197,
-        "documentCount": 31
+        "mentions": 198,
+        "documentCount": 32
       },
       "right": {
         "name": "Offices of the Secretary of Defense",
@@ -357,6 +357,22 @@
         "name": "The Intelligence Officer",
         "mentions": 5,
         "documentCount": 4
+      },
+      "similarity": 0.974,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Requirements Office",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Requirements Officer",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.974,
       "reason": "similar name",
@@ -1406,8 +1422,8 @@
       "category": "organization",
       "left": {
         "name": "University of California",
-        "mentions": 47,
-        "documentCount": 29
+        "mentions": 49,
+        "documentCount": 30
       },
       "right": {
         "name": "University of Californla's",
@@ -2451,8 +2467,8 @@
       },
       "right": {
         "name": "California Institute of Technology",
-        "mentions": 13,
-        "documentCount": 11
+        "mentions": 14,
+        "documentCount": 12
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -3187,22 +3203,6 @@
       },
       "right": {
         "name": "Army Air Forcas",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Post Office Box",
-        "mentions": 22,
-        "documentCount": 11
-      },
-      "right": {
-        "name": "Post Office Bor",
         "mentions": 2,
         "documentCount": 2
       },
