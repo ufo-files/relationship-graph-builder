@@ -8,7 +8,8 @@ const status = document.querySelector("#mapStatus");
 const DEFAULT_GLOBE_COVERAGE = .72;
 const DEFAULT_CAMERA_TARGET_X = 0;
 const DEFAULT_GLOBE_ROTATION = { x: .01375, y: 0 };
-const AUTO_ROTATION_SPEED = .000025;
+const EARTH_NORMAL_ROTATION_PERIOD_MS = 30_000;
+const AUTO_ROTATION_SPEED = Math.PI * 2 / EARTH_NORMAL_ROTATION_PERIOD_MS;
 const EARTH_EQUATORIAL_RADIUS_KM = 6371;
 const MOON_EQUATORIAL_RADIUS_KM = 1737.4;
 const MOON_MEAN_ORBIT_RADIUS_KM = 384_400;
@@ -16,9 +17,12 @@ const MOON_ORBIT_DAYS = 27.322;
 const MOON_ORBIT_INCLINATION = 5.145;
 const MOON_RADIUS = MOON_EQUATORIAL_RADIUS_KM / EARTH_EQUATORIAL_RADIUS_KM;
 const MOON_ORBIT_RADIUS = MOON_MEAN_ORBIT_RADIUS_KM / EARTH_EQUATORIAL_RADIUS_KM;
-// Physical time is compressed so a complete orbit is observable in the interactive view.
-const MOON_DISPLAY_ORBIT_PERIOD_MS = 300_000;
-const MOON_ORBIT_SPEED = Math.PI * 2 / MOON_DISPLAY_ORBIT_PERIOD_MS;
+// Hidden travel is compressed so the next front- or far-side transit returns promptly.
+const MOON_OFFSCREEN_HALF_ORBIT_MS = 5_000;
+const MOON_OFFSCREEN_ORBIT_SPEED = Math.PI / MOON_OFFSCREEN_HALF_ORBIT_MS;
+const MIN_MOON_TRANSIT_SECONDS = 2;
+const MAX_MOON_TRANSIT_SECONDS = 10;
+const DEFAULT_MOON_TRANSIT_SECONDS = 5;
 const DEFAULT_MOON_ORBIT_ANGLE = 1.545;
 const DEFAULT_CAMERA_DISTANCE = 600;
 const MIN_CAMERA_DISTANCE = 70;
@@ -51,6 +55,12 @@ class GlobeMap {
     this.globe = new THREE.Group();
     this.earthMoonSystem.add(this.globe);
     this.raycaster = new THREE.Raycaster();
+    this.labelRaycaster = new THREE.Raycaster();
+    this.viewFrustum = new THREE.Frustum();
+    this.viewProjection = new THREE.Matrix4();
+    this.moonVisibilityCenter = new THREE.Vector3();
+    this.moonVisibilitySphere = new THREE.Sphere(this.moonVisibilityCenter, MOON_RADIUS);
+    this.moonOrbitAxis = new THREE.Vector3(0, 1, 0);
     this.pointer = new THREE.Vector2();
     this.nodes = [];
     this.relationships = [];
@@ -62,6 +72,9 @@ class GlobeMap {
     this.frame = null;
     this.lastFrameTime = null;
     this.autoRotate = false;
+    this.moonTransitSeconds = DEFAULT_MOON_TRANSIT_SECONDS;
+    this.moonWasInViewport = false;
+    this.activeMoonTransitArc = null;
     this.addEarth();
     this.addMoon();
     this.bindEvents();
@@ -72,6 +85,7 @@ class GlobeMap {
     const orbitPlane = new THREE.Group();
     orbitPlane.rotation.z = THREE.MathUtils.degToRad(MOON_ORBIT_INCLINATION);
     this.earthMoonSystem.add(orbitPlane);
+    this.moonOrbitPlane = orbitPlane;
     this.moonOrbit = new THREE.Group();
     this.moonOrbit.rotation.y = DEFAULT_MOON_ORBIT_ANGLE;
     orbitPlane.add(this.moonOrbit);
@@ -123,6 +137,7 @@ class GlobeMap {
       earthMaterial
     );
     earth.name = "countries";
+    this.earth = earth;
     this.globe.add(earth);
     const atmosphere = new THREE.Mesh(
       new THREE.SphereGeometry(1.003, 64, 48),
@@ -212,6 +227,7 @@ class GlobeMap {
         this.dragDistance += Math.abs(dx) + Math.abs(dy);
         this.earthMoonSystem.rotation.y += dx * .006;
         this.earthMoonSystem.rotation.x = THREE.MathUtils.clamp(this.earthMoonSystem.rotation.x + dy * .004, -1.15, 1.15);
+        this.invalidateMoonTransit();
         this.drag = { x: event.clientX, y: event.clientY };
         this.draw();
       }
@@ -226,6 +242,7 @@ class GlobeMap {
       event.preventDefault();
       const zoomFactor = Math.exp(event.deltaY * .0015);
       this.camera.position.z = THREE.MathUtils.clamp(this.camera.position.z * zoomFactor, MIN_CAMERA_DISTANCE, MAX_CAMERA_DISTANCE);
+      this.invalidateMoonTransit();
       this.draw();
     }, { passive: false });
     canvas.addEventListener("dblclick", () => this.reset());
@@ -239,6 +256,7 @@ class GlobeMap {
       else if (event.key === "-") this.camera.position.z = Math.min(MAX_CAMERA_DISTANCE, this.camera.position.z * 1.35);
       else return;
       event.preventDefault();
+      this.invalidateMoonTransit();
       this.draw();
     });
   }
@@ -299,6 +317,7 @@ class GlobeMap {
 
   render(payload) {
     this.clearNodes();
+    this.setMoonTransitSeconds(payload.moonTransitSeconds);
     payload.items.forEach(item => {
       const material = new THREE.MeshBasicMaterial({
         color: 0x111111,
@@ -392,6 +411,16 @@ class GlobeMap {
     if (node) window.dispatchEvent(new CustomEvent("ufo-map-select", { detail: { entityId: node.userData.id } }));
   }
 
+  labelOccludedByEarth(world) {
+    const cameraWorld = this.camera.getWorldPosition(new THREE.Vector3());
+    const direction = world.clone().sub(cameraWorld);
+    const labelDistance = direction.length();
+    if (!labelDistance) return false;
+    this.labelRaycaster.set(cameraWorld, direction.normalize());
+    const earthHit = this.labelRaycaster.intersectObject(this.earth, false)[0];
+    return Boolean(earthHit && earthHit.distance < labelDistance - .001);
+  }
+
   updateLabels() {
     const cameraDirection = this.camera.getWorldDirection(new THREE.Vector3()).negate();
     const bounds = canvas.getBoundingClientRect();
@@ -400,11 +429,85 @@ class GlobeMap {
       const surfaceNormal = node.position.clone().normalize().transformDirection(node.parent.matrixWorld);
       const visible = surfaceNormal.dot(cameraDirection) > .15;
       const projected = world.clone().project(this.camera);
-      label.hidden = !visible || projected.z < -1 || projected.z > 1;
+      const occluded = this.labelOccludedByEarth(world);
+      label.hidden = !visible || occluded || projected.z < -1 || projected.z > 1;
       if (!label.hidden) {
         label.style.transform = `translate(-50%, -50%) translate(${(projected.x * .5 + .5) * bounds.width}px, ${(-projected.y * .5 + .5) * bounds.height}px)`;
       }
     });
+  }
+
+  invalidateMoonTransit() {
+    this.moonWasInViewport = false;
+    this.activeMoonTransitArc = null;
+  }
+
+  updateViewFrustum() {
+    this.camera.updateMatrixWorld(true);
+    this.moonOrbitPlane.updateWorldMatrix(true, false);
+    this.viewProjection.multiplyMatrices(this.camera.projectionMatrix, this.camera.matrixWorldInverse);
+    this.viewFrustum.setFromProjectionMatrix(this.viewProjection);
+  }
+
+  moonVisibleAtAngle(angle) {
+    this.moonVisibilityCenter.set(MOON_ORBIT_RADIUS, 0, 0)
+      .applyAxisAngle(this.moonOrbitAxis, angle)
+      .applyMatrix4(this.moonOrbitPlane.matrixWorld);
+    return this.viewFrustum.intersectsSphere(this.moonVisibilitySphere);
+  }
+
+  visibleMoonTransitArc(angle) {
+    const step = THREE.MathUtils.degToRad(1);
+    const boundary = direction => {
+      let visibleAngle = angle;
+      for (let index = 0; index < 360; index += 1) {
+        const candidate = visibleAngle + step * direction;
+        if (!this.moonVisibleAtAngle(candidate)) {
+          let inside = visibleAngle;
+          let outside = candidate;
+          for (let refinement = 0; refinement < 16; refinement += 1) {
+            const midpoint = (inside + outside) / 2;
+            if (this.moonVisibleAtAngle(midpoint)) inside = midpoint;
+            else outside = midpoint;
+          }
+          return (inside + outside) / 2;
+        }
+        visibleAngle = candidate;
+      }
+      return null;
+    };
+    const start = boundary(-1);
+    const end = boundary(1);
+    return start === null || end === null ? Math.PI * 2 : end - start;
+  }
+
+  moonViewportEntryAngle(hiddenAngle, visibleAngle) {
+    let outside = hiddenAngle;
+    let inside = visibleAngle;
+    for (let refinement = 0; refinement < 16; refinement += 1) {
+      const midpoint = (outside + inside) / 2;
+      if (this.moonVisibleAtAngle(midpoint)) inside = midpoint;
+      else outside = midpoint;
+    }
+    return inside;
+  }
+
+  animationSpeeds() {
+    this.updateViewFrustum();
+    const angle = this.moonOrbit.rotation.y;
+    const moonInViewport = this.moonVisibleAtAngle(angle);
+    if (moonInViewport && (!this.moonWasInViewport || this.activeMoonTransitArc === null)) {
+      this.activeMoonTransitArc = this.visibleMoonTransitArc(angle);
+    } else if (!moonInViewport) {
+      this.activeMoonTransitArc = null;
+    }
+    this.moonWasInViewport = moonInViewport;
+    if (!moonInViewport || !this.activeMoonTransitArc) {
+      return { moon: MOON_OFFSCREEN_ORBIT_SPEED, earth: AUTO_ROTATION_SPEED };
+    }
+    const moon = this.activeMoonTransitArc / (this.moonTransitSeconds * 1_000);
+    const earthSlowdown = MIN_MOON_TRANSIT_SECONDS / this.moonTransitSeconds;
+    return { moon, earth: AUTO_ROTATION_SPEED * earthSlowdown };
   }
 
   resize() {
@@ -414,6 +517,7 @@ class GlobeMap {
     this.renderer.setSize(width, height, false);
     this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
+    this.invalidateMoonTransit();
     this.draw();
   }
 
@@ -432,8 +536,14 @@ class GlobeMap {
     }
     if (this.autoRotate && this.lastFrameTime !== null && !this.drag) {
       const elapsed = Math.min(50, timestamp - this.lastFrameTime);
-      this.moonOrbit.rotation.y += elapsed * MOON_ORBIT_SPEED;
-      this.globe.rotation.y += elapsed * AUTO_ROTATION_SPEED;
+      const speed = this.animationSpeeds();
+      const currentMoonAngle = this.moonOrbit.rotation.y;
+      let nextMoonAngle = currentMoonAngle + elapsed * speed.moon;
+      if (!this.moonWasInViewport && this.moonVisibleAtAngle(nextMoonAngle)) {
+        nextMoonAngle = this.moonViewportEntryAngle(currentMoonAngle, nextMoonAngle);
+      }
+      this.moonOrbit.rotation.y = nextMoonAngle;
+      this.globe.rotation.y += elapsed * speed.earth;
     }
     this.lastFrameTime = timestamp;
     this.draw();
@@ -456,12 +566,18 @@ class GlobeMap {
     return this.autoRotate;
   }
 
+  setMoonTransitSeconds(seconds) {
+    this.moonTransitSeconds = THREE.MathUtils.clamp(Number(seconds) || DEFAULT_MOON_TRANSIT_SECONDS, MIN_MOON_TRANSIT_SECONDS, MAX_MOON_TRANSIT_SECONDS);
+    return this.moonTransitSeconds;
+  }
+
   reset() {
     this.earthMoonSystem.rotation.set(DEFAULT_GLOBE_ROTATION.x, DEFAULT_GLOBE_ROTATION.y, 0);
     this.globe.rotation.set(0, 0, 0);
     this.moonOrbit.rotation.set(0, DEFAULT_MOON_ORBIT_ANGLE, 0);
     this.camera.position.set(DEFAULT_CAMERA_TARGET_X, 0, cameraDistanceForCoverage(this.camera.fov, DEFAULT_GLOBE_COVERAGE));
     this.camera.lookAt(DEFAULT_CAMERA_TARGET_X, 0, 0);
+    this.invalidateMoonTransit();
     this.draw();
   }
 
