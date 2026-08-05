@@ -11,10 +11,6 @@ These previews are regenerated from the latest machine-data catalog after every 
   <strong>Default view</strong><br>
   <a href="assets/screenshots/default-view.png"><img src="assets/screenshots/default-view.png" alt="Default graph builder view screenshot" width="100%"></a>
 </p>
-<p align="center">
-  <strong>Far Side of the Moon</strong><br>
-  <a href="assets/screenshots/far-side-moon.png"><img src="assets/screenshots/far-side-moon.png" alt="Far Side of the Moon map screenshot" width="100%"></a>
-</p>
 <table>
   <tr>
     <td width="50%" align="center">
@@ -61,7 +57,10 @@ These previews are regenerated from the latest machine-data catalog after every 
       <strong>Table</strong><br>
       <a href="assets/screenshots/table.png"><img src="assets/screenshots/table.png" alt="Table graph type screenshot" width="100%"></a>
     </td>
-    <td width="50%"></td>
+    <td width="50%" align="center">
+      <strong>Far Side of the Moon</strong><br>
+      <a href="assets/screenshots/far-side-moon.png"><img src="assets/screenshots/far-side-moon.png" alt="Far Side of the Moon map screenshot" width="100%"></a>
+    </td>
   </tr>
 </table>
 <!-- graph-screenshots:end -->

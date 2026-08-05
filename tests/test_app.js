@@ -559,15 +559,20 @@ test("map and timeline expose relationship controls", () => {
 test("README screenshots capture the Far Side during its foreground transit", () => {
   const script = fs.readFileSync("scripts/capture_graph_screenshots.mjs", "utf8");
   const workflow = fs.readFileSync(".github/workflows/refresh-screenshots.yml", "utf8");
+  const readme = fs.readFileSync("README.md", "utf8");
 
   assert.match(script, /id: "far-side-moon"[\s\S]*label: "Far Side of the Moon"/);
-  assert.match(script, /alt="Far Side of the Moon map screenshot"/);
+  assert.match(script, /alt: "Far Side of the Moon map screenshot"/);
+  assert.match(script, /const galleryItems = \[[\s\S]*\.\.\.graphTypes\.map[\s\S]*\.\.\.farSideScreenshot/);
+  assert.match(script, /index < galleryItems\.length/);
   assert.match(script, /precision: "selenographic-region"/);
   assert.match(script, /moonOrbit\.rotation\.y = Math\.PI \* 3 \/ 2/);
   assert.match(script, /nodes\.find\(item => item\.userData\.name === "Far Side of the Moon"\)/);
   assert.match(script, /label && !label\.hidden/);
   assert.match(script, /page\.locator\("\.stage"\)\.screenshot/);
   assert.match(workflow, /npm run screenshots/);
+  assert.match(readme, /<table>[\s\S]*far-side-moon\.png[\s\S]*<\/table>/);
+  assert.doesNotMatch(readme, /<p align="center">\s*<strong>Far Side of the Moon<\/strong>/);
 });
 
 test("Book is a first-class mention-weighted area view for transcript-backed titles", () => {
