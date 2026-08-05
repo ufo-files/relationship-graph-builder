@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "fbb0773fa33db47e198f81637fe704330cff22d1"
+    "revision": "8c8ce6307c4797bea2e0e2c7a247ff1ee6bc39ef"
   },
-  "count": 251,
-  "totalCount": 251,
+  "count": 260,
+  "totalCount": 260,
   "shownCount": 200,
   "candidates": [
     {
@@ -638,8 +638,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 185,
-        "documentCount": 98
+        "mentions": 191,
+        "documentCount": 100
       },
       "right": {
         "name": "Fright-Patterson Air Force Base",
@@ -654,11 +654,43 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 185,
-        "documentCount": 98
+        "mentions": 191,
+        "documentCount": 100
       },
       "right": {
         "name": "Wright-pattorson AIr Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patterson Air Force Base",
+        "mentions": 191,
+        "documentCount": 100
+      },
+      "right": {
+        "name": "WRIGHT-PATTERION AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patterson Air Force Base",
+        "mentions": 191,
+        "documentCount": 100
+      },
+      "right": {
+        "name": "WRIGHT-PATTERSON AIM FORCE BASE",
         "mentions": 2,
         "documentCount": 2
       },
@@ -949,6 +981,22 @@
         "name": "Central Inteliigence Agency",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Foreign Technology Division",
+        "mentions": 31,
+        "documentCount": 19
+      },
+      "right": {
+        "name": "Fareign Technology Division",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -2622,8 +2670,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 185,
-        "documentCount": 98
+        "mentions": 191,
+        "documentCount": 100
       },
       "right": {
         "name": "Fright-Petterson Air Force Base",
@@ -2717,12 +2765,76 @@
     {
       "category": "location",
       "left": {
+        "name": "Fright-Patterson Air Force Base",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "WRIGHT-PATTERION AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Fright-Patterson Air Force Base",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "WRIGHT-PATTERSON AIM FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "REPORT ON SOVIET ISLAND IN ARCTIC",
         "mentions": 2,
         "documentCount": 2
       },
       "right": {
         "name": "REPORT ON SOV ISLAND IN ARTIC",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-pattorson AIr Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "WRIGHT-PATTERION AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-pattorson AIr Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "WRIGHT-PATTERSON AIM FORCE BASE",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2739,6 +2851,22 @@
       },
       "right": {
         "name": "The Ait Technical Intelligence Center",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "WRIGHT-PATTERION AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "WRIGHT-PATTERSON AIM FORCE BASE",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2947,8 +3075,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 158,
-        "documentCount": 25
+        "mentions": 159,
+        "documentCount": 26
       },
       "similarity": 0.932,
       "reason": "similar name",
@@ -3079,134 +3207,6 @@
         "documentCount": 2
       },
       "similarity": 0.93,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Post Office Inspeotors",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Post Office Inspector",
-        "mentions": 4,
-        "documentCount": 2
-      },
-      "similarity": 0.93,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Salt Lake City",
-        "mentions": 84,
-        "documentCount": 39
-      },
-      "right": {
-        "name": "Snlt Lake City",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "George Adamski",
-        "mentions": 26,
-        "documentCount": 14
-      },
-      "right": {
-        "name": "George Adanski",
-        "mentions": 5,
-        "documentCount": 4
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Phoenix Office",
-        "mentions": 28,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "Phoenis Office",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Edward Condon",
-        "mentions": 22,
-        "documentCount": 14
-      },
-      "right": {
-        "name": "Edward U. Condon",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Detroit Office",
-        "mentions": 20,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "Detrolt Office",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "LIBRARY SUBJECT & AREA CODES",
-        "mentions": 6,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "LIBRARY SUBJECT AND AREA CODES",
-        "mentions": 6,
-        "documentCount": 6
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "George Bush Sr",
-        "mentions": 6,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "George Bush Jr",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "similarity": 0.929,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     }
