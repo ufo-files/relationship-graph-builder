@@ -7,7 +7,7 @@ const labelLayer = document.querySelector("#globeLabels");
 const status = document.querySelector("#mapStatus");
 const DEFAULT_GLOBE_COVERAGE = .72;
 const DEFAULT_CAMERA_TARGET_X = 0;
-const DEFAULT_GLOBE_ROTATION = { x: .66, y: .11 };
+const DEFAULT_GLOBE_ROTATION = { x: .01375, y: 0 };
 const AUTO_ROTATION_SPEED = .000025;
 const EARTH_EQUATORIAL_RADIUS_KM = 6371;
 const MOON_EQUATORIAL_RADIUS_KM = 1737.4;
@@ -17,14 +17,24 @@ const MOON_ORBIT_INCLINATION = 5.145;
 const MOON_RADIUS = MOON_EQUATORIAL_RADIUS_KM / EARTH_EQUATORIAL_RADIUS_KM;
 const MOON_ORBIT_RADIUS = MOON_MEAN_ORBIT_RADIUS_KM / EARTH_EQUATORIAL_RADIUS_KM;
 // Physical time is compressed so a complete orbit is observable in the interactive view.
-const MOON_DISPLAY_ORBIT_PERIOD_MS = 30_000;
+const MOON_DISPLAY_ORBIT_PERIOD_MS = 300_000;
 const MOON_ORBIT_SPEED = Math.PI * 2 / MOON_DISPLAY_ORBIT_PERIOD_MS;
-const MAX_CAMERA_DISTANCE = 180;
+const DEFAULT_MOON_ORBIT_ANGLE = 1.545;
+const DEFAULT_CAMERA_DISTANCE = 600;
+const MIN_CAMERA_DISTANCE = 70;
+const MAX_CAMERA_DISTANCE = 1_200;
 
 function cameraDistanceForCoverage(verticalFov, coverage) {
   const halfFov = THREE.MathUtils.degToRad(verticalFov / 2);
   return 1 / Math.sin(Math.atan(Math.tan(halfFov) * coverage));
 }
+
+function verticalFovForCoverageAtDistance(distance, coverage) {
+  const apparentHalfAngle = Math.asin(1 / distance);
+  return THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(apparentHalfAngle) / coverage));
+}
+
+const DEFAULT_CAMERA_FOV = verticalFovForCoverageAtDistance(DEFAULT_CAMERA_DISTANCE, DEFAULT_GLOBE_COVERAGE);
 
 class GlobeMap {
   constructor() {
@@ -32,7 +42,7 @@ class GlobeMap {
     this.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(38, 1, .1, 500);
+    this.camera = new THREE.PerspectiveCamera(DEFAULT_CAMERA_FOV, 1, 10, 1_500);
     this.camera.position.set(DEFAULT_CAMERA_TARGET_X, 0, cameraDistanceForCoverage(this.camera.fov, DEFAULT_GLOBE_COVERAGE));
     this.camera.lookAt(DEFAULT_CAMERA_TARGET_X, 0, 0);
     this.earthMoonSystem = new THREE.Group();
@@ -63,6 +73,7 @@ class GlobeMap {
     orbitPlane.rotation.z = THREE.MathUtils.degToRad(MOON_ORBIT_INCLINATION);
     this.earthMoonSystem.add(orbitPlane);
     this.moonOrbit = new THREE.Group();
+    this.moonOrbit.rotation.y = DEFAULT_MOON_ORBIT_ANGLE;
     orbitPlane.add(this.moonOrbit);
 
     this.moonMaterial = new THREE.MeshBasicMaterial({ color: 0xd0cec7 });
@@ -214,7 +225,7 @@ class GlobeMap {
     canvas.addEventListener("wheel", event => {
       event.preventDefault();
       const zoomFactor = Math.exp(event.deltaY * .0015);
-      this.camera.position.z = THREE.MathUtils.clamp(this.camera.position.z * zoomFactor, 1.75, MAX_CAMERA_DISTANCE);
+      this.camera.position.z = THREE.MathUtils.clamp(this.camera.position.z * zoomFactor, MIN_CAMERA_DISTANCE, MAX_CAMERA_DISTANCE);
       this.draw();
     }, { passive: false });
     canvas.addEventListener("dblclick", () => this.reset());
@@ -224,7 +235,7 @@ class GlobeMap {
       else if (event.key === "ArrowRight") this.earthMoonSystem.rotation.y += step;
       else if (event.key === "ArrowUp") this.earthMoonSystem.rotation.x = Math.max(-1.15, this.earthMoonSystem.rotation.x - step);
       else if (event.key === "ArrowDown") this.earthMoonSystem.rotation.x = Math.min(1.15, this.earthMoonSystem.rotation.x + step);
-      else if (["+", "="].includes(event.key)) this.camera.position.z = Math.max(1.75, this.camera.position.z - .2);
+      else if (["+", "="].includes(event.key)) this.camera.position.z = Math.max(MIN_CAMERA_DISTANCE, this.camera.position.z / 1.35);
       else if (event.key === "-") this.camera.position.z = Math.min(MAX_CAMERA_DISTANCE, this.camera.position.z * 1.35);
       else return;
       event.preventDefault();
@@ -388,7 +399,7 @@ class GlobeMap {
   reset() {
     this.earthMoonSystem.rotation.set(DEFAULT_GLOBE_ROTATION.x, DEFAULT_GLOBE_ROTATION.y, 0);
     this.globe.rotation.set(0, 0, 0);
-    this.moonOrbit.rotation.set(0, 0, 0);
+    this.moonOrbit.rotation.set(0, DEFAULT_MOON_ORBIT_ANGLE, 0);
     this.camera.position.set(DEFAULT_CAMERA_TARGET_X, 0, cameraDistanceForCoverage(this.camera.fov, DEFAULT_GLOBE_COVERAGE));
     this.camera.lookAt(DEFAULT_CAMERA_TARGET_X, 0, 0);
     this.draw();

@@ -21,8 +21,9 @@ Physical values used by the map renderer:
 - Moon orbital period and synchronous rotation period: 27.322 Earth days
 - Moon orbit inclination: 5.145 degrees
 
-The interactive map visually compresses the orbital period to 30 seconds but keeps
+The interactive map visually compresses the orbital period to five minutes but keeps
 the mean center-to-center distance at physical scale. The default camera preserves
-Earth's map scale; zoom out to inspect the complete Earth–Moon spacing.
+Earth's map scale from outside the lunar orbit, allowing background and foreground
+transits while preserving the physical spacing.
 
 Physical data reference: https://science.nasa.gov/moon/by-the-numbers/
