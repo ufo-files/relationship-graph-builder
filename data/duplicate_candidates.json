@@ -4,7 +4,7 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "56d479e4057f7c811201da02104024a5f62f8db7"
+    "revision": "26f31f92caf037c7c5b9f07d93cef71414b513d0"
   },
   "count": 241,
   "totalCount": 241,
@@ -814,8 +814,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2410,
-        "documentCount": 586
+        "mentions": 2415,
+        "documentCount": 588
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -830,8 +830,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2410,
-        "documentCount": 586
+        "mentions": 2415,
+        "documentCount": 588
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -846,8 +846,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2410,
-        "documentCount": 586
+        "mentions": 2415,
+        "documentCount": 588
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -862,8 +862,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2410,
-        "documentCount": 586
+        "mentions": 2415,
+        "documentCount": 588
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -939,6 +939,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Donald Kehoe",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Donald Keyhoe",
+        "mentions": 15,
+        "documentCount": 11
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Mount Rainier",
@@ -949,22 +965,6 @@
         "name": "Mount Rainer",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Donald Kehoe",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Donald Keyhoe",
-        "mentions": 14,
-        "documentCount": 10
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -1758,8 +1758,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 70,
-        "documentCount": 35
+        "mentions": 74,
+        "documentCount": 36
       },
       "right": {
         "name": "United States Navy F-",
@@ -1918,8 +1918,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2410,
-        "documentCount": 586
+        "mentions": 2415,
+        "documentCount": 588
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2299,14 +2299,14 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
+      "category": "organization",
       "left": {
-        "name": "Anatolian Agency",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "USAF Intelligence",
+        "mentions": 4,
+        "documentCount": 4
       },
       "right": {
-        "name": "Anatollan Agency",
+        "name": "AF Intelligence",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2315,14 +2315,14 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "organization",
+      "category": "government_agency",
       "left": {
-        "name": "USAF Intelligence",
+        "name": "Anatolian Agency",
         "mentions": 3,
         "documentCount": 3
       },
       "right": {
-        "name": "AF Intelligence",
+        "name": "Anatollan Agency",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2478,8 +2478,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 2998,
-        "documentCount": 286
+        "mentions": 3001,
+        "documentCount": 287
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -2830,8 +2830,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2410,
-        "documentCount": 586
+        "mentions": 2415,
+        "documentCount": 588
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -2846,8 +2846,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Intelligence Agency",
-        "mentions": 1056,
-        "documentCount": 346
+        "mentions": 1057,
+        "documentCount": 347
       },
       "right": {
         "name": "DIA Defense Intelligence Agency",
