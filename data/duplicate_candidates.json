@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "6066e2127370a02481bcf8f91b9bd3f6fcc54b9c"
+    "revision": "42899314f2a44f649002f9386b55f419338874a9"
   },
-  "count": 244,
-  "totalCount": 244,
+  "count": 247,
+  "totalCount": 247,
   "shownCount": 200,
   "candidates": [
     {
@@ -46,8 +46,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 36,
-        "documentCount": 22
+        "mentions": 37,
+        "documentCount": 23
       },
       "right": {
         "name": "ATIONAL INVESTIGATIONS COMMITTEE",
@@ -427,6 +427,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Robert Sarbacher",
+        "mentions": 17,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Robert Saarbacher",
+        "mentions": 7,
+        "documentCount": 2
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "PROJECT MOONDUST",
@@ -590,8 +606,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 179,
-        "documentCount": 95
+        "mentions": 181,
+        "documentCount": 96
       },
       "right": {
         "name": "Fright-Patterson Air Force Base",
@@ -606,8 +622,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 179,
-        "documentCount": 95
+        "mentions": 181,
+        "documentCount": 96
       },
       "right": {
         "name": "Wright-pattorson AIr Force Base",
@@ -739,8 +755,8 @@
       },
       "right": {
         "name": "Rocky Mountains",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 5,
+        "documentCount": 4
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -830,8 +846,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2677,
-        "documentCount": 611
+        "mentions": 2697,
+        "documentCount": 612
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -846,8 +862,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2677,
-        "documentCount": 611
+        "mentions": 2697,
+        "documentCount": 612
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -862,8 +878,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2677,
-        "documentCount": 611
+        "mentions": 2697,
+        "documentCount": 612
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -878,8 +894,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2677,
-        "documentCount": 611
+        "mentions": 2697,
+        "documentCount": 612
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1262,8 +1278,8 @@
       "category": "person",
       "left": {
         "name": "David Grush",
-        "mentions": 90,
-        "documentCount": 45
+        "mentions": 95,
+        "documentCount": 46
       },
       "right": {
         "name": "David Grusch",
@@ -1502,8 +1518,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 916,
-        "documentCount": 243
+        "mentions": 917,
+        "documentCount": 244
       },
       "right": {
         "name": "Department of Detense",
@@ -1790,8 +1806,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 78,
-        "documentCount": 38
+        "mentions": 80,
+        "documentCount": 39
       },
       "right": {
         "name": "United States Navy F-",
@@ -1827,6 +1843,22 @@
       },
       "right": {
         "name": "Chart Showing Balloon Lunching Sites In",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.947,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Research Institute for Advanced Study",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Research Institute for Advanced Studies",
         "mentions": 2,
         "documentCount": 2
       },
@@ -1950,8 +1982,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2677,
-        "documentCount": 611
+        "mentions": 2697,
+        "documentCount": 612
       },
       "right": {
         "name": "CENTRAL INTELUGENCE AGENCY",
@@ -2478,8 +2510,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 50,
-        "documentCount": 31
+        "mentions": 51,
+        "documentCount": 32
       },
       "right": {
         "name": "EDWARDS AIR FORCE BASE CA",
@@ -2510,8 +2542,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 3046,
-        "documentCount": 296
+        "mentions": 3050,
+        "documentCount": 297
       },
       "right": {
         "name": "FEDERAL BUREAU DE INVESTIGATION",
@@ -2526,8 +2558,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 179,
-        "documentCount": 95
+        "mentions": 181,
+        "documentCount": 96
       },
       "right": {
         "name": "Fright-Petterson Air Force Base",
@@ -2862,8 +2894,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 2677,
-        "documentCount": 611
+        "mentions": 2697,
+        "documentCount": 612
       },
       "right": {
         "name": "CIA Central Intelligence Agency",
@@ -3171,38 +3203,6 @@
       },
       "right": {
         "name": "DoD and Intelligence Community",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Base Cormander",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Base Commander",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Far Department",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Air Department",
         "mentions": 2,
         "documentCount": 2
       },
