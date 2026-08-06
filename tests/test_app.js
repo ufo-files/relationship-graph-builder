@@ -1170,7 +1170,8 @@ test("all graph types export a presentation PDF with UFO Files provenance", () =
   const naming = JSON.parse(vm.runInContext(`JSON.stringify((() => {
     state.catalog = { input: {}, generatedAt: null };
     Object.assign(state.config, { type: "network", nodeRole: "entity", categories: ["person"], title: "My Custom Investigation", titleMode: "custom" });
-    return { view: Object.fromEntries(pdfProvenance(new Date("2026-01-01T00:00:00Z"))).VIEW, title: state.config.title };
+    const provenance = Object.fromEntries(pdfProvenance(new Date("2026-01-01T00:00:00Z")));
+    return { view: provenance.VIEW, graphType: provenance["GRAPH TYPE"], title: state.config.title };
   })())`, context));
   assert.deepEqual(naming, { view: "People Relationships", title: "My Custom Investigation" });
   const properties = JSON.parse(vm.runInContext(`JSON.stringify((() => {
@@ -1187,6 +1188,7 @@ test("all graph types export a presentation PDF with UFO Files provenance", () =
   assert.equal(properties.Zoom, undefined, "inactive graph properties stay off the cover");
   assert.equal(properties["Label size"], undefined, "presentation mechanics stay off the cover");
   assert.equal(properties["Moon transit"], undefined, "animation timing stays off the cover");
+  assert.equal(Object.keys(properties).at(-1), "Entity categories");
   assert.match(html, /id="exportButton">Export PDF<\/button>/);
   assert.match(html, /vendor\/html2canvas\.min\.js[\s\S]*vendor\/jspdf\.umd\.min\.js[\s\S]*vendor\/qrcode-generator\.js[\s\S]*app\.js/);
   assert.match(source, /const UFO_FILES_URL = "https:\/\/ufo-files\.app"/);
@@ -1268,11 +1270,13 @@ test("PDF capture includes the complete stage without controls and normalizes re
   assert.match(styles, /\.pdf-cover-logo \{[^}]*width: 76px; height: 72px/);
   assert.match(styles, /\.pdf-cover-project-links \{ display: flex; gap: 18px; margin-left: auto; \}/);
   assert.match(styles, /\.pdf-cover-summary \{ display: grid; grid-template-columns: minmax\(0, 1fr\) 300px/);
+  assert.match(styles, /\.pdf-cover-metadata \{[^}]*font-size: 11px/);
   assert.match(styles, /\.pdf-cover-graph-url \{ display: grid; gap: 10px; align-content: start; \}/);
   assert.match(styles, /\.pdf-cover-graph-url a \{[^}]*font-size: 8px[^}]*word-break: break-all/);
-  assert.match(styles, /\.pdf-cover-qr \{ width: 176px; height: 176px; margin-top: 22px; justify-self: start; \}/);
+  assert.match(styles, /\.pdf-cover-qr \{ width: 176px; height: 176px; margin-top: 8px; justify-self: start; \}/);
   assert.match(styles, /\.pdf-cover-properties dl \{ display: grid; grid-template-columns: repeat\(3, minmax\(0, 1fr\)\)/);
-  assert.match(styles, /\.pdf-cover-properties dd \{[^}]*font-size: 10px/);
+  assert.match(styles, /\.pdf-cover-properties dt \{[^}]*font-size: 9px/);
+  assert.match(styles, /\.pdf-cover-properties dd \{[^}]*font-size: 11px/);
   assert.match(styles, /\.pdf-stage-provenance \{[^}]*background: #fff/);
 });
 
