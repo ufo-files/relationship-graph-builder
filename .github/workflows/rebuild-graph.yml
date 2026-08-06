@@ -44,10 +44,10 @@ permissions:
   contents: read
 
 concurrency:
-  group: relationship-graph-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'pages' }}
-  # Let an active Pages deployment finish; canceling it can leave the next
-  # deployment queued behind GitHub's cleanup of the canceled deployment.
-  cancel-in-progress: false
+  group: relationship-graph-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'rebuild' }}
+  # Machine-data can advance faster than a catalog build. Keep only the newest
+  # rebuild; Pages deployment is deliberately handled by deploy-pages.yml.
+  cancel-in-progress: true
 
 jobs:
   validate:
@@ -90,8 +90,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pages: write
-      id-token: write
     steps:
       - name: Check out builder
         uses: actions/checkout@v7
@@ -157,34 +155,3 @@ jobs:
           done
           echo "Unable to publish the refreshed graph catalog" >&2
           exit 1
-
-      - name: Stage static site
-        run: |
-          mkdir -p _site
-          cp index.html app.js map-globe.js styles.css .nojekyll _site/
-          cp -R assets data vendor _site/
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v6
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: _site
-
-  deploy:
-    if: needs.publish.result == 'success'
-    needs: publish
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
-        with:
-          timeout: 1200000
