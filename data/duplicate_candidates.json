@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "1375dc482102a416b0b22afbec25301891fc7b17"
+    "revision": "15b0db4f36c2ca4cd4653ae5b8a0660b215bdba7"
   },
-  "count": 410,
-  "totalCount": 410,
+  "count": 415,
+  "totalCount": 415,
   "shownCount": 200,
   "candidates": [
     {
@@ -843,6 +843,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Comanding Officer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Conmanding Officer",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Gerain Foundation",
@@ -851,6 +867,22 @@
       },
       "right": {
         "name": "Gersain Foundation",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Comanding Officer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Comnanding Officer",
         "mentions": 2,
         "documentCount": 2
       },
@@ -3171,38 +3203,6 @@
       },
       "right": {
         "name": "Natlonal Laboratory",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.947,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Chart Showing Balloon Launching Sites",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Chart Showing Balloon Lunching Sites In",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.947,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Research Institute for Advanced Study",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Research Institute for Advanced Studies",
         "mentions": 2,
         "documentCount": 2
       },
