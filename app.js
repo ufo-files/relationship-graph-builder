@@ -2016,6 +2016,32 @@ function pdfGraphProperties() {
 }
 
 let pdfLogoPath;
+const PDF_FONT_FAMILY = "IBM Plex Mono";
+const PDF_FONTS = [
+  { file: "IBMPlexMono-Regular.ttf", style: "normal" },
+  { file: "IBMPlexMono-Bold.ttf", style: "bold" }
+];
+
+function arrayBufferToBase64(buffer) {
+  const bytes = new Uint8Array(buffer);
+  let binary = "";
+  for (let offset = 0; offset < bytes.length; offset += 0x8000) {
+    binary += String.fromCharCode(...bytes.subarray(offset, offset + 0x8000));
+  }
+  return btoa(binary);
+}
+
+async function loadPDFFonts(pdf) {
+  const fonts = await Promise.all(PDF_FONTS.map(async font => {
+    const response = await fetch(`assets/fonts/${font.file}`);
+    if (!response.ok) throw new Error(`PDF font unavailable: ${response.status} ${response.statusText}`);
+    return { ...font, data: arrayBufferToBase64(await response.arrayBuffer()) };
+  }));
+  fonts.forEach(font => {
+    pdf.addFileToVFS(font.file, font.data);
+    pdf.addFont(font.file, PDF_FONT_FAMILY, font.style);
+  });
+}
 
 async function loadPDFLogoPath() {
   if (pdfLogoPath) return pdfLogoPath;
@@ -2041,167 +2067,214 @@ function svgPathOperations(pathData, bounds) {
   let startX = 0;
   let startY = 0;
   const number = () => Number(tokens[index++]);
-
   while (index < tokens.length) {
     if (/^[A-Za-z]$/.test(tokens[index])) command = tokens[index++].toUpperCase();
     if (command === "M") {
-      currentX = number(); currentY = number();
-      startX = currentX; startY = currentY;
-      operations.push({ op: "m", c: point(currentX, currentY) });
-      command = "L";
+      currentX = number(); currentY = number(); startX = currentX; startY = currentY;
+      operations.push({ op: "m", c: point(currentX, currentY) }); command = "L";
     } else if (command === "L") {
-      currentX = number(); currentY = number();
-      operations.push({ op: "l", c: point(currentX, currentY) });
+      currentX = number(); currentY = number(); operations.push({ op: "l", c: point(currentX, currentY) });
     } else if (command === "H") {
-      currentX = number();
-      operations.push({ op: "l", c: point(currentX, currentY) });
+      currentX = number(); operations.push({ op: "l", c: point(currentX, currentY) });
     } else if (command === "V") {
-      currentY = number();
-      operations.push({ op: "l", c: point(currentX, currentY) });
+      currentY = number(); operations.push({ op: "l", c: point(currentX, currentY) });
     } else if (command === "C") {
-      const x1 = number(); const y1 = number();
-      const x2 = number(); const y2 = number();
-      currentX = number(); currentY = number();
+      const x1 = number(), y1 = number(), x2 = number(), y2 = number(); currentX = number(); currentY = number();
       operations.push({ op: "c", c: [...point(x1, y1), ...point(x2, y2), ...point(currentX, currentY)] });
     } else if (command === "Z") {
-      operations.push({ op: "h" });
-      currentX = startX; currentY = startY;
-      command = "";
-    } else {
-      throw new Error(`Unsupported logo path command: ${command || tokens[index]}`);
-    }
+      operations.push({ op: "h" }); currentX = startX; currentY = startY; command = "";
+    } else throw new Error(`Unsupported logo path command: ${command || tokens[index]}`);
   }
   return { operations, strokeWidth: 6 * scale };
 }
 
-async function capturePDFCover(exportedAt, deepLink, hasQRCode = true) {
-  const cover = document.createElement("section");
-  cover.className = "pdf-cover-render";
-  cover.setAttribute("aria-hidden", "true");
-  const metadata = pdfProvenance(exportedAt).map(([name, value]) => `<dt>${escapeHTML(name)}</dt><dd>${escapeHTML(value)}</dd>`).join("");
-  const properties = pdfGraphProperties().map(([name, value]) => `<div><dt>${escapeHTML(name)}</dt><dd>${escapeHTML(value)}</dd></div>`).join("");
-  const qr = hasQRCode ? `<span class="pdf-cover-qr"></span>` : `<span class="pdf-cover-qr pdf-cover-qr-unavailable">QR unavailable for this URL</span>`;
-  cover.innerHTML = `<header class="pdf-cover-brand"><span class="pdf-cover-logo"></span><div><strong>UFO Files</strong><span>Relationship Graph Export</span></div><nav class="pdf-cover-project-links"><a href="${UFO_FILES_URL}">ufo-files.app</a><a href="${UFO_FILES_GITHUB_URL}">github.com/ufo-files</a></nav></header><hr class="pdf-cover-rule"><h1 class="pdf-cover-title">${escapeHTML(state.config.title)}</h1><div class="pdf-cover-summary"><dl class="pdf-cover-metadata">${metadata}</dl><section class="pdf-cover-graph-url"><h2>Graph URL</h2><a href="${escapeHTML(deepLink)}">${escapeHTML(deepLink)}</a>${qr}</section></div><section class="pdf-cover-properties"><h2>Graph properties</h2><dl>${properties}</dl></section><p class="pdf-cover-footer">Exported by UFO Files</p>`;
-  document.body.append(cover);
-  try {
-    await document.fonts.ready;
-    const bounds = cover.getBoundingClientRect();
-    const logoRect = cover.querySelector(".pdf-cover-logo").getBoundingClientRect();
-    const qrRect = cover.querySelector(".pdf-cover-qr").getBoundingClientRect();
-    const links = [...cover.querySelectorAll("a")].map(link => {
-      const rect = link.getBoundingClientRect();
-      return { url: link.href, x: rect.left - bounds.left, y: rect.top - bounds.top, width: rect.width, height: rect.height };
-    });
-    const canvas = await window.html2canvas(cover, {
-      backgroundColor: "#fff",
-      logging: false,
-      scale: Math.min(2, window.devicePixelRatio || 1.5),
-      useCORS: false
-    });
-    const logo = { x: logoRect.left - bounds.left, y: logoRect.top - bounds.top, width: logoRect.width, height: logoRect.height };
-    const qr = { x: qrRect.left - bounds.left, y: qrRect.top - bounds.top, width: qrRect.width, height: qrRect.height };
-    return { canvas, links, logo, qr, width: bounds.width, height: bounds.height };
-  } finally {
-    cover.remove();
-  }
+function setPDFFont(pdf, size, bold = false, color = 17) {
+  pdf.setFont(PDF_FONT_FAMILY, bold ? "bold" : "normal");
+  pdf.setFontSize(size);
+  pdf.setTextColor(color);
+}
+
+function pdfVectorChart() {
+  const source = $("#chart");
+  const chart = source.cloneNode(true);
+  const sourceNodes = [source, ...source.querySelectorAll("*")];
+  const chartNodes = [chart, ...chart.querySelectorAll("*")];
+  const styleProperties = [
+    "color", "fill", "fill-opacity", "opacity", "stroke", "stroke-dasharray",
+    "stroke-dashoffset", "stroke-linecap", "stroke-linejoin", "stroke-miterlimit",
+    "stroke-opacity", "stroke-width", "font-size", "font-style", "font-weight",
+    "letter-spacing", "paint-order", "text-anchor", "visibility"
+  ];
+  sourceNodes.forEach((node, index) => {
+    const style = getComputedStyle(node);
+    styleProperties.forEach(property => chartNodes[index].style.setProperty(property, style.getPropertyValue(property)));
+  });
+  chart.querySelectorAll("text").forEach(node => {
+    node.style.setProperty("font-family", PDF_FONT_FAMILY);
+    node.style.setProperty("font-weight", Number.parseInt(node.style.fontWeight, 10) >= 600 ? "bold" : "normal");
+    if (node.classList.contains("node-label")) node.style.setProperty("stroke", "none");
+  });
+  return chart;
+}
+
+function truncatePDFText(pdf, value, width) {
+  const text = String(value ?? "");
+  if (pdf.getTextWidth(text) <= width) return text;
+  let shortened = text;
+  while (shortened.length && pdf.getTextWidth(`${shortened}…`) > width) shortened = shortened.slice(0, -1);
+  return `${shortened}…`;
 }
 
 function drawPDFQRCode(pdf, code, bounds) {
-  const quietZone = 4;
   const modules = code.getModuleCount();
   const cell = Math.min(bounds.width, bounds.height) / modules;
-  const size = cell * (modules + quietZone * 2);
-  const x = bounds.x - quietZone * cell;
-  const y = bounds.y - quietZone * cell;
-  pdf.setFillColor(255);
-  pdf.rect(x, y, size, size, "F");
-  pdf.setFillColor(0);
+  pdf.setFillColor(255); pdf.rect(bounds.x, bounds.y, bounds.width, bounds.height, "F"); pdf.setFillColor(0);
   for (let row = 0; row < modules; row += 1) {
     let start = -1;
     for (let col = 0; col <= modules; col += 1) {
       const dark = col < modules && code.isDark(row, col);
       if (dark && start < 0) start = col;
-      if (!dark && start >= 0) {
-        pdf.rect(x + (start + quietZone) * cell, y + (row + quietZone) * cell, (col - start) * cell, cell, "F");
-        start = -1;
-      }
+      if (!dark && start >= 0) { pdf.rect(bounds.x + start * cell, bounds.y + row * cell, (col - start) * cell, cell, "F"); start = -1; }
     }
   }
 }
 
-function addPDFCover(pdf, cover, logoPath, code, deepLink) {
-  const pageWidth = pdf.internal.pageSize.getWidth();
-  const pageHeight = pdf.internal.pageSize.getHeight();
-  pdf.addImage(cover.canvas.toDataURL("image/jpeg", .98), "JPEG", 0, 0, pageWidth, pageHeight, undefined, "FAST");
-  const scaleX = pageWidth / cover.width;
-  const scaleY = pageHeight / cover.height;
-  const logoBounds = { x: cover.logo.x * scaleX, y: cover.logo.y * scaleY, width: cover.logo.width * scaleX, height: cover.logo.height * scaleY };
-  const logo = svgPathOperations(logoPath, logoBounds);
-  pdf.saveGraphicsState();
-  pdf.setFillColor(0);
-  pdf.setDrawColor(0);
-  pdf.setLineWidth(logo.strokeWidth);
-  pdf.path(logo.operations);
-  pdf.fillStroke();
-  pdf.restoreGraphicsState();
-  if (code) {
-    const qrBounds = { x: cover.qr.x * scaleX, y: cover.qr.y * scaleY, width: cover.qr.width * scaleX, height: cover.qr.height * scaleY };
-    drawPDFQRCode(pdf, code, qrBounds);
-    pdf.link(qrBounds.x, qrBounds.y, qrBounds.width, qrBounds.height, { url: deepLink });
+function addPDFCover(pdf, exportedAt, deepLink, code, logoPath) {
+  pdf.setFillColor(255); pdf.rect(0, 0, 612, 792, "F"); pdf.setDrawColor(17); pdf.setLineWidth(.75); pdf.rect(22.5, 22.5, 567, 747);
+  const logo = svgPathOperations(logoPath, { x: 48, y: 47, width: 57, height: 54 });
+  pdf.setFillColor(0); pdf.setLineWidth(logo.strokeWidth); pdf.path(logo.operations); pdf.fillStroke();
+  setPDFFont(pdf, 13, true); pdf.text("UFO FILES", 112, 65);
+  setPDFFont(pdf, 9); pdf.text("RELATIONSHIP GRAPH EXPORT", 112, 81);
+  setPDFFont(pdf, 7.5, true); pdf.textWithLink("ufo-files.app", 402, 68, { url: UFO_FILES_URL }); pdf.textWithLink("github.com/ufo-files", 474, 68, { url: UFO_FILES_GITHUB_URL });
+  pdf.setLineWidth(1.5); pdf.line(48, 116, 564, 116);
+  setPDFFont(pdf, 25.5); const titleLines = pdf.splitTextToSize(state.config.title.toUpperCase(), 516).slice(0, 2); pdf.text(titleLines, 48, 157, { lineHeightFactor: 1.15 });
+  const summaryY = 199 + Math.max(0, titleLines.length - 1) * 27;
+  const metadata = pdfProvenance(exportedAt);
+  metadata.forEach(([name, value], index) => {
+    const y = summaryY + index * 22;
+    setPDFFont(pdf, 8.25, true); pdf.text(name, 48, y);
+    setPDFFont(pdf, 8.25); pdf.text(pdf.splitTextToSize(String(value), 168).slice(0, 2), 153, y, { lineHeightFactor: 1.25 });
+  });
+  const urlX = 339;
+  setPDFFont(pdf, 8.25, true); pdf.text("GRAPH URL", urlX, summaryY);
+  setPDFFont(pdf, 8.25, true); const urlLines = pdf.splitTextToSize(deepLink, 225); pdf.textWithLink(urlLines[0], urlX, summaryY + 20, { url: deepLink });
+  urlLines.slice(1).forEach((line, index) => { pdf.textWithLink(line, urlX, summaryY + 20 + (index + 1) * 10, { url: deepLink }); });
+  const qrY = summaryY + 42 + Math.max(0, urlLines.length - 1) * 10;
+  if (code) { const qrBounds = { x: urlX, y: qrY, width: 132, height: 132 }; drawPDFQRCode(pdf, code, qrBounds); pdf.link(qrBounds.x, qrBounds.y, qrBounds.width, qrBounds.height, { url: deepLink }); }
+  else { setPDFFont(pdf, 8.25, false, 85); pdf.text("QR unavailable for this URL", urlX, qrY + 16); }
+
+  const propertiesY = Math.max(414, summaryY + 190);
+  pdf.setDrawColor(160); pdf.setLineWidth(.5); pdf.line(48, propertiesY, 564, propertiesY);
+  setPDFFont(pdf, 8.25, true); pdf.text("GRAPH PROPERTIES", 48, propertiesY + 23);
+  const properties = pdfGraphProperties();
+  const columns = [48, 226, 404];
+  let rowY = propertiesY + 44;
+  for (let index = 0; index < properties.length; index += 3) {
+    const row = properties.slice(index, index + 3);
+    const lineCounts = row.map(([, value]) => pdf.splitTextToSize(String(value), 154).length);
+    row.forEach(([name, value], column) => {
+      setPDFFont(pdf, 6.75, true, 85); pdf.text(name.toUpperCase(), columns[column], rowY);
+      setPDFFont(pdf, 8.25); pdf.text(pdf.splitTextToSize(String(value), 154), columns[column], rowY + 12, { lineHeightFactor: 1.2 });
+    });
+    rowY += 27 + Math.max(...lineCounts) * 9;
   }
-  cover.links.forEach(link => pdf.link(link.x * scaleX, link.y * scaleY, link.width * scaleX, link.height * scaleY, { url: link.url }));
+  setPDFFont(pdf, 7.5); pdf.text("Exported by UFO Files", 48, 742);
 }
 
-async function capturePresentationView(exportedAt) {
+function drawPDFLegend(pdf, y, maxX = 564) {
+  const items = [...document.querySelectorAll("#legend .legend-item")].map(item => item.textContent.trim()).filter(Boolean);
+  if (!items.length) return y;
+  let x = 48, lineY = y;
+  items.forEach((item, index) => {
+    setPDFFont(pdf, 7.5); const width = Math.min(150, pdf.getTextWidth(item) + 18);
+    if (x + width > maxX) { x = 48; lineY += 16; }
+    const shade = 225 - index * 26; pdf.setFillColor(Math.max(17, shade)); pdf.setDrawColor(17); pdf.rect(x, lineY - 7, 8, 8, "FD");
+    pdf.text(truncatePDFText(pdf, item, width - 14), x + 13, lineY); x += width;
+  });
+  return lineY;
+}
+
+function drawPDFTableView(pdf, bounds) {
+  const table = document.querySelector("#tableView table");
+  setPDFFont(pdf, 7.5);
+  if (table) {
+    const headers = [...table.querySelectorAll("thead th")].map(cell => cell.textContent.trim());
+    const rows = [...table.querySelectorAll("tbody tr")];
+    const columnWidth = bounds.width / Math.max(1, headers.length);
+    const rowHeight = 22;
+    pdf.setFillColor(236); pdf.rect(bounds.x, bounds.y, bounds.width, rowHeight, "F");
+    headers.forEach((header, index) => { setPDFFont(pdf, 7, true, 85); pdf.text(truncatePDFText(pdf, header.toUpperCase(), columnWidth - 10), bounds.x + index * columnWidth + 5, bounds.y + 14); });
+    rows.slice(0, Math.floor((bounds.height - rowHeight) / rowHeight)).forEach((row, rowIndex) => {
+      const y = bounds.y + (rowIndex + 1) * rowHeight; pdf.setDrawColor(210); pdf.line(bounds.x, y, bounds.x + bounds.width, y);
+      [...row.cells].forEach((cell, index) => { setPDFFont(pdf, 7.5); pdf.text(truncatePDFText(pdf, cell.textContent.trim(), columnWidth - 10), bounds.x + index * columnWidth + 5, y + 14); });
+    });
+    return;
+  }
+  const cards = [...document.querySelectorAll("#tableView .document-card")];
+  const columns = 2, gap = 8, cardWidth = (bounds.width - gap) / columns, cardHeight = 76;
+  cards.slice(0, columns * Math.floor(bounds.height / (cardHeight + gap))).forEach((card, index) => {
+    const x = bounds.x + (index % columns) * (cardWidth + gap), y = bounds.y + Math.floor(index / columns) * (cardHeight + gap);
+    pdf.setDrawColor(160); pdf.rect(x, y, cardWidth, cardHeight);
+    setPDFFont(pdf, 8, true); pdf.text(pdf.splitTextToSize(card.querySelector("strong")?.textContent || "Document", cardWidth - 12).slice(0, 2), x + 6, y + 14, { lineHeightFactor: 1.15 });
+    setPDFFont(pdf, 6.75, false, 85); pdf.text(truncatePDFText(pdf, card.querySelector("small")?.textContent || "", cardWidth - 12), x + 6, y + 38);
+    pdf.text(truncatePDFText(pdf, card.querySelector(".document-card-meta")?.textContent || "", cardWidth - 12), x + 6, y + 56);
+  });
+}
+
+async function addPDFGraphPage(pdf, exportedAt) {
   const stage = document.querySelector(".stage");
   const globe = state.config.type === "map" ? window.ufoGlobe : null;
   const wasPlaying = Boolean(globe?.autoRotate);
   if (wasPlaying) globe.setPlaying(false);
   const restoreRelationships = globe?.prepareExport?.() || (() => {});
   const metadata = new Map(pdfProvenance(exportedAt));
-  const provenance = document.createElement("div");
-  provenance.className = "pdf-stage-provenance";
-  provenance.innerHTML = `<strong>UFO Files · ${UFO_FILES_URL}</strong><span>Catalog ${escapeHTML(metadata.get("CATALOG GENERATED"))}</span><span>Source ${escapeHTML(metadata.get("SOURCE OF TRUTH"))}@${escapeHTML(metadata.get("SOURCE REVISION"))}</span><span>Exported ${escapeHTML(metadata.get("EXPORTED"))}</span>`;
-  stage.append(provenance);
   stage.classList.add("pdf-exporting");
   try {
     await document.fonts.ready;
     await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-    return await window.html2canvas(stage, {
-      backgroundColor: "#fff",
-      logging: false,
-      scale: Math.min(2, window.devicePixelRatio || 1.5),
-      useCORS: false,
-      onclone: clonedDocument => clonedDocument.querySelector(".stage-tools")?.remove()
-    });
+    const stageRect = stage.getBoundingClientRect();
+    const landscape = stageRect.width / stageRect.height > 1.25;
+    pdf.addPage("letter", landscape ? "landscape" : "portrait");
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+    pdf.setFillColor(255); pdf.rect(0, 0, pageWidth, pageHeight, "F"); pdf.setDrawColor(17); pdf.setLineWidth(.75); pdf.rect(24, 24, pageWidth - 48, pageHeight - 48);
+    setPDFFont(pdf, 8.25, true); pdf.text($("#graphKicker").textContent.toUpperCase(), 45, 52);
+    setPDFFont(pdf, 18); pdf.text(truncatePDFText(pdf, state.config.title.toUpperCase(), pageWidth - 90), 45, 76);
+    setPDFFont(pdf, 8.25, false, 85); pdf.text(truncatePDFText(pdf, $("#graphSubtitle").textContent, pageWidth - 90), 45, 95);
+    const provenanceY = pageHeight - 66;
+    const chartBounds = { x: 45, y: 112, width: pageWidth - 90, height: provenanceY - 190 };
+    pdf.setDrawColor(17); pdf.setLineWidth(.75); pdf.roundedRect(chartBounds.x, chartBounds.y, chartBounds.width, chartBounds.height, 6, 6);
+    const inset = 2;
+    if (!$("#chart").hasAttribute("hidden") && $("#chart").children.length) {
+      await pdf.svg(pdfVectorChart(), { x: chartBounds.x + inset, y: chartBounds.y + inset, width: chartBounds.width - inset * 2, height: chartBounds.height - inset * 2 });
+    } else if (!$("#mapView").hidden) {
+      const canvas = $("#globeCanvas");
+      pdf.addImage(canvas.toDataURL("image/png"), "PNG", chartBounds.x + 1, chartBounds.y + 1, chartBounds.width - 2, chartBounds.height - 2, undefined, "FAST");
+      const mapRect = $("#mapView").getBoundingClientRect();
+      [...document.querySelectorAll("#globeLabels .globe-label")].forEach(labelNode => {
+        const rect = labelNode.getBoundingClientRect();
+        const x = chartBounds.x + (rect.left - mapRect.left) / mapRect.width * chartBounds.width;
+        const y = chartBounds.y + (rect.top - mapRect.top) / mapRect.height * chartBounds.height;
+        setPDFFont(pdf, 7, true); pdf.text(truncatePDFText(pdf, labelNode.textContent, 100), x, y + 7);
+      });
+    } else drawPDFTableView(pdf, { x: chartBounds.x + 1, y: chartBounds.y + 1, width: chartBounds.width - 2, height: chartBounds.height - 2 });
+    const legendY = drawPDFLegend(pdf, chartBounds.y + chartBounds.height + 24, pageWidth - 48);
+    pdf.setDrawColor(160); pdf.line(40, legendY + 16, pageWidth - 40, legendY + 16);
+    const summaryWidth = (pageWidth - 110) / 2;
+    setPDFFont(pdf, 7.5, false, 85); pdf.text(truncatePDFText(pdf, $("#resultSummary").textContent, summaryWidth), 45, legendY + 34); pdf.text(truncatePDFText(pdf, $("#policySummary").textContent, summaryWidth), pageWidth - 45, legendY + 34, { align: "right" });
+    pdf.setDrawColor(160); pdf.line(24, provenanceY - 10, pageWidth - 24, provenanceY - 10);
+    setPDFFont(pdf, 7.25, true); pdf.text(`UFO Files · ${UFO_FILES_URL}`, 45, provenanceY + 11);
+    setPDFFont(pdf, 6.75, false, 85); pdf.text(`Catalog ${metadata.get("CATALOG GENERATED")}`, 225, provenanceY); pdf.text(`Source ${metadata.get("SOURCE OF TRUTH")}@${metadata.get("SOURCE REVISION")}`, 225, provenanceY + 10); pdf.text(`Exported ${metadata.get("EXPORTED")}`, 225, provenanceY + 20);
   } finally {
     stage.classList.remove("pdf-exporting");
-    provenance.remove();
     restoreRelationships();
     if (wasPlaying) globe.setPlaying(true);
   }
 }
 
-function addPresentationPage(pdf, canvas) {
-  const landscape = canvas.width / canvas.height > 1.25;
-  pdf.addPage("letter", landscape ? "landscape" : "portrait");
-  const pageWidth = pdf.internal.pageSize.getWidth();
-  const pageHeight = pdf.internal.pageSize.getHeight();
-  const margin = 24;
-  const scale = Math.min((pageWidth - margin * 2) / canvas.width, (pageHeight - margin * 2) / canvas.height);
-  const width = canvas.width * scale;
-  const height = canvas.height * scale;
-  const x = (pageWidth - width) / 2;
-  const y = (pageHeight - height) / 2;
-  pdf.addImage(canvas.toDataURL("image/jpeg", .98), "JPEG", x, y, width, height, undefined, "FAST");
-  pdf.setDrawColor(17);
-  pdf.setLineWidth(.75);
-  pdf.rect(x, y, width, height);
-}
-
 async function exportCurrent() {
   const button = $("#exportButton");
-  if (!window.html2canvas || !window.jspdf?.jsPDF) return toast("PDF export tools unavailable");
+  if (!window.jspdf?.jsPDF || !window.svg2pdf) return toast("PDF export tools unavailable");
   button.disabled = true;
   button.setAttribute("aria-busy", "true");
   button.textContent = "Building PDF…";
@@ -2210,19 +2283,12 @@ async function exportCurrent() {
     const deepLink = currentGraphURL();
     const code = graphQRCode(deepLink);
     const logoPath = await loadPDFLogoPath();
-    const cover = await capturePDFCover(exportedAt, deepLink, Boolean(code));
-    const canvas = await capturePresentationView(exportedAt);
     const pdf = new window.jspdf.jsPDF({ orientation: "portrait", unit: "pt", format: "letter", compress: true });
-    pdf.setProperties({
-      title: state.config.title,
-      subject: "UFO Files relationship graph export",
-      author: "UFO Files",
-      creator: "UFO Files Relationship Graph Builder",
-      keywords: "UFO Files, relationship graph, machine data"
-    });
+    await loadPDFFonts(pdf);
+    pdf.setProperties({ title: state.config.title, subject: "UFO Files relationship graph export", author: "UFO Files", creator: "UFO Files Relationship Graph Builder", keywords: "UFO Files, relationship graph, machine data" });
     pdf.setCreationDate(exportedAt);
-    addPDFCover(pdf, cover, logoPath, code, deepLink);
-    addPresentationPage(pdf, canvas);
+    addPDFCover(pdf, exportedAt, deepLink, code, logoPath);
+    await addPDFGraphPage(pdf, exportedAt);
     pdf.save(pdfFilename(state.config.title));
     toast("Presentation PDF saved");
   } catch (error) {
