@@ -2,7 +2,7 @@ name: Refresh README graph screenshots
 
 on:
   workflow_run:
-    workflows: ["Rebuild graph from machine-data"]
+    workflows: ["Deploy latest graph to Pages"]
     types: [completed]
     branches: [main]
   workflow_dispatch:
