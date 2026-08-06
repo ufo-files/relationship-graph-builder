@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "178b485cdcb1993e193901ea3088865e4b5d817f"
+    "revision": "6c0adce23f0ad04c27d704f73b8901a88816e63b"
   },
-  "count": 375,
-  "totalCount": 375,
+  "count": 376,
+  "totalCount": 376,
   "shownCount": 200,
   "candidates": [
     {
@@ -350,8 +350,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1133,
-        "documentCount": 311
+        "mentions": 1134,
+        "documentCount": 312
       },
       "right": {
         "name": "Departments of Defense",
@@ -403,8 +403,8 @@
       },
       "right": {
         "name": "RESEARCH ORGANIZATION",
-        "mentions": 6,
-        "documentCount": 5
+        "mentions": 7,
+        "documentCount": 6
       },
       "similarity": 0.977,
       "reason": "similar name",
@@ -1819,6 +1819,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Range Fouler",
+        "mentions": 13,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Range Foulers",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Bureau Agents",
@@ -2478,8 +2494,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1133,
-        "documentCount": 311
+        "mentions": 1134,
+        "documentCount": 312
       },
       "right": {
         "name": "Department of Detense",
@@ -3189,22 +3205,6 @@
         "name": "STAFF COMMUNICATUNS OFFICE",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.943,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "CENTRAL INTELLIGENCE ASENCY",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "CENTRAL INTELLIGENCE AGENC",
-        "mentions": 5,
-        "documentCount": 5
       },
       "similarity": 0.943,
       "reason": "similar name",
