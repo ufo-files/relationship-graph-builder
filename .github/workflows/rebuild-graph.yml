@@ -112,10 +112,13 @@ jobs:
           ref: ${{ steps.upstream.outputs.revision }}
           path: _machine-data
 
-      - name: Set up Python
-        uses: actions/setup-python@v7
+      - name: Verify system Python
+        run: python3 --version
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
         with:
-          python-version: "3.13"
+          node-version: "24"
 
       - name: Build catalog
         env:
