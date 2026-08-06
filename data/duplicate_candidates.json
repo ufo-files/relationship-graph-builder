@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "4a4306e519f16de0356fbb6c52dda058b93664a3"
+    "revision": "1375dc482102a416b0b22afbec25301891fc7b17"
   },
-  "count": 406,
-  "totalCount": 406,
+  "count": 410,
+  "totalCount": 410,
   "shownCount": 200,
   "candidates": [
     {
@@ -222,8 +222,8 @@
       "category": "organization",
       "left": {
         "name": "National Institutes of Health",
-        "mentions": 10,
-        "documentCount": 8
+        "mentions": 12,
+        "documentCount": 9
       },
       "right": {
         "name": "National Institute of Health",
@@ -270,8 +270,8 @@
       "category": "government_agency",
       "left": {
         "name": "U.S. Department of Justice",
-        "mentions": 433,
-        "documentCount": 112
+        "mentions": 435,
+        "documentCount": 113
       },
       "right": {
         "name": "US Department of Justice",
@@ -398,8 +398,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1211,
-        "documentCount": 328
+        "mentions": 1223,
+        "documentCount": 329
       },
       "right": {
         "name": "Departments of Defense",
@@ -483,8 +483,8 @@
       },
       "right": {
         "name": "Environment and Natural Resources Division",
-        "mentions": 4,
-        "documentCount": 2
+        "mentions": 6,
+        "documentCount": 3
       },
       "similarity": 0.977,
       "reason": "similar name",
@@ -2158,8 +2158,8 @@
       "category": "organization",
       "left": {
         "name": "University of California",
-        "mentions": 52,
-        "documentCount": 33
+        "mentions": 60,
+        "documentCount": 34
       },
       "right": {
         "name": "University of Californla's",
@@ -2574,8 +2574,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 172,
-        "documentCount": 73
+        "mentions": 174,
+        "documentCount": 74
       },
       "right": {
         "name": "University of Colcrado",
@@ -2699,11 +2699,27 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "The National Aeronautics and Space Administration",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "National Aeronautics & Space Administration",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.953,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1211,
-        "documentCount": 328
+        "mentions": 1223,
+        "documentCount": 329
       },
       "right": {
         "name": "Department of Detense",
@@ -2804,6 +2820,22 @@
       "right": {
         "name": "Wrighat-Patterson Air Force Base",
         "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "University of Arkansas",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "University of Kansas",
+        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.952,
@@ -3175,38 +3207,6 @@
         "documentCount": 2
       },
       "similarity": 0.947,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of Stale",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Department of Staie",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.947,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "NASA National Aeronautic and Space Administration",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "National Aeronautic and Space Administration",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "similarity": 0.946,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     }
