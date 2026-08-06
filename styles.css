@@ -86,6 +86,7 @@ h1, h2, h3, p { margin-top: 0; }
 .stage-header h2:hover { border-bottom-color: var(--line-strong); }
 .stage-header p:last-child { color: var(--muted); font-size: 12px; margin-bottom: 0; }
 .stage-tools { display: flex; align-items: center; gap: 7px; }
+.stage.pdf-exporting .stage-tools { visibility: hidden; }
 .fullscreen-button { display: grid; place-items: center; padding: 0; }
 .fullscreen-button svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: square; }
 .fullscreen-collapse-icon { display: none; }
@@ -161,6 +162,10 @@ h1, h2, h3, p { margin-top: 0; }
 .scatter-secondary-node { fill: var(--paper); fill-opacity: .72; stroke: var(--ink); stroke-width: 1; opacity: .45; }
 .scatter-relationship-layer.has-focus .scatter-secondary-node { opacity: .08; }
 .scatter-relationship-layer.has-focus .scatter-secondary-node.is-focused { opacity: .85; }
+.stage.pdf-exporting .scatter-relationship-line { opacity: .07 !important; }
+.stage.pdf-exporting .scatter-relationship-layer.strength-medium .scatter-relationship-line { opacity: .14 !important; }
+.stage.pdf-exporting .scatter-relationship-layer.strength-strong .scatter-relationship-line { opacity: .24 !important; }
+.stage.pdf-exporting .scatter-secondary-node { opacity: .45 !important; }
 .network-relationship-line { stroke: var(--ink); opacity: .07; transition: opacity .15s; }
 .network-relationship-line:hover { opacity: .8; }
 .network-relationship-layer.has-focus .network-relationship-line { opacity: .025; }

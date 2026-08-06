@@ -1776,7 +1776,7 @@ function renderGraph() {
   $("#resetZoom").hidden = !["network", "map"].includes(state.config.type);
   $("#mapAnimationButton").hidden = state.config.type !== "map";
   if (state.config.type === "map") syncMapAnimationButton();
-  $("#exportButton").textContent = ["table", "document"].includes(state.config.type) ? "Export CSV" : state.config.type === "map" ? "Export PNG" : "Export SVG";
+  $("#exportButton").textContent = "Export PDF";
   const descriptions = {
     network: state.config.nodeRole === "collection" ? "Collections connected by shared published entities." : "Evidence-backed connections across the local archive.", scatter: `${label(state.config.x)} compared with ${label(state.config.y)}.`,
     map: `Geocoded location entities sized by ${label(state.config.size)}.`,
@@ -1897,38 +1897,145 @@ function inspectMatrix(item) {
   showInspector(item.category, `${item.source} × ${label(item.category)}`, [[item.value, "entities"], [new Set(entities.flatMap(entity => entity.documentIds)).size, "documents"]], entities.slice(0, 4).flatMap(entity => entity.evidence.slice(0, 1)), "Distinct published entities with evidence in this collection.");
 }
 
-function exportSVG() {
-  const svg = $("#chart").cloneNode(true);
-  svg.setAttribute("xmlns", NS);
-  svg.insertAdjacentHTML("afterbegin", `<style>.chart-label{fill:#111;font-family:"SF Mono","IBM Plex Mono",ui-monospace,monospace;font-size:var(--graph-label-size,12px);font-weight:650;paint-order:stroke;stroke:#f6f5ef;stroke-width:3px;stroke-linejoin:round}.axis-label{fill:#555;font:11px "SF Mono",ui-monospace,monospace}.grid-line{stroke:#111;stroke-opacity:.12}.network-relationship-line{stroke:#111;opacity:.07}</style>`);
-  const blob = new Blob([new XMLSerializer().serializeToString(svg)], { type: "image/svg+xml" });
-  const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = `${state.config.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}.svg`; link.click(); URL.revokeObjectURL(link.href);
+const UFO_FILES_URL = "https://ufo-files.app";
+const UFO_FILES_GITHUB_URL = "https://github.com/ufo-files";
+
+function pdfFilename(title) {
+  return `${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "ufo-files-graph"}.pdf`;
 }
 
-function exportCSV() {
-  const fields = state.config.tableColumns.filter(field => TABLE_FIELDS[state.config.tableRole].includes(field));
-  const quote = value => `"${String(value).replaceAll('"', '""')}"`;
-  const csv = [fields.map(field => quote(label(field))).join(","), ...tableRecords().map(item => fields.map(field => quote(tableDisplayValue(item, field))).join(","))].join("\n");
-  const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
-  const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = `${state.config.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}.csv`; link.click(); URL.revokeObjectURL(link.href);
+function addPDFCover(pdf, exportedAt) {
+  const input = state.catalog.input || {};
+  const margin = 48;
+  const pageWidth = pdf.internal.pageSize.getWidth();
+  const pageHeight = pdf.internal.pageSize.getHeight();
+  const revision = input.revision || "Not recorded";
+  const repository = input.repository || "ufo-files/machine-data";
+  const generatedAt = state.catalog.generatedAt ? new Date(state.catalog.generatedAt).toISOString() : "Not recorded";
+  const metadata = [
+    ["VIEW", state.config.title],
+    ["GRAPH TYPE", label(state.config.type)],
+    ["EXPORTED", exportedAt.toISOString()],
+    ["CATALOG GENERATED", generatedAt],
+    ["SOURCE OF TRUTH", repository],
+    ["SOURCE REVISION", revision]
+  ];
+
+  pdf.setDrawColor(17);
+  pdf.setLineWidth(.75);
+  pdf.rect(30, 30, pageWidth - 60, pageHeight - 60);
+  pdf.setTextColor(17);
+  pdf.setFont("courier", "bold");
+  pdf.setFontSize(11);
+  pdf.text("UFO FILES", margin, 70);
+  pdf.setFont("courier", "normal");
+  pdf.setFontSize(9);
+  pdf.text("RELATIONSHIP GRAPH EXPORT", margin, 88);
+  pdf.setLineWidth(1);
+  pdf.line(margin, 106, pageWidth - margin, 106);
+
+  pdf.setFontSize(9);
+  pdf.text("PRESENTATION-READY DATA VIEW", margin, 142);
+  pdf.setFont("courier", "bold");
+  pdf.setFontSize(24);
+  const titleLines = pdf.splitTextToSize(state.config.title.toUpperCase(), pageWidth - margin * 2);
+  pdf.text(titleLines, margin, 178, { lineHeightFactor: 1.12 });
+  let y = 178 + titleLines.length * 27 + 34;
+
+  metadata.forEach(([name, value]) => {
+    pdf.setFont("courier", "bold");
+    pdf.setFontSize(8);
+    pdf.text(name, margin, y);
+    pdf.setFont("courier", "normal");
+    pdf.setFontSize(9);
+    const valueLines = pdf.splitTextToSize(String(value), pageWidth - margin * 2 - 126);
+    pdf.text(valueLines, margin + 126, y);
+    y += Math.max(24, valueLines.length * 11 + 10);
+  });
+
+  pdf.setFont("courier", "normal");
+  pdf.setFontSize(9);
+  const note = "Generated from the published UFO Files catalog. Source transcripts remain unchanged; graph marks and relationships reflect the evidence policy printed with the view.";
+  pdf.text(pdf.splitTextToSize(note, pageWidth - margin * 2), margin, pageHeight - 180, { lineHeightFactor: 1.35 });
+  pdf.setFont("courier", "bold");
+  pdf.textWithLink(UFO_FILES_URL, margin, pageHeight - 112, { url: UFO_FILES_URL });
+  pdf.textWithLink(UFO_FILES_GITHUB_URL, margin, pageHeight - 91, { url: UFO_FILES_GITHUB_URL });
+  pdf.setFont("courier", "normal");
+  pdf.setFontSize(7);
+  pdf.text("Exported by UFO Files", margin, pageHeight - 54);
 }
 
-function exportDocumentCSV() {
-  const query = state.config.documentSearch.trim().toLocaleLowerCase();
-  const documents = state.catalog.documents.filter(document => sourceMatches(document.source) && (!query
-    || [document.title, document.path, document.source, document.format, document.engine].some(value => String(value || "").toLocaleLowerCase().includes(query))));
-  const fields = ["title", "source", "format", "words", "path"];
-  const quote = value => `"${String(value ?? "").replaceAll('"', '""')}"`;
-  const csv = [fields.map(field => quote(label(field))).join(","), ...documents.map(document => fields.map(field => quote(document[field])).join(","))].join("\n");
-  const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
-  const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = "document-search-results.csv"; link.click(); URL.revokeObjectURL(link.href);
+async function capturePresentationView() {
+  const stage = document.querySelector(".stage");
+  const globe = state.config.type === "map" ? window.ufoGlobe : null;
+  const wasPlaying = Boolean(globe?.autoRotate);
+  if (wasPlaying) globe.setPlaying(false);
+  const restoreRelationships = globe?.prepareExport?.() || (() => {});
+  stage.classList.add("pdf-exporting");
+  try {
+    await document.fonts.ready;
+    await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+    return await window.html2canvas(stage, {
+      backgroundColor: "#f6f5ef",
+      logging: false,
+      scale: Math.min(2, window.devicePixelRatio || 1.5),
+      useCORS: false,
+      onclone: clonedDocument => clonedDocument.querySelector(".stage-tools")?.remove()
+    });
+  } finally {
+    stage.classList.remove("pdf-exporting");
+    restoreRelationships();
+    if (wasPlaying) globe.setPlaying(true);
+  }
 }
 
-function exportCurrent() {
-  if (state.config.type === "table") exportCSV();
-  else if (state.config.type === "document") exportDocumentCSV();
-  else if (state.config.type === "map") window.ufoGlobe?.exportPNG(state.config.title.toLowerCase().replace(/[^a-z0-9]+/g, "-"));
-  else exportSVG();
+function addPresentationPage(pdf, canvas) {
+  const landscape = canvas.width / canvas.height > 1.25;
+  pdf.addPage("letter", landscape ? "landscape" : "portrait");
+  const pageWidth = pdf.internal.pageSize.getWidth();
+  const pageHeight = pdf.internal.pageSize.getHeight();
+  const margin = 24;
+  const scale = Math.min((pageWidth - margin * 2) / canvas.width, (pageHeight - margin * 2) / canvas.height);
+  const width = canvas.width * scale;
+  const height = canvas.height * scale;
+  const x = (pageWidth - width) / 2;
+  const y = (pageHeight - height) / 2;
+  pdf.addImage(canvas.toDataURL("image/jpeg", .98), "JPEG", x, y, width, height, undefined, "FAST");
+  pdf.setDrawColor(17);
+  pdf.setLineWidth(.75);
+  pdf.rect(x, y, width, height);
+}
+
+async function exportCurrent() {
+  const button = $("#exportButton");
+  if (!window.html2canvas || !window.jspdf?.jsPDF) return toast("PDF export tools unavailable");
+  button.disabled = true;
+  button.setAttribute("aria-busy", "true");
+  button.textContent = "Building PDF…";
+  try {
+    const exportedAt = new Date();
+    const canvas = await capturePresentationView();
+    const pdf = new window.jspdf.jsPDF({ orientation: "portrait", unit: "pt", format: "letter", compress: true });
+    pdf.setProperties({
+      title: state.config.title,
+      subject: "UFO Files relationship graph export",
+      author: "UFO Files",
+      creator: "UFO Files Relationship Graph Builder",
+      keywords: "UFO Files, relationship graph, machine data"
+    });
+    pdf.setCreationDate(exportedAt);
+    addPDFCover(pdf, exportedAt);
+    addPresentationPage(pdf, canvas);
+    pdf.save(pdfFilename(state.config.title));
+    toast("Presentation PDF saved");
+  } catch (error) {
+    console.error("PDF export failed", error);
+    toast("PDF export failed");
+  } finally {
+    button.disabled = false;
+    button.removeAttribute("aria-busy");
+    button.textContent = "Export PDF";
+  }
 }
 
 async function init() {
