@@ -1,24 +1,10 @@
 name: Deploy latest graph to Pages
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Rebuild graph from machine-data"]
+    types: [completed]
     branches: [main]
-    paths:
-      - ".github/workflows/deploy-pages.yml"
-      - ".nojekyll"
-      - "app.js"
-      - "assets/**"
-      - "!assets/screenshots/**"
-      - "data/curated_entities.json"
-      - "data/entity_aliases.json"
-      - "data/location_coordinates.json"
-      - "index.html"
-      - "map-globe.js"
-      - "styles.css"
-      - "vendor/**"
-  schedule:
-    # Coalesce frequent generated-catalog commits into two deployments an hour.
-    - cron: "7,37 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -32,6 +18,9 @@ concurrency:
 
 jobs:
   deploy:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     permissions:
       contents: read
