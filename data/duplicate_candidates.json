@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "d034b30aae8de127041954c60894349f037f99cf"
+    "revision": "72310bf281117d3639424b2525a33bb1687ab0bc"
   },
-  "count": 369,
-  "totalCount": 369,
+  "count": 372,
+  "totalCount": 372,
   "shownCount": 200,
   "candidates": [
     {
@@ -237,6 +237,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "U.S. Department of Justice",
+        "mentions": 426,
+        "documentCount": 109
+      },
+      "right": {
+        "name": "US Department of Justice",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.98,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "FOR DEPARTMENT AL USE ONLY",
         "mentions": 4,
         "documentCount": 4
@@ -334,8 +350,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1129,
-        "documentCount": 308
+        "mentions": 1130,
+        "documentCount": 309
       },
       "right": {
         "name": "Departments of Defense",
@@ -718,8 +734,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of Research and Development",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 5,
+        "documentCount": 4
       },
       "right": {
         "name": "Office of Research and Developnent",
@@ -2446,8 +2462,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1129,
-        "documentCount": 308
+        "mentions": 1130,
+        "documentCount": 309
       },
       "right": {
         "name": "Department of Detense",
@@ -2846,8 +2862,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 98,
-        "documentCount": 50
+        "mentions": 100,
+        "documentCount": 51
       },
       "right": {
         "name": "United States Navy F-",
@@ -3191,22 +3207,6 @@
         "documentCount": 3
       },
       "similarity": 0.943,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of War",
-        "mentions": 31,
-        "documentCount": 15
-      },
-      "right": {
-        "name": "Department of Air",
-        "mentions": 305,
-        "documentCount": 36
-      },
-      "similarity": 0.941,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     }
