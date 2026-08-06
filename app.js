@@ -1917,7 +1917,6 @@ function pdfProvenance(exportedAt) {
   const generatedAt = state.catalog.generatedAt ? new Date(state.catalog.generatedAt).toISOString() : "Not recorded";
   return [
     ["VIEW", dataAwareTitle(state.config)],
-    ["GRAPH TYPE", label(state.config.type)],
     ["EXPORTED", exportedAt.toISOString()],
     ["CATALOG GENERATED", generatedAt],
     ["SOURCE OF TRUTH", repository],
@@ -2007,12 +2006,12 @@ function pdfGraphProperties() {
 
   if (config.type === "document") add("Document search", "documentSearch");
   if (config.type === "table") add("Table search", "tableSearch");
-  if (usesEntities || config.type === "document") add("Entity categories", "categories");
   addText("Collections", config.allSources ? "All collections" : pdfGraphPropertyValue("sources", config.sources));
   if (usesEntities) add("Minimum confidence", "minConfidence");
   if (config.type === "network" || usesRelationships && config.relationshipLayer !== "off") add("Minimum evidence", "minEvidence");
   if (!["document", "table"].includes(config.type)) add("Maximum marks", "limit");
   if (usesEntities) add("Include high-inflation", "includeHighInflation");
+  if (usesEntities || config.type === "document") add("Entity categories", "categories");
   return properties;
 }
 
