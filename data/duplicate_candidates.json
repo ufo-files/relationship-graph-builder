@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "c4db5eb235ed25641d1e163f4a8c6c9f1ae92aad"
+    "revision": "584def41f87b46042e0da9a4a44e7a6a76fb01f6"
   },
-  "count": 419,
-  "totalCount": 419,
+  "count": 421,
+  "totalCount": 421,
   "shownCount": 200,
   "candidates": [
     {
@@ -30,8 +30,8 @@
       "category": "organization",
       "left": {
         "name": "Advanced Aerospace Weapon System Applications",
-        "mentions": 10,
-        "documentCount": 10
+        "mentions": 11,
+        "documentCount": 11
       },
       "right": {
         "name": "Advanced Aerospace Weapon System Application",
@@ -46,8 +46,8 @@
       "category": "organization",
       "left": {
         "name": "Advanced Aerospace Weapon System Applications",
-        "mentions": 10,
-        "documentCount": 10
+        "mentions": 11,
+        "documentCount": 11
       },
       "right": {
         "name": "Advanced Aerospace Weapon Systems Applications",
@@ -78,8 +78,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Advanced Research Projects Agency",
-        "mentions": 59,
-        "documentCount": 14
+        "mentions": 60,
+        "documentCount": 15
       },
       "right": {
         "name": "The Defense Advanced Research Project Agency",
@@ -110,8 +110,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 231,
-        "documentCount": 47
+        "mentions": 236,
+        "documentCount": 48
       },
       "right": {
         "name": "Offices of the Secretary of Defense",
@@ -142,8 +142,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 233,
-        "documentCount": 130
+        "mentions": 235,
+        "documentCount": 132
       },
       "right": {
         "name": "Wrighat-Patterson Air Force Base",
@@ -158,8 +158,8 @@
       "category": "organization",
       "left": {
         "name": "Senate Armed Services Committee",
-        "mentions": 22,
-        "documentCount": 16
+        "mentions": 24,
+        "documentCount": 17
       },
       "right": {
         "name": "Senate Armed Service Committee",
@@ -174,8 +174,8 @@
       "category": "government_agency",
       "left": {
         "name": "National Reconnaissance Office",
-        "mentions": 350,
-        "documentCount": 132
+        "mentions": 356,
+        "documentCount": 134
       },
       "right": {
         "name": "The National Reconnaisance Office",
@@ -270,13 +270,29 @@
       "category": "government_agency",
       "left": {
         "name": "U.S. Department of Justice",
-        "mentions": 437,
-        "documentCount": 114
+        "mentions": 438,
+        "documentCount": 115
       },
       "right": {
         "name": "US Department of Justice",
         "mentions": 3,
         "documentCount": 2
+      },
+      "similarity": 0.98,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "program",
+      "left": {
+        "name": "Project Preserved Destiny",
+        "mentions": 8,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Project Preserve Destiny",
+        "mentions": 27,
+        "documentCount": 6
       },
       "similarity": 0.98,
       "reason": "similar name",
@@ -293,22 +309,6 @@
         "name": "FOR DEPARTMENTAL USE ONLY",
         "mentions": 7,
         "documentCount": 2
-      },
-      "similarity": 0.98,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "program",
-      "left": {
-        "name": "Project Preserved Destiny",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Project Preserve Destiny",
-        "mentions": 6,
-        "documentCount": 5
       },
       "similarity": 0.98,
       "reason": "similar name",
@@ -398,8 +398,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1230,
-        "documentCount": 331
+        "mentions": 1304,
+        "documentCount": 333
       },
       "right": {
         "name": "Departments of Defense",
@@ -430,8 +430,8 @@
       "category": "government_agency",
       "left": {
         "name": "Public Affairs Office",
-        "mentions": 16,
-        "documentCount": 7
+        "mentions": 20,
+        "documentCount": 8
       },
       "right": {
         "name": "Public Affairs Officer",
@@ -627,8 +627,8 @@
       },
       "right": {
         "name": "Signal Intelligence",
-        "mentions": 3,
-        "documentCount": 2
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.974,
       "reason": "similar name",
@@ -910,8 +910,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 104,
-        "documentCount": 52
+        "mentions": 105,
+        "documentCount": 53
       },
       "right": {
         "name": "Air Iechnical Intelligence Center",
@@ -926,8 +926,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 104,
-        "documentCount": 52
+        "mentions": 105,
+        "documentCount": 53
       },
       "right": {
         "name": "The Ait Technical Intelligence Center",
@@ -942,8 +942,8 @@
       "category": "person",
       "left": {
         "name": "Robert Sarbacher",
-        "mentions": 19,
-        "documentCount": 11
+        "mentions": 20,
+        "documentCount": 12
       },
       "right": {
         "name": "Robert Saarbacher",
@@ -1101,6 +1101,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Department of Defense Directive",
+        "mentions": 8,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Department of Defense Directive C-",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.969,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Office of Special Investigationa",
         "mentions": 2,
         "documentCount": 2
@@ -1134,8 +1150,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 233,
-        "documentCount": 130
+        "mentions": 235,
+        "documentCount": 132
       },
       "right": {
         "name": "Fright-Patterson Air Force Base",
@@ -1150,8 +1166,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 233,
-        "documentCount": 130
+        "mentions": 235,
+        "documentCount": 132
       },
       "right": {
         "name": "Wright-Parterson Air Force Base",
@@ -1166,8 +1182,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 233,
-        "documentCount": 130
+        "mentions": 235,
+        "documentCount": 132
       },
       "right": {
         "name": "Wright-pattorson AIr Force Base",
@@ -1182,8 +1198,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 233,
-        "documentCount": 130
+        "mentions": 235,
+        "documentCount": 132
       },
       "right": {
         "name": "Wright-Patterson Air Foree Base",
@@ -1198,8 +1214,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 233,
-        "documentCount": 130
+        "mentions": 235,
+        "documentCount": 132
       },
       "right": {
         "name": "WRIGHT-PATTERION AIR FORCE BASE",
@@ -1214,8 +1230,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 233,
-        "documentCount": 130
+        "mentions": 235,
+        "documentCount": 132
       },
       "right": {
         "name": "WRIGHT-PATTERSON AIM FORCE BASE",
@@ -1678,8 +1694,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3814,
-        "documentCount": 769
+        "mentions": 3855,
+        "documentCount": 772
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1694,8 +1710,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3814,
-        "documentCount": 769
+        "mentions": 3855,
+        "documentCount": 772
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1710,8 +1726,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3814,
-        "documentCount": 769
+        "mentions": 3855,
+        "documentCount": 772
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1726,8 +1742,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3814,
-        "documentCount": 769
+        "mentions": 3855,
+        "documentCount": 772
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -2222,8 +2238,8 @@
       "category": "location",
       "left": {
         "name": "Patterson Air Force Base",
-        "mentions": 20,
-        "documentCount": 18
+        "mentions": 21,
+        "documentCount": 19
       },
       "right": {
         "name": "Patterson Air Forco Base",
@@ -2398,8 +2414,8 @@
       "category": "person",
       "left": {
         "name": "David Grush",
-        "mentions": 146,
-        "documentCount": 62
+        "mentions": 148,
+        "documentCount": 64
       },
       "right": {
         "name": "David Grusch",
@@ -2419,8 +2435,8 @@
       },
       "right": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 104,
-        "documentCount": 52
+        "mentions": 105,
+        "documentCount": 53
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2435,8 +2451,8 @@
       },
       "right": {
         "name": "FOIA Office",
-        "mentions": 10,
-        "documentCount": 9
+        "mentions": 11,
+        "documentCount": 10
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2766,8 +2782,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1230,
-        "documentCount": 331
+        "mentions": 1304,
+        "documentCount": 333
       },
       "right": {
         "name": "Department of Detense",
@@ -3150,8 +3166,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 228,
-        "documentCount": 67
+        "mentions": 234,
+        "documentCount": 69
       },
       "right": {
         "name": "Department of Stale",
@@ -3166,8 +3182,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 228,
-        "documentCount": 67
+        "mentions": 234,
+        "documentCount": 69
       },
       "right": {
         "name": "Department of Staie",
@@ -3189,22 +3205,6 @@
         "name": "United States Navy F-",
         "mentions": 4,
         "documentCount": 2
-      },
-      "similarity": 0.947,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Intelligence Center",
-        "mentions": 30,
-        "documentCount": 29
-      },
-      "right": {
-        "name": "INTELLIGENCE CENTRE",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.947,
       "reason": "similar name",
