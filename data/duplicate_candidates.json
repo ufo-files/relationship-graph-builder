@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "470250472eb4674e8bdf4cef59a552af52989a04"
+    "revision": "5b4e8b0b027da4d63ee22977333ded99821a74da"
   },
-  "count": 416,
-  "totalCount": 416,
+  "count": 419,
+  "totalCount": 419,
   "shownCount": 200,
   "candidates": [
     {
@@ -398,8 +398,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1223,
-        "documentCount": 329
+        "mentions": 1224,
+        "documentCount": 330
       },
       "right": {
         "name": "Departments of Defense",
@@ -1659,11 +1659,27 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Opinion Research Corporation",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Opinion Rescarch Corporation",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.964,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3798,
-        "documentCount": 766
+        "mentions": 3814,
+        "documentCount": 769
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1678,8 +1694,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3798,
-        "documentCount": 766
+        "mentions": 3814,
+        "documentCount": 769
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1694,8 +1710,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3798,
-        "documentCount": 766
+        "mentions": 3814,
+        "documentCount": 769
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1710,8 +1726,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3798,
-        "documentCount": 766
+        "mentions": 3814,
+        "documentCount": 769
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -2035,8 +2051,8 @@
       },
       "right": {
         "name": "Range Foulers",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2107,6 +2123,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "CSETI Website",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "CSET Website",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "RUSSIAN ARMYM",
@@ -2117,22 +2149,6 @@
         "name": "Russian Army",
         "mentions": 4,
         "documentCount": 4
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "CSETI Website",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "CSET Website",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2750,8 +2766,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1223,
-        "documentCount": 329
+        "mentions": 1224,
+        "documentCount": 330
       },
       "right": {
         "name": "Department of Detense",
@@ -3134,8 +3150,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 227,
-        "documentCount": 66
+        "mentions": 228,
+        "documentCount": 67
       },
       "right": {
         "name": "Department of Stale",
@@ -3150,8 +3166,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of State",
-        "mentions": 227,
-        "documentCount": 66
+        "mentions": 228,
+        "documentCount": 67
       },
       "right": {
         "name": "Department of Staie",
@@ -3189,22 +3205,6 @@
         "name": "INTELLIGENCE CENTRE",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.947,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "National Laboratory",
-        "mentions": 10,
-        "documentCount": 10
-      },
-      "right": {
-        "name": "Natlonal Laboratory",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.947,
       "reason": "similar name",
