@@ -15,6 +15,7 @@ jobs:
     if: >-
       github.event_name == 'workflow_dispatch' ||
       github.event.workflow_run.conclusion == 'success'
+    # Playwright's managed Chromium image is not available for this ARM64 host.
     runs-on: ubuntu-latest
     concurrency:
       group: relationship-graph-pages
