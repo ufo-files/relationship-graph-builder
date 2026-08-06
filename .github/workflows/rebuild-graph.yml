@@ -45,7 +45,9 @@ permissions:
 
 concurrency:
   group: relationship-graph-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'pages' }}
-  cancel-in-progress: true
+  # Let an active Pages deployment finish; canceling it can leave the next
+  # deployment queued behind GitHub's cleanup of the canceled deployment.
+  cancel-in-progress: false
 
 jobs:
   validate:
@@ -184,3 +186,5 @@ jobs:
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+        with:
+          timeout: 1200000
