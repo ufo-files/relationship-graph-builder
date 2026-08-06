@@ -1,13 +1,6 @@
 name: Refresh README graph screenshots
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/refresh-screenshots.yml"
-      - "package-lock.json"
-      - "package.json"
-      - "scripts/capture_graph_screenshots.mjs"
   workflow_run:
     workflows: ["Rebuild graph from machine-data"]
     types: [completed]
@@ -20,10 +13,8 @@ permissions:
 jobs:
   refresh:
     if: >-
-      github.event_name == 'push' ||
       github.event_name == 'workflow_dispatch' ||
-      github.event.workflow_run.conclusion == 'success' ||
-      github.event.workflow_run.conclusion == 'failure'
+      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     concurrency:
       group: relationship-graph-pages
