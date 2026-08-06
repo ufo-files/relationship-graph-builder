@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "f3e5ba111f242755b5cf11205414536bce254a62"
+    "revision": "6bc912a9d7b55323aa33a50c8b88a1c55573ad8b"
   },
-  "count": 365,
-  "totalCount": 365,
+  "count": 367,
+  "totalCount": 367,
   "shownCount": 200,
   "candidates": [
     {
@@ -667,6 +667,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "program",
+      "left": {
+        "name": "Project Silver Bug",
+        "mentions": 8,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Project Silverbug",
+        "mentions": 5,
+        "documentCount": 2
+      },
+      "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "General Rgrmrmy The Lesser",
@@ -1070,8 +1086,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Advisory Committee",
-        "mentions": 19,
-        "documentCount": 10
+        "mentions": 20,
+        "documentCount": 11
       },
       "right": {
         "name": "Intelligence Advisory Cosmittee",
@@ -1150,8 +1166,8 @@
       "category": "organization",
       "left": {
         "name": "Technical Intelligence Center",
-        "mentions": 24,
-        "documentCount": 19
+        "mentions": 25,
+        "documentCount": 20
       },
       "right": {
         "name": "Iechnical Intelligence Center",
@@ -1335,6 +1351,22 @@
         "documentCount": 2
       },
       "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Joint Intelligence Committee",
+        "mentions": 8,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Joint Intelligence Conmittee",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.964,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1886,8 +1918,8 @@
       "category": "location",
       "left": {
         "name": "Patterson Air Force Base",
-        "mentions": 17,
-        "documentCount": 15
+        "mentions": 18,
+        "documentCount": 16
       },
       "right": {
         "name": "Patterson Air Forco Base",
@@ -2830,8 +2862,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 29,
-        "documentCount": 28
+        "mentions": 30,
+        "documentCount": 29
       },
       "right": {
         "name": "INTELLIGENCE CENTRE",
@@ -3171,38 +3203,6 @@
       },
       "right": {
         "name": "Department of Mir",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Directorate of Intelligence",
-        "mentions": 93,
-        "documentCount": 22
-      },
-      "right": {
-        "name": "The Director of Intelligence",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Army Intelligence",
-        "mentions": 51,
-        "documentCount": 17
-      },
-      "right": {
-        "name": "Army Intelligerce",
         "mentions": 2,
         "documentCount": 2
       },
