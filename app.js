@@ -1904,15 +1904,12 @@ function pdfFilename(title) {
   return `${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "ufo-files-graph"}.pdf`;
 }
 
-function addPDFCover(pdf, exportedAt) {
+function pdfProvenance(exportedAt) {
   const input = state.catalog.input || {};
-  const margin = 48;
-  const pageWidth = pdf.internal.pageSize.getWidth();
-  const pageHeight = pdf.internal.pageSize.getHeight();
   const revision = input.revision || "Not recorded";
   const repository = input.repository || "ufo-files/machine-data";
   const generatedAt = state.catalog.generatedAt ? new Date(state.catalog.generatedAt).toISOString() : "Not recorded";
-  const metadata = [
+  return [
     ["VIEW", state.config.title],
     ["GRAPH TYPE", label(state.config.type)],
     ["EXPORTED", exportedAt.toISOString()],
@@ -1920,63 +1917,129 @@ function addPDFCover(pdf, exportedAt) {
     ["SOURCE OF TRUTH", repository],
     ["SOURCE REVISION", revision]
   ];
-
-  pdf.setDrawColor(17);
-  pdf.setLineWidth(.75);
-  pdf.rect(30, 30, pageWidth - 60, pageHeight - 60);
-  pdf.setTextColor(17);
-  pdf.setFont("courier", "bold");
-  pdf.setFontSize(11);
-  pdf.text("UFO FILES", margin, 70);
-  pdf.setFont("courier", "normal");
-  pdf.setFontSize(9);
-  pdf.text("RELATIONSHIP GRAPH EXPORT", margin, 88);
-  pdf.setLineWidth(1);
-  pdf.line(margin, 106, pageWidth - margin, 106);
-
-  pdf.setFontSize(9);
-  pdf.text("PRESENTATION-READY DATA VIEW", margin, 142);
-  pdf.setFont("courier", "bold");
-  pdf.setFontSize(24);
-  const titleLines = pdf.splitTextToSize(state.config.title.toUpperCase(), pageWidth - margin * 2);
-  pdf.text(titleLines, margin, 178, { lineHeightFactor: 1.12 });
-  let y = 178 + titleLines.length * 27 + 34;
-
-  metadata.forEach(([name, value]) => {
-    pdf.setFont("courier", "bold");
-    pdf.setFontSize(8);
-    pdf.text(name, margin, y);
-    pdf.setFont("courier", "normal");
-    pdf.setFontSize(9);
-    const valueLines = pdf.splitTextToSize(String(value), pageWidth - margin * 2 - 126);
-    pdf.text(valueLines, margin + 126, y);
-    y += Math.max(24, valueLines.length * 11 + 10);
-  });
-
-  pdf.setFont("courier", "normal");
-  pdf.setFontSize(9);
-  const note = "Generated from the published UFO Files catalog. Source transcripts remain unchanged; graph marks and relationships reflect the evidence policy printed with the view.";
-  pdf.text(pdf.splitTextToSize(note, pageWidth - margin * 2), margin, pageHeight - 180, { lineHeightFactor: 1.35 });
-  pdf.setFont("courier", "bold");
-  pdf.textWithLink(UFO_FILES_URL, margin, pageHeight - 112, { url: UFO_FILES_URL });
-  pdf.textWithLink(UFO_FILES_GITHUB_URL, margin, pageHeight - 91, { url: UFO_FILES_GITHUB_URL });
-  pdf.setFont("courier", "normal");
-  pdf.setFontSize(7);
-  pdf.text("Exported by UFO Files", margin, pageHeight - 54);
 }
 
-async function capturePresentationView() {
+let pdfLogoPath;
+
+async function loadPDFLogoPath() {
+  if (pdfLogoPath) return pdfLogoPath;
+  const response = await fetch("assets/logo.svg");
+  if (!response.ok) throw new Error(`Logo unavailable: ${response.status} ${response.statusText}`);
+  const source = await response.text();
+  pdfLogoPath = source.match(/<path\b[^>]*\bd="([^"]+)"/)?.[1];
+  if (!pdfLogoPath) throw new Error("Logo path unavailable");
+  return pdfLogoPath;
+}
+
+function svgPathOperations(pathData, bounds) {
+  const tokens = pathData.match(/[MCLHVZ]|[-+]?(?:\d*\.)?\d+(?:e[-+]?\d+)?/gi) || [];
+  const scale = Math.min(bounds.width / 460, bounds.height / 433);
+  const offsetX = bounds.x + (bounds.width - 460 * scale) / 2;
+  const offsetY = bounds.y + (bounds.height - 433 * scale) / 2;
+  const point = (x, y) => [offsetX + x * scale, offsetY + y * scale];
+  const operations = [];
+  let index = 0;
+  let command = "";
+  let currentX = 0;
+  let currentY = 0;
+  let startX = 0;
+  let startY = 0;
+  const number = () => Number(tokens[index++]);
+
+  while (index < tokens.length) {
+    if (/^[A-Za-z]$/.test(tokens[index])) command = tokens[index++].toUpperCase();
+    if (command === "M") {
+      currentX = number(); currentY = number();
+      startX = currentX; startY = currentY;
+      operations.push({ op: "m", c: point(currentX, currentY) });
+      command = "L";
+    } else if (command === "L") {
+      currentX = number(); currentY = number();
+      operations.push({ op: "l", c: point(currentX, currentY) });
+    } else if (command === "H") {
+      currentX = number();
+      operations.push({ op: "l", c: point(currentX, currentY) });
+    } else if (command === "V") {
+      currentY = number();
+      operations.push({ op: "l", c: point(currentX, currentY) });
+    } else if (command === "C") {
+      const x1 = number(); const y1 = number();
+      const x2 = number(); const y2 = number();
+      currentX = number(); currentY = number();
+      operations.push({ op: "c", c: [...point(x1, y1), ...point(x2, y2), ...point(currentX, currentY)] });
+    } else if (command === "Z") {
+      operations.push({ op: "h" });
+      currentX = startX; currentY = startY;
+      command = "";
+    } else {
+      throw new Error(`Unsupported logo path command: ${command || tokens[index]}`);
+    }
+  }
+  return { operations, strokeWidth: 6 * scale };
+}
+
+async function capturePDFCover(exportedAt) {
+  const cover = document.createElement("section");
+  cover.className = "pdf-cover-render";
+  cover.setAttribute("aria-hidden", "true");
+  cover.innerHTML = `<header class="pdf-cover-brand"><span class="pdf-cover-logo"></span><div><strong>UFO Files</strong><span>Relationship Graph Export</span></div></header><hr class="pdf-cover-rule"><h1 class="pdf-cover-title">${escapeHTML(state.config.title)}</h1><dl class="pdf-cover-metadata">${pdfProvenance(exportedAt).map(([name, value]) => `<dt>${escapeHTML(name)}</dt><dd>${escapeHTML(value)}</dd>`).join("")}</dl><p class="pdf-cover-provenance">Generated from the published UFO Files catalog. Source transcripts remain unchanged; graph marks and relationships reflect the evidence policy printed with the view.</p><div class="pdf-cover-links"><a href="${UFO_FILES_URL}">${UFO_FILES_URL}</a><a href="${UFO_FILES_GITHUB_URL}">${UFO_FILES_GITHUB_URL}</a></div><p class="pdf-cover-footer">Exported by UFO Files</p>`;
+  document.body.append(cover);
+  try {
+    await document.fonts.ready;
+    const bounds = cover.getBoundingClientRect();
+    const logoRect = cover.querySelector(".pdf-cover-logo").getBoundingClientRect();
+    const links = [...cover.querySelectorAll("a")].map(link => {
+      const rect = link.getBoundingClientRect();
+      return { url: link.href, x: rect.left - bounds.left, y: rect.top - bounds.top, width: rect.width, height: rect.height };
+    });
+    const canvas = await window.html2canvas(cover, {
+      backgroundColor: "#fff",
+      logging: false,
+      scale: Math.min(2, window.devicePixelRatio || 1.5),
+      useCORS: false
+    });
+    const logo = { x: logoRect.left - bounds.left, y: logoRect.top - bounds.top, width: logoRect.width, height: logoRect.height };
+    return { canvas, links, logo, width: bounds.width, height: bounds.height };
+  } finally {
+    cover.remove();
+  }
+}
+
+function addPDFCover(pdf, cover, logoPath) {
+  const pageWidth = pdf.internal.pageSize.getWidth();
+  const pageHeight = pdf.internal.pageSize.getHeight();
+  pdf.addImage(cover.canvas.toDataURL("image/jpeg", .98), "JPEG", 0, 0, pageWidth, pageHeight, undefined, "FAST");
+  const scaleX = pageWidth / cover.width;
+  const scaleY = pageHeight / cover.height;
+  const logoBounds = { x: cover.logo.x * scaleX, y: cover.logo.y * scaleY, width: cover.logo.width * scaleX, height: cover.logo.height * scaleY };
+  const logo = svgPathOperations(logoPath, logoBounds);
+  pdf.saveGraphicsState();
+  pdf.setFillColor(0);
+  pdf.setDrawColor(0);
+  pdf.setLineWidth(logo.strokeWidth);
+  pdf.path(logo.operations);
+  pdf.fillStroke();
+  pdf.restoreGraphicsState();
+  cover.links.forEach(link => pdf.link(link.x * scaleX, link.y * scaleY, link.width * scaleX, link.height * scaleY, { url: link.url }));
+}
+
+async function capturePresentationView(exportedAt) {
   const stage = document.querySelector(".stage");
   const globe = state.config.type === "map" ? window.ufoGlobe : null;
   const wasPlaying = Boolean(globe?.autoRotate);
   if (wasPlaying) globe.setPlaying(false);
   const restoreRelationships = globe?.prepareExport?.() || (() => {});
+  const metadata = new Map(pdfProvenance(exportedAt));
+  const provenance = document.createElement("div");
+  provenance.className = "pdf-stage-provenance";
+  provenance.innerHTML = `<strong>UFO Files · ${UFO_FILES_URL}</strong><span>Catalog ${escapeHTML(metadata.get("CATALOG GENERATED"))}</span><span>Source ${escapeHTML(metadata.get("SOURCE OF TRUTH"))}@${escapeHTML(metadata.get("SOURCE REVISION"))}</span><span>Exported ${escapeHTML(metadata.get("EXPORTED"))}</span>`;
+  stage.append(provenance);
   stage.classList.add("pdf-exporting");
   try {
     await document.fonts.ready;
     await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
     return await window.html2canvas(stage, {
-      backgroundColor: "#f6f5ef",
+      backgroundColor: "#fff",
       logging: false,
       scale: Math.min(2, window.devicePixelRatio || 1.5),
       useCORS: false,
@@ -1984,6 +2047,7 @@ async function capturePresentationView() {
     });
   } finally {
     stage.classList.remove("pdf-exporting");
+    provenance.remove();
     restoreRelationships();
     if (wasPlaying) globe.setPlaying(true);
   }
@@ -2014,7 +2078,9 @@ async function exportCurrent() {
   button.textContent = "Building PDF…";
   try {
     const exportedAt = new Date();
-    const canvas = await capturePresentationView();
+    const logoPath = await loadPDFLogoPath();
+    const cover = await capturePDFCover(exportedAt);
+    const canvas = await capturePresentationView(exportedAt);
     const pdf = new window.jspdf.jsPDF({ orientation: "portrait", unit: "pt", format: "letter", compress: true });
     pdf.setProperties({
       title: state.config.title,
@@ -2024,7 +2090,7 @@ async function exportCurrent() {
       keywords: "UFO Files, relationship graph, machine data"
     });
     pdf.setCreationDate(exportedAt);
-    addPDFCover(pdf, exportedAt);
+    addPDFCover(pdf, cover, logoPath);
     addPresentationPage(pdf, canvas);
     pdf.save(pdfFilename(state.config.title));
     toast("Presentation PDF saved");
