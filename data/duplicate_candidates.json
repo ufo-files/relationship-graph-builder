@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "f1e33f54069db7614199715b457662976a054ddd"
+    "revision": "bed6cf4941353efd8d34fce58ba5dcec77e4ec29"
   },
-  "count": 400,
-  "totalCount": 400,
+  "count": 401,
+  "totalCount": 401,
   "shownCount": 200,
   "candidates": [
     {
@@ -62,8 +62,8 @@
       "category": "government_agency",
       "left": {
         "name": "Defense Advanced Research Projects Agency",
-        "mentions": 58,
-        "documentCount": 13
+        "mentions": 59,
+        "documentCount": 14
       },
       "right": {
         "name": "The Defense Advanced Research Project Agency",
@@ -862,8 +862,8 @@
       "category": "person",
       "left": {
         "name": "Robert Sarbacher",
-        "mentions": 18,
-        "documentCount": 10
+        "mentions": 19,
+        "documentCount": 11
       },
       "right": {
         "name": "Robert Saarbacher",
@@ -1283,8 +1283,8 @@
       },
       "right": {
         "name": "Rocky Mountains",
-        "mentions": 5,
-        "documentCount": 4
+        "mentions": 6,
+        "documentCount": 5
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -1582,8 +1582,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3749,
-        "documentCount": 757
+        "mentions": 3751,
+        "documentCount": 758
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1598,8 +1598,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3749,
-        "documentCount": 757
+        "mentions": 3751,
+        "documentCount": 758
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1614,8 +1614,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3749,
-        "documentCount": 757
+        "mentions": 3751,
+        "documentCount": 758
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1630,8 +1630,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3749,
-        "documentCount": 757
+        "mentions": 3751,
+        "documentCount": 758
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -1989,6 +1989,22 @@
         "name": "Moscow Aviation Institute",
         "mentions": 8,
         "documentCount": 8
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Tim Galladet",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Tim Gallaudet",
+        "mentions": 5,
+        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -3189,22 +3205,6 @@
         "name": "Operation Majeatic-",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.944,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Bureau Bulletin No",
-        "mentions": 20,
-        "documentCount": 11
-      },
-      "right": {
-        "name": "Bureau Bullatin No",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.944,
       "reason": "similar name",
