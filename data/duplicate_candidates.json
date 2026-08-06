@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "2da691b35e1f588c510d9f48b5e4cf7e633b8a0a"
+    "revision": "d034b30aae8de127041954c60894349f037f99cf"
   },
-  "count": 367,
-  "totalCount": 367,
+  "count": 369,
+  "totalCount": 369,
   "shownCount": 200,
   "candidates": [
     {
@@ -51,8 +51,8 @@
       },
       "right": {
         "name": "The Defense Advanced Research Project Agency",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.988,
       "reason": "similar name",
@@ -78,8 +78,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 219,
-        "documentCount": 38
+        "mentions": 220,
+        "documentCount": 39
       },
       "right": {
         "name": "Offices of the Secretary of Defense",
@@ -2189,13 +2189,13 @@
     {
       "category": "organization",
       "left": {
-        "name": "COUNTER INTELLIGENCE CORPS REGION",
-        "mentions": 11,
-        "documentCount": 8
+        "name": "Northwestern University",
+        "mentions": 13,
+        "documentCount": 11
       },
       "right": {
-        "name": "COUNTER INTELLIGENCE CORPS REGION VI",
-        "mentions": 4,
+        "name": "Northeastern University",
+        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.957,
@@ -2205,13 +2205,13 @@
     {
       "category": "organization",
       "left": {
-        "name": "Northwestern University",
-        "mentions": 12,
-        "documentCount": 10
+        "name": "COUNTER INTELLIGENCE CORPS REGION",
+        "mentions": 11,
+        "documentCount": 8
       },
       "right": {
-        "name": "Northeastern University",
-        "mentions": 2,
+        "name": "COUNTER INTELLIGENCE CORPS REGION VI",
+        "mentions": 4,
         "documentCount": 2
       },
       "similarity": 0.957,
@@ -2939,6 +2939,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Counter Intelligence Corps",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "COUNTER INTELLIGENCE CORPS DE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.945,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Dwight D. Eisenhower",
@@ -3189,22 +3205,6 @@
         "name": "Department of Air",
         "mentions": 305,
         "documentCount": 36
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of Air",
-        "mentions": 305,
-        "documentCount": 36
-      },
-      "right": {
-        "name": "Department of Mir",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.941,
       "reason": "similar name",
