@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "3e5e820cfbe58e9677f3bc78a4faab7f7696febc"
+    "revision": "37959860b2d49cf3ddd6f9a4951500c1b615ba9a"
   },
-  "count": 388,
-  "totalCount": 388,
+  "count": 391,
+  "totalCount": 391,
   "shownCount": 200,
   "candidates": [
     {
@@ -36,6 +36,22 @@
       "right": {
         "name": "Advanced Aerospace Weapon System Application",
         "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.989,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "The National Aeronautics and Space Administration",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "National Aeronautic and Space Administration",
+        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.989,
@@ -350,8 +366,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1167,
-        "documentCount": 317
+        "mentions": 1170,
+        "documentCount": 319
       },
       "right": {
         "name": "Departments of Defense",
@@ -1566,8 +1582,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3692,
-        "documentCount": 748
+        "mentions": 3693,
+        "documentCount": 749
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1582,8 +1598,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3692,
-        "documentCount": 748
+        "mentions": 3693,
+        "documentCount": 749
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1598,8 +1614,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3692,
-        "documentCount": 748
+        "mentions": 3693,
+        "documentCount": 749
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1614,8 +1630,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 3692,
-        "documentCount": 748
+        "mentions": 3693,
+        "documentCount": 749
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -2558,8 +2574,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1167,
-        "documentCount": 317
+        "mentions": 1170,
+        "documentCount": 319
       },
       "right": {
         "name": "Department of Detense",
@@ -3053,6 +3069,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "NASA National Aeronautic and Space Administration",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "National Aeronautic and Space Administration",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.946,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Counter Intelligence Corps",
         "mentions": 5,
         "documentCount": 4
@@ -3171,38 +3203,6 @@
       },
       "right": {
         "name": "Connanding Officer",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.944,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Comnanding Officer",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Connanding Officer",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.944,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Estimates Division",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Estinates Division",
         "mentions": 2,
         "documentCount": 2
       },
