@@ -1146,21 +1146,72 @@ test("all graph types export a presentation PDF with UFO Files provenance", () =
   vm.runInContext(source, context);
 
   assert.equal(vm.runInContext('pdfFilename("Significant People")', context), "significant-people.pdf");
+  context.URL = URL;
+  context.btoa = value => Buffer.from(value, "binary").toString("base64");
+  context.history = { replaceState(_state, _title, value) { context.location.hash = value; } };
+  const deepLink = vm.runInContext("currentGraphURL()", context);
+  assert.match(deepLink, /^https:\/\/ufo-files\.github\.io\/relationship-graph-builder\/#config=/);
+  const encodedConfig = decodeURIComponent(new URL(deepLink).hash.split("config=")[1]);
+  const savedConfig = JSON.parse(Buffer.from(encodedConfig, "base64").toString("utf8"));
+  assert.deepEqual(savedConfig, { configVersion: 2 });
+  const qrcode = require("../vendor/qrcode-generator.js");
+  const generatedCode = qrcode(0, "M");
+  generatedCode.addData(deepLink, "Byte");
+  generatedCode.make();
+  assert.ok(generatedCode.getModuleCount() < 100);
+  context.window = { qrcode };
+  const longSearch = JSON.parse(vm.runInContext(`JSON.stringify((() => {
+    state.config = { ...DEFAULT, type: "table", tableSearch: "x".repeat(1_000) };
+    const url = currentGraphURL();
+    return { url, hasCode: Boolean(graphQRCode(url)) };
+  })())`, context));
+  assert.ok(longSearch.url.length < 2_000);
+  assert.equal(longSearch.hasCode, true);
+  const naming = JSON.parse(vm.runInContext(`JSON.stringify((() => {
+    state.catalog = { input: {}, generatedAt: null };
+    Object.assign(state.config, { type: "network", nodeRole: "entity", categories: ["person"], title: "My Custom Investigation", titleMode: "custom" });
+    return { view: Object.fromEntries(pdfProvenance(new Date("2026-01-01T00:00:00Z"))).VIEW, title: state.config.title };
+  })())`, context));
+  assert.deepEqual(naming, { view: "People Relationships", title: "My Custom Investigation" });
+  const properties = JSON.parse(vm.runInContext(`JSON.stringify((() => {
+    state.config = { ...DEFAULT, sources: ["Disclosure Team"], allSources: false, minConfidence: .91 };
+    return Object.fromEntries(pdfGraphProperties());
+  })())`, context));
+  assert.equal(properties["Graph type"], "Scatter");
+  assert.equal(properties["X axis"], "Documents");
+  assert.equal(properties.Collections, "Disclosure Team");
+  assert.equal(properties["Minimum confidence"], "91%");
+  assert.equal(properties["Relationship layer"], "Always");
+  assert.equal(properties["Maximum marks"], "50");
+  assert.equal(properties["Include high-inflation"], "Yes");
+  assert.equal(properties.Zoom, undefined, "inactive graph properties stay off the cover");
+  assert.equal(properties["Label size"], undefined, "presentation mechanics stay off the cover");
+  assert.equal(properties["Moon transit"], undefined, "animation timing stays off the cover");
   assert.match(html, /id="exportButton">Export PDF<\/button>/);
-  assert.match(html, /vendor\/html2canvas\.min\.js[\s\S]*vendor\/jspdf\.umd\.min\.js[\s\S]*app\.js/);
+  assert.match(html, /vendor\/html2canvas\.min\.js[\s\S]*vendor\/jspdf\.umd\.min\.js[\s\S]*vendor\/qrcode-generator\.js[\s\S]*app\.js/);
   assert.match(source, /const UFO_FILES_URL = "https:\/\/ufo-files\.app"/);
   assert.match(source, /const UFO_FILES_GITHUB_URL = "https:\/\/github\.com\/ufo-files"/);
+  assert.match(source, /const GRAPH_BUILDER_URL = "https:\/\/ufo-files\.github\.io\/relationship-graph-builder\/"/);
   assert.match(source, /\["CATALOG GENERATED", generatedAt\]/);
   assert.match(source, /\["SOURCE REVISION", revision\]/);
   assert.match(source, /fetch\("assets\/logo\.svg"\)/);
   assert.match(source, /pdf\.path\(logo\.operations\)[\s\S]*pdf\.fillStroke\(\)/);
+  assert.match(source, /function currentGraphURL\(\) \{[\s\S]*persistHash\(\)[\s\S]*new URL\(location\.hash, GRAPH_BUILDER_URL\)/);
+  assert.match(source, /for \(const level of \["M", "L"\]\)[\s\S]*code\.addData\(url, "Byte"\)[\s\S]*code\.make\(\)[\s\S]*return null/);
+  assert.match(source, /if \(code\) \{[\s\S]*drawPDFQRCode\(pdf, code, qrBounds\)[\s\S]*pdf\.link\(qrBounds\.x, qrBounds\.y, qrBounds\.width, qrBounds\.height, \{ url: deepLink \}\)/);
+  assert.match(source, /<div class="pdf-cover-summary"><dl class="pdf-cover-metadata">\$\{metadata\}<\/dl><section class="pdf-cover-graph-url"><h2>Graph URL<\/h2><a href="\$\{escapeHTML\(deepLink\)\}">\$\{escapeHTML\(deepLink\)\}<\/a>\$\{qr\}<\/section><\/div><section class="pdf-cover-properties"><h2>Graph properties<\/h2>/);
+  assert.match(source, /<h1 class="pdf-cover-title">\$\{escapeHTML\(state\.config\.title\)\}<\/h1>/);
+  assert.match(source, /<nav class="pdf-cover-project-links"><a href="\$\{UFO_FILES_URL\}">ufo-files\.app<\/a><a href="\$\{UFO_FILES_GITHUB_URL\}">github\.com\/ufo-files<\/a><\/nav>/);
+  assert.doesNotMatch(source, /Generated from the published UFO Files catalog/);
   assert.doesNotMatch(source, /PRESENTATION-READY DATA VIEW/);
-  assert.match(source, /loadPDFLogoPath\(\)[\s\S]*capturePDFCover\(exportedAt\)[\s\S]*capturePresentationView\(exportedAt\)[\s\S]*addPDFCover\(pdf, cover, logoPath\)[\s\S]*addPresentationPage\(pdf, canvas\)[\s\S]*pdf\.save\(pdfFilename/);
+  assert.match(source, /currentGraphURL\(\)[\s\S]*graphQRCode\(deepLink\)[\s\S]*loadPDFLogoPath\(\)[\s\S]*capturePDFCover\(exportedAt, deepLink, Boolean\(code\)\)[\s\S]*capturePresentationView\(exportedAt\)[\s\S]*addPDFCover\(pdf, cover, logoPath, code, deepLink\)[\s\S]*addPresentationPage\(pdf, canvas\)[\s\S]*pdf\.save\(pdfFilename/);
   assert.doesNotMatch(source, /function export(?:SVG|CSV|DocumentCSV)/);
   assert.ok(fs.statSync("vendor/html2canvas.min.js").size > 190_000);
   assert.ok(fs.statSync("vendor/jspdf.umd.min.js").size > 400_000);
   assert.ok(fs.statSync("vendor/HTML2CANVAS-LICENSE.txt").size > 1_000);
   assert.ok(fs.statSync("vendor/JSPDF-LICENSE.txt").size > 1_000);
+  assert.ok(fs.statSync("vendor/qrcode-generator.js").size > 50_000);
+  assert.ok(fs.statSync("vendor/QRCODE-GENERATOR-LICENSE.txt").size > 1_000);
   assert.ok(fs.statSync("assets/logo.svg").size > 8_000);
   const logo = JSON.parse(vm.runInContext('JSON.stringify(svgPathOperations("M0 0 L460 0 V433 H0 Z", { x: 10, y: 20, width: 92, height: 86.6 }))', context));
   const roundedOperations = logo.operations.map(operation => operation.c
@@ -1174,6 +1225,17 @@ test("all graph types export a presentation PDF with UFO Files provenance", () =
     { op: "h" }
   ]);
   assert.equal(logo.strokeWidth, 1.2);
+  const qrRects = JSON.parse(vm.runInContext(`JSON.stringify((() => {
+    const rectangles = [];
+    const pdf = { setFillColor() {}, rect(...args) { rectangles.push(args); } };
+    const code = { getModuleCount: () => 2, isDark: (row) => row === 0 };
+    drawPDFQRCode(pdf, code, { x: 0, y: 0, width: 20, height: 20 });
+    return rectangles;
+  })())`, context));
+  assert.deepEqual(qrRects, [
+    [-40, -40, 100, 100, "F"],
+    [0, 0, 20, 10, "F"]
+  ]);
 });
 
 test("PDF capture includes the complete stage without controls and normalizes relationships", () => {
@@ -1192,12 +1254,25 @@ test("PDF capture includes the complete stage without controls and normalizes re
   assert.match(source, /Catalog \$\{escapeHTML\(metadata\.get\("CATALOG GENERATED"\)\)\}/);
   assert.match(source, /Source \$\{escapeHTML\(metadata\.get\("SOURCE OF TRUTH"\)\)\}@\$\{escapeHTML\(metadata\.get\("SOURCE REVISION"\)\)\}/);
   assert.match(source, /backgroundColor: "#fff"/);
+  assert.match(source, /pdf\.addPage\("letter", landscape \? "landscape" : "portrait"\)/);
+  assert.match(source, /const margin = 24/);
+  assert.match(source, /const scale = Math\.min\(\(pageWidth - margin \* 2\) \/ canvas\.width, \(pageHeight - margin \* 2\) \/ canvas\.height\)/);
+  assert.match(source, /pdf\.addImage\(canvas\.toDataURL\("image\/jpeg", \.98\), "JPEG", x, y, width, height/);
+  assert.match(source, /pdf\.rect\(x, y, width, height\)/);
   assert.match(styles, /\.stage\.pdf-exporting \{ --paper: #fff; background: #fff; \}/);
   assert.match(styles, /\.stage\.pdf-exporting \.stage-tools \{ visibility: hidden; \}/);
+  assert.doesNotMatch(styles, /\.stage\.pdf-exporting \.chart-wrap/);
   assert.match(styles, /\.stage\.pdf-exporting \.scatter-relationship-line \{ opacity: \.07 !important; \}/);
   assert.match(styles, /\.pdf-cover-render \{[^}]*background: #fff; font-family: var\(--font\)/);
   assert.match(styles, /\.pdf-cover-brand \{[^}]*gap: 10px/);
   assert.match(styles, /\.pdf-cover-logo \{[^}]*width: 76px; height: 72px/);
+  assert.match(styles, /\.pdf-cover-project-links \{ display: flex; gap: 18px; margin-left: auto; \}/);
+  assert.match(styles, /\.pdf-cover-summary \{ display: grid; grid-template-columns: minmax\(0, 1fr\) 300px/);
+  assert.match(styles, /\.pdf-cover-graph-url \{ display: grid; gap: 10px; align-content: start; \}/);
+  assert.match(styles, /\.pdf-cover-graph-url a \{[^}]*font-size: 8px[^}]*word-break: break-all/);
+  assert.match(styles, /\.pdf-cover-qr \{ width: 176px; height: 176px; margin-top: 22px; justify-self: start; \}/);
+  assert.match(styles, /\.pdf-cover-properties dl \{ display: grid; grid-template-columns: repeat\(3, minmax\(0, 1fr\)\)/);
+  assert.match(styles, /\.pdf-cover-properties dd \{[^}]*font-size: 10px/);
   assert.match(styles, /\.pdf-stage-provenance \{[^}]*background: #fff/);
 });
 
