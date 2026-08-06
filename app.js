@@ -180,7 +180,12 @@ function loadConfig() {
 }
 
 function persistHash() {
-  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(state.config))));
+  const saved = Object.fromEntries(Object.entries(state.config).filter(([key, value]) => {
+    if (key === "configVersion") return true;
+    if (key === "title" && state.config.titleMode === "auto") return false;
+    return !(key in DEFAULT) || JSON.stringify(value) !== JSON.stringify(DEFAULT[key]);
+  }));
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(saved))));
   history.replaceState(null, "", `#config=${encodeURIComponent(encoded)}`);
 }
 
@@ -1899,6 +1904,7 @@ function inspectMatrix(item) {
 
 const UFO_FILES_URL = "https://ufo-files.app";
 const UFO_FILES_GITHUB_URL = "https://github.com/ufo-files";
+const GRAPH_BUILDER_URL = "https://ufo-files.github.io/relationship-graph-builder/";
 
 function pdfFilename(title) {
   return `${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "ufo-files-graph"}.pdf`;
@@ -1910,13 +1916,104 @@ function pdfProvenance(exportedAt) {
   const repository = input.repository || "ufo-files/machine-data";
   const generatedAt = state.catalog.generatedAt ? new Date(state.catalog.generatedAt).toISOString() : "Not recorded";
   return [
-    ["VIEW", state.config.title],
+    ["VIEW", dataAwareTitle(state.config)],
     ["GRAPH TYPE", label(state.config.type)],
     ["EXPORTED", exportedAt.toISOString()],
     ["CATALOG GENERATED", generatedAt],
     ["SOURCE OF TRUTH", repository],
     ["SOURCE REVISION", revision]
   ];
+}
+
+function currentGraphURL() {
+  persistHash();
+  return new URL(location.hash, GRAPH_BUILDER_URL).href;
+}
+
+function graphQRCode(url) {
+  if (typeof window.qrcode !== "function") throw new Error("QR code generator unavailable");
+  for (const level of ["M", "L"]) {
+    try {
+      const code = window.qrcode(0, level);
+      code.addData(url, "Byte");
+      code.make();
+      return code;
+    } catch (error) {
+      if (!String(error?.message || error).includes("code length overflow")) throw error;
+    }
+  }
+  return null;
+}
+
+function pdfGraphPropertyValue(key, value) {
+  if (key === "sources" && state.config.allSources) return "All";
+  if (Array.isArray(value)) return value.length ? value.map(item => label(item)).join(", ") : "None";
+  if (typeof value === "boolean") return value ? "Yes" : "No";
+  if (value === "") return "None";
+  if (key === "minConfidence") return `${Math.round(value * 100)}%`;
+  if (key === "labelSize") return `${value}px`;
+  if (key === "zoom") return `${Number(value).toFixed(1)}×`;
+  if (key === "moonTransitSeconds") return `${value}s`;
+  if (typeof value === "string" && !["title", "tableSearch", "documentSearch"].includes(key)) return label(value);
+  return String(value);
+}
+
+function pdfGraphProperties() {
+  const config = state.config;
+  const properties = [];
+  const add = (name, key, value = config[key]) => properties.push([name, pdfGraphPropertyValue(key, value)]);
+  const addText = (name, value) => properties.push([name, value]);
+  const usesRelationships = ["scatter", "map", "timeline"].includes(config.type);
+  const usesEntities = config.type === "table"
+    ? config.tableRole === "entity"
+    : config.type !== "document" && (config.type === "timeline" || !["bars", "timeline"].includes(config.type) || config.aggregation === "entity" || config.timelineRole === "entity");
+
+  add("Graph type", "type");
+  if (config.type === "network") {
+    add("Nodes", "nodeRole"); add("Relationship", "relation");
+  } else if (config.type === "map") {
+    addText("Marks", "Geocoded locations"); addText("Position", "Reviewed coordinates"); add("Relationship", "relation");
+  } else if (config.type === "book") {
+    addText("Marks", "Book titles"); addText("Layout", "Mention-weighted cover area");
+  } else if (config.type === "document") {
+    addText("Rows", "Completed transcript files"); addText("Layout", "Searchable file browser");
+  } else if (config.type === "scatter") {
+    add("X axis", "x"); add("Y axis", "y"); add("Relationship", "relation");
+  } else if (config.type === "bars") {
+    add("Group by", "aggregation"); add("Measure", "y");
+  } else if (config.type === "timeline") {
+    add("Marks", "timelineRole"); add("X axis", "x"); add("Y axis", "y");
+    config.timelineRole === "entity" ? add("Relationship", "relation") : addText("Relationship", "Shared published entities");
+  } else if (config.type === "matrix") {
+    addText("Rows", "Collections"); add("Columns", "matrixColumns");
+  } else {
+    add("Rows", "tableRole"); add("Columns", "tableColumns");
+  }
+
+  if (["scatter", "network", "timeline", "map", "book"].includes(config.type)) {
+    add(config.type === "book" ? "Shade" : "Size + shade", "size");
+    addText("Shade scale", "Monochrome value scale");
+    add("Labels", "labels");
+  } else if (["bars", "matrix"].includes(config.type)) {
+    addText("Shade scale", "Monochrome value scale");
+  }
+  if (usesRelationships) {
+    add("Relationship layer", "relationshipLayer");
+    add("Connections per node", "relationshipNeighbors");
+    add("Secondary-node size", "relationshipNodeSize");
+    add("Line strength", "relationshipStrength");
+  }
+  if (config.type === "table") { add("Sort by", "tableSort"); add("Direction", "tableDirection"); }
+
+  if (config.type === "document") add("Document search", "documentSearch");
+  if (config.type === "table") add("Table search", "tableSearch");
+  if (usesEntities || config.type === "document") add("Entity categories", "categories");
+  addText("Collections", config.allSources ? "All collections" : pdfGraphPropertyValue("sources", config.sources));
+  if (usesEntities) add("Minimum confidence", "minConfidence");
+  if (config.type === "network" || usesRelationships && config.relationshipLayer !== "off") add("Minimum evidence", "minEvidence");
+  if (!["document", "table"].includes(config.type)) add("Maximum marks", "limit");
+  if (usesEntities) add("Include high-inflation", "includeHighInflation");
+  return properties;
 }
 
 let pdfLogoPath;
@@ -1978,16 +2075,20 @@ function svgPathOperations(pathData, bounds) {
   return { operations, strokeWidth: 6 * scale };
 }
 
-async function capturePDFCover(exportedAt) {
+async function capturePDFCover(exportedAt, deepLink, hasQRCode = true) {
   const cover = document.createElement("section");
   cover.className = "pdf-cover-render";
   cover.setAttribute("aria-hidden", "true");
-  cover.innerHTML = `<header class="pdf-cover-brand"><span class="pdf-cover-logo"></span><div><strong>UFO Files</strong><span>Relationship Graph Export</span></div></header><hr class="pdf-cover-rule"><h1 class="pdf-cover-title">${escapeHTML(state.config.title)}</h1><dl class="pdf-cover-metadata">${pdfProvenance(exportedAt).map(([name, value]) => `<dt>${escapeHTML(name)}</dt><dd>${escapeHTML(value)}</dd>`).join("")}</dl><p class="pdf-cover-provenance">Generated from the published UFO Files catalog. Source transcripts remain unchanged; graph marks and relationships reflect the evidence policy printed with the view.</p><div class="pdf-cover-links"><a href="${UFO_FILES_URL}">${UFO_FILES_URL}</a><a href="${UFO_FILES_GITHUB_URL}">${UFO_FILES_GITHUB_URL}</a></div><p class="pdf-cover-footer">Exported by UFO Files</p>`;
+  const metadata = pdfProvenance(exportedAt).map(([name, value]) => `<dt>${escapeHTML(name)}</dt><dd>${escapeHTML(value)}</dd>`).join("");
+  const properties = pdfGraphProperties().map(([name, value]) => `<div><dt>${escapeHTML(name)}</dt><dd>${escapeHTML(value)}</dd></div>`).join("");
+  const qr = hasQRCode ? `<span class="pdf-cover-qr"></span>` : `<span class="pdf-cover-qr pdf-cover-qr-unavailable">QR unavailable for this URL</span>`;
+  cover.innerHTML = `<header class="pdf-cover-brand"><span class="pdf-cover-logo"></span><div><strong>UFO Files</strong><span>Relationship Graph Export</span></div><nav class="pdf-cover-project-links"><a href="${UFO_FILES_URL}">ufo-files.app</a><a href="${UFO_FILES_GITHUB_URL}">github.com/ufo-files</a></nav></header><hr class="pdf-cover-rule"><h1 class="pdf-cover-title">${escapeHTML(state.config.title)}</h1><div class="pdf-cover-summary"><dl class="pdf-cover-metadata">${metadata}</dl><section class="pdf-cover-graph-url"><h2>Graph URL</h2><a href="${escapeHTML(deepLink)}">${escapeHTML(deepLink)}</a>${qr}</section></div><section class="pdf-cover-properties"><h2>Graph properties</h2><dl>${properties}</dl></section><p class="pdf-cover-footer">Exported by UFO Files</p>`;
   document.body.append(cover);
   try {
     await document.fonts.ready;
     const bounds = cover.getBoundingClientRect();
     const logoRect = cover.querySelector(".pdf-cover-logo").getBoundingClientRect();
+    const qrRect = cover.querySelector(".pdf-cover-qr").getBoundingClientRect();
     const links = [...cover.querySelectorAll("a")].map(link => {
       const rect = link.getBoundingClientRect();
       return { url: link.href, x: rect.left - bounds.left, y: rect.top - bounds.top, width: rect.width, height: rect.height };
@@ -1999,13 +2100,37 @@ async function capturePDFCover(exportedAt) {
       useCORS: false
     });
     const logo = { x: logoRect.left - bounds.left, y: logoRect.top - bounds.top, width: logoRect.width, height: logoRect.height };
-    return { canvas, links, logo, width: bounds.width, height: bounds.height };
+    const qr = { x: qrRect.left - bounds.left, y: qrRect.top - bounds.top, width: qrRect.width, height: qrRect.height };
+    return { canvas, links, logo, qr, width: bounds.width, height: bounds.height };
   } finally {
     cover.remove();
   }
 }
 
-function addPDFCover(pdf, cover, logoPath) {
+function drawPDFQRCode(pdf, code, bounds) {
+  const quietZone = 4;
+  const modules = code.getModuleCount();
+  const cell = Math.min(bounds.width, bounds.height) / modules;
+  const size = cell * (modules + quietZone * 2);
+  const x = bounds.x - quietZone * cell;
+  const y = bounds.y - quietZone * cell;
+  pdf.setFillColor(255);
+  pdf.rect(x, y, size, size, "F");
+  pdf.setFillColor(0);
+  for (let row = 0; row < modules; row += 1) {
+    let start = -1;
+    for (let col = 0; col <= modules; col += 1) {
+      const dark = col < modules && code.isDark(row, col);
+      if (dark && start < 0) start = col;
+      if (!dark && start >= 0) {
+        pdf.rect(x + (start + quietZone) * cell, y + (row + quietZone) * cell, (col - start) * cell, cell, "F");
+        start = -1;
+      }
+    }
+  }
+}
+
+function addPDFCover(pdf, cover, logoPath, code, deepLink) {
   const pageWidth = pdf.internal.pageSize.getWidth();
   const pageHeight = pdf.internal.pageSize.getHeight();
   pdf.addImage(cover.canvas.toDataURL("image/jpeg", .98), "JPEG", 0, 0, pageWidth, pageHeight, undefined, "FAST");
@@ -2020,6 +2145,11 @@ function addPDFCover(pdf, cover, logoPath) {
   pdf.path(logo.operations);
   pdf.fillStroke();
   pdf.restoreGraphicsState();
+  if (code) {
+    const qrBounds = { x: cover.qr.x * scaleX, y: cover.qr.y * scaleY, width: cover.qr.width * scaleX, height: cover.qr.height * scaleY };
+    drawPDFQRCode(pdf, code, qrBounds);
+    pdf.link(qrBounds.x, qrBounds.y, qrBounds.width, qrBounds.height, { url: deepLink });
+  }
   cover.links.forEach(link => pdf.link(link.x * scaleX, link.y * scaleY, link.width * scaleX, link.height * scaleY, { url: link.url }));
 }
 
@@ -2078,8 +2208,10 @@ async function exportCurrent() {
   button.textContent = "Building PDF…";
   try {
     const exportedAt = new Date();
+    const deepLink = currentGraphURL();
+    const code = graphQRCode(deepLink);
     const logoPath = await loadPDFLogoPath();
-    const cover = await capturePDFCover(exportedAt);
+    const cover = await capturePDFCover(exportedAt, deepLink, Boolean(code));
     const canvas = await capturePresentationView(exportedAt);
     const pdf = new window.jspdf.jsPDF({ orientation: "portrait", unit: "pt", format: "letter", compress: true });
     pdf.setProperties({
@@ -2090,7 +2222,7 @@ async function exportCurrent() {
       keywords: "UFO Files, relationship graph, machine data"
     });
     pdf.setCreationDate(exportedAt);
-    addPDFCover(pdf, cover, logoPath);
+    addPDFCover(pdf, cover, logoPath, code, deepLink);
     addPresentationPage(pdf, canvas);
     pdf.save(pdfFilename(state.config.title));
     toast("Presentation PDF saved");
