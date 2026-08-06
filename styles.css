@@ -86,6 +86,11 @@ h1, h2, h3, p { margin-top: 0; }
 .stage-header h2:hover { border-bottom-color: var(--line-strong); }
 .stage-header p:last-child { color: var(--muted); font-size: 12px; margin-bottom: 0; }
 .stage-tools { display: flex; align-items: center; gap: 7px; }
+.stage.pdf-exporting { --paper: #fff; background: #fff; }
+.stage.pdf-exporting .stage-tools { visibility: hidden; }
+.stage.pdf-exporting .legend { background: #fff; }
+.stage.pdf-exporting .globe-label,
+.stage.pdf-exporting .map-status { background: rgba(255,255,255,.9); }
 .fullscreen-button { display: grid; place-items: center; padding: 0; }
 .fullscreen-button svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: square; }
 .fullscreen-collapse-icon { display: none; }
@@ -161,6 +166,30 @@ h1, h2, h3, p { margin-top: 0; }
 .scatter-secondary-node { fill: var(--paper); fill-opacity: .72; stroke: var(--ink); stroke-width: 1; opacity: .45; }
 .scatter-relationship-layer.has-focus .scatter-secondary-node { opacity: .08; }
 .scatter-relationship-layer.has-focus .scatter-secondary-node.is-focused { opacity: .85; }
+.stage.pdf-exporting .scatter-relationship-line { opacity: .07 !important; }
+.stage.pdf-exporting .scatter-relationship-layer.strength-medium .scatter-relationship-line { opacity: .14 !important; }
+.stage.pdf-exporting .scatter-relationship-layer.strength-strong .scatter-relationship-line { opacity: .24 !important; }
+.stage.pdf-exporting .scatter-secondary-node { opacity: .45 !important; }
+
+.pdf-cover-render { position: fixed; left: -10000px; top: 0; width: 816px; height: 1056px; padding: 64px; display: flex; flex-direction: column; color: #111; background: #fff; font-family: var(--font); line-height: 1.4; }
+.pdf-cover-render::after { content: ""; position: absolute; inset: 30px; border: 1px solid #111; pointer-events: none; }
+.pdf-cover-brand { display: flex; align-items: center; gap: 10px; }
+.pdf-cover-logo { flex: 0 0 auto; width: 76px; height: 72px; }
+.pdf-cover-brand strong, .pdf-cover-brand span { display: block; text-transform: uppercase; }
+.pdf-cover-brand strong { font-size: 17px; letter-spacing: .04em; }
+.pdf-cover-brand span { margin-top: 4px; font-size: 12px; }
+.pdf-cover-rule { width: 100%; margin: 18px 0 48px; border: 0; border-top: 2px solid #111; }
+.pdf-cover-title { max-width: 680px; margin: 0 0 54px; font: 400 34px/1.16 var(--font); letter-spacing: 0; text-transform: uppercase; }
+.pdf-cover-metadata { display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 15px 18px; margin: 0; font-size: 12px; }
+.pdf-cover-metadata dt { font-weight: 750; letter-spacing: .04em; text-transform: uppercase; }
+.pdf-cover-metadata dd { min-width: 0; margin: 0; overflow-wrap: anywhere; }
+.pdf-cover-provenance { margin: auto 0 0; font-size: 12px; line-height: 1.55; }
+.pdf-cover-links { display: grid; gap: 9px; margin-top: 28px; }
+.pdf-cover-links a { width: max-content; color: #111; font-size: 13px; font-weight: 750; text-decoration: underline; text-underline-offset: 3px; }
+.pdf-cover-footer { margin: 34px 0 0; font-size: 10px; }
+.pdf-stage-provenance { display: grid; grid-template-columns: auto 1fr; gap: 3px 18px; padding: 9px 27px 11px; border-top: 1px solid rgba(17,17,17,.34); color: #555; background: #fff; font-size: 9px; line-height: 1.35; }
+.pdf-stage-provenance strong { grid-row: span 3; align-self: center; color: #111; font-weight: 750; }
+.pdf-stage-provenance span { min-width: 0; overflow-wrap: anywhere; }
 .network-relationship-line { stroke: var(--ink); opacity: .07; transition: opacity .15s; }
 .network-relationship-line:hover { opacity: .8; }
 .network-relationship-layer.has-focus .network-relationship-line { opacity: .025; }

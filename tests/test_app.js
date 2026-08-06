@@ -1139,6 +1139,68 @@ test("network edges use the same restrained rendering as relationship overlays",
   assert.match(styles, /\.network-relationship-layer\.has-focus \.network-relationship-line\.is-focused \{ opacity: \.8/);
 });
 
+test("all graph types export a presentation PDF with UFO Files provenance", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  const html = fs.readFileSync("index.html", "utf8");
+  vm.runInContext(source, context);
+
+  assert.equal(vm.runInContext('pdfFilename("Significant People")', context), "significant-people.pdf");
+  assert.match(html, /id="exportButton">Export PDF<\/button>/);
+  assert.match(html, /vendor\/html2canvas\.min\.js[\s\S]*vendor\/jspdf\.umd\.min\.js[\s\S]*app\.js/);
+  assert.match(source, /const UFO_FILES_URL = "https:\/\/ufo-files\.app"/);
+  assert.match(source, /const UFO_FILES_GITHUB_URL = "https:\/\/github\.com\/ufo-files"/);
+  assert.match(source, /\["CATALOG GENERATED", generatedAt\]/);
+  assert.match(source, /\["SOURCE REVISION", revision\]/);
+  assert.match(source, /fetch\("assets\/logo\.svg"\)/);
+  assert.match(source, /pdf\.path\(logo\.operations\)[\s\S]*pdf\.fillStroke\(\)/);
+  assert.doesNotMatch(source, /PRESENTATION-READY DATA VIEW/);
+  assert.match(source, /loadPDFLogoPath\(\)[\s\S]*capturePDFCover\(exportedAt\)[\s\S]*capturePresentationView\(exportedAt\)[\s\S]*addPDFCover\(pdf, cover, logoPath\)[\s\S]*addPresentationPage\(pdf, canvas\)[\s\S]*pdf\.save\(pdfFilename/);
+  assert.doesNotMatch(source, /function export(?:SVG|CSV|DocumentCSV)/);
+  assert.ok(fs.statSync("vendor/html2canvas.min.js").size > 190_000);
+  assert.ok(fs.statSync("vendor/jspdf.umd.min.js").size > 400_000);
+  assert.ok(fs.statSync("vendor/HTML2CANVAS-LICENSE.txt").size > 1_000);
+  assert.ok(fs.statSync("vendor/JSPDF-LICENSE.txt").size > 1_000);
+  assert.ok(fs.statSync("assets/logo.svg").size > 8_000);
+  const logo = JSON.parse(vm.runInContext('JSON.stringify(svgPathOperations("M0 0 L460 0 V433 H0 Z", { x: 10, y: 20, width: 92, height: 86.6 }))', context));
+  const roundedOperations = logo.operations.map(operation => operation.c
+    ? { ...operation, c: operation.c.map(value => Math.round(value * 1_000) / 1_000) }
+    : operation);
+  assert.deepEqual(roundedOperations, [
+    { op: "m", c: [10, 20] },
+    { op: "l", c: [102, 20] },
+    { op: "l", c: [102, 106.6] },
+    { op: "l", c: [10, 106.6] },
+    { op: "h" }
+  ]);
+  assert.equal(logo.strokeWidth, 1.2);
+});
+
+test("PDF capture includes the complete stage without controls and normalizes relationships", () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const styles = fs.readFileSync("styles.css", "utf8");
+  const globe = fs.readFileSync("map-globe.js", "utf8");
+  const exportBody = globe.match(/prepareExport\(\) \{([\s\S]*?)\n  \}/)?.[1] || "";
+
+  assert.match(exportBody, /relationshipOpacities = this\.relationships\.map\(line => line\.material\.opacity\)/);
+  assert.match(exportBody, /line\.material\.opacity = line\.userData\.baseOpacity/);
+  assert.match(exportBody, /line\.material\.opacity = relationshipOpacities\[index\]/);
+  assert.match(source, /window\.html2canvas\(stage/);
+  assert.match(source, /onclone: clonedDocument => clonedDocument\.querySelector\("\.stage-tools"\)\?\.remove\(\)/);
+  assert.match(source, /state\.config\.type === "map" \? window\.ufoGlobe : null/);
+  assert.match(source, /provenance\.className = "pdf-stage-provenance"/);
+  assert.match(source, /Catalog \$\{escapeHTML\(metadata\.get\("CATALOG GENERATED"\)\)\}/);
+  assert.match(source, /Source \$\{escapeHTML\(metadata\.get\("SOURCE OF TRUTH"\)\)\}@\$\{escapeHTML\(metadata\.get\("SOURCE REVISION"\)\)\}/);
+  assert.match(source, /backgroundColor: "#fff"/);
+  assert.match(styles, /\.stage\.pdf-exporting \{ --paper: #fff; background: #fff; \}/);
+  assert.match(styles, /\.stage\.pdf-exporting \.stage-tools \{ visibility: hidden; \}/);
+  assert.match(styles, /\.stage\.pdf-exporting \.scatter-relationship-line \{ opacity: \.07 !important; \}/);
+  assert.match(styles, /\.pdf-cover-render \{[^}]*background: #fff; font-family: var\(--font\)/);
+  assert.match(styles, /\.pdf-cover-brand \{[^}]*gap: 10px/);
+  assert.match(styles, /\.pdf-cover-logo \{[^}]*width: 76px; height: 72px/);
+  assert.match(styles, /\.pdf-stage-provenance \{[^}]*background: #fff/);
+});
+
 test("robust scatter extents cap material outliers without changing ordinary ranges", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];

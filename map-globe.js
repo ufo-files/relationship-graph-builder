@@ -592,13 +592,20 @@ class GlobeMap {
     this.draw();
   }
 
-  exportPNG(filename) {
+  prepareExport() {
+    const relationshipOpacities = this.relationships.map(line => line.material.opacity);
+    this.relationships.forEach(line => {
+      line.material.opacity = line.userData.baseOpacity;
+    });
     this.draw();
-    const link = document.createElement("a");
-    link.href = this.renderer.domElement.toDataURL("image/png");
-    link.download = `${filename}.png`;
-    link.click();
+    return () => {
+      this.relationships.forEach((line, index) => {
+        line.material.opacity = relationshipOpacities[index];
+      });
+      this.draw();
+    };
   }
+
 }
 
 try {
