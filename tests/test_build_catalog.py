@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.build_catalog import Candidate, build, classify_phrase, comparison_key, curated_events, duplicate_candidates, entity_key, extract_mentions, extract_title_mentions, inflation_risk, load_registry, merge_events, normalized_date, overlay_curated_events, sentence_segments, temporal_candidates
+from scripts.build_catalog import Candidate, attach_event_entities, build, classify_phrase, comparison_key, curated_events, duplicate_candidates, entity_key, extract_mentions, extract_title_mentions, inflation_risk, load_registry, merge_events, normalized_date, overlay_curated_events, sentence_segments, temporal_candidates
 
 
 class ClassificationTests(unittest.TestCase):
@@ -146,6 +146,25 @@ class ClassificationTests(unittest.TestCase):
         self.assertEqual(len(events), 1)
         self.assertEqual(events[0]["id"], "curated")
         self.assertEqual(len(events[0]["evidence"]), 2)
+
+    def test_events_receive_specific_entities_from_their_evidence(self):
+        roswell = Candidate("Roswell", "location", curated=True)
+        ufo = Candidate("UFO", "subject", curated=True)
+        published = {"location:roswell": roswell, "subject:ufo": ufo}
+        events = [{"title": "Roswell incident", "evidence": [
+            {"documentId": "doc-a", "segment": 4, "excerpt": "A UFO was observed near Roswell."}
+        ]}]
+
+        attach_event_entities(
+            events,
+            {"doc-a:4": ["location:roswell", "subject:ufo"]},
+            {"doc-a": ["location:roswell"]},
+            {},
+            published,
+            {"location:roswell": "ent-roswell", "subject:ufo": "ent-ufo"},
+        )
+
+        self.assertEqual(events[0]["entityIds"], ["ent-roswell"])
 
     def test_prominence_inflation_risk_requires_lost_document_coverage(self):
         self.assertEqual(inflation_risk(0.98, 870), "high")
@@ -332,6 +351,11 @@ class ClassificationTests(unittest.TestCase):
             ("Extraterrestrial Intelligence", "subject"),
         }.issubset(entities))
         self.assertNotIn(("Extraterrestrial Intelligence", "organization"), entities)
+
+    def test_extracts_known_roswell_location_from_document_titles(self):
+        mentions = extract_title_mentions("Roswell Witness Testimony", {})
+
+        self.assertIn(("Roswell", "location"), {(canonical, category) for _, canonical, category, _, _ in mentions})
 
     def test_preserves_initials_and_ignores_declassification_boilerplate(self):
         segments = list(sentence_segments(

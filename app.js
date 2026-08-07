@@ -96,7 +96,7 @@ const VIEW_DEFAULTS = {
   book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 20 },
   document: { size: "words", color: "source", labels: "top", documentSearch: "" },
   bars: { aggregation: "source", y: "words", color: "intensity" },
-  timeline: { timelineRole: "event", x: "startDate", y: "timelineLane", size: "documentCount", color: "eventType", categories: ["date"], labels: "off", limit: 500, relationshipLayer: "always" },
+  timeline: { timelineRole: "event", x: "startDate", y: "timelineLane", size: "documentCount", color: "eventType", categories: ["date"], labels: "all", limit: 500, relationshipLayer: "always" },
   matrix: { matrixColumns: "category", color: "intensity" },
   table: { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 }
 };
@@ -459,7 +459,7 @@ function renderControls() {
       + controlSelect("y", "Y axis", state.config.timelineRole === "event" ? eventFields : state.config.timelineRole === "entity" ? numericEntity : numericDoc);
     roles += state.config.timelineRole === "entity"
       ? relationshipTypeControl()
-      : `<div class="control"><div class="control-title">Relationship</div><select disabled><option>${state.config.timelineRole === "event" ? "Chronological sequence" : "Shared published entities"}</option></select></div>`;
+      : `<div class="control"><div class="control-title">Relationship</div><select disabled><option>Shared published entities</option></select></div>`;
   } else if (state.config.type === "matrix") {
     roles = `<div class="control"><div class="control-title">Rows</div><select disabled><option>Collections</option></select></div>` + controlSelect("matrixColumns", "Columns", [{ value: "entity", label: "Entities" }, { value: "category", label: "Entity categories" }]);
   } else {
@@ -479,7 +479,7 @@ function renderControls() {
   const moonTransitControl = state.config.type === "map" ? `<div class="control"><label for="moonTransitSeconds">On-screen Moon transit <span>${state.config.moonTransitSeconds}s</span></label><input id="moonTransitSeconds" type="range" min="2" max="10" step="1" value="${state.config.moonTransitSeconds}" data-range="moonTransitSeconds"></div>` : "";
   const supportsRelationships = ["scatter", "map", "timeline"].includes(state.config.type);
   const eventSequenceRelationships = state.config.type === "timeline" && state.config.timelineRole === "event";
-  const relationshipControls = supportsRelationships ? controlSelect("relationshipLayer", eventSequenceRelationships ? "Sequence lines" : "Relationship layer", [{ value: "off", label: "Off" }, { value: "hover", label: "On hover" }, { value: "always", label: "Always" }])
+  const relationshipControls = supportsRelationships ? controlSelect("relationshipLayer", "Relationship layer", [{ value: "off", label: "Off" }, { value: "hover", label: "On hover" }, { value: "always", label: "Always" }])
     + `<div class="control"><label>Connections per node <span>${state.config.relationshipNeighbors}</span></label><input type="range" min="1" max="5" step="1" value="${state.config.relationshipNeighbors}" data-range="relationshipNeighbors"></div>`
     + (eventSequenceRelationships ? "" : controlSelect("relationshipNodeSize", "Secondary-node size", [{ value: "inherit", label: "Inherit size metric" }, { value: "fixed", label: "Fixed" }]))
     + controlSelect("relationshipStrength", "Line strength", [{ value: "subtle", label: "Subtle" }, { value: "medium", label: "Medium" }, { value: "strong", label: "Strong" }]) : "";
@@ -830,8 +830,7 @@ function scatterSecondaryAnchors(egoNetworks, displayedIndex) {
 
 function drawIntensityLegend() {
   const relationshipView = ["scatter", "map", "timeline"].includes(state.config.type);
-  const relationshipLabel = state.config.type === "timeline" && state.config.timelineRole === "event" ? "Event sequence" : "Strongest relationships";
-  const egoKey = relationshipView && state.config.relationshipLayer !== "off" ? `<span class="legend-item"><i class="ego-key"></i>${relationshipLabel}</span>` : "";
+  const egoKey = relationshipView && state.config.relationshipLayer !== "off" ? `<span class="legend-item"><i class="ego-key"></i>Strongest relationships</span>` : "";
   const outlierKey = state.config.type === "scatter" ? `<span class="legend-item"><i class="outlier-key"></i>Axis-capped outlier</span>` : "";
   const inflationKey = state.config.type === "scatter" ? `<span class="legend-item"><i class="risk-key"></i>Potential mention inflation</span>` : "";
   $("#legend").innerHTML = `<span class="legend-item"><i style="background:#111;opacity:.14"></i>Lower</span><span class="legend-item"><i style="background:#111;opacity:.48"></i>Medium</span><span class="legend-item"><i style="background:#111"></i>Higher</span>${egoKey}${outlierKey}${inflationKey}`;
@@ -1611,23 +1610,39 @@ function renderTimeline() {
     x: clampedScale(new Date(timelineDate(item)).getTime(), xExtent, [margin.left, width - margin.right]),
     y: clampedScale(item[state.config.y], yExtent, [height - margin.bottom, margin.top])
   });
+  const eventEntityNames = new Map((state.catalog.entities || []).map(entity => [entity.id, entity.name]));
+  const eventLabel = item => {
+    const entities = (item.entityIds || []).map(id => eventEntityNames.get(id)).filter(Boolean);
+    const entity = entities.find(name => item.title.toLowerCase().includes(name.toLowerCase())) || entities[0];
+    return entity ? `${entity} · ${label(item.eventType)}` : item.title.slice(0, 18);
+  };
   let relationshipLayer = null;
   const relationshipLines = new Map();
   const relationshipNodes = new Map();
   let egoNetworks = new Map();
   if (state.config.timelineRole === "event" && state.config.relationshipLayer !== "off") {
     relationshipLayer = el("g", { class: `scatter-relationship-layer relationship-${state.config.relationshipLayer} strength-${state.config.relationshipStrength}` });
-    data.forEach((item, index) => {
-      for (let offset = 1; offset <= state.config.relationshipNeighbors && index + offset < data.length; offset++) {
-        const next = data[index + offset];
-        const a = positionFor(item), b = positionFor(next);
-        const line = el("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, class: "scatter-relationship-line", "stroke-width": 1 });
-        [item.id, next.id].forEach(id => {
+    const links = new Map();
+    data.forEach(item => {
+      const related = data.filter(candidate => candidate.id !== item.id).map(candidate => {
+        const shared = (item.entityIds || []).filter(id => (candidate.entityIds || []).includes(id));
+        return { candidate, shared };
+      }).filter(link => link.shared.length).sort((a, b) => b.shared.length - a.shared.length).slice(0, state.config.relationshipNeighbors);
+      related.forEach(({ candidate, shared }) => {
+        const ids = [item.id, candidate.id].sort();
+        const key = ids.join("|");
+        if (!links.has(key) || shared.length > links.get(key).shared.length) links.set(key, { source: item, target: candidate, shared });
+      });
+    });
+    links.forEach(({ source, target, shared }) => {
+        const a = positionFor(source), b = positionFor(target);
+        const line = el("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, class: "scatter-relationship-line", "stroke-width": Math.min(2, .7 + shared.length * .25) });
+        addTitle(line, `Shared: ${shared.map(id => eventEntityNames.get(id)).filter(Boolean).join(", ")}`);
+        [source.id, target.id].forEach(id => {
           if (!relationshipLines.has(id)) relationshipLines.set(id, []);
           relationshipLines.get(id).push(line);
         });
         relationshipLayer.append(line);
-      }
     });
     svg.append(relationshipLayer);
   } else if (state.config.timelineRole !== "event" && state.config.relationshipLayer !== "off") {
@@ -1679,7 +1694,9 @@ function renderTimeline() {
     });
     svg.append(dot);
     if (state.config.labels === "all" || (state.config.labels === "top" && index < 12)) {
-      svg.append(el("text", { x, y: Math.min(height - margin.bottom + 18, y + radius + state.config.labelSize), "text-anchor": "middle", class: "chart-label node-label" }, item.title.slice(0, 22)));
+      const right = index % 2 === 0;
+      const labelY = index % 4 < 2 ? Math.max(margin.top + 10, y - radius - 5) : Math.min(height - margin.bottom - 4, y + radius + state.config.labelSize);
+      svg.append(el("text", { x: x + (right ? radius + 4 : -radius - 4), y: labelY, "text-anchor": right ? "start" : "end", "font-size": 10, class: "chart-label node-label" }, eventLabel(item).slice(0, 18)));
     }
   });
   drawIntensityLegend();

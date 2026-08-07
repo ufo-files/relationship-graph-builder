@@ -479,6 +479,30 @@ def overlay_curated_events(extracted: list[dict], reviewed: list[dict]) -> list[
     return extracted
 
 
+def attach_event_entities(
+    events: list[dict],
+    segment_entities: dict[str, list[str]],
+    document_title_entities: dict[str, list[str]],
+    registry: dict,
+    published: dict[str, Candidate],
+    entity_ids: dict[str, str],
+) -> None:
+    """Attach specific published entities evidenced by each event's supporting passages."""
+    for event in events:
+        keys: set[str] = set()
+        for evidence in event.get("evidence", []):
+            keys.update(document_title_entities.get(evidence["documentId"], []))
+            if "segment" in evidence:
+                keys.update(segment_entities.get(f"{evidence['documentId']}:{evidence['segment']}", []))
+            for _, canonical, category, _, _ in extract_mentions(evidence.get("excerpt", ""), registry):
+                keys.add(f"{category}:{entity_key(canonical, category)}")
+        for _, canonical, category, _, _ in extract_mentions(event.get("title", ""), registry):
+            keys.add(f"{category}:{entity_key(canonical, category)}")
+        specific = [key for key in keys
+                    if key in published and published[key].category not in {"date", "subject", "book"}]
+        event["entityIds"] = sorted(entity_ids[key] for key in specific)
+
+
 def clean_space(value: str) -> str:
     return re.sub(r"\s+", " ", value.replace("\u00a0", " ")).strip(" \t\r\n,;:()[]{}")
 
@@ -805,6 +829,14 @@ def extract_title_mentions(title: str, registry: dict[str, tuple[str, str]]) -> 
     """Use document titles as curated identity evidence without treating arbitrary title case as NER."""
     words = clean_space(title).split()
     found: dict[str, tuple[str, str, str, float, bool]] = {}
+    for match in KNOWN_PATTERN.finditer(title):
+        raw = match.group(0)
+        lookup = KNOWN_LOOKUP.get(known_lookup_key(raw))
+        if lookup is None:
+            continue
+        canonical, category = KNOWN[lookup]
+        key = f"{category}:{entity_key(canonical, category)}"
+        found.setdefault(key, (raw, canonical, category, 0.99, True))
     for width in range(min(8, len(words)), 0, -1):
         for start in range(len(words) - width + 1):
             raw = clean_space(" ".join(words[start:start + width])).strip("-'_.")
@@ -905,6 +937,7 @@ def build(
     candidates: dict[str, Candidate] = {}
     documents: list[dict] = []
     segment_entities: dict[str, list[str]] = {}
+    document_title_entities: dict[str, list[str]] = collections.defaultdict(list)
     segment_text: dict[str, str] = {}
     source_counts: collections.Counter = collections.Counter()
     source_words: collections.Counter = collections.Counter()
@@ -976,6 +1009,7 @@ def build(
         title_sid = f"{doc_id}:title"
         for raw, canonical, category, confidence, curated in extract_title_mentions(title, registry):
             key = f"{category}:{entity_key(canonical, category)}"
+            document_title_entities[doc_id].append(key)
             candidate = candidates.get(key)
             if candidate is None:
                 candidate = candidates[key] = Candidate(canonical, category, curated)
@@ -1031,6 +1065,7 @@ def build(
     published_items.sort(key=publication_rank, reverse=True)
     published = dict(published_items)
     entity_ids = {key: stable_id("ent", key) for key in published}
+    attach_event_entities(events, segment_entities, document_title_entities, registry, published, entity_ids)
     entities = []
     for key, candidate in published_items:
         extraction = candidate.extraction_total / max(1, candidate.mentions)

@@ -610,13 +610,14 @@ test("timeline defaults to evidence-backed event dates instead of cataloging tim
   assert.match(source, /timeline: \{ timelineRole: "event", x: "startDate", y: "timelineLane", size: "documentCount"[^\n]+relationshipLayer: "always"/);
   assert.match(source, /title = config\.timelineRole === "event" \? "Event Sequence"/);
   assert.match(source, /state\.config\.timelineRole === "event" && state\.config\.relationshipLayer !== "off"/);
-  assert.match(source, /"Chronological sequence"/);
+  assert.match(source, /const shared = \(item\.entityIds \|\| \[\]\)\.filter/);
+  assert.match(source, /return entity \? `\$\{entity\} · \$\{label\(item\.eventType\)\}`/);
   assert.match(source, /state\.catalog\.events \|\| \[\]/);
   assert.match(source, /item\.confidence >= \.9/);
   assert.match(source, /item\.startDate \|\| item\.documentDate/);
   assert.match(source, /Evidence-backed events by occurrence date/);
   assert.match(source, /\["createdAt", "documentDate", "startDate"\]\.includes\(xKey\)/);
-  assert.match(source, /labels: "off", limit: 500/);
+  assert.match(source, /labels: "all", limit: 500/);
   assert.match(source, /state\.config\.timelineRole === "event" \? \[1, 7\]/);
 });
 
