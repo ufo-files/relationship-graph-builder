@@ -1822,6 +1822,16 @@ function toggleGraphFullScreen() {
   setGraphFullScreen(!document.body.classList.contains("graph-fullscreen"));
 }
 
+function setMobileControls(open) {
+  const button = $("#controlsButton");
+  $("#builderView").classList[open ? "add" : "remove"]("controls-open");
+  if (!button) return;
+  const label = open ? "Hide graph controls" : "Show graph controls";
+  button.setAttribute("aria-expanded", String(open));
+  button.setAttribute("aria-label", label);
+  button.setAttribute("title", label);
+}
+
 function closeInspector() {
   $("#builderView").classList.add("inspector-collapsed");
   $("#inspector").classList.remove("has-selection");
@@ -2327,6 +2337,7 @@ $("#graphTitle").addEventListener("blur", event => {
 });
 $("#saveButton").addEventListener("click", () => { localStorage.setItem("ufo-files-graph-view", JSON.stringify(state.config)); toast("View saved in this browser"); });
 $("#shareButton").addEventListener("click", async () => { persistHash(); try { await navigator.clipboard.writeText(location.href); toast("Builder link copied"); } catch (_) { toast("Copy the URL from your browser"); } });
+$("#controlsButton").addEventListener("click", event => setMobileControls(event.currentTarget.getAttribute("aria-expanded") !== "true"));
 $("#fullScreenButton").addEventListener("click", toggleGraphFullScreen);
 $("#mapAnimationButton").addEventListener("click", () => {
   const playing = window.ufoGlobe?.setPlaying(!window.ufoGlobe.autoRotate) || false;
