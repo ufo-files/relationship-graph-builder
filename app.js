@@ -1916,6 +1916,11 @@ const UFO_FILES_URL = "https://ufo-files.app";
 const UFO_FILES_GITHUB_URL = "https://github.com/ufo-files";
 const GRAPH_BUILDER_URL = "https://ufo-files.github.io/relationship-graph-builder/";
 
+function pdfExportTitle(config = state.config) {
+  const title = String(config.title || "").trim();
+  return !title || /^untitled(?: graph)?$/i.test(title) ? dataAwareTitle(config) : title;
+}
+
 function pdfFilename(title) {
   return `${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "ufo-files-graph"}.pdf`;
 }
@@ -2151,13 +2156,13 @@ function drawPDFQRCode(pdf, code, bounds) {
 
 function addPDFCover(pdf, exportedAt, deepLink, code, logoPath) {
   pdf.setFillColor(255); pdf.rect(0, 0, 612, 792, "F"); pdf.setDrawColor(17); pdf.setLineWidth(.75); pdf.rect(22.5, 22.5, 567, 747);
-  const logo = svgPathOperations(logoPath, { x: 48, y: 47, width: 57, height: 54 });
+  const logo = svgPathOperations(logoPath, { x: 48, y: 49, width: 42, height: 40 });
   pdf.setFillColor(0); pdf.setLineWidth(logo.strokeWidth); pdf.path(logo.operations); pdf.fillStroke();
-  setPDFFont(pdf, 13, true); pdf.text("UFO FILES", 112, 65);
-  setPDFFont(pdf, 9); pdf.text("RELATIONSHIP GRAPH EXPORT", 112, 81);
-  setPDFFont(pdf, 7.5, true); pdf.textWithLink("ufo-files.app", 402, 68, { url: UFO_FILES_URL }); pdf.textWithLink("github.com/ufo-files", 474, 68, { url: UFO_FILES_GITHUB_URL });
+  setPDFFont(pdf, 13, true); pdf.text("UFO FILES", 99, 62);
+  setPDFFont(pdf, 9); pdf.text("RELATIONSHIP GRAPH EXPORT", 99, 77);
+  setPDFFont(pdf, 7.5, true); pdf.textWithLink("ufo-files.app", 99, 94, { url: UFO_FILES_URL }); pdf.textWithLink("github.com/ufo-files", 171, 94, { url: UFO_FILES_GITHUB_URL });
   pdf.setLineWidth(1.5); pdf.line(48, 116, 564, 116);
-  setPDFFont(pdf, 25.5); const titleLines = pdf.splitTextToSize(state.config.title.toUpperCase(), 516).slice(0, 2); pdf.text(titleLines, 48, 157, { lineHeightFactor: 1.15 });
+  setPDFFont(pdf, 25.5); const titleLines = pdf.splitTextToSize(pdfExportTitle().toUpperCase(), 516).slice(0, 2); pdf.text(titleLines, 48, 157, { lineHeightFactor: 1.15 });
   const summaryY = 199 + Math.max(0, titleLines.length - 1) * 27;
   const metadata = pdfProvenance(exportedAt);
   metadata.forEach(([name, value], index) => {
@@ -2249,7 +2254,7 @@ async function addPDFGraphPage(pdf, exportedAt) {
     const pageHeight = pdf.internal.pageSize.getHeight();
     pdf.setFillColor(255); pdf.rect(0, 0, pageWidth, pageHeight, "F"); pdf.setDrawColor(17); pdf.setLineWidth(.75); pdf.rect(24, 24, pageWidth - 48, pageHeight - 48);
     setPDFFont(pdf, 8.25, true); pdf.text($("#graphKicker").textContent.toUpperCase(), 45, 52);
-    setPDFFont(pdf, 18); pdf.text(truncatePDFText(pdf, state.config.title.toUpperCase(), pageWidth - 90), 45, 76);
+    setPDFFont(pdf, 18); pdf.text(truncatePDFText(pdf, pdfExportTitle().toUpperCase(), pageWidth - 90), 45, 76);
     setPDFFont(pdf, 8.25, false, 85); pdf.text(truncatePDFText(pdf, $("#graphSubtitle").textContent, pageWidth - 90), 45, 95);
     const provenanceY = pageHeight - 66;
     const chartBounds = { x: 45, y: 112, width: pageWidth - 90, height: provenanceY - 190 };
@@ -2272,9 +2277,12 @@ async function addPDFGraphPage(pdf, exportedAt) {
     pdf.setDrawColor(160); pdf.line(40, legendY + 16, pageWidth - 40, legendY + 16);
     const summaryWidth = (pageWidth - 110) / 2;
     setPDFFont(pdf, 7.5, false, 85); pdf.text(truncatePDFText(pdf, $("#resultSummary").textContent, summaryWidth), 45, legendY + 34); pdf.text(truncatePDFText(pdf, $("#policySummary").textContent, summaryWidth), pageWidth - 45, legendY + 34, { align: "right" });
-    pdf.setDrawColor(160); pdf.line(24, provenanceY - 10, pageWidth - 24, provenanceY - 10);
-    setPDFFont(pdf, 7.25, true); pdf.text(`UFO Files · ${UFO_FILES_URL}`, 45, provenanceY + 11);
-    setPDFFont(pdf, 6.75, false, 85); pdf.text(`Catalog ${metadata.get("CATALOG GENERATED")}`, 225, provenanceY); pdf.text(`Source ${metadata.get("SOURCE OF TRUTH")}@${metadata.get("SOURCE REVISION")}`, 225, provenanceY + 10); pdf.text(`Exported ${metadata.get("EXPORTED")}`, 225, provenanceY + 20);
+    const metadataTop = provenanceY - 10;
+    const metadataBottom = pageHeight - 24;
+    const metadataCenterY = (metadataTop + metadataBottom) / 2;
+    pdf.setDrawColor(160); pdf.line(24, metadataTop, pageWidth - 24, metadataTop);
+    setPDFFont(pdf, 7.25, true); pdf.text(`UFO Files · ${UFO_FILES_URL}`, 45, metadataCenterY + 2);
+    setPDFFont(pdf, 6.75, false, 85); pdf.text(`Catalog ${metadata.get("CATALOG GENERATED")}`, 225, metadataCenterY - 8); pdf.text(`Source ${metadata.get("SOURCE OF TRUTH")}@${metadata.get("SOURCE REVISION")}`, 225, metadataCenterY + 2); pdf.text(`Exported ${metadata.get("EXPORTED")}`, 225, metadataCenterY + 12);
   } finally {
     stage.classList.remove("pdf-exporting");
     restoreRelationships();
@@ -2290,16 +2298,17 @@ async function exportCurrent() {
   button.textContent = "Building PDF…";
   try {
     const exportedAt = new Date();
+    const exportTitle = pdfExportTitle();
     const deepLink = currentGraphURL();
     const code = graphQRCode(deepLink);
     const logoPath = await loadPDFLogoPath();
     const pdf = new window.jspdf.jsPDF({ orientation: "portrait", unit: "pt", format: "letter", compress: true });
     await loadPDFFonts(pdf);
-    pdf.setProperties({ title: state.config.title, subject: "UFO Files relationship graph export", author: "UFO Files", creator: "UFO Files Relationship Graph Builder", keywords: "UFO Files, relationship graph, machine data" });
+    pdf.setProperties({ title: exportTitle, subject: "UFO Files relationship graph export", author: "UFO Files", creator: "UFO Files Relationship Graph Builder", keywords: "UFO Files, relationship graph, machine data" });
     pdf.setCreationDate(exportedAt);
     addPDFCover(pdf, exportedAt, deepLink, code, logoPath);
     await addPDFGraphPage(pdf, exportedAt);
-    pdf.save(pdfFilename(state.config.title));
+    pdf.save(pdfFilename(exportTitle));
     toast("Presentation PDF saved");
   } catch (error) {
     console.error("PDF export failed", error);
