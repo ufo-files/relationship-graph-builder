@@ -297,7 +297,15 @@ test("mobile inspector covers the viewport and keeps the existing close button",
   const styles = fs.readFileSync("styles.css", "utf8");
   assert.match(html, /id="closeInspector"[^>]+aria-label="Close inspector"/);
   assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.inspector \{[^}]*position: fixed;[^}]*inset: 0;[^}]*z-index: 30;[^}]*width: 100%;[^}]*height: 100dvh;/);
-  assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.inspector-close \{[^}]*width: 44px;[^}]*height: 44px;/);
+  assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.inspector-close \{[^}]*width: 42px;[^}]*height: 42px;/);
+});
+
+test("action buttons stay on one line at an aligned height", () => {
+  const styles = fs.readFileSync("styles.css", "utf8");
+  assert.match(styles, /\.button, \.icon-button \{[^}]*height: 34px;[^}]*white-space: nowrap;/);
+  assert.match(styles, /\.button \{ padding: 0 13px; \}/);
+  assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.button, \.icon-button \{ height: 42px; \}/);
+  assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.controls-button \{ display: grid; width: 42px; \}/);
 });
 
 test("full-screen control expands the shared graph stage and restores app chrome", () => {
