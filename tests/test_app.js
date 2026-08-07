@@ -612,6 +612,9 @@ test("timeline defaults to evidence-backed event dates instead of cataloging tim
   assert.match(source, /item\.confidence >= \.9/);
   assert.match(source, /item\.startDate \|\| item\.documentDate/);
   assert.match(source, /Evidence-backed events by occurrence date/);
+  assert.match(source, /\["createdAt", "documentDate", "startDate"\]\.includes\(xKey\)/);
+  assert.match(source, /labels: "off", limit: 500/);
+  assert.match(source, /state\.config\.timelineRole === "event" \? \[1, 7\]/);
 });
 
 test("README screenshots capture the Far Side during its foreground transit", () => {

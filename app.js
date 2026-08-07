@@ -11,7 +11,7 @@ const LABELS = {
   inflationRate: "Mention adjustment", documentInflationRate: "Potential prominence inflation", inflationRisk: "Prominence inflation risk", inflatedMentionCount: "Adjusted mentions", inflatedDocumentCount: "Adjusted documents",
   classificationConfidence: "Classification confidence", extractionConfidence: "Extraction confidence",
   words: "Words", documents: "Documents", segments: "Segments", bytes: "Source bytes",
-  createdAt: "Cataloged at", documentDate: "Document date", startDate: "Event date", confidence: "Confidence", timelineLane: "Sequence lane", durationMs: "Duration", source: "Collection", format: "Format",
+  createdAt: "Cataloged at", documentDate: "Document date", startDate: "Event date", confidence: "Confidence", timelineLane: "Event sequence", durationMs: "Duration", source: "Collection", format: "Format",
   entity: "Entities", document: "Transcript files", name: "Name", title: "Title",
   category: "Entity type", reviewStatus: "Review status", engine: "Engine", path: "Path",
   table: "Table", collection: "Collections", shared_entities: "Shared entities"
@@ -96,7 +96,7 @@ const VIEW_DEFAULTS = {
   book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 20 },
   document: { size: "words", color: "source", labels: "top", documentSearch: "" },
   bars: { aggregation: "source", y: "words", color: "intensity" },
-  timeline: { timelineRole: "event", x: "startDate", y: "timelineLane", size: "confidence", color: "eventType", categories: ["date"], labels: "top", limit: 500, relationshipLayer: "off" },
+  timeline: { timelineRole: "event", x: "startDate", y: "timelineLane", size: "confidence", color: "eventType", categories: ["date"], labels: "off", limit: 500, relationshipLayer: "off" },
   matrix: { matrixColumns: "category", color: "intensity" },
   table: { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 }
 };
@@ -839,12 +839,20 @@ function addTitle(node, text) {
 
 function drawAxes(svg, width, height, xKey, yKey, xExtent, yExtent, capped = {}) {
   const margin = { left: 58, right: 28, top: 22, bottom: 48 };
-  for (let i = 0; i <= 4; i++) {
-    const y = margin.top + i * (height - margin.top - margin.bottom) / 4;
+  const yIntervals = yKey === "timelineLane" ? 6 : 4;
+  for (let i = 0; i <= yIntervals; i++) {
+    const y = margin.top + i * (height - margin.top - margin.bottom) / yIntervals;
     svg.append(el("line", { x1: margin.left, y1: y, x2: width - margin.right, y2: y, class: "grid-line" }));
-    const value = yExtent[1] - i * (yExtent[1] - yExtent[0]) / 4;
+    const value = yExtent[1] - i * (yExtent[1] - yExtent[0]) / yIntervals;
     const tick = capped.y && i === 0 ? `${formatNumber(value)}+` : formatNumber(value);
     svg.append(el("text", { x: margin.left - 8, y: y + 3, "text-anchor": "end", class: "axis-label" }, tick));
+  }
+  if (["createdAt", "documentDate", "startDate"].includes(xKey)) {
+    for (let i = 0; i <= 5; i++) {
+      const value = xExtent[0] + i * (xExtent[1] - xExtent[0]) / 5;
+      const x = margin.left + i * (width - margin.left - margin.right) / 5;
+      svg.append(el("text", { x, y: height - margin.bottom + 18, "text-anchor": i === 0 ? "start" : i === 5 ? "end" : "middle", class: "axis-label" }, new Date(value).getUTCFullYear()));
+    }
   }
   svg.append(el("text", { x: (margin.left + width - margin.right) / 2, y: height - 13, "text-anchor": "middle", class: "axis-label" }, label(xKey)));
   const yLabel = el("text", { x: 15, y: height / 2, transform: `rotate(-90 15 ${height / 2})`, "text-anchor": "middle", class: "axis-label" }, label(yKey));
@@ -1591,7 +1599,9 @@ function renderTimeline() {
   if (!data.length) return showEmpty();
   const timelineDate = item => item.startDate || item.documentDate;
   const dates = data.map(item => new Date(timelineDate(item)).getTime());
-  const xExtent = [Math.min(...dates), Math.max(...dates) + 1], yExtent = valueExtent(data, state.config.y), sizeExtent = valueExtent(data, state.config.size);
+  const xExtent = [Math.min(...dates), Math.max(...dates) + 1];
+  const yExtent = state.config.timelineRole === "event" ? [1, 7] : valueExtent(data, state.config.y);
+  const sizeExtent = valueExtent(data, state.config.size);
   const margin = drawAxes(svg, width, height, state.config.timelineRole === "event" ? "startDate" : "documentDate", state.config.y, xExtent, yExtent);
   const positionFor = item => ({
     x: clampedScale(new Date(timelineDate(item)).getTime(), xExtent, [margin.left, width - margin.right]),
