@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "4abaee063aa1c82015f93a145378bbc4a6dc980a"
+    "revision": "ba42b13ef49328f9e3a466ef51223e37c8d7f0a4"
   },
-  "count": 477,
-  "totalCount": 477,
+  "count": 478,
+  "totalCount": 478,
   "shownCount": 200,
   "candidates": [
     {
@@ -350,8 +350,8 @@
       "category": "government_agency",
       "left": {
         "name": "U.S. Department of Justice",
-        "mentions": 452,
-        "documentCount": 120
+        "mentions": 454,
+        "documentCount": 121
       },
       "right": {
         "name": "US Department of Justice",
@@ -558,8 +558,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1692,
-        "documentCount": 356
+        "mentions": 1693,
+        "documentCount": 357
       },
       "right": {
         "name": "Departments of Defense",
@@ -686,8 +686,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1692,
-        "documentCount": 356
+        "mentions": 1693,
+        "documentCount": 357
       },
       "right": {
         "name": "Department of Defens",
@@ -2574,8 +2574,8 @@
       "category": "location",
       "left": {
         "name": "Patterson Air Force Base",
-        "mentions": 28,
-        "documentCount": 25
+        "mentions": 29,
+        "documentCount": 26
       },
       "right": {
         "name": "Patterson Air Forco Base",
@@ -2973,6 +2973,22 @@
     {
       "category": "person",
       "left": {
+        "name": "John Doe II",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "John Doe III",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Mark Sanders",
         "mentions": 3,
         "documentCount": 2
@@ -3182,29 +3198,13 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1692,
-        "documentCount": 356
+        "mentions": 1693,
+        "documentCount": 357
       },
       "right": {
         "name": "Department of Detense",
         "mentions": 13,
         "documentCount": 4
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Search for Extraterrestrial Intelligence",
-        "mentions": 27,
-        "documentCount": 20
-      },
-      "right": {
-        "name": "SET Search for ExtraTerrestrial Intelligence",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.952,
       "reason": "similar name",
