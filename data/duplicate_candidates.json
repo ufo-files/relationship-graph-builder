@@ -6,8 +6,8 @@
     "repository": "ufo-files/machine-data",
     "revision": "09f990fde1ec4f1d16af9a89c39e62efb60cf25d"
   },
-  "count": 488,
-  "totalCount": 488,
+  "count": 422,
+  "totalCount": 422,
   "shownCount": 200,
   "candidates": [
     {
@@ -155,27 +155,11 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "organization",
-      "left": {
-        "name": "National Investigations Committee",
-        "mentions": 44,
-        "documentCount": 28
-      },
-      "right": {
-        "name": "ATIONAL INVESTIGATIONS COMMITTEE",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "similarity": 0.985,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 258,
-        "documentCount": 152
+        "mentions": 265,
+        "documentCount": 158
       },
       "right": {
         "name": "Wrighat-Patterson Air Force Base",
@@ -222,7 +206,7 @@
       "category": "government_agency",
       "left": {
         "name": "National Reconnaissance Office",
-        "mentions": 433,
+        "mentions": 434,
         "documentCount": 145
       },
       "right": {
@@ -318,7 +302,7 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4248,
+        "mentions": 4250,
         "documentCount": 813
       },
       "right": {
@@ -350,8 +334,8 @@
       "category": "government_agency",
       "left": {
         "name": "U.S. Department of Justice",
-        "mentions": 458,
-        "documentCount": 123
+        "mentions": 459,
+        "documentCount": 124
       },
       "right": {
         "name": "US Department of Justice",
@@ -558,8 +542,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1696,
-        "documentCount": 359
+        "mentions": 1722,
+        "documentCount": 373
       },
       "right": {
         "name": "Departments of Defense",
@@ -653,22 +637,6 @@
     {
       "category": "government_agency",
       "left": {
-        "name": "Re Bureau Bulletin No",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Re Bureau Bulletins No",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.977,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
         "name": "Meteorological Officer",
         "mentions": 3,
         "documentCount": 3
@@ -685,9 +653,25 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Re Bureau Bulletin No",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Re Bureau Bulletins No",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.977,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Department of Defense",
-        "mentions": 1696,
-        "documentCount": 359
+        "mentions": 1722,
+        "documentCount": 373
       },
       "right": {
         "name": "Department of Defens",
@@ -907,22 +891,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "organization",
-      "left": {
-        "name": "University of Tennessee Space Institute",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "University of Tennessec Space Institute",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.974,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "government_agency",
       "left": {
         "name": "DEPARTMENT OF JUSTIC",
@@ -931,6 +899,22 @@
       },
       "right": {
         "name": "DEPARTMENT OF JUSTI",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.974,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "University of Tennessee Space Institute",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "University of Tennessec Space Institute",
         "mentions": 2,
         "documentCount": 2
       },
@@ -973,22 +957,6 @@
     {
       "category": "organization",
       "left": {
-        "name": "COUNTER INTELLIGENCE CORPS REGION IV",
-        "mentions": 5,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "COUNTER INTELLIGENCE CORPS REGION IX",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.972,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
         "name": "Federal Civil Dofense Administration",
         "mentions": 2,
         "documentCount": 2
@@ -997,6 +965,22 @@
         "name": "Federal Civil Defense Administration",
         "mentions": 5,
         "documentCount": 4
+      },
+      "similarity": 0.972,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "COUNTER INTELLIGENCE CORPS REGION IV",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "COUNTER INTELLIGENCE CORPS REGION IX",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.972,
       "reason": "similar name",
@@ -1131,22 +1115,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
-      "left": {
-        "name": "Comanding Officer",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Comnanding Officer",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.971,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "organization",
       "left": {
         "name": "Organization Joint Chief Of Staffs",
@@ -1155,6 +1123,22 @@
       },
       "right": {
         "name": "Organization Joint Chiefs of Staff",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Comanding Officer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Comnanding Officer",
         "mentions": 2,
         "documentCount": 2
       },
@@ -1323,38 +1307,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
-      "left": {
-        "name": "TED STATES DEPARTMENT OF JUSTICE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "NITED STATES DEPARTMENT OF JUSTICE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.97,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "EXECUTIVE OFFICE OF THE PRESIDENT",
-        "mentions": 29,
-        "documentCount": 20
-      },
-      "right": {
-        "name": "XECUTIVE OFFICE OF THE PRESIDEN",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.969,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "organization",
       "left": {
         "name": "The Director of Central Intelligence",
@@ -1422,24 +1374,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 258,
-        "documentCount": 152
-      },
-      "right": {
-        "name": "Fright-Patterson Air Force Base",
-        "mentions": 6,
-        "documentCount": 6
-      },
-      "similarity": 0.968,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Wright-Patterson Air Force Base",
-        "mentions": 258,
-        "documentCount": 152
+        "mentions": 265,
+        "documentCount": 158
       },
       "right": {
         "name": "Wright-Parterson Air Force Base",
@@ -1454,8 +1390,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 258,
-        "documentCount": 152
+        "mentions": 265,
+        "documentCount": 158
       },
       "right": {
         "name": "Wright-pattorson AIr Force Base",
@@ -1470,8 +1406,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 258,
-        "documentCount": 152
+        "mentions": 265,
+        "documentCount": 158
       },
       "right": {
         "name": "Wright-Patterson Air Foree Base",
@@ -1486,8 +1422,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 258,
-        "documentCount": 152
+        "mentions": 265,
+        "documentCount": 158
       },
       "right": {
         "name": "WRIGHT-PATTERION AIR FORCE BASE",
@@ -1502,8 +1438,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 258,
-        "documentCount": 152
+        "mentions": 265,
+        "documentCount": 158
       },
       "right": {
         "name": "WRIGHT-PATTERSON AIM FORCE BASE",
@@ -1607,22 +1543,6 @@
         "documentCount": 2
       },
       "similarity": 0.968,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Technical Intelligence Center",
-        "mentions": 25,
-        "documentCount": 20
-      },
-      "right": {
-        "name": "Iechnical Intelligence Center",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.966,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1947,22 +1867,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "location",
-      "left": {
-        "name": "Techniche Universitelt Delft",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Techniche Universiteit Delft",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.964,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "government_agency",
       "left": {
         "name": "Mar Department Goneral Staff",
@@ -1995,10 +1899,26 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Techniche Universitelt Delft",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Techniche Universiteit Delft",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.964,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4248,
+        "mentions": 4250,
         "documentCount": 813
       },
       "right": {
@@ -2014,7 +1934,7 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4248,
+        "mentions": 4250,
         "documentCount": 813
       },
       "right": {
@@ -2030,7 +1950,7 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4248,
+        "mentions": 4250,
         "documentCount": 813
       },
       "right": {
@@ -2046,7 +1966,7 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4248,
+        "mentions": 4250,
         "documentCount": 813
       },
       "right": {
@@ -2123,22 +2043,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "organization",
-      "left": {
-        "name": "Maval Intelligence Division",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Naval Intelligence Division",
-        "mentions": 7,
-        "documentCount": 6
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "government_agency",
       "left": {
         "name": "Police Officer",
@@ -2203,22 +2107,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "book",
-      "left": {
-        "name": "Flying Saucers",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Flying Saucer",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "location",
       "left": {
         "name": "Kurile Islands",
@@ -2229,6 +2117,22 @@
         "name": "Kuril Islands",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "book",
+      "left": {
+        "name": "Flying Saucers",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Flying Saucer",
+        "mentions": 1,
+        "documentCount": 1
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -2363,22 +2267,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "person",
-      "left": {
-        "name": "Fred Chrisman",
-        "mentions": 10,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Fred Crisman",
-        "mentions": 10,
-        "documentCount": 4
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "location",
       "left": {
         "name": "Mount Rainier",
@@ -2389,6 +2277,22 @@
         "name": "Mount Rainer",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Fred Chrisman",
+        "mentions": 10,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Fred Crisman",
+        "mentions": 10,
+        "documentCount": 4
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2475,22 +2379,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "person",
-      "left": {
-        "name": "Tim Galladet",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Tim Gallaudet",
-        "mentions": 5,
-        "documentCount": 3
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "location",
       "left": {
         "name": "CSETI Website",
@@ -2501,6 +2389,22 @@
         "name": "CSET Website",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Superintendent LRWE Range",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Superintendent IRWE Range",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2523,16 +2427,16 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "location",
+      "category": "government_agency",
       "left": {
-        "name": "Superintendent LRWE Range",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "Army Officers",
+        "mentions": 2,
+        "documentCount": 2
       },
       "right": {
-        "name": "Superintendent IRWE Range",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "Army Officer",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2563,22 +2467,6 @@
       },
       "right": {
         "name": "CHOSEN FOR ITS FOUNDATION",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Army Officers",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Army Officer",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2651,22 +2539,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
-      "left": {
-        "name": "Inited States Department",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "United States Department",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "similarity": 0.958,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "organization",
       "left": {
         "name": "Couater Intelligence Div",
@@ -2701,6 +2573,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Applied Science Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Applied Sclence Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Direotor of Intelligence",
         "mentions": 2,
         "documentCount": 2
@@ -2734,6 +2622,54 @@
       "category": "organization",
       "left": {
         "name": "Direotor of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Direetor of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Direator of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "The Director of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Direator of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Direetor of Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "The Director of Intelligence",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2763,70 +2699,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "organization",
-      "left": {
-        "name": "Direator of Intelligence",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "The Director of Intelligence",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.958,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Direator of Intelligence",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Direetor of Intelligence",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.958,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "The Director of Intelligence",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Direetor of Intelligence",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.958,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Applied Science Division",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Applied Sclence Division",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.958,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "person",
       "left": {
         "name": "David Grush",
@@ -2837,22 +2709,6 @@
         "name": "David Grusch",
         "mentions": 23,
         "documentCount": 5
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "IS AIR TECHNICAL INTELLIGENCE CENTER",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Air Technical Intelligence Center",
-        "mentions": 114,
-        "documentCount": 61
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2987,22 +2843,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
-      "left": {
-        "name": "Inclosed for the Bureau",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Enclosed for the Bureau",
-        "mentions": 10,
-        "documentCount": 8
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "person",
       "left": {
         "name": "John Doe II",
@@ -3035,22 +2875,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
-      "left": {
-        "name": "Irited States Department of Justice",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "NITED STATES DEPARTMENT OF JUSTICE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "location",
       "left": {
         "name": "Vicinity of Provo River",
@@ -3070,7 +2894,7 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 179,
+        "mentions": 180,
         "documentCount": 79
       },
       "right": {
@@ -3163,38 +2987,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
-      "left": {
-        "name": "If Office of Special Investigations",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "THE OFFICE OF SPECIAL INVESTIGATIONS",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.955,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Irited States Department of Justice",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "TED STATES DEPARTMENT OF JUSTICE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.955,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "organization",
       "left": {
         "name": "Senate Armed Services Committee",
@@ -3207,6 +2999,214 @@
         "documentCount": 2
       },
       "similarity": 0.954,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "The National Aeronautics and Space Administration",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "National Aeronautics & Space Administration",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.953,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Defense",
+        "mentions": 1722,
+        "documentCount": 373
+      },
+      "right": {
+        "name": "Department of Detense",
+        "mentions": 13,
+        "documentCount": 4
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Garry Nolan",
+        "mentions": 107,
+        "documentCount": 80
+      },
+      "right": {
+        "name": "Gary Nolan's",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "similarity": 0.952,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Search for Extraterrestrial Intelligence",
+        "mentions": 28,
+        "documentCount": 21
+      },
+      "right": {
+        "name": "SET Search for ExtraTerrestrial Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Deputy Director for Intelligence",
+        "mentions": 9,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Deputy Director of Intelligence",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "House Appropriations Committee",
+        "mentions": 8,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "House Appropriations Subcommittee",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Defens",
+        "mentions": 7,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Departments of Defense",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Justico",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of Justice's",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Contral Ticket Office",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Central Ticket Office",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "University of Arkansas",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "University of Kansas",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Parterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Wrighat-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-pattorson AIr Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Wrighat-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wrighat-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Wright-Patterson Air Foree Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     }
