@@ -1196,6 +1196,7 @@ test("all graph types export a presentation PDF with UFO Files provenance", () =
   vm.runInContext(source, context);
 
   assert.equal(vm.runInContext('pdfFilename("Significant People")', context), "significant-people.pdf");
+  assert.equal(vm.runInContext('pdfFilename(pdfExportTitle({ ...DEFAULT, type: "network", nodeRole: "entity", categories: ["person"], title: "Untitled graph" }))', context), "people-relationships.pdf");
   context.URL = URL;
   context.btoa = value => Buffer.from(value, "binary").toString("base64");
   context.history = { replaceState(_state, _title, value) { context.location.hash = value; } };
@@ -1250,10 +1251,10 @@ test("all graph types export a presentation PDF with UFO Files provenance", () =
   assert.match(source, /function currentGraphURL\(\) \{[\s\S]*persistHash\(\)[\s\S]*new URL\(location\.hash, GRAPH_BUILDER_URL\)/);
   assert.match(source, /for \(const level of \["M", "L"\]\)[\s\S]*code\.addData\(url, "Byte"\)[\s\S]*code\.make\(\)[\s\S]*return null/);
   assert.match(source, /function drawPDFQRCode\(pdf, code, bounds\)[\s\S]*code\.isDark\(row, col\)[\s\S]*pdf\.rect/);
-  assert.match(source, /function addPDFCover\(pdf, exportedAt, deepLink, code, logoPath\)[\s\S]*pdf\.path\(logo\.operations\)[\s\S]*pdf\.textWithLink\("ufo-files\.app"[\s\S]*pdfGraphProperties\(\)/);
+  assert.match(source, /function addPDFCover\(pdf, exportedAt, deepLink, code, logoPath\)[\s\S]*width: 42, height: 40[\s\S]*RELATIONSHIP GRAPH EXPORT[\s\S]*pdf\.textWithLink\("ufo-files\.app", 99, 94[\s\S]*pdfGraphProperties\(\)/);
   assert.match(source, /const PDF_FONT_FAMILY = "IBM Plex Mono"/);
   assert.match(source, /assets\/fonts\/\$\{font\.file\}[\s\S]*pdf\.addFileToVFS\(font\.file, font\.data\)[\s\S]*pdf\.addFont\(font\.file, PDF_FONT_FAMILY, font\.style\)/);
-  assert.match(source, /currentGraphURL\(\)[\s\S]*graphQRCode\(deepLink\)[\s\S]*new window\.jspdf\.jsPDF[\s\S]*loadPDFFonts\(pdf\)[\s\S]*addPDFCover\([\s\S]*addPDFGraphPage\([\s\S]*pdf\.save\(pdfFilename\(state\.config\.title\)\)/);
+  assert.match(source, /pdfExportTitle\(\)[\s\S]*currentGraphURL\(\)[\s\S]*graphQRCode\(deepLink\)[\s\S]*new window\.jspdf\.jsPDF[\s\S]*loadPDFFonts\(pdf\)[\s\S]*addPDFCover\([\s\S]*addPDFGraphPage\([\s\S]*pdf\.save\(pdfFilename\(exportTitle\)\)/);
   assert.doesNotMatch(source, /html2canvas|window\.print\(|toDataURL\("image\/jpeg"/i);
   assert.doesNotMatch(source, /function export(?:SVG|CSV|DocumentCSV)/);
   assert.equal(fs.existsSync("vendor/html2canvas.min.js"), false);
@@ -1310,6 +1311,7 @@ test("vector PDF includes the complete stage and only rasterizes the WebGL map",
   assert.match(source, /stage\.classList\.remove\("pdf-exporting"\)/);
   assert.match(source, /Catalog \$\{metadata\.get\("CATALOG GENERATED"\)\}/);
   assert.match(source, /Source \$\{metadata\.get\("SOURCE OF TRUTH"\)\}@\$\{metadata\.get\("SOURCE REVISION"\)\}/);
+  assert.match(source, /const metadataCenterY = \(metadataTop \+ metadataBottom\) \/ 2[\s\S]*metadataCenterY - 8[\s\S]*metadataCenterY \+ 12/);
   assert.match(source, /stageRect\.width \/ stageRect\.height > 1\.25[\s\S]*landscape \? "landscape" : "portrait"/);
   assert.match(source, /const chartBounds = \{ x: 45, y: 112, width: pageWidth - 90, height: provenanceY - 190 \}/);
   assert.match(source, /const inset = 2/);
