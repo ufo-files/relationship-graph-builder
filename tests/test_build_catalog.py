@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.build_catalog import build, classify_phrase, comparison_key, entity_key, extract_mentions, inflation_risk, load_registry, sentence_segments
+from scripts.build_catalog import build, classify_phrase, comparison_key, entity_key, extract_mentions, extract_title_mentions, inflation_risk, load_registry, sentence_segments
 
 
 class ClassificationTests(unittest.TestCase):
@@ -22,6 +22,25 @@ class ClassificationTests(unittest.TestCase):
     def test_rejects_document_heading_as_person(self):
         self.assertIsNone(classify_phrase("CONGRESSIONAL TRAVEL REQUEST"))
         self.assertIsNone(classify_phrase("Additional Details"))
+
+    def test_rejects_role_prefixed_non_people(self):
+        for phrase in ("General Aviation", "General Electric", "General Relativity", "General Motors", "General Counsel"):
+            with self.subTest(phrase=phrase):
+                self.assertIsNone(classify_phrase(phrase))
+
+    def test_extracts_only_curated_entities_from_titles(self):
+        registry = {
+            comparison_key("Avi Loeb"): ("Avi Loeb", "person"),
+            comparison_key("Lue Elizondo"): ("Luis Elizondo", "person"),
+        }
+
+        mentions = extract_title_mentions("American Alchemy With Avi Loeb And Lue Elizondo", registry)
+
+        self.assertEqual(
+            {(canonical, category) for _, canonical, category, _, _ in mentions},
+            {("Avi Loeb", "person"), ("Luis Elizondo", "person")},
+        )
+        self.assertTrue(all(curated for *_, curated in mentions))
 
     def test_classifies_strong_shapes(self):
         self.assertEqual(classify_phrase("Holloman Air Force Base")[0], "location")
@@ -176,6 +195,25 @@ class ClassificationTests(unittest.TestCase):
 
 
 class CatalogTests(unittest.TestCase):
+    def test_curated_title_entity_survives_the_publication_cutoff(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "machine-data"
+            collection = root / "Example"
+            collection.mkdir(parents=True)
+            metadata = {
+                "schema": "ufo-files-archive-ocr/v1",
+                "source_file": "An Interview With Avi Loeb.mp4",
+                "source_bytes": 100,
+            }
+            body = "Federal Bureau of Investigation reviewed Roswell reports in New Mexico."
+            (collection / "source.txt").write_text(json.dumps(metadata) + "\n\n" + body, encoding="utf-8")
+
+            catalog = build(root, Path(directory) / "catalog.json", 1, 100, require_data=True)
+
+            self.assertEqual([entity["canonicalName"] for entity in catalog["entities"]], ["Avi Loeb"])
+            self.assertEqual(catalog["entities"][0]["evidence"][0]["excerpt"], "Document title: An Interview With Avi Loeb")
+            self.assertIn("not calibrated probabilities", catalog["publicationPolicy"]["confidenceSemantics"])
+
     def test_maps_far_side_to_the_anti_earth_lunar_hemisphere(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / "machine-data"
