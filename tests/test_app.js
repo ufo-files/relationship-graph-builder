@@ -300,12 +300,17 @@ test("mobile inspector covers the viewport and keeps the existing close button",
   assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.inspector-close \{[^}]*width: 42px;[^}]*height: 42px;/);
 });
 
-test("action buttons stay on one line at an aligned height", () => {
+test("action buttons stay vertically centered without crowding the mobile map toolbar", () => {
   const styles = fs.readFileSync("styles.css", "utf8");
-  assert.match(styles, /\.button, \.icon-button \{[^}]*height: 34px;[^}]*white-space: nowrap;/);
+  assert.match(styles, /\.button, \.icon-button \{[^}]*display: inline-flex;[^}]*align-items: center;[^}]*justify-content: center;[^}]*height: 34px;/);
+  assert.match(styles, /\.top-actions \.button \{ white-space: nowrap; \}/);
+  assert.doesNotMatch(styles, /\.button, \.icon-button \{[^}]*white-space: nowrap;/);
   assert.match(styles, /\.button \{ padding: 0 13px; \}/);
+  assert.match(styles, /\.review-button \{[^}]*justify-content: flex-start;[^}]*text-align: left;/);
   assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.button, \.icon-button \{ height: 42px; \}/);
   assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.controls-button \{ display: grid; width: 42px; \}/);
+  assert.match(styles, /@media \(max-width: 480px\)[\s\S]*?\.stage-header \{ flex-wrap: wrap; gap: 12px; \}/);
+  assert.match(styles, /@media \(max-width: 480px\)[\s\S]*?\.stage-tools \{ width: 100%; justify-content: flex-end; \}/);
 });
 
 test("full-screen control expands the shared graph stage and restores app chrome", () => {
