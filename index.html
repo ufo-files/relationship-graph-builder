@@ -6,7 +6,7 @@
   <meta name="description" content="Build evidence-backed relationship graphs from the UFO Files archive.">
   <title>UFO Files — Graph Builder</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23174d3c'/%3E%3Ctext x='16' y='20' text-anchor='middle' font-family='sans-serif' font-size='10' font-weight='700' fill='white'%3EUF%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=pdf-export-26">
+  <link rel="stylesheet" href="styles.css?v=mobile-support-80">
 </head>
 <body>
   <header class="topbar">
@@ -15,13 +15,21 @@
       <span><strong>UFO Files</strong><small>Relationship builder</small></span>
     </a>
     <div class="top-actions">
+      <button class="icon-button controls-button" id="controlsButton" type="button" title="Show graph controls" aria-label="Show graph controls" aria-controls="builderPanel" aria-expanded="false">
+        <svg class="controls-open-icon" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M3 5h14M3 10h14M3 15h14M7 3v4M13 8v4M8 13v4"/>
+        </svg>
+        <svg class="controls-close-icon" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M4 4l12 12M16 4L4 16"/>
+        </svg>
+      </button>
       <button class="button quiet" id="shareButton">Copy link</button>
       <button class="button primary" id="saveButton">Save view</button>
     </div>
   </header>
 
   <main id="builderView" class="app-shell inspector-collapsed">
-    <aside class="builder-panel" aria-label="Graph configuration">
+    <aside class="builder-panel" id="builderPanel" aria-label="Graph configuration">
       <section class="step open" data-step="1">
         <button class="step-heading" aria-expanded="true">
           <span class="step-number">1</span><span><strong>Graph type</strong><small>How should the answer read?</small></span>
@@ -115,7 +123,7 @@
   <script src="vendor/jspdf.umd.min.js" defer></script>
   <script src="vendor/svg2pdf.umd.min.js" defer></script>
   <script src="vendor/qrcode-generator.js" defer></script>
-  <script src="app.js?v=pdf-export-26" defer></script>
+  <script src="app.js?v=mobile-support-80" defer></script>
   <script>
     window.addEventListener("error", event => {
       if (event.target?.id === "globeModule") {
