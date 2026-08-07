@@ -203,8 +203,43 @@ BOOK_TITLE_REJECT = {
 }
 DATE_PATTERN = re.compile(
     r"\b(?:January|February|March|April|May|June|July|August|September|October|November|December)"
-    r"\s+\d{1,2},?\s+(?:19|20)\d{2}\b|\b(?:19|20)\d{2}-\d{2}-\d{2}\b"
+    r"\s+\d{1,2},?\s+(?:19|20)\d{2}\b|"
+    r"(?<![\d-])\b\d{1,2}\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)"
+    r"\s+(?:19|20)\d{2}\b|\b(?:19|20)\d{2}-\d{2}-\d{2}\b"
 )
+ADMINISTRATIVE_DATE_CONTEXT = re.compile(
+    r"\b(?:foia|freedom of information|declassif|released?|release date|request(?:ed|er)?|"
+    r"received|date processed|digitized|scanned|ocr|uploaded|catalog(?:ed|uing)?|access(?:ed|ion)|"
+    r"message taken|published|publication|drafted|newspaper|article|issue of|\w+ times of)\b", re.I,
+)
+DOCUMENT_DATE_CONTEXT = re.compile(r"^(?:date|memorandum|memo|letter|dispatch|telegram|cable|report)\b", re.I)
+EVENT_DATE_CONTEXT = re.compile(
+    r"\b(?:occurred|happened|took place|encountered|landed|crashed|disappeared|arrived|launched|exploded)\b", re.I,
+)
+SIGHTING_DATE_CONTEXT = re.compile(r"\b(?:observed|sighted|witnessed|appearance|reported seeing)\b", re.I)
+SIGHTING_SUBJECT_CONTEXT = re.compile(
+    r"\b(?:ufo|uap|object|phenomen(?:on|a)|saucer|disc|craft|aircraft|foo\s*fighter|"
+    r"(?:luminous|bright|unidentified)\s+(?:light|ball|body))s?\b", re.I,
+)
+EVENT_SUBJECT_CONTEXT = re.compile(
+    r"\b(?:ufo|uap|object|target|phenomen(?:on|a)|saucer|disc|craft|aircraft|foo\s*fighter|"
+    r"sighting|encounter|anomal(?:y|ous)|something|"
+    r"(?:luminous|bright|unidentified)\s+(?:light|ball|body))s?\b", re.I,
+)
+RADAR_DATE_CONTEXT = re.compile(r"\b(?:tracked|detected)\b", re.I)
+NON_UFO_EVENT_CONTEXT = re.compile(
+    r"\b(?:airstrike|munition|artillery|combat|joint task force|task force operation|killed in action)\b", re.I,
+)
+EVENT_TYPES = [
+    ("sighting", re.compile(r"\b(?:observed|sighted|witnessed|reported seeing|appearance)\b", re.I)),
+    ("radar_detection", re.compile(r"\b(?:radar|detected|tracked)\b", re.I)),
+    ("landing", re.compile(r"\b(?:landed|landing)\b", re.I)),
+    ("crash", re.compile(r"\b(?:crashed|crash|exploded)\b", re.I)),
+    ("encounter", re.compile(r"\b(?:encountered|encounter)\b", re.I)),
+]
+MONTHS = {name: number for number, name in enumerate(
+    ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"), 1
+)}
 ORG_WORDS = {
     "agency", "administration", "aerospace", "air force", "army", "bureau", "committee",
     "corporation", "department", "directorate", "division", "foundation", "institute",
@@ -280,6 +315,97 @@ def utc_now() -> str:
 
 def stable_id(prefix: str, value: str) -> str:
     return f"{prefix}-{hashlib.sha1(value.encode('utf-8')).hexdigest()[:12]}"
+
+
+def normalized_date(value: str) -> str | None:
+    """Normalize only unambiguous day-level dates; never invent missing precision."""
+    value = clean_space(value).replace(",", "")
+    try:
+        if re.fullmatch(r"(?:19|20)\d{2}-\d{2}-\d{2}", value):
+            return dt.date.fromisoformat(value).isoformat()
+        parts = value.split()
+        if parts[0] in MONTHS:
+            month, day, year = MONTHS[parts[0]], int(parts[1]), int(parts[2])
+        elif len(parts) == 3 and parts[1] in MONTHS:
+            day, month, year = int(parts[0]), MONTHS[parts[1]], int(parts[2])
+        else:
+            return None
+        return dt.date(year, month, day).isoformat()
+    except (ValueError, IndexError):
+        return None
+
+
+def temporal_candidates(segments: list[str], metadata: dict, document_id: str) -> tuple[dict | None, list[dict], list[dict]]:
+    """Classify dates by meaning and publish only strong document/event evidence."""
+    review, document_dates, events = [], [], []
+    for field in ("document_date", "authored_at", "record_date"):
+        raw = metadata.get(field)
+        if not raw:
+            continue
+        match = DATE_PATTERN.search(str(raw))
+        value = normalized_date(match.group(0) if match else str(raw)[:10])
+        if value:
+            document_dates.append({"value": value, "precision": "day", "confidence": 0.99,
+                                   "kind": "document_date", "method": f"metadata:{field}", "evidence": str(raw)[:280]})
+    for index, segment in enumerate(segments):
+        for match in DATE_PATTERN.finditer(segment):
+            value = normalized_date(match.group(0))
+            if not value:
+                continue
+            nearby = segment[max(0, match.start() - 120):match.end() + 120]
+            prefix = segment[max(0, match.start() - 120):match.start()]
+            if ADMINISTRATIVE_DATE_CONTEXT.search(nearby):
+                kind, confidence, method = "administrative_date", 0.98, "context-exclusion"
+            elif NON_UFO_EVENT_CONTEXT.search(nearby):
+                kind, confidence, method = "non_ufo_event", 0.9, "subject-exclusion"
+            elif re.search(r"\bdated\s*$", prefix, re.I):
+                kind, confidence, method = "referenced_document_date", 0.72, "dated-reference"
+            elif (re.search(r"\b(?:after|before|since|until|prior to)\s*$", prefix, re.I)
+                  or re.search(r"\bbetween\b[^.!?]{0,80}$", prefix, re.I)):
+                kind, confidence, method = "relative_date", 0.72, "relative-date-exclusion"
+            elif index < 12 and (re.match(r"^(?:date|dated)\s*[:.-]", segment, re.I) or DOCUMENT_DATE_CONTEXT.match(segment)):
+                kind, confidence, method = "document_date", 0.94, "document-header"
+            elif ((EVENT_DATE_CONTEXT.search(nearby) and EVENT_SUBJECT_CONTEXT.search(nearby))
+                  or (SIGHTING_DATE_CONTEXT.search(nearby) and SIGHTING_SUBJECT_CONTEXT.search(nearby))
+                  or (RADAR_DATE_CONTEXT.search(nearby) and re.search(r"\b(?:radar|object|target|track)\b", nearby, re.I))):
+                kind, confidence, method = "event_date", 0.9, "event-language"
+            else:
+                kind, confidence, method = "unknown", 0.45, "unclassified-mention"
+            candidate = {"value": value, "precision": "day", "confidence": confidence, "kind": kind,
+                         "method": method, "evidence": segment[:280], "segment": index}
+            review.append(candidate)
+            if kind == "document_date":
+                document_dates.append(candidate)
+            elif kind == "event_date":
+                event_type = next((name for name, pattern in EVENT_TYPES if pattern.search(nearby)), "reported_event")
+                events.append({"id": stable_id("event", f"{document_id}|{index}|{value}|{event_type}"),
+                               "title": segment[:140], "eventType": event_type, "startDate": value, "endDate": None,
+                               "datePrecision": "day", "confidence": confidence, "documentIds": [document_id],
+                               "evidence": [{"documentId": document_id, "segment": index, "excerpt": segment[:280]}]})
+    return max(document_dates, key=lambda item: item["confidence"], default=None), events, review
+
+
+def merge_events(events: list[dict]) -> list[dict]:
+    """Merge only strongly similar same-day reports; a shared date alone is never enough."""
+    merged: list[dict] = []
+    buckets: dict[tuple[str, str], list[dict]] = collections.defaultdict(list)
+    for event in events:
+        bucket = buckets[(event["startDate"], event["eventType"])]
+        identity = comparison_key(event["title"])
+        match = next((candidate for candidate in bucket
+                      if difflib.SequenceMatcher(None, identity, comparison_key(candidate["title"])).ratio() >= 0.82), None)
+        if match is None:
+            event["documentCount"] = len(event["documentIds"])
+            bucket.append(event)
+            merged.append(event)
+            continue
+        match["documentIds"] = sorted(set(match["documentIds"] + event["documentIds"]))
+        for evidence in event["evidence"]:
+            if evidence not in match["evidence"] and len(match["evidence"]) < 5:
+                match["evidence"].append(evidence)
+        match["documentCount"] = len(match["documentIds"])
+        match["confidence"] = round(min(0.98, max(match["confidence"], event["confidence"]) + 0.02), 3)
+    return merged
 
 
 def clean_space(value: str) -> str:
@@ -700,6 +826,7 @@ def build(
     input_revision: str | None = None,
     require_data: bool = False,
     duplicate_report: Path | None = None,
+    date_review_report: Path | None = None,
 ) -> dict:
     data_dir = Path(__file__).resolve().parents[1] / "data"
     registry = load_registry([data_dir / "curated_entities.json", data_dir / "entity_aliases.json"])
@@ -711,6 +838,8 @@ def build(
     source_counts: collections.Counter = collections.Counter()
     source_words: collections.Counter = collections.Counter()
     document_sources: dict[str, str] = {}
+    events: list[dict] = []
+    date_review: list[dict] = []
 
     paths = sorted(
         path for path in input_root.rglob("*")
@@ -741,6 +870,7 @@ def build(
         doc_id = stable_id("doc", relative)
         words = sum(len(segment.split()) for segment in segments)
         title = title_from_path(Path(str(metadata.get("source_file") or path.name)))
+        document_date, document_events, review_candidates = temporal_candidates(segments, metadata, doc_id)
         document = {
             "id": doc_id,
             "title": title,
@@ -754,6 +884,18 @@ def build(
             "engine": metadata.get("engine") or metadata.get("backend"),
             "durationMs": duration,
         }
+        if document_date:
+            document["documentDate"] = document_date["value"]
+            document["documentDatePrecision"] = document_date["precision"]
+            document["documentDateConfidence"] = document_date["confidence"]
+            document["documentDateEvidence"] = {
+                "excerpt": document_date["evidence"],
+                "method": document_date["method"],
+                **({"segment": document_date["segment"]} if "segment" in document_date else {}),
+            }
+        events.extend(document_events)
+        if review_candidates:
+            date_review.append({"documentId": doc_id, "path": relative, "candidates": review_candidates})
         documents.append(document)
         document_sources[doc_id] = source
         source_counts[source] += 1
@@ -789,6 +931,7 @@ def build(
                 segment_entities[sid] = list(dict.fromkeys(keys))
                 segment_text[sid] = segment
 
+    events = merge_events(events)
     accepted_candidates = {key: value for key, value in candidates.items() if accepted(value)}
     possible_duplicates, possible_duplicate_count = duplicate_candidates(accepted_candidates)
     def publication_rank(item: tuple[str, Candidate]) -> tuple:
@@ -923,6 +1066,7 @@ def build(
             "entityRanking": "Curated identities first, then independent documents, source diversity, context-adjusted mentions, and raw mentions",
             "titleEvidence": "Curated aliases in document titles seed identity evidence; arbitrary title-case phrases are not classified",
             "confidenceSemantics": "Heuristic ranking signals, not calibrated probabilities",
+            "temporalEvidence": "Events require explicit event language tied to an unambiguous day-level date; document dates require trusted metadata or a header; FOIA, release, declassification, and processing dates are excluded",
             "locationCoordinates": "Reviewed local gazetteer; ambiguous and unmapped names are not plotted",
             "denseSegmentLimit": 30,
             "maxEntities": max_entities,
@@ -940,9 +1084,12 @@ def build(
             "possibleDuplicates": possible_duplicate_count,
             "mappedLocations": sum(1 for entity in entities if entity.get("geo")),
             "publishedBooks": sum(1 for entity in entities if entity["category"] == "book"),
+            "datedDocuments": sum(1 for document in documents if document.get("documentDate")),
+            "publishedEvents": len(events),
         },
         "sources": sources,
         "documents": documents,
+        "events": events,
         "entities": entities,
         "edges": edges,
         "duplicateCandidates": possible_duplicates,
@@ -963,6 +1110,15 @@ def build(
             "totalCount": possible_duplicate_count,
             "shownCount": len(possible_duplicates),
             "candidates": possible_duplicates,
+        }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if date_review_report:
+        date_review_report.parent.mkdir(parents=True, exist_ok=True)
+        date_review_report.write_text(json.dumps({
+            "schema": "ufo-files-date-review/v1",
+            "generatedAt": catalog["generatedAt"],
+            "input": catalog_input,
+            "documentsWithCandidates": len(date_review),
+            "records": date_review,
         }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return catalog
 
@@ -986,6 +1142,12 @@ def main() -> None:
         action="store_true",
         help="Fail without writing the catalog when no documents or entities are found.",
     )
+    parser.add_argument(
+        "--date-review-report",
+        type=Path,
+        default=Path(__file__).resolve().parents[1] / "data" / "date_review.json",
+        help="Write classified date candidates and evidence for human review.",
+    )
     args = parser.parse_args()
     catalog = build(
         args.input.resolve(),
@@ -996,6 +1158,7 @@ def main() -> None:
         args.input_revision,
         args.require_data,
         args.duplicate_report.resolve(),
+        args.date_review_report.resolve(),
     )
     print(json.dumps({"output": str(args.output), **catalog["counts"]}, indent=2))
 

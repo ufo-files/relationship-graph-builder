@@ -3,10 +3,100 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.build_catalog import Candidate, build, classify_phrase, comparison_key, duplicate_candidates, entity_key, extract_mentions, extract_title_mentions, inflation_risk, load_registry, sentence_segments
+from scripts.build_catalog import Candidate, build, classify_phrase, comparison_key, duplicate_candidates, entity_key, extract_mentions, extract_title_mentions, inflation_risk, load_registry, merge_events, normalized_date, sentence_segments, temporal_candidates
 
 
 class ClassificationTests(unittest.TestCase):
+    def test_normalizes_only_valid_unambiguous_dates(self):
+        self.assertEqual(normalized_date("November 8, 1975"), "1975-11-08")
+        self.assertEqual(normalized_date("8 November 1975"), "1975-11-08")
+        self.assertIsNone(normalized_date("November 1975"))
+        self.assertIsNone(normalized_date("February 30, 1975"))
+
+    def test_temporal_candidates_separate_events_documents_and_foia_dates(self):
+        segments = [
+            "Date: November 10, 1975 memorandum concerning regional activity.",
+            "The object was observed near the base on November 8, 1975 by two witnesses.",
+            "FOIA request released on March 20, 2014 after systematic review.",
+            "The report also mentions January 3, 1962 without describing an occurrence.",
+        ]
+
+        document_date, events, review = temporal_candidates(segments, {}, "doc-test")
+
+        self.assertEqual(document_date["value"], "1975-11-10")
+        self.assertEqual(document_date["method"], "document-header")
+        self.assertEqual([(event["startDate"], event["eventType"]) for event in events], [("1975-11-08", "sighting")])
+        kinds = {candidate["value"]: candidate["kind"] for candidate in review}
+        self.assertEqual(kinds["2014-03-20"], "administrative_date")
+        self.assertEqual(kinds["1962-01-03"], "unknown")
+
+    def test_temporal_candidates_reject_bibliography_and_generic_observation_dates(self):
+        segments = [
+            'The bibliography lists "Flying Saucers," August 11, 1952.',
+            "The histogram of intercorrelations was observed on September 11, 2001.",
+            "The luminous object was observed on September 12, 2001 near the base.",
+        ]
+
+        _, events, review = temporal_candidates(segments, {}, "doc-test")
+
+        self.assertEqual([event["startDate"] for event in events], ["2001-09-12"])
+        kinds = {candidate["value"]: candidate["kind"] for candidate in review}
+        self.assertEqual(kinds["1952-08-11"], "unknown")
+        self.assertEqual(kinds["2001-09-11"], "unknown")
+
+    def test_temporal_candidates_exclude_access_dates_references_and_ranges(self):
+        segments = [
+            "The incident occurred constantly across squadrons (accessed on 24 July 2019).",
+            "Subject: Objects Sighted Over Oak Ridge, report dated 13 October 1950.",
+            "The military activity occurred after July 8, 1947 according to the report.",
+            "The action occurred between April 6, 1917 and a later date.",
+            "Unidentified radar tracks were observed 9-10 March 1958 near the coast.",
+            "The original recorded radar tape of JAL flight 1628, November 17, 1986, is preserved.",
+            'The Times of February 28, 2004 published the article "The Aliens have landed."',
+            "The object disappeared quickly. Message taken 3 November 1999.",
+            "Investigators first learned of the incident on February 28, 1981 during a lecture.",
+            "TESS launched on April 18, 2018 aboard a SpaceX Falcon 9 rocket.",
+            "His death occurred on January 7, 1943 after a brief illness.",
+            "The sightings occurred between May 17 and July 12, 1947 according to the summary.",
+            "The incident occurred on March 17, 2017 during a coalition airstrike in Mosul.",
+            '"Phenomena Observed Near the Channel Islands, April 23 2007" was drafted for publication.',
+            "A suspicious incident occurred on July 4, 2006 when a visitor arrived at the house.",
+        ]
+
+        _, events, review = temporal_candidates(segments, {}, "doc-test")
+
+        self.assertEqual(events, [])
+        kinds = {candidate["value"]: candidate["kind"] for candidate in review}
+        self.assertEqual(kinds["2019-07-24"], "administrative_date")
+        self.assertEqual(kinds["1950-10-13"], "referenced_document_date")
+        self.assertEqual(kinds["1947-07-08"], "relative_date")
+        self.assertEqual(kinds["1917-04-06"], "relative_date")
+        self.assertNotIn("1958-03-10", kinds)
+        self.assertEqual(kinds["1986-11-17"], "unknown")
+        self.assertEqual(kinds["2004-02-28"], "administrative_date")
+        self.assertEqual(kinds["1999-11-03"], "administrative_date")
+        self.assertEqual(kinds["1981-02-28"], "unknown")
+        self.assertEqual(kinds["2018-04-18"], "unknown")
+        self.assertEqual(kinds["1943-01-07"], "unknown")
+        self.assertEqual(kinds["1947-07-12"], "relative_date")
+        self.assertEqual(kinds["2017-03-17"], "non_ufo_event")
+        self.assertEqual(kinds["2007-04-23"], "administrative_date")
+        self.assertEqual(kinds["2006-07-04"], "unknown")
+
+    def test_merges_only_similar_same_day_event_reports(self):
+        events = [
+            {"id": "a", "title": "Witnesses observed a bright disc over Roswell", "eventType": "sighting", "startDate": "1947-07-08", "confidence": .9, "documentIds": ["doc-a"], "evidence": [{"documentId": "doc-a", "excerpt": "A"}]},
+            {"id": "b", "title": "Witnesses observed a bright disc over Roswell.", "eventType": "sighting", "startDate": "1947-07-08", "confidence": .9, "documentIds": ["doc-b"], "evidence": [{"documentId": "doc-b", "excerpt": "B"}]},
+            {"id": "c", "title": "A separate object was sighted above Seattle", "eventType": "sighting", "startDate": "1947-07-08", "confidence": .9, "documentIds": ["doc-c"], "evidence": [{"documentId": "doc-c", "excerpt": "C"}]},
+        ]
+
+        merged = merge_events(events)
+
+        self.assertEqual(len(merged), 2)
+        self.assertEqual(merged[0]["documentIds"], ["doc-a", "doc-b"])
+        self.assertEqual(merged[0]["documentCount"], 2)
+        self.assertEqual(merged[1]["documentIds"], ["doc-c"])
+
     def test_prominence_inflation_risk_requires_lost_document_coverage(self):
         self.assertEqual(inflation_risk(0.98, 870), "high")
         self.assertEqual(inflation_risk(0.35, 1), "low")
@@ -205,6 +295,32 @@ class ClassificationTests(unittest.TestCase):
 
 
 class CatalogTests(unittest.TestCase):
+    def test_build_publishes_events_and_writes_date_review_evidence(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "machine-data"
+            collection = root / "Example"
+            collection.mkdir(parents=True)
+            metadata = {"schema": "ufo-files-archive-ocr/v1", "source_file": "report.pdf", "source_bytes": 100}
+            body = (
+                "Date: November 10, 1975 memorandum concerning the incident.\n"
+                "Two officers observed a bright object near Roswell on November 8, 1975.\n"
+                "FOIA request released on March 20, 2014 after systematic review.\n"
+                "Federal Bureau of Investigation reviewed the Roswell incident."
+            )
+            (collection / "report.txt").write_text(json.dumps(metadata) + "\n\n" + body, encoding="utf-8")
+            review_path = Path(directory) / "date_review.json"
+
+            catalog = build(root, Path(directory) / "catalog.json", 100, 100, date_review_report=review_path)
+
+            self.assertEqual(catalog["documents"][0]["documentDate"], "1975-11-10")
+            self.assertEqual(catalog["events"][0]["startDate"], "1975-11-08")
+            self.assertEqual(catalog["events"][0]["eventType"], "sighting")
+            self.assertEqual(catalog["counts"]["datedDocuments"], 1)
+            self.assertEqual(catalog["counts"]["publishedEvents"], 1)
+            review = json.loads(review_path.read_text(encoding="utf-8"))
+            candidates = review["records"][0]["candidates"]
+            self.assertIn("administrative_date", {candidate["kind"] for candidate in candidates})
+
     def test_curated_title_entity_survives_the_publication_cutoff(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / "machine-data"
