@@ -96,7 +96,7 @@ const VIEW_DEFAULTS = {
   book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 20 },
   document: { size: "words", color: "source", labels: "top", documentSearch: "" },
   bars: { aggregation: "source", y: "words", color: "intensity" },
-  timeline: { timelineRole: "event", x: "startDate", y: "timelineLane", size: "confidence", color: "eventType", categories: ["date"], labels: "off", limit: 500, relationshipLayer: "off" },
+  timeline: { timelineRole: "event", x: "startDate", y: "timelineLane", size: "documentCount", color: "eventType", categories: ["date"], labels: "off", limit: 500, relationshipLayer: "off" },
   matrix: { matrixColumns: "category", color: "intensity" },
   table: { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 }
 };
@@ -267,7 +267,7 @@ function dataAwareTitle(config) {
   } else if (config.type === "bars") {
     title = config.aggregation === "entity" ? `${label(config.y)} by ${entities}` : `${label(config.y)} by ${label(config.aggregation)}`;
   } else if (config.type === "timeline") {
-    title = config.timelineRole === "event" ? "Evidence-backed Event Sequence" : config.timelineRole === "entity" ? `${entities} Over Time` : "Dated Source Documents";
+    title = config.timelineRole === "event" ? "Event Sequence" : config.timelineRole === "entity" ? `${entities} Over Time` : "Dated Source Documents";
   } else if (config.type === "matrix") {
     title = `Collections × ${config.matrixColumns === "entity" ? "Entities" : "Entity Types"}`;
   } else {
@@ -469,9 +469,11 @@ function renderControls() {
   }
   $("#roleControls").innerHTML = roles;
 
-  const sizeOptions = state.config.type === "network" && state.config.nodeRole === "collection"
-    ? ["documents", "words"]
-    : state.config.type === "document" || state.config.type === "timeline" && state.config.timelineRole !== "entity" ? numericDoc : numericEntity;
+  const sizeOptions = state.config.type === "timeline" && state.config.timelineRole === "event"
+    ? ["documentCount", "confidence"]
+    : state.config.type === "network" && state.config.nodeRole === "collection"
+      ? ["documents", "words"]
+      : state.config.type === "document" || state.config.type === "timeline" && state.config.timelineRole !== "entity" ? numericDoc : numericEntity;
   const labelSizeControl = `<div class="control"><label>Label size <span>${state.config.labelSize}px</span></label><input type="range" min="11" max="18" step="1" value="${state.config.labelSize}" data-range="labelSize"></div>`;
   const zoomControl = state.config.type === "network" ? `<div class="control"><label>Zoom <span>${state.config.zoom.toFixed(1)}×</span></label><input type="range" min="0.5" max="2.5" step="0.1" value="${state.config.zoom}" data-range="zoom"></div>` : "";
   const moonTransitControl = state.config.type === "map" ? `<div class="control"><label for="moonTransitSeconds">On-screen Moon transit <span>${state.config.moonTransitSeconds}s</span></label><input id="moonTransitSeconds" type="range" min="2" max="10" step="1" value="${state.config.moonTransitSeconds}" data-range="moonTransitSeconds"></div>` : "";
@@ -588,7 +590,7 @@ function updateConfig(key, value, rerenderControls = false) {
   if (key === "timelineRole") {
     state.config.x = value === "event" ? "startDate" : "documentDate";
     state.config.y = value === "event" ? "timelineLane" : value === "entity" ? "contextAdjustedMentions" : "words";
-    state.config.size = value === "event" ? "confidence" : value === "entity" ? "independentDocumentCount" : "words";
+    state.config.size = value === "event" ? "documentCount" : value === "entity" ? "independentDocumentCount" : "words";
     state.config.color = value === "event" ? "eventType" : value === "entity" ? "category" : "source";
     if (value === "event") state.config.relationshipLayer = "off";
   }
