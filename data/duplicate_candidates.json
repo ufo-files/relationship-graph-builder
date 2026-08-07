@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "572299fb17d24551a01f6998e1d5c2b638fec5a5"
+    "revision": "a4a68a768d9f5b56a6daa892d3402d84b60a7dec"
   },
-  "count": 423,
-  "totalCount": 423,
+  "count": 425,
+  "totalCount": 425,
   "shownCount": 200,
   "candidates": [
     {
@@ -30,8 +30,8 @@
       "category": "organization",
       "left": {
         "name": "Advanced Aerospace Weapon System Applications",
-        "mentions": 12,
-        "documentCount": 12
+        "mentions": 13,
+        "documentCount": 13
       },
       "right": {
         "name": "Advanced Aerospace Weapons System Applications",
@@ -46,8 +46,8 @@
       "category": "organization",
       "left": {
         "name": "Advanced Aerospace Weapon System Applications",
-        "mentions": 12,
-        "documentCount": 12
+        "mentions": 13,
+        "documentCount": 13
       },
       "right": {
         "name": "Advanced Aerospace Weapon System Application",
@@ -62,8 +62,8 @@
       "category": "organization",
       "left": {
         "name": "Advanced Aerospace Weapon System Applications",
-        "mentions": 12,
-        "documentCount": 12
+        "mentions": 13,
+        "documentCount": 13
       },
       "right": {
         "name": "Advanced Aerospace Weapon Systems Applications",
@@ -110,8 +110,8 @@
       "category": "organization",
       "left": {
         "name": "The Defense Intelligence Reference Document",
-        "mentions": 23,
-        "documentCount": 19
+        "mentions": 24,
+        "documentCount": 20
       },
       "right": {
         "name": "Defense Intelligence Reference Documents",
@@ -206,8 +206,8 @@
       "category": "government_agency",
       "left": {
         "name": "National Reconnaissance Office",
-        "mentions": 458,
-        "documentCount": 146
+        "mentions": 462,
+        "documentCount": 147
       },
       "right": {
         "name": "The National Reconnaisance Office",
@@ -315,6 +315,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Communication & Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Communications Intelligence",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.981,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Central Inteliigence Agency",
@@ -334,8 +350,8 @@
       "category": "government_agency",
       "left": {
         "name": "U.S. Department of Justice",
-        "mentions": 471,
-        "documentCount": 125
+        "mentions": 474,
+        "documentCount": 126
       },
       "right": {
         "name": "US Department of Justice",
@@ -443,6 +459,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Launch Site Facility Costs",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Launch Site Facility Cost",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.98,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Intelligence Department",
@@ -542,8 +574,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1754,
-        "documentCount": 378
+        "mentions": 1768,
+        "documentCount": 380
       },
       "right": {
         "name": "Departments of Defense",
@@ -670,8 +702,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1754,
-        "documentCount": 378
+        "mentions": 1768,
+        "documentCount": 380
       },
       "right": {
         "name": "Department of Defens",
@@ -1150,8 +1182,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 121,
-        "documentCount": 63
+        "mentions": 122,
+        "documentCount": 64
       },
       "right": {
         "name": "Air Iechnical Intelligence Center",
@@ -1166,8 +1198,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 121,
-        "documentCount": 63
+        "mentions": 122,
+        "documentCount": 64
       },
       "right": {
         "name": "Alr Technical Intelligence Center",
@@ -1182,8 +1214,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 121,
-        "documentCount": 63
+        "mentions": 122,
+        "documentCount": 64
       },
       "right": {
         "name": "The Ait Technical Intelligence Center",
@@ -3038,8 +3070,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1754,
-        "documentCount": 378
+        "mentions": 1768,
+        "documentCount": 380
       },
       "right": {
         "name": "Department of Detense",
@@ -3172,38 +3204,6 @@
       "right": {
         "name": "University of Kansas",
         "mentions": 3,
-        "documentCount": 2
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Wright-Parterson Air Force Base",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Wrighat-Patterson Air Force Base",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Wright-pattorson AIr Force Base",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Wrighat-Patterson Air Force Base",
-        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.952,
