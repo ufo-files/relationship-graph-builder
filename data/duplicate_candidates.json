@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "db24cebfb5e0132d0552285b435ea75791060e0f"
+    "revision": "45421723d1058ec8915685490c605dfe6d9e9f3c"
   },
-  "count": 472,
-  "totalCount": 472,
+  "count": 475,
+  "totalCount": 475,
   "shownCount": 200,
   "candidates": [
     {
@@ -203,6 +203,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "LONG RANGE WEAPONS ESTABLSHMENT",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "LONG RANGE WEAPONS ESTABLISHMENT",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.984,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "National Reconnaissance Office",
@@ -302,8 +318,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4212,
-        "documentCount": 799
+        "mentions": 4214,
+        "documentCount": 800
       },
       "right": {
         "name": "The Central Inteligence Agency",
@@ -557,14 +573,14 @@
     {
       "category": "government_agency",
       "left": {
-        "name": "Investigating Officer",
-        "mentions": 48,
-        "documentCount": 17
+        "name": "Public Affairs Office",
+        "mentions": 21,
+        "documentCount": 9
       },
       "right": {
-        "name": "Investigating Officers",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "Public Affairs Officer",
+        "mentions": 30,
+        "documentCount": 15
       },
       "similarity": 0.977,
       "reason": "similar name",
@@ -573,14 +589,14 @@
     {
       "category": "government_agency",
       "left": {
-        "name": "Public Affairs Office",
-        "mentions": 21,
-        "documentCount": 9
+        "name": "Investigating Officer",
+        "mentions": 48,
+        "documentCount": 17
       },
       "right": {
-        "name": "Public Affairs Officer",
-        "mentions": 29,
-        "documentCount": 14
+        "name": "Investigating Officers",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.977,
       "reason": "similar name",
@@ -643,6 +659,22 @@
       },
       "right": {
         "name": "Re Bureau Bulletins No",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.977,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Meteorological Officer",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Meteorlogical Officer",
         "mentions": 3,
         "documentCount": 3
       },
@@ -1934,8 +1966,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4212,
-        "documentCount": 799
+        "mentions": 4214,
+        "documentCount": 800
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1950,8 +1982,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4212,
-        "documentCount": 799
+        "mentions": 4214,
+        "documentCount": 800
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1966,8 +1998,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4212,
-        "documentCount": 799
+        "mentions": 4214,
+        "documentCount": 800
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1982,8 +2014,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4212,
-        "documentCount": 799
+        "mentions": 4214,
+        "documentCount": 800
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -2461,6 +2493,22 @@
     {
       "category": "location",
       "left": {
+        "name": "Superintendent LRWE Range",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Superintendent IRWE Range",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "STRANGE OBJECT WAS FILMED",
         "mentions": 2,
         "documentCount": 2
@@ -2510,8 +2558,8 @@
       "category": "organization",
       "left": {
         "name": "University of California",
-        "mentions": 72,
-        "documentCount": 37
+        "mentions": 73,
+        "documentCount": 38
       },
       "right": {
         "name": "University of Californla",
@@ -3157,54 +3205,6 @@
         "name": "SET Search for ExtraTerrestrial Intelligence",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Deputy Director for Intelligence",
-        "mentions": 9,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "Deputy Director of Intelligence",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "House Appropriations Committee",
-        "mentions": 8,
-        "documentCount": 8
-      },
-      "right": {
-        "name": "House Appropriations Subcommittee",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of Defens",
-        "mentions": 7,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Departments of Defense",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.952,
       "reason": "similar name",
