@@ -96,7 +96,7 @@ const VIEW_DEFAULTS = {
   book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 20 },
   document: { size: "words", color: "source", labels: "top", documentSearch: "" },
   bars: { aggregation: "source", y: "words", color: "intensity" },
-  timeline: { timelineRole: "event", x: "startDate", y: "timelineLane", size: "documentCount", color: "eventType", categories: ["date"], labels: "off", limit: 500, relationshipLayer: "off" },
+  timeline: { timelineRole: "event", x: "startDate", y: "timelineLane", size: "documentCount", color: "eventType", categories: ["date"], labels: "off", limit: 500, relationshipLayer: "always" },
   matrix: { matrixColumns: "category", color: "intensity" },
   table: { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 }
 };
@@ -459,7 +459,7 @@ function renderControls() {
       + controlSelect("y", "Y axis", state.config.timelineRole === "event" ? eventFields : state.config.timelineRole === "entity" ? numericEntity : numericDoc);
     roles += state.config.timelineRole === "entity"
       ? relationshipTypeControl()
-      : `<div class="control"><div class="control-title">Relationship</div><select disabled><option>Shared published entities</option></select></div>`;
+      : `<div class="control"><div class="control-title">Relationship</div><select disabled><option>${state.config.timelineRole === "event" ? "Chronological sequence" : "Shared published entities"}</option></select></div>`;
   } else if (state.config.type === "matrix") {
     roles = `<div class="control"><div class="control-title">Rows</div><select disabled><option>Collections</option></select></div>` + controlSelect("matrixColumns", "Columns", [{ value: "entity", label: "Entities" }, { value: "category", label: "Entity categories" }]);
   } else {
@@ -478,9 +478,10 @@ function renderControls() {
   const zoomControl = state.config.type === "network" ? `<div class="control"><label>Zoom <span>${state.config.zoom.toFixed(1)}×</span></label><input type="range" min="0.5" max="2.5" step="0.1" value="${state.config.zoom}" data-range="zoom"></div>` : "";
   const moonTransitControl = state.config.type === "map" ? `<div class="control"><label for="moonTransitSeconds">On-screen Moon transit <span>${state.config.moonTransitSeconds}s</span></label><input id="moonTransitSeconds" type="range" min="2" max="10" step="1" value="${state.config.moonTransitSeconds}" data-range="moonTransitSeconds"></div>` : "";
   const supportsRelationships = ["scatter", "map", "timeline"].includes(state.config.type);
-  const relationshipControls = supportsRelationships ? controlSelect("relationshipLayer", "Relationship layer", [{ value: "off", label: "Off" }, { value: "hover", label: "On hover" }, { value: "always", label: "Always" }])
+  const eventSequenceRelationships = state.config.type === "timeline" && state.config.timelineRole === "event";
+  const relationshipControls = supportsRelationships ? controlSelect("relationshipLayer", eventSequenceRelationships ? "Sequence lines" : "Relationship layer", [{ value: "off", label: "Off" }, { value: "hover", label: "On hover" }, { value: "always", label: "Always" }])
     + `<div class="control"><label>Connections per node <span>${state.config.relationshipNeighbors}</span></label><input type="range" min="1" max="5" step="1" value="${state.config.relationshipNeighbors}" data-range="relationshipNeighbors"></div>`
-    + controlSelect("relationshipNodeSize", "Secondary-node size", [{ value: "inherit", label: "Inherit size metric" }, { value: "fixed", label: "Fixed" }])
+    + (eventSequenceRelationships ? "" : controlSelect("relationshipNodeSize", "Secondary-node size", [{ value: "inherit", label: "Inherit size metric" }, { value: "fixed", label: "Fixed" }]))
     + controlSelect("relationshipStrength", "Line strength", [{ value: "subtle", label: "Subtle" }, { value: "medium", label: "Medium" }, { value: "strong", label: "Strong" }]) : "";
   if (state.config.type === "table") {
     const sortOptions = TABLE_FIELDS[state.config.tableRole];
@@ -514,7 +515,7 @@ function renderControls() {
     <div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div>
     ${state.config.type === "table" ? `<div class="control"><label for="tableSearch">Search rows</label><input id="tableSearch" class="text-input" type="search" value="${escapeHTML(state.config.tableSearch)}" placeholder="Filter this list" data-table-search></div>` : ""}
     ${usesEntities ? `<div class="control"><label>Minimum confidence <span>${Math.round(state.config.minConfidence * 100)}%</span></label><input type="range" min="0.5" max="0.95" step="0.01" value="${state.config.minConfidence}" data-range="minConfidence"></div>` : ""}
-    ${state.config.type === "network" || (supportsRelationships && state.config.relationshipLayer !== "off") ? `<div class="control"><label>${state.config.type === "network" && state.config.nodeRole === "collection" || state.config.type === "timeline" && state.config.timelineRole === "document" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
+    ${state.config.type === "network" || (supportsRelationships && state.config.relationshipLayer !== "off" && !eventSequenceRelationships) ? `<div class="control"><label>${state.config.type === "network" && state.config.nodeRole === "collection" || state.config.type === "timeline" && state.config.timelineRole === "document" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
     ${state.config.type === "document"
       ? `<div class="control"><div class="control-title">Search scope <span>${state.catalog?.documents.filter(document => sourceMatches(document.source)).length || 0}</span></div><select disabled><option>Every completed file</option></select></div>`
       : state.config.type === "table"
@@ -592,7 +593,7 @@ function updateConfig(key, value, rerenderControls = false) {
     state.config.y = value === "event" ? "timelineLane" : value === "entity" ? "contextAdjustedMentions" : "words";
     state.config.size = value === "event" ? "documentCount" : value === "entity" ? "independentDocumentCount" : "words";
     state.config.color = value === "event" ? "eventType" : value === "entity" ? "category" : "source";
-    if (value === "event") state.config.relationshipLayer = "off";
+    if (value === "event") state.config.relationshipLayer = "always";
   }
   if (key === "nodeRole") {
     state.config.size = value === "collection" ? "documents" : "independentDocumentCount";
@@ -829,7 +830,8 @@ function scatterSecondaryAnchors(egoNetworks, displayedIndex) {
 
 function drawIntensityLegend() {
   const relationshipView = ["scatter", "map", "timeline"].includes(state.config.type);
-  const egoKey = relationshipView && state.config.relationshipLayer !== "off" ? `<span class="legend-item"><i class="ego-key"></i>Strongest relationships</span>` : "";
+  const relationshipLabel = state.config.type === "timeline" && state.config.timelineRole === "event" ? "Event sequence" : "Strongest relationships";
+  const egoKey = relationshipView && state.config.relationshipLayer !== "off" ? `<span class="legend-item"><i class="ego-key"></i>${relationshipLabel}</span>` : "";
   const outlierKey = state.config.type === "scatter" ? `<span class="legend-item"><i class="outlier-key"></i>Axis-capped outlier</span>` : "";
   const inflationKey = state.config.type === "scatter" ? `<span class="legend-item"><i class="risk-key"></i>Potential mention inflation</span>` : "";
   $("#legend").innerHTML = `<span class="legend-item"><i style="background:#111;opacity:.14"></i>Lower</span><span class="legend-item"><i style="background:#111;opacity:.48"></i>Medium</span><span class="legend-item"><i style="background:#111"></i>Higher</span>${egoKey}${outlierKey}${inflationKey}`;
@@ -1613,7 +1615,22 @@ function renderTimeline() {
   const relationshipLines = new Map();
   const relationshipNodes = new Map();
   let egoNetworks = new Map();
-  if (state.config.timelineRole !== "event" && state.config.relationshipLayer !== "off") {
+  if (state.config.timelineRole === "event" && state.config.relationshipLayer !== "off") {
+    relationshipLayer = el("g", { class: `scatter-relationship-layer relationship-${state.config.relationshipLayer} strength-${state.config.relationshipStrength}` });
+    data.forEach((item, index) => {
+      for (let offset = 1; offset <= state.config.relationshipNeighbors && index + offset < data.length; offset++) {
+        const next = data[index + offset];
+        const a = positionFor(item), b = positionFor(next);
+        const line = el("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, class: "scatter-relationship-line", "stroke-width": 1 });
+        [item.id, next.id].forEach(id => {
+          if (!relationshipLines.has(id)) relationshipLines.set(id, []);
+          relationshipLines.get(id).push(line);
+        });
+        relationshipLayer.append(line);
+      }
+    });
+    svg.append(relationshipLayer);
+  } else if (state.config.timelineRole !== "event" && state.config.relationshipLayer !== "off") {
     egoNetworks = state.config.timelineRole === "entity"
       ? scatterEgoNetworks(candidates, data, state.config.relationshipNeighbors)
       : documentRelationshipNetworks(candidates, data, state.config.relationshipNeighbors);

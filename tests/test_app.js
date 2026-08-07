@@ -607,8 +607,10 @@ test("map and timeline expose relationship controls", () => {
 
 test("timeline defaults to evidence-backed event dates instead of cataloging time", () => {
   const source = fs.readFileSync("app.js", "utf8");
-  assert.match(source, /timeline: \{ timelineRole: "event", x: "startDate", y: "timelineLane", size: "documentCount"/);
+  assert.match(source, /timeline: \{ timelineRole: "event", x: "startDate", y: "timelineLane", size: "documentCount"[^\n]+relationshipLayer: "always"/);
   assert.match(source, /title = config\.timelineRole === "event" \? "Event Sequence"/);
+  assert.match(source, /state\.config\.timelineRole === "event" && state\.config\.relationshipLayer !== "off"/);
+  assert.match(source, /"Chronological sequence"/);
   assert.match(source, /state\.catalog\.events \|\| \[\]/);
   assert.match(source, /item\.confidence >= \.9/);
   assert.match(source, /item\.startDate \|\| item\.documentDate/);
