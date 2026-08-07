@@ -3,13 +3,14 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.build_catalog import Candidate, build, classify_phrase, comparison_key, duplicate_candidates, entity_key, extract_mentions, extract_title_mentions, inflation_risk, load_registry, merge_events, normalized_date, sentence_segments, temporal_candidates
+from scripts.build_catalog import Candidate, build, classify_phrase, comparison_key, curated_events, duplicate_candidates, entity_key, extract_mentions, extract_title_mentions, inflation_risk, load_registry, merge_events, normalized_date, overlay_curated_events, sentence_segments, temporal_candidates
 
 
 class ClassificationTests(unittest.TestCase):
     def test_normalizes_only_valid_unambiguous_dates(self):
         self.assertEqual(normalized_date("November 8, 1975"), "1975-11-08")
         self.assertEqual(normalized_date("8 November 1975"), "1975-11-08")
+        self.assertEqual(normalized_date("Nov 8, 1975"), "1975-11-08")
         self.assertIsNone(normalized_date("November 1975"))
         self.assertIsNone(normalized_date("February 30, 1975"))
 
@@ -83,6 +84,24 @@ class ClassificationTests(unittest.TestCase):
         self.assertEqual(kinds["2007-04-23"], "administrative_date")
         self.assertEqual(kinds["2006-07-04"], "unknown")
 
+    def test_publishes_uap_disclosure_and_official_report_milestones(self):
+        segments = list(sentence_segments(
+            "On Saturday, December 16, 2017, their story about the Pentagon UFO program appeared online.\n"
+            "AARO Historical Record Report cleared for open publication March 6, 2024.\n"
+            "An unrelated newspaper article was published on May 4, 2020."
+        ))
+
+        _, events, review = temporal_candidates(segments, {}, "doc-milestones")
+
+        self.assertEqual(
+            [(event["startDate"], event["eventType"]) for event in events],
+            [("2017-12-16", "publication"), ("2024-03-06", "official_report")],
+        )
+        self.assertEqual(
+            next(item for item in review if item["value"] == "2020-05-04")["kind"],
+            "administrative_date",
+        )
+
     def test_merges_only_similar_same_day_event_reports(self):
         events = [
             {"id": "a", "title": "Witnesses observed a bright disc over Roswell", "eventType": "sighting", "startDate": "1947-07-08", "confidence": .9, "documentIds": ["doc-a"], "evidence": [{"documentId": "doc-a", "excerpt": "A"}]},
@@ -96,6 +115,37 @@ class ClassificationTests(unittest.TestCase):
         self.assertEqual(merged[0]["documentIds"], ["doc-a", "doc-b"])
         self.assertEqual(merged[0]["documentCount"], 2)
         self.assertEqual(merged[1]["documentIds"], ["doc-c"])
+
+    def test_curated_milestones_require_a_present_source_document(self):
+        with tempfile.TemporaryDirectory() as directory:
+            registry = Path(directory) / "events.json"
+            registry.write_text(json.dumps({"events": [
+                {"title": "AARO publishes a report", "startDate": "2024-03-06",
+                 "eventType": "official_report", "sourcePath": "AARO/report.txt",
+                 "evidence": "Cleared for publication March 6, 2024."},
+                {"title": "Missing source", "startDate": "2024-04-01",
+                 "eventType": "official_report", "sourcePath": "missing.txt"},
+            ]}), encoding="utf-8")
+
+            events = curated_events(registry, {"AARO/report.txt": "doc-report"})
+
+            self.assertEqual(len(events), 1)
+            self.assertEqual(events[0]["documentIds"], ["doc-report"])
+            self.assertEqual(events[0]["reviewStatus"], "curated")
+
+    def test_curated_milestone_replaces_matching_extraction(self):
+        extracted = [{"id": "auto", "title": "Raw OCR", "startDate": "2017-12-16",
+                      "eventType": "publication", "documentIds": ["doc-story"],
+                      "evidence": [{"documentId": "doc-story", "excerpt": "Raw"}]}]
+        reviewed = [{"id": "curated", "title": "Reviewed title", "startDate": "2017-12-16",
+                     "eventType": "publication", "documentIds": ["doc-story"],
+                     "evidence": [{"documentId": "doc-story", "excerpt": "Reviewed"}]}]
+
+        events = overlay_curated_events(extracted, reviewed)
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["id"], "curated")
+        self.assertEqual(len(events[0]["evidence"]), 2)
 
     def test_prominence_inflation_risk_requires_lost_document_coverage(self):
         self.assertEqual(inflation_risk(0.98, 870), "high")

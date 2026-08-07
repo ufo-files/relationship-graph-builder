@@ -1946,7 +1946,7 @@ function inspectDocument(item) {
 }
 
 function inspectEvent(item) {
-  showInspector(item.eventType, item.title, [[new Date(item.startDate).toLocaleDateString(), "event date"], [`${Math.round(item.confidence * 100)}%`, "confidence"], [item.documentIds.length, "documents"]], item.evidence, "Published only from explicit event-language date evidence; FOIA, release, and processing dates are excluded.");
+  showInspector(item.eventType, item.title, [[new Date(item.startDate).toLocaleDateString(), "event date"], [`${Math.round(item.confidence * 100)}%`, "confidence"], [item.documentIds.length, "documents"]], item.evidence, "Includes explicit incident dates and source-backed disclosure, hearing, program, and official-report milestones. FOIA processing and cataloging dates remain excluded.");
 }
 
 function inspectMatrix(item) {

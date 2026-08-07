@@ -202,15 +202,24 @@ BOOK_TITLE_REJECT = {
     "a", "advanced", "an", "book", "brokers", "center", "extraterrestrial", "flying", "material", "project", "review", "service", "that", "the", "unidentified",
 }
 DATE_PATTERN = re.compile(
-    r"\b(?:January|February|March|April|May|June|July|August|September|October|November|December)"
+    r"\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|Aug(?:ust)?|Sept?(?:ember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
     r"\s+\d{1,2},?\s+(?:19|20)\d{2}\b|"
-    r"(?<![\d-])\b\d{1,2}\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)"
+    r"(?<![\d-])\b\d{1,2}\s+(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|Aug(?:ust)?|Sept?(?:ember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
     r"\s+(?:19|20)\d{2}\b|\b(?:19|20)\d{2}-\d{2}-\d{2}\b"
 )
 ADMINISTRATIVE_DATE_CONTEXT = re.compile(
     r"\b(?:foia|freedom of information|declassif|released?|release date|request(?:ed|er)?|"
     r"received|date processed|digitized|scanned|ocr|uploaded|catalog(?:ed|uing)?|access(?:ed|ion)|"
     r"message taken|published|publication|drafted|newspaper|article|issue of|\w+ times of)\b", re.I,
+)
+MILESTONE_DATE_CONTEXT = re.compile(
+    r"\b(?:appeared online|published|released|issued|submitted|"
+    r"cleared\s+for\s+open\s+publication|announced|established|created|launched|"
+    r"(?:open|public|congressional)\s+hearing)\b", re.I,
+)
+MILESTONE_SUBJECT_CONTEXT = re.compile(
+    r"\b(?:ufo|uap|aaro|aatip|unidentified anomalous phenomena|unidentified flying object)\b|"
+    r"u\s*[.·]?\s*[fpr]\s*[.·]?\s*o\s*[.]?", re.I,
 )
 DOCUMENT_DATE_CONTEXT = re.compile(r"^(?:date|memorandum|memo|letter|dispatch|telegram|cable|report)\b", re.I)
 EVENT_DATE_CONTEXT = re.compile(
@@ -237,9 +246,17 @@ EVENT_TYPES = [
     ("crash", re.compile(r"\b(?:crashed|crash|exploded)\b", re.I)),
     ("encounter", re.compile(r"\b(?:encountered|encounter)\b", re.I)),
 ]
+MILESTONE_TYPES = [
+    ("publication", re.compile(r"\b(?:article|story|appeared online|published)\b", re.I)),
+    ("public_hearing", re.compile(r"\b(?:hearing|testified|testimony)\b", re.I)),
+    ("program_milestone", re.compile(r"\b(?:program|office|established|created|launched)\b", re.I)),
+    ("official_report", re.compile(r"\b(?:report|cleared\s+for\s+open\s+publication|issued|submitted)\b", re.I)),
+]
 MONTHS = {name: number for number, name in enumerate(
     ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"), 1
 )}
+MONTHS.update({name[:3]: number for name, number in list(MONTHS.items())})
+MONTHS["Sept"] = 9
 ORG_WORDS = {
     "agency", "administration", "aerospace", "air force", "army", "bureau", "committee",
     "corporation", "department", "directorate", "division", "foundation", "institute",
@@ -353,8 +370,16 @@ def temporal_candidates(segments: list[str], metadata: dict, document_id: str) -
             if not value:
                 continue
             nearby = segment[max(0, match.start() - 120):match.end() + 120]
+            milestone_nearby = segment
+            if MILESTONE_SUBJECT_CONTEXT.search(segment) and index + 1 < len(segments):
+                milestone_nearby = f"{segment} {segments[index + 1]}"
             prefix = segment[max(0, match.start() - 120):match.start()]
-            if ADMINISTRATIVE_DATE_CONTEXT.search(nearby):
+            milestone = (MILESTONE_DATE_CONTEXT.search(milestone_nearby)
+                         and MILESTONE_SUBJECT_CONTEXT.search(milestone_nearby)
+                         and not re.search(r"\(\s*Established\b", milestone_nearby, re.I))
+            if milestone:
+                kind, confidence, method = "event_date", 0.94, "milestone-language"
+            elif ADMINISTRATIVE_DATE_CONTEXT.search(nearby):
                 kind, confidence, method = "administrative_date", 0.98, "context-exclusion"
             elif NON_UFO_EVENT_CONTEXT.search(nearby):
                 kind, confidence, method = "non_ufo_event", 0.9, "subject-exclusion"
@@ -377,7 +402,9 @@ def temporal_candidates(segments: list[str], metadata: dict, document_id: str) -
             if kind == "document_date":
                 document_dates.append(candidate)
             elif kind == "event_date":
-                event_type = next((name for name, pattern in EVENT_TYPES if pattern.search(nearby)), "reported_event")
+                type_patterns = MILESTONE_TYPES if method == "milestone-language" else EVENT_TYPES
+                type_context = segment if method == "milestone-language" else nearby
+                event_type = next((name for name, pattern in type_patterns if pattern.search(type_context)), "reported_event")
                 events.append({"id": stable_id("event", f"{document_id}|{index}|{value}|{event_type}"),
                                "title": segment[:140], "eventType": event_type, "startDate": value, "endDate": None,
                                "datePrecision": "day", "confidence": confidence, "documentIds": [document_id],
@@ -406,6 +433,50 @@ def merge_events(events: list[dict]) -> list[dict]:
         match["documentCount"] = len(match["documentIds"])
         match["confidence"] = round(min(0.98, max(match["confidence"], event["confidence"]) + 0.02), 3)
     return merged
+
+
+def curated_events(path: Path, document_ids: dict[str, str]) -> list[dict]:
+    """Load reviewed historical milestones only when their source document is present."""
+    if not path.exists():
+        return []
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    published = []
+    for item in payload.get("events", []):
+        source_path = item.get("sourcePath")
+        document_id = document_ids.get(source_path)
+        date = normalized_date(str(item.get("startDate", "")))
+        if not document_id or not date or not item.get("title") or not item.get("eventType"):
+            continue
+        excerpt = clean_space(str(item.get("evidence", "")))[:280]
+        published.append({
+            "id": stable_id("event", f"curated|{source_path}|{date}|{item['eventType']}"),
+            "title": item["title"],
+            "eventType": item["eventType"],
+            "startDate": date,
+            "endDate": None,
+            "datePrecision": "day",
+            "confidence": 0.99,
+            "reviewStatus": "curated",
+            "documentIds": [document_id],
+            "evidence": [{"documentId": document_id, "excerpt": excerpt}],
+        })
+    return published
+
+
+def overlay_curated_events(extracted: list[dict], reviewed: list[dict]) -> list[dict]:
+    """Prefer reviewed wording and combine extracted support for the same dated milestone."""
+    for curated in reviewed:
+        matches = [event for event in extracted
+                   if event["startDate"] == curated["startDate"]
+                   and event["eventType"] == curated["eventType"]]
+        for event in matches:
+            curated["documentIds"] = sorted(set(curated["documentIds"] + event["documentIds"]))
+            for evidence in event["evidence"]:
+                if evidence not in curated["evidence"] and len(curated["evidence"]) < 5:
+                    curated["evidence"].append(evidence)
+            extracted.remove(event)
+        extracted.append(curated)
+    return extracted
 
 
 def clean_space(value: str) -> str:
@@ -838,6 +909,7 @@ def build(
     source_counts: collections.Counter = collections.Counter()
     source_words: collections.Counter = collections.Counter()
     document_sources: dict[str, str] = {}
+    document_ids_by_path: dict[str, str] = {}
     events: list[dict] = []
     date_review: list[dict] = []
 
@@ -898,6 +970,7 @@ def build(
             date_review.append({"documentId": doc_id, "path": relative, "candidates": review_candidates})
         documents.append(document)
         document_sources[doc_id] = source
+        document_ids_by_path[relative] = doc_id
         source_counts[source] += 1
         source_words[source] += words
         title_sid = f"{doc_id}:title"
@@ -931,6 +1004,10 @@ def build(
                 segment_entities[sid] = list(dict.fromkeys(keys))
                 segment_text[sid] = segment
 
+    events = overlay_curated_events(
+        events,
+        curated_events(data_dir / "curated_events.json", document_ids_by_path),
+    )
     events = merge_events(events)
     accepted_candidates = {key: value for key, value in candidates.items() if accepted(value)}
     possible_duplicates, possible_duplicate_count = duplicate_candidates(accepted_candidates)
