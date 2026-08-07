@@ -223,6 +223,10 @@ GENERIC = {
     "chief science officer founder",
     "unidentified aerial phenomena", "unidentified flying object",
 }
+PERSON_HARD_NEGATIVES = {
+    "general aviation", "general counsel", "general electric", "general motors",
+    "general relativity",
+}
 NON_NAME_WORDS = {
     "act", "additional", "aerial", "all", "asset", "balloon", "balloons", "blue", "book",
     "command", "commands", "commanding", "concerning", "concerns", "congressional", "contained",
@@ -383,6 +387,8 @@ def read_tsv(path: Path) -> tuple[dict, list[str], int] | None:
 
 def classify_phrase(raw: str) -> tuple[str, float] | None:
     raw = clean_space(raw)
+    if raw.casefold() in PERSON_HARD_NEGATIVES:
+        return None
     key = comparison_key(raw)
     if len(key) < 3 or key in GENERIC or key in FIELD_LABELS or key in LOCATION_WORDS:
         return None
@@ -463,6 +469,7 @@ class Candidate:
     administrative_contexts: set[str] = field(default_factory=set)
     mentions: int = 0
     extraction_total: float = 0.0
+    title_documents: set[str] = field(default_factory=set)
 
     def add(self, raw: str, doc_id: str, source: str, segment_id: str, excerpt: str, confidence: float) -> None:
         context = context_key(excerpt)
@@ -597,42 +604,72 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
     return list(found.values())
 
 
+def extract_title_mentions(title: str, registry: dict[str, tuple[str, str]]) -> list[tuple[str, str, str, float, bool]]:
+    """Use document titles as curated identity evidence without treating arbitrary title case as NER."""
+    words = clean_space(title).split()
+    found: dict[str, tuple[str, str, str, float, bool]] = {}
+    for width in range(min(8, len(words)), 0, -1):
+        for start in range(len(words) - width + 1):
+            raw = clean_space(" ".join(words[start:start + width])).strip("-'_.")
+            registry_match = registry.get(comparison_key(raw))
+            if not registry_match:
+                continue
+            canonical, category = registry_match
+            if category == "book":
+                continue
+            key = f"{category}:{entity_key(canonical, category)}"
+            found.setdefault(key, (raw, canonical, category, 0.96, True))
+    return list(found.values())
+
+
 def duplicate_candidates(candidates: dict[str, Candidate], limit: int = 200) -> tuple[list[dict], int]:
     """Return likely but unresolved duplicates for human review; never merge them here."""
     items = [candidate for candidate in candidates.values() if candidate.category != "date"]
     matches = []
-    for index, left in enumerate(items):
-        left_name = left.canonical if left.curated else left.variants.most_common(1)[0][0]
-        left_identity = entity_key(left_name, left.category)
-        left_words = left_identity.split()
-        for right in items[index + 1:]:
-            if left.category != right.category:
-                continue
-            right_name = right.canonical if right.curated else right.variants.most_common(1)[0][0]
-            right_identity = entity_key(right_name, right.category)
-            right_words = right_identity.split()
-            similarity = difflib.SequenceMatcher(None, left_identity, right_identity).ratio()
-            left_initials = "".join(word[0] for word in left_words if word not in {"and", "of", "the"})
-            right_initials = "".join(word[0] for word in right_words if word not in {"and", "of", "the"})
-            reason = None
-            if len(left_words) >= 3 and left_initials == right_identity.replace(" ", ""):
-                reason = "acronym"
-            elif len(right_words) >= 3 and right_initials == left_identity.replace(" ", ""):
-                reason = "acronym"
-            elif left.category == "person" and left_words and right_words and left_words[-1] == right_words[-1] and similarity >= 0.86:
-                reason = "similar person name"
-            elif max(len(left_identity), len(right_identity)) >= 12 and similarity >= 0.92:
-                reason = "similar name"
-            if not reason:
-                continue
-            matches.append({
-                "category": left.category,
-                "left": {"name": left_name, "mentions": left.mentions, "documentCount": len(left.documents)},
-                "right": {"name": right_name, "mentions": right.mentions, "documentCount": len(right.documents)},
-                "similarity": round(similarity, 3),
-                "reason": reason,
-                "aliasFile": "data/entity_aliases.json",
-            })
+    buckets: dict[tuple[str, str], list[Candidate]] = collections.defaultdict(list)
+    for candidate in items:
+        name = candidate.canonical if candidate.curated else candidate.variants.most_common(1)[0][0]
+        words = entity_key(name, candidate.category).split()
+        if not words:
+            continue
+        anchor = words[-1][0] if candidate.category == "person" else words[0][0]
+        buckets[(candidate.category, anchor)].append(candidate)
+
+    for bucket in buckets.values():
+        for index, left in enumerate(bucket):
+            left_name = left.canonical if left.curated else left.variants.most_common(1)[0][0]
+            left_identity = entity_key(left_name, left.category)
+            left_words = left_identity.split()
+            for right in bucket[index + 1:]:
+                right_name = right.canonical if right.curated else right.variants.most_common(1)[0][0]
+                right_identity = entity_key(right_name, right.category)
+                right_words = right_identity.split()
+                left_initials = "".join(word[0] for word in left_words if word not in {"and", "of", "the"})
+                right_initials = "".join(word[0] for word in right_words if word not in {"and", "of", "the"})
+                reason = None
+                if len(left_words) >= 3 and left_initials == right_identity.replace(" ", ""):
+                    reason = "acronym"
+                elif len(right_words) >= 3 and right_initials == left_identity.replace(" ", ""):
+                    reason = "acronym"
+                if not reason:
+                    if abs(len(left_identity) - len(right_identity)) > max(4, int(max(len(left_identity), len(right_identity)) * 0.25)):
+                        continue
+                    similarity = difflib.SequenceMatcher(None, left_identity, right_identity).ratio()
+                    if left.category == "person" and left_words and right_words and left_words[-1] == right_words[-1] and similarity >= 0.86:
+                        reason = "similar person name"
+                    elif max(len(left_identity), len(right_identity)) >= 12 and similarity >= 0.92:
+                        reason = "similar name"
+                if not reason:
+                    continue
+                similarity = difflib.SequenceMatcher(None, left_identity, right_identity).ratio()
+                matches.append({
+                    "category": left.category,
+                    "left": {"name": left_name, "mentions": left.mentions, "documentCount": len(left.documents)},
+                    "right": {"name": right_name, "mentions": right.mentions, "documentCount": len(right.documents)},
+                    "similarity": round(similarity, 3),
+                    "reason": reason,
+                    "aliasFile": "data/entity_aliases.json",
+                })
     ranked = sorted(
         matches,
         key=lambda item: (item["similarity"], item["left"]["mentions"] + item["right"]["mentions"]),
@@ -721,6 +758,18 @@ def build(
         document_sources[doc_id] = source
         source_counts[source] += 1
         source_words[source] += words
+        title_sid = f"{doc_id}:title"
+        for raw, canonical, category, confidence, curated in extract_title_mentions(title, registry):
+            key = f"{category}:{entity_key(canonical, category)}"
+            candidate = candidates.get(key)
+            if candidate is None:
+                candidate = candidates[key] = Candidate(canonical, category, curated)
+            else:
+                if curated and not candidate.curated:
+                    candidate.canonical = canonical
+                candidate.curated = candidate.curated or curated
+            candidate.add(raw, doc_id, source, title_sid, f"Document title: {title}", confidence)
+            candidate.title_documents.add(doc_id)
         for number, segment in enumerate(segments):
             sid = f"{doc_id}:{number}"
             mentions = extract_mentions(segment, registry)
@@ -742,18 +791,24 @@ def build(
 
     accepted_candidates = {key: value for key, value in candidates.items() if accepted(value)}
     possible_duplicates, possible_duplicate_count = duplicate_candidates(accepted_candidates)
-    ranked = sorted(
-        accepted_candidates.items(),
-        key=lambda item: (item[1].mentions, len(item[1].documents), item[1].canonical),
-        reverse=True,
-    )
+    def publication_rank(item: tuple[str, Candidate]) -> tuple:
+        candidate = item[1]
+        metrics = significance_metrics(candidate)
+        return (
+            candidate.curated,
+            len(candidate.title_documents),
+            metrics["independentDocumentCount"],
+            len(candidate.sources),
+            metrics["contextAdjustedMentions"],
+            candidate.mentions,
+            candidate.canonical,
+        )
+
+    ranked = sorted(accepted_candidates.items(), key=publication_rank, reverse=True)
     book_items = [item for item in ranked if item[1].category == "book"][:min(250, max_entities)]
     book_keys = {key for key, _ in book_items}
     published_items = book_items + [item for item in ranked if item[0] not in book_keys][:max_entities - len(book_items)]
-    published_items.sort(
-        key=lambda item: (item[1].mentions, len(item[1].documents), item[1].canonical),
-        reverse=True,
-    )
+    published_items.sort(key=publication_rank, reverse=True)
     published = dict(published_items)
     entity_ids = {key: stable_id("ent", key) for key in published}
     entities = []
@@ -865,6 +920,9 @@ def build(
             "otherEvidenceFloor": "2 mentions across 2 documents (dates: 2 mentions)",
             "relationshipEvidenceFloor": "2 co-mentions or 1 same-segment typed cue",
             "contextAdjustment": "Exact context repeats within one document count once; requester metadata is excluded; exact contexts spanning 3+ documents count once",
+            "entityRanking": "Curated identities first, then independent documents, source diversity, context-adjusted mentions, and raw mentions",
+            "titleEvidence": "Curated aliases in document titles seed identity evidence; arbitrary title-case phrases are not classified",
+            "confidenceSemantics": "Heuristic ranking signals, not calibrated probabilities",
             "locationCoordinates": "Reviewed local gazetteer; ambiguous and unmapped names are not plotted",
             "denseSegmentLimit": 30,
             "maxEntities": max_entities,
