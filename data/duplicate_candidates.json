@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "920c0f6ff66ff174495d8b0f476dd2a62ff7e5ac"
+    "revision": "bbd2f5eb022b43ab713e94a75c86f5fc17c39dfe"
   },
-  "count": 451,
-  "totalCount": 451,
+  "count": 453,
+  "totalCount": 453,
   "shownCount": 200,
   "candidates": [
     {
@@ -158,8 +158,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 41,
-        "documentCount": 27
+        "mentions": 44,
+        "documentCount": 28
       },
       "right": {
         "name": "ATIONAL INVESTIGATIONS COMMITTEE",
@@ -302,8 +302,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4131,
-        "documentCount": 787
+        "mentions": 4147,
+        "documentCount": 788
       },
       "right": {
         "name": "The Central Inteligence Agency",
@@ -427,6 +427,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Applied Sciences Division",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Applied Science Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.98,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Intelligence Department",
@@ -526,8 +542,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1654,
-        "documentCount": 342
+        "mentions": 1657,
+        "documentCount": 343
       },
       "right": {
         "name": "Departments of Defense",
@@ -638,8 +654,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1654,
-        "documentCount": 342
+        "mentions": 1657,
+        "documentCount": 343
       },
       "right": {
         "name": "Department of Defens",
@@ -1102,8 +1118,8 @@
       "category": "person",
       "left": {
         "name": "Robert Sarbacher",
-        "mentions": 21,
-        "documentCount": 13
+        "mentions": 22,
+        "documentCount": 14
       },
       "right": {
         "name": "Robert Saarbacher",
@@ -1406,8 +1422,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Advisory Committee",
-        "mentions": 20,
-        "documentCount": 11
+        "mentions": 21,
+        "documentCount": 12
       },
       "right": {
         "name": "Intelligence Advisory Cosmittee",
@@ -1677,6 +1693,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Community Relations Division",
+        "mentions": 7,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Coumunity Relations Division",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.964,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Joint Intelligence Committee",
         "mentions": 8,
         "documentCount": 6
@@ -1694,24 +1726,8 @@
       "category": "organization",
       "left": {
         "name": "Community Relations Division",
-        "mentions": 6,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Coumunity Relations Division",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.964,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Community Relations Division",
-        "mentions": 6,
-        "documentCount": 5
+        "mentions": 7,
+        "documentCount": 6
       },
       "right": {
         "name": "Conmunity Relations Division",
@@ -1726,8 +1742,8 @@
       "category": "organization",
       "left": {
         "name": "Community Relations Division",
-        "mentions": 6,
-        "documentCount": 5
+        "mentions": 7,
+        "documentCount": 6
       },
       "right": {
         "name": "Cormunity Relations Division",
@@ -1854,8 +1870,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4131,
-        "documentCount": 787
+        "mentions": 4147,
+        "documentCount": 788
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1870,8 +1886,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4131,
-        "documentCount": 787
+        "mentions": 4147,
+        "documentCount": 788
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1886,8 +1902,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4131,
-        "documentCount": 787
+        "mentions": 4147,
+        "documentCount": 788
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -1902,8 +1918,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4131,
-        "documentCount": 787
+        "mentions": 4147,
+        "documentCount": 788
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -2619,6 +2635,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Applied Science Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Applied Sclence Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "David Grush",
@@ -2846,8 +2878,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 176,
-        "documentCount": 76
+        "mentions": 177,
+        "documentCount": 77
       },
       "right": {
         "name": "University of Colcrado",
@@ -2907,6 +2939,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Assistant Director for Scientific Intelligence",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Assistant Director Scientific Intelligence",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.955,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Department of the Aruy",
@@ -2915,22 +2963,6 @@
       },
       "right": {
         "name": "Department of the Arny",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.955,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Assistant Director for Scientific Intelligence",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Assistant Director Scientific Intelligence",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2990,8 +3022,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1654,
-        "documentCount": 342
+        "mentions": 1657,
+        "documentCount": 343
       },
       "right": {
         "name": "Department of Detense",
@@ -3022,13 +3054,13 @@
       "category": "organization",
       "left": {
         "name": "Deputy Director for Intelligence",
-        "mentions": 8,
-        "documentCount": 8
+        "mentions": 9,
+        "documentCount": 9
       },
       "right": {
         "name": "Deputy Director of Intelligence",
-        "mentions": 4,
-        "documentCount": 4
+        "mentions": 5,
+        "documentCount": 5
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -3171,38 +3203,6 @@
       },
       "right": {
         "name": "Wright-Patterson Air Foree Base",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Wrighat-Patterson Air Force Base",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "WRIGHT-PATTERION AIR FORCE BASE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Wrighat-Patterson Air Force Base",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "WRIGHT-PATTERSON AIM FORCE BASE",
         "mentions": 2,
         "documentCount": 2
       },
