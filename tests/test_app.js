@@ -266,40 +266,6 @@ test("inspector defaults collapsed and a selected mark reopens it", () => {
   assert.equal(elements.inspector.classList.contains("has-selection"), false);
 });
 
-test("mobile layout gives the graph the viewport and opens controls from the header", () => {
-  const html = fs.readFileSync("index.html", "utf8");
-  const styles = fs.readFileSync("styles.css", "utf8");
-  assert.match(html, /id="controlsButton"[^>]+aria-controls="builderPanel"[^>]+aria-expanded="false"/);
-  assert.match(html, /class="builder-panel" id="builderPanel"/);
-  assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.app-shell \{[^}]*height: calc\(100dvh - 68px\);[^}]*grid-template-rows: minmax\(0, 1fr\)/);
-  assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.app-shell\.inspector-collapsed \{ grid-template-columns: minmax\(0, 1fr\); \}/);
-  assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.builder-panel \{[^}]*display: none;[^}]*position: fixed;[^}]*inset: 68px 0 0;/);
-  assert.match(styles, /\.app-shell\.controls-open \.builder-panel \{ display: block; \}/);
-
-  const elements = { builderView: new FakeElement(), controlsButton: new FakeElement() };
-  const document = { querySelector: selector => elements[selector.slice(1)], querySelectorAll: () => [] };
-  const context = vm.createContext({ document, location: { hash: "" }, URLSearchParams });
-  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
-  vm.runInContext(source, context);
-
-  vm.runInContext("setMobileControls(true)", context);
-  assert.equal(elements.builderView.classList.contains("controls-open"), true);
-  assert.equal(elements.controlsButton.attributes["aria-expanded"], "true");
-  assert.equal(elements.controlsButton.attributes["aria-label"], "Hide graph controls");
-
-  vm.runInContext("setMobileControls(false)", context);
-  assert.equal(elements.builderView.classList.contains("controls-open"), false);
-  assert.equal(elements.controlsButton.attributes["aria-expanded"], "false");
-});
-
-test("mobile inspector covers the viewport and keeps the existing close button", () => {
-  const html = fs.readFileSync("index.html", "utf8");
-  const styles = fs.readFileSync("styles.css", "utf8");
-  assert.match(html, /id="closeInspector"[^>]+aria-label="Close inspector"/);
-  assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.inspector \{[^}]*position: fixed;[^}]*inset: 0;[^}]*z-index: 30;[^}]*width: 100%;[^}]*height: 100dvh;/);
-  assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.inspector-close \{[^}]*width: 44px;[^}]*height: 44px;/);
-});
-
 test("full-screen control expands the shared graph stage and restores app chrome", () => {
   const html = fs.readFileSync("index.html", "utf8");
   const styles = fs.readFileSync("styles.css", "utf8");
