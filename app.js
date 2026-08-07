@@ -96,7 +96,7 @@ const VIEW_DEFAULTS = {
   book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 20 },
   document: { size: "words", color: "source", labels: "top", documentSearch: "" },
   bars: { aggregation: "source", y: "words", color: "intensity" },
-  timeline: { timelineRole: "event", x: "startDate", y: "timelineLane", size: "documentCount", color: "eventType", categories: ["date"], labels: "all", limit: 500, relationshipLayer: "always" },
+  timeline: { timelineRole: "event", x: "startDate", y: "timelineLane", size: "documentCount", color: "eventType", categories: ["date"], labels: "top", limit: 500, relationshipLayer: "always" },
   matrix: { matrixColumns: "category", color: "intensity" },
   table: { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 }
 };
@@ -1611,11 +1611,6 @@ function renderTimeline() {
     y: clampedScale(item[state.config.y], yExtent, [height - margin.bottom, margin.top])
   });
   const eventEntityNames = new Map((state.catalog.entities || []).map(entity => [entity.id, entity.name]));
-  const eventLabel = item => {
-    const entities = (item.entityIds || []).map(id => eventEntityNames.get(id)).filter(Boolean);
-    const entity = entities.find(name => item.title.toLowerCase().includes(name.toLowerCase())) || entities[0];
-    return entity ? `${entity} · ${label(item.eventType)}` : item.title.slice(0, 18);
-  };
   let relationshipLayer = null;
   const relationshipLines = new Map();
   const relationshipNodes = new Map();
@@ -1673,6 +1668,10 @@ function renderTimeline() {
     });
     svg.append(relationshipLayer);
   }
+  const topLabelIds = new Set([...data]
+    .sort((a, b) => (b[state.config.size] || 0) - (a[state.config.size] || 0) || b.confidence - a.confidence)
+    .slice(0, 12)
+    .map(item => item.id));
   data.forEach((item, index) => {
     const { x, y } = positionFor(item);
     const radius = scale(item[state.config.size], sizeExtent, [3, 12]);
@@ -1693,10 +1692,8 @@ function renderTimeline() {
       (egoNetworks.get(item.id)?.neighbors || []).forEach(neighbor => relationshipNodes.get(neighbor.entity.id)?.classList.remove("is-focused"));
     });
     svg.append(dot);
-    if (state.config.labels === "all" || (state.config.labels === "top" && index < 12)) {
-      const right = index % 2 === 0;
-      const labelY = index % 4 < 2 ? Math.max(margin.top + 10, y - radius - 5) : Math.min(height - margin.bottom - 4, y + radius + state.config.labelSize);
-      svg.append(el("text", { x: x + (right ? radius + 4 : -radius - 4), y: labelY, "text-anchor": right ? "start" : "end", "font-size": 10, class: "chart-label node-label" }, eventLabel(item).slice(0, 18)));
+    if (state.config.labels === "all" || (state.config.labels === "top" && topLabelIds.has(item.id))) {
+      svg.append(el("text", { x, y: Math.min(height - margin.bottom + 18, y + radius + state.config.labelSize), "text-anchor": "middle", class: "chart-label node-label" }, item.title.slice(0, 22)));
     }
   });
   drawIntensityLegend();
