@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.build_catalog import build, classify_phrase, comparison_key, entity_key, extract_mentions, extract_title_mentions, inflation_risk, load_registry, sentence_segments
+from scripts.build_catalog import Candidate, build, classify_phrase, comparison_key, duplicate_candidates, entity_key, extract_mentions, extract_title_mentions, inflation_risk, load_registry, sentence_segments
 
 
 class ClassificationTests(unittest.TestCase):
@@ -32,15 +32,25 @@ class ClassificationTests(unittest.TestCase):
         registry = {
             comparison_key("Avi Loeb"): ("Avi Loeb", "person"),
             comparison_key("Lue Elizondo"): ("Luis Elizondo", "person"),
+            comparison_key("Flying Saucers"): ("Flying Saucers", "book"),
         }
 
-        mentions = extract_title_mentions("American Alchemy With Avi Loeb And Lue Elizondo", registry)
+        mentions = extract_title_mentions("Flying Saucers With Avi Loeb And Lue Elizondo", registry)
 
         self.assertEqual(
             {(canonical, category) for _, canonical, category, _, _ in mentions},
             {("Avi Loeb", "person"), ("Luis Elizondo", "person")},
         )
         self.assertTrue(all(curated for *_, curated in mentions))
+
+    def test_preserves_acronym_duplicate_candidates_before_length_pruning(self):
+        left = Candidate("Federal Bureau Investigation", "government_agency", curated=True)
+        right = Candidate("FBI", "government_agency", curated=True)
+
+        candidates, total = duplicate_candidates({"left": left, "right": right})
+
+        self.assertEqual(total, 1)
+        self.assertEqual(candidates[0]["reason"], "acronym")
 
     def test_classifies_strong_shapes(self):
         self.assertEqual(classify_phrase("Holloman Air Force Base")[0], "location")

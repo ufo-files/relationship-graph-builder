@@ -615,6 +615,8 @@ def extract_title_mentions(title: str, registry: dict[str, tuple[str, str]]) -> 
             if not registry_match:
                 continue
             canonical, category = registry_match
+            if category == "book":
+                continue
             key = f"{category}:{entity_key(canonical, category)}"
             found.setdefault(key, (raw, canonical, category, 0.96, True))
     return list(found.values())
@@ -642,9 +644,6 @@ def duplicate_candidates(candidates: dict[str, Candidate], limit: int = 200) -> 
                 right_name = right.canonical if right.curated else right.variants.most_common(1)[0][0]
                 right_identity = entity_key(right_name, right.category)
                 right_words = right_identity.split()
-                if abs(len(left_identity) - len(right_identity)) > max(4, int(max(len(left_identity), len(right_identity)) * 0.25)):
-                    continue
-                similarity = difflib.SequenceMatcher(None, left_identity, right_identity).ratio()
                 left_initials = "".join(word[0] for word in left_words if word not in {"and", "of", "the"})
                 right_initials = "".join(word[0] for word in right_words if word not in {"and", "of", "the"})
                 reason = None
@@ -652,12 +651,17 @@ def duplicate_candidates(candidates: dict[str, Candidate], limit: int = 200) -> 
                     reason = "acronym"
                 elif len(right_words) >= 3 and right_initials == left_identity.replace(" ", ""):
                     reason = "acronym"
-                elif left.category == "person" and left_words and right_words and left_words[-1] == right_words[-1] and similarity >= 0.86:
-                    reason = "similar person name"
-                elif max(len(left_identity), len(right_identity)) >= 12 and similarity >= 0.92:
-                    reason = "similar name"
+                if not reason:
+                    if abs(len(left_identity) - len(right_identity)) > max(4, int(max(len(left_identity), len(right_identity)) * 0.25)):
+                        continue
+                    similarity = difflib.SequenceMatcher(None, left_identity, right_identity).ratio()
+                    if left.category == "person" and left_words and right_words and left_words[-1] == right_words[-1] and similarity >= 0.86:
+                        reason = "similar person name"
+                    elif max(len(left_identity), len(right_identity)) >= 12 and similarity >= 0.92:
+                        reason = "similar name"
                 if not reason:
                     continue
+                similarity = difflib.SequenceMatcher(None, left_identity, right_identity).ratio()
                 matches.append({
                     "category": left.category,
                     "left": {"name": left_name, "mentions": left.mentions, "documentCount": len(left.documents)},
