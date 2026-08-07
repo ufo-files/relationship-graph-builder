@@ -1034,6 +1034,29 @@ test("automatic titles follow active entity categories, axes, and collections", 
   assert.equal(result.refinedTitle, "Mentions by Raw documents — People and Government Agencies — Army reports");
 });
 
+test("default chart titles omit the redundant all-entity scope", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const titles = JSON.parse(vm.runInContext(`JSON.stringify({
+    scatter: dataAwareTitle(presetConfig("default", "scatter")),
+    network: dataAwareTitle(presetConfig("default", "network")),
+    table: dataAwareTitle(presetConfig("default", "table")),
+    scopedScatter: dataAwareTitle({ ...presetConfig("default", "scatter"), categories: ["person"] }),
+    scopedNetwork: dataAwareTitle({ ...presetConfig("default", "network"), categories: ["person"] }),
+    scopedTable: dataAwareTitle({ ...presetConfig("default", "table"), categories: ["person"] })
+  })`, context));
+
+  assert.deepEqual(titles, {
+    scatter: "Mentions by Documents",
+    network: "Relationships",
+    table: "Table",
+    scopedScatter: "Mentions by Documents — People",
+    scopedNetwork: "People Relationships",
+    scopedTable: "People Table"
+  });
+});
+
 test("adjusted significance falls back safely for an older catalog", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];

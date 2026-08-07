@@ -87,7 +87,7 @@ const DEFAULT = {
   nodeRole: "entity", timelineRole: "document", matrixColumns: "category",
   tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"],
   tableSort: "mentions", tableDirection: "desc", tableSearch: "", documentSearch: "",
-  labelSize: 12, zoom: 1, moonTransitSeconds: 5, title: "Mentions by Documents — Entities", titleMode: "auto"
+  labelSize: 12, zoom: 1, moonTransitSeconds: 5, title: "Mentions by Documents", titleMode: "auto"
 };
 const VIEW_DEFAULTS = {
   scatter: {},
@@ -234,13 +234,14 @@ function collectionScopeTitle(config) {
 
 function dataAwareTitle(config) {
   const entities = entityScopeTitle(config.categories);
+  const defaultEntityScope = entities === "Entities";
   let title;
   if (config.type === "scatter") {
     title = config.x === "entity" && ["mentions", "contextAdjustedMentions"].includes(config.y)
       ? `Significant ${entities}`
-      : `${label(config.y)} by ${label(config.x)} — ${entities}`;
+      : `${label(config.y)} by ${label(config.x)}${defaultEntityScope ? "" : ` — ${entities}`}`;
   } else if (config.type === "network") {
-    title = config.nodeRole === "collection" ? "Collection Relationships" : `${entities} Relationships`;
+    title = config.nodeRole === "collection" ? "Collection Relationships" : defaultEntityScope ? "Relationships" : `${entities} Relationships`;
   } else if (config.type === "map") {
     title = `${label(config.size)} — Mapped Locations`;
   } else if (config.type === "book") {
@@ -254,7 +255,7 @@ function dataAwareTitle(config) {
   } else if (config.type === "matrix") {
     title = `Collections × ${config.matrixColumns === "entity" ? "Entities" : "Entity Types"}`;
   } else {
-    title = config.tableRole === "entity" ? `${entities} Table` : config.tableRole === "document" ? "Transcript Files" : "Collections";
+    title = config.tableRole === "entity" ? defaultEntityScope ? "Table" : `${entities} Table` : config.tableRole === "document" ? "Transcript Files" : "Collections";
   }
   return `${title}${collectionScopeTitle(config)}`;
 }
