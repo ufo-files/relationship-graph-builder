@@ -1034,7 +1034,7 @@ test("automatic titles follow active entity categories, axes, and collections", 
   assert.equal(result.refinedTitle, "Mentions by Raw documents — People and Government Agencies — Army reports");
 });
 
-test("default chart titles omit the redundant all-entity scope", () => {
+test("default chart titles avoid repeating the graph type", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
   vm.runInContext(source, context);
@@ -1050,10 +1050,39 @@ test("default chart titles omit the redundant all-entity scope", () => {
   assert.deepEqual(titles, {
     scatter: "Mentions by Documents",
     network: "Relationships",
-    table: "Table",
+    table: "All Entities",
     scopedScatter: "Mentions by Documents — People",
     scopedNetwork: "People Relationships",
-    scopedTable: "People Table"
+    scopedTable: "People"
+  });
+});
+
+test("automatic entity table titles summarize category and collection refinements", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const titles = JSON.parse(vm.runInContext(`JSON.stringify({
+    oneOfEach: dataAwareTitle({
+      ...presetConfig("default", "table"), categories: ["person"],
+      sources: ["Collection 1"], allSources: false
+    }),
+    condensed: dataAwareTitle({
+      ...presetConfig("default", "table"), categories: ["person"],
+      sources: Array.from({ length: 11 }, (_, index) => "Collection " + (index + 1)), allSources: false
+    }),
+    allCategoriesInOneCollection: dataAwareTitle({
+      ...presetConfig("default", "table"), sources: ["Collection 1"], allSources: false
+    }),
+    noCollections: dataAwareTitle({
+      ...presetConfig("default", "table"), categories: ["person"], sources: [], allSources: false
+    })
+  })`, context));
+
+  assert.deepEqual(titles, {
+    oneOfEach: "People and Collection 1",
+    condensed: "People, Collection 1, and 10 more",
+    allCategoriesInOneCollection: "All Entities and Collection 1",
+    noCollections: "People and No Collections"
   });
 });
 

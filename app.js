@@ -232,6 +232,22 @@ function collectionScopeTitle(config) {
   return ` — ${config.sources.length} Collections`;
 }
 
+function tableEntityScopeTitle(config) {
+  const selectedCategories = ENTITY_CATEGORIES.filter(category => config.categories.includes(category));
+  if (!selectedCategories.length) return "No Entities";
+  const allCategories = selectedCategories.length === ENTITY_CATEGORIES.length;
+  if (allCategories && config.allSources) return "All Entities";
+  const friendlyNames = { location: "Places", subject: "Terms" };
+  const categories = allCategories
+    ? ["All Entities"]
+    : selectedCategories.map(category => friendlyNames[category] || titleCase(label(category)));
+  const collections = config.allSources ? [] : config.sources.length ? config.sources : ["No Collections"];
+  const scope = [...categories, ...collections];
+  if (scope.length === 1) return scope[0];
+  if (scope.length === 2) return `${scope[0]} and ${scope[1]}`;
+  return `${scope[0]}, ${scope[1]}, and ${scope.length - 2} more`;
+}
+
 function dataAwareTitle(config) {
   const entities = entityScopeTitle(config.categories);
   const defaultEntityScope = entities === "Entities";
@@ -255,9 +271,10 @@ function dataAwareTitle(config) {
   } else if (config.type === "matrix") {
     title = `Collections × ${config.matrixColumns === "entity" ? "Entities" : "Entity Types"}`;
   } else {
-    title = config.tableRole === "entity" ? defaultEntityScope ? "Table" : `${entities} Table` : config.tableRole === "document" ? "Transcript Files" : "Collections";
+    title = config.tableRole === "entity" ? tableEntityScopeTitle(config) : config.tableRole === "document" ? "Transcript Files" : "Collections";
   }
-  return `${title}${collectionScopeTitle(config)}`;
+  const collectionScope = config.type === "table" && config.tableRole === "entity" ? "" : collectionScopeTitle(config);
+  return `${title}${collectionScope}`;
 }
 
 function prominenceInflationFor(documentCount, independentDocumentCount) {
