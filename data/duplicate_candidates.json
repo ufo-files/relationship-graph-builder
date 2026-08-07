@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "7c4ae3095911c4fe649053ed157477ddec3e98a4"
+    "revision": "a2598f2c2d66f4b18ca2aee1fd72691addc81ed5"
   },
-  "count": 478,
-  "totalCount": 478,
+  "count": 479,
+  "totalCount": 479,
   "shownCount": 200,
   "candidates": [
     {
@@ -807,6 +807,22 @@
         "documentCount": 2
       },
       "similarity": 0.976,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "HEADOUARTERS FOREIGN TECHNOLOGY DIVISION",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "HEADQUARTERS FOREIGN TECHNOLOGY DIVISION",
+        "mentions": 13,
+        "documentCount": 13
+      },
+      "similarity": 0.975,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -2574,8 +2590,8 @@
       "category": "location",
       "left": {
         "name": "Patterson Air Force Base",
-        "mentions": 29,
-        "documentCount": 26
+        "mentions": 30,
+        "documentCount": 27
       },
       "right": {
         "name": "Patterson Air Forco Base",
@@ -3191,22 +3207,6 @@
         "documentCount": 2
       },
       "similarity": 0.953,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of Defense",
-        "mentions": 1693,
-        "documentCount": 357
-      },
-      "right": {
-        "name": "Department of Detense",
-        "mentions": 13,
-        "documentCount": 4
-      },
-      "similarity": 0.952,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     }
