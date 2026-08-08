@@ -6,7 +6,7 @@
   <meta name="description" content="Build evidence-backed relationship graphs from the UFO Files archive.">
   <title>UFO Files — Graph Builder</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23174d3c'/%3E%3Ctext x='16' y='20' text-anchor='middle' font-family='sans-serif' font-size='10' font-weight='700' fill='white'%3EUF%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=triage-scoring-98">
+  <link rel="stylesheet" href="styles.css?v=case-dossiers-99">
 </head>
 <body>
   <header class="topbar">
@@ -23,6 +23,7 @@
           <path d="M4 4l12 12M16 4L4 16"/>
         </svg>
       </button>
+      <button class="button quiet" id="dossierButton" type="button">Case dossier <span id="dossierCount">0</span></button>
       <button class="button quiet" id="shareButton">Copy link</button>
       <button class="button primary" id="saveButton">Save view</button>
     </div>
@@ -119,11 +120,55 @@
     </aside>
   </main>
 
+  <dialog class="dossier-dialog" id="dossierDialog" aria-labelledby="dossierTitle">
+    <header class="dossier-header">
+      <div><p class="eyebrow">Local research workspace</p><h2 id="dossierTitle">Case dossier</h2></div>
+      <button class="icon-button" id="closeDossier" type="button" aria-label="Close case dossier" title="Close case dossier">×</button>
+    </header>
+    <div class="dossier-body">
+      <p class="dossier-privacy"><strong>Private by default.</strong> Public corpus records are labeled below. Analyst annotations stay in this browser and are never added to graph links, analytics, or PDF exports. JSON and report downloads happen only when you choose them.</p>
+      <div class="dossier-import-status" id="dossierImportStatus" hidden></div>
+      <section class="dossier-section">
+        <h3>Case frame <span>Local analyst annotation</span></h3>
+        <label>Scope<textarea data-dossier-field="scope" rows="3" placeholder="Define the boundaries of this review."></textarea></label>
+        <label>Research question<textarea data-dossier-field="researchQuestion" rows="3" placeholder="State a neutral, answerable question."></textarea></label>
+      </section>
+      <section class="dossier-section">
+        <h3>Selected evidence <span>Public corpus content</span></h3>
+        <p class="dossier-help">Add records from any evidence inspector. Classification reflects the analyst’s review, not a catalog judgment.</p>
+        <div id="dossierRecords" class="dossier-records"></div>
+      </section>
+      <section class="dossier-section dossier-notes">
+        <h3>Review notes <span>Local analyst annotation</span></h3>
+        <label>Unresolved questions<textarea data-dossier-list="unresolvedQuestions" rows="4" placeholder="One question per line"></textarea></label>
+        <label>Metadata gaps<textarea data-dossier-list="metadataGaps" rows="4" placeholder="One gap per line"></textarea></label>
+        <label>Follow-up tasks<textarea data-dossier-list="followUpTasks" rows="4" placeholder="One task per line"></textarea></label>
+      </section>
+      <section class="dossier-section">
+        <h3>Review decision <span>Local analyst annotation</span></h3>
+        <label>Status<select data-dossier-review="status"><option value="unreviewed">Unreviewed</option><option value="in_review">In review</option><option value="needs_follow_up">Needs follow-up</option><option value="reviewed">Reviewed</option></select></label>
+        <label>Rationale<textarea data-dossier-review="rationale" rows="4" placeholder="Explain the status without asserting beyond the selected sources."></textarea></label>
+      </section>
+      <section class="dossier-section dossier-provenance">
+        <h3>Snapshot <span>Public configuration</span></h3>
+        <div id="dossierProvenance"></div>
+        <button class="button quiet" id="captureDossierConfig" type="button">Capture current graph</button>
+      </section>
+    </div>
+    <footer class="dossier-actions">
+      <label class="button quiet dossier-import">Import JSON<input id="dossierImport" type="file" accept="application/json,.json" hidden></label>
+      <button class="button quiet" id="exportDossier" type="button">Export JSON</button>
+      <button class="button quiet" id="shareDossier" type="button">Copy public link</button>
+      <button class="button primary" id="reportDossier" type="button">Export neutral report</button>
+      <button class="button quiet dossier-new" id="newDossier" type="button">New dossier</button>
+    </footer>
+  </dialog>
+
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="vendor/jspdf.umd.min.js" defer></script>
   <script src="vendor/svg2pdf.umd.min.js" defer></script>
   <script src="vendor/qrcode-generator.js" defer></script>
-  <script src="app.js?v=triage-scoring-98" defer></script>
+  <script src="app.js?v=case-dossiers-99" defer></script>
   <script>
     window.addEventListener("error", event => {
       if (event.target?.id === "globeModule") {
