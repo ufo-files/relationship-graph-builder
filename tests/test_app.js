@@ -633,7 +633,8 @@ test("timeline defaults to evidence-backed event dates instead of cataloging tim
   assert.match(source, /item\.startDate \|\| item\.documentDate/);
   assert.match(source, /Evidence-backed events by occurrence date/);
   assert.match(source, /\["createdAt", "documentDate", "startDate"\]\.includes\(xKey\)/);
-  assert.match(source, /labels: "top", limit: 500/);
+  assert.match(source, /labels: "top", limit: 50/);
+  assert.match(source, /b\.mentionCount - a\.mentionCount \|\| b\.documentCount - a\.documentCount/);
   assert.match(source, /const topLabelIds = new Set\(\[\.\.\.data\]/);
   assert.match(source, /item\.mentionRank = index \+ 1/);
   assert.match(source, /mentionCount: "Event mentions"/);

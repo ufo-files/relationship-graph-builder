@@ -96,7 +96,7 @@ const VIEW_DEFAULTS = {
   book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 20 },
   document: { size: "words", color: "source", labels: "top", documentSearch: "" },
   bars: { aggregation: "source", y: "words", color: "intensity" },
-  timeline: { timelineRole: "event", x: "startDate", y: "mentionRank", size: "documentCount", color: "eventType", categories: ["date"], labels: "top", limit: 500, relationshipLayer: "always" },
+  timeline: { timelineRole: "event", x: "startDate", y: "mentionRank", size: "documentCount", color: "eventType", categories: ["date"], labels: "top", limit: 50, relationshipLayer: "always" },
   matrix: { matrixColumns: "category", color: "intensity" },
   table: { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 }
 };
@@ -1600,7 +1600,7 @@ function renderTimeline() {
       }).filter(Boolean)
     : state.catalog.documents.filter(item => item.documentDate && sourceMatches(item.source)));
   const data = candidates.sort((a, b) => state.config.timelineRole === "event"
-    ? new Date(a.startDate) - new Date(b.startDate) || a.title.localeCompare(b.title)
+    ? b.mentionCount - a.mentionCount || b.documentCount - a.documentCount || b.confidence - a.confidence
     : (b[state.config.y] || 0) - (a[state.config.y] || 0)).slice(0, state.config.limit);
   if (!data.length) return showEmpty();
   if (state.config.timelineRole === "event") {
