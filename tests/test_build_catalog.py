@@ -408,6 +408,16 @@ class ClassificationTests(unittest.TestCase):
 
 
 class CatalogTests(unittest.TestCase):
+    def test_historical_coverage_review_includes_phoenix_and_tracks_gaps(self):
+        data_dir = Path(__file__).resolve().parents[1] / "data"
+        curated = json.loads((data_dir / "curated_events.json").read_text(encoding="utf-8"))["events"]
+        coverage = json.loads((data_dir / "event_coverage_review.json").read_text(encoding="utf-8"))
+
+        phoenix = next(event for event in curated if event["title"] == "Phoenix Lights")
+        self.assertEqual(phoenix["startDate"], "1997-03-13")
+        self.assertIn("Phoenix Lights", coverage["added"])
+        self.assertIn("Chicago O'Hare UFO Sighting", coverage["notFoundByNameInCorpus"])
+
     def test_build_publishes_events_and_writes_date_review_evidence(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / "machine-data"
