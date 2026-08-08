@@ -577,6 +577,7 @@ test("app typography never renders below 10px", () => {
     .map(match => Number(match[1]))
     .filter(size => size < 10);
   assert.deepEqual(undersizedRules, []);
+  assert.match(styles, /\.stage-header p:last-child \{[^}]*font-size: 12px;/);
   assert.match(styles, /\.triage-component strong \{ margin-bottom: 0\.325rem; \}/);
 
   const source = fs.readFileSync("app.js", "utf8");

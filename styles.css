@@ -99,7 +99,7 @@ p { max-width: 768px; }
 .stage-header { display: flex; justify-content: space-between; gap: 20px; padding: 24px 28px; }
 .stage-header h2 { display: inline-block; font: 400 24px/1.1 var(--font); letter-spacing: 0; text-transform: uppercase; margin-bottom: 6px; border-bottom: 1px dashed transparent; }
 .stage-header h2:hover { border-bottom-color: var(--line-strong); }
-.stage-header p:last-child { color: var(--muted); font-size: 14px; line-height: 1.45; margin-bottom: 0; }
+.stage-header p:last-child { color: var(--muted); font-size: 12px; line-height: 1.45; margin-bottom: 0; }
 .stage-tools { display: flex; flex: 0 0 auto; align-items: center; gap: 7px; }
 .stage-tools .button { flex: 0 0 auto; white-space: nowrap; }
 .stage.pdf-exporting { --paper: #fff; background: #fff; }
