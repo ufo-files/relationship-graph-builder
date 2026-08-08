@@ -141,7 +141,7 @@ function loadConfig() {
       const saved = JSON.parse(decodeURIComponent(escape(atob(param))));
       if (saved.allSources === undefined) saved.allSources = !saved.sources?.length;
       const config = { ...DEFAULT, ...saved };
-      if (config.type === "timeline" && config.timelineRole === "event" && ["timelineLane", "mentionCount"].includes(config.y)) config.y = "mentionRank";
+      if (config.type === "timeline" && config.timelineRole === "event") config.y = "mentionRank";
       config.moonTransitSeconds = Math.min(10, Math.max(2, Number(config.moonTransitSeconds) || DEFAULT.moonTransitSeconds));
       if ((Number(saved.configVersion) || 0) < CONFIG_VERSION) migrateEntityProminenceConfig(config);
       if (saved.matrixColumns === "entity" && config.type !== "matrix") config.matrixColumns = DEFAULT.matrixColumns;
