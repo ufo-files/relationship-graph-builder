@@ -407,6 +407,23 @@ test("versioned saved views preserve an explicit raw-metric choice", () => {
   assert.equal(config.size, "documentCount");
 });
 
+test("saved event timelines cannot retain a stale words axis", () => {
+  const saved = {
+    configVersion: 2, type: "timeline", timelineRole: "event", x: "startDate", y: "words",
+    categories: ["date"], sources: [], allSources: true
+  };
+  const encoded = Buffer.from(JSON.stringify(saved), "utf8").toString("base64");
+  const context = vm.createContext({
+    location: { hash: `#config=${encodeURIComponent(encoded)}` }, URLSearchParams,
+    atob: value => Buffer.from(value, "base64").toString("binary"), escape, decodeURIComponent
+  });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const config = JSON.parse(vm.runInContext("JSON.stringify(state.config)", context));
+
+  assert.equal(config.y, "mentionRank");
+});
+
 test("saved views normalize the former Matrix default only when Matrix is inactive", () => {
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
   const defaultsContext = vm.createContext({ location: { hash: "" }, URLSearchParams });
@@ -623,7 +640,7 @@ test("timeline defaults to evidence-backed event dates instead of cataloging tim
   assert.match(source, /mentionRank: "Mention rank"/);
   assert.match(source, /yKey === "mentionRank" \? Math\.round\(rawValue\) : rawValue/);
   assert.match(source, /\[item\.mentionRank, "mention rank"\], \[item\.mentionCount, "event mentions"\]/);
-  assert.match(source, /\["timelineLane", "mentionCount"\]\.includes\(config\.y\)\) config\.y = "mentionRank"/);
+  assert.match(source, /config\.type === "timeline" && config\.timelineRole === "event"\) config\.y = "mentionRank"/);
 });
 
 test("README screenshots capture the Far Side during its foreground transit", () => {
