@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("assets/fonts/IBMPlexMono-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("assets/fonts/IBMPlexMono-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+}
+
 :root {
   --ink: #111;
   --muted: #555;
@@ -11,7 +27,7 @@
   --mint: #ecebe4;
   --shadow: none;
   --radius: 8px;
-  --font: "SF Mono", "IBM Plex Mono", "Roboto Mono", ui-monospace, monospace;
+  --font: "IBM Plex Mono", "SF Mono", "Roboto Mono", ui-monospace, monospace;
   font-family: var(--font);
   color: var(--ink);
   background: var(--paper);

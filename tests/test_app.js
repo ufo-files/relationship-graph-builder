@@ -587,6 +587,17 @@ test("app typography never renders below 10px", () => {
   assert.match(source, /const authorSize = Math\.max\(10, labelSize \* \.72\);/);
 });
 
+test("screenshots require the bundled IBM Plex Mono faces", () => {
+  const styles = fs.readFileSync("styles.css", "utf8");
+  const script = fs.readFileSync("scripts/capture_graph_screenshots.mjs", "utf8");
+  assert.match(styles, /@font-face \{[\s\S]*?font-family: "IBM Plex Mono";[\s\S]*?IBMPlexMono-Regular\.ttf[\s\S]*?font-weight: 400;/);
+  assert.match(styles, /@font-face \{[\s\S]*?font-family: "IBM Plex Mono";[\s\S]*?IBMPlexMono-Bold\.ttf[\s\S]*?font-weight: 700;/);
+  assert.match(styles, /--font: "IBM Plex Mono", "SF Mono"/);
+  assert.match(script, /document\.fonts\.load\('400 14px "IBM Plex Mono"'/);
+  assert.match(script, /document\.fonts\.load\('700 14px "IBM Plex Mono"'/);
+  assert.match(script, /plexFaces\.some\(face => face\.status !== "loaded"\)/);
+});
+
 test("stage actions do not wrap or compress the fullscreen square", () => {
   const styles = fs.readFileSync("styles.css", "utf8");
   assert.match(styles, /\.stage-tools \{[^}]*flex: 0 0 auto;/);
