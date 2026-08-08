@@ -454,7 +454,40 @@ def reviewed_event_titles(events: list[dict], path: Path) -> list[dict]:
     return published
 
 
-def curated_events(path: Path, document_ids: dict[str, str], date_review: list[dict] | None = None) -> list[dict]:
+def curated_discussion_matches(segments: list[str], items: list[dict]) -> dict[str, dict]:
+    """Find reviewed milestone discussions whose signature terms occur in a local text window."""
+    original = " ".join(segments)
+    text = comparison_key(original)
+    matches = {}
+    for item in items:
+        rules = [[comparison_key(term) for term in rule] for rule in item.get("discussionMatchAny", [])]
+        positions = []
+        for rule in rules:
+            if not rule:
+                continue
+            for anchor in re.finditer(re.escape(rule[0]), text):
+                start, end = max(0, anchor.start() - 1200), min(len(text), anchor.end() + 1200)
+                if all(term in text[start:end] for term in rule[1:]):
+                    positions.append(anchor.start())
+        distinct = []
+        for position in sorted(set(positions)):
+            if not distinct or position - distinct[-1] > 600:
+                distinct.append(position)
+        if distinct:
+            position = distinct[0]
+            matches[item["title"]] = {
+                "mentionCount": len(distinct),
+                "excerpt": clean_space(original[max(0, position - 140):position + 420])[:280],
+            }
+    return matches
+
+
+def curated_events(
+    path: Path,
+    document_ids: dict[str, str],
+    date_review: list[dict] | None = None,
+    discussion_support: dict[str, list[dict]] | None = None,
+) -> list[dict]:
     """Load reviewed historical milestones only when their source document is present."""
     if not path.exists():
         return []
@@ -469,7 +502,7 @@ def curated_events(path: Path, document_ids: dict[str, str], date_review: list[d
         excerpt = clean_space(str(item.get("evidence", "")))[:280]
         supporting_ids = {document_id}
         supporting_evidence = [{"documentId": document_id, "excerpt": excerpt}]
-        supporting_mentions = 0
+        supporting_mentions_by_document: dict[str, int] = {}
         match_terms = [comparison_key(term) for term in item.get("matchTerms", [])]
         match_kinds = set(item.get("matchCandidateKinds", ["event_date", "unknown", "referenced_document_date"]))
         if match_terms:
@@ -482,13 +515,21 @@ def curated_events(path: Path, document_ids: dict[str, str], date_review: list[d
                     if (candidate.get("value") == date and candidate.get("kind") in match_kinds
                             and all(term in context for term in match_terms)):
                         supporting_ids.add(candidate_document_id)
-                        supporting_mentions += 1
+                        supporting_mentions_by_document[candidate_document_id] = supporting_mentions_by_document.get(candidate_document_id, 0) + 1
                         if len(supporting_evidence) < 5:
                             supporting_evidence.append({
                                 "documentId": candidate_document_id,
                                 **({"segment": candidate["segment"]} if "segment" in candidate else {}),
                                 "excerpt": clean_space(candidate.get("evidence", ""))[:280],
                             })
+        for support in (discussion_support or {}).get(item["title"], []):
+            candidate_document_id = support["documentId"]
+            supporting_ids.add(candidate_document_id)
+            supporting_mentions_by_document[candidate_document_id] = max(
+                supporting_mentions_by_document.get(candidate_document_id, 0), support["mentionCount"]
+            )
+            if len(supporting_evidence) < 5:
+                supporting_evidence.append({"documentId": candidate_document_id, "excerpt": support["excerpt"]})
         published.append({
             "id": stable_id("event", f"curated|{source_path}|{date}|{item['eventType']}"),
             "title": item["title"],
@@ -497,7 +538,7 @@ def curated_events(path: Path, document_ids: dict[str, str], date_review: list[d
             "endDate": None,
             "datePrecision": "day",
             "confidence": 0.99,
-            "mentionCount": max(1, supporting_mentions),
+            "mentionCount": max(1, sum(supporting_mentions_by_document.values())),
             "reviewStatus": "curated",
             "documentIds": sorted(supporting_ids),
             "evidence": supporting_evidence,
@@ -978,6 +1019,9 @@ def build(
     data_dir = Path(__file__).resolve().parents[1] / "data"
     registry = load_registry([data_dir / "curated_entities.json", data_dir / "entity_aliases.json"])
     location_coordinates = json.loads((data_dir / "location_coordinates.json").read_text(encoding="utf-8"))
+    curated_event_path = data_dir / "curated_events.json"
+    curated_event_items = json.loads(curated_event_path.read_text(encoding="utf-8")).get("events", []) if curated_event_path.exists() else []
+    curated_discussion_support: dict[str, list[dict]] = collections.defaultdict(list)
     candidates: dict[str, Candidate] = {}
     documents: list[dict] = []
     segment_entities: dict[str, list[str]] = {}
@@ -1017,6 +1061,8 @@ def build(
             continue
         metadata, segments = parsed
         doc_id = stable_id("doc", relative)
+        for event_title, support in curated_discussion_matches(segments, curated_event_items).items():
+            curated_discussion_support[event_title].append({"documentId": doc_id, **support})
         words = sum(len(segment.split()) for segment in segments)
         title = title_from_path(Path(str(metadata.get("source_file") or path.name)))
         document_date, document_events, review_candidates = temporal_candidates(segments, metadata, doc_id)
@@ -1084,7 +1130,7 @@ def build(
 
     events = overlay_curated_events(
         events,
-        curated_events(data_dir / "curated_events.json", document_ids_by_path, date_review),
+        curated_events(curated_event_path, document_ids_by_path, date_review, curated_discussion_support),
     )
     events = merge_events(events)
     events = reviewed_event_titles(events, event_title_reviews or data_dir / "event_title_reviews.json")
