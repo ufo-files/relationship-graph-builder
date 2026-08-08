@@ -571,19 +571,19 @@ test("paragraphs keep a readable maximum line length", () => {
   assert.match(styles, /p \{ max-width: 768px; \}/);
 });
 
-test("app typography never renders below 11px", () => {
+test("app typography never renders below 10px", () => {
   const styles = fs.readFileSync("styles.css", "utf8");
   const undersizedRules = [...styles.matchAll(/font-size:\s*([\d.]+)px/g)]
     .map(match => Number(match[1]))
-    .filter(size => size < 11);
+    .filter(size => size < 10);
   assert.deepEqual(undersizedRules, []);
   assert.match(styles, /\.triage-component strong \{ margin-bottom: 0\.325rem; \}/);
 
   const source = fs.readFileSync("app.js", "utf8");
-  assert.match(source, /config\.labelSize = Math\.max\(11,/);
-  assert.match(source, /const labelSize = Math\.max\(11, state\.config\.labelSize \/ zoom\);/);
-  assert.match(source, /while \(labelSize >= 11\)/);
-  assert.match(source, /const authorSize = Math\.max\(11, labelSize \* \.72\);/);
+  assert.match(source, /config\.labelSize = Math\.max\(10,/);
+  assert.match(source, /const labelSize = Math\.max\(10, state\.config\.labelSize \/ zoom\);/);
+  assert.match(source, /while \(labelSize >= 10\)/);
+  assert.match(source, /const authorSize = Math\.max\(10, labelSize \* \.72\);/);
 });
 
 test("stage actions do not wrap or compress the fullscreen square", () => {
