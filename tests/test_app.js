@@ -417,6 +417,91 @@ test("triage missing values lower certainty without silently scoring as zero evi
   assert.equal(result.components.find(component => component.id === "mappedLocation").known, false);
 });
 
+test("triage marks identity ambiguity unknown when the duplicate catalog is truncated", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    (() => {
+      const event = {
+        id: "case-1", title: "Identity case", eventType: "sighting", startDate: "2001-02-03", datePrecision: "day",
+        titleReviewStatus: "reviewed", documentIds: ["doc-1"], entityIds: ["entity-1"], evidence: [{ documentId: "doc-1", excerpt: "Evidence" }]
+      };
+      const catalog = {
+        counts: { possibleDuplicates: 2 }, documents: [{ id: "doc-1", source: "One" }],
+        entities: [{ id: "entity-1", name: "Omitted candidate", category: "person" }], edges: [],
+        duplicateCandidates: [{ left: { name: "Other A" }, right: { name: "Other B" } }], events: [event]
+      };
+      const candidate = triageCase(event, catalog, { ...DEFAULT, type: "triage", triageSignals: triageSignalsForProfile("needs-follow-up") });
+      return JSON.stringify({ certainty: candidate.certainty, component: candidate.components.find(item => item.id === "identityAmbiguity") });
+    })()
+  `, context));
+
+  assert.equal(result.component.known, false);
+  assert.equal(result.component.ratio, null);
+  assert.match(result.component.detail, /publishes 1 of 2 possible pairs/);
+  assert.equal(result.certainty, 60);
+});
+
+test("triage metadata gaps use excerpts from the selected collection scope", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    (() => {
+      const event = {
+        id: "case-1", title: "Scoped case", eventType: "sighting", startDate: "2001-02-03", datePrecision: "day",
+        titleReviewStatus: "reviewed", documentIds: ["selected-doc", "other-doc"], entityIds: ["entity-1"],
+        evidence: [{ documentId: "other-doc", excerpt: "Excerpt outside the selected collection" }]
+      };
+      const catalog = {
+        counts: { possibleDuplicates: 0 },
+        documents: [{ id: "selected-doc", source: "Selected" }, { id: "other-doc", source: "Other" }],
+        entities: [{ id: "entity-1", name: "Entity", category: "person" }], edges: [], duplicateCandidates: [], events: [event]
+      };
+      const config = { ...DEFAULT, type: "triage", allSources: false, sources: ["Selected"], triageSignals: triageSignalsForProfile("needs-follow-up") };
+      const candidate = triageCase(event, catalog, config);
+      return JSON.stringify({ evidence: candidate.evidence, component: candidate.components.find(item => item.id === "metadataGaps") });
+    })()
+  `, context));
+
+  assert.deepEqual(result.evidence, []);
+  assert.equal(result.component.numerator, 1);
+  assert.match(result.component.detail, /1 of 5 follow-up checks flagged/);
+});
+
+test("applying a triage profile closes a stale open case inspector", () => {
+  const elements = { builderView: new FakeElement(), inspector: new FakeElement() };
+  elements.inspector.classList.add("has-selection");
+  const document = { querySelector: selector => elements[selector.slice(1)], querySelectorAll: () => [] };
+  const context = vm.createContext({ document, location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  vm.runInContext(`
+    state.config = { ...DEFAULT, type: "triage", triageCaseId: "case-1", triageSignals: triageSignalsForProfile("evidence-rich") };
+    state.selected = { event: { id: "case-1" } };
+    persistHash = () => {};
+    renderControls = () => {};
+    commitConfig = () => {};
+    toast = () => {};
+    applyTriageProfile("needs-follow-up");
+  `, context);
+
+  const stateSnapshot = JSON.parse(vm.runInContext("JSON.stringify({ selected: state.selected, config: state.config })", context));
+  assert.equal(elements.builderView.classList.contains("inspector-collapsed"), true);
+  assert.equal(elements.inspector.classList.contains("has-selection"), false);
+  assert.equal(stateSnapshot.selected, null);
+  assert.equal(stateSnapshot.config.triageCaseId, "");
+  assert.equal(stateSnapshot.config.triageProfile, "needs-follow-up");
+});
+
+test("triage rows use the compact grid before the mobile breakpoint", () => {
+  const styles = fs.readFileSync("styles.css", "utf8");
+  assert.match(styles, /@media \(max-width: 960px\)[\s\S]*?\.triage-case-open \{ grid-template-columns: 28px minmax\(0, 1fr\) 64px; \}/);
+  assert.match(styles, /@media \(max-width: 960px\)[\s\S]*?\.triage-case-open > span\[aria-hidden\] \{ display: none; \}/);
+  assert.match(styles, /@media \(max-width: 960px\)[\s\S]*?\.triage-case-certainty \{ grid-column: 2 \/ -1; text-align: left; \}/);
+});
+
 test("triage ordering uses stable title and case-ID tie breakers", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];

@@ -489,7 +489,7 @@ function applyTriageProfile(id) {
   state.config.triageProfile = id;
   state.config.triageSignals = triageSignalsForProfile(id);
   state.config.triageCaseId = "";
-  state.selected = null;
+  closeInspector();
   renderControls();
   commitConfig();
   toast(`Scoring preset applied: ${profile.label}`);
@@ -1923,14 +1923,26 @@ function triageCase(event, catalog = state.catalog, config = state.config) {
   const evidence = evidenceKnown ? event.evidence.filter(item => !scopedDocumentIds.size || scopedDocumentIds.has(item.documentId)) : [];
   const excerptDocuments = new Set(evidence.filter(item => item.documentId && String(item.excerpt || "").trim()).map(item => item.documentId));
 
-  const duplicateCandidatesKnown = Array.isArray(catalog?.duplicateCandidates) && entityReferencesKnown;
+  const publishedDuplicateCount = Array.isArray(catalog?.duplicateCandidates) ? catalog.duplicateCandidates.length : 0;
+  const possibleDuplicateCount = Number(catalog?.counts?.possibleDuplicates);
+  const duplicateCatalogComplete = !Number.isFinite(possibleDuplicateCount) || publishedDuplicateCount >= possibleDuplicateCount;
+  const duplicateCandidatesKnown = Array.isArray(catalog?.duplicateCandidates) && duplicateCatalogComplete && entityReferencesKnown;
   const ambiguousNames = new Set((catalog?.duplicateCandidates || []).flatMap(candidate => [candidate.left?.name, candidate.right?.name]).filter(Boolean).map(name => String(name).toLocaleLowerCase()));
   const ambiguousEntities = duplicateCandidatesKnown ? entities.filter(entity => ambiguousNames.has(String(entity.name).toLocaleLowerCase())) : [];
+  const identityAmbiguityDetail = !Array.isArray(catalog?.duplicateCandidates)
+    ? "Duplicate-candidate catalog unavailable"
+    : !duplicateCatalogComplete
+      ? `Duplicate-candidate catalog publishes ${publishedDuplicateCount} of ${possibleDuplicateCount} possible pairs`
+      : !entityReferencesKnown
+        ? "Associated entity references unavailable"
+        : ambiguousEntities.length
+          ? ambiguousEntities.map(entity => entity.name).join(", ")
+          : "No linked entity appears in the duplicate-candidate catalog";
 
   const missingMetadata = [
     !event.startDate || !event.datePrecision,
     !hasDocumentIds || !documentIds.length,
-    !evidenceKnown || !event.evidence.some(item => String(item.excerpt || "").trim()),
+    !evidenceKnown || !evidence.some(item => String(item.excerpt || "").trim()),
     !hasEntityIds || !entityIds.length,
     !event.eventType || !event.titleReviewStatus
   ];
@@ -1945,7 +1957,7 @@ function triageCase(event, catalog = state.catalog, config = state.config) {
     triageComponent("associatedEntities", associatedRatio, 1, entityReferencesKnown, `${entities.length} linked entit${entities.length === 1 ? "y" : "ies"} · ${entityCategories.size} type${entityCategories.size === 1 ? "" : "s"}`),
     triageComponent("typedRelationships", Math.min(typedEdges.length, 2), 2, edgesKnown, `${typedEdges.length} typed relationship${typedEdges.length === 1 ? "" : "s"} among associated entities`),
     triageComponent("evidenceExcerpts", Math.min(excerptDocuments.size, 3), 3, evidenceKnown, `${excerptDocuments.size} document${excerptDocuments.size === 1 ? "" : "s"} with a published excerpt`),
-    triageComponent("identityAmbiguity", ambiguousEntities.length ? 1 : 0, 1, duplicateCandidatesKnown, ambiguousEntities.length ? ambiguousEntities.map(entity => entity.name).join(", ") : "No linked entity appears in the duplicate-candidate catalog"),
+    triageComponent("identityAmbiguity", ambiguousEntities.length ? 1 : 0, 1, duplicateCandidatesKnown, identityAmbiguityDetail),
     triageComponent("metadataGaps", missingMetadata.filter(Boolean).length, 5, true, `${missingMetadata.filter(Boolean).length} of 5 follow-up checks flagged`)
   ];
   const enabledComponents = components.filter(component => config.triageSignals?.[component.id]?.enabled);

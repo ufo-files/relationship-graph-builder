@@ -271,6 +271,11 @@ body.graph-fullscreen #chart { min-height: 0; }
   .inspector { position: fixed; right: 16px; top: 84px; bottom: 16px; width: 290px; z-index: 8; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); transform: translateX(calc(100% + 32px)); transition: transform .2s; }
   .inspector.has-selection { transform: none; }
 }
+@media (max-width: 960px) {
+  .triage-case-open { grid-template-columns: 28px minmax(0, 1fr) 64px; }
+  .triage-case-open > span[aria-hidden] { display: none; }
+  .triage-case-certainty { grid-column: 2 / -1; text-align: left; }
+}
 @media (max-width: 780px) {
   .topbar { grid-template-columns: 1fr auto; padding: 0 14px; }
   .brand small { display: none; }
@@ -295,9 +300,6 @@ body.graph-fullscreen #chart { min-height: 0; }
   .inspector-close { width: 42px; height: 42px; margin-bottom: -42px; }
   .triage-queue-note { display: block; }
   .triage-queue-note span { display: block; margin-top: 3px; }
-  .triage-case-open { grid-template-columns: 28px minmax(0, 1fr) 64px; }
-  .triage-case-open > span[aria-hidden] { display: none; }
-  .triage-case-certainty { grid-column: 2 / -1; text-align: left; }
   .triage-breakdown { grid-template-columns: minmax(0, 1fr); }
   .triage-component { border-right: 0; }
 }
