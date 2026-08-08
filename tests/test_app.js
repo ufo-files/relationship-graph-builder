@@ -566,6 +566,11 @@ test("triage subtitle explains the candidate pool, active weights, and certainty
   assert.match(subtitle, /Unknown inputs lower certainty, not priority\.$/);
 });
 
+test("paragraphs keep a readable maximum line length", () => {
+  const styles = fs.readFileSync("styles.css", "utf8");
+  assert.match(styles, /p \{ max-width: 768px; \}/);
+});
+
 test("triage configuration survives deterministic URL round trips", () => {
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
   const location = { hash: "" };

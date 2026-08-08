@@ -53,6 +53,7 @@ button:focus-visible, select:focus-visible, input:focus-visible, [contenteditabl
 .inspector { min-height: 0; border-left: 1px solid var(--line); }
 .eyebrow { margin: 0 0 7px; color: var(--ink); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 h1, h2, h3, p { margin-top: 0; }
+p { max-width: 768px; }
 .step { border-bottom: 1px solid var(--line); }
 .step-heading { width: 100%; padding: 17px 20px; border: 0; background: none; display: flex; align-items: center; gap: 11px; cursor: pointer; text-align: left; }
 .step-heading::after { content: "+"; margin-left: auto; color: var(--muted); font-size: 18px; }
