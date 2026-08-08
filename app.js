@@ -11,7 +11,7 @@ const LABELS = {
   inflationRate: "Mention adjustment", documentInflationRate: "Potential prominence inflation", inflationRisk: "Prominence inflation risk", inflatedMentionCount: "Adjusted mentions", inflatedDocumentCount: "Adjusted documents",
   classificationConfidence: "Classification confidence", extractionConfidence: "Extraction confidence",
   words: "Words", documents: "Documents", segments: "Segments", bytes: "Source bytes",
-  createdAt: "Cataloged at", durationMs: "Duration", source: "Collection", format: "Format",
+  createdAt: "Cataloged at", documentDate: "Document date", startDate: "Event date", confidence: "Confidence", mentionCount: "Event mentions", mentionRank: "Mention rank", durationMs: "Duration", source: "Collection", format: "Format",
   entity: "Entities", document: "Transcript files", name: "Name", title: "Title",
   category: "Entity type", reviewStatus: "Review status", engine: "Engine", path: "Path",
   table: "Table", collection: "Collections", shared_entities: "Shared entities"
@@ -84,7 +84,7 @@ const DEFAULT = {
   includeHighInflation: true,
   minEvidence: 2, minConfidence: 0.95, limit: 50, labels: "top", aggregation: "source",
   relationshipLayer: "always", relationshipNeighbors: 1, relationshipNodeSize: "inherit", relationshipStrength: "subtle",
-  nodeRole: "entity", timelineRole: "document", matrixColumns: "category",
+  nodeRole: "entity", timelineRole: "event", matrixColumns: "category",
   tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"],
   tableSort: "mentions", tableDirection: "desc", tableSearch: "", documentSearch: "",
   labelSize: 12, zoom: 1, moonTransitSeconds: 5, title: "Mentions by Documents", titleMode: "auto"
@@ -96,7 +96,7 @@ const VIEW_DEFAULTS = {
   book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 20 },
   document: { size: "words", color: "source", labels: "top", documentSearch: "" },
   bars: { aggregation: "source", y: "words", color: "intensity" },
-  timeline: { timelineRole: "document", x: "createdAt", y: "words", size: "words", color: "source", categories: ["date"], labels: "top", limit: 50 },
+  timeline: { timelineRole: "event", x: "startDate", y: "mentionRank", size: "documentCount", color: "eventType", categories: ["date"], labels: "top", limit: 500, relationshipLayer: "always" },
   matrix: { matrixColumns: "category", color: "intensity" },
   table: { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 }
 };
@@ -141,6 +141,7 @@ function loadConfig() {
       const saved = JSON.parse(decodeURIComponent(escape(atob(param))));
       if (saved.allSources === undefined) saved.allSources = !saved.sources?.length;
       const config = { ...DEFAULT, ...saved };
+      if (config.type === "timeline" && config.timelineRole === "event" && ["timelineLane", "mentionCount"].includes(config.y)) config.y = "mentionRank";
       config.moonTransitSeconds = Math.min(10, Math.max(2, Number(config.moonTransitSeconds) || DEFAULT.moonTransitSeconds));
       if ((Number(saved.configVersion) || 0) < CONFIG_VERSION) migrateEntityProminenceConfig(config);
       if (saved.matrixColumns === "entity" && config.type !== "matrix") config.matrixColumns = DEFAULT.matrixColumns;
@@ -267,7 +268,7 @@ function dataAwareTitle(config) {
   } else if (config.type === "bars") {
     title = config.aggregation === "entity" ? `${label(config.y)} by ${entities}` : `${label(config.y)} by ${label(config.aggregation)}`;
   } else if (config.type === "timeline") {
-    title = config.timelineRole === "entity" ? `${entities} Over Time` : "Transcription Activity";
+    title = config.timelineRole === "event" ? "Event Sequence" : config.timelineRole === "entity" ? `${entities} Over Time` : "Dated Source Documents";
   } else if (config.type === "matrix") {
     title = `Collections × ${config.matrixColumns === "entity" ? "Entities" : "Entity Types"}`;
   } else {
@@ -453,7 +454,10 @@ function renderControls() {
   } else if (state.config.type === "bars") {
     roles = controlSelect("aggregation", "Group by", [{ value: "entity", label: "Entities" }, { value: "source", label: "Collection" }, { value: "format", label: "Transcript format" }]) + controlSelect("y", "Measure", state.config.aggregation === "entity" ? numericEntity : ["words", "documents", "bytes"]);
   } else if (state.config.type === "timeline") {
-    roles = controlSelect("timelineRole", "Marks", [{ value: "entity", label: "Entities" }, { value: "document", label: "Completed transcript files" }]) + controlSelect("x", "X axis", [{ value: "createdAt", label: "Transcription date" }]) + controlSelect("y", "Y axis", state.config.timelineRole === "entity" ? numericEntity : numericDoc);
+    const eventFields = ["mentionRank"];
+    roles = controlSelect("timelineRole", "Marks", [{ value: "event", label: "Evidence-backed events" }, { value: "document", label: "Dated source documents" }, { value: "entity", label: "Entities" }])
+      + controlSelect("x", "X axis", [{ value: state.config.timelineRole === "event" ? "startDate" : "documentDate", label: state.config.timelineRole === "event" ? "Event date" : "Document date" }])
+      + controlSelect("y", "Y axis", state.config.timelineRole === "event" ? eventFields : state.config.timelineRole === "entity" ? numericEntity : numericDoc);
     roles += state.config.timelineRole === "entity"
       ? relationshipTypeControl()
       : `<div class="control"><div class="control-title">Relationship</div><select disabled><option>Shared published entities</option></select></div>`;
@@ -466,16 +470,19 @@ function renderControls() {
   }
   $("#roleControls").innerHTML = roles;
 
-  const sizeOptions = state.config.type === "network" && state.config.nodeRole === "collection"
-    ? ["documents", "words"]
-    : state.config.type === "document" || state.config.type === "timeline" && state.config.timelineRole !== "entity" ? numericDoc : numericEntity;
+  const sizeOptions = state.config.type === "timeline" && state.config.timelineRole === "event"
+    ? ["documentCount", "confidence"]
+    : state.config.type === "network" && state.config.nodeRole === "collection"
+      ? ["documents", "words"]
+      : state.config.type === "document" || state.config.type === "timeline" && state.config.timelineRole !== "entity" ? numericDoc : numericEntity;
   const labelSizeControl = `<div class="control"><label>Label size <span>${state.config.labelSize}px</span></label><input type="range" min="11" max="18" step="1" value="${state.config.labelSize}" data-range="labelSize"></div>`;
   const zoomControl = state.config.type === "network" ? `<div class="control"><label>Zoom <span>${state.config.zoom.toFixed(1)}×</span></label><input type="range" min="0.5" max="2.5" step="0.1" value="${state.config.zoom}" data-range="zoom"></div>` : "";
   const moonTransitControl = state.config.type === "map" ? `<div class="control"><label for="moonTransitSeconds">On-screen Moon transit <span>${state.config.moonTransitSeconds}s</span></label><input id="moonTransitSeconds" type="range" min="2" max="10" step="1" value="${state.config.moonTransitSeconds}" data-range="moonTransitSeconds"></div>` : "";
   const supportsRelationships = ["scatter", "map", "timeline"].includes(state.config.type);
+  const eventSequenceRelationships = state.config.type === "timeline" && state.config.timelineRole === "event";
   const relationshipControls = supportsRelationships ? controlSelect("relationshipLayer", "Relationship layer", [{ value: "off", label: "Off" }, { value: "hover", label: "On hover" }, { value: "always", label: "Always" }])
     + `<div class="control"><label>Connections per node <span>${state.config.relationshipNeighbors}</span></label><input type="range" min="1" max="5" step="1" value="${state.config.relationshipNeighbors}" data-range="relationshipNeighbors"></div>`
-    + controlSelect("relationshipNodeSize", "Secondary-node size", [{ value: "inherit", label: "Inherit size metric" }, { value: "fixed", label: "Fixed" }])
+    + (eventSequenceRelationships ? "" : controlSelect("relationshipNodeSize", "Secondary-node size", [{ value: "inherit", label: "Inherit size metric" }, { value: "fixed", label: "Fixed" }]))
     + controlSelect("relationshipStrength", "Line strength", [{ value: "subtle", label: "Subtle" }, { value: "medium", label: "Medium" }, { value: "strong", label: "Strong" }]) : "";
   if (state.config.type === "table") {
     const sortOptions = TABLE_FIELDS[state.config.tableRole];
@@ -509,12 +516,12 @@ function renderControls() {
     <div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div>
     ${state.config.type === "table" ? `<div class="control"><label for="tableSearch">Search rows</label><input id="tableSearch" class="text-input" type="search" value="${escapeHTML(state.config.tableSearch)}" placeholder="Filter this list" data-table-search></div>` : ""}
     ${usesEntities ? `<div class="control"><label>Minimum confidence <span>${Math.round(state.config.minConfidence * 100)}%</span></label><input type="range" min="0.5" max="0.95" step="0.01" value="${state.config.minConfidence}" data-range="minConfidence"></div>` : ""}
-    ${state.config.type === "network" || (supportsRelationships && state.config.relationshipLayer !== "off") ? `<div class="control"><label>${state.config.type === "network" && state.config.nodeRole === "collection" || state.config.type === "timeline" && state.config.timelineRole === "document" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
+    ${state.config.type === "network" || (supportsRelationships && state.config.relationshipLayer !== "off" && !eventSequenceRelationships) ? `<div class="control"><label>${state.config.type === "network" && state.config.nodeRole === "collection" || state.config.type === "timeline" && state.config.timelineRole === "document" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
     ${state.config.type === "document"
       ? `<div class="control"><div class="control-title">Search scope <span>${state.catalog?.documents.filter(document => sourceMatches(document.source)).length || 0}</span></div><select disabled><option>Every completed file</option></select></div>`
       : state.config.type === "table"
         ? `<div class="control"><div class="control-title">Rows included</div><select disabled><option>All matching rows</option></select></div>`
-      : `<div class="control"><label>Maximum ${state.config.type === "table" ? "rows" : "marks"} <span>${state.config.limit}</span></label><input type="range" min="20" max="${state.config.type === "network" ? 120 : 250}" step="10" value="${state.config.limit}" data-range="limit"></div>`}
+      : `<div class="control"><label>Maximum ${state.config.type === "table" ? "rows" : "marks"} <span>${state.config.limit}</span></label><input type="range" min="20" max="${state.config.type === "timeline" ? 1000 : state.config.type === "network" ? 120 : 250}" step="10" value="${state.config.limit}" data-range="limit"></div>`}
     ${usesEntities ? `<div class="control method-note"><div class="control-title">Context adjustment</div><p>Counts exact repeats within one document once, counts text repeated across 3+ documents once, and excludes requester metadata. Raw mentions remain available.</p></div>` : ""}
     ${usesEntities ? `<div class="control"><div class="control-title">Inflation review</div><label class="check-chip"><input type="checkbox" data-include-high-inflation ${state.config.includeHighInflation ? "checked" : ""}><span>Include high-inflation entities</span></label></div>` : ""}
     <div class="control duplicate-review-control"><div class="control-title">Identity review <span>${duplicateCount} flagged</span></div><button class="button review-button" type="button" data-review-duplicates ${duplicateCount ? "" : "disabled"}>Review possible duplicates</button></div>`;
@@ -583,9 +590,11 @@ function updateConfig(key, value, rerenderControls = false) {
     state.config.color = "intensity";
   }
   if (key === "timelineRole") {
-    state.config.y = value === "entity" ? "contextAdjustedMentions" : "words";
-    state.config.size = value === "entity" ? "independentDocumentCount" : "words";
-    state.config.color = value === "entity" ? "category" : "source";
+    state.config.x = value === "event" ? "startDate" : "documentDate";
+    state.config.y = value === "event" ? "mentionRank" : value === "entity" ? "contextAdjustedMentions" : "words";
+    state.config.size = value === "event" ? "documentCount" : value === "entity" ? "independentDocumentCount" : "words";
+    state.config.color = value === "event" ? "eventType" : value === "entity" ? "category" : "source";
+    if (value === "event") state.config.relationshipLayer = "always";
   }
   if (key === "nodeRole") {
     state.config.size = value === "collection" ? "documents" : "independentDocumentCount";
@@ -832,14 +841,25 @@ function addTitle(node, text) {
   node.append(el("title", {}, text));
 }
 
-function drawAxes(svg, width, height, xKey, yKey, xExtent, yExtent, capped = {}) {
+function drawAxes(svg, width, height, xKey, yKey, xExtent, yExtent, capped = {}, ascendingDown = false) {
   const margin = { left: 58, right: 28, top: 22, bottom: 48 };
-  for (let i = 0; i <= 4; i++) {
-    const y = margin.top + i * (height - margin.top - margin.bottom) / 4;
+  const yIntervals = 4;
+  for (let i = 0; i <= yIntervals; i++) {
+    const y = margin.top + i * (height - margin.top - margin.bottom) / yIntervals;
     svg.append(el("line", { x1: margin.left, y1: y, x2: width - margin.right, y2: y, class: "grid-line" }));
-    const value = yExtent[1] - i * (yExtent[1] - yExtent[0]) / 4;
+    const rawValue = ascendingDown
+      ? yExtent[0] + i * (yExtent[1] - yExtent[0]) / yIntervals
+      : yExtent[1] - i * (yExtent[1] - yExtent[0]) / yIntervals;
+    const value = yKey === "mentionRank" ? Math.round(rawValue) : rawValue;
     const tick = capped.y && i === 0 ? `${formatNumber(value)}+` : formatNumber(value);
     svg.append(el("text", { x: margin.left - 8, y: y + 3, "text-anchor": "end", class: "axis-label" }, tick));
+  }
+  if (["createdAt", "documentDate", "startDate"].includes(xKey)) {
+    for (let i = 0; i <= 5; i++) {
+      const value = xExtent[0] + i * (xExtent[1] - xExtent[0]) / 5;
+      const x = margin.left + i * (width - margin.left - margin.right) / 5;
+      svg.append(el("text", { x, y: height - margin.bottom + 18, "text-anchor": i === 0 ? "start" : i === 5 ? "end" : "middle", class: "axis-label" }, new Date(value).getUTCFullYear()));
+    }
   }
   svg.append(el("text", { x: (margin.left + width - margin.right) / 2, y: height - 13, "text-anchor": "middle", class: "axis-label" }, label(xKey)));
   const yLabel = el("text", { x: 15, y: height / 2, transform: `rotate(-90 15 ${height / 2})`, "text-anchor": "middle", class: "axis-label" }, label(yKey));
@@ -1571,26 +1591,63 @@ function renderBars() {
 
 function renderTimeline() {
   const { svg, width, height } = clearChart();
-  const candidates = (state.config.timelineRole === "entity"
+  const candidates = (state.config.timelineRole === "event"
+    ? (state.catalog.events || []).filter(item => item.startDate && item.confidence >= .9 && item.documentIds.some(id => sourceMatches(state.documentById.get(id)?.source)))
+    : state.config.timelineRole === "entity"
     ? filteredEntities().map(entity => {
-        const documents = entity.documentIds.map(id => state.documentById.get(id)).filter(document => document?.createdAt && sourceMatches(document.source)).sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
-        return documents.length ? { ...entity, title: entity.name, createdAt: documents[0].createdAt, source: documents[0].source, format: documents[0].format, entityRecord: entity } : null;
+        const documents = entity.documentIds.map(id => state.documentById.get(id)).filter(document => document?.documentDate && sourceMatches(document.source)).sort((a, b) => new Date(a.documentDate) - new Date(b.documentDate));
+        return documents.length ? { ...entity, title: entity.name, documentDate: documents[0].documentDate, source: documents[0].source, format: documents[0].format, entityRecord: entity } : null;
       }).filter(Boolean)
-    : state.catalog.documents.filter(item => item.createdAt && sourceMatches(item.source)));
-  const data = candidates.sort((a, b) => (b[state.config.y] || 0) - (a[state.config.y] || 0)).slice(0, state.config.limit);
+    : state.catalog.documents.filter(item => item.documentDate && sourceMatches(item.source)));
+  const data = candidates.sort((a, b) => state.config.timelineRole === "event"
+    ? new Date(a.startDate) - new Date(b.startDate) || a.title.localeCompare(b.title)
+    : (b[state.config.y] || 0) - (a[state.config.y] || 0)).slice(0, state.config.limit);
   if (!data.length) return showEmpty();
-  const dates = data.map(item => new Date(item.createdAt).getTime());
-  const xExtent = [Math.min(...dates), Math.max(...dates) + 1], yExtent = valueExtent(data, state.config.y), sizeExtent = valueExtent(data, state.config.size);
-  const margin = drawAxes(svg, width, height, "createdAt", state.config.y, xExtent, yExtent);
+  if (state.config.timelineRole === "event") {
+    [...data].sort((a, b) => b.mentionCount - a.mentionCount || b.documentCount - a.documentCount || b.confidence - a.confidence)
+      .forEach((item, index) => { item.mentionRank = index + 1; });
+  }
+  const timelineDate = item => item.startDate || item.documentDate;
+  const dates = data.map(item => new Date(timelineDate(item)).getTime());
+  const xExtent = [Math.min(...dates), Math.max(...dates) + 1];
+  const yExtent = state.config.timelineRole === "event" ? [1, data.length] : valueExtent(data, state.config.y);
+  const sizeExtent = valueExtent(data, state.config.size);
+  const margin = drawAxes(svg, width, height, state.config.timelineRole === "event" ? "startDate" : "documentDate", state.config.y, xExtent, yExtent, {}, state.config.timelineRole === "event");
   const positionFor = item => ({
-    x: clampedScale(new Date(item.createdAt).getTime(), xExtent, [margin.left, width - margin.right]),
-    y: clampedScale(item[state.config.y], yExtent, [height - margin.bottom, margin.top])
+    x: clampedScale(new Date(timelineDate(item)).getTime(), xExtent, [margin.left, width - margin.right]),
+    y: clampedScale(item[state.config.y], yExtent, state.config.timelineRole === "event" ? [margin.top, height - margin.bottom] : [height - margin.bottom, margin.top])
   });
+  const eventEntityNames = new Map((state.catalog.entities || []).map(entity => [entity.id, entity.name]));
   let relationshipLayer = null;
   const relationshipLines = new Map();
   const relationshipNodes = new Map();
   let egoNetworks = new Map();
-  if (state.config.relationshipLayer !== "off") {
+  if (state.config.timelineRole === "event" && state.config.relationshipLayer !== "off") {
+    relationshipLayer = el("g", { class: `scatter-relationship-layer relationship-${state.config.relationshipLayer} strength-${state.config.relationshipStrength}` });
+    const links = new Map();
+    data.forEach(item => {
+      const related = data.filter(candidate => candidate.id !== item.id).map(candidate => {
+        const shared = (item.entityIds || []).filter(id => (candidate.entityIds || []).includes(id));
+        return { candidate, shared };
+      }).filter(link => link.shared.length).sort((a, b) => b.shared.length - a.shared.length).slice(0, state.config.relationshipNeighbors);
+      related.forEach(({ candidate, shared }) => {
+        const ids = [item.id, candidate.id].sort();
+        const key = ids.join("|");
+        if (!links.has(key) || shared.length > links.get(key).shared.length) links.set(key, { source: item, target: candidate, shared });
+      });
+    });
+    links.forEach(({ source, target, shared }) => {
+        const a = positionFor(source), b = positionFor(target);
+        const line = el("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, class: "scatter-relationship-line", "stroke-width": Math.min(2, .7 + shared.length * .25) });
+        addTitle(line, `Shared: ${shared.map(id => eventEntityNames.get(id)).filter(Boolean).join(", ")}`);
+        [source.id, target.id].forEach(id => {
+          if (!relationshipLines.has(id)) relationshipLines.set(id, []);
+          relationshipLines.get(id).push(line);
+        });
+        relationshipLayer.append(line);
+    });
+    svg.append(relationshipLayer);
+  } else if (state.config.timelineRole !== "event" && state.config.relationshipLayer !== "off") {
     egoNetworks = state.config.timelineRole === "entity"
       ? scatterEgoNetworks(candidates, data, state.config.relationshipNeighbors)
       : documentRelationshipNetworks(candidates, data, state.config.relationshipNeighbors);
@@ -1618,13 +1675,19 @@ function renderTimeline() {
     });
     svg.append(relationshipLayer);
   }
+  const topLabelIds = new Set([...data]
+    .sort((a, b) => state.config.timelineRole === "event"
+      ? a.mentionRank - b.mentionRank
+      : (b[state.config.size] || 0) - (a[state.config.size] || 0) || b.confidence - a.confidence)
+    .slice(0, 12)
+    .map(item => item.id));
   data.forEach((item, index) => {
     const { x, y } = positionFor(item);
     const radius = scale(item[state.config.size], sizeExtent, [3, 12]);
     const shade = scale(item[state.config.size], sizeExtent, [.18, .96]);
     const dot = el("circle", { cx: x, cy: y, r: radius, fill: "#111", "fill-opacity": shade, stroke: "#111", "stroke-width": 1, class: "mark" });
-    addTitle(dot, `${item.title} · ${new Date(item.createdAt).toLocaleDateString()}`);
-    dot.addEventListener("click", () => item.entityRecord ? inspectEntity(item.entityRecord) : inspectDocument(item));
+    addTitle(dot, `${item.title} · ${new Date(timelineDate(item)).toLocaleDateString()}`);
+    dot.addEventListener("click", () => state.config.timelineRole === "event" ? inspectEvent(item) : item.entityRecord ? inspectEntity(item.entityRecord) : inspectDocument(item));
     dot.addEventListener("mouseenter", () => {
       if (!relationshipLayer) return;
       relationshipLayer.classList.add("has-focus");
@@ -1638,12 +1701,12 @@ function renderTimeline() {
       (egoNetworks.get(item.id)?.neighbors || []).forEach(neighbor => relationshipNodes.get(neighbor.entity.id)?.classList.remove("is-focused"));
     });
     svg.append(dot);
-    if (state.config.labels === "all" || (state.config.labels === "top" && index < 12)) {
+    if (state.config.labels === "all" || (state.config.labels === "top" && topLabelIds.has(item.id))) {
       svg.append(el("text", { x, y: Math.min(height - margin.bottom + 18, y + radius + state.config.labelSize), "text-anchor": "middle", class: "chart-label node-label" }, item.title.slice(0, 22)));
     }
   });
   drawIntensityLegend();
-  setSummary(`${data.length} ${state.config.timelineRole === "entity" ? "entities" : "completed transcripts"}`, "timeline");
+  setSummary(`${data.length} ${state.config.timelineRole === "event" ? "evidence-backed events" : state.config.timelineRole === "entity" ? "entities" : "dated source documents"}`, "timeline");
 }
 
 function matrixEntityInterest(entity, sources) {
@@ -1806,7 +1869,7 @@ function renderGraph() {
     book: `Transcript-mentioned books with area weighted by Mentions; shade represents ${label(state.config.size)}.`,
     document: "Find completed OCR and transcript files across the selected collections.",
     bars: `${label(state.config.y)} grouped by ${label(state.config.aggregation)}.`,
-    timeline: `${state.config.timelineRole === "entity" ? "Entities" : "Completed transcript files"} by cataloging time.`,
+    timeline: state.config.timelineRole === "event" ? "Evidence-backed events by occurrence date." : `${state.config.timelineRole === "entity" ? "Entities" : "Documents"} by document date.`,
     matrix: `${state.config.matrixColumns === "entity" ? "Entity" : "Entity-type"} coverage across completed collections.`,
     table: `A custom list of ${state.config.tableRole === "entity" ? "entities" : state.config.tableRole === "document" ? "transcript files" : "collections"}.`
   };
@@ -1916,7 +1979,14 @@ function inspectGroup(item) {
 }
 
 function inspectDocument(item) {
-  showInspector(item.format, item.title, [[item.words, "words"], [item.segments, "segments"], [item.bytes, "source bytes"]], [{ documentId: item.id, excerpt: `Completed ${new Date(item.createdAt).toLocaleString()}` }], item.source);
+  const dateEvidence = item.documentDateEvidence
+    ? [{ documentId: item.id, excerpt: `${item.documentDate}: ${item.documentDateEvidence.excerpt}` }]
+    : [{ documentId: item.id, excerpt: `Completed ${new Date(item.createdAt).toLocaleString()}` }];
+  showInspector(item.format, item.title, [[item.words, "words"], [item.segments, "segments"], [item.bytes, "source bytes"]], dateEvidence, item.documentDate ? `${item.source} · document date via ${item.documentDateEvidence.method}` : item.source);
+}
+
+function inspectEvent(item) {
+  showInspector(item.eventType, item.title, [[new Date(item.startDate).toLocaleDateString(), "event date"], [item.mentionRank, "mention rank"], [item.mentionCount, "event mentions"], [item.documentIds.length, "documents"], [`${Math.round(item.confidence * 100)}%`, "confidence"]], item.evidence, "Includes explicit incident dates and source-backed disclosure, hearing, program, and official-report milestones. FOIA processing and cataloging dates remain excluded.");
 }
 
 function inspectMatrix(item) {

@@ -202,9 +202,61 @@ BOOK_TITLE_REJECT = {
     "a", "advanced", "an", "book", "brokers", "center", "extraterrestrial", "flying", "material", "project", "review", "service", "that", "the", "unidentified",
 }
 DATE_PATTERN = re.compile(
-    r"\b(?:January|February|March|April|May|June|July|August|September|October|November|December)"
-    r"\s+\d{1,2},?\s+(?:19|20)\d{2}\b|\b(?:19|20)\d{2}-\d{2}-\d{2}\b"
+    r"\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|Aug(?:ust)?|Sept?(?:ember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
+    r"\s+\d{1,2},?\s+(?:19|20)\d{2}\b|"
+    r"(?<![\d-])\b\d{1,2}\s+(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|Aug(?:ust)?|Sept?(?:ember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
+    r"\s+(?:19|20)\d{2}\b|\b(?:19|20)\d{2}-\d{2}-\d{2}\b"
 )
+ADMINISTRATIVE_DATE_CONTEXT = re.compile(
+    r"\b(?:foia|freedom of information|declassif|released?|release date|request(?:ed|er)?|"
+    r"received|date processed|digitized|scanned|ocr|uploaded|catalog(?:ed|uing)?|access(?:ed|ion)|"
+    r"message taken|published|publication|drafted|newspaper|article|issue of|\w+ times of)\b", re.I,
+)
+MILESTONE_DATE_CONTEXT = re.compile(
+    r"\b(?:appeared online|published|released|issued|submitted|"
+    r"cleared\s+for\s+open\s+publication|announced|established|created|launched|"
+    r"(?:open|public|congressional)\s+hearing)\b", re.I,
+)
+MILESTONE_SUBJECT_CONTEXT = re.compile(
+    r"\b(?:ufo|uap|aaro|aatip|unidentified anomalous phenomena|unidentified flying object)\b|"
+    r"u\s*[.·]?\s*[fpr]\s*[.·]?\s*o\s*[.]?", re.I,
+)
+DOCUMENT_DATE_CONTEXT = re.compile(r"^(?:date|memorandum|memo|letter|dispatch|telegram|cable|report)\b", re.I)
+EVENT_DATE_CONTEXT = re.compile(
+    r"\b(?:occurred|happened|took place|encountered|landed|crashed|disappeared|arrived|launched|exploded)\b", re.I,
+)
+SIGHTING_DATE_CONTEXT = re.compile(r"\b(?:observed|sighted|witnessed|appearance|reported seeing)\b", re.I)
+SIGHTING_SUBJECT_CONTEXT = re.compile(
+    r"\b(?:ufo|uap|object|phenomen(?:on|a)|saucer|disc|craft|aircraft|foo\s*fighter|"
+    r"(?:luminous|bright|unidentified)\s+(?:light|ball|body))s?\b", re.I,
+)
+EVENT_SUBJECT_CONTEXT = re.compile(
+    r"\b(?:ufo|uap|object|target|phenomen(?:on|a)|saucer|disc|craft|aircraft|foo\s*fighter|"
+    r"sighting|encounter|anomal(?:y|ous)|something|"
+    r"(?:luminous|bright|unidentified)\s+(?:light|ball|body))s?\b", re.I,
+)
+RADAR_DATE_CONTEXT = re.compile(r"\b(?:tracked|detected)\b", re.I)
+NON_UFO_EVENT_CONTEXT = re.compile(
+    r"\b(?:airstrike|munition|artillery|combat|joint task force|task force operation|killed in action)\b", re.I,
+)
+EVENT_TYPES = [
+    ("sighting", re.compile(r"\b(?:observed|sighted|witnessed|reported seeing|appearance)\b", re.I)),
+    ("radar_detection", re.compile(r"\b(?:radar|detected|tracked)\b", re.I)),
+    ("landing", re.compile(r"\b(?:landed|landing)\b", re.I)),
+    ("crash", re.compile(r"\b(?:crashed|crash|exploded)\b", re.I)),
+    ("encounter", re.compile(r"\b(?:encountered|encounter)\b", re.I)),
+]
+MILESTONE_TYPES = [
+    ("publication", re.compile(r"\b(?:article|story|appeared online|published)\b", re.I)),
+    ("public_hearing", re.compile(r"\b(?:hearing|testified|testimony)\b", re.I)),
+    ("program_milestone", re.compile(r"\b(?:program|office|established|created|launched)\b", re.I)),
+    ("official_report", re.compile(r"\b(?:report|cleared\s+for\s+open\s+publication|issued|submitted)\b", re.I)),
+]
+MONTHS = {name: number for number, name in enumerate(
+    ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"), 1
+)}
+MONTHS.update({name[:3]: number for name, number in list(MONTHS.items())})
+MONTHS["Sept"] = 9
 ORG_WORDS = {
     "agency", "administration", "aerospace", "air force", "army", "bureau", "committee",
     "corporation", "department", "directorate", "division", "foundation", "institute",
@@ -280,6 +332,218 @@ def utc_now() -> str:
 
 def stable_id(prefix: str, value: str) -> str:
     return f"{prefix}-{hashlib.sha1(value.encode('utf-8')).hexdigest()[:12]}"
+
+
+def normalized_date(value: str) -> str | None:
+    """Normalize only unambiguous day-level dates; never invent missing precision."""
+    value = clean_space(value).replace(",", "")
+    try:
+        if re.fullmatch(r"(?:19|20)\d{2}-\d{2}-\d{2}", value):
+            return dt.date.fromisoformat(value).isoformat()
+        parts = value.split()
+        if parts[0] in MONTHS:
+            month, day, year = MONTHS[parts[0]], int(parts[1]), int(parts[2])
+        elif len(parts) == 3 and parts[1] in MONTHS:
+            day, month, year = int(parts[0]), MONTHS[parts[1]], int(parts[2])
+        else:
+            return None
+        return dt.date(year, month, day).isoformat()
+    except (ValueError, IndexError):
+        return None
+
+
+def temporal_candidates(segments: list[str], metadata: dict, document_id: str) -> tuple[dict | None, list[dict], list[dict]]:
+    """Classify dates by meaning and publish only strong document/event evidence."""
+    review, document_dates, events = [], [], []
+    for field in ("document_date", "authored_at", "record_date"):
+        raw = metadata.get(field)
+        if not raw:
+            continue
+        match = DATE_PATTERN.search(str(raw))
+        value = normalized_date(match.group(0) if match else str(raw)[:10])
+        if value:
+            document_dates.append({"value": value, "precision": "day", "confidence": 0.99,
+                                   "kind": "document_date", "method": f"metadata:{field}", "evidence": str(raw)[:280]})
+    for index, segment in enumerate(segments):
+        for match in DATE_PATTERN.finditer(segment):
+            value = normalized_date(match.group(0))
+            if not value:
+                continue
+            nearby = segment[max(0, match.start() - 120):match.end() + 120]
+            milestone_nearby = segment
+            if MILESTONE_SUBJECT_CONTEXT.search(segment) and index + 1 < len(segments):
+                milestone_nearby = f"{segment} {segments[index + 1]}"
+            prefix = segment[max(0, match.start() - 120):match.start()]
+            milestone = (MILESTONE_DATE_CONTEXT.search(milestone_nearby)
+                         and MILESTONE_SUBJECT_CONTEXT.search(milestone_nearby)
+                         and not re.search(r"\(\s*Established\b", milestone_nearby, re.I))
+            if milestone:
+                kind, confidence, method = "event_date", 0.94, "milestone-language"
+            elif ADMINISTRATIVE_DATE_CONTEXT.search(nearby):
+                kind, confidence, method = "administrative_date", 0.98, "context-exclusion"
+            elif NON_UFO_EVENT_CONTEXT.search(nearby):
+                kind, confidence, method = "non_ufo_event", 0.9, "subject-exclusion"
+            elif re.search(r"\bdated\s*$", prefix, re.I):
+                kind, confidence, method = "referenced_document_date", 0.72, "dated-reference"
+            elif (re.search(r"\b(?:after|before|since|until|prior to)\s*$", prefix, re.I)
+                  or re.search(r"\bbetween\b[^.!?]{0,80}$", prefix, re.I)):
+                kind, confidence, method = "relative_date", 0.72, "relative-date-exclusion"
+            elif index < 12 and (re.match(r"^(?:date|dated)\s*[:.-]", segment, re.I) or DOCUMENT_DATE_CONTEXT.match(segment)):
+                kind, confidence, method = "document_date", 0.94, "document-header"
+            elif ((EVENT_DATE_CONTEXT.search(nearby) and EVENT_SUBJECT_CONTEXT.search(nearby))
+                  or (SIGHTING_DATE_CONTEXT.search(nearby) and SIGHTING_SUBJECT_CONTEXT.search(nearby))
+                  or (RADAR_DATE_CONTEXT.search(nearby) and re.search(r"\b(?:radar|object|target|track)\b", nearby, re.I))):
+                kind, confidence, method = "event_date", 0.9, "event-language"
+            else:
+                kind, confidence, method = "unknown", 0.45, "unclassified-mention"
+            candidate = {"value": value, "precision": "day", "confidence": confidence, "kind": kind,
+                         "method": method, "evidence": segment[:280], "segment": index}
+            review.append(candidate)
+            if kind == "document_date":
+                document_dates.append(candidate)
+            elif kind == "event_date":
+                type_patterns = MILESTONE_TYPES if method == "milestone-language" else EVENT_TYPES
+                type_context = segment if method == "milestone-language" else nearby
+                event_type = next((name for name, pattern in type_patterns if pattern.search(type_context)), "reported_event")
+                events.append({"id": stable_id("event", f"{document_id}|{index}|{value}|{event_type}"),
+                               "title": segment[:140], "eventType": event_type, "startDate": value, "endDate": None,
+                               "datePrecision": "day", "confidence": confidence, "mentionCount": 1, "documentIds": [document_id],
+                               "evidence": [{"documentId": document_id, "segment": index, "excerpt": segment[:280]}]})
+    return max(document_dates, key=lambda item: item["confidence"], default=None), events, review
+
+
+def merge_events(events: list[dict]) -> list[dict]:
+    """Merge only strongly similar same-day reports; a shared date alone is never enough."""
+    merged: list[dict] = []
+    buckets: dict[tuple[str, str], list[dict]] = collections.defaultdict(list)
+    for event in events:
+        bucket = buckets[(event["startDate"], event["eventType"])]
+        identity = comparison_key(event["title"])
+        match = next((candidate for candidate in bucket
+                      if difflib.SequenceMatcher(None, identity, comparison_key(candidate["title"])).ratio() >= 0.82), None)
+        if match is None:
+            event["documentCount"] = len(event["documentIds"])
+            bucket.append(event)
+            merged.append(event)
+            continue
+        match["documentIds"] = sorted(set(match["documentIds"] + event["documentIds"]))
+        for evidence in event["evidence"]:
+            if evidence not in match["evidence"] and len(match["evidence"]) < 5:
+                match["evidence"].append(evidence)
+        match["documentCount"] = len(match["documentIds"])
+        match["mentionCount"] = match.get("mentionCount", 1) + event.get("mentionCount", 1)
+        match["confidence"] = round(min(0.98, max(match["confidence"], event["confidence"]) + 0.02), 3)
+    return merged
+
+
+def reviewed_event_titles(events: list[dict], path: Path) -> list[dict]:
+    """Publish extracted events only after a human-reviewed public title exists."""
+    reviews = json.loads(path.read_text(encoding="utf-8")).get("events", {}) if path.exists() else {}
+    published = []
+    for event in events:
+        if event.get("reviewStatus") == "curated":
+            event["titleReviewStatus"] = "curated"
+            published.append(event)
+            continue
+        title = reviews.get(event["id"])
+        if not title:
+            continue
+        event["title"] = clean_space(title)
+        event["titleReviewStatus"] = "reviewed"
+        published.append(event)
+    return published
+
+
+def curated_events(path: Path, document_ids: dict[str, str], date_review: list[dict] | None = None) -> list[dict]:
+    """Load reviewed historical milestones only when their source document is present."""
+    if not path.exists():
+        return []
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    published = []
+    for item in payload.get("events", []):
+        source_path = item.get("sourcePath")
+        document_id = document_ids.get(source_path)
+        date = normalized_date(str(item.get("startDate", "")))
+        if not document_id or not date or not item.get("title") or not item.get("eventType"):
+            continue
+        excerpt = clean_space(str(item.get("evidence", "")))[:280]
+        supporting_ids = {document_id}
+        supporting_evidence = [{"documentId": document_id, "excerpt": excerpt}]
+        supporting_mentions = 0
+        match_terms = [comparison_key(term) for term in item.get("matchTerms", [])]
+        match_kinds = set(item.get("matchCandidateKinds", ["event_date", "unknown", "referenced_document_date"]))
+        if match_terms:
+            for record in date_review or []:
+                candidate_document_id = record.get("documentId")
+                if not candidate_document_id:
+                    continue
+                for candidate in record.get("candidates", []):
+                    context = comparison_key(f"{record.get('path', '')} {candidate.get('evidence', '')}")
+                    if (candidate.get("value") == date and candidate.get("kind") in match_kinds
+                            and all(term in context for term in match_terms)):
+                        supporting_ids.add(candidate_document_id)
+                        supporting_mentions += 1
+                        if len(supporting_evidence) < 5:
+                            supporting_evidence.append({
+                                "documentId": candidate_document_id,
+                                **({"segment": candidate["segment"]} if "segment" in candidate else {}),
+                                "excerpt": clean_space(candidate.get("evidence", ""))[:280],
+                            })
+        published.append({
+            "id": stable_id("event", f"curated|{source_path}|{date}|{item['eventType']}"),
+            "title": item["title"],
+            "eventType": item["eventType"],
+            "startDate": date,
+            "endDate": None,
+            "datePrecision": "day",
+            "confidence": 0.99,
+            "mentionCount": max(1, supporting_mentions),
+            "reviewStatus": "curated",
+            "documentIds": sorted(supporting_ids),
+            "evidence": supporting_evidence,
+        })
+    return published
+
+
+def overlay_curated_events(extracted: list[dict], reviewed: list[dict]) -> list[dict]:
+    """Prefer reviewed wording and combine extracted support for the same dated milestone."""
+    for curated in reviewed:
+        matches = [event for event in extracted
+                   if event["startDate"] == curated["startDate"]
+                   and event["eventType"] == curated["eventType"]]
+        for event in matches:
+            curated["documentIds"] = sorted(set(curated["documentIds"] + event["documentIds"]))
+            for evidence in event["evidence"]:
+                if evidence not in curated["evidence"] and len(curated["evidence"]) < 5:
+                    curated["evidence"].append(evidence)
+            extracted.remove(event)
+        curated["mentionCount"] = max(curated.get("mentionCount", 1), sum(event.get("mentionCount", 1) for event in matches))
+        extracted.append(curated)
+    return extracted
+
+
+def attach_event_entities(
+    events: list[dict],
+    segment_entities: dict[str, list[str]],
+    document_title_entities: dict[str, list[str]],
+    registry: dict,
+    published: dict[str, Candidate],
+    entity_ids: dict[str, str],
+) -> None:
+    """Attach specific published entities evidenced by each event's supporting passages."""
+    for event in events:
+        keys: set[str] = set()
+        for evidence in event.get("evidence", []):
+            keys.update(document_title_entities.get(evidence["documentId"], []))
+            if "segment" in evidence:
+                keys.update(segment_entities.get(f"{evidence['documentId']}:{evidence['segment']}", []))
+            for _, canonical, category, _, _ in extract_mentions(evidence.get("excerpt", ""), registry):
+                keys.add(f"{category}:{entity_key(canonical, category)}")
+        for _, canonical, category, _, _ in extract_mentions(event.get("title", ""), registry):
+            keys.add(f"{category}:{entity_key(canonical, category)}")
+        specific = [key for key in keys
+                    if key in published and published[key].category not in {"date", "subject", "book"}]
+        event["entityIds"] = sorted(entity_ids[key] for key in specific)
 
 
 def clean_space(value: str) -> str:
@@ -608,6 +872,14 @@ def extract_title_mentions(title: str, registry: dict[str, tuple[str, str]]) -> 
     """Use document titles as curated identity evidence without treating arbitrary title case as NER."""
     words = clean_space(title).split()
     found: dict[str, tuple[str, str, str, float, bool]] = {}
+    for match in KNOWN_PATTERN.finditer(title):
+        raw = match.group(0)
+        lookup = KNOWN_LOOKUP.get(known_lookup_key(raw))
+        if lookup is None:
+            continue
+        canonical, category = KNOWN[lookup]
+        key = f"{category}:{entity_key(canonical, category)}"
+        found.setdefault(key, (raw, canonical, category, 0.99, True))
     for width in range(min(8, len(words)), 0, -1):
         for start in range(len(words) - width + 1):
             raw = clean_space(" ".join(words[start:start + width])).strip("-'_.")
@@ -700,6 +972,8 @@ def build(
     input_revision: str | None = None,
     require_data: bool = False,
     duplicate_report: Path | None = None,
+    date_review_report: Path | None = None,
+    event_title_reviews: Path | None = None,
 ) -> dict:
     data_dir = Path(__file__).resolve().parents[1] / "data"
     registry = load_registry([data_dir / "curated_entities.json", data_dir / "entity_aliases.json"])
@@ -707,10 +981,14 @@ def build(
     candidates: dict[str, Candidate] = {}
     documents: list[dict] = []
     segment_entities: dict[str, list[str]] = {}
+    document_title_entities: dict[str, list[str]] = collections.defaultdict(list)
     segment_text: dict[str, str] = {}
     source_counts: collections.Counter = collections.Counter()
     source_words: collections.Counter = collections.Counter()
     document_sources: dict[str, str] = {}
+    document_ids_by_path: dict[str, str] = {}
+    events: list[dict] = []
+    date_review: list[dict] = []
 
     paths = sorted(
         path for path in input_root.rglob("*")
@@ -741,6 +1019,7 @@ def build(
         doc_id = stable_id("doc", relative)
         words = sum(len(segment.split()) for segment in segments)
         title = title_from_path(Path(str(metadata.get("source_file") or path.name)))
+        document_date, document_events, review_candidates = temporal_candidates(segments, metadata, doc_id)
         document = {
             "id": doc_id,
             "title": title,
@@ -754,13 +1033,27 @@ def build(
             "engine": metadata.get("engine") or metadata.get("backend"),
             "durationMs": duration,
         }
+        if document_date:
+            document["documentDate"] = document_date["value"]
+            document["documentDatePrecision"] = document_date["precision"]
+            document["documentDateConfidence"] = document_date["confidence"]
+            document["documentDateEvidence"] = {
+                "excerpt": document_date["evidence"],
+                "method": document_date["method"],
+                **({"segment": document_date["segment"]} if "segment" in document_date else {}),
+            }
+        events.extend(document_events)
+        if review_candidates:
+            date_review.append({"documentId": doc_id, "path": relative, "candidates": review_candidates})
         documents.append(document)
         document_sources[doc_id] = source
+        document_ids_by_path[relative] = doc_id
         source_counts[source] += 1
         source_words[source] += words
         title_sid = f"{doc_id}:title"
         for raw, canonical, category, confidence, curated in extract_title_mentions(title, registry):
             key = f"{category}:{entity_key(canonical, category)}"
+            document_title_entities[doc_id].append(key)
             candidate = candidates.get(key)
             if candidate is None:
                 candidate = candidates[key] = Candidate(canonical, category, curated)
@@ -789,6 +1082,13 @@ def build(
                 segment_entities[sid] = list(dict.fromkeys(keys))
                 segment_text[sid] = segment
 
+    events = overlay_curated_events(
+        events,
+        curated_events(data_dir / "curated_events.json", document_ids_by_path, date_review),
+    )
+    events = merge_events(events)
+    events = reviewed_event_titles(events, event_title_reviews or data_dir / "event_title_reviews.json")
+    events = merge_events(events)
     accepted_candidates = {key: value for key, value in candidates.items() if accepted(value)}
     possible_duplicates, possible_duplicate_count = duplicate_candidates(accepted_candidates)
     def publication_rank(item: tuple[str, Candidate]) -> tuple:
@@ -811,6 +1111,7 @@ def build(
     published_items.sort(key=publication_rank, reverse=True)
     published = dict(published_items)
     entity_ids = {key: stable_id("ent", key) for key in published}
+    attach_event_entities(events, segment_entities, document_title_entities, registry, published, entity_ids)
     entities = []
     for key, candidate in published_items:
         extraction = candidate.extraction_total / max(1, candidate.mentions)
@@ -923,6 +1224,7 @@ def build(
             "entityRanking": "Curated identities first, then independent documents, source diversity, context-adjusted mentions, and raw mentions",
             "titleEvidence": "Curated aliases in document titles seed identity evidence; arbitrary title-case phrases are not classified",
             "confidenceSemantics": "Heuristic ranking signals, not calibrated probabilities",
+            "temporalEvidence": "Events require explicit event language tied to an unambiguous day-level date; document dates require trusted metadata or a header; FOIA, release, declassification, and processing dates are excluded",
             "locationCoordinates": "Reviewed local gazetteer; ambiguous and unmapped names are not plotted",
             "denseSegmentLimit": 30,
             "maxEntities": max_entities,
@@ -940,9 +1242,12 @@ def build(
             "possibleDuplicates": possible_duplicate_count,
             "mappedLocations": sum(1 for entity in entities if entity.get("geo")),
             "publishedBooks": sum(1 for entity in entities if entity["category"] == "book"),
+            "datedDocuments": sum(1 for document in documents if document.get("documentDate")),
+            "publishedEvents": len(events),
         },
         "sources": sources,
         "documents": documents,
+        "events": events,
         "entities": entities,
         "edges": edges,
         "duplicateCandidates": possible_duplicates,
@@ -963,6 +1268,15 @@ def build(
             "totalCount": possible_duplicate_count,
             "shownCount": len(possible_duplicates),
             "candidates": possible_duplicates,
+        }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if date_review_report:
+        date_review_report.parent.mkdir(parents=True, exist_ok=True)
+        date_review_report.write_text(json.dumps({
+            "schema": "ufo-files-date-review/v1",
+            "generatedAt": catalog["generatedAt"],
+            "input": catalog_input,
+            "documentsWithCandidates": len(date_review),
+            "records": date_review,
         }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return catalog
 
@@ -986,6 +1300,12 @@ def main() -> None:
         action="store_true",
         help="Fail without writing the catalog when no documents or entities are found.",
     )
+    parser.add_argument(
+        "--date-review-report",
+        type=Path,
+        default=Path(__file__).resolve().parents[1] / "data" / "date_review.json",
+        help="Write classified date candidates and evidence for human review.",
+    )
     args = parser.parse_args()
     catalog = build(
         args.input.resolve(),
@@ -996,6 +1316,7 @@ def main() -> None:
         args.input_revision,
         args.require_data,
         args.duplicate_report.resolve(),
+        args.date_review_report.resolve(),
     )
     print(json.dumps({"output": str(args.output), **catalog["counts"]}, indent=2))
 
