@@ -44,6 +44,50 @@ const TABLE_FIELDS = {
   document: ["title", "source", "format", "words", "segments", "bytes", "createdAt", "engine", "durationMs", "path"],
   source: ["name", "documents", "words"]
 };
+const TRIAGE_SIGNALS = [
+  { id: "supportingDocuments", label: "Supporting documents", fields: "events[].documentIds", denominator: 3 },
+  { id: "collectionDiversity", label: "Collection diversity", fields: "documents[].source", denominator: 3 },
+  { id: "dateSpecificity", label: "Unambiguous event date", fields: "events[].startDate + datePrecision", denominator: 1 },
+  { id: "mappedLocation", label: "Mapped location", fields: "events[].entityIds → entities[].geo", denominator: 1 },
+  { id: "associatedEntities", label: "Associated entities", fields: "events[].entityIds + entities[].category", denominator: 1 },
+  { id: "typedRelationships", label: "Typed relationships", fields: "events[].entityIds → edges[].relationship", denominator: 2 },
+  { id: "evidenceExcerpts", label: "Source excerpts", fields: "events[].evidence", denominator: 3 },
+  { id: "identityAmbiguity", label: "Identity ambiguity", fields: "events[].entityIds → duplicateCandidates[]", denominator: 1 },
+  { id: "metadataGaps", label: "Metadata follow-up", fields: "events[].startDate,datePrecision,documentIds,evidence,entityIds,eventType,titleReviewStatus", denominator: 5 }
+];
+const TRIAGE_PROFILES = {
+  "evidence-rich": {
+    label: "Evidence rich",
+    weights: { supportingDocuments: 3, collectionDiversity: 2, dateSpecificity: 1, mappedLocation: 1, associatedEntities: 2, typedRelationships: 1, evidenceExcerpts: 2 }
+  },
+  "needs-follow-up": {
+    label: "Needs follow-up",
+    weights: { identityAmbiguity: 4, metadataGaps: 5, collectionDiversity: 1 }
+  },
+  "metadata-incomplete": {
+    label: "Metadata incomplete",
+    weights: { metadataGaps: 5, identityAmbiguity: 1 }
+  }
+};
+
+function triageSignalsForProfile(profileId = "evidence-rich") {
+  const weights = TRIAGE_PROFILES[profileId]?.weights || TRIAGE_PROFILES["evidence-rich"].weights;
+  return Object.fromEntries(TRIAGE_SIGNALS.map(signal => [signal.id, {
+    enabled: Object.hasOwn(weights, signal.id),
+    weight: Math.min(5, Math.max(1, Number(weights[signal.id]) || 1))
+  }]));
+}
+
+function normalizeTriageSignals(signals) {
+  const defaults = triageSignalsForProfile();
+  return Object.fromEntries(TRIAGE_SIGNALS.map(signal => {
+    const configured = signals?.[signal.id];
+    return [signal.id, {
+      enabled: configured?.enabled === undefined ? defaults[signal.id].enabled : Boolean(configured.enabled),
+      weight: Math.min(5, Math.max(1, Number(configured?.weight) || defaults[signal.id].weight))
+    }];
+  }));
+}
 const TYPES = [
   { id: "network", label: "Network", scope: "All", icon: "<circle cx='6' cy='8' r='3'/><circle cx='24' cy='4' r='3'/><circle cx='22' cy='16' r='3'/><path d='M9 7l12-2M9 10l10 5M23 7l-1 6'/>" },
   { id: "map", label: "Map", scope: "Locations", icon: "<circle cx='15.5' cy='10' r='8'/><path d='M7.5 10h16M15.5 2c3 3 3 13 0 16m0-16c-3 3-3 13 0 16'/>" },
@@ -53,7 +97,8 @@ const TYPES = [
   { id: "bars", label: "Bars", scope: "All collections", icon: "<path d='M3 2v16h26M7 15h4V8H7zm8 0h4V4h-4zm8 0h4v-9h-4z'/>" },
   { id: "timeline", label: "Timeline", scope: "Documents + events", icon: "<path d='M3 10h25M8 5v10m7-7v7m8-12v12'/><circle cx='8' cy='10' r='2'/><circle cx='15' cy='10' r='2'/><circle cx='23' cy='10' r='2'/>" },
   { id: "matrix", label: "Matrix", scope: "Collections × entity types", icon: "<path d='M4 3h22v15H4zM11 3v15m8-15v15M4 8h22m-22 5h22'/>" },
-  { id: "table", label: "Table", scope: "All", icon: "<path d='M3 3h25v15H3zM3 8h25M3 13h25M12 3v15'/>" }
+  { id: "table", label: "Table", scope: "All", icon: "<path d='M3 3h25v15H3zM3 8h25M3 13h25M12 3v15'/>" },
+  { id: "triage", label: "Triage", scope: "Candidate cases", icon: "<path d='M4 3h23v15H4zM8 7h3M14 7h9M8 11h3M14 11h9M8 15h3M14 15h9'/>" }
 ];
 const PRESETS = [
   {
@@ -87,6 +132,7 @@ const DEFAULT = {
   nodeRole: "entity", timelineRole: "event", matrixColumns: "category",
   tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"],
   tableSort: "mentions", tableDirection: "desc", tableSearch: "", documentSearch: "",
+  triageProfile: "evidence-rich", triageSignals: triageSignalsForProfile(), triageSort: "score", triageDirection: "desc", triageSearch: "", triageCaseId: "",
   labelSize: 12, zoom: 1, moonTransitSeconds: 5, title: "Mentions by Documents", titleMode: "auto"
 };
 const VIEW_DEFAULTS = {
@@ -98,7 +144,8 @@ const VIEW_DEFAULTS = {
   bars: { aggregation: "source", y: "words", color: "intensity" },
   timeline: { timelineRole: "event", x: "startDate", y: "mentionRank", size: "documentCount", color: "eventType", categories: ["date"], labels: "top", limit: 50, relationshipLayer: "always" },
   matrix: { matrixColumns: "category", color: "intensity" },
-  table: { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 }
+  table: { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 },
+  triage: { triageProfile: "evidence-rich", triageSignals: triageSignalsForProfile(), triageSort: "score", triageDirection: "desc", triageSearch: "", triageCaseId: "" }
 };
 const ENTITY_PRESET_DEFAULTS = {
   network: { nodeRole: "entity" },
@@ -141,6 +188,8 @@ function loadConfig() {
       const saved = JSON.parse(decodeURIComponent(escape(atob(param))));
       if (saved.allSources === undefined) saved.allSources = !saved.sources?.length;
       const config = { ...DEFAULT, ...saved };
+      config.triageSignals = normalizeTriageSignals(saved.triageSignals);
+      if (!TRIAGE_PROFILES[config.triageProfile] && config.triageProfile !== "custom") config.triageProfile = "custom";
       if (config.type === "timeline" && config.timelineRole === "event") config.y = "mentionRank";
       config.moonTransitSeconds = Math.min(10, Math.max(2, Number(config.moonTransitSeconds) || DEFAULT.moonTransitSeconds));
       if ((Number(saved.configVersion) || 0) < CONFIG_VERSION) migrateEntityProminenceConfig(config);
@@ -175,7 +224,7 @@ function loadConfig() {
       return config;
     }
   } catch (_) {}
-  const config = { ...DEFAULT };
+  const config = { ...DEFAULT, triageSignals: normalizeTriageSignals(DEFAULT.triageSignals) };
   config.title = dataAwareTitle(config);
   return config;
 }
@@ -271,6 +320,8 @@ function dataAwareTitle(config) {
     title = config.timelineRole === "event" ? "Event Sequence" : config.timelineRole === "entity" ? `${entities} Over Time` : "Dated Source Documents";
   } else if (config.type === "matrix") {
     title = `Collections × ${config.matrixColumns === "entity" ? "Entities" : "Entity Types"}`;
+  } else if (config.type === "triage") {
+    title = "Investigation Triage";
   } else {
     title = config.tableRole === "entity" ? tableEntityScopeTitle(config) : config.tableRole === "document" ? "Transcript Files" : "Collections";
   }
@@ -379,7 +430,8 @@ function presetConfig(id, type = DEFAULT.type) {
     ...overrides,
     categories: [...(overrides.categories || viewDefaults.categories || DEFAULT.categories)],
     sources: [...(overrides.sources || viewDefaults.sources || DEFAULT.sources)],
-    tableColumns: [...(overrides.tableColumns || viewDefaults.tableColumns || DEFAULT.tableColumns)]
+    tableColumns: [...(overrides.tableColumns || viewDefaults.tableColumns || DEFAULT.tableColumns)],
+    triageSignals: normalizeTriageSignals(overrides.triageSignals || viewDefaults.triageSignals || DEFAULT.triageSignals)
   };
   config.titleMode = "auto";
   config.title = dataAwareTitle(config);
@@ -393,6 +445,8 @@ function presetMatches(preset) {
     .filter(key => !["type", "title", "titleMode"].includes(key));
   return keys.every(key => Array.isArray(config[key])
     ? config[key].length === state.config[key]?.length && config[key].every((item, index) => item === state.config[key][index])
+    : config[key] && typeof config[key] === "object"
+      ? JSON.stringify(config[key]) === JSON.stringify(state.config[key])
     : state.config[key] === config[key]);
 }
 
@@ -400,15 +454,53 @@ function activePresetId() {
   return PRESETS.find(presetMatches)?.id || "";
 }
 
+function activeTriageProfileId(config = state.config) {
+  return Object.keys(TRIAGE_PROFILES).find(id => {
+    const expected = triageSignalsForProfile(id);
+    return TRIAGE_SIGNALS.every(signal => JSON.stringify(expected[signal.id]) === JSON.stringify(config.triageSignals?.[signal.id]));
+  }) || "custom";
+}
+
+function triageSubtitle(config = state.config) {
+  const profile = TRIAGE_PROFILES[activeTriageProfileId(config)];
+  const signals = TRIAGE_SIGNALS
+    .filter(signal => config.triageSignals?.[signal.id]?.enabled)
+    .map(signal => `${signal.label.toLowerCase()} (${config.triageSignals[signal.id].weight}×)`);
+  return `Published event records ranked by ${profile?.label || "custom"}${signals.length ? `: ${signals.join(", ")}` : ""}. Unknown inputs lower certainty, not priority.`;
+}
+
 function renderPresetControl() {
+  if (state.config.type === "triage") {
+    const activeId = activeTriageProfileId();
+    const options = Object.entries(TRIAGE_PROFILES).map(([id, profile]) => `<option value="${id}" ${activeId === id ? "selected" : ""}>${escapeHTML(profile.label)}</option>`).join("");
+    $("#presetControls").innerHTML = `<div class="control"><label for="control-triage-preset">Scoring preset</label><select id="control-triage-preset" data-triage-preset-select>${options}<option value="custom" ${activeId === "custom" ? "selected" : ""} disabled>Custom</option></select></div>`;
+    return;
+  }
   const activeId = activePresetId();
   const options = PRESETS.map(preset => `<option value="${escapeHTML(preset.id)}" ${activeId === preset.id ? "selected" : ""}>${escapeHTML(preset.label)}</option>`).join("");
   $("#presetControls").innerHTML = `<div class="control"><label for="control-preset">View preset</label><select id="control-preset" data-preset-select><option value="">Custom</option>${options}</select></div>`;
 }
 
 function renderPresetStatus() {
+  if (state.config.type === "triage") {
+    const select = $("[data-triage-preset-select]");
+    if (select) select.value = activeTriageProfileId();
+    return;
+  }
   const select = $("[data-preset-select]");
   if (select) select.value = activePresetId();
+}
+
+function applyTriageProfile(id) {
+  const profile = TRIAGE_PROFILES[id];
+  if (!profile) return;
+  state.config.triageProfile = id;
+  state.config.triageSignals = triageSignalsForProfile(id);
+  state.config.triageCaseId = "";
+  closeInspector();
+  renderControls();
+  commitConfig();
+  toast(`Scoring preset applied: ${profile.label}`);
 }
 
 function applyPreset(id) {
@@ -437,7 +529,10 @@ function renderControls() {
   const numericDoc = ["words", "segments", "bytes", "durationMs"];
   const relationshipTypeControl = () => controlSelect("relation", "Relationship type", [{ value: "all", label: "Any published relationship" }, { value: "co_mentioned", label: "Repeated co-mention" }, { value: "affiliated_with", label: "Affiliation cue" }, { value: "investigated", label: "Investigation cue" }]);
   let roles = "";
-  if (state.config.type === "network") {
+  if (state.config.type === "triage") {
+    roles = `<div class="control"><div class="control-title">Candidates</div><select disabled><option>Published evidence-backed events</option></select></div>
+      <div class="control method-note triage-disclaimer"><div class="control-title">Review-priority heuristic</div><p>Priority is not a judgment of truth, credibility, or threat. Scores only order review using the enabled catalog signals.</p></div>`;
+  } else if (state.config.type === "network") {
     const relationshipControl = state.config.nodeRole === "collection"
       ? `<div class="control"><label for="collectionRelationship">Relationship</label><select id="collectionRelationship" disabled><option>Shared published entities</option></select></div>`
       : controlSelect("relation", "Relationship", [{ value: "all", label: "Any published relationship" }, { value: "co_mentioned", label: "Repeated co-mention" }, { value: "affiliated_with", label: "Affiliation cue" }, { value: "investigated", label: "Investigation cue" }]);
@@ -484,7 +579,21 @@ function renderControls() {
     + `<div class="control"><label>Connections per node <span>${state.config.relationshipNeighbors}</span></label><input type="range" min="1" max="5" step="1" value="${state.config.relationshipNeighbors}" data-range="relationshipNeighbors"></div>`
     + (eventSequenceRelationships ? "" : controlSelect("relationshipNodeSize", "Secondary-node size", [{ value: "inherit", label: "Inherit size metric" }, { value: "fixed", label: "Fixed" }]))
     + controlSelect("relationshipStrength", "Line strength", [{ value: "subtle", label: "Subtle" }, { value: "medium", label: "Medium" }, { value: "strong", label: "Strong" }]) : "";
-  if (state.config.type === "table") {
+  if (state.config.type === "triage") {
+    const signalControls = TRIAGE_SIGNALS.map(signal => {
+      const config = state.config.triageSignals[signal.id];
+      return `<div class="triage-signal-control">
+        <label class="check-chip"><input type="checkbox" data-triage-enabled="${signal.id}" ${config.enabled ? "checked" : ""}><span>${escapeHTML(signal.label)}</span></label>
+        <label>Weight <span>${config.weight}</span></label><input type="range" min="1" max="5" step="1" value="${config.weight}" data-triage-weight="${signal.id}" ${config.enabled ? "" : "disabled"}>
+        <small>${escapeHTML(signal.fields)}</small>
+      </div>`;
+    }).join("");
+    $("#encodeControls").innerHTML = controlSelect("triageSort", "Sort by", [
+      { value: "score", label: "Priority score" }, { value: "certainty", label: "Certainty" }, { value: "date", label: "Event date" }, { value: "title", label: "Case title" }
+    ]) + controlSelect("triageDirection", "Direction", [{ value: "desc", label: "Descending" }, { value: "asc", label: "Ascending" }])
+      + `<div class="control"><div class="control-title">Signals</div><div class="triage-signal-controls">${signalControls}</div></div>
+        <div class="control"><button class="button review-button" type="button" data-export-triage-config>Export scoring configuration</button></div>`;
+  } else if (state.config.type === "table") {
     const sortOptions = TABLE_FIELDS[state.config.tableRole];
     $("#encodeControls").innerHTML = controlSelect("tableSort", "Sort by", sortOptions) + controlSelect("tableDirection", "Direction", [{ value: "desc", label: "Descending" }, { value: "asc", label: "Ascending" }]) + labelSizeControl;
   } else if (state.config.type === "document") {
@@ -508,10 +617,11 @@ function renderControls() {
   const selectedSourceCount = state.config.allSources ? sourceNames.length : sourceNames.filter(name => state.config.sources.includes(name)).length;
   const sourceChecks = sources.map(source => `<label class="check-chip"><input type="checkbox" data-source="${escapeHTML(source.name)}" ${sourceIsSelected(source.name, state.config.sources, state.config.allSources) ? "checked" : ""}><span>${escapeHTML(source.name)}</span></label>`).join("");
   const duplicateCount = state.catalog?.counts?.possibleDuplicates || state.catalog?.duplicateCandidates?.length || 0;
-  const usesEntities = state.config.type === "table" ? state.config.tableRole === "entity" : state.config.type !== "document" && (state.config.type === "timeline" || !["bars", "timeline"].includes(state.config.type) || state.config.aggregation === "entity" || state.config.timelineRole === "entity");
+  const usesEntities = state.config.type === "table" ? state.config.tableRole === "entity" : !["document", "triage"].includes(state.config.type) && (state.config.type === "timeline" || !["bars", "timeline"].includes(state.config.type) || state.config.aggregation === "entity" || state.config.timelineRole === "entity");
   const showsEntityCategories = usesEntities || state.config.type === "document";
   $("#filterControls").innerHTML = `
     ${state.config.type === "document" ? `<div class="control"><label for="documentSearch">Find a document</label><input id="documentSearch" class="text-input" type="search" value="${escapeHTML(state.config.documentSearch)}" placeholder="Search title, path, collection, or format" data-document-search></div>` : ""}
+    ${state.config.type === "triage" ? `<div class="control"><label for="triageSearch">Find a case</label><input id="triageSearch" class="text-input" type="search" value="${escapeHTML(state.config.triageSearch)}" placeholder="Search title, type, date, or source" data-triage-search></div>` : ""}
     ${showsEntityCategories ? `<div class="control"><div class="control-title">Entity categories</div><div class="check-grid">${categoryChecks}</div></div>` : ""}
     <div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div>
     ${state.config.type === "table" ? `<div class="control"><label for="tableSearch">Search rows</label><input id="tableSearch" class="text-input" type="search" value="${escapeHTML(state.config.tableSearch)}" placeholder="Filter this list" data-table-search></div>` : ""}
@@ -519,12 +629,12 @@ function renderControls() {
     ${state.config.type === "network" || (supportsRelationships && state.config.relationshipLayer !== "off" && !eventSequenceRelationships) ? `<div class="control"><label>${state.config.type === "network" && state.config.nodeRole === "collection" || state.config.type === "timeline" && state.config.timelineRole === "document" ? "Shared entities" : "Relationship evidence"} <span>${state.config.minEvidence}×</span></label><input type="range" min="1" max="12" step="1" value="${state.config.minEvidence}" data-range="minEvidence"></div>` : ""}
     ${state.config.type === "document"
       ? `<div class="control"><div class="control-title">Search scope <span>${state.catalog?.documents.filter(document => sourceMatches(document.source)).length || 0}</span></div><select disabled><option>Every completed file</option></select></div>`
-      : state.config.type === "table"
+      : state.config.type === "table" || state.config.type === "triage"
         ? `<div class="control"><div class="control-title">Rows included</div><select disabled><option>All matching rows</option></select></div>`
       : `<div class="control"><label>Maximum ${state.config.type === "table" ? "rows" : "marks"} <span>${state.config.limit}</span></label><input type="range" min="20" max="${state.config.type === "timeline" ? 1000 : state.config.type === "network" ? 120 : 250}" step="10" value="${state.config.limit}" data-range="limit"></div>`}
     ${usesEntities ? `<div class="control method-note"><div class="control-title">Context adjustment</div><p>Counts exact repeats within one document once, counts text repeated across 3+ documents once, and excludes requester metadata. Raw mentions remain available.</p></div>` : ""}
     ${usesEntities ? `<div class="control"><div class="control-title">Inflation review</div><label class="check-chip"><input type="checkbox" data-include-high-inflation ${state.config.includeHighInflation ? "checked" : ""}><span>Include high-inflation entities</span></label></div>` : ""}
-    <div class="control duplicate-review-control"><div class="control-title">Identity review <span>${duplicateCount} flagged</span></div><button class="button review-button" type="button" data-review-duplicates ${duplicateCount ? "" : "disabled"}>Review possible duplicates</button></div>`;
+    ${state.config.type === "triage" ? "" : `<div class="control duplicate-review-control"><div class="control-title">Identity review <span>${duplicateCount} flagged</span></div><button class="button review-button" type="button" data-review-duplicates ${duplicateCount ? "" : "disabled"}>Review possible duplicates</button></div>`}`;
 
   $$('[data-config]').forEach(node => node.addEventListener("change", event => updateConfig(event.target.dataset.config, event.target.value)));
   $$('[data-range]').forEach(node => node.addEventListener("input", event => {
@@ -538,6 +648,25 @@ function renderControls() {
     if (key === "moonTransitSeconds") return window.ufoGlobe?.setMoonTransitSeconds(value);
     renderGraph();
   }));
+  $$('[data-triage-enabled]').forEach(node => node.addEventListener("change", event => {
+    const id = event.target.dataset.triageEnabled;
+    state.config.triageSignals[id].enabled = event.target.checked;
+    state.config.triageProfile = "custom";
+    state.config.triageCaseId = "";
+    renderControls();
+    commitConfig(false);
+  }));
+  $$('[data-triage-weight]').forEach(node => node.addEventListener("input", event => {
+    const id = event.target.dataset.triageWeight;
+    state.config.triageSignals[id].weight = Number(event.target.value);
+    state.config.triageProfile = "custom";
+    state.config.triageCaseId = "";
+    const output = event.target.closest(".triage-signal-control")?.querySelector("label:not(.check-chip) span");
+    if (output) output.textContent = event.target.value;
+    persistHash();
+    renderPresetStatus();
+    renderGraph();
+  }));
   $$('[data-category]').forEach(node => node.addEventListener("change", () => {
     state.config.categories = $$('[data-category]:checked').map(input => input.dataset.category);
     commitConfig();
@@ -549,6 +678,7 @@ function renderControls() {
   $$('[data-source]').forEach(node => node.addEventListener("change", () => {
     const selectedSources = $$('[data-source]:checked').map(input => input.dataset.source);
     Object.assign(state.config, sourceSelectionConfig(selectedSources, sourceNames));
+    if (state.config.type === "triage") state.config.triageCaseId = "";
     renderControls();
     commitConfig();
   }));
@@ -570,10 +700,18 @@ function renderControls() {
     persistHash();
     renderGraph();
   });
+  $("[data-triage-search]")?.addEventListener("input", event => {
+    state.config.triageSearch = event.target.value;
+    state.config.triageCaseId = "";
+    persistHash();
+    renderGraph();
+  });
   $$('[data-type]').forEach(node => node.addEventListener("click", () => setType(node.dataset.type)));
   $("[data-preset-select]")?.addEventListener("change", event => {
     if (event.target.value) applyPreset(event.target.value);
   });
+  $("[data-triage-preset-select]")?.addEventListener("change", event => applyTriageProfile(event.target.value));
+  $("[data-export-triage-config]")?.addEventListener("click", exportTriageConfiguration);
 }
 
 function setType(type) {
@@ -585,6 +723,7 @@ function setType(type) {
 
 function updateConfig(key, value, rerenderControls = false) {
   state.config[key] = value;
+  if (["triageSort", "triageDirection"].includes(key)) state.config.triageCaseId = "";
   if (key === "aggregation") {
     state.config.y = value === "entity" ? "contextAdjustedMentions" : "words";
     state.config.color = "intensity";
@@ -630,7 +769,7 @@ function clearChart() {
   const svg = $("#chart");
   svg.removeAttribute("hidden");
   $("#tableView").hidden = true;
-  $("#chartWrap").classList.remove("table-mode");
+  $("#chartWrap").classList.remove("table-mode", "triage-mode");
   svg.replaceChildren();
   svg.style.setProperty("--graph-label-size", `${state.config.labelSize}px`);
   drawIntensityLegend();
@@ -650,7 +789,7 @@ function prepareMapView() {
   svg.setAttribute("hidden", "");
   svg.replaceChildren();
   $("#tableView").hidden = true;
-  $("#chartWrap").classList.remove("table-mode");
+  $("#chartWrap").classList.remove("table-mode", "triage-mode");
   $("#mapView").hidden = false;
 }
 
@@ -1749,6 +1888,183 @@ function renderMatrix() {
   setSummary(`${sources.length} collections × ${columns.length} ${state.config.matrixColumns === "entity" ? "entities" : "entity types"}`, "matrix");
 }
 
+function triageComponent(id, numerator, denominator, known, detail) {
+  const definition = TRIAGE_SIGNALS.find(signal => signal.id === id);
+  const safeDenominator = Math.max(1, Number(denominator) || definition?.denominator || 1);
+  const safeNumerator = Math.min(safeDenominator, Math.max(0, Number(numerator) || 0));
+  return {
+    id,
+    label: definition?.label || label(id),
+    fields: definition?.fields || "",
+    known: Boolean(known),
+    numerator: safeNumerator,
+    denominator: safeDenominator,
+    ratio: known ? safeNumerator / safeDenominator : null,
+    detail
+  };
+}
+
+function triageCase(event, catalog = state.catalog, config = state.config) {
+  const allDocuments = Array.isArray(catalog?.documents) ? catalog.documents : null;
+  const documentMap = new Map((allDocuments || []).map(document => [document.id, document]));
+  const hasDocumentIds = Array.isArray(event.documentIds);
+  const documentIds = hasDocumentIds ? [...new Set(event.documentIds)] : [];
+  const documentReferencesKnown = hasDocumentIds && allDocuments !== null && documentIds.every(id => documentMap.has(id));
+  const documents = documentIds.map(id => documentMap.get(id)).filter(Boolean).filter(document => sourceIsSelected(document.source, config.sources || [], config.allSources));
+  const scopedDocumentIds = new Set(documents.map(document => document.id));
+  const collections = [...new Set(documents.map(document => document.source))].sort();
+
+  const allEntities = Array.isArray(catalog?.entities) ? catalog.entities : null;
+  const entityMap = new Map((allEntities || []).map(entity => [entity.id, entity]));
+  const hasEntityIds = Array.isArray(event.entityIds);
+  const entityIds = hasEntityIds ? [...new Set(event.entityIds)] : [];
+  const entityReferencesKnown = hasEntityIds && allEntities !== null && entityIds.every(id => entityMap.has(id));
+  const entities = entityIds.map(id => entityMap.get(id)).filter(Boolean);
+  const entityCategories = new Set(entities.map(entity => entity.category).filter(Boolean));
+  const mappedLocations = entities.filter(entity => entity.category === "location" && entity.geo && Number.isFinite(entity.geo.lat) && Number.isFinite(entity.geo.lon));
+
+  const edgesKnown = Array.isArray(catalog?.edges) && entityReferencesKnown;
+  const entityIdSet = new Set(entityIds);
+  const typedEdges = edgesKnown ? catalog.edges.filter(edge => entityIdSet.has(edge.source) && entityIdSet.has(edge.target) && edge.relationship && edge.relationship !== "co_mentioned") : [];
+
+  const evidenceKnown = Array.isArray(event.evidence);
+  const evidence = evidenceKnown ? event.evidence.filter(item => !scopedDocumentIds.size || scopedDocumentIds.has(item.documentId)) : [];
+  const excerptDocuments = new Set(evidence.filter(item => item.documentId && String(item.excerpt || "").trim()).map(item => item.documentId));
+
+  const publishedDuplicateCount = Array.isArray(catalog?.duplicateCandidates) ? catalog.duplicateCandidates.length : 0;
+  const possibleDuplicateCount = Number(catalog?.counts?.possibleDuplicates);
+  const duplicateCatalogComplete = !Number.isFinite(possibleDuplicateCount) || publishedDuplicateCount >= possibleDuplicateCount;
+  const duplicateCandidatesKnown = Array.isArray(catalog?.duplicateCandidates) && duplicateCatalogComplete && entityReferencesKnown;
+  const ambiguousNames = new Set((catalog?.duplicateCandidates || []).flatMap(candidate => [candidate.left?.name, candidate.right?.name]).filter(Boolean).map(name => String(name).toLocaleLowerCase()));
+  const ambiguousEntities = duplicateCandidatesKnown ? entities.filter(entity => ambiguousNames.has(String(entity.name).toLocaleLowerCase())) : [];
+  const identityAmbiguityDetail = !Array.isArray(catalog?.duplicateCandidates)
+    ? "Duplicate-candidate catalog unavailable"
+    : !duplicateCatalogComplete
+      ? `Duplicate-candidate catalog publishes ${publishedDuplicateCount} of ${possibleDuplicateCount} possible pairs`
+      : !entityReferencesKnown
+        ? "Associated entity references unavailable"
+        : ambiguousEntities.length
+          ? ambiguousEntities.map(entity => entity.name).join(", ")
+          : "No linked entity appears in the duplicate-candidate catalog";
+
+  const missingMetadata = [
+    !event.startDate || !event.datePrecision,
+    !hasDocumentIds || !documentIds.length,
+    !evidenceKnown || !evidence.some(item => String(item.excerpt || "").trim()),
+    !hasEntityIds || !entityIds.length,
+    !event.eventType || !event.titleReviewStatus
+  ];
+  const associatedRatio = entityReferencesKnown
+    ? (Math.min(entityIds.length, 4) / 4 + Math.min(entityCategories.size, 3) / 3) / 2
+    : 0;
+  const components = [
+    triageComponent("supportingDocuments", Math.min(documents.length, 3), 3, documentReferencesKnown, `${documents.length} distinct published document${documents.length === 1 ? "" : "s"}`),
+    triageComponent("collectionDiversity", Math.min(collections.length, 3), 3, documentReferencesKnown, `${collections.length} collection${collections.length === 1 ? "" : "s"}`),
+    triageComponent("dateSpecificity", event.datePrecision === "day" ? 1 : 0, 1, Boolean(event.startDate && event.datePrecision), event.startDate ? `${event.startDate} · ${event.datePrecision || "precision unknown"}` : "Event date unavailable"),
+    triageComponent("mappedLocation", mappedLocations.length ? 1 : 0, 1, entityReferencesKnown, mappedLocations.length ? mappedLocations.map(entity => entity.name).join(", ") : "No associated entity has reviewed coordinates"),
+    triageComponent("associatedEntities", associatedRatio, 1, entityReferencesKnown, `${entities.length} linked entit${entities.length === 1 ? "y" : "ies"} · ${entityCategories.size} type${entityCategories.size === 1 ? "" : "s"}`),
+    triageComponent("typedRelationships", Math.min(typedEdges.length, 2), 2, edgesKnown, `${typedEdges.length} typed relationship${typedEdges.length === 1 ? "" : "s"} among associated entities`),
+    triageComponent("evidenceExcerpts", Math.min(excerptDocuments.size, 3), 3, evidenceKnown, `${excerptDocuments.size} document${excerptDocuments.size === 1 ? "" : "s"} with a published excerpt`),
+    triageComponent("identityAmbiguity", ambiguousEntities.length ? 1 : 0, 1, duplicateCandidatesKnown, identityAmbiguityDetail),
+    triageComponent("metadataGaps", missingMetadata.filter(Boolean).length, 5, true, `${missingMetadata.filter(Boolean).length} of 5 follow-up checks flagged`)
+  ];
+  const enabledComponents = components.filter(component => config.triageSignals?.[component.id]?.enabled);
+  const totalWeight = enabledComponents.reduce((sum, component) => sum + config.triageSignals[component.id].weight, 0);
+  const knownWeight = enabledComponents.filter(component => component.known).reduce((sum, component) => sum + config.triageSignals[component.id].weight, 0);
+  const earnedWeight = enabledComponents.filter(component => component.known).reduce((sum, component) => sum + component.ratio * config.triageSignals[component.id].weight, 0);
+  return {
+    event,
+    documents,
+    collections,
+    entities,
+    typedEdges,
+    evidence,
+    components,
+    totalWeight,
+    knownWeight,
+    earnedWeight,
+    score: knownWeight ? earnedWeight / knownWeight * 100 : null,
+    certainty: totalWeight ? knownWeight / totalWeight * 100 : 0
+  };
+}
+
+function triageStableCompare(left, right) {
+  const leftKey = `${String(left.event.title || "").toLowerCase()}\u0000${left.event.id || ""}`;
+  const rightKey = `${String(right.event.title || "").toLowerCase()}\u0000${right.event.id || ""}`;
+  return leftKey < rightKey ? -1 : leftKey > rightKey ? 1 : 0;
+}
+
+function triageCandidates(catalog = state.catalog, config = state.config) {
+  const query = String(config.triageSearch || "").trim().toLocaleLowerCase();
+  const direction = config.triageDirection === "asc" ? 1 : -1;
+  const valueFor = candidate => ({
+    score: candidate.score,
+    certainty: candidate.certainty,
+    date: candidate.event.startDate || null,
+    title: String(candidate.event.title || "").toLowerCase()
+  })[config.triageSort] ?? candidate.score;
+  return (catalog?.events || [])
+    .map(event => triageCase(event, catalog, config))
+    .filter(candidate => config.allSources ? true : candidate.documents.length > 0)
+    .filter(candidate => !query || [candidate.event.title, candidate.event.eventType, candidate.event.startDate, ...candidate.collections]
+      .some(value => String(value || "").toLocaleLowerCase().includes(query)))
+    .sort((left, right) => {
+      const leftValue = valueFor(left), rightValue = valueFor(right);
+      if (leftValue == null && rightValue != null) return 1;
+      if (leftValue != null && rightValue == null) return -1;
+      if (leftValue < rightValue) return -1 * direction;
+      if (leftValue > rightValue) return 1 * direction;
+      if (config.triageSort === "score" && left.certainty !== right.certainty) return right.certainty - left.certainty;
+      return triageStableCompare(left, right);
+    });
+}
+
+function triageNumber(value) {
+  return Number.isInteger(value) ? String(value) : Number(value).toFixed(1).replace(/\.0$/, "");
+}
+
+function triageBreakdownHTML(candidate) {
+  return candidate.components.map(component => {
+    const config = state.config.triageSignals[component.id];
+    const raw = component.known ? `${triageNumber(component.numerator)}/${triageNumber(component.denominator)}` : "Unknown";
+    const weighted = !config.enabled ? "Off" : component.known ? `${triageNumber(component.ratio * config.weight)}/${config.weight} points` : `0/${config.weight} certainty weight`;
+    return `<div class="triage-component ${config.enabled ? "" : "is-disabled"} ${component.known ? "" : "is-unknown"}">
+      <span><strong>${escapeHTML(component.label)}</strong><small>${escapeHTML(component.fields)}</small></span>
+      <span><strong>${escapeHTML(raw)}</strong><small>${escapeHTML(weighted)}</small></span>
+      <small>${escapeHTML(component.detail)}</small>
+    </div>`;
+  }).join("");
+}
+
+function renderTriage() {
+  hideMapView();
+  const svg = $("#chart"), queue = $("#tableView");
+  svg.setAttribute("hidden", "");
+  svg.replaceChildren();
+  queue.hidden = false;
+  $("#chartWrap").classList.add("table-mode", "triage-mode");
+  $("#legend").innerHTML = "";
+  const candidates = triageCandidates();
+  if (!candidates.length) {
+    queue.replaceChildren();
+    return showEmpty();
+  }
+  queue.innerHTML = `<div class="triage-queue-note"><strong>Review priority, not credibility</strong><span>Priority compares known signals; certainty shows how much of the scoring model had usable data.</span></div><div class="triage-queue">${candidates.map((candidate, index) => `
+    <article class="triage-case">
+      <button class="triage-case-open" type="button" data-triage-case="${index}">
+        <span class="triage-case-rank">${String(index + 1).padStart(2, "0")}</span>
+        <span class="triage-case-title"><strong>${escapeHTML(candidate.event.title)}</strong><small>${escapeHTML(label(candidate.event.eventType))} · ${escapeHTML(candidate.event.startDate || "Date unavailable")} · ${candidate.documents.length} documents / ${candidate.collections.length} collections</small></span>
+        <span class="triage-case-score"><strong>${candidate.score == null ? "—" : Math.round(candidate.score)}</strong><small>of 100 priority</small></span>
+        <span class="triage-case-certainty"><strong>${Math.round(candidate.certainty)}%</strong><small>certainty · ${triageNumber(candidate.knownWeight)}/${triageNumber(candidate.totalWeight)} weight known</small></span>
+        <span aria-hidden="true">→</span>
+      </button>
+      <div class="triage-breakdown">${triageBreakdownHTML(candidate)}</div>
+    </article>`).join("")}</div>`;
+  $$('[data-triage-case]').forEach(button => button.addEventListener("click", () => openTriageCase(candidates[Number(button.dataset.triageCase)])));
+  const selectedCollections = state.config.allSources ? "all collections" : `${state.config.sources.length} selected collection${state.config.sources.length === 1 ? "" : "s"}`;
+  setSummary(`${candidates.length} published event candidates from ${selectedCollections} · ranked by ${label(state.config.triageSort).toLowerCase()}${state.config.triageSort === "score" ? ", then certainty" : ""} · not selected from all source documents`, "triage");
+}
+
 function tableRecords() {
   let records;
   if (state.config.tableRole === "document") {
@@ -1844,6 +2160,7 @@ function setSummary(text, type) {
     : type === "map" ? "Coordinates come from the reviewed local gazetteer · ambiguous names omitted"
     : type === "book" ? "Titles require an explicit book, novel, or memoir cue in transcript text"
     : type === "document" ? "Sorted by published-entity count · TXT shade represents document length · source links open the exact machine-data file"
+    : type === "triage" ? "Priority is not a credibility judgment · unknown data lowers certainty"
     : `${formatNumber(state.catalog.counts.documents)} source files · transcript text unchanged`;
 }
 
@@ -1862,7 +2179,7 @@ function renderGraph() {
   $("#resetZoom").hidden = !["network", "map"].includes(state.config.type);
   $("#mapAnimationButton").hidden = state.config.type !== "map";
   if (state.config.type === "map") syncMapAnimationButton();
-  $("#exportButton").textContent = "Export PDF";
+  $("#exportButton").textContent = state.config.type === "triage" ? "Export queue CSV" : "Export PDF";
   const descriptions = {
     network: state.config.nodeRole === "collection" ? "Collections connected by shared published entities." : "Evidence-backed connections across the local archive.", scatter: `${label(state.config.x)} compared with ${label(state.config.y)}.`,
     map: `Geocoded location entities sized by ${label(state.config.size)}.`,
@@ -1871,10 +2188,11 @@ function renderGraph() {
     bars: `${label(state.config.y)} grouped by ${label(state.config.aggregation)}.`,
     timeline: state.config.timelineRole === "event" ? "Evidence-backed events by occurrence date." : `${state.config.timelineRole === "entity" ? "Entities" : "Documents"} by document date.`,
     matrix: `${state.config.matrixColumns === "entity" ? "Entity" : "Entity-type"} coverage across completed collections.`,
-    table: `A custom list of ${state.config.tableRole === "entity" ? "entities" : state.config.tableRole === "document" ? "transcript files" : "collections"}.`
+    table: `A custom list of ${state.config.tableRole === "entity" ? "entities" : state.config.tableRole === "document" ? "transcript files" : "collections"}.`,
+    triage: triageSubtitle()
   };
   $("#graphSubtitle").textContent = descriptions[state.config.type];
-  ({ network: renderNetwork, map: renderMap, book: renderBook, document: renderDocument, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, matrix: renderMatrix, table: renderTable })[state.config.type]();
+  ({ network: renderNetwork, map: renderMap, book: renderBook, document: renderDocument, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, matrix: renderMatrix, table: renderTable, triage: renderTriage })[state.config.type]();
 }
 
 function evidenceHTML(evidence = []) {
@@ -1916,6 +2234,11 @@ function setMobileControls(open) {
 function closeInspector() {
   $("#builderView").classList.add("inspector-collapsed");
   $("#inspector").classList.remove("has-selection");
+  state.selected = null;
+  if (state.config.type === "triage" && state.config.triageCaseId) {
+    state.config.triageCaseId = "";
+    persistHash();
+  }
   refreshGraphAfterInspectorResize();
 }
 
@@ -1989,6 +2312,33 @@ function inspectEvent(item) {
   showInspector(item.eventType, item.title, [[new Date(item.startDate).toLocaleDateString(), "event date"], [item.mentionRank, "mention rank"], [item.mentionCount, "event mentions"], [item.documentIds.length, "documents"], [`${Math.round(item.confidence * 100)}%`, "confidence"]], item.evidence, "Includes explicit incident dates and source-backed disclosure, hearing, program, and official-report milestones. FOIA processing and cataloging dates remain excluded.");
 }
 
+function inspectTriageCase(candidate, refresh = true) {
+  if (!candidate) return;
+  state.selected = candidate;
+  const inspector = $("#inspector");
+  $("#builderView").classList.remove("inspector-collapsed");
+  inspector.classList.add("has-selection");
+  const documents = candidate.documents.map(document => `<a class="triage-source-document" href="${escapeHTML(machineDataDocumentURL(document))}" target="_blank" rel="noopener noreferrer"><strong>${escapeHTML(document.title || document.path)}</strong><small>${escapeHTML(document.source)} · ${escapeHTML(document.path)}</small><span>Open source ↗</span></a>`).join("");
+  const entities = candidate.entities.length
+    ? `<div class="triage-entity-list">${candidate.entities.map(entity => `<span>${escapeHTML(entity.name)} <small>${escapeHTML(label(entity.category))}</small></span>`).join("")}</div>`
+    : "<p>No associated entities are published for this event.</p>";
+  $("#inspectorContent").innerHTML = `<p class="inspect-category">Investigation triage workspace</p><h3>${escapeHTML(candidate.event.title)}</h3>
+    <p class="triage-priority-note">Priority is not a judgment of truth, credibility, or threat. Unknown inputs reduce certainty rather than counting as zero evidence.</p>
+    <div class="metric-row"><div class="metric"><strong>${candidate.score == null ? "—" : Math.round(candidate.score)}</strong><small>Priority / 100</small></div><div class="metric"><strong>${Math.round(candidate.certainty)}%</strong><small>Certainty</small></div><div class="metric"><strong>${candidate.documents.length}</strong><small>Documents</small></div><div class="metric"><strong>${candidate.collections.length}</strong><small>Collections</small></div></div>
+    <div class="evidence-list triage-inspector-section"><h4>Complete score breakdown</h4><div class="triage-breakdown">${triageBreakdownHTML(candidate)}</div></div>
+    <div class="evidence-list triage-inspector-section"><h4>Associated entities</h4>${entities}</div>
+    <div class="evidence-list triage-inspector-section"><h4>Published excerpts</h4>${evidenceHTML(candidate.evidence)}</div>
+    <div class="evidence-list triage-inspector-section"><h4>Supporting source documents</h4>${documents || "<p>No supporting source document is available in the selected collection scope.</p>"}</div>`;
+  if (refresh) refreshGraphAfterInspectorResize();
+}
+
+function openTriageCase(candidate) {
+  if (!candidate) return;
+  state.config.triageCaseId = candidate.event.id;
+  persistHash();
+  inspectTriageCase(candidate);
+}
+
 function inspectMatrix(item) {
   if (item.entityId) {
     const entity = state.catalog.entities.find(candidate => candidate.id === item.entityId);
@@ -2003,6 +2353,57 @@ function inspectMatrix(item) {
 const UFO_FILES_URL = "https://ufo-files.app";
 const UFO_FILES_GITHUB_URL = "https://github.com/ufo-files";
 const GRAPH_BUILDER_URL = "https://ufo-files.github.io/relationship-graph-builder/";
+
+function triageConfigurationExport(config = state.config) {
+  return {
+    schema: "ufo-files-triage-configuration/v1",
+    notice: "Review priority only; not a judgment of truth, credibility, or threat.",
+    profile: activeTriageProfileId(config),
+    sort: { field: config.triageSort, direction: config.triageDirection },
+    signals: TRIAGE_SIGNALS.map(signal => ({
+      id: signal.id,
+      label: signal.label,
+      enabled: Boolean(config.triageSignals[signal.id].enabled),
+      weight: config.triageSignals[signal.id].weight,
+      publishedFields: signal.fields
+    }))
+  };
+}
+
+function downloadText(filename, textContent, mimeType) {
+  const link = document.createElement("a");
+  const url = URL.createObjectURL(new Blob([textContent], { type: mimeType }));
+  link.href = url;
+  link.download = filename;
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
+function exportTriageConfiguration() {
+  downloadText("ufo-files-triage-configuration.json", `${JSON.stringify(triageConfigurationExport(), null, 2)}\n`, "application/json");
+  toast("Scoring configuration saved");
+}
+
+function csvCell(value) {
+  return `"${String(value ?? "").replaceAll('"', '""')}"`;
+}
+
+function exportTriageQueue() {
+  const candidates = triageCandidates();
+  const headers = ["Rank", "Case ID", "Title", "Event date", "Event type", "Priority / 100", "Certainty %", "Known weight", "Enabled weight", ...TRIAGE_SIGNALS.map(signal => signal.label)];
+  const rows = candidates.map((candidate, index) => [
+    index + 1, candidate.event.id, candidate.event.title, candidate.event.startDate, candidate.event.eventType,
+    candidate.score == null ? "" : candidate.score.toFixed(4), candidate.certainty.toFixed(4), candidate.knownWeight, candidate.totalWeight,
+    ...candidate.components.map(component => {
+      const config = state.config.triageSignals[component.id];
+      if (!config.enabled) return "off";
+      if (!component.known) return `unknown; 0/${config.weight} certainty weight`;
+      return `${triageNumber(component.numerator)}/${triageNumber(component.denominator)}; ${triageNumber(component.ratio * config.weight)}/${config.weight} points`;
+    })
+  ]);
+  downloadText("ufo-files-triage-queue.csv", `${[headers, ...rows].map(row => row.map(csvCell).join(",")).join("\n")}\n`, "text/csv");
+  toast("Triage queue saved");
+}
 
 function pdfExportTitle(config = state.config) {
   const title = String(config.title || "").trim();
@@ -2379,6 +2780,7 @@ async function addPDFGraphPage(pdf, exportedAt) {
 }
 
 async function exportCurrent() {
+  if (state.config.type === "triage") return exportTriageQueue();
   const button = $("#exportButton");
   if (!window.jspdf?.jsPDF || !window.svg2pdf) return toast("PDF export tools unavailable");
   button.disabled = true;
@@ -2418,6 +2820,10 @@ async function init() {
     $("#loadingState").remove();
     syncAutomaticTitle();
     renderControls(); renderGraph();
+    if (state.config.type === "triage" && state.config.triageCaseId) {
+      const candidate = triageCandidates().find(item => item.event.id === state.config.triageCaseId);
+      if (candidate) inspectTriageCase(candidate, false);
+    }
   } catch (error) {
     $("#loadingState").innerHTML = `<strong>Catalog unavailable</strong><br><small>${escapeHTML(error.message)}. Serve this folder over HTTP.</small>`;
   }

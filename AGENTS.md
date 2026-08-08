@@ -39,5 +39,6 @@
 - Open a focused draft PR with the problem, solution, user impact, validation results, residual risk, and testing URL. Include before/after screenshots for user-visible changes.
 - Do not mix generated catalog refreshes, automated screenshot refreshes, or unrelated cleanup into a feature PR.
 - Monitor CI and review feedback. Address actionable comments, reply with what changed and how it was verified, and resolve a thread only after its concern is fixed or explicitly answered.
+- Before considering a PR ready, make sure all Codex review comments are addressed, each comment has a concrete reply, and every associated review conversation is resolved.
 - If feedback changes visible output, replace the after screenshot and confirm the testing URL still reproduces the updated result.
 - After merge, confirm the branch is deleted and report any deployment or follow-up work that remains.

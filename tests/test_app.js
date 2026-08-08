@@ -363,6 +363,266 @@ test("default graph includes every entity category with globally adjusted promin
   assert.equal(config.relationshipStrength, "subtle");
 });
 
+test("triage scoring applies enabled weights to published-field ratios", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const scores = JSON.parse(vm.runInContext(`
+    (() => {
+      const catalog = {
+        documents: [
+          { id: "doc-1", source: "One" }, { id: "doc-2", source: "One" }, { id: "doc-3", source: "One" }
+        ],
+        entities: [], edges: [], duplicateCandidates: [],
+        events: [{
+          id: "case-1", title: "Test case", eventType: "sighting", startDate: "2000-01-01", datePrecision: "day",
+          titleReviewStatus: "reviewed", documentIds: ["doc-1", "doc-2", "doc-3"], entityIds: [],
+          evidence: [{ documentId: "doc-1", excerpt: "Evidence" }]
+        }]
+      };
+      const signals = triageSignalsForProfile();
+      Object.values(signals).forEach(signal => signal.enabled = false);
+      signals.supportingDocuments = { enabled: true, weight: 5 };
+      signals.collectionDiversity = { enabled: true, weight: 1 };
+      const documentHeavy = triageCase(catalog.events[0], catalog, { ...DEFAULT, type: "triage", triageSignals: signals }).score;
+      signals.supportingDocuments.weight = 1;
+      signals.collectionDiversity.weight = 5;
+      const diversityHeavy = triageCase(catalog.events[0], catalog, { ...DEFAULT, type: "triage", triageSignals: signals }).score;
+      return JSON.stringify({ documentHeavy, diversityHeavy });
+    })()
+  `, context));
+
+  assert.ok(Math.abs(scores.documentHeavy - 88.8889) < 0.001);
+  assert.ok(Math.abs(scores.diversityHeavy - 44.4444) < 0.001);
+});
+
+test("triage missing values lower certainty without silently scoring as zero evidence", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    (() => {
+      const event = { id: "sparse", title: "Sparse case", eventType: "sighting", startDate: "2001-02-03", datePrecision: "day", titleReviewStatus: "reviewed" };
+      const catalog = { documents: [], entities: [], edges: [], duplicateCandidates: [], events: [event] };
+      const candidate = triageCase(event, catalog, { ...DEFAULT, type: "triage", triageSignals: triageSignalsForProfile("evidence-rich") });
+      return JSON.stringify({ score: candidate.score, certainty: candidate.certainty, knownWeight: candidate.knownWeight, totalWeight: candidate.totalWeight, components: candidate.components });
+    })()
+  `, context));
+
+  assert.equal(result.score, 100, "the one known positive signal should retain its value");
+  assert.equal(result.knownWeight, 1);
+  assert.equal(result.totalWeight, 12);
+  assert.ok(Math.abs(result.certainty - 100 / 12) < 0.001);
+  assert.equal(result.components.find(component => component.id === "supportingDocuments").known, false);
+  assert.equal(result.components.find(component => component.id === "mappedLocation").known, false);
+});
+
+test("triage marks identity ambiguity unknown when the duplicate catalog is truncated", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    (() => {
+      const event = {
+        id: "case-1", title: "Identity case", eventType: "sighting", startDate: "2001-02-03", datePrecision: "day",
+        titleReviewStatus: "reviewed", documentIds: ["doc-1"], entityIds: ["entity-1"], evidence: [{ documentId: "doc-1", excerpt: "Evidence" }]
+      };
+      const catalog = {
+        counts: { possibleDuplicates: 2 }, documents: [{ id: "doc-1", source: "One" }],
+        entities: [{ id: "entity-1", name: "Omitted candidate", category: "person" }], edges: [],
+        duplicateCandidates: [{ left: { name: "Other A" }, right: { name: "Other B" } }], events: [event]
+      };
+      const candidate = triageCase(event, catalog, { ...DEFAULT, type: "triage", triageSignals: triageSignalsForProfile("needs-follow-up") });
+      return JSON.stringify({ certainty: candidate.certainty, component: candidate.components.find(item => item.id === "identityAmbiguity") });
+    })()
+  `, context));
+
+  assert.equal(result.component.known, false);
+  assert.equal(result.component.ratio, null);
+  assert.match(result.component.detail, /publishes 1 of 2 possible pairs/);
+  assert.equal(result.certainty, 60);
+});
+
+test("triage metadata gaps use excerpts from the selected collection scope", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    (() => {
+      const event = {
+        id: "case-1", title: "Scoped case", eventType: "sighting", startDate: "2001-02-03", datePrecision: "day",
+        titleReviewStatus: "reviewed", documentIds: ["selected-doc", "other-doc"], entityIds: ["entity-1"],
+        evidence: [{ documentId: "other-doc", excerpt: "Excerpt outside the selected collection" }]
+      };
+      const catalog = {
+        counts: { possibleDuplicates: 0 },
+        documents: [{ id: "selected-doc", source: "Selected" }, { id: "other-doc", source: "Other" }],
+        entities: [{ id: "entity-1", name: "Entity", category: "person" }], edges: [], duplicateCandidates: [], events: [event]
+      };
+      const config = { ...DEFAULT, type: "triage", allSources: false, sources: ["Selected"], triageSignals: triageSignalsForProfile("needs-follow-up") };
+      const candidate = triageCase(event, catalog, config);
+      return JSON.stringify({ evidence: candidate.evidence, component: candidate.components.find(item => item.id === "metadataGaps") });
+    })()
+  `, context));
+
+  assert.deepEqual(result.evidence, []);
+  assert.equal(result.component.numerator, 1);
+  assert.match(result.component.detail, /1 of 5 follow-up checks flagged/);
+});
+
+test("applying a triage profile closes a stale open case inspector", () => {
+  const elements = { builderView: new FakeElement(), inspector: new FakeElement() };
+  elements.inspector.classList.add("has-selection");
+  const document = { querySelector: selector => elements[selector.slice(1)], querySelectorAll: () => [] };
+  const context = vm.createContext({ document, location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  vm.runInContext(`
+    state.config = { ...DEFAULT, type: "triage", triageCaseId: "case-1", triageSignals: triageSignalsForProfile("evidence-rich") };
+    state.selected = { event: { id: "case-1" } };
+    persistHash = () => {};
+    renderControls = () => {};
+    commitConfig = () => {};
+    toast = () => {};
+    applyTriageProfile("needs-follow-up");
+  `, context);
+
+  const stateSnapshot = JSON.parse(vm.runInContext("JSON.stringify({ selected: state.selected, config: state.config })", context));
+  assert.equal(elements.builderView.classList.contains("inspector-collapsed"), true);
+  assert.equal(elements.inspector.classList.contains("has-selection"), false);
+  assert.equal(stateSnapshot.selected, null);
+  assert.equal(stateSnapshot.config.triageCaseId, "");
+  assert.equal(stateSnapshot.config.triageProfile, "needs-follow-up");
+});
+
+test("triage rows use the compact grid before the mobile breakpoint", () => {
+  const styles = fs.readFileSync("styles.css", "utf8");
+  assert.match(styles, /@media \(max-width: 960px\)[\s\S]*?\.triage-case-open \{ grid-template-columns: 28px minmax\(0, 1fr\) 64px; \}/);
+  assert.match(styles, /@media \(max-width: 960px\)[\s\S]*?\.triage-case-open > span\[aria-hidden\] \{ display: none; \}/);
+  assert.match(styles, /@media \(max-width: 960px\)[\s\S]*?\.triage-case-certainty \{ grid-column: 2 \/ -1; text-align: left; \}/);
+});
+
+test("triage ordering uses stable title and case-ID tie breakers", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const orders = JSON.parse(vm.runInContext(`
+    (() => {
+      const base = { eventType: "sighting", startDate: "2000-01-01", datePrecision: "day", titleReviewStatus: "reviewed", documentIds: [], entityIds: [], evidence: [] };
+      const events = [
+        { ...base, id: "case-b", title: "Same" },
+        { ...base, id: "case-z", title: "Zulu" },
+        { ...base, id: "case-a", title: "Same" },
+        { ...base, id: "case-alpha", title: "Alpha" }
+      ];
+      const catalog = { documents: [], entities: [], edges: [], duplicateCandidates: [], events };
+      const config = { ...DEFAULT, type: "triage", triageSort: "score", triageDirection: "desc", triageSignals: triageSignalsForProfile("evidence-rich") };
+      const first = triageCandidates(catalog, config).map(candidate => candidate.event.id);
+      catalog.events.reverse();
+      const reversedInput = triageCandidates(catalog, config).map(candidate => candidate.event.id);
+      return JSON.stringify({ first, reversedInput });
+    })()
+  `, context));
+
+  assert.deepEqual(orders.first, ["case-alpha", "case-a", "case-b", "case-z"]);
+  assert.deepEqual(orders.reversedInput, orders.first);
+});
+
+test("triage priority ties prefer candidates with more known scoring data", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const order = JSON.parse(vm.runInContext(`
+    (() => {
+      const events = [
+        { id: "sparse", title: "Alpha", eventType: "sighting", startDate: "2000-01-01", datePrecision: "day", titleReviewStatus: "reviewed" },
+        { id: "complete", title: "Zulu", eventType: "sighting", startDate: "2000-01-01", datePrecision: "day", titleReviewStatus: "reviewed", documentIds: ["doc-1", "doc-2", "doc-3"], entityIds: ["person", "place", "agency", "program"], evidence: [{ documentId: "doc-1", excerpt: "One" }, { documentId: "doc-2", excerpt: "Two" }, { documentId: "doc-3", excerpt: "Three" }] }
+      ];
+      const catalog = {
+        documents: [{ id: "doc-1", source: "One" }, { id: "doc-2", source: "Two" }, { id: "doc-3", source: "Three" }],
+        entities: [
+          { id: "person", name: "Person", category: "person" },
+          { id: "place", name: "Place", category: "location", geo: { lat: 1, lon: 1 } },
+          { id: "agency", name: "Agency", category: "government_agency" },
+          { id: "program", name: "Program", category: "program" }
+        ],
+        edges: [{ source: "person", target: "agency", relationship: "affiliated_with" }, { source: "agency", target: "program", relationship: "investigated" }],
+        duplicateCandidates: [], counts: { possibleDuplicates: 0 }, events
+      };
+      return JSON.stringify(triageCandidates(catalog, { ...DEFAULT, type: "triage", triageSort: "score", triageDirection: "desc", triageSignals: triageSignalsForProfile("evidence-rich") }).map(candidate => candidate.event.id));
+    })()
+  `, context));
+  assert.deepEqual(order, ["complete", "sparse"]);
+});
+
+test("triage subtitle explains the candidate pool, active weights, and certainty", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const subtitle = vm.runInContext('triageSubtitle({ ...DEFAULT, triageSignals: triageSignalsForProfile("evidence-rich") })', context);
+  assert.match(subtitle, /^Published event records ranked by Evidence rich:/);
+  assert.match(subtitle, /supporting documents \(3×\)/);
+  assert.match(subtitle, /source excerpts \(2×\)/);
+  assert.match(subtitle, /Unknown inputs lower certainty, not priority\.$/);
+});
+
+test("paragraphs keep a readable maximum line length", () => {
+  const styles = fs.readFileSync("styles.css", "utf8");
+  assert.match(styles, /p \{ max-width: 768px; \}/);
+});
+
+test("stage actions do not wrap or compress the fullscreen square", () => {
+  const styles = fs.readFileSync("styles.css", "utf8");
+  assert.match(styles, /\.stage-tools \{[^}]*flex: 0 0 auto;/);
+  assert.match(styles, /\.stage-tools \.button \{[^}]*white-space: nowrap;/);
+  assert.match(styles, /\.fullscreen-button \{[^}]*flex: 0 0 34px;[^}]*width: 34px;[^}]*height: 34px;/);
+  assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.fullscreen-button \{[^}]*flex-basis: 42px;[^}]*width: 42px;/);
+});
+
+test("triage configuration survives deterministic URL round trips", () => {
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  const location = { hash: "" };
+  const context = vm.createContext({
+    location,
+    history: { replaceState(_state, _title, hash) { location.hash = hash; } },
+    URLSearchParams,
+    btoa: value => Buffer.from(value, "binary").toString("base64"),
+    atob: value => Buffer.from(value, "base64").toString("binary"),
+    escape,
+    unescape,
+    encodeURIComponent,
+    decodeURIComponent
+  });
+  vm.runInContext(source, context);
+  vm.runInContext(`
+    state.config = presetConfig("default", "triage");
+    state.config.triageSignals.supportingDocuments = { enabled: true, weight: 4 };
+    state.config.triageSignals.mappedLocation = { enabled: false, weight: 2 };
+    state.config.triageProfile = "custom";
+    state.config.triageSort = "certainty";
+    state.config.triageDirection = "asc";
+    persistHash();
+  `, context);
+
+  const restoredContext = vm.createContext({
+    location: { hash: location.hash }, URLSearchParams,
+    atob: value => Buffer.from(value, "base64").toString("binary"),
+    escape,
+    decodeURIComponent
+  });
+  vm.runInContext(source, restoredContext);
+  const restored = JSON.parse(vm.runInContext("JSON.stringify(state.config)", restoredContext));
+  const exported = JSON.parse(vm.runInContext("JSON.stringify(triageConfigurationExport())", restoredContext));
+
+  assert.equal(restored.type, "triage");
+  assert.equal(restored.triageProfile, "custom");
+  assert.deepEqual(restored.triageSignals.supportingDocuments, { enabled: true, weight: 4 });
+  assert.deepEqual(restored.triageSignals.mappedLocation, { enabled: false, weight: 2 });
+  assert.equal(restored.triageSort, "certainty");
+  assert.equal(restored.triageDirection, "asc");
+  assert.deepEqual(exported.signals.map(signal => signal.id), JSON.parse(vm.runInContext("JSON.stringify(TRIAGE_SIGNALS.map(signal => signal.id))", restoredContext)));
+});
+
 test("pre-adjustment saved views migrate prominence metrics across entity graph types", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
