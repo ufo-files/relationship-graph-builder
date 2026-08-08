@@ -407,7 +407,7 @@ def temporal_candidates(segments: list[str], metadata: dict, document_id: str) -
                 event_type = next((name for name, pattern in type_patterns if pattern.search(type_context)), "reported_event")
                 events.append({"id": stable_id("event", f"{document_id}|{index}|{value}|{event_type}"),
                                "title": segment[:140], "eventType": event_type, "startDate": value, "endDate": None,
-                               "datePrecision": "day", "confidence": confidence, "documentIds": [document_id],
+                               "datePrecision": "day", "confidence": confidence, "mentionCount": 1, "documentIds": [document_id],
                                "evidence": [{"documentId": document_id, "segment": index, "excerpt": segment[:280]}]})
     return max(document_dates, key=lambda item: item["confidence"], default=None), events, review
 
@@ -431,6 +431,7 @@ def merge_events(events: list[dict]) -> list[dict]:
             if evidence not in match["evidence"] and len(match["evidence"]) < 5:
                 match["evidence"].append(evidence)
         match["documentCount"] = len(match["documentIds"])
+        match["mentionCount"] = match.get("mentionCount", 1) + event.get("mentionCount", 1)
         match["confidence"] = round(min(0.98, max(match["confidence"], event["confidence"]) + 0.02), 3)
     return merged
 
@@ -450,6 +451,7 @@ def curated_events(path: Path, document_ids: dict[str, str], date_review: list[d
         excerpt = clean_space(str(item.get("evidence", "")))[:280]
         supporting_ids = {document_id}
         supporting_evidence = [{"documentId": document_id, "excerpt": excerpt}]
+        supporting_mentions = 0
         match_terms = [comparison_key(term) for term in item.get("matchTerms", [])]
         match_kinds = set(item.get("matchCandidateKinds", ["event_date", "unknown", "referenced_document_date"]))
         if match_terms:
@@ -462,13 +464,13 @@ def curated_events(path: Path, document_ids: dict[str, str], date_review: list[d
                     if (candidate.get("value") == date and candidate.get("kind") in match_kinds
                             and all(term in context for term in match_terms)):
                         supporting_ids.add(candidate_document_id)
+                        supporting_mentions += 1
                         if len(supporting_evidence) < 5:
                             supporting_evidence.append({
                                 "documentId": candidate_document_id,
                                 **({"segment": candidate["segment"]} if "segment" in candidate else {}),
                                 "excerpt": clean_space(candidate.get("evidence", ""))[:280],
                             })
-                        break
         published.append({
             "id": stable_id("event", f"curated|{source_path}|{date}|{item['eventType']}"),
             "title": item["title"],
@@ -477,6 +479,7 @@ def curated_events(path: Path, document_ids: dict[str, str], date_review: list[d
             "endDate": None,
             "datePrecision": "day",
             "confidence": 0.99,
+            "mentionCount": max(1, supporting_mentions),
             "reviewStatus": "curated",
             "documentIds": sorted(supporting_ids),
             "evidence": supporting_evidence,
@@ -496,6 +499,7 @@ def overlay_curated_events(extracted: list[dict], reviewed: list[dict]) -> list[
                 if evidence not in curated["evidence"] and len(curated["evidence"]) < 5:
                     curated["evidence"].append(evidence)
             extracted.remove(event)
+        curated["mentionCount"] = max(curated.get("mentionCount", 1), sum(event.get("mentionCount", 1) for event in matches))
         extracted.append(curated)
     return extracted
 

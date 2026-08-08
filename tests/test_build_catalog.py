@@ -154,6 +154,7 @@ class ClassificationTests(unittest.TestCase):
 
             self.assertEqual(events[0]["documentIds"], ["doc-source", "doc-support"])
             self.assertEqual(events[0]["evidence"][1]["segment"], 2)
+            self.assertEqual(events[0]["mentionCount"], 1)
 
     def test_curated_milestone_replaces_matching_extraction(self):
         extracted = [{"id": "auto", "title": "Raw OCR", "startDate": "2017-12-16",

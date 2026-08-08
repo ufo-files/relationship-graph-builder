@@ -607,7 +607,7 @@ test("map and timeline expose relationship controls", () => {
 
 test("timeline defaults to evidence-backed event dates instead of cataloging time", () => {
   const source = fs.readFileSync("app.js", "utf8");
-  assert.match(source, /timeline: \{ timelineRole: "event", x: "startDate", y: "timelineLane", size: "documentCount"[^\n]+relationshipLayer: "always"/);
+  assert.match(source, /timeline: \{ timelineRole: "event", x: "startDate", y: "mentionRank", size: "documentCount"[^\n]+relationshipLayer: "always"/);
   assert.match(source, /title = config\.timelineRole === "event" \? "Event Sequence"/);
   assert.match(source, /state\.config\.timelineRole === "event" && state\.config\.relationshipLayer !== "off"/);
   assert.match(source, /const shared = \(item\.entityIds \|\| \[\]\)\.filter/);
@@ -618,7 +618,12 @@ test("timeline defaults to evidence-backed event dates instead of cataloging tim
   assert.match(source, /\["createdAt", "documentDate", "startDate"\]\.includes\(xKey\)/);
   assert.match(source, /labels: "top", limit: 500/);
   assert.match(source, /const topLabelIds = new Set\(\[\.\.\.data\]/);
-  assert.match(source, /state\.config\.timelineRole === "event" \? \[1, 7\]/);
+  assert.match(source, /item\.mentionRank = index \+ 1/);
+  assert.match(source, /mentionCount: "Event mentions"/);
+  assert.match(source, /mentionRank: "Mention rank"/);
+  assert.match(source, /yKey === "mentionRank" \? Math\.round\(rawValue\) : rawValue/);
+  assert.match(source, /\[item\.mentionRank, "mention rank"\], \[item\.mentionCount, "event mentions"\]/);
+  assert.match(source, /\["timelineLane", "mentionCount"\]\.includes\(config\.y\)\) config\.y = "mentionRank"/);
 });
 
 test("README screenshots capture the Far Side during its foreground transit", () => {

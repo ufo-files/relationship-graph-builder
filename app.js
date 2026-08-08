@@ -11,7 +11,7 @@ const LABELS = {
   inflationRate: "Mention adjustment", documentInflationRate: "Potential prominence inflation", inflationRisk: "Prominence inflation risk", inflatedMentionCount: "Adjusted mentions", inflatedDocumentCount: "Adjusted documents",
   classificationConfidence: "Classification confidence", extractionConfidence: "Extraction confidence",
   words: "Words", documents: "Documents", segments: "Segments", bytes: "Source bytes",
-  createdAt: "Cataloged at", documentDate: "Document date", startDate: "Event date", confidence: "Confidence", timelineLane: "Event sequence", durationMs: "Duration", source: "Collection", format: "Format",
+  createdAt: "Cataloged at", documentDate: "Document date", startDate: "Event date", confidence: "Confidence", mentionCount: "Event mentions", mentionRank: "Mention rank", durationMs: "Duration", source: "Collection", format: "Format",
   entity: "Entities", document: "Transcript files", name: "Name", title: "Title",
   category: "Entity type", reviewStatus: "Review status", engine: "Engine", path: "Path",
   table: "Table", collection: "Collections", shared_entities: "Shared entities"
@@ -96,7 +96,7 @@ const VIEW_DEFAULTS = {
   book: { size: "contextAdjustedMentions", color: "intensity", labels: "all", limit: 20 },
   document: { size: "words", color: "source", labels: "top", documentSearch: "" },
   bars: { aggregation: "source", y: "words", color: "intensity" },
-  timeline: { timelineRole: "event", x: "startDate", y: "timelineLane", size: "documentCount", color: "eventType", categories: ["date"], labels: "top", limit: 500, relationshipLayer: "always" },
+  timeline: { timelineRole: "event", x: "startDate", y: "mentionRank", size: "documentCount", color: "eventType", categories: ["date"], labels: "top", limit: 500, relationshipLayer: "always" },
   matrix: { matrixColumns: "category", color: "intensity" },
   table: { tableRole: "entity", tableColumns: ["name", "category", "mentions", "documentCount", "sourceCount"], tableSort: "mentions", tableDirection: "desc", tableSearch: "", limit: 60 }
 };
@@ -141,6 +141,7 @@ function loadConfig() {
       const saved = JSON.parse(decodeURIComponent(escape(atob(param))));
       if (saved.allSources === undefined) saved.allSources = !saved.sources?.length;
       const config = { ...DEFAULT, ...saved };
+      if (config.type === "timeline" && config.timelineRole === "event" && ["timelineLane", "mentionCount"].includes(config.y)) config.y = "mentionRank";
       config.moonTransitSeconds = Math.min(10, Math.max(2, Number(config.moonTransitSeconds) || DEFAULT.moonTransitSeconds));
       if ((Number(saved.configVersion) || 0) < CONFIG_VERSION) migrateEntityProminenceConfig(config);
       if (saved.matrixColumns === "entity" && config.type !== "matrix") config.matrixColumns = DEFAULT.matrixColumns;
@@ -453,7 +454,7 @@ function renderControls() {
   } else if (state.config.type === "bars") {
     roles = controlSelect("aggregation", "Group by", [{ value: "entity", label: "Entities" }, { value: "source", label: "Collection" }, { value: "format", label: "Transcript format" }]) + controlSelect("y", "Measure", state.config.aggregation === "entity" ? numericEntity : ["words", "documents", "bytes"]);
   } else if (state.config.type === "timeline") {
-    const eventFields = ["timelineLane"];
+    const eventFields = ["mentionRank"];
     roles = controlSelect("timelineRole", "Marks", [{ value: "event", label: "Evidence-backed events" }, { value: "document", label: "Dated source documents" }, { value: "entity", label: "Entities" }])
       + controlSelect("x", "X axis", [{ value: state.config.timelineRole === "event" ? "startDate" : "documentDate", label: state.config.timelineRole === "event" ? "Event date" : "Document date" }])
       + controlSelect("y", "Y axis", state.config.timelineRole === "event" ? eventFields : state.config.timelineRole === "entity" ? numericEntity : numericDoc);
@@ -590,7 +591,7 @@ function updateConfig(key, value, rerenderControls = false) {
   }
   if (key === "timelineRole") {
     state.config.x = value === "event" ? "startDate" : "documentDate";
-    state.config.y = value === "event" ? "timelineLane" : value === "entity" ? "contextAdjustedMentions" : "words";
+    state.config.y = value === "event" ? "mentionRank" : value === "entity" ? "contextAdjustedMentions" : "words";
     state.config.size = value === "event" ? "documentCount" : value === "entity" ? "independentDocumentCount" : "words";
     state.config.color = value === "event" ? "eventType" : value === "entity" ? "category" : "source";
     if (value === "event") state.config.relationshipLayer = "always";
@@ -840,13 +841,16 @@ function addTitle(node, text) {
   node.append(el("title", {}, text));
 }
 
-function drawAxes(svg, width, height, xKey, yKey, xExtent, yExtent, capped = {}) {
+function drawAxes(svg, width, height, xKey, yKey, xExtent, yExtent, capped = {}, ascendingDown = false) {
   const margin = { left: 58, right: 28, top: 22, bottom: 48 };
-  const yIntervals = yKey === "timelineLane" ? 6 : 4;
+  const yIntervals = 4;
   for (let i = 0; i <= yIntervals; i++) {
     const y = margin.top + i * (height - margin.top - margin.bottom) / yIntervals;
     svg.append(el("line", { x1: margin.left, y1: y, x2: width - margin.right, y2: y, class: "grid-line" }));
-    const value = yExtent[1] - i * (yExtent[1] - yExtent[0]) / yIntervals;
+    const rawValue = ascendingDown
+      ? yExtent[0] + i * (yExtent[1] - yExtent[0]) / yIntervals
+      : yExtent[1] - i * (yExtent[1] - yExtent[0]) / yIntervals;
+    const value = yKey === "mentionRank" ? Math.round(rawValue) : rawValue;
     const tick = capped.y && i === 0 ? `${formatNumber(value)}+` : formatNumber(value);
     svg.append(el("text", { x: margin.left - 8, y: y + 3, "text-anchor": "end", class: "axis-label" }, tick));
   }
@@ -1598,17 +1602,20 @@ function renderTimeline() {
   const data = candidates.sort((a, b) => state.config.timelineRole === "event"
     ? new Date(a.startDate) - new Date(b.startDate) || a.title.localeCompare(b.title)
     : (b[state.config.y] || 0) - (a[state.config.y] || 0)).slice(0, state.config.limit);
-  if (state.config.timelineRole === "event") data.forEach((item, index) => { item.timelineLane = index % 7 + 1; });
   if (!data.length) return showEmpty();
+  if (state.config.timelineRole === "event") {
+    [...data].sort((a, b) => b.mentionCount - a.mentionCount || b.documentCount - a.documentCount || b.confidence - a.confidence)
+      .forEach((item, index) => { item.mentionRank = index + 1; });
+  }
   const timelineDate = item => item.startDate || item.documentDate;
   const dates = data.map(item => new Date(timelineDate(item)).getTime());
   const xExtent = [Math.min(...dates), Math.max(...dates) + 1];
-  const yExtent = state.config.timelineRole === "event" ? [1, 7] : valueExtent(data, state.config.y);
+  const yExtent = state.config.timelineRole === "event" ? [1, data.length] : valueExtent(data, state.config.y);
   const sizeExtent = valueExtent(data, state.config.size);
-  const margin = drawAxes(svg, width, height, state.config.timelineRole === "event" ? "startDate" : "documentDate", state.config.y, xExtent, yExtent);
+  const margin = drawAxes(svg, width, height, state.config.timelineRole === "event" ? "startDate" : "documentDate", state.config.y, xExtent, yExtent, {}, state.config.timelineRole === "event");
   const positionFor = item => ({
     x: clampedScale(new Date(timelineDate(item)).getTime(), xExtent, [margin.left, width - margin.right]),
-    y: clampedScale(item[state.config.y], yExtent, [height - margin.bottom, margin.top])
+    y: clampedScale(item[state.config.y], yExtent, state.config.timelineRole === "event" ? [margin.top, height - margin.bottom] : [height - margin.bottom, margin.top])
   });
   const eventEntityNames = new Map((state.catalog.entities || []).map(entity => [entity.id, entity.name]));
   let relationshipLayer = null;
@@ -1669,7 +1676,9 @@ function renderTimeline() {
     svg.append(relationshipLayer);
   }
   const topLabelIds = new Set([...data]
-    .sort((a, b) => (b[state.config.size] || 0) - (a[state.config.size] || 0) || b.confidence - a.confidence)
+    .sort((a, b) => state.config.timelineRole === "event"
+      ? a.mentionRank - b.mentionRank
+      : (b[state.config.size] || 0) - (a[state.config.size] || 0) || b.confidence - a.confidence)
     .slice(0, 12)
     .map(item => item.id));
   data.forEach((item, index) => {
@@ -1977,7 +1986,7 @@ function inspectDocument(item) {
 }
 
 function inspectEvent(item) {
-  showInspector(item.eventType, item.title, [[new Date(item.startDate).toLocaleDateString(), "event date"], [`${Math.round(item.confidence * 100)}%`, "confidence"], [item.documentIds.length, "documents"]], item.evidence, "Includes explicit incident dates and source-backed disclosure, hearing, program, and official-report milestones. FOIA processing and cataloging dates remain excluded.");
+  showInspector(item.eventType, item.title, [[new Date(item.startDate).toLocaleDateString(), "event date"], [item.mentionRank, "mention rank"], [item.mentionCount, "event mentions"], [item.documentIds.length, "documents"], [`${Math.round(item.confidence * 100)}%`, "confidence"]], item.evidence, "Includes explicit incident dates and source-backed disclosure, hearing, program, and official-report milestones. FOIA processing and cataloging dates remain excluded.");
 }
 
 function inspectMatrix(item) {
