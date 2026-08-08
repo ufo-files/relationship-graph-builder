@@ -6,6 +6,8 @@ const DOSSIER_SCHEMA = "ufo-files-case-dossier/v1";
 const PUBLIC_DOSSIER_SCHEMA = "ufo-files-public-dossier/v1";
 const DOSSIER_STORAGE_KEY = "ufo-files-case-dossier";
 const DOSSIER_RECORD_TYPES = ["documents", "events", "entities", "relationships"];
+const DOSSIER_RECORD_SINGULAR = { documents: "document", events: "event", entities: "entity", relationships: "relationship" };
+const DOSSIER_RECORD_LABEL = { documents: "Document", events: "Event", entities: "Entity", relationships: "Relationship" };
 const DOSSIER_STANCES = ["supporting", "contrary", "context"];
 const ENTITY_CATEGORIES = ["person", "government_agency", "organization", "location", "program", "subject", "book", "date"];
 const LABELS = {
@@ -159,7 +161,7 @@ const ENTITY_PRESET_DEFAULTS = {
   matrix: { matrixColumns: "entity" },
   table: { tableRole: "entity" }
 };
-const state = { catalog: null, config: loadConfig(), selected: null, documentById: new Map(), dossier: null, inspectorDossierSelection: null, dossierImportMessage: "" };
+const state = { catalog: null, config: loadConfig(), selected: null, documentById: new Map(), dossier: null, dossierIsPublicReference: false, inspectorDossierSelection: null, dossierImportMessage: "" };
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 
@@ -426,6 +428,20 @@ function dossierCatalogSnapshot(catalog = state.catalog) {
   };
 }
 
+function normalizeDossierGraphConfiguration(value) {
+  const supplied = value && typeof value === "object" && !Array.isArray(value) ? value : {};
+  const config = dossierClone(DEFAULT);
+  Object.keys(DEFAULT).forEach(key => {
+    if (Object.hasOwn(supplied, key)) config[key] = dossierClone(supplied[key]);
+  });
+  if (!TYPES.some(type => type.id === config.type)) config.type = DEFAULT.type;
+  ["categories", "sources", "tableColumns"].forEach(key => {
+    if (!Array.isArray(config[key])) config[key] = dossierClone(DEFAULT[key]);
+  });
+  config.triageSignals = normalizeTriageSignals(config.triageSignals);
+  return config;
+}
+
 function emptyDossier(catalog = state.catalog, config = state.config, timestamp = new Date().toISOString()) {
   return {
     schema: DOSSIER_SCHEMA,
@@ -433,13 +449,22 @@ function emptyDossier(catalog = state.catalog, config = state.config, timestamp 
     createdAt: timestamp,
     updatedAt: timestamp,
     catalog: dossierCatalogSnapshot(catalog),
-    graphConfiguration: dossierClone(config || {}),
+    graphConfiguration: normalizeDossierGraphConfiguration(config),
     scope: "",
     researchQuestion: "",
     records: { documents: [], events: [], entities: [], relationships: [] },
     annotations: { unresolvedQuestions: [], metadataGaps: [], followUpTasks: [] },
     review: { status: "unreviewed", rationale: "" }
   };
+}
+
+function trustedDossierSourceURL(value) {
+  try {
+    const url = new URL(value);
+    return url.origin === "https://github.com" && /^\/ufo-files\/machine-data\/blob\/[^/]+\/.+/.test(url.pathname);
+  } catch (_) {
+    return false;
+  }
 }
 
 function validateDossierImport(value) {
@@ -460,7 +485,7 @@ function validateDossierImport(value) {
       if (!record || typeof record !== "object" || typeof record.id !== "string" || !record.id) errors.push(`records.${type}[${index}] requires a stable ID.`);
       if (!DOSSIER_STANCES.includes(record?.stance)) errors.push(`records.${type}[${index}] has an invalid evidence classification.`);
       if (typeof record?.addedAt !== "string" || Number.isNaN(Date.parse(record.addedAt))) errors.push(`records.${type}[${index}] requires an addedAt timestamp.`);
-      if (!Array.isArray(record?.sourceLinks) || record.sourceLinks.some(link => !link || typeof link.documentId !== "string" || typeof link.url !== "string" || !link.url)) errors.push(`records.${type}[${index}] requires sourceLinks with documentId and URL values.`);
+      if (!Array.isArray(record?.sourceLinks) || record.sourceLinks.some(link => !link || typeof link.documentId !== "string" || !trustedDossierSourceURL(link.url))) errors.push(`records.${type}[${index}] requires trusted HTTPS machine-data source links.`);
     });
   });
   if (!value.annotations || typeof value.annotations !== "object" || ["unresolvedQuestions", "metadataGaps", "followUpTasks"].some(key => !Array.isArray(value.annotations[key]))) errors.push("Annotation lists are invalid.");
@@ -473,7 +498,9 @@ function loadDossier(storage = typeof localStorage === "undefined" ? null : loca
   if (!storage) return null;
   try {
     const parsed = JSON.parse(storage.getItem(DOSSIER_STORAGE_KEY));
-    return validateDossierImport(parsed).valid ? parsed : null;
+    if (!validateDossierImport(parsed).valid) return null;
+    parsed.graphConfiguration = normalizeDossierGraphConfiguration(parsed.graphConfiguration);
+    return parsed;
   } catch (_) {
     return null;
   }
@@ -481,7 +508,8 @@ function loadDossier(storage = typeof localStorage === "undefined" ? null : loca
 
 function persistDossier(dossier, storage = typeof localStorage === "undefined" ? null : localStorage, timestamp = new Date().toISOString()) {
   dossier.updatedAt = timestamp;
-  if (storage) storage.setItem(DOSSIER_STORAGE_KEY, JSON.stringify(dossier));
+  const publicReference = dossier === state.dossier && state.dossierIsPublicReference;
+  if (storage && !publicReference) storage.setItem(DOSSIER_STORAGE_KEY, JSON.stringify(dossier));
   return dossier;
 }
 
@@ -497,7 +525,7 @@ function uniqueSourceLinks(documentIds = []) {
 }
 
 function dossierRecord(type, item, labelText = "") {
-  const singular = type.replace(/s$/, "");
+  const singular = DOSSIER_RECORD_SINGULAR[type];
   const evidenceDocumentIds = (item.evidence || []).map(evidence => evidence.documentId);
   const documentIds = singular === "document"
     ? [item.id]
@@ -535,8 +563,6 @@ function toggleDossierSelection(selection, stance = "supporting", timestamp = ne
     const removeIds = new Set(selection.records.map(record => record.id));
     state.dossier.records[selection.type] = records.filter(record => !removeIds.has(record.id));
   } else {
-    state.dossier.catalog = dossierCatalogSnapshot();
-    state.dossier.graphConfiguration = dossierClone(state.config);
     const existing = new Set(records.map(record => record.id));
     selection.records.forEach(record => {
       if (!existing.has(record.id)) records.push({ ...record, stance, addedAt: timestamp });
@@ -556,7 +582,7 @@ function missingDossierRecords(dossier = state.dossier, catalog = state.catalog)
     entities: new Set((catalog.entities || []).map(record => record.id)),
     relationships: new Set((catalog.edges || []).map(relationshipStableId))
   };
-  const sources = new Set((catalog.sources || []).map(source => source.name));
+  const sources = new Set((catalog.sources || []).map(source => source.id));
   return DOSSIER_RECORD_TYPES.flatMap(type => dossier.records[type]
     .filter(record => type === "relationships" && record.relationship === "shared_entities"
       ? !sources.has(record.source) || !sources.has(record.target)
@@ -624,7 +650,7 @@ function dossierReport(dossier = state.dossier) {
     records.forEach(record => {
       const target = record.sourceLinks[0]?.url;
       const title = target ? `[${markdownText(record.label)}](${target})` : markdownText(record.label);
-      lines.push(`- ${title} — ${label(record.type.replace(/s$/, ""))}; stable ID \`${record.id.replaceAll("`", "")}\``);
+      lines.push(`- ${title} — ${DOSSIER_RECORD_LABEL[record.type]}; stable ID \`${record.id.replaceAll("`", "")}\``);
     });
     if (records.length) lines.push("");
   });
@@ -2482,7 +2508,7 @@ function renderDossier() {
       const missingRecord = missingKeys.has(`${record.type}|${record.id}`);
       const source = record.sourceLinks[0]?.url;
       return `<div class="dossier-record ${missingRecord ? "is-missing" : ""}" data-dossier-record="${escapeHTML(record.id)}" data-dossier-type="${record.type}">
-        <span><strong>${source ? `<a href="${escapeHTML(source)}" target="_blank" rel="noopener noreferrer">${escapeHTML(record.label)}</a>` : escapeHTML(record.label)}</strong><small>${escapeHTML(label(record.type.replace(/s$/, "")))} · ${escapeHTML(record.id)}${missingRecord ? " · Missing from current catalog" : ""}</small></span>
+        <span><strong>${source ? `<a href="${escapeHTML(source)}" target="_blank" rel="noopener noreferrer">${escapeHTML(record.label)}</a>` : escapeHTML(record.label)}</strong><small>${DOSSIER_RECORD_LABEL[record.type]} · ${escapeHTML(record.id)}${missingRecord ? " · Missing from current catalog" : ""}</small></span>
         <select aria-label="Evidence classification for ${escapeHTML(record.label)}" data-dossier-stance><option value="supporting" ${record.stance === "supporting" ? "selected" : ""}>Evidence for</option><option value="contrary" ${record.stance === "contrary" ? "selected" : ""}>Evidence against</option><option value="context" ${record.stance === "context" ? "selected" : ""}>Context only</option></select>
         <button class="button quiet" type="button" data-dossier-remove>Remove</button>
       </div>`;
@@ -2589,8 +2615,7 @@ function inspectCollectionEdge(edge, nodes) {
   const left = nodes.find(item => item.id === edge.source), right = nodes.find(item => item.id === edge.target);
   const names = edge.sharedEntities.slice(0, 8).map(entity => entity.name).join(", ");
   const remainder = Math.max(0, edge.sharedEntities.length - 8);
-  const dossierEdge = { ...edge, source: left?.name || edge.source, target: right?.name || edge.target };
-  showInspector("shared_entities", `${left?.name || "Collection"} ↔ ${right?.name || "Collection"}`, [[edge.evidenceCount, "shared entities"], [edge.documentCount, "documents"], [`${Math.round(edge.confidence * 100)}%`, "avg. classification"]], edge.evidence, `${names}${remainder ? `, and ${remainder} more` : ""}`, "", dossierSelection("relationships", dossierEdge, () => `${dossierEdge.source} ↔ ${dossierEdge.target}`));
+  showInspector("shared_entities", `${left?.name || "Collection"} ↔ ${right?.name || "Collection"}`, [[edge.evidenceCount, "shared entities"], [edge.documentCount, "documents"], [`${Math.round(edge.confidence * 100)}%`, "avg. classification"]], edge.evidence, `${names}${remainder ? `, and ${remainder} more` : ""}`, "", dossierSelection("relationships", edge, () => `${left?.name || edge.source} ↔ ${right?.name || edge.target}`));
 }
 
 function inspectGroup(item) {
@@ -3140,7 +3165,9 @@ async function importDossierFile(file) {
     const parsed = JSON.parse(await file.text());
     const validation = validateDossierImport(parsed);
     if (!validation.valid) throw new Error(validation.errors.join(" "));
+    parsed.graphConfiguration = normalizeDossierGraphConfiguration(parsed.graphConfiguration);
     state.dossier = sortedDossier(parsed);
+    state.dossierIsPublicReference = false;
     const missing = missingDossierRecords();
     state.dossierImportMessage = missing.length
       ? `Imported ${dossierRecordCount()} records. ${missing.length} record${missing.length === 1 ? " is" : "s are"} missing from the current catalog and remain flagged by stable ID.`
@@ -3172,7 +3199,8 @@ async function init() {
     state.catalog.documents.forEach(item => state.documentById.set(item.id, item));
     const sharedDossier = publicDossierFromHash();
     state.dossier = sharedDossier || loadDossier() || emptyDossier();
-    if (sharedDossier) state.dossierImportMessage = "Opened a public reference link. It contains catalog identifiers and graph configuration only; no analyst notes were shared.";
+    state.dossierIsPublicReference = Boolean(sharedDossier);
+    if (sharedDossier) state.dossierImportMessage = "Opened a temporary public reference. Your saved local dossier remains preserved; edits to this reference stay in this tab unless you export them.";
     updateDossierCount();
     $("#loadingState").remove();
     syncAutomaticTitle();
@@ -3229,7 +3257,7 @@ $("#shareDossier").addEventListener("click", async () => {
 $("#dossierImport").addEventListener("change", event => { const [file] = event.target.files; if (file) importDossierFile(file); event.target.value = ""; });
 $("#newDossier").addEventListener("click", () => {
   if (!confirm("Start a new local dossier? Export the current JSON first if you need a backup.")) return;
-  state.dossier = emptyDossier(); state.dossierImportMessage = ""; persistDossier(state.dossier, undefined, state.dossier.createdAt); renderDossier(); renderDossierCollector();
+  state.dossier = emptyDossier(); state.dossierIsPublicReference = false; state.dossierImportMessage = ""; persistDossier(state.dossier, undefined, state.dossier.createdAt); renderDossier(); renderDossierCollector();
 });
 $("#controlsButton").addEventListener("click", event => setMobileControls(event.currentTarget.getAttribute("aria-expanded") !== "true"));
 $("#fullScreenButton").addEventListener("click", toggleGraphFullScreen);

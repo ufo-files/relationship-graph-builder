@@ -1742,7 +1742,10 @@ test("inspector dossier toggles retain graph state and cover every public record
   assert.equal(result.afterAdd.graph, result.graphBefore);
   assert.equal(result.afterAdd.record.stance, "contrary");
   assert.equal(result.afterAdd.record.addedAt, "2026-01-03T00:00:00Z");
-  assert.deepEqual(result.afterAdd.snapshot, { type: "map", zoom: 2, categories: ["location"] });
+  assert.equal(result.afterAdd.snapshot.type, "map");
+  assert.equal(result.afterAdd.snapshot.zoom, 2);
+  assert.deepEqual(result.afterAdd.snapshot.categories, ["location"]);
+  assert.deepEqual(result.afterAdd.snapshot.sources, []);
   assert.equal(result.remaining, 0);
   assert.match(source, /inspectEntity[\s\S]*dossierSelection\("entities"/);
   assert.match(source, /inspectEdge[\s\S]*dossierSelection\("relationships"/);
@@ -1773,18 +1776,20 @@ test("public dossier links include only catalog identifiers and graph configurat
 
   assert.equal(result.payload.schema, "ufo-files-public-dossier/v1");
   assert.deepEqual(result.payload.records.entities, [{ id: "entity-1" }]);
-  assert.deepEqual(result.payload.graphConfiguration, { type: "network", relation: "investigated" });
+  assert.equal(result.payload.graphConfiguration.type, "network");
+  assert.equal(result.payload.graphConfiguration.relation, "investigated");
+  assert.deepEqual(result.payload.graphConfiguration.sources, []);
   assert.doesNotMatch(result.url, /SECRET|scope|researchQuestion|annotations|rationale|contrary|example\.test/i);
   assert.doesNotMatch(fs.readFileSync("app.js", "utf8").match(/async function exportCurrent\(\)[\s\S]*?\n\}/)?.[0] || "", /dossier|annotation|researchQuestion/);
 });
 
 test("dossier import validation rejects versions and reports stale stable IDs", () => {
-  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const context = vm.createContext({ location: { hash: "" }, URL, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
   vm.runInContext(source, context);
   const result = JSON.parse(vm.runInContext(`JSON.stringify((() => {
     const dossier = emptyDossier({ input: { revision: "old" } }, {}, "2026-01-02T00:00:00Z");
-    dossier.records.documents.push({ id: "present", label: "Present", stance: "supporting", addedAt: "2026-01-02T00:00:00Z", sourceLinks: [{ documentId: "present", url: "https://example.test/present" }] });
+    dossier.records.documents.push({ id: "present", label: "Present", stance: "supporting", addedAt: "2026-01-02T00:00:00Z", sourceLinks: [{ documentId: "present", url: "https://github.com/ufo-files/machine-data/blob/old/present.txt" }] });
     dossier.records.entities.push({ id: "removed", label: "Removed", stance: "context", addedAt: "2026-01-02T00:00:00Z", sourceLinks: [] });
     const catalog = { documents: [{ id: "present" }], events: [], entities: [], edges: [], sources: [] };
     const wrongVersion = { ...dossier, schema: "ufo-files-case-dossier/v2" };
@@ -1802,7 +1807,114 @@ test("dossier import validation rejects versions and reports stale stable IDs", 
   assert.deepEqual(result.missing, [{ type: "entities", id: "removed", label: "Removed" }]);
   assert.equal(result.exported.catalog.revision, "old");
   assert.equal(result.exported.records.documents[0].id, "present");
-  assert.equal(result.exported.records.documents[0].sourceLinks[0].url, "https://example.test/present");
+  assert.equal(result.exported.records.documents[0].sourceLinks[0].url, "https://github.com/ufo-files/machine-data/blob/old/present.txt");
+});
+
+test("loaded dossier graph configurations are normalized before rendering", () => {
+  const stored = new Map();
+  const storage = { getItem: key => stored.get(key) || null, setItem: (key, value) => stored.set(key, value) };
+  const context = vm.createContext({ location: { hash: "" }, URL, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  context.storage = storage;
+  const result = JSON.parse(vm.runInContext(`JSON.stringify((() => {
+    const dossier = emptyDossier(undefined, {}, "2026-01-02T00:00:00Z");
+    dossier.graphConfiguration = {};
+    storage.setItem(DOSSIER_STORAGE_KEY, JSON.stringify(dossier));
+    const loaded = loadDossier(storage);
+    return {
+      type: loaded.graphConfiguration.type,
+      categories: loaded.graphConfiguration.categories,
+      sources: loaded.graphConfiguration.sources,
+      title: dataAwareTitle(loaded.graphConfiguration)
+    };
+  })())`, context));
+
+  assert.equal(result.type, "scatter");
+  assert.deepEqual(result.categories, [
+    "person", "government_agency", "organization", "location", "program", "subject", "book", "date"
+  ]);
+  assert.deepEqual(result.sources, []);
+  assert.equal(typeof result.title, "string");
+  assert.ok(result.title.length > 0);
+});
+
+test("dossier imports reject untrusted source-link schemes and hosts", () => {
+  const context = vm.createContext({ location: { hash: "" }, URL, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`JSON.stringify((() => {
+    const dossier = emptyDossier(undefined, {}, "2026-01-02T00:00:00Z");
+    const record = { id: "doc-1", label: "Source", stance: "supporting", addedAt: "2026-01-02T00:00:00Z", sourceLinks: [] };
+    dossier.records.documents.push(record);
+    const validateWith = url => {
+      record.sourceLinks = [{ documentId: "doc-1", url }];
+      return validateDossierImport(dossier);
+    };
+    return {
+      javascript: validateWith("javascript:alert(1)"),
+      lookalike: validateWith("https://github.com.evil.test/ufo-files/machine-data/blob/rev/doc.txt"),
+      trusted: validateWith("https://github.com/ufo-files/machine-data/blob/rev/doc.txt")
+    };
+  })())`, context));
+
+  assert.equal(result.javascript.valid, false);
+  assert.equal(result.lookalike.valid, false);
+  assert.match(result.javascript.errors.join(" "), /trusted HTTPS machine-data source links/);
+  assert.equal(result.trusted.valid, true);
+});
+
+test("adding records retains the dossier's captured revision and graph configuration", () => {
+  const document = { querySelector: () => null, querySelectorAll: () => [] };
+  const context = vm.createContext({ document, location: { hash: "" }, URL, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`JSON.stringify((() => {
+    state.catalog = { schema: "catalog/v1", generatedAt: "2026-02-01T00:00:00Z", input: { revision: "current" }, documents: [], events: [], entities: [], edges: [], sources: [] };
+    state.config = { ...DEFAULT, type: "map" };
+    state.dossier = emptyDossier({ input: { revision: "original" } }, { ...DEFAULT, type: "timeline" }, "2026-01-02T00:00:00Z");
+    toggleDossierSelection({ type: "entities", records: [{ id: "entity-1", label: "Entity", stance: "supporting", addedAt: "", sourceLinks: [] }] }, "context", "2026-02-02T00:00:00Z");
+    return { revision: state.dossier.catalog.revision, type: state.dossier.graphConfiguration.type };
+  })())`, context));
+
+  assert.deepEqual(result, { revision: "original", type: "timeline" });
+});
+
+test("collection relationships keep stable endpoint IDs and display-name labels", () => {
+  const context = vm.createContext({ location: { hash: "" }, URL, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`JSON.stringify((() => {
+    const edge = { source: "src-left", target: "src-right", relationship: "shared_entities", evidence: [] };
+    return dossierRecord("relationships", edge, "Left collection ↔ Right collection");
+  })())`, context));
+
+  assert.equal(result.id, "src-left|shared_entities|src-right");
+  assert.equal(result.source, "src-left");
+  assert.equal(result.target, "src-right");
+  assert.equal(result.label, "Left collection ↔ Right collection");
+  assert.doesNotMatch(source.match(/function inspectCollectionEdge[\s\S]*?\n\}/)?.[0] || "", /source: left\?\.name|target: right\?\.name/);
+});
+
+test("temporary public dossiers cannot overwrite the saved local draft", () => {
+  const stored = new Map();
+  const localStorage = { getItem: key => stored.get(key) || null, setItem: (key, value) => stored.set(key, value) };
+  const context = vm.createContext({ localStorage, location: { hash: "" }, URL, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`JSON.stringify((() => {
+    const local = emptyDossier(undefined, {}, "2026-01-01T00:00:00Z");
+    local.scope = "Saved local work";
+    persistDossier(local, localStorage, "2026-01-02T00:00:00Z");
+    state.dossier = emptyDossier(undefined, {}, "2026-02-01T00:00:00Z");
+    state.dossier.scope = "Shared reference edit";
+    state.dossierIsPublicReference = true;
+    persistDossier(state.dossier, localStorage, "2026-02-02T00:00:00Z");
+    return JSON.parse(localStorage.getItem(DOSSIER_STORAGE_KEY));
+  })())`, context));
+
+  assert.equal(result.scope, "Saved local work");
+  assert.equal(result.updatedAt, "2026-01-02T00:00:00Z");
 });
 
 test("dossier reports are deterministic, neutral, source-linked, and revision-specific", () => {
@@ -1813,6 +1925,7 @@ test("dossier reports are deterministic, neutral, source-linked, and revision-sp
     const dossier = emptyDossier({ schema: "catalog/v1", generatedAt: "2026-01-01T00:00:00Z", input: { repository: "ufo-files/machine-data", revision: "fixed-revision" } }, { type: "timeline", limit: 12 }, "2026-01-02T00:00:00Z");
     dossier.researchQuestion = "What does the selected record establish?";
     dossier.records.events.push({ id: "event-b", label: "Selected event", stance: "supporting", addedAt: "2026-01-02T00:00:00Z", sourceLinks: [{ documentId: "doc-a", url: "https://github.com/ufo-files/machine-data/blob/fixed-revision/doc-a.txt" }] });
+    dossier.records.entities.push({ id: "entity-a", label: "Selected entity", stance: "context", addedAt: "2026-01-02T00:00:00Z", sourceLinks: [] });
     dossier.annotations.followUpTasks = ["Compare independent source records."];
     return [dossierReport(dossier), dossierReport(dossier)];
   })())`, context));
@@ -1822,6 +1935,8 @@ test("dossier reports are deterministic, neutral, source-linked, and revision-sp
   assert.match(reports[0], /Selection and classification do not establish the accuracy/i);
   assert.match(reports[0], /\[Selected event\]\(https:\/\/github\.com\/ufo-files\/machine-data\/blob\/fixed-revision\/doc-a\.txt\)/);
   assert.match(reports[0], /Source revision: `fixed-revision`/);
+  assert.match(reports[0], /Selected entity — Entity; stable ID/);
+  assert.doesNotMatch(reports[0], /— Entitie;/);
   assert.match(reports[0], /"type": "timeline"/);
 });
 
