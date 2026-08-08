@@ -58,9 +58,16 @@ These previews are regenerated from the latest machine-data catalog after every 
       <a href="assets/screenshots/table.png"><img src="assets/screenshots/table.png" alt="Table graph type screenshot" width="100%"></a>
     </td>
     <td width="50%" align="center">
+      <strong>Triage</strong><br>
+      <a href="assets/screenshots/triage.png"><img src="assets/screenshots/triage.png" alt="Triage graph type screenshot" width="100%"></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
       <strong>Far Side of the Moon</strong><br>
       <a href="assets/screenshots/far-side-moon.png"><img src="assets/screenshots/far-side-moon.png" alt="Far Side of the Moon map screenshot" width="100%"></a>
     </td>
+    <td width="50%"></td>
   </tr>
 </table>
 <!-- graph-screenshots:end -->
