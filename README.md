@@ -80,7 +80,7 @@ The builder asks for five decisions:
 2. **Data roles** — nodes/relationships or X and Y fields, depending on the shape.
 3. **Encoding** — size, monochrome value scales, and labels.
 4. **Refinement** — collections, entity types, confidence, evidence floor, and mark count.
-5. **Output** — a URL-addressable view, browser save, or presentation-ready PDF.
+5. **Output** — a URL-addressable view, browser save, presentation-ready PDF, or local case dossier.
 
 The default view is an ordinary builder configuration and uses the same rendering and data path as every saved view. Presets refine the currently selected graph type instead of replacing it: for example, applying Significant People to Network keeps the network layout and narrows its entities, while applying it to Map keeps the globe selected. Numeric scatter axes use a robust 95th-percentile cap only when the maximum is at least 50% beyond that cap; capped marks stay visible at the plot edge with a heavier outline and retain their exact values in the inspector and tooltip.
 
@@ -95,6 +95,42 @@ Every graph type exports the same presentation-ready PDF as a one-click download
 The Book type is a contiguous area view of titles explicitly identified in transcript text. The leading title keeps an upright 2:3 book-cover shape, while the remaining mention-weighted blocks flex to fill all available chart space. Their proportions favor near-square blocks for short titles and progressively wider blocks for longer titles so serif cover text wraps legibly. Title type scales with cell area, and cells too small for a complete title remain tooltip-only; shade is controlled independently by the selected prominence metric. Titles are extracted only from book, novel, or memoir cues; each mark opens its source evidence in the inspector.
 
 The Map type renders a rotatable Three.js globe with SVG country boundaries and location-entity nodes. A Moon sized proportionally to Earth follows a time-compressed display orbit at its mean physical distance while keeping its near side tidally locked toward Earth. Animation starts paused and is controlled by Play/Pause beside Export PDF; dragging rotates the complete Earth–Moon system independently. Graph Properties includes a 2–10 second Moon transit control. While any part of the Moon is inside the viewport, its pass is timed to the selected duration and Earth spin is slowed proportionally: 2 seconds retains normal Earth speed and 10 seconds uses 20% speed. Off-screen, Earth resumes a clearly visible 30-second revolution and the Moon completes the hidden half of its orbit in five seconds, bringing the next front- or far-side pass back promptly. The transition frame is clamped to the exact viewport entry boundary so the faster hidden travel cannot jump the Moon into the canvas. A distant telephoto camera outside the lunar orbit preserves Earth’s original centered map scale and keeps the Moon near its familiar apparent size: the Moon starts upper-right on the far side, transits behind Earth, and crosses in front of Earth on the near half-orbit. Whole-body Moon markers stay readable on the camera-facing lunar disk, while selenographic locations remain fixed to their actual surface coordinates. The evidence-backed Far Side of the Moon location is centered on the anti-Earth hemisphere at 0° latitude, 180° longitude, so its node appears during the Moon’s foreground pass and hides when that hemisphere turns away from the camera; projected labels also remain hidden when Earth occludes their 3D nodes. Terrestrial node position comes only from the reviewed `data/location_coordinates.json` gazetteer; ambiguous and unmapped names are reported but never guessed onto the globe. Map nodes retain the same collection, confidence, prominence-inflation, size, label, and evidence-inspection controls as other entity views.
+
+## Case dossiers
+
+**Case dossier** opens a browser-local research workspace. Evidence inspectors can add or remove public document, event, entity, and relationship records without changing the graph. Collection and matrix inspectors add the public records represented by their aggregate. Analysts can classify selections as evidence for, evidence against, or context; record scope, a research question, unresolved questions, metadata gaps, follow-up tasks, review status, and rationale; and capture the exact graph configuration and catalog revision.
+
+The current draft is stored only in browser `localStorage` under `ufo-files-case-dossier`. It is not uploaded. Ordinary graph links and presentation PDFs remain dossier-free. **Copy public link** creates a separate `ufo-files-public-dossier/v1` payload containing only catalog stable IDs, relationship endpoints/types, the catalog revision, and graph configuration. It excludes labels, source links, evidence classification, scope, questions, tasks, status, rationale, and every other analyst annotation. **Export JSON** and **Export neutral report** are explicit downloads and may include local annotations.
+
+JSON imports and exports use `ufo-files-case-dossier/v1`:
+
+```json
+{
+  "schema": "ufo-files-case-dossier/v1",
+  "id": "dossier-YYYYMMDDHHMMSS",
+  "createdAt": "ISO-8601 timestamp",
+  "updatedAt": "ISO-8601 timestamp",
+  "catalog": {
+    "schema": "catalog schema",
+    "generatedAt": "ISO-8601 timestamp",
+    "repository": "owner/repository",
+    "revision": "immutable revision"
+  },
+  "graphConfiguration": {},
+  "scope": "local analyst annotation",
+  "researchQuestion": "local analyst annotation",
+  "records": {
+    "documents": [{ "id": "stable ID", "label": "public label", "stance": "supporting|contrary|context", "addedAt": "ISO-8601 timestamp", "sourceLinks": [{ "documentId": "stable ID", "url": "immutable source URL" }] }],
+    "events": [],
+    "entities": [],
+    "relationships": [{ "id": "source|type|target", "source": "stable ID", "target": "stable ID", "relationship": "published type", "label": "public label", "stance": "supporting", "addedAt": "ISO-8601 timestamp", "sourceLinks": [] }]
+  },
+  "annotations": { "unresolvedQuestions": [], "metadataGaps": [], "followUpTasks": [] },
+  "review": { "status": "unreviewed|in_review|needs_follow_up|reviewed", "rationale": "local analyst annotation" }
+}
+```
+
+Imports reject other schema versions and malformed record groups. Stable IDs absent from the current catalog remain in the dossier and are visibly flagged so a catalog update cannot silently discard prior work. The Markdown report is deterministically ordered, source-linked, revision-specific, and uses neutral language about analyst selection rather than treating selection as verification.
 
 ## Run locally
 
