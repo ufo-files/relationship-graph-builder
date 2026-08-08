@@ -133,6 +133,28 @@ class ClassificationTests(unittest.TestCase):
             self.assertEqual(events[0]["documentIds"], ["doc-report"])
             self.assertEqual(events[0]["reviewStatus"], "curated")
 
+    def test_curated_milestone_aggregates_same_date_reviewed_contexts(self):
+        with tempfile.TemporaryDirectory() as directory:
+            registry = Path(directory) / "events.json"
+            registry.write_text(json.dumps({"events": [{
+                "title": "Roswell announcement", "startDate": "1947-07-08",
+                "eventType": "official_announcement", "sourcePath": "Roswell/source.txt",
+                "evidence": "Roswell reported recovery.", "matchTerms": ["Roswell"],
+            }]}), encoding="utf-8")
+            review = [
+                {"documentId": "doc-support", "path": "Archive/roswell-report.txt", "candidates": [
+                    {"value": "1947-07-08", "kind": "unknown", "segment": 2, "evidence": "Roswell issued a statement."}
+                ]},
+                {"documentId": "doc-admin", "path": "Archive/roswell-foia.txt", "candidates": [
+                    {"value": "1947-07-08", "kind": "administrative_date", "evidence": "Roswell FOIA processing date."}
+                ]},
+            ]
+
+            events = curated_events(registry, {"Roswell/source.txt": "doc-source"}, review)
+
+            self.assertEqual(events[0]["documentIds"], ["doc-source", "doc-support"])
+            self.assertEqual(events[0]["evidence"][1]["segment"], 2)
+
     def test_curated_milestone_replaces_matching_extraction(self):
         extracted = [{"id": "auto", "title": "Raw OCR", "startDate": "2017-12-16",
                       "eventType": "publication", "documentIds": ["doc-story"],

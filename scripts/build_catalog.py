@@ -435,7 +435,7 @@ def merge_events(events: list[dict]) -> list[dict]:
     return merged
 
 
-def curated_events(path: Path, document_ids: dict[str, str]) -> list[dict]:
+def curated_events(path: Path, document_ids: dict[str, str], date_review: list[dict] | None = None) -> list[dict]:
     """Load reviewed historical milestones only when their source document is present."""
     if not path.exists():
         return []
@@ -448,6 +448,27 @@ def curated_events(path: Path, document_ids: dict[str, str]) -> list[dict]:
         if not document_id or not date or not item.get("title") or not item.get("eventType"):
             continue
         excerpt = clean_space(str(item.get("evidence", "")))[:280]
+        supporting_ids = {document_id}
+        supporting_evidence = [{"documentId": document_id, "excerpt": excerpt}]
+        match_terms = [comparison_key(term) for term in item.get("matchTerms", [])]
+        match_kinds = set(item.get("matchCandidateKinds", ["event_date", "unknown", "referenced_document_date"]))
+        if match_terms:
+            for record in date_review or []:
+                candidate_document_id = record.get("documentId")
+                if not candidate_document_id:
+                    continue
+                for candidate in record.get("candidates", []):
+                    context = comparison_key(f"{record.get('path', '')} {candidate.get('evidence', '')}")
+                    if (candidate.get("value") == date and candidate.get("kind") in match_kinds
+                            and all(term in context for term in match_terms)):
+                        supporting_ids.add(candidate_document_id)
+                        if len(supporting_evidence) < 5:
+                            supporting_evidence.append({
+                                "documentId": candidate_document_id,
+                                **({"segment": candidate["segment"]} if "segment" in candidate else {}),
+                                "excerpt": clean_space(candidate.get("evidence", ""))[:280],
+                            })
+                        break
         published.append({
             "id": stable_id("event", f"curated|{source_path}|{date}|{item['eventType']}"),
             "title": item["title"],
@@ -457,8 +478,8 @@ def curated_events(path: Path, document_ids: dict[str, str]) -> list[dict]:
             "datePrecision": "day",
             "confidence": 0.99,
             "reviewStatus": "curated",
-            "documentIds": [document_id],
-            "evidence": [{"documentId": document_id, "excerpt": excerpt}],
+            "documentIds": sorted(supporting_ids),
+            "evidence": supporting_evidence,
         })
     return published
 
@@ -1040,7 +1061,7 @@ def build(
 
     events = overlay_curated_events(
         events,
-        curated_events(data_dir / "curated_events.json", document_ids_by_path),
+        curated_events(data_dir / "curated_events.json", document_ids_by_path, date_review),
     )
     events = merge_events(events)
     accepted_candidates = {key: value for key, value in candidates.items() if accepted(value)}
