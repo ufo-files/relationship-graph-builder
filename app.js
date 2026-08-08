@@ -188,6 +188,7 @@ function loadConfig() {
       const saved = JSON.parse(decodeURIComponent(escape(atob(param))));
       if (saved.allSources === undefined) saved.allSources = !saved.sources?.length;
       const config = { ...DEFAULT, ...saved };
+      config.labelSize = Math.max(11, Number(config.labelSize) || DEFAULT.labelSize);
       config.triageSignals = normalizeTriageSignals(saved.triageSignals);
       if (!TRIAGE_PROFILES[config.triageProfile] && config.triageProfile !== "custom") config.triageProfile = "custom";
       if (config.type === "timeline" && config.timelineRole === "event") config.y = "mentionRank";
@@ -1065,7 +1066,7 @@ function fitNetworkPositions(positions, width, height, coverage = .9) {
 function renderNetwork() {
   const { svg, width, height } = clearChart();
   const zoom = Math.max(.5, Math.min(2.5, Number(state.config.zoom) || 1));
-  const labelSize = state.config.labelSize / zoom;
+  const labelSize = Math.max(11, state.config.labelSize / zoom);
   const collectionMode = state.config.nodeRole === "collection";
   let candidates, edges;
   if (collectionMode) {
@@ -1474,7 +1475,7 @@ function bookLabelLines(title, maxCharacters, maxLines) {
 
 function bookTitleLayout(block, requestedSize) {
   const areaScale = Math.min(1.5, Math.max(1, Math.sqrt(block.width * block.height) / 130));
-  const maximumSize = Math.max(8, Math.floor(requestedSize * areaScale));
+  const maximumSize = Math.max(11, Math.floor(requestedSize * areaScale));
   const spineWidth = Math.min(18, Math.max(6, block.width * .11));
   const horizontalPadding = Math.min(18, Math.max(7, block.width * .055));
   const textWidth = block.width - spineWidth - horizontalPadding * 2;
@@ -1483,18 +1484,18 @@ function bookTitleLayout(block, requestedSize) {
   let authorLine = "";
   let complete = false;
   const author = bookAuthor(block.item);
-  while (labelSize >= 8) {
+  while (labelSize >= 11) {
     const maxCharacters = Math.max(4, Math.floor(textWidth / (labelSize * .62)));
-    const authorSize = Math.max(7, labelSize * .72);
+    const authorSize = Math.max(11, labelSize * .72);
     const maxLines = Math.max(1, Math.min(4, Math.floor((block.height - 14 - (author ? authorSize * 1.65 : 0)) / (labelSize * 1.15))));
     lines = bookLabelLines(block.item.name, maxCharacters, maxLines);
     authorLine = author ? bookLabelLines(author, Math.max(5, Math.floor(textWidth / (authorSize * .58))), 1)[0] : "";
     complete = Boolean(lines.length) && !lines.at(-1).endsWith("…") && lines.every(line => line.length <= maxCharacters);
-    if (complete || labelSize === 8) break;
+    if (complete || labelSize === 11) break;
     labelSize -= 1;
   }
   const lineHeight = labelSize * 1.15;
-  const authorSize = Math.max(7, labelSize * .72);
+  const authorSize = Math.max(11, labelSize * .72);
   const titleHeight = Math.max(labelSize, lines.length * lineHeight);
   const groupHeight = titleHeight + (authorLine ? authorSize * 1.65 : 0);
   const y = block.y + block.height / 2 - groupHeight / 2 + labelSize;
