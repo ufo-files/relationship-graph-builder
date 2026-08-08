@@ -571,6 +571,14 @@ test("paragraphs keep a readable maximum line length", () => {
   assert.match(styles, /p \{ max-width: 768px; \}/);
 });
 
+test("stage actions do not wrap or compress the fullscreen square", () => {
+  const styles = fs.readFileSync("styles.css", "utf8");
+  assert.match(styles, /\.stage-tools \{[^}]*flex: 0 0 auto;/);
+  assert.match(styles, /\.stage-tools \.button \{[^}]*white-space: nowrap;/);
+  assert.match(styles, /\.fullscreen-button \{[^}]*flex: 0 0 34px;[^}]*width: 34px;[^}]*height: 34px;/);
+  assert.match(styles, /@media \(max-width: 780px\)[\s\S]*?\.fullscreen-button \{[^}]*flex-basis: 42px;[^}]*width: 42px;/);
+});
+
 test("triage configuration survives deterministic URL round trips", () => {
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
   const location = { hash: "" };
