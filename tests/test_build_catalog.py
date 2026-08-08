@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.build_catalog import Candidate, attach_event_entities, build, classify_phrase, comparison_key, curated_events, duplicate_candidates, entity_key, extract_mentions, extract_title_mentions, inflation_risk, load_registry, merge_events, normalized_date, overlay_curated_events, reviewed_event_titles, sentence_segments, stable_id, temporal_candidates
+from scripts.build_catalog import Candidate, attach_event_entities, build, classify_phrase, comparison_key, curated_discussion_matches, curated_events, duplicate_candidates, entity_key, extract_mentions, extract_title_mentions, inflation_risk, load_registry, merge_events, normalized_date, overlay_curated_events, reviewed_event_titles, sentence_segments, stable_id, temporal_candidates
 
 
 class ClassificationTests(unittest.TestCase):
@@ -165,11 +165,26 @@ class ClassificationTests(unittest.TestCase):
                 ]},
             ]
 
-            events = curated_events(registry, {"Roswell/source.txt": "doc-source"}, review)
+            discussion_support = {"Roswell announcement": [
+                {"documentId": "doc-discussion", "mentionCount": 3, "excerpt": "The event reshaped public discussion."}
+            ]}
+            events = curated_events(registry, {"Roswell/source.txt": "doc-source"}, review, discussion_support)
 
-            self.assertEqual(events[0]["documentIds"], ["doc-source", "doc-support"])
+            self.assertEqual(events[0]["documentIds"], ["doc-discussion", "doc-source", "doc-support"])
             self.assertEqual(events[0]["evidence"][1]["segment"], 2)
-            self.assertEqual(events[0]["mentionCount"], 1)
+            self.assertEqual(events[0]["mentionCount"], 4)
+
+    def test_curated_discussion_signatures_count_contextual_article_mentions(self):
+        items = [{"title": "2017 article", "discussionMatchAny": [
+            ["new york times", "aatip"], ["new york times", "elizondo", "2017"]
+        ]}]
+
+        matched = curated_discussion_matches([
+            "The December 2017 New York Times article revealed AATIP to a broad audience.",
+            "A generic New York Times bestseller is unrelated.",
+        ], items)
+
+        self.assertEqual(matched["2017 article"]["mentionCount"], 1)
 
 
     def test_curated_milestone_replaces_matching_extraction(self):
