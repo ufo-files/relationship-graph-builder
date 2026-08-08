@@ -4,10 +4,10 @@
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "repository": "ufo-files/machine-data",
-    "revision": "e6ceb7676bb4042eee5bba54d608e0b661b8837d"
+    "revision": "bd387b6cb688b7915d2b7f42be1c6d11013b0fc9"
   },
-  "count": 425,
-  "totalCount": 425,
+  "count": 427,
+  "totalCount": 427,
   "shownCount": 200,
   "candidates": [
     {
@@ -109,6 +109,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Search for Extraterrestrial Intelligence",
+        "mentions": 28,
+        "documentCount": 21
+      },
+      "right": {
+        "name": "Search for Extra Terrestrial Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.988,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "The Defense Intelligence Reference Document",
         "mentions": 24,
         "documentCount": 20
@@ -126,8 +142,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 249,
-        "documentCount": 54
+        "mentions": 250,
+        "documentCount": 55
       },
       "right": {
         "name": "Offices of the Secretary of Defense",
@@ -302,8 +318,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4661,
-        "documentCount": 1100
+        "mentions": 4663,
+        "documentCount": 1101
       },
       "right": {
         "name": "The Central Inteligence Agency",
@@ -387,8 +403,8 @@
       },
       "right": {
         "name": "Armed Services Committees",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.98,
       "reason": "similar name",
@@ -574,8 +590,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1768,
-        "documentCount": 380
+        "mentions": 1771,
+        "documentCount": 381
       },
       "right": {
         "name": "Departments of Defense",
@@ -702,8 +718,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1768,
-        "documentCount": 380
+        "mentions": 1771,
+        "documentCount": 381
       },
       "right": {
         "name": "Department of Defens",
@@ -1966,8 +1982,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4661,
-        "documentCount": 1100
+        "mentions": 4663,
+        "documentCount": 1101
       },
       "right": {
         "name": "CENIRAL INTELLIGENCE AGENCY",
@@ -1982,8 +1998,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4661,
-        "documentCount": 1100
+        "mentions": 4663,
+        "documentCount": 1101
       },
       "right": {
         "name": "CENTRAL INTELLIDENCE AGENCY",
@@ -1998,8 +2014,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4661,
-        "documentCount": 1100
+        "mentions": 4663,
+        "documentCount": 1101
       },
       "right": {
         "name": "CINTRAL INTELLIGENCE AGENCY",
@@ -2014,8 +2030,8 @@
       "category": "government_agency",
       "left": {
         "name": "Central Intelligence Agency",
-        "mentions": 4661,
-        "documentCount": 1100
+        "mentions": 4663,
+        "documentCount": 1101
       },
       "right": {
         "name": "Central Inteliigence Agency",
@@ -2755,8 +2771,8 @@
       },
       "right": {
         "name": "David Grusch",
-        "mentions": 23,
-        "documentCount": 5
+        "mentions": 26,
+        "documentCount": 6
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -3070,8 +3086,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 1768,
-        "documentCount": 380
+        "mentions": 1771,
+        "documentCount": 381
       },
       "right": {
         "name": "Department of Detense",
@@ -3189,22 +3205,6 @@
         "name": "Central Ticket Office",
         "mentions": 5,
         "documentCount": 4
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "University of Arkansas",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "University of Kansas",
-        "mentions": 3,
-        "documentCount": 2
       },
       "similarity": 0.952,
       "reason": "similar name",
