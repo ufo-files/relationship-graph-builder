@@ -461,6 +461,14 @@ function activeTriageProfileId(config = state.config) {
   }) || "custom";
 }
 
+function triageSubtitle(config = state.config) {
+  const profile = TRIAGE_PROFILES[activeTriageProfileId(config)];
+  const signals = TRIAGE_SIGNALS
+    .filter(signal => config.triageSignals?.[signal.id]?.enabled)
+    .map(signal => `${signal.label.toLowerCase()} (${config.triageSignals[signal.id].weight}×)`);
+  return `Published event records ranked by ${profile?.label || "custom"}${signals.length ? `: ${signals.join(", ")}` : ""}. Unknown inputs lower certainty, not priority.`;
+}
+
 function renderPresetControl() {
   if (state.config.type === "triage") {
     const activeId = activeTriageProfileId();
@@ -2006,6 +2014,7 @@ function triageCandidates(catalog = state.catalog, config = state.config) {
       if (leftValue != null && rightValue == null) return -1;
       if (leftValue < rightValue) return -1 * direction;
       if (leftValue > rightValue) return 1 * direction;
+      if (config.triageSort === "score" && left.certainty !== right.certainty) return right.certainty - left.certainty;
       return triageStableCompare(left, right);
     });
 }
@@ -2040,7 +2049,7 @@ function renderTriage() {
     queue.replaceChildren();
     return showEmpty();
   }
-  queue.innerHTML = `<div class="triage-queue-note"><strong>Review priority, not credibility</strong><span>Unknown inputs reduce certainty and are not treated as zero evidence.</span></div><div class="triage-queue">${candidates.map((candidate, index) => `
+  queue.innerHTML = `<div class="triage-queue-note"><strong>Review priority, not credibility</strong><span>Priority compares known signals; certainty shows how much of the scoring model had usable data.</span></div><div class="triage-queue">${candidates.map((candidate, index) => `
     <article class="triage-case">
       <button class="triage-case-open" type="button" data-triage-case="${index}">
         <span class="triage-case-rank">${String(index + 1).padStart(2, "0")}</span>
@@ -2052,7 +2061,8 @@ function renderTriage() {
       <div class="triage-breakdown">${triageBreakdownHTML(candidate)}</div>
     </article>`).join("")}</div>`;
   $$('[data-triage-case]').forEach(button => button.addEventListener("click", () => openTriageCase(candidates[Number(button.dataset.triageCase)])));
-  setSummary(`${candidates.length} candidate cases · sorted by ${label(state.config.triageSort).toLowerCase()} · stable title/ID ties`, "triage");
+  const selectedCollections = state.config.allSources ? "all collections" : `${state.config.sources.length} selected collection${state.config.sources.length === 1 ? "" : "s"}`;
+  setSummary(`${candidates.length} published event candidates from ${selectedCollections} · ranked by ${label(state.config.triageSort).toLowerCase()}${state.config.triageSort === "score" ? ", then certainty" : ""} · not selected from all source documents`, "triage");
 }
 
 function tableRecords() {
@@ -2179,7 +2189,7 @@ function renderGraph() {
     timeline: state.config.timelineRole === "event" ? "Evidence-backed events by occurrence date." : `${state.config.timelineRole === "entity" ? "Entities" : "Documents"} by document date.`,
     matrix: `${state.config.matrixColumns === "entity" ? "Entity" : "Entity-type"} coverage across completed collections.`,
     table: `A custom list of ${state.config.tableRole === "entity" ? "entities" : state.config.tableRole === "document" ? "transcript files" : "collections"}.`,
-    triage: "Evidence-backed events ordered by a configurable review-priority heuristic."
+    triage: triageSubtitle()
   };
   $("#graphSubtitle").textContent = descriptions[state.config.type];
   ({ network: renderNetwork, map: renderMap, book: renderBook, document: renderDocument, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, matrix: renderMatrix, table: renderTable, triage: renderTriage })[state.config.type]();

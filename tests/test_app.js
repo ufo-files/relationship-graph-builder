@@ -528,6 +528,44 @@ test("triage ordering uses stable title and case-ID tie breakers", () => {
   assert.deepEqual(orders.reversedInput, orders.first);
 });
 
+test("triage priority ties prefer candidates with more known scoring data", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const order = JSON.parse(vm.runInContext(`
+    (() => {
+      const events = [
+        { id: "sparse", title: "Alpha", eventType: "sighting", startDate: "2000-01-01", datePrecision: "day", titleReviewStatus: "reviewed" },
+        { id: "complete", title: "Zulu", eventType: "sighting", startDate: "2000-01-01", datePrecision: "day", titleReviewStatus: "reviewed", documentIds: ["doc-1", "doc-2", "doc-3"], entityIds: ["person", "place", "agency", "program"], evidence: [{ documentId: "doc-1", excerpt: "One" }, { documentId: "doc-2", excerpt: "Two" }, { documentId: "doc-3", excerpt: "Three" }] }
+      ];
+      const catalog = {
+        documents: [{ id: "doc-1", source: "One" }, { id: "doc-2", source: "Two" }, { id: "doc-3", source: "Three" }],
+        entities: [
+          { id: "person", name: "Person", category: "person" },
+          { id: "place", name: "Place", category: "location", geo: { lat: 1, lon: 1 } },
+          { id: "agency", name: "Agency", category: "government_agency" },
+          { id: "program", name: "Program", category: "program" }
+        ],
+        edges: [{ source: "person", target: "agency", relationship: "affiliated_with" }, { source: "agency", target: "program", relationship: "investigated" }],
+        duplicateCandidates: [], counts: { possibleDuplicates: 0 }, events
+      };
+      return JSON.stringify(triageCandidates(catalog, { ...DEFAULT, type: "triage", triageSort: "score", triageDirection: "desc", triageSignals: triageSignalsForProfile("evidence-rich") }).map(candidate => candidate.event.id));
+    })()
+  `, context));
+  assert.deepEqual(order, ["complete", "sparse"]);
+});
+
+test("triage subtitle explains the candidate pool, active weights, and certainty", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const subtitle = vm.runInContext('triageSubtitle({ ...DEFAULT, triageSignals: triageSignalsForProfile("evidence-rich") })', context);
+  assert.match(subtitle, /^Published event records ranked by Evidence rich:/);
+  assert.match(subtitle, /supporting documents \(3×\)/);
+  assert.match(subtitle, /source excerpts \(2×\)/);
+  assert.match(subtitle, /Unknown inputs lower certainty, not priority\.$/);
+});
+
 test("triage configuration survives deterministic URL round trips", () => {
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
   const location = { hash: "" };
