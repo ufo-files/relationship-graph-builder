@@ -363,6 +363,130 @@ test("default graph includes every entity category with globally adjusted promin
   assert.equal(config.relationshipStrength, "subtle");
 });
 
+test("triage scoring applies enabled weights to published-field ratios", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const scores = JSON.parse(vm.runInContext(`
+    (() => {
+      const catalog = {
+        documents: [
+          { id: "doc-1", source: "One" }, { id: "doc-2", source: "One" }, { id: "doc-3", source: "One" }
+        ],
+        entities: [], edges: [], duplicateCandidates: [],
+        events: [{
+          id: "case-1", title: "Test case", eventType: "sighting", startDate: "2000-01-01", datePrecision: "day",
+          titleReviewStatus: "reviewed", documentIds: ["doc-1", "doc-2", "doc-3"], entityIds: [],
+          evidence: [{ documentId: "doc-1", excerpt: "Evidence" }]
+        }]
+      };
+      const signals = triageSignalsForProfile();
+      Object.values(signals).forEach(signal => signal.enabled = false);
+      signals.supportingDocuments = { enabled: true, weight: 5 };
+      signals.collectionDiversity = { enabled: true, weight: 1 };
+      const documentHeavy = triageCase(catalog.events[0], catalog, { ...DEFAULT, type: "triage", triageSignals: signals }).score;
+      signals.supportingDocuments.weight = 1;
+      signals.collectionDiversity.weight = 5;
+      const diversityHeavy = triageCase(catalog.events[0], catalog, { ...DEFAULT, type: "triage", triageSignals: signals }).score;
+      return JSON.stringify({ documentHeavy, diversityHeavy });
+    })()
+  `, context));
+
+  assert.ok(Math.abs(scores.documentHeavy - 88.8889) < 0.001);
+  assert.ok(Math.abs(scores.diversityHeavy - 44.4444) < 0.001);
+});
+
+test("triage missing values lower certainty without silently scoring as zero evidence", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`
+    (() => {
+      const event = { id: "sparse", title: "Sparse case", eventType: "sighting", startDate: "2001-02-03", datePrecision: "day", titleReviewStatus: "reviewed" };
+      const catalog = { documents: [], entities: [], edges: [], duplicateCandidates: [], events: [event] };
+      const candidate = triageCase(event, catalog, { ...DEFAULT, type: "triage", triageSignals: triageSignalsForProfile("evidence-rich") });
+      return JSON.stringify({ score: candidate.score, certainty: candidate.certainty, knownWeight: candidate.knownWeight, totalWeight: candidate.totalWeight, components: candidate.components });
+    })()
+  `, context));
+
+  assert.equal(result.score, 100, "the one known positive signal should retain its value");
+  assert.equal(result.knownWeight, 1);
+  assert.equal(result.totalWeight, 12);
+  assert.ok(Math.abs(result.certainty - 100 / 12) < 0.001);
+  assert.equal(result.components.find(component => component.id === "supportingDocuments").known, false);
+  assert.equal(result.components.find(component => component.id === "mappedLocation").known, false);
+});
+
+test("triage ordering uses stable title and case-ID tie breakers", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const orders = JSON.parse(vm.runInContext(`
+    (() => {
+      const base = { eventType: "sighting", startDate: "2000-01-01", datePrecision: "day", titleReviewStatus: "reviewed", documentIds: [], entityIds: [], evidence: [] };
+      const events = [
+        { ...base, id: "case-b", title: "Same" },
+        { ...base, id: "case-z", title: "Zulu" },
+        { ...base, id: "case-a", title: "Same" },
+        { ...base, id: "case-alpha", title: "Alpha" }
+      ];
+      const catalog = { documents: [], entities: [], edges: [], duplicateCandidates: [], events };
+      const config = { ...DEFAULT, type: "triage", triageSort: "score", triageDirection: "desc", triageSignals: triageSignalsForProfile("evidence-rich") };
+      const first = triageCandidates(catalog, config).map(candidate => candidate.event.id);
+      catalog.events.reverse();
+      const reversedInput = triageCandidates(catalog, config).map(candidate => candidate.event.id);
+      return JSON.stringify({ first, reversedInput });
+    })()
+  `, context));
+
+  assert.deepEqual(orders.first, ["case-alpha", "case-a", "case-b", "case-z"]);
+  assert.deepEqual(orders.reversedInput, orders.first);
+});
+
+test("triage configuration survives deterministic URL round trips", () => {
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  const location = { hash: "" };
+  const context = vm.createContext({
+    location,
+    history: { replaceState(_state, _title, hash) { location.hash = hash; } },
+    URLSearchParams,
+    btoa: value => Buffer.from(value, "binary").toString("base64"),
+    atob: value => Buffer.from(value, "base64").toString("binary"),
+    escape,
+    unescape,
+    encodeURIComponent,
+    decodeURIComponent
+  });
+  vm.runInContext(source, context);
+  vm.runInContext(`
+    state.config = presetConfig("default", "triage");
+    state.config.triageSignals.supportingDocuments = { enabled: true, weight: 4 };
+    state.config.triageSignals.mappedLocation = { enabled: false, weight: 2 };
+    state.config.triageProfile = "custom";
+    state.config.triageSort = "certainty";
+    state.config.triageDirection = "asc";
+    persistHash();
+  `, context);
+
+  const restoredContext = vm.createContext({
+    location: { hash: location.hash }, URLSearchParams,
+    atob: value => Buffer.from(value, "base64").toString("binary"),
+    escape,
+    decodeURIComponent
+  });
+  vm.runInContext(source, restoredContext);
+  const restored = JSON.parse(vm.runInContext("JSON.stringify(state.config)", restoredContext));
+  const exported = JSON.parse(vm.runInContext("JSON.stringify(triageConfigurationExport())", restoredContext));
+
+  assert.equal(restored.type, "triage");
+  assert.equal(restored.triageProfile, "custom");
+  assert.deepEqual(restored.triageSignals.supportingDocuments, { enabled: true, weight: 4 });
+  assert.deepEqual(restored.triageSignals.mappedLocation, { enabled: false, weight: 2 });
+  assert.equal(restored.triageSort, "certainty");
+  assert.equal(restored.triageDirection, "asc");
+  assert.deepEqual(exported.signals.map(signal => signal.id), JSON.parse(vm.runInContext("JSON.stringify(TRIAGE_SIGNALS.map(signal => signal.id))", restoredContext)));
+});
+
 test("pre-adjustment saved views migrate prominence metrics across entity graph types", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
