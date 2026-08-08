@@ -436,6 +436,24 @@ def merge_events(events: list[dict]) -> list[dict]:
     return merged
 
 
+def reviewed_event_titles(events: list[dict], path: Path) -> list[dict]:
+    """Publish extracted events only after a human-reviewed public title exists."""
+    reviews = json.loads(path.read_text(encoding="utf-8")).get("events", {}) if path.exists() else {}
+    published = []
+    for event in events:
+        if event.get("reviewStatus") == "curated":
+            event["titleReviewStatus"] = "curated"
+            published.append(event)
+            continue
+        title = reviews.get(event["id"])
+        if not title:
+            continue
+        event["title"] = clean_space(title)
+        event["titleReviewStatus"] = "reviewed"
+        published.append(event)
+    return published
+
+
 def curated_events(path: Path, document_ids: dict[str, str], date_review: list[dict] | None = None) -> list[dict]:
     """Load reviewed historical milestones only when their source document is present."""
     if not path.exists():
@@ -955,6 +973,7 @@ def build(
     require_data: bool = False,
     duplicate_report: Path | None = None,
     date_review_report: Path | None = None,
+    event_title_reviews: Path | None = None,
 ) -> dict:
     data_dir = Path(__file__).resolve().parents[1] / "data"
     registry = load_registry([data_dir / "curated_entities.json", data_dir / "entity_aliases.json"])
@@ -1067,6 +1086,8 @@ def build(
         events,
         curated_events(data_dir / "curated_events.json", document_ids_by_path, date_review),
     )
+    events = merge_events(events)
+    events = reviewed_event_titles(events, event_title_reviews or data_dir / "event_title_reviews.json")
     events = merge_events(events)
     accepted_candidates = {key: value for key, value in candidates.items() if accepted(value)}
     possible_duplicates, possible_duplicate_count = duplicate_candidates(accepted_candidates)

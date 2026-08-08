@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.build_catalog import Candidate, attach_event_entities, build, classify_phrase, comparison_key, curated_events, duplicate_candidates, entity_key, extract_mentions, extract_title_mentions, inflation_risk, load_registry, merge_events, normalized_date, overlay_curated_events, sentence_segments, temporal_candidates
+from scripts.build_catalog import Candidate, attach_event_entities, build, classify_phrase, comparison_key, curated_events, duplicate_candidates, entity_key, extract_mentions, extract_title_mentions, inflation_risk, load_registry, merge_events, normalized_date, overlay_curated_events, reviewed_event_titles, sentence_segments, stable_id, temporal_candidates
 
 
 class ClassificationTests(unittest.TestCase):
@@ -116,6 +116,21 @@ class ClassificationTests(unittest.TestCase):
         self.assertEqual(merged[0]["documentCount"], 2)
         self.assertEqual(merged[1]["documentIds"], ["doc-c"])
 
+    def test_extracted_events_require_reviewed_public_titles(self):
+        events = [
+            {"id": "approved", "title": "Detroft, whi reoported", "eventType": "sighting", "startDate": "1954-07-14"},
+            {"id": "rejected", "title": "Raw OCR", "eventType": "sighting", "startDate": "1954-08-16"},
+            {"id": "curated", "title": "Roswell UFO Crash", "eventType": "crash", "startDate": "1947-07-08", "reviewStatus": "curated"},
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            reviews = Path(directory) / "reviews.json"
+            reviews.write_text(json.dumps({"events": {"approved": "Detroit Flying Saucer Sighting", "rejected": None}}), encoding="utf-8")
+
+            published = reviewed_event_titles(events, reviews)
+
+        self.assertEqual([event["title"] for event in published], ["Detroit Flying Saucer Sighting", "Roswell UFO Crash"])
+        self.assertEqual(published[0]["titleReviewStatus"], "reviewed")
+
     def test_curated_milestones_require_a_present_source_document(self):
         with tempfile.TemporaryDirectory() as directory:
             registry = Path(directory) / "events.json"
@@ -155,6 +170,7 @@ class ClassificationTests(unittest.TestCase):
             self.assertEqual(events[0]["documentIds"], ["doc-source", "doc-support"])
             self.assertEqual(events[0]["evidence"][1]["segment"], 2)
             self.assertEqual(events[0]["mentionCount"], 1)
+
 
     def test_curated_milestone_replaces_matching_extraction(self):
         extracted = [{"id": "auto", "title": "Raw OCR", "startDate": "2017-12-16",
@@ -406,8 +422,11 @@ class CatalogTests(unittest.TestCase):
             )
             (collection / "report.txt").write_text(json.dumps(metadata) + "\n\n" + body, encoding="utf-8")
             review_path = Path(directory) / "date_review.json"
+            title_review_path = Path(directory) / "event_title_reviews.json"
+            _, extracted, _ = temporal_candidates(list(sentence_segments(body)), metadata, stable_id("doc", "Example/report.txt"))
+            title_review_path.write_text(json.dumps({"events": {extracted[0]["id"]: "Roswell Bright Object Sighting"}}), encoding="utf-8")
 
-            catalog = build(root, Path(directory) / "catalog.json", 100, 100, date_review_report=review_path)
+            catalog = build(root, Path(directory) / "catalog.json", 100, 100, date_review_report=review_path, event_title_reviews=title_review_path)
 
             self.assertEqual(catalog["documents"][0]["documentDate"], "1975-11-10")
             self.assertEqual(catalog["events"][0]["startDate"], "1975-11-08")
