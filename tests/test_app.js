@@ -52,8 +52,39 @@ function labelTexts(chart) {
 test("startup loads and validates source-specific document shards", () => {
   const source = fs.readFileSync("app.js", "utf8");
   assert.match(source, /catalog\.documentShards\.map/);
+  assert.match(source, /shard\.version \|\| catalog\.input\?\.revision/);
   assert.match(source, /ufo-files-source-documents\/v1/);
   assert.match(source, /Document shard count mismatch/);
+});
+
+test("Galactic Entities boots from a compact astronomy payload", () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const payloadText = fs.readFileSync("data/astronomy.json", "utf8");
+  const payload = JSON.parse(payloadText);
+  assert.equal(payload.schema, "ufo-files-astronomy-bootstrap/v1");
+  assert.equal(payload.astronomy.targets.length, payload.counts.astronomyTargets);
+  assert.equal(payload.sources.length, payload.counts.sources);
+  const referencedDocumentIds = new Set([
+    ...payload.astronomy.targets.flatMap(target => (target.evidence || []).map(evidence => evidence.documentId)),
+    ...payload.astronomy.reviewCandidates.flatMap(candidate => (candidate.examples || []).map(example => example.documentId))
+  ]);
+  assert.deepEqual(new Set(payload.documents.map(document => document.id)), referencedDocumentIds);
+  assert.ok(payload.documents.every(document => document.id && document.path && document.source));
+  assert.equal(payload.astronomy.observations, undefined);
+  assert.ok(Buffer.byteLength(payloadText) < 2 * 1024 * 1024);
+  assert.match(source, /state\.config\.type === "solar"/);
+  assert.match(source, /fetch\("data\/astronomy\.json", \{ cache: "no-store" \}\)/);
+  assert.match(source, /state\.catalogMode = "astronomy"/);
+  assert.match(source, /state\.catalog\.documents\.forEach\(item => state\.documentById\.set\(item\.id, item\)\)/);
+  assert.match(source, /type !== "solar" && !await ensureFullCatalog\(requestId\)/);
+  assert.match(source, /const requestId = \+\+state\.typeRequestId/);
+  assert.match(source, /requestId !== state\.typeRequestId/);
+  assert.match(source, /state\.initialCatalogPromise = init\(\)/);
+  assert.match(source, /if \(state\.initialCatalogPromise\) await state\.initialCatalogPromise/);
+  assert.match(source, /state\.publicDossierPayload = publicDossierPayloadFromHash\(\)/);
+  assert.match(source, /state\.publicDossierPayload \|\| publicDossierPayloadFromHash\(\)/);
+  assert.match(source, /requestId === null \|\| requestId === state\.typeRequestId\) showCatalogError/);
+  assert.match(source, /async function openDossierDialog\(\)[\s\S]*ensureFullCatalog\(\)[\s\S]*initializeDossier\(\)/);
 });
 
 test("catalog CI exercises the French source independently", () => {
@@ -1976,8 +2007,8 @@ test("timeline defaults to reviewed events and published structured reports", ()
   assert.match(source, /radius \+ 3[^\n]+timeline-candidate-ring/);
   assert.match(styles, /timeline-candidate-ring[^}]*stroke: var\(--ink\)[^}]*stroke-dasharray: 3 2/);
   assert.match(styles, /timeline-event-node\.timeline-candidate[^}]*fill: var\(--paper\)/);
-  assert.match(source, /fetch\("data\/catalog\.json", \{ cache: "no-store" \}\)/);
-  assert.match(source, /catalog\.input\?\.revision \|\| catalog\.generatedAt/);
+  assert.match(source, /fetch\("data\/catalog\.json", \{ cache: "no-cache" \}\)/);
+  assert.match(source, /shard\.version \|\| catalog\.input\?\.revision \|\| catalog\.generatedAt/);
   assert.match(source, /fetch\(`data\/\$\{shard\.path\}\?v=\$\{shardVersion\}`\)/);
   assert.match(source, /mentionCount: "Event mentions"/);
   assert.match(source, /mentionRank: "Mention rank"/);
@@ -3185,6 +3216,9 @@ test("entity inspection groups supporting documents by lineage and warns about d
   assert.match(elements.inspectorContent.innerHTML, /Unknown/);
   assert.match(elements.inspectorContent.innerHTML, /Inspect source document ↗/);
   assert.match(elements.inspectorContent.innerHTML, /Evidence excerpts are 94% text-similar/);
+  const sampledLineage = vm.runInContext(`lineageGroupsHTML(["a", "missing-document"])`, context);
+  assert.match(sampledLineage, /Stored evidence sample by likely lineage · 1 of 2 documents/);
+  assert.match(sampledLineage, /sample is not complete lineage accounting/);
 });
 
 test("book inspection places the author beneath the title", () => {

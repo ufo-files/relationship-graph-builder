@@ -1,3 +1,4 @@
+import hashlib
 import json
 import re
 import tempfile
@@ -5,6 +6,7 @@ import unittest
 from pathlib import Path
 
 from scripts.build_catalog import Candidate, astronomy_observations_for_segment, astronomy_target_summaries, attach_event_entities, build, case_records, classify_phrase, comparison_key, compile_astronomy_taxonomy, coverage_aggregate, craft_class_summaries, craft_measurements, craft_observations_for_segment, curated_discussion_matches, curated_events, duplicate_candidates, entity_key, epistemic_qualifiers_for_segment, extract_mentions, extract_title_mentions, git_blob_sha, inflation_risk, load_epistemic_qualifier_rules, load_registry, machine_data_paths, merge_events, normalized_date, overlay_curated_events, read_language_pair, read_portuguese_pair, reported_event_date_review, reviewed_event_titles, sentence_segments, significance_metrics, signal_frequency_summaries, signal_observations_for_segment, source_lineage_assignments, source_title_from_path, species_class_summaries, species_observations_for_segment, stable_id, temporal_candidates, validate_claim_source_blobs, write_document_shards
+from scripts.build_catalog import astronomy_bootstrap_payload
 
 
 class ClassificationTests(unittest.TestCase):
@@ -1903,6 +1905,36 @@ class CatalogTests(unittest.TestCase):
             mufon = json.loads((data_dir / next(item["path"] for item in manifest if item["source"] == "UPDB-MUFON")).read_text())
             self.assertEqual(mufon["schema"], "ufo-files-source-documents/v1")
             self.assertEqual([item["id"] for item in mufon["documents"]], ["a", "b"])
+            for item in manifest:
+                payload = (data_dir / item["path"]).read_bytes()
+                self.assertEqual(item["version"], hashlib.sha256(payload).hexdigest())
+
+    def test_astronomy_bootstrap_keeps_reviewed_targets_without_observation_bulk(self):
+        catalog = {
+            "schema": "ufo-files-relationship-catalog/v1",
+            "generatedAt": "2026-08-29T00:00:00Z",
+            "input": {"revision": "abc"},
+            "counts": {"documents": 10, "astronomyTargets": 1},
+            "sources": [{"id": "source-example", "name": "Example"}],
+            "documents": [{"id": "doc-1", "path": "Example/moon.txt", "title": "Moon", "source": "Example", "words": 50}],
+            "astronomy": {
+                "schema": "ufo-files-astronomy-observations/v1",
+                "taxonomyVersion": "1",
+                "scope": "Reviewed names",
+                "targets": [{"targetId": "moon", "mentionCount": 12, "evidence": [{"documentId": "doc-1"}]}],
+                "observations": [{"targetId": "moon", "excerpt": "large payload"}],
+                "reviewCandidates": [{"targetId": "io", "count": 2}],
+            },
+        }
+
+        payload = astronomy_bootstrap_payload(catalog)
+
+        self.assertEqual(payload["schema"], "ufo-files-astronomy-bootstrap/v1")
+        self.assertEqual(payload["sources"], catalog["sources"])
+        self.assertEqual(payload["astronomy"]["targets"], catalog["astronomy"]["targets"])
+        self.assertEqual(payload["astronomy"]["reviewCandidates"], catalog["astronomy"]["reviewCandidates"])
+        self.assertEqual(payload["documents"], [{"id": "doc-1", "path": "Example/moon.txt", "title": "Moon", "source": "Example"}])
+        self.assertNotIn("observations", payload["astronomy"])
 
     def test_claim_evidence_is_bound_to_the_reviewed_source_blob(self):
         with tempfile.TemporaryDirectory() as directory:

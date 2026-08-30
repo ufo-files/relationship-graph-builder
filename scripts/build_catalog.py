@@ -24,6 +24,7 @@ from typing import Iterable
 
 SCHEMA = "ufo-files-relationship-catalog/v1"
 DOCUMENT_SHARD_SCHEMA = "ufo-files-source-documents/v1"
+ASTRONOMY_BOOTSTRAP_SCHEMA = "ufo-files-astronomy-bootstrap/v1"
 DOCUMENT_SHARD_MAX_BYTES = 80 * 1024 * 1024
 SOURCE_FAMILY_POLICY = "ufo-files-source-family-policy/v1"
 REPORTED_EVENT_AUTOMATIC_START_DATE = dt.date(1947, 1, 1)
@@ -4007,6 +4008,7 @@ def build(
     document_shards = write_document_shards(output.parent / "source-documents", documents, output.parent)
     published_catalog = {**catalog, "documents": [], "documentShards": document_shards}
     output.write_text(json.dumps(published_catalog, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    write_astronomy_bootstrap(output.with_name("astronomy.json"), catalog)
     if duplicate_report:
         duplicate_report.parent.mkdir(parents=True, exist_ok=True)
         duplicate_report.write_text(json.dumps({
@@ -4032,6 +4034,48 @@ def build(
 def source_shard_slug(source: str) -> str:
     slug = re.sub(r"[^a-z0-9]+", "-", unicodedata.normalize("NFKD", source).encode("ascii", "ignore").decode().lower()).strip("-")
     return slug or f"source-{hashlib.sha1(source.encode('utf-8')).hexdigest()[:10]}"
+
+
+def astronomy_bootstrap_payload(catalog: dict) -> dict:
+    """Return the small payload required to render Galactic Entities."""
+    astronomy = catalog["astronomy"]
+    evidence_document_ids = {
+        evidence["documentId"]
+        for target in astronomy["targets"]
+        for evidence in target.get("evidence", [])
+    } | {
+        evidence["documentId"]
+        for candidate in astronomy["reviewCandidates"]
+        for evidence in candidate.get("examples", [])
+    }
+    evidence_documents = [{
+        key: document[key]
+        for key in ("id", "path", "title", "source", "sourceFamily")
+        if key in document
+    } for document in catalog.get("documents", []) if document["id"] in evidence_document_ids]
+    return {
+        "schema": ASTRONOMY_BOOTSTRAP_SCHEMA,
+        "catalogSchema": catalog["schema"],
+        "generatedAt": catalog["generatedAt"],
+        "input": catalog["input"],
+        "counts": catalog["counts"],
+        "sources": catalog["sources"],
+        "documents": evidence_documents,
+        "astronomy": {
+            "schema": astronomy["schema"],
+            "taxonomyVersion": astronomy["taxonomyVersion"],
+            "scope": astronomy["scope"],
+            "targets": astronomy["targets"],
+            "reviewCandidates": astronomy["reviewCandidates"],
+        },
+    }
+
+
+def write_astronomy_bootstrap(path: Path, catalog: dict) -> None:
+    path.write_text(
+        json.dumps(astronomy_bootstrap_payload(catalog), ensure_ascii=False, separators=(",", ":")) + "\n",
+        encoding="utf-8",
+    )
 
 
 def write_document_shards(shard_dir: Path, documents: list[dict], data_dir: Path) -> list[dict]:
@@ -4072,6 +4116,7 @@ def write_document_shards(shard_dir: Path, documents: list[dict], data_dir: Path
                 "path": path.relative_to(data_dir).as_posix(),
                 "documents": len(chunk),
                 "bytes": path.stat().st_size,
+                "version": hashlib.sha256(payload.encode("utf-8")).hexdigest(),
             })
 
     for stale in shard_dir.glob("*.json"):
