@@ -52,8 +52,24 @@ function labelTexts(chart) {
 test("startup loads and validates source-specific document shards", () => {
   const source = fs.readFileSync("app.js", "utf8");
   assert.match(source, /catalog\.documentShards\.map/);
+  assert.match(source, /shard\.version \|\| catalog\.input\?\.revision/);
   assert.match(source, /ufo-files-source-documents\/v1/);
   assert.match(source, /Document shard count mismatch/);
+});
+
+test("Galactic Entities boots from a compact astronomy payload", () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const payloadText = fs.readFileSync("data/astronomy.json", "utf8");
+  const payload = JSON.parse(payloadText);
+  assert.equal(payload.schema, "ufo-files-astronomy-bootstrap/v1");
+  assert.equal(payload.astronomy.targets.length, 39);
+  assert.ok(payload.astronomy.reviewCandidates.length);
+  assert.equal(payload.astronomy.observations, undefined);
+  assert.ok(Buffer.byteLength(payloadText) < 2 * 1024 * 1024);
+  assert.match(source, /state\.config\.type === "solar"/);
+  assert.match(source, /fetch\("data\/astronomy\.json", \{ cache: "no-store" \}\)/);
+  assert.match(source, /state\.catalogMode = "astronomy"/);
+  assert.match(source, /type !== "solar" && !await ensureFullCatalog\(\)/);
 });
 
 test("catalog CI exercises the French source independently", () => {
@@ -1976,8 +1992,8 @@ test("timeline defaults to reviewed events and published structured reports", ()
   assert.match(source, /radius \+ 3[^\n]+timeline-candidate-ring/);
   assert.match(styles, /timeline-candidate-ring[^}]*stroke: var\(--ink\)[^}]*stroke-dasharray: 3 2/);
   assert.match(styles, /timeline-event-node\.timeline-candidate[^}]*fill: var\(--paper\)/);
-  assert.match(source, /fetch\("data\/catalog\.json", \{ cache: "no-store" \}\)/);
-  assert.match(source, /catalog\.input\?\.revision \|\| catalog\.generatedAt/);
+  assert.match(source, /fetch\("data\/catalog\.json", \{ cache: "no-cache" \}\)/);
+  assert.match(source, /shard\.version \|\| catalog\.input\?\.revision \|\| catalog\.generatedAt/);
   assert.match(source, /fetch\(`data\/\$\{shard\.path\}\?v=\$\{shardVersion\}`\)/);
   assert.match(source, /mentionCount: "Event mentions"/);
   assert.match(source, /mentionRank: "Mention rank"/);

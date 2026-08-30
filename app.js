@@ -5,6 +5,7 @@ const AXIS_MARGIN = Object.freeze({ left: 58, right: 28, top: 22, bottom: 48 });
 const CONFIG_VERSION = 3;
 const DOSSIER_SCHEMA = "ufo-files-case-dossier/v1";
 const PUBLIC_DOSSIER_SCHEMA = "ufo-files-public-dossier/v1";
+const ASTRONOMY_BOOTSTRAP_SCHEMA = "ufo-files-astronomy-bootstrap/v1";
 const CLAIM_POLICY_VERSION = "ufo-files-claim-policy/v2";
 const SOURCE_FAMILY_POLICY_VERSION = "ufo-files-source-family-policy/v1";
 const CORROBORATION_METRICS = ["independentSourceFamilyCount", "independentDocumentCount", "documentCount", "epistemicAdjustedMentions", "contextAdjustedMentions", "mentions"];
@@ -379,7 +380,7 @@ const ENTITY_PRESET_DEFAULTS = {
   matrix: { matrixColumns: "entity" },
   table: { tableRole: "entity" }
 };
-const state = { catalog: null, claimCatalog: null, programCatalog: null, config: loadConfig(), selected: null, documentById: new Map(), historicalTimelineCandidateCount: 0, dossier: null, dossierIsPublicReference: false, inspectorDossierSelection: null, dossierImportMessage: "" };
+const state = { catalog: null, catalogMode: null, fullCatalogPromise: null, claimCatalog: null, programCatalog: null, config: loadConfig(), selected: null, documentById: new Map(), historicalTimelineCandidateCount: 0, dossier: null, dossierIsPublicReference: false, inspectorDossierSelection: null, dossierImportMessage: "" };
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 
@@ -1544,7 +1545,8 @@ function renderControls() {
   $("[data-export-triage-config]")?.addEventListener("click", exportTriageConfiguration);
 }
 
-function setType(type) {
+async function setType(type) {
+  if (type !== "solar" && !await ensureFullCatalog()) return;
   state.config = presetConfig("default", type);
   state.selected = null;
   renderControls();
@@ -6635,52 +6637,136 @@ function captureDossierConfiguration(timestamp = new Date().toISOString()) {
   toast("Current catalog and graph captured");
 }
 
+function showLoadingState(message) {
+  let node = $("#loadingState");
+  if (!node) {
+    node = document.createElement("div");
+    node.className = "loading";
+    node.id = "loadingState";
+    $("#chartWrap").prepend(node);
+  }
+  node.innerHTML = `<span></span>${escapeHTML(message)}`;
+}
+
+function showCatalogError(error) {
+  let node = $("#loadingState");
+  if (!node) {
+    node = document.createElement("div");
+    node.className = "loading";
+    node.id = "loadingState";
+    $("#chartWrap").prepend(node);
+  }
+  node.innerHTML = `<strong>Catalog unavailable</strong><br><small>${escapeHTML(error.message)}. Serve this folder over HTTP.</small>`;
+}
+
+function astronomyBootstrapCatalog(payload) {
+  if (payload?.schema !== ASTRONOMY_BOOTSTRAP_SCHEMA || payload.catalogSchema !== "ufo-files-relationship-catalog/v1") {
+    throw new Error("Astronomy bootstrap invalid");
+  }
+  if (!Array.isArray(payload.astronomy?.targets) || !Array.isArray(payload.astronomy?.reviewCandidates)) {
+    throw new Error("Astronomy bootstrap is missing reviewed targets");
+  }
+  return {
+    schema: payload.catalogSchema,
+    generatedAt: payload.generatedAt,
+    input: payload.input,
+    counts: payload.counts,
+    sources: [], documents: [], sourceFamilies: [], events: [], cases: [], entities: [], edges: [],
+    coverage: {}, craft: { classes: [], observations: [], reviewCandidates: [] },
+    species: { categories: [], classes: [], observations: [], reviewCandidates: [] },
+    astronomy: payload.astronomy,
+    signals: { frequencies: [], observations: [] }, duplicateCandidates: []
+  };
+}
+
+async function loadFullCatalogPayload() {
+  const [catalogResponse, claimResponse, programResponse] = await Promise.all([
+    fetch("data/catalog.json", { cache: "no-cache" }),
+    fetch("data/claims.json", { cache: "no-cache" }),
+    fetch("data/government_programs.json", { cache: "no-cache" })
+  ]);
+  if (!catalogResponse.ok) throw new Error(`${catalogResponse.status} ${catalogResponse.statusText}`);
+  if (!claimResponse.ok) throw new Error(`Claims ${claimResponse.status} ${claimResponse.statusText}`);
+  if (!programResponse.ok) throw new Error(`Programs ${programResponse.status} ${programResponse.statusText}`);
+  const catalog = await catalogResponse.json();
+  if (Array.isArray(catalog.documentShards) && catalog.documentShards.length) {
+    const shardPayloads = await Promise.all(catalog.documentShards.map(async shard => {
+      const shardVersion = encodeURIComponent(shard.version || catalog.input?.revision || catalog.generatedAt || "current");
+      const response = await fetch(`data/${shard.path}?v=${shardVersion}`);
+      if (!response.ok) throw new Error(`Document shard ${shard.source}: ${response.status} ${response.statusText}`);
+      const payload = await response.json();
+      if (payload.schema !== "ufo-files-source-documents/v1" || payload.source !== shard.source || !Array.isArray(payload.documents)) {
+        throw new Error(`Document shard invalid: ${shard.path}`);
+      }
+      return payload.documents;
+    }));
+    catalog.documents = shardPayloads.flat();
+    if (catalog.documents.length !== catalog.counts.documents) {
+      throw new Error(`Document shard count mismatch: expected ${catalog.counts.documents}, loaded ${catalog.documents.length}`);
+    }
+  }
+  return { catalog, claimCatalog: await claimResponse.json(), programCatalog: await programResponse.json() };
+}
+
+function installFullCatalog({ catalog, claimCatalog, programCatalog }) {
+  state.catalog = applySpeciesPresentation(catalog);
+  state.claimCatalog = claimCatalog;
+  state.programCatalog = programCatalog;
+  const programErrors = validateProgramCatalog(state.programCatalog);
+  if (programErrors.length) throw new Error(`Program catalog invalid: ${programErrors.join(" ")}`);
+  state.programCatalog = programCatalogWithCorpus(state.programCatalog, state.catalog);
+  state.catalog.entities = state.catalog.entities.map(withSignificanceDefaults);
+  state.documentById.clear();
+  state.catalog.documents.forEach(item => state.documentById.set(item.id, item));
+  state.historicalTimelineCandidateCount = state.catalog.documents.filter(historicalTimelineCandidate).length;
+  const claimErrors = validateClaimCatalog(state.claimCatalog, state.catalog.documents);
+  if (claimErrors.length) throw new Error(`Claim catalog invalid: ${claimErrors.join(" ")}`);
+  state.catalogMode = "full";
+}
+
+async function initializeDossier() {
+  const sharedDossier = await publicDossierFromHash();
+  state.dossier = sharedDossier || loadDossier() || emptyDossier();
+  state.dossierIsPublicReference = Boolean(sharedDossier);
+  if (sharedDossier) state.dossierImportMessage = "Opened a temporary public reference. Your saved local dossier remains preserved; edits to this reference stay in this tab unless you export them.";
+  updateDossierCount();
+}
+
+function renderInitialView() {
+  $("#loadingState")?.remove();
+  syncAutomaticTitle();
+  renderControls(); renderGraph();
+}
+
+async function ensureFullCatalog() {
+  if (state.catalogMode === "full" || !state.catalog) return true;
+  showLoadingState("Loading full corpus…");
+  try {
+    state.fullCatalogPromise ||= loadFullCatalogPayload();
+    installFullCatalog(await state.fullCatalogPromise);
+    $("#loadingState")?.remove();
+    return true;
+  } catch (error) {
+    state.fullCatalogPromise = null;
+    showCatalogError(error);
+    return false;
+  }
+}
+
 async function init() {
   try {
-    const [catalogResponse, claimResponse, programResponse] = await Promise.all([
-      fetch("data/catalog.json", { cache: "no-store" }),
-      fetch("data/claims.json", { cache: "no-store" }),
-      fetch("data/government_programs.json", { cache: "no-store" })
-    ]);
-    if (!catalogResponse.ok) throw new Error(`${catalogResponse.status} ${catalogResponse.statusText}`);
-    if (!claimResponse.ok) throw new Error(`Claims ${claimResponse.status} ${claimResponse.statusText}`);
-    if (!programResponse.ok) throw new Error(`Programs ${programResponse.status} ${programResponse.statusText}`);
-    const catalog = await catalogResponse.json();
-    if (Array.isArray(catalog.documentShards) && catalog.documentShards.length) {
-      const shardVersion = encodeURIComponent(catalog.input?.revision || catalog.generatedAt || "current");
-      const shardPayloads = await Promise.all(catalog.documentShards.map(async shard => {
-        const response = await fetch(`data/${shard.path}?v=${shardVersion}`);
-        if (!response.ok) throw new Error(`Document shard ${shard.source}: ${response.status} ${response.statusText}`);
-        const payload = await response.json();
-        if (payload.schema !== "ufo-files-source-documents/v1" || payload.source !== shard.source || !Array.isArray(payload.documents)) {
-          throw new Error(`Document shard invalid: ${shard.path}`);
-        }
-        return payload.documents;
-      }));
-      catalog.documents = shardPayloads.flat();
-      if (catalog.documents.length !== catalog.counts.documents) {
-        throw new Error(`Document shard count mismatch: expected ${catalog.counts.documents}, loaded ${catalog.documents.length}`);
-      }
+    if (state.config.type === "solar") {
+      const response = await fetch("data/astronomy.json", { cache: "no-store" });
+      if (!response.ok) throw new Error(`Astronomy ${response.status} ${response.statusText}`);
+      state.catalog = astronomyBootstrapCatalog(await response.json());
+      state.catalogMode = "astronomy";
+      await initializeDossier();
+      renderInitialView();
+      return;
     }
-    state.catalog = applySpeciesPresentation(catalog);
-    state.historicalTimelineCandidateCount = state.catalog.documents.filter(historicalTimelineCandidate).length;
-    state.claimCatalog = await claimResponse.json();
-    state.programCatalog = await programResponse.json();
-    const programErrors = validateProgramCatalog(state.programCatalog);
-    if (programErrors.length) throw new Error(`Program catalog invalid: ${programErrors.join(" ")}`);
-    state.programCatalog = programCatalogWithCorpus(state.programCatalog, state.catalog);
-    state.catalog.entities = state.catalog.entities.map(withSignificanceDefaults);
-    state.catalog.documents.forEach(item => state.documentById.set(item.id, item));
-    const claimErrors = validateClaimCatalog(state.claimCatalog, state.catalog.documents);
-    if (claimErrors.length) throw new Error(`Claim catalog invalid: ${claimErrors.join(" ")}`);
-    const sharedDossier = await publicDossierFromHash();
-    state.dossier = sharedDossier || loadDossier() || emptyDossier();
-    state.dossierIsPublicReference = Boolean(sharedDossier);
-    if (sharedDossier) state.dossierImportMessage = "Opened a temporary public reference. Your saved local dossier remains preserved; edits to this reference stay in this tab unless you export them.";
-    updateDossierCount();
-    $("#loadingState").remove();
-    syncAutomaticTitle();
-    renderControls(); renderGraph();
+    installFullCatalog(await loadFullCatalogPayload());
+    await initializeDossier();
+    renderInitialView();
     if (new URLSearchParams(location.search).get("dossier") === "open") {
       renderDossier();
       $("#dossierDialog").showModal();
@@ -6690,7 +6776,7 @@ async function init() {
       if (candidate) inspectTriageCase(candidate, false);
     }
   } catch (error) {
-    $("#loadingState").innerHTML = `<strong>Catalog unavailable</strong><br><small>${escapeHTML(error.message)}. Serve this folder over HTTP.</small>`;
+    showCatalogError(error);
   }
 }
 
