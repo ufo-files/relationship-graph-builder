@@ -76,9 +76,14 @@ test("Galactic Entities boots from a compact astronomy payload", () => {
   assert.match(source, /fetch\("data\/astronomy\.json", \{ cache: "no-store" \}\)/);
   assert.match(source, /state\.catalogMode = "astronomy"/);
   assert.match(source, /state\.catalog\.documents\.forEach\(item => state\.documentById\.set\(item\.id, item\)\)/);
-  assert.match(source, /type !== "solar" && !await ensureFullCatalog\(\)/);
+  assert.match(source, /type !== "solar" && !await ensureFullCatalog\(requestId\)/);
   assert.match(source, /const requestId = \+\+state\.typeRequestId/);
   assert.match(source, /requestId !== state\.typeRequestId/);
+  assert.match(source, /state\.initialCatalogPromise = init\(\)/);
+  assert.match(source, /if \(state\.initialCatalogPromise\) await state\.initialCatalogPromise/);
+  assert.match(source, /state\.publicDossierPayload = publicDossierPayloadFromHash\(\)/);
+  assert.match(source, /state\.publicDossierPayload \|\| publicDossierPayloadFromHash\(\)/);
+  assert.match(source, /requestId === null \|\| requestId === state\.typeRequestId\) showCatalogError/);
   assert.match(source, /async function openDossierDialog\(\)[\s\S]*ensureFullCatalog\(\)[\s\S]*initializeDossier\(\)/);
 });
 

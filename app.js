@@ -380,7 +380,7 @@ const ENTITY_PRESET_DEFAULTS = {
   matrix: { matrixColumns: "entity" },
   table: { tableRole: "entity" }
 };
-const state = { catalog: null, catalogMode: null, fullCatalogPromise: null, typeRequestId: 0, claimCatalog: null, programCatalog: null, config: loadConfig(), selected: null, documentById: new Map(), historicalTimelineCandidateCount: 0, dossier: null, dossierIsPublicReference: false, inspectorDossierSelection: null, dossierImportMessage: "" };
+const state = { catalog: null, catalogMode: null, initialCatalogPromise: null, fullCatalogPromise: null, typeRequestId: 0, claimCatalog: null, programCatalog: null, config: loadConfig(), selected: null, documentById: new Map(), historicalTimelineCandidateCount: 0, dossier: null, publicDossierPayload: null, dossierIsPublicReference: false, inspectorDossierSelection: null, dossierImportMessage: "" };
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 
@@ -1547,10 +1547,11 @@ function renderControls() {
 
 async function setType(type) {
   const requestId = ++state.typeRequestId;
-  if (type !== "solar" && !await ensureFullCatalog()) return;
+  if (type !== "solar" && !await ensureFullCatalog(requestId)) return;
   if (requestId !== state.typeRequestId) return;
   state.config = presetConfig("default", type);
   state.selected = null;
+  $("#loadingState")?.remove();
   renderControls();
   commitConfig();
 }
@@ -6580,7 +6581,7 @@ function publicDossierPayloadFromHash() {
 }
 
 async function publicDossierFromHash(catalog = state.catalog, timestamp = new Date().toISOString()) {
-  const payload = publicDossierPayloadFromHash();
+  const payload = state.publicDossierPayload || publicDossierPayloadFromHash();
   if (!payload) return null;
   catalog = applySpeciesPresentation(catalog);
   const dossier = emptyDossier(catalog, payload.graphConfiguration || state.config, timestamp);
@@ -6754,8 +6755,14 @@ async function openDossierDialog() {
   $("#dossierDialog").showModal();
 }
 
-async function ensureFullCatalog() {
-  if (state.catalogMode === "full" || !state.catalog) return true;
+async function ensureFullCatalog(requestId = null) {
+  if (state.catalogMode === "full") return true;
+  if (!state.catalog) {
+    if (state.initialCatalogPromise) await state.initialCatalogPromise;
+    if (requestId !== null && requestId !== state.typeRequestId) return false;
+    if (state.catalogMode === "full") return true;
+    if (!state.catalog) return false;
+  }
   showLoadingState("Loading full corpus…");
   try {
     state.fullCatalogPromise ||= loadFullCatalogPayload();
@@ -6765,13 +6772,14 @@ async function ensureFullCatalog() {
     return true;
   } catch (error) {
     state.fullCatalogPromise = null;
-    showCatalogError(error);
+    if (requestId === null || requestId === state.typeRequestId) showCatalogError(error);
     return false;
   }
 }
 
 async function init() {
   try {
+    state.publicDossierPayload = publicDossierPayloadFromHash();
     if (state.config.type === "solar") {
       const response = await fetch("data/astronomy.json", { cache: "no-store" });
       if (!response.ok) throw new Error(`Astronomy ${response.status} ${response.statusText}`);
@@ -6872,4 +6880,4 @@ window.addEventListener("ufo-map-select", event => {
 });
 window.addEventListener("resize", () => { clearTimeout(window.resizeTimer); window.resizeTimer = setTimeout(renderGraph, 120); });
 
-init();
+state.initialCatalogPromise = init();
