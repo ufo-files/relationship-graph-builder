@@ -4059,6 +4059,7 @@ def astronomy_bootstrap_payload(catalog: dict) -> dict:
         "generatedAt": catalog["generatedAt"],
         "input": catalog["input"],
         "counts": catalog["counts"],
+        "sources": catalog["sources"],
         "documents": evidence_documents,
         "astronomy": {
             "schema": astronomy["schema"],

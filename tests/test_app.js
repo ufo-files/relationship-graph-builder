@@ -62,9 +62,13 @@ test("Galactic Entities boots from a compact astronomy payload", () => {
   const payloadText = fs.readFileSync("data/astronomy.json", "utf8");
   const payload = JSON.parse(payloadText);
   assert.equal(payload.schema, "ufo-files-astronomy-bootstrap/v1");
-  assert.equal(payload.astronomy.targets.length, 39);
-  assert.ok(payload.astronomy.reviewCandidates.length);
-  assert.equal(payload.documents.length, 195);
+  assert.equal(payload.astronomy.targets.length, payload.counts.astronomyTargets);
+  assert.equal(payload.sources.length, payload.counts.sources);
+  const referencedDocumentIds = new Set([
+    ...payload.astronomy.targets.flatMap(target => (target.evidence || []).map(evidence => evidence.documentId)),
+    ...payload.astronomy.reviewCandidates.flatMap(candidate => (candidate.examples || []).map(example => example.documentId))
+  ]);
+  assert.deepEqual(new Set(payload.documents.map(document => document.id)), referencedDocumentIds);
   assert.ok(payload.documents.every(document => document.id && document.path && document.source));
   assert.equal(payload.astronomy.observations, undefined);
   assert.ok(Buffer.byteLength(payloadText) < 2 * 1024 * 1024);
@@ -73,6 +77,8 @@ test("Galactic Entities boots from a compact astronomy payload", () => {
   assert.match(source, /state\.catalogMode = "astronomy"/);
   assert.match(source, /state\.catalog\.documents\.forEach\(item => state\.documentById\.set\(item\.id, item\)\)/);
   assert.match(source, /type !== "solar" && !await ensureFullCatalog\(\)/);
+  assert.match(source, /const requestId = \+\+state\.typeRequestId/);
+  assert.match(source, /requestId !== state\.typeRequestId/);
   assert.match(source, /async function openDossierDialog\(\)[\s\S]*ensureFullCatalog\(\)[\s\S]*initializeDossier\(\)/);
 });
 
@@ -3205,6 +3211,9 @@ test("entity inspection groups supporting documents by lineage and warns about d
   assert.match(elements.inspectorContent.innerHTML, /Unknown/);
   assert.match(elements.inspectorContent.innerHTML, /Inspect source document ↗/);
   assert.match(elements.inspectorContent.innerHTML, /Evidence excerpts are 94% text-similar/);
+  const sampledLineage = vm.runInContext(`lineageGroupsHTML(["a", "missing-document"])`, context);
+  assert.match(sampledLineage, /Stored evidence sample by likely lineage · 1 of 2 documents/);
+  assert.match(sampledLineage, /sample is not complete lineage accounting/);
 });
 
 test("book inspection places the author beneath the title", () => {

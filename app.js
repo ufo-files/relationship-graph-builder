@@ -380,7 +380,7 @@ const ENTITY_PRESET_DEFAULTS = {
   matrix: { matrixColumns: "entity" },
   table: { tableRole: "entity" }
 };
-const state = { catalog: null, catalogMode: null, fullCatalogPromise: null, claimCatalog: null, programCatalog: null, config: loadConfig(), selected: null, documentById: new Map(), historicalTimelineCandidateCount: 0, dossier: null, dossierIsPublicReference: false, inspectorDossierSelection: null, dossierImportMessage: "" };
+const state = { catalog: null, catalogMode: null, fullCatalogPromise: null, typeRequestId: 0, claimCatalog: null, programCatalog: null, config: loadConfig(), selected: null, documentById: new Map(), historicalTimelineCandidateCount: 0, dossier: null, dossierIsPublicReference: false, inspectorDossierSelection: null, dossierImportMessage: "" };
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 
@@ -1546,7 +1546,9 @@ function renderControls() {
 }
 
 async function setType(type) {
+  const requestId = ++state.typeRequestId;
   if (type !== "solar" && !await ensureFullCatalog()) return;
+  if (requestId !== state.typeRequestId) return;
   state.config = presetConfig("default", type);
   state.selected = null;
   renderControls();
@@ -5409,8 +5411,11 @@ function documentSourceFamily(document) {
 }
 
 function lineageGroupsHTML(documentIds = []) {
+  const uniqueDocumentIds = [...new Set(documentIds)];
+  const resolvedDocuments = uniqueDocumentIds.map(documentId => state.documentById.get(documentId)).filter(Boolean);
+  const sampled = resolvedDocuments.length < uniqueDocumentIds.length;
   const groups = new Map();
-  [...new Set(documentIds)].map(documentId => state.documentById.get(documentId)).filter(Boolean).forEach(document => {
+  resolvedDocuments.forEach(document => {
     const assignment = documentSourceFamily(document);
     if (!groups.has(assignment.id)) groups.set(assignment.id, { assignment: { ...assignment, status: assignment.familyStatus || assignment.status }, documents: [] });
     groups.get(assignment.id).documents.push(document);
@@ -5431,7 +5436,11 @@ function lineageGroupsHTML(documentIds = []) {
     }).join("");
     return `<section class="lineage-family lineage-family-${escapeHTML(group.assignment.status)}"><header><span>${escapeHTML(label(group.assignment.status))}</span><h5>${escapeHTML(group.assignment.label)}</h5><small>${group.documents.length} supporting document${group.documents.length === 1 ? "" : "s"}${group.documents.length > 20 ? " · first 20 shown" : ""}</small></header>${assignments}</section>`;
   }).join("");
-  return `<div class="evidence-list lineage-groups"><h4>Supporting documents by likely lineage · ${groups.size} ${groups.size === 1 ? "family" : "families"}</h4><p>Reviewed assignments come from published metadata. Inferred assignments expose their signals. Unknown documents remain separate and count as independent without implying confidence.${groups.size > shownGroups.length ? ` Showing the first ${shownGroups.length} families.` : ""}</p>${cards}</div>`;
+  const heading = sampled
+    ? `Stored evidence sample by likely lineage · ${resolvedDocuments.length.toLocaleString()} of ${uniqueDocumentIds.length.toLocaleString()} documents`
+    : `Supporting documents by likely lineage · ${groups.size} ${groups.size === 1 ? "family" : "families"}`;
+  const scope = sampled ? "The compact Galactic Entities view retains document metadata for stored evidence excerpts; its sample is not complete lineage accounting. " : "";
+  return `<div class="evidence-list lineage-groups"><h4>${heading}</h4><p>${scope}Reviewed assignments come from published metadata. Inferred assignments expose their signals. Unknown documents remain separate and count as independent without implying confidence.${groups.size > shownGroups.length ? ` Showing the first ${shownGroups.length} families.` : ""}</p>${cards}</div>`;
 }
 
 function derivativeCoverageWarning(item) {
@@ -6663,7 +6672,7 @@ function astronomyBootstrapCatalog(payload) {
   if (payload?.schema !== ASTRONOMY_BOOTSTRAP_SCHEMA || payload.catalogSchema !== "ufo-files-relationship-catalog/v1") {
     throw new Error("Astronomy bootstrap invalid");
   }
-  if (!Array.isArray(payload.documents) || !Array.isArray(payload.astronomy?.targets) || !Array.isArray(payload.astronomy?.reviewCandidates)) {
+  if (!Array.isArray(payload.sources) || !Array.isArray(payload.documents) || !Array.isArray(payload.astronomy?.targets) || !Array.isArray(payload.astronomy?.reviewCandidates)) {
     throw new Error("Astronomy bootstrap is missing reviewed targets");
   }
   return {
@@ -6671,7 +6680,7 @@ function astronomyBootstrapCatalog(payload) {
     generatedAt: payload.generatedAt,
     input: payload.input,
     counts: payload.counts,
-    sources: [], documents: payload.documents, sourceFamilies: [], events: [], cases: [], entities: [], edges: [],
+    sources: payload.sources, documents: payload.documents, sourceFamilies: [], events: [], cases: [], entities: [], edges: [],
     coverage: {}, craft: { classes: [], observations: [], reviewCandidates: [] },
     species: { categories: [], classes: [], observations: [], reviewCandidates: [] },
     astronomy: payload.astronomy,

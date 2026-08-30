@@ -1915,6 +1915,7 @@ class CatalogTests(unittest.TestCase):
             "generatedAt": "2026-08-29T00:00:00Z",
             "input": {"revision": "abc"},
             "counts": {"documents": 10, "astronomyTargets": 1},
+            "sources": [{"id": "source-example", "name": "Example"}],
             "documents": [{"id": "doc-1", "path": "Example/moon.txt", "title": "Moon", "source": "Example", "words": 50}],
             "astronomy": {
                 "schema": "ufo-files-astronomy-observations/v1",
@@ -1929,6 +1930,7 @@ class CatalogTests(unittest.TestCase):
         payload = astronomy_bootstrap_payload(catalog)
 
         self.assertEqual(payload["schema"], "ufo-files-astronomy-bootstrap/v1")
+        self.assertEqual(payload["sources"], catalog["sources"])
         self.assertEqual(payload["astronomy"]["targets"], catalog["astronomy"]["targets"])
         self.assertEqual(payload["astronomy"]["reviewCandidates"], catalog["astronomy"]["reviewCandidates"])
         self.assertEqual(payload["documents"], [{"id": "doc-1", "path": "Example/moon.txt", "title": "Moon", "source": "Example"}])
