@@ -6663,7 +6663,7 @@ function astronomyBootstrapCatalog(payload) {
   if (payload?.schema !== ASTRONOMY_BOOTSTRAP_SCHEMA || payload.catalogSchema !== "ufo-files-relationship-catalog/v1") {
     throw new Error("Astronomy bootstrap invalid");
   }
-  if (!Array.isArray(payload.astronomy?.targets) || !Array.isArray(payload.astronomy?.reviewCandidates)) {
+  if (!Array.isArray(payload.documents) || !Array.isArray(payload.astronomy?.targets) || !Array.isArray(payload.astronomy?.reviewCandidates)) {
     throw new Error("Astronomy bootstrap is missing reviewed targets");
   }
   return {
@@ -6671,7 +6671,7 @@ function astronomyBootstrapCatalog(payload) {
     generatedAt: payload.generatedAt,
     input: payload.input,
     counts: payload.counts,
-    sources: [], documents: [], sourceFamilies: [], events: [], cases: [], entities: [], edges: [],
+    sources: [], documents: payload.documents, sourceFamilies: [], events: [], cases: [], entities: [], edges: [],
     coverage: {}, craft: { classes: [], observations: [], reviewCandidates: [] },
     species: { categories: [], classes: [], observations: [], reviewCandidates: [] },
     astronomy: payload.astronomy,
@@ -6738,12 +6738,20 @@ function renderInitialView() {
   renderControls(); renderGraph();
 }
 
+async function openDossierDialog() {
+  if (!await ensureFullCatalog()) return;
+  if (!state.dossier) await initializeDossier();
+  renderDossier();
+  $("#dossierDialog").showModal();
+}
+
 async function ensureFullCatalog() {
   if (state.catalogMode === "full" || !state.catalog) return true;
   showLoadingState("Loading full corpus…");
   try {
     state.fullCatalogPromise ||= loadFullCatalogPayload();
     installFullCatalog(await state.fullCatalogPromise);
+    if (!state.dossier) await initializeDossier();
     $("#loadingState")?.remove();
     return true;
   } catch (error) {
@@ -6760,16 +6768,17 @@ async function init() {
       if (!response.ok) throw new Error(`Astronomy ${response.status} ${response.statusText}`);
       state.catalog = astronomyBootstrapCatalog(await response.json());
       state.catalogMode = "astronomy";
-      await initializeDossier();
+      state.documentById.clear();
+      state.catalog.documents.forEach(item => state.documentById.set(item.id, item));
       renderInitialView();
+      if (new URLSearchParams(location.search).get("dossier") === "open") await openDossierDialog();
       return;
     }
     installFullCatalog(await loadFullCatalogPayload());
     await initializeDossier();
     renderInitialView();
     if (new URLSearchParams(location.search).get("dossier") === "open") {
-      renderDossier();
-      $("#dossierDialog").showModal();
+      await openDossierDialog();
     }
     if (state.config.type === "triage" && state.config.triageCaseId) {
       const candidate = triageCandidates().find(item => item.event.id === state.config.triageCaseId);
@@ -6791,7 +6800,7 @@ $("#graphTitle").addEventListener("blur", event => {
 });
 $("#saveButton").addEventListener("click", () => { localStorage.setItem("ufo-files-graph-view", JSON.stringify(state.config)); toast("View saved in this browser"); });
 $("#shareButton").addEventListener("click", async () => { persistHash(); try { await navigator.clipboard.writeText(location.href); toast("Builder link copied"); } catch (_) { toast("Copy the URL from your browser"); } });
-$("#dossierButton").addEventListener("click", () => { renderDossier(); $("#dossierDialog").showModal(); });
+$("#dossierButton").addEventListener("click", openDossierDialog);
 $("#closeDossier").addEventListener("click", () => $("#dossierDialog").close());
 $("#dossierDialog").addEventListener("input", event => {
   if (event.target.matches("[data-dossier-field], [data-dossier-list], [data-dossier-review]")) saveDossierWorkspaceValue(event.target);

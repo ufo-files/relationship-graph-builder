@@ -4008,7 +4008,7 @@ def build(
     document_shards = write_document_shards(output.parent / "source-documents", documents, output.parent)
     published_catalog = {**catalog, "documents": [], "documentShards": document_shards}
     output.write_text(json.dumps(published_catalog, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
-    write_astronomy_bootstrap(output.with_name("astronomy.json"), published_catalog)
+    write_astronomy_bootstrap(output.with_name("astronomy.json"), catalog)
     if duplicate_report:
         duplicate_report.parent.mkdir(parents=True, exist_ok=True)
         duplicate_report.write_text(json.dumps({
@@ -4039,12 +4039,27 @@ def source_shard_slug(source: str) -> str:
 def astronomy_bootstrap_payload(catalog: dict) -> dict:
     """Return the small payload required to render Galactic Entities."""
     astronomy = catalog["astronomy"]
+    evidence_document_ids = {
+        evidence["documentId"]
+        for target in astronomy["targets"]
+        for evidence in target.get("evidence", [])
+    } | {
+        evidence["documentId"]
+        for candidate in astronomy["reviewCandidates"]
+        for evidence in candidate.get("examples", [])
+    }
+    evidence_documents = [{
+        key: document[key]
+        for key in ("id", "path", "title", "source", "sourceFamily")
+        if key in document
+    } for document in catalog.get("documents", []) if document["id"] in evidence_document_ids]
     return {
         "schema": ASTRONOMY_BOOTSTRAP_SCHEMA,
         "catalogSchema": catalog["schema"],
         "generatedAt": catalog["generatedAt"],
         "input": catalog["input"],
         "counts": catalog["counts"],
+        "documents": evidence_documents,
         "astronomy": {
             "schema": astronomy["schema"],
             "taxonomyVersion": astronomy["taxonomyVersion"],

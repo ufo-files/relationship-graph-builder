@@ -64,12 +64,16 @@ test("Galactic Entities boots from a compact astronomy payload", () => {
   assert.equal(payload.schema, "ufo-files-astronomy-bootstrap/v1");
   assert.equal(payload.astronomy.targets.length, 39);
   assert.ok(payload.astronomy.reviewCandidates.length);
+  assert.equal(payload.documents.length, 195);
+  assert.ok(payload.documents.every(document => document.id && document.path && document.source));
   assert.equal(payload.astronomy.observations, undefined);
   assert.ok(Buffer.byteLength(payloadText) < 2 * 1024 * 1024);
   assert.match(source, /state\.config\.type === "solar"/);
   assert.match(source, /fetch\("data\/astronomy\.json", \{ cache: "no-store" \}\)/);
   assert.match(source, /state\.catalogMode = "astronomy"/);
+  assert.match(source, /state\.catalog\.documents\.forEach\(item => state\.documentById\.set\(item\.id, item\)\)/);
   assert.match(source, /type !== "solar" && !await ensureFullCatalog\(\)/);
+  assert.match(source, /async function openDossierDialog\(\)[\s\S]*ensureFullCatalog\(\)[\s\S]*initializeDossier\(\)/);
 });
 
 test("catalog CI exercises the French source independently", () => {

@@ -1915,11 +1915,12 @@ class CatalogTests(unittest.TestCase):
             "generatedAt": "2026-08-29T00:00:00Z",
             "input": {"revision": "abc"},
             "counts": {"documents": 10, "astronomyTargets": 1},
+            "documents": [{"id": "doc-1", "path": "Example/moon.txt", "title": "Moon", "source": "Example", "words": 50}],
             "astronomy": {
                 "schema": "ufo-files-astronomy-observations/v1",
                 "taxonomyVersion": "1",
                 "scope": "Reviewed names",
-                "targets": [{"targetId": "moon", "mentionCount": 12}],
+                "targets": [{"targetId": "moon", "mentionCount": 12, "evidence": [{"documentId": "doc-1"}]}],
                 "observations": [{"targetId": "moon", "excerpt": "large payload"}],
                 "reviewCandidates": [{"targetId": "io", "count": 2}],
             },
@@ -1930,6 +1931,7 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(payload["schema"], "ufo-files-astronomy-bootstrap/v1")
         self.assertEqual(payload["astronomy"]["targets"], catalog["astronomy"]["targets"])
         self.assertEqual(payload["astronomy"]["reviewCandidates"], catalog["astronomy"]["reviewCandidates"])
+        self.assertEqual(payload["documents"], [{"id": "doc-1", "path": "Example/moon.txt", "title": "Moon", "source": "Example"}])
         self.assertNotIn("observations", payload["astronomy"])
 
     def test_claim_evidence_is_bound_to_the_reviewed_source_blob(self):
