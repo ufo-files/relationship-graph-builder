@@ -1,0 +1,315 @@
+{
+  "schema": "ufo-files-government-programs/v1",
+  "reviewedAt": "2026-08-25",
+  "method": "The audit covers every entity currently classified as a program in the generated corpus catalog plus named government UAP efforts found in other entity categories, paired-source metadata, and authoritative national records. Included efforts have a source-reviewed start and an explicit end or remain bounded by the catalog review date. Merged aliases, non-program entities, private efforts, and unsupported program claims are recorded in entityReviews and are not rendered as government-program intervals. Evidence status remains visible in every presentation.",
+  "programs": [
+    {
+      "id": "operation-paperclip", "entityId": "ent-e2c597665f0b", "name": "Operation Paperclip", "kind": "operation",
+      "agency": "Joint Intelligence Objectives Agency", "country": "United States",
+      "startDate": "1946-09", "endDate": "1947-09-30", "startPrecision": "month", "endPrecision": "day", "evidenceStatus": "official",
+      "summary": "U.S. recruitment effort for German scientists and engineers. The interval follows presidential authorization of the named Paperclip program through the end of its general recruitment authority; later special admissions are not presented as the same interval.",
+      "sources": [
+        { "title": "National Archives: Implementation of the Nazi War Crimes Disclosure Act", "url": "https://www.archives.gov/iwg/reports/nazi-war-crimes-interim-report-october-1999" },
+        { "title": "CIA FOIA: U.S. use of Nazi and Axis collaborators", "url": "https://www.cia.gov/readingroom/document/cia-rdp87m01152r000300410001-8" }
+      ]
+    },
+    {
+      "id": "project-sign", "entityId": "ent-50b219f8d791", "name": "Project Sign", "kind": "project", "agency": "U.S. Air Force", "country": "United States",
+      "startDate": "1947-12-30", "endDate": "1949-02-11", "startPrecision": "day", "endPrecision": "day", "evidenceStatus": "official",
+      "summary": "The first named Air Force project to collect and evaluate reports of unidentified flying objects.",
+      "sources": [{ "title": "National Archives: Records of Project Blue Book", "url": "https://www.archives.gov/research/guide-fed-records/groups/341.html#341.15" }]
+    },
+    {
+      "id": "project-mogul", "entityId": "ent-8e631aff88eb", "name": "Project Mogul", "kind": "project", "agency": "U.S. Army Air Forces", "country": "United States",
+      "startDate": "1947", "endDate": "1949", "startPrecision": "year", "endPrecision": "year", "evidenceStatus": "official",
+      "summary": "A classified balloon-borne acoustic detection program identified by the Air Force and AARO as the source of debris recovered near Roswell.",
+      "sources": [{ "title": "AARO Historical Record Report, Volume 1", "url": "https://www.aaro.mil/Portals/136/PDFs/AARO_Historical_Record_Report_Vol_1_2024.pdf" }]
+    },
+    {
+      "id": "project-grudge", "entityId": "ent-5194e49dc4fe", "name": "Project Grudge", "kind": "project", "agency": "U.S. Air Force", "country": "United States",
+      "startDate": "1949-02-11", "endDate": "1952-03", "startPrecision": "day", "endPrecision": "month",
+      "intervals": [
+        { "startDate": "1949-02-11", "endDate": "1949-12-27", "startPrecision": "day", "endPrecision": "day" },
+        { "startDate": "1951-10-27", "endDate": "1952-03", "startPrecision": "day", "endPrecision": "month" }
+      ],
+      "evidenceStatus": "official", "summary": "The Air Force successor to Project Sign; terminated in 1949, reestablished in October 1951, and redesignated in March 1952.",
+      "sources": [
+        { "title": "National Archives: Records of Project Blue Book", "url": "https://www.archives.gov/research/guide-fed-records/groups/341.html#341.15" },
+        { "title": "AARO Historical Record Report, Volume 1", "url": "https://www.aaro.mil/Portals/136/PDFs/AARO_Historical_Record_Report_Vol_1_2024.pdf" }
+      ]
+    },
+    {
+      "id": "project-twinkle", "entityId": "ent-7e9f7d616267", "name": "Project Twinkle", "kind": "project", "agency": "U.S. Air Force Cambridge Research Laboratory", "country": "United States",
+      "startDate": "1949", "endDate": "1950", "startPrecision": "year", "endPrecision": "year", "evidenceStatus": "official",
+      "summary": "Air Force camera investigation of reported green fireballs. AARO describes summer 1949 through summer 1950; the timeline uses year precision rather than inventing exact dates.",
+      "sources": [{ "title": "AARO Historical Record Report, Volume 1", "url": "https://www.aaro.mil/Portals/136/PDFs/AARO_Historical_Record_Report_Vol_1_2024.pdf" }]
+    },
+    {
+      "id": "flying-saucer-working-party", "name": "Flying Saucer Working Party", "kind": "task_force", "agency": "Ministry of Defence", "country": "United Kingdom",
+      "startDate": "1950-08", "endDate": "1951", "startPrecision": "month", "endPrecision": "year", "evidenceStatus": "official",
+      "summary": "British defence-intelligence working party established in August 1950 to investigate flying-saucer reports; its full intelligence study was completed in 1951.",
+      "sources": [{ "title": "UK National Archives: UFO files research guide", "url": "https://cdn.nationalarchives.gov.uk/documents/aug-2009-research-guide.pdf" }]
+    },
+    {
+      "id": "project-magnet", "entityId": "ent-7989d0e9b236", "name": "Project Magnet", "kind": "project", "agency": "Department of Transport", "country": "Canada",
+      "startDate": "1950", "endDate": "1954", "startPrecision": "year", "endPrecision": "year", "evidenceStatus": "official",
+      "summary": "Canadian Department of Transport investigation led by Wilbert B. Smith.",
+      "sources": [{ "title": "Government of Canada: Management and public reporting of UAP", "url": "https://ised-isde.canada.ca/site/science/en/office-chief-science-advisor/sky-canada-project/management-public-reporting-unidentified-aerial-phenomena-canada" }]
+    },
+    {
+      "id": "project-blue-book", "entityId": "ent-576318b7542d", "name": "Project Blue Book", "kind": "project", "agency": "U.S. Air Force", "country": "United States",
+      "startDate": "1952-03", "endDate": "1969-12-17", "startPrecision": "month", "endPrecision": "day", "evidenceStatus": "official",
+      "summary": "Air Force program for investigating UFO reports, terminated in December 1969.",
+      "sources": [{ "title": "National Archives: Project Blue Book", "url": "https://www.archives.gov/research/military/air-force/ufos" }]
+    },
+    {
+      "id": "project-second-storey", "name": "Project Second Storey", "kind": "project", "agency": "Defence Research Board", "country": "Canada",
+      "startDate": "1952", "endDate": "1954", "startPrecision": "year", "endPrecision": "year", "evidenceStatus": "official",
+      "summary": "Canadian Defence Research Board committee created to collect, catalog, and correlate UFO reports; it met six times from 1952 through 1954.",
+      "sources": [{ "title": "Government of Canada: Management and public reporting of UAP", "url": "https://ised-isde.canada.ca/site/science/en/office-chief-science-advisor/sky-canada-project/management-public-reporting-unidentified-aerial-phenomena-canada" }]
+    },
+    {
+      "id": "project-stork", "entityId": "ent-66cd1f0da659", "name": "Project STORK", "kind": "project", "agency": "U.S. Air Force Air Technical Intelligence Center / Battelle Memorial Institute", "country": "United States",
+      "startDate": "1952", "endDate": "1953", "startPrecision": "year", "endPrecision": "year", "evidenceStatus": "official",
+      "summary": "Battelle Memorial Institute contract supporting Air Technical Intelligence Center analysis, including statistical work used during the 1953 scientific advisory-panel review.",
+      "sources": [
+        { "title": "CIA: Project STORK status report", "url": "https://www.cia.gov/readingroom/docs/DOC_0005517565.pdf" },
+        { "title": "CIA: Scientific Advisory Panel on Unidentified Flying Objects", "url": "https://www.cia.gov/readingroom/docs/CIA-RDP81R00560R000100030026-1.pdf" }
+      ]
+    },
+    {
+      "id": "operation-mainbrace", "entityId": "ent-503b710b1dbb", "name": "Operation Main Brace", "kind": "operation", "agency": "North Atlantic Treaty Organization", "country": "Multinational",
+      "startDate": "1952-09-13", "endDate": "1952-09-23", "startPrecision": "day", "endPrecision": "day", "evidenceStatus": "official",
+      "summary": "NATO exercise Mainbrace in northern Europe. The interval follows the dates reported to the UK Parliament after the exercise.",
+      "sources": [{ "title": "UK Parliament: Exercise Mainbrace", "url": "https://hansard.parliament.uk/commons/1952-10-15/debates/68ba003b-f803-40b9-b078-b51a42c35707/ExerciseMainbrace" }]
+    },
+    {
+      "id": "robertson-panel", "name": "Robertson Panel", "kind": "task_force", "agency": "Central Intelligence Agency Office of Scientific Intelligence", "country": "United States",
+      "startDate": "1953-01-14", "endDate": "1953-01-17", "startPrecision": "day", "endPrecision": "day", "evidenceStatus": "official",
+      "summary": "Scientific Advisory Panel on Unidentified Flying Objects convened by the CIA under H. P. Robertson for four days in January 1953.",
+      "sources": [{ "title": "CIA: Scientific Advisory Panel on Unidentified Flying Objects", "url": "https://www.cia.gov/readingroom/docs/CIA-RDP81R00560R000100030026-1.pdf" }]
+    },
+    {
+      "id": "project-silver-bug", "entityId": "ent-23e2a475eba7", "name": "Project Silver Bug", "kind": "project", "agency": "U.S. Air Force and U.S. Army", "country": "United States / Canada",
+      "startDate": "1958", "endDate": "1961-12", "startPrecision": "year", "endPrecision": "month", "evidenceStatus": "official",
+      "summary": "U.S.-supported Avro Canada circular vertical-takeoff aircraft effort, cancelled in December 1961.",
+      "sources": [{ "title": "AARO Historical Record Report, Volume 1", "url": "https://www.aaro.mil/Portals/136/PDFs/AARO_Historical_Record_Report_Vol_1_2024.pdf" }]
+    },
+    {
+      "id": "project-moon-dust", "entityId": "ent-c7c67f8ae476", "name": "Project Moon Dust", "kind": "project", "agency": "U.S. Air Force", "country": "United States",
+      "startDate": "1957", "endDate": "1980", "startPrecision": "year", "endPrecision": "decade", "evidenceStatus": "official",
+      "summary": "Air Force activity for locating and recovering descended foreign space vehicles, documented from 1957 and reported as discontinued during the 1980s. The decade endpoint is intentionally coarse.",
+      "sources": [{ "title": "Declassified Air Force Moon Dust and Blue Fly records", "url": "https://ufopedia.fyi/source/moon-dust-blue-fly-programs/" }]
+    },
+    {
+      "id": "condon-committee", "entityId": "ent-6146a98f813a", "name": "Condon Committee / University of Colorado UFO Project", "kind": "project", "agency": "U.S. Air Force / University of Colorado", "country": "United States",
+      "startDate": "1966", "endDate": "1968", "startPrecision": "year", "endPrecision": "year", "evidenceStatus": "official",
+      "summary": "Air Force-funded University of Colorado scientific study led by Edward Condon, concluded with the committee's final report in 1968.",
+      "sources": [
+        { "title": "National Archives: History of Project Blue Book", "url": "https://prologue.blogs.archives.gov/2019/12/19/saucers-over-washington-the-history-of-project-blue-book/" },
+        { "title": "CIA: The CIA's Role in the Study of UFOs, 1947–90", "url": "https://www.cia.gov/resources/csi/static/cia-role-study-UFOs.pdf" }
+      ]
+    },
+    {
+      "id": "sioani", "name": "SIOANI", "kind": "program", "agency": "Força Aérea Brasileira", "country": "Brazil",
+      "startDate": "1969", "endDate": "1972", "startPrecision": "year", "endPrecision": "year", "evidenceStatus": "official",
+      "summary": "Sistema de Investigação de Objetos Aéreos Não Identificados, created by the Brazilian Air Force in 1969 for scientific investigation and ended in 1972.",
+      "sources": [
+        { "title": "Government of Brazil: Official UFO Night in Brazil", "url": "https://www.gov.br/en/government-of-brazil/latest-news/2022/official-ufo-night-in-brazil" },
+        { "title": "CAPES: O Sistema de Investigação de Objetos Aéreos Não Identificados", "url": "https://educapes.capes.gov.br/handle/capes/902140?mode=full" }
+      ]
+    },
+    {
+      "id": "apollo-14", "entityId": "ent-34d61a71e4fb", "name": "Apollo 14", "kind": "mission", "agency": "NASA", "country": "United States",
+      "startDate": "1971-01-31", "endDate": "1971-02-09", "startPrecision": "day", "endPrecision": "day", "evidenceStatus": "official",
+      "summary": "NASA lunar-landing mission from launch through splashdown.",
+      "sources": [{ "title": "NASA: Apollo 14 mission details", "url": "https://www.nasa.gov/missions/apollo/apollo-14-mission-details/" }]
+    },
+    {
+      "id": "operacao-prato", "entityId": "ent-18f2debd3471", "name": "Operação Prato", "kind": "operation", "agency": "Força Aérea Brasileira", "country": "Brazil",
+      "startDate": "1977", "endDate": "1978", "startPrecision": "year", "endPrecision": "year", "evidenceStatus": "official",
+      "summary": "Brazilian Air Force investigation documented in records from 1977 and 1978. Year precision reflects the public government record.",
+      "sources": [{ "title": "Brazil CMRI decision 205/2023", "url": "https://www.gov.br/casacivil/pt-br/assuntos/colegiados/comissao-mista-de-reavaliacao-de-informacoes-cmri/decisoes-de-recurso-de-4a-instancia/sistema-deliberacoes/2023/decisao-205-2023-nup-60110-000472-2023-41.pdf" }]
+    },
+    {
+      "id": "gepan", "name": "GEPAN", "kind": "office", "agency": "Centre national d'études spatiales", "country": "France",
+      "startDate": "1977-05-01", "endDate": "1988", "startPrecision": "day", "endPrecision": "year", "evidenceStatus": "official",
+      "summary": "Groupe d'Études des Phénomènes Aérospatiaux Non-identifiés, created by CNES on 1 May 1977 and replaced by SEPRA in 1988.",
+      "sources": [
+        { "title": "GEIPAN: History", "url": "https://www.geipan.fr/en/node/58791" },
+        { "title": "CNES audit: GEPAN/SEPRA", "url": "https://geipan.fr/sites/default/files/Audit_SEPRA_synthese_web_0.pdf" }
+      ]
+    },
+    {
+      "id": "sepra", "name": "SEPRA", "kind": "office", "agency": "Centre national d'études spatiales", "country": "France",
+      "startDate": "1988", "endDate": "2005", "startPrecision": "year", "endPrecision": "year", "evidenceStatus": "official",
+      "summary": "Service d'Expertise des Phénomènes de Rentrée Atmosphérique, the CNES successor to GEPAN until GEIPAN replaced it in 2005.",
+      "sources": [{ "title": "GEIPAN: History", "url": "https://www.geipan.fr/en/node/58791" }]
+    },
+    {
+      "id": "geipan", "name": "GEIPAN", "kind": "office", "agency": "Centre national d'études spatiales", "country": "France",
+      "startDate": "2005", "endDate": null, "startPrecision": "year", "endPrecision": null, "evidenceStatus": "official",
+      "summary": "Groupe d'Études et d'Informations sur les Phénomènes Aérospatiaux Non-identifiés, the active CNES unit that replaced SEPRA in 2005 and publishes the French case data used by this corpus.",
+      "sources": [{ "title": "GEIPAN: History", "url": "https://www.geipan.fr/en/node/58791" }]
+    },
+    {
+      "id": "defense-support-program", "entityId": "ent-f4471c9d5c51", "name": "Defense Support Program", "kind": "program", "agency": "U.S. Space Force", "country": "United States",
+      "startDate": "1970-11-06", "endDate": null, "startPrecision": "day", "endPrecision": null, "evidenceStatus": "official",
+      "summary": "Space-based infrared early-warning program, active at the review date; the first DSP satellite launched in November 1970.",
+      "sources": [{ "title": "U.S. Space Force: Defense Support Program satellites", "url": "https://www.spaceforce.mil/About-Us/Fact-Sheets/Fact-Sheet-Display/Article/2197774/defense-support-program-satellites/" }]
+    },
+    {
+      "id": "brac", "entityId": "ent-7e60bcfc7ce8", "name": "Base Realignment and Closure", "kind": "program", "agency": "Department of Defense", "country": "United States",
+      "startDate": "1988", "endDate": "2011-09-15", "startPrecision": "year", "endPrecision": "day", "evidenceStatus": "official",
+      "summary": "Five statutory BRAC rounds beginning in 1988, bounded here by the implementation deadline for the 2005 round.",
+      "sources": [{ "title": "GAO: Military Base Closures", "url": "https://www.gao.gov/products/gao-10-725r" }]
+    },
+    {
+      "id": "operation-desert-shield", "entityId": "ent-f45d865714c1", "name": "Operation Desert Shield", "kind": "operation", "agency": "United States Armed Forces", "country": "United States / Multinational",
+      "startDate": "1990-08-02", "endDate": "1991-01-16", "startPrecision": "day", "endPrecision": "day", "evidenceStatus": "official",
+      "summary": "Defensive deployment phase of the Gulf War, ending immediately before Operation Desert Storm began.",
+      "sources": [{ "title": "U.S. Army chronology", "url": "https://history.army.mil/Research/Reference-Topics/Army-Birthdays/Chronology-of-Army-History/" }]
+    },
+    {
+      "id": "operation-desert-storm", "entityId": "ent-2b7c5ddbaf81", "name": "Operation Desert Storm", "kind": "operation", "agency": "United States Armed Forces", "country": "United States / Multinational",
+      "startDate": "1991-01-17", "endDate": "1991-02-28", "startPrecision": "day", "endPrecision": "day", "evidenceStatus": "official",
+      "summary": "Combat phase of the Gulf War from the opening air strikes through the end of hostilities.",
+      "sources": [{ "title": "U.S. Army chronology", "url": "https://history.army.mil/Research/Reference-Topics/Army-Birthdays/Chronology-of-Army-History/" }]
+    },
+    {
+      "id": "project-condign", "name": "Project Condign", "kind": "project", "agency": "Ministry of Defence", "country": "United Kingdom",
+      "startDate": "1997", "endDate": "2000", "startPrecision": "year", "endPrecision": "year", "evidenceStatus": "official",
+      "summary": "UK Ministry of Defence study of unidentified aerial phenomena whose four-volume report was completed in 2000.",
+      "sources": [{ "title": "UK National Archives: The UFO Files extract", "url": "https://cdn.nationalarchives.gov.uk/documents/the-ufo-files-extract.pdf" }]
+    },
+    {
+      "id": "sentry-eagle", "entityId": "ent-f7f4dcc9aa61", "name": "Sentry Eagle", "kind": "program", "agency": "National Security Agency / U.S. Strategic Command", "country": "United States",
+      "startDate": "2004", "endDate": "2004", "startPrecision": "year", "endPrecision": "year", "evidenceStatus": "official",
+      "summary": "Compartmented umbrella for sensitive computer-network operations. The public record establishes a 2004 documentation window, not the program's full operational lifetime.",
+      "sources": [{ "title": "National Security Archive: Sentry Eagle", "url": "https://nsarchive.gwu.edu/media/21723/ocr" }]
+    },
+    {
+      "id": "aawsap", "entityId": "ent-1401144ab3dc", "name": "AAWSAP / AATIP", "kind": "program", "agency": "Defense Intelligence Agency", "country": "United States",
+      "startDate": "2009", "endDate": "2012", "startPrecision": "year", "endPrecision": "year", "evidenceStatus": "official",
+      "summary": "DIA program also described in official documentation with the AATIP name. AARO found AATIP was not a separate official DoD program, so that corpus entity is merged into this interval.",
+      "sources": [{ "title": "AARO Historical Record Report, Volume 1", "url": "https://www.aaro.mil/Portals/136/PDFs/AARO_Historical_Record_Report_Vol_1_2024.pdf" }]
+    },
+    {
+      "id": "kona-blue", "entityId": "ent-6f00716f0cfb", "name": "KONA BLUE", "kind": "proposed_program", "agency": "Department of Homeland Security", "country": "United States",
+      "startDate": "2012", "endDate": "2012-02-10", "startPrecision": "year", "endPrecision": "day", "evidenceStatus": "official",
+      "summary": "Prospective special-access-program proposal. It was never approved or formally established; the timeline represents the documented proposal period through termination.",
+      "sources": [{ "title": "AARO: DHS KONA BLUE information release", "url": "https://www.aaro.mil/Portals/136/PDFs/UAP_Records_Research/AARO_DHS_Kona_Blue.pdf" }]
+    },
+    {
+      "id": "uap-task-force", "name": "UAP Task Force", "kind": "task_force", "agency": "Department of the Navy", "country": "United States",
+      "startDate": "2020-08-04", "endDate": "2021-11", "startPrecision": "day", "endPrecision": "month", "evidenceStatus": "official",
+      "summary": "Defense Department task force for detecting, analyzing, and cataloging UAP, succeeded by AOIMSG in November 2021.",
+      "sources": [
+        { "title": "DoD: Establishment of the UAP Task Force", "url": "https://www.defense.gov/News/Releases/Release/Article/2302049/establishment-of-unidentified-aerial-phenomena-task-force/" },
+        { "title": "AARO Historical Record Report, Volume 1", "url": "https://www.aaro.mil/Portals/136/PDFs/AARO_Historical_Record_Report_Vol_1_2024.pdf" }
+      ]
+    },
+    {
+      "id": "aoimsg", "name": "AOIMSG", "kind": "office", "agency": "Department of Defense", "country": "United States",
+      "startDate": "2021-11-23", "endDate": "2022-06", "startPrecision": "day", "endPrecision": "month", "evidenceStatus": "official",
+      "summary": "The Airborne Object Identification and Management Synchronization Group, directed as the successor to the UAP Task Force and later renamed and expanded as AARO.",
+      "sources": [
+        { "title": "DoD: Establishment of AOIMSG", "url": "https://www.defense.gov/News/Releases/Release/Article/2853121/dod-announces-the-establishment-of-the-airborne-object-identification-and-manag/" },
+        { "title": "AARO Historical Record Report, Volume 1", "url": "https://www.aaro.mil/Portals/136/PDFs/AARO_Historical_Record_Report_Vol_1_2024.pdf" }
+      ]
+    },
+    {
+      "id": "nasa-uap-independent-study", "name": "NASA UAP Independent Study Team", "kind": "task_force", "agency": "NASA", "country": "United States",
+      "startDate": "2022-06-09", "endDate": "2023-09-14", "startPrecision": "day", "endPrecision": "day", "evidenceStatus": "official",
+      "summary": "Independent study team commissioned by NASA to examine how civilian government data, commercial data, and other sources could support scientific analysis of UAP; it concluded with its public report in September 2023.",
+      "sources": [{ "title": "NASA: UAP Independent Study", "url": "https://science.nasa.gov/uap/" }]
+    },
+    {
+      "id": "sky-canada", "name": "Sky Canada Project", "kind": "project", "agency": "Office of the Chief Science Advisor", "country": "Canada",
+      "startDate": "2022", "endDate": "2025-06", "startPrecision": "year", "endPrecision": "month", "evidenceStatus": "official",
+      "summary": "Canadian government review of how public UAP reports are collected and managed, launched in fall 2022 and concluded with the Office of the Chief Science Advisor's final report in June 2025.",
+      "sources": [
+        { "title": "Government of Canada: Sky Canada Project", "url": "https://ised-isde.canada.ca/site/science/en/office-chief-science-advisor/sky-canada-project" },
+        { "title": "Government of Canada Publications: Sky Canada final report", "url": "https://publications.gc.ca/site/eng/9.954480/publication.html" }
+      ]
+    },
+    {
+      "id": "aaro", "name": "AARO", "kind": "office", "agency": "Department of Defense", "country": "United States",
+      "startDate": "2022-07-15", "endDate": null, "startPrecision": "day", "endPrecision": null, "evidenceStatus": "official",
+      "summary": "The All-domain Anomaly Resolution Office, active at the catalog review date.",
+      "sources": [{ "title": "DoD: Establishment of AARO", "url": "https://www.defense.gov/News/Releases/Release/Article/3100053/dod-announces-the-establishment-of-the-all-domain-anomaly-resolution-office/" }]
+    },
+    {
+      "id": "immaculate-constellation", "name": "Immaculate Constellation", "kind": "alleged_program", "agency": "Department of Defense (alleged)", "country": "United States",
+      "startDate": "2017-12", "endDate": "2024-11-13", "startPrecision": "month", "endPrecision": "day", "evidenceStatus": "congressional_record_claim",
+      "summary": "An alleged unacknowledged special-access program described in material entered into a House hearing record. The claimed interval is bounded by its reported December 2017 start and the November 2024 hearing date; this is not agency confirmation.",
+      "sources": [{ "title": "House hearing record: Unidentified Anomalous Phenomena", "url": "https://www.congress.gov/118/chrg/CHRG-118hhrg57440/CHRG-118hhrg57440.pdf" }]
+    }
+  ],
+  "entityReviews": [
+    {
+      "entityId": "ent-eb70172c69f0", "name": "Advanced Aerospace Threat Identification Program", "disposition": "merged", "programId": "aawsap",
+      "rationale": "AARO found AATIP was not a separate official DoD program and that the name was used interchangeably for AAWSAP; its corpus entity is represented by the reviewed AAWSAP interval.",
+      "sources": [{ "title": "AARO Historical Record Report, Volume 1", "url": "https://www.aaro.mil/Portals/136/PDFs/AARO_Historical_Record_Report_Vol_1_2024.pdf" }]
+    },
+    {
+      "entityId": "ent-16630e914960", "name": "Department of Defense UAP Program", "disposition": "not_program",
+      "rationale": "This is a generic corpus label rather than a distinct named effort. The reviewed named DoD efforts are listed separately as AAWSAP, UAPTF, AOIMSG, and AARO.",
+      "sources": [{ "title": "AARO Historical Record Report, Volume 1", "url": "https://www.aaro.mil/Portals/136/PDFs/AARO_Historical_Record_Report_Vol_1_2024.pdf" }]
+    },
+    {
+      "entityId": "ent-9d0b3e246063", "name": "Fastwalker", "disposition": "not_program",
+      "rationale": "Fastwalker is an event-detection term in the cited military context, not the name of a government program.",
+      "sources": [{ "title": "Air Force Institute of Technology: Orbit Determination of Sunlight Illuminated Objects", "url": "https://documents.theblackvault.com/documents/ufos/fastwalkers/a209227.pdf" }]
+    },
+    {
+      "entityId": "ent-8afa219bc3bf", "name": "Majestic 12", "disposition": "unsupported_claim",
+      "rationale": "National Archives searches found no record of a Majestic Twelve organization, and the alleged briefing document contains documented inconsistencies; it is not published as a government-program interval.",
+      "sources": [{ "title": "National Archives: UFO records and the Majestic Twelve documents", "url": "https://www.archives.gov/research/military/air-force/ufos" }]
+    },
+    {
+      "entityId": "ent-3465ba9db2e8", "name": "Operation Majestic", "disposition": "merged", "mergedEntityId": "ent-8afa219bc3bf",
+      "rationale": "Corpus excerpts use this label for the alleged Majestic 12 material. It is reviewed with the Majestic 12 unsupported-claim disposition and is not a separate interval.",
+      "sources": [{ "title": "National Archives: UFO records and the Majestic Twelve documents", "url": "https://www.archives.gov/research/military/air-force/ufos" }]
+    },
+    {
+      "entityId": "ent-05f481e8b116", "name": "Project Aquarius", "disposition": "unsupported_claim",
+      "rationale": "National Archives searches of Air Force, Joint Chiefs, presidential, and National Security Council records found no Project Aquarius organization; it is not published as a government-program interval.",
+      "sources": [{ "title": "National Archives: UFO records and Majestic/Aquarius searches", "url": "https://www.archives.gov/research/military/air-force/ufos" }]
+    },
+    {
+      "entityId": "ent-5fed1c8893da", "name": "Project Starlight", "disposition": "not_government",
+      "rationale": "The corpus evidence refers to Project Starlight International, a private initiative, rather than a government program.",
+      "sources": [{ "title": "Geoscientific Instrumentation: UAP geomagnetic instrumentation review", "url": "https://gi.copernicus.org/articles/14/335/2025/" }]
+    },
+    {
+      "entityId": "ent-7491b8fc260d", "name": "Project Daedalus", "disposition": "not_government",
+      "rationale": "Project Daedalus was a British Interplanetary Society technical study, not a government program.",
+      "sources": [{ "title": "British Interplanetary Society: Technical Projects", "url": "https://www.bis-space.com/technical-projects/" }]
+    },
+    {
+      "entityId": "ent-aba905961f0c", "name": "Project Preserve Destiny", "disposition": "unsupported_claim",
+      "rationale": "The reviewed corpus references are secondary allegations, and the public government review does not establish a named program or a supportable operational interval.",
+      "sources": [{ "title": "Project Profound: Project Preserve Destiny corpus summary", "url": "https://projectprofound.org/uap/programs/project-preserve-destiny" }]
+    },
+    {
+      "entityId": "ent-ce1ce2900758", "name": "RC-135", "disposition": "not_program",
+      "rationale": "RC-135 is an aircraft family, not a named government program interval.",
+      "sources": [{ "title": "Air Combat Command: RC-135V/W Rivet Joint fact sheet", "url": "https://www.acc.af.mil/Portals/92/Docs/Fact%20Sheets%20-%202020%20Update/Facts%20Sheets%202022%20Final/RC-135VW_final.pdf" }]
+    },
+    {
+      "entityId": "ent-7076f33eaa17", "name": "WC-135", "disposition": "not_program",
+      "rationale": "WC-135 Constant Phoenix is an aircraft and mission system, not a named government program interval.",
+      "sources": [{ "title": "U.S. Air Force: WC-135 Constant Phoenix fact sheet", "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104494/wc-135-constant-phoenix/" }]
+    }
+  ],
+  "relationships": [
+    { "source": "project-sign", "target": "project-grudge", "type": "succeeded_by" },
+    { "source": "project-grudge", "target": "project-blue-book", "type": "redesignated_as" },
+    { "source": "gepan", "target": "sepra", "type": "succeeded_by" },
+    { "source": "sepra", "target": "geipan", "type": "succeeded_by" },
+    { "source": "uap-task-force", "target": "aoimsg", "type": "succeeded_by" },
+    { "source": "aoimsg", "target": "aaro", "type": "renamed_and_expanded_as" },
+    { "source": "uap-task-force", "target": "aaro", "type": "records_transferred_to" }
+  ]
+}

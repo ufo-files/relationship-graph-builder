@@ -1,0 +1,154 @@
+{
+  "schema": "ufo-files-craft-icon-briefs/v2",
+  "reviewedAt": "2026-08-08",
+  "system": {
+    "projection": "front field-guide elevation or a restrained dimensional view when volume is essential to class recognition",
+    "material": "Scientific field-guide plate language: thin square-ended sectional contours, restrained monochrome geometry, and generous negative space",
+    "prominence": "solid neutral-value ranges; never opacity",
+    "principles": [
+      "one dominant evidence-grounded elevation per class",
+      "technical line weight remains subordinate to observed geometry",
+      "compound contours communicate section and volume without implying observed surface structure",
+      "surface modeling describes facets, curvature, rims, or documented luminous features only",
+      "no decorative windows, propulsion, seams, or lights without evidence",
+      "source profiles retain documented component ratios and prohibited details",
+      "material detail and silhouette must survive reduction to graph-node size",
+      "reported component ratios take priority over decorative symmetry"
+    ]
+  },
+  "profiles": [
+    {
+      "classId": "saucer",
+      "evidence": {"documents": 360, "observations": 622, "motifs": {"rim_or_band": 8, "light_emission": 9, "dome": 4, "windows_or_ports": 3}},
+      "projection": "front elevation",
+      "required": ["domed upper hull", "lenticular lower hull", "continuous rim band", "vertical centerline"],
+      "forbidden": ["flat disc-only profile", "invented landing gear"]
+    },
+    {
+      "classId": "disc",
+      "evidence": {"documents": 172, "observations": 356, "motifs": {"metallic_surface": 11, "light_emission": 10, "dome": 6}},
+      "projection": "front elevation",
+      "required": ["thin symmetric lenticular section", "concentric structural contour"],
+      "forbidden": ["prominent saucer dome", "windows"]
+    },
+    {
+      "classId": "orb",
+      "evidence": {"documents": 60, "observations": 136, "motifs": {"light_emission": 18, "dark_body": 2, "metallic_surface": 2}},
+      "projection": "front elevation",
+      "required": ["true circle", "spherical latitude and longitude construction"],
+      "forbidden": ["flat ring", "hard surface panels"]
+    },
+    {
+      "classId": "triangle",
+      "evidence": {"documents": 86, "observations": 180, "motifs": {"dark_body": 34, "light_emission": 23, "three_lights": 6, "corner_lights": 3, "central_light": 2}},
+      "projection": "plan/front view",
+      "required": ["dark triangular planform", "three corner lights", "central light cluster", "inset structural frame"],
+      "forbidden": ["pyramid facets", "four corner lights"]
+    },
+    {
+      "classId": "pyramid",
+      "evidence": {"documents": 3, "observations": 5},
+      "projection": "front elevation",
+      "required": ["single apex", "visible base", "three triangular facets"],
+      "forbidden": ["flat triangle planform", "lamp circles"]
+    },
+    {
+      "classId": "tic_tac",
+      "evidence": {"documents": 29, "observations": 61, "authoritySizeMeters": [9, 12]},
+      "projection": "front elevation",
+      "required": ["smooth 2.6:1 capsule", "uninterrupted outer surface"],
+      "forbidden": ["end seams", "windows", "propulsion"]
+    },
+    {
+      "classId": "cigar",
+      "evidence": {"documents": 133, "observations": 239, "motifs": {"light_emission": 24, "metallic_surface": 10, "dark_body": 5}},
+      "projection": "front elevation",
+      "required": ["long cylindrical body", "subtly tapered ends", "longitudinal construction axis"],
+      "forbidden": ["capsule proportions", "wings"]
+    },
+    {
+      "classId": "boomerang",
+      "evidence": {"documents": 10, "observations": 19, "motifs": {"light_emission": 2}},
+      "projection": "plan/front view",
+      "required": ["swept chevron planform", "central keel", "paired spar lines"],
+      "forbidden": ["simple curved arc", "closed triangle"]
+    },
+    {
+      "classId": "egg",
+      "evidence": {"documents": 35, "observations": 47, "motifs": {"metallic_surface": 5, "light_emission": 3}, "reportedWidthMeters": {"mean": 3.3, "n": 3}},
+      "projection": "front elevation",
+      "required": ["smooth true ovoid", "rounded narrow pole", "broader lower hemisphere"],
+      "forbidden": ["pointed tip", "teardrop", "seams", "windows", "propulsion"]
+    },
+    {
+      "classId": "diamond",
+      "evidence": {"documents": 17, "observations": 22, "motifs": {"light_emission": 1}},
+      "projection": "front elevation",
+      "required": ["rhombic silhouette", "horizontal and vertical structural axes"],
+      "forbidden": ["tetrahedral depth faces", "starburst"]
+    },
+    {
+      "classId": "cube",
+      "evidence": {"documents": 3, "observations": 4},
+      "projection": "axonometric technical view",
+      "required": ["three visible square faces", "consistent parallel edges"],
+      "forbidden": ["flat square", "decorative grids"]
+    },
+    {
+      "classId": "skywatcher_tetra",
+      "evidence": {"authoritySizeMeters": [1.5, 2], "authorityShape": "black tetrahedron"},
+      "projection": "front elevation",
+      "required": ["dark bipyramidal silhouette", "four readable triangular facets"],
+      "forbidden": ["flat triangle planform", "star glyph"]
+    },
+    {
+      "classId": "skywatcher_blob",
+      "evidence": {"authoritySizeMeters": [3, 5], "authorityShape": "cloud-like orb with luminous core"},
+      "projection": "sensor-plane/front view",
+      "required": ["irregular diffuse envelope", "offset inner envelope", "central core"],
+      "forbidden": ["hard shell", "surface seams"]
+    },
+    {
+      "classId": "skywatcher_beam",
+      "evidence": {"authorityShape": "stable infrared orb", "displayDirection": "user-directed overhead spotlight metaphor"},
+      "projection": "front elevation",
+      "required": ["overhead emitter", "widening light cone", "elliptical ground pool"],
+      "forbidden": ["windows", "surface panels", "horizontal flashlight"]
+    },
+    {
+      "classId": "skywatcher_manta_ray",
+      "evidence": {"authoritySizeMeters": [2, 3], "authorityShape": "black manta-ray-like body"},
+      "projection": "front elevation",
+      "required": ["broad swept body", "central keel", "documented upper-surface emission points"],
+      "forbidden": ["cockpit", "windows"]
+    },
+    {
+      "classId": "skywatcher_bright_star",
+      "evidence": {"authoritySizeMeters": [1.5, 3], "authorityShape": "reflective tetrahedron with luminous endpoints", "displayDirection": "user-directed literal star symbol"},
+      "projection": "front elevation symbol",
+      "required": ["one unmistakable radiant star", "four long cardinal rays", "four shorter diagonal rays", "compact white central glint"],
+      "forbidden": ["tetrahedron", "bipyramid", "diamond", "triangle", "multiple stars"]
+    },
+    {
+      "classId": "skywatcher_jellyfish",
+      "evidence": {"documents": 2, "observations": 3, "authorityComponentMeters": {"head": 2, "tailMaximum": 5}},
+      "projection": "front elevation",
+      "required": ["bulbous head", "independent tendrils", "2:5 head-to-tail length construction"],
+      "forbidden": ["short tail", "single fused stem"]
+    },
+    {
+      "classId": "skywatcher_hornet",
+      "evidence": {"authoritySizeMeters": [2, 4], "authorityShape": "two-part body with tendrils and folding tail"},
+      "projection": "front elevation",
+      "required": ["separate upper and secondary bodies", "suspending tendrils", "articulated stinger tail"],
+      "forbidden": ["single body", "jellyfish silhouette"]
+    },
+    {
+      "classId": "unknown",
+      "evidence": {"documents": 193, "observations": 446},
+      "projection": "non-morphological review marker",
+      "required": ["unresolved boundary", "question mark"],
+      "forbidden": ["implied physical shape", "invented craft details"]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Recommended four-arm logarithmic fit to H II regions",
+  "paper": "Hou & Han (2014), A&A 569, A125",
+  "equation": "ln(r / initialRadiusKpc) = (theta - startAngleDegrees) * tan(pitchAngleDegrees)",
+  "galactocentricRadiusOfSunKpc": 8.3,
+  "displayRadiusKpc": 18,
+  "arms": [
+    { "name": "Norma", "initialRadiusKpc": 3.35, "startAngleDegrees": 44.4, "pitchAngleDegrees": 11.43 },
+    { "name": "Scutum–Centaurus", "initialRadiusKpc": 4.61, "startAngleDegrees": 192.4, "pitchAngleDegrees": 9.84 },
+    { "name": "Sagittarius–Carina", "initialRadiusKpc": 3.56, "startAngleDegrees": 218.6, "pitchAngleDegrees": 10.38 },
+    { "name": "Perseus", "initialRadiusKpc": 3.67, "startAngleDegrees": 330.3, "pitchAngleDegrees": 10.54 }
+  ],
+  "localArm": {
+    "name": "Local Arm",
+    "initialRadiusKpc": 8.21,
+    "startAngleDegrees": 55.1,
+    "pitchAngleDegrees": 2.77,
+    "minimumAngleDegrees": 50,
+    "maximumAngleDegrees": 110
+  }
+}

@@ -1,0 +1,37 @@
+Source: The observed spiral structure of the Milky Way
+Authors: L. G. Hou and J. L. Han
+Paper: Astronomy & Astrophysics 569, A125 (2014)
+Paper DOI: https://doi.org/10.1051/0004-6361/201424039
+Catalog: VizieR J/A+A/569/A125
+Catalog DOI: https://doi.org/10.26093/cds/vizier.35690125
+Provider: Centre de Donnees astronomiques de Strasbourg (CDS)
+Files: tablea1.dat, tablea2.dat, tablea3.dat
+Retrieved: 2026-08-26
+
+The catalog compiles H II regions, giant molecular clouds, and 6.7 GHz methanol masers as observed tracers of Milky Way spiral structure. The checked-in CSV includes every catalog row with a positive adopted D8.3 heliocentric distance:
+
+- 1,866 H II regions
+- 1,344 giant molecular clouds
+- 740 6.7 GHz methanol masers
+- 3,950 exported tracer records total
+- 3,931 records inside the renderer's 18 kpc Galactocentric display radius
+- 19 distant catalog outliers retained in the CSV but not drawn in the default frame
+
+The adopted D8.3 distance uses R0 = 8.3 kpc and Theta0 = 239 km/s. Where a photometric or trigonometric distance is available, the catalog adopts it directly; otherwise the authors calculate a kinematic distance from the observed radial velocity and their stated Galactic rotation assumptions.
+
+Coordinate transform:
+
+- x = D8.3 * cos(GLAT) * sin(GLON)
+- y = 8.3 kpc - D8.3 * cos(GLAT) * cos(GLON)
+- z = D8.3 * sin(GLAT)
+- Galactic Center = (0, 0, 0)
+- Sun = (0, 8.3, 0) kpc
+
+The renderer plots these catalog positions directly and does not interpolate or populate missing tracer positions. Empty regions in the observed catalog stay empty. Separately, it draws the paper's recommended four-arm H II logarithmic fit and Local Arm fit from Table 1 as thin reference curves. Those curves are a published statistical model of the observed H II distribution, not added tracer points or an artist's reconstruction.
+
+Scientific limitations:
+
+- The catalog is a heterogeneous literature compilation, not a complete or uniform census.
+- Many positions use kinematic distances, which depend on the adopted rotation curve and near/far ambiguity resolution.
+- Tracers concentrate in high-mass star-forming regions and molecular gas; they do not represent the full stellar population.
+- The far side of the Galaxy remains less completely sampled from the Sun's internal viewpoint.

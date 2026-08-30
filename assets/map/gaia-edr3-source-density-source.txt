@@ -1,0 +1,12 @@
+Asset: gaia-edr3-source-density.png
+Source: ESA Gaia EDR3 documentation, Figure 11.1, HEALPix density count for all sources in Galactic coordinates
+Source URL: https://gea.esac.esa.int/archive/documentation/GEDR3/large/cu9/cu9gat_skydensity_healpix_logcount_gal_all.png
+Documentation: https://gea.esac.esa.int/archive/documentation/GEDR3/Catalogue_consolidation/chap_cu9gat/sec_cu9gat_intro/sec_cu9gat_skydensity.html
+Credit: ESA/Gaia/DPAC
+Release: Gaia Early Data Release 3
+
+Runtime transformation:
+- Crops the published Mollweide plot from the documentation figure.
+- Maps the published blue-to-red logarithmic count scale monotonically to black opacity.
+- Preserves the original projection, measurements, grid, and survey artifacts.
+- Does not interpolate missing regions, infer spiral arms, or reconstruct an external view.

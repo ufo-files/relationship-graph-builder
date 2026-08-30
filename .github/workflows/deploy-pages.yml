@@ -1,0 +1,54 @@
+name: Deploy latest graph to Pages
+
+on:
+  workflow_run:
+    workflows: ["Rebuild graph from machine-data"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: relationship-graph-pages-deploy
+  # Do not cancel an active Pages deployment; cancellation can leave GitHub's
+  # next deployment queued behind cleanup of the canceled deployment.
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ufo-agent-1-graph-builder
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out latest graph
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Stage static site
+        run: |
+          mkdir -p _site
+          cp index.html app.js map-globe.js solar-system.js styles.css .nojekyll _site/
+          cp -R assets data vendor _site/
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

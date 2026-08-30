@@ -1,0 +1,325 @@
+{
+  "schema": "ufo-files-craft-taxonomy/v1",
+  "version": "1.2.0",
+  "reviewedAt": "2026-08-08",
+  "methodology": "Literal, reviewed phrases are matched only in report-like context. Exclusion rules retain likely lexical false positives for review instead of publishing them as observations.",
+  "authorities": [
+    {
+      "id": "skywatcher",
+      "name": "Skywatcher UAP Classification Guide",
+      "url": "https://skywatcher.ai/research",
+      "status": "living preliminary taxonomy",
+      "role": "authoritative external coverage baseline",
+      "reviewedAt": "2026-08-08",
+      "note": "Skywatcher classes are preserved as source-attributed reference profiles. Corpus counts remain separate and require literal phrase evidence."
+    }
+  ],
+  "contextTerms": [
+    "appeared", "described", "hovered", "observed", "object", "objects", "reported", "saw", "seen", "shape", "shaped", "sighted", "uap", "ufo", "witness", "witnessed", "craft"
+  ],
+  "witnessTypes": {
+    "pilot": ["aircrew", "aviator", "pilot", "copilot", "co-pilot"],
+    "military": ["air force", "army", "military", "navy", "marine", "serviceman", "officer"],
+    "law_enforcement": ["police", "sheriff", "deputy", "state trooper", "law enforcement"],
+    "civilian": ["civilian", "resident", "motorist", "farmer", "family", "witness"]
+  },
+  "exclusionRules": [
+    {"id": "ordinary-cigar", "terms": ["ashtray", "cigar store", "cigarette", "smoking", "tobacco"]},
+    {"id": "recorded-media-disc", "terms": ["compact disc", "cd-rom", "disc jockey", "dvd", "music disc", "record disc"]},
+    {"id": "unrelated-geometry", "terms": ["bermuda triangle", "love triangle", "triangle equation", "triangle diagram"]},
+    {"id": "unrelated-object-design", "terms": ["disk-shaped galaxy", "disk-shaped magnet", "egg shaped storage vessel", "flying disc patent", "flying disc simulator"]},
+    {"id": "reference-only", "terms": ["bibliography", "book entitled", "lecture entitled", "publication entitled"]}
+  ],
+  "classes": [
+    {
+      "id": "orb",
+      "label": "Orb / sphere",
+      "description": "Circular front projection with spherical construction lines.",
+      "mappings": [
+        {"phrase": "metallic sphere", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "spherical object", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "sphere-shaped object", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "orb-shaped object", "matchType": "reviewed_synonym", "confidence": 0.9},
+        {"phrase": "glowing orb", "matchType": "reviewed_synonym", "confidence": 0.9},
+        {"phrase": "luminous orb", "matchType": "reviewed_synonym", "confidence": 0.9}
+      ]
+    },
+    {
+      "id": "triangle",
+      "label": "Triangle",
+      "description": "Triangular plan with centerline and inset structural frame.",
+      "mappings": [
+        {"phrase": "black triangle", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "triangular craft", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "triangular object", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "triangular-shaped craft", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "triangular-shaped object", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "triangle-shaped craft", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "triangle-shaped object", "matchType": "explicit", "confidence": 0.97}
+      ]
+    },
+    {
+      "id": "pyramid",
+      "label": "Pyramid",
+      "description": "Pyramidal front projection with apex, base, and internal facets.",
+      "mappings": [
+        {"phrase": "pyramid-shaped craft", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "pyramid-shaped object", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "pyramidal craft", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "pyramidal object", "matchType": "explicit", "confidence": 0.96}
+      ]
+    },
+    {
+      "id": "tic_tac",
+      "label": "Tic Tac / capsule",
+      "description": "Capsule body with longitudinal and transverse centerlines.",
+      "authority": {
+        "id": "skywatcher", "class": "II", "slug": "tic-tac", "url": "https://skywatcher.ai/research/tic-tac", "status": "preliminary",
+        "shape": "bright white cylinder that elongates in stable flight", "visualProfile": "White capsule-like form with reported white-to-purple-to-pink transitions and no visible propulsion.",
+        "sizeMeters": {"minimum": 9, "maximum": 12}, "behavior": "Hovering and vertical oscillation followed by rapid descent, abrupt stopping, and stabilized flight."
+      },
+      "drawingProfile": {"aspectRatio": 2.6, "projection": "front elevation", "geometry": "smooth capsule", "allowedDetails": [], "forbiddenDetails": ["end seams", "windows", "propulsion"]},
+      "mappings": [
+        {"phrase": "class ii is the class of tic tac", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "class two is the classic tic tac", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "class 2 is the classic tic tac", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "tic-tac-shaped craft", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "tic-tac-shaped ufo", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "tic tac object", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "tic tac craft", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "tic tac ufo", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "tic-tac-shaped object", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "tic-tac-shaped uap", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "capsule-shaped object", "matchType": "reviewed_synonym", "confidence": 0.9},
+        {"phrase": "capsule-shaped craft", "matchType": "reviewed_synonym", "confidence": 0.9},
+        {"phrase": "capsule-like object", "matchType": "reviewed_synonym", "confidence": 0.88}
+      ]
+    },
+    {
+      "id": "cigar",
+      "label": "Cigar / cylinder",
+      "description": "Long cylindrical front projection with end and center seams.",
+      "mappings": [
+        {"phrase": "cigar-shaped object", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "cigar-shaped craft", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "cigar-shaped ufo", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "cylindrical object", "matchType": "reviewed_synonym", "confidence": 0.9},
+        {"phrase": "cylindrical craft", "matchType": "reviewed_synonym", "confidence": 0.9},
+        {"phrase": "cylindrical-shaped object", "matchType": "reviewed_synonym", "confidence": 0.9},
+        {"phrase": "cylindrical-shaped craft", "matchType": "reviewed_synonym", "confidence": 0.9},
+        {"phrase": "cylinder-shaped object", "matchType": "reviewed_synonym", "confidence": 0.9}
+      ]
+    },
+    {
+      "id": "saucer",
+      "label": "Saucer",
+      "description": "Domed lenticular front projection with rim and centerline.",
+      "mappings": [
+        {"phrase": "saucer-shaped object", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "saucer-shaped craft", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "saucer-shaped ufo", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "saucer-shaped uap", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "flying saucer", "matchType": "normalized_term", "confidence": 0.84}
+      ]
+    },
+    {
+      "id": "disc",
+      "label": "Disc",
+      "description": "Flattened circular front projection with concentric structure.",
+      "mappings": [
+        {"phrase": "disc-shaped object", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "disk-shaped object", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "disc-shaped craft", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "disk-shaped craft", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "disc-shaped ufo", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "disk-shaped ufo", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "disc-shaped uap", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "disk-shaped uap", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "flying disc", "matchType": "normalized_term", "confidence": 0.84},
+        {"phrase": "flying disk", "matchType": "normalized_term", "confidence": 0.84}
+      ]
+    },
+    {
+      "id": "boomerang",
+      "label": "Boomerang / chevron",
+      "description": "Swept chevron front projection with centerline and spar marks.",
+      "mappings": [
+        {"phrase": "boomerang-shaped object", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "boomerang-shaped craft", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "chevron-shaped object", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "chevron-shaped craft", "matchType": "explicit", "confidence": 0.97}
+      ]
+    },
+    {
+      "id": "egg",
+      "label": "Egg",
+      "description": "Ovoid front projection with vertical and transverse axes.",
+      "authority": {
+        "id": "skywatcher", "class": "IX", "slug": "egg", "url": "https://skywatcher.ai/research/egg", "status": "preliminary",
+        "shape": "off-white egg-shaped form", "visualProfile": "Off-white metallic ovoid without visible propulsion or aerodynamic control surfaces.",
+        "sizeMeters": null, "behavior": "No corroborated motion pattern is published."
+      },
+      "drawingProfile": {"aspectRatio": 0.7, "projection": "front elevation", "geometry": "smooth rounded ovoid", "allowedDetails": [], "forbiddenDetails": ["pointed tip", "seams", "windows", "propulsion"]},
+      "mappings": [
+        {"phrase": "class nine is the egg", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "class 9 is the egg", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "egg-shaped ufo", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "egg-shaped object", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "egg-shaped craft", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "ovoid object", "matchType": "reviewed_synonym", "confidence": 0.9},
+        {"phrase": "ovoid craft", "matchType": "reviewed_synonym", "confidence": 0.9}
+      ]
+    },
+    {
+      "id": "diamond",
+      "label": "Diamond",
+      "description": "Rhombic front projection with diagonal structural axes.",
+      "mappings": [
+        {"phrase": "diamond-shaped object", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "diamond-shaped craft", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "diamond-shaped ufo", "matchType": "explicit", "confidence": 0.98}
+      ]
+    },
+    {
+      "id": "cube",
+      "label": "Cube",
+      "description": "Square front projection with inset frame and construction diagonals.",
+      "mappings": [
+        {"phrase": "cube-shaped object", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "cube-shaped craft", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "cubic object", "matchType": "reviewed_synonym", "confidence": 0.9},
+        {"phrase": "cubic craft", "matchType": "reviewed_synonym", "confidence": 0.9}
+      ]
+    },
+    {
+      "id": "skywatcher_tetra",
+      "label": "Tetra",
+      "description": "Dark tetrahedral form shown as a faceted front projection.",
+      "authority": {
+        "id": "skywatcher", "class": "I", "slug": "tetra", "url": "https://skywatcher.ai/research/tetra", "status": "preliminary",
+        "shape": "black tetrahedron", "visualProfile": "Dark tetrahedral body with intermittent white vapor-like bursts and visible-spectrum strobing.",
+        "sizeMeters": {"minimum": 1.5, "maximum": 2}, "behavior": "Multi-axis tumbling while maintaining an overall flight path; often reported in groups."
+      },
+      "drawingProfile": {"aspectRatio": 0.72, "projection": "front elevation", "geometry": "dark tetrahedron projection", "allowedDetails": ["facets"], "forbiddenDetails": ["triangle planform", "star glyphs"]},
+      "mappings": [
+        {"phrase": "class i", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "class one", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "tetrahedron-shaped object", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "tetrahedron-shaped craft", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "tetrahedron-shaped uap", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "tetrahedral object", "matchType": "reviewed_synonym", "confidence": 0.9},
+        {"phrase": "tetrahedral craft", "matchType": "reviewed_synonym", "confidence": 0.9}
+      ]
+    },
+    {
+      "id": "skywatcher_blob",
+      "label": "Blob",
+      "description": "Amorphous luminous-orb form with a diffuse envelope and central core.",
+      "authority": {
+        "id": "skywatcher", "class": "III", "slug": "blob", "url": "https://skywatcher.ai/research/blob", "status": "preliminary",
+        "shape": "cloud-like orb with a luminous core", "visualProfile": "Red amorphous envelope surrounding a pulsing bright core, with flare-driven changes in apparent size.",
+        "sizeMeters": {"minimum": 3, "maximum": 5}, "behavior": "Horizontal oscillation, abrupt point-to-point motion, and expansion during flare events."
+      },
+      "drawingProfile": {"aspectRatio": 1, "projection": "front elevation", "geometry": "diffuse cloud-like orb", "allowedDetails": ["central core", "diffuse envelope"], "forbiddenDetails": ["hard shell", "surface seams"]},
+      "mappings": [
+        {"phrase": "class three, the blob", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "class 3, the blob", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "blob-shaped object", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "blob-shaped craft", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "blob-shaped uap", "matchType": "explicit", "confidence": 0.97}
+      ]
+    },
+    {
+      "id": "skywatcher_beam",
+      "label": "Beam",
+      "description": "Overhead light source rendered as a widening beam and ground pool for the graph's requested visual metaphor.",
+      "authority": {
+        "id": "skywatcher", "class": "IV", "slug": "beam", "url": "https://skywatcher.ai/research/beam", "status": "preliminary",
+        "shape": "stable infrared orb", "visualProfile": "Not reported in the visible spectrum; represented from its strong infrared signature without invented surface detail.",
+        "sizeMeters": null, "behavior": "Long-duration hovering, slow deliberate movement, and lateral vibration; reported in pairs."
+      },
+      "drawingProfile": {"aspectRatio": 1, "projection": "front field-guide elevation", "geometry": "overhead emitter, widening beam, and elliptical ground pool", "allowedDetails": ["light cone", "ground pool"], "forbiddenDetails": ["windows", "surface panels", "horizontal flashlight"]},
+      "mappings": [
+        {"phrase": "class four is your orb", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "class 4 is your orb", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]}
+      ]
+    },
+    {
+      "id": "skywatcher_manta_ray",
+      "label": "Manta Ray",
+      "description": "Broad swept manta-like form with documented upper-surface emission points.",
+      "authority": {
+        "id": "skywatcher", "class": "V", "slug": "manta-ray", "url": "https://skywatcher.ai/research/manta-ray", "status": "preliminary",
+        "shape": "black manta-ray-like body", "visualProfile": "Dark swept body with reported colored light or vapor-like emission from several upper-surface points.",
+        "sizeMeters": {"minimum": 2, "maximum": 3}, "behavior": "Multi-axis tumbling and rotation with hovering and rapid altitude changes."
+      },
+      "drawingProfile": {"aspectRatio": 2.2, "projection": "front elevation", "geometry": "broad swept manta silhouette", "allowedDetails": ["upper-surface emission points"], "forbiddenDetails": ["cockpit", "windows"]},
+      "mappings": [
+        {"phrase": "class five we call the manta ray", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "class 5 we call the manta ray", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "manta-ray-shaped object", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "manta-ray-shaped craft", "matchType": "explicit", "confidence": 0.98},
+        {"phrase": "manta ray shaped uap", "matchType": "explicit", "confidence": 0.97}
+      ]
+    },
+    {
+      "id": "skywatcher_bright_star",
+      "label": "Bright Star",
+      "description": "Single radiant star symbol used for immediate graph recognition while retaining the source profile in provenance.",
+      "authority": {
+        "id": "skywatcher", "class": "VI", "slug": "bright-star", "url": "https://skywatcher.ai/research/bright-star", "status": "preliminary",
+        "shape": "reflective tetrahedron with luminous endpoints", "visualProfile": "Shimmering tetrahedral surface with multiband flashes and less-opaque endpoints.",
+        "sizeMeters": {"minimum": 1.5, "maximum": 3}, "behavior": "Rapid contained horizontal oscillation with reflective or luminous flashing."
+      },
+      "drawingProfile": {"aspectRatio": 1, "projection": "front elevation symbol", "geometry": "single radiant eight-point star", "allowedDetails": ["four long cardinal rays", "four shorter diagonal rays", "white central glint"], "forbiddenDetails": ["tetrahedron", "bipyramid", "diamond", "triangle", "multiple stars"]},
+      "mappings": [
+        {"phrase": "class six is bright star", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "class 6 is bright star", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]}
+      ]
+    },
+    {
+      "id": "skywatcher_jellyfish",
+      "label": "Jellyfish",
+      "description": "Bulbous head above substantially longer trailing appendages.",
+      "authority": {
+        "id": "skywatcher", "class": "VII", "slug": "jellyfish", "url": "https://skywatcher.ai/research/jellyfish", "status": "preliminary",
+        "shape": "white bulbous head with trailing tendrils", "visualProfile": "Small rounded head above a substantially longer set of independently moving appendages.",
+        "sizeMeters": {"head": 2, "appendageMinimum": 3, "appendageMaximum": 5}, "behavior": "Deliberate winding or serpentine point-to-point movement."
+      },
+      "drawingProfile": {"aspectRatio": 0.55, "projection": "front elevation", "geometry": "bulbous head with trailing tendrils", "componentMeters": {"head": 2, "tailMaximum": 5}, "allowedDetails": ["independent tendrils"], "forbiddenDetails": ["short tail"]},
+      "mappings": [
+        {"phrase": "class seven is the jellyfish", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "class 7 is the jellyfish", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "class vii is the jellyfish", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "jellyfish-shaped object", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "jellyfish-shaped craft", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "jellyfish-shaped uap", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "jellyfish-shaped ufo", "matchType": "explicit", "confidence": 0.97}
+      ]
+    },
+    {
+      "id": "skywatcher_hornet",
+      "label": "Hornet",
+      "description": "Dual-body form with hanging tendrils and an extendable tail.",
+      "authority": {
+        "id": "skywatcher", "class": "VIII", "slug": "hornet", "url": "https://skywatcher.ai/research/hornet", "status": "preliminary",
+        "shape": "two-part body with tendrils and a folding tail", "visualProfile": "Reflective multi-part form with hanging tendrils and a tail that can compact or extend like a stinger.",
+        "sizeMeters": {"minimum": 2, "maximum": 4}, "behavior": "Irregular flight with asynchronous rotation between upper and lower components."
+      },
+      "drawingProfile": {"aspectRatio": 0.72, "projection": "front elevation", "geometry": "dual body with tendrils and folding tail", "allowedDetails": ["secondary body", "tendrils", "tail"], "forbiddenDetails": ["single body"]},
+      "mappings": [
+        {"phrase": "class eight we call the hornet", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "class 8 we call the hornet", "matchType": "authority_class", "confidence": 0.99, "sources": ["Skywatcher-HQ"]},
+        {"phrase": "hornet-shaped object", "matchType": "explicit", "confidence": 0.96},
+        {"phrase": "hornet-shaped craft", "matchType": "explicit", "confidence": 0.97},
+        {"phrase": "hornet-shaped uap", "matchType": "explicit", "confidence": 0.97}
+      ]
+    },
+    {
+      "id": "unknown",
+      "label": "Unknown / ambiguous",
+      "description": "Unmapped or conflicting explicit shape language retained for review.",
+      "mappings": []
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+Source: Trigonometric Parallaxes of High-mass Star-forming Regions: Our View of the Milky Way
+Authors: M. J. Reid et al.
+Paper: The Astrophysical Journal 885, 131 (2019)
+Paper DOI: https://doi.org/10.3847/1538-4357/ab4a11
+Catalog: VizieR J/ApJ/885/131
+Catalog DOI: https://doi.org/10.26093/cds/vizier.18850131
+Provider: Centre de Donnees astronomiques de Strasbourg (CDS)
+File: table1.dat
+Retrieved: 2026-08-26
+
+The catalog contains 199 VLBI trigonometric-parallax measurements of molecular masers associated with young high-mass star-forming regions. The measurements come primarily from the BeSSeL Survey and the Japanese VERA project, with additional EVN and Australian LBA results.
+
+Coordinate transform:
+
+- heliocentric distance = 1 / parallax in kpc, for parallax in milliarcseconds
+- ICRS coordinates are transformed with the standard J2000 ICRS-to-Galactic rotation matrix
+- x = distance * cos(b) * sin(l)
+- y = 8.3 kpc - distance * cos(b) * cos(l)
+- z = distance * sin(b)
+- Galactic Center = (0, 0, 0)
+- Sun = (0, 8.3, 0) kpc, matching the shared display frame
+
+The renderer uses open circles so these high-precision parallax anchors remain distinct from the Hou & Han compilation. Some Reid sources also appear in that earlier literature compilation; the layer is shown as an updated measurement catalog, not counted as 199 wholly independent objects.
+
+Scientific limitations:
+
+- Inverse parallax is used directly and its uncertainty becomes asymmetric in distance, especially for the most distant sources.
+- The catalog traces young high-mass star-forming regions, not the full stellar population.
+- Selection reflects the sky coverage and targets of the contributing VLBI programs.

@@ -1,0 +1,265 @@
+{
+  "schema": "ufo-files-claims/v1",
+  "policy": {
+    "version": "ufo-files-claim-policy/v2",
+    "short": "Preserve observations separately from causal attributions; publication requires exact evidence and explicit review.",
+    "summary": "Claims preserve reviewable subject–predicate–object propositions and exact document language. Observed behavior is recorded separately from a speaker's causal attribution. Automated comparisons remain candidates. Published relationships require explicit human review; differences in scope, time, modality, or speaker expertise are not contradictions by themselves. Claim confidence, domain relevance, independent source-family count, and document count are reported separately, and disagreement is never collapsed into one score.",
+    "confidenceSemantics": "claimConfidence estimates how faithfully the structured proposition represents the cited language; it is not a truth, credibility, or source-independence score.",
+    "evidenceBinding": "Each evidence excerpt is bound to the reviewed machine-data file by its Git blob SHA. Catalog rebuilds fail when a referenced file's content no longer matches that binding.",
+    "domainExpertiseSemantics": "A speaker's relevant expertise may raise the review priority of an interpretation in that domain, but it never changes the recorded observation, verifies the cause, or acts as a general credibility score.",
+    "deviceCompromise": {
+      "defaultObservationClass": "device_anomaly",
+      "genericAttributionClass": "unverified_device_compromise_attribution",
+      "specificBehaviorClass": "possible_intentional_control",
+      "verifiedClass": "verified_device_compromise",
+      "rule": "Words such as hacked, hacking, or compromised do not establish a device intrusion. Without a specific intentional action, classify the event as a device anomaly and preserve hacking only as the speaker's unverified attribution. Specific autonomous actions such as composing or sending a message may support possible intentional control. Verified device compromise requires independently reviewed technical or forensic evidence.",
+      "specificBehaviorExamples": [
+        "the device composed or typed a message without the user's input",
+        "the device sent a message or initiated an account action without authorization",
+        "an identified remote-control session performed a specific action"
+      ],
+      "technicalEvidenceExamples": [
+        "forensically validated malware or persistence",
+        "corroborated authentication, network, or device logs",
+        "independently verified credential or account compromise"
+      ]
+    }
+  },
+  "entities": [
+    { "id": "ent-3d2a2ae3c142", "label": "All-domain Anomaly Resolution Office" },
+    { "id": "department-of-defense", "label": "Department of Defense" },
+    { "id": "unconventional-aircraft", "label": "Unconventional aircraft over Artesia" },
+    { "id": "us-government", "label": "U.S. government" },
+    { "id": "named-military-officer", "label": "Named former military officer" }
+  ],
+  "lineages": [
+    { "id": "aaro-established", "label": "The Department of Defense established AARO on July 20, 2022" },
+    { "id": "artesia-date-correction", "label": "Date correction for the Artesia unconventional-aircraft sighting" },
+    { "id": "officer-craft-account", "label": "Account that a military officer touched an off-world craft" },
+    { "id": "usg-retrieval-disagreement", "label": "Claims about U.S. recovery or reverse-engineering of non-human technology" }
+  ],
+  "claims": [
+    {
+      "id": "claim-aaro-established-2022-report",
+      "lineageId": "aaro-established",
+      "statement": "The Department of Defense established AARO on July 20, 2022.",
+      "subject": "Department of Defense",
+      "predicate": "established",
+      "object": "All-domain Anomaly Resolution Office",
+      "entityIds": ["department-of-defense", "ent-3d2a2ae3c142"],
+      "scope": { "time": "2022-07-20", "location": "" },
+      "modality": "asserted",
+      "polarity": "positive",
+      "appearanceDate": "2023-01-12",
+      "claimConfidence": 0.99,
+      "sourceFamily": { "id": "odni-2022-annual-report", "label": "ODNI 2022 Annual Report" },
+      "evidence": {
+        "documentId": "doc-cd1a0bf169dc",
+        "sourceBlobSha": "5eda4cbd965632419316df9faa51a21b2097fbfe",
+        "locator": "reviewed event evidence",
+        "excerpt": "The Deputy Secretary of Defense directed the USD(I&S) to establish an office with sufficient scope, authorities, responsibilities, and capabilities to continue the UAPTF efforts and meet the expanded criteria. AARO was established as the UAPTF's successor entity on 20 July 2022."
+      },
+      "extraction": { "method": "manual_proposition", "note": "Manually transcribed from the cited sentence." },
+      "review": { "status": "published", "method": "human_textual_review", "note": "Proposition and date checked against the excerpt." }
+    },
+    {
+      "id": "claim-aaro-established-dodig-2024",
+      "lineageId": "aaro-established",
+      "statement": "The Department of Defense established AARO on July 20, 2022.",
+      "subject": "Department of Defense",
+      "predicate": "established",
+      "object": "All-domain Anomaly Resolution Office",
+      "entityIds": ["department-of-defense", "ent-3d2a2ae3c142"],
+      "scope": { "time": "2022-07-20", "location": "" },
+      "modality": "asserted",
+      "polarity": "positive",
+      "appearanceDate": "2024-01-24",
+      "claimConfidence": 0.99,
+      "sourceFamily": { "id": "dod-inspector-general-uap-evaluation", "label": "DoD Inspector General UAP evaluation" },
+      "evidence": {
+        "documentId": "doc-560fff3192e0",
+        "sourceBlobSha": "a7056b0af5067aa7fe95936a3827e52bbf6ab285",
+        "segment": 32,
+        "excerpt": "On July 20, 2022, the DoD established the All-domain Anomaly Resolution Office (AARO) to be that entity."
+      },
+      "extraction": { "method": "manual_proposition", "note": "Manually transcribed from the cited sentence." },
+      "review": { "status": "published", "method": "human_textual_review", "note": "Matched to the earlier proposition after source-family review." }
+    },
+    {
+      "id": "claim-artesia-1951-positive",
+      "lineageId": "artesia-date-correction",
+      "statement": "The unconventional aircraft was sighted over Artesia on January 16, 1951.",
+      "subject": "unconventional aircraft",
+      "predicate": "was sighted",
+      "object": "over Artesia, New Mexico",
+      "entityIds": ["unconventional-aircraft"],
+      "scope": { "time": "1951-01-16", "location": "Artesia, New Mexico" },
+      "modality": "asserted",
+      "polarity": "positive",
+      "appearanceDate": "1952-06-03",
+      "claimConfidence": 0.98,
+      "sourceFamily": { "id": "usaf-artesia-case-file", "label": "U.S. Air Force Artesia case file" },
+      "evidence": {
+        "documentId": "doc-b85d2a648945",
+        "sourceBlobSha": "62a5bbb37a1eacd552faf13532892ce5078707cd",
+        "locator": "memorandum dated June 3, 1952",
+        "excerpt": "that the unconventional aircraft was sighted 16 January 1951 and not 16 January 1952."
+      },
+      "extraction": { "method": "manual_compound_split", "note": "Positive half of one explicit date-correction sentence." },
+      "review": { "status": "published", "method": "human_textual_review", "note": "Kept separate from the negated 1952 proposition." }
+    },
+    {
+      "id": "claim-artesia-1952-negative",
+      "lineageId": "artesia-date-correction",
+      "statement": "The unconventional aircraft was not sighted over Artesia on January 16, 1952.",
+      "subject": "unconventional aircraft",
+      "predicate": "was sighted",
+      "object": "over Artesia, New Mexico",
+      "entityIds": ["unconventional-aircraft"],
+      "scope": { "time": "1952-01-16", "location": "Artesia, New Mexico" },
+      "modality": "asserted",
+      "polarity": "negative",
+      "appearanceDate": "1952-06-03",
+      "claimConfidence": 0.98,
+      "sourceFamily": { "id": "usaf-artesia-case-file", "label": "U.S. Air Force Artesia case file" },
+      "evidence": {
+        "documentId": "doc-b85d2a648945",
+        "sourceBlobSha": "62a5bbb37a1eacd552faf13532892ce5078707cd",
+        "locator": "memorandum dated June 3, 1952",
+        "excerpt": "that the unconventional aircraft was sighted 16 January 1951 and not 16 January 1952."
+      },
+      "extraction": { "method": "manual_compound_split", "note": "Negated half of one explicit date-correction sentence." },
+      "review": { "status": "published", "method": "human_textual_review", "note": "Different temporal scope prevents a false contradiction with the 1951 proposition." }
+    },
+    {
+      "id": "claim-officer-touched-craft",
+      "lineageId": "officer-craft-account",
+      "statement": "An interviewee claimed that a named former military officer touched an extraterrestrial spacecraft.",
+      "subject": "named former military officer",
+      "predicate": "touched",
+      "object": "an extraterrestrial spacecraft",
+      "entityIds": ["named-military-officer"],
+      "scope": { "time": "", "location": "" },
+      "modality": "asserted",
+      "polarity": "positive",
+      "appearanceDate": "2024-03-06",
+      "claimConfidence": 0.98,
+      "sourceFamily": { "id": "aaro-historical-record-report-v1", "label": "AARO Historical Record Report, Volume I" },
+      "evidence": {
+        "documentId": "doc-d7bf199e9724",
+        "sourceBlobSha": "342e192a29211c7bae8af972809a37a5a62438d1",
+        "locator": "page 8, named-claims assessment",
+        "excerpt": "An interviewee claim that a named former military officer explained in detail how he physically touched an extraterrestrial spacecraft is inaccurate."
+      },
+      "extraction": { "method": "manual_attributed_proposition", "note": "Attribution is retained in the statement while the reviewed proposition records the reported act." },
+      "review": { "status": "published", "method": "human_textual_review", "note": "Compared only with the on-record denial in the same passage." }
+    },
+    {
+      "id": "claim-officer-denied-touching-craft",
+      "lineageId": "officer-craft-account",
+      "statement": "The named former military officer denied touching an extraterrestrial spacecraft.",
+      "subject": "named former military officer",
+      "predicate": "touched",
+      "object": "an extraterrestrial spacecraft",
+      "entityIds": ["named-military-officer"],
+      "scope": { "time": "", "location": "" },
+      "modality": "asserted",
+      "polarity": "negative",
+      "appearanceDate": "2024-03-06",
+      "claimConfidence": 0.99,
+      "sourceFamily": { "id": "aaro-historical-record-report-v1", "label": "AARO Historical Record Report, Volume I" },
+      "evidence": {
+        "documentId": "doc-d7bf199e9724",
+        "sourceBlobSha": "342e192a29211c7bae8af972809a37a5a62438d1",
+        "locator": "page 8, named-claims assessment",
+        "excerpt": "The claim was denied on the record by the named former officer who recounted a story of when he touched an F-117 Nighthawk stealth fighter that could have been misconstrued by the interviewee, though the named former officer does not recall having this conversation with the interviewee."
+      },
+      "extraction": { "method": "manual_attributed_proposition", "note": "The on-record denial is represented as negative polarity." },
+      "review": { "status": "published", "method": "human_textual_review", "note": "Direct denial checked against the immediately preceding attributed claim." }
+    },
+    {
+      "id": "claim-usg-retrieved-nonhuman-vehicles",
+      "lineageId": "usg-retrieval-disagreement",
+      "statement": "David Grusch claimed that the U.S. possesses multiple non-human-origin vehicles.",
+      "subject": "U.S. government",
+      "predicate": "possesses",
+      "object": "non-human-origin technical vehicles",
+      "entityIds": ["us-government"],
+      "scope": { "time": "2023-06", "location": "United States" },
+      "modality": "attributed_claim",
+      "polarity": "positive",
+      "appearanceDate": "2023-06-05",
+      "claimConfidence": 0.97,
+      "sourceFamily": { "id": "newsnation-grusch-interview", "label": "NewsNation interview with David Grusch" },
+      "evidence": {
+        "documentId": "doc-f8512d237878",
+        "sourceBlobSha": "e1bc5ffe166fba08448dbe329d268b29473f9f27",
+        "locator": "interview transcript",
+        "excerpt": "Grusch told NewsNation that the U.S. is in possession of \"quite a number\" of these \"non-human\" vehicles."
+      },
+      "extraction": { "method": "manual_attributed_proposition", "note": "The statement preserves that this is Grusch's attributed claim." },
+      "review": { "status": "published", "method": "human_textual_review", "note": "Claim publication does not endorse the underlying assertion." }
+    },
+    {
+      "id": "claim-aaro-no-reverse-engineering-evidence",
+      "lineageId": "usg-retrieval-disagreement",
+      "statement": "AARO reported finding no empirical evidence that the U.S. government or private companies reverse-engineered extraterrestrial technology.",
+      "subject": "AARO",
+      "predicate": "found no empirical evidence for",
+      "object": "U.S. government and private-company reverse-engineering of extraterrestrial technology",
+      "entityIds": ["ent-3d2a2ae3c142", "us-government"],
+      "scope": { "time": "through 2024-03-06", "location": "United States" },
+      "modality": "evidence_assessment",
+      "polarity": "negative",
+      "appearanceDate": "2024-03-06",
+      "claimConfidence": 0.99,
+      "sourceFamily": { "id": "aaro-historical-record-report-v1", "label": "AARO Historical Record Report, Volume I" },
+      "evidence": {
+        "documentId": "doc-d7bf199e9724",
+        "sourceBlobSha": "342e192a29211c7bae8af972809a37a5a62438d1",
+        "locator": "page 7, executive summary",
+        "excerpt": "AARO found no empirical evidence for claims that the USG and private companies have been reverse-engineering extraterrestrial technology."
+      },
+      "extraction": { "method": "manual_attributed_proposition", "note": "The epistemic phrase 'no empirical evidence' is retained rather than converted into a categorical denial." },
+      "review": { "status": "published", "method": "human_textual_review", "note": "Scope and predicate were kept distinct from recovery and possession claims." }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "relationship-aaro-report-repeat",
+      "from": "claim-aaro-established-2022-report",
+      "to": "claim-aaro-established-dodig-2024",
+      "type": "repeats",
+      "rationale": "The later DoD Inspector General report repeats the same establishment date and proposition in a separate source family.",
+      "method": { "type": "structured_comparison_candidate", "name": "subject–predicate–object and scope comparison" },
+      "review": { "status": "published", "method": "human_side_by_side_review" }
+    },
+    {
+      "id": "relationship-artesia-date-qualification",
+      "from": "claim-artesia-1951-positive",
+      "to": "claim-artesia-1952-negative",
+      "type": "qualifies",
+      "rationale": "One compound sentence corrects the year. The positive 1951 proposition and negative 1952 proposition have different temporal scopes, so they are not marked contradictory.",
+      "method": { "type": "manual_compound_sentence_review", "name": "temporal-scope review" },
+      "review": { "status": "published", "method": "human_side_by_side_review" }
+    },
+    {
+      "id": "relationship-officer-craft-contradiction",
+      "from": "claim-officer-touched-craft",
+      "to": "claim-officer-denied-touching-craft",
+      "type": "contradicts",
+      "rationale": "The passage presents a reported act and the named officer's direct on-record denial of that same act. The compared subject, predicate, object, and scope match; polarity is opposite.",
+      "method": { "type": "structured_comparison_candidate", "name": "polarity comparison with exact-scope gate" },
+      "review": { "status": "published", "method": "human_side_by_side_review" }
+    },
+    {
+      "id": "relationship-retrieval-assessment-unclear",
+      "from": "claim-usg-retrieved-nonhuman-vehicles",
+      "to": "claim-aaro-no-reverse-engineering-evidence",
+      "type": "unclear",
+      "rationale": "The first is an attributed possession claim; the second is AARO's evidence assessment about reverse-engineering through a later date. Different predicates, modality, and temporal scope prevent a contradiction label.",
+      "method": { "type": "structured_comparison_candidate", "name": "scope and modality comparison" },
+      "review": { "status": "published", "method": "human_side_by_side_review" }
+    }
+  ]
+}

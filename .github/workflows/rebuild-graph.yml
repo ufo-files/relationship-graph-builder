@@ -1,0 +1,418 @@
+name: Rebuild graph from machine-data
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/rebuild-graph.yml"
+      - ".machine-data-revision"
+      - ".nojekyll"
+      - "app.js"
+      - "assets/**"
+      - "!assets/screenshots/**"
+      - "data/book_catalog.json"
+      - "data/astronomy_taxonomy.json"
+      - "data/milky-way-spiral-fit.json"
+      - "data/milky-way-spiral-tracers.csv"
+      - "data/milky-way-spiral-tracers-source.txt"
+      - "data/milky-way-vlbi-masers.csv"
+      - "data/milky-way-vlbi-masers-source.txt"
+      - "data/case_reviews.json"
+      - "data/curated_entities.json"
+      - "data/curated_events.json"
+      - "data/claims.json"
+      - "data/craft_icon_briefs.json"
+      - "data/craft_taxonomy.json"
+      - "data/species_taxonomy.json"
+      - "data/entity_aliases.json"
+      - "data/event_coverage_review.json"
+      - "data/event_title_reviews.json"
+      - "data/government_programs.json"
+      - "data/location_coordinates.json"
+      - "data/reported_event_date_reviews.json"
+      - "index.html"
+      - "map-globe.js"
+      - "solar-system.js"
+      - "scripts/**"
+      - "!scripts/capture_graph_screenshots.mjs"
+      - "styles.css"
+      - "tests/**"
+      - "vendor/**"
+  pull_request:
+    paths:
+      - ".github/workflows/rebuild-graph.yml"
+      - ".machine-data-revision"
+      - "app.js"
+      - "assets/**"
+      - "!assets/screenshots/**"
+      - "data/book_catalog.json"
+      - "data/astronomy_taxonomy.json"
+      - "data/milky-way-spiral-fit.json"
+      - "data/milky-way-spiral-tracers.csv"
+      - "data/milky-way-spiral-tracers-source.txt"
+      - "data/milky-way-vlbi-masers.csv"
+      - "data/milky-way-vlbi-masers-source.txt"
+      - "data/case_reviews.json"
+      - "data/curated_entities.json"
+      - "data/curated_events.json"
+      - "data/claims.json"
+      - "data/craft_icon_briefs.json"
+      - "data/craft_taxonomy.json"
+      - "data/species_taxonomy.json"
+      - "data/entity_aliases.json"
+      - "data/event_coverage_review.json"
+      - "data/event_title_reviews.json"
+      - "data/government_programs.json"
+      - "data/location_coordinates.json"
+      - "data/reported_event_date_reviews.json"
+      - "index.html"
+      - "map-globe.js"
+      - "solar-system.js"
+      - "scripts/**"
+      - "!scripts/capture_graph_screenshots.mjs"
+      - "styles.css"
+      - "tests/**"
+      - "vendor/**"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [machine-data-updated]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: relationship-graph-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'rebuild' }}
+  # Machine-data can advance faster than a catalog build. Keep only the newest
+  # rebuild; Pages deployment is deliberately handled by deploy-pages.yml.
+  cancel-in-progress: true
+
+jobs:
+  changes:
+    name: detect catalog changes
+    runs-on: ubuntu-latest
+    outputs:
+      catalog: ${{ steps.detect.outputs.catalog }}
+    steps:
+      - name: Check out builder history
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Detect catalog inputs
+        id: detect
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PUSH_BASE_SHA: ${{ github.event.before }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          CURRENT_SHA: ${{ github.sha }}
+        run: |
+          if [[ "$EVENT_NAME" == "repository_dispatch" || "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            echo "catalog=true" >> "$GITHUB_OUTPUT"
+            echo "Catalog rebuild required: true (explicit rebuild event)" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          if [[ "$EVENT_NAME" == "pull_request" ]]; then
+            base_sha="$PR_BASE_SHA"
+            head_sha="$PR_HEAD_SHA"
+          else
+            base_sha="$PUSH_BASE_SHA"
+            head_sha="$CURRENT_SHA"
+          fi
+
+          if [[ -z "$base_sha" || "$base_sha" =~ ^0+$ ]]; then
+            echo "catalog=true" >> "$GITHUB_OUTPUT"
+            echo "Catalog rebuild required: true (no usable base revision)" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          catalog=false
+          if ! git diff --quiet "$base_sha" "$head_sha" -- \
+            .machine-data-revision \
+            scripts/build_catalog.py \
+            data/book_catalog.json \
+            data/astronomy_taxonomy.json \
+            data/case_reviews.json \
+            data/claims.json \
+            data/craft_taxonomy.json \
+            data/curated_entities.json \
+            data/curated_events.json \
+            data/entity_aliases.json \
+            data/event_title_reviews.json \
+            data/location_coordinates.json \
+            data/reported_event_date_reviews.json \
+            data/species_taxonomy.json; then
+            catalog=true
+          fi
+
+          echo "catalog=$catalog" >> "$GITHUB_OUTPUT"
+          echo "Catalog rebuild required: $catalog" >> "$GITHUB_STEP_SUMMARY"
+
+  source-build:
+    needs: [changes, validate]
+    if: >-
+      github.event_name == 'pull_request' &&
+      needs.changes.outputs.catalog == 'true'
+    name: source / ${{ matrix.source }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        source:
+          - AARO-UAP-Records
+          - American-Alchemy
+          - Area52-Investigations
+          - Black-Vault-UFO
+          - Brazil-Government-UAP
+          - DOE-NNSA-UAP-UFO
+          - DPIArchive
+          - FBI-Vault-UFO
+          - France-GEIPAN
+          - MUFON
+          - NSA-UFO-FOIA
+          - National-Archives-UAP-Bulk
+          - Skywatcher-HQ
+          - Steven-Greer-Document-Library
+          - Tridactyls
+          - UPDB-MUFON
+          - War-Gov-PURSUE
+          - Weaponized-Podcast
+          - Whitepapers
+          - WikiLeaks-UFO
+    steps:
+      - name: Check out builder
+        uses: actions/checkout@v7
+
+      - name: Check out machine-data
+        uses: actions/checkout@v7
+        with:
+          repository: ufo-files/machine-data
+          path: _machine-data
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Build ${{ matrix.source }} catalog
+        shell: bash
+        env:
+          SOURCE: ${{ matrix.source }}
+        run: |
+          mkdir -p _source-input
+          mv "_machine-data/$SOURCE" "_source-input/$SOURCE"
+          printf '{"schema":"ufo-files-claims/v1","claims":[]}\n' > _empty-claims.json
+          revision="$(git -C _machine-data rev-parse HEAD)"
+          python3 scripts/build_catalog.py \
+            --input _source-input \
+            --input-repository ufo-files/machine-data \
+            --input-revision "$revision" \
+            --paired-language en \
+            --claims _empty-claims.json \
+            --output _source-output/catalog.json \
+            --duplicate-report _source-output/duplicate_candidates.json \
+            --date-review-report _source-output/date_review.json \
+            --require-data
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          catalog = json.loads(Path("_source-output/catalog.json").read_text())
+          shards = catalog.get("documentShards", [])
+          if not shards:
+              raise SystemExit("Source build emitted no document shard")
+          limit = 95 * 1024 * 1024
+          paths = [Path("_source-output/catalog.json"), *Path("_source-output/source-documents").glob("*.json")]
+          oversized = [(path, path.stat().st_size) for path in paths if path.stat().st_size > limit]
+          if oversized:
+              raise SystemExit("Source files exceed 95 MiB: " + ", ".join(f"{path} ({size} bytes)" for path, size in oversized))
+          print(json.dumps({"documents": catalog["counts"]["documents"], "shards": shards}, indent=2))
+          PY
+
+  validate:
+    needs: changes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out builder
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: Verify checked-in catalog file sizes
+        if: needs.changes.outputs.catalog != 'true'
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          limit = 95 * 1024 * 1024
+          paths = [Path("data/catalog.json"), *Path("data/source-documents").glob("*.json")]
+          oversized = [(path, path.stat().st_size) for path in paths if path.stat().st_size > limit]
+          if oversized:
+              raise SystemExit("Generated catalog files exceed 95 MiB: " + ", ".join(f"{path} ({size} bytes)" for path, size in oversized))
+          print("Generated catalog files are below 95 MiB")
+          PY
+
+      - name: Run unit and syntax tests
+        run: |
+          python3 -m unittest discover -s tests -v
+          node --check app.js
+          node --check map-globe.js
+
+      - name: Test app against checked-in catalog
+        if: needs.changes.outputs.catalog != 'true'
+        run: |
+          node --test tests/test_app.js
+
+  catalog-validate:
+    needs: [changes, validate]
+    if: >-
+      github.event_name == 'pull_request' &&
+      needs.changes.outputs.catalog == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out builder
+        uses: actions/checkout@v7
+
+      - name: Check out machine-data
+        uses: actions/checkout@v7
+        with:
+          repository: ufo-files/machine-data
+          path: _machine-data
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: Build catalog
+        shell: bash
+        run: |
+          revision="$(git -C _machine-data rev-parse HEAD)"
+          python3 scripts/build_catalog.py \
+            --input _machine-data \
+            --input-repository ufo-files/machine-data \
+            --input-revision "$revision" \
+            --paired-language en \
+            --require-data
+
+      - name: Verify generated catalog file sizes
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          limit = 95 * 1024 * 1024
+          paths = [Path("data/catalog.json"), *Path("data/source-documents").glob("*.json")]
+          oversized = [(path, path.stat().st_size) for path in paths if path.stat().st_size > limit]
+          if oversized:
+              raise SystemExit("Generated catalog files exceed 95 MiB: " + ", ".join(f"{path} ({size} bytes)" for path, size in oversized))
+          print("Generated catalog files are below 95 MiB")
+          PY
+
+      - name: Run tests against rebuilt catalog
+        run: |
+          python3 -m unittest discover -s tests -v
+          node --check app.js
+          node --check map-globe.js
+          node --test tests/test_app.js
+
+  publish:
+    needs: [changes, validate]
+    if: >-
+      github.event_name != 'pull_request' &&
+      needs.changes.outputs.catalog == 'true'
+    runs-on: ufo-agent-1-graph-builder
+    permissions:
+      contents: read
+    steps:
+      - name: Check out builder
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          ssh-key: ${{ secrets.MAIN_AUTOMATION_DEPLOY_KEY }}
+
+      - name: Resolve machine-data revision
+        id: upstream
+        shell: bash
+        run: |
+          revision="$(git ls-remote https://github.com/ufo-files/machine-data.git refs/heads/main | cut -f1)"
+          test -n "$revision"
+          echo "revision=$revision" >> "$GITHUB_OUTPUT"
+
+      - name: Check out machine-data
+        uses: actions/checkout@v7
+        with:
+          repository: ufo-files/machine-data
+          ref: ${{ steps.upstream.outputs.revision }}
+          path: _machine-data
+
+      - name: Verify system Python
+        run: python3 --version
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: Build catalog
+        env:
+          UPSTREAM_REVISION: ${{ steps.upstream.outputs.revision }}
+        run: |
+          python3 scripts/build_catalog.py \
+            --input _machine-data \
+            --input-repository ufo-files/machine-data \
+            --input-revision "$UPSTREAM_REVISION" \
+            --paired-language en \
+            --require-data
+
+      - name: Verify generated catalog file sizes
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          limit = 95 * 1024 * 1024
+          paths = [Path("data/catalog.json"), *Path("data/source-documents").glob("*.json")]
+          oversized = [(path, path.stat().st_size) for path in paths if path.stat().st_size > limit]
+          if oversized:
+              raise SystemExit("Generated catalog files exceed 95 MiB: " + ", ".join(f"{path} ({size} bytes)" for path, size in oversized))
+          print("Generated catalog files are below 95 MiB")
+          PY
+
+      - name: Run tests
+        run: |
+          python3 -m unittest discover -s tests -v
+          node --check app.js
+          node --check map-globe.js
+          node --test tests/test_app.js
+
+      - name: Commit refreshed catalog
+        env:
+          UPSTREAM_REVISION: ${{ steps.upstream.outputs.revision }}
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- data/catalog.json data/source-documents data/duplicate_candidates.json data/date_review.json)" ]; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/catalog.json data/source-documents data/duplicate_candidates.json data/date_review.json
+          git commit -m "Rebuild graph from machine-data@${UPSTREAM_REVISION:0:7}"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo "Unable to publish the refreshed graph catalog" >&2
+          exit 1

@@ -1,0 +1,21 @@
+Source: ESA Gaia Archive, Gaia Data Release 3
+Endpoint: https://gea.esac.esa.int/tap-server/tap/sync
+Table: gaiadr3.gaia_source
+Retrieved: 2026-08-24
+
+Local detail sample (gaia-dr3-3d-local-stars.csv):
+SELECT TOP 30000 source_id,ra,dec,parallax,phot_g_mean_mag
+FROM gaiadr3.gaia_source
+WHERE parallax_over_error > 10
+  AND parallax > 2
+  AND random_index < 1000000000
+ORDER BY random_index
+
+Rendering:
+- Distance in parsecs is the direct inverse of positive parallax in arcseconds.
+- ICRS right ascension and declination are transformed with the standard ICRS-to-Galactic rotation matrix.
+- The default corpus-neighborhood view displays the 11,639 rows at or within 1,000 light-years, covering every reviewed fixed-position corpus target; the full 30,000-row sample remains checked in.
+- No arm assignment, density interpolation, extinction correction, or synthetic star is added.
+
+Important limitation:
+Inverse parallax becomes increasingly uncertain with distance. This deterministic local sample is an observational point cloud, not a complete or volume-corrected census.

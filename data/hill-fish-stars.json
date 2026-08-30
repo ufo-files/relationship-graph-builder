@@ -1,0 +1,64 @@
+{
+  "schema": "ufo-files-hill-fish-star-map/v1",
+  "version": "1.0.0",
+  "reviewedAt": "2026-08-27",
+  "methodology": "The twelve connected pattern points and three unconnected background points reproduce Marjorie Fish's published interpretation of Betty Hill's reported map. ICRS positions and parallaxes are current SIMBAD measurements, not the 1969 Gliese distances Fish used. Lines encode reported map relationships only; they are not measured or verified interstellar routes.",
+  "sources": {
+    "interpretation": "https://www.nicap.org/reports/hillmap.htm",
+    "primaryAnalysis": "https://avalonlibrary.net/ebooks/Betty%20Hill%20-%20Zeta%20Reticuli%20Star%20Map%20presented%20by%20Marjorie%20E.%20Fish%20%28MUFON%2C%201974%29.pdf",
+    "routeDiagram": "https://commons.wikimedia.org/wiki/File:BH_Star_map.png",
+    "astrometry": "https://simbad.cds.unistra.fr/simbad/sim-tap/sync",
+    "astrometryQuery": "SELECT ident.id, basic.main_id, basic.ra, basic.dec, basic.plx_value FROM basic JOIN ident ON basic.oid=ident.oidref WHERE ident.id IN (the 14 listed HIP identifiers)",
+    "astrometryRetrievedAt": "2026-08-27"
+  },
+  "defaultView": {
+    "methodology": "The default sightline reproduces Fish's published viewing constraint: the observer is beyond Zeta 1 Reticuli looking back through it toward Zeta Tucanae. Camera roll places the Sun relative to Zeta 1 as it appears in the published comparison diagram. This metadata controls only the initial camera; it does not alter any star position or distance.",
+    "source": "https://www.nicap.org/reports/hillmap.htm",
+    "rollSource": "https://commons.wikimedia.org/wiki/File:BH_Star_map.png",
+    "foregroundStarId": "zeta_1_reticuli",
+    "screenAnchorStarId": "sun",
+    "screenAnchorClockwiseDegreesFromUp": -11.78,
+    "occludedReference": {
+      "id": "zeta_tucanae",
+      "name": "Zeta Tucanae",
+      "historicalId": "Gliese 17",
+      "hip": 1599,
+      "position": {
+        "frame": "ICRS",
+        "raDegrees": 5.017744,
+        "decDegrees": -64.874794,
+        "distanceLightYears": 28.0712
+      }
+    }
+  },
+  "stars": [
+    {"id":"sun","name":"Sun","historicalId":"Sun","position":{"frame":"ICRS","raDegrees":0,"decDegrees":0,"distanceLightYears":0}},
+    {"id":"zeta_1_reticuli","name":"Zeta 1 Reticuli","historicalId":"Gliese 136","hip":15330,"position":{"frame":"ICRS","raDegrees":49.442348,"decDegrees":-62.575320,"distanceLightYears":39.2845}},
+    {"id":"zeta_2_reticuli","name":"Zeta 2 Reticuli","historicalId":"Gliese 138","hip":15371,"position":{"frame":"ICRS","raDegrees":49.553412,"decDegrees":-62.506362,"distanceLightYears":39.2672}},
+    {"id":"alpha_mensae","name":"Alpha Mensae","historicalId":"Gliese 231","hip":29271,"position":{"frame":"ICRS","raDegrees":92.560302,"decDegrees":-74.753044,"distanceLightYears":33.3098}},
+    {"id":"82_eridani","name":"82 Eridani","historicalId":"Gliese 139","hip":15510,"position":{"frame":"ICRS","raDegrees":49.981879,"decDegrees":-43.069782,"distanceLightYears":19.7044}},
+    {"id":"tau_ceti","name":"Tau Ceti","historicalId":"Gliese 71","hip":8102,"position":{"frame":"ICRS","raDegrees":26.017013,"decDegrees":-15.937480,"distanceLightYears":11.9118}},
+    {"id":"107_piscium","name":"107 Piscium","historicalId":"Gliese 68","hip":7981,"position":{"frame":"ICRS","raDegrees":25.624011,"decDegrees":20.268513,"distanceLightYears":24.9310}},
+    {"id":"54_piscium","name":"54 Piscium","historicalId":"Gliese 27","hip":3093,"position":{"frame":"ICRS","raDegrees":9.840856,"decDegrees":21.250476,"distanceLightYears":36.2296}},
+    {"id":"gliese_67","name":"Gliese 67","historicalId":"Gliese 67","hip":7918,"position":{"frame":"ICRS","raDegrees":25.446362,"decDegrees":42.613395,"distanceLightYears":47.9469}},
+    {"id":"gliese_86","name":"Gliese 86","historicalId":"Gliese 86","hip":10138,"position":{"frame":"ICRS","raDegrees":32.607992,"decDegrees":-50.823740,"distanceLightYears":35.0988}},
+    {"id":"tau_1_eridani","name":"Tau 1 Eridani","historicalId":"Gliese 111","hip":12843,"position":{"frame":"ICRS","raDegrees":41.275828,"decDegrees":-18.572623,"distanceLightYears":46.5632}},
+    {"id":"gliese_59","name":"Gliese 59","historicalId":"Gliese 59","hip":7235,"position":{"frame":"ICRS","raDegrees":23.315871,"decDegrees":-24.177960,"distanceLightYears":62.8350}},
+    {"id":"gliese_86_1","name":"HD 13435","historicalId":"Gliese 86.1","hip":10164,"position":{"frame":"ICRS","raDegrees":32.673595,"decDegrees":-28.219259,"distanceLightYears":192.4815}},
+    {"id":"gliese_95","name":"Gliese 95","historicalId":"Gliese 95","hip":10798,"position":{"frame":"ICRS","raDegrees":34.743770,"decDegrees":-25.945687,"distanceLightYears":41.8610}},
+    {"id":"kappa_fornacis","name":"Kappa Fornacis","historicalId":"Gliese 97","hip":11072,"position":{"frame":"ICRS","raDegrees":35.635794,"decDegrees":-23.816800,"distanceLightYears":76.0063}}
+  ],
+  "routes": [
+    {"from":"zeta_2_reticuli","to":"zeta_1_reticuli","kind":"reported_route"},
+    {"from":"zeta_1_reticuli","to":"alpha_mensae","kind":"reported_route"},
+    {"from":"zeta_1_reticuli","to":"sun","kind":"reported_route"},
+    {"from":"zeta_1_reticuli","to":"82_eridani","kind":"reported_route"},
+    {"from":"82_eridani","to":"tau_ceti","kind":"reported_route"},
+    {"from":"zeta_1_reticuli","to":"gliese_86","kind":"reported_route"},
+    {"from":"tau_ceti","to":"107_piscium","kind":"reported_expedition"},
+    {"from":"107_piscium","to":"54_piscium","kind":"reported_expedition"},
+    {"from":"54_piscium","to":"gliese_67","kind":"reported_expedition"},
+    {"from":"gliese_86","to":"tau_1_eridani","kind":"reported_expedition"},
+    {"from":"gliese_86","to":"gliese_59","kind":"reported_expedition"}
+  ]
+}

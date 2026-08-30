@@ -1,0 +1,13 @@
+{
+  "name": "relationship-graph-builder",
+  "private": true,
+  "scripts": {
+    "screenshots": "node scripts/capture_graph_screenshots.mjs"
+  },
+  "devDependencies": {
+    "jspdf": "4.2.1",
+    "playwright": "1.62.0",
+    "qrcode-generator": "1.4.4",
+    "svg2pdf.js": "2.7.0"
+  }
+}

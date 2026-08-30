@@ -1,0 +1,197 @@
+{
+  "schema": "ufo-files-curated-events/v1",
+  "events": [
+    {
+      "title": "Roswell UFO Crash",
+      "startDate": "1947-07-08",
+      "eventType": "crash",
+      "sourcePath": "National-Archives-UAP-Bulk/documents/147873187/42-t-7585721-20060476F-001-006-2013.txt",
+      "evidence": "On July 8, 1947, the Roswell Army Air Field public information office in Roswell, New Mexico, reported the crash and recovery of a 'flying disc.'",
+      "matchTerms": ["Roswell"],
+      "matchCandidateKinds": ["event_date", "unknown", "referenced_document_date"]
+    },
+    {
+      "title": "The Department of Defense establishes AARO",
+      "startDate": "2022-07-20",
+      "eventType": "program_milestone",
+      "sourcePath": "National-Archives-UAP-Bulk/documents/493468579/493468579/576UAP0007.txt",
+      "evidence": "On July 20, 2022, the Department of Defense established the All-domain Anomaly Resolution Office to study, collect data, and report on UAP."
+    },
+    {
+      "title": "The New York Times publishes its investigation of the Pentagon's UFO program",
+      "startDate": "2017-12-16",
+      "eventType": "publication",
+      "sourcePath": "DPIArchive/documents/122173-how-the-pentagon-started-to-take-ufos-seriously.txt",
+      "evidence": "On Saturday, December 16, 2017, their story appeared online; it was printed on the front page the next day.",
+      "discussionMatchAny": [
+        ["new york times", "aatip"],
+        ["new york times", "atip", "2017"],
+        ["new york times", "elizondo", "2017"],
+        ["new york times", "leslie", "2017"],
+        ["new york times", "pentagon", "ufo", "2017"],
+        ["2017", "new york times", "article", "ufo"]
+      ]
+    },
+    {
+      "title": "ODNI submits the 2022 Annual Report on Unidentified Aerial Phenomena",
+      "startDate": "2023-01-12",
+      "eventType": "official_report",
+      "sourcePath": "National-Archives-UAP-Bulk/documents/493468580/493468580/05_AARO_Historical_Record_Report.txt",
+      "evidence": "On January 12, 2023, the ODNI submitted the 2022 Annual Report on Unidentified Aerial Phenomena."
+    },
+    {
+      "title": "AARO's FY2023 consolidated UAP report is cleared for open publication",
+      "startDate": "2023-10-17",
+      "eventType": "official_report",
+      "sourcePath": "National-Archives-UAP-Bulk/documents/493468580/493468580/01_2023_Annual_Report.txt",
+      "evidence": "Fiscal Year 2023 Consolidated Annual Report on Unidentified Anomalous Phenomena; cleared for open publication Oct 17, 2023."
+    },
+    {
+      "title": "AARO launches its public website and secure reporting mechanism",
+      "startDate": "2023-10-31",
+      "eventType": "program_milestone",
+      "sourcePath": "National-Archives-UAP-Bulk/documents/493468580/493468580/07_2024_Annual_Report.txt",
+      "evidence": "On October 31, 2023, AARO launched the aaro.mil website, featuring a secure mechanism for authorized reporting."
+    },
+    {
+      "title": "AARO's Historical Record Report, Volume I, is cleared for open publication",
+      "startDate": "2024-03-06",
+      "eventType": "official_report",
+      "sourcePath": "National-Archives-UAP-Bulk/documents/493468580/493468580/05_AARO_Historical_Record_Report.txt",
+      "evidence": "Report on the Historical Record of U.S. Government Involvement with UAP, Volume I; cleared for open publication Mar 06, 2024."
+    },
+    {
+      "title": "AARO's FY2024 consolidated UAP report is cleared for open publication",
+      "startDate": "2024-11-07",
+      "eventType": "official_report",
+      "sourcePath": "National-Archives-UAP-Bulk/documents/493468580/493468580/07_2024_Annual_Report.txt",
+      "evidence": "Fiscal Year 2024 Consolidated Annual Report on Unidentified Anomalous Phenomena; cleared for open publication Nov 07, 2024."
+    },
+    {
+      "title": "Kenneth Arnold Mount Rainier Sighting",
+      "startDate": "1947-06-24",
+      "eventType": "sighting",
+      "sourcePath": "National-Archives-UAP-Bulk/documents/147871567/42-t-1127712-20060476F-001-001-2013.txt",
+      "evidence": "On June 24, 1947, pilot Kenneth Arnold reported seeing nine objects near Mount Rainier.",
+      "matchTerms": ["Kenneth", "Arnold"],
+      "matchCandidateKinds": ["event_date", "unknown"]
+    },
+    {
+      "title": "Captain Mantell UFO Pursuit",
+      "startDate": "1948-01-07",
+      "eventType": "encounter",
+      "sourcePath": "War-Gov-PURSUE/release-04/documents/dow-uap-d094-analysis-of-flying-object-incidents-in-the-us-1949.txt",
+      "evidence": "On January 7, 1948, National Guard pilot Captain Thomas Mantell was killed while attempting to chase an unidentified object.",
+      "matchTerms": ["Mantell"],
+      "matchCandidateKinds": ["event_date", "unknown"]
+    },
+    {
+      "title": "Lubbock Lights",
+      "startDate": "1951-08-25",
+      "eventType": "sighting",
+      "sourcePath": "DPIArchive/documents/116349-project-grudge-status-report-no-1-november-30-1951.txt",
+      "evidence": "On August 25, 1951, four Texas Tech professors observed lights crossing the sky near Lubbock.",
+      "matchTerms": ["August", "1951"],
+      "matchCandidateKinds": ["event_date", "unknown"]
+    },
+    {
+      "title": "Washington, D.C. Radar-Visual Sightings",
+      "startDate": "1952-07-19",
+      "eventType": "radar_detection",
+      "sourcePath": "DPIArchive/documents/127495-cosmonauts-claim-ufos-are-real-report-7-24-2002.txt",
+      "evidence": "On July 19, 1952, radar operators and controllers at Washington National Airport reported unexplained targets and lights.",
+      "matchTerms": ["Washington"],
+      "matchCandidateKinds": ["event_date", "unknown"]
+    },
+    {
+      "title": "Betty and Barney Hill Encounter",
+      "startDate": "1961-09-19",
+      "eventType": "encounter",
+      "sourcePath": "Area52-Investigations/videos/the-truth-behind-betty-barney-hill-s-haunting-experience-debriefed-ep-56-CSjpgxLuYyA.tsv",
+      "evidence": "On September 19, 1961, Betty and Barney Hill reported an encounter while driving home to Portsmouth, New Hampshire.",
+      "matchTerms": ["Betty", "Barney", "Hill"],
+      "matchCandidateKinds": ["event_date", "unknown"]
+    },
+    {
+      "title": "Socorro UFO Landing",
+      "startDate": "1964-04-24",
+      "eventType": "landing",
+      "sourcePath": "Black-Vault-UFO/pdfs/fbi-files-on-the-socorro-ufo-landing-april-24-1964.txt",
+      "evidence": "On April 24, 1964, a police officer near Socorro, New Mexico, reported an unidentified object rising from the ground.",
+      "matchTerms": ["Socorro"],
+      "matchCandidateKinds": ["event_date", "unknown"]
+    },
+    {
+      "title": "Tehran F-4 UFO Intercept",
+      "startDate": "1976-09-19",
+      "eventType": "encounter",
+      "sourcePath": "NSA-UFO-FOIA/pdfs/the-u-s-government-and-the-iran-case.txt",
+      "evidence": "On September 19, 1976, Iranian authorities scrambled an F-4 after reports of a bright unidentified object over Tehran.",
+      "matchTerms": ["Iran"],
+      "matchCandidateKinds": ["event_date", "unknown"]
+    },
+    {
+      "title": "Rendlesham Forest Incident",
+      "startDate": "1980-12-26",
+      "eventType": "landing",
+      "sourcePath": "Black-Vault-UFO/pdfs/highlights-guide-2.txt",
+      "evidence": "On December 26, 1980, personnel were called to the reported UFO landing scene in Rendlesham Forest near RAF Woodbridge.",
+      "matchTerms": ["Rendlesham"],
+      "matchCandidateKinds": ["event_date", "unknown"]
+    },
+    {
+      "title": "Cash–Landrum Encounter",
+      "startDate": "1980-12-29",
+      "eventType": "encounter",
+      "sourcePath": "DPIArchive/documents/126065-cash-landrum-case-huffman-tx-december-29-1980-united-states-district-court.txt",
+      "evidence": "On December 29, 1980, Betty Cash, Vickie Landrum, and Colby Landrum reported an encounter near Huffman, Texas.",
+      "matchTerms": ["Cash"],
+      "matchCandidateKinds": ["event_date", "unknown"]
+    },
+    {
+      "title": "Japan Air Lines Flight 1628 Encounter",
+      "startDate": "1986-11-17",
+      "eventType": "encounter",
+      "sourcePath": "National-Archives-UAP-Bulk/documents/733667/733667-001-002.txt",
+      "evidence": "On November 17, 1986, the crew of Japan Air Lines Flight 1628 reported unidentified traffic near their Boeing 747 over Alaska.",
+      "matchTerms": ["1628"],
+      "matchCandidateKinds": ["event_date", "unknown"]
+    },
+    {
+      "title": "Belgian UFO Wave Begins",
+      "startDate": "1989-11-29",
+      "eventType": "sighting",
+      "sourcePath": "DPIArchive/documents/116135-belgian-ministry-of-defense-ufo-on-f16s-radar-march-1990.txt",
+      "evidence": "The Belgian UFO wave began on November 29, 1989 and later included an F-16 radar investigation.",
+      "matchTerms": ["November", "1989"],
+      "matchCandidateKinds": ["event_date", "unknown"]
+    },
+    {
+      "title": "Phoenix Lights",
+      "startDate": "1997-03-13",
+      "eventType": "sighting",
+      "sourcePath": "Black-Vault-UFO/pdfs/davis-monthan-air-force-base-response-regarding-aircraft-flares-requested-in-august-of-2013.txt",
+      "evidence": "On March 13, 1997, witnesses reported a UFO sighting over Phoenix, Arizona.",
+      "matchTerms": ["Phoenix"],
+      "matchCandidateKinds": ["event_date", "unknown"]
+    },
+    {
+      "title": "USS Nimitz Tic Tac Encounter",
+      "startDate": "2004-11-14",
+      "eventType": "encounter",
+      "sourcePath": "Black-Vault-UFO/pdfs/u-s-navy-releases-uap-briefing-documents-10.txt",
+      "evidence": "The main USS Nimitz Tic Tac incident occurred on November 14, 2004.",
+      "matchTerms": ["Tic", "Tac"],
+      "matchCandidateKinds": ["event_date", "unknown"]
+    },
+    {
+      "title": "Stephenville Lights",
+      "startDate": "2008-01-08",
+      "eventType": "sighting",
+      "sourcePath": "Black-Vault-UFO/pdfs/faa-radar-data-skeptical-magazine-inquiry-documents.txt",
+      "evidence": "FAA records document the Stephenville Lights reports of January 8, 2008.",
+      "matchTerms": ["Stephenville"],
+      "matchCandidateKinds": ["event_date", "unknown"]
+    }
+  ]
+}
