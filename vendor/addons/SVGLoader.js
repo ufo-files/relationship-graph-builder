@@ -18,7 +18,7 @@ import {
 	SRGBColorSpace,
 	Vector2,
 	Vector3
-} from '../three.module.min.js';
+} from '../three.module.min.js?v=astronomy-renderer-v1';
 
 const COLOR_SPACE_SVG = SRGBColorSpace;
 
