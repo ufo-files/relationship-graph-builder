@@ -91,6 +91,7 @@ test("Galactic Entities boots from a compact astronomy payload", () => {
   assert.match(html, /solar-system\.js\?v=astronomy-renderer-v1/);
   assert.match(fs.readFileSync("solar-system.js", "utf8"), /three\.module\.min\.js\?v=astronomy-renderer-v1/);
   assert.match(fs.readFileSync("map-globe.js", "utf8"), /three\.module\.min\.js\?v=astronomy-renderer-v1/);
+  assert.match(fs.readFileSync("map-globe.js", "utf8"), /SVGLoader\.js\?v=astronomy-renderer-v1/);
   assert.match(fs.readFileSync("vendor/addons/SVGLoader.js", "utf8"), /three\.module\.min\.js\?v=astronomy-renderer-v1/);
   const threeModule = fs.readFileSync("vendor/three.module.min.js", "utf8");
   assert.equal(threeModule.match(/three\.core\.min\.js\?v=astronomy-renderer-v1/g)?.length, 2);

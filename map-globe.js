@@ -1,5 +1,5 @@
 import * as THREE from "./vendor/three.module.min.js?v=astronomy-renderer-v1";
-import { SVGLoader } from "./vendor/addons/SVGLoader.js";
+import { SVGLoader } from "./vendor/addons/SVGLoader.js?v=astronomy-renderer-v1";
 
 const canvas = document.querySelector("#globeCanvas");
 const container = document.querySelector("#mapView");
