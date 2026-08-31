@@ -59,6 +59,7 @@ test("startup loads and validates source-specific document shards", () => {
 
 test("Galactic Entities boots from a compact astronomy payload", () => {
   const source = fs.readFileSync("app.js", "utf8");
+  const html = fs.readFileSync("index.html", "utf8");
   const payloadText = fs.readFileSync("data/astronomy.json", "utf8");
   const payload = JSON.parse(payloadText);
   assert.equal(payload.schema, "ufo-files-astronomy-bootstrap/v1");
@@ -85,6 +86,9 @@ test("Galactic Entities boots from a compact astronomy payload", () => {
   assert.match(source, /state\.publicDossierPayload \|\| publicDossierPayloadFromHash\(\)/);
   assert.match(source, /requestId === null \|\| requestId === state\.typeRequestId\) showCatalogError/);
   assert.match(source, /async function openDossierDialog\(\)[\s\S]*ensureFullCatalog\(\)[\s\S]*initializeDossier\(\)/);
+  assert.match(html, /app\.js\?v=astronomy-bootstrap-v1/);
+  assert.match(html, /solar-system\.js\?v=astronomy-bootstrap-v1/);
+  assert.doesNotMatch(html, /milky-way-layered-tracers-2/);
 });
 
 test("catalog CI exercises the French source independently", () => {
