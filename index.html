@@ -183,7 +183,7 @@
   <script src="vendor/jspdf.umd.min.js" defer></script>
   <script src="vendor/svg2pdf.umd.min.js" defer></script>
   <script src="vendor/qrcode-generator.js" defer></script>
-  <script src="app.js?v=astronomy-bootstrap-v1" defer></script>
+  <script src="app.js?v=astronomy-renderer-v1" defer></script>
   <script>
     window.addEventListener("error", event => {
       if (event.target?.id === "globeModule") {
@@ -197,6 +197,6 @@
     }, true);
   </script>
   <script id="globeModule" src="map-globe.js" type="module"></script>
-  <script id="solarModule" src="solar-system.js?v=astronomy-bootstrap-v1" type="module"></script>
+  <script id="solarModule" src="solar-system.js?v=astronomy-renderer-v1" type="module"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-import * as THREE from "./vendor/three.module.min.js";
+import * as THREE from "./vendor/three.module.min.js?v=astronomy-renderer-v1";
 import { SVGLoader } from "./vendor/addons/SVGLoader.js";
 
 const canvas = document.querySelector("#globeCanvas");

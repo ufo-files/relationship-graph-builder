@@ -1,4 +1,4 @@
-import * as THREE from "./vendor/three.module.min.js";
+import * as THREE from "./vendor/three.module.min.js?v=astronomy-renderer-v1";
 
 const canvas = document.querySelector("#solarCanvas");
 const container = document.querySelector("#solarView");
