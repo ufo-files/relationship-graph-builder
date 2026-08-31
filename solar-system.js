@@ -1,4 +1,4 @@
-import * as THREE from "./vendor/three.module.min.js?v=astronomy-renderer-v1";
+import * as THREE from "./vendor/three.module.min.js?v=astronomy-renderer-v2";
 
 const canvas = document.querySelector("#solarCanvas");
 const container = document.querySelector("#solarView");
@@ -206,7 +206,7 @@ class SolarModel {
   hillFishActive(){return this.mode==="local"&&HILL_FISH_CASES.has(this.caseLayer);}
   isReady(){if(this.mode==="galaxy")return this.spiralReady;if(this.mode==="sky")return this.skyReady;return this.gaiaReady&&(!this.hillFishActive()||this.caseReady);}
   corpusNodeData(target){return {selectable:true,targetId:target.targetId,kind:target.kind,system:target.system,mentionCount:target.mentionCount,documentCount:target.documentCount,sourceCount:target.sourceCount,distanceLightYears:target.position?.distanceLightYears,labelPriority:3000000+(target.mentionCount||0)};}
-  caseCorpusTarget(star){const targetId=({sun:"sun",zeta_1_reticuli:"zeta_reticuli",tau_ceti:"tau_ceti",82_eridani:"82_eridani"})[star.id];return targetId?this.astronomy.find(target=>target.targetId===targetId):null;}
+  caseCorpusTarget(star){const targetId=({sun:"sun",zeta_1_reticuli:"zeta_reticuli",tau_ceti:"tau_ceti","82_eridani":"82_eridani"})[star.id];return targetId?this.astronomy.find(target=>target.targetId===targetId):null;}
   async addHillFishLayer(){const requestedCase=this.caseLayer;try{
     const response=await fetch("data/hill-fish-stars.json");if(!response.ok)throw new Error("catalog");const data=await response.json();if(!this.hillFishActive()||this.caseLayer!==requestedCase)return;
     this.casePositions=new Map(data.stars.map(star=>[star.id,star.position.distanceLightYears?localGalacticPosition(star.position.raDegrees,star.position.decDegrees,star.position.distanceLightYears):new THREE.Vector3()]));
