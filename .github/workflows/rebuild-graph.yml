@@ -82,9 +82,10 @@ permissions:
 
 concurrency:
   group: relationship-graph-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'rebuild' }}
-  # Machine-data can advance faster than a catalog build. Keep only the newest
-  # rebuild; Pages deployment is deliberately handled by deploy-pages.yml.
-  cancel-in-progress: true
+  # Machine-data can advance faster than a catalog build. Finish the active
+  # rebuild while GitHub retains only the newest pending request for this group;
+  # Pages deployment is deliberately handled by deploy-pages.yml.
+  cancel-in-progress: false
 
 jobs:
   changes:
