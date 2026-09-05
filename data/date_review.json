@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-05T08:40:37Z",
+  "generatedAt": "2026-09-05T09:18:44Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "56bad6bd5b154390f032c999bde79d1f01f28503"
+    "revision": "b44709cd75ee220ce122c2aa9777f373816aefc6"
   },
-  "documentsWithCandidates": 9581,
+  "documentsWithCandidates": 9585,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -4376,6 +4376,57 @@
       ]
     },
     {
+      "documentId": "doc-66e5fee69269",
+      "path": "Archives-for-the-Unexplained/documents/Shadow-of-a-Doubt---2001-01.txt",
+      "candidates": [
+        {
+          "value": "2001-01-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, January 20, 2001, 2 pm - 3:30 pm",
+          "segment": 27
+        },
+        {
+          "value": "2000-12-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Probably the last Y2K bug occurred on December 31, 2000 in Norway.",
+          "segment": 40
+        },
+        {
+          "value": "2000-12-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "reset the calendar to December 1, 2000.",
+          "segment": 43
+        },
+        {
+          "value": "2000-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The White House Commission on Alternative Medicine, created by an executive order on March 8, 2000, is charged with",
+          "segment": 46
+        },
+        {
+          "value": "2001-01-31",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "and will remain online until January 31, 2001.",
+          "segment": 63
+        }
+      ]
+    },
+    {
       "documentId": "doc-1550f197f255",
       "path": "Archives-for-the-Unexplained/documents/Shadow-of-a-Doubt---2001-05.txt",
       "candidates": [
@@ -5510,6 +5561,48 @@
       ]
     },
     {
+      "documentId": "doc-1e1a881510b7",
+      "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S01E15---Top-10-Alien-Plots---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2010-11-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On November 8, 2010, a mysterious object came out of the Pacific Ocean off the coast of",
+          "segment": 104
+        },
+        {
+          "value": "2007-09-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Just ask the residents of Karankas, Peru on September 15, 2007.",
+          "segment": 171
+        },
+        {
+          "value": "1964-06-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Big Sur, California, June 10, 1964.",
+          "segment": 189
+        },
+        {
+          "value": "1957-10-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Base in New Mexico on October 16, 1957.",
+          "segment": 220
+        }
+      ]
+    },
+    {
       "documentId": "doc-e60de48c7093",
       "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S01E21---British-X-files---transcript-automated-.txt",
       "candidates": [
@@ -5791,6 +5884,30 @@
           "method": "unclassified-mention",
           "evidence": "Roswell, New Mexico, July 7, 1947.",
           "segment": 298
+        }
+      ]
+    },
+    {
+      "documentId": "doc-dffc7695b0f5",
+      "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S03E12---Triangle-Terror---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1989-11-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Eupen, Belgium, November 29, 1989.",
+          "segment": 82
+        },
+        {
+          "value": "1980-12-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Suffolk, England, December 27, 1980.",
+          "segment": 218
         }
       ]
     },
@@ -209293,6 +209410,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On November 3, 1953 at 7:14 pm (UTC, 8:14 pm local time) the press reports multiple witness accounts of a white, luminous sphere in the sky. This phenomenon is stationary in the northeast sky, clear of clouds. A controller recorded his observation in the tower's log ",
           "segment": "seg-c5a15a60c373959b7fa4b4e3"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ceae220eac62ff9a321e7fa4",
+      "path": "France-GEIPAN/paired/cases/1954-09-00007/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1954-09-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Sunday, September 5, 1954, at 5:15 PM, a couple and their daughter, located near the PTT radio station near Cape Spartel (Morocco), observed a dark, circular patch high in the sky, approximately the size of an airplane. One of the witnesses reported following this",
+          "segment": "seg-afbd0b00fe3f595e66c71c37"
         }
       ]
     },

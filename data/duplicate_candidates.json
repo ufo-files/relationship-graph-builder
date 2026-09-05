@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "56bad6bd5b154390f032c999bde79d1f01f28503"
+    "revision": "b44709cd75ee220ce122c2aa9777f373816aefc6"
   },
   "count": 208,
   "totalCount": 208,
@@ -271,8 +271,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 361,
-        "documentCount": 145
+        "mentions": 362,
+        "documentCount": 146
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -303,8 +303,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 452,
-        "documentCount": 212
+        "mentions": 455,
+        "documentCount": 215
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -1119,8 +1119,8 @@
       "category": "location",
       "left": {
         "name": "O'Hare Airport",
-        "mentions": 19,
-        "documentCount": 19
+        "mentions": 21,
+        "documentCount": 20
       },
       "right": {
         "name": "Ohare Airport",
@@ -1772,6 +1772,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of Kansas",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "University of Arkansas",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Godman Alr Force Base",
@@ -1781,22 +1797,6 @@
       "right": {
         "name": "Godman Air Force Base",
         "mentions": 5,
-        "documentCount": 3
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "University of Arkansas",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "University of Kansas",
-        "mentions": 4,
         "documentCount": 3
       },
       "similarity": 0.952,
@@ -2303,8 +2303,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 170,
-        "documentCount": 100
+        "mentions": 171,
+        "documentCount": 101
       },
       "right": {
         "name": "Stanton Freedman",
