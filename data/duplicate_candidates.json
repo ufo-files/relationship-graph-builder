@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "af17e60e7ae0f518d92503101003b194c0a326e4"
+    "revision": "89b09cc73da79562e154aedebe12fc329cd48093"
   },
-  "count": 220,
-  "totalCount": 220,
-  "shownCount": 220,
+  "count": 221,
+  "totalCount": 221,
+  "shownCount": 221,
   "candidates": [
     {
       "category": "organization",
@@ -2444,6 +2444,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Eric Von Daniken",
+        "mentions": 9,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "Eric Von Danikin",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "McCarran Airport",
@@ -2454,22 +2470,6 @@
         "name": "McCarren Airport",
         "mentions": 5,
         "documentCount": 4
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Eric Von Daniken",
-        "mentions": 8,
-        "documentCount": 7
-      },
-      "right": {
-        "name": "Eric Von Danikin",
-        "mentions": 4,
-        "documentCount": 2
       },
       "similarity": 0.938,
       "reason": "similar name",
@@ -3084,6 +3084,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Johns Hopkins University Applied Physics Laboratory",
+        "mentions": 5,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Johns Hopkins University Applied Physics Lab",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.926,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "Project Mogul",
@@ -3359,8 +3375,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 78,
-        "documentCount": 41
+        "mentions": 79,
+        "documentCount": 42
       },
       "right": {
         "name": "Stephen Spielberg",
