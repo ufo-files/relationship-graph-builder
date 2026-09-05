@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-05T14:44:45Z",
+  "generatedAt": "2026-09-05T15:18:10Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "8477915a61b1754376b4eaba6b64ca3169b99382"
+    "revision": "2b85e30a5477102e3236f435f54005d5f5b96b88"
   },
-  "documentsWithCandidates": 9679,
+  "documentsWithCandidates": 9691,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1847,6 +1847,39 @@
       ]
     },
     {
+      "documentId": "doc-1ece80961f56",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S11E12---Russias-Secret-Files---transcript-automated-.eng.txt",
+      "candidates": [
+        {
+          "value": "1991-12-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Moscow, Russia, December 25, 1991.",
+          "segment": 25
+        },
+        {
+          "value": "1934-12-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Leningrad, Russia, December 1, 1934.",
+          "segment": 92
+        },
+        {
+          "value": "1977-09-20",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "That changed after September 20, 1977, when numerous residents of Petrovsk reported seeing",
+          "segment": 437
+        }
+      ]
+    },
+    {
       "documentId": "doc-995cebe981d8",
       "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S11E13---Beyond-Roswell---transcript-automated-.eng.txt",
       "candidates": [
@@ -2092,6 +2125,45 @@
           "method": "unclassified-mention",
           "evidence": "Hornada del Muerto Desert, New Mexico, July 16, 1945.",
           "segment": 501
+        }
+      ]
+    },
+    {
+      "documentId": "doc-55f2f9deefaf",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S12E12---The-Animal-Agenda---transcript-automated-.eng.txt",
+      "candidates": [
+        {
+          "value": "1992-12-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Houston, Texas, December 11, 1992.",
+          "segment": 26
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ab2069028f65",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S13E05---The-Desert-Codes---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1980-12-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Rendlesham Forest, Suffolk County, England, December 26, 1980.",
+          "segment": 771
+        },
+        {
+          "value": "1965-12-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 9, 1965, a fireball was seen streaking through the skies of Michigan and Ontario and",
+          "segment": 794
         }
       ]
     },
@@ -5072,6 +5144,30 @@
       ]
     },
     {
+      "documentId": "doc-09ff8b35da9a",
+      "path": "Archives-for-the-Unexplained/documents/Hangar-1---S02E06---Hunted-by-UFOs---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1977-02-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "February 1, 1977, Glendale, California.",
+          "segment": 713
+        },
+        {
+          "value": "1977-02-02",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "On February 2, 1977, MoveOn received a call from a Sergeant Simpson reporting that a police",
+          "segment": 715
+        }
+      ]
+    },
+    {
       "documentId": "doc-7c0183f2e800",
       "path": "Archives-for-the-Unexplained/documents/Hangar-1---S02E09---Cops-vs-UFOs---transcript-automated-.txt",
       "candidates": [
@@ -5326,6 +5422,66 @@
           "method": "unclassified-mention",
           "evidence": "The Reverend Jim Jones, born 1931, died November 18, 1978, with 913 of his followers in the jungle",
           "segment": 14
+        }
+      ]
+    },
+    {
+      "documentId": "doc-80e5cdc4c210",
+      "path": "Archives-for-the-Unexplained/documents/Jones-William-E---Inventory2.txt",
+      "candidates": [
+        {
+          "value": "1996-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ABC News Nightline with Ted Koppel. #3952; Jul 16, 1996. \"Are We Alone?\"",
+          "segment": 5
+        },
+        {
+          "value": "1957-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of the defense science board, 16 Sep 1957.",
+          "segment": 12
+        },
+        {
+          "value": "1999-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Weekly. v.1:n.2; Jul 8, 1999",
+          "segment": 158
+        },
+        {
+          "value": "1993-02-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mobilization-Investigative Team (RMIT) in Mexico Jan 30 - Feb 4, 1993.",
+          "segment": 320
+        },
+        {
+          "value": "1998-01-12",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "FBI UFO Documents - Obtained via FOIA Requests as of Jan 12, 1998.",
+          "segment": 507
+        },
+        {
+          "value": "1974-06-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Akron, OH, Jun 22, 1974.",
+          "segment": 587
         }
       ]
     },
@@ -5849,6 +6005,21 @@
       ]
     },
     {
+      "documentId": "doc-3c09b2765d38",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-07-No-10---1993.txt",
+      "candidates": [
+        {
+          "value": "1979-10-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "beginning of World War III on October 13, 1979.\" Mr. Ehrlich continued to make predictions of imminent disaster throughout the decade of the 80s.",
+          "segment": 96
+        }
+      ]
+    },
+    {
       "documentId": "doc-18e302438221",
       "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-08-No-04---1994.txt",
       "candidates": [
@@ -5995,6 +6166,75 @@
           "method": "unclassified-mention",
           "evidence": "January 18, 1997, Dallas, Texas",
           "segment": 131
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cd794410fbf9",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-12-No-09---1998.txt",
+      "candidates": [
+        {
+          "value": "1995-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "it on February 28, 1995 along with allegations of physical, sexual, and psychological abuse at the hands of church",
+          "segment": 122
+        },
+        {
+          "value": "1984-09-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "8. \"Doctor's License Is Revoked For Diagnosis of Evil Spirits.\" New York Times; September 24, 1984.",
+          "segment": 265
+        },
+        {
+          "value": "1995-03-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Valerie Bauerlein, \"I prayed...and wrote this story.\" The Shelby Star (Shelby, NC); March 25, 1995.",
+          "segment": 271
+        },
+        {
+          "value": "1995-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Roberta Borden, \"Whaleys say Word of Faith is victim of persecution.\" Daily Star (Shelby, NC); March 3, 1995.",
+          "segment": 272
+        },
+        {
+          "value": "1995-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "From wire reports, \"Woman charged in daughter's drowning.\" Dallas Morning News (Dallas, TX); July 1, 1995.",
+          "segment": 275
+        },
+        {
+          "value": "1996-08-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Paul Salopek, \"Korean Exorcism, Bare-Knuckle Style.\" Chicago Tribune (Chicago, IL); August 28, 1996.",
+          "segment": 276
+        },
+        {
+          "value": "1995-03-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "wire reports, \"5 sect members are held in slaying.\" Dallas Morning News (Dallas TX); March 17, 1995.",
+          "segment": 277
         }
       ]
     },
@@ -7084,6 +7324,66 @@
           "method": "unclassified-mention",
           "evidence": "November 2, 1971, Delphos, Kansas.",
           "segment": 162
+        }
+      ]
+    },
+    {
+      "documentId": "doc-71b3292362c3",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Hunters---S01E11---UFO-Dogfights---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2008-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On February 21, 2008, the team was invited to March Air Force Base in Riverside, California to",
+          "segment": 45
+        },
+        {
+          "value": "1976-09-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "It is approximately 11 p.m. on September 18, 1976.",
+          "segment": 70
+        },
+        {
+          "value": "1976-09-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "According to the report, a UFO was seen about 11 p.m. on September 18, 1976.",
+          "segment": 219
+        },
+        {
+          "value": "1976-09-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The day after the event, September 19, 1976, the crash site was reportedly searched and tested for",
+          "segment": 370
+        },
+        {
+          "value": "2008-02-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On February 18, 2008, Oscar Santa Maria arrives at Los Angeles International Airport from Lima",
+          "segment": 509
+        },
+        {
+          "value": "1980-04-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On April 11, 1980, at 7.15 in the morning, at the airbase of La Jolla in Peru",
+          "segment": 516
         }
       ]
     },
@@ -9076,6 +9376,21 @@
           "method": "unclassified-mention",
           "evidence": "It landed August 1, 1978 at approximately 1037 p.m. about two miles south and a quarter",
           "segment": 7
+        }
+      ]
+    },
+    {
+      "documentId": "doc-25f6911d45a2",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-08---Track-03.tsv",
+      "candidates": [
+        {
+          "value": "1957-12-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The following tape recording was made December 5, 1957, and includes an interview with gentlemen",
+          "segment": 0
         }
       ]
     },
@@ -224309,6 +224624,21 @@
       ]
     },
     {
+      "documentId": "doc-807980fbb3372b3f3e355f89",
+      "path": "France-GEIPAN/paired/cases/2008-12-02308/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-12-16",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: In the evening of December 16, 2008, between 8:45 PM and 9:00 PM, two witnesses observed the rapid movements of a luminous phenomenon. A very bright red glow moves silently and according to a random trajectory above the city of Saint-Pierre. The object is sometimes h",
+          "segment": "seg-73133926bf7af5e7206d3d35"
+        }
+      ]
+    },
+    {
       "documentId": "doc-315b9b34a85398172da66a5f",
       "path": "France-GEIPAN/paired/cases/2009-01-01940/en/translation.txt",
       "candidates": [
@@ -229607,6 +229937,21 @@
       ]
     },
     {
+      "documentId": "doc-1831c56506caec50f31395bf",
+      "path": "France-GEIPAN/paired/cases/2013-12-09096/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-12-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: Recent (02/08/2015) testimony of an old observation. On December 24, 2014, at 8:30 PM, a witness observed the slow and silent passage of at least 5 orange glowing orbs. The observation of orange orbs crossing the sky in a few minutes, on a festive night, strongly sug",
+          "segment": "seg-bc676e36ac4526b902834fc8"
+        }
+      ]
+    },
+    {
       "documentId": "doc-7276625dd699e1723ebb6d5a",
       "path": "France-GEIPAN/paired/cases/2014-01-08632/en/translation.txt",
       "candidates": [
@@ -230356,6 +230701,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On the evening of August 14, 2016, a vacationer at the edge of a beach in the Gorges de la Cèze (30) gazes at the starry sky. He is surprised by the very quick passage of a bright point \"like a shooting star.\" The trajectory of the PAN is straight, then a zigzag is o",
           "segment": "seg-429cabd049186a12cff08f62"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fbfbb26df2aed9f512a93d09",
+      "path": "France-GEIPAN/paired/cases/2017-07-09698/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Sunday, July 23, 2017 at 11:27 PM, a witness and his partner observed for less than a minute a slow-moving bright white light point on a west-east trajectory in a clear sky. The intensity of the point dimmed as it moved. Only one testimony was collected. The witne",
+          "segment": "seg-8319d40d6dea20a225c3d958"
         }
       ]
     },
