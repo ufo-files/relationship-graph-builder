@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a4c3081f94a16421d05bd64dbe9d569cd192a02c"
+    "revision": "d921011316010800955a53f7d809adc95532ab4e"
   },
-  "count": 214,
-  "totalCount": 214,
-  "shownCount": 214,
+  "count": 215,
+  "totalCount": 215,
+  "shownCount": 215,
   "candidates": [
     {
       "category": "organization",
@@ -95,8 +95,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 574,
-        "documentCount": 371
+        "mentions": 576,
+        "documentCount": 372
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -111,8 +111,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 574,
-        "documentCount": 371
+        "mentions": 576,
+        "documentCount": 372
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -287,8 +287,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 375,
-        "documentCount": 154
+        "mentions": 377,
+        "documentCount": 155
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -303,8 +303,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 226,
-        "documentCount": 126
+        "mentions": 228,
+        "documentCount": 127
       },
       "right": {
         "name": "Kirtland Airforce Base",
@@ -687,8 +687,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 574,
-        "documentCount": 371
+        "mentions": 576,
+        "documentCount": 372
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -703,8 +703,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 574,
-        "documentCount": 371
+        "mentions": 576,
+        "documentCount": 372
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -719,8 +719,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 574,
-        "documentCount": 371
+        "mentions": 576,
+        "documentCount": 372
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -742,6 +742,22 @@
         "name": "AREA NAVI GATION",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Michael Shermer",
+        "mentions": 30,
+        "documentCount": 21
+      },
+      "right": {
+        "name": "Michael Schermer",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -1087,8 +1103,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 132,
-        "documentCount": 95
+        "mentions": 137,
+        "documentCount": 97
       },
       "right": {
         "name": "Flying Saucer",
@@ -1391,8 +1407,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 226,
-        "documentCount": 126
+        "mentions": 228,
+        "documentCount": 127
       },
       "right": {
         "name": "Kirkland Air Force Base",
@@ -1407,8 +1423,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 226,
-        "documentCount": 126
+        "mentions": 228,
+        "documentCount": 127
       },
       "right": {
         "name": "Kirtland Alr Force Base",
@@ -1423,8 +1439,8 @@
       "category": "program",
       "left": {
         "name": "Project Sign",
-        "mentions": 101,
-        "documentCount": 62
+        "mentions": 103,
+        "documentCount": 63
       },
       "right": {
         "name": "Project SIG",
@@ -1804,6 +1820,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Godman Air Force Base",
+        "mentions": 6,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Godman Alr Force Base",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "University of Kansas",
@@ -1813,22 +1845,6 @@
       "right": {
         "name": "University of Arkansas",
         "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Godman Alr Force Base",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Godman Air Force Base",
-        "mentions": 5,
         "documentCount": 3
       },
       "similarity": 0.952,
@@ -2815,8 +2831,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 94,
-        "documentCount": 47
+        "mentions": 95,
+        "documentCount": 48
       },
       "right": {
         "name": "George Adamsky",
@@ -3023,8 +3039,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 94,
-        "documentCount": 47
+        "mentions": 95,
+        "documentCount": 48
       },
       "right": {
         "name": "Mr. George Adams",
@@ -3327,8 +3343,8 @@
       "category": "person",
       "left": {
         "name": "Allen Heineck",
-        "mentions": 8,
-        "documentCount": 7
+        "mentions": 9,
+        "documentCount": 8
       },
       "right": {
         "name": "Alan Heineck",
