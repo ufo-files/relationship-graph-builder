@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-05T10:56:12Z",
+  "generatedAt": "2026-09-05T11:27:28Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "25f0fe91a40db263f0a3a4255eac506c6ef1896f"
+    "revision": "853282dc659b095474a0753c31bd42e979fe0a69"
   },
-  "documentsWithCandidates": 9601,
+  "documentsWithCandidates": 9607,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1538,6 +1538,21 @@
       ]
     },
     {
+      "documentId": "doc-2d74d4886157",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S07E11-Secrets-of-the-Mummies---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2005-04-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Vatican City, April 2, 2005.",
+          "segment": 29
+        }
+      ]
+    },
+    {
       "documentId": "doc-13e9f5754f66",
       "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S09E08---Hidden-Pyramids---transcript-automated-.txt",
       "candidates": [
@@ -1972,6 +1987,21 @@
           "method": "unclassified-mention",
           "evidence": "choke\" work and stated he was returning Saturday, 24 May 1952, t~ JJI",
           "segment": 17
+        }
+      ]
+    },
+    {
+      "documentId": "doc-34f840a3edbf",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000149516.txt",
+      "candidates": [
+        {
+          "value": "1951-09-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "i~ on 7 September 1951 ·",
+          "segment": 5
         }
       ]
     },
@@ -5198,6 +5228,21 @@
       ]
     },
     {
+      "documentId": "doc-5aa5f37b6a0c",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-03-No-10---1995.txt",
+      "candidates": [
+        {
+          "value": "1995-10-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 3 Issue 10 October 1995",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-37139f6b1f70",
       "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-03-No-11---1995.txt",
       "candidates": [
@@ -7286,6 +7331,21 @@
       ]
     },
     {
+      "documentId": "doc-f540ba514d24",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-01---Track-32-PeoplePlacesAndThings.tsv",
+      "candidates": [
+        {
+          "value": "1958-09-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In the Durham Herald, the edition of September 30, 1958, a story appeared, and I'd like to read from the story now.",
+          "segment": 126
+        }
+      ]
+    },
+    {
       "documentId": "doc-9bdb28260b76",
       "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-02---Track-37---transcript-automated-.txt",
       "candidates": [
@@ -7852,6 +7912,66 @@
           "method": "relative-date-exclusion",
           "evidence": "I did not believe in the existence of unidentified flying objects until June 11, 1954, when on a flight from Charleston, West Virginia, to Atlanta in Georgia",
           "segment": 48
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5dcac97d42ba",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-09---Track-56.tsv",
+      "candidates": [
+        {
+          "value": "1954-12-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 16, 1954, a torpedo-shaped spaceship bigger than the B-29 bomber, Cusillade, no wings",
+          "segment": 131
+        },
+        {
+          "value": "1948-09-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "two Air Force jet pilots reported today, this was September 11, 1948",
+          "segment": 189
+        },
+        {
+          "value": "1946-10-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "spaceship appeared over San Diego on the night of October 9, 1946.",
+          "segment": 236
+        },
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "And about a month after, Ken Arnold saw the nine saucers flying in front of Mount Rainier over here on June 24, 1947.",
+          "segment": 256
+        },
+        {
+          "value": "1955-09-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Three years later, on September 4, 1955, in Oslo, Norway",
+          "segment": 425
+        },
+        {
+          "value": "1954-04-16",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "That was April 16, 1954, that our director received this letter and this staggering information",
+          "segment": 526
         }
       ]
     },
@@ -224209,6 +224329,21 @@
           "method": "event-language",
           "evidence": "Description: On September 16, 2009, at 4:26 a.m., a witness observed in the sky a phenomenon he could not explain. He reported to the gendarmerie that he had observed a material shape at the end of a cloud. The object was round with three or four lit windows. Below this object, h",
           "segment": "seg-1b326ecaa5e71e2cbceab385"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9cd30b5e37d29b712fe0c2d1",
+      "path": "France-GEIPAN/paired/cases/2009-09-08636/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2009-09-26",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: The GEIPAN is contacted by a witness regarding a singular object observed in the sky of Thônes (74) during the Saint-Maurice agricultural fair on September 26, 2009. The object appears to be spinning on itself. The witness will attach to his email two photographs of ",
+          "segment": "seg-89f504da4341c8e60374d294"
         }
       ]
     },
