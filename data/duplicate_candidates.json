@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "da977a456212c4eaa094ebad170a9541987d6f33"
+    "revision": "8587e2725cf97a00aba0f95ee69a504671f1c0ba"
   },
   "count": 215,
   "totalCount": 215,
@@ -527,8 +527,8 @@
       "category": "government_agency",
       "left": {
         "name": "Police Department",
-        "mentions": 62,
-        "documentCount": 43
+        "mentions": 63,
+        "documentCount": 44
       },
       "right": {
         "name": "Police Departments",
@@ -2254,14 +2254,14 @@
     {
       "category": "organization",
       "left": {
+        "name": "Appropriations Committee",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
         "name": "APPROPRIATIONS SUBCOMMITTEE",
         "mentions": 5,
         "documentCount": 5
-      },
-      "right": {
-        "name": "Appropriations Committee",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -2831,8 +2831,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 96,
-        "documentCount": 49
+        "mentions": 97,
+        "documentCount": 50
       },
       "right": {
         "name": "George Adamsky",
@@ -3039,8 +3039,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 96,
-        "documentCount": 49
+        "mentions": 97,
+        "documentCount": 50
       },
       "right": {
         "name": "Mr. George Adams",
@@ -3118,6 +3118,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Col. Charles Brown",
+        "mentions": 7,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Charles Bowen",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Jacques Valet",
         "mentions": 3,
         "documentCount": 2
@@ -3142,22 +3158,6 @@
         "name": "Peter Levenda",
         "mentions": 7,
         "documentCount": 4
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Col. Charles Brown",
-        "mentions": 5,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Charles Bowen",
-        "mentions": 5,
-        "documentCount": 5
       },
       "similarity": 0.923,
       "reason": "similar name",
