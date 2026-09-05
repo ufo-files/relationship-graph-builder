@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "6432950174daf21bdf3a41c961b53032e36d0952"
+    "revision": "94ccd758e87f7ff18355e58c11e5758f11cab3af"
   },
-  "count": 213,
-  "totalCount": 213,
-  "shownCount": 213,
+  "count": 214,
+  "totalCount": 214,
+  "shownCount": 214,
   "candidates": [
     {
       "category": "organization",
@@ -150,6 +150,22 @@
         "name": "Major Range and Test Facility Bases",
         "mentions": 4,
         "documentCount": 4
+      },
+      "similarity": 0.982,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Institute of Noetic Sciences",
+        "mentions": 9,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "Institute of Noetic Science",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.982,
       "reason": "similar name",
@@ -1087,8 +1103,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 102,
-        "documentCount": 64
+        "mentions": 103,
+        "documentCount": 65
       },
       "right": {
         "name": "Major Donald Keyhole",
