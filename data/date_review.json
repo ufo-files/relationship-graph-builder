@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-05T02:51:44Z",
+  "generatedAt": "2026-09-05T03:33:18Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "df90546c8c64583814dfa9fe8f0518c36fc09853"
+    "revision": "0d1b0554a2f24b99df2616683a4a7ffe66d1a5e2"
   },
-  "documentsWithCandidates": 9553,
+  "documentsWithCandidates": 9555,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -877,6 +877,30 @@
           "method": "unclassified-mention",
           "evidence": "Journal of Contemporary Psychotherapy [jcp] PH026-298430 February 13, 2001 19:13 Style file version Nov. 19th, 1999",
           "segment": 582
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5a37e7ae6091",
+      "path": "Archives-for-the-Unexplained/documents/2005-09-28_Coast-to-Coast-AM_Unusual-Technology.txt",
+      "candidates": [
+        {
+          "value": "2005-09-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Tuesday - September 27 2005",
+          "segment": 0
+        },
+        {
+          "value": "2005-09-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "URL: https://www.coasttocoastam.com/alternate/amp/show/2005-09-27-show/",
+          "segment": 19
         }
       ]
     },
@@ -226027,6 +226051,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On February 25, 2015, at 6:10 PM, a witness is driving when they spot a high in the sky, colored phenomenon heading northwest. A plane passes nearby. The sky is very clear. A yellow or red oval, very bright, observed for 5 minutes at sunset, appears as a small cloud ",
           "segment": "seg-38da5fae2b9bb3b46a360995"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0b4c0e61ff78c5f3facdd5f0",
+      "path": "France-GEIPAN/paired/cases/2015-02-09113/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Saturday, February 21, 2015, at 11:30 PM, a motorist and their passenger were intrigued by several silent, orange glowing objects moving across the Lille sky. Only one statement was collected. The observation of orange balls crossing the sky in a matter of minutes",
+          "segment": "seg-d5e466c0e09853ce68afbe46"
         }
       ]
     },
