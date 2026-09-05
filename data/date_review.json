@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-05T07:35:40Z",
+  "generatedAt": "2026-09-05T08:07:54Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d31c19ac8173e0d80b23fd390edf909596e13942"
+    "revision": "ab18530010da545b78dd8205e2c6f06e453dd934"
   },
-  "documentsWithCandidates": 9573,
+  "documentsWithCandidates": 9578,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -4934,6 +4934,75 @@
       ]
     },
     {
+      "documentId": "doc-6b4a6cfc7d6d",
+      "path": "Archives-for-the-Unexplained/documents/UFORA-Research-Digest---No-16---Nov-1990.txt",
+      "candidates": [
+        {
+          "value": "1990-10-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "5 Oct 1990 Keith SA 1950 hrs Low Level C S3/P3",
+          "segment": 56
+        },
+        {
+          "value": "1990-06-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFORA90094 QA90040 4 Jun 1990 Buderain QLD 1920 hrs Med Level B S4/P3",
+          "segment": 65
+        },
+        {
+          "value": "1990-04-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFORA90095 QA90029 15 Apr 1990 Townsville QLD 0405hrs Low Level A S4/P4",
+          "segment": 69
+        },
+        {
+          "value": "1990-05-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFORA90097 QA90044 2 May 1990 Townsville QLD 0280 Hrs Low Level A S4/P4",
+          "segment": 77
+        },
+        {
+          "value": "1990-05-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFORA90098 QA90045 7 May 1990 Townsville QLD 1140hrs Med Level A S4/P4",
+          "segment": 81
+        },
+        {
+          "value": "1975-09-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFORA90099 QA90047 CA 19 Sep 1975 Rudy Vale QLD 2335 Hrs Med Level A S4/P4",
+          "segment": 85
+        },
+        {
+          "value": "1990-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFORA90100 QA90063 28 Jul 1990 Thornsland QLD 2120hrs Med Level A S4/P4",
+          "segment": 95
+        }
+      ]
+    },
+    {
       "documentId": "doc-dcc4dea1bc69",
       "path": "Archives-for-the-Unexplained/documents/UFORA-Research-Digest---No-22---Jun-1991.txt",
       "candidates": [
@@ -5558,6 +5627,21 @@
       ]
     },
     {
+      "documentId": "doc-4bfb37b02cd9",
+      "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S02E13---Earth-Federation---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1952-09-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Operation Main Brace begins September 13, 1952.",
+          "segment": 147
+        }
+      ]
+    },
+    {
       "documentId": "doc-8896cccf8b87",
       "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S02E15---UFO-Crash-Retrieval---transcript-automated-.txt",
       "candidates": [
@@ -6001,6 +6085,21 @@
           "method": "unclassified-mention",
           "evidence": "The first chapter took place on the night of July 19, 1922.",
           "segment": 286
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9266953b6e20",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-05---Track-03---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1957-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This was in October 15 or October 14, 1957.",
+          "segment": 281
         }
       ]
     },
@@ -212159,6 +212258,21 @@
       ]
     },
     {
+      "documentId": "doc-d22a7f267606b0c62fb2ae6b",
+      "path": "France-GEIPAN/paired/cases/1978-12-00577/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1978-12-10",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On December 10, 1978, starting at 6:40 a.m., several witnesses, including gendarmes, observed a peculiar luminous phenomenon in the western sky. This phenomenon appeared to be moving in a pendular and ascending manner. It gradually diminished and disappeared around 9",
+          "segment": "seg-ac70cffb935656b12446896d"
+        }
+      ]
+    },
+    {
       "documentId": "doc-78b9060cd9e8055f7a1fc505",
       "path": "France-GEIPAN/paired/cases/1978-12-00580/en/translation.txt",
       "candidates": [
@@ -223246,6 +223360,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On February 22, 2010, at 1:55 AM, a witness observed from the garden a stationary glowing point that intrigued them. Upon closer observation, they noticed that the light emitted by this point was composed of various colors. Impressed, the person called their brother ",
           "segment": "seg-3db844f50df3d4cb1fa15994"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5e3da16bb96bff22c4472af3",
+      "path": "France-GEIPAN/paired/cases/2010-02-02547/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2010-02-27",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On February 27, 2010, at 1:58 PM, a witness observed a strange light phenomenon in the south-southwest direction. For 2 minutes, they saw a round, rainbow-colored glow and a white glow. No sounds were heard. The witness took photographs. The observation described in ",
+          "segment": "seg-3c5afcd6e58993e33d631cf3"
         }
       ]
     },
