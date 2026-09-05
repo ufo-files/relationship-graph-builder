@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-05T07:00:13Z",
+  "generatedAt": "2026-09-05T07:35:40Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "71475e65fa193a72fb0ceb1dc277ee6ead5f8531"
+    "revision": "d31c19ac8173e0d80b23fd390edf909596e13942"
   },
-  "documentsWithCandidates": 9570,
+  "documentsWithCandidates": 9573,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -5554,6 +5554,30 @@
           "method": "unclassified-mention",
           "evidence": "The Air Force officially closes Project Blue Book on December 17, 1969.",
           "segment": 249
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8896cccf8b87",
+      "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S02E15---UFO-Crash-Retrieval---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1978-01-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Fort Dix, New Jersey, January 18, 1978.",
+          "segment": 187
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Dayton, Texas, December 29, 1980.",
+          "segment": 223
         }
       ]
     },
@@ -225701,6 +225725,21 @@
       ]
     },
     {
+      "documentId": "doc-89e7269918cd29ffe42d9ca4",
+      "path": "France-GEIPAN/paired/cases/2013-03-08421/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-03-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 15, 2013, at 7:38 PM, a witness and his son were intrigued by the silent, zigzagging movement of a golden, round object in the sky. The witness's description (slowly advancing golden ball) suggests a Thai lantern. The wind direction, south (see Meteociel rep",
+          "segment": "seg-dfd325a73349e1f95332f2be"
+        }
+      ]
+    },
+    {
       "documentId": "doc-9486409998eac2f5a3b6103a",
       "path": "France-GEIPAN/paired/cases/2013-03-08423/en/translation.txt",
       "candidates": [
@@ -225742,6 +225781,21 @@
           "method": "event-language",
           "evidence": "Description: On March 31, 2013, at 5:54 PM, a witness, while driving, observed above a field a black, faceted diamond-shaped object spinning. No wind was perceptible, and the sky was overcast. No other testimonies were collected. A field investigation was conducted with the witne",
           "segment": "seg-d475855b85be1415d38a1b9e"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5fe8ff08c6271bf59b211f69",
+      "path": "France-GEIPAN/paired/cases/2013-04-08440/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On April 14, 2013, around 8:00 PM, a witness observed the movement of approximately fifteen very bright points in the sky. They moved in the same direction. No particular noise was heard during the twenty-second observation. Four minutes before sunset, the witness ob",
+          "segment": "seg-d4bc8a880609af19d38d6832"
         }
       ]
     },
