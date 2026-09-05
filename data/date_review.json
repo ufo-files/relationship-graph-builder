@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-05T04:17:11Z",
+  "generatedAt": "2026-09-05T04:56:09Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e511482015591b7c5aebda693c5496944265bd07"
+    "revision": "dfe1e8443644d6321216f8ef08efe958b3c4b92f"
   },
-  "documentsWithCandidates": 9557,
+  "documentsWithCandidates": 9559,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -4070,6 +4070,21 @@
       ]
     },
     {
+      "documentId": "doc-892553b579be",
+      "path": "Archives-for-the-Unexplained/documents/Secrets-of-the-Unknown---Curses_JfPDNEAkiXU---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1922-11-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On November 26, 1922, history was rediscovered and made.",
+          "segment": 196
+        }
+      ]
+    },
+    {
       "documentId": "doc-df6611da72bc",
       "path": "Archives-for-the-Unexplained/documents/Shadow-of-a-Doubt---1994-05.txt",
       "candidates": [
@@ -5584,6 +5599,21 @@
           "method": "unclassified-mention",
           "evidence": "The experience itself started on September 19, 1961.",
           "segment": 24
+        }
+      ]
+    },
+    {
+      "documentId": "doc-686c54bd8a75",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-05---Track-21.tsv",
+      "candidates": [
+        {
+          "value": "1961-09-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On the night of September 19, 1961, Mr. and Mrs. Barney Hill were driving through New",
+          "segment": 0
         }
       ]
     },
