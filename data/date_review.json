@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-05T23:08:20Z",
+  "generatedAt": "2026-09-05T23:50:41Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a52f644a09c4c0da11b61232038d466bec65b7a2"
+    "revision": "d432f4124fc06036e895c444e3f38ccab953109b"
   },
-  "documentsWithCandidates": 9792,
+  "documentsWithCandidates": 9796,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1316,6 +1316,21 @@
       ]
     },
     {
+      "documentId": "doc-b40eea835726",
+      "path": "Archives-for-the-Unexplained/documents/2008-07-04_BBC_Wales-Police-say-UFO-was-just-the-Moon.txt",
+      "candidates": [
+        {
+          "value": "2008-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "News Front Page Page last updated at 10:24 GMT, Friday, 4 July 2008 11:24 UK",
+          "segment": 1
+        }
+      ]
+    },
+    {
       "documentId": "doc-b795314f0fad",
       "path": "Archives-for-the-Unexplained/documents/2008-07-19_London-SE1_UFO-lands-in-Potters-Fields-Park-19-July-2008.txt",
       "candidates": [
@@ -1477,6 +1492,21 @@
           "method": "unclassified-mention",
           "evidence": "November 12 1966 was the date of one of",
           "segment": 192
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3be479335c54",
+      "path": "Archives-for-the-Unexplained/documents/2011-05-27---NASA-Goddard---NASA-Swift-Finds-Most-Distant-Gamma-ray-Burst-Yet_qomRweB6moc---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2009-04-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 29, 2009: GRB 090429B is now most distant burst",
+          "segment": 0
         }
       ]
     },
@@ -3294,6 +3324,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "TO : Ghiei, t;J(ti UATE: 5 November 1956",
+          "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8821e7ed5ea4",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000146314.txt",
+      "candidates": [
+        {
+          "value": "1951-02-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I discussed the attached Memorandun of 12 February 1951",
           "segment": 0
         }
       ]
@@ -225346,6 +225391,21 @@
           "method": "event-language",
           "evidence": "Description: On June 19, 2005, a witness observed the movements of an object the size of a small plane. Very little information is available on this case, but the hypothesis of observing a small aircraft cannot be ruled out.",
           "segment": "seg-f191af2cd383927137491f61"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2ccc0a9accd617705bbb46a1",
+      "path": "France-GEIPAN/paired/cases/2005-07-02573/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2005-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On July 7, 2005 at 14:14 (UTC), the captain of flight AF 7705, approaching Charles-De-Gaulle Airport, reported crossing with an object of gray color, seemingly stationary and shaped like an hourglass, according to the pilot's drawing. The object, which appears to be ",
+          "segment": "seg-745cf0641896763c6b5d9340"
         }
       ]
     },
