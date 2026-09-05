@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e5bbb5b1c174519ada2adcef412ff9fd8e6c144e"
+    "revision": "5ce428aa5e145df8ecf4ca7062b02e05e5f7a80e"
   },
-  "count": 211,
-  "totalCount": 211,
-  "shownCount": 211,
+  "count": 213,
+  "totalCount": 213,
+  "shownCount": 213,
   "candidates": [
     {
       "category": "organization",
@@ -95,8 +95,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 548,
-        "documentCount": 364
+        "mentions": 567,
+        "documentCount": 366
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -111,8 +111,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 548,
-        "documentCount": 364
+        "mentions": 567,
+        "documentCount": 366
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -159,8 +159,8 @@
       "category": "location",
       "left": {
         "name": "White Sands Missile Range",
-        "mentions": 65,
-        "documentCount": 54
+        "mentions": 66,
+        "documentCount": 55
       },
       "right": {
         "name": "White Sands Missle Range",
@@ -671,8 +671,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 548,
-        "documentCount": 364
+        "mentions": 567,
+        "documentCount": 366
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -687,8 +687,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 548,
-        "documentCount": 364
+        "mentions": 567,
+        "documentCount": 366
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -703,8 +703,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 548,
-        "documentCount": 364
+        "mentions": 567,
+        "documentCount": 366
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1087,8 +1087,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 99,
-        "documentCount": 61
+        "mentions": 100,
+        "documentCount": 62
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -1174,6 +1174,22 @@
         "name": "Richard Clarke",
         "mentions": 3,
         "documentCount": 2
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "The Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Airforce Base",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -2862,6 +2878,22 @@
     {
       "category": "location",
       "left": {
+        "name": "The Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Alr Force Base",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "Sand Mountain",
         "mentions": 2,
         "documentCount": 2
@@ -3278,14 +3310,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Jane Goodall",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "Allen Heineck",
+        "mentions": 7,
+        "documentCount": 6
       },
       "right": {
-        "name": "James Goodall",
-        "mentions": 9,
-        "documentCount": 6
+        "name": "Alan Heineck",
+        "mentions": 5,
+        "documentCount": 2
       },
       "similarity": 0.88,
       "reason": "similar person name",
@@ -3294,14 +3326,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Allen Heineck",
-        "mentions": 6,
-        "documentCount": 5
+        "name": "Jane Goodall",
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
-        "name": "Alan Heineck",
-        "mentions": 5,
-        "documentCount": 2
+        "name": "James Goodall",
+        "mentions": 9,
+        "documentCount": 6
       },
       "similarity": 0.88,
       "reason": "similar person name",
