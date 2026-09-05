@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-05T20:17:27Z",
+  "generatedAt": "2026-09-05T21:05:38Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "fe76e094366822ad20f43086e17b24d3a78a03ed"
+    "revision": "07e399600d93c789099b3f1bd481f6ef79d19684"
   },
-  "documentsWithCandidates": 9764,
+  "documentsWithCandidates": 9768,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7453,6 +7453,30 @@
           "method": "unclassified-mention",
           "evidence": "2 The Dallas Morning News, 15 July 2000. http://www.dallasnews.com/texas_southwest/111922_waco_15tex.html",
           "segment": 137
+        }
+      ]
+    },
+    {
+      "documentId": "doc-602135b2b5d6",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-16-No-12---2002.txt",
+      "candidates": [
+        {
+          "value": "2002-12-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 16 December 2002 Number 12 http://www.ntskeptics.org",
+          "segment": 0
+        },
+        {
+          "value": "2002-12-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Your parents got you hooked on food December 14, 2002",
+          "segment": 7
         }
       ]
     },
@@ -225143,6 +225167,21 @@
       ]
     },
     {
+      "documentId": "doc-f7b5844fc26495bcb857a2fd",
+      "path": "France-GEIPAN/paired/cases/2007-07-02211/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2007-07-18",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On July 18, 2007, around 4:45 a.m., a witness observed from their terrace a luminous phenomenon that intrigued them. A light moved closer, then changed direction and disappeared. No noise was heard by the witness during the observation. The location data provided by ",
+          "segment": "seg-cad5433b93ef83e7d578faf7"
+        }
+      ]
+    },
+    {
       "documentId": "doc-697fcdc2bbf267992b5f97c2",
       "path": "France-GEIPAN/paired/cases/2007-08-01745/en/translation.txt",
       "candidates": [
@@ -229757,6 +229796,21 @@
       ]
     },
     {
+      "documentId": "doc-d382c06d0075635d75e4572d",
+      "path": "France-GEIPAN/paired/cases/2011-09-02830/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-09-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 24, 2011, at 3:35 a.m., a Parisian taxi driver observed from his vehicle the silent and horizontal movement of a green fluorescent cone closed by a red line. The object crossed his field of vision and disappeared quickly. No other witnesses were reported",
+          "segment": "seg-3bb0188301e532f5aa4cd879"
+        }
+      ]
+    },
+    {
       "documentId": "doc-a52026103409185d0360b697",
       "path": "France-GEIPAN/paired/cases/2011-09-02842/en/translation.txt",
       "candidates": [
@@ -232252,6 +232306,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Saturday, February 21, 2015, at 11:30 PM, a motorist and their passenger were intrigued by several silent, orange glowing objects moving across the Lille sky. Only one statement was collected. The observation of orange balls crossing the sky in a matter of minutes",
           "segment": "seg-d5e466c0e09853ce68afbe46"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-418ee1f8460aacc0ff449f35",
+      "path": "France-GEIPAN/paired/cases/2015-04-09146/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-04-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On April 3, 2015, at 4:15 PM, a motorist and her two passengers were intrigued by the slow, silent, and low-altitude flight of an aircraft they did not recognize. The GEIPAN consulted military air traffic control regarding this observation; it turns out that on that ",
+          "segment": "seg-45a32517b6dbb483521fa078"
         }
       ]
     },
