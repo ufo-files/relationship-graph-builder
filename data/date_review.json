@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-05T15:18:10Z",
+  "generatedAt": "2026-09-05T15:50:27Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "2b85e30a5477102e3236f435f54005d5f5b96b88"
+    "revision": "a4b8d2b99465197c2e9fecced51f3a804dd07823"
   },
-  "documentsWithCandidates": 9691,
+  "documentsWithCandidates": 9699,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -935,6 +935,30 @@
       ]
     },
     {
+      "documentId": "doc-e22b13123738",
+      "path": "Archives-for-the-Unexplained/documents/2007-02-22_The-Guardian_Could-we-have-hitched-a-ride-on-UFOs.txt",
+      "candidates": [
+        {
+          "value": "2007-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thu 22 Feb 2007 11.13 GMT",
+          "segment": 5
+        },
+        {
+          "value": "1995-06-19",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "The initial request in 1993 for an MoD research project into UFOs was shelved, but in a later memo dated June 19 1995 following a",
+          "segment": 40
+        }
+      ]
+    },
+    {
       "documentId": "doc-5cc050e2cb7e",
       "path": "Archives-for-the-Unexplained/documents/2007-05-25---NASA-Jet-Propulsion-Laboratory---JPL-Video-Cassini-at-Saturn-5-24-07_prVhFhez2Uo---transcript-automated-.txt",
       "candidates": [
@@ -1126,6 +1150,21 @@
           "method": "unclassified-mention",
           "evidence": "\\h space aboard Space Shuttle Columbia on July 23, 1999.",
           "segment": 85
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7816676ff3e2",
+      "path": "Archives-for-the-Unexplained/documents/2011-02-14---NASA-STI-Program---Apollo-11-For-All-Mankind_M9uHmRFmrx4---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1969-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "then on July 19 1969 Apollo 11 prepared",
+          "segment": 91
         }
       ]
     },
@@ -1733,6 +1772,30 @@
       ]
     },
     {
+      "documentId": "doc-8d5257d4ceff",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S04E07---Aliens-and-Bigfoot---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1951-11-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mount Everest, November 9, 1951",
+          "segment": 41
+        },
+        {
+          "value": "1927-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Russia, February 28, 1927.",
+          "segment": 639
+        }
+      ]
+    },
+    {
       "documentId": "doc-cd6902e152ee",
       "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S04E10---Aliens-and-Dinosaurs---transcript-automated-.txt",
       "candidates": [
@@ -2188,6 +2251,30 @@
           "method": "unclassified-mention",
           "evidence": "On January 28, 1994, Air France Flight 3532 was flying from Nice, France to London, England.",
           "segment": 510
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cfb88f1d7bda",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S19E06---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-10-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On October 19, 2017, astronomers detect a mysterious object traveling through our solar system.",
+          "segment": 453
+        },
+        {
+          "value": "2022-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Harvard University, September 16, 2022.",
+          "segment": 769
         }
       ]
     },
@@ -5741,6 +5828,36 @@
       ]
     },
     {
+      "documentId": "doc-bcdacb843143",
+      "path": "Archives-for-the-Unexplained/documents/Monumental-Mysteries---S01E12-Eureka-Springs-Cancer-Hotel---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 14, 1947 was Chuck Yeager's date with destiny.",
+          "segment": 479
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7fe958b83893",
+      "path": "Archives-for-the-Unexplained/documents/Monumental-Mysteries---S02E01---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1915-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 2, 1915, Washington, DC. All is quiet in the U.S. Capitol building.",
+          "segment": 212
+        }
+      ]
+    },
+    {
       "documentId": "doc-d932c5462940",
       "path": "Archives-for-the-Unexplained/documents/Mysteries-Magic-and-Miracles---S01E10---transcript-automated-.txt",
       "candidates": [
@@ -7294,6 +7411,66 @@
           "method": "unclassified-mention",
           "evidence": "The military format would be November 18, 1952, no",
           "segment": 578
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a9bfd0ae8f50",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Files---S02E09---Russian-Roswell---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1948-06-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 19, 1948, early evening.",
+          "segment": 59
+        },
+        {
+          "value": "1908-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 30, 1908, approximately 7 a.m.",
+          "segment": 230
+        },
+        {
+          "value": "1960-12-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "According to a December 1, 1960 joint Army, Navy, and CIA intelligence brief, Kapustin Yar is a",
+          "segment": 420
+        },
+        {
+          "value": "1957-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 4, 1957, when Sputnik, the",
+          "segment": 494
+        },
+        {
+          "value": "1957-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 4, 1957, the Soviet Union's space program successfully launches the world's first",
+          "segment": 497
+        },
+        {
+          "value": "1990-03-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "According to the Blue File, as recently as March 21, 1990, the residents of a dozen Russian towns",
+          "segment": 706
         }
       ]
     },
@@ -230122,6 +230299,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On April 23, 2014, at 1:28 PM, a witness observing the clouds was intrigued by the passage of a white spherical shape followed by several others. The witness's account of small spherical objects moving beneath the cloud cover resembles a release of rubber balloons. T",
           "segment": "seg-dbe64b984aec467f6a89693e"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4dfa64aced5529b79664a952",
+      "path": "France-GEIPAN/paired/cases/2014-04-08700/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-04-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On April 10, 2014, around 6:00 PM, a witness observes a stationary bright object in the sky. The observation lasts for approximately thirty seconds before the object disappears instantly. Only one testimony was collected. A bright object observed in the west during t",
+          "segment": "seg-f517e5afc2169efdf84eea8e"
         }
       ]
     },
