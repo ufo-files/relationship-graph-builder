@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-05T12:00:08Z",
+  "generatedAt": "2026-09-05T12:33:17Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "90d9b43559894ac71c946f6a0a49b5a5aad98c04"
+    "revision": "df5f862eb5fa5a28283495db5bfdf73834e03b4c"
   },
-  "documentsWithCandidates": 9622,
+  "documentsWithCandidates": 9638,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -965,6 +965,66 @@
       ]
     },
     {
+      "documentId": "doc-b52884e136b0",
+      "path": "Archives-for-the-Unexplained/documents/2008-05-23_Richmond-Twickenham-Times_Close-encounters-of-the-alien-kind.txt",
+      "candidates": [
+        {
+          "value": "2005-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On February 21, 2005, a vague report was made indicating that something had been seen in the sky in Teddington at 10am.",
+          "segment": 19
+        },
+        {
+          "value": "2003-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A record from Richmond revealed that on June 21, 2003, a doughnut-shaped object was spotted moving from left to right",
+          "segment": 20
+        },
+        {
+          "value": "2002-02-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On February 15, 2002, a sighting was made in Richmond of a very odd flashing light on a moving object, spinning above",
+          "segment": 23
+        },
+        {
+          "value": "2000-09-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Records show that on September 24, 2000, at 12.02am, one, or possibly two golden lights, moved incredibly fast in the",
+          "segment": 24
+        },
+        {
+          "value": "1998-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A report was made on July 27, 1998, of a large, circular object, that had blue lights that were spinning moving above",
+          "segment": 27
+        },
+        {
+          "value": "1997-08-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On August 2, 1997, at 10.18pm lights were seen in the sky over Twickenham.",
+          "segment": 30
+        }
+      ]
+    },
+    {
       "documentId": "doc-b795314f0fad",
       "path": "Archives-for-the-Unexplained/documents/2008-07-19_London-SE1_UFO-lands-in-Potters-Fields-Park-19-July-2008.txt",
       "candidates": [
@@ -976,6 +1036,21 @@
           "method": "unclassified-mention",
           "evidence": "File: 2008 07 19_London SE1_UFO lands in Potters Fields Park 19 July 2008.pdf",
           "segment": 13
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ed7a5fc16e87",
+      "path": "Archives-for-the-Unexplained/documents/2009-01-08_The-Guardian_UFO-puzzle-it-was-the-Guardian-wot-done-it.txt",
+      "candidates": [
+        {
+          "value": "2009-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Fri 9 Jan 2009 00.01 GMT",
+          "segment": 6
         }
       ]
     },
@@ -1006,6 +1081,21 @@
           "method": "unclassified-mention",
           "evidence": "\\h space aboard Space Shuttle Columbia on July 23, 1999.",
           "segment": 85
+        }
+      ]
+    },
+    {
+      "documentId": "doc-07259583747b",
+      "path": "Archives-for-the-Unexplained/documents/2011-03-11---NASA-STI-Program---Aeronautics-and-Space-Report-Highlights-1966_rPdFAA4jYQU---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1966-11-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 12 1966 was the date of one of",
+          "segment": 192
         }
       ]
     },
@@ -1799,6 +1889,39 @@
       ]
     },
     {
+      "documentId": "doc-9c9018962f40",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S12E10---The-Akashic-Record---transcript-automated-.eng.txt",
+      "candidates": [
+        {
+          "value": "2001-09-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "New York City, September 11, 2001.",
+          "segment": 333
+        },
+        {
+          "value": "2004-12-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sumatra, Indonesia, December 26, 2004.",
+          "segment": 340
+        },
+        {
+          "value": "2009-01-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Washington, D.C. January 20, 2009.",
+          "segment": 347
+        }
+      ]
+    },
+    {
       "documentId": "doc-6c46fce037ca",
       "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S12E11---Voices-of-the-Gods---transcript-automated-.txt",
       "candidates": [
@@ -2185,6 +2308,54 @@
           "method": "unclassified-mention",
           "evidence": "returning around 23 August 1953.",
           "segment": 6
+        }
+      ]
+    },
+    {
+      "documentId": "doc-014a0f31b8a0",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000184392.txt",
+      "candidates": [
+        {
+          "value": "1952-01-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 29 January 1952, 2:00 PM, another conference was held in",
+          "segment": 7
+        },
+        {
+          "value": "1952-02-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "It was agreed that at ~he conference set for 4 February 1952",
+          "segment": 26
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d14759a84ea3",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000190640.txt",
+      "candidates": [
+        {
+          "value": "1953-06-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SI and # Experimentation, 3 June 1953 a",
+          "segment": 0
+        },
+        {
+          "value": "1953-06-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Wednesday, 3 June 1953, SI and I experimentation, and",
+          "segment": 1
         }
       ]
     },
@@ -4463,6 +4634,57 @@
       ]
     },
     {
+      "documentId": "doc-d2504bf621ec",
+      "path": "Archives-for-the-Unexplained/documents/Hangar-1---S01E01---Presidential-Encounters---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1954-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and all non-essential personnel from February 19, 1954 to February 21.",
+          "segment": 46
+        },
+        {
+          "value": "1963-11-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "President Kennedy's CIA memo was issued on November 12, 1963.",
+          "segment": 265
+        },
+        {
+          "value": "1967-03-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 16, 1967, Malmstrom Air Force Base, Montana.",
+          "segment": 279
+        },
+        {
+          "value": "1971-09-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "There was a treaty that was signed September 30, 1971.",
+          "segment": 308
+        },
+        {
+          "value": "1971-09-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "There was a treaty that was signed September 30, 1971.",
+          "segment": 316
+        }
+      ]
+    },
+    {
       "documentId": "doc-4c126056afd7",
       "path": "Archives-for-the-Unexplained/documents/Historys-Greatest-Mysteries---S04E25---The-Gardner-Museum---transcript-automated-.txt",
       "candidates": [
@@ -5015,6 +5237,21 @@
       ]
     },
     {
+      "documentId": "doc-a4bafb45e65e",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-05-No-04---1991.txt",
+      "candidates": [
+        {
+          "value": "1991-04-19",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "In an April 19, 1991 Wall Street Journal article, staff reporter Thomas Burton told how Lilly introduced Prozac in 1988",
+          "segment": 133
+        }
+      ]
+    },
+    {
       "documentId": "doc-6ebcc9dfc176",
       "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-07-No-01---1993.txt",
       "candidates": [
@@ -5146,6 +5383,21 @@
           "method": "context-exclusion",
           "evidence": "The above article appeared in the 12-page Feb. issue, Copyright (c) January 27, 1993 by Gordon-",
           "segment": 280
+        }
+      ]
+    },
+    {
+      "documentId": "doc-18e302438221",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-08-No-04---1994.txt",
+      "candidates": [
+        {
+          "value": "1994-03-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "editorial for March 19, 1994 noted: \" ... there are question whether Mr. Ames effectively lied during a polygraph test or",
+          "segment": 407
         }
       ]
     },
@@ -5534,6 +5786,36 @@
       ]
     },
     {
+      "documentId": "doc-45e414dd8457",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-03-No-12---1995.txt",
+      "candidates": [
+        {
+          "value": "1995-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 3 Issue 12 December 1995",
+          "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-61eac0b00174",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-04-No-07---1996.txt",
+      "candidates": [
+        {
+          "value": "1996-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 4 Issue 7 July 1996",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-7a712b0204d4",
       "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-04-No-08---1996.txt",
       "candidates": [
@@ -5900,6 +6182,63 @@
       ]
     },
     {
+      "documentId": "doc-9e0d150a4626",
+      "path": "Archives-for-the-Unexplained/documents/Swamp-Gas-Journal---1993-Volume-6-Number-4.txt",
+      "candidates": [
+        {
+          "value": "1993-08-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 27 Aug 1993 10:31:02 GMT",
+          "segment": 171
+        },
+        {
+          "value": "1993-08-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 30 Aug 1993 11:27:12 GMT",
+          "segment": 187
+        },
+        {
+          "value": "1993-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "As many of you will know, on July 28, 1993, Doug Bower",
+          "segment": 529
+        },
+        {
+          "value": "1992-11-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Brookhaven Laboratories on November 24, 1992.\" The note describes the",
+          "segment": 751
+        }
+      ]
+    },
+    {
+      "documentId": "doc-eb564180f33d",
+      "path": "Archives-for-the-Unexplained/documents/Swamp-Gas-Journal---1995-Volume-7-Number-3.txt",
+      "candidates": [
+        {
+          "value": "1995-05-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: 27 May 1995 03:45:40 +0100",
+          "segment": 416
+        }
+      ]
+    },
+    {
       "documentId": "doc-076337d8061b",
       "path": "Archives-for-the-Unexplained/documents/Tampa-Bay-Skeptics-Report---vol-09-no-2---INCOMPLETE.txt",
       "candidates": [
@@ -5929,6 +6268,69 @@
           "method": "unclassified-mention",
           "evidence": "something like a pit.\" (Emphasis added.) The Chiefland Citizen (April 11, 1996) quotes Slaughter",
           "segment": 29
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6b9b686e79b2",
+      "path": "Archives-for-the-Unexplained/documents/Tampa-Bay-Skeptics-Report---vol-12-no-2---INCOMPLETE.txt",
+      "candidates": [
+        {
+          "value": "1966-03-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 30, 1966, about my appointment to the Youth Council of the now-defunct National",
+          "segment": 72
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b5dc87f26cb2",
+      "path": "Archives-for-the-Unexplained/documents/Tampa-Bay-Skeptics-Report---vol-13-no-3---INCOMPLETE.txt",
+      "candidates": [
+        {
+          "value": "1993-11-12",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "own, dated November 12, 1993, which was reproduced in the Dec. '93 Briefs.",
+          "segment": 110
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c704e2c21808",
+      "path": "Archives-for-the-Unexplained/documents/Tampa-Bay-Skeptics-Report---vol-19-no-2---INCOMPLETE.txt",
+      "candidates": [
+        {
+          "value": "2005-05-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "a rerun from May 30, 2005) to the topic of \"psychic detectives.\" One of those featured was Noreen",
+          "segment": 3
+        },
+        {
+          "value": "1998-08-16",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "August 16, 1998, issue of Parade magazine.",
+          "segment": 74
+        },
+        {
+          "value": "2006-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Rosenfeld has reprised his seemingly impossible claim in his July 9, 2006, Parade column, \"Does",
+          "segment": 88
         }
       ]
     },
