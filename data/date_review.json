@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-05T03:33:18Z",
+  "generatedAt": "2026-09-05T04:17:11Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "0d1b0554a2f24b99df2616683a4a7ffe66d1a5e2"
+    "revision": "e511482015591b7c5aebda693c5496944265bd07"
   },
-  "documentsWithCandidates": 9555,
+  "documentsWithCandidates": 9557,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1738,6 +1738,39 @@
           "method": "unclassified-mention",
           "evidence": "Burdens,\" New York Times, September 6, 1992, p.",
           "segment": 94
+        }
+      ]
+    },
+    {
+      "documentId": "doc-76dcfccf6fc6",
+      "path": "Archives-for-the-Unexplained/documents/Cincinnati-Skeptic---Vol-06-No-03---1996.txt",
+      "candidates": [
+        {
+          "value": "1996-04-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Wall Street Journal (26 April 1996) panned the book as \"repetitious, cloying, sanctimonious, self-regarding\".",
+          "segment": 136
+        },
+        {
+          "value": "1996-10-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sanders Theater, Harvard University on Thursday evening, October 3, 1996.",
+          "segment": 284
+        },
+        {
+          "value": "1995-07-18",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "published in European Journal of Physics, vol.16, no.4, July 18, 1995, p.",
+          "segment": 304
         }
       ]
     },
@@ -4642,6 +4675,48 @@
           "method": "unclassified-mention",
           "evidence": "UFORA90024 QA89017 Ca 18 Jul 1984 Esk QLD (1930-2000)hrs CE1",
           "segment": 34
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b8ffe94994ed",
+      "path": "Archives-for-the-Unexplained/documents/UFORA-Research-Digest---No-13---Aug-1990.txt",
+      "candidates": [
+        {
+          "value": "1990-01-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFORA90067 QB90001 8 Jan 1990 Lochart River QLD 1700hrs Low Level B S1/P5",
+          "segment": 7
+        },
+        {
+          "value": "1990-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFORA90019 QB90002 1 Jan 1990 Malanda QLD 2050hrs Med Level A S4/P5",
+          "segment": 11
+        },
+        {
+          "value": "1990-02-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFORA90074 QA90014 14 Feb 1990 Kallangur QLD 1145hrs CE4?",
+          "segment": 61
+        },
+        {
+          "value": "1990-04-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFORA90075 QA90034 25 Apr 1990 Coondoo QLD (0330-0430hrs) CE1 Level?",
+          "segment": 72
         }
       ]
     },
