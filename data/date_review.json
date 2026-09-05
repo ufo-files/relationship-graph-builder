@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-05T11:27:28Z",
+  "generatedAt": "2026-09-05T12:00:08Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "853282dc659b095474a0753c31bd42e979fe0a69"
+    "revision": "90d9b43559894ac71c946f6a0a49b5a5aad98c04"
   },
-  "documentsWithCandidates": 9607,
+  "documentsWithCandidates": 9622,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1040,6 +1040,21 @@
       ]
     },
     {
+      "documentId": "doc-76df875656c3",
+      "path": "Archives-for-the-Unexplained/documents/2012-05-09---NASA-s-Ames-Research-Center---NASA-Ames-Helps-Search-For-and-Study-Sutter-s-Mill-Meteorites_lRV7KLoCHPI---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2012-04-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "into Northern California on April 22, 2012.",
+          "segment": 5
+        }
+      ]
+    },
+    {
       "documentId": "doc-70e32ba53edb",
       "path": "Archives-for-the-Unexplained/documents/2012-10-29---NASA-s-Kennedy-Space-Center---2012-Innovation-Expo-KSC-Visitor-Complex-Master-Plan__6asnta7MXc---transcript-automated-.txt",
       "candidates": [
@@ -1234,6 +1249,21 @@
           "method": "unclassified-mention",
           "evidence": "July 14, 2017 - M2.4 solar flare and an eruption of material called a coronal mass ejection or CME.",
           "segment": 8
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5de811e689ca",
+      "path": "Archives-for-the-Unexplained/documents/2017-12-15---NASA-s-Marshall-Space-Flight-Center---Launching-of-Explorer_kpO4EAf9rC0---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1958-01-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "hours on 31 January 1958 as part",
+          "segment": 5
         }
       ]
     },
@@ -1583,6 +1613,99 @@
       ]
     },
     {
+      "documentId": "doc-62d86aa45ee7",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S11E09---The-Hidden-Empire---transcript-automated-.eng.txt",
+      "candidates": [
+        {
+          "value": "1947-03-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On March 27, 1947, Colonel Xi'an's eyewitness account is circulated worldwide when the New York",
+          "segment": 297
+        },
+        {
+          "value": "2015-10-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Fuxian, China, October 7, 2015.",
+          "segment": 454
+        }
+      ]
+    },
+    {
+      "documentId": "doc-995cebe981d8",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S11E13---Beyond-Roswell---transcript-automated-.eng.txt",
+      "candidates": [
+        {
+          "value": "1950-03-22",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The memo, dated March 22, 1950, is a briefing to FBI Director J. Edgar Hoover",
+          "segment": 24
+        },
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On July 8, 1947, the headline on the front page of the Roswell Daily Record",
+          "segment": 52
+        },
+        {
+          "value": "1941-04-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Cape Gerardo, Missouri, April 12, 1941, 9.30 p.m.",
+          "segment": 174
+        },
+        {
+          "value": "2013-08-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "After years of denying its existence, on August 16, 2013, the United States government officially",
+          "segment": 253
+        },
+        {
+          "value": "2013-08-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lund University, Sweden, August 27, 2013",
+          "segment": 501
+        },
+        {
+          "value": "2015-12-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 23, 2015, yet another groundbreaking material makes headlines.",
+          "segment": 528
+        },
+        {
+          "value": "2014-06-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Tucson, Arizona, June 17, 2014.",
+          "segment": 572
+        }
+      ]
+    },
+    {
       "documentId": "doc-d6738124b112",
       "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S11E13---Beyond-Roswell---transcript-automated-.txt",
       "candidates": [
@@ -1744,6 +1867,21 @@
           "method": "unclassified-mention",
           "evidence": "from the \"San Jose Mercury News\", Sunday, October 24, 1982.",
           "segment": 260
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fa2c8d37e37d",
+      "path": "Archives-for-the-Unexplained/documents/Bay-Area-Skeptics-Information-Sheet---1987-01.txt",
+      "candidates": [
+        {
+          "value": "1987-01-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DAY/DATE: Tuesday, January 27, 1987.",
+          "segment": 91
         }
       ]
     },
@@ -5102,6 +5240,21 @@
       ]
     },
     {
+      "documentId": "doc-09a0cc8ca40b",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-10-No-01---1996.txt",
+      "candidates": [
+        {
+          "value": "1995-12-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "As of this writing [December 22, 1995], federal judge Sim",
+          "segment": 406
+        }
+      ]
+    },
+    {
       "documentId": "doc-ed7f6745d55e",
       "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-10-No-04---1996.txt",
       "candidates": [
@@ -5132,6 +5285,39 @@
       ]
     },
     {
+      "documentId": "doc-7eb63a7c567d",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-13-No-05---1999.txt",
+      "candidates": [
+        {
+          "value": "2000-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "few seconds after midnight on January 1, 2000 – but only for a few seconds. (If it’s any consolation, CHALS-X cannot",
+          "segment": 160
+        },
+        {
+          "value": "1999-09-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "kick in on September 9, 1999.",
+          "segment": 170
+        },
+        {
+          "value": "2038-01-19",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "It keeps this count in a 32-digit signed integer, which will provide for an accurate count until January 19, 2038",
+          "segment": 175
+        }
+      ]
+    },
+    {
       "documentId": "doc-dc2bf6f2a968",
       "path": "Archives-for-the-Unexplained/documents/Paranormal-State---S01E15---transcript-automated-.txt",
       "candidates": [
@@ -5143,6 +5329,57 @@
           "method": "unclassified-mention",
           "evidence": "who died October 27, 1992.",
           "segment": 604
+        }
+      ]
+    },
+    {
+      "documentId": "doc-96de4e3ab385",
+      "path": "Archives-for-the-Unexplained/documents/Phenomenon-The-Lost-Archives---S01E05---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1961-04-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On April 12, 1961, the Soviet Union reports the successful launch, orbit, and reentry",
+          "segment": 12
+        },
+        {
+          "value": "1961-04-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Indeed, a rocket is launched on April 16, 1961, completely",
+          "segment": 36
+        },
+        {
+          "value": "1957-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On October 4, 1957, in a feat most global experts think impossible, the Soviet Union",
+          "segment": 44
+        },
+        {
+          "value": "1958-12-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 17, 1958, the United States",
+          "segment": 78
+        },
+        {
+          "value": "1961-04-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In a highly suspect coincidence, on Saturday, April 8, 1961, the very day after illusion's",
+          "segment": 489
         }
       ]
     },
@@ -5213,6 +5450,36 @@
       ]
     },
     {
+      "documentId": "doc-bb78c4264f39",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-01-No-10---1993.txt",
+      "candidates": [
+        {
+          "value": "1993-11-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 1, Number 10 November 1993",
+          "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-27ec6306da1e",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-01-No-11---1993.txt",
+      "candidates": [
+        {
+          "value": "1993-12-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 1, Number 11 December 1993",
+          "segment": 2
+        }
+      ]
+    },
+    {
       "documentId": "doc-c8cd3e36d843",
       "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-03-No-08---1995.txt",
       "candidates": [
@@ -5263,6 +5530,48 @@
           "method": "unclassified-mention",
           "evidence": "Double Abduction of November 7, 1989",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7a712b0204d4",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-04-No-08---1996.txt",
+      "candidates": [
+        {
+          "value": "1996-08-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 4 Issue 8 August 1996",
+          "segment": 0
+        },
+        {
+          "value": "1980-11-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Late in the evening of November 19, 1980, a man and woman were driving home to Longmont, Colorado, and had a",
+          "segment": 1
+        },
+        {
+          "value": "1964-12-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 5, 1964, an episode of a",
+          "segment": 79
+        },
+        {
+          "value": "1996-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "with Anonymity,” July 29, 1996): “....",
+          "segment": 203
         }
       ]
     },
@@ -7312,6 +7621,30 @@
           "method": "unclassified-mention",
           "evidence": "New Isle. We examined a weather map showing wind direction on 7 January 1948.",
           "segment": 203
+        }
+      ]
+    },
+    {
+      "documentId": "doc-be41e5ae23ef",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-01---Track-10-MikeWallaceInterviewsThe-DonKeyhoe.tsv",
+      "candidates": [
+        {
+          "value": "1957-11-05",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "The Department of Defense released an official bulletin on November 5, 1957",
+          "segment": 171
+        },
+        {
+          "value": "1957-11-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "flying with it over California, November 11, 1957",
+          "segment": 277
         }
       ]
     },
@@ -226460,6 +226793,30 @@
       ]
     },
     {
+      "documentId": "doc-95b9da14403a39a4524d8a8d",
+      "path": "France-GEIPAN/paired/cases/2011-11-02857/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-11-20",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On November 20, 2011, at 3:20 PM, a witness observed in the clear sky a fast-moving white spherical object that appeared to \"race past a commercial airliner.\" The witness watched the object until it disappeared on the horizon 2 to 3 minutes later. No other witnesses ",
+          "segment": "seg-07deb023a14e5745f8dd315a"
+        },
+        {
+          "value": "2011-11-20",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On November 20, 2011, at 3:20 PM, a witness observed in the clear sky a fast-moving white spherical object that appeared to \"race past a commercial airliner.\" The witness watched the object until it disappeared on the horizon 2 to 3 minutes later. No other witnesses ",
+          "segment": "seg-07deb023a14e5745f8dd315a"
+        }
+      ]
+    },
+    {
       "documentId": "doc-f230f42b3e6c309b8a3ae7b1",
       "path": "France-GEIPAN/paired/cases/2011-11-08157/en/translation.txt",
       "candidates": [
@@ -226951,6 +227308,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: A witness looks at the sky, specifically the constellation of Orion, on August 29, 2012 at 6:00 AM. He observes for approximately 5 seconds a bright light crossing the upper part of Orion, continuing on a straight trajectory before gradually disappearing towards the ",
           "segment": "seg-d3e92697126171dbae69e898"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a92d2a777bc8d50f4e64322a",
+      "path": "France-GEIPAN/paired/cases/2012-08-08311/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-08-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 23, 2012, at 23:00, a witness is intrigued by the presence of a peculiar bright point in the sky. The witness then observes the slow horizontal movement of this yellow glow. No particular noise is heard during the observation. The point disappears, hidden b",
+          "segment": "seg-c12b51da288052981dc072ba"
         }
       ]
     },
@@ -228049,6 +228421,21 @@
           "method": "event-language",
           "evidence": "Description: On December 15, 2013, at 23:00, a witness observed the clear sky from his terrace. He saw a stationary, colored light phenomenon. The observation lasted several hours with the naked eye and binoculars. No particular noise was heard. Only one testimony was collected. ",
           "segment": "seg-bc01cbedd48a4801637ed8d9"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-262280bb80793b41a4324088",
+      "path": "France-GEIPAN/paired/cases/2013-12-08649/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-12-08",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On December 8, 2013, starting at 5:15 PM, several people observed in the sky to the south-southwest a unique and spherical phenomenon that intrigued them. Very bright, the phenomenon appeared stationary in the clear sky. The phenomenon was observed until around 8:00 ",
+          "segment": "seg-144f11736039dd8ba698f2b5"
         }
       ]
     },
