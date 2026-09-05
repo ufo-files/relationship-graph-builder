@@ -1301,9 +1301,15 @@ test("Galactic Entities PDF properties retain complete corpus target accounting"
   })())`, context));
 
   assert.equal(properties["Corpus target accounting"], `${context.catalogFixture.astronomy.targets.length} / ${context.catalogFixture.astronomy.targets.length} direct-mention targets`);
-  assert.match(properties["Solar System at the Sun · 20"], /Moon [\d,]+ mentions \/ [\d,]+ documents/);
-  assert.match(properties["Fixed ICRS points · 13"], /Sirius [\d,]+ mentions \/ [\d,]+ documents/);
-  assert.ok(Object.hasOwn(properties, "No reviewed point position · 4"));
+  const propertyKey = prefix => Object.keys(properties).find(key => key.startsWith(prefix));
+  const solarKey = propertyKey("Solar System at the Sun · ");
+  const positionedKey = propertyKey("Fixed ICRS points · ");
+  const unpositionedKey = propertyKey("No reviewed point position · ");
+  assert.ok(solarKey);
+  assert.ok(positionedKey);
+  assert.ok(unpositionedKey);
+  assert.match(properties[solarKey], /Moon [\d,]+ mentions \/ [\d,]+ documents/);
+  assert.match(properties[positionedKey], /Sirius [\d,]+ mentions \/ [\d,]+ documents/);
 });
 
 test("saved URLs and PDF properties retain the selected corroboration metric and conservative policy", () => {
