@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T07:14:27Z",
+  "generatedAt": "2026-09-06T07:51:43Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "96f1c4556c7f58c0df34e1d34cb42787a372a020"
+    "revision": "13ae0b5fde5f6b6341e45d195b5ef145305d5f8c"
   },
-  "documentsWithCandidates": 9858,
+  "documentsWithCandidates": 9872,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1376,6 +1376,21 @@
       ]
     },
     {
+      "documentId": "doc-17875a274ff8",
+      "path": "Archives-for-the-Unexplained/documents/2007-12-18_BBC_Asia-Pacific-UFOs-exist-says-Japan-official.txt",
+      "candidates": [
+        {
+          "value": "2007-12-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "News Front Page Last Updated: Tuesday, 18 December 2007, 14:51 GMT",
+          "segment": 2
+        }
+      ]
+    },
+    {
       "documentId": "doc-e08718656960",
       "path": "Archives-for-the-Unexplained/documents/2008-05-14_Australian-Broadcasting-Corporation_Aliens-over-London-Whitehall-declassifies-UFO-files.txt",
       "candidates": [
@@ -1919,6 +1934,36 @@
       ]
     },
     {
+      "documentId": "doc-beea29adca20",
+      "path": "Archives-for-the-Unexplained/documents/2012-05-25---NASA-Jet-Propulsion-Laboratory---Tsunami-Makes-Waves-in-More-Than-Just-the-Ocean_Be0feMxWRug---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2001-03-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The March 11, 2001 earthquake and tsunami disturbed the upper atmosphere in a way",
+          "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-37d2531c3fce",
+      "path": "Archives-for-the-Unexplained/documents/2012-09-24---NASA-STI-Program---NASA-Report-to-Education-Volume-6_ILs_AEF_Zvg---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1986-01-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 12 1986 during the three and a",
+          "segment": 42
+        }
+      ]
+    },
+    {
       "documentId": "doc-70e32ba53edb",
       "path": "Archives-for-the-Unexplained/documents/2012-10-29---NASA-s-Kennedy-Space-Center---2012-Innovation-Expo-KSC-Visitor-Complex-Master-Plan__6asnta7MXc---transcript-automated-.txt",
       "candidates": [
@@ -1930,6 +1975,21 @@
           "method": "unclassified-mention",
           "evidence": "The landing on the moon on July 20, 1969.",
           "segment": 37
+        }
+      ]
+    },
+    {
+      "documentId": "doc-10162edc8e0d",
+      "path": "Archives-for-the-Unexplained/documents/2014-05-16---OpenMindsTV---TV-crew-accidentally-films-UFOs-in-New-Zealand---Spacing-Out-Ep.-73_tKi2Q8_kFEY---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2014-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“On May 5, 2014, approx.",
+          "segment": 135
         }
       ]
     },
@@ -1979,6 +2039,21 @@
       ]
     },
     {
+      "documentId": "doc-1ddcd6429110",
+      "path": "Archives-for-the-Unexplained/documents/2015-02-19---Hubble-Space-Telescope---Hubble-and-the-Debris-Disk-of-Beta-Pictoris_EuaQEOTqm0c---transcript-automated-_image.txt",
+      "candidates": [
+        {
+          "value": "2015-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thursday February 19, 2015 ane EST 8pm UT, airet CET",
+          "segment": 2
+        }
+      ]
+    },
+    {
       "documentId": "doc-80db84dd1132",
       "path": "Archives-for-the-Unexplained/documents/2015-02-26---OpenMindsTV---IUFOC-UFO-Researcher-of-the-Year-2015-John-Burroughs_CFsfR4XiyoU---transcript-automated-.txt",
       "candidates": [
@@ -2020,6 +2095,21 @@
           "method": "unclassified-mention",
           "evidence": "on April 24, 1990, to an orbit some 380 miles",
           "segment": 25
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9f669a3ccb7f",
+      "path": "Archives-for-the-Unexplained/documents/2015-04-09---Hubble-Space-Telescope---Stellar-Evolution-in-Milky-Way-Type-Galaxies_RWs5Ob5komA---transcript-automated-_image.txt",
+      "candidates": [
+        {
+          "value": "2015-04-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thursday April 9, 2015 3pm EDT 7pm UT, 8pm CET",
+          "segment": 1
         }
       ]
     },
@@ -3253,6 +3343,30 @@
           "method": "unclassified-mention",
           "evidence": "Delaware, Ohio, August 15, 1977.",
           "segment": 511
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d19aba21c8be",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S12E02---Forged-by-the-Gods---transcript-automated-.eng.txt",
+      "candidates": [
+        {
+          "value": "1974-03-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On March 26, 1974, on a remote piece of land",
+          "segment": 62
+        },
+        {
+          "value": "2017-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "For George Island, Florida, February 3, 2017",
+          "segment": 334
         }
       ]
     },
@@ -5383,6 +5497,21 @@
           "method": "unclassified-mention",
           "evidence": "on 5 July 1955 • . · · •",
           "segment": 12
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6ce95643b97d",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000144676.txt",
+      "candidates": [
+        {
+          "value": "1954-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This Information is desired by wednesday, 21 July 1954.",
+          "segment": 10
         }
       ]
     },
@@ -10418,6 +10547,93 @@
       ]
     },
     {
+      "documentId": "doc-fd70d487e2c9",
+      "path": "Archives-for-the-Unexplained/documents/SearchLites---Vol-02-No-3.txt",
+      "candidates": [
+        {
+          "value": "1996-08-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "That is, what is the minimum August 28, 1996: SETI Lecture at Simi Settlers Amateur",
+          "segment": 268
+        },
+        {
+          "value": "1996-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Unfortunately, August 29 - September 2, 1996: L.A. Con III / 1996",
+          "segment": 271
+        },
+        {
+          "value": "1996-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "For PCs (as opposed to high-end dedi- September 21, 1996: Long Island Astronomy Forum, New",
+          "segment": 276
+        },
+        {
+          "value": "1996-10-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "But it doesn't necessarily pay to go with the October 5, 1996: Mid-Atlantic VHF Conference, Horsham",
+          "segment": 278
+        },
+        {
+          "value": "1997-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "If the antenna is fixed (operated in drift-scan May 30 - June 1, 1997: Rochester Hamfest and ARRL",
+          "segment": 284
+        },
+        {
+          "value": "1997-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 28 - September 1, 1997: Lonestarcon 2 / 1997",
+          "segment": 289
+        },
+        {
+          "value": "1996-06-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "New Life Into Cosmic Search LITTLE FERRY, NJ.., June 11, 1996 -- In 1971 a",
+          "segment": 306
+        },
+        {
+          "value": "1996-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ORLANDO, FL.., June 21, 1996 -- In death Tony team of radioastronomers and engineers headed by Hewlett",
+          "segment": 307
+        },
+        {
+          "value": "1995-10-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "died of natural causes on October 5, 1995.",
+          "segment": 330
+        }
+      ]
+    },
+    {
       "documentId": "doc-892553b579be",
       "path": "Archives-for-the-Unexplained/documents/Secrets-of-the-Unknown---Curses_JfPDNEAkiXU---transcript-automated-.txt",
       "candidates": [
@@ -11404,6 +11620,30 @@
           "method": "relative-date-exclusion",
           "evidence": "I've been seeing these phenomena since March 13, 1997.",
           "segment": 119
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4f43839a5980",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Witness---S02E03---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2019-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This remarkable sighting was filmed on July 15, 2019",
+          "segment": 68
+        },
+        {
+          "value": "1980-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This was January 26, 1980.",
+          "segment": 839
         }
       ]
     },
@@ -229721,6 +229961,30 @@
       ]
     },
     {
+      "documentId": "doc-62baf686960dd0e5f03cbda0",
+      "path": "France-GEIPAN/paired/cases/2009-02-09010/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2009-02-09",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On February 9, 2009, between 8:00 PM and 10:00 PM, several people witnessed a frightening light phenomenon. Only one statement was collected describing the observation of a large, multi-colored light stationary in the sky. No sounds were heard during this two-hour ob",
+          "segment": "seg-c96658dc1ce399836a0dc606"
+        },
+        {
+          "value": "2009-02-05",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On February 9, 2009, between 8:00 PM and 10:00 PM, several people witnessed a frightening light phenomenon. Only one statement was collected describing the observation of a large, multi-colored light stationary in the sky. No sounds were heard during this two-hour ob",
+          "segment": "seg-c96658dc1ce399836a0dc606"
+        }
+      ]
+    },
+    {
       "documentId": "doc-240a608177052b48d1cee1cc",
       "path": "France-GEIPAN/paired/cases/2009-03-02235/en/translation.txt",
       "candidates": [
@@ -231742,6 +232006,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: During the night of Friday, June 25, to Saturday, June 26, 2010, around 1 a.m., eight individuals observed in the Paris sky the silent, low-altitude, constant-speed movement of a very bright orange ball that suddenly plummeted in altitude and light intensity. Only on",
           "segment": "seg-6ffcb5865756c9ea37d34c93"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c932c1cea0068822b2b84453",
+      "path": "France-GEIPAN/paired/cases/2010-06-02598/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2010-06-07",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: A witness observed, on June 7, 2010 at approximately 12:30 AM, a stationary, circular, glowing object in the airspace. The observation lasted about 15 seconds before the object quickly disappeared without any sound. Following additional information received from SNA-",
+          "segment": "seg-9dfa63c1bc3dd6b8b50973a2"
         }
       ]
     },
@@ -234449,6 +234728,21 @@
       ]
     },
     {
+      "documentId": "doc-f9d993ca186503f920f58324",
+      "path": "France-GEIPAN/paired/cases/2013-06-08474/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-06-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 16, 2013, around 1:30 PM, a witness notices while putting on their sunglasses, they see blue and pink lights in the sky, which they immediately photograph. No other witness statements were collected regarding this phenomenon. The witness observes iridescent r",
+          "segment": "seg-13955448d59425dbfb84b5fa"
+        }
+      ]
+    },
+    {
       "documentId": "doc-851106f436de20d3b20caf64",
       "path": "France-GEIPAN/paired/cases/2013-06-08477/en/translation.txt",
       "candidates": [
@@ -234844,6 +235138,30 @@
           "method": "unclassified-mention",
           "evidence": "Description: On October 3, 2013, around 10:05 PM, a witness was intrigued by the presence at low altitude in the sky of some kind of bright orange half-circle. The observation lasted 5 minutes. Over a year after the event, and after studying various possibilities of misperception",
           "segment": "seg-eef705cadaff5434bddf59be"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-461fae1759f17e8dae530f99",
+      "path": "France-GEIPAN/paired/cases/2013-10-08576/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-10-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: A witness observed, on Thursday, October 3, 2013 at 7:40 PM, two fixed bright points advancing silently in a symmetrical and uniform manner. The observation of two similar bright points, like stars, continuously crossing the sky in a straight line, clearly suggests a",
+          "segment": "seg-37bb90bd524e2c07420c1d24"
+        },
+        {
+          "value": "2013-09-01",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: A witness observed, on Thursday, October 3, 2013 at 7:40 PM, two fixed bright points advancing silently in a symmetrical and uniform manner. The observation of two similar bright points, like stars, continuously crossing the sky in a straight line, clearly suggests a",
+          "segment": "seg-37bb90bd524e2c07420c1d24"
         }
       ]
     },
