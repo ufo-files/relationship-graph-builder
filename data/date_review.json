@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T14:32:40Z",
+  "generatedAt": "2026-09-06T15:10:07Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "4796279a36755a624dc05fb3eb3a27fdd474000e"
+    "revision": "1d17fd8246265f903eb018ca830733088d6acadb"
   },
-  "documentsWithCandidates": 9932,
+  "documentsWithCandidates": 9936,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -2663,6 +2663,21 @@
       ]
     },
     {
+      "documentId": "doc-5d1c501739f9",
+      "path": "Archives-for-the-Unexplained/documents/2018-05-04---NASA-Jet-Propulsion-Laboratory---What-s-Up-for-May-2018_-VPBE2YGB7Q---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2018-11-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mars on November 26, 2018.",
+          "segment": 25
+        }
+      ]
+    },
+    {
       "documentId": "doc-23a40d8280cd",
       "path": "Archives-for-the-Unexplained/documents/2018-05-07---NASA-s-Marshall-Space-Flight-Center---Project-Saturn-Quarterly-Report-Number-Six---December-1960-archival-film-_pwCFsF1PoS8---transcript-automated-.txt",
       "candidates": [
@@ -3160,6 +3175,21 @@
           "method": "unclassified-mention",
           "evidence": "this Wednesday April 26 2023 Fade to",
           "segment": 269
+        }
+      ]
+    },
+    {
+      "documentId": "doc-edcbc719daa4",
+      "path": "Archives-for-the-Unexplained/documents/2023-05-17---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Wednesday-May-17th-2023_i3Qj_DV2BzA---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-05-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Wednesday May 17 2023 this is all of the",
+          "segment": 5
         }
       ]
     },
@@ -10609,6 +10639,57 @@
           "method": "unclassified-mention",
           "evidence": "And when he appeared on The Tonight Show with Jay Leno on January 5, 2000, it looked like he had a",
           "segment": 125
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c9c4539c7569",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-14-No-07---2000.txt",
+      "candidates": [
+        {
+          "value": "2000-06-19",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "In a report dated June 19, 2000, the CDC commented on various reports that the CDC confirmed that",
+          "segment": 185
+        },
+        {
+          "value": "2000-06-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mikkelson, Barbara. \"Gas Trick Upset.\" Urban Legends Reference Pages; June 19, 2000. http://www.snopes.com/horrors/mayhem/gaspump.htm",
+          "segment": 224
+        },
+        {
+          "value": "1999-03-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mikkelson, David P; Mikkelson, Barbara. \"Slots of Fun.\" Urban Legends Reference Pages; March 25, 1999.",
+          "segment": 225
+        },
+        {
+          "value": "2000-06-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"Are these stories true?\" CDC-NCHSTP-Divisions of HIV/AIDS Prevention; June 19, 2000. http://www.cdc.gov/hiv/pubs/faq/faq5a.htm",
+          "segment": 229
+        },
+        {
+          "value": "1999-09-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"The Needle and the Damage Done.\" Urban Legends Research Centre; September 26, 1999. http://www.ulrc.Com.au/html/report.asp?",
+          "segment": 230
         }
       ]
     },
@@ -235480,6 +235561,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: Recent testimony of an old observation. On July 23, 2015, a witness reports an observation made on October 31, 2012. That day, at 7:50 PM, the witness is intrigued by the silent, north-to-south passage of an orange ball in the sky. The movement is quite slow and stra",
           "segment": "seg-348d8f22749b70a5b9accdd0"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-19ce4303f4fe190a9570d5fd",
+      "path": "France-GEIPAN/paired/cases/2012-11-08363/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On November 2, 2012, around 11 PM, three individuals were intrigued by the passage in the sky, at five-minute intervals, of two red light orbs. These objects moved slowly towards the sea and disappeared on an ascending trajectory. This observation exhibits all charac",
+          "segment": "seg-fd6e4898cf692336de5a11a4"
         }
       ]
     },
