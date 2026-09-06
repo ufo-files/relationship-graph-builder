@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e4a692c6c3174e1095eedd39737ca0c8e5281081"
+    "revision": "a6c29970171dc66a31a9bc363a48c43f3660c5ec"
   },
   "count": 225,
   "totalCount": 225,
@@ -1836,6 +1836,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of Arkansas",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "University of Kansas",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Meteorlogical Officer",
@@ -1845,22 +1861,6 @@
       "right": {
         "name": "Meteorological Office",
         "mentions": 7,
-        "documentCount": 4
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "University of Arkansas",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "University of Kansas",
-        "mentions": 5,
         "documentCount": 4
       },
       "similarity": 0.952,
@@ -2943,8 +2943,8 @@
       "category": "organization",
       "left": {
         "name": "University of North Carolina",
-        "mentions": 24,
-        "documentCount": 18
+        "mentions": 25,
+        "documentCount": 19
       },
       "right": {
         "name": "University of South Carolina",
@@ -3407,8 +3407,8 @@
       "category": "government_agency",
       "left": {
         "name": "Joint Intelligence Bureau",
-        "mentions": 16,
-        "documentCount": 5
+        "mentions": 18,
+        "documentCount": 6
       },
       "right": {
         "name": "Joint Inielligcnce Bureau",

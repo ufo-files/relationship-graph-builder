@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T10:15:30Z",
+  "generatedAt": "2026-09-06T10:53:01Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e4a692c6c3174e1095eedd39737ca0c8e5281081"
+    "revision": "a6c29970171dc66a31a9bc363a48c43f3660c5ec"
   },
-  "documentsWithCandidates": 9890,
+  "documentsWithCandidates": 9893,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -2125,6 +2125,21 @@
           "method": "unclassified-mention",
           "evidence": "very early morning of December 26 1980",
           "segment": 33
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5415417c3fa6",
+      "path": "Archives-for-the-Unexplained/documents/2015-03-05---Hubble-Space-Telescope---Hubble-Sees-Supernovae-Split-into-Four-Images-by-Gravitational-Lens_5eQTUK6XvB8---transcript-automated-_image.txt",
+      "candidates": [
+        {
+          "value": "2015-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thursday March 5, 2015 3pm EST 8pm UT, 9pm CET",
+          "segment": 1
         }
       ]
     },
@@ -142680,7 +142695,7 @@
           "kind": "administrative_date",
           "method": "context-exclusion",
           "evidence": "Was moving fast and then disappeared quickly. (Message taken - 3 November 1999).",
-          "segment": 437
+          "segment": 467
         },
         {
           "value": "1999-11-10",
@@ -142689,7 +142704,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Like half way speed between a satellite and shooting star. (Sent to DAS - 10 November 1999).",
-          "segment": 439
+          "segment": 469
         }
       ]
     },
@@ -232175,6 +232190,30 @@
       ]
     },
     {
+      "documentId": "doc-a2b085cf1bfea8646f027939",
+      "path": "France-GEIPAN/paired/cases/2010-04-02831/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-11-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: A witness reported on November 15, 2011, an observation made on April 10, 2010 at 6:23 a.m. of a bright white/yellow sphere passing over a neighboring residence. After 5 seconds, the witness noticed the sphere moving slowly and straight towards another residence befo",
+          "segment": "seg-dce420f7f46d0359414e9fa4"
+        },
+        {
+          "value": "2010-04-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: A witness reported on November 15, 2011, an observation made on April 10, 2010 at 6:23 a.m. of a bright white/yellow sphere passing over a neighboring residence. After 5 seconds, the witness noticed the sphere moving slowly and straight towards another residence befo",
+          "segment": "seg-dce420f7f46d0359414e9fa4"
+        }
+      ]
+    },
+    {
       "documentId": "doc-8e73556547f0ea68a9367683",
       "path": "France-GEIPAN/paired/cases/2010-05-02562/en/translation.txt",
       "candidates": [
@@ -234565,6 +234604,21 @@
           "method": "event-language",
           "evidence": "Description: On the evening of August 22, 2012, witnesses from their terrace observed a very bright point moving across the sky. The object departed in an unusual manner at high speed into the sky. It came from the West and disappeared towards the East. The Calsky site indicates ",
           "segment": "seg-16da7194677a62776d4aeee0"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7fe455cfffc558fe2c58b619",
+      "path": "France-GEIPAN/paired/cases/2012-09-08316/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-09-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 9, 2012, around midnight, a group of three friends observing meteors are intrigued by a very bright star that seems to move quite quickly in all directions, followed by another light of lower intensity. Only one statement is collected. The sky map shows ",
+          "segment": "seg-0621b3a49e9519c619426764"
         }
       ]
     },
