@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d432f4124fc06036e895c444e3f38ccab953109b"
+    "revision": "96942f639f4a92c9acc3c3179d8c0598a75016ee"
   },
   "count": 221,
   "totalCount": 221,
@@ -1068,6 +1068,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Jacques Vallee",
+        "mentions": 247,
+        "documentCount": 69
+      },
+      "right": {
+        "name": "Jacques Valle",
+        "mentions": 9,
+        "documentCount": 2
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Salt Lake City",
@@ -1077,22 +1093,6 @@
       "right": {
         "name": "Salt Lake Cit",
         "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Jacques Vallee",
-        "mentions": 246,
-        "documentCount": 68
-      },
-      "right": {
-        "name": "Jacques Valle",
-        "mentions": 9,
         "documentCount": 2
       },
       "similarity": 0.963,
@@ -1343,8 +1343,8 @@
       "category": "location",
       "left": {
         "name": "Marin County",
-        "mentions": 11,
-        "documentCount": 10
+        "mentions": 12,
+        "documentCount": 11
       },
       "right": {
         "name": "Marion County",
@@ -1535,8 +1535,8 @@
       "category": "person",
       "left": {
         "name": "Frank Manor",
-        "mentions": 6,
-        "documentCount": 4
+        "mentions": 11,
+        "documentCount": 5
       },
       "right": {
         "name": "Frank Mannor",
@@ -3135,8 +3135,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 53,
-        "documentCount": 45
+        "mentions": 54,
+        "documentCount": 46
       },
       "right": {
         "name": "Mohave Desert",
@@ -3375,8 +3375,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 79,
-        "documentCount": 42
+        "mentions": 81,
+        "documentCount": 43
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -3439,8 +3439,8 @@
       "category": "person",
       "left": {
         "name": "Allen Heineck",
-        "mentions": 12,
-        "documentCount": 9
+        "mentions": 14,
+        "documentCount": 10
       },
       "right": {
         "name": "Alan Heineck",
