@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "1d17fd8246265f903eb018ca830733088d6acadb"
+    "revision": "f56cd3a6dc7e9d05ba6f67f0064895dfccc6552f"
   },
-  "count": 232,
-  "totalCount": 232,
-  "shownCount": 232,
+  "count": 234,
+  "totalCount": 234,
+  "shownCount": 234,
   "candidates": [
     {
       "category": "organization",
@@ -812,6 +812,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Thomas Winterton",
+        "mentions": 5,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Thomas Winerton",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Single Site ASR",
@@ -1103,8 +1119,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 257,
-        "documentCount": 166
+        "mentions": 258,
+        "documentCount": 167
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1119,8 +1135,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 249,
-        "documentCount": 71
+        "mentions": 250,
+        "documentCount": 72
       },
       "right": {
         "name": "Jacques Valle",
@@ -1135,8 +1151,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 145,
-        "documentCount": 103
+        "mentions": 146,
+        "documentCount": 104
       },
       "right": {
         "name": "Flying Saucer",
@@ -1151,13 +1167,13 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 112,
-        "documentCount": 67
+        "mentions": 114,
+        "documentCount": 68
       },
       "right": {
         "name": "Major Donald Keyhole",
-        "mentions": 5,
-        "documentCount": 3
+        "mentions": 6,
+        "documentCount": 4
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -1462,6 +1478,22 @@
         "name": "AAF Base Unit",
         "mentions": 3,
         "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "book",
+      "left": {
+        "name": "Supernatural",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "The Super Natural",
+        "mentions": 1,
+        "documentCount": 1
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -3007,8 +3039,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 98,
-        "documentCount": 51
+        "mentions": 99,
+        "documentCount": 52
       },
       "right": {
         "name": "George Adamsky",
@@ -3263,8 +3295,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 98,
-        "documentCount": 51
+        "mentions": 99,
+        "documentCount": 52
       },
       "right": {
         "name": "Mr. George Adams",
@@ -3519,8 +3551,8 @@
       "category": "government_agency",
       "left": {
         "name": "Joint Intelligence Bureau",
-        "mentions": 18,
-        "documentCount": 6
+        "mentions": 19,
+        "documentCount": 7
       },
       "right": {
         "name": "Joint Inielligcnce Bureau",
@@ -3615,8 +3647,8 @@
       "category": "person",
       "left": {
         "name": "Allen Heineck",
-        "mentions": 14,
-        "documentCount": 10
+        "mentions": 15,
+        "documentCount": 11
       },
       "right": {
         "name": "Alan Heineck",
