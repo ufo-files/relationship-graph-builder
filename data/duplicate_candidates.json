@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "4b9604de2349e2480ad3b95119966fdf944588b8"
+    "revision": "14d726ecf9d08eb675906796b23a0b9d05996312"
   },
-  "count": 228,
-  "totalCount": 228,
-  "shownCount": 228,
+  "count": 230,
+  "totalCount": 230,
+  "shownCount": 230,
   "candidates": [
     {
       "category": "organization",
@@ -287,8 +287,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 383,
-        "documentCount": 160
+        "mentions": 384,
+        "documentCount": 161
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -884,8 +884,24 @@
       },
       "right": {
         "name": "Department of National Defence",
-        "mentions": 38,
-        "documentCount": 35
+        "mentions": 39,
+        "documentCount": 36
+      },
+      "similarity": 0.967,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of National Defence",
+        "mentions": 39,
+        "documentCount": 36
+      },
+      "right": {
+        "name": "DEPARTMENT OF NATIONAL DEPENCE",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.967,
       "reason": "similar name",
@@ -959,8 +975,8 @@
       "category": "location",
       "left": {
         "name": "White Mountains",
-        "mentions": 22,
-        "documentCount": 17
+        "mentions": 24,
+        "documentCount": 18
       },
       "right": {
         "name": "White Mountain",
@@ -1119,8 +1135,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 144,
-        "documentCount": 102
+        "mentions": 145,
+        "documentCount": 103
       },
       "right": {
         "name": "Flying Saucer",
@@ -2431,8 +2447,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 181,
-        "documentCount": 109
+        "mentions": 182,
+        "documentCount": 110
       },
       "right": {
         "name": "Stanton Freedman",
@@ -2772,6 +2788,22 @@
       },
       "right": {
         "name": "Kirtland Airforce Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of National Defense",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "DEPARTMENT OF NATIONAL DEPENCE",
         "mentions": 2,
         "documentCount": 2
       },
