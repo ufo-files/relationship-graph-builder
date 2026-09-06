@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T21:32:38Z",
+  "generatedAt": "2026-09-06T22:12:48Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e13752a1527e7dfd810231ba5b683be15ebf34b3"
+    "revision": "bde62dc9fe2949a98c372c1e17f9a71030783a8f"
   },
-  "documentsWithCandidates": 9983,
+  "documentsWithCandidates": 9985,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7089,6 +7089,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Subject: 3I and H Experimentation, 21 May 1951 (Room 20, Building 13",
+          "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b8c7f26e5a4f",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000190577.txt",
+      "candidates": [
+        {
+          "value": "1951-05-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Subject: SI and H Experimentation, 9 May 1951",
           "segment": 0
         }
       ]
@@ -236653,6 +236668,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Saturday, September 15, 2012, around 11 PM, several people observed in the sky the silent movement of several yellow-orange lights that gradually faded out. Only one person testified. The witness's description (yellow points fading gradually into a black shape, sl",
           "segment": "seg-d175c252dcb2884c489287d0"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0b85fb16c95507c44e9c0bf2",
+      "path": "France-GEIPAN/paired/cases/2012-09-08702/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: Recent testimony of an old observation. In May 2015, the GEIPAN receives a testimony of an observation made on September 16, 2012. That evening, around 11:30 PM, a witness observes the silent passage of several white glowing points in the sky. The witness notices thi",
+          "segment": "seg-91c758d88a44961d72471086"
         }
       ]
     },
