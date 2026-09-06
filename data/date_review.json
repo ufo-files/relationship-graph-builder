@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T19:00:49Z",
+  "generatedAt": "2026-09-06T19:38:42Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "376508eee024356aaaa8e38185a5ff2ebbfb2e73"
+    "revision": "b4846891a4d0a52aebc570946a763a0a82b8ff27"
   },
-  "documentsWithCandidates": 9969,
+  "documentsWithCandidates": 9973,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -6350,6 +6350,21 @@
       ]
     },
     {
+      "documentId": "doc-761610c4e58a",
+      "path": "Archives-for-the-Unexplained/documents/Conspiracy-Theory-with-Jesse-Ventura---S03E03---Time-Travel---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2001-09-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of the World Trade Center on September 11, 2001.",
+          "segment": 195
+        }
+      ]
+    },
+    {
       "documentId": "doc-e72049b5fcdc",
       "path": "Archives-for-the-Unexplained/documents/Conspiracy-Theory-with-Jesse-Ventura---S03E06---Manimal---transcript-automated-.txt",
       "candidates": [
@@ -6691,6 +6706,21 @@
           "method": "unclassified-mention",
           "evidence": "choke\" work and stated he was returning Saturday, 24 May 1952, t~ JJI",
           "segment": 17
+        }
+      ]
+    },
+    {
+      "documentId": "doc-25a9999ad45c",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000146350.txt",
+      "candidates": [
+        {
+          "value": "1954-02-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Chiof, Security HoGcn.rch Staff 2 February 1954",
+          "segment": 0
         }
       ]
     },
@@ -222023,6 +222053,21 @@
       ]
     },
     {
+      "documentId": "doc-ca719961756e1eac0820d1e7",
+      "path": "France-GEIPAN/paired/cases/1978-11-02606/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1978-11-21",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time as Type \"C\" cases, which are now being reassessed with the sole purpose of being more relevant in their conclusions. Th",
+          "segment": "seg-47ed44e5cfea8db470b92a8b"
+        }
+      ]
+    },
+    {
       "documentId": "doc-a57106eb41affd5b9849907b",
       "path": "France-GEIPAN/paired/cases/1978-12-00573/en/translation.txt",
       "candidates": [
@@ -230791,6 +230836,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On April 16, 2008, between 9:45 PM and 11:00 PM, a witness was intrigued by seeing, between two house roofs in the S-SW, a bright (flashing) yellow-orange light that appeared every two or three minutes in a restricted area. With low strangeness and average consistenc",
           "segment": "seg-edac6be6d5a96ec473e8be94"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f15ee49c3355b8c35df0ab56",
+      "path": "France-GEIPAN/paired/cases/2008-04-02071/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On April 4, 2008, at 10:28 PM, a motorist on the rest area of Mas d'Agenais was intrigued by the peculiar movement of a white object in the starry sky. The object moved according to an irregular trajectory. The observation lasted approximately 50 seconds before the o",
+          "segment": "seg-eb162d5e6b6254595a3e9207"
         }
       ]
     },
