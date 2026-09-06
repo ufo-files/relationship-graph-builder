@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a6c29970171dc66a31a9bc363a48c43f3660c5ec"
+    "revision": "bdfa86dfb14f47e30fab241d24bf9e47c0546606"
   },
-  "count": 225,
-  "totalCount": 225,
-  "shownCount": 225,
+  "count": 228,
+  "totalCount": 228,
+  "shownCount": 228,
   "candidates": [
     {
       "category": "organization",
@@ -287,8 +287,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 381,
-        "documentCount": 159
+        "mentions": 383,
+        "documentCount": 160
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -884,8 +884,8 @@
       },
       "right": {
         "name": "Department of National Defence",
-        "mentions": 31,
-        "documentCount": 29
+        "mentions": 32,
+        "documentCount": 30
       },
       "similarity": 0.967,
       "reason": "similar name",
@@ -950,6 +950,22 @@
         "name": "Michael Schratt",
         "mentions": 19,
         "documentCount": 14
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "White Mountains",
+        "mentions": 22,
+        "documentCount": 17
+      },
+      "right": {
+        "name": "White Mountain",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -1103,8 +1119,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 143,
-        "documentCount": 101
+        "mentions": 144,
+        "documentCount": 102
       },
       "right": {
         "name": "Flying Saucer",
@@ -1295,8 +1311,8 @@
       "category": "person",
       "left": {
         "name": "Frank Edwards",
-        "mentions": 86,
-        "documentCount": 48
+        "mentions": 89,
+        "documentCount": 50
       },
       "right": {
         "name": "Frank Edward",
@@ -1646,13 +1662,13 @@
     {
       "category": "person",
       "left": {
-        "name": "Mr. George Adams",
-        "mentions": 4,
-        "documentCount": 3
+        "name": "George Adam",
+        "mentions": 6,
+        "documentCount": 4
       },
       "right": {
-        "name": "George Adam",
-        "mentions": 5,
+        "name": "Mr. George Adams",
+        "mentions": 4,
         "documentCount": 3
       },
       "similarity": 0.957,
@@ -2415,8 +2431,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 178,
-        "documentCount": 107
+        "mentions": 181,
+        "documentCount": 109
       },
       "right": {
         "name": "Stanton Freedman",
@@ -2716,6 +2732,38 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Robert Traylins",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Robert Traylons",
+        "mentions": 5,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Robert Traylans",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Robert Traylons",
+        "mentions": 5,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Kirkland Air Force Base",
@@ -2927,8 +2975,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 97,
-        "documentCount": 50
+        "mentions": 98,
+        "documentCount": 51
       },
       "right": {
         "name": "George Adamsky",
@@ -3183,8 +3231,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 97,
-        "documentCount": 50
+        "mentions": 98,
+        "documentCount": 51
       },
       "right": {
         "name": "Mr. George Adams",
@@ -3262,14 +3310,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Col. Charles Brown",
-        "mentions": 7,
-        "documentCount": 4
+        "name": "Jacques Valet",
+        "mentions": 5,
+        "documentCount": 3
       },
       "right": {
-        "name": "Charles Bowen",
-        "mentions": 5,
-        "documentCount": 5
+        "name": "Jacques Valle",
+        "mentions": 9,
+        "documentCount": 2
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -3278,14 +3326,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Jacques Valet",
-        "mentions": 3,
-        "documentCount": 2
+        "name": "Col. Charles Brown",
+        "mentions": 7,
+        "documentCount": 4
       },
       "right": {
-        "name": "Jacques Valle",
-        "mentions": 9,
-        "documentCount": 2
+        "name": "Charles Bowen",
+        "mentions": 5,
+        "documentCount": 5
       },
       "similarity": 0.923,
       "reason": "similar name",

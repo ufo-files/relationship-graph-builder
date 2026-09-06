@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T10:53:01Z",
+  "generatedAt": "2026-09-06T11:29:35Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a6c29970171dc66a31a9bc363a48c43f3660c5ec"
+    "revision": "bdfa86dfb14f47e30fab241d24bf9e47c0546606"
   },
-  "documentsWithCandidates": 9893,
+  "documentsWithCandidates": 9898,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1313,6 +1313,21 @@
       ]
     },
     {
+      "documentId": "doc-34dc66b7c8fc",
+      "path": "Archives-for-the-Unexplained/documents/2007-09-19_The-Guardian_Soul-survivor.txt",
+      "candidates": [
+        {
+          "value": "2007-09-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Wed 19 Sep 2007 15.55 BST",
+          "segment": 9
+        }
+      ]
+    },
+    {
       "documentId": "doc-bf0837de8692",
       "path": "Archives-for-the-Unexplained/documents/2007-10-29_Houma-Today_UFO-whistleblower-s-nephew-maintains-family-tradition-of-belief-in-aliens.txt",
       "candidates": [
@@ -2184,6 +2199,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Thursday April 9, 2015 3pm EDT 7pm UT, 8pm CET",
+          "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-42338c178782",
+      "path": "Archives-for-the-Unexplained/documents/2015-04-16---Hubble-Space-Telescope---Hubble-The-Man-Behind-the-Name_hC7ICBGzl6o---transcript-automated-_image.txt",
+      "candidates": [
+        {
+          "value": "2015-04-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thursday April 16, 2015 3pm EDT, 7pm UTC, 8pm CET",
           "segment": 1
         }
       ]
@@ -13811,6 +13841,21 @@
       ]
     },
     {
+      "documentId": "doc-b81b037561b5",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-01---Track-28-UfologyRound-table-4---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I'm quoting from Life Magazine, July 21, 1947, and it was on June the 24th.",
+          "segment": 527
+        }
+      ]
+    },
+    {
       "documentId": "doc-a7b147858be1",
       "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-01---Track-31-Project60-TheFlyingSaucerStory---transcript-automated-.txt",
       "candidates": [
@@ -14467,6 +14512,21 @@
           "method": "unclassified-mention",
           "evidence": "flying with it over California, November 11, 1957",
           "segment": 289
+        }
+      ]
+    },
+    {
+      "documentId": "doc-91e4bcf10c20",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-09---Track-08---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1955-12-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and I saw that on December 5, 1955, Captain Ruppel's book was cleared by Security and Review.",
+          "segment": 751
         }
       ]
     },
@@ -171348,13 +171408,22 @@
       "path": "DPIArchive/documents/116760-department-of-defense-intelligence-information-report-ufo-newspaper-clippings.txt",
       "candidates": [
         {
+          "value": "1968-08-09",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "UFO Newspaper Clippings O. DATE OF REPORT, 9 August 1968",
+          "segment": 9
+        },
+        {
           "value": "1968-08-08",
           "precision": "day",
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "numbers on clippings attached, last article in report is datod 8 August 1968.",
-          "segment": 14
+          "evidence": "numbers on. clippings attached, last article in report is dated 8 August 1968.",
+          "segment": 23
         }
       ]
     },
@@ -187583,8 +187652,17 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Intelligence from 30 January 1976 to",
+          "evidence": "Director of Central Intelligence from 30 January 1976 to",
           "segment": 4
+        },
+        {
+          "value": "1977-03-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "20 January to 9 March 1977.",
+          "segment": 6
         }
       ]
     },
@@ -232894,6 +232972,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Tuesday, August 31, 2010, around 9 PM, a witness, seated at the dinner table, noticed a very bright light through the open window of his dining room. Intrigued by what he called \"a little sun,\" he filmed his observation. He made other similar observations. Of low ",
           "segment": "seg-1ddbbaa6819338ec903a8e52"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4f8e693409769bf46f8a3a8f",
+      "path": "France-GEIPAN/paired/cases/2010-09-02645/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2010-09-10",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On September 10, 2010, around 10:30 PM, a witness observed for 40 minutes the movements of a very bright object at a very high altitude in the sky. The characteristics of the observation (very bright object in the night, observation duration of 40 minutes interrupted",
+          "segment": "seg-475db4cff585564d2547bb06"
         }
       ]
     },
