@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e3b1577f4e01fce864202d504af573265cff5b04"
+    "revision": "4dd541937168b7989b6a7cd06d0978fe7fd4b35c"
   },
-  "count": 222,
-  "totalCount": 222,
-  "shownCount": 222,
+  "count": 223,
+  "totalCount": 223,
+  "shownCount": 223,
   "candidates": [
     {
       "category": "organization",
@@ -2950,6 +2950,22 @@
         "name": "Project Horizon",
         "mentions": 7,
         "documentCount": 4
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "George Harrison",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "George Harris's",
+        "mentions": 6,
+        "documentCount": 3
       },
       "similarity": 0.929,
       "reason": "similar name",
