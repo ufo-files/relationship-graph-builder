@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "6bbbb2805214cb3f2feeab8719f4af770eaa0685"
+    "revision": "d9228cc8b0c53f3db3535de6da9eae8b871bd8df"
   },
   "count": 221,
   "totalCount": 221,
@@ -1068,6 +1068,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Salt Lake City",
+        "mentions": 254,
+        "documentCount": 164
+      },
+      "right": {
+        "name": "Salt Lake Cit",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
@@ -1077,22 +1093,6 @@
       "right": {
         "name": "Jacques Valle",
         "mentions": 9,
-        "documentCount": 2
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Salt Lake City",
-        "mentions": 253,
-        "documentCount": 163
-      },
-      "right": {
-        "name": "Salt Lake Cit",
-        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.963,
@@ -3135,8 +3135,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 54,
-        "documentCount": 46
+        "mentions": 55,
+        "documentCount": 47
       },
       "right": {
         "name": "Mohave Desert",
