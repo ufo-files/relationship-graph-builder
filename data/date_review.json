@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T02:57:53Z",
+  "generatedAt": "2026-09-06T03:34:19Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "49cac677184ee660cc301ecb6f892faea9cf2cf9"
+    "revision": "900ed6c59ab0172ee492afb258afe517c8ca975e"
   },
-  "documentsWithCandidates": 9817,
+  "documentsWithCandidates": 9830,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1151,6 +1151,21 @@
       ]
     },
     {
+      "documentId": "doc-94021f40c26c",
+      "path": "Archives-for-the-Unexplained/documents/2007-06-13_MetroWest-Daily-News_Had-a-close-encounter.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "On July 8, 1947, a local military office issued a press release saying that pieces of a \"crashed disk\" were recovered.",
+          "segment": 25
+        }
+      ]
+    },
+    {
       "documentId": "doc-1366b3b70795",
       "path": "Archives-for-the-Unexplained/documents/2007-06-15_Worcester-Telegram_Roswell-plans-60th-anniversary.txt",
       "candidates": [
@@ -1213,6 +1228,21 @@
           "method": "unclassified-mention",
           "evidence": "August 2006 - email, 23 August 2006).",
           "segment": 60
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bf0837de8692",
+      "path": "Archives-for-the-Unexplained/documents/2007-10-29_Houma-Today_UFO-whistleblower-s-nephew-maintains-family-tradition-of-belief-in-aliens.txt",
+      "candidates": [
+        {
+          "value": "2006-04-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "• A more extensive account comes from Berwick, early in the morning of April 15, 2006. “I immediately sat up in my bed, and the",
+          "segment": 55
         }
       ]
     },
@@ -1387,6 +1417,21 @@
           "method": "unclassified-mention",
           "evidence": "Tue 7 Oct 2008 09.58 BST",
           "segment": 8
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1eddf7018a5a",
+      "path": "Archives-for-the-Unexplained/documents/2008-10-15_The-Guardian_Which-are-the-best-books-that-never-existed.txt",
+      "candidates": [
+        {
+          "value": "2008-10-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Wed 15 Oct 2008 08.00 BST",
+          "segment": 9
         }
       ]
     },
@@ -1964,6 +2009,21 @@
       ]
     },
     {
+      "documentId": "doc-f544d6a117d8",
+      "path": "Archives-for-the-Unexplained/documents/2018-05-14---NASA-s-Marshall-Space-Flight-Center---Saturn-IB-Quarterly-Film-Report-Number-Thirty-Five---March-1968_6-a-YyDpe18---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1968-01-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Douglas on January 16 1968 extensive",
+          "segment": 262
+        }
+      ]
+    },
+    {
       "documentId": "doc-0b8f929d2bed",
       "path": "Archives-for-the-Unexplained/documents/2018-05-14---NASA-s-Marshall-Space-Flight-Center---Saturn-IB-Quarterly-Film-Report-Number-Twenty-Five---September-1965-archival-film-_LwfukXJEn4c---transcript-automated-.txt",
       "candidates": [
@@ -2317,6 +2377,39 @@
           "method": "unclassified-mention",
           "evidence": "November 6 1966 Washington Olympian has",
           "segment": 455
+        }
+      ]
+    },
+    {
+      "documentId": "doc-600c2246daab",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S02E05---Aliens-and-the-Third-Reich---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1945-04-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On April 30, 1945, as the Allied armies closed in on Berlin, Adolf Hitler committed suicide.",
+          "segment": 1064
+        },
+        {
+          "value": "1945-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "There, at 5.29 a.m. on July 16, 1945, the U.S. military detonated the first ever atomic bomb.",
+          "segment": 1077
+        },
+        {
+          "value": "1969-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On July 20, 1969, less than 25 years after the end of World War II",
+          "segment": 1100
         }
       ]
     },
@@ -2992,6 +3085,30 @@
           "method": "unclassified-mention",
           "evidence": "On January 28, 1994, Air France Flight 3532 was flying from Nice, France to London, England.",
           "segment": 510
+        }
+      ]
+    },
+    {
+      "documentId": "doc-caf00316c507",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S18E07---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2020-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 29, 2020, a very curious thing happened off of the coast of Hawaii.",
+          "segment": 792
+        },
+        {
+          "value": "2021-06-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Washington, D.C. June 15, 2021.",
+          "segment": 881
         }
       ]
     },
@@ -4820,6 +4937,30 @@
       ]
     },
     {
+      "documentId": "doc-a8c61d526fdd",
+      "path": "Archives-for-the-Unexplained/documents/Craig-Charles-UFO-Conspiracies---S01E06---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1997-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "There is much more to the story of the Phoenix Lights than just March 13, 1997.",
+          "segment": 981
+        },
+        {
+          "value": "1997-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "We know that between 7.30pm and 10.30pm on March 13, 1997, under a clear sky with a light breeze",
+          "segment": 1100
+        }
+      ]
+    },
+    {
       "documentId": "doc-da774e4337f5",
       "path": "Archives-for-the-Unexplained/documents/Craig-Roy---Inventory.txt",
       "candidates": [
@@ -5332,6 +5473,21 @@
           "method": "unclassified-mention",
           "evidence": "On, 2 March 1954, SI and I experimentation and",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5775b080204e",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000190719.txt",
+      "candidates": [
+        {
+          "value": "1950-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on 19 July 1950, Ye vere A.dvised tha.t he 'Wtl.G plnced in nn ''npprove<l-cautlon'",
+          "segment": 21
         }
       ]
     },
@@ -10865,6 +11021,21 @@
       ]
     },
     {
+      "documentId": "doc-321f7d6d4607",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Witness---S01E03---Alien-High-Tech---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1996-09-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Until the night of September 4, 1996, we're at the Salt Lake Regional Medical Center.",
+          "segment": 628
+        }
+      ]
+    },
+    {
       "documentId": "doc-63783b1cf309",
       "path": "Archives-for-the-Unexplained/documents/UFO-Witness---S01E05---transcript-automated-.txt",
       "candidates": [
@@ -12619,6 +12790,84 @@
           "method": "unclassified-mention",
           "evidence": "flying with it over California, November 11, 1957",
           "segment": 277
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bac21efd02c4",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-01---Track-13-longJohnNebel-nicapversususafoncensorshipofufoinformation.tsv",
+      "candidates": [
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "as far as knowledge is concerned, about this phenomena known as flying saucers since June 24, 1947",
+          "segment": 494
+        },
+        {
+          "value": "1958-01-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1947, right up to and including this day of January 23, 1958. Is that about the size of it?",
+          "segment": 495
+        },
+        {
+          "value": "1957-12-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sign this letter that was mailed on December 31, 1957.",
+          "segment": 507
+        },
+        {
+          "value": "1958-01-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I am not making an appearance on any television program on January 22, 1958.",
+          "segment": 563
+        },
+        {
+          "value": "1958-01-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Actually, it was in 1958, January 23, 1958, just a short time ago.",
+          "segment": 656
+        },
+        {
+          "value": "1955-12-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 11, 1955, he and another Navy pilot were flying from Jacksonville Naval Air Station",
+          "segment": 1007
+        },
+        {
+          "value": "1955-12-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I checked on that. It was cleared December 5, 1955.",
+          "segment": 1177
+        },
+        {
+          "value": "1953-01-26",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "the Department of Defense, the Office of Public Information, dated January 26, 1953, which",
+          "segment": 3481
         }
       ]
     },
@@ -229088,6 +229337,21 @@
       ]
     },
     {
+      "documentId": "doc-7a31e494c9639b80027bd9cb",
+      "path": "France-GEIPAN/paired/cases/2009-03-02258/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2009-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 3, 2009, around 8:30 PM, four people in a car on a rural road were intrigued by the slow movement of three flashing and colored lights in the sky delineating a triangular object. The object at low altitude disappeared behind a hill; no unusual noises were he",
+          "segment": "seg-11909ddacc79564c78390cdc"
+        }
+      ]
+    },
+    {
       "documentId": "doc-88c4519fbf15ecd276007ab0",
       "path": "France-GEIPAN/paired/cases/2009-03-02273/en/translation.txt",
       "candidates": [
@@ -229234,6 +229498,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: A witness observed on April 25, 2009 at 5:10 AM the silent SO-NE passage of a very bright sphere in the sky. The trajectory was straight and the speed fast and regular. Unfortunately, the photographs taken are unusable. After verification with the space station orbit",
           "segment": "seg-54b2c10b71c0c911e8b911de"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-41dc53260405ea15c0847bf1",
+      "path": "France-GEIPAN/paired/cases/2009-05-02301/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2009-05-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On May 17, 2009, around 1 a.m., two individuals observed approximately a dozen orange-colored lights in the sky. They appeared to emanate from a single point and silently moved in the direction of Grange-sur-Lot, disappearing over the horizon. The witness provided se",
+          "segment": "seg-c30cd5bb15a1f80a857f1e7e"
         }
       ]
     },
@@ -232123,6 +232402,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On August 28, 2011, around 0:35 a.m., a driver and his wife observed in the sky the silent movement from north-northwest to east of orange points. The witnesses then distinguished 7 triangles that seemed equilateral and all had a rounded shape inside one of the verti",
           "segment": "seg-0dec802f0dc7060ef93cc0f0"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4bc36c916e9e00dac24e5bf3",
+      "path": "France-GEIPAN/paired/cases/2011-08-02835/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-08-03",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: A witness observed two distinct phenomena in the Bordeaux sky on two separate occasions: first, in the evening of August 3, 2011, starting at 9:00 PM; and second, in the night of August 6-7, 2011, at 3:15 AM. The second observation, which closely resembles a misident",
+          "segment": "seg-a357475c37f9d362ba08d901"
         }
       ]
     },
