@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T08:27:43Z",
+  "generatedAt": "2026-09-06T09:04:07Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "6386be7b204ca5fc35830d0c6acecf57639fbba3"
+    "revision": "9ba34f2d55bd7c7bf1375d4c5a35592cc4d8114c"
   },
-  "documentsWithCandidates": 9875,
+  "documentsWithCandidates": 9879,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -5868,6 +5868,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Subject: 3I and H Experimentation, 21 May 1951 (Room 20, Building 13",
+          "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-27103d77c836",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000190585.txt",
+      "candidates": [
+        {
+          "value": "1952-10-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "29 October 1952 vv u-J..___",
           "segment": 0
         }
       ]
@@ -170771,6 +170786,48 @@
       ]
     },
     {
+      "documentId": "doc-cd525695298e",
+      "path": "DPIArchive/documents/116742-department-of-defense-intelligence-information-report-1-19-68.txt",
+      "candidates": [
+        {
+          "value": "1968-01-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "IUDJECTI (U) Unidentified Flying I. OATE OF RLPORTI 19 January 1968",
+          "segment": 10
+        },
+        {
+          "value": "1967-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "$.— On 12 December 1967. the British Embassy was directed by London to",
+          "segment": 44
+        },
+        {
+          "value": "1968-01-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "However, on 8 January 1968 while on a routine visit to the Soviet State Committee",
+          "segment": 53
+        },
+        {
+          "value": "1967-11-11",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "J_ On 10 or 11 November 1967 the O.S. Sciencdi~tache received a",
+          "segment": 67
+        }
+      ]
+    },
+    {
       "documentId": "doc-8405397df7b0",
       "path": "DPIArchive/documents/116746-nasa-origin-of-life-studies-urged-12-11-96.txt",
       "candidates": [
@@ -222803,6 +222860,21 @@
       ]
     },
     {
+      "documentId": "doc-b7b05a7eb196924f54f1085c",
+      "path": "France-GEIPAN/paired/cases/1981-12-00905/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1981-11-21",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On November 21, 1981, around 8:00 PM, two individuals observed a peculiar lighting phenomenon in the forest facing their home, which intrigued them. This rectangular-shaped object was orange-red in color and remained stationary. During the observation that lasted nea",
+          "segment": "seg-4aa4a7bf7037be0d88567683"
+        }
+      ]
+    },
+    {
       "documentId": "doc-571bbf60c4ade0a0d948f525",
       "path": "France-GEIPAN/paired/cases/1982-01-00908/en/translation.txt",
       "candidates": [
@@ -236278,6 +236350,30 @@
           "method": "context-exclusion",
           "evidence": "Description: On April 17, 2020, at 9:15 PM, a witness, located in the heights of Nice, observed in the direction of Saint-Laurent-du-Var and Grasse. They saw several bright points in the sky. The witness then observed, for approximately 50 minutes, various shapes \"represented by ",
           "segment": "seg-38101857c287b4ea92e5b412"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-31ba77d58397821865c5c778",
+      "path": "France-GEIPAN/paired/cases/2022-05-51341/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2022-05-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On May 11, 2022, around 5 a.m., the witness, outside their home in Vernajoul (09), sees \"something\" heading towards the Plantauren mountain. It consists of a dozen white glowing points of equal intensity as satellites, tilted between 0° and 45° approximately, moving ",
+          "segment": "seg-e8ee32e54b1b86341d1212e6"
+        },
+        {
+          "value": "2022-03-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On May 11, 2022, around 5 a.m., the witness, outside their home in Vernajoul (09), sees \"something\" heading towards the Plantauren mountain. It consists of a dozen white glowing points of equal intensity as satellites, tilted between 0° and 45° approximately, moving ",
+          "segment": "seg-e8ee32e54b1b86341d1212e6"
         }
       ]
     },
