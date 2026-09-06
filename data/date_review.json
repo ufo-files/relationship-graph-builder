@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T09:40:20Z",
+  "generatedAt": "2026-09-06T10:15:30Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5c53136dc966d30d0531284e85a3d5b4eea5a85c"
+    "revision": "e4a692c6c3174e1095eedd39737ca0c8e5281081"
   },
-  "documentsWithCandidates": 9883,
+  "documentsWithCandidates": 9890,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1466,6 +1466,21 @@
       ]
     },
     {
+      "documentId": "doc-7c3b5476ac5a",
+      "path": "Archives-for-the-Unexplained/documents/2008-06-20_BBC_UK-Wales-UFO-spotted-by-police-helicopter.txt",
+      "candidates": [
+        {
+          "value": "2008-06-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "News Front Page Page last updated at 12:03 GMT, Friday, 20 June 2008 13:03 UK",
+          "segment": 1
+        }
+      ]
+    },
+    {
       "documentId": "doc-69dae78244f6",
       "path": "Archives-for-the-Unexplained/documents/2008-06-25_BBC_UK-Hotel-behind-UFO-fleet-mystery.txt",
       "candidates": [
@@ -1627,6 +1642,21 @@
           "method": "unclassified-mention",
           "evidence": "Fri 9 Jan 2009 00.01 GMT",
           "segment": 6
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ddad4e7c1fd3",
+      "path": "Archives-for-the-Unexplained/documents/2009-01-08_The-Guardian_UFOs-crashing-into-wind-farms-has-the-Guardian-solved-the-mystery.txt",
+      "candidates": [
+        {
+          "value": "2009-01-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thu 8 Jan 2009 11.38 GMT",
+          "segment": 10
         }
       ]
     },
@@ -8870,6 +8900,66 @@
       ]
     },
     {
+      "documentId": "doc-ecb00f189df2",
+      "path": "Archives-for-the-Unexplained/documents/INEXPLICATA-11.txt",
+      "candidates": [
+        {
+          "value": "2001-09-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 11, 2001 have played any role in this change",
+          "segment": 25
+        },
+        {
+          "value": "1938-02-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Province of Granada) on February 5, 1938 endured the cold as",
+          "segment": 112
+        },
+        {
+          "value": "1938-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "It was half past eleven o'clock on the evening of July 25, 1938.",
+          "segment": 184
+        },
+        {
+          "value": "1939-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Two months later, on July 1, 1939, several children who",
+          "segment": 284
+        },
+        {
+          "value": "2001-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mysterious animal deaths began to occur on July 28, 2001 in the",
+          "segment": 317
+        },
+        {
+          "value": "1983-11-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Saturday, 13 November 1983, Eusebio Sánchez, 56, was",
+          "segment": 491
+        }
+      ]
+    },
+    {
       "documentId": "doc-0fbc5a13576f",
       "path": "Archives-for-the-Unexplained/documents/In-Search-Of---S01E07---Earthquakes---transcript-automated-.txt",
       "candidates": [
@@ -11470,6 +11560,39 @@
           "method": "unclassified-mention",
           "evidence": "November 2, 1971, Delphos, Kansas.",
           "segment": 162
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e8fd610d2c2b",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Hunters---S01E06---Cops-vs-UFOs---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1991-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This is a video from March 1, 1991.",
+          "segment": 38
+        },
+        {
+          "value": "1991-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Beach, Florida on March 1, 1991.",
+          "segment": 42
+        },
+        {
+          "value": "1987-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On June 21, 1987, officer Phil Hutchings and dozens of other police officers were on duty",
+          "segment": 885
         }
       ]
     },
@@ -175556,7 +175679,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Tuesday, April 3, 2018 2:26 PM",
+          "evidence": "Sent: Tuesday, April 3, 2018 2:26 PM",
           "segment": 0
         }
       ]
@@ -229559,6 +229682,30 @@
       ]
     },
     {
+      "documentId": "doc-55b14804c0f900575b1224e7",
+      "path": "France-GEIPAN/paired/cases/2008-06-02386/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2009-08-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 3, 2009, a witness contacted the GEIPAN regarding a previous observation made on June 3, 2008 at 9 PM. From the third-floor balcony, the witness observed the successive presence of three objects with a shape comparable to a rugby ball and a faded brown and ",
+          "segment": "seg-e5e8336ef50184d68733480f"
+        },
+        {
+          "value": "2008-06-03",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On August 3, 2009, a witness contacted the GEIPAN regarding a previous observation made on June 3, 2008 at 9 PM. From the third-floor balcony, the witness observed the successive presence of three objects with a shape comparable to a rugby ball and a faded brown and ",
+          "segment": "seg-e5e8336ef50184d68733480f"
+        }
+      ]
+    },
+    {
       "documentId": "doc-465dea88ed01b97972124e14",
       "path": "France-GEIPAN/paired/cases/2008-06-08565/en/translation.txt",
       "candidates": [
@@ -233957,6 +234104,21 @@
       ]
     },
     {
+      "documentId": "doc-8ea0f014f6eda11d49d6780d",
+      "path": "France-GEIPAN/paired/cases/2012-03-08216/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 24, 2012, around 8:20 PM, a witness observed in the sky the silent and very rapid movement of a group of four white lights. The amateur astronomer reported that the lights appeared at the height of Capella, turning off as they reached the constellation Ursa ",
+          "segment": "seg-91549906d9be6ecccbe42e76"
+        }
+      ]
+    },
+    {
       "documentId": "doc-20264f3efe05fb70b5f92130",
       "path": "France-GEIPAN/paired/cases/2012-03-08223/en/translation.txt",
       "candidates": [
@@ -236398,6 +236560,30 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Sunday, July 23, 2017 at 11:27 PM, a witness and his partner observed for less than a minute a slow-moving bright white light point on a west-east trajectory in a clear sky. The intensity of the point dimmed as it moved. Only one testimony was collected. The witne",
           "segment": "seg-8319d40d6dea20a225c3d958"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f261bbbf048d80e562fb2f19",
+      "path": "France-GEIPAN/paired/cases/2017-07-50409/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-07-07",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On July 7, 2017, between 11 PM and midnight, the witness, from his terrace with friends, observed 5 luminous objects in the sky, moving one after the other from northeast to southwest, completely silent and on the same trajectory. Never were two objects visible at th",
+          "segment": "seg-2530f9a31a5c4b74ea2741d3"
+        },
+        {
+          "value": "2017-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On July 7, 2017, between 11 PM and midnight, the witness, from his terrace with friends, observed 5 luminous objects in the sky, moving one after the other from northeast to southwest, completely silent and on the same trajectory. Never were two objects visible at th",
+          "segment": "seg-2530f9a31a5c4b74ea2741d3"
         }
       ]
     },

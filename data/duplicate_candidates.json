@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5c53136dc966d30d0531284e85a3d5b4eea5a85c"
+    "revision": "e4a692c6c3174e1095eedd39737ca0c8e5281081"
   },
-  "count": 224,
-  "totalCount": 224,
-  "shownCount": 224,
+  "count": 225,
+  "totalCount": 225,
+  "shownCount": 225,
   "candidates": [
     {
       "category": "organization",
@@ -884,8 +884,8 @@
       },
       "right": {
         "name": "Department of National Defence",
-        "mentions": 28,
-        "documentCount": 26
+        "mentions": 31,
+        "documentCount": 29
       },
       "similarity": 0.967,
       "reason": "similar name",
@@ -2732,6 +2732,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Robert Traylins",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Robert Traylans",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Weather Offices",
@@ -3183,8 +3199,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 61,
-        "documentCount": 51
+        "mentions": 63,
+        "documentCount": 52
       },
       "right": {
         "name": "Mohave Desert",
