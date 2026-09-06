@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T15:47:17Z",
+  "generatedAt": "2026-09-06T16:24:33Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "f56cd3a6dc7e9d05ba6f67f0064895dfccc6552f"
+    "revision": "623a2e2f190d48cf8809c19b7a01b78951ca08ff"
   },
-  "documentsWithCandidates": 9942,
+  "documentsWithCandidates": 9948,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -2555,6 +2555,21 @@
       ]
     },
     {
+      "documentId": "doc-d532765b16b3",
+      "path": "Archives-for-the-Unexplained/documents/2017-03-13---OpenMindsTV---Phoenix-Lights-UFO-Event---20-Years-Later_92iSbbGFZmo---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1997-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to March 13 1997 where they were seeing",
+          "segment": 89
+        }
+      ]
+    },
+    {
       "documentId": "doc-d517ae4b7332",
       "path": "Archives-for-the-Unexplained/documents/2017-03-30---NASA-Goddard---The-Little-Satellite-That-Could_rWehzhdYnnM---transcript-automated-.txt",
       "candidates": [
@@ -3134,6 +3149,30 @@
       ]
     },
     {
+      "documentId": "doc-bb50ee92bf50",
+      "path": "Archives-for-the-Unexplained/documents/2023-03-06---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Monday-March-06-2023_hdE4uU56uJk---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-03-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "news for this Monday March 6 2023",
+          "segment": 5
+        },
+        {
+          "value": "2022-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "here in California on December 12 2022.",
+          "segment": 298
+        }
+      ]
+    },
+    {
       "documentId": "doc-80e07a9c2043",
       "path": "Archives-for-the-Unexplained/documents/2023-04-18---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Tuesday-April-18-2023_57-zN1EFEeI---transcript-automated-.txt",
       "candidates": [
@@ -3238,6 +3277,30 @@
           "method": "unclassified-mention",
           "evidence": "November 6 1966 Washington Olympian has",
           "segment": 455
+        }
+      ]
+    },
+    {
+      "documentId": "doc-896cbcfcb0fe",
+      "path": "Archives-for-the-Unexplained/documents/2023-05-23---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Tuesday-May-23rd-2023_bynNrCwdq_4---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-05-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "news for this Tuesday May 23 2023 this",
+          "segment": 5
+        },
+        {
+          "value": "2023-05-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Tuesday May 23 2023 paid the black",
+          "segment": 297
         }
       ]
     },
@@ -9461,6 +9524,66 @@
       ]
     },
     {
+      "documentId": "doc-d19fe17a765a",
+      "path": "Archives-for-the-Unexplained/documents/INEXPLICATA-05.txt",
+      "candidates": [
+        {
+          "value": "1998-12-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 23, 1998, another news item pertaining to the UFO",
+          "segment": 100
+        },
+        {
+          "value": "1999-06-02",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "\"Ultima Hora\" (Newspaper), June 2, 1999",
+          "segment": 219
+        },
+        {
+          "value": "1999-06-05",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "\"Ultima Hora\" (Newspaper), June 5, 1999",
+          "segment": 256
+        },
+        {
+          "value": "1998-01-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Xalapa, Veracruz: January 12, 1998--Some 20 kilometers to the",
+          "segment": 1831
+        },
+        {
+          "value": "1999-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "From \"POLITICA\", Thursday, July 8, 1999",
+          "segment": 2052
+        },
+        {
+          "value": "1999-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "From \"POLITICA\", Tuesday, July 13, 1999",
+          "segment": 2097
+        }
+      ]
+    },
+    {
       "documentId": "doc-ecb00f189df2",
       "path": "Archives-for-the-Unexplained/documents/INEXPLICATA-11.txt",
       "candidates": [
@@ -10942,6 +11065,84 @@
           "method": "unclassified-mention",
           "evidence": "Your parents got you hooked on food December 14, 2002",
           "segment": 7
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e2c8ba06c3af",
+      "path": "Archives-for-the-Unexplained/documents/PV-n-1690-2008311918-.txt",
+      "candidates": [
+        {
+          "value": "2008-10-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "N° 131424 du 9 octobre 2008",
+          "segment": 3
+        },
+        {
+          "value": "1975-10-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lettre nº46862 DEF/GEND/OPS/ du 20 octobre 1975. c",
+          "segment": 5
+        },
+        {
+          "value": "2008-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le dimanche 21 septembre 2008 à 17 heures 30 minutes.",
+          "segment": 13
+        },
+        {
+          "value": "2008-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 21 septembre 2008 à 17 heures 30, nous procédons à l'enquête citée en référence",
+          "segment": 17
+        },
+        {
+          "value": "2008-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 21 septembre 2008 à 10 heures 50 minutes, nous recevons à notre unité le témoignage de",
+          "segment": 18
+        },
+        {
+          "value": "2008-09-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Celui-ci nous indique avoir observé entre le 20 septembre 2008 à 23 heures 50 minutes au 21",
+          "segment": 19
+        },
+        {
+          "value": "2008-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "au 21 septembre 2008) deux appels concernant des lumières dans le ciel.",
+          "segment": 34
+        },
+        {
+          "value": "2008-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "le 21 septembre 2008 à 17 heures 50.",
+          "segment": 42
         }
       ]
     },
@@ -229468,6 +229669,30 @@
           "method": "event-language",
           "evidence": "Description: On January 9, 2007, a witness observed the passage of 3 objects emitting smoke. Too little information available for a serious analysis.",
           "segment": "seg-f44a4bed90f86d2219a6bc21"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5751374cb4d3d16ebef47d90",
+      "path": "France-GEIPAN/paired/cases/2007-03-02311/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-02-29",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: On February 29, 2008, the GEIPAN received an email accompanied by two photographs depicting a glowing ball, corresponding to a report of a luminous phenomenon in the sky observed on the evening of March 26, 2007. This testimony is of fairly low consistency: the accou",
+          "segment": "seg-807b0457ad8da1630ef225d1"
+        },
+        {
+          "value": "2007-03-26",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On February 29, 2008, the GEIPAN received an email accompanied by two photographs depicting a glowing ball, corresponding to a report of a luminous phenomenon in the sky observed on the evening of March 26, 2007. This testimony is of fairly low consistency: the accou",
+          "segment": "seg-807b0457ad8da1630ef225d1"
         }
       ]
     },
