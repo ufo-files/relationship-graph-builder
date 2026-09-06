@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T17:42:40Z",
+  "generatedAt": "2026-09-06T18:22:05Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e7cb11ab8fbcc1eb23018c809df4e937b149977a"
+    "revision": "5bc792625c1ff5a4a4ae0c3deb96906553ad82eb"
   },
-  "documentsWithCandidates": 9955,
+  "documentsWithCandidates": 9961,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -3008,6 +3008,21 @@
       ]
     },
     {
+      "documentId": "doc-c2be97601f61",
+      "path": "Archives-for-the-Unexplained/documents/2020-06-21---Phantoms-Monsters-Radio---Flying-Manta-Shaped-Rays-Cryptids-Alien-Organic-Hybrid-Phantoms-Monsters-Radio_cvoqKf6vl9s---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2005-07-06",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "encounter occurred on July 6 2005 at",
+          "segment": 240
+        }
+      ]
+    },
+    {
       "documentId": "doc-bae1644f1ebc",
       "path": "Archives-for-the-Unexplained/documents/2020-06-24---NASA-Goddard---A-Decade-of-Sun_l3QQQu7QLoM---transcript-automated-.txt",
       "candidates": [
@@ -3326,6 +3341,21 @@
       ]
     },
     {
+      "documentId": "doc-b4a8b082cd3d",
+      "path": "Archives-for-the-Unexplained/documents/2023-03-15---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Wednesday-March-15-2023_Zi_aK9IYmbQ---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-03-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 15 2023 faded black breaking news",
+          "segment": 380
+        }
+      ]
+    },
+    {
       "documentId": "doc-80e07a9c2043",
       "path": "Archives-for-the-Unexplained/documents/2023-04-18---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Tuesday-April-18-2023_57-zN1EFEeI---transcript-automated-.txt",
       "candidates": [
@@ -3493,6 +3523,21 @@
           "method": "unclassified-mention",
           "evidence": "need for this Tuesday June 13 2023 Fade",
           "segment": 220
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e7321906f4a0",
+      "path": "Archives-for-the-Unexplained/documents/Alien-Highway---S01E07---SoCal-Clusters---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1942-02-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In the early morning hours of February 5, 1942",
+          "segment": 666
         }
       ]
     },
@@ -6163,6 +6208,21 @@
           "method": "milestone-language",
           "evidence": "published in European Journal of Physics, vol.16, no.4, July 18, 1995, p.",
           "segment": 304
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e72049b5fcdc",
+      "path": "Archives-for-the-Unexplained/documents/Conspiracy-Theory-with-Jesse-Ventura---S03E06---Manimal---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1976-08-29",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "It was dated August 29, 1976.",
+          "segment": 1204
         }
       ]
     },
@@ -10072,6 +10132,21 @@
           "method": "relative-date-exclusion",
           "evidence": "Between Two Lies: Journal Entries, February 1, 1996 - April 20",
           "segment": 326
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f105b027850d",
+      "path": "Archives-for-the-Unexplained/documents/Kalamazoo-Flying-Saucer-Study-Club---No-07.txt",
+      "candidates": [
+        {
+          "value": "1957-04-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BEGINNERS MEETING, April 26, 1957 at 8800 P.M. in the same location, No",
+          "segment": 30
         }
       ]
     },
@@ -235651,6 +235726,30 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Sunday, June 24, 2012, at 12:20 a.m., a witness and her husband observed in the clear sky about a dozen yellow-white glowing points. The witness noticed that these points, which appeared static, then moved, gained altitude, and sped off towards the horizon. No noi",
           "segment": "seg-e5d3819c08f253a9156ab096"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-918554506734930347b94261",
+      "path": "France-GEIPAN/paired/cases/2012-06-08268/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-06-17",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On June 17, 2012, at 12:25 AM, a couple observed the silent passage of a luminous phenomenon consisting of red balls. The witnesses filmed their observation. This case is typical of Thai lanterns: orange or red balls moving erratically according to local wind (from s",
+          "segment": "seg-18b60ea17dacae10f41d60c2"
+        },
+        {
+          "value": "2012-08-30",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: On June 17, 2012, at 12:25 AM, a couple observed the silent passage of a luminous phenomenon consisting of red balls. The witnesses filmed their observation. This case is typical of Thai lanterns: orange or red balls moving erratically according to local wind (from s",
+          "segment": "seg-18b60ea17dacae10f41d60c2"
         }
       ]
     },
