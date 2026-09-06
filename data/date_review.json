@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T22:51:33Z",
+  "generatedAt": "2026-09-06T23:28:48Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "3d168e19587c742cbcc4f91c9f724ac571cf73ff"
+    "revision": "985ad16f70c4d738eb25225fe2e988242c63fd2f"
   },
-  "documentsWithCandidates": 9991,
+  "documentsWithCandidates": 9996,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -2354,6 +2354,21 @@
       ]
     },
     {
+      "documentId": "doc-d28df531c88e",
+      "path": "Archives-for-the-Unexplained/documents/2013-09-13---Podcast-UFO-Live-Shows---Travis-Walton-Interview-on-Recent-Topics-Podcast-UFO_eFs670jEQkk---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1993-09-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 10 1993 although the show is",
+          "segment": 388
+        }
+      ]
+    },
+    {
       "documentId": "doc-10162edc8e0d",
       "path": "Archives-for-the-Unexplained/documents/2014-05-16---OpenMindsTV---TV-crew-accidentally-films-UFOs-in-New-Zealand---Spacing-Out-Ep.-73_tKi2Q8_kFEY---transcript-automated-.txt",
       "candidates": [
@@ -4516,6 +4531,39 @@
           "method": "unclassified-mention",
           "evidence": "On December 9, 1965, a fireball was seen streaking through the skies of Michigan and Ontario and",
           "segment": 794
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d311b6c05f6a",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S13E13---The-Artificial-Human---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-10-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "United Nations Headquarters, New York City, October 11, 2017.",
+          "segment": 42
+        },
+        {
+          "value": "2017-03-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "San Francisco, California, March 27, 2017.",
+          "segment": 1090
+        },
+        {
+          "value": "2017-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Pasadena, California, June 21, 2017, engineer Steve Chan and Kiri Wagstaff of NASA's Jet Propulsion",
+          "segment": 1286
         }
       ]
     },
@@ -7075,6 +7123,30 @@
           "method": "unclassified-mention",
           "evidence": "It was agreed that at ~he conference set for 4 February 1952",
           "segment": 26
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e67311317a09",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000190559.txt",
+      "candidates": [
+        {
+          "value": "1951-09-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Subject: Sl and H Experimentation - (6 September 1951",
+          "segment": 0
+        },
+        {
+          "value": "1951-09-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Thursday, 6 September 1951, Messrs.",
+          "segment": 1
         }
       ]
     },
@@ -30127,6 +30199,15 @@
           "method": "unclassified-mention",
           "evidence": "Sent: Tuesday, July 23, 2019 4:11 PM",
           "segment": 12
+        },
+        {
+          "value": "2019-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Tuesday, July 23, 2019 3:46 PM",
+          "segment": 26
         }
       ]
     },
@@ -169125,22 +169206,13 @@
       "path": "DPIArchive/documents/116506-cia-marilyn-monroe-august-3-1962-re-typed.txt",
       "candidates": [
         {
-          "value": "1994-11-02",
+          "value": "1962-08-03",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Wednesday, November 02, 1994 1:23:22 PM",
-          "segment": 47
-        },
-        {
-          "value": "1994-11-02",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Wednesday, November 02, 1994 1:23:22 PM",
-          "segment": 58
+          "evidence": "New York — US 3 August 1962",
+          "segment": 0
         }
       ]
     },
@@ -186257,8 +186329,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "turday, January 15, 1994",
-          "segment": 49
+          "evidence": "tiitday, January 15, 1994 THE DENVER POST",
+          "segment": 22
         }
       ]
     },
@@ -204383,8 +204455,8 @@
           "confidence": 0.94,
           "kind": "document_date",
           "method": "document-header",
-          "evidence": "Date: January 17, 2022 at 4:09:35 PM EST",
-          "segment": 6
+          "evidence": "Date: January 17, 2022 at 4:31:44 PM EST",
+          "segment": 4
         }
       ]
     },
@@ -237989,6 +238061,21 @@
       ]
     },
     {
+      "documentId": "doc-ad91612e5b5db43b4ab1932b",
+      "path": "France-GEIPAN/paired/cases/2014-03-08673/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-03-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Tuesday, March 18, 2014, around 8:30 PM, a couple of walkers were surprised to observe in the clear sky four constant, pale orange lights forming a dark trapezoidal shape. These lights moved silently at a constant speed on a straight trajectory. The witness turned",
+          "segment": "seg-a72958cae5a02879aa9ddeff"
+        }
+      ]
+    },
+    {
       "documentId": "doc-4d2fcd81c6273c6c7a6d3955",
       "path": "France-GEIPAN/paired/cases/2014-03-08674/en/translation.txt",
       "candidates": [
@@ -238174,6 +238261,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On July 12, 2014, a witness observed from their balcony the slow group movement of four blue circles. They began to flash and left together, maintaining an equal distance from each other. Given the objective elements defined in the investigation report (see attached ",
           "segment": "seg-3d07d36b833dd3ca25cb2647"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-30d34e0c4f2a599f86d3f3f0",
+      "path": "France-GEIPAN/paired/cases/2014-08-08940/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-08-16",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: The witness is on a boat on the Oise when, on August 16, 2014 at 9:55 PM for 10 to 20 seconds, they observe a black, rectangular flying object with rounded corners. The object disappears behind trees. The object moves silently in a straight line, from Cergy to Pontoi",
+          "segment": "seg-bee990f4d0438c3144096f78"
         }
       ]
     },
