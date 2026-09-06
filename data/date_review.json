@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T13:19:27Z",
+  "generatedAt": "2026-09-06T13:57:30Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "14d726ecf9d08eb675906796b23a0b9d05996312"
+    "revision": "5f1551d98c15b0508c3fa1e3710132f7cca72bcf"
   },
-  "documentsWithCandidates": 9927,
+  "documentsWithCandidates": 9929,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1189,6 +1189,39 @@
           "method": "unclassified-mention",
           "evidence": "This content downloaded from 137.122.8.73 on Sat, 15 Jun 2013 06:33:15 AM",
           "segment": 96
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4b59a6a4309f",
+      "path": "Archives-for-the-Unexplained/documents/2006-05-08_Australian-Broadcasting-Corporation_UFO-sightings-a-lot-of-hot-air.txt",
+      "candidates": [
+        {
+          "value": "2006-05-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Monday, 8 May 2006 Judy Skatssoon",
+          "segment": 3
+        },
+        {
+          "value": "2004-08-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Scientists bored by UFOs, Science Online, 24 Aug 2004",
+          "segment": 5
+        },
+        {
+          "value": "2005-04-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Your neighbours may be aliens, Science Online, 13 Apr 2005",
+          "segment": 6
         }
       ]
     },
@@ -3112,6 +3145,30 @@
           "method": "unclassified-mention",
           "evidence": "November 6 1966 Washington Olympian has",
           "segment": 455
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fbb982ad149e",
+      "path": "Archives-for-the-Unexplained/documents/2023-05-29---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Monday-May-29th-2023_Q9wSj2oHyo8---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-05-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "this Monday May 29 2023 this is all of",
+          "segment": 5
+        },
+        {
+          "value": "2023-05-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "this Monday May 29 2023 Fade to Black",
+          "segment": 227
         }
       ]
     },
