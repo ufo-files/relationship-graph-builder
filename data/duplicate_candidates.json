@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "72d341304dcd7b1213d952a8e01bd9a9b6a4e7f6"
+    "revision": "b6f42a24a079678f00a1cfda61f348b52cb8fb2b"
   },
-  "count": 235,
-  "totalCount": 235,
-  "shownCount": 235,
+  "count": 238,
+  "totalCount": 238,
+  "shownCount": 238,
   "candidates": [
     {
       "category": "organization",
@@ -95,8 +95,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 586,
-        "documentCount": 377
+        "mentions": 587,
+        "documentCount": 378
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -111,8 +111,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 586,
-        "documentCount": 377
+        "mentions": 587,
+        "documentCount": 378
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -318,6 +318,22 @@
     {
       "category": "location",
       "left": {
+        "name": "Holloman Air Force Base",
+        "mentions": 139,
+        "documentCount": 73
+      },
+      "right": {
+        "name": "Hollman Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.978,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "Edwards Air Force Base",
         "mentions": 475,
         "documentCount": 223
@@ -476,6 +492,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Public Record Office",
+        "mentions": 14,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Public Records Office",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.976,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Intelligence Service",
@@ -486,22 +518,6 @@
         "name": "Intelligence Services",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.976,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Public Records Office",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Public Record Office",
-        "mentions": 13,
-        "documentCount": 6
       },
       "similarity": 0.976,
       "reason": "similar name",
@@ -520,6 +536,22 @@
         "documentCount": 2
       },
       "similarity": 0.976,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Institute of Health",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Institutes of Health",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.974,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -687,8 +719,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 586,
-        "documentCount": 377
+        "mentions": 587,
+        "documentCount": 378
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -703,8 +735,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 586,
-        "documentCount": 377
+        "mentions": 587,
+        "documentCount": 378
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -719,8 +751,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 586,
-        "documentCount": 377
+        "mentions": 587,
+        "documentCount": 378
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -916,8 +948,8 @@
       },
       "right": {
         "name": "Department of National Defence",
-        "mentions": 46,
-        "documentCount": 43
+        "mentions": 47,
+        "documentCount": 44
       },
       "similarity": 0.967,
       "reason": "similar name",
@@ -927,8 +959,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of National Defence",
-        "mentions": 46,
-        "documentCount": 43
+        "mentions": 47,
+        "documentCount": 44
       },
       "right": {
         "name": "DEPARTMENT OF NATIONAL DEPENCE",
@@ -1183,8 +1215,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 118,
-        "documentCount": 71
+        "mentions": 119,
+        "documentCount": 72
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -1468,6 +1500,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Paul Schartle",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Paul Shartle",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Claire County",
@@ -1567,8 +1615,8 @@
       "category": "program",
       "left": {
         "name": "Project Sign",
-        "mentions": 105,
-        "documentCount": 64
+        "mentions": 107,
+        "documentCount": 65
       },
       "right": {
         "name": "Project SIG",
@@ -1615,8 +1663,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 59,
-        "documentCount": 44
+        "mentions": 60,
+        "documentCount": 45
       },
       "right": {
         "name": "Northeastern University",
@@ -3567,8 +3615,8 @@
       "category": "government_agency",
       "left": {
         "name": "Joint Intelligence Bureau",
-        "mentions": 21,
-        "documentCount": 9
+        "mentions": 22,
+        "documentCount": 10
       },
       "right": {
         "name": "Joint Inielligcnce Bureau",
@@ -3599,8 +3647,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 84,
-        "documentCount": 45
+        "mentions": 86,
+        "documentCount": 46
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -3727,8 +3775,8 @@
       "category": "person",
       "left": {
         "name": "Joe Walker",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "right": {
         "name": "Joseph Walker",
