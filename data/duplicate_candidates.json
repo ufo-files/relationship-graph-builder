@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "13ae0b5fde5f6b6341e45d195b5ef145305d5f8c"
+    "revision": "6386be7b204ca5fc35830d0c6acecf57639fbba3"
   },
-  "count": 223,
-  "totalCount": 223,
-  "shownCount": 223,
+  "count": 224,
+  "totalCount": 224,
+  "shownCount": 224,
   "candidates": [
     {
       "category": "organization",
@@ -1272,6 +1272,22 @@
         "documentCount": 2
       },
       "similarity": 0.961,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Neil Sanders",
+        "mentions": 170,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Neil Saunders",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
