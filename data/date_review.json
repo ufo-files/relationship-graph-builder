@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T04:49:25Z",
+  "generatedAt": "2026-09-06T05:26:04Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "44c7f2d134e43819e1b5b8552b11313b39edaf1f"
+    "revision": "dfd3cb5d80d259bd582465f8b0c9f9ed3ea9ac0f"
   },
-  "documentsWithCandidates": 9844,
+  "documentsWithCandidates": 9846,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -2011,6 +2011,21 @@
           "method": "unclassified-mention",
           "evidence": "Mariner 4 reached Mars on July 14, 1965, and took 22 pictures as it flew by.",
           "segment": 24
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ea4b01d441f0",
+      "path": "Archives-for-the-Unexplained/documents/2015-10-15---Hubble-Space-Telescope---Hubble-Captures-New-Maps-of-Jupiter_ZbPwiUldgps---transcript-automated-_image.txt",
+      "candidates": [
+        {
+          "value": "2015-10-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "-Thursday Oct 15, 2015 3pm EDT",
+          "segment": 1
         }
       ]
     },
@@ -233392,6 +233407,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: Three people observed on July 11, 2012 at 9:30 PM (21h30) the slow, east-to-west (O-E) passage of a bright, yellow ball that split in half before disappearing. No sound was heard during the passage. After ruling out the possibility of Thai lanterns (inconsistent east",
           "segment": "seg-a167d4cf1fc341fbeb48a5e3"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4f37ddc00eb40003a2dea143",
+      "path": "France-GEIPAN/paired/cases/2012-07-08270/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On July 1, 2012, around 11 PM, a witness observed the silent passage of several orange lights moving on a slightly curved trajectory towards the East. These lights suddenly changed direction to head North before quickly disappearing. The witness's description matches",
+          "segment": "seg-2cb4f7b9eda021145733581a"
         }
       ]
     },
