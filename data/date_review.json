@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T18:22:05Z",
+  "generatedAt": "2026-09-06T19:00:49Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5bc792625c1ff5a4a4ae0c3deb96906553ad82eb"
+    "revision": "376508eee024356aaaa8e38185a5ff2ebbfb2e73"
   },
-  "documentsWithCandidates": 9961,
+  "documentsWithCandidates": 9969,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -913,6 +913,66 @@
           "method": "unclassified-mention",
           "evidence": "Ravenna, OH police station on May 11, 1966.",
           "segment": 75
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7de2f33a76a0",
+      "path": "Archives-for-the-Unexplained/documents/1971-04-00_Journal-of-Social-Psychology---Vol-83-No-2---Littig.txt",
+      "candidates": [
+        {
+          "value": "2015-02-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On: 02 February 2015, At: 17:34",
+          "segment": 1
+        },
+        {
+          "value": "2010-06-30",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Published online: 30 Jun 2010.",
+          "segment": 10
+        },
+        {
+          "value": "2015-02-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Downloaded by [University of Sussex Library] at 17:34 02 February 2015",
+          "segment": 34
+        },
+        {
+          "value": "2015-02-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Downloaded by [University of Sussex Library] at 17:34 02 February 2015",
+          "segment": 43
+        },
+        {
+          "value": "1970-05-27",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "• Received in the Editorial Office, Provincetown, Massachusetts, on May 27, 1970.",
+          "segment": 64
+        },
+        {
+          "value": "2015-02-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Downloaded by [University of Sussex Library] at 17:34 02 February 2015",
+          "segment": 84
         }
       ]
     },
@@ -1858,6 +1918,21 @@
           "method": "unclassified-mention",
           "evidence": "Thu 8 Jan 2009 11.38 GMT",
           "segment": 10
+        }
+      ]
+    },
+    {
+      "documentId": "doc-83e7dc732f69",
+      "path": "Archives-for-the-Unexplained/documents/2009-02-23_Space-com_Natural-Explanation-Found-for-UFOs.txt",
+      "candidates": [
+        {
+          "value": "2009-02-23",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "published 23 February 2009",
+          "segment": 8
         }
       ]
     },
@@ -2963,6 +3038,21 @@
       ]
     },
     {
+      "documentId": "doc-41e2707384fe",
+      "path": "Archives-for-the-Unexplained/documents/2019-08-05---Society-for-Scientific-Exploration---Anomalous-Physical-Effects-During-Solar-Eclipses-Goodey-Verreault_GH_jxkUdS0o---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "solar eclipse 21 August 2017 ah thank",
+          "segment": 21
+        }
+      ]
+    },
+    {
       "documentId": "doc-1910e43a968c",
       "path": "Archives-for-the-Unexplained/documents/2019-09-12---Society-for-Scientific-Exploration---Global-and-Individual-Consciousness-Roger-Nelson_6qZBmXHJcaM---transcript-automated-.txt",
       "candidates": [
@@ -3341,6 +3431,30 @@
       ]
     },
     {
+      "documentId": "doc-42ed440e5c0a",
+      "path": "Archives-for-the-Unexplained/documents/2023-03-08---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Wednesday-March-08-2023_fNc6BW1Fv2Y---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "news for this Wednesday March 8 2023 I'm",
+          "segment": 5
+        },
+        {
+          "value": "2023-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "need for this Wednesday March 8 2023",
+          "segment": 388
+        }
+      ]
+    },
+    {
       "documentId": "doc-b4a8b082cd3d",
       "path": "Archives-for-the-Unexplained/documents/2023-03-15---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Wednesday-March-15-2023_Zi_aK9IYmbQ---transcript-automated-.txt",
       "candidates": [
@@ -3538,6 +3652,30 @@
           "method": "unclassified-mention",
           "evidence": "In the early morning hours of February 5, 1942",
           "segment": 666
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4b85657856a8",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S01E02---The-Visitors---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1969-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "We aliens who happened to go down the ladder on July 20, 1969",
+          "segment": 140
+        },
+        {
+          "value": "1965-03-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On March 18, 1965, Russian cosmonaut Alexei Leonov stepped outside the Vashko-2 and became the",
+          "segment": 967
         }
       ]
     },
@@ -163970,7 +164108,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Saturday, December 31, 2016 6:56 PM",
+          "evidence": "Sent Saturday, December 31, 2016 6:56 PM",
           "segment": 0
         },
         {
@@ -163979,7 +164117,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "On 2016-12-30 06:30, XXXXX wrote",
+          "evidence": "On 2016-12-30 06:30, r wrote",
           "segment": 17
         }
       ]
@@ -167239,6 +167377,21 @@
           "method": "unclassified-mention",
           "evidence": "on November 22, 1996 a major symposium discussing the cultural",
           "segment": 31
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a65dd25cd8cb",
+      "path": "DPIArchive/documents/116374-keay-air-force-1952.txt",
+      "candidates": [
+        {
+          "value": "1952-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A. H, E ?lOXT rE: July 29, 1952",
+          "segment": 0
         }
       ]
     },
@@ -205262,21 +205415,6 @@
       ]
     },
     {
-      "documentId": "doc-cac97bea6dbf",
-      "path": "DPIArchive/documents/124829-witness-11050-letter-to-dr-greer-witness-poc-8-2-00.txt",
-      "candidates": [
-        {
-          "value": "2000-08-02",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Wednesday, August 02, 2000",
-          "segment": 16
-        }
-      ]
-    },
-    {
       "documentId": "doc-9cb2103c4af0",
       "path": "DPIArchive/documents/124830-email-from-witness-11045-witness-poc-1967-sighting-5-22-01.txt",
       "candidates": [
@@ -237116,6 +237254,21 @@
       ]
     },
     {
+      "documentId": "doc-3a04c8e0105437c5a16320c2",
+      "path": "France-GEIPAN/paired/cases/2013-10-08585/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-10-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On the night of October 20, 2013, between midnight and 1 a.m., two people walking together were intrigued by a group of equally spaced lights in the sky forming a triangle. Only one statement was collected. Of average strangeness and consistency, this case turns out ",
+          "segment": "seg-9d2166d7e3523a8c12eaee88"
+        }
+      ]
+    },
+    {
       "documentId": "doc-0bb25a97615ab1b24acd507a",
       "path": "France-GEIPAN/paired/cases/2013-10-08589/en/translation.txt",
       "candidates": [
@@ -237764,6 +237917,21 @@
       ]
     },
     {
+      "documentId": "doc-ad923ca10a4e88a5295a8141",
+      "path": "France-GEIPAN/paired/cases/2014-12-09062/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-12-25",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On December 25, 2014, between 01:20 and 01:29, a witness observed successive movements of 8 bright lights in a clear sky. With a slightly red center and yellow outer edges, these points moved silently towards the East (towards Hyeres). No other reports were collected",
+          "segment": "seg-633f8bbc1c992e9467b56a4c"
+        }
+      ]
+    },
+    {
       "documentId": "doc-b7b85f0853214e95446cd834",
       "path": "France-GEIPAN/paired/cases/2014-12-09064/en/translation.txt",
       "candidates": [
@@ -237970,6 +238138,21 @@
           "method": "event-language",
           "evidence": "Description: On May 25, 2015, at 7:58 PM, a witness observed in the sky a dark phenomenon composed of 6 lights arranged in a circle. Only one testimony was collected. This observation report is particularly concise, the geographical references are imprecise, the narrative is very",
           "segment": "seg-c98e856845e6293311d8c7f5"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cc31ae0c7180b49d58ad1453",
+      "path": "France-GEIPAN/paired/cases/2015-06-09210/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-06-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 8, 2015, at 2:30 AM, a witness observed through a roof window approximately 10 red-orange glowing points moving silently in a straight line across the night sky. The points gradually disappeared. Only one testimony was collected. The observation of red-orange",
+          "segment": "seg-b13e6d79c5486de58646d8cc"
         }
       ]
     },
