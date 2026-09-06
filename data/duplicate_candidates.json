@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5f1551d98c15b0508c3fa1e3710132f7cca72bcf"
+    "revision": "4796279a36755a624dc05fb3eb3a27fdd474000e"
   },
-  "count": 230,
-  "totalCount": 230,
-  "shownCount": 230,
+  "count": 232,
+  "totalCount": 232,
+  "shownCount": 232,
   "candidates": [
     {
       "category": "organization",
@@ -3308,6 +3308,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Brandon Fugal",
+        "mentions": 16,
+        "documentCount": 12
+      },
+      "right": {
+        "name": "Brandon Fugle",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "Project Stork",
@@ -3316,6 +3332,22 @@
       },
       "right": {
         "name": "Project SLork",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Health",
+        "mentions": 16,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Department of Earth",
         "mentions": 2,
         "documentCount": 2
       },
