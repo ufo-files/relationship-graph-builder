@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "4dd541937168b7989b6a7cd06d0978fe7fd4b35c"
+    "revision": "96f1c4556c7f58c0df34e1d34cb42787a372a020"
   },
   "count": 223,
   "totalCount": 223,
@@ -1068,6 +1068,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Jacques Vallee",
+        "mentions": 248,
+        "documentCount": 70
+      },
+      "right": {
+        "name": "Jacques Valle",
+        "mentions": 9,
+        "documentCount": 2
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Salt Lake City",
@@ -1077,22 +1093,6 @@
       "right": {
         "name": "Salt Lake Cit",
         "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Jacques Vallee",
-        "mentions": 247,
-        "documentCount": 69
-      },
-      "right": {
-        "name": "Jacques Valle",
-        "mentions": 9,
         "documentCount": 2
       },
       "similarity": 0.963,
@@ -1807,8 +1807,8 @@
       "category": "organization",
       "left": {
         "name": "Advanced Aerospace Threat and Identification",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
         "name": "Advanced Aerospace Threat Identification",
@@ -3167,8 +3167,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 58,
-        "documentCount": 49
+        "mentions": 60,
+        "documentCount": 50
       },
       "right": {
         "name": "Mohave Desert",
