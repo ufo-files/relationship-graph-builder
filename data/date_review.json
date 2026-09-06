@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T04:10:25Z",
+  "generatedAt": "2026-09-06T04:49:25Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "3043a934141835f40cb7559d15a87aeee5393b74"
+    "revision": "44c7f2d134e43819e1b5b8552b11313b39edaf1f"
   },
-  "documentsWithCandidates": 9839,
+  "documentsWithCandidates": 9844,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1112,6 +1112,39 @@
       ]
     },
     {
+      "documentId": "doc-1a3a79139839",
+      "path": "Archives-for-the-Unexplained/documents/2006-03-13_The-Space-Review_Six-blind-men-in-a-zoo-Aviation-Week-s-mythical-Blackstar-page-1.txt",
+      "candidates": [
+        {
+          "value": "1990-12-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Aircraft,” December 24, 1990, p.",
+          "segment": 61
+        },
+        {
+          "value": "1991-06-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Recon Aircraft May be Supporting F-117A,” June 10, 1991, p.",
+          "segment": 69
+        },
+        {
+          "value": "1992-08-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Launcher for Spacecraft,” August 24, 1992, p.",
+          "segment": 151
+        }
+      ]
+    },
+    {
       "documentId": "doc-ab9877fe6e2e",
       "path": "Archives-for-the-Unexplained/documents/2006-05-00_Journal-of-Alternative-and-Emergent-Religions---Vol-9-No-4---Dawson.txt",
       "candidates": [
@@ -1529,6 +1562,84 @@
       ]
     },
     {
+      "documentId": "doc-a07fb4a8169c",
+      "path": "Archives-for-the-Unexplained/documents/2009-11-24_History-com_U-S-Air-Force-reports-on-Roswell-June-24-1997.txt",
+      "candidates": [
+        {
+          "value": "1997-06-24",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "On June 24, 1997, U.S. Air Force officials release a 231-page report dismissing long-standing claims of an alien spacecraft crash in",
+          "segment": 1
+        },
+        {
+          "value": "1997-07-24",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "On July 24, 1997, barely a week before the extravagant 50th anniversary celebration of the incident, the Air Force released yet",
+          "segment": 22
+        },
+        {
+          "value": "2025-01-05",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Date Accessed January 5, 2025",
+          "segment": 45
+        },
+        {
+          "value": "1997-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "File: 2009 11 24_History com_U S Air Force reports on Roswell June 24 1997.pdf",
+          "segment": 47
+        },
+        {
+          "value": "2024-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Last Updated June 21, 2024",
+          "segment": 49
+        },
+        {
+          "value": "2009-11-24",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Original Published Date November 24, 2009",
+          "segment": 50
+        },
+        {
+          "value": "1997-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "File: 2009 11 24_History com_U S Air Force reports on Roswell June 24 1997.pdf",
+          "segment": 74
+        },
+        {
+          "value": "1997-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "File: 2009 11 24_History com_U S Air Force reports on Roswell June 24 1997.pdf",
+          "segment": 80
+        }
+      ]
+    },
+    {
       "documentId": "doc-408711b555fd",
       "path": "Archives-for-the-Unexplained/documents/2009-11-27_The-Guardian_The-betrayal-of-Gary-McKinnon.txt",
       "candidates": [
@@ -1660,6 +1771,21 @@
           "method": "unclassified-mention",
           "evidence": "the first launch, back on April 12, 1981 and has continued, for the past 30 years",
           "segment": 35
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6f53804647d7",
+      "path": "Archives-for-the-Unexplained/documents/2011-08-04---NASA-s-Kennedy-Space-Center---Juno-Launch-Vehicle-and-Spacecraft-Readied-for-Launch_0fVAMaV7syE---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2011-04-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "down April 8 2011 on the shuttle landing",
+          "segment": 30
         }
       ]
     },
@@ -2044,6 +2170,21 @@
           "method": "unclassified-mention",
           "evidence": "On April 1, 2017, a Nor'easter hit New England, covering the region with snow.",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a7646b0a35e2",
+      "path": "Archives-for-the-Unexplained/documents/2017-06-22---NASA-Armstrong-Flight-Research-Center---ATTREX-Chapter-6-Legacy_GEpTieWIcns---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1968-12-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>So, on December 24, 1968...",
+          "segment": 266
         }
       ]
     },
@@ -223507,6 +223648,30 @@
           "method": "unclassified-mention",
           "evidence": "Description: On December 8, 1987, a witness observed from his kitchen a very bright stationary point that would slowly move after about 5 minutes. The testimony contains too little information to perform a serious analysis.",
           "segment": "seg-3308a8106e4ede0e44bdcb4c"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1433fb2c0f3e8647792c8997",
+      "path": "France-GEIPAN/paired/cases/1987-12-01120/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1987-12-20",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: Following an article in the newspaper 'l'Indépendant' on December 20, 1987, the Gendarmerie interviews a witness who claims to have encountered on December 12, 1987, seeking shelter from the rain in the ruins of a house, a group of 6 strange individuals with whom he ",
+          "segment": "seg-03e447546428ee25f91ff953"
+        },
+        {
+          "value": "1987-12-12",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: Following an article in the newspaper 'l'Indépendant' on December 20, 1987, the Gendarmerie interviews a witness who claims to have encountered on December 12, 1987, seeking shelter from the rain in the ruins of a house, a group of 6 strange individuals with whom he ",
+          "segment": "seg-03e447546428ee25f91ff953"
         }
       ]
     },
