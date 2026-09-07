@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T18:09:48Z",
+  "generatedAt": "2026-09-07T18:49:51Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d47197d0cab6b4801307e580d7396592b47c138e"
+    "revision": "067bba796bc07ad348ffe441d47874f89ecca192"
   },
-  "documentsWithCandidates": 10108,
+  "documentsWithCandidates": 10111,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -4786,6 +4786,21 @@
           "method": "context-exclusion",
           "evidence": "March 12 1979 issue of Time Magazine",
           "segment": 389
+        }
+      ]
+    },
+    {
+      "documentId": "doc-191552a563ee",
+      "path": "Archives-for-the-Unexplained/documents/2022-12-25---Grant-Cameron-Whitehouse-UFO---GRANT-CAMERON-Chris-Bledsoe-and-the-Alien-Message-Flying-the-Craft-part-1-2_sZHu_xsWFRI---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2012-02-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "happened February 26 2012.",
+          "segment": 938
         }
       ]
     },
@@ -13432,6 +13447,21 @@
           "method": "relative-date-exclusion",
           "evidence": "It keeps this count in a 32-digit signed integer, which will provide for an accurate count until January 19, 2038",
           "segment": 175
+        }
+      ]
+    },
+    {
+      "documentId": "doc-30bb56a78729",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-13-No-11---1999.txt",
+      "candidates": [
+        {
+          "value": "1999-08-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Dallas Morning News, August 17, 1999.",
+          "segment": 196
         }
       ]
     },
@@ -188169,7 +188199,7 @@
           "kind": "administrative_date",
           "method": "context-exclusion",
           "evidence": "physiological data, I received the following typewritten statement in the mail, July 2, 1979.",
-          "segment": 96
+          "segment": 95
         }
       ]
     },
@@ -205031,7 +205061,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "›Date: Tue, 20 Jun 2000 08:52:08-1000",
+          "evidence": ">Date: Tue, 20 Jun 2000 085Z08 -1000",
           "segment": 3
         }
       ]
@@ -241072,6 +241102,21 @@
           "method": "event-language",
           "evidence": "Description: On the night of July 24, 2013, around midnight, several people observed for a few seconds the silent movement of a bright phenomenon in the sky. The observation of a very bright, long trail for a few seconds clearly suggests a bolide (the entry into Earth's atmospher",
           "segment": "seg-6aef1eec6e3aeeec6110b5aa"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8461b6d2cbe9e2fa72226ec9",
+      "path": "France-GEIPAN/paired/cases/2013-07-08502/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-07-24",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On July 24, 2013, at midnight, a witness observed more than 10 flying objects over the course of 30 minutes, with varying shapes and behaviors. No other testimonies were collected. This atypical testimony reports numerous apparently spectacular phenomena and varied b",
+          "segment": "seg-a2944da4f6319d78b15f577c"
         }
       ]
     },

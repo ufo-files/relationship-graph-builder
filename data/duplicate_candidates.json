@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d47197d0cab6b4801307e580d7396592b47c138e"
+    "revision": "067bba796bc07ad348ffe441d47874f89ecca192"
   },
-  "count": 243,
-  "totalCount": 243,
-  "shownCount": 243,
+  "count": 244,
+  "totalCount": 244,
+  "shownCount": 244,
   "candidates": [
     {
       "category": "organization",
@@ -1199,8 +1199,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 259,
-        "documentCount": 168
+        "mentions": 260,
+        "documentCount": 169
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -2478,6 +2478,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "University of St",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "University of West",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Kansai University",
         "mentions": 2,
         "documentCount": 2
@@ -2559,8 +2575,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 198,
-        "documentCount": 117
+        "mentions": 203,
+        "documentCount": 118
       },
       "right": {
         "name": "Stanton Freedman",
