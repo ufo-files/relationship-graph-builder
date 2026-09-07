@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T14:49:12Z",
+  "generatedAt": "2026-09-07T15:30:47Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "efd0307d236614939780731cca0fdf847ee21cc6"
+    "revision": "c5837c2590ff079db43ccf328b24d58d189f9b8a"
   },
-  "documentsWithCandidates": 10087,
+  "documentsWithCandidates": 10089,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -4066,6 +4066,30 @@
           "method": "unclassified-mention",
           "evidence": "nightfall June 8 2017 look for the full",
           "segment": 158
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9c9d7db67421",
+      "path": "Archives-for-the-Unexplained/documents/2017-06-17---Inception-Radio-Network---UFO-Headline-News-Thursday-June-15th-2017_phXpdxogLw8---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-06-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "hello it's Thursday June 15 2017 you are",
+          "segment": 1
+        },
+        {
+          "value": "2017-06-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "opposition tonight June 15 2017 it will",
+          "segment": 288
         }
       ]
     },
@@ -240304,6 +240328,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: A witness reports their observation made on July 11, 2013 at 10:30 PM: in the sky, they witness the appearance of three bright orange lights that move silently from northeast to south-west, then disappear one by one after changing direction towards the west. Unfortun",
           "segment": "seg-ddcdd1dfdbffa29b2e2987c1"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-796c6a47a444f31fa175ddcf",
+      "path": "France-GEIPAN/paired/cases/2013-07-08486/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On July 13, 2013, between 11:30 PM and 11:40 PM, a witness was intrigued by the successive and silent passage of several orange glowing orbs in the sky. The witness's account and photos exhibit all the characteristics of a report of an observation of Thai lanterns: o",
+          "segment": "seg-a48743e7f7e2eb58f1731eab"
         }
       ]
     },
