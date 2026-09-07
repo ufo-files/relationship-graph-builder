@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T12:45:26Z",
+  "generatedAt": "2026-09-07T13:28:55Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "7df439212cf6a1953f54d8cc292cd716d3c7a858"
+    "revision": "fc7372251290b1ed1bc45b6e0a5e82bb06bfba12"
   },
-  "documentsWithCandidates": 10073,
+  "documentsWithCandidates": 10080,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8153,6 +8153,75 @@
       ]
     },
     {
+      "documentId": "doc-c292e9e1d9c6",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000146154.txt",
+      "candidates": [
+        {
+          "value": "1983-12-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CL BY: 061378 ·31 December 1983",
+          "segment": 17
+        },
+        {
+          "value": "1975-01-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 28 January 1975 at the close of the regular",
+          "segment": 20
+        },
+        {
+          "value": "1975-01-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "were to be in by close of business 28 January 1975.",
+          "segment": 28
+        },
+        {
+          "value": "1975-01-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Officialon 28 January 1975. miS Officer could find no doc- .- .-",
+          "segment": 43
+        },
+        {
+          "value": "1983-12-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CL BY: 061378 31 December 1983",
+          "segment": 54
+        },
+        {
+          "value": "1975-02-03",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "was not due to return to duty until 3 February 1975.",
+          "segment": 58
+        },
+        {
+          "value": "1975-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 3 February 1975 on Dr. IIMif'J! return to duty",
+          "segment": 64
+        }
+      ]
+    },
+    {
       "documentId": "doc-a5be1b976917",
       "path": "Archives-for-the-Unexplained/documents/DOC_0000146261.txt",
       "candidates": [
@@ -8470,6 +8539,21 @@
           "method": "unclassified-mention",
           "evidence": "SI Testing, 17 July 1951, (Polygraph Room #J).",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1f0511016fe3",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000190573.txt",
+      "candidates": [
+        {
+          "value": "1951-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SI and H Experimentation, 9 July 1951",
+          "segment": 0
         }
       ]
     },
@@ -10963,6 +11047,57 @@
           "method": "unclassified-mention",
           "evidence": "9 RAN Minute 10 Sep 1954.",
           "segment": 186
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e63b4abeb25b",
+      "path": "Archives-for-the-Unexplained/documents/Enquete-R.txt",
+      "candidates": [
+        {
+          "value": "2009-10-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Envoyé mardi 20 octobre 2009 20:38",
+          "segment": 0
+        },
+        {
+          "value": "2009-10-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Tuesday, October 20, 2009 9:12 AM",
+          "segment": 27
+        },
+        {
+          "value": "2009-10-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Envoyé : lundi 19 octobre 2009 18:21",
+          "segment": 38
+        },
+        {
+          "value": "2009-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "mercredi 21 octobre 2009 09:47",
+          "segment": 49
+        },
+        {
+          "value": "2009-10-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "mardi 20 octobre 2009 18:28",
+          "segment": 53
         }
       ]
     },
@@ -14089,6 +14224,147 @@
           "method": "unclassified-mention",
           "evidence": "ford the car.\" Now, let me set about proving this null hy- press beginning on 28 October 1998 about an intelligently",
           "segment": 292
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9a9de0b31f45",
+      "path": "Archives-for-the-Unexplained/documents/SearchLites---Vol-07-No-4.txt",
+      "candidates": [
+        {
+          "value": "2002-04-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Last Christmas, I opened my presents under the tree and for 10 AM Eastern time on Sunday, April 28, 2002.",
+          "segment": 91
+        },
+        {
+          "value": "2002-04-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "thought, to hold a lecture and present a slide show at the ban- April 26, through 5 PM on Saturday, April 27, 2002.",
+          "segment": 95
+        },
+        {
+          "value": "2001-09-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "future of SETI throughout Europe. tor at n6tx@setileague.org, no later than 30 September 2001.",
+          "segment": 116
+        },
+        {
+          "value": "2001-11-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "30 November 2001, with acceptance notification expected by",
+          "segment": 122
+        },
+        {
+          "value": "2002-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "camera-ready copy will be due no later than 28 February 2002.",
+          "segment": 124
+        },
+        {
+          "value": "2002-03-31",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "nonmembers, if received by 31 March 2002.",
+          "segment": 131
+        },
+        {
+          "value": "2001-09-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 30 - September 3, 2001: Millennium Philcon World astrobiology.",
+          "segment": 161
+        },
+        {
+          "value": "2001-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 8, 2001: Dr. SETI ® is Banquet Speaker at ARRL",
+          "segment": 165
+        },
+        {
+          "value": "2002-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 21, 2002: Fourth Annual SETI League Ham Radio QSO unveils emerging technologies that will allow astronomers to",
+          "segment": 185
+        },
+        {
+          "value": "2002-05-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 18, 2002, 0700 hours: SETI Breakfast, Marriott Hotel, influence contemporary astronomy.",
+          "segment": 192
+        },
+        {
+          "value": "2002-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 29 - September 2, 2002: ConJose World Science Fic- of chewing gum whizzing around the rim!",
+          "segment": 199
+        },
+        {
+          "value": "2003-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 21, 2003: Fifth Annual SETI League Ham Radio QSO issues and carefully separates hypothesis from fact.",
+          "segment": 205
+        },
+        {
+          "value": "2003-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 28 - September 1, 2003: Torcon 3 World Science Fic- ties might contribute to astrobiology.",
+          "segment": 211
+        },
+        {
+          "value": "2004-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 21, 2004: Sixth Annual SETI League Ham Radio QSO Dr. Darling’s new book.",
+          "segment": 216
+        },
+        {
+          "value": "2002-04-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "dures (including remote imaging from multiple locations) to New Jersey on Saturday evening, 28 April 2002.",
+          "segment": 281
         }
       ]
     },
@@ -169050,12 +169326,21 @@
       "path": "DPIArchive/documents/116324-cia-letter-to-major-donald-keyhoe-from-j-s-earman-3-5-59.txt",
       "candidates": [
         {
-          "value": "1958-04-17",
+          "value": "1939-02-12",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "If ao, my reply of 17 April 1958 furalahes all the",
+          "evidence": "Receipt of your letter of February 12, 1939 is",
+          "segment": 2
+        },
+        {
+          "value": "1955-04-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "U so, my reply of 17 April 1955 furnishes all the",
           "segment": 7
         }
       ]
@@ -238949,6 +239234,36 @@
       ]
     },
     {
+      "documentId": "doc-a59fb6eae71a8998bb1fae2f",
+      "path": "France-GEIPAN/paired/cases/2012-08-08304/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 14, 2012, between 11:30 PM and 11:35 PM, a witness observed an orange light in the sky, with a rounded shape and a vague triangular form. They noted a silent movement: the trajectory was perfectly straight, constant, and horizontal. Three other witnesses sa",
+          "segment": "seg-35d99c6339ca796cc0dbc59f"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-13ecac81b4e2e6bfa32ab8a7",
+      "path": "France-GEIPAN/paired/cases/2012-08-08306/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-08-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 13, 2012 at 12:09 AM, a witness observed from their window a silent passage across the sky of a bright, orange-red ball that disappeared behind clouds after a peculiar trajectory. As the witness specifies their observation direction very precisely, the cart",
+          "segment": "seg-22f63fe97ff720622b3656e7"
+        }
+      ]
+    },
+    {
       "documentId": "doc-f1b491d6e7605848dbcd53ec",
       "path": "France-GEIPAN/paired/cases/2012-08-08307/en/translation.txt",
       "candidates": [
@@ -240034,6 +240349,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On the night of August 9, 2013, midnight, several people were stargazing and were surprised to see a light, gray triangular object moving northeast to southwest at a low altitude without making any noise. Only one brief testimony was collected. This testimony is of v",
           "segment": "seg-6111da0a513a6146c02acb7e"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0990faad830e3194502cec22",
+      "path": "France-GEIPAN/paired/cases/2013-08-08529/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-08-25",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On Sunday, August 25, 2013, between 7:30 PM and 7:45 PM, a witness observed from their balcony two successive luminous phenomena in the sky that they did not recognize. The observation of a large red light in the sky for 2 minutes, moving slowly, could be the observa",
+          "segment": "seg-b1fbf6bcfd52b28cf10a6254"
         }
       ]
     },
