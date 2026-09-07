@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T16:50:33Z",
+  "generatedAt": "2026-09-07T17:29:48Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "63d66b911771c4c2d2d8b15dea466aa9a0014e92"
+    "revision": "59783b93365f2649f5a32ae61a4dcf6540bf3d9f"
   },
-  "documentsWithCandidates": 10101,
+  "documentsWithCandidates": 10104,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -3740,6 +3740,21 @@
       ]
     },
     {
+      "documentId": "doc-6481b20147b5",
+      "path": "Archives-for-the-Unexplained/documents/2015-10-20---ShatteredRealityPodcast---6--Albert-Rosales--Humanoids-an-Amazing-Compilation_dMbtDsQuWoM---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1973-11-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the November 26 1973 around 1:00 in the",
+          "segment": 924
+        }
+      ]
+    },
+    {
       "documentId": "doc-fc61b7ac13f9",
       "path": "Archives-for-the-Unexplained/documents/2015-11-19---Hubble-Space-Telescope---Bright-Galaxies-at-High-Redshifts---How-Luminous-_jmFircShvwM---transcript-automated-_image.txt",
       "candidates": [
@@ -6037,6 +6052,30 @@
           "method": "unclassified-mention",
           "evidence": "Cossack Republic, Soviet Union, August 29, 1949",
           "segment": 280
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b15f969354c1",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S16E06---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1942-02-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The one that most people are not aware of today, the date was February 25, 1942.",
+          "segment": 1706
+        },
+        {
+          "value": "1942-02-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "It took place on the early morning of February 25, 1942.",
+          "segment": 1716
         }
       ]
     },
@@ -234421,6 +234460,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On May 17, 2008, between 10:35 PM and 11:15 PM, two individuals observed, at low altitude in the cloudy sky, the dance of three glowing orbs with fusion and multiplication. This observation is very likely a confusion with the light projected onto clouds from a \"Sky R",
           "segment": "seg-77bc9db14bcd92776f8d78fa"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e1784ce8f2d9b57c9304d2c2",
+      "path": "France-GEIPAN/paired/cases/2008-05-01936/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-05-12",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On May 12, 2008, between 10:40 PM and 10:45 PM, a witness observed a bright light object crossing the sky from south to northeast. This white and very bright object moved quickly, making a curve in its trajectory. No noise was heard. After investigation and confirmat",
+          "segment": "seg-98a71a39911745a9f4aa1d69"
         }
       ]
     },
