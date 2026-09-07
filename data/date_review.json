@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T02:01:13Z",
+  "generatedAt": "2026-09-07T02:52:12Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "393a71000f391e67aab2933dfe2aa8c2cb73da14"
+    "revision": "073ef2036663e41c4897b48d682b13e8c48120b7"
   },
-  "documentsWithCandidates": 10010,
+  "documentsWithCandidates": 10014,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -16414,6 +16414,30 @@
           "method": "unclassified-mention",
           "evidence": "It showed that on December 5, 1955, Captain Ruppel's book was cleared by Security and Review.",
           "segment": 453
+        }
+      ]
+    },
+    {
+      "documentId": "doc-236f63f7cab1",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-09---Track-18---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1965-09-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "object on September 3, 1965, down near Damon, Texas.",
+          "segment": 457
+        },
+        {
+          "value": "1965-11-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Now, as soon as the great blackout happened on November 9, 1965, we were dead.",
+          "segment": 913
         }
       ]
     },
@@ -232016,6 +232040,21 @@
       ]
     },
     {
+      "documentId": "doc-ca98e2a35b9a00faa730d541",
+      "path": "France-GEIPAN/paired/cases/2008-09-09397/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-09-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: This observation on September 25, 2008 at 21:00 of a bright, large point moving across the sky from west to east in just a few minutes at the beginning of night suggests the passage of a large satellite. A check on the Calsky site indicates the passage of the Interna",
+          "segment": "seg-7112fa0d830590cad1ef11af"
+        }
+      ]
+    },
+    {
       "documentId": "doc-0537efcc02884d72fbfe19b9",
       "path": "France-GEIPAN/paired/cases/2008-11-01897/en/translation.txt",
       "candidates": [
@@ -233518,6 +233557,21 @@
           "method": "event-language",
           "evidence": "Description: On August 21, 2009, at 9:49 PM, a witness observed for three minutes in the sky an oval-shaped object equipped with a powerful white light beacon and small lights. Initially stationary, the object then flew in a straight line without any noise being heard. The witnes",
           "segment": "seg-48262f0f3b751eab694aade0"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-499a59450aa3eca75bc01970",
+      "path": "France-GEIPAN/paired/cases/2009-08-02450/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2009-08-05",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On the night of August 5, 2009, around 2 a.m., two individuals observed from their home a particularly bright circular object. While filming the phenomenon, the main witness noticed a very slow horizontal movement of the object. The astronomical configuration and a c",
+          "segment": "seg-af4701a15d9594630dbbe1ba"
         }
       ]
     },
@@ -237787,6 +237841,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On July 23, 2013, early in the morning, the witness observed a bright sphere moving slowly and silently above the crest of a nearby mountain. Astronomical verification and several email exchanges providing additional information led to the conclusion that it was a mi",
           "segment": "seg-466728291ba6a7a910525cfa"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4203660c8f647da391ccb8f5",
+      "path": "France-GEIPAN/paired/cases/2013-07-08505/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-07-27",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On July 27, 2013, at 11:47 PM, a couple observed the passage of a flickering bright object in the clear sky. Viewed through binoculars, the object was described as being round in shape, with regular flickering, and amber in color. No noise was heard. Approaching from",
+          "segment": "seg-db631b5881817da95009a08c"
         }
       ]
     },
