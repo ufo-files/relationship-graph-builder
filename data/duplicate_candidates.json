@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "c5837c2590ff079db43ccf328b24d58d189f9b8a"
+    "revision": "7ecc2ccae068afc8830795736e6a117e1272c5b1"
   },
-  "count": 241,
-  "totalCount": 241,
-  "shownCount": 241,
+  "count": 243,
+  "totalCount": 243,
+  "shownCount": 243,
   "candidates": [
     {
       "category": "organization",
@@ -287,8 +287,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 392,
-        "documentCount": 166
+        "mentions": 393,
+        "documentCount": 167
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -652,6 +652,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Committee Reports",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Committee Report",
+        "mentions": 11,
+        "documentCount": 2
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Charles Lindbergh",
@@ -799,8 +815,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Freeman",
-        "mentions": 10,
-        "documentCount": 9
+        "mentions": 11,
+        "documentCount": 10
       },
       "right": {
         "name": "Stanton Freedman",
@@ -1292,6 +1308,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "The Air Force Base",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Airforce Base",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Richard Clark",
@@ -1302,22 +1334,6 @@
         "name": "Richard Clarke",
         "mentions": 3,
         "documentCount": 2
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "The Air Force Base",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Airforce Base",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -3215,8 +3231,8 @@
       "category": "location",
       "left": {
         "name": "The Air Force Base",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
         "name": "Alr Force Base",
@@ -3672,6 +3688,22 @@
         "documentCount": 4
       },
       "similarity": 0.909,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Stephen Schwartz",
+        "mentions": 7,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Steven Schwartz",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.903,
       "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
