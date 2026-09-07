@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T19:29:39Z",
+  "generatedAt": "2026-09-07T20:09:20Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "af0287e00afd3a13dd0ad7a2147675b3e851ff4e"
+    "revision": "4a8bea7917c36383b8223e5dc07070d5c8cda761"
   },
-  "documentsWithCandidates": 10116,
+  "documentsWithCandidates": 10119,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -4640,6 +4640,21 @@
       ]
     },
     {
+      "documentId": "doc-35e022f61d72",
+      "path": "Archives-for-the-Unexplained/documents/2017-07-12---Inception-Radio-Network---UFO-Headline-News-Tuesday-July-11th-2017_ZNHeQiTiadk---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "hello it's Tuesday July 11 2017 you are",
+          "segment": 1
+        }
+      ]
+    },
+    {
       "documentId": "doc-d6858093c044",
       "path": "Archives-for-the-Unexplained/documents/2017-08-04---NASA-Goddard---Two-Weeks-in-the-Life-of-a-Sunspot_SungFXUsoqw---transcript-automated-.txt",
       "candidates": [
@@ -4684,6 +4699,21 @@
           "method": "unclassified-mention",
           "evidence": "the morning of September 8 2017 watch",
           "segment": 139
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c170bc3145c1",
+      "path": "Archives-for-the-Unexplained/documents/2017-09-27---Inception-Radio-Network---UFO-Headline-News-Tuesday-September-19th-2017_hET7w7XihV0---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "this sighting is September 16 2017 it",
+          "segment": 640
         }
       ]
     },
@@ -234811,6 +234841,21 @@
           "method": "event-language",
           "evidence": "Description: Two witnesses observed on March 15, 2008, from 10:20 PM to 10:30 PM, three successive silent passages of a glowing phenomenon described as a \"ball of fire.\" The witness description (shimmering ball), the spacing between observations, the movement consistent with the ",
           "segment": "seg-2b93dde820dc74891c275393"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-dc934fb03426d1bf77250688",
+      "path": "France-GEIPAN/paired/cases/2008-03-01794/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-03-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 10, 2008, an amateur photographer sent to the GEIPAN a high-quality image taken from his window in Paris, part of a series of 5 photos taken in rapid succession. The image shows an object with an elliptical, almost round shape, dark at the bottom and light a",
+          "segment": "seg-3bf984ddc09fdb72447a4a64"
         }
       ]
     },
