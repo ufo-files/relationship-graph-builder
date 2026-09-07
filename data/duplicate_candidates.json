@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "2adf02e8a92ab6450ae7969a5820d9783b1dca3b"
+    "revision": "89d4a16a2e75e2f9c3d3bbdab3dbf98a163e3ac5"
   },
-  "count": 238,
-  "totalCount": 238,
-  "shownCount": 238,
+  "count": 240,
+  "totalCount": 240,
+  "shownCount": 240,
   "candidates": [
     {
       "category": "organization",
@@ -95,8 +95,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 591,
-        "documentCount": 381
+        "mentions": 592,
+        "documentCount": 382
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -111,8 +111,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 591,
-        "documentCount": 381
+        "mentions": 592,
+        "documentCount": 382
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -319,8 +319,8 @@
       "category": "location",
       "left": {
         "name": "Holloman Air Force Base",
-        "mentions": 153,
-        "documentCount": 75
+        "mentions": 154,
+        "documentCount": 76
       },
       "right": {
         "name": "Hollman Air Force Base",
@@ -719,8 +719,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 591,
-        "documentCount": 381
+        "mentions": 592,
+        "documentCount": 382
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -735,8 +735,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 591,
-        "documentCount": 381
+        "mentions": 592,
+        "documentCount": 382
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -751,8 +751,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 591,
-        "documentCount": 381
+        "mentions": 592,
+        "documentCount": 382
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1199,8 +1199,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 151,
-        "documentCount": 107
+        "mentions": 152,
+        "documentCount": 108
       },
       "right": {
         "name": "Flying Saucer",
@@ -2543,8 +2543,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 189,
-        "documentCount": 113
+        "mentions": 193,
+        "documentCount": 114
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3006,6 +3006,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "National Institute of Standards",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "National Institute of Stand",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.931,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Aerorautical Systens Division",
         "mentions": 2,
         "documentCount": 2
@@ -3343,8 +3359,8 @@
       "category": "program",
       "left": {
         "name": "Project Mogul",
-        "mentions": 122,
-        "documentCount": 38
+        "mentions": 123,
+        "documentCount": 39
       },
       "right": {
         "name": "Project Mogui",
@@ -3630,12 +3646,12 @@
     {
       "category": "book",
       "left": {
-        "name": "Behind the fluing saucere",
-        "mentions": 1,
-        "documentCount": 1
+        "name": "Behind the Flying Saucers",
+        "mentions": 2,
+        "documentCount": 2
       },
       "right": {
-        "name": "Behind the Flying Saucers",
+        "name": "Behind the fluing saucere",
         "mentions": 1,
         "documentCount": 1
       },
@@ -3647,8 +3663,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 87,
-        "documentCount": 47
+        "mentions": 88,
+        "documentCount": 48
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -3798,6 +3814,22 @@
         "name": "Joe Stalin",
         "mentions": 4,
         "documentCount": 3
+      },
+      "similarity": 0.87,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Dan Goldin",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Daniel Goldin",
+        "mentions": 6,
+        "documentCount": 5
       },
       "similarity": 0.87,
       "reason": "similar person name",

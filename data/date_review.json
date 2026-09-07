@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T10:49:36Z",
+  "generatedAt": "2026-09-07T11:28:40Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "2adf02e8a92ab6450ae7969a5820d9783b1dca3b"
+    "revision": "89d4a16a2e75e2f9c3d3bbdab3dbf98a163e3ac5"
   },
-  "documentsWithCandidates": 10062,
+  "documentsWithCandidates": 10066,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -2078,6 +2078,30 @@
       ]
     },
     {
+      "documentId": "doc-7fcbe5cc4154",
+      "path": "Archives-for-the-Unexplained/documents/2006-05-07_Live-Science_The-Story-Behind-the-Alien-Autopsy-Hoax.txt",
+      "candidates": [
+        {
+          "value": "2006-04-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Britain's Manchester Evening News (April 6, 2006) termed it a hoax that \"fooled the world.\" Well, not exactly: Skeptical Inquirer",
+          "segment": 10
+        },
+        {
+          "value": "1995-08-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On August 28, 1995, footage of the so-called alien autopsy aired on Fox Television under the title \"Alien Autopsy",
+          "segment": 25
+        }
+      ]
+    },
+    {
       "documentId": "doc-4b59a6a4309f",
       "path": "Archives-for-the-Unexplained/documents/2006-05-08_Australian-Broadcasting-Corporation_UFO-sightings-a-lot-of-hot-air.txt",
       "candidates": [
@@ -2877,6 +2901,21 @@
           "kind": "administrative_date",
           "method": "context-exclusion",
           "evidence": "published 23 February 2009",
+          "segment": 8
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b18bd0d3e34c",
+      "path": "Archives-for-the-Unexplained/documents/2009-09-04_The-Guardian_District-9-is-lucky-to-have-avoided-a-close-encounter-with-the-Pentagon.txt",
+      "candidates": [
+        {
+          "value": "2009-09-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Fri 4 Sep 2009 09.14 BST",
           "segment": 8
         }
       ]
@@ -13753,6 +13792,93 @@
           "method": "unclassified-mention",
           "evidence": "died of natural causes on October 5, 1995.",
           "segment": 330
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a37a7692c20f",
+      "path": "Archives-for-the-Unexplained/documents/SearchLites---Vol-04-No-4.txt",
+      "candidates": [
+        {
+          "value": "1998-10-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 28 - October 2, 1998: International Volume 4 Number 4",
+          "segment": 9
+        },
+        {
+          "value": "1998-10-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 28 - October 7, 1998: IARU Region 2 Triennial",
+          "segment": 11
+        },
+        {
+          "value": "1998-10-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "* October 3, 1998: Western States Weak Signal Society",
+          "segment": 13
+        },
+        {
+          "value": "1998-10-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 3, 1998: Mid Atlantic VHF Conf., Horsham PA. \"What is The SETI League doing in my town",
+          "segment": 16
+        },
+        {
+          "value": "1998-11-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "* November 8, 1998: Martlesham Microwave Roundtable, member's time and commitment.",
+          "segment": 21
+        },
+        {
+          "value": "1999-03-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "* March 28, 1999: Annual Meeting, Little Ferry NJ. Our major activity, of course, is Project Argus, a",
+          "segment": 27
+        },
+        {
+          "value": "2000-03-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "* March 26, 2000: Annual Meeting, Little Ferry NJ. in our email discussion list.",
+          "segment": 34
+        },
+        {
+          "value": "1998-04-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Dr. Peter Schenkel (schenkel@ecnet.ec) BRISBANE, AU.., April 25, 1998 -- Noel C. Welstead",
+          "segment": 68
+        },
+        {
+          "value": "1977-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "There August 15, 1977 \"Wow!\" signal which made OSU SETI world",
+          "segment": 210
         }
       ]
     },
@@ -237715,6 +237841,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On September 28, 2011, around 8:25 PM, a driver and his passenger quickly observed several lights in the sky. This case of medium strangeness and average consistency (precise testimony, two non-independent witnesses) only allows for the hypothesis of luminous balloon",
           "segment": "seg-bfc27ccd4cc8005fd5e9b086"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1087c1a5bec5f296243c2d13",
+      "path": "France-GEIPAN/paired/cases/2011-09-08156/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-12-04",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: On December 4, 2011, the GEIPAN received by email a Land Questionnaire (LQ) from a witness of an orange light in the shape of a saucer observation on the night of September 24 to 25, 2011. As the witness contacted us nearly four months after the event, filing a repor",
+          "segment": "seg-9e3495fe19fc89ba5ad2b488"
         }
       ]
     },
