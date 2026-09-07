@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T21:27:22Z",
+  "generatedAt": "2026-09-07T22:15:08Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "395a095f0a886f3ab6107b354903d711c08bf518"
+    "revision": "e818a0b9494b2054f6babf2b9684a56885365549"
   },
-  "documentsWithCandidates": 10127,
+  "documentsWithCandidates": 10131,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -4549,6 +4549,30 @@
           "method": "unclassified-mention",
           "evidence": "On April 1, 2017, a Nor'easter hit New England, covering the region with snow.",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cea61aa1857b",
+      "path": "Archives-for-the-Unexplained/documents/2017-04-26---UFO-HUB---The-Story-of-the-Intruders-Continues-Debra-Kauble_9uC0eFE1GpY---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1983-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to be telling him about June 30 1983 so",
+          "segment": 1092
+        },
+        {
+          "value": "1983-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "around me and the June 30 1983",
+          "segment": 1264
         }
       ]
     },
@@ -32240,11 +32264,11 @@
         {
           "value": "1994-01-31",
           "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Jan 31, 1994 / 310000Z Jan 94",
-          "segment": 0
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date/DTG: Jan 31, 1994 / 310000Z Jan 94",
+          "segment": 1
         }
       ]
     },
@@ -199799,6 +199823,21 @@
       ]
     },
     {
+      "documentId": "doc-60e4ecfa21fa",
+      "path": "DPIArchive/documents/123805-letter-to-graham-bethune-to-stuart-nixon-8-12-70.txt",
+      "candidates": [
+        {
+          "value": "1970-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 12, 1970 TELEPHONE",
+          "segment": 1
+        }
+      ]
+    },
+    {
       "documentId": "doc-c66d4cc303b0",
       "path": "DPIArchive/documents/123809-graham-bethune-enclosures.txt",
       "candidates": [
@@ -239708,6 +239747,21 @@
       ]
     },
     {
+      "documentId": "doc-d830c130bfee6c891ad0817f",
+      "path": "France-GEIPAN/paired/cases/2011-07-02844/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-07-10",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: Several people from the Island of Pines (New Caledonia) reported what they observed on July 10, 2011, around 5:30 PM: a round-shaped object crossed the sky diagonally on a descending trajectory towards the sea. Several colors and a trail were noticed. No noise was he",
+          "segment": "seg-ee03620c4fb9396c19d6e98d"
+        }
+      ]
+    },
+    {
       "documentId": "doc-fa5ae698e6d2be732cbeaa0b",
       "path": "France-GEIPAN/paired/cases/2011-08-02792/en/translation.txt",
       "candidates": [
@@ -243184,6 +243238,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On June 8, 2015, at 2:30 AM, a witness observed through a roof window approximately 10 red-orange glowing points moving silently in a straight line across the night sky. The points gradually disappeared. Only one testimony was collected. The observation of red-orange",
           "segment": "seg-b13e6d79c5486de58646d8cc"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6a8afeda2a924581e83805eb",
+      "path": "France-GEIPAN/paired/cases/2015-07-09223/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Thursday, July 2, 2015, at 10:30 PM, several people observed the slow, silent north-south movement of a bright, orange-colored ball of light, which disappeared behind the clouds. Only one testimony was collected. The observation of a floating fireball in the sky f",
+          "segment": "seg-321b5c7cdecda129554f7369"
         }
       ]
     },
