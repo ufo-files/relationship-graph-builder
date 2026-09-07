@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T06:19:28Z",
+  "generatedAt": "2026-09-07T06:56:51Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "55202f6e16f53c8fdb11f7b73f19b2129de5b255"
+    "revision": "cc21d02936309e37e53ca2baf772d82680519129"
   },
-  "documentsWithCandidates": 10030,
+  "documentsWithCandidates": 10031,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -2515,6 +2515,21 @@
           "method": "unclassified-mention",
           "evidence": "September 10 1993 although the show is",
           "segment": 388
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e61a8888bc4a",
+      "path": "Archives-for-the-Unexplained/documents/2013-12-31---OpenMindsTV---Mysterious-and-Unusual-UFO-Sightings-and-Events-from-Alvin-Texas_uhmaWy62jmo---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2008-04-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "his cell phone on April 11 2008 I had my",
+          "segment": 36
         }
       ]
     },
@@ -194565,58 +194580,13 @@
       "path": "DPIArchive/documents/123584-witness-10939-info-from-son-may2023.txt",
       "candidates": [
         {
-          "value": "2023-05-21",
-          "precision": "day",
-          "confidence": 0.94,
-          "kind": "document_date",
-          "method": "document-header",
-          "evidence": "Date: May 21, 2023 at 8:32:26 PM",
-          "segment": 1
-        },
-        {
-          "value": "2023-05-21",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "On May 21, 2023, at 10:52 AM",
-          "segment": 2
-        },
-        {
-          "value": "2023-05-21",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Sent: Sunday, May 21, 2023 1:38 PM",
-          "segment": 3
-        },
-        {
-          "value": "2023-05-21",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "On May 21, 2023, at 11:14 AM.",
-          "segment": 5
-        },
-        {
-          "value": "2023-05-21",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Sent: Sundav, May 21, 2023 10:25 AM",
-          "segment": 6
-        },
-        {
           "value": "2023-05-20",
           "precision": "day",
           "confidence": 0.94,
           "kind": "document_date",
           "method": "document-header",
           "evidence": "Date: Sat, May 20, 2023 at 6:59 PM",
-          "segment": 10
+          "segment": 0
         }
       ]
     },
