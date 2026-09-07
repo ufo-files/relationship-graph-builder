@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "f4d1c14fe557f4f7cf4f211b45f524c270ce8566"
+    "revision": "9d903a0e873ea9c266273a3b7d8f58f33a69f9ff"
   },
   "count": 238,
   "totalCount": 238,
@@ -287,8 +287,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 387,
-        "documentCount": 163
+        "mentions": 388,
+        "documentCount": 164
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -948,8 +948,8 @@
       },
       "right": {
         "name": "Department of National Defence",
-        "mentions": 50,
-        "documentCount": 47
+        "mentions": 51,
+        "documentCount": 48
       },
       "similarity": 0.967,
       "reason": "similar name",
@@ -959,13 +959,13 @@
       "category": "government_agency",
       "left": {
         "name": "Department of National Defence",
-        "mentions": 50,
-        "documentCount": 47
+        "mentions": 51,
+        "documentCount": 48
       },
       "right": {
         "name": "DEPARTMENT OF NATIONAL DEPENCE",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.967,
       "reason": "similar name",
@@ -1183,8 +1183,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 250,
-        "documentCount": 72
+        "mentions": 251,
+        "documentCount": 73
       },
       "right": {
         "name": "Jacques Valle",
@@ -2844,6 +2844,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of National Defense",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "DEPARTMENT OF NATIONAL DEPENCE",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Robert Traylins",
@@ -2884,22 +2900,6 @@
       },
       "right": {
         "name": "Kirtland Airforce Base",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of National Defense",
-        "mentions": 5,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "DEPARTMENT OF NATIONAL DEPENCE",
         "mentions": 2,
         "documentCount": 2
       },

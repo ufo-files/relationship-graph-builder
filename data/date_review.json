@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T05:02:33Z",
+  "generatedAt": "2026-09-07T05:40:38Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "f4d1c14fe557f4f7cf4f211b45f524c270ce8566"
+    "revision": "9d903a0e873ea9c266273a3b7d8f58f33a69f9ff"
   },
-  "documentsWithCandidates": 10022,
+  "documentsWithCandidates": 10026,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1973,6 +1973,30 @@
       ]
     },
     {
+      "documentId": "doc-5f085fe301a3",
+      "path": "Archives-for-the-Unexplained/documents/2008-10-12_The-Sydney-Morning-Herald_30-years-on-UFO-mystery-still-vivid.txt",
+      "candidates": [
+        {
+          "value": "2008-10-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 12, 2008 — 12.00am",
+          "segment": 25
+        },
+        {
+          "value": "1978-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The now-retired air traffic controller was working the night shift at the Melbourne Flight Service Unit on Saturday, October 21, 1978, when the call came in at",
+          "segment": 31
+        }
+      ]
+    },
+    {
       "documentId": "doc-1eddf7018a5a",
       "path": "Archives-for-the-Unexplained/documents/2008-10-15_The-Guardian_Which-are-the-best-books-that-never-existed.txt",
       "candidates": [
@@ -2536,6 +2560,21 @@
           "method": "unclassified-mention",
           "evidence": "Thursday, August 14 2014, 3pm EDT, 7pm UTC",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6a4e83e13da9",
+      "path": "Archives-for-the-Unexplained/documents/2014-10-02---Podcast-UFO-Live-Shows---Randall-Nickerson-Interview-Ariel-School-UFO-Encounter-10-01-2014_QPJaPsPtl-M---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1994-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "now it happened on September 16 1994 so",
+          "segment": 68
         }
       ]
     },
@@ -3244,6 +3283,21 @@
           "method": "unclassified-mention",
           "evidence": "and that this dates to 7 July 1993 and",
           "segment": 404
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d6d5ec54cb38",
+      "path": "Archives-for-the-Unexplained/documents/2019-06-17---NASA-s-Marshall-Space-Flight-Center---Marshall-Remembers-Apollo-Jay-Foster_EBnZZw3Ko7c---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1960-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "employees and you work up July 1 1960 as",
+          "segment": 125
         }
       ]
     },
@@ -28766,11 +28820,11 @@
         {
           "value": "1985-01-28",
           "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Jan 28, 1985 / 280000Z Jan 85",
-          "segment": 0
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date/DTG: Jan 28, 1985 / 280000Z Jan 85",
+          "segment": 2
         }
       ]
     },
@@ -168776,7 +168830,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "peration established by President Iruman on September 24, 1947.",
+          "evidence": "Operation established by President Truman on September 24, 1947.",
           "segment": 1
         },
         {
@@ -168786,7 +168840,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Admiral Hillenkoetter, director of the CIA from May 1, 1947 until",
-          "segment": 82
+          "segment": 91
         },
         {
           "value": "1947-07-02",
@@ -168794,8 +168848,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Within 6 months of the Roswell crash on July 2, 1947 and the finding",
-          "segment": 91
+          "evidence": "within 6 months of the Roswell crash on July 2, 1947 and the finding",
+          "segment": 106
         },
         {
           "value": "1947-07-03",
@@ -168804,7 +168858,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Mexico on July 3, 1947, a great deal of reorganization of agencies",
-          "segment": 93
+          "segment": 108
         }
       ]
     },
@@ -256633,6 +256687,21 @@
           "method": "unclassified-mention",
           "evidence": "Well, we had just moved to Albuquerque, New Mexico on July 4, 1947. This was approximately the day before we went out on the planes of San Augustine with my Uncle Ted, my cousin Victor, my father, my brother Glenn, and myself.",
           "segment": 18
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2e5fd519172b",
+      "path": "National-Archives-of-Australia-UFO/documents/10491375/0228.txt",
+      "candidates": [
+        {
+          "value": "1978-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "VH-DSJ on 21 October 1978.",
+          "segment": 2
         }
       ]
     },
