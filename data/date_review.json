@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T00:11:38Z",
+  "generatedAt": "2026-09-07T00:49:38Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "6de9affe91aeb4e429f0125b229e16aed459de84"
+    "revision": "f2b02fa3a8c827380c05bc154c252b74c78ce0da"
   },
-  "documentsWithCandidates": 10004,
+  "documentsWithCandidates": 10006,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -2551,6 +2551,30 @@
           "method": "unclassified-mention",
           "evidence": "Thursday December 4, 2014 3pm EST, som UT, 9pm CET",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f7a408bf9c83",
+      "path": "Archives-for-the-Unexplained/documents/2015-01-27---NASA-s-Kennedy-Space-Center---Soil-Mapping-Spacecraft-Ready-for-Flight_cJCjVLEROVw---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2014-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Building 836 on July 23, 2014.",
+          "segment": 18
+        },
+        {
+          "value": "2014-08-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On August 4, 2014, the first stage moved out",
+          "segment": 22
         }
       ]
     },
@@ -239206,6 +239230,21 @@
           "method": "context-exclusion",
           "evidence": "Description: On April 17, 2020, at 9:15 PM, a witness, located in the heights of Nice, observed in the direction of Saint-Laurent-du-Var and Grasse. They saw several bright points in the sky. The witness then observed, for approximately 50 minutes, various shapes \"represented by ",
           "segment": "seg-38101857c287b4ea92e5b412"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1aada15458672a801a498628",
+      "path": "France-GEIPAN/paired/cases/2022-03-51335/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2022-03-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 23, 2022, at 10:08 PM, a resident of LACOUR-D’ARCENAY (21) observes the sky and hears a deep, humming noise. Suddenly, the object appears from the south, flying almost vertically over the witness's location, and continues in a northeasterly direction before ",
+          "segment": "seg-76068a53c1f28b3edddd5fb3"
         }
       ]
     },
