@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T08:12:31Z",
+  "generatedAt": "2026-09-07T08:51:56Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "1a96c536fa5dfa0a4617a8c179a9978a1d39976e"
+    "revision": "d5aca482132db644253e5d3c1d9bdcd30a4b7b7d"
   },
-  "documentsWithCandidates": 10041,
+  "documentsWithCandidates": 10048,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1451,6 +1451,30 @@
       ]
     },
     {
+      "documentId": "doc-0de86bcc0282",
+      "path": "Archives-for-the-Unexplained/documents/1995-00-00_Journal-of-American-History---Vol-82-No-2---Jacobs.txt",
+      "candidates": [
+        {
+          "value": "2015-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Downloaded from http://jah.oxfordjournals.org/ at Florida Atlantic University on July 24, 2015",
+          "segment": 16
+        },
+        {
+          "value": "2015-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Downloaded from http://jah.oxfordjournals.org/ at Florida Atlantic University on July 24, 2015",
+          "segment": 72
+        }
+      ]
+    },
+    {
       "documentId": "doc-37bbaa676f04",
       "path": "Archives-for-the-Unexplained/documents/1997-08-00_Bulletin-of-Science-Technology-and-Society---Vol-17-No-4.txt",
       "candidates": [
@@ -1951,6 +1975,39 @@
           "method": "unclassified-mention",
           "evidence": "Nov 17, 2004 • The speakers took",
           "segment": 79
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bfdf509e6a9d",
+      "path": "Archives-for-the-Unexplained/documents/2007-00-00_Journal-of-Personality-and-Social-Psychology---Vol-92-No-5---Laura-King.txt",
+      "candidates": [
+        {
+          "value": "2005-07-29",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Judgment under uncertainty: Heu- Received July 29, 2005",
+          "segment": 1255
+        },
+        {
+          "value": "2006-12-14",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "In D. J. Levitin (Ed.), Foundations of cognitive Revision received December 14, 2006",
+          "segment": 1256
+        },
+        {
+          "value": "2006-12-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Accepted December 20, 2006 䡲",
+          "segment": 1259
         }
       ]
     },
@@ -4546,6 +4603,21 @@
           "method": "unclassified-mention",
           "evidence": "this Monday May 29 2023 Fade to Black",
           "segment": 227
+        }
+      ]
+    },
+    {
+      "documentId": "doc-550775f34699",
+      "path": "Archives-for-the-Unexplained/documents/2023-05-29---Witness-Citizen---The-San-Diego-Flares-A-Texas-Sheriff-and-the-Purple-Healer-What-the-heck-is-that-_IdlcFZ_h-PQ---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1949-10-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to ride around 25 October 1949",
+          "segment": 1338
         }
       ]
     },
@@ -7295,6 +7367,21 @@
       ]
     },
     {
+      "documentId": "doc-23c4ddacc1a7",
+      "path": "Archives-for-the-Unexplained/documents/Bilk---no-061---1994-09.txt",
+      "candidates": [
+        {
+          "value": "1993-12-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the Inverness Courier, 14 Dec 1993 (it haooened in Oct 1993).",
+          "segment": 19
+        }
+      ]
+    },
+    {
       "documentId": "doc-3167b40665f8",
       "path": "Archives-for-the-Unexplained/documents/Bolide-25janvier2009_-21h22TU.txt",
       "candidates": [
@@ -8101,6 +8188,39 @@
           "method": "unclassified-mention",
           "evidence": "Subject: SI and H Experimentation, 9 May 1951",
           "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-05e9696eefec",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000190580.txt",
+      "candidates": [
+        {
+          "value": "1952-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "18 November 1952 (Tuesday",
+          "segment": 0
+        },
+        {
+          "value": "1952-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 18 November 1952, SI and H experimentation, was carried on in",
+          "segment": 1
+        },
+        {
+          "value": "1952-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In view of the success of the experiment of 28 October 1952 in",
+          "segment": 3
         }
       ]
     },
@@ -222815,6 +222935,21 @@
       ]
     },
     {
+      "documentId": "doc-147a8ebd9a76b68230e1ae78",
+      "path": "France-GEIPAN/paired/cases/1977-11-02670/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1977-11-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On November 19, 1977, at approximately 01:05, a motorist and his passenger observed a red-orange sphere in motion and approaching them. The driver stopped, and the phenomenon remained stationary in a field 1.5 meters above the ground and about 30 meters from the car.",
+          "segment": "seg-a453ae7e4b272356e75a36c9"
+        }
+      ]
+    },
+    {
       "documentId": "doc-b253a2464798c32e32b87023",
       "path": "France-GEIPAN/paired/cases/1977-12-00461/en/translation.txt",
       "candidates": [
@@ -231016,6 +231151,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On March 16, 2002, crews from several aircraft reported the very rapid passage of a green light with a trail, likely resulting from an atmospheric reentry.",
           "segment": "seg-a047f7a33ac0bea68539432e"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2e047a9397634ca9104a1efe",
+      "path": "France-GEIPAN/paired/cases/2002-04-01587/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2002-04-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On April 6, 2002, at 10:45 PM, several independent witnesses across multiple departments observed the very rapid fall of a fireball that made no noise. All witnesses indicate that the observation was in the eastern direction. This phenomenon was also reported by witn",
+          "segment": "seg-43b91800305d43d42553bda3"
         }
       ]
     },
