@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-06T23:28:48Z",
+  "generatedAt": "2026-09-07T00:11:38Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "985ad16f70c4d738eb25225fe2e988242c63fd2f"
+    "revision": "6de9affe91aeb4e429f0125b229e16aed459de84"
   },
-  "documentsWithCandidates": 9996,
+  "documentsWithCandidates": 10004,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1439,6 +1439,48 @@
       ]
     },
     {
+      "documentId": "doc-3c5ff8d66873",
+      "path": "Archives-for-the-Unexplained/documents/2006-11-19_SWI-swissinfo-ch_Closure-of-Mystery-Park-is-no-enigma.txt",
+      "candidates": [
+        {
+          "value": "2006-11-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 19, 2006 - 00:01",
+          "segment": 0
+        },
+        {
+          "value": "2006-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sep 8, 2006 • Entrepreneur Jakob",
+          "segment": 55
+        },
+        {
+          "value": "2006-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Aug 21, 2006 • On Monday it was",
+          "segment": 67
+        },
+        {
+          "value": "2004-11-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Nov 17, 2004 • The speakers took",
+          "segment": 79
+        }
+      ]
+    },
+    {
       "documentId": "doc-e22b13123738",
       "path": "Archives-for-the-Unexplained/documents/2007-02-22_The-Guardian_Could-we-have-hitched-a-ride-on-UFOs.txt",
       "candidates": [
@@ -1570,6 +1612,75 @@
           "method": "unclassified-mention",
           "evidence": "Wed 19 Sep 2007 15.55 BST",
           "segment": 9
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0bac123d73f2",
+      "path": "Archives-for-the-Unexplained/documents/2007-09-27_Space-com_Holloman-Air-Force-Base-Making-Air-and-Space-History.txt",
+      "candidates": [
+        {
+          "value": "2007-09-27",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "published September 27, 2007",
+          "segment": 8
+        },
+        {
+          "value": "1954-12-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "No. 1, he rocket-sledded his way into the record book on December 10, 1954 by reaching a velocity of 632 miles per hour.",
+          "segment": 31
+        },
+        {
+          "value": "1960-08-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On August 16, 1960, Kittinger departed in an open balloon gondola from an abandoned airstrip near Tularosa, northeast of",
+          "segment": 41
+        },
+        {
+          "value": "1961-01-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "For example, there's the January 31, 1961 liftoff of HAM, a three-year-old chimpanzee, from Cape Canaveral inside a Mercury-",
+          "segment": 53
+        },
+        {
+          "value": "1961-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Shepard became the first American into space on May 5, 1961.",
+          "segment": 58
+        },
+        {
+          "value": "1961-11-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "spin around Earth on November 29, 1961.",
+          "segment": 61
+        },
+        {
+          "value": "1962-02-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "orbit on February 20, 1962.",
+          "segment": 63
         }
       ]
     },
@@ -1933,6 +2044,21 @@
           "method": "unclassified-mention",
           "evidence": "Thu 8 Jan 2009 11.38 GMT",
           "segment": 10
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a1e1fb6cb24d",
+      "path": "Archives-for-the-Unexplained/documents/2009-02-19_Space-com_What-Finding-Alien-Life-Could-Mean-for-Earth.txt",
+      "candidates": [
+        {
+          "value": "2009-02-19",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "published 19 February 2009",
+          "segment": 8
         }
       ]
     },
@@ -3019,6 +3145,21 @@
           "method": "unclassified-mention",
           "evidence": "February 16 1965 placed into orbit a",
           "segment": 339
+        }
+      ]
+    },
+    {
+      "documentId": "doc-54869fcb9760",
+      "path": "Archives-for-the-Unexplained/documents/2018-06-18---New-Thinking-Allowed-with-Jeffrey-Mishlove---InPresence-0109-Conscious-Robots-Aboard-UFOs_-waVvIKKpPI---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2018-06-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "given [on June 8, 2018, in Las Vegas], by another",
+          "segment": 45
         }
       ]
     },
@@ -112652,17 +112793,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "January 16, 2009, Dahigren, Virginia Oral History Interview",
-          "segment": 9
-        },
-        {
-          "value": "2017-11-29",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Interview with Mary Lacey by Diane I. Putney Nov 29, 2017",
-          "segment": 29
+          "evidence": "January 16, 2009, Dahlgren, Virginia Oral History Interview",
+          "segment": 12
         }
       ]
     },
@@ -203991,31 +204123,13 @@
       "path": "DPIArchive/documents/124569-witness-10496-united-states-new-emails-february-28-2023.txt",
       "candidates": [
         {
-          "value": "2023-02-28",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Subject: Fwd: New customer message on February 28, 2023 at",
-          "segment": 0
-        },
-        {
-          "value": "2023-04-18",
-          "precision": "day",
-          "confidence": 0.94,
-          "kind": "document_date",
-          "method": "document-header",
-          "evidence": "Date: Apr 18, 2023 at 5:08:57 PM",
-          "segment": 1
-        },
-        {
           "value": "2023-04-17",
           "precision": "day",
           "confidence": 0.94,
           "kind": "document_date",
           "method": "document-header",
           "evidence": "Date: Mon, Apr 17, 2023 at 12:05 AM",
-          "segment": 3
+          "segment": 1
         },
         {
           "value": "2023-02-28",
@@ -204024,7 +204138,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Subject: Re: New customer message on February 28, 2023 at 12:44 pm",
-          "segment": 4
+          "segment": 2
         },
         {
           "value": "2023-04-14",
@@ -204033,7 +204147,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "On Fri, Apr 14, 2023 at 5:00 PM",
-          "segment": 9
+          "segment": 7
         },
         {
           "value": "2023-03-01",
@@ -204042,7 +204156,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "On Wed, Mar 1, 2023 at 4:05 PM",
-          "segment": 13
+          "segment": 11
         },
         {
           "value": "2023-03-01",
@@ -204051,7 +204165,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "On Wed, Mar 1, 2023 at 12:05 PM",
-          "segment": 22
+          "segment": 20
         },
         {
           "value": "2023-03-01",
@@ -204060,7 +204174,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "On Wed, Mar 1, 2023 at 1:00 PM",
-          "segment": 26
+          "segment": 24
         },
         {
           "value": "2023-03-01",
@@ -204068,8 +204182,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "On Wed, Mar 1, 2023 at 9:51 AM",
-          "segment": 33
+          "evidence": "On Wed, Mar 1, 2023 at 9:51 AM, r",
+          "segment": 32
         },
         {
           "value": "2023-02-28",
@@ -204077,8 +204191,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "On Tue, Feb 28, 2023 at 3:17 PM L",
-          "segment": 36
+          "evidence": "On Tue, Feb 28, 2023 at 3:17 PM",
+          "segment": 35
         },
         {
           "value": "2023-02-28",
@@ -204086,8 +204200,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "On Tue, Feb 28, 2023 at 1:03 PM, X",
-          "segment": 64
+          "evidence": "On Tue, Feb 28, 2023 at 1:03 PM",
+          "segment": 63
         }
       ]
     },
@@ -231803,6 +231917,21 @@
       ]
     },
     {
+      "documentId": "doc-0537efcc02884d72fbfe19b9",
+      "path": "France-GEIPAN/paired/cases/2008-11-01897/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-11-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On November 7, 2008, at 6:25 PM, a witness is waiting for his companion to go to a show. He steps outside to observe the sky and spots two unusual, fixed bright points located to the East. As his friend arrives, the points slowly fade out. The observation lasted for ",
+          "segment": "seg-6739e21792909058517a5a51"
+        }
+      ]
+    },
+    {
       "documentId": "doc-37e79d691b0f1e7176ec7af3",
       "path": "France-GEIPAN/paired/cases/2008-11-01933/en/translation.txt",
       "candidates": [
@@ -236075,6 +236204,21 @@
       ]
     },
     {
+      "documentId": "doc-99ed245f19ea9a08d366ba3f",
+      "path": "France-GEIPAN/paired/cases/2011-12-08177/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-12-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 25, 2011, between 6:35 and 6:40 PM, a motorist and his passenger observed in the sky a bright, stationary light performing swinging movements. Initially thinking it was a firework, the witness continued driving but then stopped to take photographs. Upon a",
+          "segment": "seg-becad1b832e02bc89fa0711f"
+        }
+      ]
+    },
+    {
       "documentId": "doc-908050eccc9e07315af8d989",
       "path": "France-GEIPAN/paired/cases/2011-12-08335/en/translation.txt",
       "candidates": [
@@ -237289,6 +237433,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On June 6, 2013, at 8:50 a.m., while walking in the street, a witness noticed the presence in a sunny sky of an oval, beige and gray object spinning on itself. No unusual noises were heard during the observation of the object, which remained stationary. Another perso",
           "segment": "seg-5c2aff1dcd92277f8c1633f3"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b89a35c81f4e6ae0819f01f3",
+      "path": "France-GEIPAN/paired/cases/2013-06-08466/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 1, 2013, at 12:02 AM, several people observed the silent passage of a dozen glowing yellow-orange orbs that appeared successively in the sky. The witness's description (very bright yellow-orange orbs moving slowly in the sky) perfectly matches Thai lanterns. ",
+          "segment": "seg-ed926db9eb4a0eae78d8def1"
         }
       ]
     },
@@ -238690,6 +238849,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On April 3, 2015, at 4:15 PM, a motorist and her two passengers were intrigued by the slow, silent, and low-altitude flight of an aircraft they did not recognize. The GEIPAN consulted military air traffic control regarding this observation; it turns out that on that ",
           "segment": "seg-45a32517b6dbb483521fa078"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2083b9cb4e9c315ddcf541f8",
+      "path": "France-GEIPAN/paired/cases/2015-05-09180/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-05-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Saturday, May 9, 2015, around 10:30 PM, a witness observed for 10 seconds the slow movement of an orange sphere in the night sky. The sphere lost intensity as it moved away. No other testimonies were collected. The observation of an orange ball crossing the sky in",
+          "segment": "seg-b6f2047edc3209801bceca63"
         }
       ]
     },
