@@ -1,12 +1,12 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T04:17:11Z",
+  "generatedAt": "2026-09-07T05:02:33Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "19e1abb6caa1e9f65600037c8572fba0e7f8d8ae"
+    "revision": "f4d1c14fe557f4f7cf4f211b45f524c270ce8566"
   },
   "documentsWithCandidates": 10022,
   "records": [
@@ -171290,20 +171290,11 @@
         {
           "value": "1990-11-17",
           "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "November 17 1990 document",
-          "segment": 46
-        },
-        {
-          "value": "1990-11-17",
-          "precision": "day",
           "confidence": 0.72,
           "kind": "referenced_document_date",
           "method": "dated-reference",
           "evidence": "Stamp dated 17 November 1990",
-          "segment": 47
+          "segment": 58
         }
       ]
     },
@@ -171581,20 +171572,11 @@
         {
           "value": "1990-11-17",
           "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "November 17 1990 document",
-          "segment": 47
-        },
-        {
-          "value": "1990-11-17",
-          "precision": "day",
           "confidence": 0.72,
           "kind": "referenced_document_date",
           "method": "dated-reference",
           "evidence": "Stamp dated 17 November 1990",
-          "segment": 48
+          "segment": 53
         }
       ]
     },
@@ -202090,21 +202072,6 @@
           "method": "unclassified-mention",
           "evidence": "Thu, 21 Dec 1995 17:15:18 -0800",
           "segment": 5
-        }
-      ]
-    },
-    {
-      "documentId": "doc-a2c014371e11",
-      "path": "DPIArchive/documents/124321-witness-10549-2.txt",
-      "candidates": [
-        {
-          "value": "1999-10-20",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Wednesday, October 20, 1999 CompuServe: DrSGreer",
-          "segment": 20
         }
       ]
     },
@@ -238783,6 +238750,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Sunday, June 8, 2014, between 1:00 PM and 2:00 PM, a witness observes and photographs a gigantic gray-blue circle around the sun. This observation case is typical of a halo phenomenon, which occurs under particular atmospheric conditions. See: Solar Halo. The phot",
           "segment": "seg-42c52eaa11affcb775bc331f"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ef72fb9b00316fa3d6aa54fc",
+      "path": "France-GEIPAN/paired/cases/2014-06-09122/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-06-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Monday, June 2, 2014, around 10:45 PM, three friends observed through a window a sphere of red-orange color passing at a constant speed in a clear sky. No noise was heard during the observation which lasted three to four minutes. This report of a bright light, app",
+          "segment": "seg-564bb199d95267fabf93d51d"
         }
       ]
     },
