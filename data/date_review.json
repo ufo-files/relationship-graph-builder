@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T10:10:23Z",
+  "generatedAt": "2026-09-07T10:49:36Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "aea8395e7960046b53c32f09a16cae0f63de4032"
+    "revision": "2adf02e8a92ab6450ae7969a5820d9783b1dca3b"
   },
-  "documentsWithCandidates": 10058,
+  "documentsWithCandidates": 10062,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1969,6 +1969,30 @@
           "method": "unclassified-mention",
           "evidence": "URL: https://www.coasttocoastam.com/alternate/amp/show/2005-09-27-show/",
           "segment": 19
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2fc852797ddc",
+      "path": "Archives-for-the-Unexplained/documents/2006-03-09_GIGAZINE_The-identity-of-Microsoft-s-Origami-was-still-Ultra-Mobile-PC.txt",
+      "candidates": [
+        {
+          "value": "2006-03-09",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "This article, originally posted in Japanese on 21:11 Mar 09, 2006, may contains some machine-translated parts.",
+          "segment": 1
+        },
+        {
+          "value": "2006-03-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mar 09, 2006 21:11:00 in Hardware, Posted by darkhorse_log",
+          "segment": 18
         }
       ]
     },
@@ -8361,6 +8385,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "SI Testing, 17 July 1951, (Polygraph Room #J).",
+          "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4137f62b9f4e",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000190574.txt",
+      "candidates": [
+        {
+          "value": "1951-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Subject: SI and H Experimentation, 5 July 1951",
           "segment": 1
         }
       ]
@@ -232634,6 +232673,30 @@
       ]
     },
     {
+      "documentId": "doc-692a8dbef91b9b44a1c37421",
+      "path": "France-GEIPAN/paired/cases/2007-09-01801/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2007-09-13",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On September 13, 2007, between 5:08 and 5:13 AM, a witness observed outside their home the north-south passage of two bright lights (white in color with red reflections) separated by approximately two degrees. No noise was heard during the observation. The described ",
+          "segment": "seg-925d9ef21ae31ce62613a071"
+        },
+        {
+          "value": "2007-09-11",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On September 13, 2007, between 5:08 and 5:13 AM, a witness observed outside their home the north-south passage of two bright lights (white in color with red reflections) separated by approximately two degrees. No noise was heard during the observation. The described ",
+          "segment": "seg-925d9ef21ae31ce62613a071"
+        }
+      ]
+    },
+    {
       "documentId": "doc-5eb4a561438c6466e1e6c626",
       "path": "France-GEIPAN/paired/cases/2007-09-01804/en/translation.txt",
       "candidates": [
@@ -239023,6 +239086,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On March 15, 2013, at 7:38 PM, a witness and his son were intrigued by the silent, zigzagging movement of a golden, round object in the sky. The witness's description (slowly advancing golden ball) suggests a Thai lantern. The wind direction, south (see Meteociel rep",
           "segment": "seg-dfd325a73349e1f95332f2be"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f34829a1c19b72655f2ccbe0",
+      "path": "France-GEIPAN/paired/cases/2013-03-08422/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-03-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 9, 2013, around 8:20 PM, a witness observed the silent and linear passage of approximately fifteen white glowing points across the sky. They disappeared, hidden by the landscape. The behavior of this series of luminous flying objects is perfectly consistent ",
+          "segment": "seg-d3e3af984a9fec0e081c7a9a"
         }
       ]
     },
