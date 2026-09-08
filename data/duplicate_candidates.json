@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "611c30223b6e7ef45d4675d3742df35f86daf4de"
+    "revision": "bfcf38a6deea3270a3e8e1b8201ce0ea52e613d8"
   },
-  "count": 251,
-  "totalCount": 251,
-  "shownCount": 251,
+  "count": 252,
+  "totalCount": 252,
+  "shownCount": 252,
   "candidates": [
     {
       "category": "organization",
@@ -335,8 +335,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 478,
-        "documentCount": 226
+        "mentions": 479,
+        "documentCount": 227
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -1199,8 +1199,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 266,
-        "documentCount": 174
+        "mentions": 267,
+        "documentCount": 175
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1215,8 +1215,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 155,
-        "documentCount": 110
+        "mentions": 156,
+        "documentCount": 111
       },
       "right": {
         "name": "Flying Saucer",
@@ -1231,8 +1231,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 122,
-        "documentCount": 75
+        "mentions": 123,
+        "documentCount": 76
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -2655,8 +2655,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 213,
-        "documentCount": 126
+        "mentions": 214,
+        "documentCount": 127
       },
       "right": {
         "name": "Stanton Freedman",
@@ -2918,6 +2918,22 @@
         "name": "Sol Foundation",
         "mentions": 46,
         "documentCount": 26
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Transport",
+        "mentions": 39,
+        "documentCount": 27
+      },
+      "right": {
+        "name": "Department of Tramport",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.933,
       "reason": "similar name",
