@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "f11b3bfb784b4f5e82130eb4f3aa4fe9fd352cf8"
+    "revision": "162a81b2a88317e5b33bd172336206c3b6ebcf2e"
   },
   "count": 252,
   "totalCount": 252,
@@ -3247,8 +3247,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 108,
-        "documentCount": 60
+        "mentions": 109,
+        "documentCount": 61
       },
       "right": {
         "name": "George Adamsky",
@@ -3519,8 +3519,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 108,
-        "documentCount": 60
+        "mentions": 109,
+        "documentCount": 61
       },
       "right": {
         "name": "Mr. George Adams",
@@ -3567,8 +3567,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Health",
-        "mentions": 18,
-        "documentCount": 11
+        "mentions": 19,
+        "documentCount": 12
       },
       "right": {
         "name": "Department of Earth",
@@ -3740,6 +3740,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of Cologne",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "University of Colo",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "PROJECT PLATO",
@@ -3749,22 +3765,6 @@
       "right": {
         "name": "Project PLUTO",
         "mentions": 3,
-        "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "University of Colo",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "University of Cologne",
-        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.923,
@@ -3919,8 +3919,8 @@
       "category": "person",
       "left": {
         "name": "Jane Goodall",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 5,
+        "documentCount": 4
       },
       "right": {
         "name": "James Goodall",
