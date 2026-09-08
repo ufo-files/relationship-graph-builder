@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-08T17:13:55Z",
+  "generatedAt": "2026-09-08T17:58:06Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "bfcf38a6deea3270a3e8e1b8201ce0ea52e613d8"
+    "revision": "f11b3bfb784b4f5e82130eb4f3aa4fe9fd352cf8"
   },
-  "documentsWithCandidates": 10250,
+  "documentsWithCandidates": 10252,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1561,6 +1561,21 @@
           "method": "unclassified-mention",
           "evidence": "Downloaded by [University of Sussex Library] at 17:34 02 February 2015",
           "segment": 84
+        }
+      ]
+    },
+    {
+      "documentId": "doc-342c3b566776",
+      "path": "Archives-for-the-Unexplained/documents/1984-06-00_Perceptual-and-Motor-Skills---Vol-58-No-3---Persinger.txt",
+      "candidates": [
+        {
+          "value": "1984-04-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Accepted April 24, 1984.",
+          "segment": 195
         }
       ]
     },
@@ -179801,8 +179816,17 @@
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "Prague Mada Fronta of 24 August 1965 carsies an article by",
-          "segment": 64
+          "evidence": "Prague Miada Fronts of 24 August 1965 carries an article by",
+          "segment": 71
+        },
+        {
+          "value": "1965-09-05",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "According to the .5 September 1965 issue of Rude Pravo, Czech-",
+          "segment": 128
         }
       ]
     },
@@ -244837,6 +244861,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: Testimony in 2014 of an old observation. On March 24, 2013, at 3 or 4 a.m., a driver observed in the black sky a static small amber-yellow light. He informed his two passengers when the light changed shape and moved quickly in all directions, approaching the vehicle,",
           "segment": "seg-a31980abfd652caef3957645"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3c21f4ac99345442a52738ff",
+      "path": "France-GEIPAN/paired/cases/2013-03-50062/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-03-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 26, 2013 at 10:00 PM, a driver was intrigued by the rapid east/west movement of a bright orange light framed by white points. Due to its strange and weak consistency (two witnesses, but only one report; photographs unusable), this case appears to be a probab",
+          "segment": "seg-03b669d08fc4d71d53018d64"
         }
       ]
     },

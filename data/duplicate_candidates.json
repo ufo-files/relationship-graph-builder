@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "bfcf38a6deea3270a3e8e1b8201ce0ea52e613d8"
+    "revision": "f11b3bfb784b4f5e82130eb4f3aa4fe9fd352cf8"
   },
   "count": 252,
   "totalCount": 252,
@@ -175,8 +175,8 @@
       "category": "location",
       "left": {
         "name": "White Sands Missile Range",
-        "mentions": 68,
-        "documentCount": 57
+        "mentions": 69,
+        "documentCount": 58
       },
       "right": {
         "name": "White Sands Missle Range",
@@ -1183,8 +1183,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 266,
-        "documentCount": 86
+        "mentions": 267,
+        "documentCount": 87
       },
       "right": {
         "name": "Jacques Valle",
@@ -1679,8 +1679,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 84,
-        "documentCount": 9
+        "mentions": 85,
+        "documentCount": 10
       },
       "right": {
         "name": "Kings Island",
@@ -1695,8 +1695,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 60,
-        "documentCount": 45
+        "mentions": 62,
+        "documentCount": 46
       },
       "right": {
         "name": "Northeastern University",
@@ -2655,8 +2655,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 214,
-        "documentCount": 127
+        "mentions": 217,
+        "documentCount": 128
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3564,6 +3564,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Health",
+        "mentions": 18,
+        "documentCount": 11
+      },
+      "right": {
+        "name": "Department of Earth",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Brandon Fugal",
@@ -3573,22 +3589,6 @@
       "right": {
         "name": "Brandon Fugle",
         "mentions": 4,
-        "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of Health",
-        "mentions": 17,
-        "documentCount": 10
-      },
-      "right": {
-        "name": "Department of Earth",
-        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.923,
