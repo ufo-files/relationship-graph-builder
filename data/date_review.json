@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-08T09:05:03Z",
+  "generatedAt": "2026-09-08T09:47:53Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "267aea8ed272899f6ec22e2ee63e07df053baadc"
+    "revision": "b058a2dac10785036db145331878a3e6d5f4d5ee"
   },
-  "documentsWithCandidates": 10181,
+  "documentsWithCandidates": 10183,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -241919,6 +241919,21 @@
       ]
     },
     {
+      "documentId": "doc-270cf6cdbbd3f7dfb0c8a6b6",
+      "path": "France-GEIPAN/paired/cases/2012-08-08303/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-08-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: A witness is intrigued by an observation made on August 22, 2012 at 10:19 PM. He observed the passage of a bright point that, after an initial straight trajectory, makes jerky movements from right to left before disappearing. The witness's description (appearance and",
+          "segment": "seg-2eb6c5f4d25b86b962c96f9a"
+        }
+      ]
+    },
+    {
       "documentId": "doc-a59fb6eae71a8998bb1fae2f",
       "path": "France-GEIPAN/paired/cases/2012-08-08304/en/translation.txt",
       "candidates": [
@@ -242584,6 +242599,21 @@
           "method": "event-language",
           "evidence": "Description: On March 31, 2013, at 5:54 PM, a witness, while driving, observed above a field a black, faceted diamond-shaped object spinning. No wind was perceptible, and the sky was overcast. No other testimonies were collected. A field investigation was conducted with the witne",
           "segment": "seg-d475855b85be1415d38a1b9e"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a4739e424c374649591eceb3",
+      "path": "France-GEIPAN/paired/cases/2013-03-09051/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: Testimony in 2014 of an old observation. On March 24, 2013, at 3 or 4 a.m., a driver observed in the black sky a static small amber-yellow light. He informed his two passengers when the light changed shape and moved quickly in all directions, approaching the vehicle,",
+          "segment": "seg-a31980abfd652caef3957645"
         }
       ]
     },
