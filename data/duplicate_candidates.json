@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "061f62e5124d398f78c3ebbdbab959f80ff5ea6f"
+    "revision": "1af84438d0a19fe45f5ee1cb7f36885c18df96dc"
   },
-  "count": 252,
-  "totalCount": 252,
-  "shownCount": 252,
+  "count": 253,
+  "totalCount": 253,
+  "shownCount": 253,
   "candidates": [
     {
       "category": "organization",
@@ -799,8 +799,8 @@
       "category": "person",
       "left": {
         "name": "Michael Shermer",
-        "mentions": 37,
-        "documentCount": 28
+        "mentions": 38,
+        "documentCount": 29
       },
       "right": {
         "name": "Michael Schermer",
@@ -1710,14 +1710,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Frank Manor",
-        "mentions": 11,
-        "documentCount": 5
+        "name": "John Edward",
+        "mentions": 16,
+        "documentCount": 10
       },
       "right": {
-        "name": "Frank Mannor",
-        "mentions": 8,
-        "documentCount": 5
+        "name": "John Edwards",
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -1726,14 +1726,14 @@
     {
       "category": "person",
       "left": {
-        "name": "John Edward",
-        "mentions": 15,
-        "documentCount": 9
+        "name": "Frank Manor",
+        "mentions": 11,
+        "documentCount": 5
       },
       "right": {
-        "name": "John Edwards",
-        "mentions": 4,
-        "documentCount": 3
+        "name": "Frank Mannor",
+        "mentions": 8,
+        "documentCount": 5
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -3925,6 +3925,22 @@
       "right": {
         "name": "James Goodall",
         "mentions": 9,
+        "documentCount": 6
+      },
+      "similarity": 0.88,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Stephen Jones",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Steven Jones",
+        "mentions": 6,
         "documentCount": 6
       },
       "similarity": 0.88,

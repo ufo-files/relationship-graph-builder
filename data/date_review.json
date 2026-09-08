@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-08T19:29:54Z",
+  "generatedAt": "2026-09-08T20:11:47Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "061f62e5124d398f78c3ebbdbab959f80ff5ea6f"
+    "revision": "1af84438d0a19fe45f5ee1cb7f36885c18df96dc"
   },
-  "documentsWithCandidates": 10262,
+  "documentsWithCandidates": 10264,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -5971,6 +5971,30 @@
           "method": "context-exclusion",
           "evidence": "published on October 12 2018 so it's",
           "segment": 797
+        }
+      ]
+    },
+    {
+      "documentId": "doc-90b0d14f1c05",
+      "path": "Archives-for-the-Unexplained/documents/2019-01-13---skepticzonepodcast---The-Skeptic-Zone-534---13.January.2019_-uK0jSWX9f0---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2018-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2011 on 24 July 2018 a portfolio of 104",
+          "segment": 341
+        },
+        {
+          "value": "2018-10-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on 1 October 2018 the TGA made a new",
+          "segment": 368
         }
       ]
     },
@@ -16333,6 +16357,57 @@
           "method": "unclassified-mention",
           "evidence": "Your parents got you hooked on food December 14, 2002",
           "segment": 7
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f372d02e9102",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-17-No-03---2003.txt",
+      "candidates": [
+        {
+          "value": "2003-03-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 17 March 2003 Number 3 http://www.ntskeptics.org",
+          "segment": 0
+        },
+        {
+          "value": "2003-01-27",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "One of India’s major weeklies (India Today, January 27, 2003) published that in Saturday, March 8, 2003 at 2:00pm",
+          "segment": 7
+        },
+        {
+          "value": "2003-03-08",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "One of India’s major weeklies (India Today, January 27, 2003) published that in Saturday, March 8, 2003 at 2:00pm",
+          "segment": 7
+        },
+        {
+          "value": "2003-01-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 2, 2003, a story broke out in Andhra Pradesh (a Southern state in the Indian check our Web site at",
+          "segment": 29
+        },
+        {
+          "value": "2003-03-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, 22 March 2003, at 7:30 p.m. ating it. His 3-D nuts optical illusion was quite a hit.",
+          "segment": 173
         }
       ]
     },
