@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-08T21:35:16Z",
+  "generatedAt": "2026-09-08T22:17:51Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "4ad091f7bdf39dd341386d6e8a748f734bc862a1"
+    "revision": "c162239b6788502936f95d0a9433b61886cd5391"
   },
-  "documentsWithCandidates": 10269,
+  "documentsWithCandidates": 10271,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1654,6 +1654,21 @@
           "method": "unclassified-mention",
           "evidence": "Downloaded from bst.sagepub.com at NORTH DAKOTA STATE UNIV LIB on June 16, 2015",
           "segment": 54
+        }
+      ]
+    },
+    {
+      "documentId": "doc-701c9e87c337",
+      "path": "Archives-for-the-Unexplained/documents/1997-09-00_Personality-and-Individual-Differences---Vol-23-No-3---Chequers.txt",
+      "candidates": [
+        {
+          "value": "1996-12-23",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Received 23 December 1996",
+          "segment": 10
         }
       ]
     },
@@ -246196,6 +246211,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On November 23, 2013, at 6:45 PM, an individual observed for 15 seconds the silent, straight-line passage across a cloudy sky of a very bright, round object of yellow-orange color. Traveling on a west/southwest trajectory, the phenomenon was quickly obscured by the a",
           "segment": "seg-4b0712061df660f3e1d79083"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-452a8721fba550dfd1b6bda5",
+      "path": "France-GEIPAN/paired/cases/2013-11-08647/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-11-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Tuesday, November 26, 2013, around 5:30 PM, a witness is intrigued by the presence in the sky of lights with a particular shape. The phenomenon of elongated shapes, apparently stationary in the setting sky (see witness photo), clearly resembles illuminated airplan",
+          "segment": "seg-d03b5c0e83b8b252f0435cf3"
         }
       ]
     },
