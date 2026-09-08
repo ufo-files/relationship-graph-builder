@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-08T02:21:23Z",
+  "generatedAt": "2026-09-08T03:03:28Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "455887a38ec02b7668e414fa17c3f51deec04105"
+    "revision": "fbd8be04f21b3755cfb7dbaf73e47f581677dbdb"
   },
-  "documentsWithCandidates": 10153,
+  "documentsWithCandidates": 10156,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -2839,6 +2839,21 @@
           "method": "context-exclusion",
           "evidence": "On July 8, 1947, a local military office issued a press release saying that pieces of a “crashed disk” were recovered.",
           "segment": 26
+        }
+      ]
+    },
+    {
+      "documentId": "doc-61d7dc0736ca",
+      "path": "Archives-for-the-Unexplained/documents/2007-07-23_Trend-Hunter_Personal-UFOs.txt",
+      "candidates": [
+        {
+          "value": "2007-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Jeremy Gutsche — July 23, 2007 — Autos",
+          "segment": 2
         }
       ]
     },
@@ -230783,6 +230798,21 @@
       ]
     },
     {
+      "documentId": "doc-92b6980dac70cdd7df70938b",
+      "path": "France-GEIPAN/paired/cases/1989-05-01176/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1989-05-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On May 30, 1989, around 11:15 PM, three gamekeepers on patrol observed three lights emitting very bright flashes at very close intervals. After approximately twenty seconds of immobility, these three lights ascended vertically at a very high speed, performing zigzags",
+          "segment": "seg-408a886c678547b8e6a0b442"
+        }
+      ]
+    },
+    {
       "documentId": "doc-bf680edc8b36aecd95131b75",
       "path": "France-GEIPAN/paired/cases/1989-06-01177/en/translation.txt",
       "candidates": [
@@ -243652,6 +243682,21 @@
           "method": "event-language",
           "evidence": "Description: On May 25, 2015, at 7:58 PM, a witness observed in the sky a dark phenomenon composed of 6 lights arranged in a circle. Only one testimony was collected. This observation report is particularly concise, the geographical references are imprecise, the narrative is very",
           "segment": "seg-c98e856845e6293311d8c7f5"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6652f61375d00c06bba230bd",
+      "path": "France-GEIPAN/paired/cases/2015-05-09185/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-05-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Saturday, May 23, 2015, between 11:00 PM and 11:15 PM, two individuals observed for approximately 5 minutes the swift and silent passage of a very bright, orange object in the sky. A few minutes later, a second object with the same characteristics as the first was",
+          "segment": "seg-e367a909da57bd480c52d141"
         }
       ]
     },
