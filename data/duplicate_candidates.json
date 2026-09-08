@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "1af84438d0a19fe45f5ee1cb7f36885c18df96dc"
+    "revision": "f391affa94f68363317b1f7544a8230148b5d6a0"
   },
   "count": 253,
   "totalCount": 253,
@@ -1231,7 +1231,7 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 123,
+        "mentions": 124,
         "documentCount": 76
       },
       "right": {
@@ -3324,6 +3324,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Timothy Beckley",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Timothy Becky",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Thule Air Base",
@@ -3333,22 +3349,6 @@
       "right": {
         "name": "Thale Air Base",
         "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Timothy Beckley",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Timothy Becky",
-        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.929,
