@@ -156,7 +156,21 @@ test("Programs requires a reviewed disposition for every corpus candidate and da
 
   assert.equal(result.corpusProgramCount, corpusEntities.length);
   assert.equal(result.reviewedEntityCount, corpusEntities.length);
-  assert.equal(result.excludedEntityCount, context.reviewedFixture.entityReviews.length);
+  assert.equal(
+    result.excludedEntityCount,
+    context.reviewedFixture.entityReviews.filter(review => corpusEntities.some(entity => entity.id === review.entityId)).length
+  );
+  const staleReviewFixture = structuredClone(context.reviewedFixture);
+  staleReviewFixture.entityReviews.push({
+    entityId: "ent-retained-historical-review",
+    name: "Retained historical review",
+    disposition: "not_program",
+    rationale: "Retained review records do not count as current corpus candidates.",
+    sources: [{ title: "UFO Files review record", url: "https://github.com/ufo-files/relationship-graph-builder" }]
+  });
+  context.staleReviewFixture = staleReviewFixture;
+  const staleReviewResult = JSON.parse(vm.runInContext(`JSON.stringify(programCatalogWithCorpus(staleReviewFixture, catalogFixture))`, context));
+  assert.equal(staleReviewResult.excludedEntityCount, result.excludedEntityCount);
   assert.deepEqual(JSON.parse(vm.runInContext(`JSON.stringify(validateProgramCatalog(reviewedFixture))`, context)), []);
   assert.ok(corpusEntities.every(entity => reviewedEntityIds.has(entity.id)));
   assert.ok(result.programs.every(program => program.startDate && program.startPrecision));
