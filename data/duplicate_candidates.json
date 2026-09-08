@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a3895ff2a6e837cf79f10510c5a4dfeaf443347b"
+    "revision": "d80f724b00487ec09ab71a70bbae1903b7c7d4ab"
   },
-  "count": 246,
-  "totalCount": 246,
-  "shownCount": 246,
+  "count": 247,
+  "totalCount": 247,
+  "shownCount": 247,
   "candidates": [
     {
       "category": "organization",
@@ -287,8 +287,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 394,
-        "documentCount": 168
+        "mentions": 395,
+        "documentCount": 169
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1055,8 +1055,8 @@
       "category": "location",
       "left": {
         "name": "White Mountains",
-        "mentions": 24,
-        "documentCount": 18
+        "mentions": 25,
+        "documentCount": 19
       },
       "right": {
         "name": "White Mountain",
@@ -1983,13 +1983,13 @@
       "category": "organization",
       "left": {
         "name": "University of Kansas",
-        "mentions": 7,
-        "documentCount": 6
+        "mentions": 8,
+        "documentCount": 7
       },
       "right": {
         "name": "University of Arkansas",
-        "mentions": 8,
-        "documentCount": 8
+        "mentions": 9,
+        "documentCount": 9
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -3692,6 +3692,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "FMS Foundation Newsletter July",
+        "mentions": 28,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "FMS Foundation Newsletter January",
+        "mentions": 28,
+        "documentCount": 2
+      },
+      "similarity": 0.921,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Joint Intelligence Bureau",
@@ -3919,8 +3935,8 @@
       "category": "person",
       "left": {
         "name": "Jean Chapman",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "right": {
         "name": "Ken Chapman",
