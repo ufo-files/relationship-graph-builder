@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-08T18:38:05Z",
+  "generatedAt": "2026-09-08T19:29:54Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "162a81b2a88317e5b33bd172336206c3b6ebcf2e"
+    "revision": "061f62e5124d398f78c3ebbdbab959f80ff5ea6f"
   },
-  "documentsWithCandidates": 10258,
+  "documentsWithCandidates": 10262,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -3416,6 +3416,21 @@
       ]
     },
     {
+      "documentId": "doc-7bfb8e086a5f",
+      "path": "Archives-for-the-Unexplained/documents/2008-09-19_Guitar-World_Michael-Schenker-Brick-By-Brick.txt",
+      "candidates": [
+        {
+          "value": "2008-09-19",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "published 19 September 2008",
+          "segment": 10
+        }
+      ]
+    },
+    {
       "documentId": "doc-c4ad359aa761",
       "path": "Archives-for-the-Unexplained/documents/2008-09-30_BBC_Southern-Counties-Places-in-Sussex-and-Surrey-The-lights-in-the-sky.txt",
       "candidates": [
@@ -6238,6 +6253,21 @@
           "method": "unclassified-mention",
           "evidence": "TG APS 2009-07-14 211246 UTC-07:00",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-808fb3551465",
+      "path": "Archives-for-the-Unexplained/documents/2022-02-17---NASA-Jet-Propulsion-Laboratory---Roving-with-Perseverance-Findings-from-One-Year-on-Mars-Live-Public-Talk-_-IAcwLYYFGk---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2021-02-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of the last year was February 18 2021 so",
+          "segment": 141
         }
       ]
     },
@@ -170690,8 +170720,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "›Date: Tue, 3 Nov 1998 13:57:10 ~0800",
-          "segment": 5
+          "evidence": ">Date: Tue, 3 Nov 1998 13:57:10 -0800",
+          "segment": 4
         },
         {
           "value": "1998-11-03",
@@ -170699,8 +170729,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "›Tuesday, November 03, 1998",
-          "segment": 12
+          "evidence": ">Tuesday, November 03, 1998",
+          "segment": 10
         }
       ]
     },
@@ -183168,7 +183198,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Wednesday, March 6, 1996",
-          "segment": 6
+          "segment": 12
         }
       ]
     },
@@ -229298,6 +229328,21 @@
       ]
     },
     {
+      "documentId": "doc-63b0c69398676cb53d331d74",
+      "path": "France-GEIPAN/paired/cases/1978-11-00565/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1978-11-08",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On the morning of November 8, 1978, several witnesses in different departments observed the rapid passage in the sky of a luminous phenomenon. According to the descriptions of the witnesses, this object was followed by a colored trail in the sky and moved according t",
+          "segment": "seg-08f47439b350297c52329b31"
+        }
+      ]
+    },
+    {
       "documentId": "doc-9aa015742e56fba513928b51",
       "path": "France-GEIPAN/paired/cases/1978-11-00567/en/translation.txt",
       "candidates": [
@@ -244132,6 +244177,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On July 14, 2012, at 10:50 PM, during communal festivities and before the fireworks began, a witness was intrigued by the silent passage from East to West of an orange light. The appearance of the object (orange light halo), its mode of movement according to the stro",
           "segment": "seg-20d5ed64a0b1e6f0222d2adf"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1766013d9398d13feec64a77",
+      "path": "France-GEIPAN/paired/cases/2012-07-08432/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On July 14, 2012, around midnight, a driver was intrigued by the silent movement across the sky of three white lights that were quickly hidden by the landscape. The witness reported this observation in 2013, as well as another observation made seven years prior. The ",
+          "segment": "seg-17910d62ecd76681bbca644e"
         }
       ]
     },
