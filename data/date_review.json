@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-08T05:59:47Z",
+  "generatedAt": "2026-09-08T06:45:36Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "21ab33db04900316cb4ec7ac56845f9ae203d4f8"
+    "revision": "cdc86d4a62344dc915b065cff20ef199a0b3867f"
   },
-  "documentsWithCandidates": 10168,
+  "documentsWithCandidates": 10169,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1471,6 +1471,21 @@
           "method": "unclassified-mention",
           "evidence": "Missile, HQs Pacific Missile Test Center, Vol. 31, No. 14, April 7, 1978.",
           "segment": 733
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ad6f9891179a",
+      "path": "Archives-for-the-Unexplained/documents/1969-11-00_Icarus---Vol-11-No-3---Peter-M-Millman.txt",
+      "candidates": [
+        {
+          "value": "1968-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "19th Congress, 2nd Session, July 29, 1968.",
+          "segment": 20
         }
       ]
     },
