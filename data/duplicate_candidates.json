@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d80f724b00487ec09ab71a70bbae1903b7c7d4ab"
+    "revision": "9f81de4edda9b36c6f71a2399e58453570f3d9d7"
   },
   "count": 247,
   "totalCount": 247,
@@ -351,8 +351,8 @@
       "category": "location",
       "left": {
         "name": "MacDill Air Force Base",
-        "mentions": 182,
-        "documentCount": 94
+        "mentions": 184,
+        "documentCount": 95
       },
       "right": {
         "name": "Macdill Airforce Base",
@@ -639,8 +639,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of Scientific Intelligence",
-        "mentions": 16,
-        "documentCount": 12
+        "mentions": 17,
+        "documentCount": 13
       },
       "right": {
         "name": "Office of Scientific Intalligence",
@@ -1468,6 +1468,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "George Noory",
+        "mentions": 18,
+        "documentCount": 15
+      },
+      "right": {
+        "name": "George Noorey",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Marin County",
@@ -1478,22 +1494,6 @@
         "name": "Marion County",
         "mentions": 7,
         "documentCount": 7
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "George Noory",
-        "mentions": 17,
-        "documentCount": 14
-      },
-      "right": {
-        "name": "George Noorey",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2607,8 +2607,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 208,
-        "documentCount": 121
+        "mentions": 209,
+        "documentCount": 122
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3183,8 +3183,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 104,
-        "documentCount": 57
+        "mentions": 106,
+        "documentCount": 58
       },
       "right": {
         "name": "George Adamsky",
@@ -3439,8 +3439,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 104,
-        "documentCount": 57
+        "mentions": 106,
+        "documentCount": 58
       },
       "right": {
         "name": "Mr. George Adams",
@@ -3455,8 +3455,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 69,
-        "documentCount": 56
+        "mentions": 70,
+        "documentCount": 57
       },
       "right": {
         "name": "Mohave Desert",
