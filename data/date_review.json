@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-07T23:35:49Z",
+  "generatedAt": "2026-09-08T00:17:39Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "59665c59e8d915744894265c17e5a6f507e4aa86"
+    "revision": "5d9994c4be2be9f4348106357d0b016f71eede53"
   },
-  "documentsWithCandidates": 10138,
+  "documentsWithCandidates": 10142,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -4841,6 +4841,30 @@
       ]
     },
     {
+      "documentId": "doc-4f2ff75086ac",
+      "path": "Archives-for-the-Unexplained/documents/2018-01-22---Inception-Radio-Network---UFO-Headline-News-Friday-January-19th-2018_tfp96-FCmx8---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Idaho this occurred on January 14 2017",
+          "segment": 701
+        },
+        {
+          "value": "2018-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "this happened January 14 2018 in brief",
+          "segment": 794
+        }
+      ]
+    },
+    {
       "documentId": "doc-a1eda1284aa9",
       "path": "Archives-for-the-Unexplained/documents/2018-04-20---NASA-Jet-Propulsion-Laboratory---NASA-s-NEOWISE-Four-Years-of-Asteroid-and-Comet-Data_1zpXL6fYafE---transcript-automated-.txt",
       "candidates": [
@@ -8947,6 +8971,21 @@
           "method": "unclassified-mention",
           "evidence": "23 April 1953 from the DOX to tha D0/2, and the astersion of",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-98bb4e618f07",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000021997.txt",
+      "candidates": [
+        {
+          "value": "1969-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "study was undertaken on June 1, 1969, in which several individuals",
+          "segment": 65
         }
       ]
     },
@@ -241748,6 +241787,21 @@
       ]
     },
     {
+      "documentId": "doc-e142ce1f276526fe4b53faf5",
+      "path": "France-GEIPAN/paired/cases/2013-05-08540/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-05-11",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: On May 11, 2013, around midnight, a driver observes the silent movement of several glowing orange orbs in the sky. The witness reports a low-altitude passage beneath the clouds, following a straight trajectory towards Marcais, northeast of Le Chatelet. The witness to",
+          "segment": "seg-593ee514515e5860d7535d5a"
+        }
+      ]
+    },
+    {
       "documentId": "doc-1fba9633d860f9886576f2b7",
       "path": "France-GEIPAN/paired/cases/2013-06-08462/en/translation.txt",
       "candidates": [
@@ -242446,6 +242500,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On October 25, 2013, at 8:00 PM, two individuals observed a fixed, bright white point in the sky. In the southwest direction at the time of observation, the planet Venus, particularly bright at that time (magnitude -5, its maximum), was noted, in conjunction with a v",
           "segment": "seg-9bf5ff1d48a99e16c0f3048c"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7d6af61cb5f7e6ca364e7c72",
+      "path": "France-GEIPAN/paired/cases/2013-10-08594/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-10-27",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: During a fair on October 27, 2013, a witness observed and photographed a black object moving very slowly under the clouds. Several people then observed the phenomenon, but only one testimony was collected. The witness described the object as: a black to gray, oval ob",
+          "segment": "seg-201cf3328013e533e39f99d9"
         }
       ]
     },
