@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-09T05:33:46Z",
+  "generatedAt": "2026-09-09T06:22:46Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9d549e0c4fdd029bbe05674fd51705c21952922f"
+    "revision": "23dfbe15ed1a1da8ea1f03faab252c4236980701"
   },
-  "documentsWithCandidates": 10288,
+  "documentsWithCandidates": 10289,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9904,6 +9904,21 @@
           "method": "unclassified-mention",
           "evidence": "Burdens,\" New York Times, September 6, 1992, p.",
           "segment": 94
+        }
+      ]
+    },
+    {
+      "documentId": "doc-86892db8fee0",
+      "path": "Archives-for-the-Unexplained/documents/Cincinnati-Skeptic---Vol-02-No-03---1993.txt",
+      "candidates": [
+        {
+          "value": "1992-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Executive Council Adopts Guidelines: On December 12, 1992, the Executive Council adopted",
+          "segment": 54
         }
       ]
     },
