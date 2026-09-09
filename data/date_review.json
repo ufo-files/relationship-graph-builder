@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-09T18:03:45Z",
+  "generatedAt": "2026-09-09T19:03:12Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "b13c1b5aa9375d8e5341077e35fe40922bdd2895"
+    "revision": "79f1c4b9038aa1d98d8cd82f80ee366240832bfd"
   },
-  "documentsWithCandidates": 10320,
+  "documentsWithCandidates": 10321,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7021,6 +7021,21 @@
           "method": "unclassified-mention",
           "evidence": "is Friday October 26 2008 we are back to",
           "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b584bc2c4d02",
+      "path": "Archives-for-the-Unexplained/documents/2018-11-21---Nyxx-Media---Special-Thoughts-2-Is-Mark-Zuckerberg-Too-Powerful-_ANnw6vOzDTg---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1979-08-06",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "goth and August 6 1979 is the release",
+          "segment": 139
         }
       ]
     },
@@ -177806,7 +177821,7 @@
           "confidence": 0.72,
           "kind": "referenced_document_date",
           "method": "dated-reference",
-          "evidence": "Letter Iron Icoa Davidson, dated 3 July 1958",
+          "evidence": "Letter from Leon Davidson, dated 3 July 1958",
           "segment": 1
         }
       ]
