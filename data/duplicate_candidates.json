@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5b596df16f1399fd00d0f714a24ce3e66b920a8c"
+    "revision": "494834929c94e3615a0af0ce33556999650d9b5c"
   },
   "count": 255,
   "totalCount": 255,
@@ -1247,8 +1247,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 90,
-        "documentCount": 62
+        "mentions": 92,
+        "documentCount": 63
       },
       "right": {
         "name": "Bruce Macabee",
@@ -2076,6 +2076,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Godman Air Force Base",
+        "mentions": 7,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Godman Alr Force Base",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Meteorlogical Officer",
@@ -2101,22 +2117,6 @@
       "right": {
         "name": "West Hen Desk Officer",
         "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Godman Air Force Base",
-        "mentions": 6,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Godman Alr Force Base",
-        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.952,
@@ -2655,8 +2655,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 226,
-        "documentCount": 132
+        "mentions": 227,
+        "documentCount": 133
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3247,8 +3247,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 109,
-        "documentCount": 61
+        "mentions": 110,
+        "documentCount": 62
       },
       "right": {
         "name": "George Adamsky",
@@ -3519,8 +3519,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 109,
-        "documentCount": 61
+        "mentions": 110,
+        "documentCount": 62
       },
       "right": {
         "name": "Mr. George Adams",
@@ -3567,8 +3567,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Health",
-        "mentions": 20,
-        "documentCount": 13
+        "mentions": 21,
+        "documentCount": 14
       },
       "right": {
         "name": "Department of Earth",

@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-09T08:00:44Z",
+  "generatedAt": "2026-09-09T08:45:12Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5b596df16f1399fd00d0f714a24ce3e66b920a8c"
+    "revision": "494834929c94e3615a0af0ce33556999650d9b5c"
   },
-  "documentsWithCandidates": 10295,
+  "documentsWithCandidates": 10297,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -227174,6 +227174,30 @@
       ]
     },
     {
+      "documentId": "doc-5b0062990247b58adefd5797",
+      "path": "France-GEIPAN/paired/cases/1965-07-02381/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2009-08-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: Recent testimony (August 17, 2009) of an old observation made at the beginning of July 1965 (the exact date is not specified by the witness; an arbitrary date is given as July 1, 1965; the witness also does not specify the exact location of the observation). By a con",
+          "segment": "seg-0845c639ca3a241ae125aaa9"
+        },
+        {
+          "value": "1965-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: Recent testimony (August 17, 2009) of an old observation made at the beginning of July 1965 (the exact date is not specified by the witness; an arbitrary date is given as July 1, 1965; the witness also does not specify the exact location of the observation). By a con",
+          "segment": "seg-0845c639ca3a241ae125aaa9"
+        }
+      ]
+    },
+    {
       "documentId": "doc-e9042d47c9cecf56010a77ca",
       "path": "France-GEIPAN/paired/cases/1965-08-02422/en/translation.txt",
       "candidates": [
@@ -239566,6 +239590,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Sunday, July 20, 2008, at 10:12 PM, a driver and his passenger observed for one minute the movement of a shape that intrigued them. A elongated object of matte light gray color with two large fins made a loop and disappeared towards the West. Two photographs were ",
           "segment": "seg-ccb43d87752b5a5c967daebc"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-abec28853181f9b6e9b3e685",
+      "path": "France-GEIPAN/paired/cases/2008-07-02144/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-07-30",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On July 30, 2008, at approximately 10:05 PM, two individuals from their 6th-floor apartment observed an unusual object to the left of the Eiffel Tower: a dark, lenticular mass, initially static, then moving towards Charles de Gaulle Airport, blending into the horizon",
+          "segment": "seg-a8e528bbbc06f1463f82f657"
         }
       ]
     },
