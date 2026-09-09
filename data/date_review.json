@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-09T09:31:58Z",
+  "generatedAt": "2026-09-09T10:16:35Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9c43ce236b17591bb8f2d8776c34c710ea6d1faa"
+    "revision": "4cc78420b21536e01611ea2b71b10ced7ff49906"
   },
-  "documentsWithCandidates": 10301,
+  "documentsWithCandidates": 10302,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -77337,7 +77337,7 @@
           "kind": "administrative_date",
           "method": "context-exclusion",
           "evidence": "This is in response to your July 17, 2013 Freedom of Information Act request for all",
-          "segment": 15
+          "segment": 5
         },
         {
           "value": "1997-03-13",
@@ -77346,7 +77346,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "there being a UFO sighting on March 13, 1997.",
-          "segment": 17
+          "segment": 7
         }
       ]
     },
@@ -176791,6 +176791,21 @@
           "method": "unclassified-mention",
           "evidence": "In response to your letter of 21 October 1974, z",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a2035b6c8b5f",
+      "path": "DPIArchive/documents/116390-department-of-the-air-force-george-freeman.txt",
+      "candidates": [
+        {
+          "value": "1947-09-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 23, 1947 letter about which you inquired.",
+          "segment": 5
         }
       ]
     },
