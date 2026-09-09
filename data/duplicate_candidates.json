@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "c6d16e76412486ecebda79be1ee29b82f1871d2b"
+    "revision": "9f65009758a83f953948d5f3f77598fcd5d9ec13"
   },
-  "count": 254,
-  "totalCount": 254,
-  "shownCount": 254,
+  "count": 255,
+  "totalCount": 255,
+  "shownCount": 255,
   "candidates": [
     {
       "category": "organization",
@@ -287,8 +287,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 397,
-        "documentCount": 170
+        "mentions": 398,
+        "documentCount": 171
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1183,8 +1183,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 268,
-        "documentCount": 88
+        "mentions": 270,
+        "documentCount": 89
       },
       "right": {
         "name": "Jacques Valle",
@@ -2639,8 +2639,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 233,
-        "documentCount": 137
+        "mentions": 235,
+        "documentCount": 138
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3832,6 +3832,22 @@
         "documentCount": 2
       },
       "similarity": 0.903,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Stephen Hawking",
+        "mentions": 55,
+        "documentCount": 43
+      },
+      "right": {
+        "name": "Steven Hawking",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.897,
       "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
