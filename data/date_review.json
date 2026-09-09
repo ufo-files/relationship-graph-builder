@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-09T06:22:46Z",
+  "generatedAt": "2026-09-09T07:05:10Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "23dfbe15ed1a1da8ea1f03faab252c4236980701"
+    "revision": "093a52e1c3613289c74cd088e6e50d011d400a5a"
   },
-  "documentsWithCandidates": 10289,
+  "documentsWithCandidates": 10293,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -19723,6 +19723,30 @@
           "method": "unclassified-mention",
           "evidence": "Judge James L. Robart's final ruling, issued on April 5, 2007, reaffirmed that Renier was the",
           "segment": 36
+        }
+      ]
+    },
+    {
+      "documentId": "doc-712eb173d77a",
+      "path": "Archives-for-the-Unexplained/documents/Tampa-Bay-Skeptics-Report---vol-25-no-3---INCOMPLETE.txt",
+      "candidates": [
+        {
+          "value": "2009-02-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Schlesinger, one of the lead authors of the IPCC report, when questioned during a February 11, 2009",
+          "segment": 33
+        },
+        {
+          "value": "2010-10-25",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "accusations of heresy, as detailed in an enlightening October 25, 2010, Scientific American article.",
+          "segment": 125
         }
       ]
     },
@@ -233273,6 +233297,21 @@
       ]
     },
     {
+      "documentId": "doc-97eec6d6dbc6b8d40aa42d19",
+      "path": "France-GEIPAN/paired/cases/1984-11-01038/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1984-11-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On November 12, 1984, around 7 PM, several witnesses saw a white ball, about the size of a soccer ball, with a bright red tail approximately 2 meters long, moving slowly, silently, and at low altitude along a straight trajectory above the coastline for 5 to 6 seconds",
+          "segment": "seg-96d25cf1dc615e90bf70baa5"
+        }
+      ]
+    },
+    {
       "documentId": "doc-884664f1905c41c118f306f9",
       "path": "France-GEIPAN/paired/cases/1985-01-01045/en/translation.txt",
       "candidates": [
@@ -242531,6 +242570,21 @@
       ]
     },
     {
+      "documentId": "doc-06bd692a88af58fc1f8e7c45",
+      "path": "France-GEIPAN/paired/cases/2010-06-02613/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2010-06-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Saturday, June 19, 2010, around 11:30 PM, a witness near a village party was intrigued by a varying intensity red light and a white-lit object that the witness did not recognize. The observation lasted between 5 to 10 minutes. The witness initially thought it was ",
+          "segment": "seg-c51c9487a7767b5c32d72e55"
+        }
+      ]
+    },
+    {
       "documentId": "doc-9d628ba02865d836aed11a59",
       "path": "France-GEIPAN/paired/cases/2010-06-02614/en/translation.txt",
       "candidates": [
@@ -247912,6 +247966,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On September 07, 2015, around 21:43, a witness observed two brief flashes separated by a few seconds in a clear sky. Only one testimony was collected. Of average strangeness but sufficient consistency, this case turns out to be a misperception with a satellite reflec",
           "segment": "seg-f3cd9a84632ccaa1fa845c51"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c5e53c91f52a54c5a1624c8a",
+      "path": "France-GEIPAN/paired/cases/2015-10-09362/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On October 14, 2015, at 23:31, a witness observed several successive flashes in the sky, in a very identifiable area. He checked the Heavens Above site but identified no Iridium satellite flashes or satellite passes that could correspond. Of average strangeness but s",
+          "segment": "seg-18c77314159d27b264f4dacf"
         }
       ]
     },
