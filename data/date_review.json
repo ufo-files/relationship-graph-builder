@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-09T11:12:10Z",
+  "generatedAt": "2026-09-09T11:54:30Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "2ba90893e2d22982eb5b1504271b3d23b0820a58"
+    "revision": "43068cee13968f75b3474d70647ff9ff4f77f7cb"
   },
-  "documentsWithCandidates": 10302,
+  "documentsWithCandidates": 10303,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -247225,6 +247225,21 @@
           "method": "event-language",
           "evidence": "Description: On Monday, July 22, 2013, around 6:15 PM, a witness observed the movement of a bright, streaking object in the sky, without sound and at very high speed. This person described a silver, rounded object resembling a \"bucket.\" The approximate trajectory given is southea",
           "segment": "seg-cf719b2c65f4cfdb5f184462"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-31e02af48831ec3f9ab314da",
+      "path": "France-GEIPAN/paired/cases/2013-07-08500/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On July 21, 2013, around 4 a.m., a witness is intrigued by the fixed presence of a dark red light in the cloudy sky. The witness's observation direction (Courcelles) corresponds to an azimuth of 230°. The witness describes a round, red object four times larger than t",
+          "segment": "seg-e2fb660bf8bc3506a0f87c50"
         }
       ]
     },
