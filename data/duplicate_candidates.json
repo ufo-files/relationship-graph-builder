@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "377354faf092d53292a67b277791d37645189a02"
+    "revision": "c6d16e76412486ecebda79be1ee29b82f1871d2b"
   },
   "count": 254,
   "totalCount": 254,
@@ -1199,8 +1199,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 268,
-        "documentCount": 176
+        "mentions": 269,
+        "documentCount": 177
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1740,6 +1740,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "John Deutsch",
+        "mentions": 8,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "John Deutch",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Office of International and Interagency Relations",
@@ -1750,22 +1766,6 @@
         "name": "Office of International & Interagency Relations",
         "mentions": 3,
         "documentCount": 2
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "John Deutsch",
-        "mentions": 6,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "John Deutch",
-        "mentions": 6,
-        "documentCount": 6
       },
       "similarity": 0.957,
       "reason": "similar name",
