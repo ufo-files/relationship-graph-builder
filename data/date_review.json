@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-09T16:00:57Z",
+  "generatedAt": "2026-09-09T16:46:08Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "728e89012f6a85789421b9038b0fec26d6a96a23"
+    "revision": "ca9caf72041572ccdabe84bc314555d34ffd624c"
   },
-  "documentsWithCandidates": 10314,
+  "documentsWithCandidates": 10316,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -3652,6 +3652,75 @@
           "method": "context-exclusion",
           "evidence": "published 23 February 2009",
           "segment": 8
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2fecea6c6100",
+      "path": "Archives-for-the-Unexplained/documents/2009-05-03_Consequence-of-Sound_Rock-History-101-Sufjan-Stevens-John-Wayne-Gacy-Jr.txt",
+      "candidates": [
+        {
+          "value": "2009-05-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 3, 2009 | 11:00am ET",
+          "segment": 4
+        },
+        {
+          "value": "2024-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Prisoner, Postabiogenetic Apotheosis, Skagos, and Stygian Ruin December 29, 2024 Moment Becomes a Movem",
+          "segment": 7
+        },
+        {
+          "value": "2024-12-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 30, 2024 December 23, 2024",
+          "segment": 8
+        },
+        {
+          "value": "2024-12-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 30, 2024 December 23, 2024",
+          "segment": 8
+        },
+        {
+          "value": "2024-12-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 18, 2024 December 18, 2024 December 17, 2024",
+          "segment": 10
+        },
+        {
+          "value": "2024-12-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 18, 2024 December 18, 2024 December 17, 2024",
+          "segment": 10
+        },
+        {
+          "value": "2024-12-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 18, 2024 December 18, 2024 December 17, 2024",
+          "segment": 10
         }
       ]
     },
@@ -18826,6 +18895,21 @@
           "method": "unclassified-mention",
           "evidence": "easy to see.” August 23, 2001.",
           "segment": 481
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8c8f37069f73",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-10-No-05---2002.txt",
+      "candidates": [
+        {
+          "value": "2002-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 10, Number 5 May 2002",
+          "segment": 2
         }
       ]
     },
@@ -171893,6 +171977,21 @@
       ]
     },
     {
+      "documentId": "doc-80bc2149963e",
+      "path": "Chile-SEFAA/documents/CASO-N-800-19032018.txt",
+      "candidates": [
+        {
+          "value": "2018-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "De la filmación se extrae la imagen vlcsnap-2018-07-20-13h17m42s611.",
+          "segment": 12
+        }
+      ]
+    },
+    {
       "documentId": "doc-33303c7b9a0c",
       "path": "DPIArchive/documents/114772-area-51-burning-revealed.txt",
       "candidates": [
@@ -174651,22 +174750,13 @@
       "path": "DPIArchive/documents/116274-department-of-defense-intelligence-information-report-ufos-7-23-65.txt",
       "candidates": [
         {
-          "value": "1965-07-23",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "DATE OF REPORT: 23 July 1965",
-          "segment": 13
-        },
-        {
           "value": "1965-07-04",
           "precision": "day",
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "The 4 July 1965 edition of Diario Illustrado, Santiago newspaper contained",
-          "segment": 43
+          "evidence": "The,4 July 1965 edition of Diario Illustrado, Santiago newspaper contained",
+          "segment": 48
         },
         {
           "value": "1965-07-07",
@@ -174674,17 +174764,8 @@
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "Tho 7 July 1965 odition of El Mercurio, Santiago newspaper carriod tho",
-          "segment": 61
-        },
-        {
-          "value": "1965-06-19",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "69 earles valok vas launobed on 15 June had a decay date of 19 June 1965",
-          "segment": 122
+          "evidence": "The 7 July 1965 edition of E1 Mercurio, Santiago newspaper carried the",
+          "segment": 79
         }
       ]
     },
@@ -220735,21 +220816,6 @@
           "method": "unclassified-mention",
           "evidence": "On September 2, 1963 (off the coast of Sardinia west of Italy) a radar operator aboard the",
           "segment": 130
-        }
-      ]
-    },
-    {
-      "documentId": "doc-e2ca178fbdff",
-      "path": "DPIArchive/documents/127491-gordon-cooper-1951-and-1957-sightings-magazine-article-july-1995.txt",
-      "candidates": [
-        {
-          "value": "1978-11-09",
-          "precision": "day",
-          "confidence": 0.72,
-          "kind": "referenced_document_date",
-          "method": "dated-reference",
-          "evidence": "mous letter dated November 9, 1978, to",
-          "segment": 30
         }
       ]
     },
