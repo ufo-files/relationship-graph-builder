@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-09T13:40:47Z",
+  "generatedAt": "2026-09-09T14:27:32Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d24bb57678710a912d0a5ca6706e1b461c258dcd"
+    "revision": "2a2bb6c8560895a761fb9550da5a28499db4e09e"
   },
-  "documentsWithCandidates": 10306,
+  "documentsWithCandidates": 10310,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7474,6 +7474,21 @@
           "method": "unclassified-mention",
           "evidence": "this Thursday December 15 2022 I'm Jimmy",
           "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d1797fb5faa2",
+      "path": "Archives-for-the-Unexplained/documents/2022-12-17---Strange-Planet---UFO-s-The-Occult-and-Metaphysics-W-Mitch-Horowitz_z8X-ApXMMjE---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-12-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "so was it December 27 2017 for you or or",
+          "segment": 313
         }
       ]
     },
@@ -172268,7 +172283,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "›Date: Mon, 13 Apr 1998 00:31:34 -0700",
+          "evidence": ">Date: Mon, 13 Apr 1998 00:31:34 -0700",
           "segment": 5
         }
       ]
@@ -213192,22 +213207,13 @@
       "path": "DPIArchive/documents/124639-eric-hecker-united-states-calling-for-witnesses-june-1-2023.txt",
       "candidates": [
         {
-          "value": "2023-06-01",
-          "precision": "day",
-          "confidence": 0.94,
-          "kind": "document_date",
-          "method": "document-header",
-          "evidence": "Date: Thursday, June 1, 2023, 08:42 AM EDT",
-          "segment": 0
-        },
-        {
           "value": "2023-03-18",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "On Sat, Mar 18, 2023 at 6:56 AM Steve Greer",
-          "segment": 53
+          "segment": 18
         },
         {
           "value": "2023-03-17",
@@ -213216,7 +213222,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "> On Mar 17, 2023, at 8:34 AM",
-          "segment": 57
+          "segment": 22
         }
       ]
     },
@@ -229658,6 +229664,30 @@
       ]
     },
     {
+      "documentId": "doc-2dfa15c8c0f761e3d57c55fa",
+      "path": "France-GEIPAN/paired/cases/1977-08-00419/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1977-08-06",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On August 6, 1977, at 1:30 a.m., two individuals observed a strange light phenomenon outside their home, which intrigued them. A bright, yellow-orange glow moved slowly, stopped, and briefly displayed two small red lights before continuing its path. During the three ",
+          "segment": "seg-d08149a65353a7ba8dd3f50f"
+        },
+        {
+          "value": "1977-08-13",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On August 6, 1977, at 1:30 a.m., two individuals observed a strange light phenomenon outside their home, which intrigued them. A bright, yellow-orange glow moved slowly, stopped, and briefly displayed two small red lights before continuing its path. During the three ",
+          "segment": "seg-d08149a65353a7ba8dd3f50f"
+        }
+      ]
+    },
+    {
       "documentId": "doc-a44258f4545cf522cc941f75",
       "path": "France-GEIPAN/paired/cases/1977-08-00420/en/translation.txt",
       "candidates": [
@@ -232039,6 +232069,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On October 9, 1979, around 11:30 PM, several people will spot a luminous flying object at low altitude. It moves while making a startling noise, frightening some witnesses and animals. These people were likely witnesses to the passage of an aircraft, confirmed by one",
           "segment": "seg-43f44e569f744966bc8ed1f7"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bbbf5ee73a25930533573ede",
+      "path": "France-GEIPAN/paired/cases/1979-10-00673/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1979-10-20",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On October 20, 1979, several people in the Vosges and Haut-Rhin regions witnessed a flickering light phenomenon in the sky. The object, spherical in shape, appeared to move in a zigzag pattern without making any noise. A similar event had been reported by witnesses o",
+          "segment": "seg-a33ccdf85c7e713564c45723"
         }
       ]
     },
@@ -240922,6 +240967,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On December 18, 2008, between 5:58 and 6:05 a.m., a witness was intrigued by a noise and blue lights in the sky and over their garden. The observation lasted one minute. The witness believed something was slowly flying over their house. Afraid, this person warned the",
           "segment": "seg-fd5bd9631316c403f6237e67"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-52188e1758a124b7e1802a25",
+      "path": "France-GEIPAN/paired/cases/2008-12-02132/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 2, 2008, at 10:15 PM, two witnesses in a car were surprised by the presence in the sky of a large black mass with green, red/orange, and pale lights arranged in a triangle. The PAN was at very low altitude and appeared static. It was suddenly hidden by tr",
+          "segment": "seg-e584507c1229219de35d20d9"
         }
       ]
     },

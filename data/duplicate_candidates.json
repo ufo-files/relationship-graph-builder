@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d24bb57678710a912d0a5ca6706e1b461c258dcd"
+    "revision": "2a2bb6c8560895a761fb9550da5a28499db4e09e"
   },
   "count": 255,
   "totalCount": 255,
@@ -2015,8 +2015,8 @@
       "category": "organization",
       "left": {
         "name": "University of Kansas",
-        "mentions": 14,
-        "documentCount": 13
+        "mentions": 15,
+        "documentCount": 14
       },
       "right": {
         "name": "University of Arkansas",
@@ -3252,8 +3252,8 @@
       },
       "right": {
         "name": "George Adamsky",
-        "mentions": 4,
-        "documentCount": 3
+        "mentions": 5,
+        "documentCount": 4
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -3692,6 +3692,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "George Adamsky",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Mr. George Adams",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Okanagan Lake",
@@ -3718,22 +3734,6 @@
         "name": "Project Sincer",
         "mentions": 3,
         "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "George Adamsky",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Mr. George Adams",
-        "mentions": 4,
-        "documentCount": 3
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -3967,8 +3967,8 @@
       "category": "person",
       "left": {
         "name": "George Hunt Williamson",
-        "mentions": 6,
-        "documentCount": 6
+        "mentions": 7,
+        "documentCount": 7
       },
       "right": {
         "name": "George Williamson",
