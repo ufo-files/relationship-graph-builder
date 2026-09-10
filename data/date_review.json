@@ -1,12 +1,12 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-10T09:53:17Z",
+  "generatedAt": "2026-09-10T10:46:37Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "539ad3fcd711e2dbfd16136205d8fd1ea9bc5c52"
+    "revision": "e8d25465679da7e14759e4792f79983dd4724cad"
   },
   "documentsWithCandidates": 10350,
   "records": [
@@ -259331,10 +259331,10 @@
         {
           "value": "2015-10-01",
           "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Thursday, October 1, 2015 4:49:15 PM",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Thursday, October 1, 2015 4:49:15 PM",
           "segment": 2
         },
         {
@@ -259370,7 +259370,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Thursday, October 1, 2015 1:27:10 PM",
+          "evidence": "Date: Thursday, October 1, 2015 1:27:10 PM",
           "segment": 33
         },
         {
@@ -259397,7 +259397,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Wednesday, September 30, 2015 11:46:00 AM",
+          "evidence": "Date: Wednesday, September 30, 2015 11:46:00 AM",
           "segment": 59
         },
         {
@@ -259407,7 +259407,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Sent: Wednesday, September 30, 2015 11:14 AM",
-          "segment": 60
+          "segment": 61
         },
         {
           "value": "2015-09-30",
@@ -259416,7 +259416,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Sent: Wednesday, September 30, 2015 11:13 AM",
-          "segment": 65
+          "segment": 66
         },
         {
           "value": "2015-09-30",
@@ -259425,7 +259425,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Sent: Wednesday, September 30, 2015 11:11 AM",
-          "segment": 71
+          "segment": 72
         },
         {
           "value": "2015-09-30",
@@ -259434,7 +259434,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Sent: Wednesday, September 30, 2015 8:44 AM",
-          "segment": 76
+          "segment": 77
         },
         {
           "value": "2015-09-29",
@@ -259442,8 +259442,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Tuesday, September 29, 2015 11:27:00 PM",
-          "segment": 84
+          "evidence": "Date: Tuesday, September 29, 2015 11:27:00 PM",
+          "segment": 86
         }
       ]
     },
