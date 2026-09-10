@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "0057a2b21d2b217411a0b5f0e7433b650fe2fcfb"
+    "revision": "8f48cc45649f3e16c348bb2e7b7f3c62ef2c169f"
   },
-  "count": 261,
-  "totalCount": 261,
-  "shownCount": 261,
+  "count": 262,
+  "totalCount": 262,
+  "shownCount": 262,
   "candidates": [
     {
       "category": "organization",
@@ -1471,8 +1471,8 @@
       "category": "person",
       "left": {
         "name": "Philip Corso",
-        "mentions": 53,
-        "documentCount": 42
+        "mentions": 54,
+        "documentCount": 43
       },
       "right": {
         "name": "Colonel Phillip Corso",
@@ -1558,6 +1558,22 @@
         "name": "Read Mountain",
         "mentions": 9,
         "documentCount": 5
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Michael Salla",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Michael Sala",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -1870,14 +1886,14 @@
     {
       "category": "person",
       "left": {
-        "name": "George Adam",
-        "mentions": 6,
-        "documentCount": 4
+        "name": "David Clarke",
+        "mentions": 7,
+        "documentCount": 6
       },
       "right": {
-        "name": "Mr. George Adams",
-        "mentions": 4,
-        "documentCount": 3
+        "name": "David Clark",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -1886,14 +1902,14 @@
     {
       "category": "person",
       "left": {
-        "name": "David Clarke",
+        "name": "George Adam",
         "mentions": 6,
-        "documentCount": 5
+        "documentCount": 4
       },
       "right": {
-        "name": "David Clark",
-        "mentions": 3,
-        "documentCount": 2
+        "name": "Mr. George Adams",
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2687,8 +2703,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 242,
-        "documentCount": 144
+        "mentions": 244,
+        "documentCount": 145
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3647,8 +3663,8 @@
       "category": "person",
       "left": {
         "name": "Brandon Fugal",
-        "mentions": 17,
-        "documentCount": 13
+        "mentions": 18,
+        "documentCount": 14
       },
       "right": {
         "name": "Brandon Fugle",
