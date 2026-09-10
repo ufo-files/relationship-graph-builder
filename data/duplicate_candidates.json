@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5b09da45e5588eb7a1e67c14237b664c9660adf1"
+    "revision": "e88be26f4d6d680d5cd405eb2e7357b745882f81"
   },
-  "count": 256,
-  "totalCount": 256,
-  "shownCount": 256,
+  "count": 257,
+  "totalCount": 257,
+  "shownCount": 257,
   "candidates": [
     {
       "category": "organization",
@@ -3038,6 +3038,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Office of Current Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "The Office of Currene Inrelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Weather Offices",
         "mentions": 2,
         "documentCount": 2
@@ -4079,8 +4095,8 @@
       "category": "person",
       "left": {
         "name": "Dan Goldin",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "right": {
         "name": "Daniel Goldin",
