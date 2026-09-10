@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-09T23:53:43Z",
+  "generatedAt": "2026-09-10T01:05:09Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9f65009758a83f953948d5f3f77598fcd5d9ec13"
+    "revision": "b7fd9888039d9b84158fd8d45f1b3048ecb7d470"
   },
-  "documentsWithCandidates": 10327,
+  "documentsWithCandidates": 10329,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -238295,6 +238295,21 @@
       ]
     },
     {
+      "documentId": "doc-68556e09fc52fd3bf0dcf32a",
+      "path": "France-GEIPAN/paired/cases/1997-11-01489/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1996-09-12",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: Case previously published under the name Pont-De-Salars (12). On September 12, 1996, around 8:00 PM, a mother and her daughter, while driving out of Flavin (12), observed an object they could not identify. The craft consisted of an oval skirt and a cylinder topped wi",
+          "segment": "seg-72f205a1a492ddcc1d7811a3"
+        }
+      ]
+    },
+    {
       "documentId": "doc-bb90105200e52c6aae6bdb89",
       "path": "France-GEIPAN/paired/cases/1997-11-01490/en/translation.txt",
       "candidates": [
@@ -248692,6 +248707,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On January 1, 2014, around 00:08, a witness observing from their balcony saw in the sky the silent movement of numerous red glowing objects that progressed in a straight line through the cloudy sky. This observation of 23 red glowing points flying linearly on the sam",
           "segment": "seg-92b2b761c50a69dc30011588"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d2e433ed7ef3df50d2456078",
+      "path": "France-GEIPAN/paired/cases/2014-01-08645/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-01-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: A witness reports observing approximately fifteen blue or white lights in the sky while looking south from Grand-Bornand (in the direction of La Clusaz, located behind the Danay mountain) on January 7, 2014, around 10 PM. The nightclub \"le bal\" in La Clusaz uses a la",
+          "segment": "seg-288fcaeba61220e450977bc6"
         }
       ]
     },
