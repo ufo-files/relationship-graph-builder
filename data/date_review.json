@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-10T17:39:45Z",
+  "generatedAt": "2026-09-10T18:40:35Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "4c60f98cc56a52024723c32f182db1f6dc608ab1"
+    "revision": "4a143655b8b426dd045ef0df641bd2af01999f8a"
   },
-  "documentsWithCandidates": 10370,
+  "documentsWithCandidates": 10371,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -79307,7 +79307,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Management, \" January 11, 2021",
+          "evidence": "Management,” January 11, 2021",
           "segment": 42
         },
         {
@@ -79316,8 +79316,17 @@
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "Release,\" January 8, 2009 (hereby cancelled",
+          "evidence": "Release,” January 8, 2009 (hereby cancelled",
           "segment": 44
+        },
+        {
+          "value": "2022-02-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ODA&M DoD Issuances,” February 1, 2022",
+          "segment": 47
         },
         {
           "value": "2021-01-01",
@@ -79325,8 +79334,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "for Fiscal Year 2021,\" January 1, 2021",
-          "segment": 48
+          "evidence": "for Fiscal Year 2021,” January 1, 2021",
+          "segment": 49
         },
         {
           "value": "2021-01-11",
@@ -79334,8 +79343,17 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Officer of the DoD and Realignment of Functions and Responsibilities,\" January 11, 2021",
-          "segment": 50
+          "evidence": "Officer of the DoD and Realignment of Functions and Responsibilities,” January 11, 2021",
+          "segment": 51
+        },
+        {
+          "value": "2009-03-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "h) DoD Instruction 5400.04, “Provision of Information to Congress,” March 17, 2009",
+          "segment": 52
         },
         {
           "value": "2012-08-23",
@@ -79344,7 +79362,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "August 23, 2012, as amended",
-          "segment": 53
+          "segment": 54
         },
         {
           "value": "1984-11-06",
@@ -79352,8 +79370,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Disclosure,\" November 6, 1984, as amended",
-          "segment": 55
+          "evidence": "Disclosure,” November 6, 1984, as amended",
+          "segment": 56
         },
         {
           "value": "2012-06-20",
@@ -79361,8 +79379,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "1) DoD Directive 5205.02E, \"DoD Operations Security (OPSEC) Program,\" June 20, 2012, as",
-          "segment": 58
+          "evidence": "l) DoD Directive 5205.02E, “DoD Operations Security (OPSEC) Program,” June 20, 2012, as",
+          "segment": 59
         },
         {
           "value": "2012-02-24",
@@ -79370,8 +79388,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "m) DoD Manual 5200.01, \"DoD Information Security Program,\" February 24, 2012, as",
-          "segment": 59
+          "evidence": "m) DoD Manual 5200.01, “DoD Information Security Program,” February 24, 2012, as",
+          "segment": 60
         },
         {
           "value": "2012-01-17",
@@ -79379,8 +79397,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Clearance Procedures,\" January 17, 2012",
-          "segment": 61
+          "evidence": "Clearance Procedures,” January 17, 2012",
+          "segment": 62
         },
         {
           "value": "2018-12-13",
@@ -79388,8 +79406,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "p) DoD Directive 3000.05, \"Stabilization,\" December 13, 2018",
-          "segment": 63
+          "evidence": "p) DoD Directive 3000.05, “Stabilization,” December 13, 2018",
+          "segment": 64
         },
         {
           "value": "2017-08-07",
@@ -79397,8 +79415,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "ATSD(PA)),\" August 7, 2017",
-          "segment": 65
+          "evidence": "ATSD(PA)),” August 7, 2017",
+          "segment": 66
         },
         {
           "value": "2019-01-02",
@@ -79407,7 +79425,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "January 2, 2019, as amended",
-          "segment": 67
+          "segment": 68
         },
         {
           "value": "2016-11-18",
@@ -79415,8 +79433,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Meetings, \" November 18, 2016, as amended",
-          "segment": 69
+          "evidence": "Meetings,” November 18, 2016, as amended",
+          "segment": 70
         },
         {
           "value": "2013-08-22",
@@ -79425,15 +79443,6 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "August 22, 2013, as amended",
-          "segment": 71
-        },
-        {
-          "value": "2014-08-13",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "DoDI 5230.29, August 13, 2014",
           "segment": 72
         },
         {
@@ -79443,7 +79452,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "DoDI 5230.29, August 13, 2014",
-          "segment": 75
+          "segment": 74
         },
         {
           "value": "2014-08-13",
@@ -79452,7 +79461,16 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "DoDI 5230.29, August 13, 2014",
-          "segment": 104
+          "segment": 78
+        },
+        {
+          "value": "2014-08-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoDI 5230.29, August 13, 2014",
+          "segment": 108
         },
         {
           "value": "2012-01-17",
@@ -79461,7 +79479,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Ensure Component compliance with the guidelines of the January 17, 2012 Deputy",
-          "segment": 115
+          "segment": 119
         },
         {
           "value": "2014-08-13",
@@ -79470,7 +79488,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "DoDI 5230.29, August 13, 2014",
-          "segment": 122
+          "segment": 127
         },
         {
           "value": "2014-08-13",
@@ -79479,7 +79497,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "DoDI 5230.29, August 13, 2014",
-          "segment": 148
+          "segment": 154
         },
         {
           "value": "2014-08-13",
@@ -79488,7 +79506,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "DoDI 5230.29, August 13, 2014",
-          "segment": 182
+          "segment": 189
         },
         {
           "value": "2014-08-13",
@@ -79497,7 +79515,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "DoDI 5230.29, August 13, 2014",
-          "segment": 218
+          "segment": 226
         },
         {
           "value": "2014-08-13",
@@ -79506,7 +79524,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "DoDI 5230.29, August 13, 2014",
-          "segment": 257
+          "segment": 266
         }
       ]
     },
@@ -236371,6 +236389,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On the evening of October 3, 1983, two witnesses briefly spotted a circular, glowing object. It moved rapidly in a straight line on a north-south axis, tracing spirals. It vanished suddenly without a trace. No further information could be gathered about this phenomen",
           "segment": "seg-9b256d6e48e9bbc700e74ae9"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d291dbcb4d726c7fbc39694e",
+      "path": "France-GEIPAN/paired/cases/1983-10-01000/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1983-09-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 26, 1983, at approximately 6:50 PM, a large number of witnesses scattered across the entire territory of French Polynesia were able to observe a particular luminous phenomenon. A group of 6 to 8 points of varying sizes and extremely bright moved at extre",
+          "segment": "seg-9d0e78bde96686f1e4687c32"
         }
       ]
     },
