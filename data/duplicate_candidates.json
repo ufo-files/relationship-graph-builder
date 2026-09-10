@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e88be26f4d6d680d5cd405eb2e7357b745882f81"
+    "revision": "69ad7a3e3c0b978a3fb8bc69886c1e798e8f4506"
   },
-  "count": 257,
-  "totalCount": 257,
-  "shownCount": 257,
+  "count": 258,
+  "totalCount": 258,
+  "shownCount": 258,
   "candidates": [
     {
       "category": "organization",
@@ -248,6 +248,22 @@
         "documentCount": 2
       },
       "similarity": 0.98,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Transport",
+        "mentions": 40,
+        "documentCount": 28
+      },
+      "right": {
+        "name": "Department of Transports",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.979,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1390,13 +1406,13 @@
     {
       "category": "location",
       "left": {
-        "name": "Contact Working Area Contact Latitute MS",
-        "mentions": 4,
-        "documentCount": 2
+        "name": "Contact Working Area Contact Latitute",
+        "mentions": 21,
+        "documentCount": 3
       },
       "right": {
-        "name": "Contact Working Area Contact Latitute",
-        "mentions": 20,
+        "name": "Contact Working Area Contact Latitute MS",
+        "mentions": 4,
         "documentCount": 2
       },
       "similarity": 0.961,
@@ -3855,8 +3871,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 55,
-        "documentCount": 43
+        "mentions": 59,
+        "documentCount": 45
       },
       "right": {
         "name": "Steven Hawking",

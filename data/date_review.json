@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-10T04:20:33Z",
+  "generatedAt": "2026-09-10T05:17:19Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e88be26f4d6d680d5cd405eb2e7357b745882f81"
+    "revision": "69ad7a3e3c0b978a3fb8bc69886c1e798e8f4506"
   },
-  "documentsWithCandidates": 10333,
+  "documentsWithCandidates": 10336,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1486,6 +1486,39 @@
           "method": "unclassified-mention",
           "evidence": "Missile, HQs Pacific Missile Test Center, Vol. 31, No. 14, April 7, 1978.",
           "segment": 733
+        }
+      ]
+    },
+    {
+      "documentId": "doc-20974fce93ee",
+      "path": "Archives-for-the-Unexplained/documents/00---Koi-index---In-Search-of-Aliens---Wikipedia.txt",
+      "candidates": [
+        {
+          "value": "2014-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "premiered on July 25, 2014, on the H2 channel.[1] Produced by In Search of Aliens",
+          "segment": 2
+        },
+        {
+          "value": "2014-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "History.com. September 2, 2014.",
+          "segment": 40
+        },
+        {
+          "value": "2020-01-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Retrieved 27 January 2020.",
+          "segment": 44
         }
       ]
     },
@@ -247115,6 +247148,21 @@
       ]
     },
     {
+      "documentId": "doc-3d119f00a0b0551c3441e118",
+      "path": "France-GEIPAN/paired/cases/2012-09-08372/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-09-23",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On September 23, 2012, at 5:05 PM, a motorist and his companion observed several round, glowing objects appearing and disappearing in the clouds. No other testimonies were collected. The witnesses were traveling in a south-southwest direction (see map), and the weath",
+          "segment": "seg-d75410878f3ea4eac1f823aa"
+        }
+      ]
+    },
+    {
       "documentId": "doc-0b85fb16c95507c44e9c0bf2",
       "path": "France-GEIPAN/paired/cases/2012-09-08702/en/translation.txt",
       "candidates": [
@@ -249634,6 +249682,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On April 13, 2015, at 9:55 PM, a witness, who regularly observes and knows the starry sky, first observes a bright, brief white flash, followed by three static red orbs forming a triangle. The phenomenon is silent. Initially intense, its brightness diminishes until t",
           "segment": "seg-2d741a6f7a01ad4d17173b07"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-57d26f52e156ec54fc9f206d",
+      "path": "France-GEIPAN/paired/cases/2015-05-09168/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-05-04",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On May 4, 2015 at 10:05 AM, a witness observed a shimmering object moving slowly across the sky from their home. No other witnesses were reported. The shimmering object with changing reflections, in broad daylight, moving slowly across the Paris sky, has all the char",
+          "segment": "seg-6b5de33b210e494bb028e483"
         }
       ]
     },
