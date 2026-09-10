@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "1e21c861204f21f97b4d674563726f479bc6ccf4"
+    "revision": "c8ecd445e21d12ccb3c6c639e6a56bdbba76200a"
   },
-  "count": 258,
-  "totalCount": 258,
-  "shownCount": 258,
+  "count": 259,
+  "totalCount": 259,
+  "shownCount": 259,
   "candidates": [
     {
       "category": "organization",
@@ -488,6 +488,22 @@
         "documentCount": 1
       },
       "similarity": 0.977,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Supply",
+        "mentions": 20,
+        "documentCount": 12
+      },
+      "right": {
+        "name": "Department of Supplys",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.976,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1199,8 +1215,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 270,
-        "documentCount": 89
+        "mentions": 271,
+        "documentCount": 90
       },
       "right": {
         "name": "Jacques Valle",
@@ -2655,8 +2671,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 235,
-        "documentCount": 138
+        "mentions": 236,
+        "documentCount": 139
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3839,8 +3855,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 99,
-        "documentCount": 59
+        "mentions": 100,
+        "documentCount": 60
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -3871,8 +3887,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 66,
-        "documentCount": 46
+        "mentions": 71,
+        "documentCount": 47
       },
       "right": {
         "name": "Steven Hawking",

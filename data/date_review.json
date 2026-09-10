@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-10T06:15:12Z",
+  "generatedAt": "2026-09-10T07:16:33Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "1e21c861204f21f97b4d674563726f479bc6ccf4"
+    "revision": "c8ecd445e21d12ccb3c6c639e6a56bdbba76200a"
   },
-  "documentsWithCandidates": 10339,
+  "documentsWithCandidates": 10341,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -14959,6 +14959,30 @@
           "method": "unclassified-mention",
           "evidence": "On September 16, 1994, a mysterious craft was spotted landing near the grounds of the Aerial",
           "segment": 235
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0ea770378ed0",
+      "path": "Archives-for-the-Unexplained/documents/Expedition-Unknown---S01E01---Amelia-Earhart---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1937-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On May 21, 1937, Amelia Earhart departs Oakland, California",
+          "segment": 297
+        },
+        {
+          "value": "1937-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "It was here, on July 2, 1937, in this very spot",
+          "segment": 309
         }
       ]
     },
@@ -249604,6 +249628,21 @@
           "method": "event-language",
           "evidence": "Description: On November 1, 2014, at 9:15 PM, a witness observed three round objects, orange-red in color, moving silently in the sky. Eventually, the witness lost sight of the objects. The observation of orange balls crossing the sky in a few minutes, on a weekend night, suggest",
           "segment": "seg-053e72268f222c4d2f51d2fa"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8b6de4067d253bab64c91dd1",
+      "path": "France-GEIPAN/paired/cases/2014-11-09048/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-11-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On November 20, 2014, at 21:29, an amateur astronomer was surprised to observe through the ocular of his telescope a small, fuzzy, bright, warm-toned sphere. Of average strangeness and good consistency (unique witness, but with a very precise testimony), this case tu",
+          "segment": "seg-d4d46f00f3bc43d4faf62b6a"
         }
       ]
     },
