@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-10T15:53:28Z",
+  "generatedAt": "2026-09-10T16:48:48Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "43e63302c82efe68a93287a3e1651527bccfff54"
+    "revision": "671212f05732148021bf405d058278bff13b26ee"
   },
-  "documentsWithCandidates": 10363,
+  "documentsWithCandidates": 10365,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -5710,6 +5710,21 @@
           "method": "unclassified-mention",
           "evidence": "December 17, 2015 3pm EST",
           "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0a78030f35ba",
+      "path": "Archives-for-the-Unexplained/documents/2016-02-05---OpenMindsTV---CIA-s-UFO-X-Files---Open-Minds-UFO-Report_lmMtsDxrZU4---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2016-01-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 24 2016 3 days prior to the",
+          "segment": 43
         }
       ]
     },
@@ -101283,13 +101298,22 @@
       "path": "Black-Vault-UFO/pdfs/faa-notice-n-7110-800.txt",
       "candidates": [
         {
+          "value": "2025-10-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Air Traffic Organization Policy October 26, 2025",
+          "segment": 2
+        },
+        {
           "value": "2022-12-22",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "On December 22, 2022, Title 50 United States Code (50 U.S.C.) section 3373",
-          "segment": 34
+          "segment": 33
         }
       ]
     },
@@ -246289,6 +246313,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On September 25, 2010, around 11:30 PM, a witness observed from their garden the silent passage of 8 orange balls. The characteristics of the observation (several orange balls flying silently in the same direction, seen in successive bursts then disappearing, observe",
           "segment": "seg-45efeb59f6f06e09e7c6e44b"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-651cacfed2a511bd3039ad2d",
+      "path": "France-GEIPAN/paired/cases/2010-11-02681/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2010-11-16",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On November 16, 2010, at 6:40 a.m., a driver observed for two to three minutes a stationary, luminous phenomenon in the sky at a great distance (several kilometers) that resembled a saucer. The saucer was surrounded by approximately thirty white and green lights. The",
+          "segment": "seg-c884ccede059ecaea61856e9"
         }
       ]
     },
