@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-10T12:26:53Z",
+  "generatedAt": "2026-09-10T13:19:53Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "750d4941c2265a1d922301109f6814d904490270"
+    "revision": "bfeec59aa5d17caf092b49c65a2210dbe370d562"
   },
-  "documentsWithCandidates": 10356,
+  "documentsWithCandidates": 10359,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -19465,6 +19465,48 @@
           "method": "unclassified-mention",
           "evidence": "Volume 10, Number 5 May 2002",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7f8141e54649",
+      "path": "Archives-for-the-Unexplained/documents/Rencontres-Ufologiques---2013-06-28.txt",
+      "candidates": [
+        {
+          "value": "2013-06-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Informations des Rencontres Ufologiques 28 juin 2013",
+          "segment": 0
+        },
+        {
+          "value": "2013-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le Souper Ufologique Mensuel de l'AQU se tiendra le samedi 06 juillet 2013 à 19 h 00 au restaurant Al-Raouché",
+          "segment": 2
+        },
+        {
+          "value": "2013-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MARSEILLE et du CERPA met en place pour le dimanche 7 juillet 2013 à 14 h 00 au Restaurant Buffalo Grill de",
+          "segment": 23
+        },
+        {
+          "value": "2013-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Prochain Café Ufologiques le 4 juillet 2013 à 18 h30, lieu habituel.",
+          "segment": 61
         }
       ]
     },
@@ -247865,6 +247907,21 @@
       ]
     },
     {
+      "documentId": "doc-9d2edc5a2dd50a6b1db9363f",
+      "path": "France-GEIPAN/paired/cases/2012-07-08278/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: A witness reports an observation made on July 27, 2013, around 3:30 AM: the witness observed twice the rapid and silent passage across the sky of orange lights forming a triangular shape. The first passage followed a path from West to East (O-E) and the second from E",
+          "segment": "seg-5e59057b1d0e92f144f1c658"
+        }
+      ]
+    },
+    {
       "documentId": "doc-bd2245912f1c586ea5901023",
       "path": "France-GEIPAN/paired/cases/2012-07-08296/en/translation.txt",
       "candidates": [
@@ -250210,6 +250267,21 @@
           "method": "event-language",
           "evidence": "Description: On March 14, 2014 at 7:30 PM, a motorist and his daughter observed through the windshield the very fast movement of a luminous phenomenon in the cloudy sky. The phenomenon disappeared behind the horizon. The observation of a large, very bright point, followed by a sh",
           "segment": "seg-5548b0c816622203580e9219"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9d85da54a51810ffca239768",
+      "path": "France-GEIPAN/paired/cases/2014-03-09126/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-03-07",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On March 7, 2014 between 0:25 and 0:40, a person and his young daughter observed a yellow-orange object in the sky, in the shape of a crescent. The witness had the reflex to take pictures. The photograph presented by the witness perfectly matches the shape the Moon h",
+          "segment": "seg-76e694f927c1147c0eef8c46"
         }
       ]
     },
