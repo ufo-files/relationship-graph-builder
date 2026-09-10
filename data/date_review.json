@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-10T07:16:33Z",
+  "generatedAt": "2026-09-10T08:06:37Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "c8ecd445e21d12ccb3c6c639e6a56bdbba76200a"
+    "revision": "b8858dbd985fd823b115d435c17ff101706b7bea"
   },
-  "documentsWithCandidates": 10341,
+  "documentsWithCandidates": 10342,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -232237,6 +232237,21 @@
           "method": "event-language",
           "evidence": "Description: On January 11, 1979, at 4:35 PM, two witnesses observed in the sky approximately fifteen flying objects. They appeared to be between 24 and 32 inches in size. Metallic in color, they spun and emitted flashes of light as they reflected the setting sun. They moved slow",
           "segment": "seg-d720900850a713d351987089"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f35bfd20e5a7147a6ffc88df",
+      "path": "France-GEIPAN/paired/cases/1979-01-01846/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1979-01-13",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On January 13, 1979, starting at 8:00 PM, several witnesses observed in the sky a luminous object of various colors emitting reflections. The observation lasted approximately thirty minutes. The object was located to the right of the Moon, but there is no information",
+          "segment": "seg-d57e6ebddbcf0a17d5c55c40"
         }
       ]
     },
