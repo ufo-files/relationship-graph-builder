@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-10T01:05:09Z",
+  "generatedAt": "2026-09-10T02:23:40Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "b7fd9888039d9b84158fd8d45f1b3048ecb7d470"
+    "revision": "3fd796890d168fd940a4c122f7f849c1a79ca109"
   },
-  "documentsWithCandidates": 10329,
+  "documentsWithCandidates": 10331,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -6124,6 +6124,30 @@
           "method": "unclassified-mention",
           "evidence": "was the evening of May 18 2013 at the",
           "segment": 1115
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a4b58bac4e61",
+      "path": "Archives-for-the-Unexplained/documents/2017-11-26---Ryan-Sprague---Somewhere-in-the-Skies-Childhood-UFO-Encounters_pwD6Yo2Qsjg---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1952-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 12 1952 that the time period",
+          "segment": 485
+        },
+        {
+          "value": "1994-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "them what happened on September 16 1994",
+          "segment": 2172
         }
       ]
     },
@@ -248881,6 +248905,21 @@
           "method": "event-language",
           "evidence": "Description: On March 14, 2014 at 7:30 PM, a motorist and his daughter observed through the windshield the very fast movement of a luminous phenomenon in the cloudy sky. The phenomenon disappeared behind the horizon. The observation of a large, very bright point, followed by a sh",
           "segment": "seg-5548b0c816622203580e9219"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3bf54495b02e0647fbb10c29",
+      "path": "France-GEIPAN/paired/cases/2014-03-09137/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-03-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 21, 2014, around 9 PM, a witness observed for 2 to 3 minutes three equally spaced, yellow-orange lights moving silently on a straight trajectory and then suddenly accelerating before disappearing. The observation of equally spaced, yellow-orange lights cross",
+          "segment": "seg-1688a3e499e5f7384dd4cb35"
         }
       ]
     },

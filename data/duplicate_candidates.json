@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "b7fd9888039d9b84158fd8d45f1b3048ecb7d470"
+    "revision": "3fd796890d168fd940a4c122f7f849c1a79ca109"
   },
   "count": 255,
   "totalCount": 255,
@@ -1772,6 +1772,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Tim Schwartz",
+        "mentions": 9,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Tim Schwarz",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Special Programs Office",
@@ -1782,22 +1798,6 @@
         "name": "Special Program Officer",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Tim Schwartz",
-        "mentions": 8,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Tim Schwarz",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -3231,8 +3231,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 113,
-        "documentCount": 64
+        "mentions": 115,
+        "documentCount": 65
       },
       "right": {
         "name": "George Adamsky",
@@ -3503,8 +3503,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 113,
-        "documentCount": 64
+        "mentions": 115,
+        "documentCount": 65
       },
       "right": {
         "name": "Mr. George Adams",
