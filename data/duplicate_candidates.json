@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "3fd796890d168fd940a4c122f7f849c1a79ca109"
+    "revision": "5b09da45e5588eb7a1e67c14237b664c9660adf1"
   },
-  "count": 255,
-  "totalCount": 255,
-  "shownCount": 255,
+  "count": 256,
+  "totalCount": 256,
+  "shownCount": 256,
   "candidates": [
     {
       "category": "organization",
@@ -95,8 +95,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 597,
-        "documentCount": 386
+        "mentions": 598,
+        "documentCount": 387
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -111,8 +111,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 597,
-        "documentCount": 386
+        "mentions": 598,
+        "documentCount": 387
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -735,8 +735,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 597,
-        "documentCount": 386
+        "mentions": 598,
+        "documentCount": 387
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -751,8 +751,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 597,
-        "documentCount": 386
+        "mentions": 598,
+        "documentCount": 387
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -767,8 +767,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 597,
-        "documentCount": 386
+        "mentions": 598,
+        "documentCount": 387
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1439,8 +1439,8 @@
       "category": "person",
       "left": {
         "name": "Philip Corso",
-        "mentions": 52,
-        "documentCount": 41
+        "mentions": 53,
+        "documentCount": 42
       },
       "right": {
         "name": "Colonel Phillip Corso",
@@ -1487,8 +1487,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 19,
-        "documentCount": 16
+        "mentions": 20,
+        "documentCount": 17
       },
       "right": {
         "name": "George Noorey",
@@ -3231,8 +3231,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 115,
-        "documentCount": 65
+        "mentions": 116,
+        "documentCount": 66
       },
       "right": {
         "name": "George Adamsky",
@@ -3503,8 +3503,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 115,
-        "documentCount": 65
+        "mentions": 116,
+        "documentCount": 66
       },
       "right": {
         "name": "Mr. George Adams",
@@ -3966,6 +3966,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Mike Williams",
+        "mentions": 5,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Ken Williams",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.88,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "George Hunt Williamson",
         "mentions": 7,
         "documentCount": 7
@@ -4046,14 +4062,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Dan Goldin",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "James Hansen",
+        "mentions": 5,
+        "documentCount": 4
       },
       "right": {
-        "name": "Daniel Goldin",
-        "mentions": 6,
-        "documentCount": 5
+        "name": "Jane Hansen",
+        "mentions": 5,
+        "documentCount": 3
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -4062,14 +4078,14 @@
     {
       "category": "person",
       "left": {
-        "name": "James Hansen",
-        "mentions": 4,
+        "name": "Dan Goldin",
+        "mentions": 3,
         "documentCount": 3
       },
       "right": {
-        "name": "Jane Hansen",
-        "mentions": 4,
-        "documentCount": 2
+        "name": "Daniel Goldin",
+        "mentions": 6,
+        "documentCount": 5
       },
       "similarity": 0.87,
       "reason": "similar person name",

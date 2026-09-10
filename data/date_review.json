@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-10T02:23:40Z",
+  "generatedAt": "2026-09-10T03:20:04Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "3fd796890d168fd940a4c122f7f849c1a79ca109"
+    "revision": "5b09da45e5588eb7a1e67c14237b664c9660adf1"
   },
-  "documentsWithCandidates": 10331,
+  "documentsWithCandidates": 10333,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -228863,6 +228863,21 @@
       ]
     },
     {
+      "documentId": "doc-eccf28878935014aaafeeee5",
+      "path": "France-GEIPAN/paired/cases/1965-07-02569/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1965-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: Recent report of an old observation made on July 23, 1965, around 6 PM. A metallic-looking triangular object is stationary in the sky and reflects sunlight strongly. This case of observation by multiple witnesses of a fixed bright object in the evening sky has all th",
+          "segment": "seg-fbb5940f090911817349ea22"
+        }
+      ]
+    },
+    {
       "documentId": "doc-e9042d47c9cecf56010a77ca",
       "path": "France-GEIPAN/paired/cases/1965-08-02422/en/translation.txt",
       "candidates": [
@@ -233731,6 +233746,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On October 31, 1980, around 6:45 a.m., a witness on a train observed two bright points that seemed to follow the train's path. No further information was collected on this phenomenon.",
           "segment": "seg-3483927dee02ff9f89a18d22"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d9507eca4f1a2ce76d2f093f",
+      "path": "France-GEIPAN/paired/cases/1980-11-00818/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1980-10-05",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On October 5, 1980, between 7:25 PM and 8:00 PM, several witnesses observed the low-altitude movement of an object that intrigued them. Shaped either circular or rectangular, according to the witnesses, it emitted lights. It moved very slowly and without any noise, m",
+          "segment": "seg-02ded60d19cb9a766a7c0ed4"
         }
       ]
     },
