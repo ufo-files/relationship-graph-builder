@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-10T10:46:37Z",
+  "generatedAt": "2026-09-10T11:37:26Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e8d25465679da7e14759e4792f79983dd4724cad"
+    "revision": "d8b3d8ba2243bec2660466b46e5307ecbd532e91"
   },
-  "documentsWithCandidates": 10350,
+  "documentsWithCandidates": 10353,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -2668,6 +2668,30 @@
           "method": "unclassified-mention",
           "evidence": "Launcher for Spacecraft,” August 24, 1992, p.",
           "segment": 151
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e1d46cd64ce9",
+      "path": "Archives-for-the-Unexplained/documents/2006-03-19_GIGAZINE_Nissin-Yaki-soba-U-F-O-mentaiko-Mayonnaise-was-boldly-bought-and-bought.txt",
+      "candidates": [
+        {
+          "value": "2006-03-19",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "This article, originally posted in Japanese on 11:58 Mar 19, 2006, may contains some machine-translated parts.",
+          "segment": 1
+        },
+        {
+          "value": "2006-03-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mar 19, 2006 11:58:00 in Gastronomic Adventure, Posted by darkhorse_log",
+          "segment": 22
         }
       ]
     },
@@ -23446,6 +23470,21 @@
           "method": "unclassified-mention",
           "evidence": "May 14, 2008, Needles, California.",
           "segment": 35
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9f27e729d4bc",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Navigator---No-025---2001.txt",
+      "candidates": [
+        {
+          "value": "1954-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"Sunday Dispatch\", London, July 11, 1954",
+          "segment": 6
         }
       ]
     },
@@ -249583,6 +249622,21 @@
           "method": "event-language",
           "evidence": "Description: On September 9, 2013, at 10:02 PM or 10:03 PM, a witness observed for 5 seconds the movements of several white light phenomena that silently moved across the cloudy sky in a linear fashion, then turned in a counterclockwise direction, and eventually disappeared. Only",
           "segment": "seg-31d9364dd4d67235927b6fa7"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d75d5939dc65399017c314bb",
+      "path": "France-GEIPAN/paired/cases/2013-09-08560/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Sunday, September 8, 2013 at 4:19 a.m., two individuals were intrigued by the successive arrival in the sky of several very bright red lights that moved silently in the same direction. One witness filmed his observation and posted it on an internet site dedicated ",
+          "segment": "seg-bc719e0e27eea23b4c3c9b88"
         }
       ]
     },
