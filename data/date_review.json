@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-11T13:19:50Z",
+  "generatedAt": "2026-09-11T14:10:24Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "cec1b830aa9773b62ee8f6651c3ccecb3a1ed5bb"
+    "revision": "9223c93ed24c4e8bb29b54c5c6723ad0aca843fb"
   },
-  "documentsWithCandidates": 10404,
+  "documentsWithCandidates": 10410,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -5978,6 +5978,21 @@
       ]
     },
     {
+      "documentId": "doc-334cd90b6ed7",
+      "path": "Archives-for-the-Unexplained/documents/2016-10-11---TheHighersideChats---Peter-Robbins-Wilhelm-Reich-Orgone-Energy-UFOs_UIPXKEAsCcE---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1954-10-10",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "action until 10 October 1954",
+          "segment": 2463
+        }
+      ]
+    },
+    {
       "documentId": "doc-30b948f64f8d",
       "path": "Archives-for-the-Unexplained/documents/2017-03-01---NASA-s-Marshall-Space-Flight-Center---Lewis-Wooten__QvWdlgf3X8---transcript-automated-.txt",
       "candidates": [
@@ -7963,6 +7978,21 @@
           "method": "unclassified-mention",
           "evidence": "excuse me, September 7 2022.",
           "segment": 339
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6e12c6e3acea",
+      "path": "Archives-for-the-Unexplained/documents/2022-12-01---The-Black-Vault-Originals---What-is-the-Pentagon-s-Newest-UFO-Office-AARO-Up-To-_nAKSU2earlg---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2022-10-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "this letter I.E by October 6 2022 we",
+          "segment": 413
         }
       ]
     },
@@ -11758,6 +11788,30 @@
           "method": "unclassified-mention",
           "evidence": "Date and Day: Sat. October 13, 2001",
           "segment": 718
+        }
+      ]
+    },
+    {
+      "documentId": "doc-53699f926b1c",
+      "path": "Archives-for-the-Unexplained/documents/Civlilian-Saucer-Intellligence-of-New-York---No-01.txt",
+      "candidates": [
+        {
+          "value": "1955-02-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Friday, February 25, 1955 - 8~30 p.m. - PLBASE BE PROMPT",
+          "segment": 10
+        },
+        {
+          "value": "1955-02-11",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "In Meyer Berger's column in the New York Times of February 11 1955, appeared",
+          "segment": 20
         }
       ]
     },
@@ -242666,6 +242720,21 @@
       ]
     },
     {
+      "documentId": "doc-c48ae866b9d7c372add52018",
+      "path": "France-GEIPAN/paired/cases/2008-03-01957/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 29, 2008, around 7:05 PM or 7:10 PM, a witness was intrigued by the silent passage across the sky of three dark, circular objects. The objects were quickly obscured by the urban landscape. The observation lasted approximately 30 seconds. Based on the objecti",
+          "segment": "seg-548bde6a07cd2cee9ec51b81"
+        }
+      ]
+    },
+    {
       "documentId": "doc-3b630c9a14a99f94bc423a49",
       "path": "France-GEIPAN/paired/cases/2008-04-01815/en/translation.txt",
       "candidates": [
@@ -250715,6 +250784,21 @@
       ]
     },
     {
+      "documentId": "doc-9d65e22650c0777a1cb329e1",
+      "path": "France-GEIPAN/paired/cases/2013-10-08583/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-10-13",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On October 13, 2013, four pilots (see the estimated positions of the 4 aircraft on the aeronautical questionnaire) observed a powerful light phenomenon in the east of France, a phenomenon also observed on the ground (see press article), and by the Chaligny camera (ne",
+          "segment": "seg-9c11e3e5c943b04fe92b68d3"
+        }
+      ]
+    },
+    {
       "documentId": "doc-3a04c8e0105437c5a16320c2",
       "path": "France-GEIPAN/paired/cases/2013-10-08585/en/translation.txt",
       "candidates": [
@@ -252544,6 +252628,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Sunday, July 23, 2017 at 11:27 PM, a witness and his partner observed for less than a minute a slow-moving bright white light point on a west-east trajectory in a clear sky. The intensity of the point dimmed as it moved. Only one testimony was collected. The witne",
           "segment": "seg-8319d40d6dea20a225c3d958"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-95ea1adf9cfea9a529b7240e",
+      "path": "France-GEIPAN/paired/cases/2017-07-09734/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On July 13, 2017, at 10:38 PM, a witness observing from their backyard noticed a stationary presence followed by the slow movement of a red ball and three green balls in a clear sky. The witness took photos before the sparkling phenomenon moved away and disappeared. ",
+          "segment": "seg-4b1ed0c0f12f22edfee67108"
         }
       ]
     },
