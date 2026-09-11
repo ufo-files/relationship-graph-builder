@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "def418977d1af4b32c7d51a2018d722c3cacb7d5"
+    "revision": "a8f7034a485c1056677e8f3ef13983f3dd030d70"
   },
-  "count": 262,
-  "totalCount": 262,
-  "shownCount": 262,
+  "count": 264,
+  "totalCount": 264,
+  "shownCount": 264,
   "candidates": [
     {
       "category": "organization",
@@ -1263,8 +1263,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 133,
-        "documentCount": 81
+        "mentions": 132,
+        "documentCount": 80
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -1503,8 +1503,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 24,
-        "documentCount": 21
+        "mentions": 25,
+        "documentCount": 22
       },
       "right": {
         "name": "George Noorey",
@@ -1743,8 +1743,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 88,
-        "documentCount": 11
+        "mentions": 89,
+        "documentCount": 12
       },
       "right": {
         "name": "Kings Island",
@@ -1924,6 +1924,22 @@
       },
       "right": {
         "name": "Barbara Lam",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Peter Levin",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Peter Levine",
         "mentions": 3,
         "documentCount": 2
       },
@@ -2703,8 +2719,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 256,
-        "documentCount": 155
+        "mentions": 257,
+        "documentCount": 156
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3396,8 +3412,8 @@
       },
       "right": {
         "name": "Timothy Becky",
-        "mentions": 5,
-        "documentCount": 4
+        "mentions": 6,
+        "documentCount": 5
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -3934,6 +3950,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Allen Greenfield",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Alan Greenfield",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.903,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Stephen Hawking",
         "mentions": 71,
         "documentCount": 47
@@ -4047,8 +4079,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Jones",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 5,
+        "documentCount": 4
       },
       "right": {
         "name": "Steven Jones",
