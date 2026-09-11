@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-11T08:22:37Z",
+  "generatedAt": "2026-09-11T09:10:03Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "99681b1ff6d93405267dca261646e83905bd8a83"
+    "revision": "c69c886908e24d7d7c1ea08fbe7273aac5c12cef"
   },
-  "documentsWithCandidates": 10391,
+  "documentsWithCandidates": 10394,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -21478,6 +21478,30 @@
           "method": "unclassified-mention",
           "evidence": "Last Change: April 7, 1998",
           "segment": 57
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4d2449582563",
+      "path": "Archives-for-the-Unexplained/documents/Shadow-of-a-Doubt---2000-03.txt",
+      "candidates": [
+        {
+          "value": "2000-03-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, March 11, 2000, 2pm-3:30pm",
+          "segment": 19
+        },
+        {
+          "value": "2000-02-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Bob Park's \"What's New\" - February 18, 2000.",
+          "segment": 40
         }
       ]
     },
@@ -243101,6 +243125,21 @@
       ]
     },
     {
+      "documentId": "doc-3d4d01316138d565f7e51059",
+      "path": "France-GEIPAN/paired/cases/2008-06-02117/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-06-23",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: Following a press article, the GEIPAN decides to investigate an observation made on June 23, 2008 at 4:52 a.m. by a witness who took photographs of a luminous phenomenon in the sky. According to the investigation report, there are many inconsistencies in the testimon",
+          "segment": "seg-b080355674e7cdc96dd72b1c"
+        }
+      ]
+    },
+    {
       "documentId": "doc-0ff7af47853ee7eac619db4b",
       "path": "France-GEIPAN/paired/cases/2008-06-02313/en/translation.txt",
       "candidates": [
@@ -251791,6 +251830,21 @@
           "method": "event-language",
           "evidence": "Description: On May 4, 2015 at 10:05 AM, a witness observed a shimmering object moving slowly across the sky from their home. No other witnesses were reported. The shimmering object with changing reflections, in broad daylight, moving slowly across the Paris sky, has all the char",
           "segment": "seg-6b5de33b210e494bb028e483"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a15602ba60ce3aa1effe26d7",
+      "path": "France-GEIPAN/paired/cases/2015-05-09173/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-05-07",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On May 7, 2015, at 11:15 PM, a witness observed in the sky a particularly bright spherical object that intrigued them. The PAN moved on a descending vertical trajectory. The observation lasted for an hour and stopped when the PAN was obscured by clouds or fog. Only o",
+          "segment": "seg-9df27a22a59bc2ce2d685269"
         }
       ]
     },
