@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-11T20:33:48Z",
+  "generatedAt": "2026-09-11T21:25:25Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "0bb3fa4e96e545597c93db48c4243c71e2f6ca0a"
+    "revision": "b4ce644c9de0850610d6cbafce21ca4318729a87"
   },
-  "documentsWithCandidates": 10436,
+  "documentsWithCandidates": 10441,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7310,6 +7310,21 @@
       ]
     },
     {
+      "documentId": "doc-e02184eca214",
+      "path": "Archives-for-the-Unexplained/documents/2018-02-02---FADE-TO-BLACK-Radio---BREAKING-Richard-Doty-Surprise-Call-to-FADE-to-BLACK-Unedited-LIVE_7cj_hhQ63lo---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 these are the air",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-df697d0c06f9",
       "path": "Archives-for-the-Unexplained/documents/2018-02-19---Inception-Radio-Network---UFO-Headline-News-Monday-February-12th-2018_4NhM7mC_lwA---transcript-automated-.txt",
       "candidates": [
@@ -12193,6 +12208,21 @@
           "method": "context-exclusion",
           "evidence": "In Meyer Berger's column in the New York Times of February 11 1955, appeared",
           "segment": 20
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6b4939077887",
+      "path": "Archives-for-the-Unexplained/documents/Civlilian-Saucer-Intellligence-of-New-York---No-04.txt",
+      "candidates": [
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 24, 1947)· Mr. Bloecher 4eacr1be4 a tw ot t.beee briefly, 1Dclu41ng the vart1-",
+          "segment": 23
         }
       ]
     },
@@ -123138,13 +123168,22 @@
       "path": "Black-Vault-UFO/pdfs/harvard-s-website.txt",
       "candidates": [
         {
+          "value": "2023-03-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Draft version March 7, 2023",
+          "segment": 0
+        },
+        {
           "value": "2017-03-09",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "On March 9, 2017, six months before 'Oumuamua's closest approach to Earth, a meter-size interstellar meteor",
-          "segment": 32
+          "evidence": "On March 9, 2017, six months before ‘Oumuamua’s closest approach to Earth, a meter-size interstellar meteor",
+          "segment": 31
         }
       ]
     },
@@ -270841,6 +270880,51 @@
           "method": "unclassified-mention",
           "evidence": "VH-DSJ on 21 October 1978.",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-41cf0186be37",
+      "path": "National-Archives-of-Australia-UFO/documents/30030606/0010.txt",
+      "candidates": [
+        {
+          "value": "1953-02-16",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The CIA, however, in a report dated 16 February 1953 showed",
+          "segment": 24
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6882f3959f3c",
+      "path": "National-Archives-of-Australia-UFO/documents/30030606/0015.txt",
+      "candidates": [
+        {
+          "value": "1965-09-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "28 September 1965 Maj. Gen. LeBailly, Director of Information",
+          "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-db1a0f523efb",
+      "path": "National-Archives-of-Australia-UFO/documents/30030606/0021.txt",
+      "candidates": [
+        {
+          "value": "1955-10-25",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "the press release meeting on 25 October 1955 fer the Special",
+          "segment": 31
         }
       ]
     },

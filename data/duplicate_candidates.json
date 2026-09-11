@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "0bb3fa4e96e545597c93db48c4243c71e2f6ca0a"
+    "revision": "b4ce644c9de0850610d6cbafce21ca4318729a87"
   },
-  "count": 264,
-  "totalCount": 264,
-  "shownCount": 264,
+  "count": 266,
+  "totalCount": 266,
+  "shownCount": 266,
   "candidates": [
     {
       "category": "organization",
@@ -303,8 +303,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 400,
-        "documentCount": 173
+        "mentions": 402,
+        "documentCount": 175
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -319,8 +319,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 236,
-        "documentCount": 133
+        "mentions": 238,
+        "documentCount": 134
       },
       "right": {
         "name": "Kirtland Airforce Base",
@@ -335,8 +335,8 @@
       "category": "location",
       "left": {
         "name": "Holloman Air Force Base",
-        "mentions": 160,
-        "documentCount": 79
+        "mentions": 163,
+        "documentCount": 80
       },
       "right": {
         "name": "Hollman Air Force Base",
@@ -1215,8 +1215,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 291,
-        "documentCount": 101
+        "mentions": 295,
+        "documentCount": 102
       },
       "right": {
         "name": "Jacques Valle",
@@ -1582,6 +1582,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Michael Wolfe",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Dr. Michael Wolf",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Nancy Talbot",
         "mentions": 3,
         "documentCount": 3
@@ -1679,8 +1695,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 236,
-        "documentCount": 133
+        "mentions": 238,
+        "documentCount": 134
       },
       "right": {
         "name": "Kirkland Air Force Base",
@@ -1695,8 +1711,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 236,
-        "documentCount": 133
+        "mentions": 238,
+        "documentCount": 134
       },
       "right": {
         "name": "Kirtland Alr Force Base",
@@ -1775,8 +1791,8 @@
       "category": "person",
       "left": {
         "name": "John Edward",
-        "mentions": 17,
-        "documentCount": 11
+        "mentions": 19,
+        "documentCount": 12
       },
       "right": {
         "name": "John Edwards",
@@ -3422,6 +3438,22 @@
     {
       "category": "person",
       "left": {
+        "name": "William Pollan",
+        "mentions": 7,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "William Poland",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "George Harrison",
         "mentions": 3,
         "documentCount": 2
@@ -3500,14 +3532,14 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "organization",
+      "category": "location",
       "left": {
-        "name": "University of Toronto",
+        "name": "Offutt Air Force Base",
         "mentions": 16,
-        "documentCount": 16
+        "documentCount": 15
       },
       "right": {
-        "name": "University of Trento",
+        "name": "Offit Air Force Base",
         "mentions": 2,
         "documentCount": 2
       },
@@ -3516,14 +3548,14 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "location",
+      "category": "organization",
       "left": {
-        "name": "Offutt Air Force Base",
-        "mentions": 15,
-        "documentCount": 14
+        "name": "University of Toronto",
+        "mentions": 16,
+        "documentCount": 16
       },
       "right": {
-        "name": "Offit Air Force Base",
+        "name": "University of Trento",
         "mentions": 2,
         "documentCount": 2
       },
@@ -3631,8 +3663,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 76,
-        "documentCount": 59
+        "mentions": 77,
+        "documentCount": 60
       },
       "right": {
         "name": "Mohave Desert",
@@ -3919,8 +3951,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 103,
-        "documentCount": 63
+        "mentions": 105,
+        "documentCount": 64
       },
       "right": {
         "name": "Stephen Spielberg",
