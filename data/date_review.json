@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-11T15:52:33Z",
+  "generatedAt": "2026-09-11T16:47:52Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a8f7034a485c1056677e8f3ef13983f3dd030d70"
+    "revision": "31fb4b22e9c93452210bcb7a0b612017c7424509"
   },
-  "documentsWithCandidates": 10417,
+  "documentsWithCandidates": 10419,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -3952,6 +3952,21 @@
           "method": "unclassified-mention",
           "evidence": "Sunday, January 05, 2025",
           "segment": 47
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d69163d76ad4",
+      "path": "Archives-for-the-Unexplained/documents/2009-11-19_Atlas-Obscura_Emilcin-UFO-memorial.txt",
+      "candidates": [
+        {
+          "value": "1978-05-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "said to have taken place on May 10, 1978.",
+          "segment": 8
         }
       ]
     },
@@ -193559,7 +193574,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "From Los Angeles Times - March 22 2018",
+          "evidence": "From Los Angeles Times — March 22 2018",
           "segment": 0
         }
       ]
@@ -212907,24 +212922,6 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "id WAA10586; Thu, 21 Dec 1995 22:01:08 -0500",
-          "segment": 0
-        },
-        {
-          "value": "1995-12-21",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "id SAA20232; Thu, 21 Dec 1995 18:58:09 - 0800",
-          "segment": 1
-        },
-        {
-          "value": "1995-12-21",
-          "precision": "day",
-          "confidence": 0.94,
-          "kind": "document_date",
-          "method": "document-header",
-          "evidence": "Date: Thu, 21 Dec 1995 18:58:09 -0800 (PST",
           "segment": 2
         },
         {
@@ -212933,8 +212930,26 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Thu, 21 Dec 1995 17:15:18 -0800",
+          "evidence": "id SAA20232; Thu, 21 Dec 1995 18:58:09 -0800",
+          "segment": 4
+        },
+        {
+          "value": "1995-12-21",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Thu, 21 Dec 1995 18:58:09 -0800 (PST",
           "segment": 5
+        },
+        {
+          "value": "1995-12-21",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Thu, 21 Dec 1995 17:15:18 -0800",
+          "segment": 8
         }
       ]
     },
@@ -247072,6 +247087,21 @@
           "method": "event-language",
           "evidence": "Description: On September 10, 2010, around 10:30 PM, a witness observed for 40 minutes the movements of a very bright object at a very high altitude in the sky. The characteristics of the observation (very bright object in the night, observation duration of 40 minutes interrupted",
           "segment": "seg-475db4cff585564d2547bb06"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-963c7fe79aea9763a000e4ae",
+      "path": "France-GEIPAN/paired/cases/2010-09-02646/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2010-09-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 24, 2010, motorists traveling on the A11 (direction Le Mans-Paris) noticed a stationary object in the sky that intrigued them. The witnesses, upon arriving at the rest area of Sargé-lés-Le-Mans, photographed a structure resembling a type of airship, dark",
+          "segment": "seg-f464c03d8a88a6a390a128ce"
         }
       ]
     },
