@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-11T10:53:53Z",
+  "generatedAt": "2026-09-11T11:42:12Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "06f55525a8b16dad0fa7c42f4fdf7c4ed67f1b10"
+    "revision": "86c68ef49d236a61f5a4bb70c582f8f3534f7a5e"
   },
-  "documentsWithCandidates": 10399,
+  "documentsWithCandidates": 10401,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7786,6 +7786,21 @@
           "method": "unclassified-mention",
           "evidence": "of the last year was February 18 2021 so",
           "segment": 141
+        }
+      ]
+    },
+    {
+      "documentId": "doc-afdf1deef666",
+      "path": "Archives-for-the-Unexplained/documents/2022-03-28---New-Thinking-Allowed-with-Jeffrey-Mishlove---UFOs-The-Demonic-with-Charles-Upton_zINb1Usx3EQ---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1962-05-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "at West Point on May 12, 1962, he says",
+          "segment": 1277
         }
       ]
     },
@@ -216636,7 +216651,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": ">Date: Thu, 16 Oct 1997 08:29:13 -0700",
-          "segment": 0
+          "segment": 1
         },
         {
           "value": "1997-04-13",
@@ -216644,8 +216659,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": ">On April 13, 1997, in Lona Linda, California, at the RAB meeting",
-          "segment": 13
+          "evidence": ">On'April 13, 1997, in Loma Linda, California, at the RAE meeting",
+          "segment": 14
         }
       ]
     },
@@ -251839,6 +251854,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On April 3, 2015, at 4:15 PM, a motorist and her two passengers were intrigued by the slow, silent, and low-altitude flight of an aircraft they did not recognize. The GEIPAN consulted military air traffic control regarding this observation; it turns out that on that ",
           "segment": "seg-45a32517b6dbb483521fa078"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8428e90b97cefd567d7aca9e",
+      "path": "France-GEIPAN/paired/cases/2015-04-09162/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-04-22",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On April 22, 2015, around 1:20/1:30 AM, two individuals observed the very quick passage in a clear sky of an object (triangular or round in shape) with three white LEDs and a green light in its center. No particular noise was heard. No trail or halo was seen. The obj",
+          "segment": "seg-0dfd1d66eaf9c3bd97c3e61d"
         }
       ]
     },
