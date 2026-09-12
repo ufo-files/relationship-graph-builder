@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-12T01:47:49Z",
+  "generatedAt": "2026-09-12T02:39:48Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "1a52cebdcdbe41d8ac689fbf394b53dfbacce2d7"
+    "revision": "f53caa6588fac125bd4e14a9132e5724c7059cbc"
   },
-  "documentsWithCandidates": 10451,
+  "documentsWithCandidates": 10452,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -235357,6 +235357,21 @@
           "method": "event-language",
           "evidence": "Description: On March 18, 1979, around 9:45 PM, a witness observed from his courtyard for 5 seconds a luminous phenomenon that intrigued him. He saw two orange spheres, 15 cm in diameter, appear and disappear in the clouds, moving at extremely high speed from west to southeast. T",
           "segment": "seg-2c35d6be64ff58aa8bb21f98"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f8974ecb869093753f0c2bca",
+      "path": "France-GEIPAN/paired/cases/1979-04-00615/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1979-04-02",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: On April 2, 1979, at approximately 8:40 PM, the gendarmerie received telephone calls reporting the overflight of the commune by a craft emitting a bright light. On the scene, the gendarmes observed an orange luminescent phenomenon moving across the clear sky at low a",
+          "segment": "seg-45c1dbe195b1ef241cb84bf3"
         }
       ]
     },
