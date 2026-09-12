@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-12T07:51:42Z",
+  "generatedAt": "2026-09-12T08:46:56Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a0f199b2f04a4dd15c34b2e8b94fe9497a4c4589"
+    "revision": "b5717c3436a280888fe2217af9173685ddd9e27f"
   },
-  "documentsWithCandidates": 10465,
+  "documentsWithCandidates": 10469,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -6268,6 +6268,21 @@
           "method": "unclassified-mention",
           "evidence": "at 8:20 p.m. on July 15 2014 when he",
           "segment": 267
+        }
+      ]
+    },
+    {
+      "documentId": "doc-84bd8d49d615",
+      "path": "Archives-for-the-Unexplained/documents/2016-05-06---Podcast-UFO-Live-Shows---Ryan-Mullahy-UFOs-in-New-Hampshire-05-04-2016_iYuwMc-kgnI---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1984-10-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 15 1984 1984 Wow yeah that is I",
+          "segment": 2719
         }
       ]
     },
@@ -22907,6 +22922,129 @@
       ]
     },
     {
+      "documentId": "doc-4d6eb2263614",
+      "path": "Archives-for-the-Unexplained/documents/Shadow-of-a-Doubt---1999-09.txt",
+      "candidates": [
+        {
+          "value": "1999-09-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 11, 1999 September 25, 1999* October 16, 1999* November 13, 1999",
+          "segment": 16
+        },
+        {
+          "value": "1999-09-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 11, 1999 September 25, 1999* October 16, 1999* November 13, 1999",
+          "segment": 16
+        },
+        {
+          "value": "1999-10-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 11, 1999 September 25, 1999* October 16, 1999* November 13, 1999",
+          "segment": 16
+        },
+        {
+          "value": "1999-11-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 11, 1999 September 25, 1999* October 16, 1999* November 13, 1999",
+          "segment": 16
+        },
+        {
+          "value": "1999-12-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 11, 1999 January 8, 2000 February 12, 2000 March 11, 2000",
+          "segment": 17
+        },
+        {
+          "value": "2000-01-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 11, 1999 January 8, 2000 February 12, 2000 March 11, 2000",
+          "segment": 17
+        },
+        {
+          "value": "2000-02-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 11, 1999 January 8, 2000 February 12, 2000 March 11, 2000",
+          "segment": 17
+        },
+        {
+          "value": "2000-03-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 11, 1999 January 8, 2000 February 12, 2000 March 11, 2000",
+          "segment": 17
+        },
+        {
+          "value": "2000-04-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 8, 2000 May 20, 2000 June 10, 2000",
+          "segment": 18
+        },
+        {
+          "value": "2000-05-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 8, 2000 May 20, 2000 June 10, 2000",
+          "segment": 18
+        },
+        {
+          "value": "2000-06-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 8, 2000 May 20, 2000 June 10, 2000",
+          "segment": 18
+        },
+        {
+          "value": "1999-09-25",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "$30 after September 25, 1999",
+          "segment": 66
+        },
+        {
+          "value": "1999-09-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, September 25, 1999, 4-5 pm",
+          "segment": 81
+        }
+      ]
+    },
+    {
       "documentId": "doc-d3463df0a67c",
       "path": "Archives-for-the-Unexplained/documents/Shadow-of-a-Doubt---1999-11.txt",
       "candidates": [
@@ -25060,6 +25198,48 @@
           "method": "unclassified-mention",
           "evidence": "But all that changed on October 20, 1967.",
           "segment": 48
+        }
+      ]
+    },
+    {
+      "documentId": "doc-58e00b90e128",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Criticism-by-JN-from-Japan---2010-09---vol-10-no-2.txt",
+      "candidates": [
+        {
+          "value": "2010-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The 18th Issue Vol.lO No.2 September 2010",
+          "segment": 1
+        },
+        {
+          "value": "1986-04-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Chapter) 1 On the afternoon of April 11, 1986, over the Sea of Japan, Mr. Shinkichi Nagatomi",
+          "segment": 72
+        },
+        {
+          "value": "1973-05-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Base (Ibaraki Prefecture near Tokyo) on May 1, 1973.",
+          "segment": 113
+        },
+        {
+          "value": "1974-06-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The reporter's story seems to have meant an alleged event on June 9, 1974 reported by",
+          "segment": 116
         }
       ]
     },
@@ -142667,7 +142847,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "This Al is effective June 23, 2016.",
+          "evidence": "This AI is effective June 23, 2016.",
           "segment": 52
         },
         {
@@ -142676,8 +142856,8 @@
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "Freedom of Information Act (FOIA) Program,\" September 29, 2008 (hereby cancelled",
-          "segment": 56
+          "evidence": "Freedom of Information Act (FOIA) Program,” September 29, 2008 (hereby cancelled",
+          "segment": 55
         },
         {
           "value": "2013-03-27",
@@ -142685,8 +142865,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "\"Washington Headquarters Services (WHS),\" March 27, 2013",
-          "segment": 59
+          "evidence": "c) DoD Directive 5110.04, “Washington Headquarters Services (WHS),” March 27, 2013",
+          "segment": 57
         },
         {
           "value": "2016-08-01",
@@ -142694,8 +142874,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "DoD Instruction 5025.01, \"DoD Issuances Program,\" August 1, 2016, as amended",
-          "segment": 60
+          "evidence": "d) DoD Instruction 5025.01, “DoD Issuances Program,” August 1, 2016, as amended",
+          "segment": 58
         },
         {
           "value": "2017-01-25",
@@ -142703,8 +142883,8 @@
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "DoD Manual 5400.07, \"DoD Freedom of Information Act Program,\" January 25, 2017",
-          "segment": 61
+          "evidence": "e) DoD Manual 5400.07, “DoD Freedom of Information Act Program,” January 25, 2017",
+          "segment": 59
         },
         {
           "value": "2022-01-19",
@@ -142712,8 +142892,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Administrative Instructions,\" January 19, 2022",
-          "segment": 63
+          "evidence": "Administrative Instructions,” January 19, 2022",
+          "segment": 61
         },
         {
           "value": "2007-05-14",
@@ -142721,8 +142901,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "DoD 5400.11-R, \"Department of Defense Privacy Program,\" May 14, 2007",
-          "segment": 65
+          "evidence": "h) DoD 5400.11-R, “Department of Defense Privacy Program,” May 14, 2007",
+          "segment": 63
         },
         {
           "value": "2019-01-29",
@@ -142730,8 +142910,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "DoD Instruction 5400.11, \"DoD Privacy and Civil Liberties Programs,\" January 29, 2019",
-          "segment": 66
+          "evidence": "i) DoD Instruction 5400.11, “DoD Privacy and Civil Liberties Programs,” January 29, 2019",
+          "segment": 64
         },
         {
           "value": "2012-02-24",
@@ -142740,7 +142920,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "February 24, 2012, as amended",
-          "segment": 68
+          "segment": 66
         },
         {
           "value": "2009-12-29",
@@ -142748,8 +142928,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "k) Executive Order 13526, \"Classified National Security Information,\" December 29, 2009",
-          "segment": 69
+          "evidence": "k) Executive Order 13526, “Classified National Security Information,” December 29, 2009",
+          "segment": 67
         }
       ]
     },
@@ -271827,6 +272007,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Interview date: September 1, 2020",
+          "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-01ad6c081691",
+      "path": "Rice-Archive-of-the-Impossible/documents/280040-jacques-vallee-oral-history-interview-transcript.txt",
+      "candidates": [
+        {
+          "value": "2021-02-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview date: February 11, 2021",
           "segment": 3
         }
       ]
