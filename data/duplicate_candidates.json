@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "89e1f590992ce27fd44dba114b40da0bb538c182"
+    "revision": "2f032741ade6bcb560168ee72bd623555ec17baf"
   },
   "count": 277,
   "totalCount": 277,
@@ -255,8 +255,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 45,
-        "documentCount": 30
+        "mentions": 46,
+        "documentCount": 31
       },
       "right": {
         "name": "Department of Transports",
@@ -303,8 +303,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 405,
-        "documentCount": 178
+        "mentions": 407,
+        "documentCount": 179
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1231,8 +1231,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 314,
-        "documentCount": 115
+        "mentions": 315,
+        "documentCount": 116
       },
       "right": {
         "name": "Jacques Valle",
@@ -2318,12 +2318,12 @@
     {
       "category": "location",
       "left": {
-        "name": "Area Contact Latltute",
-        "mentions": 2,
-        "documentCount": 2
+        "name": "Area Contact Latitute",
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
-        "name": "Area Contact Latitute",
+        "name": "Area Contact Latltute",
         "mentions": 2,
         "documentCount": 2
       },
@@ -3068,6 +3068,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Transport",
+        "mentions": 46,
+        "documentCount": 31
+      },
+      "right": {
+        "name": "Department of Tramport",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Seoul Foundation",
@@ -3078,22 +3094,6 @@
         "name": "Sol Foundation",
         "mentions": 46,
         "documentCount": 26
-      },
-      "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of Transport",
-        "mentions": 45,
-        "documentCount": 30
-      },
-      "right": {
-        "name": "Department of Tramport",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.933,
       "reason": "similar name",
@@ -3439,8 +3439,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 314,
-        "documentCount": 115
+        "mentions": 315,
+        "documentCount": 116
       },
       "right": {
         "name": "Jacques Valley",
@@ -3615,8 +3615,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 405,
-        "documentCount": 178
+        "mentions": 407,
+        "documentCount": 179
       },
       "right": {
         "name": "University Colorado",
@@ -4228,8 +4228,8 @@
       },
       "right": {
         "name": "Daniel Sheehan",
-        "mentions": 31,
-        "documentCount": 20
+        "mentions": 32,
+        "documentCount": 21
       },
       "similarity": 0.88,
       "reason": "similar person name",
