@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "2f032741ade6bcb560168ee72bd623555ec17baf"
+    "revision": "c02d1075e12fa40e3eea249dc783bcb11db692e5"
   },
   "count": 277,
   "totalCount": 277,
@@ -303,8 +303,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 407,
-        "documentCount": 179
+        "mentions": 408,
+        "documentCount": 180
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1823,8 +1823,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 65,
-        "documentCount": 49
+        "mentions": 66,
+        "documentCount": 50
       },
       "right": {
         "name": "Northeastern University",
@@ -2815,8 +2815,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 299,
-        "documentCount": 175
+        "mentions": 301,
+        "documentCount": 176
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3359,8 +3359,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 65,
-        "documentCount": 49
+        "mentions": 66,
+        "documentCount": 50
       },
       "right": {
         "name": "Northwest University",
@@ -3500,6 +3500,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Timothy Becky",
+        "mentions": 8,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Timothy Beckley",
+        "mentions": 8,
+        "documentCount": 8
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "Project Orion",
@@ -3510,22 +3526,6 @@
         "name": "Project Horizon",
         "mentions": 7,
         "documentCount": 4
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Timothy Beckley",
-        "mentions": 7,
-        "documentCount": 7
-      },
-      "right": {
-        "name": "Timothy Becky",
-        "mentions": 6,
-        "documentCount": 5
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -3615,8 +3615,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 407,
-        "documentCount": 179
+        "mentions": 408,
+        "documentCount": 180
       },
       "right": {
         "name": "University Colorado",

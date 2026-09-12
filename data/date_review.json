@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-12T19:56:37Z",
+  "generatedAt": "2026-09-12T20:53:41Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "2f032741ade6bcb560168ee72bd623555ec17baf"
+    "revision": "c02d1075e12fa40e3eea249dc783bcb11db692e5"
   },
-  "documentsWithCandidates": 10507,
+  "documentsWithCandidates": 10511,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -12226,6 +12226,21 @@
           "method": "unclassified-mention",
           "evidence": "37&catid=1:2008-01-31-19-12-36",
           "segment": 9
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5817654f7faf",
+      "path": "Archives-for-the-Unexplained/documents/CENAP-Newsflash---No-07.txt",
+      "candidates": [
+        {
+          "value": "2004-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of the Caspian Sea, \"early Monday,\" July 12, 2004. \"The object appeared at quarter past",
+          "segment": 1281
         }
       ]
     },
@@ -179549,6 +179564,21 @@
       ]
     },
     {
+      "documentId": "doc-4e07880cc33a",
+      "path": "DPIArchive/documents/116250-cia-ohio-state-university-letter-from-j-allen-hynek-to-dr-h-m-chadwell-12-23-52.txt",
+      "candidates": [
+        {
+          "value": "1952-12-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I N 1MI Dial December 23, 1952",
+          "segment": 1
+        }
+      ]
+    },
+    {
       "documentId": "doc-7fd04ba345b6",
       "path": "DPIArchive/documents/116251-sec-defense-memo-air-alert-december-6-1950.txt",
       "candidates": [
@@ -203885,7 +203915,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "On Jul 3, 2023, at 1:25 PM",
+          "evidence": "On Jul 3, 2023, at 1:25 PM, wrote",
           "segment": 5
         }
       ]
@@ -251579,6 +251609,21 @@
       ]
     },
     {
+      "documentId": "doc-dbe16e710915f5fa8d8d63e6",
+      "path": "France-GEIPAN/paired/cases/2012-07-08273/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-07-27",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On July 27, 2012, at 8:23 a.m., a witness observed in the sky the silent, constant-speed movement of a large, dark-colored object. The investigation shows that the object's speed and direction of travel could be consistent with wind conditions at the time and day of ",
+          "segment": "seg-d0b744e44bbc296cd03fe6b2"
+        }
+      ]
+    },
+    {
       "documentId": "doc-a2bc0856d8b20104159975db",
       "path": "France-GEIPAN/paired/cases/2012-07-08275/en/translation.txt",
       "candidates": [
@@ -252799,6 +252844,21 @@
           "method": "event-language",
           "evidence": "Description: On June 12, 2013, at 10:59 PM, a witness observed the silent movement of an orange-colored light disk in the sky. The object disappeared into the clouds. The appearance and movement of the light point clearly evoke a Thai lantern. The witness states that he has seen ",
           "segment": "seg-676e3044644b8dcbd81386b3"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6dc9e6464800314a00e5b41b",
+      "path": "France-GEIPAN/paired/cases/2013-06-08473/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-06-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 14, 2013, at 11 PM, a witness in their courtyard was intrigued by the successive passage of two orange glowing phenomena. The description of slowly and silently moving red points in the sky on a weekend evening evokes Thai lanterns. The Blagnac Météociel repo",
+          "segment": "seg-d9360dcb6c4a5ced0653af67"
         }
       ]
     },
