@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-12T22:00:15Z",
+  "generatedAt": "2026-09-12T22:57:58Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "fb509c657a601a11326733e40ddd5d8632196c37"
+    "revision": "711ad07c095fdc9f19964f176dc8512c67cdd691"
   },
-  "documentsWithCandidates": 10511,
+  "documentsWithCandidates": 10514,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8278,6 +8278,30 @@
           "method": "unclassified-mention",
           "evidence": "part of my journey in 20 November 2011 I",
           "segment": 2166
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2c93c93a78f5",
+      "path": "Archives-for-the-Unexplained/documents/2020-05-16---skepticzonepodcast---The-Skeptic-Zone-605---17.May.2020_fHP7qFmc_s4---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 1 2011 Sciences editors issued a",
+          "segment": 1571
+        },
+        {
+          "value": "2011-12-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "figures finally on 23 December 2011 the",
+          "segment": 1581
         }
       ]
     },
@@ -252173,6 +252197,21 @@
       ]
     },
     {
+      "documentId": "doc-45a3744d10ed74a523a677f4",
+      "path": "France-GEIPAN/paired/cases/2012-09-08343/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 16, 2012, at 20:24, a witness on their balcony had their attention drawn by the silent movement of a white glowing point. The trajectory is E-W and the phenomenon disappears behind the Jura mountains. No noise was heard during the 4-second observation. N",
+          "segment": "seg-17185119bbfda48efaf04043"
+        }
+      ]
+    },
+    {
       "documentId": "doc-495c4da513bbd6df0fc7708d",
       "path": "France-GEIPAN/paired/cases/2012-09-08350/en/translation.txt",
       "candidates": [
@@ -253441,6 +253480,21 @@
           "method": "event-language",
           "evidence": "Description: On August 20, 2013 at 10:40 PM, three people observed the silent passage in the sky of an orange-colored light phenomenon. The observation of an orange ball moving silently in the sky resembles a Thai lantern. Weather reports for Grenoble and Lyon indicate a strong n",
           "segment": "seg-12c0e8601e63882dc80f130d"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4614e06fdc92abea78fe8525",
+      "path": "France-GEIPAN/paired/cases/2013-08-08539/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-08-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: This testimony reports fixed bright points in the sky every evening, without further details. Also, a brief light phenomenon on August 13, 2013; only the latter phenomenon was considered, due to a lack of precise information for the initial phenomena, very likely rel",
+          "segment": "seg-ea1d560818ca38a1ba2082a9"
         }
       ]
     },
