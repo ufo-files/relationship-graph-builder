@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-11T23:13:34Z",
+  "generatedAt": "2026-09-12T00:04:29Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d17af94138d7eb3d4efa3cc8fc18211459ee2905"
+    "revision": "10d17d51c572235e832ed3107f35d6dd222db087"
   },
-  "documentsWithCandidates": 10446,
+  "documentsWithCandidates": 10449,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -5951,6 +5951,21 @@
       ]
     },
     {
+      "documentId": "doc-ce8fb58348a5",
+      "path": "Archives-for-the-Unexplained/documents/2015-05-12---Inception-Radio-Network---David-Schwartz---Earthquake-Myths---TruthFunders-Radio_3mqO1Iei5sE---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2015-05-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "9 192 355 and it is Wednesday May 6 2015",
+          "segment": 2243
+        }
+      ]
+    },
+    {
       "documentId": "doc-9a73def2bf82",
       "path": "Archives-for-the-Unexplained/documents/2015-05-22---FADE-TO-BLACK-Radio---Ep.-252-FADE-to-BLACK-Jimmy-Church-w-Kevin-Randle-Richard-Shaw-LIVE-on-air_xMFtKidI840---transcript-automated-_image.txt",
       "candidates": [
@@ -7624,6 +7639,30 @@
           "method": "unclassified-mention",
           "evidence": "February 16 1965 placed into orbit a",
           "segment": 339
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8e9be14d3912",
+      "path": "Archives-for-the-Unexplained/documents/2018-05-25---FADE-TO-BLACK-Radio---Ep.-862-FADE-to-BLACK-FADERNIGHT-w-Jon-Rappoport-NMFNR-Open-Lines-LIVE_NW1Y4s4z_Zc---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "believe July 8 1947 the Army Air Forces",
+          "segment": 4
+        },
+        {
+          "value": "2011-11-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Rules dee died on November 8 2011 right",
+          "segment": 786
         }
       ]
     },
@@ -22486,6 +22525,30 @@
           "method": "unclassified-mention",
           "evidence": "Last Change: November 22, 1995",
           "segment": 35
+        }
+      ]
+    },
+    {
+      "documentId": "doc-761ba11fd874",
+      "path": "Archives-for-the-Unexplained/documents/Shadow-of-a-Doubt---1997-12.txt",
+      "candidates": [
+        {
+          "value": "1997-12-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, December 20, 1997, 2:00pm -- 3:30pm",
+          "segment": 13
+        },
+        {
+          "value": "1997-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Last Change: December 29, 1997",
+          "segment": 52
         }
       ]
     },
