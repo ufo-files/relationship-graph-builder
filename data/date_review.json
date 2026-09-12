@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-12T11:27:48Z",
+  "generatedAt": "2026-09-12T12:22:49Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9f272e8f10e4b8e30ab3d6cc89fbfd95b25ab18a"
+    "revision": "37800117c640aa539ffd214d4d378a5172495029"
   },
-  "documentsWithCandidates": 10476,
+  "documentsWithCandidates": 10480,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -6667,6 +6667,21 @@
           "method": "unclassified-mention",
           "evidence": "didn't get reported till July 19 2017",
           "segment": 1285
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ec5998cc66b6",
+      "path": "Archives-for-the-Unexplained/documents/2017-07-30---Ryan-Sprague---Somewhere-in-the-Skies-The-Howl-Horror-Program-and-Fire-in-the-Sky_PkWAA28IqRI---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1993-03-12",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "it was released in March 12 1993 it the",
+          "segment": 2087
         }
       ]
     },
@@ -19886,6 +19901,21 @@
       ]
     },
     {
+      "documentId": "doc-947cbb3b5386",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-22-No-06---2008.txt",
+      "candidates": [
+        {
+          "value": "2008-06-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 22 June 2008 Number 6 http://www.ntskeptics.org",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-5986fc84bc31",
       "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-23-No-09---2009.txt",
       "candidates": [
@@ -22954,6 +22984,120 @@
           "method": "unclassified-mention",
           "evidence": "Last Change: November 22, 1995",
           "segment": 35
+        }
+      ]
+    },
+    {
+      "documentId": "doc-44f4063d62c8",
+      "path": "Archives-for-the-Unexplained/documents/Shadow-of-a-Doubt---1997-06.txt",
+      "candidates": [
+        {
+          "value": "1997-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, June 21, 1997, 2:00pm -- ???",
+          "segment": 6
+        },
+        {
+          "value": "1997-09-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 20, 1997 Davis Branch February 21, 1998 Bethesda Branch",
+          "segment": 21
+        },
+        {
+          "value": "1998-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 20, 1997 Davis Branch February 21, 1998 Bethesda Branch",
+          "segment": 21
+        },
+        {
+          "value": "1997-10-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 18, 1997 Bethesda Branch March 21, 1998 Davis Branch",
+          "segment": 22
+        },
+        {
+          "value": "1998-03-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 18, 1997 Bethesda Branch March 21, 1998 Davis Branch",
+          "segment": 22
+        },
+        {
+          "value": "1997-11-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 15, 1997 Bethesda Branch April 18, 1998 Bethesda Branch",
+          "segment": 23
+        },
+        {
+          "value": "1998-04-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 15, 1997 Bethesda Branch April 18, 1998 Bethesda Branch",
+          "segment": 23
+        },
+        {
+          "value": "1997-12-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 20, 1997 Bethesda Branch May 16, 1998 Bethesda Branch",
+          "segment": 24
+        },
+        {
+          "value": "1998-05-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 20, 1997 Bethesda Branch May 16, 1998 Bethesda Branch",
+          "segment": 24
+        },
+        {
+          "value": "1998-01-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 17, 1998 Bethesda Branch June 20, 1998 Bethesda Branch",
+          "segment": 25
+        },
+        {
+          "value": "1998-06-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 17, 1998 Bethesda Branch June 20, 1998 Bethesda Branch",
+          "segment": 25
+        },
+        {
+          "value": "1997-06-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Last Change: June 23, 1997",
+          "segment": 47
         }
       ]
     },
@@ -179315,17 +179459,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "UFO Briefing for Dr. Edward Condon, 5 May 1967",
+          "evidence": "b' JDJ T: UFO Briefins for Dr. Edward Condon, 5 May 1967",
           "segment": 1
-        },
-        {
-          "value": "1967-05-05",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "UrO Breling for De. Edward Condon, 5 May 1967",
-          "segment": 35
         }
       ]
     },
@@ -236104,6 +236239,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On June 10, 1979, between 3:30 and 4:00 a.m. and after a thunderstorm, a witness sees a strange light through a window that intrigues them. They observe a powerful light in the southwest direction above the horizon. This light moves slowly horizontally with occasiona",
           "segment": "seg-3a5e9494479f4242c608aad8"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7142bbdfefde57f8a8df517c",
+      "path": "France-GEIPAN/paired/cases/1979-06-00633/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1979-06-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 15, 1979, around 11 PM, several individuals will spot on the horizon an orange glow that intrigues them. This glow in the northwest appears to be composed of several bright points. The observation will last about ten minutes before everything goes dark. That ",
+          "segment": "seg-cf0d02a30d74a66ec22fb7c1"
         }
       ]
     },
