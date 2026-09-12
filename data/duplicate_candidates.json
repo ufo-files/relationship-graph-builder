@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "2804060f28e06ea93f884da44b959aedfc921404"
+    "revision": "9f272e8f10e4b8e30ab3d6cc89fbfd95b25ab18a"
   },
   "count": 270,
   "totalCount": 270,
@@ -140,6 +140,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Institute of Noetic Sciences",
+        "mentions": 10,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Institute of Noetic Science",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.982,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Major Range and Test Facility Base",
@@ -150,22 +166,6 @@
         "name": "Major Range and Test Facility Bases",
         "mentions": 4,
         "documentCount": 4
-      },
-      "similarity": 0.982,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Institute of Noetic Sciences",
-        "mentions": 9,
-        "documentCount": 8
-      },
-      "right": {
-        "name": "Institute of Noetic Science",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.982,
       "reason": "similar name",
@@ -303,8 +303,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 402,
-        "documentCount": 175
+        "mentions": 403,
+        "documentCount": 176
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -319,8 +319,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 242,
-        "documentCount": 135
+        "mentions": 243,
+        "documentCount": 136
       },
       "right": {
         "name": "Kirtland Airforce Base",
@@ -831,8 +831,8 @@
       "category": "person",
       "left": {
         "name": "Michael Shermer",
-        "mentions": 45,
-        "documentCount": 34
+        "mentions": 46,
+        "documentCount": 35
       },
       "right": {
         "name": "Michael Schermer",
@@ -1215,8 +1215,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 303,
-        "documentCount": 106
+        "mentions": 304,
+        "documentCount": 107
       },
       "right": {
         "name": "Jacques Valle",
@@ -1711,8 +1711,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 242,
-        "documentCount": 135
+        "mentions": 243,
+        "documentCount": 136
       },
       "right": {
         "name": "Kirkland Air Force Base",
@@ -1727,8 +1727,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 242,
-        "documentCount": 135
+        "mentions": 243,
+        "documentCount": 136
       },
       "right": {
         "name": "Kirtland Alr Force Base",
@@ -3375,8 +3375,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 303,
-        "documentCount": 106
+        "mentions": 304,
+        "documentCount": 107
       },
       "right": {
         "name": "Jacques Valley",
@@ -3391,8 +3391,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 128,
-        "documentCount": 72
+        "mentions": 129,
+        "documentCount": 73
       },
       "right": {
         "name": "George Adamsky",
@@ -3455,8 +3455,8 @@
       "category": "person",
       "left": {
         "name": "Timothy Beckley",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 6,
+        "documentCount": 6
       },
       "right": {
         "name": "Timothy Becky",
@@ -3663,8 +3663,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 128,
-        "documentCount": 72
+        "mentions": 129,
+        "documentCount": 73
       },
       "right": {
         "name": "Mr. George Adams",
@@ -4031,8 +4031,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 79,
-        "documentCount": 53
+        "mentions": 83,
+        "documentCount": 55
       },
       "right": {
         "name": "Steven Hawking",
