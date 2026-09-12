@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "47e5fd6a251bb056a3a606dd910610df2fdab61f"
+    "revision": "0aeebfda4f61fb848e51ea3a2c8d4fba9e29f62f"
   },
-  "count": 275,
-  "totalCount": 275,
-  "shownCount": 275,
+  "count": 277,
+  "totalCount": 277,
+  "shownCount": 277,
   "candidates": [
     {
       "category": "organization",
@@ -1231,8 +1231,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 310,
-        "documentCount": 112
+        "mentions": 312,
+        "documentCount": 113
       },
       "right": {
         "name": "Jacques Valle",
@@ -1263,8 +1263,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 166,
-        "documentCount": 115
+        "mentions": 167,
+        "documentCount": 116
       },
       "right": {
         "name": "Flying Saucer",
@@ -1327,8 +1327,8 @@
       "category": "location",
       "left": {
         "name": "O'Hare Airport",
-        "mentions": 24,
-        "documentCount": 23
+        "mentions": 25,
+        "documentCount": 24
       },
       "right": {
         "name": "Ohare Airport",
@@ -1492,6 +1492,22 @@
       },
       "right": {
         "name": "Frank Edward",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Timothy Good",
+        "mentions": 77,
+        "documentCount": 45
+      },
+      "right": {
+        "name": "Timothy Goods",
         "mentions": 3,
         "documentCount": 3
       },
@@ -1855,8 +1871,8 @@
       "category": "person",
       "left": {
         "name": "Tim Schwartz",
-        "mentions": 9,
-        "documentCount": 6
+        "mentions": 10,
+        "documentCount": 7
       },
       "right": {
         "name": "Tim Schwarz",
@@ -2294,6 +2310,22 @@
         "name": "Intelligence Material",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Area Contact Latltute",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Area Contact Latitute",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -3407,8 +3439,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 310,
-        "documentCount": 112
+        "mentions": 312,
+        "documentCount": 113
       },
       "right": {
         "name": "Jacques Valley",
@@ -4047,8 +4079,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 108,
-        "documentCount": 66
+        "mentions": 109,
+        "documentCount": 67
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -4254,14 +4286,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Stephen Jones",
-        "mentions": 5,
-        "documentCount": 4
+        "name": "Mike Williams",
+        "mentions": 8,
+        "documentCount": 5
       },
       "right": {
-        "name": "Steven Jones",
-        "mentions": 6,
-        "documentCount": 6
+        "name": "Ken Williams",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.88,
       "reason": "similar person name",
@@ -4270,14 +4302,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Mike Williams",
-        "mentions": 6,
+        "name": "Stephen Jones",
+        "mentions": 5,
         "documentCount": 4
       },
       "right": {
-        "name": "Ken Williams",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "Steven Jones",
+        "mentions": 6,
+        "documentCount": 6
       },
       "similarity": 0.88,
       "reason": "similar person name",

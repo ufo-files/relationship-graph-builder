@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-12T15:59:54Z",
+  "generatedAt": "2026-09-12T16:54:58Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "47e5fd6a251bb056a3a606dd910610df2fdab61f"
+    "revision": "0aeebfda4f61fb848e51ea3a2c8d4fba9e29f62f"
   },
-  "documentsWithCandidates": 10493,
+  "documentsWithCandidates": 10495,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -4622,6 +4622,30 @@
       ]
     },
     {
+      "documentId": "doc-5d8f0bd3afb0",
+      "path": "Archives-for-the-Unexplained/documents/2011-12-20---OpenMindsTV---Dudley-Dorito-UFO-Ontario-Canada-UFO-and-CME-UFO_3uDKyydo9FI---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2010-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "posted this video on November 18 2010 by",
+          "segment": 15
+        },
+        {
+          "value": "2010-11-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "object on November 12 2010 in this",
+          "segment": 19
+        }
+      ]
+    },
+    {
       "documentId": "doc-946154265a2b",
       "path": "Archives-for-the-Unexplained/documents/2012-01-27---NASA-s-Kennedy-Space-Center---In-Their-Own-Words-Astronaut-Chris-Hadfield_uSwwYl3lRtc---transcript-automated-.txt",
       "candidates": [
@@ -8743,6 +8767,21 @@
           "method": "unclassified-mention",
           "evidence": "happened February 26 2012.",
           "segment": 938
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e02d4c82e099",
+      "path": "Archives-for-the-Unexplained/documents/2023-01-06---Strange-Planet---Are-UFOs-just-us-from-the-future-Strange-Planet-Throwback_a8h7HOy-qYw---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2012-12-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "much focused on December 21 2012. in",
+          "segment": 1238
         }
       ]
     },
@@ -202313,8 +202352,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "›Date: Thu, 15 Apr 1999 17:05:00 -0700",
-          "segment": 1
+          "evidence": ">Date: Thu, 15 Apr 1999 17:05:00 -0700",
+          "segment": 2
         },
         {
           "value": "1999-04-15",
@@ -202322,8 +202361,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "›Date: Thursday, April 15, 1999 1:28PM",
-          "segment": 3
+          "evidence": ">Date: Thursday, April 15, 1999 1:28PM",
+          "segment": 5
         }
       ]
     },
