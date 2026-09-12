@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-12T00:04:29Z",
+  "generatedAt": "2026-09-12T00:55:39Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "10d17d51c572235e832ed3107f35d6dd222db087"
+    "revision": "3338ff0d771b5e77e007b9b6c69fca210e44c90d"
   },
-  "documentsWithCandidates": 10449,
+  "documentsWithCandidates": 10451,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -18730,6 +18730,39 @@
           "method": "unclassified-mention",
           "evidence": "The Dallas Morning News, August 17, 1999.",
           "segment": 196
+        }
+      ]
+    },
+    {
+      "documentId": "doc-06cacc6f8d61",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-14-No-01---2000.txt",
+      "candidates": [
+        {
+          "value": "2001-01-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "actually reach the new millennium until January 1, 2001.",
+          "segment": 254
+        },
+        {
+          "value": "2000-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, January 1, 2000.",
+          "segment": 325
+        },
+        {
+          "value": "2001-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Editor’s note: The author is fully aware that the new millennium starts on January 1, 2001.",
+          "segment": 380
         }
       ]
     },
@@ -234250,6 +234283,21 @@
           "method": "event-language",
           "evidence": "Description: On March 14, 1978, around 7:30 PM, several people observed in the sky a luminous object with a peculiar shape. Two white, glowing orbs were connected by a red-orange bar. The stationary object moved for a moment, then suddenly changed direction. The lights remained f",
           "segment": "seg-a03e2cb286a5b9d14e2282bb"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ca4c3636d6921049d4d4493b",
+      "path": "France-GEIPAN/paired/cases/1978-03-00500/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1978-03-17",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: This observation case is part of cases classified as 'C' in 2008 by the GEIPAN. It was subject to a new review (see document: investigation notes). On March 17, 1978, around 1:30 AM, a witness observed a round, glowing object moving slowly in a south-north direction.",
+          "segment": "seg-41445e93d281754eb1e728d3"
         }
       ]
     },
