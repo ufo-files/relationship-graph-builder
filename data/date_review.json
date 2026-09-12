@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-12T09:40:14Z",
+  "generatedAt": "2026-09-12T10:35:08Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5fffc8ca06019aa6e6146bacd4a5acef5a0cc4e1"
+    "revision": "2804060f28e06ea93f884da44b959aedfc921404"
   },
-  "documentsWithCandidates": 10474,
+  "documentsWithCandidates": 10475,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -181682,21 +181682,6 @@
       ]
     },
     {
-      "documentId": "doc-d0be4e88a9f7",
-      "path": "DPIArchive/documents/116459-the-director-of-central-intelligence-marshall-chadwell-december-10-1952.txt",
-      "candidates": [
-        {
-          "value": "1952-12-10",
-          "precision": "day",
-          "confidence": 0.98,
-          "kind": "administrative_date",
-          "method": "context-exclusion",
-          "evidence": "Request of the Director of 10 December 1952.",
-          "segment": 3
-        }
-      ]
-    },
-    {
       "documentId": "doc-9e9f8daac619",
       "path": "DPIArchive/documents/116465-proposed-studies-implications-peaceful-space-activities-mar-1961.txt",
       "candidates": [
@@ -185679,25 +185664,7 @@
           "kind": "referenced_document_date",
           "method": "dated-reference",
           "evidence": "One dated 27 April 1958 addressed to the DCI",
-          "segment": 5
-        },
-        {
-          "value": "1958-04-14",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "14 April 1958 reply to avidson.",
-          "segment": 9
-        },
-        {
-          "value": "1950-05-16",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Lexca's 16 May 1950 remorandir",
-          "segment": 26
+          "segment": 6
         }
       ]
     },
@@ -194970,22 +194937,13 @@
       "path": "DPIArchive/documents/119990-silent-missile-microwave-pulse-daily-mail-article.txt",
       "candidates": [
         {
-          "value": "2015-05-28",
+          "value": "2015-05-20",
           "precision": "day",
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "PUBLISHED: 12:36 EST, 28 May 2015 | UPDATED: 15:19 EST, 26 May 2015",
-          "segment": 11
-        },
-        {
-          "value": "2015-05-26",
-          "precision": "day",
-          "confidence": 0.98,
-          "kind": "administrative_date",
-          "method": "context-exclusion",
-          "evidence": "PUBLISHED: 12:36 EST, 28 May 2015 | UPDATED: 15:19 EST, 26 May 2015",
-          "segment": 11
+          "evidence": "PUBLISHED:1tr EST, 26 May2a15I UPPATm: 15:19 EST, 20 May 2015",
+          "segment": 12
         }
       ]
     },
@@ -203490,30 +203448,12 @@
       "path": "DPIArchive/documents/122777-john-callahan-chart-of-events-flight-1628.txt",
       "candidates": [
         {
-          "value": "1986-11-18",
+          "value": "1987-01-09",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "on November 18, 1986 at approximately 0218 UIC.",
-          "segment": 5
-        },
-        {
-          "value": "1986-11-18",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "This transcription covers the time periód from November 18, 1986, 0214 UIC to",
-          "segment": 6
-        },
-        {
-          "value": "1986-11-18",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "November 18, 1986, 0259 VIC.",
+          "evidence": "Subject: INFORMATION: Transcription concerning the Date: January 9, 1987",
           "segment": 7
         },
         {
@@ -203522,8 +203462,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Japan Airlines Flight 1628 on November 18, 1986.",
-          "segment": 23
+          "evidence": "on November 18, 1986 at approximately 0218 UTC.",
+          "segment": 9
         },
         {
           "value": "1986-11-18",
@@ -203531,8 +203471,26 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "sightings by Japan Airlines Flight 1628, on November 18, 1986",
-          "segment": 34
+          "evidence": "This transcription covers the time period from November 18, 1986, 0214 UTC to",
+          "segment": 11
+        },
+        {
+          "value": "1986-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 18, 1986, 0259 UTC.",
+          "segment": 12
+        },
+        {
+          "value": "1986-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Japan Airlines Flight 1628 on November 18, 1986.",
+          "segment": 29
         },
         {
           "value": "1986-11-18",
@@ -203541,70 +203499,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "November 18, 1986 at 0230 UTC.",
-          "segment": 78
-        },
-        {
-          "value": "1986-11-18",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "frOm 0156 UIC, November 18, 1986 to 0230 UIC, November 18, 1986.",
-          "segment": 87
-        },
-        {
-          "value": "1986-11-18",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "frOm 0156 UIC, November 18, 1986 to 0230 UIC, November 18, 1986.",
-          "segment": 87
-        },
-        {
-          "value": "1986-11-18",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "of Fairbanks, Alaska on November 18, 1986 at 0218 UTC.",
-          "segment": 115
-        },
-        {
-          "value": "1986-11-18",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "the period of 0035 UIC, November 18, 1986, to 0835 UTC, November 18",
-          "segment": 120
-        },
-        {
-          "value": "1986-11-18",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "FrOm 0230 UIT, November 18, 1986, to 0530 VIC, November 18, 1986.",
-          "segment": 122
-        },
-        {
-          "value": "1986-11-18",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "FrOm 0230 UIT, November 18, 1986, to 0530 VIC, November 18, 1986.",
-          "segment": 122
-        },
-        {
-          "value": "1986-11-18",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "1628 (JL1628) NoIth of Fairbanks, Alaska on November 18, 1986 at 0218 UTC. '",
-          "segment": 147
+          "segment": 85
         },
         {
           "value": "1986-11-17",
@@ -203612,8 +203507,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "UIC, November 17, 1986 to 0630 November 18, 1986 I was on duty in the",
-          "segment": 153
+          "evidence": "During the period of 2030 UTC, November 17, 1986, to 0430 UTC, November 18",
+          "segment": 89
         },
         {
           "value": "1986-11-18",
@@ -203621,8 +203516,80 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "UIC, November 17, 1986 to 0630 November 18, 1986 I was on duty in the",
-          "segment": 153
+          "evidence": "from 0156 UTC, November 18, 1986 to 0230UTC, November 18, 1986.",
+          "segment": 92
+        },
+        {
+          "value": "1986-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "from 0156 UTC, November 18, 1986 to 0230UTC, November 18, 1986.",
+          "segment": 92
+        },
+        {
+          "value": "1986-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "north of Fairbanks, Alaska on November 18, 1986 at 0218 UTC.",
+          "segment": 119
+        },
+        {
+          "value": "1986-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "During the period of 0035 UTC, November 18, 1986, to 0835 UTC, November 18",
+          "segment": 124
+        },
+        {
+          "value": "1986-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "from 0230 UTC, November 18, 1986, to 0530 UTC, November 18, 1986.",
+          "segment": 127
+        },
+        {
+          "value": "1986-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "from 0230 UTC, November 18, 1986, to 0530 UTC, November 18, 1986.",
+          "segment": 127
+        },
+        {
+          "value": "1986-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1628 (JL1628) North of Fairbanks, Alaska on November 18, 1986 at 0218 UTC.",
+          "segment": 151
+        },
+        {
+          "value": "1986-11-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UTC, November 17, 1986 to 0630 November 18, 1986 I was on duty in the",
+          "segment": 157
+        },
+        {
+          "value": "1986-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UTC, November 17, 1986 to 0630 November 18, 1986 I was on duty in the",
+          "segment": 157
         },
         {
           "value": "1986-11-18",
@@ -203631,7 +203598,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "November 18, 1986 to 0250 UTC, November 18, 1986.",
-          "segment": 155
+          "segment": 159
         },
         {
           "value": "1986-11-18",
@@ -203640,7 +203607,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "November 18, 1986 to 0250 UTC, November 18, 1986.",
-          "segment": 155
+          "segment": 159
         }
       ]
     },
@@ -253481,6 +253448,21 @@
       ]
     },
     {
+      "documentId": "doc-edfcae6f5406b4f4386183e4",
+      "path": "France-GEIPAN/paired/cases/2014-08-09118/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-08-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Sunday, August 3, 2014, at 1 a.m., a person is startled to see through a window the silent passage across the sky of a fireball. Its trajectory is straight. Observation of the phenomenon is very brief. No other testimony will be collected. The observation for one ",
+          "segment": "seg-c83ee993336d0efee192541d"
+        }
+      ]
+    },
+    {
       "documentId": "doc-2c58fd22b088c6c10d3badad",
       "path": "France-GEIPAN/paired/cases/2014-08-09123/en/translation.txt",
       "candidates": [
@@ -254326,6 +254308,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On October 14, 2015, at 23:31, a witness observed several successive flashes in the sky, in a very identifiable area. He checked the Heavens Above site but identified no Iridium satellite flashes or satellite passes that could correspond. Of average strangeness but s",
           "segment": "seg-18c77314159d27b264f4dacf"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f5cb51ab70b7f54ab5da2470",
+      "path": "France-GEIPAN/paired/cases/2015-11-09349/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-11-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Sunday, November 1, 2015, around 7 a.m., a witness was observing the stars and noticed a random bright point, which then appeared to split into two. Using his camcorder, he watched and zoomed in, finding the multicolored diamond shape curious. No other witnesses w",
+          "segment": "seg-7c9e5bdf8d209b3a0e9b9698"
         }
       ]
     },
