@@ -1,12 +1,12 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-12T20:53:41Z",
+  "generatedAt": "2026-09-12T22:00:15Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "c02d1075e12fa40e3eea249dc783bcb11db692e5"
+    "revision": "fb509c657a601a11326733e40ddd5d8632196c37"
   },
   "documentsWithCandidates": 10511,
   "records": [
@@ -186660,22 +186660,58 @@
       "path": "DPIArchive/documents/116740-unidentified-object-thought-to-be-helicopter-observed-near-nakhon-phanom-rtafb-9-6-1969.txt",
       "candidates": [
         {
-          "value": "1909-08-24",
-          "precision": "day",
-          "confidence": 0.2,
-          "kind": "date_conflict",
-          "method": "filename-date-conflict",
-          "evidence": "OCR header candidate 1909-08-24 conflicts with the full date encoded in source filename 116740-unidentified-object-thought-to-be-helicopter-observed-near-nakhon-phanom-rtafb-9-6-1969.pdf.",
-          "segment": 6
-        },
-        {
-          "value": "1969-08-22",
+          "value": "1969-09-06",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Early on the morning of 22 August 1969, the pllot of a base urcraft",
-          "segment": 8
+          "evidence": ". $UOJCCT: UNKNOWN ENTITY 7. (ITC D/ ncrOnT: 6 September 1969",
+          "segment": 10
+        },
+        {
+          "value": "1969-08-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DATC GI, INFORMATIOli 24 August 1969 tz. otttclHATomtOSI District 51, Bangkok, Thaila",
+          "segment": 13
+        },
+        {
+          "value": "1969-08-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "hailand, 24 August 1969 Nakhon Phanom R AFB, Th iland",
+          "segment": 15
+        },
+        {
+          "value": "1969-08-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "between 0100 and 0400. hours, ,24 August 1969 producod no results, nor did a .",
+          "segment": 64
+        },
+        {
+          "value": "1969-08-24",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "sometime between 2400 hours 23 August and 0103 hoLtrs 24 August 1969. (F-3).",
+          "segment": 77
+        },
+        {
+          "value": "1969-08-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Bin betwgon 0100 and 0130 hours, 24 August 1969. (F-3$. (See attached",
+          "segment": 97
         },
         {
           "value": "1968-11-28",
@@ -186683,8 +186719,26 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "the perlod 28 November 1968 to 1 Januury 1969 uldno.1.",
-          "segment": 89
+          "evidence": "the•period 28 November 1968 to 1 January 1969 nlono,l Attomptn by base recon",
+          "segment": 122
+        },
+        {
+          "value": "1969-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the•period 28 November 1968 to 1 January 1969 nlono,l Attomptn by base recon",
+          "segment": 122
+        },
+        {
+          "value": "1968-11-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 28 November 1968, the Thai Bordor Patrol Police (an) began an H",
+          "segment": 126
         },
         {
           "value": "1969-01-09",
@@ -186692,8 +186746,8 @@
           "confidence": 0.72,
           "kind": "referenced_document_date",
           "method": "dated-reference",
-          "evidence": "2 SID IIR 1 656 0003 69, dated 9 January 1969, 2310: 56-713/03/5.",
-          "segment": 150
+          "evidence": "15ID IIR 1 656 0003 69, dated 9 January 1969, file: 56-713/03/5",
+          "segment": 190
         }
       ]
     },
@@ -211247,8 +211301,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Ref: My 3 January 2001 Fax to LTG Singer, et al, Letterto the Editor",
-          "segment": 20
+          "evidence": "Ref My 3 January 2001 Fax to LTG Singer, et al, Letterto the Editor",
+          "segment": 30
         }
       ]
     },
