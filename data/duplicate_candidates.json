@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "91bbe4bb5169183d2a69d8b61754b1fbf4d660e3"
+    "revision": "fac12152f2bd7f566c863f6570fba5ad550e87af"
   },
-  "count": 291,
-  "totalCount": 291,
-  "shownCount": 291,
+  "count": 294,
+  "totalCount": 294,
+  "shownCount": 294,
   "candidates": [
     {
       "category": "organization",
@@ -271,8 +271,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 47,
-        "documentCount": 32
+        "mentions": 49,
+        "documentCount": 33
       },
       "right": {
         "name": "Department of Transports",
@@ -335,8 +335,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 415,
-        "documentCount": 187
+        "mentions": 419,
+        "documentCount": 189
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1263,8 +1263,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 342,
-        "documentCount": 130
+        "mentions": 343,
+        "documentCount": 131
       },
       "right": {
         "name": "Jacques Valle",
@@ -1295,8 +1295,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 171,
-        "documentCount": 120
+        "mentions": 172,
+        "documentCount": 121
       },
       "right": {
         "name": "Flying Saucer",
@@ -1871,8 +1871,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 105,
-        "documentCount": 20
+        "mentions": 106,
+        "documentCount": 21
       },
       "right": {
         "name": "Kings Island",
@@ -1910,6 +1910,22 @@
         "name": "Northeastern University",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Transport",
+        "mentions": 49,
+        "documentCount": 33
+      },
+      "right": {
+        "name": "Department of Trancport",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2895,8 +2911,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 345,
-        "documentCount": 201
+        "mentions": 349,
+        "documentCount": 202
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3102,6 +3118,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Department of Transports",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of Trancport",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.936,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Assistant Secretary of the Navy",
         "mentions": 30,
         "documentCount": 4
@@ -3167,8 +3199,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 47,
-        "documentCount": 32
+        "mentions": 49,
+        "documentCount": 33
       },
       "right": {
         "name": "Department of Tramport",
@@ -3301,6 +3333,22 @@
       "right": {
         "name": "Robert Traylans",
         "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Tramport",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of Trancport",
+        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.933,
@@ -3535,8 +3583,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 342,
-        "documentCount": 130
+        "mentions": 343,
+        "documentCount": 131
       },
       "right": {
         "name": "Jacques Valley",
@@ -3551,8 +3599,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 134,
-        "documentCount": 78
+        "mentions": 142,
+        "documentCount": 79
       },
       "right": {
         "name": "George Adamsky",
@@ -3743,8 +3791,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 415,
-        "documentCount": 187
+        "mentions": 419,
+        "documentCount": 189
       },
       "right": {
         "name": "University Colorado",
@@ -3871,8 +3919,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 134,
-        "documentCount": 78
+        "mentions": 142,
+        "documentCount": 79
       },
       "right": {
         "name": "Mr. George Adams",

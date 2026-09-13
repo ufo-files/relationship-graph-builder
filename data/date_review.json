@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-13T22:51:10Z",
+  "generatedAt": "2026-09-13T23:55:56Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "91bbe4bb5169183d2a69d8b61754b1fbf4d660e3"
+    "revision": "fac12152f2bd7f566c863f6570fba5ad550e87af"
   },
-  "documentsWithCandidates": 10596,
+  "documentsWithCandidates": 10597,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -2164,6 +2164,48 @@
           "method": "unclassified-mention",
           "evidence": "Downloaded by [North Carolina State University] at 16:24 15 March 2015",
           "segment": 146
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2462915ed1dc",
+      "path": "Archives-for-the-Unexplained/documents/1969-11-00_Icarus---Vol-11-No-3---National-Academy-of-Sciences-Panel.txt",
+      "candidates": [
+        {
+          "value": "1969-01-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "scope; namely, did the Report, in the opinion of January 6, 1969, to conclude its deliberations and",
+          "segment": 89
+        },
+        {
+          "value": "1968-03-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 12, 1968, at the Canadian Aeronautics and (Twenty-four appendixes add detailed technical",
+          "segment": 113
+        },
+        {
+          "value": "1967-06-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to the United Nations on June 7, 1967.",
+          "segment": 118
+        },
+        {
+          "value": "1968-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Session, July 29, 1968.) gations where telephonic communication with",
+          "segment": 135
         }
       ]
     },
@@ -190208,7 +190250,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "id FAA12068; Thu, 12 Dec 1996 05:16:52 - 0500",
+          "evidence": "id FAA12068; Thu, 12 Dec 1996 05:16:52 -0500",
           "segment": 6
         },
         {
@@ -190217,7 +190259,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Mail Server 1.1.1); Thu, 12 Dec 1996",
+          "evidence": "with SMTP (Apple Internet Mail Server 1.1.1); Thu, 12 Dec 1996",
           "segment": 11
         },
         {
