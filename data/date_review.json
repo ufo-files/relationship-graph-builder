@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-13T16:37:29Z",
+  "generatedAt": "2026-09-13T17:40:33Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "aae1f3106417e15ce1becc222feab9345575178d"
+    "revision": "00d47c7598a3c4593d7e4b455d8b543b90baa1f2"
   },
-  "documentsWithCandidates": 10575,
+  "documentsWithCandidates": 10578,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -3229,6 +3229,30 @@
           "method": "unclassified-mention",
           "evidence": "This content downloaded from 128.252.67.66 on Sat, 15 Jun 2013 06:48:46 AM",
           "segment": 1339
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5a8ba4375ec0",
+      "path": "Archives-for-the-Unexplained/documents/2006-02-13_India-Today_UFO-sighting-in-Himachal-Lahaul-Spiti-district-remains-a-mystery.txt",
+      "candidates": [
+        {
+          "value": "2006-02-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ISSUE DATE: Feb 13, 2006 | UPDATED: Mar 12, 2012 16:05 IST",
+          "segment": 9
+        },
+        {
+          "value": "2012-03-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ISSUE DATE: Feb 13, 2006 | UPDATED: Mar 12, 2012 16:05 IST",
+          "segment": 9
         }
       ]
     },
@@ -23414,6 +23438,66 @@
       ]
     },
     {
+      "documentId": "doc-2b3cd55dc162",
+      "path": "Archives-for-the-Unexplained/documents/SearchLites---Vol-07-No-3.txt",
+      "candidates": [
+        {
+          "value": "2001-04-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Little Ferry, NJ, March 2001 -- With financial assistance Little Ferry, NJ, 28 April 2001 -- The SETI League",
+          "segment": 63
+        },
+        {
+          "value": "2001-05-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A signal which May 18, 2001, 0700 hours: SETI Breakfast, Marriott Hotel",
+          "segment": 147
+        },
+        {
+          "value": "2001-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "our technological level today, then we can use the concept of July 14, 2001, 1600 hours: Frank Drake delivers Friedman",
+          "segment": 152
+        },
+        {
+          "value": "2001-09-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1000 or even a 1,000,000 light years is nothing in standard August 30 - September 3, 2001: Millennium Philcon World",
+          "segment": 158
+        },
+        {
+          "value": "2002-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A August 29 - September 2, 2002: ConJose World Science Fic-",
+          "segment": 177
+        },
+        {
+          "value": "2003-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to 100 light years or less if we have any hope of actually com- August 28 - September 1, 2003: Torcon 3 World Science Fic-",
+          "segment": 185
+        }
+      ]
+    },
+    {
       "documentId": "doc-9a9de0b31f45",
       "path": "Archives-for-the-Unexplained/documents/SearchLites---Vol-07-No-4.txt",
       "candidates": [
@@ -29374,6 +29458,21 @@
           "method": "unclassified-mention",
           "evidence": "This was January 26, 1980.",
           "segment": 839
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fe17430d5c70",
+      "path": "Archives-for-the-Unexplained/documents/UFODOS---2008-01-01---translation-automated-.txt",
+      "candidates": [
+        {
+          "value": "1967-06-27",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "June 27, 1967 Wu Tang, then UN Secretary-General, told the New York Post: I believe that after the cooperation with the newspaper \"Alien\"…",
+          "segment": 167
         }
       ]
     },
