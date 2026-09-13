@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-13T10:19:29Z",
+  "generatedAt": "2026-09-13T11:31:27Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5bd158105ea6a0ea4fbf9486cfba1dd6ffd5bc34"
+    "revision": "69f44ba4c0a4832e25645122bfd298aa3699ec3f"
   },
-  "documentsWithCandidates": 10553,
+  "documentsWithCandidates": 10555,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7190,6 +7190,21 @@
       ]
     },
     {
+      "documentId": "doc-34d6e7bb407e",
+      "path": "Archives-for-the-Unexplained/documents/2017-11-29---Podcast-UFO-Live-Shows---11-29-17-Jim-MacDonald-A-Different-Opinion-on-Betty-Barney-Hill_K8qcDb9S5N4---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1961-09-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 26 1961 they also made an Air",
+          "segment": 1079
+        }
+      ]
+    },
+    {
       "documentId": "doc-ede6e29f1b48",
       "path": "Archives-for-the-Unexplained/documents/2017-12-08---Inception-Radio-Network---UFO-Headline-News-Wednesday-December-6th-2017_Ji8eywpd8UQ---transcript-automated-.txt",
       "candidates": [
@@ -9247,6 +9262,21 @@
           "method": "unclassified-mention",
           "evidence": "happened February 26 2012.",
           "segment": 938
+        }
+      ]
+    },
+    {
+      "documentId": "doc-57fb1fb9a7a4",
+      "path": "Archives-for-the-Unexplained/documents/2023-01-05---Phantoms-Monsters-Radio---PENNSYLVANIA-UPRIGHT-CANINE-ENCOUNTER-THE-DWAYYO-THE-SYKESVILLE-MONSTER---Lon-Strickler-Host-_7OTVjR5Dv2E---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1981-05-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "this was May 9 1981 I was living a cycle",
+          "segment": 1527
         }
       ]
     },
@@ -210555,13 +210585,22 @@
           "segment": 20
         },
         {
+          "value": "1947-09-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and H , appointed by President September 18, 1947",
+          "segment": 22
+        },
+        {
           "value": "1985-03-24",
           "precision": "day",
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "This is in response to your 24 March 1985 Freedom of Information Act request",
-          "segment": 37
+          "evidence": "This is in esponse to your 24 March 1985 Freedom of Information Act request",
+          "segment": 36
         }
       ]
     },
