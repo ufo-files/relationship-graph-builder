@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-13T03:53:54Z",
+  "generatedAt": "2026-09-13T04:50:50Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a6f4d38e77bbbc8ef4e7d590fb936e9d07d0a473"
+    "revision": "cb844686427de94e0e3f57a9c802aee71c6fb72f"
   },
-  "documentsWithCandidates": 10535,
+  "documentsWithCandidates": 10537,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -21787,6 +21787,21 @@
           "method": "unclassified-mention",
           "evidence": "Volume 10, Number 5 May 2002",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ef2376aebb74",
+      "path": "Archives-for-the-Unexplained/documents/Releve-meteo-pdf.txt",
+      "candidates": [
+        {
+          "value": "2013-06-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "« dimanche 9 juin 2013 »",
+          "segment": 3
         }
       ]
     },
@@ -251674,6 +251689,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: A witness reports his observation made with binoculars on May 29, 2011, between 10:41 PM and 10:45 PM. He observes the slow, random East-South movement of about one hundred white light points. Given the low movement of the whole group, without cohesion, correlating w",
           "segment": "seg-a8bfe7b776d31730f73203b8"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7ce8ffbcadca4cae077b0c28",
+      "path": "France-GEIPAN/paired/cases/2011-05-02785/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: A person reports the following events which they cannot explain: a passenger on a commercial airliner on May 21, 2011, the plane encounters a turbulence zone while the sky is clear blue with a cloud layer below. The witness then notices a large horizontal brown strea",
+          "segment": "seg-be9c3f59a04b334c22b282f7"
         }
       ]
     },
