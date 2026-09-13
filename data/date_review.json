@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-13T19:44:46Z",
+  "generatedAt": "2026-09-13T20:48:01Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "8ade68270105a142117df9d8f4efcb01de65a82a"
+    "revision": "b80333f3d679da97e9b09f002b22c1a60f009da0"
   },
-  "documentsWithCandidates": 10585,
+  "documentsWithCandidates": 10587,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -14752,6 +14752,21 @@
           "method": "unclassified-mention",
           "evidence": "It was agreed that at ~he conference set for 4 February 1952",
           "segment": 26
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e83ae7b80716",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000184423.txt",
+      "candidates": [
+        {
+          "value": "1953-01-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TO A DATE: 7 January 1953",
+          "segment": 1
         }
       ]
     },
@@ -258394,6 +258409,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On April 3, 2015, at 4:15 PM, a motorist and her two passengers were intrigued by the slow, silent, and low-altitude flight of an aircraft they did not recognize. The GEIPAN consulted military air traffic control regarding this observation; it turns out that on that ",
           "segment": "seg-45a32517b6dbb483521fa078"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-098b1f17e330c1bcba657499",
+      "path": "France-GEIPAN/paired/cases/2015-04-09154/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-04-08",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On April 8, 2015, around 7:15 PM, a witness seated on a couch beneath a skylight observed the passage of a bright white flying object with no visible logo. The object, with V-shaped wings, made a curve and then ascended vertically at great speed, transforming into a ",
+          "segment": "seg-2b371ecb854dd78d5928777c"
         }
       ]
     },
