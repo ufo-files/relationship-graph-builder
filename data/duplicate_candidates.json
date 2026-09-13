@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "cb844686427de94e0e3f57a9c802aee71c6fb72f"
+    "revision": "c17180650cec3128ad3fa34a4956b83d09f91a1b"
   },
-  "count": 281,
-  "totalCount": 281,
-  "shownCount": 281,
+  "count": 284,
+  "totalCount": 284,
+  "shownCount": 284,
   "candidates": [
     {
       "category": "organization",
@@ -95,8 +95,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 606,
-        "documentCount": 390
+        "mentions": 607,
+        "documentCount": 391
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -111,8 +111,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 606,
-        "documentCount": 390
+        "mentions": 607,
+        "documentCount": 391
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -303,8 +303,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 408,
-        "documentCount": 180
+        "mentions": 410,
+        "documentCount": 182
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -351,8 +351,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 485,
-        "documentCount": 234
+        "mentions": 486,
+        "documentCount": 235
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -783,8 +783,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 606,
-        "documentCount": 390
+        "mentions": 607,
+        "documentCount": 391
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -799,8 +799,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 606,
-        "documentCount": 390
+        "mentions": 607,
+        "documentCount": 391
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -815,8 +815,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 606,
-        "documentCount": 390
+        "mentions": 607,
+        "documentCount": 391
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1103,8 +1103,8 @@
       "category": "location",
       "left": {
         "name": "White Mountains",
-        "mentions": 30,
-        "documentCount": 24
+        "mentions": 31,
+        "documentCount": 25
       },
       "right": {
         "name": "White Mountain",
@@ -1231,8 +1231,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 321,
-        "documentCount": 119
+        "mentions": 325,
+        "documentCount": 121
       },
       "right": {
         "name": "Jacques Valle",
@@ -1279,8 +1279,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 137,
-        "documentCount": 85
+        "mentions": 138,
+        "documentCount": 86
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -1295,8 +1295,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 102,
-        "documentCount": 71
+        "mentions": 103,
+        "documentCount": 72
       },
       "right": {
         "name": "Bruce Macabee",
@@ -1343,8 +1343,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Valley",
-        "mentions": 4,
-        "documentCount": 4
+        "mentions": 5,
+        "documentCount": 5
       },
       "right": {
         "name": "Jacques Valle",
@@ -1724,6 +1724,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Michael Sala",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Michael Salah",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "book",
       "left": {
         "name": "Supernatural",
@@ -1807,8 +1823,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 96,
-        "documentCount": 15
+        "mentions": 100,
+        "documentCount": 17
       },
       "right": {
         "name": "Kings Island",
@@ -2828,6 +2844,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Stanton Friedman",
+        "mentions": 313,
+        "documentCount": 185
+      },
+      "right": {
+        "name": "Stanton Freedman",
+        "mentions": 5,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Office of Secretary of Defense",
@@ -2838,22 +2870,6 @@
         "name": "Office of the Secretary of Defense",
         "mentions": 315,
         "documentCount": 83
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Stanton Friedman",
-        "mentions": 312,
-        "documentCount": 184
-      },
-      "right": {
-        "name": "Stanton Freedman",
-        "mentions": 5,
-        "documentCount": 2
       },
       "similarity": 0.938,
       "reason": "similar name",
@@ -3471,13 +3487,13 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 321,
-        "documentCount": 119
+        "mentions": 325,
+        "documentCount": 121
       },
       "right": {
         "name": "Jacques Valley",
-        "mentions": 4,
-        "documentCount": 4
+        "mentions": 5,
+        "documentCount": 5
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -3663,8 +3679,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 408,
-        "documentCount": 180
+        "mentions": 410,
+        "documentCount": 182
       },
       "right": {
         "name": "University Colorado",
@@ -3982,6 +3998,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Michael Salla",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Michael Salah",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "George Adamsky",
         "mentions": 5,
         "documentCount": 4
@@ -4076,6 +4108,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Michael Saleh",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Michael Salah",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "PROJECT PLATO",
@@ -4143,8 +4191,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 112,
-        "documentCount": 70
+        "mentions": 113,
+        "documentCount": 71
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -4191,8 +4239,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 88,
-        "documentCount": 59
+        "mentions": 90,
+        "documentCount": 60
       },
       "right": {
         "name": "Steven Hawking",
@@ -4415,13 +4463,29 @@
       "category": "person",
       "left": {
         "name": "Joseph Stalin",
-        "mentions": 11,
-        "documentCount": 10
+        "mentions": 12,
+        "documentCount": 11
       },
       "right": {
         "name": "Joe Stalin",
         "mentions": 4,
         "documentCount": 3
+      },
+      "similarity": 0.87,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "James Hansen",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Jane Hansen",
+        "mentions": 10,
+        "documentCount": 6
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -4453,22 +4517,6 @@
       "right": {
         "name": "Joseph Walker",
         "mentions": 11,
-        "documentCount": 5
-      },
-      "similarity": 0.87,
-      "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "James Hansen",
-        "mentions": 5,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Jane Hansen",
-        "mentions": 8,
         "documentCount": 5
       },
       "similarity": 0.87,
