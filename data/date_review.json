@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-12T23:56:19Z",
+  "generatedAt": "2026-09-13T00:56:04Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "7cae3a1253296fc4395ca83be79625ba24e1a550"
+    "revision": "bfff36b90febcfe87d19e09deeb09c1e11a9d8ac"
   },
-  "documentsWithCandidates": 10519,
+  "documentsWithCandidates": 10523,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1519,6 +1519,57 @@
           "method": "unclassified-mention",
           "evidence": "Retrieved 27 January 2020.",
           "segment": 44
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9a1f5a5e68d9",
+      "path": "Archives-for-the-Unexplained/documents/00---Koi-index---Truth-or-Scare---Wikipedia.txt",
+      "candidates": [
+        {
+          "value": "2003-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2001, to January 1, 2003.",
+          "segment": 3
+        },
+        {
+          "value": "2012-10-29",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "Hub until October 29, 2012.",
+          "segment": 10
+        },
+        {
+          "value": "2003-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "7. \"UFOs Over Phoenix\" - The mysterious sightings of January 1, 2003",
+          "segment": 43
+        },
+        {
+          "value": "2001-10-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Monaghan, Carol (October 24, 2001). \"TV show seeks truth behind the scare\" (https://www.ne",
+          "segment": 68
+        },
+        {
+          "value": "2001-10-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Spreier, Jeanne (October 30, 2001). \"Young viewers are treated to nothing bur boo skies for",
+          "segment": 70
         }
       ]
     },
@@ -7877,6 +7928,21 @@
       ]
     },
     {
+      "documentId": "doc-49992538bfd3",
+      "path": "Archives-for-the-Unexplained/documents/2018-09-22---skepticzonepodcast---The-Skeptic-Zone-518---23.September.2018_flgus8AnpDM---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2018-06-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "number 2 June 2018 hi this is dr. Pamela",
+          "segment": 2246
+        }
+      ]
+    },
+    {
       "documentId": "doc-c07e8d0b297f",
       "path": "Archives-for-the-Unexplained/documents/2018-09-29---skepticzonepodcast---The-Skeptic-Zone-519---30.September.2018_u9wwPD6vXyQ---transcript-automated-.txt",
       "candidates": [
@@ -8062,6 +8128,21 @@
           "method": "unclassified-mention",
           "evidence": "solar eclipse 21 August 2017 ah thank",
           "segment": 21
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bbb9ed0d8600",
+      "path": "Archives-for-the-Unexplained/documents/2019-08-27---FADE-TO-BLACK-Radio---Ep.-1082-FADE-to-BLACK-Jimmy-Church-w-Annie-Jacobsen-The-CIA-s-Secret-Army-LIVE_2tfjS65Pe3Y---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Forces",
+          "segment": 4
         }
       ]
     },
@@ -25414,6 +25495,948 @@
           "method": "unclassified-mention",
           "evidence": "The Mad Scientist - August 25, 2017 41_ Episode 26_ Mental Health Myths Part 2_q_uWDoxSA1E - transcript (automated).txt[05/07/2019 21:09:24",
           "segment": 1896
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5710fd1db539",
+      "path": "Archives-for-the-Unexplained/documents/The-Mad-Scientist---July-20-2017-36_-Episode-25_-Mental-Health-Myths-Episode-1_Ft5ATsNeeXE---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 27
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 56
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 86
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 116
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 144
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 171
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 201
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 231
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 260
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 289
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 318
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 348
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 377
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 406
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 436
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 466
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 495
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 524
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 551
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 581
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 610
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 639
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 667
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 697
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 726
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 754
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 784
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 814
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 843
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 872
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 902
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 932
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 961
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 990
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1020
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1050
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1079
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1107
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1137
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1167
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1196
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1225
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1254
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1284
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1313
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1341
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1371
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1401
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1429
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1457
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1487
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1517
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1546
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1574
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1603
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1633
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1661
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1690
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1720
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1750
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1778
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1807
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1837
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1865
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1894
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1923
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1953
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 1982
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2011
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2039
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2068
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2096
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2125
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2153
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2182
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2212
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2240
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2269
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2299
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2329
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2358
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2386
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2416
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2446
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2475
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2504
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2534
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2562
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2591
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2620
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2650
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2678
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2707
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2736
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2765
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2795
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2824
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2853
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2883
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2913
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2941
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2970
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 2999
+        },
+        {
+          "value": "2017-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Mad Scientist - July 20, 2017 36_ Episode 25_ Mental Health Myths Episode 1_Ft5ATsNeeXE - transcript (automated).txt[05/07/2019 21:09:31",
+          "segment": 3027
         }
       ]
     },
