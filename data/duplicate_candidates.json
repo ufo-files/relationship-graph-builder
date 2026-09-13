@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d9e5d930ffe29eb1a9f7173948368ccfdaf525ea"
+    "revision": "aae1f3106417e15ce1becc222feab9345575178d"
   },
-  "count": 287,
-  "totalCount": 287,
-  "shownCount": 287,
+  "count": 288,
+  "totalCount": 288,
+  "shownCount": 288,
   "candidates": [
     {
       "category": "organization",
@@ -316,11 +316,27 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Officers Training School",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Officer Training School",
+        "mentions": 5,
+        "documentCount": 2
+      },
+      "similarity": 0.979,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 412,
-        "documentCount": 184
+        "mentions": 413,
+        "documentCount": 185
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -924,6 +940,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Thomas Winterton",
+        "mentions": 7,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Thomas Winerton",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "AAF Intelligence",
@@ -934,22 +966,6 @@
         "name": "AF Intelligence",
         "mentions": 5,
         "documentCount": 3
-      },
-      "similarity": 0.968,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Thomas Winterton",
-        "mentions": 6,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Thomas Winerton",
-        "mentions": 4,
-        "documentCount": 4
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -1247,8 +1263,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 340,
-        "documentCount": 128
+        "mentions": 341,
+        "documentCount": 129
       },
       "right": {
         "name": "Jacques Valle",
@@ -1279,8 +1295,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 169,
-        "documentCount": 118
+        "mentions": 170,
+        "documentCount": 119
       },
       "right": {
         "name": "Flying Saucer",
@@ -1311,8 +1327,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 104,
-        "documentCount": 73
+        "mentions": 105,
+        "documentCount": 74
       },
       "right": {
         "name": "Bruce Macabee",
@@ -1935,8 +1951,8 @@
       "category": "person",
       "left": {
         "name": "David Clarke",
-        "mentions": 11,
-        "documentCount": 8
+        "mentions": 12,
+        "documentCount": 9
       },
       "right": {
         "name": "David Clark",
@@ -3503,8 +3519,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 340,
-        "documentCount": 128
+        "mentions": 341,
+        "documentCount": 129
       },
       "right": {
         "name": "Jacques Valley",
@@ -3711,8 +3727,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 412,
-        "documentCount": 184
+        "mentions": 413,
+        "documentCount": 185
       },
       "right": {
         "name": "University Colorado",
@@ -3887,8 +3903,8 @@
       "category": "person",
       "left": {
         "name": "John Peterson",
-        "mentions": 20,
-        "documentCount": 13
+        "mentions": 21,
+        "documentCount": 14
       },
       "right": {
         "name": "John Petersen",

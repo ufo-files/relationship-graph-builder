@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-13T15:35:07Z",
+  "generatedAt": "2026-09-13T16:37:29Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d9e5d930ffe29eb1a9f7173948368ccfdaf525ea"
+    "revision": "aae1f3106417e15ce1becc222feab9345575178d"
   },
-  "documentsWithCandidates": 10571,
+  "documentsWithCandidates": 10575,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8882,6 +8882,30 @@
       ]
     },
     {
+      "documentId": "doc-9827486d402b",
+      "path": "Archives-for-the-Unexplained/documents/2019-12-20---FADE-TO-BLACK-Radio---Ep.-1137-FADE-to-BLACK-Jimmy-Church-w-John-Burroughs-Who-is-TTSA-LIVE_zmUD5PlTX0I---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Forces",
+          "segment": 4
+        },
+        {
+          "value": "2009-11-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "today's Wednesday November 16 2009 t 310",
+          "segment": 38
+        }
+      ]
+    },
+    {
       "documentId": "doc-b58fa69f2562",
       "path": "Archives-for-the-Unexplained/documents/2020-00-00_Antipoda---Vol-41---Espirito-Santo.txt",
       "candidates": [
@@ -9667,6 +9691,57 @@
           "method": "unclassified-mention",
           "evidence": "terrorists August 20 August 2011 justice",
           "segment": 2116
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3896360add23",
+      "path": "Archives-for-the-Unexplained/documents/2023-01-17---Truthseekers---The-DARKER-side-of-CONSPIRACY-THEORIES-_ihy1Icf_8y8---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2021-01-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 6 2021 Capital riot",
+          "segment": 502
+        },
+        {
+          "value": "2021-01-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 6 2021 Capital Riot which was",
+          "segment": 519
+        },
+        {
+          "value": "1997-03-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "bodies behind and so on March 26 1997",
+          "segment": 1166
+        },
+        {
+          "value": "1997-03-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 26 1997 39 members of The Cult",
+          "segment": 1175
+        },
+        {
+          "value": "2021-01-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "behind the January 6 2021 Capital Riot",
+          "segment": 1578
         }
       ]
     },
@@ -236261,6 +236336,21 @@
       ]
     },
     {
+      "documentId": "doc-9211035aed7b806b752a7073",
+      "path": "France-GEIPAN/paired/cases/1956-09-09134/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1956-09-20",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On September 20, 1956, at 3:50 PM, two pilots on a patrol flight observed a spherical object with an aluminum-colored surface. Intrigued and intending to close in, the pilots gained altitude but realized it was impossible to catch up with the object. They abandoned t",
+          "segment": "seg-a93d2b794b3cfb12d1c300bd"
+        }
+      ]
+    },
+    {
       "documentId": "doc-e0d7c71b3368be93a9623450",
       "path": "France-GEIPAN/paired/cases/1956-11-00037/en/translation.txt",
       "candidates": [
@@ -247360,6 +247450,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On May 10, 2004, at approximately 9:20 PM, two independent witnesses observed the very rapid passage of a bright, yellow-orange ball of light. Although the two testimonies are not entirely consistent regarding the movement (one witness reported horizontal movement wh",
           "segment": "seg-9c8134a7fd4136088ebce037"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e5d100c37d5991fbf86cc725",
+      "path": "France-GEIPAN/paired/cases/2004-05-01624/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2004-05-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On May 14, 2004, at 21:44, a witness, an amateur astronomer, observed for several minutes the slow southerly-to-north-eastern (SO-NE) passage of a very bright point in the sky. The object made a second pass on a different trajectory but still heading north-east at 23",
+          "segment": "seg-cebc700d203e5c67bb9fee8f"
         }
       ]
     },
