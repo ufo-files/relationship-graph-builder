@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-13T00:56:04Z",
+  "generatedAt": "2026-09-13T01:53:48Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "bfff36b90febcfe87d19e09deeb09c1e11a9d8ac"
+    "revision": "08dc12e3bb72a495e414867c0b6d61b684e9c372"
   },
-  "documentsWithCandidates": 10523,
+  "documentsWithCandidates": 10524,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -21682,6 +21682,30 @@
           "method": "unclassified-mention",
           "evidence": "Prochain Café Ufologiques le 4 juillet 2013 à 18 h30, lieu habituel.",
           "segment": 61
+        }
+      ]
+    },
+    {
+      "documentId": "doc-03d12b57ab17",
+      "path": "Archives-for-the-Unexplained/documents/Rencontres-Ufologiques---2013-07-10.txt",
+      "candidates": [
+        {
+          "value": "2013-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le vendredi 21 juin 2013, au siège de l’association LE SCEAU (Sauvegarde et",
+          "segment": 124
+        },
+        {
+          "value": "2013-06-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le lendemain 22 juin 2013 dès 8 h 30 précise, Raoul Robé et Lionel Robé sont venus prendre le précieux",
+          "segment": 134
         }
       ]
     },

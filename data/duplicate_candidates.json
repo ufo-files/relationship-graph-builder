@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "bfff36b90febcfe87d19e09deeb09c1e11a9d8ac"
+    "revision": "08dc12e3bb72a495e414867c0b6d61b684e9c372"
   },
-  "count": 279,
-  "totalCount": 279,
-  "shownCount": 279,
+  "count": 280,
+  "totalCount": 280,
+  "shownCount": 280,
   "candidates": [
     {
       "category": "organization",
@@ -335,8 +335,8 @@
       "category": "location",
       "left": {
         "name": "Holloman Air Force Base",
-        "mentions": 167,
-        "documentCount": 83
+        "mentions": 168,
+        "documentCount": 84
       },
       "right": {
         "name": "Hollman Air Force Base",
@@ -1231,8 +1231,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 316,
-        "documentCount": 117
+        "mentions": 318,
+        "documentCount": 118
       },
       "right": {
         "name": "Jacques Valle",
@@ -1247,8 +1247,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 277,
-        "documentCount": 182
+        "mentions": 278,
+        "documentCount": 183
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1692,6 +1692,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Chris Mullin",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Chris Mullins",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "AF Base Unit",
@@ -1823,8 +1839,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 66,
-        "documentCount": 50
+        "mentions": 67,
+        "documentCount": 51
       },
       "right": {
         "name": "Northeastern University",
@@ -1854,14 +1870,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Frank Manor",
-        "mentions": 11,
-        "documentCount": 5
+        "name": "Tim Schwartz",
+        "mentions": 12,
+        "documentCount": 8
       },
       "right": {
-        "name": "Frank Mannor",
+        "name": "Tim Schwarz",
         "mentions": 8,
-        "documentCount": 5
+        "documentCount": 8
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -1870,14 +1886,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Tim Schwartz",
-        "mentions": 10,
-        "documentCount": 7
+        "name": "Frank Manor",
+        "mentions": 11,
+        "documentCount": 5
       },
       "right": {
-        "name": "Tim Schwarz",
-        "mentions": 7,
-        "documentCount": 7
+        "name": "Frank Mannor",
+        "mentions": 8,
+        "documentCount": 5
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -3375,8 +3391,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 66,
-        "documentCount": 50
+        "mentions": 67,
+        "documentCount": 51
       },
       "right": {
         "name": "Northwest University",
@@ -3455,8 +3471,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 316,
-        "documentCount": 117
+        "mentions": 318,
+        "documentCount": 118
       },
       "right": {
         "name": "Jacques Valley",
@@ -3524,8 +3540,8 @@
       },
       "right": {
         "name": "Timothy Beckley",
-        "mentions": 8,
-        "documentCount": 8
+        "mentions": 9,
+        "documentCount": 9
       },
       "similarity": 0.929,
       "reason": "similar name",
