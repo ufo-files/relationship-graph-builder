@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "c17180650cec3128ad3fa34a4956b83d09f91a1b"
+    "revision": "490d87542f6e2816a48e19147c3a73c384246ad6"
   },
-  "count": 284,
-  "totalCount": 284,
-  "shownCount": 284,
+  "count": 285,
+  "totalCount": 285,
+  "shownCount": 285,
   "candidates": [
     {
       "category": "organization",
@@ -72,6 +72,22 @@
         "documentCount": 4
       },
       "similarity": 0.987,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "THE FOUNDATIONS OF INTER-PLANETARY UNITY",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "The Foundations of Interplanetary Unity",
+        "mentions": 8,
+        "documentCount": 2
+      },
+      "similarity": 0.986,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -879,8 +895,8 @@
       "category": "person",
       "left": {
         "name": "Richard Dreyfuss",
-        "mentions": 9,
-        "documentCount": 8
+        "mentions": 10,
+        "documentCount": 9
       },
       "right": {
         "name": "Richard Dreyfus",
@@ -1263,8 +1279,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 168,
-        "documentCount": 117
+        "mentions": 169,
+        "documentCount": 118
       },
       "right": {
         "name": "Flying Saucer",
@@ -1918,6 +1934,22 @@
     {
       "category": "person",
       "left": {
+        "name": "David Marlar",
+        "mentions": 10,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "David Marla",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "John Deutsch",
         "mentions": 8,
         "documentCount": 6
@@ -1942,22 +1974,6 @@
         "name": "Office of International & Interagency Relations",
         "mentions": 3,
         "documentCount": 2
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "David Marlar",
-        "mentions": 9,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "David Marla",
-        "mentions": 4,
-        "documentCount": 3
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2847,8 +2863,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 313,
-        "documentCount": 185
+        "mentions": 315,
+        "documentCount": 187
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3871,8 +3887,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Health",
-        "mentions": 27,
-        "documentCount": 19
+        "mentions": 28,
+        "documentCount": 20
       },
       "right": {
         "name": "Department of Earth",
@@ -4239,8 +4255,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 90,
-        "documentCount": 60
+        "mentions": 91,
+        "documentCount": 61
       },
       "right": {
         "name": "Steven Hawking",
@@ -4319,8 +4335,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 63,
-        "documentCount": 54
+        "mentions": 64,
+        "documentCount": 55
       },
       "right": {
         "name": "George HW Bush",
