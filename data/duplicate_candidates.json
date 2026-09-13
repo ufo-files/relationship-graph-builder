@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a1b49a956f3c12084d688ceb39f447f14861db64"
+    "revision": "91bbe4bb5169183d2a69d8b61754b1fbf4d660e3"
   },
-  "count": 289,
-  "totalCount": 289,
-  "shownCount": 289,
+  "count": 291,
+  "totalCount": 291,
+  "shownCount": 291,
   "candidates": [
     {
       "category": "organization",
@@ -335,8 +335,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 414,
-        "documentCount": 186
+        "mentions": 415,
+        "documentCount": 187
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -894,14 +894,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Stanton Freeman",
-        "mentions": 13,
-        "documentCount": 12
+        "name": "Richard Dreyfuss",
+        "mentions": 11,
+        "documentCount": 10
       },
       "right": {
-        "name": "Stanton Freedman",
-        "mentions": 5,
-        "documentCount": 2
+        "name": "Richard Dreyfus",
+        "mentions": 7,
+        "documentCount": 6
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -910,14 +910,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Richard Dreyfuss",
-        "mentions": 10,
-        "documentCount": 9
+        "name": "Stanton Freeman",
+        "mentions": 13,
+        "documentCount": 12
       },
       "right": {
-        "name": "Richard Dreyfus",
-        "mentions": 7,
-        "documentCount": 6
+        "name": "Stanton Freedman",
+        "mentions": 5,
+        "documentCount": 2
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -1116,6 +1116,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "White Mountains",
+        "mentions": 35,
+        "documentCount": 28
+      },
+      "right": {
+        "name": "White Mountain",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Michael Schrat",
@@ -1126,22 +1142,6 @@
         "name": "Michael Schratt",
         "mentions": 20,
         "documentCount": 15
-      },
-      "similarity": 0.966,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "White Mountains",
-        "mentions": 33,
-        "documentCount": 27
-      },
-      "right": {
-        "name": "White Mountain",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -1583,8 +1583,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 38,
-        "documentCount": 33
+        "mentions": 40,
+        "documentCount": 34
       },
       "right": {
         "name": "George Noorey",
@@ -2895,8 +2895,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 342,
-        "documentCount": 199
+        "mentions": 345,
+        "documentCount": 201
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3471,8 +3471,8 @@
       "category": "person",
       "left": {
         "name": "Catherine Austin Fitz",
-        "mentions": 22,
-        "documentCount": 14
+        "mentions": 23,
+        "documentCount": 15
       },
       "right": {
         "name": "Catherine Austin Fitts",
@@ -3743,8 +3743,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 414,
-        "documentCount": 186
+        "mentions": 415,
+        "documentCount": 187
       },
       "right": {
         "name": "University Colorado",
@@ -4252,6 +4252,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "HEADQUARTERS ASTERN AREA",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Headquarters Southern Area",
+        "mentions": 6,
+        "documentCount": 2
+      },
+      "similarity": 0.92,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "book",
       "left": {
         "name": "Behind the Flying Saucers",
@@ -4325,6 +4341,22 @@
       "right": {
         "name": "Steven Hawking",
         "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.897,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Stephen Bassett",
+        "mentions": 19,
+        "documentCount": 17
+      },
+      "right": {
+        "name": "Steven Bassett",
+        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.897,

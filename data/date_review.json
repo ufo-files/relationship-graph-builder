@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-13T21:50:18Z",
+  "generatedAt": "2026-09-13T22:51:10Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a1b49a956f3c12084d688ceb39f447f14861db64"
+    "revision": "91bbe4bb5169183d2a69d8b61754b1fbf4d660e3"
   },
-  "documentsWithCandidates": 10593,
+  "documentsWithCandidates": 10596,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8855,6 +8855,21 @@
       ]
     },
     {
+      "documentId": "doc-026282c2d8d8",
+      "path": "Archives-for-the-Unexplained/documents/2019-07-13---Nyxx-Media---Bibi-Tinsley-Kelly-farmer-Girl-s-Night-In-Ep.-62-_uGJBf9d9XJs---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2019-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 13 2019 thank you so much for being",
+          "segment": 2
+        }
+      ]
+    },
+    {
       "documentId": "doc-41e2707384fe",
       "path": "Archives-for-the-Unexplained/documents/2019-08-05---Society-for-Scientific-Exploration---Anomalous-Physical-Effects-During-Solar-Eclipses-Goodey-Verreault_GH_jxkUdS0o---transcript-automated-.txt",
       "candidates": [
@@ -9283,6 +9298,21 @@
           "method": "unclassified-mention",
           "evidence": "On October 20, 2020, the OSIRIS-REx spacecraft will attempt to sample asteroid Bennu.",
           "segment": 12
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c7c015dfcb22",
+      "path": "Archives-for-the-Unexplained/documents/2020-11-23---Hidden-Truth-Show---White-House-Insider-Biden-Aided-Son-Hunter-in-his-Shady-Foreign-Dealings_NkBevcQP9c4---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2014-04-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "uh April 16 2014. so I was looking over",
+          "segment": 2664
         }
       ]
     },
@@ -180575,7 +180605,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Tue, 20 Oct 1998 17:18:20 -0400",
+          "evidence": "Tue, 20 Oct 1998 17:18:20 -0400 (EDT",
           "segment": 6
         },
         {
@@ -213260,8 +213290,17 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "-- April 6, 1970 -- page 2",
-          "segment": 41
+          "evidence": "ASSISTANT DIRECTOR April 6, 1970 TELEPHONE",
+          "segment": 2
+        },
+        {
+          "value": "1970-04-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "n -- April 6, 1970 -- page 2",
+          "segment": 44
         }
       ]
     },
@@ -254035,6 +254074,30 @@
           "method": "unclassified-mention",
           "evidence": "Description: On June 26, 2011, at 2:30 a.m., an individual was stargazing. He was intrigued by a bright point moving, quickly followed by several other bright points (between 5 and 7). These points moved slowly and silently, aligned in a V-formation and heading west. The descript",
           "segment": "seg-6de6430f7f1288a3e48a787c"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9ba2fdf467294f0406e14f0a",
+      "path": "France-GEIPAN/paired/cases/2011-07-02788/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: A witness reports observing, with his wife, a bright, orange light silently crossing the sky on July 14, 2011 at 23:49. The object moved at a constant speed along a straight trajectory. A video taken from a mobile phone captures the last 43 seconds of the object's vi",
+          "segment": "seg-c3647875154495753d27836f"
+        },
+        {
+          "value": "2011-11-04",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: A witness reports observing, with his wife, a bright, orange light silently crossing the sky on July 14, 2011 at 23:49. The object moved at a constant speed along a straight trajectory. A video taken from a mobile phone captures the last 43 seconds of the object's vi",
+          "segment": "seg-c3647875154495753d27836f"
         }
       ]
     },
