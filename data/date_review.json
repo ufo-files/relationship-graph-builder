@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-13T13:31:44Z",
+  "generatedAt": "2026-09-13T14:33:46Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "09859e7c3e1c5d6c9510baca50176c9feef78350"
+    "revision": "3777e9348d147c5c780b243c0529ea0fd13345de"
   },
-  "documentsWithCandidates": 10564,
+  "documentsWithCandidates": 10567,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -13027,6 +13027,48 @@
           "method": "unclassified-mention",
           "evidence": "the Inverness Courier, 14 Dec 1993 (it haooened in Oct 1993).",
           "segment": 19
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b7091eddd500",
+      "path": "Archives-for-the-Unexplained/documents/Bilk---no-077---1997-05.txt",
+      "candidates": [
+        {
+          "value": "1997-02-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "after two minutes. <Inverness Courier, 18 February 1997) * Dates",
+          "segment": 28
+        },
+        {
+          "value": "1997-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "last of the movies. <SUddeutsche Zeitung, 4 April 1997, p.",
+          "segment": 64
+        },
+        {
+          "value": "1995-05-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "caught on May 4, 1995, o££ Senegal.",
+          "segment": 73
+        },
+        {
+          "value": "1997-02-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Zealand, on February 24, 1997. \"The stranding is the ninth .in the",
+          "segment": 83
         }
       ]
     },
@@ -88362,22 +88404,13 @@
       "path": "Black-Vault-UFO/pdfs/dod-5040-6-m-1-2.txt",
       "candidates": [
         {
-          "value": "2001-04-10",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "of DoD Visual Information,\" April 10, 2001 (reference (a)).",
-          "segment": 14
-        },
-        {
           "value": "2001-04-05",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Information,\" Attachment 4, \"DoD Imagery and Caption Style Guide,\" April 5, 2001",
-          "segment": 149
+          "segment": 170
         },
         {
           "value": "1995-08-29",
@@ -88386,7 +88419,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "c) DoD Directive 5040.5, \"Alteration of Official DoD Imagery,\" August 29, 1995",
-          "segment": 150
+          "segment": 171
         }
       ]
     },
@@ -221459,8 +221492,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Friday, April 09, 2004 3:37 PM",
-          "segment": 0
+          "evidence": "Sent: Friday, April 09, 2004 3:37 PM",
+          "segment": 1
         },
         {
           "value": "2004-04-08",
@@ -221469,7 +221502,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Sent: Thursday, April 08, 2004 5:45 PM",
-          "segment": 2
+          "segment": 3
         }
       ]
     },
@@ -258191,6 +258224,21 @@
       ]
     },
     {
+      "documentId": "doc-cb60b5de629ff4f3f701a278",
+      "path": "France-GEIPAN/paired/cases/2017-07-09702/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On July 8, 2017, around 11:45 PM, a witness and his spouse were intrigued by the movement on a single trajectory of two orange disks in the clear sky. Several other disks of the same color then appear. All seem to be coming from the East (Gondecourt) and heading towa",
+          "segment": "seg-cc5797e9612e86dcc90598b8"
+        }
+      ]
+    },
+    {
       "documentId": "doc-95ea1adf9cfea9a529b7240e",
       "path": "France-GEIPAN/paired/cases/2017-07-09734/en/translation.txt",
       "candidates": [
@@ -275401,6 +275449,30 @@
           "method": "unclassified-mention",
           "evidence": "piloted by Mr Frederick Valentich, on the night of 21 October 1976.",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3a9d1d109ebb",
+      "path": "National-Archives-of-Australia-UFO/documents/10491375/0112.txt",
+      "candidates": [
+        {
+          "value": "1978-10-22",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "1800 hours on 22 October 1978, I received a telephone",
+          "segment": 0
+        },
+        {
+          "value": "1978-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At about 1855 hours on Saturday 21 October 1978 he was travelling from",
+          "segment": 4
         }
       ]
     },
