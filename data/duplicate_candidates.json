@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "fac12152f2bd7f566c863f6570fba5ad550e87af"
+    "revision": "a3ac3c0e045df23f739e6f6acf396a523b7af248"
   },
   "count": 294,
   "totalCount": 294,
@@ -1263,8 +1263,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 343,
-        "documentCount": 131
+        "mentions": 345,
+        "documentCount": 133
       },
       "right": {
         "name": "Jacques Valle",
@@ -1311,8 +1311,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 145,
-        "documentCount": 90
+        "mentions": 146,
+        "documentCount": 91
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -2060,6 +2060,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "George Adams",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "George Adam",
+        "mentions": 6,
+        "documentCount": 4
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Lake County",
@@ -2078,30 +2094,14 @@
     {
       "category": "person",
       "left": {
-        "name": "George Adam",
-        "mentions": 6,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Mr. George Adams",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
         "name": "Barbara Lamb",
         "mentions": 4,
         "documentCount": 3
       },
       "right": {
         "name": "Barbara Lam",
-        "mentions": 4,
-        "documentCount": 3
+        "mentions": 5,
+        "documentCount": 4
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2911,8 +2911,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 349,
-        "documentCount": 202
+        "mentions": 354,
+        "documentCount": 206
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3583,8 +3583,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 343,
-        "documentCount": 131
+        "mentions": 345,
+        "documentCount": 133
       },
       "right": {
         "name": "Jacques Valley",
@@ -3599,8 +3599,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 142,
-        "documentCount": 79
+        "mentions": 143,
+        "documentCount": 80
       },
       "right": {
         "name": "George Adamsky",
@@ -3919,13 +3919,13 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 142,
-        "documentCount": 79
+        "mentions": 143,
+        "documentCount": 80
       },
       "right": {
-        "name": "Mr. George Adams",
-        "mentions": 4,
-        "documentCount": 3
+        "name": "George Adams",
+        "mentions": 5,
+        "documentCount": 4
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -4110,14 +4110,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Michael Salla",
-        "mentions": 6,
-        "documentCount": 5
+        "name": "George Adams",
+        "mentions": 5,
+        "documentCount": 4
       },
       "right": {
-        "name": "Michael Salah",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "George Adamsky",
+        "mentions": 5,
+        "documentCount": 4
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -4126,13 +4126,13 @@
     {
       "category": "person",
       "left": {
-        "name": "George Adamsky",
-        "mentions": 5,
-        "documentCount": 4
+        "name": "Michael Salla",
+        "mentions": 6,
+        "documentCount": 5
       },
       "right": {
-        "name": "Mr. George Adams",
-        "mentions": 4,
+        "name": "Michael Salah",
+        "mentions": 3,
         "documentCount": 3
       },
       "similarity": 0.923,
@@ -4383,8 +4383,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 109,
-        "documentCount": 68
+        "mentions": 118,
+        "documentCount": 71
       },
       "right": {
         "name": "Steven Hawking",
@@ -4639,8 +4639,8 @@
       "category": "person",
       "left": {
         "name": "James Hansen",
-        "mentions": 5,
-        "documentCount": 4
+        "mentions": 6,
+        "documentCount": 5
       },
       "right": {
         "name": "Jane Hansen",
