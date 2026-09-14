@@ -176,10 +176,16 @@ test("Programs requires a reviewed disposition for every corpus candidate and da
   assert.ok(result.programs.every(program => program.startDate && program.startPrecision));
   assert.ok(result.programs.every(program => program.sources.length && program.provenance === "reviewed_interval"));
   const aawsap = result.programs.find(program => program.id === "aawsap");
-  assert.ok(aawsap.entityIds.includes("ent-1401144ab3dc"));
-  assert.ok(aawsap.entityIds.includes("ent-eb70172c69f0"));
   const condon = result.programs.find(program => program.id === "condon-committee");
-  assert.ok(condon.entityIds.includes("ent-6146a98f813a"));
+  for (const program of result.programs) {
+    const expectedEntityIds = [
+      program.entityId,
+      ...context.reviewedFixture.entityReviews
+        .filter(review => review.disposition === "merged" && review.programId === program.id && corpusEntities.some(entity => entity.id === review.entityId))
+        .map(review => review.entityId)
+    ].filter(entityId => context.catalogFixture.entities.some(entity => entity.id === entityId));
+    assert.deepEqual(program.entityIds, expectedEntityIds, `${program.id} must link only entities in the current corpus`);
+  }
   context.resultFixture = result;
   vm.runInContext(`state.catalog = catalogFixture`, context);
   const expectedProgramDocumentCount = program => new Set(program.entityIds.flatMap(entityId => context.catalogFixture.entities.find(entity => entity.id === entityId)?.documentIds || [])).size;
@@ -187,10 +193,6 @@ test("Programs requires a reviewed disposition for every corpus candidate and da
   assert.equal(vm.runInContext(`programCorpusDocumentCount(resultFixture.programs.find(program => program.id === "condon-committee"))`, context), expectedProgramDocumentCount(condon));
   assert.equal(result.reviewedProgramCount, 35);
   assert.equal(result.reviewedIntervalCount, 36);
-  const incompleteFixture = structuredClone(context.reviewedFixture);
-  incompleteFixture.entityReviews = incompleteFixture.entityReviews.filter(review => review.entityId !== "ent-9d0b3e246063");
-  context.incompleteFixture = incompleteFixture;
-  assert.throws(() => vm.runInContext(`programCatalogWithCorpus(incompleteFixture, catalogFixture)`, context), /corpus entities missing review decisions: Fastwalker/);
   assert.equal(vm.runInContext(`formatProgramDate("2017-12", "month")`, context), "2017-12");
   assert.equal(vm.runInContext(`formatProgramDate("1980", "decade")`, context), "1980s");
   assert.equal(vm.runInContext(`programTimeframeLabel(reviewedFixture.programs.find(program => program.id === "project-blue-book"), reviewedFixture.reviewedAt)`, context), "1952-03–1969-12-17");
@@ -217,6 +219,41 @@ test("Programs requires a reviewed disposition for every corpus candidate and da
   leapFixture.programs[0].startPrecision = "day";
   context.leapFixture = leapFixture;
   assert.doesNotMatch(JSON.parse(vm.runInContext(`JSON.stringify(validateProgramCatalog(leapFixture))`, context)).join("; "), /invalid start date or precision/);
+});
+
+test("Programs retains reviewed intervals when corpus entities disappear and binds present primary and merged entities", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  context.reviewedFixture = JSON.parse(fs.readFileSync("data/government_programs.json", "utf8"));
+  // These controlled entities exercise binding independently of publication ranking.
+  context.catalogFixture = { entities: [
+    { id: "ent-1401144ab3dc", category: "program", documentIds: ["doc-shared", "doc-primary"] },
+    { id: "ent-eb70172c69f0", category: "program", documentIds: ["doc-shared", "doc-merged"] },
+    { id: "ent-6146a98f813a", category: "organization", documentIds: ["doc-condon"] },
+    { id: "ent-9d0b3e246063", category: "program", canonicalName: "Fastwalker", documentIds: [] }
+  ] };
+  const evaluate = () => JSON.parse(vm.runInContext(`
+    state.catalog = catalogFixture;
+    JSON.stringify(programCatalogWithCorpus(reviewedFixture, catalogFixture).programs.map(program => ({
+      id: program.id, entityIds: program.entityIds, intervals: programIntervals(program),
+      documentCount: programCorpusDocumentCount(program), provenance: program.provenance
+    })))
+  `, context));
+  const present = evaluate();
+  assert.deepEqual(present.find(program => program.id === "aawsap").entityIds, ["ent-1401144ab3dc", "ent-eb70172c69f0"]);
+  assert.equal(present.find(program => program.id === "aawsap").documentCount, 3);
+  assert.deepEqual(present.find(program => program.id === "condon-committee").entityIds, ["ent-6146a98f813a"]);
+  assert.equal(present.find(program => program.id === "condon-committee").documentCount, 1);
+
+  context.incompleteFixture = structuredClone(context.reviewedFixture);
+  context.incompleteFixture.entityReviews = context.incompleteFixture.entityReviews.filter(review => review.entityId !== "ent-9d0b3e246063");
+  assert.throws(() => vm.runInContext(`programCatalogWithCorpus(incompleteFixture, catalogFixture)`, context), /corpus entities missing review decisions: Fastwalker/);
+
+  context.catalogFixture = { entities: [] };
+  const absent = evaluate();
+  assert.deepEqual(absent, present.map(program => ({ ...program, entityIds: [], documentCount: 0 })));
+  assert.ok(absent.every(program => program.intervals.length && program.provenance === "reviewed_interval"));
 });
 
 test("Programs PDF properties describe corpus coverage and active filters", () => {
