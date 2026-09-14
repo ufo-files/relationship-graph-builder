@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-14T06:47:36Z",
+  "generatedAt": "2026-09-14T07:53:22Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "530c7b032ae0dda18d91db52a7b15f4477893c9c"
+    "revision": "4a8b2f4569d909161cf3e6b84b9c5012ffb5cff6"
   },
-  "documentsWithCandidates": 10616,
+  "documentsWithCandidates": 10619,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -22904,6 +22904,39 @@
       ]
     },
     {
+      "documentId": "doc-9ce0442b1288",
+      "path": "Archives-for-the-Unexplained/documents/PV-n-882-1993307738-.txt",
+      "candidates": [
+        {
+          "value": "1903-05-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Vu les articles: 59 et 298 du décret du 20 mai 1903 portant règlement sur l'organisation",
+          "segment": 4
+        },
+        {
+          "value": "1993-08-19",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "observé le 19 août 1993 un objet volant non identifié.",
+          "segment": 10
+        },
+        {
+          "value": "1993-08-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 19 août 1993 vers 22 heures, je me trouvais sur ma terrasse en compagnie de",
+          "segment": 20
+        }
+      ]
+    },
+    {
       "documentId": "doc-221021ef4c57",
       "path": "Archives-for-the-Unexplained/documents/PV-n-883-2100310483-.txt",
       "candidates": [
@@ -30490,6 +30523,39 @@
           "method": "unclassified-mention",
           "evidence": "http://www.ufo.se/index.php/donera 2018-02-15 http://www.afu.se/afu2/",
           "segment": 82
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e3cbee9035fa",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Sverige-nyhetsbrev---No-3-2019.txt",
+      "candidates": [
+        {
+          "value": "2019-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Facebooksida 2019-07-27 NÄTET",
+          "segment": 37
+        },
+        {
+          "value": "2019-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2019-07-02 Håkan Blomqvist",
+          "segment": 62
+        },
+        {
+          "value": "2016-06-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2016-06-16 http://www.afu.se/afu2/",
+          "segment": 76
         }
       ]
     },
@@ -251467,6 +251533,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On April 4, 2008, at 10:28 PM, a motorist on the rest area of Mas d'Agenais was intrigued by the peculiar movement of a white object in the starry sky. The object moved according to an irregular trajectory. The observation lasted approximately 50 seconds before the o",
           "segment": "seg-eb162d5e6b6254595a3e9207"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a3fb09630980fb3e037a8020",
+      "path": "France-GEIPAN/paired/cases/2008-04-02073/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-04-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On April 12, 2008, around 10 PM, two witnesses were intrigued by a luminous phenomenon in the sky: a glow with strong, multicolored twinkling, predominantly blue, and round in shape, stationary in the southwest in a clear sky. The witnesses had time to retrieve binoc",
+          "segment": "seg-197c5f9aa875508a0b829557"
         }
       ]
     },
