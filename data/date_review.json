@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-14T05:27:32Z",
+  "generatedAt": "2026-09-14T06:47:36Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "eed5039705306a7ec29b7464fbd31b323fcdedf3"
+    "revision": "530c7b032ae0dda18d91db52a7b15f4477893c9c"
   },
-  "documentsWithCandidates": 10614,
+  "documentsWithCandidates": 10616,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -10465,6 +10465,30 @@
           "method": "unclassified-mention",
           "evidence": "Episode 762 - 14 May 2023",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-967756c3aa58",
+      "path": "Archives-for-the-Unexplained/documents/2023-05-15---UAP-STUDIES-Podcast---THE-SKINWALKER-RANCH-OF-COLORADO---KATIE-PAIGE-INVESTIGATES_pI610Dw_O28---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1975-11-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of November 11 1975 so we're right",
+          "segment": 2385
+        },
+        {
+          "value": "1975-11-12",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "that article there November 12 1975 sure",
+          "segment": 2496
         }
       ]
     },
@@ -25933,6 +25957,48 @@
           "method": "unclassified-mention",
           "evidence": "Last Change: November 22, 1995",
           "segment": 35
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a7b4185d5679",
+      "path": "Archives-for-the-Unexplained/documents/Shadow-of-a-Doubt---1997-01.txt",
+      "candidates": [
+        {
+          "value": "1997-01-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, January 18, 1997, 2:00pm -- 3:30pm",
+          "segment": 7
+        },
+        {
+          "value": "1997-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "be holding a press conference on Thursday, January 9, 1997.",
+          "segment": 15
+        },
+        {
+          "value": "1996-12-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 20, 1996) The Demon-Haunted World: Science As a Candle in the Dark",
+          "segment": 33
+        },
+        {
+          "value": "1997-01-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Last Change: January 5, 1997",
+          "segment": 34
         }
       ]
     },
