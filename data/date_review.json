@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-15T11:34:22Z",
+  "generatedAt": "2026-09-15T12:41:39Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "949daaac25da5f792399e5dfe8c41402d2be9d28"
+    "revision": "bdf67641b9d9793b5c65f16a4418d5ab02f51d69"
   },
-  "documentsWithCandidates": 10698,
+  "documentsWithCandidates": 10701,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -25978,6 +25978,21 @@
           "method": "unclassified-mention",
           "evidence": "August 6, 1977, at the Hotel San Franciscan in - you guessed",
           "segment": 33
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9d8d1530a7df",
+      "path": "Archives-for-the-Unexplained/documents/Saucer-Smear---Vol-25-No-01---1978.txt",
+      "candidates": [
+        {
+          "value": "1978-01-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The forms will be ready by 1 or 31 January 1978 and will be",
+          "segment": 183
         }
       ]
     },
@@ -152505,13 +152520,22 @@
       "path": "Black-Vault-UFO/pdfs/return-of-wreckage-of-a-12-125-to-area-51-10-january-1967.txt",
       "candidates": [
         {
+          "value": "1967-01-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 10 January 1967 Deputy",
+          "segment": 4
+        },
+        {
           "value": "1967-01-09",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "#125 had been returned to Area 51 last night (9 Jan 1967).",
-          "segment": 12
+          "evidence": "#125 had been returned to Area 51 last night {9 Jan 1967).",
+          "segment": 7
         }
       ]
     },
@@ -185408,6 +185432,39 @@
       ]
     },
     {
+      "documentId": "doc-a8c3e146b8cf",
+      "path": "Chile-SEFAA/documents/CASO-N--2021-06112024.txt",
+      "candidates": [
+        {
+          "value": "2024-11-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Junto al reporte se ingresó el archivo de video “WhatsApp Video 2024-11-01 at",
+          "segment": 23
+        },
+        {
+          "value": "2024-11-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "596dcbe99c23.jpeg”, “WhatsApp Image 2024-11-01 at 23.00.40.jpeg”.",
+          "segment": 27
+        },
+        {
+          "value": "2024-11-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "acuerdo a su nombre, “WhatsApp Video 2024-11-01 at 22.47.47.mp4”, debería",
+          "segment": 35
+        }
+      ]
+    },
+    {
       "documentId": "doc-c76c8ba8f373",
       "path": "Chile-SEFAA/documents/CASO-N--2250-13062021.txt",
       "candidates": [
@@ -196164,13 +196221,22 @@
       "path": "DPIArchive/documents/116794-cia-military-unidentified-aircraft-french-morocco-9-2-52.txt",
       "candidates": [
         {
+          "value": "1952-07-18",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "PUBLISHED 12 - 18 Jul 1952",
+          "segment": 6
+        },
+        {
           "value": "1952-07-03",
           "precision": "day",
           "confidence": 0.9,
           "kind": "event_date",
           "method": "event-language",
-          "evidence": "•claims to have observed a flying saucer above Daier at 0608 hours on 3 July 1952.",
-          "segment": 7
+          "evidence": "claims to have observed a flying saucer above Dakar at 0608 how's on 3 July 1952.",
+          "segment": 13
         },
         {
           "value": "1952-07-12",
@@ -196178,8 +196244,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "It 1s reported from Mechra bel Ks1r1 that on 12 July 1952, two flying",
-          "segment": 15
+          "evidence": "It is reported from Mechra bel Ksiri that on 12 July 1952, two flying",
+          "segment": 21
         },
         {
           "value": "1952-07-13",
@@ -196187,8 +196253,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "On 13 July 1952, two inhabitants of Pedal& reported having seen, st",
-          "segment": 19
+          "evidence": "On 13 July 1952, two inhabitants of Fedala reported having seen, at",
+          "segment": 26
         },
         {
           "value": "1952-07-13",
@@ -196196,8 +196262,17 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "sky at 2130 bours on 13 July 1952.",
-          "segment": 30
+          "evidence": "sky at 2130 hours on 13 July 1952.",
+          "segment": 37
+        },
+        {
+          "value": "1952-07-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between 2100 and 2200 hours on 13 July 1952.",
+          "segment": 42
         },
         {
           "value": "1952-07-13",
@@ -196205,8 +196280,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "betveen 2100 and 2200 hours on 13 July 1952.",
-          "segment": 35
+          "evidence": "Forty persons have reported that at 2200 hours on 13 July 1952, they ob-",
+          "segment": 44
         }
       ]
     },
@@ -282150,6 +282225,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Sutject : Mosing Arcisft, VH-DSJ, 21 October 1978 21",
+          "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9611e9939bc5",
+      "path": "National-Archives-of-Australia-UFO/documents/10491375/0274.txt",
+      "candidates": [
+        {
+          "value": "1978-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "VH-DSJ an 21 October 1978",
           "segment": 0
         }
       ]
