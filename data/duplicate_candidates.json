@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "bdf67641b9d9793b5c65f16a4418d5ab02f51d69"
+    "revision": "ffa9e2432ab82e54ce45998aa4d752be24b3245c"
   },
   "count": 311,
   "totalCount": 311,
@@ -1279,8 +1279,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 368,
-        "documentCount": 150
+        "mentions": 370,
+        "documentCount": 151
       },
       "right": {
         "name": "Jacques Valle",
@@ -1391,8 +1391,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Valley",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 7,
+        "documentCount": 7
       },
       "right": {
         "name": "Jacques Valle",
@@ -1615,8 +1615,8 @@
       "category": "person",
       "left": {
         "name": "Philip Corso",
-        "mentions": 59,
-        "documentCount": 47
+        "mentions": 60,
+        "documentCount": 48
       },
       "right": {
         "name": "Colonel Phillip Corso",
@@ -1788,6 +1788,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Nancy Talbot",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Nancy Talbott",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Jekyl Island",
@@ -1828,22 +1844,6 @@
       },
       "right": {
         "name": "Dr. Michael Wolf",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Nancy Talbot",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Nancy Talbott",
         "mentions": 4,
         "documentCount": 3
       },
@@ -2063,8 +2063,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 68,
-        "documentCount": 52
+        "mentions": 69,
+        "documentCount": 53
       },
       "right": {
         "name": "Northeastern University",
@@ -2142,14 +2142,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Frank Manor",
-        "mentions": 11,
-        "documentCount": 5
+        "name": "David Clarke",
+        "mentions": 16,
+        "documentCount": 13
       },
       "right": {
-        "name": "Frank Mannor",
-        "mentions": 8,
-        "documentCount": 5
+        "name": "David Clark",
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2158,14 +2158,14 @@
     {
       "category": "person",
       "left": {
-        "name": "David Clarke",
-        "mentions": 15,
-        "documentCount": 12
+        "name": "Frank Manor",
+        "mentions": 11,
+        "documentCount": 5
       },
       "right": {
-        "name": "David Clark",
-        "mentions": 4,
-        "documentCount": 3
+        "name": "Frank Mannor",
+        "mentions": 8,
+        "documentCount": 5
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2910,12 +2910,12 @@
     {
       "category": "organization",
       "left": {
-        "name": "University of Chi",
-        "mentions": 2,
-        "documentCount": 2
+        "name": "University of Maine",
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
-        "name": "University of Chile",
+        "name": "University of Min",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2926,12 +2926,12 @@
     {
       "category": "organization",
       "left": {
-        "name": "University of Min",
+        "name": "University of Chi",
         "mentions": 2,
         "documentCount": 2
       },
       "right": {
-        "name": "University of Maine",
+        "name": "University of Chile",
         "mentions": 2,
         "documentCount": 2
       },
@@ -3103,8 +3103,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 423,
-        "documentCount": 251
+        "mentions": 424,
+        "documentCount": 252
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3679,8 +3679,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 68,
-        "documentCount": 52
+        "mentions": 69,
+        "documentCount": 53
       },
       "right": {
         "name": "Northwest University",
@@ -3759,13 +3759,13 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 368,
-        "documentCount": 150
+        "mentions": 370,
+        "documentCount": 151
       },
       "right": {
         "name": "Jacques Valley",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 7,
+        "documentCount": 7
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -4143,8 +4143,8 @@
       "category": "program",
       "left": {
         "name": "Project Mogul",
-        "mentions": 125,
-        "documentCount": 41
+        "mentions": 126,
+        "documentCount": 42
       },
       "right": {
         "name": "Project Mogui",
@@ -4591,8 +4591,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 128,
-        "documentCount": 82
+        "mentions": 130,
+        "documentCount": 83
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -4639,8 +4639,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 132,
-        "documentCount": 82
+        "mentions": 133,
+        "documentCount": 83
       },
       "right": {
         "name": "Steven Hawking",
