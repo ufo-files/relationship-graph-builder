@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-14T23:16:10Z",
+  "generatedAt": "2026-09-15T00:24:46Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "dc8801c0dff7b532c234a05a73e5ecb15fd59cd0"
+    "revision": "be8ac74382a5213f2a85b3a2563487a0722bf6ef"
   },
-  "documentsWithCandidates": 10660,
+  "documentsWithCandidates": 10664,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7561,6 +7561,21 @@
           "method": "unclassified-mention",
           "evidence": ">>So, on December 24, 1968...",
           "segment": 266
+        }
+      ]
+    },
+    {
+      "documentId": "doc-61c5fcf0c2f6",
+      "path": "Archives-for-the-Unexplained/documents/2017-07-06---Inception-Radio-Network---Trace-Evidence-Proves-the-Location-of-Amelia-Earhart-s-Burial-Ground_5_AztQg6nRA---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1944-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 6 1944 but at that time he was",
+          "segment": 2015
         }
       ]
     },
@@ -31517,6 +31532,39 @@
       ]
     },
     {
+      "documentId": "doc-e1be6f1de14b",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Potpourri-No-434.txt",
+      "candidates": [
+        {
+          "value": "2000-06-20",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The following information is from Filer's Files #24, dated June 20, 2000: David",
+          "segment": 3
+        },
+        {
+          "value": "1992-06-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "going over,\" David L. Chandler, Boston Globe, June 22, 1992. (3) \"Helping Abductees,\"",
+          "segment": 53
+        },
+        {
+          "value": "2000-05-12",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "An article in Science magazine, Vol. 228, 12 May 2000, entitled \"Interacting",
+          "segment": 58
+        }
+      ]
+    },
+    {
       "documentId": "doc-af7feb945f8c",
       "path": "Archives-for-the-Unexplained/documents/UFO-Potpourri-No-439.txt",
       "candidates": [
@@ -31555,6 +31603,228 @@
           "method": "unclassified-mention",
           "evidence": "aircraft enroute from Majorca, Spain to Britain on September 10, 1967.",
           "segment": 75
+        }
+      ]
+    },
+    {
+      "documentId": "doc-90b70a9be1d7",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Research-Newsletter---1973-06-07---Vol-03-No-03.txt",
+      "candidates": [
+        {
+          "value": "1973-04-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "area on the evening of April 6, according to the April 12, 1973, edition of the St.",
+          "segment": 26
+        },
+        {
+          "value": "1973-03-29",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "in the March 29, 1973, edition of their newspaper, the Piedmont Journal Banner.",
+          "segment": 40
+        },
+        {
+          "value": "1945-12-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "books -- took place on December 4, 1945, when five Grumman Navy Avenger torpedo",
+          "segment": 76
+        },
+        {
+          "value": "1973-04-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "spokes,.. the April 12, 1973, edition of the Doniphan Prospeat News, said.",
+          "segment": 116
+        },
+        {
+          "value": "1973-04-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 16, 1973, edition of the Jeannette News-Dispatah.",
+          "segment": 129
+        },
+        {
+          "value": "1973-03-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Bloomsburg, Pa., Morning Press, March 21, 1973.",
+          "segment": 165
+        },
+        {
+          "value": "1973-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "since the first of the year, according to the June 24, 1973, edition of the Na­",
+          "segment": 187
+        },
+        {
+          "value": "1973-03-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Kingston to Rockville to Westerly to Stonington, stated the March 21, 1973, edi­",
+          "segment": 211
+        },
+        {
+          "value": "1973-02-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "from Beira to Laurenco Marques, Mozambique, stated the February 8, 1973, edition",
+          "segment": 243
+        },
+        {
+          "value": "1973-02-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ball flashing across the sky from my right, .. he stated in the February 9, 1973",
+          "segment": 278
+        },
+        {
+          "value": "1973-01-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "South Wales, Australia) Daily News, January 16, 1973.",
+          "segment": 291
+        },
+        {
+          "value": "1973-06-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On June 10, 1973, the National Aeronautics and Space Administration (NASA",
+          "segment": 302
+        },
+        {
+          "value": "1973-06-04",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "According to a NASA press release dated June 4, 1973, the Radio Astronomy",
+          "segment": 308
+        },
+        {
+          "value": "1973-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "blinking 9 reen light\" before disappearing, the RusseU DaiZy News, February 3, 1973",
+          "segment": 362
+        },
+        {
+          "value": "1973-02-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "sound,\" the Thames (Auckland Province, New Zealand) Star, February 14, 1973, said.",
+          "segment": 370
+        },
+        {
+          "value": "1973-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "witnesses, stopped, then continued on, stated the February 10, 1973, edition of the",
+          "segment": 374
+        },
+        {
+          "value": "1973-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "stated the February 19, 1973, edition of The (Hastings, New Zealand) Hawks Bay",
+          "segment": 381
+        },
+        {
+          "value": "1973-02-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Herald-Tribune; the February 20, 1973, edition of The (Dunedin) Evening Star; and",
+          "segment": 382
+        },
+        {
+          "value": "1973-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the February 21, 1973, edition of The Timaru (New Zealand) Herald. (Probable ex­",
+          "segment": 383
+        },
+        {
+          "value": "1973-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"horrified her,\" according to the York, Pa., Daily Record, February 22, 1973.",
+          "segment": 387
+        },
+        {
+          "value": "1973-03-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 7, 1973, stated that Mr. and Mrs. Pierre Hernandez spotted \"a very bright ob­",
+          "segment": 389
+        },
+        {
+          "value": "1973-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "spectator, February 28, 1973.",
+          "segment": 394
+        },
+        {
+          "value": "1973-03-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "England) News, March 9, 1973, said that David Rouse and Richard Sande1ls saw \"a",
+          "segment": 396
+        },
+        {
+          "value": "1973-03-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 7, 1973, edition of the Ann Arbor News. (Possible explanation: break-up of",
+          "segment": 402
         }
       ]
     },
@@ -280225,6 +280495,30 @@
           "method": "relative-date-exclusion",
           "evidence": "intensive air, sea and land search was continued until 25 October 1978, but no trace of the aircraft was found.",
           "segment": 19
+        }
+      ]
+    },
+    {
+      "documentId": "doc-81eb472d2704",
+      "path": "National-Archives-of-Australia-UFO/documents/10491375/0046.txt",
+      "candidates": [
+        {
+          "value": "1981-12-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I refer to your letter of 25 December 1981 concerning the accident",
+          "segment": 0
+        },
+        {
+          "value": "1978-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to Cessna 182 aircraft VI-DSJ, on 21 October 1978.",
+          "segment": 1
         }
       ]
     },
