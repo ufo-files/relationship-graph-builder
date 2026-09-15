@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d257f94be0bf420e1fe8b46fbbfb52b2c10c4079"
+    "revision": "a11dce7d0bad6d9d74d231ac7ff8d8b54faabb8e"
   },
-  "count": 309,
-  "totalCount": 309,
-  "shownCount": 309,
+  "count": 310,
+  "totalCount": 310,
+  "shownCount": 310,
   "candidates": [
     {
       "category": "organization",
@@ -335,8 +335,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 424,
-        "documentCount": 194
+        "mentions": 425,
+        "documentCount": 195
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -383,8 +383,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 490,
-        "documentCount": 239
+        "mentions": 491,
+        "documentCount": 240
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -1279,8 +1279,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 366,
-        "documentCount": 148
+        "mentions": 368,
+        "documentCount": 150
       },
       "right": {
         "name": "Jacques Valle",
@@ -1295,8 +1295,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 293,
-        "documentCount": 195
+        "mentions": 295,
+        "documentCount": 196
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1343,8 +1343,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 120,
-        "documentCount": 85
+        "mentions": 122,
+        "documentCount": 86
       },
       "right": {
         "name": "Bruce Macabee",
@@ -2862,6 +2862,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "University of Oslo",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "University of Colo",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "POST INTELLIGENCEF",
         "mentions": 2,
         "documentCount": 2
@@ -3071,8 +3087,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 402,
-        "documentCount": 242
+        "mentions": 406,
+        "documentCount": 245
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3743,8 +3759,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 366,
-        "documentCount": 148
+        "mentions": 368,
+        "documentCount": 150
       },
       "right": {
         "name": "Jacques Valley",
@@ -3983,8 +3999,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 424,
-        "documentCount": 194
+        "mentions": 425,
+        "documentCount": 195
       },
       "right": {
         "name": "University Colorado",
@@ -4396,6 +4412,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of Cologne",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "University of Colo",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Mason County",
@@ -4406,22 +4438,6 @@
         "name": "Madison County",
         "mentions": 5,
         "documentCount": 5
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "University of Cologne",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "University of Colo",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -4607,8 +4623,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 127,
-        "documentCount": 78
+        "mentions": 129,
+        "documentCount": 79
       },
       "right": {
         "name": "Steven Hawking",
@@ -4623,8 +4639,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Bassett",
-        "mentions": 24,
-        "documentCount": 20
+        "mentions": 25,
+        "documentCount": 21
       },
       "right": {
         "name": "Steven Bassett",
