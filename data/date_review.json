@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-15T20:57:33Z",
+  "generatedAt": "2026-09-15T22:08:02Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "8202abbc315b5ce7ff63395b589a0f09980011db"
+    "revision": "6799a4c9b360254497048257e01c5047f5255994"
   },
-  "documentsWithCandidates": 10713,
+  "documentsWithCandidates": 10715,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9032,6 +9032,21 @@
       ]
     },
     {
+      "documentId": "doc-e57d235a6a65",
+      "path": "Archives-for-the-Unexplained/documents/2018-08-09---Den-of-Lore---EP.-105---Something-Big-is-Coming-Empire-of-the-Wheel-w-Walter-Bosley_b5n-QOOlijQ---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2018-08-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "is Thursday August 8 2018 and ladies and",
+          "segment": 14
+        }
+      ]
+    },
+    {
       "documentId": "doc-ee3196346ab9",
       "path": "Archives-for-the-Unexplained/documents/2018-08-17---OpenMindsTV---Famous-UFO-Landing-at-Bentwaters-Rendlesham-Linda-Moulton-Howe_VsqO7k0HDuk---transcript-automated-.txt",
       "candidates": [
@@ -9313,6 +9328,30 @@
           "method": "unclassified-mention",
           "evidence": "okay today is February 27 2018 and we",
           "segment": 26
+        }
+      ]
+    },
+    {
+      "documentId": "doc-566f8682cce8",
+      "path": "Archives-for-the-Unexplained/documents/2019-02-26---FADE-TO-BLACK-Radio---Ep.-1002-FADE-to-BLACK-w-Barbara-Lamb-LIVE_9JJ1hGsNcsU---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 here on the airport",
+          "segment": 4
+        },
+        {
+          "value": "2009-02-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Tuesday February 26 2009",
+          "segment": 40
         }
       ]
     },
@@ -214700,8 +214739,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "•i Fri, 9 Jan 1998 13:45:52 -0500",
-          "segment": 2
+          "evidence": "for <D >; Fri, 9 Jan 1998 13:45:52 -0500",
+          "segment": 4
         },
         {
           "value": "1998-01-09",
@@ -214709,8 +214748,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "9 Jan 1998 10:46:04 -0800 (PST",
-          "segment": 4
+          "evidence": "<D >; Fri, 9 Jan 1998 10:46:04 -0800 (PST",
+          "segment": 7
         },
         {
           "value": "1998-01-09",
@@ -214719,7 +214758,7 @@
           "kind": "document_date",
           "method": "document-header",
           "evidence": "Date: Fri, 09 Jan 1998 10:32:06 -0800",
-          "segment": 8
+          "segment": 10
         },
         {
           "value": "1998-01-05",
@@ -214728,7 +214767,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Date: Monday, January 05, 1998 3:29 PM",
-          "segment": 18
+          "segment": 20
         }
       ]
     },
