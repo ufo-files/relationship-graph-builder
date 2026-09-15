@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "c6d15613aa09a13ba13e5f59ec00af1d3f3b19b3"
+    "revision": "ee3f967d98d09d77b9671e171b371d08fce7469c"
   },
   "count": 309,
   "totalCount": 309,
@@ -655,8 +655,8 @@
       "category": "government_agency",
       "left": {
         "name": "Police Department",
-        "mentions": 76,
-        "documentCount": 55
+        "mentions": 77,
+        "documentCount": 56
       },
       "right": {
         "name": "Police Departments",
@@ -1004,22 +1004,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
-      "left": {
-        "name": "The Office of Public",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Office Of Pubic",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.968,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "location",
       "left": {
         "name": "Rogers Dry Lake",
@@ -1029,6 +1013,22 @@
       "right": {
         "name": "Rodgers Dry Lake",
         "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "The Office of Public",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Office Of Pubic",
+        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.968,
@@ -3684,7 +3684,7 @@
       },
       "right": {
         "name": "Catherine Austin Fitts",
-        "mentions": 18,
+        "mentions": 19,
         "documentCount": 8
       },
       "similarity": 0.93,
@@ -4051,9 +4051,9 @@
         "documentCount": 5
       },
       "right": {
-        "name": "Trump Administration's",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "Trump Administration",
+        "mentions": 9,
+        "documentCount": 4
       },
       "similarity": 0.927,
       "reason": "similar name",
@@ -4623,8 +4623,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Bassett",
-        "mentions": 22,
-        "documentCount": 18
+        "mentions": 23,
+        "documentCount": 19
       },
       "right": {
         "name": "Steven Bassett",
