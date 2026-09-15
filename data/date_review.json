@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-15T22:08:02Z",
+  "generatedAt": "2026-09-15T23:21:55Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "6799a4c9b360254497048257e01c5047f5255994"
+    "revision": "5c007870df839ffcd7745fddf714416fbf6b6b33"
   },
-  "documentsWithCandidates": 10715,
+  "documentsWithCandidates": 10717,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9244,6 +9244,21 @@
           "method": "unclassified-mention",
           "evidence": "launched on September 15, 2018.",
           "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-adf1cee7729c",
+      "path": "Archives-for-the-Unexplained/documents/2019-01-03---FADE-TO-BLACK-Radio---Ep.-972-FADE-to-BLACK-FADERNIGHT-Open-Lines-LIVE_ztoOYT1fizs---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Forces",
+          "segment": 5
         }
       ]
     },
@@ -90061,21 +90076,6 @@
           "method": "unclassified-mention",
           "evidence": "AIICE ANSA SPanIan 1556 GIE 6 July 1965.-P) HANDOROM",
           "segment": 44
-        }
-      ]
-    },
-    {
-      "documentId": "doc-102cb5285193",
-      "path": "Black-Vault-UFO/pdfs/c05515811-pdf-2.txt",
-      "candidates": [
-        {
-          "value": "1958-06-03",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "OSI: ASD 117901:21(22) 3 June 1958",
-          "segment": 7
         }
       ]
     },
@@ -266939,6 +266939,21 @@
       ]
     },
     {
+      "documentId": "doc-675009441797ff596cdca1ba",
+      "path": "France-GEIPAN/paired/cases/2015-07-09238/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On July 15, 2015, at 11:45 PM, a witness observing the stars noticed the passage of a satellite, then was surprised to see a flying object in the shape of a triangle composed of three weak, orange circles at each end. The phenomenon was fleeting and disappeared very ",
+          "segment": "seg-c49d8c4ca0871c06aa0994b3"
+        }
+      ]
+    },
+    {
       "documentId": "doc-fcd8b04aaa9c08cb6caec23b",
       "path": "France-GEIPAN/paired/cases/2015-07-09256/en/translation.txt",
       "candidates": [
@@ -285040,6 +285055,21 @@
           "method": "unclassified-mention",
           "evidence": "Washington DC) on 7 August 1952.",
           "segment": 25
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c4594b697276",
+      "path": "National-Archives-of-Australia-UFO/documents/3083715/0013.txt",
+      "candidates": [
+        {
+          "value": "1952-07-19",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "19 July 1952 the press published a report fron Captain Ruppelt, an",
+          "segment": 14
         }
       ]
     },
