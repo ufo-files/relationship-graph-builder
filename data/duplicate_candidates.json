@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "93518e2e5dc3d8ab1173ecb75af45af722c26f41"
+    "revision": "949daaac25da5f792399e5dfe8c41402d2be9d28"
   },
-  "count": 310,
-  "totalCount": 310,
-  "shownCount": 310,
+  "count": 311,
+  "totalCount": 311,
+  "shownCount": 311,
   "candidates": [
     {
       "category": "organization",
@@ -111,8 +111,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 616,
-        "documentCount": 398
+        "mentions": 619,
+        "documentCount": 399
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -127,8 +127,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 616,
-        "documentCount": 398
+        "mentions": 619,
+        "documentCount": 399
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -271,8 +271,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 50,
-        "documentCount": 34
+        "mentions": 51,
+        "documentCount": 35
       },
       "right": {
         "name": "Department of Transports",
@@ -335,8 +335,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 425,
-        "documentCount": 195
+        "mentions": 426,
+        "documentCount": 196
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -831,8 +831,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 616,
-        "documentCount": 398
+        "mentions": 619,
+        "documentCount": 399
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -847,8 +847,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 616,
-        "documentCount": 398
+        "mentions": 619,
+        "documentCount": 399
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -863,8 +863,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 616,
-        "documentCount": 398
+        "mentions": 619,
+        "documentCount": 399
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -943,8 +943,8 @@
       "category": "government_agency",
       "left": {
         "name": "Regional Office",
-        "mentions": 14,
-        "documentCount": 10
+        "mentions": 15,
+        "documentCount": 11
       },
       "right": {
         "name": "Regional Offices",
@@ -1470,6 +1470,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Richard Clark",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Richard Clarke",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Frank Kaufman",
         "mentions": 3,
         "documentCount": 3
@@ -1494,22 +1510,6 @@
         "name": "Airforce Base",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Richard Clark",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Richard Clarke",
-        "mentions": 3,
-        "documentCount": 2
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -1604,8 +1604,8 @@
       },
       "right": {
         "name": "Timothy Goods",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 5,
+        "documentCount": 4
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -1854,6 +1854,22 @@
     {
       "category": "person",
       "left": {
+        "name": "James Mosley",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "James Moseley",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Paul Schartle",
         "mentions": 3,
         "documentCount": 2
@@ -2063,8 +2079,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 50,
-        "documentCount": 34
+        "mentions": 51,
+        "documentCount": 35
       },
       "right": {
         "name": "Department of Trancport",
@@ -2086,6 +2102,22 @@
         "name": "John Edwards",
         "mentions": 6,
         "documentCount": 5
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "David Marlar",
+        "mentions": 21,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "David Marla",
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2132,22 +2164,6 @@
       },
       "right": {
         "name": "David Clark",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "David Marlar",
-        "mentions": 12,
-        "documentCount": 8
-      },
-      "right": {
-        "name": "David Marla",
         "mentions": 4,
         "documentCount": 3
       },
@@ -3087,8 +3103,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 409,
-        "documentCount": 248
+        "mentions": 423,
+        "documentCount": 251
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3228,22 +3244,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "organization",
-      "left": {
-        "name": "Systems Division",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Systens Division",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "location",
       "left": {
         "name": "TOPSIDE RIVER REPORA ALL CONDITONS NORMAL",
@@ -3375,8 +3375,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 50,
-        "documentCount": 34
+        "mentions": 51,
+        "documentCount": 35
       },
       "right": {
         "name": "Department of Tramport",
@@ -3999,8 +3999,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 425,
-        "documentCount": 195
+        "mentions": 426,
+        "documentCount": 196
       },
       "right": {
         "name": "University Colorado",
@@ -4380,6 +4380,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Office of In",
+        "mentions": 7,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Office of Info",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "Project Sine",
@@ -4607,8 +4623,8 @@
       "category": "person",
       "left": {
         "name": "Allen Greenfield",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 8,
+        "documentCount": 6
       },
       "right": {
         "name": "Alan Greenfield",
@@ -4623,8 +4639,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 131,
-        "documentCount": 81
+        "mentions": 132,
+        "documentCount": 82
       },
       "right": {
         "name": "Steven Hawking",
@@ -4639,8 +4655,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Bassett",
-        "mentions": 26,
-        "documentCount": 22
+        "mentions": 27,
+        "documentCount": 23
       },
       "right": {
         "name": "Steven Bassett",
