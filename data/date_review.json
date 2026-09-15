@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-15T09:17:22Z",
+  "generatedAt": "2026-09-15T10:24:09Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "661e30bcbe59dce5b483dac1db4fc1f7be14a6b0"
+    "revision": "93518e2e5dc3d8ab1173ecb75af45af722c26f41"
   },
-  "documentsWithCandidates": 10692,
+  "documentsWithCandidates": 10693,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7378,6 +7378,30 @@
           "method": "relative-date-exclusion",
           "evidence": "action until 10 October 1954",
           "segment": 2463
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cfa15933653d",
+      "path": "Archives-for-the-Unexplained/documents/2017-01-02_Folklore---Vol-128-No-1---Mark-Norman.txt",
+      "candidates": [
+        {
+          "value": "2017-03-16",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Published online: 16 Mar 2017.",
+          "segment": 5
+        },
+        {
+          "value": "2017-05-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Download by: [The UC San Diego Library] Date: 27 May 2017, At: 08:17",
+          "segment": 9
         }
       ]
     },
@@ -186168,7 +186192,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Mr. Annan was born in Kumasi, Ghana, on 8 April 1938.",
-          "segment": 39
+          "segment": 48
         }
       ]
     },
