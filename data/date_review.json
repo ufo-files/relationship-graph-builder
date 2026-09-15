@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-15T08:08:37Z",
+  "generatedAt": "2026-09-15T09:17:22Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "ce3b3b09ba33b3ac4d284f93af74a1103529806a"
+    "revision": "661e30bcbe59dce5b483dac1db4fc1f7be14a6b0"
   },
-  "documentsWithCandidates": 10688,
+  "documentsWithCandidates": 10692,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9005,6 +9005,21 @@
       ]
     },
     {
+      "documentId": "doc-4c31d1645a36",
+      "path": "Archives-for-the-Unexplained/documents/2018-10-09---Grant-Cameron-Whitehouse-UFO---Grant-Cameron-on-his-Download-and-Inspirations-cell-video-_IG2piBh0Ba4---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2012-02-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "came unexpectedly February 26 2012 in",
+          "segment": 65
+        }
+      ]
+    },
+    {
       "documentId": "doc-eb99d10e1433",
       "path": "Archives-for-the-Unexplained/documents/2018-10-24---OpenMindsTV---Open-Minds-UFO-Radio-Nick-Pope-Renewed-Government-Interest-in-UFOs_LbcaQrhLJKQ---transcript-automated-.txt",
       "candidates": [
@@ -14329,6 +14344,39 @@
           "method": "unclassified-mention",
           "evidence": "the Inverness Courier, 14 Dec 1993 (it haooened in Oct 1993).",
           "segment": 19
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0c4c8238427b",
+      "path": "Archives-for-the-Unexplained/documents/Bilk---no-065---1995-05.txt",
+      "candidates": [
+        {
+          "value": "1994-10-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Nemetsky after a storm on October 24, 1994.",
+          "segment": 45
+        },
+        {
+          "value": "1994-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "only two words. (Die Rheinpfalz, 22 July 1994).",
+          "segment": 86
+        },
+        {
+          "value": "1995-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "• Atlantis: The \"Frankfurter Allgemeine Magazin\" for March 3, 1995, had a very good",
+          "segment": 93
         }
       ]
     },
@@ -25345,6 +25393,30 @@
           "method": "unclassified-mention",
           "evidence": "Volume 10, Number 5 May 2002",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6b2cef0786c2",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-10-No-06---2002.txt",
+      "candidates": [
+        {
+          "value": "2002-06-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 10, Number 6 June 2002",
+          "segment": 2
+        },
+        {
+          "value": "1997-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "known and elusive energies and thereby account for ESP. Such Browne; New York Times, July 22, 1997: Science Times",
+          "segment": 454
         }
       ]
     },
@@ -211640,6 +211712,48 @@
       ]
     },
     {
+      "documentId": "doc-c7c65586f847",
+      "path": "DPIArchive/documents/122575-dr-paul-laviolette-the-talk-of-the-galaxy.txt",
+      "candidates": [
+        {
+          "value": "2000-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Mon, 22 May 2000 12:37:03 -0700",
+          "segment": 8
+        },
+        {
+          "value": "2000-05-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Sent: Thursday, May 18, 2000 9:42 AM",
+          "segment": 37
+        },
+        {
+          "value": "2000-05-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "> > >Date: Wed, 17 May 2000 11:59:21 -0500",
+          "segment": 39
+        },
+        {
+          "value": "2000-04-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">> > >Date: Wed, 26 Apr 2000 22:59:53 +0200",
+          "segment": 58
+        }
+      ]
+    },
+    {
       "documentId": "doc-ee5eead76de4",
       "path": "DPIArchive/documents/122578-paul-laviolette-advanced-tech-and-propulsion-systems-12-5-20.txt",
       "candidates": [
@@ -227634,15 +227748,6 @@
       "path": "DPIArchive/documents/124803-email-from-witness-11040-to-steven-greer-witness-poc-incontrovertible-proof-of-extraterrestril-life-5-30-01.txt",
       "candidates": [
         {
-          "value": "2001-05-31",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Thursday, May 31, 2001 Compuserve: EmilyGreer",
-          "segment": 30
-        },
-        {
           "value": "2001-04-10",
           "precision": "day",
           "confidence": 0.45,
@@ -227650,24 +227755,6 @@
           "method": "unclassified-mention",
           "evidence": "Below is what happen to us on April 10, 2001 3:10 AM. May God be with us",
           "segment": 32
-        },
-        {
-          "value": "2001-05-31",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Thursday, May 31, 2001 Compuserve: EmilyGreer",
-          "segment": 76
-        },
-        {
-          "value": "2001-05-31",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Thursday, May 31, 2001 CompuServe: EmilyGrees",
-          "segment": 111
         }
       ]
     },
@@ -231666,7 +231753,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "the Air Force, was issued on September 2, 1983 and this suit was",
-          "segment": 11
+          "segment": 12
         },
         {
           "value": "1980-12-29",
@@ -231675,7 +231762,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "On the evening of December 29, 1980 plaintiff Betty",
-          "segment": 20
+          "segment": 21
         }
       ]
     },
