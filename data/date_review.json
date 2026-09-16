@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-16T04:32:37Z",
+  "generatedAt": "2026-09-16T06:02:24Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e97ac76e9c0aef28914e38691413885608282637"
+    "revision": "34fa9f4cc3ec787aeba69d29314c08f2ef14d9df"
   },
-  "documentsWithCandidates": 10724,
+  "documentsWithCandidates": 10727,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9136,6 +9136,45 @@
           "method": "unclassified-mention",
           "evidence": "dot-com au September 23 2018 last week",
           "segment": 1671
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6fc6f65bf19e",
+      "path": "Archives-for-the-Unexplained/documents/2018-10-02---FADE-TO-BLACK-Radio---Ep.-860-FADE-to-BLACK-w-Linda-Moulton-Howe-LIVE_DRpg286hGoA---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Forces",
+          "segment": 65
+        },
+        {
+          "value": "2017-08-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "what happened on Saturday August 26 2017",
+          "segment": 2540
+        }
+      ]
+    },
+    {
+      "documentId": "doc-417c8ea52031",
+      "path": "Archives-for-the-Unexplained/documents/2018-10-09---FADE-TO-BLACK-Radio---Ep.-930-FADE-TO-BLACK-w-Chris-Dunn-LIVE_F-KhLNM1Klc---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 8 1947 the Army Air Forces has",
+          "segment": 4
         }
       ]
     },
@@ -262303,6 +262342,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On August 15, 2011, between 11:30 PM and 11:45 PM, two witnesses were intrigued by the rapid passage in the sky of a very intense and flickering white light. The phenomenon crossed the entire sky. Of average strangeness, but insufficiently precise (directions, time),",
           "segment": "seg-421f8efd3c6712ec2d07f838"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fa81c64c5641205ac30af396",
+      "path": "France-GEIPAN/paired/cases/2011-06-02779/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-06-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 14, 2011, around 10:30 PM, two individuals were intrigued by the silent and variable speed movements of a bright object in the sky. The observation lasted between 5 and 10 minutes. On June 16, when these two people returned to the site, they discovered a circ",
+          "segment": "seg-611dd8d7309c1d0be31ff5f3"
         }
       ]
     },
