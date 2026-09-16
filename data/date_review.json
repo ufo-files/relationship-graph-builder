@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-15T23:21:55Z",
+  "generatedAt": "2026-09-16T00:40:48Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5c007870df839ffcd7745fddf714416fbf6b6b33"
+    "revision": "0d30c32ebf13bee46e3d7d0961f6c96400fb938d"
   },
-  "documentsWithCandidates": 10717,
+  "documentsWithCandidates": 10718,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7921,6 +7921,30 @@
           "method": "unclassified-mention",
           "evidence": "took place on October 8 2017 it got a",
           "segment": 1135
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e7f69c1827a6",
+      "path": "Archives-for-the-Unexplained/documents/2017-11-13---The-Grimerica-Show---252---Grimerica-Talks-High-Level-Charity-Fraud-with-Charles-Ortel_fo5d_syt7Lk---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-11-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 15 2017 we're going to do two a",
+          "segment": 3627
+        },
+        {
+          "value": "2017-11-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 15 2017 to see you know what",
+          "segment": 4209
         }
       ]
     },
