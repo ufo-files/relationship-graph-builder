@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-16T06:02:24Z",
+  "generatedAt": "2026-09-16T07:20:56Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "34fa9f4cc3ec787aeba69d29314c08f2ef14d9df"
+    "revision": "7945546c259f5c06faad3497b757816eb840cabf"
   },
-  "documentsWithCandidates": 10727,
+  "documentsWithCandidates": 10729,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9056,6 +9056,39 @@
       ]
     },
     {
+      "documentId": "doc-e3cebc6cf7f0",
+      "path": "Archives-for-the-Unexplained/documents/2018-07-27---FADE-TO-BLACK-Radio---Ep.-895-FADE-to-BLACK-FADERNIGHT-w-Jon-Rappoport-NMFNR-Open-Lines-LIVE_cnKuXGaVBCA---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the birth of July 8 1947 the Army Air",
+          "segment": 4
+        },
+        {
+          "value": "2018-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "this day July 26 2018 sent out at 3:39",
+          "segment": 2244
+        },
+        {
+          "value": "2011-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 13 2011 okay 9:00 at night just",
+          "segment": 3085
+        }
+      ]
+    },
+    {
       "documentId": "doc-e57d235a6a65",
       "path": "Archives-for-the-Unexplained/documents/2018-08-09---Den-of-Lore---EP.-105---Something-Big-is-Coming-Empire-of-the-Wheel-w-Walter-Bosley_b5n-QOOlijQ---transcript-automated-.txt",
       "candidates": [
@@ -9106,6 +9139,30 @@
           "method": "unclassified-mention",
           "evidence": "the birth of July 8 1947 the Army Air",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d697838f7ae8",
+      "path": "Archives-for-the-Unexplained/documents/2018-09-10---FADE-TO-BLACK-Radio---Ep.-913-FADE-TO-BLACK-w-Sandia-the-ET-LIVE_z-pEoFjk3TE---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Forces",
+          "segment": 4
+        },
+        {
+          "value": "1950-09-26",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "dated September 26 1950 which is the",
+          "segment": 926
         }
       ]
     },
