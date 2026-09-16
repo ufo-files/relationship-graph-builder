@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-16T07:20:56Z",
+  "generatedAt": "2026-09-16T08:36:44Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "7945546c259f5c06faad3497b757816eb840cabf"
+    "revision": "2dc00c0680a25678408cec4bd68cd396bd5e242a"
   },
-  "documentsWithCandidates": 10729,
+  "documentsWithCandidates": 10730,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9037,6 +9037,21 @@
           "method": "unclassified-mention",
           "evidence": "given [on June 8, 2018, in Las Vegas], by another",
           "segment": 45
+        }
+      ]
+    },
+    {
+      "documentId": "doc-24293c839280",
+      "path": "Archives-for-the-Unexplained/documents/2018-06-30---FADE-TO-BLACK-Radio---Ep.-881-FADE-to-BLACK-FADERNIGHT-Open-Lines-LIVE_mAQEpNJRHQw---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 these are the air",
+          "segment": 4
         }
       ]
     },
@@ -90713,21 +90728,6 @@
       ]
     },
     {
-      "documentId": "doc-bd1630715672",
-      "path": "Black-Vault-UFO/pdfs/c05516064-pdf-2.txt",
-      "candidates": [
-        {
-          "value": "1906-07-20",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Ieno to th/DSD datad 20 July 1906",
-          "segment": 1
-        }
-      ]
-    },
-    {
       "documentId": "doc-d79f5c513d11",
       "path": "Black-Vault-UFO/pdfs/c05516070-pdf-2.txt",
       "candidates": [
@@ -92081,8 +92081,17 @@
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "On 24 Dec 1990 PMU received via pressfax (second cast) a 4-page paper",
+          "evidence": "1 On 24 Dec 1990 PMU received via pressfax (second cast) a 4-page paper",
           "segment": 2
+        },
+        {
+          "value": "1990-12-25",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "8 The subscription copy of KOMSOMOLSKAYA PRAVDA 25 Dec 1990 received by PMU",
+          "segment": 20
         }
       ]
     },
@@ -285411,6 +285420,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Sutject : Mosing Arcisft, VH-DSJ, 21 October 1978 21",
+          "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-41aa288fb0e8",
+      "path": "National-Archives-of-Australia-UFO/documents/10491375/0268.txt",
+      "candidates": [
+        {
+          "value": "1978-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SubRet - Missing Aerat, KH-DSJ, on 21 October 1978",
           "segment": 0
         }
       ]
