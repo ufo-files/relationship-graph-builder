@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "0d30c32ebf13bee46e3d7d0961f6c96400fb938d"
+    "revision": "ff026e84a53e196c7f15031cd40bca85cd0664a8"
   },
   "count": 314,
   "totalCount": 314,
@@ -271,8 +271,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 51,
-        "documentCount": 35
+        "mentions": 52,
+        "documentCount": 36
       },
       "right": {
         "name": "Department of Transports",
@@ -287,8 +287,8 @@
       "category": "organization",
       "left": {
         "name": "Johns Hopkins University",
-        "mentions": 41,
-        "documentCount": 33
+        "mentions": 42,
+        "documentCount": 34
       },
       "right": {
         "name": "John Hopkins University",
@@ -644,8 +644,8 @@
       },
       "right": {
         "name": "Sheriffs Department",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.973,
       "reason": "similar name",
@@ -1295,8 +1295,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 309,
-        "documentCount": 202
+        "mentions": 311,
+        "documentCount": 203
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1391,8 +1391,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Valley",
-        "mentions": 7,
-        "documentCount": 7
+        "mentions": 8,
+        "documentCount": 8
       },
       "right": {
         "name": "Jacques Valle",
@@ -1631,8 +1631,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 61,
-        "documentCount": 51
+        "mentions": 62,
+        "documentCount": 52
       },
       "right": {
         "name": "George Noorey",
@@ -1742,6 +1742,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Michael Salla",
+        "mentions": 10,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "Michael Sala",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Bruce Cornett",
         "mentions": 7,
         "documentCount": 4
@@ -1782,22 +1798,6 @@
         "name": "Nancy Talbott",
         "mentions": 5,
         "documentCount": 4
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Michael Salla",
-        "mentions": 8,
-        "documentCount": 7
-      },
-      "right": {
-        "name": "Michael Sala",
-        "mentions": 3,
-        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2031,7 +2031,7 @@
       "category": "program",
       "left": {
         "name": "Project Sign",
-        "mentions": 119,
+        "mentions": 120,
         "documentCount": 72
       },
       "right": {
@@ -2079,8 +2079,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 51,
-        "documentCount": 35
+        "mentions": 52,
+        "documentCount": 36
       },
       "right": {
         "name": "Department of Trancport",
@@ -3391,8 +3391,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 51,
-        "documentCount": 35
+        "mentions": 52,
+        "documentCount": 36
       },
       "right": {
         "name": "Department of Tramport",
@@ -3679,7 +3679,7 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 302,
+        "mentions": 301,
         "documentCount": 127
       },
       "right": {
@@ -3780,8 +3780,8 @@
       },
       "right": {
         "name": "Jacques Valley",
-        "mentions": 7,
-        "documentCount": 7
+        "mentions": 8,
+        "documentCount": 8
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -3948,6 +3948,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Thule Air Base",
+        "mentions": 7,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Thale Air Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Albert Hoffman",
@@ -3957,22 +3973,6 @@
       "right": {
         "name": "Albert Hofmann",
         "mentions": 4,
-        "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Thule Air Base",
-        "mentions": 6,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Thale Air Base",
-        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.929,
@@ -4047,7 +4047,7 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 302,
+        "mentions": 301,
         "documentCount": 127
       },
       "right": {
@@ -4175,8 +4175,8 @@
       "category": "program",
       "left": {
         "name": "Project Mogul",
-        "mentions": 125,
-        "documentCount": 41
+        "mentions": 124,
+        "documentCount": 40
       },
       "right": {
         "name": "Project Mogui",
@@ -4191,8 +4191,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 89,
-        "documentCount": 68
+        "mentions": 90,
+        "documentCount": 69
       },
       "right": {
         "name": "Mohave Desert",
@@ -4302,14 +4302,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Col. Charles Brown",
-        "mentions": 7,
-        "documentCount": 4
+        "name": "Michael Salla",
+        "mentions": 10,
+        "documentCount": 8
       },
       "right": {
-        "name": "Charles Bowen",
-        "mentions": 5,
-        "documentCount": 5
+        "name": "Michael Salah",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -4318,14 +4318,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Michael Salla",
-        "mentions": 8,
-        "documentCount": 7
+        "name": "Col. Charles Brown",
+        "mentions": 7,
+        "documentCount": 4
       },
       "right": {
-        "name": "Michael Salah",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "Charles Bowen",
+        "mentions": 5,
+        "documentCount": 5
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -4671,8 +4671,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 137,
-        "documentCount": 86
+        "mentions": 138,
+        "documentCount": 87
       },
       "right": {
         "name": "Steven Hawking",
@@ -4783,8 +4783,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 73,
-        "documentCount": 64
+        "mentions": 75,
+        "documentCount": 66
       },
       "right": {
         "name": "George HW Bush",
@@ -4895,8 +4895,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 142,
-        "documentCount": 96
+        "mentions": 143,
+        "documentCount": 97
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
