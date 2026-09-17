@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-17T03:17:05Z",
+  "generatedAt": "2026-09-17T04:27:33Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "4d7cd3955af852afeb75b5e8c7a6a81f60327ae9"
+    "revision": "824aa2b08354c0fbd8ea438992039772c18fd312"
   },
-  "documentsWithCandidates": 10779,
+  "documentsWithCandidates": 10786,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8126,6 +8126,21 @@
       ]
     },
     {
+      "documentId": "doc-ac4ea82de6b9",
+      "path": "Archives-for-the-Unexplained/documents/2017-12-01---FADE-TO-BLACK-Radio---Ep.-764-FADE-to-BLACK-FADERNIGHT-w-Jon-Rappoport-NMFNR-Open-Lines-LIVE_owtRLQWFT54---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "headliner between July 8 1947 here on",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-ede6e29f1b48",
       "path": "Archives-for-the-Unexplained/documents/2017-12-08---Inception-Radio-Network---UFO-Headline-News-Wednesday-December-6th-2017_Ji8eywpd8UQ---transcript-automated-.txt",
       "candidates": [
@@ -9499,6 +9514,21 @@
           "method": "unclassified-mention",
           "evidence": "what happened on Saturday August 26 2017",
           "segment": 2540
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7a410e7c9192",
+      "path": "Archives-for-the-Unexplained/documents/2018-10-02---FADE-TO-BLACK-Radio---Ep.-877-FADE-TO-BLACK-FADERNIGHT-Open-Lines-LIVE_rKGI24Mmmig---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 beyond the airport",
+          "segment": 110
         }
       ]
     },
@@ -11491,6 +11521,21 @@
           "method": "unclassified-mention",
           "evidence": "that and on June 28 2022 uh for anybody",
           "segment": 2062
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1afbd764205a",
+      "path": "Archives-for-the-Unexplained/documents/2023-01-30---Ryan-Sprague---The-Mosul-Orb-UFOs-at-the-UN-and-UFO-Video-of-the-Week-EP-02_dkRUBw19yDs---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2020-03-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "um this happened on March 19 2020 two",
+          "segment": 3683
         }
       ]
     },
@@ -22808,6 +22853,48 @@
       ]
     },
     {
+      "documentId": "doc-d8680b8b0015",
+      "path": "Archives-for-the-Unexplained/documents/MUFON-Minnesota-Journal---No-155.txt",
+      "candidates": [
+        {
+          "value": "2012-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "unexplained events are the result of physical Mysteries Staff Writer, 29 March 2012",
+          "segment": 58
+        },
+        {
+          "value": "2012-12-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "historically critical moments of December 21, 2012, would strongly depend on the relative intelligence",
+          "segment": 109
+        },
+        {
+          "value": "2012-03-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "By davidjones, March 15, 2012 balloons, planets, meteors, satellites, stars",
+          "segment": 339
+        },
+        {
+          "value": "2012-04-13",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Each has its own unique forms of UFOs, and Published on Apr 13, 2012 by",
+          "segment": 614
+        }
+      ]
+    },
+    {
       "documentId": "doc-008c8ab03d23",
       "path": "Archives-for-the-Unexplained/documents/MUFON-Minnesota-Journal---No-166.txt",
       "candidates": [
@@ -27373,6 +27460,66 @@
           "method": "unclassified-mention",
           "evidence": "October 4, 1994 ficial origin.\" On the one hand, this statement",
           "segment": 949
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8dc48c6ba8e3",
+      "path": "Archives-for-the-Unexplained/documents/RIAP-bulletin---Vol-05-No-3-4---july-December-1999.txt",
+      "candidates": [
+        {
+          "value": "1977-09-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 20, 1977, late at night, inhabitants of USSR asking for an explanation of the observed",
+          "segment": 197
+        },
+        {
+          "value": "1981-05-15",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "\" UFOs\" have been unambiguously identified as observed on May 15, 1981, was connected with",
+          "segment": 459
+        },
+        {
+          "value": "1982-08-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the effects accompanying rocket launches and the launch of Meteor-2; August 28, 1982 - the",
+          "segment": 460
+        },
+        {
+          "value": "1984-07-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Such an identification included launch of Molniya-1; July 3, 1984 - Kosmos-1581",
+          "segment": 461
+        },
+        {
+          "value": "1982-06-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the \"rocket effects\" one can note the above-men­ The following episode took place on June 3, 1982",
+          "segment": 509
+        },
+        {
+          "value": "1983-10-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "altitude was reached by the sounding balloon The first episode took place on October 5, 1983",
+          "segment": 553
         }
       ]
     },
@@ -270737,6 +270884,21 @@
       ]
     },
     {
+      "documentId": "doc-7b644c4dcc6d207617748f36",
+      "path": "France-GEIPAN/paired/cases/2013-12-08626/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 29, 2013, around 5:45 a.m., a witness on the terrace of his home was intrigued by a glow in the sky that appeared between clouds, followed by a sparkling disk. The stationary object quickly disappeared behind the clouds. No other witnesses have come forwa",
+          "segment": "seg-982d7fd292020fd9e81d7043"
+        }
+      ]
+    },
+    {
       "documentId": "doc-c001a47aaf015f62442e065d",
       "path": "France-GEIPAN/paired/cases/2013-12-08629/en/translation.txt",
       "candidates": [
@@ -290290,6 +290452,30 @@
           "method": "context-exclusion",
           "evidence": "the press release meeting on 25 October 1955 fer the Special",
           "segment": 31
+        }
+      ]
+    },
+    {
+      "documentId": "doc-069feac4cbe1",
+      "path": "National-Archives-of-Australia-UFO/documents/3083715/0008.txt",
+      "candidates": [
+        {
+          "value": "1952-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "19 July 1952, pilot Plermin of the \"Capital AlrlInes\"",
+          "segment": 16
+        },
+        {
+          "value": "1952-10-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ano reporte vere nade by Golliac (27 October 1952) and Cloron",
+          "segment": 19
         }
       ]
     },
