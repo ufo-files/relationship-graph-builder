@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "fcc7c1384cf0ad49c0b4382b51bf18fd9a658412"
+    "revision": "289758e3075e3980da3ec1eec2c685af1b262940"
   },
   "count": 324,
   "totalCount": 324,
@@ -639,8 +639,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 166,
-        "documentCount": 108
+        "mentions": 170,
+        "documentCount": 110
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -1343,8 +1343,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 442,
-        "documentCount": 162
+        "mentions": 443,
+        "documentCount": 163
       },
       "right": {
         "name": "Jacques Valle",
@@ -1359,8 +1359,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 354,
-        "documentCount": 227
+        "mentions": 362,
+        "documentCount": 231
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1679,8 +1679,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 73,
-        "documentCount": 58
+        "mentions": 77,
+        "documentCount": 60
       },
       "right": {
         "name": "George Noorey",
@@ -1695,8 +1695,8 @@
       "category": "person",
       "left": {
         "name": "Philip Corso",
-        "mentions": 66,
-        "documentCount": 51
+        "mentions": 67,
+        "documentCount": 52
       },
       "right": {
         "name": "Colonel Phillip Corso",
@@ -1870,6 +1870,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Chris Mullins",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Chris Mullin",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Nancy Talbot",
         "mentions": 6,
         "documentCount": 6
@@ -1893,22 +1909,6 @@
       "right": {
         "name": "Dr. Michael Wolf",
         "mentions": 5,
-        "documentCount": 4
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Chris Mullins",
-        "mentions": 6,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Chris Mullin",
-        "mentions": 4,
         "documentCount": 4
       },
       "similarity": 0.96,
@@ -2863,8 +2863,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 166,
-        "documentCount": 108
+        "mentions": 170,
+        "documentCount": 110
       },
       "right": {
         "name": "Linda Moulton Howell",
@@ -3871,8 +3871,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 442,
-        "documentCount": 162
+        "mentions": 443,
+        "documentCount": 163
       },
       "right": {
         "name": "Jacques Valley",
@@ -4556,6 +4556,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Michael Saleh",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Michael Salah",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "Project Sine",
@@ -4614,22 +4630,6 @@
         "name": "Madison County",
         "mentions": 5,
         "documentCount": 5
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Michael Saleh",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Michael Salah",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -5055,8 +5055,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 166,
-        "documentCount": 108
+        "mentions": 170,
+        "documentCount": 110
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
