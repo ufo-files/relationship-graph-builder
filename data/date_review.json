@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-17T11:13:34Z",
+  "generatedAt": "2026-09-17T12:18:02Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "051494ae9f077e487366e4fa54232c8473d935a1"
+    "revision": "1755f66fd805b18d57bcc398c9129a5771a1f7f2"
   },
-  "documentsWithCandidates": 10828,
+  "documentsWithCandidates": 10830,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9446,6 +9446,21 @@
       ]
     },
     {
+      "documentId": "doc-52e2aff129e6",
+      "path": "Archives-for-the-Unexplained/documents/2018-01-31---FADE-TO-BLACK-Radio---Ep.-797-FADE-to-BLACK-Jimmy-Church-w-Tracie-Austin-Days-of-Disclosure-LIVE_yNJDVozdz6c---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "13 July 1947 the Army Air Forces Rezanov",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-aedaf368e3a3",
       "path": "Archives-for-the-Unexplained/documents/2018-01-31---Inception-Radio-Network---UFO-Headline-News-Monday-January-29th-2018_lBDoFJVjUU8---transcript-automated-.txt",
       "candidates": [
@@ -9838,6 +9853,21 @@
           "method": "unclassified-mention",
           "evidence": "when that went down that was May 12 2015",
           "segment": 4251
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1eda1736add5",
+      "path": "Archives-for-the-Unexplained/documents/2018-04-04---FADE-TO-BLACK-Radio---Ep.-832-FADE-to-BLACK-Jimmy-Church-w-Emery-Smith-C2C-Show-Analysis-LIVE_RgZhvok0mB8---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Force",
+          "segment": 5
         }
       ]
     },
