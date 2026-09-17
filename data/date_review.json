@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-17T10:07:19Z",
+  "generatedAt": "2026-09-17T11:13:34Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "fb6e233bccf85a402c83ea2dffb91937ebb0e4cb"
+    "revision": "051494ae9f077e487366e4fa54232c8473d935a1"
   },
-  "documentsWithCandidates": 10826,
+  "documentsWithCandidates": 10828,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -273161,6 +273161,21 @@
       ]
     },
     {
+      "documentId": "doc-80968feae8b0b16c2144552c",
+      "path": "France-GEIPAN/paired/cases/2014-06-09374/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-06-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: From June 2014 to December 2015, an individual regularly observed the sky with binoculars and a telescope, reporting several sightings of colored spheres, only visible on clear nights. The multi-colored spheres move slightly. The witness, in particular, recounts a le",
+          "segment": "seg-c7d7f47decfec30cfa715502"
+        }
+      ]
+    },
+    {
       "documentId": "doc-e732611e8cfb7a3262257c5e",
       "path": "France-GEIPAN/paired/cases/2014-07-08732/en/translation.txt",
       "candidates": [
@@ -292018,6 +292033,30 @@
           "method": "unclassified-mention",
           "evidence": "search action was terminated at 1900 hours on 25 October 1970, when all divers- efforts",
           "segment": 21
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f95ed68eb11e",
+      "path": "National-Archives-of-Australia-UFO/documents/10491375/0056.txt",
+      "candidates": [
+        {
+          "value": "1978-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At 1723 hours on 21 October 1978, lix. Frederick Valentich lodged a {11cht",
+          "segment": 1
+        },
+        {
+          "value": "1978-10-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on 25 October 1978, after divers and widespread search efforts failed to locate any",
+          "segment": 35
         }
       ]
     },
