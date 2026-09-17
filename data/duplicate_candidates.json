@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "f36a302ea0340a51a445a23ec4c42aa34374a10b"
+    "revision": "02acbb4238561e0c294c107a73b62898865e3e9b"
   },
-  "count": 333,
-  "totalCount": 333,
-  "shownCount": 333,
+  "count": 336,
+  "totalCount": 336,
+  "shownCount": 336,
   "candidates": [
     {
       "category": "organization",
@@ -655,8 +655,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 181,
-        "documentCount": 117
+        "mentions": 183,
+        "documentCount": 118
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -1199,8 +1199,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 392,
-        "documentCount": 217
+        "mentions": 403,
+        "documentCount": 218
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1375,8 +1375,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 426,
-        "documentCount": 268
+        "mentions": 432,
+        "documentCount": 271
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1471,8 +1471,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Valley",
-        "mentions": 8,
-        "documentCount": 8
+        "mentions": 9,
+        "documentCount": 9
       },
       "right": {
         "name": "Jacques Valle",
@@ -1679,8 +1679,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 92,
-        "documentCount": 69
+        "mentions": 93,
+        "documentCount": 70
       },
       "right": {
         "name": "George Noorey",
@@ -2380,6 +2380,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Ken Johnston",
+        "mentions": 8,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Ken Johnson",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Special Programs Office",
@@ -2911,8 +2927,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 181,
-        "documentCount": 117
+        "mentions": 183,
+        "documentCount": 118
       },
       "right": {
         "name": "Linda Moulton Howell",
@@ -3247,8 +3263,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 481,
-        "documentCount": 284
+        "mentions": 482,
+        "documentCount": 285
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3268,8 +3284,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 314,
-        "documentCount": 83
+        "mentions": 315,
+        "documentCount": 84
       },
       "similarity": 0.938,
       "reason": "similar name",
@@ -3812,8 +3828,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 314,
-        "documentCount": 83
+        "mentions": 315,
+        "documentCount": 84
       },
       "similarity": 0.932,
       "reason": "similar name",
@@ -3972,8 +3988,8 @@
       },
       "right": {
         "name": "Jacques Valley",
-        "mentions": 8,
-        "documentCount": 8
+        "mentions": 9,
+        "documentCount": 9
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -3983,8 +3999,8 @@
       "category": "person",
       "left": {
         "name": "Robert Bigelow",
-        "mentions": 219,
-        "documentCount": 119
+        "mentions": 225,
+        "documentCount": 120
       },
       "right": {
         "name": "Robert Bigalow",
@@ -4910,6 +4926,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Ken Johnson",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Ben Johnson",
+        "mentions": 5,
+        "documentCount": 2
+      },
+      "similarity": 0.909,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Allen Greenfield",
         "mentions": 12,
         "documentCount": 9
@@ -5183,8 +5215,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 181,
-        "documentCount": 117
+        "mentions": 183,
+        "documentCount": 118
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
@@ -5302,6 +5334,22 @@
         "name": "Daniel Goldin",
         "mentions": 6,
         "documentCount": 5
+      },
+      "similarity": 0.87,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Mike Johnson",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Ken Johnson",
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.87,
       "reason": "similar person name",
