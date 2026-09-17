@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-17T19:09:34Z",
+  "generatedAt": "2026-09-17T20:11:53Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a3978b4d08f4793ee1dc1a39c1c1fb27ca48b03b"
+    "revision": "9dc3424efc62ee3d64bc71a7577e1f29e636ab31"
   },
-  "documentsWithCandidates": 10851,
+  "documentsWithCandidates": 10852,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -10879,6 +10879,39 @@
           "method": "unclassified-mention",
           "evidence": "launched on September 15, 2018.",
           "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-df9bc99b06d6",
+      "path": "Archives-for-the-Unexplained/documents/2018-12-18---FADE-TO-BLACK-Radio---Ep.-967-FADE-to-BLACK-w-Derrel-Sims-The-Alien-Hunter-LIVE_zxUn9bEvUYw---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2008-12-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Wow today is Tuesday December 18 2008",
+          "segment": 42
+        },
+        {
+          "value": "2009-12-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 18 2009 teen Derrel Sims is",
+          "segment": 4890
+        },
+        {
+          "value": "2019-01-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 19 2019 all of the information",
+          "segment": 5909
         }
       ]
     },
