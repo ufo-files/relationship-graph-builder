@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-17T20:11:53Z",
+  "generatedAt": "2026-09-17T21:15:35Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9dc3424efc62ee3d64bc71a7577e1f29e636ab31"
+    "revision": "33a7b714123bccc5fa4b0edd981429324bc06bca"
   },
-  "documentsWithCandidates": 10852,
+  "documentsWithCandidates": 10855,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9980,6 +9980,21 @@
       ]
     },
     {
+      "documentId": "doc-c8cdd5ddfd82",
+      "path": "Archives-for-the-Unexplained/documents/2018-04-05---FADE-TO-BLACK-Radio---Ep.-833-FADE-to-BLACK-Jimmy-Church-w-Sonja-Grace-Egypt-Lemuria-and-the-Mu-LIVE_hgbDRT1RuDs---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "lino between July 8 1947 the Army Air",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-7efa76acd2c0",
       "path": "Archives-for-the-Unexplained/documents/2018-04-06---FADE-TO-BLACK-Radio---Ep.-834-FADE-to-BLACK-FADERNIGHT-w-Jon-Rappoport-NMFNR-Open-Lines-LIVE_oF95EeAEpFc---transcript-automated-.txt",
       "candidates": [
@@ -10408,6 +10423,21 @@
           "method": "unclassified-mention",
           "evidence": "March 13 2011 okay 9:00 at night just",
           "segment": 3085
+        }
+      ]
+    },
+    {
+      "documentId": "doc-22dd35fb533c",
+      "path": "Archives-for-the-Unexplained/documents/2018-08-01---FADE-TO-BLACK-Radio---Ep.-897-FADE-to-BLACK-Jimmy-Church-w-Dr.-Michael-P.-Masters-UFOs-and-Time-Travel-LIVE_6c2y_ktguWE---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Force",
+          "segment": 4
         }
       ]
     },
@@ -268054,6 +268084,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On June 4, 2010, at 11:15 PM, a witness observed for two to three minutes in the sky three bright points. Stationary and the same size, they all disappeared at the same time. The witness did not wish to testify at the gendarmerie and no other testimony was collected ",
           "segment": "seg-86a72e23e61e5b8e0abc2b1c"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-db79710e59c20e9f98dad1dc",
+      "path": "France-GEIPAN/paired/cases/2010-06-02578/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2010-06-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 3, 2010, at 7:28 a.m., a witness observed for approximately ten seconds a white sphere passing through the sky. Small in size and flying above buildings, this object quickly disappeared, hidden by the urban landscape. No noise was heard during the observation",
+          "segment": "seg-4946ee7e9775cd131cf61786"
         }
       ]
     },
