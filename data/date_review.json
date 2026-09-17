@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-17T14:36:31Z",
+  "generatedAt": "2026-09-17T15:45:08Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "6e1bf1f0f89d54214f9288099f8e5f88e5a69b09"
+    "revision": "96183ee5fe75d73bc3b31d08f5ff90e9675de28e"
   },
-  "documentsWithCandidates": 10841,
+  "documentsWithCandidates": 10842,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8709,6 +8709,21 @@
           "kind": "relative_date",
           "method": "relative-date-exclusion",
           "evidence": "between July 8 1947 the Army Air Forces",
+          "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-089c4befa51e",
+      "path": "Archives-for-the-Unexplained/documents/2017-10-11---FADE-TO-BLACK-Radio---Ep.-734-FADE-to-BLACK-Jimmy-Church-w-Mark-McCandlish-Shane-Seymore-The-VCMD-System-LIVE_3g54YJ7sevo---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Force",
           "segment": 4
         }
       ]
