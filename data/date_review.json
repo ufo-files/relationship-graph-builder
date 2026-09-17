@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-17T13:26:28Z",
+  "generatedAt": "2026-09-17T14:36:31Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9098f379c8f2d490dc91e9f48f96606be82ee2e1"
+    "revision": "6e1bf1f0f89d54214f9288099f8e5f88e5a69b09"
   },
-  "documentsWithCandidates": 10836,
+  "documentsWithCandidates": 10841,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8729,6 +8729,30 @@
       ]
     },
     {
+      "documentId": "doc-2c8a865fd6d3",
+      "path": "Archives-for-the-Unexplained/documents/2017-10-19---FADE-TO-BLACK-Radio---Ep.-741-FADE-TO-BLACK-FADERNIGHT-Open-Lines-LIVE_StpWRn7q968---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 you're on the",
+          "segment": 166
+        },
+        {
+          "value": "1992-05-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 12 1992 at the Huntington Memorial",
+          "segment": 861
+        }
+      ]
+    },
+    {
       "documentId": "doc-b1437bdd52b2",
       "path": "Archives-for-the-Unexplained/documents/2017-10-25---skeptiko---Joseph-Atwill-Why-is-the-Deep-State-Interested-in-Psychedelics-364-_XX8RqBeR9GY---transcript-automated-.txt",
       "candidates": [
@@ -10221,6 +10245,21 @@
           "kind": "relative_date",
           "method": "relative-date-exclusion",
           "evidence": "between July 8 1947 these are the air",
+          "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ff3c04db3916",
+      "path": "Archives-for-the-Unexplained/documents/2018-07-03---FADE-TO-BLACK-Radio---Ep.-882-FADE-to-BLACK-Jimmy-Church-w-Joshua-P.-Warren-Time-Warp-Discovered-in-LV-LIVE_lSvk40G-rVo---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-03",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 3 1947 you're on the air",
           "segment": 4
         }
       ]
@@ -22162,6 +22201,111 @@
           "method": "unclassified-mention",
           "evidence": "htp:M:24.com/2013-09-23/18:2112049.59-8.5148",
           "segment": 13
+        }
+      ]
+    },
+    {
+      "documentId": "doc-173562780c35",
+      "path": "Archives-for-the-Unexplained/documents/Flying-Saucer-Digest---No-217---2017.txt",
+      "candidates": [
+        {
+          "value": "2017-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "p.m. on June 1, 2017, when the incident began. \"This is a common area that planes are landing in, so seeing",
+          "segment": 25
+        },
+        {
+          "value": "2017-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "not a plane.\" Source: Roger Marsh, \"Open Minds\" June 27, 2017.",
+          "segment": 44
+        },
+        {
+          "value": "2017-03-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Source: \"Mysterious Universe\" March 14, 2017.",
+          "segment": 99
+        },
+        {
+          "value": "2017-02-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the vast compass of space and time.\" Source: \"Unexplained Mysteries\", February 16, 2017.",
+          "segment": 124
+        },
+        {
+          "value": "2017-05-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "was really sleepy, so he went to bed.� Source: Roger Marsh, \"Open Minds� May 25, 2017.",
+          "segment": 151
+        },
+        {
+          "value": "1976-01-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "incidents, such as the attack experienced by a Seville resident on the cold night of 28 January 1976.",
+          "segment": 200
+        },
+        {
+          "value": "2017-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Source: Scott Corrales, \"lnexplicata- The Journal of Hispanic Ufology\" May 22, 2017.",
+          "segment": 225
+        },
+        {
+          "value": "2017-05-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "parking lot.\" Source: ''Unexplained Mysteries\" May 1, 2017.",
+          "segment": 240
+        },
+        {
+          "value": "2017-04-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The witness was driving home from a gym at 9: 30 p.m. on April 30, 2017, when the incident began. \"For",
+          "segment": 243
+        },
+        {
+          "value": "2017-05-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the road is called Chaffee Road.\" Source: Roger Marsh, \"Open Minds\" May 4, 2017.",
+          "segment": 254
+        },
+        {
+          "value": "1999-08-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Source: Associated Press, August 22, 1999.",
+          "segment": 289
         }
       ]
     },
@@ -270926,6 +271070,21 @@
       ]
     },
     {
+      "documentId": "doc-53226821d17a0bd06d6b57bf",
+      "path": "France-GEIPAN/paired/cases/2012-09-08356/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 12, 2012, around 9:30 PM, a driver was intrigued by the presence in the sky and at low altitude of three lights of color (red, blue, white) that blinked and outlined a triangular shape. No particular noise was heard during the movement of the phenomenon,",
+          "segment": "seg-952b32f1672ac8f652dab56d"
+        }
+      ]
+    },
+    {
       "documentId": "doc-8c0551f2e17fa4703e00b58a",
       "path": "France-GEIPAN/paired/cases/2012-09-08367/en/translation.txt",
       "candidates": [
@@ -292309,6 +292468,21 @@
           "method": "unclassified-mention",
           "evidence": "within about a 150 mile radius of Melbourne on October 21, 1978 up to",
           "segment": 14
+        }
+      ]
+    },
+    {
+      "documentId": "doc-72db10296d2b",
+      "path": "National-Archives-of-Australia-UFO/documents/10491375/0227.txt",
+      "candidates": [
+        {
+          "value": "1978-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At 1723 hours EST on 21 October 1978 a flight plan for VE-DSJ (Moorabbin to King Island",
+          "segment": 3
         }
       ]
     },
