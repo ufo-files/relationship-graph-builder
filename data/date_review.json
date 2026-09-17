@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-17T09:01:29Z",
+  "generatedAt": "2026-09-17T10:07:19Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "10ff174369b1e1c026aeb2e95f58ee962818b10f"
+    "revision": "fb6e233bccf85a402c83ea2dffb91937ebb0e4cb"
   },
-  "documentsWithCandidates": 10820,
+  "documentsWithCandidates": 10826,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8915,6 +8915,21 @@
       ]
     },
     {
+      "documentId": "doc-90ee77adc9ba",
+      "path": "Archives-for-the-Unexplained/documents/2017-12-08---FADE-TO-BLACK-Radio---Ep.-768-FADE-to-BLACK-Jimmy-Church-w-Korinne-Wilson-Hermes-and-Thoth-LIVE_gj-pzpns6Bk---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "headliner between July 8 1947 the Army",
+          "segment": 3
+        }
+      ]
+    },
+    {
       "documentId": "doc-ede6e29f1b48",
       "path": "Archives-for-the-Unexplained/documents/2017-12-08---Inception-Radio-Network---UFO-Headline-News-Wednesday-December-6th-2017_Ji8eywpd8UQ---transcript-automated-.txt",
       "candidates": [
@@ -9046,6 +9061,21 @@
           "method": "unclassified-mention",
           "evidence": "September 19 1961 Betty and Barney are",
           "segment": 3392
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7fea6cddcb58",
+      "path": "Archives-for-the-Unexplained/documents/2017-12-28---FADE-TO-BLACK-Radio---Ep.-780-FADE-to-BLACK-FADERNIGHT-LIVE_1isKWLP4J5Q---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 here on the airport",
+          "segment": 176
         }
       ]
     },
@@ -9784,6 +9814,30 @@
           "method": "event-language",
           "evidence": "occurred February 26 2018 objects seemed",
           "segment": 466
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3149320c5351",
+      "path": "Archives-for-the-Unexplained/documents/2018-03-22---FADE-TO-BLACK-Radio---Ep.-825-FADE-to-BLACK-FADERNIGHT-Open-Lines-LIVE_jcYNtoDvo98---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 beyond the airport",
+          "segment": 5
+        },
+        {
+          "value": "2015-05-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "when that went down that was May 12 2015",
+          "segment": 4251
         }
       ]
     },
@@ -12184,6 +12238,48 @@
           "method": "relative-date-exclusion",
           "evidence": "between November 29 1989 in Belgium and",
           "segment": 5237
+        }
+      ]
+    },
+    {
+      "documentId": "doc-aaf92a98eb11",
+      "path": "Archives-for-the-Unexplained/documents/2022-12-08---Truthseekers---Getting-away-with-murder-Seann-Campbell-Bryan-Benson-murder-investigation_YeSmXM8ks-Q---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1993-11-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the evening of November 10 1993",
+          "segment": 47
+        },
+        {
+          "value": "1993-11-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the Fateful night of November 10 1993",
+          "segment": 166
+        },
+        {
+          "value": "1993-11-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on the night of November 10 1993 both",
+          "segment": 844
+        },
+        {
+          "value": "1993-11-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "time it was November 10 1993 the men",
+          "segment": 1559
         }
       ]
     },
@@ -30871,6 +30967,147 @@
           "method": "unclassified-mention",
           "evidence": "It is certainly true September 27 - October 1, 2010: 61st International Astro-",
           "segment": 515
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7d6380b65865",
+      "path": "Archives-for-the-Unexplained/documents/SearchLites---Vol-16-No-2.txt",
+      "candidates": [
+        {
+          "value": "2010-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Little Ferry NJ San Diego, CA.., 21 February 2010 -- The SETI League, Inc., nonprofit leaders",
+          "segment": 3
+        },
+        {
+          "value": "2010-04-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Eastern time on Sunday, April 18, 2010, at SETI League",
+          "segment": 66
+        },
+        {
+          "value": "2010-04-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 10, 2010: 50° Ozma Bioastronomia SETI, Varese, Italy.",
+          "segment": 70
+        },
+        {
+          "value": "2010-04-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 17, 2010, 0000 UTC - 2359 UTC: Eleventh annual",
+          "segment": 72
+        },
+        {
+          "value": "2010-04-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 18, 2010: Sixteenth SETI League Annual Membership (EWR), which is about twenty minutes South of our office.",
+          "segment": 75
+        },
+        {
+          "value": "2010-10-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 27 - October 1, 2010: 61st International Astro- you with ground transportation.",
+          "segment": 90
+        },
+        {
+          "value": "2011-04-16",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "April 16, 2011, 0000 UTC - 2359 UTC: Twelfth annual SETI per Bylaws Article XII, appears below.",
+          "segment": 99
+        },
+        {
+          "value": "2011-04-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 17, 2011: Seventeenth SETI League Annual Member- notice of this Meeting is being provided to all members in",
+          "segment": 102
+        },
+        {
+          "value": "2012-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 21, 2012, 0000 UTC - 2359 UTC: Thirteenth annual inclusion in the Agenda.",
+          "segment": 107
+        },
+        {
+          "value": "2010-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SETI League Ham Radio QSO Party: 3.551, 7.0309, 7.2039, n6tx@setileague.org, not later than April 1, 2010.",
+          "segment": 109
+        },
+        {
+          "value": "2012-04-22",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "April 22, 2012: Eighteenth SETI League Annual Membership laws Article V, Section 3 will immediately follow the Mem-",
+          "segment": 111
+        },
+        {
+          "value": "2013-04-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 20, 2013, 0000 UTC - 2359 UTC: Fourteenth annual • Call to Order",
+          "segment": 118
+        },
+        {
+          "value": "2013-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 21, 2013: Nineteenth SETI League Annual Membership • Committee Reports",
+          "segment": 121
+        },
+        {
+          "value": "2014-04-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 19, 2014, 0000 UTC - 2359 UTC: Fourteenth annual",
+          "segment": 123
+        },
+        {
+          "value": "2014-04-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 20, 2014: Twentieth SETI League Annual Membership • Adjournment",
+          "segment": 126
         }
       ]
     },
@@ -269614,6 +269851,21 @@
           "method": "event-language",
           "evidence": "Description: On Saturday, February 18, 2012, around 8:00 PM, a witness observed in the sky a luminous phenomenon that intrigued them: a white, oblong glow appeared stationary above the farm buildings. It suddenly disappeared but reappeared a few seconds later at the same location",
           "segment": "seg-0726ced04b1198babb4fcc10"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-499a344e512b8adb55230ba4",
+      "path": "France-GEIPAN/paired/cases/2012-02-09079/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-02-03",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: Recent testimony (14/01/2015) of an old observation. On February 3, 2012, at 6:04 PM, a witness observed in the sky a luminous, oblong phenomenon, slowly and silently following a straight trajectory. The object disappeared after a few minutes. The observation lasted ",
+          "segment": "seg-f1a9291c11f3fbace59e17c9"
         }
       ]
     },
