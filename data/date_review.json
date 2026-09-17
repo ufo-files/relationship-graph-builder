@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-17T15:45:08Z",
+  "generatedAt": "2026-09-17T16:49:57Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "96183ee5fe75d73bc3b31d08f5ff90e9675de28e"
+    "revision": "f36a302ea0340a51a445a23ec4c42aa34374a10b"
   },
-  "documentsWithCandidates": 10842,
+  "documentsWithCandidates": 10845,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8351,6 +8351,21 @@
       ]
     },
     {
+      "documentId": "doc-9561df4adf7a",
+      "path": "Archives-for-the-Unexplained/documents/2017-05-06---FADE-TO-BLACK-Radio---Ep.-653-FADE-to-BLACK-FADERNIGHT-w-Jon-Rappoport-NMFNR-Open-lines-LIVE_4oZJq8RYnnA---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1973-04-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on April 17 1973 the rest is history by",
+          "segment": 1095
+        }
+      ]
+    },
+    {
       "documentId": "doc-42b0efe2390b",
       "path": "Archives-for-the-Unexplained/documents/2017-05-09---FADE-TO-BLACK-Radio---Ep.-654-FADE-to-BLACK-Jimmy-Church-w-Michael-Schratt-UFO-s-and-Black-Ops-LIVE_1iadjgmZFLQ---transcript-automated-.txt",
       "candidates": [
@@ -9100,6 +9115,30 @@
           "method": "unclassified-mention",
           "evidence": "September 19 1961 Betty and Barney are",
           "segment": 3392
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f6c94b66766b",
+      "path": "Archives-for-the-Unexplained/documents/2017-12-28---FADE-TO-BLACK-Radio---Ep.-779-FADE-to-BLACK-Jimmy-Church-w-Lisa-Garr-Aware-and-Awake-in-2018-LIVE_0256Wrk1qBs---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "headliner between July 8 1947 the Army",
+          "segment": 4
+        },
+        {
+          "value": "2017-12-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "happened on December 16 2017 and looking",
+          "segment": 740
         }
       ]
     },
@@ -267613,6 +267652,21 @@
           "method": "event-language",
           "evidence": "Description: On February 27, 2010, at 1:58 PM, a witness observed a strange light phenomenon in the south-southwest direction. For 2 minutes, they saw a round, rainbow-colored glow and a white glow. No sounds were heard. The witness took photographs. The observation described in ",
           "segment": "seg-3c5afcd6e58993e33d631cf3"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-86e5e690504ae0fd0a02e13c",
+      "path": "France-GEIPAN/paired/cases/2010-02-02548/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2010-02-28",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: Two people in their kitchen observed, during two minutes around 2:40 AM on February 28, 2010, the silent passage of a bright orange shimmering sphere without flickering. The object, at low altitude, moved on a straight trajectory before disappearing vertically. This ",
+          "segment": "seg-b72463d4b6b8fd67149ebee5"
         }
       ]
     },
