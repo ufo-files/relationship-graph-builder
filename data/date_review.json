@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-17T05:33:48Z",
+  "generatedAt": "2026-09-17T06:43:10Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "f50dbdb3b8f86c3f101d087db79051c8d6128f16"
+    "revision": "6d8bcb6d4a208a18eb49eb27f8cfcc9d1e8cf2aa"
   },
-  "documentsWithCandidates": 10795,
+  "documentsWithCandidates": 10803,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7610,6 +7610,39 @@
       ]
     },
     {
+      "documentId": "doc-42b0efe2390b",
+      "path": "Archives-for-the-Unexplained/documents/2017-05-09---FADE-TO-BLACK-Radio---Ep.-654-FADE-to-BLACK-Jimmy-Church-w-Michael-Schratt-UFO-s-and-Black-Ops-LIVE_1iadjgmZFLQ---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1984-09-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 28 1984 and Jimmy this is the",
+          "segment": 2135
+        },
+        {
+          "value": "1990-01-17",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Gonzalez this is dated January 17 1990",
+          "segment": 2584
+        },
+        {
+          "value": "1955-11-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 29 1955 Amarillo yes",
+          "segment": 3771
+        }
+      ]
+    },
+    {
       "documentId": "doc-a4e5442732e1",
       "path": "Archives-for-the-Unexplained/documents/2017-05-17---Podcast-UFO-Live-Shows---05-17-17-John-DeSouza-The-Extra-Dimensionals-True-Tales-and-Concepts-of-Alien-Visitors_7wDJpGo0wgs---transcript-automated-.txt",
       "candidates": [
@@ -8759,6 +8792,21 @@
       ]
     },
     {
+      "documentId": "doc-ccb43a14d0d2",
+      "path": "Archives-for-the-Unexplained/documents/2018-02-16---FADE-TO-BLACK-Radio---Ep.-805-FADE-to-BLACK-CLE-2018-Recap-Special-w-David-Wilcock-w-Images-LIVE_rw2IANR5U_w---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Forces",
+          "segment": 5
+        }
+      ]
+    },
+    {
       "documentId": "doc-097b1e32db92",
       "path": "Archives-for-the-Unexplained/documents/2018-02-19---Inception-Radio-Network---The-Most-Haunted-Place-on-Earth-Time-to-Pack-Your-Bags-_saH331EhDgQ---transcript-automated-.txt",
       "candidates": [
@@ -9509,6 +9557,21 @@
       ]
     },
     {
+      "documentId": "doc-20313082fed5",
+      "path": "Archives-for-the-Unexplained/documents/2018-09-30---FADE-TO-BLACK-Radio---Ep.-885-FADE-TO-BLACK-w-Emery-Smith-LIVE_zvRLfZ4iObg---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-03",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 3 1947 the Army Air Forces",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-6fc6f65bf19e",
       "path": "Archives-for-the-Unexplained/documents/2018-10-02---FADE-TO-BLACK-Radio---Ep.-860-FADE-to-BLACK-w-Linda-Moulton-Howe-LIVE_DRpg286hGoA---transcript-automated-.txt",
       "candidates": [
@@ -9774,6 +9837,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "this new July 8 1947 the Army Air Force",
+          "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f71ef7eb92c3",
+      "path": "Archives-for-the-Unexplained/documents/2019-01-10---FADE-TO-BLACK-Radio---Ep.-976-FADE-to-BLACK-FADERNIGHT-Open-Lines-LIVE_UyOviPXP27U---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Force",
           "segment": 4
         }
       ]
@@ -12077,6 +12155,21 @@
       ]
     },
     {
+      "documentId": "doc-bb5caef38502",
+      "path": "Archives-for-the-Unexplained/documents/2023-05-01---Ryan-Sprague---Logan-Paul-Has-Best-UFO-Video-Ever-Space-Anomaly-Over-Japan-6-UFO-Program-Whistleblowers-Speak-Out_qecHPgaDc70---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2002-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "is interesting so on September 16 2002",
+          "segment": 1427
+        }
+      ]
+    },
+    {
       "documentId": "doc-f33ae53f7c8d",
       "path": "Archives-for-the-Unexplained/documents/2023-05-11---UAP-STUDIES-Podcast---WHITLEY-STRIEBER-THE-VISITORS-40-YEARS-OF-ENCOUNTERS._DNQoY154etg---transcript-automated-.txt",
       "candidates": [
@@ -12346,6 +12439,21 @@
           "method": "unclassified-mention",
           "evidence": "need for this Tuesday June 13 2023 Fade",
           "segment": 220
+        }
+      ]
+    },
+    {
+      "documentId": "doc-38bbca32bdb8",
+      "path": "Archives-for-the-Unexplained/documents/2023-06-15---FADE-TO-BLACK-Radio---Ep.-1828-Rob-Sullivan-Symbolism-in-Hollywood_sBsKAJvOzgM---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1971-09-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 13 1971. why is that important",
+          "segment": 2765
         }
       ]
     },
@@ -272489,6 +272597,21 @@
       ]
     },
     {
+      "documentId": "doc-add618f8e5cfe6e81d319ca5",
+      "path": "France-GEIPAN/paired/cases/2015-08-09266/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-08-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 6, 2015, between 12:15 AM and 12:20 AM, a witness watching television was surprised by the sudden appearance of a very powerful green light ray that penetrated his apartment. The phenomenon moved along the walls for a few seconds. The witness ruled out the ",
+          "segment": "seg-77884d3502bc4af286923947"
+        }
+      ]
+    },
+    {
       "documentId": "doc-7e93f6b936e3fdb39d3e57d8",
       "path": "France-GEIPAN/paired/cases/2015-08-09275/en/translation.txt",
       "candidates": [
@@ -290377,6 +290500,21 @@
           "method": "unclassified-mention",
           "evidence": "on Sunday 15 October 1978, Valentich had said to hez, \"12 a UPO landed in fzont of",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8a4d79f3b842",
+      "path": "National-Archives-of-Australia-UFO/documents/10491375/0108.txt",
+      "candidates": [
+        {
+          "value": "1978-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Bass Strait 21 October 1978",
+          "segment": 1
         }
       ]
     },
