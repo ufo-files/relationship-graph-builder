@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "289758e3075e3980da3ec1eec2c685af1b262940"
+    "revision": "4d7cd3955af852afeb75b5e8c7a6a81f60327ae9"
   },
-  "count": 324,
-  "totalCount": 324,
-  "shownCount": 324,
+  "count": 325,
+  "totalCount": 325,
+  "shownCount": 325,
   "candidates": [
     {
       "category": "organization",
@@ -1343,8 +1343,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 443,
-        "documentCount": 163
+        "mentions": 444,
+        "documentCount": 164
       },
       "right": {
         "name": "Jacques Valle",
@@ -1359,8 +1359,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 362,
-        "documentCount": 231
+        "mentions": 371,
+        "documentCount": 236
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1679,8 +1679,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 77,
-        "documentCount": 60
+        "mentions": 79,
+        "documentCount": 61
       },
       "right": {
         "name": "George Noorey",
@@ -1868,6 +1868,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Jekyl Island",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Jekyll Island",
+        "mentions": 10,
+        "documentCount": 5
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Chris Mullins",
@@ -1909,22 +1925,6 @@
       "right": {
         "name": "Dr. Michael Wolf",
         "mentions": 5,
-        "documentCount": 4
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Jekyl Island",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Jekyll Island",
-        "mentions": 8,
         "documentCount": 4
       },
       "similarity": 0.96,
@@ -3199,8 +3199,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 443,
-        "documentCount": 265
+        "mentions": 447,
+        "documentCount": 268
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3871,8 +3871,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 443,
-        "documentCount": 163
+        "mentions": 444,
+        "documentCount": 164
       },
       "right": {
         "name": "Jacques Valley",
@@ -4782,14 +4782,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Stephen Schwartz",
+        "name": "Allen Greenfield",
         "mentions": 12,
-        "documentCount": 10
+        "documentCount": 9
       },
       "right": {
-        "name": "Steven Schwartz",
-        "mentions": 3,
-        "documentCount": 2
+        "name": "Alan Greenfield",
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.903,
       "reason": "similar person name",
@@ -4798,14 +4798,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Allen Greenfield",
-        "mentions": 10,
-        "documentCount": 8
+        "name": "Stephen Schwartz",
+        "mentions": 12,
+        "documentCount": 10
       },
       "right": {
-        "name": "Alan Greenfield",
-        "mentions": 4,
-        "documentCount": 3
+        "name": "Steven Schwartz",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.903,
       "reason": "similar person name",
@@ -4943,8 +4943,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 77,
-        "documentCount": 68
+        "mentions": 80,
+        "documentCount": 69
       },
       "right": {
         "name": "George HW Bush",
@@ -5060,8 +5060,8 @@
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 7,
+        "documentCount": 6
       },
       "similarity": 0.878,
       "reason": "similar person name",
@@ -5190,6 +5190,22 @@
         "name": "Timothy Gallaudet",
         "mentions": 110,
         "documentCount": 7
+      },
+      "similarity": 0.867,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "David Griffin",
+        "mentions": 5,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "David Ray Griffin",
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.867,
       "reason": "similar person name",
