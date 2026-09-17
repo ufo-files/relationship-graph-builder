@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "41116935c190f8368a4ecd6c8b8830480561ab76"
+    "revision": "10ff174369b1e1c026aeb2e95f58ee962818b10f"
   },
-  "count": 330,
-  "totalCount": 330,
-  "shownCount": 330,
+  "count": 331,
+  "totalCount": 331,
+  "shownCount": 331,
   "candidates": [
     {
       "category": "organization",
@@ -383,8 +383,8 @@
       "category": "location",
       "left": {
         "name": "Holloman Air Force Base",
-        "mentions": 173,
-        "documentCount": 89
+        "mentions": 174,
+        "documentCount": 90
       },
       "right": {
         "name": "Hollman Air Force Base",
@@ -447,8 +447,8 @@
       "category": "location",
       "left": {
         "name": "McChord Air Force Base",
-        "mentions": 18,
-        "documentCount": 13
+        "mentions": 19,
+        "documentCount": 14
       },
       "right": {
         "name": "McCord Air Force Base",
@@ -639,8 +639,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 178,
-        "documentCount": 115
+        "mentions": 180,
+        "documentCount": 116
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -1183,8 +1183,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 389,
-        "documentCount": 216
+        "mentions": 392,
+        "documentCount": 217
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1236,8 +1236,8 @@
       },
       "right": {
         "name": "Dr. Richard Sauter",
-        "mentions": 8,
-        "documentCount": 3
+        "mentions": 10,
+        "documentCount": 4
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -1343,8 +1343,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 449,
-        "documentCount": 168
+        "mentions": 450,
+        "documentCount": 169
       },
       "right": {
         "name": "Jacques Valle",
@@ -1359,8 +1359,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 398,
-        "documentCount": 251
+        "mentions": 402,
+        "documentCount": 253
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1375,8 +1375,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 179,
-        "documentCount": 126
+        "mentions": 180,
+        "documentCount": 127
       },
       "right": {
         "name": "Flying Saucer",
@@ -1663,8 +1663,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 89,
-        "documentCount": 66
+        "mentions": 90,
+        "documentCount": 67
       },
       "right": {
         "name": "George Noorey",
@@ -1966,6 +1966,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Keith Roland",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Keith Rowland",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Paul Schartle",
         "mentions": 3,
         "documentCount": 2
@@ -1990,22 +2006,6 @@
         "name": "Clair County",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Keith Roland",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Keith Rowland",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2895,8 +2895,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 178,
-        "documentCount": 115
+        "mentions": 180,
+        "documentCount": 116
       },
       "right": {
         "name": "Linda Moulton Howell",
@@ -3092,8 +3092,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 393,
-        "documentCount": 54
+        "mentions": 394,
+        "documentCount": 55
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -3596,6 +3596,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Edgar Allen Poe",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Edgar Allan Poe",
+        "mentions": 8,
+        "documentCount": 7
+      },
+      "similarity": 0.933,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Special Access Programs Control Office",
@@ -3919,8 +3935,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 449,
-        "documentCount": 168
+        "mentions": 450,
+        "documentCount": 169
       },
       "right": {
         "name": "Jacques Valley",
@@ -3951,8 +3967,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 206,
-        "documentCount": 100
+        "mentions": 208,
+        "documentCount": 101
       },
       "right": {
         "name": "George Adamsky",
@@ -4351,8 +4367,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 206,
-        "documentCount": 100
+        "mentions": 208,
+        "documentCount": 101
       },
       "right": {
         "name": "George Adams",
@@ -5135,8 +5151,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 178,
-        "documentCount": 115
+        "mentions": 180,
+        "documentCount": 116
       },
       "right": {
         "name": "Eric Linda Moulton Howe",

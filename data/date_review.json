@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-17T07:53:21Z",
+  "generatedAt": "2026-09-17T09:01:29Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "41116935c190f8368a4ecd6c8b8830480561ab76"
+    "revision": "10ff174369b1e1c026aeb2e95f58ee962818b10f"
   },
-  "documentsWithCandidates": 10815,
+  "documentsWithCandidates": 10820,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9959,6 +9959,21 @@
       ]
     },
     {
+      "documentId": "doc-3abb0c51857e",
+      "path": "Archives-for-the-Unexplained/documents/2018-05-16---FADE-TO-BLACK-Radio---Ep.-856-FADE-to-BLACK-Jimmy-Church-w-Nick-Redfern-The-Slenderman-Mysteries-LIVE_mhwczaeYzLU---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-03",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "headliner between July 3 1947 the Army",
+          "segment": 5
+        }
+      ]
+    },
+    {
       "documentId": "doc-62b3174482cc",
       "path": "Archives-for-the-Unexplained/documents/2018-05-18---Grant-Cameron-Whitehouse-UFO---Paola-Harris-on-Starworks-USA-Conference-part-two-_JcFri8NUwvQ---transcript-automated-.txt",
       "candidates": [
@@ -11278,6 +11293,21 @@
           "method": "unclassified-mention",
           "evidence": "John Lennon's murder December 8 1980 and",
           "segment": 3710
+        }
+      ]
+    },
+    {
+      "documentId": "doc-15c5e4550928",
+      "path": "Archives-for-the-Unexplained/documents/2019-12-16---UFO-News-Network-Sunday---Jan-Aldrich-Paul-Dean-12-15-2019_gQGMSlWYxBY---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "New Mexico he was July 7 1947 I wanted",
+          "segment": 2553
         }
       ]
     },
@@ -27820,6 +27850,30 @@
           "method": "unclassified-mention",
           "evidence": "in the Sunday, March 26, 2006 edition of the Philadelphia more properly a subject of derision than of",
           "segment": 150
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2e8a0ab0221c",
+      "path": "Archives-for-the-Unexplained/documents/Phactum---2006-06---June.txt",
+      "candidates": [
+        {
+          "value": "2006-06-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, June 17, 2006—Noon to 4 PM",
+          "segment": 33
+        },
+        {
+          "value": "2006-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, September 16, 2006 the 2006/2007 series of lectures will resume at Community",
+          "segment": 51
         }
       ]
     },
@@ -44533,6 +44587,66 @@
           "method": "context-exclusion",
           "evidence": "June 27, 1967 Wu Tang, then UN Secretary-General, told the New York Post: I believe that after the cooperation with the newspaper \"Alien\"…",
           "segment": 167
+        }
+      ]
+    },
+    {
+      "documentId": "doc-70b31cacb103",
+      "path": "Archives-for-the-Unexplained/documents/UFODOS---2009-01-02---translation-automated-.txt",
+      "candidates": [
+        {
+          "value": "2009-01-23",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "UFO in Dnepropetrovsk (publication January 23, 2009, 8:30 http://smi.dp.ua/dnepropetrovsk/nlo-v-nebe nad- in Ukrainian",
+          "segment": 98
+        },
+        {
+          "value": "2009-01-28",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "UFO in Poltava (published on January 28, 2009 http://www.regionnews.poltava.ua/index.php?",
+          "segment": 110
+        },
+        {
+          "value": "2006-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "neighbor Oleg Kolisnyk and said: \"Come on, put on your shorts, because aliens ran into us here.\" taken on June 1, 2006 near",
+          "segment": 123
+        },
+        {
+          "value": "2004-06-29",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Certificate of registration KV ÿ8918 dated June 29, 2004 issued by the State Committee for Television and Radio Broadcasting",
+          "segment": 216
+        },
+        {
+          "value": "2004-03-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "appeared in Polotsk - at night there was a stampede, something moaned in the street, demons roamed like people…\", \"Facts and comments rii \", March 17, 2004), and so to",
+          "segment": 226
+        },
+        {
+          "value": "2004-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of the Ukrainian Center for the Study of Mysterious Phenomena and Artifacts, Kyiv, October 21, 2004).",
+          "segment": 280
         }
       ]
     },
@@ -273775,6 +273889,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On August 7, 2015, at 3:00 a.m., a witness observed through the foliage four fixed, bright silver lights with strong sparkling. The lights are side by side, two by two on the same horizontal line. The witness observed the presence of these lights until 4:30 a.m. and ",
           "segment": "seg-beeeca16257b29ccae3b5332"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b432f2c42cb2df722d6d5d83",
+      "path": "France-GEIPAN/paired/cases/2015-08-09276/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 21, 2015, at 11:13 PM, a witness by the seashore had their gaze drawn to a movement in the sky: three bright, white, star-like forms formed an isosceles triangle that moved in a straight line without sound. After turning away from the PAN to call another pe",
+          "segment": "seg-ba8908e6e986586fbf2fc89a"
         }
       ]
     },
