@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "1634cd3da6f11b30a3155b269c9f08bb1f2f11f5"
+    "revision": "5d12b2553d5ffc54b2490bf38a6a5d2f9463965e"
   },
   "count": 337,
   "totalCount": 337,
@@ -655,8 +655,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 185,
-        "documentCount": 120
+        "mentions": 186,
+        "documentCount": 121
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -1359,8 +1359,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 453,
-        "documentCount": 171
+        "mentions": 456,
+        "documentCount": 172
       },
       "right": {
         "name": "Jacques Valle",
@@ -1375,8 +1375,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 455,
-        "documentCount": 283
+        "mentions": 461,
+        "documentCount": 286
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1695,8 +1695,8 @@
       "category": "person",
       "left": {
         "name": "Timothy Good",
-        "mentions": 78,
-        "documentCount": 46
+        "mentions": 81,
+        "documentCount": 47
       },
       "right": {
         "name": "Timothy Goods",
@@ -2012,6 +2012,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Michael Sala",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Michael Salah",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Claire County",
@@ -2038,22 +2054,6 @@
         "name": "AAF Base Unit",
         "mentions": 3,
         "documentCount": 2
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Michael Sala",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Michael Salah",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2927,8 +2927,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 185,
-        "documentCount": 120
+        "mentions": 186,
+        "documentCount": 121
       },
       "right": {
         "name": "Linda Moulton Howell",
@@ -3263,8 +3263,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 496,
-        "documentCount": 290
+        "mentions": 499,
+        "documentCount": 291
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3935,8 +3935,8 @@
       "category": "government_agency",
       "left": {
         "name": "Investigations Officer",
-        "mentions": 12,
-        "documentCount": 8
+        "mentions": 13,
+        "documentCount": 9
       },
       "right": {
         "name": "Investigating Officer's",
@@ -3983,8 +3983,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 453,
-        "documentCount": 171
+        "mentions": 456,
+        "documentCount": 172
       },
       "right": {
         "name": "Jacques Valley",
@@ -4031,8 +4031,8 @@
       "category": "person",
       "left": {
         "name": "Richard Haines",
-        "mentions": 66,
-        "documentCount": 46
+        "mentions": 67,
+        "documentCount": 47
       },
       "right": {
         "name": "Richard Haynes",
@@ -4063,13 +4063,13 @@
       "category": "person",
       "left": {
         "name": "Timothy Beckley",
-        "mentions": 19,
-        "documentCount": 18
+        "mentions": 20,
+        "documentCount": 19
       },
       "right": {
         "name": "Timothy Becky",
-        "mentions": 15,
-        "documentCount": 12
+        "mentions": 16,
+        "documentCount": 13
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -4558,13 +4558,13 @@
     {
       "category": "person",
       "left": {
-        "name": "Charles Bowen",
-        "mentions": 7,
-        "documentCount": 6
+        "name": "Michael Salla",
+        "mentions": 10,
+        "documentCount": 8
       },
       "right": {
-        "name": "Col. Charles Brown",
-        "mentions": 7,
+        "name": "Michael Salah",
+        "mentions": 4,
         "documentCount": 4
       },
       "similarity": 0.923,
@@ -4574,14 +4574,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Michael Salla",
-        "mentions": 10,
-        "documentCount": 8
+        "name": "Charles Bowen",
+        "mentions": 7,
+        "documentCount": 6
       },
       "right": {
-        "name": "Michael Salah",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "Col. Charles Brown",
+        "mentions": 7,
+        "documentCount": 4
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -4613,6 +4613,22 @@
       "right": {
         "name": "Peter Levenda",
         "mentions": 7,
+        "documentCount": 4
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Michael Saleh",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Michael Salah",
+        "mentions": 4,
         "documentCount": 4
       },
       "similarity": 0.923,
@@ -4678,22 +4694,6 @@
         "name": "Office of Info",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Michael Saleh",
-        "mentions": 6,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Michael Salah",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -4927,8 +4927,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 139,
-        "documentCount": 90
+        "mentions": 140,
+        "documentCount": 91
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -5231,8 +5231,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 185,
-        "documentCount": 120
+        "mentions": 186,
+        "documentCount": 121
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
