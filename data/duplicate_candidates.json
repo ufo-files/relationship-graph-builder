@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5d12b2553d5ffc54b2490bf38a6a5d2f9463965e"
+    "revision": "903ea64378f7309afa3302bf6b95121e37bb4c43"
   },
-  "count": 337,
-  "totalCount": 337,
-  "shownCount": 337,
+  "count": 338,
+  "totalCount": 338,
+  "shownCount": 338,
   "candidates": [
     {
       "category": "organization",
@@ -271,8 +271,8 @@
       "category": "government_agency",
       "left": {
         "name": "Moorabbin Briefing Office",
-        "mentions": 6,
-        "documentCount": 3
+        "mentions": 7,
+        "documentCount": 4
       },
       "right": {
         "name": "Moorabbin Briefing Officer",
@@ -655,8 +655,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 186,
-        "documentCount": 121
+        "mentions": 187,
+        "documentCount": 122
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -703,8 +703,8 @@
       "category": "government_agency",
       "left": {
         "name": "Police Department",
-        "mentions": 81,
-        "documentCount": 59
+        "mentions": 82,
+        "documentCount": 60
       },
       "right": {
         "name": "Police Departments",
@@ -943,8 +943,8 @@
       "category": "person",
       "left": {
         "name": "Michael Shermer",
-        "mentions": 70,
-        "documentCount": 46
+        "mentions": 72,
+        "documentCount": 47
       },
       "right": {
         "name": "Michael Schermer",
@@ -1359,8 +1359,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 456,
-        "documentCount": 172
+        "mentions": 457,
+        "documentCount": 173
       },
       "right": {
         "name": "Jacques Valle",
@@ -1836,6 +1836,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Red Mountain",
+        "mentions": 6,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Read Mountain",
+        "mentions": 9,
+        "documentCount": 5
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Michael Wolfe",
@@ -1845,22 +1861,6 @@
       "right": {
         "name": "Dr. Michael Wolf",
         "mentions": 6,
-        "documentCount": 5
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Red Mountain",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Read Mountain",
-        "mentions": 9,
         "documentCount": 5
       },
       "similarity": 0.96,
@@ -2143,8 +2143,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 139,
-        "documentCount": 40
+        "mentions": 141,
+        "documentCount": 41
       },
       "right": {
         "name": "Kings Island",
@@ -2222,13 +2222,13 @@
     {
       "category": "person",
       "left": {
-        "name": "David Clarke",
-        "mentions": 23,
-        "documentCount": 17
+        "name": "John Edward",
+        "mentions": 25,
+        "documentCount": 18
       },
       "right": {
-        "name": "David Clark",
-        "mentions": 7,
+        "name": "John Edwards",
+        "mentions": 6,
         "documentCount": 5
       },
       "similarity": 0.957,
@@ -2238,13 +2238,13 @@
     {
       "category": "person",
       "left": {
-        "name": "John Edward",
-        "mentions": 24,
+        "name": "David Clarke",
+        "mentions": 23,
         "documentCount": 17
       },
       "right": {
-        "name": "John Edwards",
-        "mentions": 6,
+        "name": "David Clark",
+        "mentions": 7,
         "documentCount": 5
       },
       "similarity": 0.957,
@@ -2927,8 +2927,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 186,
-        "documentCount": 121
+        "mentions": 187,
+        "documentCount": 122
       },
       "right": {
         "name": "Linda Moulton Howell",
@@ -3983,8 +3983,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 456,
-        "documentCount": 172
+        "mentions": 457,
+        "documentCount": 173
       },
       "right": {
         "name": "Jacques Valley",
@@ -4201,6 +4201,22 @@
       },
       "similarity": 0.929,
       "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Jane Steinberg",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Jean Steinberg",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.929,
+      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -5231,8 +5247,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 186,
-        "documentCount": 121
+        "mentions": 187,
+        "documentCount": 122
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
