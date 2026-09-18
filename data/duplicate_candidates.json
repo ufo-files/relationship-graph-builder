@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "372c9c880b1262c501f0aadda378d570daa37490"
+    "revision": "952825afbf90200c20cf287405d19f2a9a35b08d"
   },
   "count": 338,
   "totalCount": 338,
@@ -252,6 +252,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Moorabbin Briefing Office",
+        "mentions": 8,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Moorabbin Briefing Officer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.98,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "HEADQUARTERS ASTERN AREA",
@@ -262,22 +278,6 @@
         "name": "Headquarters Eastern Area",
         "mentions": 7,
         "documentCount": 3
-      },
-      "similarity": 0.98,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Moorabbin Briefing Office",
-        "mentions": 7,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Moorabbin Briefing Officer",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.98,
       "reason": "similar name",
@@ -367,8 +367,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 437,
-        "documentCount": 205
+        "mentions": 438,
+        "documentCount": 206
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1359,8 +1359,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 470,
-        "documentCount": 292
+        "mentions": 474,
+        "documentCount": 294
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1663,8 +1663,8 @@
       "category": "person",
       "left": {
         "name": "Frank Edwards",
-        "mentions": 135,
-        "documentCount": 70
+        "mentions": 136,
+        "documentCount": 71
       },
       "right": {
         "name": "Frank Edward",
@@ -1679,8 +1679,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 102,
-        "documentCount": 76
+        "mentions": 103,
+        "documentCount": 77
       },
       "right": {
         "name": "George Noorey",
@@ -2143,8 +2143,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 142,
-        "documentCount": 42
+        "mentions": 143,
+        "documentCount": 43
       },
       "right": {
         "name": "Kings Island",
@@ -4287,8 +4287,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 437,
-        "documentCount": 205
+        "mentions": 438,
+        "documentCount": 206
       },
       "right": {
         "name": "University Colorado",
@@ -4319,8 +4319,8 @@
       "category": "organization",
       "left": {
         "name": "University of Toronto",
-        "mentions": 19,
-        "documentCount": 19
+        "mentions": 20,
+        "documentCount": 20
       },
       "right": {
         "name": "University of Trento",
@@ -5039,8 +5039,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Bassett",
-        "mentions": 32,
-        "documentCount": 28
+        "mentions": 33,
+        "documentCount": 29
       },
       "right": {
         "name": "Steven Bassett",
@@ -5135,8 +5135,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 81,
-        "documentCount": 70
+        "mentions": 83,
+        "documentCount": 71
       },
       "right": {
         "name": "George HW Bush",
