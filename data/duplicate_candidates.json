@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "b4b2babafe4f249f455bc81f9a216874c83b43ed"
+    "revision": "889beea6e1655cbd6f63433af0cfb80c6dcdd00a"
   },
-  "count": 342,
-  "totalCount": 342,
-  "shownCount": 342,
+  "count": 343,
+  "totalCount": 343,
+  "shownCount": 343,
   "candidates": [
     {
       "category": "organization",
@@ -1359,8 +1359,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 524,
-        "documentCount": 322
+        "mentions": 527,
+        "documentCount": 324
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1375,8 +1375,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 463,
-        "documentCount": 179
+        "mentions": 465,
+        "documentCount": 180
       },
       "right": {
         "name": "Jacques Valle",
@@ -1391,8 +1391,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 186,
-        "documentCount": 131
+        "mentions": 187,
+        "documentCount": 132
       },
       "right": {
         "name": "Flying Saucer",
@@ -1407,8 +1407,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 175,
-        "documentCount": 110
+        "mentions": 177,
+        "documentCount": 111
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -1423,8 +1423,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 132,
-        "documentCount": 94
+        "mentions": 133,
+        "documentCount": 95
       },
       "right": {
         "name": "Bruce Macabee",
@@ -1695,8 +1695,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 115,
-        "documentCount": 88
+        "mentions": 117,
+        "documentCount": 89
       },
       "right": {
         "name": "George Noorey",
@@ -1886,6 +1886,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Michael Salla",
+        "mentions": 11,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Michael Sala",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Michael Wolfe",
         "mentions": 8,
         "documentCount": 7
@@ -1902,14 +1918,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Michael Salla",
-        "mentions": 10,
-        "documentCount": 8
+        "name": "Chris Mullins",
+        "mentions": 8,
+        "documentCount": 7
       },
       "right": {
-        "name": "Michael Sala",
-        "mentions": 3,
-        "documentCount": 2
+        "name": "Chris Mullin",
+        "mentions": 5,
+        "documentCount": 5
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -1926,22 +1942,6 @@
         "name": "Bruce Cornet",
         "mentions": 6,
         "documentCount": 6
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Chris Mullins",
-        "mentions": 7,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "Chris Mullin",
-        "mentions": 5,
-        "documentCount": 5
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -3311,8 +3311,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 521,
-        "documentCount": 302
+        "mentions": 529,
+        "documentCount": 305
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4047,8 +4047,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 463,
-        "documentCount": 179
+        "mentions": 465,
+        "documentCount": 180
       },
       "right": {
         "name": "Jacques Valley",
@@ -4063,8 +4063,8 @@
       "category": "person",
       "left": {
         "name": "Robert Bigelow",
-        "mentions": 232,
-        "documentCount": 127
+        "mentions": 233,
+        "documentCount": 128
       },
       "right": {
         "name": "Robert Bigalow",
@@ -4079,8 +4079,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 214,
-        "documentCount": 107
+        "mentions": 215,
+        "documentCount": 108
       },
       "right": {
         "name": "George Adamsky",
@@ -4142,6 +4142,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Jane Steinberg",
+        "mentions": 14,
+        "documentCount": 12
+      },
+      "right": {
+        "name": "Jean Steinberg",
+        "mentions": 13,
+        "documentCount": 10
+      },
+      "similarity": 0.929,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "John Ratcliffe",
         "mentions": 22,
         "documentCount": 15
@@ -4153,22 +4169,6 @@
       },
       "similarity": 0.929,
       "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Jane Steinberg",
-        "mentions": 12,
-        "documentCount": 10
-      },
-      "right": {
-        "name": "Jean Steinberg",
-        "mentions": 10,
-        "documentCount": 8
-      },
-      "similarity": 0.929,
-      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -4495,8 +4495,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 214,
-        "documentCount": 107
+        "mentions": 215,
+        "documentCount": 108
       },
       "right": {
         "name": "George Adams",
@@ -4607,8 +4607,8 @@
       "category": "person",
       "left": {
         "name": "Michael Salla",
-        "mentions": 10,
-        "documentCount": 8
+        "mentions": 11,
+        "documentCount": 9
       },
       "right": {
         "name": "Michael Salah",
@@ -4854,6 +4854,22 @@
         "name": "Madison County",
         "mentions": 5,
         "documentCount": 5
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Robert Simpson",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Robert Simon",
+        "mentions": 4,
+        "documentCount": 2
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -5199,8 +5215,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 90,
-        "documentCount": 75
+        "mentions": 91,
+        "documentCount": 76
       },
       "right": {
         "name": "George HW Bush",
