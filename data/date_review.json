@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-18T10:23:56Z",
+  "generatedAt": "2026-09-18T11:35:57Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "952825afbf90200c20cf287405d19f2a9a35b08d"
+    "revision": "f1c92ff1b391a498ddf920300f92f8600c38a5f6"
   },
-  "documentsWithCandidates": 10904,
+  "documentsWithCandidates": 10907,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9497,6 +9497,39 @@
       ]
     },
     {
+      "documentId": "doc-9f724d3a0168",
+      "path": "Archives-for-the-Unexplained/documents/2017-12-16---FADE-TO-BLACK-Radio---Ep.-773-FADE-to-BLACK-DISCLOSURE-Special-Event-LIVE_8q_fP7HoFOg---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Force",
+          "segment": 4
+        },
+        {
+          "value": "2017-12-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "feel like December 16 2017 is noteworthy",
+          "segment": 2049
+        },
+        {
+          "value": "2017-12-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "experiencing today on December 16 2017",
+          "segment": 2309
+        }
+      ]
+    },
+    {
       "documentId": "doc-a8759b97d62d",
       "path": "Archives-for-the-Unexplained/documents/2017-12-19---FADE-TO-BLACK-Radio---Ep.-774-FADE-to-BLACK-Jimmy-Church-w-Derrel-Sims-The-Alien-Hunter-LIVE_pUL_hre9fg0---transcript-automated-.txt",
       "candidates": [
@@ -11566,6 +11599,21 @@
           "method": "unclassified-mention",
           "evidence": "January 19 2019 all of the information",
           "segment": 5909
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b80d12316b93",
+      "path": "Archives-for-the-Unexplained/documents/2019-01-03---FADE-TO-BLACK-Radio---Ep.-971-FADE-to-BLACK-Jimmy-Church-w-Laura-Eisenhower-2019-1-Show-LIVE_Fvbd-rXF9C4---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 you are the air",
+          "segment": 4
         }
       ]
     },
@@ -40681,6 +40729,30 @@
           "method": "context-exclusion",
           "evidence": "he received it on May 8, 1945 but there is no accompanying citation.",
           "segment": 370
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5cc10bcd0960",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Mail---No-211---2016.txt",
+      "candidates": [
+        {
+          "value": "2016-02-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "https://www.dr.dk/tv/se/tv-avisen-med-sporten/tv-avisen-med-sporten-og-vejret-2016-02-07#!/",
+          "segment": 80
+        },
+        {
+          "value": "2016-02-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "http://nyheder.tv2.dk/samfund/2016-02-07-56-gram-og-millioner-af-aar-gammel-meteorit-fundet-",
+          "segment": 82
         }
       ]
     },
