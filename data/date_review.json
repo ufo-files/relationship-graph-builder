@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-18T00:55:06Z",
+  "generatedAt": "2026-09-18T02:08:45Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "77f0d37247c5fe5d1c7ca4aff09d93d3a6fa1ad5"
+    "revision": "abf1a73d9a54df28250293a79b069ee32bd0c963"
   },
-  "documentsWithCandidates": 10863,
+  "documentsWithCandidates": 10866,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -10888,6 +10888,21 @@
           "method": "unclassified-mention",
           "evidence": "of this in July 8 1947 the Army Air",
           "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6fb9901a958d",
+      "path": "Archives-for-the-Unexplained/documents/2018-09-04---FADE-TO-BLACK-Radio---Ep.-909-FADE-to-BLACK-Jimmy-Church-w-Emery-Smith-The-Interview-LIVE_lsK3ig3K808---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the balloon July 8 1947 the Army Air",
+          "segment": 7
         }
       ]
     },
@@ -272708,6 +272723,21 @@
       ]
     },
     {
+      "documentId": "doc-3599aea9908c4c5521472aa2",
+      "path": "France-GEIPAN/paired/cases/2013-06-08460/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-06-06",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On June 6, 2013, at 10:50 PM, several witnesses observed from their homes a silent, S-NE moving white light phenomenon in the sky. The object was then hidden by the landscape. The elements provided by the witness demonstrate, in support of Calsky records, that it was",
+          "segment": "seg-f16056854f32b32502c8ab38"
+        }
+      ]
+    },
+    {
       "documentId": "doc-3b487a1523308e76e4eb8b2c",
       "path": "France-GEIPAN/paired/cases/2013-06-08461/en/translation.txt",
       "candidates": [
@@ -293314,6 +293344,21 @@
           "method": "unclassified-mention",
           "evidence": "on 25 October 1978, after divers and widespread search efforts failed to locate any",
           "segment": 35
+        }
+      ]
+    },
+    {
+      "documentId": "doc-23fd6ad288df",
+      "path": "National-Archives-of-Australia-UFO/documents/10491375/0084.txt",
+      "candidates": [
+        {
+          "value": "1978-10-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Diseussion with Jiss I. Rushton on 24 October 1978",
+          "segment": 1
         }
       ]
     },
