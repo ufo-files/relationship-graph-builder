@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-18T18:51:39Z",
+  "generatedAt": "2026-09-18T20:05:43Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d89ef89b7f03cb57dfd4d8b8369c289150cc7bde"
+    "revision": "f8f08e4a2569fab1d53a3661839cdb4204e0e416"
   },
-  "documentsWithCandidates": 10940,
+  "documentsWithCandidates": 10941,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -18433,6 +18433,30 @@
           "method": "unclassified-mention",
           "evidence": "lancé le 15 octobre 1965.",
           "segment": 1188
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0858e45e47d8",
+      "path": "Archives-for-the-Unexplained/documents/Cielo-Insolito---No-07.txt",
+      "candidates": [
+        {
+          "value": "1909-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of July 30, 1909: it was a superbolide seen from Northern and Central Italy, as well as from the Italian-",
+          "segment": 631
+        },
+        {
+          "value": "1923-05-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "An interpretation for the luminous phenomenon of May 10, 1923? (G. Stilo, p.",
+          "segment": 635
         }
       ]
     },

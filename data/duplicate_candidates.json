@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d89ef89b7f03cb57dfd4d8b8369c289150cc7bde"
+    "revision": "f8f08e4a2569fab1d53a3661839cdb4204e0e416"
   },
   "count": 340,
   "totalCount": 340,
@@ -1423,8 +1423,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 130,
-        "documentCount": 92
+        "mentions": 131,
+        "documentCount": 93
       },
       "right": {
         "name": "Bruce Macabee",
@@ -1679,8 +1679,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 114,
-        "documentCount": 87
+        "mentions": 115,
+        "documentCount": 88
       },
       "right": {
         "name": "George Noorey",
@@ -2159,8 +2159,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 145,
-        "documentCount": 44
+        "mentions": 148,
+        "documentCount": 45
       },
       "right": {
         "name": "Kings Island",
@@ -4063,8 +4063,8 @@
       "category": "person",
       "left": {
         "name": "Richard Haines",
-        "mentions": 67,
-        "documentCount": 47
+        "mentions": 68,
+        "documentCount": 48
       },
       "right": {
         "name": "Richard Haynes",
@@ -4124,6 +4124,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Jane Steinberg",
+        "mentions": 12,
+        "documentCount": 10
+      },
+      "right": {
+        "name": "Jean Steinberg",
+        "mentions": 10,
+        "documentCount": 8
+      },
+      "similarity": 0.929,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Office of Special Projects",
@@ -4137,22 +4153,6 @@
       },
       "similarity": 0.929,
       "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Jane Steinberg",
-        "mentions": 10,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "Jean Steinberg",
-        "mentions": 10,
-        "documentCount": 8
-      },
-      "similarity": 0.929,
-      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -5007,8 +5007,8 @@
       "category": "person",
       "left": {
         "name": "Allen Greenfield",
-        "mentions": 14,
-        "documentCount": 11
+        "mentions": 16,
+        "documentCount": 12
       },
       "right": {
         "name": "Alan Greenfield",
