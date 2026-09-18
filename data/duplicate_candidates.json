@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "1440d760a768e8b472ee15c781c87ce106482852"
+    "revision": "d89ef89b7f03cb57dfd4d8b8369c289150cc7bde"
   },
   "count": 340,
   "totalCount": 340,
@@ -367,8 +367,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 440,
-        "documentCount": 208
+        "mentions": 441,
+        "documentCount": 209
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -399,8 +399,8 @@
       "category": "location",
       "left": {
         "name": "Holloman Air Force Base",
-        "mentions": 174,
-        "documentCount": 90
+        "mentions": 176,
+        "documentCount": 91
       },
       "right": {
         "name": "Hollman Air Force Base",
@@ -1199,8 +1199,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 410,
-        "documentCount": 222
+        "mentions": 414,
+        "documentCount": 223
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1359,8 +1359,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 508,
-        "documentCount": 313
+        "mentions": 514,
+        "documentCount": 317
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1375,8 +1375,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 459,
-        "documentCount": 175
+        "mentions": 461,
+        "documentCount": 177
       },
       "right": {
         "name": "Jacques Valle",
@@ -1391,8 +1391,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 181,
-        "documentCount": 128
+        "mentions": 182,
+        "documentCount": 129
       },
       "right": {
         "name": "Flying Saucer",
@@ -1407,8 +1407,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 171,
-        "documentCount": 108
+        "mentions": 174,
+        "documentCount": 109
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -1679,8 +1679,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 112,
-        "documentCount": 85
+        "mentions": 114,
+        "documentCount": 87
       },
       "right": {
         "name": "George Noorey",
@@ -1711,8 +1711,8 @@
       "category": "person",
       "left": {
         "name": "Philip Corso",
-        "mentions": 72,
-        "documentCount": 57
+        "mentions": 73,
+        "documentCount": 58
       },
       "right": {
         "name": "Colonel Phillip Corso",
@@ -1852,6 +1852,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Jekyl Island",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Jekyll Island",
+        "mentions": 12,
+        "documentCount": 7
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Michael Wolfe",
@@ -1862,22 +1878,6 @@
         "name": "Dr. Michael Wolf",
         "mentions": 6,
         "documentCount": 5
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Jekyl Island",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Jekyll Island",
-        "mentions": 11,
-        "documentCount": 6
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2302,14 +2302,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Frank Manor",
-        "mentions": 11,
-        "documentCount": 5
+        "name": "Barbara Lamb",
+        "mentions": 4,
+        "documentCount": 3
       },
       "right": {
-        "name": "Frank Mannor",
-        "mentions": 8,
-        "documentCount": 5
+        "name": "Barbara Lam",
+        "mentions": 19,
+        "documentCount": 8
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2318,14 +2318,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Barbara Lamb",
-        "mentions": 4,
-        "documentCount": 3
+        "name": "Frank Manor",
+        "mentions": 11,
+        "documentCount": 5
       },
       "right": {
-        "name": "Barbara Lam",
-        "mentions": 14,
-        "documentCount": 7
+        "name": "Frank Mannor",
+        "mentions": 8,
+        "documentCount": 5
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -3279,8 +3279,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 510,
-        "documentCount": 297
+        "mentions": 516,
+        "documentCount": 301
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4015,8 +4015,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 459,
-        "documentCount": 175
+        "mentions": 461,
+        "documentCount": 177
       },
       "right": {
         "name": "Jacques Valley",
@@ -4031,8 +4031,8 @@
       "category": "person",
       "left": {
         "name": "Robert Bigelow",
-        "mentions": 231,
-        "documentCount": 126
+        "mentions": 232,
+        "documentCount": 127
       },
       "right": {
         "name": "Robert Bigalow",
@@ -4143,13 +4143,13 @@
       "category": "person",
       "left": {
         "name": "Jane Steinberg",
-        "mentions": 9,
-        "documentCount": 8
+        "mentions": 10,
+        "documentCount": 9
       },
       "right": {
         "name": "Jean Steinberg",
-        "mentions": 8,
-        "documentCount": 6
+        "mentions": 10,
+        "documentCount": 8
       },
       "similarity": 0.929,
       "reason": "similar person name",
@@ -4319,8 +4319,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 440,
-        "documentCount": 208
+        "mentions": 441,
+        "documentCount": 209
       },
       "right": {
         "name": "University Colorado",
@@ -4495,8 +4495,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 94,
-        "documentCount": 72
+        "mentions": 95,
+        "documentCount": 73
       },
       "right": {
         "name": "Mohave Desert",
@@ -5167,13 +5167,13 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 88,
-        "documentCount": 73
+        "mentions": 90,
+        "documentCount": 75
       },
       "right": {
         "name": "George HW Bush",
-        "mentions": 7,
-        "documentCount": 6
+        "mentions": 8,
+        "documentCount": 7
       },
       "similarity": 0.88,
       "reason": "similar person name",
@@ -5284,8 +5284,8 @@
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
-        "mentions": 14,
-        "documentCount": 13
+        "mentions": 16,
+        "documentCount": 15
       },
       "similarity": 0.878,
       "reason": "similar person name",

@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-18T17:35:23Z",
+  "generatedAt": "2026-09-18T18:51:39Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "1440d760a768e8b472ee15c781c87ce106482852"
+    "revision": "d89ef89b7f03cb57dfd4d8b8369c289150cc7bde"
   },
-  "documentsWithCandidates": 10937,
+  "documentsWithCandidates": 10940,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -11201,6 +11201,30 @@
       ]
     },
     {
+      "documentId": "doc-a4eb4e5315c4",
+      "path": "Archives-for-the-Unexplained/documents/2018-08-28---FADE-TO-BLACK-Radio---Ep.-906-FADE-TO-BLACK-w-Alan-Green-LIVE_E4JqfR8QdSk---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Force",
+          "segment": 29
+        },
+        {
+          "value": "2018-08-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "today's Tuesday August 28 2018 241 days",
+          "segment": 61
+        }
+      ]
+    },
+    {
       "documentId": "doc-54fdca51771b",
       "path": "Archives-for-the-Unexplained/documents/2018-08-29---FADE-TO-BLACK-Radio---Ep.-906-FADE-to-BLACK-Jimmy-Church-w-Alan-Green-Dee-Coding-Shakespeare-LIVE_jIflwJ25Mmw---transcript-automated-.txt",
       "candidates": [
@@ -11458,6 +11482,21 @@
           "method": "relative-date-exclusion",
           "evidence": "between July 8 1947 these are the",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c507185c7428",
+      "path": "Archives-for-the-Unexplained/documents/2018-10-02---FADE-TO-BLACK-Radio---Ep.-852-FADE-to-BLACK-w-Nick-Pope-LIVE_GR5YLkXC8-o---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of the July 8 1947 the Army Air Force",
+          "segment": 43
         }
       ]
     },
@@ -26665,6 +26704,57 @@
           "method": "unclassified-mention",
           "evidence": "interested in trying to find out what did or did not happen in t he forest on 5 November 1975.",
           "segment": 219
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7c7f8bd9dd03",
+      "path": "Archives-for-the-Unexplained/documents/Magonia-Supplement---No-13---1999-03.txt",
+      "candidates": [
+        {
+          "value": "1999-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Editor: JOHN HARNEY No. 1 3 March 1999",
+          "segment": 1
+        },
+        {
+          "value": "1997-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The main part of his talk concerned the Burmarsh incident of 8 March 1997 and its apparently",
+          "segment": 29
+        },
+        {
+          "value": "1999-02-09",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "On 9 February 1999, Anderson received by mail a tape cassette, which be found to be a",
+          "segment": 43
+        },
+        {
+          "value": "1974-01-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At 8.30 p.m. on the evening of 23 January 1974 there was a loud explosion",
+          "segment": 84
+        },
+        {
+          "value": "1961-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 1 September 1961 the Soviet Union had ended its nuclear testing moratorium and exploded",
+          "segment": 178
         }
       ]
     },
