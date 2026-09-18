@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "762f3b3e5045f2a1938ee4bd8673a6ac294ab9ab"
+    "revision": "77f0d37247c5fe5d1c7ca4aff09d93d3a6fa1ad5"
   },
-  "count": 336,
-  "totalCount": 336,
-  "shownCount": 336,
+  "count": 337,
+  "totalCount": 337,
+  "shownCount": 337,
   "candidates": [
     {
       "category": "organization",
@@ -943,8 +943,8 @@
       "category": "person",
       "left": {
         "name": "Michael Shermer",
-        "mentions": 68,
-        "documentCount": 45
+        "mentions": 70,
+        "documentCount": 46
       },
       "right": {
         "name": "Michael Schermer",
@@ -1407,8 +1407,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 163,
-        "documentCount": 103
+        "mentions": 164,
+        "documentCount": 104
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -2143,8 +2143,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 135,
-        "documentCount": 37
+        "mentions": 136,
+        "documentCount": 38
       },
       "right": {
         "name": "Kings Island",
@@ -4837,6 +4837,22 @@
       "right": {
         "name": "Project PLUTO",
         "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Merced County",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Mercer County",
+        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.923,
