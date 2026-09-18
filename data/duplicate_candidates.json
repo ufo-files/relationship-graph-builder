@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "8522cbe9609c9c7d7c169a8d0b88fa1a905fe041"
+    "revision": "42e1b782e79f453769a1ae59e27669381d1b3efe"
   },
   "count": 338,
   "totalCount": 338,
@@ -415,8 +415,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 509,
-        "documentCount": 250
+        "mentions": 510,
+        "documentCount": 251
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -943,8 +943,8 @@
       "category": "person",
       "left": {
         "name": "Michael Shermer",
-        "mentions": 73,
-        "documentCount": 48
+        "mentions": 77,
+        "documentCount": 50
       },
       "right": {
         "name": "Michael Schermer",
@@ -1199,8 +1199,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 405,
-        "documentCount": 220
+        "mentions": 410,
+        "documentCount": 222
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1359,8 +1359,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 486,
-        "documentCount": 301
+        "mentions": 496,
+        "documentCount": 307
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1375,8 +1375,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 457,
-        "documentCount": 173
+        "mentions": 459,
+        "documentCount": 175
       },
       "right": {
         "name": "Jacques Valle",
@@ -1391,8 +1391,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 180,
-        "documentCount": 127
+        "mentions": 181,
+        "documentCount": 128
       },
       "right": {
         "name": "Flying Saucer",
@@ -1407,8 +1407,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 165,
-        "documentCount": 105
+        "mentions": 169,
+        "documentCount": 107
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -1679,8 +1679,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 108,
-        "documentCount": 81
+        "mentions": 109,
+        "documentCount": 82
       },
       "right": {
         "name": "George Noorey",
@@ -1868,6 +1868,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Jekyl Island",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Jekyll Island",
+        "mentions": 11,
+        "documentCount": 6
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Michael Salla",
@@ -1894,22 +1910,6 @@
         "name": "Bruce Cornet",
         "mentions": 6,
         "documentCount": 6
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Jekyl Island",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Jekyll Island",
-        "mentions": 10,
-        "documentCount": 5
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -3198,13 +3198,13 @@
     {
       "category": "organization",
       "left": {
-        "name": "Kansai University",
-        "mentions": 2,
-        "documentCount": 2
+        "name": "Kansas University",
+        "mentions": 5,
+        "documentCount": 3
       },
       "right": {
-        "name": "Kansas University",
-        "mentions": 3,
+        "name": "Kansai University",
+        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.941,
@@ -3983,8 +3983,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 457,
-        "documentCount": 173
+        "mentions": 459,
+        "documentCount": 175
       },
       "right": {
         "name": "Jacques Valley",
@@ -3999,8 +3999,8 @@
       "category": "person",
       "left": {
         "name": "Robert Bigelow",
-        "mentions": 226,
-        "documentCount": 121
+        "mentions": 228,
+        "documentCount": 123
       },
       "right": {
         "name": "Robert Bigalow",
@@ -4015,8 +4015,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 209,
-        "documentCount": 102
+        "mentions": 211,
+        "documentCount": 104
       },
       "right": {
         "name": "George Adamsky",
@@ -4124,6 +4124,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Jane Steinberg",
+        "mentions": 9,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "Jean Steinberg",
+        "mentions": 7,
+        "documentCount": 5
+      },
+      "similarity": 0.929,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "Project Orion",
@@ -4169,22 +4185,6 @@
       },
       "similarity": 0.929,
       "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Jane Steinberg",
-        "mentions": 9,
-        "documentCount": 8
-      },
-      "right": {
-        "name": "Jean Steinberg",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "similarity": 0.929,
-      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -4431,8 +4431,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 209,
-        "documentCount": 102
+        "mentions": 211,
+        "documentCount": 104
       },
       "right": {
         "name": "George Adams",
@@ -4943,8 +4943,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 140,
-        "documentCount": 91
+        "mentions": 144,
+        "documentCount": 92
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -5135,8 +5135,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 84,
-        "documentCount": 72
+        "mentions": 88,
+        "documentCount": 73
       },
       "right": {
         "name": "George HW Bush",
@@ -5156,8 +5156,8 @@
       },
       "right": {
         "name": "Daniel Sheehan",
-        "mentions": 37,
-        "documentCount": 25
+        "mentions": 41,
+        "documentCount": 26
       },
       "similarity": 0.88,
       "reason": "similar person name",
@@ -5295,8 +5295,8 @@
       "category": "person",
       "left": {
         "name": "Joseph Stalin",
-        "mentions": 15,
-        "documentCount": 14
+        "mentions": 16,
+        "documentCount": 15
       },
       "right": {
         "name": "Joe Stalin",
