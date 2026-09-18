@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-18T12:44:59Z",
+  "generatedAt": "2026-09-18T13:54:43Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "4f1ec3c4493bb3685af86c8ed579af4ba546e882"
+    "revision": "8522cbe9609c9c7d7c169a8d0b88fa1a905fe041"
   },
-  "documentsWithCandidates": 10912,
+  "documentsWithCandidates": 10917,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -11078,6 +11078,30 @@
       ]
     },
     {
+      "documentId": "doc-54fdca51771b",
+      "path": "Archives-for-the-Unexplained/documents/2018-08-29---FADE-TO-BLACK-Radio---Ep.-906-FADE-to-BLACK-Jimmy-Church-w-Alan-Green-Dee-Coding-Shakespeare-LIVE_jIflwJ25Mmw---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "believe July 8 1947 beyond the airport",
+          "segment": 5
+        },
+        {
+          "value": "2018-08-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "yeah man today's Tuesday August 28 2018",
+          "segment": 35
+        }
+      ]
+    },
+    {
       "documentId": "doc-73a883b3ebed",
       "path": "Archives-for-the-Unexplained/documents/2018-09-03---FADE-TO-BLACK-Radio---Ep.-909-FADE-TO-BLACK-w-Emery-Smith-LIVE_i8i7aRB-UxE---transcript-automated-.txt",
       "candidates": [
@@ -11296,6 +11320,21 @@
           "method": "relative-date-exclusion",
           "evidence": "between July 8 1947 here on the airport",
           "segment": 90
+        }
+      ]
+    },
+    {
+      "documentId": "doc-67f424af871c",
+      "path": "Archives-for-the-Unexplained/documents/2018-10-01---FADE-TO-BLACK-Radio---Ep.-925-FADE-TO-BLACK-w-Jim-Breslo-Las-Vegas-Shooting-One-Year-Later-LIVE_rEfPbHhuySE---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 these are the",
+          "segment": 4
         }
       ]
     },
@@ -11566,6 +11605,21 @@
           "method": "unclassified-mention",
           "evidence": "today's Monday November 26 2008 een",
           "segment": 38
+        }
+      ]
+    },
+    {
+      "documentId": "doc-76d49867cf88",
+      "path": "Archives-for-the-Unexplained/documents/2018-12-10---FADE-TO-BLACK-Radio---Ep.-962-FADE-to-BLACK-w-Billy-Carson-LIVE_951TL06-VBI---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "this new July 8 1947 here on the airport",
+          "segment": 4
         }
       ]
     },
@@ -27145,6 +27199,21 @@
           "method": "unclassified-mention",
           "evidence": "January 18, 1997, Dallas, Texas",
           "segment": 131
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9d73321e7615",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-12-No-04---1998.txt",
+      "candidates": [
+        {
+          "value": "1976-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On July 25, 1976, it photographed a region of buttes and mesas along the escarpment",
+          "segment": 7
         }
       ]
     },
@@ -278131,6 +278200,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On October 14, 2015, at approximately 1:25 AM, a witness is awakened by a deafening noise outside and observes through the bathroom window a bright white spherical object passing by, describing two large circles as it gradually moves away. No other testimonies were c",
           "segment": "seg-f9be2b41f6525b172e7abb96"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bf23100a6de27a401857eeae",
+      "path": "France-GEIPAN/paired/cases/2015-10-09345/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On October 28, 2015, at 4:30 a.m., a witness was intrigued by the presence in the southeastern sky of two very bright white points. During an observation lasting approximately thirty minutes, no unusual noises were heard. The two points moved little on a straight upw",
+          "segment": "seg-ad495ffaa4ba2343f93f00c8"
         }
       ]
     },
