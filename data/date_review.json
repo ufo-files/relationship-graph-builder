@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-18T05:44:27Z",
+  "generatedAt": "2026-09-18T06:54:08Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "903ea64378f7309afa3302bf6b95121e37bb4c43"
+    "revision": "736b8e79b5af191d3ac48fde36dbcab8f4c8a9b2"
   },
-  "documentsWithCandidates": 10885,
+  "documentsWithCandidates": 10888,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8845,6 +8845,21 @@
           "method": "unclassified-mention",
           "evidence": "Space Station on November 19 2016 along",
           "segment": 191
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ca228b0562ad",
+      "path": "Archives-for-the-Unexplained/documents/2017-06-08---FADE-TO-BLACK-Radio---Ep.-670-FADE-to-BLACK-the-Los-Angeles-DisclosureFest-LIVE_bnSZN4PNjkE---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Atlanta Bissell July 8 1947 the Army Air",
+          "segment": 4
         }
       ]
     },
@@ -26269,6 +26284,21 @@
           "method": "unclassified-mention",
           "evidence": "Reception : Saturday Evening September 28, 1991.",
           "segment": 55
+        }
+      ]
+    },
+    {
+      "documentId": "doc-36d2adc84641",
+      "path": "Archives-for-the-Unexplained/documents/News-Fortiane---No-06.txt",
+      "candidates": [
+        {
+          "value": "2000-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Il periodo che va dal 2 novembre 2000 al 24",
+          "segment": 33
         }
       ]
     },
@@ -258037,6 +258067,21 @@
           "method": "event-language",
           "evidence": "Description: On December 10, 1978, starting at 6:40 a.m., several witnesses, including gendarmes, observed a peculiar luminous phenomenon in the western sky. This phenomenon appeared to be moving in a pendular and ascending manner. It gradually diminished and disappeared around 9",
           "segment": "seg-ac70cffb935656b12446896d"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-951572024992c2d534c05e77",
+      "path": "France-GEIPAN/paired/cases/1978-12-00578/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1978-12-11",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On December 11, 1978, witnesses in several departments observed a bright phenomenon moving at high speed in the sky without any sound being heard. A trail was also spotted. The phenomenon suddenly disappeared. These people likely observed an atmospheric reentry.",
+          "segment": "seg-50557591c3dcba8829847326"
         }
       ]
     },
