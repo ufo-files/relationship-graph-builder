@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9705c33c57a70624caf7894011f1927f6d9b5c79"
+    "revision": "372c9c880b1262c501f0aadda378d570daa37490"
   },
   "count": 338,
   "totalCount": 338,
@@ -671,8 +671,8 @@
       "category": "location",
       "left": {
         "name": "Luke Air Force Base",
-        "mentions": 35,
-        "documentCount": 30
+        "mentions": 38,
+        "documentCount": 31
       },
       "right": {
         "name": "Luke Airforce Base",
@@ -1356,6 +1356,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Salt Lake City",
+        "mentions": 470,
+        "documentCount": 292
+      },
+      "right": {
+        "name": "Salt Lake Cit",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
@@ -1366,22 +1382,6 @@
         "name": "Jacques Valle",
         "mentions": 11,
         "documentCount": 4
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Salt Lake City",
-        "mentions": 465,
-        "documentCount": 289
-      },
-      "right": {
-        "name": "Salt Lake Cit",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -1679,8 +1679,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 100,
-        "documentCount": 74
+        "mentions": 102,
+        "documentCount": 76
       },
       "right": {
         "name": "George Noorey",
@@ -3999,8 +3999,8 @@
       "category": "person",
       "left": {
         "name": "Robert Bigelow",
-        "mentions": 225,
-        "documentCount": 120
+        "mentions": 226,
+        "documentCount": 121
       },
       "right": {
         "name": "Robert Bigalow",
@@ -4191,8 +4191,8 @@
       "category": "person",
       "left": {
         "name": "Jane Steinberg",
-        "mentions": 7,
-        "documentCount": 6
+        "mentions": 8,
+        "documentCount": 7
       },
       "right": {
         "name": "Jean Steinberg",
@@ -4975,8 +4975,8 @@
       "category": "person",
       "left": {
         "name": "Allen Greenfield",
-        "mentions": 12,
-        "documentCount": 9
+        "mentions": 13,
+        "documentCount": 10
       },
       "right": {
         "name": "Alan Greenfield",

@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-18T08:03:45Z",
+  "generatedAt": "2026-09-18T09:16:41Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9705c33c57a70624caf7894011f1927f6d9b5c79"
+    "revision": "372c9c880b1262c501f0aadda378d570daa37490"
   },
-  "documentsWithCandidates": 10894,
+  "documentsWithCandidates": 10897,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -11174,6 +11174,21 @@
       ]
     },
     {
+      "documentId": "doc-0d1a226e4754",
+      "path": "Archives-for-the-Unexplained/documents/2018-09-30---FADE-TO-BLACK-Radio---Ep.-890-FADE-TO-BLACK-w-Justin-Benson-Aaron-Moorhead-LIVE_YJuenfJmiWg---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 here on the airport",
+          "segment": 90
+        }
+      ]
+    },
+    {
       "documentId": "doc-0f12ca4704b2",
       "path": "Archives-for-the-Unexplained/documents/2018-10-02---FADE-TO-BLACK-Radio---Ep.-856-FADE-to-BLACK-w-Nick-Redfern-LIVE_xOTxfTt5mE4---transcript-automated-.txt",
       "candidates": [
@@ -12634,6 +12649,30 @@
           "method": "unclassified-mention",
           "evidence": "report filed on June 12 2014 in st.",
           "segment": 47
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e881babdb294",
+      "path": "Archives-for-the-Unexplained/documents/2020-06-24---FADE-TO-BLACK-Radio---June-24-2020-FADE-TO-BLACK-Live-Stream-F2B---RIZ-VIRK_N5f-Tr_8SJM---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-03",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "Atlanta between July 3 1947 beyond the",
+          "segment": 4
+        },
+        {
+          "value": "2001-12-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "finally revealed on December 30 2001 a",
+          "segment": 480
         }
       ]
     },
@@ -277255,6 +277294,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On February 9, 2015, between 8:00 PM and 11:00 PM, a witness observed a \"strange\" star that he described as stationary, red, green, and blue. The long observation (one hour) of a fixed object in the sky, appearing like a star, suggests a distant astronomical phenomen",
           "segment": "seg-a577274d177e6072cc66eece"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9435485e21ad82095a3bb27c",
+      "path": "France-GEIPAN/paired/cases/2015-03-09119/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-03-03",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On March 3, 2015, at 9:30 AM, a witness observed through a roof window a transparent sphere and a white, bright triangular object passing through a clear sky. Both objects disappeared towards the North on a straight trajectory. No particular noise was heard. The obse",
+          "segment": "seg-95501d23d22df424c4bd0fc7"
         }
       ]
     },
