@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a7e0cd35a6bd9cbfb5fc48563a2a9de4772bd705"
+    "revision": "a5f82b67f3a6c0b301b0d4313c349f92135864f6"
   },
-  "count": 348,
-  "totalCount": 348,
-  "shownCount": 348,
+  "count": 349,
+  "totalCount": 349,
+  "shownCount": 349,
   "candidates": [
     {
       "category": "organization",
@@ -367,8 +367,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 442,
-        "documentCount": 210
+        "mentions": 443,
+        "documentCount": 211
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1359,8 +1359,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 548,
-        "documentCount": 335
+        "mentions": 552,
+        "documentCount": 337
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1423,8 +1423,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 135,
-        "documentCount": 97
+        "mentions": 136,
+        "documentCount": 98
       },
       "right": {
         "name": "Bruce Macabee",
@@ -1518,14 +1518,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Michael Grosso",
-        "mentions": 7,
-        "documentCount": 6
+        "name": "Frank Kaufman",
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
-        "name": "Michael Gross",
-        "mentions": 3,
-        "documentCount": 2
+        "name": "Frank Kaufmann",
+        "mentions": 7,
+        "documentCount": 5
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -1534,14 +1534,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Frank Kaufman",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "Michael Grosso",
+        "mentions": 7,
+        "documentCount": 6
       },
       "right": {
-        "name": "Frank Kaufmann",
-        "mentions": 6,
-        "documentCount": 4
+        "name": "Michael Gross",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -1695,8 +1695,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 120,
-        "documentCount": 92
+        "mentions": 122,
+        "documentCount": 94
       },
       "right": {
         "name": "George Noorey",
@@ -1727,8 +1727,8 @@
       "category": "person",
       "left": {
         "name": "Philip Corso",
-        "mentions": 78,
-        "documentCount": 61
+        "mentions": 79,
+        "documentCount": 62
       },
       "right": {
         "name": "Colonel Phillip Corso",
@@ -2175,8 +2175,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 154,
-        "documentCount": 47
+        "mentions": 155,
+        "documentCount": 48
       },
       "right": {
         "name": "Kings Island",
@@ -2207,8 +2207,8 @@
       "category": "person",
       "left": {
         "name": "David Jacobs",
-        "mentions": 109,
-        "documentCount": 69
+        "mentions": 110,
+        "documentCount": 70
       },
       "right": {
         "name": "David Jacob",
@@ -3359,8 +3359,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 555,
-        "documentCount": 313
+        "mentions": 556,
+        "documentCount": 314
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4180,8 +4180,8 @@
       },
       "right": {
         "name": "Jean Steinberg",
-        "mentions": 18,
-        "documentCount": 15
+        "mentions": 19,
+        "documentCount": 16
       },
       "similarity": 0.929,
       "reason": "similar person name",
@@ -4415,8 +4415,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 442,
-        "documentCount": 210
+        "mentions": 443,
+        "documentCount": 211
       },
       "right": {
         "name": "University Colorado",
@@ -5176,6 +5176,22 @@
         "documentCount": 2
       },
       "similarity": 0.903,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Mark Kelly",
+        "mentions": 9,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Mary Kelly",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.9,
       "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
