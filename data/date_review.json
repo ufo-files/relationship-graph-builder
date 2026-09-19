@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-19T17:50:40Z",
+  "generatedAt": "2026-09-19T19:10:10Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "979db2c588cfeb48db48c1d0bf84c955342a71bd"
+    "revision": "e4066c3582dbc52c84b924738ffb55d0a9e1b85c"
   },
-  "documentsWithCandidates": 11022,
+  "documentsWithCandidates": 11025,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -4144,6 +4144,30 @@
           "method": "unclassified-mention",
           "evidence": "Newsweek, March 8, 1943, pp. 58-61.",
           "segment": 429
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7141f7828ad4",
+      "path": "Archives-for-the-Unexplained/documents/1989-00-00_Journal-of-American-Folklore---UFO-Abduction-Reports---Bullard.txt",
+      "candidates": [
+        {
+          "value": "1961-09-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the night of September 19, 1961, when Barney and Betty Hill drove home",
+          "segment": 82
+        },
+        {
+          "value": "1975-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Then on November 5, 1975, six members of an Arizona",
+          "segment": 124
         }
       ]
     },
@@ -9730,6 +9754,30 @@
           "method": "relative-date-exclusion",
           "evidence": "between July 8 1947 beyond the airport",
           "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-887569de0ade",
+      "path": "Archives-for-the-Unexplained/documents/2017-09-01---The-Official-Paracast-Channel---The-Paracast-May-19-2013-Robert-Hastings-with-Goggs-Mackay_1ylBbfVvlyY---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2008-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "was on Larry King Live on July 18 2008",
+          "segment": 4489
+        },
+        {
+          "value": "1967-03-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "incident at Echo flight on March 16 1967",
+          "segment": 4533
         }
       ]
     },
@@ -53668,6 +53716,39 @@
           "method": "unclassified-mention",
           "evidence": "On May 19, 1968, one year after Stephen Michalak's close encounter, he and a friend returned to the",
           "segment": 1771
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f9e136aa2c8c",
+      "path": "Archives-for-the-Unexplained/documents/WATSUP-UFO-Sightings-Supplement---1977-no-1.txt",
+      "candidates": [
+        {
+          "value": "1976-01-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "3.30 P.M. Tuesday 20 January 1976",
+          "segment": 7
+        },
+        {
+          "value": "1976-11-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "4.50 P.M. 6 November 1976",
+          "segment": 35
+        },
+        {
+          "value": "1976-09-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "7.15 P.M. 20 September 1976",
+          "segment": 55
         }
       ]
     },

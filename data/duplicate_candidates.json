@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "979db2c588cfeb48db48c1d0bf84c955342a71bd"
+    "revision": "e4066c3582dbc52c84b924738ffb55d0a9e1b85c"
   },
   "count": 351,
   "totalCount": 351,
@@ -367,8 +367,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 445,
-        "documentCount": 212
+        "mentions": 446,
+        "documentCount": 213
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -383,8 +383,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 263,
-        "documentCount": 148
+        "mentions": 264,
+        "documentCount": 149
       },
       "right": {
         "name": "Kirtland Airforce Base",
@@ -415,8 +415,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 516,
-        "documentCount": 255
+        "mentions": 517,
+        "documentCount": 256
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -671,8 +671,8 @@
       "category": "location",
       "left": {
         "name": "Luke Air Force Base",
-        "mentions": 38,
-        "documentCount": 31
+        "mentions": 39,
+        "documentCount": 32
       },
       "right": {
         "name": "Luke Airforce Base",
@@ -1215,8 +1215,8 @@
       "category": "location",
       "left": {
         "name": "White Mountains",
-        "mentions": 38,
-        "documentCount": 30
+        "mentions": 39,
+        "documentCount": 31
       },
       "right": {
         "name": "White Mountain",
@@ -1359,8 +1359,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 563,
-        "documentCount": 344
+        "mentions": 564,
+        "documentCount": 345
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1375,8 +1375,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 485,
-        "documentCount": 193
+        "mentions": 487,
+        "documentCount": 195
       },
       "right": {
         "name": "Jacques Valle",
@@ -1772,6 +1772,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Marin County",
+        "mentions": 17,
+        "documentCount": 15
+      },
+      "right": {
+        "name": "Marion County",
+        "mentions": 8,
+        "documentCount": 8
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Edgar Fouché",
@@ -1782,22 +1798,6 @@
         "name": "Edgar Fouchet",
         "mentions": 3,
         "documentCount": 2
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Marin County",
-        "mentions": 16,
-        "documentCount": 14
-      },
-      "right": {
-        "name": "Marion County",
-        "mentions": 8,
-        "documentCount": 8
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2111,8 +2111,8 @@
       "category": "location",
       "left": {
         "name": "Malmstrom Air Force Base",
-        "mentions": 133,
-        "documentCount": 76
+        "mentions": 135,
+        "documentCount": 77
       },
       "right": {
         "name": "Maelstrom Air Force Base",
@@ -2143,8 +2143,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 263,
-        "documentCount": 148
+        "mentions": 264,
+        "documentCount": 149
       },
       "right": {
         "name": "Kirkland Air Force Base",
@@ -2159,8 +2159,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 263,
-        "documentCount": 148
+        "mentions": 264,
+        "documentCount": 149
       },
       "right": {
         "name": "Kirtland Alr Force Base",
@@ -3375,8 +3375,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 571,
-        "documentCount": 325
+        "mentions": 574,
+        "documentCount": 326
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4127,8 +4127,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 485,
-        "documentCount": 193
+        "mentions": 487,
+        "documentCount": 195
       },
       "right": {
         "name": "Jacques Valley",
@@ -4191,8 +4191,8 @@
       "category": "person",
       "left": {
         "name": "Jane Steinberg",
-        "mentions": 33,
-        "documentCount": 26
+        "mentions": 36,
+        "documentCount": 29
       },
       "right": {
         "name": "Jean Steinberg",
@@ -4447,8 +4447,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 445,
-        "documentCount": 212
+        "mentions": 446,
+        "documentCount": 213
       },
       "right": {
         "name": "University Colorado",
@@ -4830,6 +4830,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Robert Simpson",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Robert Simon",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Daniel Goldin",
         "mentions": 6,
         "documentCount": 5
@@ -4885,22 +4901,6 @@
       "right": {
         "name": "Office of Info",
         "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Robert Simpson",
-        "mentions": 5,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Robert Simon",
-        "mentions": 4,
         "documentCount": 2
       },
       "similarity": 0.923,
@@ -5167,13 +5167,13 @@
       "category": "person",
       "left": {
         "name": "Allen Greenfield",
-        "mentions": 18,
-        "documentCount": 14
+        "mentions": 24,
+        "documentCount": 15
       },
       "right": {
         "name": "Alan Greenfield",
-        "mentions": 4,
-        "documentCount": 3
+        "mentions": 8,
+        "documentCount": 4
       },
       "similarity": 0.903,
       "reason": "similar person name",
@@ -5247,8 +5247,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Bassett",
-        "mentions": 38,
-        "documentCount": 34
+        "mentions": 39,
+        "documentCount": 35
       },
       "right": {
         "name": "Steven Bassett",
@@ -5343,8 +5343,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 91,
-        "documentCount": 76
+        "mentions": 92,
+        "documentCount": 77
       },
       "right": {
         "name": "George HW Bush",
