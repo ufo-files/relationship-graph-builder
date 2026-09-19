@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "f9c08bd20744bc547bd97978f34118b8e5e957c9"
+    "revision": "2d8fccafa178820249cff0ab34b44d4be2005975"
   },
   "count": 350,
   "totalCount": 350,
@@ -111,8 +111,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 624,
-        "documentCount": 404
+        "mentions": 625,
+        "documentCount": 405
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -127,8 +127,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 624,
-        "documentCount": 404
+        "mentions": 625,
+        "documentCount": 405
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -383,8 +383,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 260,
-        "documentCount": 146
+        "mentions": 261,
+        "documentCount": 147
       },
       "right": {
         "name": "Kirtland Airforce Base",
@@ -415,8 +415,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 513,
-        "documentCount": 253
+        "mentions": 514,
+        "documentCount": 254
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -655,8 +655,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 206,
-        "documentCount": 130
+        "mentions": 208,
+        "documentCount": 131
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -895,8 +895,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 624,
-        "documentCount": 404
+        "mentions": 625,
+        "documentCount": 405
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -911,8 +911,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 624,
-        "documentCount": 404
+        "mentions": 625,
+        "documentCount": 405
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -927,8 +927,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 624,
-        "documentCount": 404
+        "mentions": 625,
+        "documentCount": 405
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -991,8 +991,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Freeman",
-        "mentions": 17,
-        "documentCount": 16
+        "mentions": 18,
+        "documentCount": 17
       },
       "right": {
         "name": "Stanton Freedman",
@@ -1199,8 +1199,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 422,
-        "documentCount": 229
+        "mentions": 426,
+        "documentCount": 231
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1359,8 +1359,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 556,
-        "documentCount": 340
+        "mentions": 558,
+        "documentCount": 341
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1375,8 +1375,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 475,
-        "documentCount": 186
+        "mentions": 477,
+        "documentCount": 188
       },
       "right": {
         "name": "Jacques Valle",
@@ -1423,8 +1423,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 137,
-        "documentCount": 99
+        "mentions": 139,
+        "documentCount": 101
       },
       "right": {
         "name": "Bruce Macabee",
@@ -1695,8 +1695,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 123,
-        "documentCount": 95
+        "mentions": 126,
+        "documentCount": 98
       },
       "right": {
         "name": "George Noorey",
@@ -1727,8 +1727,8 @@
       "category": "person",
       "left": {
         "name": "Philip Corso",
-        "mentions": 81,
-        "documentCount": 63
+        "mentions": 82,
+        "documentCount": 64
       },
       "right": {
         "name": "Colonel Phillip Corso",
@@ -1764,8 +1764,24 @@
       },
       "right": {
         "name": "Edgar Fouché",
-        "mentions": 21,
-        "documentCount": 12
+        "mentions": 22,
+        "documentCount": 13
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Edgar Fouché",
+        "mentions": 22,
+        "documentCount": 13
+      },
+      "right": {
+        "name": "Edgar Fouchet",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -1782,22 +1798,6 @@
         "name": "Marion County",
         "mentions": 8,
         "documentCount": 8
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Edgar Fouché",
-        "mentions": 21,
-        "documentCount": 12
-      },
-      "right": {
-        "name": "Edgar Fouchet",
-        "mentions": 3,
-        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -1854,14 +1854,14 @@
     {
       "category": "location",
       "left": {
-        "name": "Red Mountain",
-        "mentions": 6,
-        "documentCount": 4
+        "name": "Jekyl Island",
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
-        "name": "Read Mountain",
-        "mentions": 9,
-        "documentCount": 5
+        "name": "Jekyll Island",
+        "mentions": 14,
+        "documentCount": 9
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -1870,14 +1870,14 @@
     {
       "category": "location",
       "left": {
-        "name": "Jekyl Island",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "Red Mountain",
+        "mentions": 6,
+        "documentCount": 4
       },
       "right": {
-        "name": "Jekyll Island",
-        "mentions": 12,
-        "documentCount": 7
+        "name": "Read Mountain",
+        "mentions": 9,
+        "documentCount": 5
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -1918,6 +1918,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Bruce Cornett",
+        "mentions": 8,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Bruce Cornet",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Michael Wolfe",
         "mentions": 8,
         "documentCount": 7
@@ -1941,22 +1957,6 @@
       "right": {
         "name": "Mike Cleland",
         "mentions": 10,
-        "documentCount": 6
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Bruce Cornett",
-        "mentions": 7,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Bruce Cornet",
-        "mentions": 6,
         "documentCount": 6
       },
       "similarity": 0.96,
@@ -2143,8 +2143,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 260,
-        "documentCount": 146
+        "mentions": 261,
+        "documentCount": 147
       },
       "right": {
         "name": "Kirkland Air Force Base",
@@ -2159,8 +2159,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 260,
-        "documentCount": 146
+        "mentions": 261,
+        "documentCount": 147
       },
       "right": {
         "name": "Kirtland Alr Force Base",
@@ -2975,8 +2975,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 206,
-        "documentCount": 130
+        "mentions": 208,
+        "documentCount": 131
       },
       "right": {
         "name": "Linda Moulton Howell",
@@ -3375,8 +3375,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 558,
-        "documentCount": 316
+        "mentions": 562,
+        "documentCount": 319
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4111,8 +4111,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 475,
-        "documentCount": 186
+        "mentions": 477,
+        "documentCount": 188
       },
       "right": {
         "name": "Jacques Valley",
@@ -4191,13 +4191,13 @@
       "category": "person",
       "left": {
         "name": "Jane Steinberg",
-        "mentions": 21,
-        "documentCount": 18
+        "mentions": 24,
+        "documentCount": 20
       },
       "right": {
         "name": "Jean Steinberg",
-        "mentions": 19,
-        "documentCount": 16
+        "mentions": 20,
+        "documentCount": 17
       },
       "similarity": 0.929,
       "reason": "similar person name",
@@ -4607,8 +4607,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 96,
-        "documentCount": 74
+        "mentions": 97,
+        "documentCount": 75
       },
       "right": {
         "name": "Mohave Desert",
@@ -4876,6 +4876,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Robert Simpson",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Robert Simon",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "Project Sine",
@@ -4950,22 +4966,6 @@
         "name": "Madison County",
         "mentions": 5,
         "documentCount": 5
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Robert Simpson",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Robert Simon",
-        "mentions": 4,
-        "documentCount": 2
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -5374,14 +5374,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Steven Tango",
-        "mentions": 11,
-        "documentCount": 6
+        "name": "Jane Goodall",
+        "mentions": 6,
+        "documentCount": 5
       },
       "right": {
-        "name": "Stephen Tango",
-        "mentions": 4,
-        "documentCount": 4
+        "name": "James Goodall",
+        "mentions": 10,
+        "documentCount": 7
       },
       "similarity": 0.88,
       "reason": "similar person name",
@@ -5390,14 +5390,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Jane Goodall",
-        "mentions": 6,
-        "documentCount": 5
+        "name": "Steven Tango",
+        "mentions": 11,
+        "documentCount": 6
       },
       "right": {
-        "name": "James Goodall",
-        "mentions": 9,
-        "documentCount": 6
+        "name": "Stephen Tango",
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.88,
       "reason": "similar person name",
@@ -5439,8 +5439,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 206,
-        "documentCount": 130
+        "mentions": 208,
+        "documentCount": 131
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
@@ -5471,8 +5471,8 @@
       "category": "person",
       "left": {
         "name": "Dan Wilson",
-        "mentions": 748,
-        "documentCount": 573
+        "mentions": 750,
+        "documentCount": 574
       },
       "right": {
         "name": "Daniel Wilson",
