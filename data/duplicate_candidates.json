@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "55b7718f5bf876ddca73e9eb9c723bed60d75774"
+    "revision": "bf610a2bab9573dd552384e97d31861fbefe6feb"
   },
-  "count": 343,
-  "totalCount": 343,
-  "shownCount": 343,
+  "count": 346,
+  "totalCount": 346,
+  "shownCount": 346,
   "candidates": [
     {
       "category": "organization",
@@ -607,8 +607,8 @@
       "category": "government_agency",
       "left": {
         "name": "Public Record Office",
-        "mentions": 15,
-        "documentCount": 8
+        "mentions": 16,
+        "documentCount": 9
       },
       "right": {
         "name": "Public Records Office",
@@ -943,8 +943,8 @@
       "category": "person",
       "left": {
         "name": "Michael Shermer",
-        "mentions": 77,
-        "documentCount": 50
+        "mentions": 78,
+        "documentCount": 51
       },
       "right": {
         "name": "Michael Schermer",
@@ -1071,8 +1071,8 @@
       "category": "location",
       "left": {
         "name": "Rogers Dry Lake",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
         "name": "Rodgers Dry Lake",
@@ -1199,8 +1199,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 418,
-        "documentCount": 225
+        "mentions": 419,
+        "documentCount": 226
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1359,8 +1359,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 529,
-        "documentCount": 325
+        "mentions": 534,
+        "documentCount": 328
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1375,12 +1375,28 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 465,
-        "documentCount": 180
+        "mentions": 469,
+        "documentCount": 181
       },
       "right": {
         "name": "Jacques Valle",
         "mentions": 11,
+        "documentCount": 4
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Donald Keyhoe",
+        "mentions": 183,
+        "documentCount": 113
+      },
+      "right": {
+        "name": "Major Donald Keyhole",
+        "mentions": 6,
         "documentCount": 4
       },
       "similarity": 0.963,
@@ -1398,22 +1414,6 @@
         "name": "Flying Saucer",
         "mentions": 1,
         "documentCount": 1
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Donald Keyhoe",
-        "mentions": 179,
-        "documentCount": 112
-      },
-      "right": {
-        "name": "Major Donald Keyhole",
-        "mentions": 6,
-        "documentCount": 4
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -1695,8 +1695,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 117,
-        "documentCount": 89
+        "mentions": 118,
+        "documentCount": 90
       },
       "right": {
         "name": "George Noorey",
@@ -1711,8 +1711,8 @@
       "category": "person",
       "left": {
         "name": "Timothy Good",
-        "mentions": 83,
-        "documentCount": 48
+        "mentions": 84,
+        "documentCount": 49
       },
       "right": {
         "name": "Timothy Goods",
@@ -1988,8 +1988,8 @@
       },
       "right": {
         "name": "Michael Salah",
-        "mentions": 6,
-        "documentCount": 6
+        "mentions": 8,
+        "documentCount": 7
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2004,8 +2004,8 @@
       },
       "right": {
         "name": "James Moseley",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2191,8 +2191,8 @@
       "category": "program",
       "left": {
         "name": "Project Sign",
-        "mentions": 121,
-        "documentCount": 73
+        "mentions": 126,
+        "documentCount": 74
       },
       "right": {
         "name": "Project SIG",
@@ -3084,6 +3084,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Clinton County AFB",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Clinton County AAF",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "University of Oslo",
@@ -3110,6 +3126,22 @@
         "name": "Post Intelligencer",
         "mentions": 4,
         "documentCount": 3
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Clinton County AFB",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Clinton County AAB",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.944,
       "reason": "similar name",
@@ -3288,6 +3320,22 @@
         "documentCount": 2
       },
       "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Intelligence Report",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Air Intelligence Report No",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "similarity": 0.939,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -3951,8 +3999,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 303,
-        "documentCount": 129
+        "mentions": 304,
+        "documentCount": 130
       },
       "right": {
         "name": "Department of the Army",
@@ -4047,8 +4095,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 465,
-        "documentCount": 180
+        "mentions": 469,
+        "documentCount": 181
       },
       "right": {
         "name": "Jacques Valley",
@@ -4079,8 +4127,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 215,
-        "documentCount": 108
+        "mentions": 217,
+        "documentCount": 109
       },
       "right": {
         "name": "George Adamsky",
@@ -4095,8 +4143,8 @@
       "category": "person",
       "left": {
         "name": "Richard Haines",
-        "mentions": 69,
-        "documentCount": 49
+        "mentions": 71,
+        "documentCount": 50
       },
       "right": {
         "name": "Richard Haynes",
@@ -4143,13 +4191,13 @@
       "category": "person",
       "left": {
         "name": "Jane Steinberg",
-        "mentions": 15,
-        "documentCount": 13
+        "mentions": 16,
+        "documentCount": 14
       },
       "right": {
         "name": "Jean Steinberg",
-        "mentions": 13,
-        "documentCount": 10
+        "mentions": 14,
+        "documentCount": 11
       },
       "similarity": 0.929,
       "reason": "similar person name",
@@ -4367,8 +4415,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 303,
-        "documentCount": 129
+        "mentions": 304,
+        "documentCount": 130
       },
       "right": {
         "name": "DEPARTMENT OF THE AL",
@@ -4495,8 +4543,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 215,
-        "documentCount": 108
+        "mentions": 217,
+        "documentCount": 109
       },
       "right": {
         "name": "George Adams",
@@ -4612,8 +4660,24 @@
       },
       "right": {
         "name": "Michael Salah",
-        "mentions": 6,
+        "mentions": 8,
+        "documentCount": 7
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Michael Saleh",
+        "mentions": 8,
         "documentCount": 6
+      },
+      "right": {
+        "name": "Michael Salah",
+        "mentions": 8,
+        "documentCount": 7
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -4646,22 +4710,6 @@
         "name": "Directorate of Air",
         "mentions": 12,
         "documentCount": 7
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Michael Saleh",
-        "mentions": 8,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "Michael Salah",
-        "mentions": 6,
-        "documentCount": 6
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -5103,8 +5151,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 152,
-        "documentCount": 95
+        "mentions": 154,
+        "documentCount": 96
       },
       "right": {
         "name": "Steven Hawking",
@@ -5294,6 +5342,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Mike Williams",
+        "mentions": 10,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Ken Williams",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.88,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Stephen Jones",
         "mentions": 5,
         "documentCount": 4
@@ -5310,30 +5374,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Mike Williams",
-        "mentions": 8,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Ken Williams",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.88,
-      "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
         "name": "Linda Moulton Howe",
         "mentions": 205,
         "documentCount": 129
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
-        "mentions": 16,
-        "documentCount": 15
+        "mentions": 17,
+        "documentCount": 16
       },
       "similarity": 0.878,
       "reason": "similar person name",
