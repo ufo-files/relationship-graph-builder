@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-19T15:11:27Z",
+  "generatedAt": "2026-09-19T16:31:44Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "12831d86ecd73314740b5af5a5fef77fe389b693"
+    "revision": "8dcae39298552b6c1efb5b70238fc0c456fb0ec5"
   },
-  "documentsWithCandidates": 11018,
+  "documentsWithCandidates": 11020,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -11288,6 +11288,21 @@
       ]
     },
     {
+      "documentId": "doc-c1c3c31c98ab",
+      "path": "Archives-for-the-Unexplained/documents/2018-03-14---FADE-TO-BLACK-Radio---Ep.-820-FADE-to-BLACK-Jimmy-Church-w-Grant-Cameron-Analyzes-the-Go-Fast-Tom-DeLonge-UFO-LIVE_kN0R15Hg-B8---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 she's on the air",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-e67b8174ff02",
       "path": "Archives-for-the-Unexplained/documents/2018-03-17---Inception-Radio-Network---UFO-Headline-News-Monday-March-12th-2018_M0Ic1kMCnc8---transcript-automated-.txt",
       "candidates": [
@@ -11944,6 +11959,21 @@
           "method": "unclassified-mention",
           "evidence": "March 13 2011 okay 9:00 at night just",
           "segment": 3085
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1a1861df95de",
+      "path": "Archives-for-the-Unexplained/documents/2018-07-31---FADE-TO-BLACK-Radio---Ep.-896-FADE-to-BLACK-Jimmy-Church-w-Claudia-Ackley-CA-Bigfoot-Lawsuit-LIVE_1MZ2lkDeqMY---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 you're on the air",
+          "segment": 5
         }
       ]
     },
