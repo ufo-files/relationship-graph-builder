@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-19T21:50:08Z",
+  "generatedAt": "2026-09-19T23:09:41Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "55fdcaf75ddf6da52efadef71a7d7fc96d53ac71"
+    "revision": "308e40c0022f3241e781c867e43139e4800fff5e"
   },
-  "documentsWithCandidates": 11032,
+  "documentsWithCandidates": 11034,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9895,6 +9895,21 @@
           "method": "relative-date-exclusion",
           "evidence": "it's you know since December 7 1941",
           "segment": 678
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e70c4acbfd44",
+      "path": "Archives-for-the-Unexplained/documents/2017-09-13---The-Official-Paracast-Channel---The-Paracast-May-15-2011-Tim-Mr.-UFO-Beckley-and-Tim-Swartz_p8NVBSxjh38---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1911-12-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "number 9 December 1911 shows I don't",
+          "segment": 1409
         }
       ]
     },
@@ -202852,6 +202867,21 @@
           "method": "unclassified-mention",
           "evidence": "Video 2026-07-12 at 02.06.05.mp4”, cuyo metadato confirmó que fue alterado por",
           "segment": 21
+        }
+      ]
+    },
+    {
+      "documentId": "doc-033d42245276",
+      "path": "Chile-SEFAA/documents/CASO-N--2267-29072026.txt",
+      "candidates": [
+        {
+          "value": "2026-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Junto al reporte se ingresó el archivo “WhatsApp Image 2026-07-29 at",
+          "segment": 9
         }
       ]
     },
