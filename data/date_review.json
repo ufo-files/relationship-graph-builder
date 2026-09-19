@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-19T16:31:44Z",
+  "generatedAt": "2026-09-19T17:50:40Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "8dcae39298552b6c1efb5b70238fc0c456fb0ec5"
+    "revision": "979db2c588cfeb48db48c1d0bf84c955342a71bd"
   },
-  "documentsWithCandidates": 11020,
+  "documentsWithCandidates": 11022,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9730,6 +9730,30 @@
           "method": "relative-date-exclusion",
           "evidence": "between July 8 1947 beyond the airport",
           "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1000e08c4fca",
+      "path": "Archives-for-the-Unexplained/documents/2017-09-02---The-Official-Paracast-Channel---The-Paracast-February-17-2013-Stan-Gordon_ipfAL4Wu7gw---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1974-02-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "February 6 1974 it's a very interesting",
+          "segment": 1631
+        },
+        {
+          "value": "2011-03-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "whatever but anyhow March 18 2011",
+          "segment": 4863
         }
       ]
     },
@@ -44104,6 +44128,57 @@
           "method": "unclassified-mention",
           "evidence": "Police are playing down the sighting saying it may England, July 19, 1995.",
           "segment": 80
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3682afeebace",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Potpourri-No-401.txt",
+      "candidates": [
+        {
+          "value": "1996-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "From: Machine Design, February 22, 1996 aircraft. the system is considerably cheaper than",
+          "segment": 3
+        },
+        {
+          "value": "1963-11-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "From: Missiles and Rockets, November 25, 1963",
+          "segment": 30
+        },
+        {
+          "value": "1995-10-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "From: London Sunday Times, 15 October 1995 years.",
+          "segment": 66
+        },
+        {
+          "value": "1995-10-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "From: Doncaster Star, 16 October 1995 minute, and then telephoned the local police",
+          "segment": 105
+        },
+        {
+          "value": "1995-10-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "o An official U.S. government statement is From: London Sunday People, 8 October 1995",
+          "segment": 113
         }
       ]
     },
