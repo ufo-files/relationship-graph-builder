@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d154d44831814b4fd426fcef01e09f0a5ea0340c"
+    "revision": "a72a7e623a93260e14cee4e7d7e6f862aa37e955"
   },
-  "count": 346,
-  "totalCount": 346,
-  "shownCount": 346,
+  "count": 348,
+  "totalCount": 348,
+  "shownCount": 348,
   "candidates": [
     {
       "category": "organization",
@@ -367,8 +367,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 441,
-        "documentCount": 209
+        "mentions": 442,
+        "documentCount": 210
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -415,8 +415,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 510,
-        "documentCount": 251
+        "mentions": 512,
+        "documentCount": 252
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -1199,8 +1199,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 420,
-        "documentCount": 227
+        "mentions": 421,
+        "documentCount": 228
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1359,8 +1359,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 540,
-        "documentCount": 331
+        "mentions": 546,
+        "documentCount": 334
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1391,8 +1391,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 183,
-        "documentCount": 113
+        "mentions": 185,
+        "documentCount": 114
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -1695,8 +1695,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 118,
-        "documentCount": 90
+        "mentions": 120,
+        "documentCount": 92
       },
       "right": {
         "name": "George Noorey",
@@ -1934,13 +1934,13 @@
     {
       "category": "person",
       "left": {
-        "name": "Bruce Cornett",
-        "mentions": 7,
-        "documentCount": 4
+        "name": "Mike Clelland",
+        "mentions": 3,
+        "documentCount": 2
       },
       "right": {
-        "name": "Bruce Cornet",
-        "mentions": 6,
+        "name": "Mike Cleland",
+        "mentions": 10,
         "documentCount": 6
       },
       "similarity": 0.96,
@@ -1950,14 +1950,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Mike Clelland",
-        "mentions": 3,
-        "documentCount": 2
+        "name": "Bruce Cornett",
+        "mentions": 7,
+        "documentCount": 4
       },
       "right": {
-        "name": "Mike Cleland",
-        "mentions": 9,
-        "documentCount": 5
+        "name": "Bruce Cornet",
+        "mentions": 6,
+        "documentCount": 6
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2175,8 +2175,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 153,
-        "documentCount": 46
+        "mentions": 154,
+        "documentCount": 47
       },
       "right": {
         "name": "Kings Island",
@@ -2414,6 +2414,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Ken Johnston",
+        "mentions": 9,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Ken Johnson",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Peter Levin",
         "mentions": 8,
         "documentCount": 7
@@ -2438,22 +2454,6 @@
         "name": "George Adams",
         "mentions": 5,
         "documentCount": 4
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Ken Johnston",
-        "mentions": 8,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Ken Johnson",
-        "mentions": 4,
-        "documentCount": 3
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -3359,8 +3359,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 544,
-        "documentCount": 308
+        "mentions": 551,
+        "documentCount": 310
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4174,6 +4174,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Jane Steinberg",
+        "mentions": 21,
+        "documentCount": 18
+      },
+      "right": {
+        "name": "Jean Steinberg",
+        "mentions": 16,
+        "documentCount": 13
+      },
+      "similarity": 0.929,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Timothy Beckley",
         "mentions": 20,
         "documentCount": 19
@@ -4190,22 +4206,6 @@
     {
       "category": "person",
       "left": {
-        "name": "Jane Steinberg",
-        "mentions": 19,
-        "documentCount": 16
-      },
-      "right": {
-        "name": "Jean Steinberg",
-        "mentions": 15,
-        "documentCount": 12
-      },
-      "similarity": 0.929,
-      "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
         "name": "John Ratcliffe",
         "mentions": 22,
         "documentCount": 15
@@ -4214,6 +4214,22 @@
         "name": "John Radcliffe",
         "mentions": 3,
         "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Donald Schmidt",
+        "mentions": 9,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Donald Schmitt",
+        "mentions": 13,
+        "documentCount": 3
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -4399,8 +4415,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 441,
-        "documentCount": 209
+        "mentions": 442,
+        "documentCount": 210
       },
       "right": {
         "name": "University Colorado",
@@ -4575,8 +4591,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 95,
-        "documentCount": 73
+        "mentions": 96,
+        "documentCount": 74
       },
       "right": {
         "name": "Mohave Desert",
@@ -4646,6 +4662,22 @@
         "name": "Project SLork",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Aerospace Engineer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Aerospace Engineering",
+        "mentions": 17,
+        "documentCount": 16
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -5151,8 +5183,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 154,
-        "documentCount": 96
+        "mentions": 155,
+        "documentCount": 97
       },
       "right": {
         "name": "Steven Hawking",
