@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-19T19:10:10Z",
+  "generatedAt": "2026-09-19T20:29:34Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e4066c3582dbc52c84b924738ffb55d0a9e1b85c"
+    "revision": "180caacfc7ec22d5a85682258d6bcf30af28e9e6"
   },
-  "documentsWithCandidates": 11025,
+  "documentsWithCandidates": 11029,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -11371,6 +11371,21 @@
           "method": "relative-date-exclusion",
           "evidence": "between July 8 1947 she's on the air",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5af5beb9ef71",
+      "path": "Archives-for-the-Unexplained/documents/2018-03-15---FADE-TO-BLACK-Radio---Ep.-821-FADE-to-BLACK-Jimmy-Church-w-Tim-Ray-United-Intentions-host-LIVE_Yj2IB1YOrB4---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Force",
+          "segment": 5
         }
       ]
     },
@@ -31676,6 +31691,48 @@
       ]
     },
     {
+      "documentId": "doc-c06669967964",
+      "path": "Archives-for-the-Unexplained/documents/PV-n-842-1980308478-.txt",
+      "candidates": [
+        {
+          "value": "1968-08-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "REFERENCE : C•M. N° 32.600 HA/GEND.I. du 2 août 1968.",
+          "segment": 3
+        },
+        {
+          "value": "1980-08-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "29 août 1980 à 20 heures 50g",
+          "segment": 7
+        },
+        {
+          "value": "1980-08-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "--- Le 29 août 1980 à 20 heures 50, je me trouvais sur la terrasse de ma résiden-",
+          "segment": 12
+        },
+        {
+          "value": "1900-08-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "volant non identifié aperçu le 29 août 1900 à 20 heures 50",
+          "segment": 55
+        }
+      ]
+    },
+    {
       "documentId": "doc-9ce0442b1288",
       "path": "Archives-for-the-Unexplained/documents/PV-n-882-1993307738-.txt",
       "candidates": [
@@ -33430,6 +33487,48 @@
           "method": "context-exclusion",
           "evidence": "July 8, 1947, and published in the July 9 edition, Brazel first discovered the unusual debris on",
           "segment": 313
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8e0c83fa40d7",
+      "path": "Archives-for-the-Unexplained/documents/SUN-45-May-1997-.txt",
+      "candidates": [
+        {
+          "value": "1994-03-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and SUN's editor) on March 25, 1994, when Randle/Schmitt \"unveiled\" the then-new impact",
+          "segment": 24
+        },
+        {
+          "value": "1995-04-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "R/S could oever have imagined that little more than two years later- -oo April 15, 1995--",
+          "segment": 67
+        },
+        {
+          "value": "1996-07-15",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Incident for an article for the July 15, 1996, issue of Forbes magazine (which was headlined",
+          "segment": 105
+        },
+        {
+          "value": "1947-12-30",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "1) By letter dated 30 December 1947 from the Director of Research and Development",
+          "segment": 179
         }
       ]
     },
@@ -277468,6 +277567,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: Witnesses reported their observations on May 6, 2012, between 11:00 PM and 11:30 PM of the silent movement of several orange glowing points. The phenomenon appears to fade out and disappears after several minutes of observation. The appearance of the lights (orange b",
           "segment": "seg-15aeabe74116b1595c7a62b1"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-46eed5e4bf4fea31846d4dca",
+      "path": "France-GEIPAN/paired/cases/2012-05-08245/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-05-28",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: An amateur astronomer observed the sky towards Mars on Monday, May 28, 2012, at 1:10 a.m., and suddenly noticed the passage of a white streak followed by a red-orange fireball. The phenomenon then disappeared, hidden by the church roof to the northwest. A muffled det",
+          "segment": "seg-ca2f19ba5c65eb6412681a18"
         }
       ]
     },
