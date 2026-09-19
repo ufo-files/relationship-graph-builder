@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-18T23:49:37Z",
+  "generatedAt": "2026-09-19T01:03:56Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "889beea6e1655cbd6f63433af0cfb80c6dcdd00a"
+    "revision": "55b7718f5bf876ddca73e9eb9c723bed60d75774"
   },
-  "documentsWithCandidates": 10958,
+  "documentsWithCandidates": 10960,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -11392,6 +11392,39 @@
           "method": "unclassified-mention",
           "evidence": "occurred on November 17 1986 and then it",
           "segment": 2854
+        }
+      ]
+    },
+    {
+      "documentId": "doc-346c21e8ccd1",
+      "path": "Archives-for-the-Unexplained/documents/2018-09-26---FADE-TO-BLACK-Radio---Ep.-922-FADE-to-BLACK-Jimmy-Church-w-John-Greenewald-To-The-Stars-AATIP-JAL1628-UFO-LIVE_ojMvFwgAaoY---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Force",
+          "segment": 4
+        },
+        {
+          "value": "2001-06-27",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "dated June 27 2001 I've got it all in",
+          "segment": 1702
+        },
+        {
+          "value": "1986-11-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "event occurred on November 17 1986 and",
+          "segment": 2838
         }
       ]
     },
@@ -23824,6 +23857,84 @@
           "method": "unclassified-mention",
           "evidence": "htp:M:24.com/2013-09-23/18:2112049.59-8.5148",
           "segment": 13
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d052462548f5",
+      "path": "Archives-for-the-Unexplained/documents/Flying-Saucer-Digest---No-166---2004.txt",
+      "candidates": [
+        {
+          "value": "2004-04-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Standard, Terrace, B.C. April 7, 2004.",
+          "segment": 82
+        },
+        {
+          "value": "2004-04-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Source: The Liverpool Daily Post April 15, 2004.",
+          "segment": 150
+        },
+        {
+          "value": "2004-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Source: Joe Danborn, The Mobile Register April 14, 2004 via A. Etheredge.",
+          "segment": 188
+        },
+        {
+          "value": "2004-06-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "circle ship with small red lights on the bottom on June 9, 2004.",
+          "segment": 209
+        },
+        {
+          "value": "2004-06-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "moving west with the sun reflecting off its surface on June 12, 2004.",
+          "segment": 216
+        },
+        {
+          "value": "2004-06-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 15, 2004, so he grabbed his camcorder and saw something with three",
+          "segment": 231
+        },
+        {
+          "value": "2004-06-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on June 16, 2004, when they saw an egg-shaped object which sat stationary",
+          "segment": 250
+        },
+        {
+          "value": "2004-05-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "aluminum rectangular object 0n Thursday evening May 26, 2004, at 6:50",
+          "segment": 263
         }
       ]
     },
