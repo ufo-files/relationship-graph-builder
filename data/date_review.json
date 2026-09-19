@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-19T02:20:29Z",
+  "generatedAt": "2026-09-19T03:35:42Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "bf610a2bab9573dd552384e97d31861fbefe6feb"
+    "revision": "d154d44831814b4fd426fcef01e09f0a5ea0340c"
   },
-  "documentsWithCandidates": 10967,
+  "documentsWithCandidates": 10975,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9134,6 +9134,21 @@
       ]
     },
     {
+      "documentId": "doc-946acc4f66d6",
+      "path": "Archives-for-the-Unexplained/documents/2017-09-07---FADE-TO-BLACK-Radio---Ep.-716-FADE-to-BLACK-Jimmy-Church-w-Teresa-Yanaros-Age-of-Disclosure-2-LIVE_K9MDvk-7Epk---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "headliner between July 8 1947 here on",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-5a64ff2a25dd",
       "path": "Archives-for-the-Unexplained/documents/2017-09-09---Inception-Radio-Network---UFO-Headline-News-Wednesday-September-6th-2017_JV_rdwhRg2U---transcript-automated-.txt",
       "candidates": [
@@ -11123,6 +11138,30 @@
       ]
     },
     {
+      "documentId": "doc-51a3a7beaa0e",
+      "path": "Archives-for-the-Unexplained/documents/2018-07-13---FADE-TO-BLACK-Radio---Ep.-887-FADE-to-BLACK-Jimmy-Church-w-Barrett-Brown-The-Interview_792jaW9iT-8---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of this new July 8 1947 the Army Air",
+          "segment": 4
+        },
+        {
+          "value": "2012-03-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the early 2000 on March 6 2012 the FBI",
+          "segment": 714
+        }
+      ]
+    },
+    {
       "documentId": "doc-9f649c605a67",
       "path": "Archives-for-the-Unexplained/documents/2018-07-26---FADE-TO-BLACK-Radio---Ep.-894-FADE-to-BLACK-Jimmy-Church-w-Billy-Carson-Mayan-Pyramids-LIVE_6Q2UL1tFVbo---transcript-automated-.txt",
       "candidates": [
@@ -11704,6 +11743,30 @@
           "method": "unclassified-mention",
           "evidence": "died at the age of 83 on August 29 2016",
           "segment": 796
+        }
+      ]
+    },
+    {
+      "documentId": "doc-607299c5824b",
+      "path": "Archives-for-the-Unexplained/documents/2018-10-02---FADE-TO-BLACK-Radio---Ep.-873-FADE-TO-BLACK-w-Christina-Contini-LIVE_XIdTHy2ECj0---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 here on the airport",
+          "segment": 85
+        },
+        {
+          "value": "2018-06-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "big day today it's Monday June 18 2018",
+          "segment": 117
         }
       ]
     },
@@ -31577,6 +31640,48 @@
       ]
     },
     {
+      "documentId": "doc-34cb86e97cc9",
+      "path": "Archives-for-the-Unexplained/documents/Repas-Ufologiques---2010-03.txt",
+      "candidates": [
+        {
+          "value": "2004-08-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "son travail qui consiste à informer en mettant en place officiellement le 28 août 2004.",
+          "segment": 40
+        },
+        {
+          "value": "2010-03-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Toulouse - Rendez vous le 10 mars 2010 à 19 h 00.",
+          "segment": 132
+        },
+        {
+          "value": "1944-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Né à Nice le 21 mai 1944, sous le signe",
+          "segment": 133
+        },
+        {
+          "value": "2010-03-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Deux de ses Montpellier à été fixé au vendredi 19 mars 2010 à 19 h",
+          "segment": 167
+        }
+      ]
+    },
+    {
       "documentId": "doc-7360382a5eb4",
       "path": "Archives-for-the-Unexplained/documents/Rich-Planet-TV---PART-1-OF-3---Secrets-in-the-Solar-System_g56NySWX0Es---transcript-automated-.txt",
       "candidates": [
@@ -31684,6 +31789,21 @@
           "method": "unclassified-mention",
           "evidence": "May 9, 1977: (U .S. News & World Report) Philip J. Klass Letter-to-the-Editor: \"Your April",
           "segment": 377
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2d1bde1094e3",
+      "path": "Archives-for-the-Unexplained/documents/SUN-48-Nov-1977-.txt",
+      "candidates": [
+        {
+          "value": "1950-04-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "entered the Army on April 5, 1950, and retired on Oct. 31, 1976- -with many decorations for",
+          "segment": 16
         }
       ]
     },
@@ -35257,6 +35377,21 @@
           "method": "unclassified-mention",
           "evidence": "TUGS2 VDIILD, August 13, 1967.",
           "segment": 129
+        }
+      ]
+    },
+    {
+      "documentId": "doc-03366f42fd12",
+      "path": "Archives-for-the-Unexplained/documents/Slidings---No-1---1990-02.txt",
+      "candidates": [
+        {
+          "value": "1990-02-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "5 L I D I N G 5 number 1 February 1990",
+          "segment": 3
         }
       ]
     },
@@ -265988,6 +266123,21 @@
       ]
     },
     {
+      "documentId": "doc-ffb590d3cd6bac0fbce17ca9",
+      "path": "France-GEIPAN/paired/cases/1994-11-50853/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1994-11-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: A person testifies in 2010 about an observation made when they were a child on November 10, 1994, after 8:00 PM. While riding in the back of a vehicle on a rural road, they looked east and through the tops of trees in a forest and saw a very intense green light follo",
+          "segment": "seg-e1cf1e2f84c68b5870354866"
+        }
+      ]
+    },
+    {
       "documentId": "doc-e390f73befd7ad8acee39f72",
       "path": "France-GEIPAN/paired/cases/1995-01-01383/en/translation.txt",
       "candidates": [
@@ -279208,6 +279358,21 @@
           "method": "event-language",
           "evidence": "Description: On March 3, 2015, at 9:30 AM, a witness observed through a roof window a transparent sphere and a white, bright triangular object passing through a clear sky. Both objects disappeared towards the North on a straight trajectory. No particular noise was heard. The obse",
           "segment": "seg-95501d23d22df424c4bd0fc7"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5289efb47b66c11e527ae165",
+      "path": "France-GEIPAN/paired/cases/2015-03-09153/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-03-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 4, 2015, around 8:15 PM, a witness observes a circular, pale white object in the sky that is as big and bright as the moon. The object is above the trees, surrounded by two thin, glowing lines. The object moves slowly, then takes on an elongated shape follow",
+          "segment": "seg-8a28b6ca78e1563d18e4e458"
         }
       ]
     },
