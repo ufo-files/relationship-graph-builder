@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d75a4893d6af28abe1319c31ff39be07143fd21e"
+    "revision": "ac3d6dab8ead56fd220e31b43dfa68cfc54cc4e8"
   },
-  "count": 351,
-  "totalCount": 351,
-  "shownCount": 351,
+  "count": 352,
+  "totalCount": 352,
+  "shownCount": 352,
   "candidates": [
     {
       "category": "organization",
@@ -303,8 +303,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 53,
-        "documentCount": 37
+        "mentions": 54,
+        "documentCount": 38
       },
       "right": {
         "name": "Department of Transports",
@@ -383,8 +383,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 264,
-        "documentCount": 149
+        "mentions": 267,
+        "documentCount": 150
       },
       "right": {
         "name": "Kirtland Airforce Base",
@@ -1199,8 +1199,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 454,
-        "documentCount": 237
+        "mentions": 455,
+        "documentCount": 238
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1375,8 +1375,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 492,
-        "documentCount": 199
+        "mentions": 493,
+        "documentCount": 200
       },
       "right": {
         "name": "Jacques Valle",
@@ -1391,8 +1391,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 203,
-        "documentCount": 139
+        "mentions": 207,
+        "documentCount": 140
       },
       "right": {
         "name": "Flying Saucer",
@@ -1407,8 +1407,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 190,
-        "documentCount": 119
+        "mentions": 191,
+        "documentCount": 120
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -1548,6 +1548,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "John Humphreys",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "John Humphrys",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Intel Officer",
@@ -1557,22 +1573,6 @@
       "right": {
         "name": "INTELL OFFICER",
         "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "John Humphreys",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "John Humphrys",
-        "mentions": 4,
         "documentCount": 2
       },
       "similarity": 0.963,
@@ -1711,8 +1711,8 @@
       "category": "person",
       "left": {
         "name": "Timothy Good",
-        "mentions": 86,
-        "documentCount": 51
+        "mentions": 89,
+        "documentCount": 52
       },
       "right": {
         "name": "Timothy Goods",
@@ -1902,6 +1902,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Michael Wolfe",
+        "mentions": 8,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Dr. Michael Wolf",
+        "mentions": 7,
+        "documentCount": 6
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Chris Mullins",
         "mentions": 9,
         "documentCount": 8
@@ -1926,22 +1942,6 @@
         "name": "Michael Sala",
         "mentions": 3,
         "documentCount": 2
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Michael Wolfe",
-        "mentions": 8,
-        "documentCount": 7
-      },
-      "right": {
-        "name": "Dr. Michael Wolf",
-        "mentions": 6,
-        "documentCount": 5
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2143,8 +2143,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 264,
-        "documentCount": 149
+        "mentions": 267,
+        "documentCount": 150
       },
       "right": {
         "name": "Kirkland Air Force Base",
@@ -2159,8 +2159,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 264,
-        "documentCount": 149
+        "mentions": 267,
+        "documentCount": 150
       },
       "right": {
         "name": "Kirtland Alr Force Base",
@@ -2175,8 +2175,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 157,
-        "documentCount": 49
+        "mentions": 158,
+        "documentCount": 50
       },
       "right": {
         "name": "Kings Island",
@@ -2255,8 +2255,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 53,
-        "documentCount": 37
+        "mentions": 54,
+        "documentCount": 38
       },
       "right": {
         "name": "Department of Trancport",
@@ -3375,8 +3375,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 578,
-        "documentCount": 329
+        "mentions": 582,
+        "documentCount": 331
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3679,8 +3679,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 53,
-        "documentCount": 37
+        "mentions": 54,
+        "documentCount": 38
       },
       "right": {
         "name": "Department of Tramport",
@@ -4127,8 +4127,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 492,
-        "documentCount": 199
+        "mentions": 493,
+        "documentCount": 200
       },
       "right": {
         "name": "Jacques Valley",
@@ -4191,8 +4191,8 @@
       "category": "person",
       "left": {
         "name": "Jane Steinberg",
-        "mentions": 44,
-        "documentCount": 34
+        "mentions": 45,
+        "documentCount": 35
       },
       "right": {
         "name": "Jean Steinberg",
@@ -4796,6 +4796,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Robert Simpson",
+        "mentions": 8,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Robert Simon",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Chavez County",
@@ -4806,22 +4822,6 @@
         "name": "Chaves County",
         "mentions": 9,
         "documentCount": 8
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Robert Simpson",
-        "mentions": 7,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "Robert Simon",
-        "mentions": 4,
-        "documentCount": 2
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -5231,8 +5231,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 165,
-        "documentCount": 100
+        "mentions": 166,
+        "documentCount": 101
       },
       "right": {
         "name": "Steven Hawking",
@@ -5625,6 +5625,22 @@
       },
       "similarity": 0.867,
       "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "book",
+      "left": {
+        "name": "UFO",
+        "mentions": 14,
+        "documentCount": 13
+      },
+      "right": {
+        "name": "Unconventional Flying Objects",
+        "mentions": 1,
+        "documentCount": 1
+      },
+      "similarity": 0.188,
+      "reason": "acronym",
       "aliasFile": "data/entity_aliases.json"
     }
   ]
