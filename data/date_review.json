@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-20T01:51:26Z",
+  "generatedAt": "2026-09-20T03:13:09Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "ac3d6dab8ead56fd220e31b43dfa68cfc54cc4e8"
+    "revision": "632905fdbf7273d01279b2ceaa142d2575feabb9"
   },
-  "documentsWithCandidates": 11043,
+  "documentsWithCandidates": 11046,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9886,6 +9886,39 @@
           "method": "unclassified-mention",
           "evidence": "Wednesday September 6 2017 you are",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fe8b2090d67c",
+      "path": "Archives-for-the-Unexplained/documents/2017-09-09---The-Official-Paracast-Channel---The-Paracast-October-16-2011-Aaron-Kaplan_yVgLm3ansKo---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-01-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I believe roughly on January 29 1947",
+          "segment": 1957
+        },
+        {
+          "value": "2009-10-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "moon they can October 9 2009 do which",
+          "segment": 4122
+        },
+        {
+          "value": "2006-01-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "launched in January 19 2006 let",
+          "segment": 5803
         }
       ]
     },
@@ -29656,6 +29689,39 @@
           "method": "unclassified-mention",
           "evidence": "began on Jan 23, 1993; a guest on Larry King Live, whose wife had died of brain cancer, was suing the cell-phone industry, claiming her cancer was caused by",
           "segment": 204
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8b3e0ae5fc02",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-15-No-05---2001.txt",
+      "candidates": [
+        {
+          "value": "1998-04-01",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Regarding the ability to detect the body's \"energy field\" with the hands, this idea was roundly debunked in an article published in the April 1, 1998, issue of the",
+          "segment": 27
+        },
+        {
+          "value": "2001-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On April 4, 2001, the North Texas Skeptics staffed a table at the Health Check 2001 expo at Texas Woman's University in Denton.",
+          "segment": 94
+        },
+        {
+          "value": "2001-03-26",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "It was dated March 26, 2001, just three days after the",
+          "segment": 279
         }
       ]
     },
@@ -262381,6 +262447,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On August 15, 1978, between 9:00 and 9:10 PM, several witnesses located in the departments of Gard and Ardèche observed a red-tinted light phenomenon moving from south-east (SO) to north-east (NE). The witnesses described a glowing ball followed by a trail. No sound ",
           "segment": "seg-cf8c79ab013296a2c75dcade"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-13da7de458207c1fd3dbd37b",
+      "path": "France-GEIPAN/paired/cases/1978-06-00525/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1978-06-19",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On June 19, 1978, between 11:00 PM and 12:45 AM, several people heard a loud, deep noise and then observed a glowing object above the urban area. The orange-colored object was oval-shaped. Electrical power outages in the street were noted as the object was present. G",
+          "segment": "seg-1d22dd517a5da682c7e8a64a"
         }
       ]
     },
