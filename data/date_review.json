@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-20T14:29:13Z",
+  "generatedAt": "2026-09-20T18:09:22Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "dee119df20b4e4734b0e0728b237075c7a5f3c58"
+    "revision": "cc9742f5a697ff5bd8108d937c268492e540d774"
   },
-  "documentsWithCandidates": 11055,
+  "documentsWithCandidates": 11057,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -29627,6 +29627,21 @@
       ]
     },
     {
+      "documentId": "doc-712975e437a0",
+      "path": "Archives-for-the-Unexplained/documents/Info-CERPA---No-2---f-vrier-1997.txt",
+      "candidates": [
+        {
+          "value": "1997-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "lieu le 22 février 1997 à la",
+          "segment": 119
+        }
+      ]
+    },
+    {
       "documentId": "doc-90dacb9f1261",
       "path": "Archives-for-the-Unexplained/documents/Itufor09.txt",
       "candidates": [
@@ -36592,6 +36607,21 @@
           "method": "unclassified-mention",
           "evidence": "Le 7 octobre 2008, Les Repas Ufologiques Parisiens",
           "segment": 96
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4ccaf401da11",
+      "path": "Archives-for-the-Unexplained/documents/Repas-Ufologiques---2009-11.txt",
+      "candidates": [
+        {
+          "value": "2009-11-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MARDI 3 NOVEMBRE 2009 AUX REPAS Vendredi 20 novembre 2009",
+          "segment": 143
         }
       ]
     },
