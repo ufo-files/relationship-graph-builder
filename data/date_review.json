@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-19T23:09:41Z",
+  "generatedAt": "2026-09-20T00:29:45Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "308e40c0022f3241e781c867e43139e4800fff5e"
+    "revision": "d75a4893d6af28abe1319c31ff39be07143fd21e"
   },
-  "documentsWithCandidates": 11034,
+  "documentsWithCandidates": 11039,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9832,6 +9832,30 @@
           "method": "relative-date-exclusion",
           "evidence": "headliner between July 8 1947 here on",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7b8b7f0285be",
+      "path": "Archives-for-the-Unexplained/documents/2017-09-07---The-Official-Paracast-Channel---The-Paracast-March-18-2012-Curt-Sutherly_WgH7APFotlQ---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "shaped objects June 24 1947 his name is",
+          "segment": 721
+        },
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "28 years old and June 24 1947 which was",
+          "segment": 739
         }
       ]
     },
@@ -33517,6 +33541,75 @@
           "method": "context-exclusion",
           "evidence": "July 8, 1947, and published in the July 9 edition, Brazel first discovered the unusual debris on",
           "segment": 313
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c2a38fe92cf8",
+      "path": "Archives-for-the-Unexplained/documents/SUN-41-Sept-1996-.txt",
+      "candidates": [
+        {
+          "value": "1995-06-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "·~ SUN has learned that on June 14, 1995, Schiff and members of his starr met with the",
+          "segment": 12
+        },
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "outgoing teletype messages from RAAF after it had issued a press release on July 8, 1947",
+          "segment": 16
+        },
+        {
+          "value": "1995-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On July 5, 1995, the GAO sent a revised (second) draft report to all interested agencies",
+          "segment": 32
+        },
+        {
+          "value": "1947-06-04",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "balloons and group of radar targets that had been launched on June 4, 1947, from Alamogordo",
+          "segment": 65
+        },
+        {
+          "value": "1971-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On May 5, 1971, less than",
+          "segment": 283
+        },
+        {
+          "value": "1971-02-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of February 18, 1971, they broke into the office of the Western Molding Company with intent to steal",
+          "segment": 286
+        },
+        {
+          "value": "1973-08-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On August 3, 1973 , having lived up to the terms of",
+          "segment": 291
         }
       ]
     },
@@ -202886,6 +202979,48 @@
       ]
     },
     {
+      "documentId": "doc-afbc8f49398c",
+      "path": "Chile-SEFAA/documents/CASO-N-1929-30102023.txt",
+      "candidates": [
+        {
+          "value": "2023-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "10-28 a las 00.54.54_72e957.mp4”, “Vídeo de WhatsApp 2023-10-28 a las",
+          "segment": 20
+        },
+        {
+          "value": "2023-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "31.01.14_f58bf9.mp4”, “Vídeo de WhatsApp 2023-10-28 a las",
+          "segment": 21
+        },
+        {
+          "value": "2023-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "01.31.15_627e10.mp4”, “Vídeo de WhatsApp 2023-10-28 a las",
+          "segment": 22
+        },
+        {
+          "value": "2023-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "31.01.16_b39e6b.mp4” y “Vídeo de WhatsApp 2023-10-28 a las",
+          "segment": 23
+        }
+      ]
+    },
+    {
       "documentId": "doc-ee0434549c4a",
       "path": "Chile-SEFAA/documents/CASO-N-1965-20012024.txt",
       "candidates": [
@@ -271937,6 +272072,21 @@
       ]
     },
     {
+      "documentId": "doc-75a069a0c4222e6e73ad8aa0",
+      "path": "France-GEIPAN/paired/cases/2008-05-01858/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-05-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On May 11, 2008, around 10:50 PM, two witnesses observed the high-speed passage in the sky of a dark, triangular mass with fixed and flashing white, green, and red lights. During the observation, which lasted several dozen seconds, a faint, deep noise was heard. This",
+          "segment": "seg-8c1218978b50c8d55ba5520b"
+        }
+      ]
+    },
+    {
       "documentId": "doc-926738897eaeb3697512e47a",
       "path": "France-GEIPAN/paired/cases/2008-05-01881/en/translation.txt",
       "candidates": [
@@ -282580,6 +282730,21 @@
           "method": "event-language",
           "evidence": "Description: On January 1, 2016 at 12:16 a.m., a witness observed silent movements in the sky of flame-colored light phenomena. The objects moved towards the NNE on a horizontal trajectory at low altitude. The observation lasted 5 minutes. No other reports of sightings in the are",
           "segment": "seg-65e08ddd9998725260fcdf81"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-aee9e1403838bc6e221307d0",
+      "path": "France-GEIPAN/paired/cases/2016-01-09408/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-01-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Sunday, January 31, 2016, around 6:45 PM, a witness observed in the sky a set of white lights resembling halogen lights forming an immobile bar. No noise was heard. The phenomenon quickly disappeared behind a cloud. No other testimonies were collected for that day",
+          "segment": "seg-c76dcbdecf0c12106e52483e"
         }
       ]
     },
