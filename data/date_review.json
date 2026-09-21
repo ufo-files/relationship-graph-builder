@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-21T04:36:09Z",
+  "generatedAt": "2026-09-21T07:56:08Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9d6ee3dcf676f903a08dbc3c29be41b59cb62619"
+    "revision": "1354cbbea86934fca88a0e72c6201c74c6053607"
   },
-  "documentsWithCandidates": 11064,
+  "documentsWithCandidates": 11067,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -3895,6 +3895,48 @@
           "method": "unclassified-mention",
           "evidence": "Downloaded by [North Carolina State University] at 16:24 15 March 2015",
           "segment": 146
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c95b7d93f619",
+      "path": "Archives-for-the-Unexplained/documents/1958-05-01---Saucerian-Bulletin---Vol-3-No-2.txt",
+      "candidates": [
+        {
+          "value": "1958-05-01",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "About Vol. 3, No. 2 -- ltbr Release May 1, 1958 Publication",
+          "segment": 1
+        },
+        {
+          "value": "1958-05-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Page 4 'lllE SAUCERDN BULLET.IN May 1, 1958",
+          "segment": 152
+        },
+        {
+          "value": "1958-05-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Page 5 THE SAUCERIAN BULIETIN May 1, 1958",
+          "segment": 227
+        },
+        {
+          "value": "1958-05-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Page 6 mE SAIJCERI&N BULIETlN May 1, 1958",
+          "segment": 286
         }
       ]
     },
@@ -9817,6 +9859,21 @@
           "method": "unclassified-mention",
           "evidence": "whatever but anyhow March 18 2011",
           "segment": 4863
+        }
+      ]
+    },
+    {
+      "documentId": "doc-68d4e4a07011",
+      "path": "Archives-for-the-Unexplained/documents/2017-09-05---The-Official-Paracast-Channel---The-Paracast-July-29-2012-Rosemary-Ellen-Guiley_B1eBeWdEVfU---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1952-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "but not that year September 12 1952 will",
+          "segment": 126
         }
       ]
     },
@@ -29686,6 +29743,39 @@
           "method": "unclassified-mention",
           "evidence": "lieu le 22 février 1997 à la",
           "segment": 119
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ad7d9f787775",
+      "path": "Archives-for-the-Unexplained/documents/Itufor03.txt",
+      "candidates": [
+        {
+          "value": "1986-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and midnight on Saturday, July 12, 1986, tens of",
+          "segment": 93
+        },
+        {
+          "value": "1984-10-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "same area, at Prata Principato Ultra (Avellino) on October 8, 1984.",
+          "segment": 177
+        },
+        {
+          "value": "1985-09-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Sightings of September 15, 1985",
+          "segment": 236
         }
       ]
     },
