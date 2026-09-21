@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-21T00:23:13Z",
+  "generatedAt": "2026-09-21T01:49:18Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "fb1e5c00443c4466137116a853906e6778d09cb6"
+    "revision": "1de2f9246e1fd9885b8c072a9d21dafddef4622c"
   },
-  "documentsWithCandidates": 11063,
+  "documentsWithCandidates": 11064,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -419752,6 +419752,48 @@
           "method": "unclassified-mention",
           "evidence": "embedded \\lideos of 8 September 2021 UAPs captured via AC- 130",
           "segment": 209
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c3df87756998",
+      "path": "War-Gov-PURSUE/release-06/documents/dow-uap-d112-aawsap-contract-modification-p00001-september-2-2009.txt",
+      "candidates": [
+        {
+          "value": "2009-09-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Option Year: 22 September 2009 - 29 September 2010",
+          "segment": 66
+        },
+        {
+          "value": "2010-09-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Option Year: 22 September 2009 - 29 September 2010",
+          "segment": 66
+        },
+        {
+          "value": "2009-09-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A) Extend the current period of perfonnance to 30 September 2009",
+          "segment": 85
+        },
+        {
+          "value": "2010-09-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "B) Revise Option year dates to be I Oct 2009 to 30 September 2010",
+          "segment": 86
         }
       ]
     },
