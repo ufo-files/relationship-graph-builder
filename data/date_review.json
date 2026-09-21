@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-21T20:41:52Z",
+  "generatedAt": "2026-09-21T22:15:10Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9d0917296198aba73eac71a3d84912bb0ed59da3"
+    "revision": "b11357d060826cf372774f83919f044b936d9155"
   },
-  "documentsWithCandidates": 11081,
+  "documentsWithCandidates": 11082,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -48511,6 +48511,39 @@
           "method": "unclassified-mention",
           "evidence": "EDINBURGH SCOTSMAN on 8 December 1993.",
           "segment": 59
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c6781eae0950",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Potpourri-No-390.txt",
+      "candidates": [
+        {
+          "value": "1994-11-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Chronicle, November 7, 1994, described how the It will be good for a chuckle.",
+          "segment": 21
+        },
+        {
+          "value": "1994-06-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "according to the London Times, June 3, 1994, \"They immediately checked with air traffic control at",
+          "segment": 90
+        },
+        {
+          "value": "1995-06-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "that water may be found everywhere, possibly From: The Houston Chronicle, June 3, 1995",
+          "segment": 110
         }
       ]
     },
