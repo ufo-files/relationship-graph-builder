@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "1354cbbea86934fca88a0e72c6201c74c6053607"
+    "revision": "eeefd7586d6a5d8cf363e4d231e727411c1c3c37"
   },
-  "count": 353,
-  "totalCount": 353,
-  "shownCount": 353,
+  "count": 354,
+  "totalCount": 354,
+  "shownCount": 354,
   "candidates": [
     {
       "category": "organization",
@@ -367,8 +367,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 447,
-        "documentCount": 214
+        "mentions": 451,
+        "documentCount": 215
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1199,8 +1199,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 474,
-        "documentCount": 247
+        "mentions": 475,
+        "documentCount": 248
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -2223,8 +2223,8 @@
       "category": "person",
       "left": {
         "name": "David Jacobs",
-        "mentions": 120,
-        "documentCount": 76
+        "mentions": 121,
+        "documentCount": 77
       },
       "right": {
         "name": "David Jacob",
@@ -2255,8 +2255,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 71,
-        "documentCount": 55
+        "mentions": 72,
+        "documentCount": 56
       },
       "right": {
         "name": "Northeastern University",
@@ -3084,6 +3084,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of Paris",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "University of Ari",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "North-Eastern Area",
@@ -3110,22 +3126,6 @@
         "name": "Clinton County AAF",
         "mentions": 4,
         "documentCount": 2
-      },
-      "similarity": 0.944,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "University of Paris",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "University of Ari",
-        "mentions": 4,
-        "documentCount": 4
       },
       "similarity": 0.944,
       "reason": "similar name",
@@ -3391,8 +3391,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 609,
-        "documentCount": 344
+        "mentions": 613,
+        "documentCount": 345
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4063,8 +4063,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 71,
-        "documentCount": 55
+        "mentions": 72,
+        "documentCount": 56
       },
       "right": {
         "name": "Northwest University",
@@ -4175,8 +4175,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 237,
-        "documentCount": 119
+        "mentions": 238,
+        "documentCount": 120
       },
       "right": {
         "name": "George Adamsky",
@@ -4196,8 +4196,8 @@
       },
       "right": {
         "name": "Jean Steinberg",
-        "mentions": 34,
-        "documentCount": 28
+        "mentions": 36,
+        "documentCount": 29
       },
       "similarity": 0.929,
       "reason": "similar person name",
@@ -4463,8 +4463,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 447,
-        "documentCount": 214
+        "mentions": 451,
+        "documentCount": 215
       },
       "right": {
         "name": "University Colorado",
@@ -4607,8 +4607,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 237,
-        "documentCount": 119
+        "mentions": 238,
+        "documentCount": 120
       },
       "right": {
         "name": "George Adams",
@@ -5270,6 +5270,22 @@
         "name": "Steven Bassett",
         "mentions": 16,
         "documentCount": 13
+      },
+      "similarity": 0.897,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Jane Steinberg",
+        "mentions": 59,
+        "documentCount": 46
+      },
+      "right": {
+        "name": "James Steinberg",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.897,
       "reason": "similar person name",
