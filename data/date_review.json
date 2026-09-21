@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-20T21:22:54Z",
+  "generatedAt": "2026-09-21T00:23:13Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "ef53cd4804686a4be03e0dd0b290d1632dd1bbe8"
+    "revision": "fb1e5c00443c4466137116a853906e6778d09cb6"
   },
-  "documentsWithCandidates": 11062,
+  "documentsWithCandidates": 11063,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -24250,6 +24250,30 @@
           "method": "unclassified-mention",
           "evidence": "5 Nay i952 to 18 February 1970.",
           "segment": 196
+        }
+      ]
+    },
+    {
+      "documentId": "doc-043dc6e7d8da",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000146204.txt",
+      "candidates": [
+        {
+          "value": "1975-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference is made to a 10 July 1975 requcs~ from",
+          "segment": 46
+        },
+        {
+          "value": "1975-07-19",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Mr. Scott Ereckinridge on 19 July 1975 ,. ~1r. lh·ody requested that",
+          "segment": 58
         }
       ]
     },
