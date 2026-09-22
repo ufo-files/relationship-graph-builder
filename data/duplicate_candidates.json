@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e7ce84bfc52dd2acbd19bb064dd8305b0434ab65"
+    "revision": "6332b522007ab296feb52a100e0536b83217c406"
   },
   "count": 358,
   "totalCount": 358,
@@ -588,6 +588,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Public Record Office",
+        "mentions": 17,
+        "documentCount": 10
+      },
+      "right": {
+        "name": "Public Records Office",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.976,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Intelligence Service",
@@ -598,22 +614,6 @@
         "name": "Intelligence Services",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.976,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Public Record Office",
-        "mentions": 16,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "Public Records Office",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.976,
       "reason": "similar name",
@@ -1199,8 +1199,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 477,
-        "documentCount": 250
+        "mentions": 478,
+        "documentCount": 251
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1727,8 +1727,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 131,
-        "documentCount": 103
+        "mentions": 132,
+        "documentCount": 104
       },
       "right": {
         "name": "George Noorey",
@@ -3423,8 +3423,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 620,
-        "documentCount": 351
+        "mentions": 626,
+        "documentCount": 352
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4164,8 +4164,8 @@
       },
       "right": {
         "name": "Base Aérea El Bosque",
-        "mentions": 7,
-        "documentCount": 7
+        "mentions": 8,
+        "documentCount": 8
       },
       "similarity": 0.93,
       "reason": "similar name",
@@ -4239,8 +4239,8 @@
       "category": "person",
       "left": {
         "name": "Jane Steinberg",
-        "mentions": 65,
-        "documentCount": 50
+        "mentions": 66,
+        "documentCount": 51
       },
       "right": {
         "name": "Jean Steinberg",
@@ -5199,8 +5199,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 153,
-        "documentCount": 98
+        "mentions": 154,
+        "documentCount": 99
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -5311,8 +5311,8 @@
       "category": "person",
       "left": {
         "name": "Jane Steinberg",
-        "mentions": 65,
-        "documentCount": 50
+        "mentions": 66,
+        "documentCount": 51
       },
       "right": {
         "name": "James Steinberg",
