@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a84da13f93dfa791eaf51f651f070629c093da89"
+    "revision": "8239061171c53d338ffc34c7cfef42fec56a33d2"
   },
-  "count": 356,
-  "totalCount": 356,
-  "shownCount": 356,
+  "count": 357,
+  "totalCount": 357,
+  "shownCount": 357,
   "candidates": [
     {
       "category": "organization",
@@ -1340,6 +1340,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Steven Hawkings",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Steven Hawking",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Recoras Administration Branch",
@@ -1391,8 +1407,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 504,
-        "documentCount": 209
+        "mentions": 505,
+        "documentCount": 210
       },
       "right": {
         "name": "Jacques Valle",
@@ -1988,8 +2004,8 @@
       },
       "right": {
         "name": "Mike Cleland",
-        "mentions": 10,
-        "documentCount": 6
+        "mentions": 11,
+        "documentCount": 7
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2191,8 +2207,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 158,
-        "documentCount": 50
+        "mentions": 159,
+        "documentCount": 51
       },
       "right": {
         "name": "Kings Island",
@@ -4175,8 +4191,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 504,
-        "documentCount": 209
+        "mentions": 505,
+        "documentCount": 210
       },
       "right": {
         "name": "Jacques Valley",
@@ -4223,8 +4239,8 @@
       "category": "person",
       "left": {
         "name": "Jane Steinberg",
-        "mentions": 63,
-        "documentCount": 49
+        "mentions": 65,
+        "documentCount": 50
       },
       "right": {
         "name": "Jean Steinberg",
@@ -5295,8 +5311,8 @@
       "category": "person",
       "left": {
         "name": "Jane Steinberg",
-        "mentions": 63,
-        "documentCount": 49
+        "mentions": 65,
+        "documentCount": 50
       },
       "right": {
         "name": "James Steinberg",
@@ -5492,8 +5508,8 @@
       },
       "right": {
         "name": "Ken Williams",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.88,
       "reason": "similar person name",
