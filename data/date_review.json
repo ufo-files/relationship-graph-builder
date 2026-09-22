@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-22T12:04:03Z",
+  "generatedAt": "2026-09-22T13:20:16Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "912b88687351cedb002a7fba40d944f8aa149595"
+    "revision": "9f12135c08be9e2a0f867b3716220cb9d8878275"
   },
-  "documentsWithCandidates": 11099,
+  "documentsWithCandidates": 11100,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -37927,6 +37927,21 @@
           "method": "context-exclusion",
           "evidence": "In an interriew . with Darid Jacobs, published in the March 12, 1992 edition of the",
           "segment": 279
+        }
+      ]
+    },
+    {
+      "documentId": "doc-27cad1c3fd5e",
+      "path": "Archives-for-the-Unexplained/documents/SUN-27-May-1994-.txt",
+      "candidates": [
+        {
+          "value": "1994-01-26",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "confirms our meeting with you on January 26, 1994, where we discussed the issue of government",
+          "segment": 441
         }
       ]
     },
