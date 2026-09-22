@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-22T18:22:00Z",
+  "generatedAt": "2026-09-22T19:36:32Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "cfecd7a62c6c30159ab794d56d7de6260ead537d"
+    "revision": "5585fe5a1f0781f57a8cabdbbb0f9adf7ffac072"
   },
-  "documentsWithCandidates": 11103,
+  "documentsWithCandidates": 11104,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -26632,6 +26632,138 @@
           "method": "unclassified-mention",
           "evidence": "19 August 1958 Wooroloo WA 1010hrs 1M Wishart DO",
           "segment": 575
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5369c1dcc7dc",
+      "path": "Archives-for-the-Unexplained/documents/Disclosure-Australia-AURA---No-12---April-2004.txt",
+      "candidates": [
+        {
+          "value": "1950-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "After much searching, we have recently located a file in the NAA, which was opened on 21 August 1950.",
+          "segment": 13
+        },
+        {
+          "value": "1950-08-15",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Confidential memo from RAAF East Sale to HQ Southern Area dated 15 August 1950.",
+          "segment": 18
+        },
+        {
+          "value": "1950-08-24",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Memo dated 24 August 1950 forwarding report at folio 1 from Southern Area RAAF to DAFI.",
+          "segment": 21
+        },
+        {
+          "value": "1950-08-20",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "RAAF telegram dated 20 August 1950 from Wing Commander SASO to RAAF HQ giving details of aircraft",
+          "segment": 22
+        },
+        {
+          "value": "1950-07-16",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "Here we find a list of 20 sightings between 16 July 1950 and 31 August 1953.",
+          "segment": 43
+        },
+        {
+          "value": "1953-08-31",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "Here we find a list of 20 sightings between 16 July 1950 and 31 August 1953.",
+          "segment": 43
+        },
+        {
+          "value": "1952-05-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "reports found on B5758, control symbol 5/6/AIR part 1, only one, namely 3 May 1952 from Kew, makes Turner’s list.",
+          "segment": 44
+        },
+        {
+          "value": "1966-10-24",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "This file is mentioned in a RAAF minute dated 24 Oct 1966 on file 554/1/30 part 1.",
+          "segment": 54
+        },
+        {
+          "value": "1966-10-24",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "This file is mentioned in a RAAF minute dated 24 Oct 1966 on file 554/1/30 part 1.",
+          "segment": 57
+        },
+        {
+          "value": "2004-03-16",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Request submitted to them 16 March 2004.",
+          "segment": 61
+        },
+        {
+          "value": "1966-10-24",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "This file is mentioned in a RAAF minute dated 24 Oct 1966 on file 554/1/30 part 1.",
+          "segment": 65
+        },
+        {
+          "value": "2004-03-16",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Request submitted to them 16 March 2004.",
+          "segment": 71
+        },
+        {
+          "value": "1972-05-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "26 May 1972 to 2 Feb 1984.",
+          "segment": 73
+        },
+        {
+          "value": "1984-02-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "26 May 1972 to 2 Feb 1984.",
+          "segment": 73
         }
       ]
     },

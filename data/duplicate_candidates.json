@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "cfecd7a62c6c30159ab794d56d7de6260ead537d"
+    "revision": "5585fe5a1f0781f57a8cabdbbb0f9adf7ffac072"
   },
   "count": 358,
   "totalCount": 358,
@@ -3102,6 +3102,22 @@
     {
       "category": "location",
       "left": {
+        "name": "North Eastern Area",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "North-Western Area",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "Clinton County AAF",
         "mentions": 4,
         "documentCount": 2
@@ -3126,22 +3142,6 @@
         "name": "University of Ari",
         "mentions": 5,
         "documentCount": 5
-      },
-      "similarity": 0.944,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "North-Eastern Area",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "North-Western Area",
-        "mentions": 4,
-        "documentCount": 3
       },
       "similarity": 0.944,
       "reason": "similar name",
@@ -3268,8 +3268,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 394,
-        "documentCount": 55
+        "mentions": 396,
+        "documentCount": 56
       },
       "similarity": 0.941,
       "reason": "similar name",
