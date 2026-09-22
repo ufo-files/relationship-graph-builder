@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "8239061171c53d338ffc34c7cfef42fec56a33d2"
+    "revision": "e7ce84bfc52dd2acbd19bb064dd8305b0434ab65"
   },
-  "count": 357,
-  "totalCount": 357,
-  "shownCount": 357,
+  "count": 358,
+  "totalCount": 358,
+  "shownCount": 358,
   "candidates": [
     {
       "category": "organization",
@@ -367,8 +367,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 451,
-        "documentCount": 215
+        "mentions": 454,
+        "documentCount": 216
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1391,8 +1391,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 569,
-        "documentCount": 350
+        "mentions": 570,
+        "documentCount": 351
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1556,8 +1556,8 @@
       },
       "right": {
         "name": "Frank Kaufmann",
-        "mentions": 7,
-        "documentCount": 5
+        "mentions": 8,
+        "documentCount": 6
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -1902,6 +1902,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Michael Salla",
+        "mentions": 14,
+        "documentCount": 10
+      },
+      "right": {
+        "name": "Michael Sala",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Joseph Burkes",
         "mentions": 14,
         "documentCount": 9
@@ -1974,22 +1990,6 @@
         "name": "Chris Mullin",
         "mentions": 5,
         "documentCount": 5
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Michael Salla",
-        "mentions": 11,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "Michael Sala",
-        "mentions": 3,
-        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2271,8 +2271,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 73,
-        "documentCount": 57
+        "mentions": 74,
+        "documentCount": 58
       },
       "right": {
         "name": "Northeastern University",
@@ -3423,8 +3423,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 619,
-        "documentCount": 350
+        "mentions": 620,
+        "documentCount": 351
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4095,8 +4095,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 73,
-        "documentCount": 57
+        "mentions": 74,
+        "documentCount": 58
       },
       "right": {
         "name": "Northwest University",
@@ -4511,8 +4511,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 451,
-        "documentCount": 215
+        "mentions": 454,
+        "documentCount": 216
       },
       "right": {
         "name": "University Colorado",
@@ -4703,8 +4703,8 @@
       "category": "person",
       "left": {
         "name": "Michael Salla",
-        "mentions": 11,
-        "documentCount": 9
+        "mentions": 14,
+        "documentCount": 10
       },
       "right": {
         "name": "Michael Salah",
@@ -5390,6 +5390,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Herbert Walker",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Robert Walker",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.889,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Robert Wood Johnson",
         "mentions": 3,
         "documentCount": 3
@@ -5423,8 +5439,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 93,
-        "documentCount": 78
+        "mentions": 95,
+        "documentCount": 79
       },
       "right": {
         "name": "George HW Bush",
@@ -5471,8 +5487,8 @@
       "category": "person",
       "left": {
         "name": "Jane Goodall",
-        "mentions": 6,
-        "documentCount": 5
+        "mentions": 7,
+        "documentCount": 6
       },
       "right": {
         "name": "James Goodall",

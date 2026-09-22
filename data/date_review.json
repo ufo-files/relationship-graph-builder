@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-22T06:59:22Z",
+  "generatedAt": "2026-09-22T08:16:07Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "8239061171c53d338ffc34c7cfef42fec56a33d2"
+    "revision": "e7ce84bfc52dd2acbd19bb064dd8305b0434ab65"
   },
-  "documentsWithCandidates": 11091,
+  "documentsWithCandidates": 11093,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -38113,6 +38113,30 @@
           "method": "unclassified-mention",
           "evidence": "had occurred on May 5, 1984.",
           "segment": 146
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b558f1046c99",
+      "path": "Archives-for-the-Unexplained/documents/SUN-63-May-2000-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-03",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "One of the drones; (a'Iiegedly) launched on July 3, 1947, was tracked by a radar at the",
+          "segment": 170
+        },
+        {
+          "value": "1998-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Nearly two years ago, on July 23, 1998, attorney Peter Gersten, who heads Citizens",
+          "segment": 348
         }
       ]
     },
@@ -210583,6 +210607,30 @@
           "method": "unclassified-mention",
           "evidence": "Junto a su reporte ingresó el archivo “WhatsApp Image 2022-05-17 at 9.26.18",
           "segment": 15
+        }
+      ]
+    },
+    {
+      "documentId": "doc-16dc867655c9",
+      "path": "Chile-SEFAA/documents/Informe-de-Publicacion-de-caso-N-1889-23052023.txt",
+      "candidates": [
+        {
+          "value": "2023-04-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Junto al reporte se ingresaron los archivos “Video 2023-04-13.mp4” e “Image 2023-04-",
+          "segment": 25
+        },
+        {
+          "value": "2023-04-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lo estudiado en el archivo “Image 2023-04-13.jpeg”.",
+          "segment": 29
         }
       ]
     },
