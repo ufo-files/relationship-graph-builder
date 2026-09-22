@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-21T23:40:48Z",
+  "generatedAt": "2026-09-22T03:02:39Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "48f40b5803629072dc9dff8b016e364ad1f640a2"
+    "revision": "c663a160b65c1d759cc31a849fd62915d7510e8b"
   },
-  "documentsWithCandidates": 11084,
+  "documentsWithCandidates": 11085,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -210340,6 +210340,48 @@
           "method": "unclassified-mention",
           "evidence": "“2018-07-10-00002506.mp4”.",
           "segment": 13
+        }
+      ]
+    },
+    {
+      "documentId": "doc-81f4bbc8d40f",
+      "path": "Chile-SEFAA/documents/Informe-de-Publicacion-de-caso-N-959-10062019.txt",
+      "candidates": [
+        {
+          "value": "2019-05-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“MVI_874.mp4”, “WhatsApp Video 2019-05-09 at 18.14.54.mp4” y WhatsApp Video",
+          "segment": 21
+        },
+        {
+          "value": "2019-05-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2019-05-09 at 18.19.45.mp4”.",
+          "segment": 22
+        },
+        {
+          "value": "2019-05-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Para finalizar, en los videos recibidos Video 2019-05-09 18.14.54 y Video 2019-05-09",
+          "segment": 44
+        },
+        {
+          "value": "2019-05-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Para finalizar, en los videos recibidos Video 2019-05-09 18.14.54 y Video 2019-05-09",
+          "segment": 44
         }
       ]
     },
