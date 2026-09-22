@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "c663a160b65c1d759cc31a849fd62915d7510e8b"
+    "revision": "a84da13f93dfa791eaf51f651f070629c093da89"
   },
   "count": 356,
   "totalCount": 356,
@@ -1199,8 +1199,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 476,
-        "documentCount": 249
+        "mentions": 477,
+        "documentCount": 250
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -2028,6 +2028,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Uintah County",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Uinta County",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Keith Roland",
@@ -2038,22 +2054,6 @@
         "name": "Keith Rowland",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Uintah County",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Uinta County",
-        "mentions": 4,
-        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2255,8 +2255,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 72,
-        "documentCount": 56
+        "mentions": 73,
+        "documentCount": 57
       },
       "right": {
         "name": "Northeastern University",
@@ -3407,8 +3407,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 616,
-        "documentCount": 348
+        "mentions": 619,
+        "documentCount": 350
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4079,8 +4079,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 72,
-        "documentCount": 56
+        "mentions": 73,
+        "documentCount": 57
       },
       "right": {
         "name": "Northwest University",
@@ -4111,8 +4111,8 @@
       "category": "government_agency",
       "left": {
         "name": "Investigations Officer",
-        "mentions": 13,
-        "documentCount": 9
+        "mentions": 14,
+        "documentCount": 10
       },
       "right": {
         "name": "Investigating Officer's",
@@ -4228,8 +4228,8 @@
       },
       "right": {
         "name": "Jean Steinberg",
-        "mentions": 38,
-        "documentCount": 30
+        "mentions": 39,
+        "documentCount": 31
       },
       "similarity": 0.929,
       "reason": "similar person name",
@@ -5695,8 +5695,8 @@
       "category": "book",
       "left": {
         "name": "UFO",
-        "mentions": 14,
-        "documentCount": 13
+        "mentions": 16,
+        "documentCount": 14
       },
       "right": {
         "name": "Unconventional Flying Objects",
