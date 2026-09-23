@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-23T09:11:05Z",
+  "generatedAt": "2026-09-23T10:05:19Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "81b4e97d0533c275d0ee93ba9e3f781c6191d7be"
+    "revision": "1b0d37e49c04d0253eb10ff9ed59104db22b0163"
   },
-  "documentsWithCandidates": 11205,
+  "documentsWithCandidates": 11209,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -271133,6 +271133,30 @@
       ]
     },
     {
+      "documentId": "doc-bfafb9386f65c9f42d1b823c",
+      "path": "France-GEIPAN/paired/cases/1977-10-00446/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1977-10-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive. Among its publications are older cases classified at the time as Type \"C\" cases, which are now being reassessed with the sole purpose of being more relevant in the conclusions. Thanks to new technical means (softwar",
+          "segment": "seg-9015a3303b533b465f60988f"
+        },
+        {
+          "value": "1977-10-26",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive. Among its publications are older cases classified at the time as Type \"C\" cases, which are now being reassessed with the sole purpose of being more relevant in the conclusions. Thanks to new technical means (softwar",
+          "segment": "seg-9015a3303b533b465f60988f"
+        }
+      ]
+    },
+    {
       "documentId": "doc-fb1a1d9313c98424d1075b20",
       "path": "France-GEIPAN/paired/cases/1977-10-00447/en/translation.txt",
       "candidates": [
@@ -271442,6 +271466,21 @@
       ]
     },
     {
+      "documentId": "doc-73b171f55f686f63b00897ff",
+      "path": "France-GEIPAN/paired/cases/1977-12-00463/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1977-12-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 13, 1977, between 7:00 and 7:30 PM, several witnesses in different regions of France observed the rapid east-west passage in the sky of a circular, luminous phenomenon followed by a trail. Most of these observations lasted a few seconds and no particular ",
+          "segment": "seg-c0c7376170da344c4af0da8c"
+        }
+      ]
+    },
+    {
       "documentId": "doc-b5223580bc1114e1e38cb3d1",
       "path": "France-GEIPAN/paired/cases/1977-12-00465/en/translation.txt",
       "candidates": [
@@ -271453,6 +271492,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On December 17, 1977, around midnight, several members of the same family observed for a few seconds, at their home's front door, the passage of a luminous phenomenon. A ball of yellow-orange color moving from N-E to South at extremely high speed. It left behind a br",
           "segment": "seg-1a3e557d6ccc45225b59fa9f"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-57733caab64856d5cf3df1aa",
+      "path": "France-GEIPAN/paired/cases/1977-12-00466/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1977-12-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 18, 1977, around 1:20 a.m., approximately ten people in a hamlet of the commune of Sainte-Cérotte (72) observed a red-orange phenomenon in the sky. The witnesses were unable to gauge the distance of the phenomenon and did not agree on its shape. However, ",
+          "segment": "seg-0bfe58a1c1a050bf94e47d00"
         }
       ]
     },
@@ -271477,6 +271531,21 @@
           "method": "event-language",
           "evidence": "Description: On December 31, 1977, after 7 PM, several people observed an intriguing orange-colored light phenomenon in the sky. A person who learned of these events from their neighborhood, later testifying at the gendarmerie, claimed to have fired a fireworks display consisting",
           "segment": "seg-f1e80821717d7ce931b8692e"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6feba87509ec64ec789eafa0",
+      "path": "France-GEIPAN/paired/cases/1977-12-02675/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1977-12-19",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On December 19, 1977, around 2 a.m., a motorist observed a luminous phenomenon in the sky while driving on D109. The PAN (unidentified aerial phenomenon) appeared as a ball with a flat top, emitting a pale glow and seemingly stationary above a valley. The witness dec",
+          "segment": "seg-32f4d51bad4204b2e9b08ccb"
         }
       ]
     },
