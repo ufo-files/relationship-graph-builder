@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-23T14:41:18Z",
+  "generatedAt": "2026-09-23T15:37:43Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "94dd558f2e4bf0d1de4a106ed89d33fd9a018759"
+    "revision": "6d04cdf41402b56cf11bac413b1e679383e42421"
   },
-  "documentsWithCandidates": 11246,
+  "documentsWithCandidates": 11249,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -274691,6 +274691,36 @@
       ]
     },
     {
+      "documentId": "doc-f13f178e478fc6312a5962f4",
+      "path": "France-GEIPAN/paired/cases/1980-03-00746/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1980-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 3, 1980, starting at 8:45 PM, witnesses in a vehicle observed above the ridges a bright PAN in the shape of a plate. According to the witnesses, the object was between 100 and 200 meters from the vehicle. During a stop, the witnesses heard no noise and smell",
+          "segment": "seg-c63811e972a4444f3d2816fd"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4449ef4ae10854810e332ce8",
+      "path": "France-GEIPAN/paired/cases/1980-03-00748/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1980-03-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being re-examined to enhance the conclusions. Thanks to new technical tools (softwar",
+          "segment": "seg-e2d32f9a6ac1b500d24cbb1b"
+        }
+      ]
+    },
+    {
       "documentId": "doc-6cbfb1c3b75634a380c6a4ff",
       "path": "France-GEIPAN/paired/cases/1980-03-00749/en/translation.txt",
       "candidates": [
@@ -274717,6 +274747,21 @@
           "method": "event-language",
           "evidence": "Description: On March 17, 1980, at 20:40, three individuals observed a very bright object moving slowly in a north-south direction. This object was circular in shape. This observation was not confirmed by gendarmes who repeatedly looked up in that direction. No further informatio",
           "segment": "seg-73eab3239358eb8024dfd73e"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cb024bc6e7248a6ca2759982",
+      "path": "France-GEIPAN/paired/cases/1980-03-00751/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1980-03-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being re-examined to enhance the conclusions' relevance. Thanks to new technical too",
+          "segment": "seg-53d54af7b727a10aa0bb12ea"
         }
       ]
     },
