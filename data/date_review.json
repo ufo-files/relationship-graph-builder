@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-23T12:50:59Z",
+  "generatedAt": "2026-09-23T13:46:06Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e4f5203485136666d265019864a2ead7cf7c001d"
+    "revision": "7ab1debfd10b61ba1ed844a87f8ff8cd1cc40a67"
   },
-  "documentsWithCandidates": 11228,
+  "documentsWithCandidates": 11238,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -37667,6 +37667,21 @@
       ]
     },
     {
+      "documentId": "doc-c8502b57f1fa",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-04-No-02---1996.txt",
+      "candidates": [
+        {
+          "value": "1996-02-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 4 Issue 2 February 1996",
+          "segment": 1
+        }
+      ]
+    },
+    {
       "documentId": "doc-61eac0b00174",
       "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-04-No-07---1996.txt",
       "candidates": [
@@ -63772,6 +63787,21 @@
           "method": "unclassified-mention",
           "evidence": "late afternoon of June 24, 1947, when a gentleman named Kenneth Arnold was flying his fighter",
           "segment": 15
+        }
+      ]
+    },
+    {
+      "documentId": "doc-425360cd4ff7",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-04---Track-44---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1942-03-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "corporation was incorporated on March 20, 1942.",
+          "segment": 73
         }
       ]
     },
@@ -273899,6 +273929,21 @@
       ]
     },
     {
+      "documentId": "doc-9f8a33b6cc8f85989114a2e1",
+      "path": "France-GEIPAN/paired/cases/1979-10-00674/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1979-10-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed, with the sole purpose of being more relevant in their conclusions. Thank",
+          "segment": "seg-ea19f20ae309041d677b3573"
+        }
+      ]
+    },
+    {
       "documentId": "doc-9fbd0b375680b4f6130860d2",
       "path": "France-GEIPAN/paired/cases/1979-10-01866/en/translation.txt",
       "candidates": [
@@ -273910,6 +273955,39 @@
           "method": "event-language",
           "evidence": "Description: On October 10, 1979, at approximately 7:55 a.m., a witness observed an unusual object in the sky. In the shape of a dirigible, the object moved at a constant speed on a horizontal trajectory towards the northwest. No noise emanating from the object was heard during t",
           "segment": "seg-91853e3884fa6ebed3b1b5ee"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0442de92f0d723e733c44379",
+      "path": "France-GEIPAN/paired/cases/1979-11-00678/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1979-12-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 1, 1979, the gendarmerie learned from the press that residents of the same locality had observed on November 11, 1979, around 6:45 PM, \"craft\" or \"objects\" moving above Mareau-Aux-Bois (45). These objects were described as having a round shape, with a dom",
+          "segment": "seg-507d42daa348f7d49a1dab42"
+        },
+        {
+          "value": "1979-11-11",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On December 1, 1979, the gendarmerie learned from the press that residents of the same locality had observed on November 11, 1979, around 6:45 PM, \"craft\" or \"objects\" moving above Mareau-Aux-Bois (45). These objects were described as having a round shape, with a dom",
+          "segment": "seg-507d42daa348f7d49a1dab42"
+        },
+        {
+          "value": "1979-11-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 1, 1979, the gendarmerie learned from the press that residents of the same locality had observed on November 11, 1979, around 6:45 PM, \"craft\" or \"objects\" moving above Mareau-Aux-Bois (45). These objects were described as having a round shape, with a dom",
+          "segment": "seg-507d42daa348f7d49a1dab42"
         }
       ]
     },
@@ -273974,6 +274052,30 @@
       ]
     },
     {
+      "documentId": "doc-0264d67219d1cb2679e708fb",
+      "path": "France-GEIPAN/paired/cases/1979-11-00685/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1979-11-26",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: The names of the various protagonists have been anonymized, as in the case of the official reports. The story that follows had a significant media impact due to the main protagonists who never sought discretion, quite the opposite. The various events that comprise it",
+          "segment": "seg-3fb1dbae43308e0aab228022"
+        },
+        {
+          "value": "1979-12-03",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "Description: The names of the various protagonists have been anonymized, as in the case of the official reports. The story that follows had a significant media impact due to the main protagonists who never sought discretion, quite the opposite. The various events that comprise it",
+          "segment": "seg-3fb1dbae43308e0aab228022"
+        }
+      ]
+    },
+    {
       "documentId": "doc-0ebdd5da2655d745cb14e4de",
       "path": "France-GEIPAN/paired/cases/1979-11-01706/en/translation.txt",
       "candidates": [
@@ -274034,6 +274136,21 @@
       ]
     },
     {
+      "documentId": "doc-22d65dc360893074a32b292a",
+      "path": "France-GEIPAN/paired/cases/1979-12-00695/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1979-12-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: This observation case was recently reviewed (see the *Investigation Notes* document). On December 7, 1979, around 9:15 PM, several drivers in the same geographical area spotted a luminous phenomenon in the sky that intrigued them. It appeared to be moving at low alti",
+          "segment": "seg-2175cb3d1aebc65128c01304"
+        }
+      ]
+    },
+    {
       "documentId": "doc-feacd67070c143b83c9f051e",
       "path": "France-GEIPAN/paired/cases/1979-12-00696/en/translation.txt",
       "candidates": [
@@ -274079,6 +274196,36 @@
       ]
     },
     {
+      "documentId": "doc-2ad07191cce519f9c1aeb906",
+      "path": "France-GEIPAN/paired/cases/1979-12-00702/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1979-12-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more accurate in their conclusions. Thanks",
+          "segment": "seg-a131f9173f2588ec43624ead"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8cdf98800cb6d8c56d11806b",
+      "path": "France-GEIPAN/paired/cases/1979-12-00703/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1979-12-20",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-7219bdd41cac95f1d80b428a"
+        }
+      ]
+    },
+    {
       "documentId": "doc-bcb8bb90ca74ba157de58a1e",
       "path": "France-GEIPAN/paired/cases/1979-12-01703/en/translation.txt",
       "candidates": [
@@ -274090,6 +274237,21 @@
           "method": "event-language",
           "evidence": "Description: On December 3, 1979, at approximately 4:50 PM, two witnesses observed a triangular-shaped object emitting two red smoke trails. As it passed over a radio tower, the object stopped for a few seconds before continuing on. The witnesses followed it with their eyes until",
           "segment": "seg-2cf889cf4a4a274789447eab"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-806829114b86eb6ec580f10b",
+      "path": "France-GEIPAN/paired/cases/1979-12-01704/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1979-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-564e659ba71fe174e8145fcc"
         }
       ]
     },
@@ -274150,6 +274312,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On the morning of January 3, 1980, at 8:05 a.m., a witness, while closing their shutters, spotted a red ball in the sky. This ball disappeared behind clouds and then reappeared in the sky. It moved erratically and at a very high speed. The given trajectory was southe",
           "segment": "seg-28242c1cf7aa145473b4d6eb"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-399f084a43469c9776ad38b6",
+      "path": "France-GEIPAN/paired/cases/1980-01-00712/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1980-01-05",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On January 5, 1980, starting at 6:30 PM, several witnesses observed a luminous phenomenon that intrigued them. A sphere emitting intense light was stationary, then moved slowly and silently through the clear sky. Colors and volume varied according to the witnesses. S",
+          "segment": "seg-6116d27257b1c197e636ad29"
         }
       ]
     },
