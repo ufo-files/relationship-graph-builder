@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-23T21:15:56Z",
+  "generatedAt": "2026-09-23T22:11:25Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "de84a16d0176ff55dee56a0e077814858908ffb8"
+    "revision": "2aea023f0c37f7619d9679320d7c5d97d0e0a6a0"
   },
-  "documentsWithCandidates": 11312,
+  "documentsWithCandidates": 11323,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -33284,6 +33284,30 @@
       ]
     },
     {
+      "documentId": "doc-dc47a70c1357",
+      "path": "Archives-for-the-Unexplained/documents/MUFON-Pennsylvania-newsletter---2008-09.txt",
+      "candidates": [
+        {
+          "value": "2008-09-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 28 2008 from 1000 hrs to 1400 hrs. All FI's",
+          "segment": 9
+        },
+        {
+          "value": "2008-01-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "approximatly 155 case reports, since January 1, 2008.",
+          "segment": 26
+        }
+      ]
+    },
+    {
       "documentId": "doc-1ec7144e16f6",
       "path": "Archives-for-the-Unexplained/documents/MUFON-Pennsylvania-newsletter---2008-11.txt",
       "candidates": [
@@ -64157,6 +64181,30 @@
       ]
     },
     {
+      "documentId": "doc-436bcc814a07",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-02---Track-56.tsv",
+      "candidates": [
+        {
+          "value": "1959-12-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 24, 1959",
+          "segment": 3
+        },
+        {
+          "value": "1962-04-18",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "April 18, 1962, a glowing red object was sighted by a ground observer group at Oneida, New York.",
+          "segment": 117
+        }
+      ]
+    },
+    {
       "documentId": "doc-ca8f6a6458ec",
       "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-02---Track-58.tsv",
       "candidates": [
@@ -64381,6 +64429,21 @@
           "method": "unclassified-mention",
           "evidence": "On March 25, 1966, Dr. Hynek was to learn what it feels like when you find yourself all alone and things are quiet from the storm.",
           "segment": 245
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cb9817d41b03",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-04---Track-63.tsv",
+      "candidates": [
+        {
+          "value": "1955-02-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "a picture taken February 26, 1955",
+          "segment": 140
         }
       ]
     },
@@ -64750,6 +64813,21 @@
           "method": "unclassified-mention",
           "evidence": "Date of May 31, 1966.",
           "segment": 447
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5815bc4026ae",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-06---Track-570621---Long-Jon-Nebel---George-Van-Tassel.tsv",
+      "candidates": [
+        {
+          "value": "1956-12-15",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The particular bulletin I'm referring to is dated December 15, 1956.",
+          "segment": 2068
         }
       ]
     },
@@ -277076,6 +277154,78 @@
       ]
     },
     {
+      "documentId": "doc-7ef8cff12730c26651b83309",
+      "path": "France-GEIPAN/paired/cases/1982-01-00913/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1982-01-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being re-examined with the sole purpose of being more relevant in their conclusions.",
+          "segment": "seg-7f504e78a3158682a26f4990"
+        },
+        {
+          "value": "1982-01-17",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being re-examined with the sole purpose of being more relevant in their conclusions.",
+          "segment": "seg-7f504e78a3158682a26f4990"
+        },
+        {
+          "value": "1982-01-19",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being re-examined with the sole purpose of being more relevant in their conclusions.",
+          "segment": "seg-7f504e78a3158682a26f4990"
+        },
+        {
+          "value": "1982-01-27",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being re-examined with the sole purpose of being more relevant in their conclusions.",
+          "segment": "seg-7f504e78a3158682a26f4990"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8da4abcf0ec455d6be3210fe",
+      "path": "France-GEIPAN/paired/cases/1982-01-00914/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1982-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being re-examined to enhance the conclusions' relevance. Thanks to new technical too",
+          "segment": "seg-4c4efc1bf3e80392c47b11d7"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-50a449cadf5381ecd016febf",
+      "path": "France-GEIPAN/paired/cases/1982-01-00915/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1982-01-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On January 27, 1982, around 7:15 PM, an entire family in a car on CD 910, in the commune of Guenviller (57), observed for two minutes a peculiar object in the cloudy sky. The object emitted light and moved slowly without making a sound. It was in the shape of a half-",
+          "segment": "seg-f0b4e7cc53019d63f4fc66c3"
+        }
+      ]
+    },
+    {
       "documentId": "doc-4b38749ae3cbe7d4a3f034ef",
       "path": "France-GEIPAN/paired/cases/1982-02-00916/en/translation.txt",
       "candidates": [
@@ -277132,6 +277282,21 @@
           "method": "event-language",
           "evidence": "Description: On February 9, 1982, several witnesses observed around 6:40 a.m. a luminous phenomenon. With an oval shape, it emitted a red-orange light. During the 47 minutes of observation, the object moved, performing up-and-down reciprocating motions. One witness claims to have",
           "segment": "seg-14ad3c543e6748d5fe22e4ad"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7757bc11b947fa57c63889f8",
+      "path": "France-GEIPAN/paired/cases/1982-03-00920/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1982-02-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed, with the sole purpose of being more relevant in their conclusions. Thank",
+          "segment": "seg-4333cb6c739739ab2cab9ca0"
         }
       ]
     },
@@ -277196,6 +277361,21 @@
       ]
     },
     {
+      "documentId": "doc-9372bc2407b8f289f58b2d68",
+      "path": "France-GEIPAN/paired/cases/1982-04-00926/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1982-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reexamined with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-00c80da0426b653137f9dea8"
+        }
+      ]
+    },
+    {
       "documentId": "doc-92983e66ad071a35bed3a578",
       "path": "France-GEIPAN/paired/cases/1982-04-00927/en/translation.txt",
       "candidates": [
@@ -277226,6 +277406,21 @@
       ]
     },
     {
+      "documentId": "doc-4f9f4b9e8bbb867ddc506d1a",
+      "path": "France-GEIPAN/paired/cases/1982-04-00930/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1982-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-045bdb1367ab596422c2b87c"
+        }
+      ]
+    },
+    {
       "documentId": "doc-59ef1316ec841075a7baef79",
       "path": "France-GEIPAN/paired/cases/1982-04-01675/en/translation.txt",
       "candidates": [
@@ -277237,6 +277432,21 @@
           "method": "event-language",
           "evidence": "Description: On April 3, 1982, several people observed a slow-moving, North-South oriented, colored light phenomenon. According to the director of the volcanic observatory, this phenomenon is likely due to an atmospheric reentry of a natural object (meteorite) or human-made objec",
           "segment": "seg-e1f60ff0bce5e071854363a8"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c59824db81aeb1d60ce8be35",
+      "path": "France-GEIPAN/paired/cases/1982-05-00931/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1982-04-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reexamined with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-a7ddca968e4b153fffc6ca44"
         }
       ]
     },
