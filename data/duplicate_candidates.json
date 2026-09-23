@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e1e991dfe018cb419924a8c6305a47b9b3e4c868"
+    "revision": "633fae8085ffe672f49fdc4c0bd0fc35b8995853"
   },
-  "count": 367,
-  "totalCount": 367,
-  "shownCount": 367,
+  "count": 369,
+  "totalCount": 369,
+  "shownCount": 369,
   "candidates": [
     {
       "category": "organization",
@@ -111,8 +111,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 660,
-        "documentCount": 421
+        "mentions": 661,
+        "documentCount": 422
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -127,8 +127,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 660,
-        "documentCount": 421
+        "mentions": 661,
+        "documentCount": 422
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -399,8 +399,8 @@
       "category": "location",
       "left": {
         "name": "Holloman Air Force Base",
-        "mentions": 187,
-        "documentCount": 96
+        "mentions": 188,
+        "documentCount": 97
       },
       "right": {
         "name": "Hollman Air Force Base",
@@ -463,8 +463,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 534,
-        "documentCount": 269
+        "mentions": 535,
+        "documentCount": 270
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -719,8 +719,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 222,
-        "documentCount": 140
+        "mentions": 223,
+        "documentCount": 141
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -908,16 +908,16 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "organization",
+      "category": "government_agency",
       "left": {
-        "name": "Principal Deputy Director of National Intelligence",
-        "mentions": 7,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "Principal Deputy Director for National Intelligence",
+        "name": "Executive Offices",
         "mentions": 2,
         "documentCount": 2
+      },
+      "right": {
+        "name": "Executive Office",
+        "mentions": 9,
+        "documentCount": 6
       },
       "similarity": 0.97,
       "reason": "similar name",
@@ -932,6 +932,22 @@
       },
       "right": {
         "name": "Billeting Office",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Principal Deputy Director of National Intelligence",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Principal Deputy Director for National Intelligence",
         "mentions": 2,
         "documentCount": 2
       },
@@ -959,8 +975,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 660,
-        "documentCount": 421
+        "mentions": 661,
+        "documentCount": 422
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -975,8 +991,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 660,
-        "documentCount": 421
+        "mentions": 661,
+        "documentCount": 422
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -991,8 +1007,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 660,
-        "documentCount": 421
+        "mentions": 661,
+        "documentCount": 422
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1839,8 +1855,8 @@
       "category": "person",
       "left": {
         "name": "Timothy Good",
-        "mentions": 94,
-        "documentCount": 56
+        "mentions": 95,
+        "documentCount": 57
       },
       "right": {
         "name": "Timothy Goods",
@@ -2223,8 +2239,8 @@
       "category": "location",
       "left": {
         "name": "Malmstrom Air Force Base",
-        "mentions": 137,
-        "documentCount": 79
+        "mentions": 138,
+        "documentCount": 80
       },
       "right": {
         "name": "Maelstrom Air Force Base",
@@ -3103,8 +3119,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 222,
-        "documentCount": 140
+        "mentions": 223,
+        "documentCount": 141
       },
       "right": {
         "name": "Linda Moulton Howell",
@@ -4764,6 +4780,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "The Walter Reed Army Medical Center",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "WALTER REED ARMY MEDICAL CENTER WILL",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.925,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "George Adamski",
@@ -5711,8 +5743,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 222,
-        "documentCount": 140
+        "mentions": 223,
+        "documentCount": 141
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
