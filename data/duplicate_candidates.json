@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5ffb76c9f85787e1ec9d6761474e82d5ce6e3af6"
+    "revision": "e1e991dfe018cb419924a8c6305a47b9b3e4c868"
   },
-  "count": 370,
-  "totalCount": 370,
-  "shownCount": 370,
+  "count": 367,
+  "totalCount": 367,
+  "shownCount": 367,
   "candidates": [
     {
       "category": "organization",
@@ -111,8 +111,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 656,
-        "documentCount": 420
+        "mentions": 660,
+        "documentCount": 421
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -127,8 +127,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 656,
-        "documentCount": 420
+        "mentions": 660,
+        "documentCount": 421
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -136,22 +136,6 @@
         "documentCount": 2
       },
       "similarity": 0.984,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "book",
-      "left": {
-        "name": "Area 51: An Uncensored History",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "right": {
-        "name": "Area 51 and Uncensored History",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "similarity": 0.983,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -196,8 +180,8 @@
       },
       "right": {
         "name": "Major Range and Test Facility Bases",
-        "mentions": 4,
-        "documentCount": 4
+        "mentions": 5,
+        "documentCount": 5
       },
       "similarity": 0.982,
       "reason": "similar name",
@@ -303,8 +287,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 54,
-        "documentCount": 38
+        "mentions": 55,
+        "documentCount": 39
       },
       "right": {
         "name": "Department of Transports",
@@ -399,8 +383,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 271,
-        "documentCount": 154
+        "mentions": 273,
+        "documentCount": 155
       },
       "right": {
         "name": "Kirtland Airforce Base",
@@ -479,8 +463,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 530,
-        "documentCount": 268
+        "mentions": 534,
+        "documentCount": 269
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -735,8 +719,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 221,
-        "documentCount": 139
+        "mentions": 222,
+        "documentCount": 140
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -975,8 +959,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 656,
-        "documentCount": 420
+        "mentions": 660,
+        "documentCount": 421
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -991,8 +975,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 656,
-        "documentCount": 420
+        "mentions": 660,
+        "documentCount": 421
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1007,8 +991,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 656,
-        "documentCount": 420
+        "mentions": 660,
+        "documentCount": 421
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1516,22 +1500,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "book",
-      "left": {
-        "name": "Flying Saucers",
-        "mentions": 221,
-        "documentCount": 154
-      },
-      "right": {
-        "name": "Flying Saucer",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
@@ -1567,8 +1535,8 @@
       "category": "government_agency",
       "left": {
         "name": "Action Officer",
-        "mentions": 85,
-        "documentCount": 40
+        "mentions": 86,
+        "documentCount": 41
       },
       "right": {
         "name": "ACTION OFFICE",
@@ -1750,6 +1718,22 @@
         "name": "Airforce Base",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Deputy Director of National Intelligence",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Deputy Director for National Intelligence",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -2236,22 +2220,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "book",
-      "left": {
-        "name": "Supernatural",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "The Super Natural",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "location",
       "left": {
         "name": "Malmstrom Air Force Base",
@@ -2287,8 +2255,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 271,
-        "documentCount": 154
+        "mentions": 273,
+        "documentCount": 155
       },
       "right": {
         "name": "Kirkland Air Force Base",
@@ -2303,8 +2271,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 271,
-        "documentCount": 154
+        "mentions": 273,
+        "documentCount": 155
       },
       "right": {
         "name": "Kirtland Alr Force Base",
@@ -2367,8 +2335,8 @@
       "category": "person",
       "left": {
         "name": "Chris Sharp",
-        "mentions": 90,
-        "documentCount": 42
+        "mentions": 94,
+        "documentCount": 43
       },
       "right": {
         "name": "Chris Sharpe's",
@@ -2396,6 +2364,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Transport",
+        "mentions": 55,
+        "documentCount": 39
+      },
+      "right": {
+        "name": "Department of Trancport",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Paul Hellyer",
@@ -2406,22 +2390,6 @@
         "name": "Paul Heller",
         "mentions": 4,
         "documentCount": 4
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of Transport",
-        "mentions": 54,
-        "documentCount": 38
-      },
-      "right": {
-        "name": "Department of Trancport",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2799,8 +2767,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of the Director",
-        "mentions": 14,
-        "documentCount": 13
+        "mentions": 13,
+        "documentCount": 12
       },
       "right": {
         "name": "Office of the Direct",
@@ -3135,8 +3103,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 221,
-        "documentCount": 139
+        "mentions": 222,
+        "documentCount": 140
       },
       "right": {
         "name": "Linda Moulton Howell",
@@ -3188,8 +3156,8 @@
       },
       "right": {
         "name": "Special Access Program Central Office",
-        "mentions": 7,
-        "documentCount": 5
+        "mentions": 8,
+        "documentCount": 6
       },
       "similarity": 0.946,
       "reason": "similar name",
@@ -3535,8 +3503,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 632,
-        "documentCount": 357
+        "mentions": 633,
+        "documentCount": 358
       },
       "right": {
         "name": "Stanton Freedman",
@@ -3839,8 +3807,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 54,
-        "documentCount": 38
+        "mentions": 55,
+        "documentCount": 39
       },
       "right": {
         "name": "Department of Tramport",
@@ -3940,8 +3908,8 @@
       },
       "right": {
         "name": "Special Access Program Central Office",
-        "mentions": 7,
-        "documentCount": 5
+        "mentions": 8,
+        "documentCount": 6
       },
       "similarity": 0.933,
       "reason": "similar name",
@@ -4223,8 +4191,8 @@
       "category": "person",
       "left": {
         "name": "Catherine Austin Fitz",
-        "mentions": 24,
-        "documentCount": 16
+        "mentions": 25,
+        "documentCount": 17
       },
       "right": {
         "name": "Catherine Austin Fitts",
@@ -4428,6 +4396,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Office of Special Projects",
+        "mentions": 19,
+        "documentCount": 10
+      },
+      "right": {
+        "name": "OSI Office of Special Projects",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Donald Schmidt",
@@ -4444,16 +4428,16 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
+      "category": "program",
       "left": {
-        "name": "Office of Special Projects",
-        "mentions": 17,
-        "documentCount": 9
+        "name": "Project Orion",
+        "mentions": 10,
+        "documentCount": 6
       },
       "right": {
-        "name": "OSI Office of Special Projects",
-        "mentions": 4,
-        "documentCount": 2
+        "name": "Project Horizon",
+        "mentions": 10,
+        "documentCount": 5
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -4470,22 +4454,6 @@
         "name": "Joseph Ferrell",
         "mentions": 7,
         "documentCount": 7
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "program",
-      "left": {
-        "name": "Project Orion",
-        "mentions": 8,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "Project Horizon",
-        "mentions": 10,
-        "documentCount": 5
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -4927,8 +4895,8 @@
       "category": "program",
       "left": {
         "name": "Project Stork",
-        "mentions": 18,
-        "documentCount": 14
+        "mentions": 19,
+        "documentCount": 15
       },
       "right": {
         "name": "Project SLork",
@@ -5375,8 +5343,8 @@
       "category": "book",
       "left": {
         "name": "Behind the Flying Saucers",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 1,
+        "documentCount": 1
       },
       "right": {
         "name": "Behind the fluing saucere",
@@ -5615,8 +5583,8 @@
       "category": "person",
       "left": {
         "name": "Mary Sturtevant",
-        "mentions": 12,
-        "documentCount": 8
+        "mentions": 14,
+        "documentCount": 9
       },
       "right": {
         "name": "Mary Kay Sturtevant",
@@ -5743,8 +5711,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 221,
-        "documentCount": 139
+        "mentions": 222,
+        "documentCount": 140
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
@@ -5913,22 +5881,6 @@
       },
       "similarity": 0.867,
       "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "book",
-      "left": {
-        "name": "UFO",
-        "mentions": 16,
-        "documentCount": 14
-      },
-      "right": {
-        "name": "Unconventional Flying Objects",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "similarity": 0.188,
-      "reason": "acronym",
       "aliasFile": "data/entity_aliases.json"
     }
   ]
