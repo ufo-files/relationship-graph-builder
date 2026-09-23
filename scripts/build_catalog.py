@@ -228,7 +228,9 @@ GENERATIONAL_SUFFIX_AFTER = re.compile(
 BOOK_TITLE_WORD = r"(?:[A-Z0-9][A-Za-z0-9.'’:-]*|(?:of|the|and|to|in|on|at|from|for|is|a|an)\b)"
 BOOK_TITLE = rf"(?P<title>(?:[A-Z0-9][A-Za-z0-9.'’:-]{{1,}}|A)(?:\s+{BOOK_TITLE_WORD}){{0,11}})"
 BOOK_PATTERNS = [
-    re.compile(r"\b(?i:(?:book|novel|memoir)(?:\s+(?:called|titled|entitled))?)\s+[\"'“](?P<title>[^\"'”\n]{3,120})[\"'”]"),
+    re.compile(r"\b(?i:(?:book|novel|memoir)(?:\s+(?:called|titled|entitled))?)\s+\"(?P<title>[^\"\n]{3,120})\""),
+    re.compile(r"\b(?i:(?:book|novel|memoir)(?:\s+(?:called|titled|entitled))?)\s+“(?P<title>[^”\n]{3,120})”"),
+    re.compile(r"\b(?i:(?:book|novel|memoir)(?:\s+(?:called|titled|entitled))?)\s+['‘](?P<title>(?:[^'’\n]|['’](?=\w)){3,120})['’](?!\w)"),
     re.compile(rf"\b(?i:(?:book|novel|memoir)(?:\s+by\b(?!\s*(?:an?\s+)?(?:guy|author|man|woman)\b)\s*[^.!?\n]{{0,100}}?)?\s+(?:called|titled|entitled))\s+(?![\"'“]){BOOK_TITLE}"),
     re.compile(rf"\b(?i:author of (?:the\s+)?(?:(?:recently|newly)\s+published\s+)?(?:book|novel|memoir))\s+(?![\"'“]){BOOK_TITLE}"),
     re.compile(rf"\b(?i:(?:in|from|read|reading|through)\s+(?:his|her|their|the|a|this)\s+(?:new\s+|classic\s+)?(?:book|novel|memoir))\s+(?![\"'“]){BOOK_TITLE}"),
@@ -1954,7 +1956,9 @@ def title_from_path(path: Path) -> str:
 def clean_book_title(value: str) -> str:
     title = clean_space(value).strip("\"'“”‘’.,;:!?- ")
     title = re.split(r"(?<!\bMr)(?<!\bDr)(?<!\bMs)(?<!\bU\.S)(?<!\b[A-Z])\.\s+(?=[A-Z])", title, maxsplit=1)[0]
-    title = re.sub(r"\s+(?:a|an|and|for|from|in|of|on|the|to)$", "", title, flags=re.IGNORECASE)
+    # A lowercase predicate belongs to the surrounding sentence, unless the
+    # next word is title-cased (e.g. Mr. Kant is Dead).
+    title = re.split(r"\s+is\b(?!\s+[A-Z])", title, maxsplit=1)[0]
     title = re.sub(r"\s+in\s+(?:19|20)\d{2}$", "", title, flags=re.IGNORECASE)
     return title.strip("\"'“”‘’.,;:!?- ")
 
@@ -1966,7 +1970,35 @@ def plausible_book_title(value: str) -> bool:
         return False
     if key in BOOK_TITLE_REJECT or words[0] in {"chapter", "figure", "table"}:
         return False
+    if not any(char.isalpha() for char in value):
+        return False
+    if re.fullmatch(r"(?:i|we|you|he|she|it|they)['’](?:m|ve|ll|d|re|s)|let['’]s", value, re.I):
+        return False
+    if words[-1] in {"a", "an", "and", "for", "from", "in", "of", "on", "the", "to", "is"}:
+        return False
     return True
+
+
+def supported_unreviewed_book_match(match: re.Match, segment: str) -> bool:
+    """Require a title assertion and a boundary, not merely words after 'book'."""
+    prefix = segment[match.start():match.start("title")]
+    if prefix.rstrip().endswith(('"', "'", "“", "‘")):
+        return True
+    if not re.search(r"\b(?:called|titled|entitled|is|was)\s*$|\bauthor of\b", prefix, re.I):
+        return False
+    raw = match.group("title")
+    after = segment[match.end("title"):]
+    if raw[len(clean_book_title(raw)):].startswith("."):
+        return True
+    # Unpunctuated transcript/OCR endings can be just the first word of a title.
+    if not after.strip():
+        return raw.endswith((".", "!", "?"))
+    return bool(
+        re.match(r"^\s*[,.;:!?)]", after)
+        or re.match(r"^\s+(?:by|about|which|that|where|published|discusses|sold)\b", after)
+        or re.match(r"^\s+in\s+(?:18|19|20)\d{2}\b", after)
+        or re.search(r"\s+is$", raw)
+    )
 
 
 def sentence_segments(text: str) -> Iterable[str]:
@@ -3135,7 +3167,9 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
         found[entity_key(raw, "date")] = (raw, raw, "date", 0.96, False)
     for pattern in BOOK_PATTERNS:
         for match in pattern.finditer(segment):
-            raw = clean_book_title(match.group("title"))
+            quoted = segment[match.start():match.start("title")].rstrip().endswith(('"', "'", "“", "‘"))
+            raw = (clean_space(match.group("title")).strip(".,;:!?- ") if quoted
+                   else clean_book_title(match.group("title")))
             if not plausible_book_title(raw):
                 continue
             registry_match = registry.get(comparison_key(raw))
@@ -3143,6 +3177,8 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
                 canonical, category = registry_match
                 found[entity_key(canonical, category)] = (raw, canonical, category, 0.98, True)
             else:
+                if not supported_unreviewed_book_match(match, segment):
+                    continue
                 found[entity_key(raw, "book")] = (raw, raw, "book", 0.97, False)
     book_pattern = getattr(registry, "book_pattern", None)
     if book_pattern:
@@ -3873,7 +3909,7 @@ def build(
         "input": catalog_input,
         "publicationPolicy": {
             "personEvidenceFloor": "3 mentions across 2 documents",
-            "bookEvidenceFloor": "1 explicit title cue in transcript text",
+            "bookEvidenceFloor": "reviewed title in book context, or a quoted/bounded explicit title assertion",
             "otherEvidenceFloor": "2 mentions across 2 documents (dates: 2 mentions)",
             "relationshipEvidenceFloor": "2 co-mentions or 1 same-segment typed cue",
             "contextAdjustment": "Exact context repeats within one document count once; requester metadata is excluded; exact contexts spanning 3+ documents count once",

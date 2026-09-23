@@ -1824,6 +1824,46 @@ class ClassificationTests(unittest.TestCase):
             ["James T. Lacatski", "Colm A. Kelleher", "George Knapp"],
         )
 
+    def test_book_titles_reject_transcript_fragments_and_incomplete_titles(self):
+        data_dir = Path(__file__).resolve().parents[1] / "data"
+        registry = load_registry([data_dir / "book_catalog.json"])
+        fragments = [
+            "history in the book I'm working on now I",
+            "know as I've written in a book I've",
+            "was written about in a book I'll post",
+            "in the book Nick says", "the last line I have of my book is Joe",
+            "in her book Kate McCann says", "book is American conspiracies",
+            "a book called UFOs myths", "Peter Sturrock wrote this book UFO",
+            "in his book On Growth and", "wrote a book called UFOs and in that",
+            "wrote a book 1949 is called pioneers of",
+            "a book called The Physics of", "the book is 1997.",
+            "Corso's Roswell Book Is Riddled With Factual Errors As Well",
+        ]
+        for segment in fragments:
+            with self.subTest(segment=segment):
+                books = [m for m in extract_mentions(segment, registry) if m[2] == "book"]
+                self.assertEqual(books, [])
+
+    def test_book_titles_preserve_complete_titles_quotes_and_reviewed_case_variants(self):
+        data_dir = Path(__file__).resolve().parents[1] / "data"
+        registry = load_registry([data_dir / "book_catalog.json"])
+        examples = {
+            "out with a book called American cosmic": "American Cosmic",
+            "His third book is Majestic.": "Majestic",
+            'I read the novel "Home".': "Home",
+            'a book called "Childhood\'s End" was discussed.': "Childhood's End",
+            'a book called "Love is blind" was discussed.': "Love is blind",
+            "a book called ‘Childhood’s End’ was discussed.": "Childhood’s End",
+            'a book entitled “Very Strange Things I’ve Encountered” was discussed.': "Very Strange Things I’ve Encountered",
+            "the book Communion was discussed.": "Communion",
+            "a book titled Mr. Kant is Dead by Orville M. Irwin.": "Mr. Kant is Dead",
+            "NICAP's book entitled The UFO Evidence is nearly 200 pages long.": "The UFO Evidence",
+        }
+        for segment, expected in examples.items():
+            with self.subTest(segment=segment):
+                books = {m[1] for m in extract_mentions(segment, registry) if m[2] == "book"}
+                self.assertEqual(books, {expected})
+
     def test_extracts_curated_wikileaks_ufo_entities(self):
         mentions = extract_mentions(
             "Our nonviolent ETI from the contiguous universe are helping bring zero point energy to Earth. "
