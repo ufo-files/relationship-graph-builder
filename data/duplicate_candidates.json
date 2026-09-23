@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "633fae8085ffe672f49fdc4c0bd0fc35b8995853"
+    "revision": "084d81766fd66d436b719e298eae82ce5ed69a24"
   },
   "count": 369,
   "totalCount": 369,
@@ -111,8 +111,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 661,
-        "documentCount": 422
+        "mentions": 662,
+        "documentCount": 423
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -127,8 +127,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 661,
-        "documentCount": 422
+        "mentions": 662,
+        "documentCount": 423
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -367,8 +367,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 457,
-        "documentCount": 219
+        "mentions": 458,
+        "documentCount": 220
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -463,8 +463,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 535,
-        "documentCount": 270
+        "mentions": 536,
+        "documentCount": 271
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -975,8 +975,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 661,
-        "documentCount": 422
+        "mentions": 662,
+        "documentCount": 423
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -991,8 +991,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 661,
-        "documentCount": 422
+        "mentions": 662,
+        "documentCount": 423
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1007,8 +1007,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 661,
-        "documentCount": 422
+        "mentions": 662,
+        "documentCount": 423
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1295,8 +1295,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 494,
-        "documentCount": 258
+        "mentions": 495,
+        "documentCount": 259
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1519,8 +1519,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 210,
-        "documentCount": 132
+        "mentions": 213,
+        "documentCount": 135
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -1980,6 +1980,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Army Reserve",
+        "mentions": 14,
+        "documentCount": 13
+      },
+      "right": {
+        "name": "Army Reserves",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Joseph Burks",
@@ -1990,22 +2006,6 @@
         "name": "Joseph Burkes",
         "mentions": 14,
         "documentCount": 9
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Army Reserve",
-        "mentions": 13,
-        "documentCount": 12
-      },
-      "right": {
-        "name": "Army Reserves",
-        "mentions": 4,
-        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2367,8 +2367,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 86,
-        "documentCount": 67
+        "mentions": 88,
+        "documentCount": 68
       },
       "right": {
         "name": "Northeastern University",
@@ -3884,6 +3884,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Edgar Allen Poe",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Edgar Allan Poe",
+        "mentions": 10,
+        "documentCount": 8
+      },
+      "similarity": 0.933,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Kirkland Air Force Base",
@@ -3897,22 +3913,6 @@
       },
       "similarity": 0.933,
       "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Edgar Allen Poe",
-        "mentions": 5,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Edgar Allan Poe",
-        "mentions": 8,
-        "documentCount": 7
-      },
-      "similarity": 0.933,
-      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -4191,8 +4191,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 86,
-        "documentCount": 67
+        "mentions": 88,
+        "documentCount": 68
       },
       "right": {
         "name": "Northwest University",
@@ -4639,8 +4639,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 457,
-        "documentCount": 219
+        "mentions": 458,
+        "documentCount": 220
       },
       "right": {
         "name": "University Colorado",
@@ -4958,13 +4958,13 @@
     {
       "category": "person",
       "left": {
-        "name": "Jacques Valet",
-        "mentions": 5,
-        "documentCount": 3
+        "name": "Charles Bowen",
+        "mentions": 9,
+        "documentCount": 8
       },
       "right": {
-        "name": "Jacques Valle",
-        "mentions": 11,
+        "name": "Col. Charles Brown",
+        "mentions": 7,
         "documentCount": 4
       },
       "similarity": 0.923,
@@ -4974,13 +4974,13 @@
     {
       "category": "person",
       "left": {
-        "name": "Charles Bowen",
-        "mentions": 8,
-        "documentCount": 7
+        "name": "Jacques Valet",
+        "mentions": 5,
+        "documentCount": 3
       },
       "right": {
-        "name": "Col. Charles Brown",
-        "mentions": 7,
+        "name": "Jacques Valle",
+        "mentions": 11,
         "documentCount": 4
       },
       "similarity": 0.923,
@@ -5014,6 +5014,22 @@
         "name": "Robert Simon",
         "mentions": 4,
         "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Okanagan Lake",
+        "mentions": 8,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Okanogan Lake",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -5078,22 +5094,6 @@
         "name": "George Adamsky",
         "mentions": 5,
         "documentCount": 4
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Okanagan Lake",
-        "mentions": 6,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "Okanogan Lake",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.923,
       "reason": "similar name",
