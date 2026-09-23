@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a2ea23976636368570eac78e942aaa8df9a3ac12"
+    "revision": "81b4e97d0533c275d0ee93ba9e3f781c6191d7be"
   },
   "count": 364,
   "totalCount": 364,
@@ -367,8 +367,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 455,
-        "documentCount": 217
+        "mentions": 456,
+        "documentCount": 218
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1980,6 +1980,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Mike Clelland",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Mike Cleland",
+        "mentions": 13,
+        "documentCount": 9
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Red Mountain",
@@ -1990,22 +2006,6 @@
         "name": "Read Mountain",
         "mentions": 9,
         "documentCount": 5
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Mike Clelland",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Mike Cleland",
-        "mentions": 12,
-        "documentCount": 8
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2399,8 +2399,8 @@
       "category": "person",
       "left": {
         "name": "John Edward",
-        "mentions": 26,
-        "documentCount": 19
+        "mentions": 27,
+        "documentCount": 20
       },
       "right": {
         "name": "John Edwards",
@@ -3340,6 +3340,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of St",
+        "mentions": 7,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "University of West",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Knoxvillo Airport",
@@ -3350,22 +3366,6 @@
         "name": "Knoxville Airport",
         "mentions": 6,
         "documentCount": 5
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "University of St",
-        "mentions": 6,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "University of West",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -3471,8 +3471,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 628,
-        "documentCount": 354
+        "mentions": 629,
+        "documentCount": 355
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4575,8 +4575,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 455,
-        "documentCount": 217
+        "mentions": 456,
+        "documentCount": 218
       },
       "right": {
         "name": "University Colorado",
