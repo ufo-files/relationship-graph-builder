@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "6d04cdf41402b56cf11bac413b1e679383e42421"
+    "revision": "e5a08eda92831eab9b9dc24046ead81e1b729f7f"
   },
-  "count": 368,
-  "totalCount": 368,
-  "shownCount": 368,
+  "count": 370,
+  "totalCount": 370,
+  "shownCount": 370,
   "candidates": [
     {
       "category": "organization",
@@ -415,8 +415,8 @@
       "category": "location",
       "left": {
         "name": "Holloman Air Force Base",
-        "mentions": 185,
-        "documentCount": 95
+        "mentions": 187,
+        "documentCount": 96
       },
       "right": {
         "name": "Hollman Air Force Base",
@@ -479,8 +479,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 525,
-        "documentCount": 263
+        "mentions": 527,
+        "documentCount": 265
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -1044,6 +1044,22 @@
       },
       "right": {
         "name": "AREA NAVI GATION",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Marshall Islands",
+        "mentions": 51,
+        "documentCount": 23
+      },
+      "right": {
+        "name": "Marshall Island",
         "mentions": 2,
         "documentCount": 2
       },
@@ -1876,8 +1892,8 @@
       },
       "right": {
         "name": "Donald Keogh",
-        "mentions": 37,
-        "documentCount": 6
+        "mentions": 39,
+        "documentCount": 7
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2316,6 +2332,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "program",
+      "left": {
+        "name": "Project Sign",
+        "mentions": 132,
+        "documentCount": 77
+      },
+      "right": {
+        "name": "Project SIG",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "David Jacobs",
@@ -2326,22 +2358,6 @@
         "name": "David Jacob",
         "mentions": 5,
         "documentCount": 5
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "program",
-      "left": {
-        "name": "Project Sign",
-        "mentions": 131,
-        "documentCount": 76
-      },
-      "right": {
-        "name": "Project SIG",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -3519,8 +3535,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 631,
-        "documentCount": 356
+        "mentions": 632,
+        "documentCount": 357
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4319,8 +4335,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 257,
-        "documentCount": 130
+        "mentions": 260,
+        "documentCount": 131
       },
       "right": {
         "name": "George Adamsky",
@@ -4534,6 +4550,22 @@
         "name": "William Poland",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Keith Roberts",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Keith Robertson",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -4767,8 +4799,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 257,
-        "documentCount": 130
+        "mentions": 260,
+        "documentCount": 131
       },
       "right": {
         "name": "George Adams",
