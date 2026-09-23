@@ -1980,6 +1980,21 @@ class CatalogTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "evidence excerpt is not exact source language"):
                 validate_claim_source_blobs(root, claims_path, [{"id": document_id, "path": "Example/source.txt"}])
 
+    def test_recent_reviewed_milestones_require_their_archived_sources(self):
+        registry = Path(__file__).resolve().parents[1] / "data" / "curated_events.json"
+        items = json.loads(registry.read_text())["events"]
+        recent = [item for item in items if item["startDate"] >= "2025-01-01"]
+        self.assertEqual({item["startDate"] for item in recent}, {"2025-09-16", "2026-05-22"})
+        document_ids = {item["sourcePath"]: stable_id("doc", item["sourcePath"]) for item in recent}
+        events = curated_events(registry, document_ids)
+        self.assertEqual({event["startDate"] for event in events}, {"2025-09-16", "2026-05-22"})
+        self.assertTrue(all(event["confidence"] >= .9 and event["evidence"] for event in events))
+        self.assertTrue(all(event["documentIds"] for event in events))
+        self.assertEqual(curated_events(registry, {}), [])
+        release = next(event for event in events if event["startDate"] == "2026-05-22")
+        self.assertEqual(release["eventType"], "publication")
+        self.assertIn("originally posted", release["evidence"][0]["excerpt"])
+
     def test_historical_coverage_review_includes_phoenix_and_tracks_gaps(self):
         data_dir = Path(__file__).resolve().parents[1] / "data"
         curated = json.loads((data_dir / "curated_events.json").read_text(encoding="utf-8"))["events"]

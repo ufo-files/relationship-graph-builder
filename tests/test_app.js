@@ -110,6 +110,10 @@ test("government program chronology is source-backed and preserves congressional
   assert.ok(programs.programs.length >= 20);
   assert.ok(programs.programs.every(program => program.sources.length && program.sources.every(source => source.url.startsWith("https://"))));
   assert.ok(programs.programs.every(program => program.startDate && program.startPrecision));
+  const pursue = programs.programs.find(program => program.id === "pursue");
+  assert.ok(pursue, "PURSUE must be included even without a ranked corpus entity");
+  assert.deepEqual([pursue.startDate, pursue.endDate, pursue.evidenceStatus], ["2026-05-08", null, "official"]);
+  assert.match(pursue.summary, /Presidential Unsealing and Reporting System for UAP Encounters/);
   const blueBook = programs.programs.find(program => program.id === "project-blue-book");
   assert.deepEqual([blueBook.startDate, blueBook.startPrecision, blueBook.endDate, blueBook.endPrecision, blueBook.evidenceStatus], ["1952-03", "month", "1969-12-17", "day", "official"]);
   const grudge = programs.programs.find(program => program.id === "project-grudge");
@@ -191,8 +195,8 @@ test("Programs requires a reviewed disposition for every corpus candidate and da
   const expectedProgramDocumentCount = program => new Set(program.entityIds.flatMap(entityId => context.catalogFixture.entities.find(entity => entity.id === entityId)?.documentIds || [])).size;
   assert.equal(vm.runInContext(`programCorpusDocumentCount(resultFixture.programs.find(program => program.id === "aawsap"))`, context), expectedProgramDocumentCount(aawsap));
   assert.equal(vm.runInContext(`programCorpusDocumentCount(resultFixture.programs.find(program => program.id === "condon-committee"))`, context), expectedProgramDocumentCount(condon));
-  assert.equal(result.reviewedProgramCount, 35);
-  assert.equal(result.reviewedIntervalCount, 36);
+  assert.equal(result.reviewedProgramCount, 36);
+  assert.equal(result.reviewedIntervalCount, 37);
   assert.equal(vm.runInContext(`formatProgramDate("2017-12", "month")`, context), "2017-12");
   assert.equal(vm.runInContext(`formatProgramDate("1980", "decade")`, context), "1980s");
   assert.equal(vm.runInContext(`programTimeframeLabel(reviewedFixture.programs.find(program => program.id === "project-blue-book"), reviewedFixture.reviewedAt)`, context), "1952-03–1969-12-17");

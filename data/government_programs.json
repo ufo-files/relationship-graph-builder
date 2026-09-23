@@ -1,6 +1,6 @@
 {
   "schema": "ufo-files-government-programs/v1",
-  "reviewedAt": "2026-08-25",
+  "reviewedAt": "2026-09-23",
   "method": "The audit covers every entity currently classified as a program in the generated corpus catalog plus named government UAP efforts found in other entity categories, paired-source metadata, and authoritative national records. Included efforts have a source-reviewed start and an explicit end or remain bounded by the catalog review date. Merged aliases, non-program entities, private efforts, and unsupported program claims are recorded in entityReviews and are not rendered as government-program intervals. Evidence status remains visible in every presentation.",
   "programs": [
     {
@@ -244,6 +244,25 @@
       "startDate": "2017-12", "endDate": "2024-11-13", "startPrecision": "month", "endPrecision": "day", "evidenceStatus": "congressional_record_claim",
       "summary": "An alleged unacknowledged special-access program described in material entered into a House hearing record. The claimed interval is bounded by its reported December 2017 start and the November 2024 hearing date; this is not agency confirmation.",
       "sources": [{ "title": "House hearing record: Unidentified Anomalous Phenomena", "url": "https://www.congress.gov/118/chrg/CHRG-118hhrg57440/CHRG-118hhrg57440.pdf" }]
+    },
+    {
+      "id": "pursue",
+      "name": "PURSUE",
+      "kind": "program",
+      "agency": "U.S. Department of War, with support from the Office of the Director of National Intelligence",
+      "country": "United States",
+      "startDate": "2026-05-08",
+      "endDate": null,
+      "startPrecision": "day",
+      "endPrecision": null,
+      "evidenceStatus": "official",
+      "summary": "Presidential Unsealing and Reporting System for UAP Encounters: a government-wide effort to review, declassify, and publicly release unresolved UAP records. The interval starts with its first public release on May 8, 2026, rather than the earlier February 19 presidential directive. Release dates do not establish the dates or nature of the underlying observations.",
+      "sources": [
+        {
+          "title": "Department of War: PURSUE overview and release chronology",
+          "url": "https://www.war.gov/UFO/"
+        }
+      ]
     }
   ],
   "entityReviews": [
