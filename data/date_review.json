@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-23T20:19:33Z",
+  "generatedAt": "2026-09-23T21:15:56Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "084d81766fd66d436b719e298eae82ce5ed69a24"
+    "revision": "de84a16d0176ff55dee56a0e077814858908ffb8"
   },
-  "documentsWithCandidates": 11304,
+  "documentsWithCandidates": 11312,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -33158,6 +33158,39 @@
       ]
     },
     {
+      "documentId": "doc-26ade9205212",
+      "path": "Archives-for-the-Unexplained/documents/MUFON-Pennsylvania-newsletter---2008-01.txt",
+      "candidates": [
+        {
+          "value": "2008-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 1 2008 Vol. 1 No. 1",
+          "segment": 0
+        },
+        {
+          "value": "2008-05-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Spirit Society of PA, for their annual Spirit Day May 3 2008.",
+          "segment": 55
+        },
+        {
+          "value": "2008-04-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Conference on April 12 2008 at Bube’s Brewery in Mt Joy PA",
+          "segment": 59
+        }
+      ]
+    },
+    {
       "documentId": "doc-f7989f5b301a",
       "path": "Archives-for-the-Unexplained/documents/MUFON-Pennsylvania-newsletter---2008-02.txt",
       "candidates": [
@@ -64105,6 +64138,21 @@
           "method": "unclassified-mention",
           "evidence": "And this took place, this incident took place in Minas Gerais, Brazil, at 1.30 a.m. on the morning of October 15, 1957.",
           "segment": 705
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cb06066fd903",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-02---Track-54.tsv",
+      "candidates": [
+        {
+          "value": "1947-07-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "And they announced on July 3, 1947, that it was nothing but a form of hallucination.",
+          "segment": 536
         }
       ]
     },
@@ -276833,6 +276881,21 @@
       ]
     },
     {
+      "documentId": "doc-9bb122a1e98ae6511edf987c",
+      "path": "France-GEIPAN/paired/cases/1981-11-00898/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1981-11-06",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being re-examined to enhance the conclusions' relevance. Thanks to new technical tools",
+          "segment": "seg-643696f436ae1f9d8766315f"
+        }
+      ]
+    },
+    {
       "documentId": "doc-de87fe2831d2ce2936442eac",
       "path": "France-GEIPAN/paired/cases/1981-11-00899/en/translation.txt",
       "candidates": [
@@ -276844,6 +276907,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On October 5, 1981, between 9 a.m. and 10 a.m., a driver and her passenger were traveling on a national road. They suddenly spotted a black object resembling a pointed stick crossing the road slowly from left to right, just in front of their car. The observation last",
           "segment": "seg-51963b010617c0eb32ddc6f5"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ce0aca3a422e1f49598963f8",
+      "path": "France-GEIPAN/paired/cases/1981-11-00900/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1981-11-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being reexamined to enhance the conclusions. Thanks to new technical tools (software",
+          "segment": "seg-2c1dcc9b21b54ff12410746f"
         }
       ]
     },
@@ -276908,6 +276986,21 @@
       ]
     },
     {
+      "documentId": "doc-6bdefc7aa3de7e11c426f7bd",
+      "path": "France-GEIPAN/paired/cases/1981-12-00906/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1981-12-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-e38f1593a70e58e3e48b0ebf"
+        }
+      ]
+    },
+    {
       "documentId": "doc-571bbf60c4ade0a0d948f525",
       "path": "France-GEIPAN/paired/cases/1982-01-00908/en/translation.txt",
       "candidates": [
@@ -276934,6 +277027,51 @@
           "method": "unclassified-mention",
           "evidence": "Description: On December 16, 1981, one hour after sunset, several witnesses made a lengthy observation of a bright point surrounded by a blue ring. The point sometimes appeared with a colored trail. Its movements formed zigzags. No other information could be gathered about this p",
           "segment": "seg-2e54b1e958a7c5df59b43a36"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-99bd5cfa82791cab9a5ab4e5",
+      "path": "France-GEIPAN/paired/cases/1982-01-00910/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1981-12-19",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-90455972710fa9afa766cd0f"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5c957762ce74f6fae44a4151",
+      "path": "France-GEIPAN/paired/cases/1982-01-00911/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1982-01-12",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being re-examined to enhance the accuracy of conclusions. Thanks to new technical to",
+          "segment": "seg-553664b2fec0419c28b3ea3f"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5a24af2e835411f1d4427f69",
+      "path": "France-GEIPAN/paired/cases/1982-01-00912/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1982-01-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being re-examined to enhance the conclusions. Through new technical tools (software)",
+          "segment": "seg-f577b3631ef959eb1f19e323"
         }
       ]
     },
@@ -317235,7 +317373,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Back within January of 1947, 29 January 1947 to be exact, Secretary of War Robert P. Patterson",
-          "segment": 557
+          "segment": 576
         },
         {
           "value": "1952-11-18",
@@ -317244,7 +317382,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "The Eisenhower briefing document, stamped 18 November 1952, sought to allegedly brief",
-          "segment": 922
+          "segment": 941
         },
         {
           "value": "1947-09-24",
@@ -317253,7 +317391,7 @@
           "kind": "referenced_document_date",
           "method": "dated-reference",
           "evidence": "of Defense James Forrestal from President Harry Truman himself dated 24 September 1947",
-          "segment": 929
+          "segment": 948
         },
         {
           "value": "1947-09-24",
@@ -317262,7 +317400,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Of course, in real life, Truman, Forrestal, and Bush did, in fact, meet on 24 September 1947.",
-          "segment": 931
+          "segment": 950
         },
         {
           "value": "1949-05-22",
@@ -317271,7 +317409,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "who allegedly threw himself out of the window of Bethesda Naval Hospital on 22 May 1949.",
-          "segment": 935
+          "segment": 954
         },
         {
           "value": "1950-08-01",
@@ -317280,7 +317418,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "after his passing in the Majestic 12 on 1 August 1950. And of course, in Truman's very real daily",
-          "segment": 937
+          "segment": 956
         },
         {
           "value": "1950-08-01",
@@ -317289,7 +317427,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "daily appointments on 1 August 1950, we can find an off-record meeting with General Walter",
-          "segment": 938
+          "segment": 957
         },
         {
           "value": "1954-03-15",
@@ -317298,7 +317436,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Shortly after taking office, on 15 March 1954, Eisenhower established and approved the NSC-5412",
-          "segment": 956
+          "segment": 975
         },
         {
           "value": "1942-03-05",
@@ -317307,7 +317445,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Twelve documents, including a 5 March 1942 memo allegedly from Marshall to Franklin",
-          "segment": 1338
+          "segment": 1358
         },
         {
           "value": "1947-07-22",
@@ -317316,7 +317454,7 @@
           "kind": "referenced_document_date",
           "method": "dated-reference",
           "evidence": "documents. Take the IPU report dated 22 July 1947, for example. This alleged IPU report states",
-          "segment": 1344
+          "segment": 1364
         }
       ]
     },

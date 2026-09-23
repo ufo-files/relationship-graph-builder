@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "084d81766fd66d436b719e298eae82ce5ed69a24"
+    "revision": "de84a16d0176ff55dee56a0e077814858908ffb8"
   },
-  "count": 369,
-  "totalCount": 369,
-  "shownCount": 369,
+  "count": 370,
+  "totalCount": 370,
+  "shownCount": 370,
   "candidates": [
     {
       "category": "organization",
@@ -111,8 +111,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 662,
-        "documentCount": 423
+        "mentions": 661,
+        "documentCount": 422
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -127,8 +127,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 662,
-        "documentCount": 423
+        "mentions": 661,
+        "documentCount": 422
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -136,6 +136,22 @@
         "documentCount": 2
       },
       "similarity": 0.984,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Audit Bureau of Circulation",
+        "mentions": 41,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Audit Bureau of Circulations",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "similarity": 0.982,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -463,8 +479,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 536,
-        "documentCount": 271
+        "mentions": 535,
+        "documentCount": 270
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -975,8 +991,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 662,
-        "documentCount": 423
+        "mentions": 661,
+        "documentCount": 422
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -991,8 +1007,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 662,
-        "documentCount": 423
+        "mentions": 661,
+        "documentCount": 422
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1007,8 +1023,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 662,
-        "documentCount": 423
+        "mentions": 661,
+        "documentCount": 422
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1295,8 +1311,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 495,
-        "documentCount": 259
+        "mentions": 498,
+        "documentCount": 261
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1823,8 +1839,8 @@
       "category": "person",
       "left": {
         "name": "Frank Edwards",
-        "mentions": 158,
-        "documentCount": 75
+        "mentions": 170,
+        "documentCount": 76
       },
       "right": {
         "name": "Frank Edward",
@@ -4415,8 +4431,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of Special Projects",
-        "mentions": 19,
-        "documentCount": 10
+        "mentions": 18,
+        "documentCount": 9
       },
       "right": {
         "name": "OSI Office of Special Projects",
@@ -4831,8 +4847,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 100,
-        "documentCount": 78
+        "mentions": 101,
+        "documentCount": 79
       },
       "right": {
         "name": "Mohave Desert",
@@ -5822,14 +5838,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Jean Chapman",
-        "mentions": 10,
-        "documentCount": 10
+        "name": "Joe Walker",
+        "mentions": 5,
+        "documentCount": 5
       },
       "right": {
-        "name": "Ken Chapman",
-        "mentions": 5,
-        "documentCount": 3
+        "name": "Joseph Walker",
+        "mentions": 11,
+        "documentCount": 5
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -5838,14 +5854,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Joe Walker",
-        "mentions": 4,
-        "documentCount": 4
+        "name": "Jean Chapman",
+        "mentions": 10,
+        "documentCount": 10
       },
       "right": {
-        "name": "Joseph Walker",
-        "mentions": 11,
-        "documentCount": 5
+        "name": "Ken Chapman",
+        "mentions": 5,
+        "documentCount": 3
       },
       "similarity": 0.87,
       "reason": "similar person name",
