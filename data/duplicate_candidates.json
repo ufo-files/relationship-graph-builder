@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "7ab1debfd10b61ba1ed844a87f8ff8cd1cc40a67"
+    "revision": "94dd558f2e4bf0d1de4a106ed89d33fd9a018759"
   },
-  "count": 364,
-  "totalCount": 364,
-  "shownCount": 364,
+  "count": 368,
+  "totalCount": 368,
+  "shownCount": 368,
   "candidates": [
     {
       "category": "organization",
@@ -111,8 +111,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 654,
-        "documentCount": 418
+        "mentions": 656,
+        "documentCount": 420
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -127,8 +127,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 654,
-        "documentCount": 418
+        "mentions": 656,
+        "documentCount": 420
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -350,6 +350,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Air Intelligence Office",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Air Intelligence Officer",
+        "mentions": 5,
+        "documentCount": 3
+      },
+      "similarity": 0.979,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Officers Training School",
         "mentions": 2,
         "documentCount": 2
@@ -404,6 +420,22 @@
       },
       "right": {
         "name": "Hollman Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.978,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Intelligence Committee",
+        "mentions": 38,
+        "documentCount": 33
+      },
+      "right": {
+        "name": "INTELLIGENCE COMMITTEES",
         "mentions": 2,
         "documentCount": 2
       },
@@ -668,6 +700,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "program",
+      "left": {
+        "name": "Operation Main Brace",
+        "mentions": 16,
+        "documentCount": 10
+      },
+      "right": {
+        "name": "Operation Main Race",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.974,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Institute of Health",
@@ -927,8 +975,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 654,
-        "documentCount": 418
+        "mentions": 656,
+        "documentCount": 420
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -943,8 +991,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 654,
-        "documentCount": 418
+        "mentions": 656,
+        "documentCount": 420
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -959,8 +1007,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 654,
-        "documentCount": 418
+        "mentions": 656,
+        "documentCount": 420
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1231,8 +1279,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 492,
-        "documentCount": 256
+        "mentions": 493,
+        "documentCount": 257
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1423,8 +1471,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 570,
-        "documentCount": 351
+        "mentions": 571,
+        "documentCount": 352
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1455,8 +1503,8 @@
       "category": "book",
       "left": {
         "name": "Flying Saucers",
-        "mentions": 217,
-        "documentCount": 150
+        "mentions": 219,
+        "documentCount": 152
       },
       "right": {
         "name": "Flying Saucer",
@@ -2319,8 +2367,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 83,
-        "documentCount": 64
+        "mentions": 84,
+        "documentCount": 65
       },
       "right": {
         "name": "Northeastern University",
@@ -3124,7 +3172,7 @@
       },
       "right": {
         "name": "Special Access Program Central Office",
-        "mentions": 6,
+        "mentions": 7,
         "documentCount": 5
       },
       "similarity": 0.946,
@@ -3876,7 +3924,7 @@
       },
       "right": {
         "name": "Special Access Program Central Office",
-        "mentions": 6,
+        "mentions": 7,
         "documentCount": 5
       },
       "similarity": 0.933,
@@ -4143,8 +4191,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 83,
-        "documentCount": 64
+        "mentions": 84,
+        "documentCount": 65
       },
       "right": {
         "name": "Northwest University",
@@ -4271,8 +4319,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 252,
-        "documentCount": 127
+        "mentions": 256,
+        "documentCount": 129
       },
       "right": {
         "name": "George Adamsky",
@@ -4719,8 +4767,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 252,
-        "documentCount": 127
+        "mentions": 256,
+        "documentCount": 129
       },
       "right": {
         "name": "George Adams",
@@ -5029,6 +5077,22 @@
       "right": {
         "name": "Office of Info",
         "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "David Morrison",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "David Morris",
+        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.923,

@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-23T13:46:06Z",
+  "generatedAt": "2026-09-23T14:41:18Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "7ab1debfd10b61ba1ed844a87f8ff8cd1cc40a67"
+    "revision": "94dd558f2e4bf0d1de4a106ed89d33fd9a018759"
   },
-  "documentsWithCandidates": 11238,
+  "documentsWithCandidates": 11246,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9526,6 +9526,21 @@
           "method": "relative-date-exclusion",
           "evidence": "action until 10 October 1954",
           "segment": 2463
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0b0ad44b0105",
+      "path": "Archives-for-the-Unexplained/documents/2016-11-28---FADE-TO-BLACK-Radio---BREAKING-UFO-seen-over-Turkey-on-November-27-2016-_hsfeZe1chgo---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2016-11-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 27 2016 and a few hours ago",
+          "segment": 5
         }
       ]
     },
@@ -63791,6 +63806,39 @@
       ]
     },
     {
+      "documentId": "doc-bde8261eda5b",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-04---Track-37.tsv",
+      "candidates": [
+        {
+          "value": "1948-01-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On January 7, 1948, early in the afternoon",
+          "segment": 125
+        },
+        {
+          "value": "1948-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On July 24, 1948, a commercial airliner flying from Houston, Texas to Atlanta was 20 miles southwest of Montgomery, Alabama.",
+          "segment": 168
+        },
+        {
+          "value": "1948-01-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "showing wind direction on 7 January 1948.",
+          "segment": 244
+        }
+      ]
+    },
+    {
       "documentId": "doc-425360cd4ff7",
       "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-04---Track-44---transcript-automated-.txt",
       "candidates": [
@@ -63919,6 +63967,30 @@
           "method": "unclassified-mention",
           "evidence": "This was in October 15 or October 14, 1957.",
           "segment": 281
+        }
+      ]
+    },
+    {
+      "documentId": "doc-826b743cdbd4",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-05---Track-18.tsv",
+      "candidates": [
+        {
+          "value": "1969-10-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This is October 19, 1969, March 1st speaking.",
+          "segment": 280
+        },
+        {
+          "value": "1969-12-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This is Marjorie Fish, and it is December 28, 1969.",
+          "segment": 909
         }
       ]
     },
@@ -274400,6 +274472,21 @@
       ]
     },
     {
+      "documentId": "doc-a48287ea76914cd61b47ece0",
+      "path": "France-GEIPAN/paired/cases/1980-01-00723/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1980-01-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On January 27, 1980, between 21:05 and 21:10, several witnesses observed in a clear sky a bright orange ball of light. Located low on the horizon, it seemed to blink at times. The observation lasted 10 to 15 minutes for some witnesses. A similar observation occurred ",
+          "segment": "seg-db70928ada5711af84fc0445"
+        }
+      ]
+    },
+    {
       "documentId": "doc-d9edd1eb335c166ccc70d4e6",
       "path": "France-GEIPAN/paired/cases/1980-01-00725/en/translation.txt",
       "candidates": [
@@ -274469,6 +274556,21 @@
       ]
     },
     {
+      "documentId": "doc-9a16c00c47de4e23ac7f3e11",
+      "path": "France-GEIPAN/paired/cases/1980-01-50559/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1993-05-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-0b1e3e6f237f8f3561b580e3"
+        }
+      ]
+    },
+    {
       "documentId": "doc-251db41dbb4bae011d8b2517",
       "path": "France-GEIPAN/paired/cases/1980-02-00727/en/translation.txt",
       "candidates": [
@@ -274529,6 +274631,36 @@
       ]
     },
     {
+      "documentId": "doc-91382090973d696500be6a32",
+      "path": "France-GEIPAN/paired/cases/1980-02-00738/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1980-02-18",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On February 18, 1980, several people observed from the courtyard of a residence a peculiar luminous phenomenon surrounded by a misty halo. A white, glowing ball stood motionless near an object resembling a crescent moon. This observation lasted several minutes, after",
+          "segment": "seg-13f1303ee8da837a9471fc17"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-30a2a2c2ef38dbb72cede55e",
+      "path": "France-GEIPAN/paired/cases/1980-02-00740/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1980-02-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On February 24, 1980, around 3:15 AM, a group of young people spotted an orange glow through the pines towards the beach. Moving to gain better visibility, they then saw a very large object heading towards the island of Yeu, which was three-quarters spherical, orange",
+          "segment": "seg-898ee435d12d289c5bb4c69f"
+        }
+      ]
+    },
+    {
       "documentId": "doc-b6483737196e5d007457ceca",
       "path": "France-GEIPAN/paired/cases/1980-02-01697/en/translation.txt",
       "candidates": [
@@ -274540,6 +274672,21 @@
           "method": "event-language",
           "evidence": "Description: On February 29, 1980, between 8:30 PM and 9:40 PM, two witnesses observed a peculiar lighting phenomenon multiple times. An object composed of several spheres moved very high in the sky. The object resembled \"a brooch\" with several blue and pink spheres. The overall ",
           "segment": "seg-653654618a7c4932f33aae8b"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0b0b52e898ef9a86be97bdb9",
+      "path": "France-GEIPAN/paired/cases/1980-03-00743/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1980-03-02",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time as Type \"B\" cases, which are now being reassessed with the sole purpose of being more relevant in the conclusions. Than",
+          "segment": "seg-add589fc89540679852d75fe"
         }
       ]
     },
