@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "21ef49f38f215235a7e2cc82a9bb1367447d72e7"
+    "revision": "4d3827669dd553dcb2a16935fc08a6c318d32d9f"
   },
   "count": 383,
   "totalCount": 383,
@@ -1327,8 +1327,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 517,
-        "documentCount": 274
+        "mentions": 518,
+        "documentCount": 275
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1551,8 +1551,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 224,
-        "documentCount": 144
+        "mentions": 231,
+        "documentCount": 145
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -1855,8 +1855,8 @@
       "category": "location",
       "left": {
         "name": "Vandenberg Air Force Base",
-        "mentions": 183,
-        "documentCount": 103
+        "mentions": 185,
+        "documentCount": 104
       },
       "right": {
         "name": "Vandenburg Air Force Base",
@@ -1940,8 +1940,8 @@
       },
       "right": {
         "name": "Donald Keogh",
-        "mentions": 42,
-        "documentCount": 9
+        "mentions": 44,
+        "documentCount": 10
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -4959,8 +4959,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 222,
-        "documentCount": 116
+        "mentions": 223,
+        "documentCount": 117
       },
       "right": {
         "name": "Natural Investigations Committee",
@@ -5036,6 +5036,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Health",
+        "mentions": 34,
+        "documentCount": 26
+      },
+      "right": {
+        "name": "Department of Earth",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Michael Salla",
@@ -5046,22 +5062,6 @@
         "name": "Michael Salah",
         "mentions": 22,
         "documentCount": 8
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of Health",
-        "mentions": 33,
-        "documentCount": 25
-      },
-      "right": {
-        "name": "Department of Earth",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -5695,8 +5695,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 168,
-        "documentCount": 103
+        "mentions": 169,
+        "documentCount": 104
       },
       "right": {
         "name": "Steven Hawking",
