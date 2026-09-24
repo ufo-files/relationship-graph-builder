@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-24T12:34:31Z",
+  "generatedAt": "2026-09-24T13:28:06Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "24e38441f77f575be50bc40c202ba406d1637b1b"
+    "revision": "21f747d85c9d78d226f8be2a416e0851a8b1ea5f"
   },
-  "documentsWithCandidates": 11457,
+  "documentsWithCandidates": 11459,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -65764,6 +65764,21 @@
           "method": "unclassified-mention",
           "evidence": "of the Juergen discussion of May 31, 1958",
           "segment": 1504
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fe38294bea41",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-01---Track-16-ExcerptFromTheLongJohnNebelPartyLineProgram.tsv",
+      "candidates": [
+        {
+          "value": "1952-08-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 13, 1952.",
+          "segment": 502
         }
       ]
     },
@@ -284212,6 +284227,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On February 22, 1995, around 6:20 AM, a witness observed a very bright, flickering point moving with a sudden acceleration and accompanied by a pitch-and-roll maneuver. No other information is available.",
           "segment": "seg-f85bf043ea4862143e3f07d8"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0f936bd246145a804b13d8ba",
+      "path": "France-GEIPAN/paired/cases/1995-02-01652/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1995-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** In the archives of GEIPAN, there are old cases classified at the time (A, B, C, or D) that are now being re-examined to enhance the relevance of conclusions. Thanks to new technical means (software) and investigative experience gained over the years, this re-exam",
+          "segment": "seg-0c2d36d7b6b3fc09ef1558cf"
         }
       ]
     },
