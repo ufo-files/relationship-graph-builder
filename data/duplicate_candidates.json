@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d28327d208574886b15d8ed85bbb350491166c22"
+    "revision": "8a95b5ae54b27b06b477663b8b82fe3293fc845f"
   },
-  "count": 372,
-  "totalCount": 372,
-  "shownCount": 372,
+  "count": 374,
+  "totalCount": 374,
+  "shownCount": 374,
   "candidates": [
     {
       "category": "organization",
@@ -383,8 +383,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 461,
-        "documentCount": 222
+        "mentions": 462,
+        "documentCount": 223
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -678,6 +678,22 @@
         "name": "Intelligence Services",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.976,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "book",
+      "left": {
+        "name": "Rockets Through Space",
+        "mentions": 5,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Rocket Through Space",
+        "mentions": 1,
+        "documentCount": 1
       },
       "similarity": 0.976,
       "reason": "similar name",
@@ -1311,8 +1327,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 506,
-        "documentCount": 266
+        "mentions": 508,
+        "documentCount": 267
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1535,8 +1551,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 216,
-        "documentCount": 138
+        "mentions": 217,
+        "documentCount": 139
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -4239,8 +4255,8 @@
       "category": "government_agency",
       "left": {
         "name": "Investigations Officer",
-        "mentions": 14,
-        "documentCount": 10
+        "mentions": 15,
+        "documentCount": 11
       },
       "right": {
         "name": "Investigating Officer's",
@@ -4671,8 +4687,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 461,
-        "documentCount": 222
+        "mentions": 462,
+        "documentCount": 223
       },
       "right": {
         "name": "University Colorado",
@@ -4870,6 +4886,22 @@
         "name": "Mohave Desert",
         "mentions": 8,
         "documentCount": 6
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Howard Menger",
+        "mentions": 41,
+        "documentCount": 26
+      },
+      "right": {
+        "name": "Howard Mender",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -5567,13 +5599,13 @@
       "category": "person",
       "left": {
         "name": "Dr. Joseph Gastright",
-        "mentions": 3,
-        "documentCount": 2
+        "mentions": 4,
+        "documentCount": 3
       },
       "right": {
         "name": "Joe Gastright",
-        "mentions": 34,
-        "documentCount": 14
+        "mentions": 39,
+        "documentCount": 16
       },
       "similarity": 0.897,
       "reason": "similar person name",
@@ -5807,8 +5839,8 @@
       "category": "person",
       "left": {
         "name": "George Hunt Williamson",
-        "mentions": 14,
-        "documentCount": 10
+        "mentions": 16,
+        "documentCount": 11
       },
       "right": {
         "name": "George Williamson",
