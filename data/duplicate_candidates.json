@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "4b18b98ca52ec801a7d3bd0e36d2f7e84a2490d1"
+    "revision": "a158f4f8c65871239a2cfa8499a48fde3f6fb46d"
   },
-  "count": 371,
-  "totalCount": 371,
-  "shownCount": 371,
+  "count": 372,
+  "totalCount": 372,
+  "shownCount": 372,
   "candidates": [
     {
       "category": "organization",
@@ -479,8 +479,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 536,
-        "documentCount": 271
+        "mentions": 538,
+        "documentCount": 273
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -1535,8 +1535,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 215,
-        "documentCount": 137
+        "mentions": 216,
+        "documentCount": 138
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -3535,8 +3535,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 633,
-        "documentCount": 358
+        "mentions": 634,
+        "documentCount": 359
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4319,8 +4319,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 267,
-        "documentCount": 134
+        "mentions": 268,
+        "documentCount": 135
       },
       "right": {
         "name": "George Adamsky",
@@ -4831,8 +4831,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 267,
-        "documentCount": 134
+        "mentions": 268,
+        "documentCount": 135
       },
       "right": {
         "name": "George Adams",
@@ -5566,6 +5566,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Dr. Joseph Gastright",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Joe Gastright",
+        "mentions": 34,
+        "documentCount": 14
+      },
+      "similarity": 0.897,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Stephen Lovekin",
         "mentions": 11,
         "documentCount": 11
@@ -5710,14 +5726,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Jane Goodall",
-        "mentions": 8,
+        "name": "Steven Tango",
+        "mentions": 14,
         "documentCount": 7
       },
       "right": {
-        "name": "James Goodall",
-        "mentions": 10,
-        "documentCount": 7
+        "name": "Stephen Tango",
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.88,
       "reason": "similar person name",
@@ -5726,14 +5742,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Steven Tango",
-        "mentions": 11,
-        "documentCount": 6
+        "name": "Jane Goodall",
+        "mentions": 8,
+        "documentCount": 7
       },
       "right": {
-        "name": "Stephen Tango",
-        "mentions": 4,
-        "documentCount": 4
+        "name": "James Goodall",
+        "mentions": 10,
+        "documentCount": 7
       },
       "similarity": 0.88,
       "reason": "similar person name",
