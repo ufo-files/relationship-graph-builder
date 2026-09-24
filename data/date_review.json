@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-24T18:47:02Z",
+  "generatedAt": "2026-09-24T19:41:08Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "c49bff8608ab46e2b0e4981cb51382fe1d0c7343"
+    "revision": "3aa6471e7cad39825b4ce0bdf639424a4820c050"
   },
-  "documentsWithCandidates": 11509,
+  "documentsWithCandidates": 11521,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -4298,6 +4298,21 @@
       ]
     },
     {
+      "documentId": "doc-dbac3066ae9d",
+      "path": "Archives-for-the-Unexplained/documents/1986-04-12_Seattle-Post-Intelligencer-WA_SUFOG-scan_SUFOG-DVD.txt",
+      "candidates": [
+        {
+          "value": "1986-04-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Scattle, MA - April 12, 1986",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-509414266add",
       "path": "Archives-for-the-Unexplained/documents/1986-06-00_Journal-of-Popular-Culture---Vol-20-No-1---Sandels.txt",
       "candidates": [
@@ -6299,6 +6314,21 @@
       ]
     },
     {
+      "documentId": "doc-bed3f644b488",
+      "path": "Archives-for-the-Unexplained/documents/2008-01-25_The-Austin-Chronicle_Strange-but-True-Human-dynamo-Jad-Fair-Music.txt",
+      "candidates": [
+        {
+          "value": "2008-01-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "URL: https://www.austinchronicle.com/music/2008-01-25/584314/",
+          "segment": 1
+        }
+      ]
+    },
+    {
       "documentId": "doc-ec66da61d864",
       "path": "Archives-for-the-Unexplained/documents/2008-02-16_Trend-Hunter_Can-Dell-Have-a-Cool-Phone.txt",
       "candidates": [
@@ -7723,6 +7753,21 @@
           "method": "unclassified-mention",
           "evidence": "reported on March 26 2012 net was given",
           "segment": 273
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6c386a848881",
+      "path": "Archives-for-the-Unexplained/documents/2013-03-18---NASA-STI-Program---STS-85-Day-04-Highlights_OG_-833hOd0---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2008-06-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 10, 2008 handed over to the mother stayed and",
+          "segment": 15
         }
       ]
     },
@@ -15986,6 +16031,21 @@
       ]
     },
     {
+      "documentId": "doc-4e40e65d5ff4",
+      "path": "Archives-for-the-Unexplained/documents/2023-01-16---Podcast-UFO-Live-Shows---AudioBlog-AudioBlog-A-Trucker-Reports-a-Harrowing-UFO-Encounter_xJURVu6fV3Q---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1979-09-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "light years in the September 23 1979",
+          "segment": 85
+        }
+      ]
+    },
+    {
       "documentId": "doc-3896360add23",
       "path": "Archives-for-the-Unexplained/documents/2023-01-17---Truthseekers---The-DARKER-side-of-CONSPIRACY-THEORIES-_ihy1Icf_8y8---transcript-automated-.txt",
       "candidates": [
@@ -20359,6 +20419,48 @@
           "method": "unclassified-mention",
           "evidence": "Sunday, December 9, 1990, 5 pm",
           "segment": 672
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b5024e4ba9dd",
+      "path": "Archives-for-the-Unexplained/documents/Bay-Area-Skeptics-Information-Sheet---1993-04.txt",
+      "candidates": [
+        {
+          "value": "1993-04-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "seer.\" The seer was not named. (San Jose Mercury News, April 2, 1993",
+          "segment": 27
+        },
+        {
+          "value": "1993-04-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mercury News, April 2, 1993",
+          "segment": 35
+        },
+        {
+          "value": "1993-01-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Medicine, reviewed in the San Jose Mercury News, January 28, 1993",
+          "segment": 46
+        },
+        {
+          "value": "1993-03-23",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "article by Willie Brown in the San Jose Mercury News, March 23, 1993",
+          "segment": 56
         }
       ]
     },
@@ -66628,6 +66730,48 @@
           "method": "unclassified-mention",
           "evidence": "I'm quoting from Life Magazine, July 21, 1947, and it was on June the 24th.",
           "segment": 527
+        }
+      ]
+    },
+    {
+      "documentId": "doc-be1a89ab26b3",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-01---Track-28-UfologyRound-table-4.tsv",
+      "candidates": [
+        {
+          "value": "1947-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I'm quoting from Life magazine, July 21, 1947, and it was on June the 24th, you see, just roughly a month ahead of this, in 47, when Kenneth Arnold first called them flying saucers.",
+          "segment": 300
+        },
+        {
+          "value": "1952-04-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "that April 7, 1952 came rolling along",
+          "segment": 332
+        },
+        {
+          "value": "1949-12-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 27, 1949, after two years of operation",
+          "segment": 375
+        },
+        {
+          "value": "1951-08-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "These photographs were made at Lubbock, Texas on August 3, 1951 by Carl Hart, Jr.",
+          "segment": 543
         }
       ]
     },
@@ -286667,6 +286811,39 @@
       ]
     },
     {
+      "documentId": "doc-123e05be0d7278a6e63c3745",
+      "path": "France-GEIPAN/paired/cases/1998-08-01514/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1998-08-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-5ca5f75f5939945224cc419e"
+        },
+        {
+          "value": "1998-08-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-5ca5f75f5939945224cc419e"
+        },
+        {
+          "value": "1998-08-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-5ca5f75f5939945224cc419e"
+        }
+      ]
+    },
+    {
       "documentId": "doc-0ff649204308832b9296b3b6",
       "path": "France-GEIPAN/paired/cases/1998-08-01515/en/translation.txt",
       "candidates": [
@@ -286742,6 +286919,21 @@
       ]
     },
     {
+      "documentId": "doc-aa5c989de8d56e5ea6481983",
+      "path": "France-GEIPAN/paired/cases/1998-09-01754/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1998-09-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 6, 1998, around 8:00 PM, witnesses in their garden spotted a circular object above a tree on a neighboring property. According to the witnesses, the object was seen in varying sizes and colors. However, several people noticed that the object seemed to ha",
+          "segment": "seg-a5a7fc856311e01560039991"
+        }
+      ]
+    },
+    {
       "documentId": "doc-cddf538d10c7630457811cf2",
       "path": "France-GEIPAN/paired/cases/1998-10-02532/en/translation.txt",
       "candidates": [
@@ -286787,6 +286979,69 @@
       ]
     },
     {
+      "documentId": "doc-2d99b19e7cdd8e098a20bb57",
+      "path": "France-GEIPAN/paired/cases/1998-12-01522/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1998-12-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-6239c168d0019f8a970c565b"
+        },
+        {
+          "value": "1999-01-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-6239c168d0019f8a970c565b"
+        },
+        {
+          "value": "1998-12-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-6239c168d0019f8a970c565b"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-dad3ade296e73693209f07a7",
+      "path": "France-GEIPAN/paired/cases/1998-12-01714/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1998-12-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in the conclusions. Thanks t",
+          "segment": "seg-d4ad66e9a337ad1dd76181c8"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f8440d8f8f07b4b578a9a818",
+      "path": "France-GEIPAN/paired/cases/1999-02-01524/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1999-02-01",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On February 1, 1999, just after 7:00 a.m., a dozen witnesses in two departments of southeastern France observed a large, luminous ball with sparks trailing behind it moving at high speed before disappearing. The phenomenon was silent and lasted only a few seconds. Ba",
+          "segment": "seg-1167eca0b220cb9c7de29878"
+        }
+      ]
+    },
+    {
       "documentId": "doc-8ca90c2e69f223b5c088d276",
       "path": "France-GEIPAN/paired/cases/1999-02-01525/en/translation.txt",
       "candidates": [
@@ -286813,6 +287068,48 @@
           "method": "event-language",
           "evidence": "Description: On March 16, 1999, around 8:00 PM, a witness observed the very fast passage of two aerial phenomena consisting of a small orange ball and a ball of flames. The trajectory of the two balls was straight, but one of them seemed to dive into the valley before rising agai",
           "segment": "seg-3166217b08f52610cdb05a63"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f9118f6dfa041ed1ef5f6d81",
+      "path": "France-GEIPAN/paired/cases/1999-05-01530/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1999-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-79b9a104cf7ca9575600be5d"
+        },
+        {
+          "value": "1999-05-04",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-79b9a104cf7ca9575600be5d"
+        },
+        {
+          "value": "1999-05-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-79b9a104cf7ca9575600be5d"
+        },
+        {
+          "value": "1999-05-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-79b9a104cf7ca9575600be5d"
         }
       ]
     },
