@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "018082c155bcfee2fd8e90759ce3348f4e6d735f"
+    "revision": "b3e6e04141ebc22020e440f11dc208801f2ad82a"
   },
-  "count": 370,
-  "totalCount": 370,
-  "shownCount": 370,
+  "count": 371,
+  "totalCount": 371,
+  "shownCount": 371,
   "candidates": [
     {
       "category": "organization",
@@ -479,8 +479,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 535,
-        "documentCount": 270
+        "mentions": 536,
+        "documentCount": 271
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -1311,8 +1311,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 499,
-        "documentCount": 262
+        "mentions": 501,
+        "documentCount": 263
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -4644,6 +4644,22 @@
       },
       "right": {
         "name": "Hawaiian Island",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Harrison County",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Harris County",
         "mentions": 2,
         "documentCount": 2
       },
