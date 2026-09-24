@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-24T05:26:22Z",
+  "generatedAt": "2026-09-24T06:19:45Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "2867b1c77e38a0ed60781c388375db4c9bc779d5"
+    "revision": "d28327d208574886b15d8ed85bbb350491166c22"
   },
-  "documentsWithCandidates": 11379,
+  "documentsWithCandidates": 11388,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -38411,6 +38411,30 @@
       ]
     },
     {
+      "documentId": "doc-7f52981225b3",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-06-No-04---1998.txt",
+      "candidates": [
+        {
+          "value": "1998-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On January 9, 1998, a group of about 25 skeptics visited the \"Museum of Creation and Earth History\" run by the",
+          "segment": 2
+        },
+        {
+          "value": "1998-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On January 9, 1998, a group of about 25 skeptics visited the \"Museum of Creation and Earth History\" run by the",
+          "segment": 11
+        }
+      ]
+    },
+    {
       "documentId": "doc-dd5d5fb1123f",
       "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-06-No-10---1998.txt",
       "candidates": [
@@ -66886,6 +66910,21 @@
           "method": "unclassified-mention",
           "evidence": "On June 4, 1956, the Naval Observatory in Washington announced that it had succeeded in making what",
           "segment": 68
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6ba5dd637a9e",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-10---Track-14.tsv",
+      "candidates": [
+        {
+          "value": "1956-06-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On June 4, 1956, the Naval Observatory in Washington",
+          "segment": 42
         }
       ]
     },
@@ -280811,6 +280850,39 @@
       ]
     },
     {
+      "documentId": "doc-cdf8cbd5bcfdf14d90ebb0e7",
+      "path": "France-GEIPAN/paired/cases/1988-12-01159/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1988-12-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 21, 1988, at approximately 0:50 a.m., numerous witnesses across French territory, aligned along a North-South axis, observed a very bright white object with a yellow-orange trail moving across the sky. Pilots also reported observing the phenomenon in flig",
+          "segment": "seg-8f1015a39e52d4e058b04a15"
+        },
+        {
+          "value": "1988-12-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 21, 1988, at approximately 0:50 a.m., numerous witnesses across French territory, aligned along a North-South axis, observed a very bright white object with a yellow-orange trail moving across the sky. Pilots also reported observing the phenomenon in flig",
+          "segment": "seg-8f1015a39e52d4e058b04a15"
+        },
+        {
+          "value": "1989-02-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 21, 1988, at approximately 0:50 a.m., numerous witnesses across French territory, aligned along a North-South axis, observed a very bright white object with a yellow-orange trail moving across the sky. Pilots also reported observing the phenomenon in flig",
+          "segment": "seg-8f1015a39e52d4e058b04a15"
+        }
+      ]
+    },
+    {
       "documentId": "doc-2a62713d8c1251c25fb00fb6",
       "path": "France-GEIPAN/paired/cases/1989-01-01162/en/translation.txt",
       "candidates": [
@@ -280841,6 +280913,36 @@
       ]
     },
     {
+      "documentId": "doc-1e273eab897671255a6c2f69",
+      "path": "France-GEIPAN/paired/cases/1989-01-01165/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1989-01-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: On January 28, 1989, around 8:30 PM, the Gendarmerie Group of Guéret requested that all its brigades look up at the sky towards the East for a particular phenomenon. Very bright, multicolored points were observed. These observations were made over several consecutive",
+          "segment": "seg-2b9111c9d4e68c735c26685f"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f99e4136a1061a3b5024e9ac",
+      "path": "France-GEIPAN/paired/cases/1989-02-01167/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1989-02-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On February 6, 1989, around 11:20 PM, approximately ten independent witnesses across several departments in southwestern France observed an intense light that turned blue with a trail and disappeared in about ten seconds. Several investigations were conducted by brig",
+          "segment": "seg-a12f41fb6e33243db66ea386"
+        }
+      ]
+    },
+    {
       "documentId": "doc-19a1140ff4fe143c768e2eee",
       "path": "France-GEIPAN/paired/cases/1989-02-01168/en/translation.txt",
       "candidates": [
@@ -280867,6 +280969,30 @@
           "method": "event-language",
           "evidence": "Description: On March 12, 1989, around 7:20 PM, a woman observed the passage towards the ground of a flaming object followed by a trail that changed color from yellow to red before fading out. She heard a deep noise at the presumed moment of impact. At the supposed location of th",
           "segment": "seg-9dc6f53b5a09da7c0b31d54c"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-678f7dd1173b25072c5e8c95",
+      "path": "France-GEIPAN/paired/cases/1989-03-01172/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1989-03-13",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time as Type \"B\" cases, which are now being reassessed with the sole purpose of being more relevant in their conclusions. Th",
+          "segment": "seg-377d8aabfb4e6cef5b61f7b6"
+        },
+        {
+          "value": "1989-03-13",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time as Type \"B\" cases, which are now being reassessed with the sole purpose of being more relevant in their conclusions. Th",
+          "segment": "seg-377d8aabfb4e6cef5b61f7b6"
         }
       ]
     },
@@ -280931,6 +281057,21 @@
       ]
     },
     {
+      "documentId": "doc-4fa2cd97e2afd8f7503b1a9a",
+      "path": "France-GEIPAN/paired/cases/1989-07-01179/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1989-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reexamined, with the sole purpose of being more relevant in their conclusions. Thank",
+          "segment": "seg-69a215a19b567c24aabd208a"
+        }
+      ]
+    },
+    {
       "documentId": "doc-949e407bb09991fbb63e21da",
       "path": "France-GEIPAN/paired/cases/1989-08-01181/en/translation.txt",
       "candidates": [
@@ -280957,6 +281098,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On November 5, 1989, a taxi driver observed for a few seconds the rapid passage of a bright point in the sky of Paris. A glowing, round object followed by a green trail crossed the sky. No other testimony was collected. The witness's description corresponds to the ob",
           "segment": "seg-7fd7a7af7d8d2f30e671caba"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-654ca0d6021a462565f139f8",
+      "path": "France-GEIPAN/paired/cases/1989-09-01666/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1989-09-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 4, 1989, around 4:30 a.m., a man suffering from insomnia sees through his open window a bright light. He gets up and notices, below in a clover field, a square of light approximately 10 meters in side length. The light emanates from an object stationary ",
+          "segment": "seg-a07aa593bc9d584595ccbad0"
         }
       ]
     },
@@ -281002,6 +281158,21 @@
           "method": "event-language",
           "evidence": "Description: On October 26, 1989, just before 4:00 PM, a witness observed an object resembling an airplane, but it disappeared very quickly into the horizon. The provided information does not allow for any analysis.",
           "segment": "seg-4d141b8e0ad3d34c905124f6"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-21486eb710fda7308ae601d5",
+      "path": "France-GEIPAN/paired/cases/1989-10-01668/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1989-10-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: This SEPRA investigation was conducted to assess an unusual and suspicious burnt-earth trace in a meadow in Normandy. The local brigade, unable to determine the origin and cause of the phenomenon, called upon the SEPRA who promptly visited the site. On October 27, 19",
+          "segment": "seg-fa3ff421d7dc47fe30338d50"
         }
       ]
     },
