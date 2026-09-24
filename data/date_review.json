@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-24T01:50:59Z",
+  "generatedAt": "2026-09-24T02:44:22Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5f81591147cceec9bc4277d1c9444d3504b21691"
+    "revision": "4b18b98ca52ec801a7d3bd0e36d2f7e84a2490d1"
   },
-  "documentsWithCandidates": 11344,
+  "documentsWithCandidates": 11352,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -64067,6 +64067,39 @@
       ]
     },
     {
+      "documentId": "doc-cd72d6349c34",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-01---Track-31-Project60-TheFlyingSaucerStory.tsv",
+      "candidates": [
+        {
+          "value": "1950-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "And apparently he had a... was offered a ride in a spaceship on the night of July 4, 1950, and accepted.",
+          "segment": 260
+        },
+        {
+          "value": "1955-05-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on May 23, 1955.",
+          "segment": 477
+        },
+        {
+          "value": "1954-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on July 29, 1954. The evidence seems to demonstrate with adequate certainty",
+          "segment": 576
+        }
+      ]
+    },
+    {
       "documentId": "doc-f540ba514d24",
       "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-01---Track-32-PeoplePlacesAndThings.tsv",
       "candidates": [
@@ -64309,6 +64342,30 @@
           "method": "unclassified-mention",
           "evidence": "On November 30, 1973 the pilot of a small plane landing at Turing Airport saw a luminous",
           "segment": 110
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f55a275eb318",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-03---Track-52.tsv",
+      "candidates": [
+        {
+          "value": "1974-03-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "run in the sky. The second observation analyzed was a case of the 7 March 1974 at Combe Rouge",
+          "segment": 100
+        },
+        {
+          "value": "1978-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This last recommendation by the advisory panel led to the meeting of 12 September 1978 in Toulouse.",
+          "segment": 293
         }
       ]
     },
@@ -278285,6 +278342,36 @@
       ]
     },
     {
+      "documentId": "doc-f13b5df7a7788c07e6e8b7ec",
+      "path": "France-GEIPAN/paired/cases/1984-09-01031/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1984-09-03",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed, with the sole purpose of being more relevant in their conclusions. Thank",
+          "segment": "seg-409e3ca61d0d72e32cce0b0d"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-23de192dad6db780b454d6af",
+      "path": "France-GEIPAN/paired/cases/1984-09-01032/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1984-09-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time and now being re-examined, with the sole purpose of being more relevant in the conclusions. Thanks to new technical mea",
+          "segment": "seg-ca52870b31214929d3599fa0"
+        }
+      ]
+    },
+    {
       "documentId": "doc-6572a736f7e1e68dfe5ab57d",
       "path": "France-GEIPAN/paired/cases/1984-10-01033/en/translation.txt",
       "candidates": [
@@ -278330,6 +278417,21 @@
       ]
     },
     {
+      "documentId": "doc-836ddc60c703b5208a326624",
+      "path": "France-GEIPAN/paired/cases/1984-12-01044/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1984-12-14",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: On December 14, 1984, in the late afternoon, several witnesses in different communes and departments of France observed a bright, cigar- or ball-shaped object moving silently and quickly across the sky, leaving a trail. The observations lasted for a few seconds befor",
+          "segment": "seg-f5f792271bfda67be5cccfcd"
+        }
+      ]
+    },
+    {
       "documentId": "doc-884664f1905c41c118f306f9",
       "path": "France-GEIPAN/paired/cases/1985-01-01045/en/translation.txt",
       "candidates": [
@@ -278341,6 +278443,57 @@
           "method": "event-language",
           "evidence": "Description: On January 6, 1985, around 11 PM, a witness will observe a particular luminous phenomenon. A dozen points of different colors, blue, yellow, or white, are above the city at several locations. They will gradually disappear behind clouds. No further information will be",
           "segment": "seg-078fe6909025574d51d40f62"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9e52701f9e1b86b3c7ef0536",
+      "path": "France-GEIPAN/paired/cases/1985-01-01046/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1985-01-14",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being reexamined to enhance the conclusions. Thanks to new technical tools (software",
+          "segment": "seg-de80b3dee9dcf7c79bf40261"
+        },
+        {
+          "value": "1985-01-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being reexamined to enhance the conclusions. Thanks to new technical tools (software",
+          "segment": "seg-de80b3dee9dcf7c79bf40261"
+        },
+        {
+          "value": "1985-01-14",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being reexamined to enhance the conclusions. Thanks to new technical tools (software",
+          "segment": "seg-de80b3dee9dcf7c79bf40261"
+        },
+        {
+          "value": "1985-01-02",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being reexamined to enhance the conclusions. Thanks to new technical tools (software",
+          "segment": "seg-de80b3dee9dcf7c79bf40261"
+        },
+        {
+          "value": "1985-01-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are older cases classified at the time (A, B, C, or D) that are now being reexamined to enhance the conclusions. Thanks to new technical tools (software",
+          "segment": "seg-de80b3dee9dcf7c79bf40261"
         }
       ]
     },
@@ -278360,6 +278513,21 @@
       ]
     },
     {
+      "documentId": "doc-311f9dd143754109dc2bc629",
+      "path": "France-GEIPAN/paired/cases/1985-01-01048/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1985-01-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed, with the sole purpose of being more relevant in their conclusions. Thank",
+          "segment": "seg-5a8027688ed2dd28dfb5ea5a"
+        }
+      ]
+    },
+    {
       "documentId": "doc-dc5239cbfe163faa6d0f8d0a",
       "path": "France-GEIPAN/paired/cases/1985-01-01049/en/translation.txt",
       "candidates": [
@@ -278371,6 +278539,30 @@
           "method": "event-language",
           "evidence": "Description: On January 26, 1986, five witnesses from different locations observed a red ball of fire. This very bright phenomenon moved, creating thick smoke. The gendarmerie investigation revealed it was likely a distress rocket fired for testing by a resident.",
           "segment": "seg-c2874a388748b88aa6cbf5b5"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4adbdd4fb38e1fa860783f76",
+      "path": "France-GEIPAN/paired/cases/1985-01-01050/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1985-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time as Type 'C' cases, which are now being reassessed with the sole purpose of being more relevant in the conclusions. Than",
+          "segment": "seg-e8a0e87ac7909059018a3a25"
+        },
+        {
+          "value": "1985-01-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time as Type 'C' cases, which are now being reassessed with the sole purpose of being more relevant in the conclusions. Than",
+          "segment": "seg-e8a0e87ac7909059018a3a25"
         }
       ]
     },
