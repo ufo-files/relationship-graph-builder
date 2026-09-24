@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-24T19:41:08Z",
+  "generatedAt": "2026-09-24T20:34:15Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "3aa6471e7cad39825b4ce0bdf639424a4820c050"
+    "revision": "1784c4b259cdf18034edc165ba1df600e3444e2f"
   },
-  "documentsWithCandidates": 11521,
+  "documentsWithCandidates": 11523,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -65566,6 +65566,21 @@
           "method": "unclassified-mention",
           "evidence": "Dayton, Texas, December 29, 1980.",
           "segment": 223
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c9d379c41048",
+      "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S02E16---The-Watchmen---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1956-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 23, 1956, Pixley, California.",
+          "segment": 108
         }
       ]
     },
@@ -287320,6 +287335,21 @@
           "method": "event-language",
           "evidence": "Description: On June 27, 2000, around 11 PM, several witnesses observed the passage of objects with lights of various colors flying over houses. Trajectories varied depending on the point of observation. Although witnesses described them as flying saucers, it is likely these obse",
           "segment": "seg-cf8a30a53d847a89c578e810"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-25e91bbb5c30d8fc94256819",
+      "path": "France-GEIPAN/paired/cases/2000-07-01548/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2000-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being re-examined with the sole purpose of being more relevant in their conclusions. Thank",
+          "segment": "seg-6fdcd59b002fa9f670fc438e"
         }
       ]
     },
