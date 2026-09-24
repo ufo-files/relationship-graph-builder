@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-24T00:57:16Z",
+  "generatedAt": "2026-09-24T01:50:59Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "b3e6e04141ebc22020e440f11dc208801f2ad82a"
+    "revision": "5f81591147cceec9bc4277d1c9444d3504b21691"
   },
-  "documentsWithCandidates": 11342,
+  "documentsWithCandidates": 11344,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -65221,6 +65221,21 @@
           "method": "unclassified-mention",
           "evidence": "To quote from Time Magazine in their August 4, 1967 issue in which they had an editorial",
           "segment": 7
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e800369176a3",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-09---Track-28.tsv",
+      "candidates": [
+        {
+          "value": "1952-03-29",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Brigham reported seeing the disc on March 29, 1952 at about noon on a bright clear day.",
+          "segment": 156
         }
       ]
     },
@@ -278195,6 +278210,21 @@
       ]
     },
     {
+      "documentId": "doc-ef0ef1c0eb7d04e078bbde99",
+      "path": "France-GEIPAN/paired/cases/1984-03-01023/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1984-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Saturday, March 24, 1984, starting at 5:50 a.m., five nuns from a convent observed a PAN in the early morning sky for 10 minutes. This oval-shaped object glowed in the night, moving very quickly from left to right and up and down. The witnesses stopped observing t",
+          "segment": "seg-57133a916fa96979e429606f"
+        }
+      ]
+    },
+    {
       "documentId": "doc-2c2bb00067414c966c343ba0",
       "path": "France-GEIPAN/paired/cases/1984-04-01024/en/translation.txt",
       "candidates": [
@@ -316827,7 +316857,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Collins did indeed die on 30 December 1990.",
-          "segment": 273
+          "segment": 283
         },
         {
           "value": "2021-05-06",
@@ -316836,7 +316866,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Recent Sentient Highlights, end quote, from data collected on 6 May 2021.",
-          "segment": 375
+          "segment": 385
         },
         {
           "value": "2017-10-26",
@@ -316845,7 +316875,7 @@
           "kind": "administrative_date",
           "method": "context-exclusion",
           "evidence": "On Joe Rogan episode 1029, released on 26 October 2017",
-          "segment": 504
+          "segment": 514
         },
         {
           "value": "2009-07-30",
@@ -316854,7 +316884,7 @@
           "kind": "referenced_document_date",
           "method": "dated-reference",
           "evidence": "Space Studies 10-month report dated 30 July 2009 while contracting under the OSAP program.",
-          "segment": 523
+          "segment": 533
         },
         {
           "value": "2021-05-07",
@@ -316863,7 +316893,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Within the documents, we can see a 7 May 2021 communication stating, quote",
-          "segment": 594
+          "segment": 604
         },
         {
           "value": "2024-09-20",
@@ -316872,7 +316902,7 @@
           "kind": "administrative_date",
           "method": "context-exclusion",
           "evidence": "Let's recall a 20 September 2024 article by Christopher Sharp of the Liberation Times titled",
-          "segment": 658
+          "segment": 668
         },
         {
           "value": "1971-07-18",
@@ -316881,7 +316911,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "vehicles. The first successful flight, according to Wilson, had allegedly occurred on 18 July 1971",
-          "segment": 966
+          "segment": 976
         },
         {
           "value": "1973-01-17",
@@ -316890,7 +316920,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "From the Robertson panel, we can see evidence presented from 14 to 17 January 1973.",
-          "segment": 1068
+          "segment": 1078
         },
         {
           "value": "1994-01-05",
@@ -316899,7 +316929,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "programs. This reorganization of SAPOC began on 5 January 1994, when the Deputy Secretary of",
-          "segment": 1396
+          "segment": 1408
         },
         {
           "value": "1994-08-10",
@@ -316908,7 +316938,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "resulting in a high-profile 10 August 1994 hearing",
-          "segment": 1463
+          "segment": 1478
         },
         {
           "value": "1994-03-11",
@@ -316917,7 +316947,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Meaning from 11 March 1994 to 10 May 1995",
-          "segment": 1543
+          "segment": 1558
         },
         {
           "value": "1995-05-10",
@@ -316926,7 +316956,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Meaning from 11 March 1994 to 10 May 1995",
-          "segment": 1543
+          "segment": 1558
         },
         {
           "value": "2016-07-27",
@@ -316935,7 +316965,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "We can learn a lot of intriguing data from a 27 July 2016 GAO document titled quote",
-          "segment": 1608
+          "segment": 1623
         },
         {
           "value": "1989-08-10",
@@ -316944,7 +316974,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "10 August 1989.",
-          "segment": 1785
+          "segment": 1800
         },
         {
           "value": "1974-09-13",
@@ -316953,7 +316983,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "I became the Director of Naval Intelligence 13 September 1974, brand new flag selectee that year.",
-          "segment": 1802
+          "segment": 1819
         }
       ]
     },
