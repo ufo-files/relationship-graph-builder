@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-23T23:07:18Z",
+  "generatedAt": "2026-09-24T00:02:00Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "3f1b535bd2f0ab41e0b36faa2c0262c59b51ecc4"
+    "revision": "018082c155bcfee2fd8e90759ce3348f4e6d735f"
   },
-  "documentsWithCandidates": 11332,
+  "documentsWithCandidates": 11337,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -64802,6 +64802,21 @@
       ]
     },
     {
+      "documentId": "doc-0183897faaf0",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-06---Track-42---Major-Wayne-Aho-at-Daniel-Frys-Understanding-International-1960.tsv",
+      "candidates": [
+        {
+          "value": "1957-05-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of it. The craft that I saw landing on the Moabit desert on May 11, 1957, was first a",
+          "segment": 225
+        }
+      ]
+    },
+    {
       "documentId": "doc-b819a6c1734e",
       "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-06---Track-45---Daniel-Fry-and-Phillip-Klass-1966.tsv",
       "candidates": [
@@ -65428,6 +65443,21 @@
           "method": "unclassified-mention",
           "evidence": "In the April 18, 1977 edition of U.S. News and World Report",
           "segment": 244
+        }
+      ]
+    },
+    {
+      "documentId": "doc-97e35810ee3e",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-09---Track-52---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1954-06-11",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "I did not believe in the existence of an identified flying orbiter until June 11, 1954",
+          "segment": 93
         }
       ]
     },
@@ -277826,6 +277856,45 @@
       ]
     },
     {
+      "documentId": "doc-e8866bb830fbf7a6b0104f40",
+      "path": "France-GEIPAN/paired/cases/1983-05-00977/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1983-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On the night of May 5, 1983, between 2:00 and 2:15 a.m., a driver noticed a glow on the right front window of his vehicle: this glow moving up and down and in all directions intrigued the driver, who continued his journey. Very quickly, the witness saw the glow again",
+          "segment": "seg-4c301747bd0a980eb0847ec8"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-46ce4efa227c4cd749062462",
+      "path": "France-GEIPAN/paired/cases/1983-06-00978/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1983-06-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 6, 1983, around 11 PM, numerous witnesses across southern France, from the Alps to the Eastern Pyrenees, observed a rapidly moving light in the sky at the same time (11 PM) and for a brief duration (usually less than 20 seconds, and at most 1 or 2 minutes). T",
+          "segment": "seg-d7f27a13b0d2c68dc08740f6"
+        },
+        {
+          "value": "1983-06-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 6, 1983, around 11 PM, numerous witnesses across southern France, from the Alps to the Eastern Pyrenees, observed a rapidly moving light in the sky at the same time (11 PM) and for a brief duration (usually less than 20 seconds, and at most 1 or 2 minutes). T",
+          "segment": "seg-d7f27a13b0d2c68dc08740f6"
+        }
+      ]
+    },
+    {
       "documentId": "doc-5e9d6ea16018d1c9128748f0",
       "path": "France-GEIPAN/paired/cases/1983-07-00986/en/translation.txt",
       "candidates": [
@@ -277867,6 +277936,21 @@
           "method": "relative-date-exclusion",
           "evidence": "Description: Between 2:00 and 2:30 AM on September 11, 1983, a witness observed above his house and the surrounding houses a peculiar luminous phenomenon. Cylindrical beams one meter in diameter brightly illuminated the houses. These 8 fixed bands of slightly yellow color were sp",
           "segment": "seg-7889b16e1ae49ea9ab187076"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-250a503d59fdacf35bb07f16",
+      "path": "France-GEIPAN/paired/cases/1983-09-00994/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1983-09-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 26, 1983, between 6:48 PM and 7:00 PM, several witnesses observed the movement of lights of varying sizes and colors. This high-altitude, fast-moving object made no sound during the observations, which lasted from one to several minutes. The lights left ",
+          "segment": "seg-20c1e309427e3ee0a6963868"
         }
       ]
     },
