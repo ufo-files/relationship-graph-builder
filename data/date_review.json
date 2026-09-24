@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-24T13:28:06Z",
+  "generatedAt": "2026-09-24T14:22:09Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "21f747d85c9d78d226f8be2a416e0851a8b1ea5f"
+    "revision": "b7d6d406151aaa38577ffe53ceb638d61434d0cf"
   },
-  "documentsWithCandidates": 11459,
+  "documentsWithCandidates": 11465,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -30694,6 +30694,48 @@
           "method": "unclassified-mention",
           "evidence": "Channel 5, CBS affiliate, January 20, 1992), information was provided",
           "segment": 427
+        }
+      ]
+    },
+    {
+      "documentId": "doc-491ac41031f1",
+      "path": "Archives-for-the-Unexplained/documents/Greenwood-Barry---Inventory.txt",
+      "candidates": [
+        {
+          "value": "2003-10-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ball Lightning Catalogue – Updated: October 12, 2003",
+          "segment": 33
+        },
+        {
+          "value": "2002-12-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Barry Greenwood's UFO Clipping Volumes Listing - December 5, 2002",
+          "segment": 40
+        },
+        {
+          "value": "2000-08-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Barry Greenwood's Topical UFO Files Index - August 24, 2000",
+          "segment": 41
+        },
+        {
+          "value": "2000-08-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Barry Greenwood's Government Folder Headings - August 26, 2000",
+          "segment": 42
         }
       ]
     },
@@ -66910,6 +66952,30 @@
           "method": "dated-reference",
           "evidence": "The particular bulletin I'm referring to is dated December 15, 1956.",
           "segment": 2068
+        }
+      ]
+    },
+    {
+      "documentId": "doc-41ec86df3dd1",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-06---Track-590000---Orfeo-Angelucci---Lecture.tsv",
+      "candidates": [
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "certainly not in flying saucers when Kenneth Arnold first sighted them on June 24, 1947.",
+          "segment": 79
+        },
+        {
+          "value": "1952-05-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This first experience, of course, was May 23, 1952. The second came July 23. May or June, July, exactly 60 days. 1952.",
+          "segment": 156
         }
       ]
     },
@@ -284276,6 +284342,30 @@
       ]
     },
     {
+      "documentId": "doc-1c7b320d12bceafef39bf8e6",
+      "path": "France-GEIPAN/paired/cases/1995-05-01392/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1995-05-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: This observation case, formerly named LORGUES (83) on May 14, 1995, is part of cases classified as 'D' by the SEPRA and currently under review (see the Investigation Notes document). On May 14, 1995, a witness, alone in a remote camping site, spotted between the tree",
+          "segment": "seg-25f2a050afe2a43e8d335b53"
+        },
+        {
+          "value": "1995-05-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: This observation case, formerly named LORGUES (83) on May 14, 1995, is part of cases classified as 'D' by the SEPRA and currently under review (see the Investigation Notes document). On May 14, 1995, a witness, alone in a remote camping site, spotted between the tree",
+          "segment": "seg-25f2a050afe2a43e8d335b53"
+        }
+      ]
+    },
+    {
       "documentId": "doc-1279eefb41c0edf1b54dc1d2",
       "path": "France-GEIPAN/paired/cases/1995-05-01394/en/translation.txt",
       "candidates": [
@@ -284471,6 +284561,21 @@
       ]
     },
     {
+      "documentId": "doc-09ca52f2d020a9a14e4cbd8e",
+      "path": "France-GEIPAN/paired/cases/1995-12-01411/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1995-12-23",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed, with the sole purpose of being more relevant in their conclusions. Thank",
+          "segment": "seg-587688577fe320eecefff610"
+        }
+      ]
+    },
+    {
       "documentId": "doc-c2887156c88cc355e9daeea6",
       "path": "France-GEIPAN/paired/cases/1995-12-01412/en/translation.txt",
       "candidates": [
@@ -284647,6 +284752,36 @@
           "method": "unclassified-mention",
           "evidence": "Description: On July 3, 1996, just before midnight, a witness observing the sky noticed a brief (15 seconds) and high-speed passage of a bright point through the sky. No other information is available, but the description suggests prioritizing the hypothesis of a minor atmospheri",
           "segment": "seg-101b932bf731df6e1ac296af"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f62518fbfd7686d9aafe177a",
+      "path": "France-GEIPAN/paired/cases/1996-08-01430/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1996-08-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On the evening of August 1, 1996, numerous witnesses observed the very quick passage of a very bright white ball with a yellow and green trail. The luminous phenomenon lasted approximately thirty seconds. It was described in the same terms from Cantal to Alsace. The ",
+          "segment": "seg-f31bf2deb74de27209eff61a"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9856b2c68fc6d978896f7713",
+      "path": "France-GEIPAN/paired/cases/1996-09-01434/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1996-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reexamined, with the sole purpose of being more relevant in the conclusions. Thanks ",
+          "segment": "seg-d3cb3cd3a2ff52f790ba15d8"
         }
       ]
     },
