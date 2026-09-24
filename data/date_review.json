@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-24T20:34:15Z",
+  "generatedAt": "2026-09-24T21:28:23Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "1784c4b259cdf18034edc165ba1df600e3444e2f"
+    "revision": "a6061ebb446d3200dd42cfab57616dedbcfe3378"
   },
-  "documentsWithCandidates": 11523,
+  "documentsWithCandidates": 11542,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -4346,6 +4346,21 @@
       ]
     },
     {
+      "documentId": "doc-ceec28b99e2c",
+      "path": "Archives-for-the-Unexplained/documents/1987-06-27_Asheville-Citizen-NC_SUFOG-scan_SUFOG-DVD.txt",
+      "candidates": [
+        {
+          "value": "1987-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 27, 1987 CR: J. Fisher",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-7141f7828ad4",
       "path": "Archives-for-the-Unexplained/documents/1989-00-00_Journal-of-American-Folklore---UFO-Abduction-Reports---Bullard.txt",
       "candidates": [
@@ -7132,6 +7147,21 @@
           "method": "unclassified-mention",
           "evidence": "Mintoff on 6 March 1979 - shows.",
           "segment": 89
+        }
+      ]
+    },
+    {
+      "documentId": "doc-77696967a77f",
+      "path": "Archives-for-the-Unexplained/documents/2010-04-15---NASA-STI-Program---United-States-Space-Explorations-1958-Part-1-of-2-_aDiy-5QmGgU---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1958-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "explorer for on July 26 1958 as a",
+          "segment": 190
         }
       ]
     },
@@ -27671,6 +27701,66 @@
       ]
     },
     {
+      "documentId": "doc-53deb9f38a79",
+      "path": "Archives-for-the-Unexplained/documents/Disclosure-Australia-AURA---No-08---Dec-2003.txt",
+      "candidates": [
+        {
+          "value": "1967-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "5 July 1967 Murray Bridge SA. Five miles NNE of Murray Bridge on the Murray Bridge to Karoonda Road.",
+          "segment": 58
+        },
+        {
+          "value": "1966-10-24",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "dated 24 October 1966 revealed that there were four files on the subject; namely 569/5/461; 2/25/1; 574/3/88 and",
+          "segment": 76
+        },
+        {
+          "value": "1963-07-10",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Recently, I located a reference in the “Adelaide Advertiser” dated 10 July 1963 to an incident reported to have",
+          "segment": 88
+        },
+        {
+          "value": "1963-06-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "occurred on 28 June 1963 at Sandy Creek on the Lyndoch to Gawler, SA road, to a Williston man. The Advertiser",
+          "segment": 89
+        },
+        {
+          "value": "2003-11-21",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The following reply was forwarded to us dated 21 November 2003",
+          "segment": 96
+        },
+        {
+          "value": "2003-08-18",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "I refer to your letter of 18 August 2003 in which you request access to a file held by the former Special branch",
+          "segment": 97
+        }
+      ]
+    },
+    {
       "documentId": "doc-64fa1768ecdb",
       "path": "Archives-for-the-Unexplained/documents/Disclosure-Australia-AURA---No-10---Feb-2004.txt",
       "candidates": [
@@ -32162,6 +32252,21 @@
       ]
     },
     {
+      "documentId": "doc-14ca1d51d369",
+      "path": "Archives-for-the-Unexplained/documents/In-Search-Of---S04E01---Tidal-Waves---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1960-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "These procedures were in full operation at the Warning Center on May 22, 1960.",
+          "segment": 87
+        }
+      ]
+    },
+    {
       "documentId": "doc-ca6f266b07a8",
       "path": "Archives-for-the-Unexplained/documents/In-Search-Of---S04E04---UFO-Australia---transcript-automated-.txt",
       "candidates": [
@@ -32281,6 +32386,21 @@
           "method": "unclassified-mention",
           "evidence": "The Reverend Jim Jones, born 1931, died November 18, 1978, with 913 of his followers in the jungle",
           "segment": 14
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bbe77288c151",
+      "path": "Archives-for-the-Unexplained/documents/In-Search-Of---S06E12---Hiroshima-Survivors---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1945-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On July 16, 1945, a signal flare illuminates the barren New Mexico desert as scientists anxiously",
+          "segment": 15
         }
       ]
     },
@@ -39454,6 +39574,21 @@
           "method": "unclassified-mention",
           "evidence": "to Randall Alley, 9 April 1998.",
           "segment": 88
+        }
+      ]
+    },
+    {
+      "documentId": "doc-278868b66dc6",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-07-No-04---1999.txt",
+      "candidates": [
+        {
+          "value": "1999-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 7 Issue 4 April 1999",
+          "segment": 0
         }
       ]
     },
@@ -65489,6 +65624,21 @@
       ]
     },
     {
+      "documentId": "doc-f5c642226f92",
+      "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S02E08---Plunder---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2012-06-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Zhekwan Satellite Launch Center in Mongolia, June 16, 2012.",
+          "segment": 23
+        }
+      ]
+    },
+    {
       "documentId": "doc-acadc095ef33",
       "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S02E11---Blackouts---transcript-automated-.txt",
       "candidates": [
@@ -65629,6 +65779,21 @@
           "method": "unclassified-mention",
           "evidence": "July 15, 1960, a Womera security officer spots a strange white light traveling across the evening",
           "segment": 165
+        }
+      ]
+    },
+    {
+      "documentId": "doc-55c66f90eb43",
+      "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S02E20---Controlled-Panic---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1961-09-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "New Hampshire, September 19, 1961.",
+          "segment": 258
         }
       ]
     },
@@ -65794,6 +65959,39 @@
           "method": "unclassified-mention",
           "evidence": "Bakersfield, California, June 23, 1947.",
           "segment": 92
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2a06626dd821",
+      "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S03E10---Antigravity-UFOs---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2002-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Paintsville, Kentucky, January 14, 2002.",
+          "segment": 118
+        },
+        {
+          "value": "1947-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Roswell, New Mexico, July 2, 1947.",
+          "segment": 164
+        },
+        {
+          "value": "1986-11-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Anchorage, Alaska, November 17, 1986.",
+          "segment": 280
         }
       ]
     },
@@ -66734,6 +66932,21 @@
       ]
     },
     {
+      "documentId": "doc-5eb8ac32983d",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-01---Track-25-UfologyRound-table.tsv",
+      "candidates": [
+        {
+          "value": "1953-12-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Executive Order 10501, the classification of restricted, was officially abolished, effective December 15, 1953.",
+          "segment": 164
+        }
+      ]
+    },
+    {
       "documentId": "doc-b81b037561b5",
       "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-01---Track-28-UfologyRound-table-4---transcript-automated-.txt",
       "candidates": [
@@ -66895,6 +67108,21 @@
           "method": "unclassified-mention",
           "evidence": "on July 29, 1954. The evidence seems to demonstrate with adequate certainty",
           "segment": 576
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7657a1a37993",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-01---Track-32-PeoplePlacesAndThings---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1958-09-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In the Durham Herald, the edition of September 30, 1958, a story appeared, and I'd like to read",
+          "segment": 227
         }
       ]
     },
@@ -68134,6 +68362,21 @@
           "method": "unclassified-mention",
           "evidence": "February 10, 1967, 1122 Erie County Sheriff's Department, Sandusky, Ohio",
           "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f36911c5a1ac",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-08---Track-31.tsv",
+      "candidates": [
+        {
+          "value": "1969-06-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on the night of Friday, June 20, 1969",
+          "segment": 256
         }
       ]
     },
@@ -69400,6 +69643,93 @@
           "method": "unclassified-mention",
           "evidence": "Ufology on June 24, 1956.",
           "segment": 82
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ec56f986e9d2",
+      "path": "Archives-for-the-Unexplained/documents/audio-material-wendy-connors-disc-10---High-Strangeness.txt",
+      "candidates": [
+        {
+          "value": "1956-09-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 27, 1956 1st Annual Convention of the Michigan Flying Saucer Federation",
+          "segment": 5
+        },
+        {
+          "value": "1967-03-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Moseley's, 7th Congress of Scientific Ufologists, NYC on March 16, 1967.",
+          "segment": 8
+        },
+        {
+          "value": "1970-02-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Research Association (BUFORA) on February 7, 1970.",
+          "segment": 17
+        },
+        {
+          "value": "1966-03-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "07: John Keel lectures at the March 16, 1966 meeting of Saucer News.",
+          "segment": 22
+        },
+        {
+          "value": "1956-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Recorded on July 4, 1956, prior to his keynote address to the 1st Annual Convention of the",
+          "segment": 28
+        },
+        {
+          "value": "1956-11-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "investigation into the Flatwoods, WV monster incident on the November 25, 1956 WOR-NY",
+          "segment": 31
+        },
+        {
+          "value": "1958-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "13: Long John Nebel Radio Program from March 13, 1958.",
+          "segment": 50
+        },
+        {
+          "value": "1977-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "14: Ray Palmer Discusses the Richard Shaver Mystery on June 25, 1977.",
+          "segment": 53
+        },
+        {
+          "value": "1982-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "18: Carlos M. Allende (aka Carl M. Allen) is Interviewed October 14, 1982 by Dan",
+          "segment": 59
         }
       ]
     },
@@ -287399,6 +287729,21 @@
       ]
     },
     {
+      "documentId": "doc-a9c10dac160d913091134adf",
+      "path": "France-GEIPAN/paired/cases/2000-08-01553/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2000-08-20",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more relevant in their conclusions. Thanks",
+          "segment": "seg-0f0ac9ff2e0b80fd94bafbd5"
+        }
+      ]
+    },
+    {
       "documentId": "doc-1588c412b1879dedc4abf19d",
       "path": "France-GEIPAN/paired/cases/2000-08-01776/en/translation.txt",
       "candidates": [
@@ -287429,6 +287774,21 @@
       ]
     },
     {
+      "documentId": "doc-b28de87f9e1ba62351868c79",
+      "path": "France-GEIPAN/paired/cases/2000-09-01555/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2000-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being reassessed with the sole purpose of being more accurate in their conclusions. Thanks",
+          "segment": "seg-b56e895d39e41f58fc9f046f"
+        }
+      ]
+    },
+    {
       "documentId": "doc-63373f172221dbcbc28047dd",
       "path": "France-GEIPAN/paired/cases/2000-09-01556/en/translation.txt",
       "candidates": [
@@ -287440,6 +287800,21 @@
           "method": "event-language",
           "evidence": "Description: On September 21, 2000, a witness returning from work around 5:00 observed with a telescope a bright object with a series of colors for approximately 2 hours. The object moved quickly with erratic movements without making any noise. The object disappeared with the daw",
           "segment": "seg-d160e6921f1d43e9634dbda3"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9f49c21cb6165f3c60b787be",
+      "path": "France-GEIPAN/paired/cases/2000-10-01558/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2000-10-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) and now being re-examined with the sole purpose of being more relevant in its conclusions. Thanks to ne",
+          "segment": "seg-905204f6de64a90ec408c364"
         }
       ]
     },
@@ -287489,6 +287864,30 @@
       ]
     },
     {
+      "documentId": "doc-84de419e5dc5c0e474dc8f57",
+      "path": "France-GEIPAN/paired/cases/2001-01-01753/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2001-01-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: This is routine for Emma in the Biarritz-Parme control tower on the morning of January 16, 2001. The day is dawning clear. Around 7:45, the phone rings. It's José from the San Sebastian Fuentarrabia control tower, observing a fixed bright point above the sea and seek",
+          "segment": "seg-7fbd0c5567e12abcee9733e0"
+        },
+        {
+          "value": "2001-02-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: This is routine for Emma in the Biarritz-Parme control tower on the morning of January 16, 2001. The day is dawning clear. Around 7:45, the phone rings. It's José from the San Sebastian Fuentarrabia control tower, observing a fixed bright point above the sea and seek",
+          "segment": "seg-7fbd0c5567e12abcee9733e0"
+        }
+      ]
+    },
+    {
       "documentId": "doc-4f1a24c92f3801c0753628c5",
       "path": "France-GEIPAN/paired/cases/2001-03-01562/en/translation.txt",
       "candidates": [
@@ -287515,6 +287914,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: During the night of March 31 to April 1, 2001, and the following night, several witnesses observed a brighter-than-star light point. When viewed through binoculars, color flashes appeared in the light point. The phenomenon made no sound and was observed for several h",
           "segment": "seg-a4473ea04b75fef8bb84e2d7"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d3b34e500efe03181459d44f",
+      "path": "France-GEIPAN/paired/cases/2001-06-01567/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1981-06-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 12, 1981, in the late afternoon, a farm worker observing a field of corn noticed a circular area approximately 20 meters in diameter where the plants appeared to be sick. In the center of the area, several plants had disappeared, and further away, the plants ",
+          "segment": "seg-e4f2892146ad874ce01a40ac"
         }
       ]
     },
@@ -287590,6 +288004,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On August 20, 2001, around 11:15 PM, a witness at a campsite observed the passage of a triangle delineated by three bright points in the sky. The phenomenon was silent and lasted for several minutes. The witness's son attempted in vain to film it. No other informatio",
           "segment": "seg-b5c2edfe89dc1b2ea4e344d5"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6c8201201608913571ef3d64",
+      "path": "France-GEIPAN/paired/cases/2001-09-01573/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2001-09-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The GEIPAN continues to publish its entire archive on its public website www.geipan.fr. Among its publications are old cases classified at the time (A, B, C, or D) that are now being re-examined with the sole purpose of being more relevant in their conclusions. Thank",
+          "segment": "seg-3edd52a653d0d951ca37db01"
         }
       ]
     },
