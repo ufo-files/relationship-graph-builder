@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "f10ee0bdb7d9afd30c09180f28ce830e42a929ba"
+    "revision": "914c95c8c67ece568d441127a12b6621bd3aad79"
   },
-  "count": 421,
-  "totalCount": 421,
-  "shownCount": 421,
+  "count": 425,
+  "totalCount": 425,
+  "shownCount": 425,
   "candidates": [
     {
       "category": "organization",
@@ -127,8 +127,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 711,
-        "documentCount": 450
+        "mentions": 716,
+        "documentCount": 453
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -143,8 +143,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 711,
-        "documentCount": 450
+        "mentions": 716,
+        "documentCount": 453
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -239,8 +239,8 @@
       "category": "location",
       "left": {
         "name": "White Sands Missile Range",
-        "mentions": 80,
-        "documentCount": 68
+        "mentions": 81,
+        "documentCount": 69
       },
       "right": {
         "name": "White Sands Missle Range",
@@ -511,8 +511,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 564,
-        "documentCount": 295
+        "mentions": 569,
+        "documentCount": 300
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -767,8 +767,8 @@
       "category": "program",
       "left": {
         "name": "Operation Main Brace",
-        "mentions": 20,
-        "documentCount": 11
+        "mentions": 27,
+        "documentCount": 12
       },
       "right": {
         "name": "Operation Main Race",
@@ -831,8 +831,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 233,
-        "documentCount": 150
+        "mentions": 235,
+        "documentCount": 152
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -1103,8 +1103,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 711,
-        "documentCount": 450
+        "mentions": 716,
+        "documentCount": 453
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -1119,8 +1119,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 711,
-        "documentCount": 450
+        "mentions": 716,
+        "documentCount": 453
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1135,8 +1135,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 711,
-        "documentCount": 450
+        "mentions": 716,
+        "documentCount": 453
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1151,8 +1151,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 177,
-        "documentCount": 112
+        "mentions": 182,
+        "documentCount": 115
       },
       "right": {
         "name": "Stephen Hawkings",
@@ -1679,8 +1679,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 519,
-        "documentCount": 225
+        "mentions": 520,
+        "documentCount": 226
       },
       "right": {
         "name": "Jacques Valle",
@@ -1910,6 +1910,22 @@
         "name": "Stephen Brody",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "George Peddley",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "George Pedley",
+        "mentions": 5,
+        "documentCount": 2
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -2159,8 +2175,8 @@
       "category": "person",
       "left": {
         "name": "Philip Corso",
-        "mentions": 87,
-        "documentCount": 68
+        "mentions": 88,
+        "documentCount": 69
       },
       "right": {
         "name": "Colonel Phillip Corso",
@@ -2169,6 +2185,22 @@
       },
       "similarity": 0.96,
       "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Allen Heineck",
+        "mentions": 48,
+        "documentCount": 32
+      },
+      "right": {
+        "name": "Allen Hineck",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -2188,27 +2220,11 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "person",
-      "left": {
-        "name": "Allen Heineck",
-        "mentions": 41,
-        "documentCount": 30
-      },
-      "right": {
-        "name": "Allen Hineck",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "location",
       "left": {
         "name": "Mount Palomar",
-        "mentions": 31,
-        "documentCount": 21
+        "mentions": 32,
+        "documentCount": 22
       },
       "right": {
         "name": "Mount Paloma",
@@ -2271,8 +2287,8 @@
       "category": "location",
       "left": {
         "name": "Marin County",
-        "mentions": 17,
-        "documentCount": 15
+        "mentions": 18,
+        "documentCount": 16
       },
       "right": {
         "name": "Marion County",
@@ -2492,6 +2508,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Lake Monsters",
+        "mentions": 9,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Lake Monster",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "John Michell",
@@ -2639,8 +2671,8 @@
       "category": "location",
       "left": {
         "name": "Malmstrom Air Force Base",
-        "mentions": 142,
-        "documentCount": 83
+        "mentions": 144,
+        "documentCount": 84
       },
       "right": {
         "name": "Maelstrom Air Force Base",
@@ -2662,6 +2694,22 @@
         "name": "DIVISION OF RADIOPHYSICS",
         "mentions": 5,
         "documentCount": 5
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Lockborn Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Lockbourne Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.958,
       "reason": "similar name",
@@ -2751,8 +2799,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 110,
-        "documentCount": 85
+        "mentions": 111,
+        "documentCount": 86
       },
       "right": {
         "name": "Northeastern University",
@@ -2958,6 +3006,22 @@
     {
       "category": "person",
       "left": {
+        "name": "George Adam",
+        "mentions": 8,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "George Adams",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Ken Johnston",
         "mentions": 10,
         "documentCount": 7
@@ -2982,22 +3046,6 @@
         "name": "Office of International & Interagency Relations",
         "mentions": 3,
         "documentCount": 2
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "George Adam",
-        "mentions": 7,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "George Adams",
-        "mentions": 6,
-        "documentCount": 5
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -3252,8 +3300,8 @@
       },
       "right": {
         "name": "Advanced Aerospace Threat Identification",
-        "mentions": 10,
-        "documentCount": 10
+        "mentions": 11,
+        "documentCount": 11
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -3583,8 +3631,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 233,
-        "documentCount": 150
+        "mentions": 235,
+        "documentCount": 152
       },
       "right": {
         "name": "Linda Moulton Howell",
@@ -4031,8 +4079,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 661,
-        "documentCount": 379
+        "mentions": 664,
+        "documentCount": 381
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4111,8 +4159,8 @@
       "category": "location",
       "left": {
         "name": "McCarran Airport",
-        "mentions": 11,
-        "documentCount": 9
+        "mentions": 12,
+        "documentCount": 10
       },
       "right": {
         "name": "McCarren Airport",
@@ -4239,8 +4287,8 @@
       "category": "location",
       "left": {
         "name": "Malmstrom Air Force Base",
-        "mentions": 142,
-        "documentCount": 83
+        "mentions": 144,
+        "documentCount": 84
       },
       "right": {
         "name": "Momstrom Air Force Base",
@@ -4719,8 +4767,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 110,
-        "documentCount": 85
+        "mentions": 111,
+        "documentCount": 86
       },
       "right": {
         "name": "Northwest University",
@@ -4831,8 +4879,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 519,
-        "documentCount": 225
+        "mentions": 520,
+        "documentCount": 226
       },
       "right": {
         "name": "Jacques Valley",
@@ -4863,8 +4911,8 @@
       "category": "person",
       "left": {
         "name": "Robert Bigelow",
-        "mentions": 284,
-        "documentCount": 152
+        "mentions": 286,
+        "documentCount": 154
       },
       "right": {
         "name": "Robert Bigalow",
@@ -5407,8 +5455,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 263,
-        "documentCount": 144
+        "mentions": 264,
+        "documentCount": 145
       },
       "right": {
         "name": "Natural Investigations Committee",
@@ -5487,8 +5535,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Health",
-        "mentions": 46,
-        "documentCount": 38
+        "mentions": 47,
+        "documentCount": 39
       },
       "right": {
         "name": "Department of Earth",
@@ -5948,6 +5996,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "John Schuster",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "John Schusler",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "University of Cologne",
@@ -6159,8 +6223,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 165,
-        "documentCount": 109
+        "mentions": 169,
+        "documentCount": 110
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -6271,8 +6335,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 177,
-        "documentCount": 112
+        "mentions": 182,
+        "documentCount": 115
       },
       "right": {
         "name": "Steven Hawking",
@@ -6431,8 +6495,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 114,
-        "documentCount": 95
+        "mentions": 116,
+        "documentCount": 96
       },
       "right": {
         "name": "George HW Bush",
@@ -6447,8 +6511,8 @@
       "category": "person",
       "left": {
         "name": "Allen Heineck",
-        "mentions": 41,
-        "documentCount": 30
+        "mentions": 48,
+        "documentCount": 32
       },
       "right": {
         "name": "Dr. Alan Heineck",
@@ -6559,8 +6623,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 233,
-        "documentCount": 150
+        "mentions": 235,
+        "documentCount": 152
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
@@ -6628,8 +6692,8 @@
       },
       "right": {
         "name": "Joseph Walker",
-        "mentions": 11,
-        "documentCount": 5
+        "mentions": 12,
+        "documentCount": 6
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -6735,8 +6799,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 36455,
-        "documentCount": 7897
+        "mentions": 36854,
+        "documentCount": 8028
       },
       "right": {
         "name": "North American Space Agency",
