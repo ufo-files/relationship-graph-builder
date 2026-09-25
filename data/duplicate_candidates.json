@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d8cabadcb4fdefec6a99e63d2cf050f9ab72993c"
+    "revision": "8ecf80a91fb374a4e4e266d6d14a45b169994dd7"
   },
-  "count": 392,
-  "totalCount": 392,
-  "shownCount": 392,
+  "count": 395,
+  "totalCount": 395,
+  "shownCount": 395,
   "candidates": [
     {
       "category": "organization",
@@ -111,8 +111,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 685,
-        "documentCount": 436
+        "mentions": 686,
+        "documentCount": 437
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -127,8 +127,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 685,
-        "documentCount": 436
+        "mentions": 686,
+        "documentCount": 437
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -383,8 +383,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 488,
-        "documentCount": 239
+        "mentions": 493,
+        "documentCount": 241
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -415,8 +415,8 @@
       "category": "location",
       "left": {
         "name": "Holloman Air Force Base",
-        "mentions": 195,
-        "documentCount": 100
+        "mentions": 198,
+        "documentCount": 101
       },
       "right": {
         "name": "Hollman Air Force Base",
@@ -751,8 +751,8 @@
       "category": "program",
       "left": {
         "name": "Project Coordinator",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
         "name": "Project Co-ordinator",
@@ -1039,8 +1039,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 685,
-        "documentCount": 436
+        "mentions": 686,
+        "documentCount": 437
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -1055,8 +1055,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 685,
-        "documentCount": 436
+        "mentions": 686,
+        "documentCount": 437
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1071,8 +1071,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 685,
-        "documentCount": 436
+        "mentions": 686,
+        "documentCount": 437
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1086,9 +1086,25 @@
     {
       "category": "person",
       "left": {
+        "name": "Stephen Hawking",
+        "mentions": 171,
+        "documentCount": 106
+      },
+      "right": {
+        "name": "Stephen Hawkings",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Michael Shermer",
-        "mentions": 82,
-        "documentCount": 53
+        "mentions": 86,
+        "documentCount": 56
       },
       "right": {
         "name": "Michael Schermer",
@@ -1359,8 +1375,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 528,
-        "documentCount": 281
+        "mentions": 531,
+        "documentCount": 283
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1583,8 +1599,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 239,
-        "documentCount": 151
+        "mentions": 240,
+        "documentCount": 152
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -1742,6 +1758,22 @@
     {
       "category": "person",
       "left": {
+        "name": "John Humphreys",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "John Humphrys",
+        "mentions": 5,
+        "documentCount": 3
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Professor Hermann Oberth",
         "mentions": 3,
         "documentCount": 3
@@ -1753,22 +1785,6 @@
       },
       "similarity": 0.963,
       "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "John Humphreys",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "John Humphrys",
-        "mentions": 4,
-        "documentCount": 2
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -1951,8 +1967,8 @@
       "category": "person",
       "left": {
         "name": "Timothy Good",
-        "mentions": 98,
-        "documentCount": 60
+        "mentions": 99,
+        "documentCount": 61
       },
       "right": {
         "name": "Timothy Goods",
@@ -2511,8 +2527,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 102,
-        "documentCount": 78
+        "mentions": 103,
+        "documentCount": 79
       },
       "right": {
         "name": "Northeastern University",
@@ -2590,14 +2606,14 @@
     {
       "category": "person",
       "left": {
-        "name": "David Clarke",
-        "mentions": 28,
-        "documentCount": 19
+        "name": "John Edwards",
+        "mentions": 8,
+        "documentCount": 7
       },
       "right": {
-        "name": "David Clark",
-        "mentions": 7,
-        "documentCount": 5
+        "name": "John Edward",
+        "mentions": 28,
+        "documentCount": 21
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -2606,14 +2622,14 @@
     {
       "category": "person",
       "left": {
-        "name": "John Edwards",
-        "mentions": 8,
-        "documentCount": 7
+        "name": "David Clarke",
+        "mentions": 28,
+        "documentCount": 19
       },
       "right": {
-        "name": "John Edward",
-        "mentions": 27,
-        "documentCount": 20
+        "name": "David Clark",
+        "mentions": 7,
+        "documentCount": 5
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -3572,8 +3588,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 403,
-        "documentCount": 59
+        "mentions": 404,
+        "documentCount": 60
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -4415,8 +4431,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 102,
-        "documentCount": 78
+        "mentions": 103,
+        "documentCount": 79
       },
       "right": {
         "name": "Northwest University",
@@ -4828,6 +4844,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Brian Forrester",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Brian Forster",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "The Air Force Base",
@@ -4895,8 +4927,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 488,
-        "documentCount": 239
+        "mentions": 493,
+        "documentCount": 241
       },
       "right": {
         "name": "University Colorado",
@@ -5071,8 +5103,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 239,
-        "documentCount": 129
+        "mentions": 241,
+        "documentCount": 130
       },
       "right": {
         "name": "Natural Investigations Committee",
@@ -5103,8 +5135,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 107,
-        "documentCount": 84
+        "mentions": 108,
+        "documentCount": 85
       },
       "right": {
         "name": "Mohave Desert",
@@ -5806,6 +5838,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Steven Hawkings",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Stephen Hawkings",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.903,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Mark Kelly",
         "mentions": 11,
         "documentCount": 8
@@ -5823,8 +5871,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 170,
-        "documentCount": 105
+        "mentions": 171,
+        "documentCount": 106
       },
       "right": {
         "name": "Steven Hawking",
@@ -5983,8 +6031,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 100,
-        "documentCount": 83
+        "mentions": 101,
+        "documentCount": 84
       },
       "right": {
         "name": "George HW Bush",
@@ -6174,14 +6222,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Joe Walker",
+        "name": "James Hansen",
         "mentions": 8,
         "documentCount": 7
       },
       "right": {
-        "name": "Joseph Walker",
+        "name": "Jane Hansen",
         "mentions": 11,
-        "documentCount": 5
+        "documentCount": 7
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -6190,14 +6238,14 @@
     {
       "category": "person",
       "left": {
-        "name": "James Hansen",
-        "mentions": 7,
-        "documentCount": 6
+        "name": "Joe Walker",
+        "mentions": 8,
+        "documentCount": 7
       },
       "right": {
-        "name": "Jane Hansen",
+        "name": "Joseph Walker",
         "mentions": 11,
-        "documentCount": 7
+        "documentCount": 5
       },
       "similarity": 0.87,
       "reason": "similar person name",
