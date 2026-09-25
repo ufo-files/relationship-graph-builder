@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-25T14:14:50Z",
+  "generatedAt": "2026-09-25T15:11:15Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "6d9c2f614efa52f120b95d02ee53b246821e7e2a"
+    "revision": "f10ee0bdb7d9afd30c09180f28ce830e42a929ba"
   },
-  "documentsWithCandidates": 12021,
+  "documentsWithCandidates": 12056,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -6353,6 +6353,48 @@
       ]
     },
     {
+      "documentId": "doc-09b478e3934b",
+      "path": "Archives-for-the-Unexplained/documents/2006-09-25_The-Guardian_Is-there-anybody-out-there-How-the-men-from-the-ministry-hid-the-hunt-for-UFOs.txt",
+      "candidates": [
+        {
+          "value": "2006-09-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mon 25 Sep 2006 13.19 BST",
+          "segment": 8
+        },
+        {
+          "value": "1993-04-28",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "In a note dated April 28 1993 from DI55 to the public UFO desk the",
+          "segment": 33
+        },
+        {
+          "value": "1965-08-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 10 1965 A man reported seeing a crimson ball fly out of the side of a hill in Warminster, Wiltshire.",
+          "segment": 59
+        },
+        {
+          "value": "1980-11-28",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "November 28 1980 Policeman Alan Godfrey reported seeing a six-metre wide dome-like object hovering in the air in Todmorden",
+          "segment": 67
+        }
+      ]
+    },
+    {
       "documentId": "doc-aec0944943fb",
       "path": "Archives-for-the-Unexplained/documents/2006-10-09_China-Daily_Abducted-by-aliens-Call-now-for-compensation.txt",
       "candidates": [
@@ -10433,6 +10475,21 @@
       ]
     },
     {
+      "documentId": "doc-d11c77a594e5",
+      "path": "Archives-for-the-Unexplained/documents/2015-03-15---FADE-TO-BLACK-Radio---Ep.-215-FADE-to-BLACK-Jimmy-Church-w-Nick-Pope-MOD-UFO-LIVE-on-air_mYU7rteKkDU---transcript-automated-_image.txt",
+      "candidates": [
+        {
+          "value": "2015-03-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“on March 4, 2015 ia aca",
+          "segment": 2
+        }
+      ]
+    },
+    {
       "documentId": "doc-4d10e730d5a3",
       "path": "Archives-for-the-Unexplained/documents/2015-03-29---FADE-TO-BLACK-Radio---Ep.-221-FADE-to-BLACK-Jimmy-Church-w-Larry-Warren-Peter-Robbins-UFO-LIVE-on-air_FSmiBCJhcWI---transcript-automated-_image.txt",
       "candidates": [
@@ -11279,6 +11336,21 @@
       ]
     },
     {
+      "documentId": "doc-f80a737a5273",
+      "path": "Archives-for-the-Unexplained/documents/2017-02-03---NASA-s-Kennedy-Space-Center---Inside-KSC-for-Feb.-3-2017_a-DaDOWwB-Y---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1967-01-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "dress rehearsal January 27, 1967.",
+          "segment": 29
+        }
+      ]
+    },
+    {
       "documentId": "doc-30b948f64f8d",
       "path": "Archives-for-the-Unexplained/documents/2017-03-01---NASA-s-Marshall-Space-Flight-Center---Lewis-Wooten__QvWdlgf3X8---transcript-automated-.txt",
       "candidates": [
@@ -11677,6 +11749,21 @@
           "method": "unclassified-mention",
           "evidence": "hello it's Tuesday July 11 2017 you are",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5ada4b824d0b",
+      "path": "Archives-for-the-Unexplained/documents/2017-07-18---NASA-Armstrong-Flight-Research-Center---Sturckow-Recaps-Last-Shuttle-Mission-to-Land-at-Edwards_R4LoR8dAV78---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2009-09-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 11 2009 to conclude mission",
+          "segment": 10
         }
       ]
     },
@@ -16826,6 +16913,21 @@
       ]
     },
     {
+      "documentId": "doc-bd46dbdace1b",
+      "path": "Archives-for-the-Unexplained/documents/2020-07-02---FADE-TO-BLACK-Radio---July-2-2020-FADE-TO-BLACK-Live-Stream-F2B---Richard-Dolan-UFO-UAP-Updates_ofnY3dKnXk4---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "anniversary July 8 1947 here on the",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-009be9c31087",
       "path": "Archives-for-the-Unexplained/documents/2020-07-18---HERO-paranormal---Michael-Schratt-Dark-Files_VqqD6r7jvW0---transcript-automated-.txt",
       "candidates": [
@@ -17191,6 +17293,21 @@
           "method": "unclassified-mention",
           "evidence": "17 May 2021 UFOs regularly spotted and",
           "segment": 764
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3fb71683c9c3",
+      "path": "Archives-for-the-Unexplained/documents/2022-07-07---NASA-Goddard---How-Far-Did-OSIRIS-REx-Plunge-Into-Asteroid-Bennu-_wCO1y_GNo98---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2020-10-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Music] On October 20, 2020",
+          "segment": 1
         }
       ]
     },
@@ -20870,6 +20987,21 @@
       ]
     },
     {
+      "documentId": "doc-283125caa906",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S14E08---The-Reptilian-Agenda---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1995-05-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On May 8, 1995, Schneider gave a presentation in Post Falls, Idaho and claimed he was attacked by",
+          "segment": 815
+        }
+      ]
+    },
+    {
       "documentId": "doc-6b26c5473304",
       "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S14E11---The-Trans-Dimensionals---transcript-automated-.txt",
       "candidates": [
@@ -24187,6 +24319,21 @@
           "method": "unclassified-mention",
           "evidence": "That was Wednesday, May 20, 1987.",
           "segment": 135
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d1a93ad6c619",
+      "path": "Archives-for-the-Unexplained/documents/Bay-Area-Skeptics-Information-Sheet---1987-10.txt",
+      "candidates": [
+        {
+          "value": "1954-07-14",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "memorandum dated July 14, 1954, written by Robert Cutler, assistant",
+          "segment": 160
         }
       ]
     },
@@ -29603,6 +29750,21 @@
       ]
     },
     {
+      "documentId": "doc-3943c03fc2d6",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000040395.txt",
+      "candidates": [
+        {
+          "value": "1985-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on March 8, 1985, unintentionally killing 80 people and wounding another 200.",
+          "segment": 17
+        }
+      ]
+    },
+    {
       "documentId": "doc-66356a4ddf0a",
       "path": "Archives-for-the-Unexplained/documents/DOC_0000144673.txt",
       "candidates": [
@@ -30179,6 +30341,21 @@
       ]
     },
     {
+      "documentId": "doc-bf1a799f55f0",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000146343.txt",
+      "candidates": [
+        {
+          "value": "1953-11-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TO Chief, Technical Branch DATE: 4 November 1953",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-25a9999ad45c",
       "path": "Archives-for-the-Unexplained/documents/DOC_0000146350.txt",
       "candidates": [
@@ -30250,6 +30427,30 @@
           "method": "unclassified-mention",
           "evidence": "done cleared through TS on 28 July 1952",
           "segment": 6
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1f7c2287caa8",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000147401.txt",
+      "candidates": [
+        {
+          "value": "1953-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "•,. -ro. FILE DATI!.: 26 January 1953 i",
+          "segment": 2
+        },
+        {
+          "value": "1953-01-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "apd duling the~ek of 19 January 1953, ~tet'IIJ llf!ll!l.i",
+          "segment": 5
         }
       ]
     },
@@ -30995,6 +31196,30 @@
       ]
     },
     {
+      "documentId": "doc-69b596deb873",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000190582.txt",
+      "candidates": [
+        {
+          "value": "1952-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "~ 28 October 1952 (Tuesday",
+          "segment": 0
+        },
+        {
+          "value": "1952-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Tuesday, 28 October 1952, SI carried",
+          "segment": 1
+        }
+      ]
+    },
+    {
       "documentId": "doc-27103d77c836",
       "path": "Archives-for-the-Unexplained/documents/DOC_0000190585.txt",
       "candidates": [
@@ -31174,6 +31399,21 @@
           "method": "unclassified-mention",
           "evidence": "On Tuesday, 17 March 1953, SI and H experimentation was cancelled.",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d2bde1d19bed",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000190627.txt",
+      "candidates": [
+        {
+          "value": "1953-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUBJECT: .SI and H Experimentation, 21 April 1953",
+          "segment": 0
         }
       ]
     },
@@ -34622,6 +34862,120 @@
       ]
     },
     {
+      "documentId": "doc-daec7accfd5a",
+      "path": "Archives-for-the-Unexplained/documents/Disclosure-Australia-AURA---No-23---May-2005.txt",
+      "candidates": [
+        {
+          "value": "1951-02-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "reports from 7 Feb 1951 and 3 May 1952",
+          "segment": 40
+        },
+        {
+          "value": "1952-05-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "reports from 7 Feb 1951 and 3 May 1952",
+          "segment": 40
+        },
+        {
+          "value": "1959-11-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On the 25 Nov 1959 five of the main",
+          "segment": 115
+        },
+        {
+          "value": "1964-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO report on 23 July 1964.",
+          "segment": 243
+        },
+        {
+          "value": "1984-10-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On the 10 October 1984 Sen TheHon.",
+          "segment": 294
+        },
+        {
+          "value": "1996-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Question 835 from Mrs Johnston on 2 December 1996, responded to by Peter McGauran, MP, Gippsland, Science and",
+          "segment": 311
+        },
+        {
+          "value": "1996-10-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"Mrs Johnston asked the Minister for Science, Industry, and Technology, upon notice on 17 October 1996",
+          "segment": 312
+        },
+        {
+          "value": "1996-10-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"Mrs Johnston asked the Minister for Defence , upon notice on 17 October 1996",
+          "segment": 328
+        },
+        {
+          "value": "1996-10-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mrs Johnston asked the Minister for Transport and Regional Development, upon notice on 17 October 1996",
+          "segment": 339
+        },
+        {
+          "value": "2004-02-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "14) http://parlinfoweb.aph.gov.au/plweb/view_document.aspx?id=33922&table=HANSARD of 23 Feb 2004.",
+          "segment": 358
+        },
+        {
+          "value": "2004-02-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "15) http://parlinfoweb.aph.gov.au/plweb/view_document.aspx?id=49958&table=HANSARD of 23 Feb 2004.",
+          "segment": 359
+        },
+        {
+          "value": "2004-02-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "13 http://parlinfoweb.aph.gov.au/plweb/view_document.aspx?id=180246&table=HANSARD of 23 Feb 2004.",
+          "segment": 360
+        }
+      ]
+    },
+    {
       "documentId": "doc-5bb6c6b8c091",
       "path": "Archives-for-the-Unexplained/documents/Disclosure-Australia-AURA---No-25---Oct-2005.txt",
       "candidates": [
@@ -37984,6 +38338,21 @@
           "method": "unclassified-mention",
           "evidence": "Butch writes a letter from prison on May 1, 2000, with a shocking revelation.",
           "segment": 601
+        }
+      ]
+    },
+    {
+      "documentId": "doc-67ae3680657c",
+      "path": "Archives-for-the-Unexplained/documents/Historys-Greatest-Mysteries---S04E03---The-Assassination-of-JFK---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1963-11-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Dallas, Texas, November 22, 1963.",
+          "segment": 27
         }
       ]
     },
@@ -42449,6 +42818,21 @@
       ]
     },
     {
+      "documentId": "doc-2c6a2c4902f0",
+      "path": "Archives-for-the-Unexplained/documents/Mysteries-at-the-Monument---S03E10---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1962-10-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "It's October 27, 1962, off the coast of Cuba.",
+          "segment": 255
+        }
+      ]
+    },
+    {
       "documentId": "doc-c42f8f40db67",
       "path": "Archives-for-the-Unexplained/documents/Mysteries-at-the-Monument---S03E11---transcript-automated-.txt",
       "candidates": [
@@ -43658,6 +44042,21 @@
       ]
     },
     {
+      "documentId": "doc-e8e266c578e0",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-11-No-06---1997.txt",
+      "candidates": [
+        {
+          "value": "1997-05-12",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "This story is a press release from CSICOP, dated May 12, 1997",
+          "segment": 350
+        }
+      ]
+    },
+    {
       "documentId": "doc-30c09a70217e",
       "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-12-No-03---1998.txt",
       "candidates": [
@@ -44041,6 +44440,48 @@
           "method": "unclassified-mention",
           "evidence": "The Dallas Morning News, August 17, 1999.",
           "segment": 196
+        }
+      ]
+    },
+    {
+      "documentId": "doc-76c393ff69c1",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-13-No-12---1999.txt",
+      "candidates": [
+        {
+          "value": "1999-11-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On November 1, 1999, Dallas radio station KPBC 770 AM, a Christian station also known as “The Witness,” ceased to",
+          "segment": 6
+        },
+        {
+          "value": "1998-01-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "KPBC 770 AM (Dallas, TX), January 13, 1998.",
+          "segment": 146
+        },
+        {
+          "value": "1999-08-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "KPBC 770 AM (Dallas, TX), August 26, 1999.",
+          "segment": 148
+        },
+        {
+          "value": "1999-09-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "KPBC 770 AM (Dallas, TX), September 18, 1999.",
+          "segment": 151
         }
       ]
     },
@@ -47240,6 +47681,66 @@
       ]
     },
     {
+      "documentId": "doc-b2753f4bbf6a",
+      "path": "Archives-for-the-Unexplained/documents/Phenomenon-The-Lost-Archives---S01E09---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1958-02-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "But when they scramble into their B-47 on the night of February 4, 1958, no",
+          "segment": 205
+        },
+        {
+          "value": "1954-05-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The design was first built in 1953 and test-fired on Bikini Atoll on May 14, 1954.",
+          "segment": 598
+        },
+        {
+          "value": "1945-08-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This is about the size of the manaputonium that destroyed Nagasaki on August 9, 1945.",
+          "segment": 602
+        },
+        {
+          "value": "1958-02-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On the morning of February 5, 1958, Savannah unexpectedly finds itself party to an Air Force",
+          "segment": 616
+        },
+        {
+          "value": "1966-01-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On January 16, 1966, a B-52 bomber on a routine airborne alert mission collides with the fueling",
+          "segment": 729
+        },
+        {
+          "value": "1968-01-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On January 21, 1968, a B-52 bomber on a secret early warning mission crashes into the ice near Tule",
+          "segment": 754
+        }
+      ]
+    },
+    {
       "documentId": "doc-b943fdef8312",
       "path": "Archives-for-the-Unexplained/documents/Phenomenon-The-Lost-Archives---S01E12---transcript-automated-.txt",
       "candidates": [
@@ -47554,6 +48055,21 @@
           "method": "unclassified-mention",
           "evidence": "Volume 2, Number 1 January 1994",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-64e6fa30d1b5",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-02-No-06---1994.txt",
+      "candidates": [
+        {
+          "value": "1992-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "involving the wire-cage probe which Mack dates to August 14, 1992.",
+          "segment": 198
         }
       ]
     },
@@ -48004,6 +48520,21 @@
           "method": "unclassified-mention",
           "evidence": "Of particular note are two items among the mound of paperwork: a May 12, 1995, report filed by Investigator Brian",
           "segment": 11
+        }
+      ]
+    },
+    {
+      "documentId": "doc-919066f939f3",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-05-No-03---1997.txt",
+      "candidates": [
+        {
+          "value": "1997-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 5 Issue 3 March 1997",
+          "segment": 0
         }
       ]
     },
@@ -55106,6 +55637,21 @@
       ]
     },
     {
+      "documentId": "doc-c63be354bbd4",
+      "path": "Archives-for-the-Unexplained/documents/Tampa-Bay-Skeptics-Report---vol-10-no-1---INCOMPLETE.txt",
+      "candidates": [
+        {
+          "value": "1995-05-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Investigator Brian Hewitt's May 12, 1995, report (two months prior to Renier's reading) in which he",
+          "segment": 10
+        }
+      ]
+    },
+    {
       "documentId": "doc-6b9b686e79b2",
       "path": "Archives-for-the-Unexplained/documents/Tampa-Bay-Skeptics-Report---vol-12-no-2---INCOMPLETE.txt",
       "candidates": [
@@ -60935,6 +61481,21 @@
       ]
     },
     {
+      "documentId": "doc-eda33fe4bded",
+      "path": "Archives-for-the-Unexplained/documents/Top-Secret-UFO-Projects-Declassified---S01E02---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1952-06-18",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "EB survived until June 18, 1952 when he died of an unknown disease.",
+          "segment": 235
+        }
+      ]
+    },
+    {
       "documentId": "doc-08e167d84b04",
       "path": "Archives-for-the-Unexplained/documents/Top-Secret-UFO-Projects-Declassified---S01E03---transcript-automated-.txt",
       "candidates": [
@@ -62221,6 +62782,147 @@
           "method": "unclassified-mention",
           "evidence": "On April 11, 1980, at 7.15 in the morning, at the airbase of La Jolla in Peru",
           "segment": 516
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b9cf69ae8f8d",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Hunters---S02E06---Arizona-Lights---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1997-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 13, 1997, the skies above Arizona ignite.",
+          "segment": 3
+        },
+        {
+          "value": "1997-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On the evening of March 13, 1997, residents throughout Phoenix, Arizona are outside looking",
+          "segment": 40
+        },
+        {
+          "value": "1997-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "What people saw on March 13, 1997 put Hail Bob to shame.",
+          "segment": 53
+        },
+        {
+          "value": "1997-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "o'clock lights over Phoenix on March 13, 1997.",
+          "segment": 142
+        },
+        {
+          "value": "1997-05-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On May 6, 1997, citing public safety concerns, Barwood asks for an official investigation into the",
+          "segment": 176
+        },
+        {
+          "value": "1997-06-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "He calls a press conference on the morning of June 19, 1997.",
+          "segment": 214
+        },
+        {
+          "value": "1997-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The March 13, 1997 sightings in Arizona are complicated, combining multiple sightings across the",
+          "segment": 259
+        },
+        {
+          "value": "1997-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On March 13, 1997, Mike is out on his balcony enjoying the cool night air, when he spots a bright",
+          "segment": 269
+        },
+        {
+          "value": "1997-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Eye witnesses to the so-called Phoenix Lights event of March 13, 1997.",
+          "segment": 447
+        },
+        {
+          "value": "1997-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the night of March 13, 1997.",
+          "segment": 541
+        },
+        {
+          "value": "1997-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Video evidence from March 13, 1997 has shown strange light formations in the Phoenix skies",
+          "segment": 643
+        },
+        {
+          "value": "2005-01-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Barbell shaped UFOs, like this one videotaped over Phoenix on January 24, 2005, are well known to",
+          "segment": 674
+        },
+        {
+          "value": "1997-06-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On June 19, 1997, the Governor holds a press conference and promises to investigate the Phoenix",
+          "segment": 780
+        },
+        {
+          "value": "1997-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Fife, can you describe what exactly you saw on March 13, 1997?",
+          "segment": 829
+        },
+        {
+          "value": "1997-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Tests have shown the lights captured on video on March 13, 1997, behave unlike conventional flares.",
+          "segment": 878
         }
       ]
     },
@@ -76199,6 +76901,21 @@
       ]
     },
     {
+      "documentId": "doc-f4937c0e855a",
+      "path": "Archives-for-the-Unexplained/documents/Unexplained-Mysteries---S01E19---The-Monster-Show---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1934-04-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On the morning of April 19, 1934, Lieutenant Colonel Arkenith Wilson, who was also a practicing",
+          "segment": 649
+        }
+      ]
+    },
+    {
       "documentId": "doc-299628d1ba49",
       "path": "Archives-for-the-Unexplained/documents/Unidentified---Inside-Americas-UFO-Investigation---S01E03-The-Pattern-Revealed---transcript-automated-.txt",
       "candidates": [
@@ -76994,6 +77711,39 @@
       ]
     },
     {
+      "documentId": "doc-a18efa94df3a",
+      "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S03E09---Signs-of-Abduction---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1976-08-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Eagle Lake, Maine, August 20, 1976.",
+          "segment": 208
+        },
+        {
+          "value": "1967-01-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "South Ashburnham, Massachusetts, January 25, 1967.",
+          "segment": 316
+        },
+        {
+          "value": "1991-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Aldergrove, British Columbia, July 17, 1991.",
+          "segment": 377
+        }
+      ]
+    },
+    {
       "documentId": "doc-2a06626dd821",
       "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S03E10---Antigravity-UFOs---transcript-automated-.txt",
       "candidates": [
@@ -77782,6 +78532,21 @@
           "method": "unclassified-mention",
           "evidence": "On August 28, 2007 our boat was out in the bay to find dolphins and follow them and do",
           "segment": 270
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d67b20914384",
+      "path": "Archives-for-the-Unexplained/documents/Weird-or-What---S02E01---Alien-Encounters---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1977-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "After years of little more than radio silence, at 10.16 p.m. on August 15, 1977, the Big Ear",
+          "segment": 687
         }
       ]
     },
@@ -78760,6 +79525,21 @@
           "method": "unclassified-mention",
           "evidence": "On November 30, 1973 the pilot of a small plane landing at Turing Airport saw a luminous",
           "segment": 110
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5d2a5634d153",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-03---Track-48.tsv",
+      "candidates": [
+        {
+          "value": "1973-11-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On November 30, 1973, the pilot of a small plane landing at Turin Airport saw a luminous ball 400 metres above the runway.",
+          "segment": 60
         }
       ]
     },
@@ -308489,6 +309269,21 @@
       ]
     },
     {
+      "documentId": "doc-45813bd27e405a81b1c89788",
+      "path": "France-GEIPAN/paired/cases/2011-08-02791/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-08-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Tuesday, August 2, 2011, between 3:27 and 3:35 a.m., several dozen witnesses observed a sudden lighting of the sky as bright as day, followed by an object, often described as green/blue, passing for 4 to 5 seconds. Some witnesses also heard one or two explosions, ",
+          "segment": "seg-4047a16075246f58dc3aa18d"
+        }
+      ]
+    },
+    {
       "documentId": "doc-fa5ae698e6d2be732cbeaa0b",
       "path": "France-GEIPAN/paired/cases/2011-08-02792/en/translation.txt",
       "candidates": [
@@ -308530,6 +309325,36 @@
           "method": "unclassified-mention",
           "evidence": "Description: On August 1, 2011, around 12:25, a driver and their passenger noticed a bright object in the sky. The object appeared stationary before suddenly disappearing. The phenomenon was observed for 4 to 5 seconds. Temporary bright points observed during the day are usually ",
           "segment": "seg-d3726153a76bc1d5070ffddd"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-92fbd7be5e33d8fa6e34f251",
+      "path": "France-GEIPAN/paired/cases/2011-08-02803/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-08-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: In its publications on the GEIPAN site, it includes old cases classified at the time (A, B, C, or D) that are now being re-examined for the sole purpose of being more relevant in the conclusions. Thanks to new technical means (software) and the investigative experien",
+          "segment": "seg-a38cf3d78eb7462cb0df861c"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a2770abbe6806693c0668b5e",
+      "path": "France-GEIPAN/paired/cases/2011-08-02805/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-08-04",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On August 4, 2011, at 10:59 PM, a witness observed a bright point moving from south to north across the sky. Intrigued by the object's zigzag movements and changes in intensity, the witness heard no noise during the observation. The object disappeared from the witnes",
+          "segment": "seg-a46f183e0437a5dbaea14afb"
         }
       ]
     },
@@ -308590,6 +309415,21 @@
           "method": "event-language",
           "evidence": "Description: A witness observed two distinct phenomena in the Bordeaux sky on two separate occasions: first, in the evening of August 3, 2011, starting at 9:00 PM; and second, in the night of August 6-7, 2011, at 3:15 AM. The second observation, which closely resembles a misident",
           "segment": "seg-a357475c37f9d362ba08d901"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3a0ab9a1b0da32bb51b3fe77",
+      "path": "France-GEIPAN/paired/cases/2011-08-02839/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-08-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 26, 2011, around 6 a.m., a witness and his spouse were intrigued by the slow movement of a bright phenomenon descending in the sky. The characteristics of this observation and its two-minute duration suggest the possibility of an atmospheric reentry of a sa",
+          "segment": "seg-28d44046bd1807d82fc74e13"
         }
       ]
     },
@@ -308663,6 +309503,21 @@
       ]
     },
     {
+      "documentId": "doc-3718dbf12aec1baea7a5e575",
+      "path": "France-GEIPAN/paired/cases/2011-09-02828/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-09-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 09, 2011, around 10:10 PM, several people in the same neighborhood of Montauban observed a swift and silent South-to-North passage of a luminous phenomenon in the sky. We received two independent testimonies: during the brief observation (from 5 to 30 se",
+          "segment": "seg-55bb69d54798e4edbfcee32f"
+        }
+      ]
+    },
+    {
       "documentId": "doc-0480efa6e2588d2fc8e1c30d",
       "path": "France-GEIPAN/paired/cases/2011-09-02829/en/translation.txt",
       "candidates": [
@@ -308704,6 +309559,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On September 28, 2011, around 8:25 PM, a driver and his passenger quickly observed several lights in the sky. This case of medium strangeness and average consistency (precise testimony, two non-independent witnesses) only allows for the hypothesis of luminous balloon",
           "segment": "seg-bfc27ccd4cc8005fd5e9b086"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d48bbd71259da7c545d3de13",
+      "path": "France-GEIPAN/paired/cases/2011-09-02850/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-09-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 13, 2011, at 11:15 PM, the gendarmerie was contacted by individuals who had spotted an unidentified flying object. The gendarmerie responded to the scene, and witnesses reported observing a spherical object with three distinct lights in the sky; initiall",
+          "segment": "seg-a8440fa4950bd93b4cffdc2a"
         }
       ]
     },
@@ -308929,6 +309799,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On October 22, 2011, between 9:20 and 9:30 PM, a witness from their home observed the slow, silent passage at low altitude of an orange glow they compared to a streetlight. A second glow arrived a few seconds later. The phenomena disappeared into the clouds. The witn",
           "segment": "seg-b5770b3e20bfb3da94691e87"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6720b829efb6bebe36cd62ea",
+      "path": "France-GEIPAN/paired/cases/2011-10-02854/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: Numerous people report observing a bright light phenomenon in the sky on October 21, 2011, around 8 PM. Witnesses are located in various departments of France. The descriptions closely match a meteor: intense green light with a trail, straight trajectory, lasting for",
+          "segment": "seg-80777fdfdda3258028c06a27"
         }
       ]
     },
