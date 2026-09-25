@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-25T02:54:06Z",
+  "generatedAt": "2026-09-25T03:48:08Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "da82ae25bd5d9f2a5272e1ef356f3e38eb5cb28b"
+    "revision": "cbd7b84ba213dd73fd7fa7dba595b9177ed1b035"
   },
-  "documentsWithCandidates": 11604,
+  "documentsWithCandidates": 11633,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -4346,6 +4346,21 @@
       ]
     },
     {
+      "documentId": "doc-e39e191e8313",
+      "path": "Archives-for-the-Unexplained/documents/1987-05-26_Sun-The-_SUFOG-scan_SUFOG-DVD.txt",
+      "candidates": [
+        {
+          "value": "1987-05-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUN, London, England - May 26, 1987",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-ceec28b99e2c",
       "path": "Archives-for-the-Unexplained/documents/1987-06-27_Asheville-Citizen-NC_SUFOG-scan_SUFOG-DVD.txt",
       "candidates": [
@@ -6071,6 +6086,21 @@
       ]
     },
     {
+      "documentId": "doc-4490153ff921",
+      "path": "Archives-for-the-Unexplained/documents/2007-07-07_Worcester-Telegram_Of-UFOs-and-aliens-when-is-enough-enough.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "ordered by a colonel to issue the July 8, 1947, news release disclosing the recovery of “a flying disk” at a ranch near Roswell.",
+          "segment": 30
+        }
+      ]
+    },
+    {
       "documentId": "doc-61d7dc0736ca",
       "path": "Archives-for-the-Unexplained/documents/2007-07-23_Trend-Hunter_Personal-UFOs.txt",
       "candidates": [
@@ -7348,6 +7378,30 @@
           "method": "unclassified-mention",
           "evidence": "on July 11 1993 Diane Whitney and a",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ae2d0b849d46",
+      "path": "Archives-for-the-Unexplained/documents/2010-12-17---NASA-s-Kennedy-Space-Center---Kennedy-Space-Center-Home-of-the-Space-Shuttle_wNMsKKN4m9k---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1981-04-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The first Shuttle flight blasted off from Pad 39-A at KSC on April 12, 1981.",
+          "segment": 10
+        },
+        {
+          "value": "1984-02-11",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "Those piggy-back flights became less frequent after February 11, 1984",
+          "segment": 17
         }
       ]
     },
@@ -8984,6 +9038,21 @@
       ]
     },
     {
+      "documentId": "doc-c338f031423f",
+      "path": "Archives-for-the-Unexplained/documents/2014-08-21---Hubble-Space-Telescope---Calilbrating-Hubble-Data-Decoding-the-Secrets-of-the-Distant-Universe_PnxEsnVyHbY---transcript-automated-_image.txt",
+      "candidates": [
+        {
+          "value": "2014-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thursaay, August 21 2014, 3pm EDT, 7pm UTC",
+          "segment": 1
+        }
+      ]
+    },
+    {
       "documentId": "doc-6a4e83e13da9",
       "path": "Archives-for-the-Unexplained/documents/2014-10-02---Podcast-UFO-Live-Shows---Randall-Nickerson-Interview-Ariel-School-UFO-Encounter-10-01-2014_QPJaPsPtl-M---transcript-automated-.txt",
       "candidates": [
@@ -9048,6 +9117,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Thursday February 19, 2015 ane EST 8pm UT, airet CET",
+          "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ffbb0280b793",
+      "path": "Archives-for-the-Unexplained/documents/2015-02-23---FADE-TO-BLACK-Radio---Ep.197-FADE-to-BLACK-Jimmy-Church-w-Kathleen-Marden-the-Hill-Abduction-LIVE-on-air_Btfx_gI10s0---transcript-automated-_image.txt",
+      "candidates": [
+        {
+          "value": "2019-02-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\" February 2, 2019 Le % |",
           "segment": 2
         }
       ]
@@ -9811,6 +9895,21 @@
           "method": "unclassified-mention",
           "evidence": "of the September 11 2001 attack on the",
           "segment": 9
+        }
+      ]
+    },
+    {
+      "documentId": "doc-dda0e899f3b4",
+      "path": "Archives-for-the-Unexplained/documents/2016-09-02---NASA-Goddard---SDO-Witnesses-A-Double-Eclipse_yqQ3bvVQuD8---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2016-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On September 1, 2016, Earth briefly blocked",
+          "segment": 6
         }
       ]
     },
@@ -14759,6 +14858,21 @@
       ]
     },
     {
+      "documentId": "doc-9e60d4827d03",
+      "path": "Archives-for-the-Unexplained/documents/2019-12-10---NASA-Goddard---XMM-Newton-Celebrates-20-Years-in-Space_JMFLWTcBsi8---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1999-12-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Launched on December 10, 1999",
+          "segment": 3
+        }
+      ]
+    },
+    {
       "documentId": "doc-cbd0126cbbcd",
       "path": "Archives-for-the-Unexplained/documents/2019-12-11---Strange-Planet---American-Cover-ups-John-Lennon-Reverse-Speech_A0kzQZghNXk---transcript-automated-.txt",
       "candidates": [
@@ -18985,6 +19099,912 @@
           "method": "unclassified-mention",
           "evidence": "August 12, 1953.) -UFO Inv.•",
           "segment": 232
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2c161425e611",
+      "path": "Archives-for-the-Unexplained/documents/Audio_Catalog.txt",
+      "candidates": [
+        {
+          "value": "1960-01-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Project Blue Book – King’s Landing, CA, January 21, 1960",
+          "segment": 68
+        },
+        {
+          "value": "1961-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Project Blue Book – Salt Lake City, UT, October 21, 1961",
+          "segment": 70
+        },
+        {
+          "value": "1978-04-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Middleton, MA – Gould, April 12, 1978 (BG 334",
+          "segment": 224
+        },
+        {
+          "value": "1978-06-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Sebring, OH – M. Rice, UFO, June 2, 1978 (BG84",
+          "segment": 226
+        },
+        {
+          "value": "1978-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – Larry Moyers, July 9, 1978 (BG83",
+          "segment": 227
+        },
+        {
+          "value": "1978-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – MUFON Symposium – Hind, July 29, 1978 (BG201",
+          "segment": 228
+        },
+        {
+          "value": "1978-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – MUFON Symposium – Stringfield, July 29, 1978 (BG202",
+          "segment": 229
+        },
+        {
+          "value": "1978-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – MUFON Symposium – Hall, Stringfield, July 29, 1978 (BG203",
+          "segment": 230
+        },
+        {
+          "value": "1978-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – MUFON Symposium – Revisiting CE-3, July 29, 1978 (BG204",
+          "segment": 231
+        },
+        {
+          "value": "1978-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – MUFON Symposium – Revisiting CE-3, Keyhoe, July 29, 1978",
+          "segment": 232
+        },
+        {
+          "value": "1979-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“News” – BBC – Australian UFOs, January 1, 1979 (BG75",
+          "segment": 233
+        },
+        {
+          "value": "1979-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“News” – WEEI-AM, Boston – Australian UFOs, January 1, 1979 (BG75",
+          "segment": 234
+        },
+        {
+          "value": "1979-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“News” – WBZ-AM, Boston – Australian UFOs, January 1, 1979 (BG75",
+          "segment": 235
+        },
+        {
+          "value": "1979-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“News” – VOA – Australian UFOs – January 1, 1979 (BG75",
+          "segment": 236
+        },
+        {
+          "value": "1979-01-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – WGN, Chicago – Hynek, Hall, Fulton, January 16, 1979 (BG76-",
+          "segment": 237
+        },
+        {
+          "value": "1979-02-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Larry Glick Show” – WBZ-AM, Boston – Klass, February 6, 1979 (BG75",
+          "segment": 238
+        },
+        {
+          "value": "1979-03-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – WORC-AM, Washington, D.C. – Diaz, March 22, 1979 (BG78",
+          "segment": 239
+        },
+        {
+          "value": "1979-03-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“UFO Report” – WNBC-AM, NY – Spiegel, March 4, 1979 (BG25,26",
+          "segment": 240
+        },
+        {
+          "value": "1979-04-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“UFO Report” – WNBC-AM, NY – Spiegel, April 5, 1979 (BG27",
+          "segment": 241
+        },
+        {
+          "value": "1979-05-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“UFO Report” – WNBC-AM, NY – Spiegel, May 7, 1979 (BG29",
+          "segment": 244
+        },
+        {
+          "value": "1979-05-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“UFO Report” – WNBC-AM, NY – Spiegel, May 7, 1979 (BG30",
+          "segment": 245
+        },
+        {
+          "value": "1979-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – phone con – McIntyre, Cashman, July 18, 1979 (BG107",
+          "segment": 247
+        },
+        {
+          "value": "1979-08-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“UFO Report” – WNBC-AM, NY – Spiegel, August 9, 1979 (BG32",
+          "segment": 248
+        },
+        {
+          "value": "1979-11-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“David Gold Show” – WITS-AM, Boston – Stalnaker, November 14, 1979",
+          "segment": 249
+        },
+        {
+          "value": "1980-09-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“MUFON Amateur Radio” – Dobbs, September 13, 1980 (BG40",
+          "segment": 256
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Live tape – private – C. Halt, Rendlesham Forest, December 29, 1980",
+          "segment": 257
+        },
+        {
+          "value": "1981-04-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Larry Glick Show” – WBZ-AM, Boston – Friedman, April 2, 1981 (BG52",
+          "segment": 268
+        },
+        {
+          "value": "1981-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Bigfoot, Rome, OH, July 6, 1981 (BG107",
+          "segment": 271
+        },
+        {
+          "value": "1981-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Chatham, NY UFO, July 6, 1981 (BG383",
+          "segment": 272
+        },
+        {
+          "value": "1981-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Pat Whitley Show” – WITS-AM, Boston – Hynek, Hopkins, July 24, 1981",
+          "segment": 276
+        },
+        {
+          "value": "1981-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Janet Jeghelian Show” – WBZ-AM, Boston - J. Wales, July 26, 1981",
+          "segment": 277
+        },
+        {
+          "value": "1981-08-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – WMTR, Morristown, NJ – J. Stewart, August 25, 1981 (BG379",
+          "segment": 278
+        },
+        {
+          "value": "1981-09-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – phone con – Moseley, September 5, 1981 (BG55",
+          "segment": 279
+        },
+        {
+          "value": "1981-10-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Larry Glick Show” – WBZ-AM, Boston – R. Barry, October 13, 1981",
+          "segment": 280
+        },
+        {
+          "value": "1981-10-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Press Conference – Washington, D.C. – CAUS, Gersten, October 27, 1981",
+          "segment": 281
+        },
+        {
+          "value": "1981-11-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Sheriff, November 14, 1981 (BG59",
+          "segment": 282
+        },
+        {
+          "value": "1981-12-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Mendhamboro, NJ UFO, December 28, 1981 (BG383",
+          "segment": 284
+        },
+        {
+          "value": "1981-12-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – UFO, December 31, 1981 (BG384",
+          "segment": 285
+        },
+        {
+          "value": "1982-02-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – phone con – Pilichis, Boeche, February 11, 1982 (BG68",
+          "segment": 286
+        },
+        {
+          "value": "1982-02-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Z. Sitchin, February 13, 1982 (BG406",
+          "segment": 287
+        },
+        {
+          "value": "1982-02-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – WVBF-FM, Boston – Christensen, February 24, 1982 (BG56",
+          "segment": 288
+        },
+        {
+          "value": "1982-04-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Gambles, Rome, OH UFO, April 28, 1982 (BG408",
+          "segment": 289
+        },
+        {
+          "value": "1982-04-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – WNIR-FM, Cleveland, OH - D. Edwards, April 30, 1982 (BG65",
+          "segment": 290
+        },
+        {
+          "value": "1982-06-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – Tri-County UFO meeting, Ohio – E. Neff, June 12, 1982 (BG57",
+          "segment": 291
+        },
+        {
+          "value": "1982-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Larry King Show” – WITS-AM, Boston – B. Hopkins, June 29, 1982",
+          "segment": 292
+        },
+        {
+          "value": "1982-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – phone con, OH – Wilhelm, D. Pilichis, July 21, 1982 (BG407",
+          "segment": 293
+        },
+        {
+          "value": "1982-08-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – phone con, OH– Wilhelm, D, Pilichis, August 6, 1982 (BG409",
+          "segment": 294
+        },
+        {
+          "value": "1982-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Meeting – Tri-County UFO, OH – August 15, 1982 (BG473",
+          "segment": 295
+        },
+        {
+          "value": "1982-09-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Meeting – Tri-County UFO, OH – September 11, 1982 (BG394",
+          "segment": 299
+        },
+        {
+          "value": "1982-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Newburgh, NY – J. Stewart, September 21, 1982 (BG382",
+          "segment": 302
+        },
+        {
+          "value": "1982-10-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Meeting – Tri-County UFO, OH – October 9, 1982 (BG395-397",
+          "segment": 303
+        },
+        {
+          "value": "1982-10-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Westport, IN – Kearney UFO, October 15, 1982 (BG401",
+          "segment": 304
+        },
+        {
+          "value": "1982-10-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Manerva, OH – UFO sighting, October 19, 1982 (BG405",
+          "segment": 305
+        },
+        {
+          "value": "1982-11-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Meeting – Tri-County UFO, OH – November 13, 1982 (BG398-400",
+          "segment": 306
+        },
+        {
+          "value": "1982-11-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – phone con, OH – D. Pilichis, J. Rastetter, November 21, 1982",
+          "segment": 307
+        },
+        {
+          "value": "1983-02-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Mornings” – WKOX, Framingham, MA – R. Fowler, February 9, 1983",
+          "segment": 310
+        },
+        {
+          "value": "1983-02-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – Boston University – S. Friedman, February 15, 1983 (BG329",
+          "segment": 311
+        },
+        {
+          "value": "1983-02-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Larry Glick Show” – WBZ-AM, Boston – S. Friedman, February 15, 1983",
+          "segment": 312
+        },
+        {
+          "value": "1983-03-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – P. Klass, March 10, 1983 (BG423",
+          "segment": 313
+        },
+        {
+          "value": "1983-04-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – Tri-County UFO Study Group, OH – meeting, April 9, 1983",
+          "segment": 314
+        },
+        {
+          "value": "1983-05-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – Tri-County UFO Study Group, OH – meeting, May 14, 1983",
+          "segment": 316
+        },
+        {
+          "value": "1983-06-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – Tri-County UFO Study Group, OH – meeting, June 11, 1983",
+          "segment": 317
+        },
+        {
+          "value": "1983-08-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "B. Hopkins, August 22, 1983 (BG333",
+          "segment": 321
+        },
+        {
+          "value": "1983-10-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – Tri-County UFO Study Group, OH – meeting, October 8, 1983",
+          "segment": 322
+        },
+        {
+          "value": "1983-11-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – Tri-County UFO Study Group, OH – meeting, November 8, 1983",
+          "segment": 323
+        },
+        {
+          "value": "1983-11-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "News – WRKO-AM, Boston – L. Bryant, November 20, 1983 (BG332",
+          "segment": 325
+        },
+        {
+          "value": "1984-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Mike Rosen Show” – KNUS, Denver – Greenwood, July 30, 1984 (BG431",
+          "segment": 328
+        },
+        {
+          "value": "1984-08-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – Brewster, NY UFO Conference – August 25, 1984",
+          "segment": 331
+        },
+        {
+          "value": "1984-11-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – California – Hynek, November 9, 1984 (BG426",
+          "segment": 336
+        },
+        {
+          "value": "1985-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "February 21, 1985 (BG435",
+          "segment": 339
+        },
+        {
+          "value": "1985-03-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Larry Glick Show” – WBZ-AM, Boston – B. Greenwood, March 15, 1985",
+          "segment": 340
+        },
+        {
+          "value": "1985-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Edge of Reality” – WNBC, NY – L. Fawcett, B. Greenwood, April 21, 1985",
+          "segment": 341
+        },
+        {
+          "value": "1985-05-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Mike Miller Show” – WHDH-AM, Boston – B. Greenwood, May 13, 1985",
+          "segment": 342
+        },
+        {
+          "value": "1985-05-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – KFOX – D. Goudie, May 26, 1985 (BG438",
+          "segment": 343
+        },
+        {
+          "value": "1985-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Edge of Reality” – WNBC-NY – L. Howe, June 30, 1985 (BG436",
+          "segment": 344
+        },
+        {
+          "value": "1985-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Ron Robin Show” – WBZ-AM, Boston – M. Christensen, July 18, 1985",
+          "segment": 348
+        },
+        {
+          "value": "1985-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – Mass MUFON Forum – August 12, 1985",
+          "segment": 351
+        },
+        {
+          "value": "1985-08-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Dick Syatt Show” – WRKO-AM, Boston – B. Greenwood, August 18, 1985",
+          "segment": 356
+        },
+        {
+          "value": "1985-08-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – WJRC-AM, Joliet, IL – L. Sturm, August 23, 1985 (BG444",
+          "segment": 358
+        },
+        {
+          "value": "1985-08-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Larry Glick Show” – WBZ-AM, Boston – B. Hopkins, August 28, 1985",
+          "segment": 359
+        },
+        {
+          "value": "1985-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Edge of Reality” – WNBC, NY – Z. Sitchin, September 8, 1985 (BG450",
+          "segment": 361
+        },
+        {
+          "value": "1985-09-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Braintree, MA – Primavera UFO, September 9, 1985 (BG443",
+          "segment": 362
+        },
+        {
+          "value": "1985-10-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Larry Glick Show” – WBZ-AM, Boston – L. Coleman, October 25, 1985",
+          "segment": 365
+        },
+        {
+          "value": "1985-11-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Albuquerque, NM – Bennewitz, November 11, 1985 (BG437",
+          "segment": 366
+        },
+        {
+          "value": "1985-12-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – WRKO-AM, Boston – L. Bryant, December 26, 1985 (BG446",
+          "segment": 367
+        },
+        {
+          "value": "1986-01-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – S. Villanueva Medina – January 25, 1986 (BG338",
+          "segment": 370
+        },
+        {
+          "value": "1986-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – E. Mercado, January 26, 1986 (BG339-40",
+          "segment": 371
+        },
+        {
+          "value": "1986-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – phone con – J. Vaillancourt, D. Goudie, May 22, 1986 (BG343",
+          "segment": 372
+        },
+        {
+          "value": "1986-08-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – Mass MUFON Forum, Beverly, MA – August 10, 1986",
+          "segment": 374
+        },
+        {
+          "value": "1986-08-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – WMJX-FM, Boston – J. Melesciuc, August 3, 1986 (BG141",
+          "segment": 379
+        },
+        {
+          "value": "1986-10-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Invisible Influence” – NPR – Sonya UFO Abduction, October 31, 1986",
+          "segment": 381
+        },
+        {
+          "value": "1987-01-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – WOR-AM, NY – Strieber, January 20, 1987 (BG352",
+          "segment": 384
+        },
+        {
+          "value": "1987-01-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Milwaukee, WI – C. Silva, January 30, 1987 (BG347",
+          "segment": 386
+        },
+        {
+          "value": "1987-02-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Ted and Janet Show” – WRKO-AM, Boston – Strieber, February 9, 1987",
+          "segment": 388
+        },
+        {
+          "value": "1987-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interview – Milwaukee, WI – Jose Gutierrez, April 1, 1987 (BG346",
+          "segment": 389
+        },
+        {
+          "value": "1987-04-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Boston Sunday Review” – WBCN-FM, Boston – Hopkins, April 26, 1987",
+          "segment": 390
+        },
+        {
+          "value": "1987-05-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“David Brudnoy Show” – WBZ-AM, Boston – Kinder, May 14, 1987",
+          "segment": 391
+        },
+        {
+          "value": "1987-06-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Paul Harvey News” – WBZ-AM, Boston – MJ-12, June 6, 1987 (BG322",
+          "segment": 393
+        },
+        {
+          "value": "1987-06-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Paul Harvey News” – WBZ-AM, Boston – MJ-12, June 20, 1987 (BG470",
+          "segment": 394
+        },
+        {
+          "value": "1987-06-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lecture – MUFON Symposium – Klass, June 28, 1987 (BG345",
+          "segment": 396
         }
       ]
     },
@@ -25265,6 +26285,21 @@
       ]
     },
     {
+      "documentId": "doc-e3c4c8033826",
+      "path": "Archives-for-the-Unexplained/documents/Courrier-R-.txt",
+      "candidates": [
+        {
+          "value": "2009-09-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Envoyé: lundi 28 septembre 2009 00:30",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-521e345ea87f",
       "path": "Archives-for-the-Unexplained/documents/Courrier-R.txt",
       "candidates": [
@@ -25988,6 +27023,21 @@
       ]
     },
     {
+      "documentId": "doc-5b9af1d5e7b8",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000146379.txt",
+      "candidates": [
+        {
+          "value": "1953-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TO Chief, Technical Branch DATE: 28 October 1953",
+          "segment": 1
+        }
+      ]
+    },
+    {
       "documentId": "doc-1919dc4b08dc",
       "path": "Archives-for-the-Unexplained/documents/DOC_0000147026.txt",
       "candidates": [
@@ -26296,6 +27346,21 @@
           "method": "unclassified-mention",
           "evidence": "29 May 1952 and has not yet been returned by him. Upon",
           "segment": 6
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4b2e4677a2fd",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000184412.txt",
+      "candidates": [
+        {
+          "value": "1953-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TO File DATE: 27 July 1953",
+          "segment": 2
         }
       ]
     },
@@ -32885,6 +33950,21 @@
       ]
     },
     {
+      "documentId": "doc-c5e967e156cf",
+      "path": "Archives-for-the-Unexplained/documents/In-Search-Of---S05E19---The-Death-of-Marilyn-Monroe---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1962-08-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On August 5, 1962, screen star Marilyn Monroe was found dead of barbiturate poisoning.",
+          "segment": 7
+        }
+      ]
+    },
+    {
       "documentId": "doc-80c6e0eabce2",
       "path": "Archives-for-the-Unexplained/documents/In-Search-Of---S06E07---Jim-Jones---transcript-automated-.txt",
       "candidates": [
@@ -33184,6 +34264,21 @@
           "method": "unclassified-mention",
           "evidence": "On November 16, 2007, Kevin Weller and his younger brother Cole snuck out of their suburban home to",
           "segment": 33
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2ba581c28f4c",
+      "path": "Archives-for-the-Unexplained/documents/Lost-Tapes---S02E02---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1988-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On June 29, 1988, Chris Davis got off late from work.",
+          "segment": 1
         }
       ]
     },
@@ -35866,6 +36961,21 @@
           "method": "unclassified-mention",
           "evidence": "From Science, May 10, 1912, 35(906): 749-51.",
           "segment": 1862
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4af3bdbf8ac6",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-01-No-02---1987.txt",
+      "candidates": [
+        {
+          "value": "1987-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A meeting of the fellows of NTS was held on July 22, 1987.",
+          "segment": 277
         }
       ]
     },
@@ -40193,6 +41303,21 @@
       ]
     },
     {
+      "documentId": "doc-d310f8bbcaa9",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-06-No-09---1998.txt",
+      "candidates": [
+        {
+          "value": "1998-11-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 6 Issue 9 November 1998",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-dd5d5fb1123f",
       "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-06-No-10---1998.txt",
       "candidates": [
@@ -40252,6 +41377,39 @@
           "method": "unclassified-mention",
           "evidence": "Volume 7 Issue 4 April 1999",
           "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5e66908e5eba",
+      "path": "Archives-for-the-Unexplained/documents/REALL-News---Vol-07-No-05---1999.txt",
+      "candidates": [
+        {
+          "value": "1999-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 7 Issue 5 May 1999",
+          "segment": 0
+        },
+        {
+          "value": "1998-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The July 10, 1998, issue includes a minor masterpiece about a mantis alien overseeing an exosemination",
+          "segment": 74
+        },
+        {
+          "value": "1986-03-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On March 14, 1986, he was regressed",
+          "segment": 188
         }
       ]
     },
@@ -46310,6 +47468,30 @@
       ]
     },
     {
+      "documentId": "doc-ad00c49c9166",
+      "path": "Archives-for-the-Unexplained/documents/South-Shore-Skeptic---Vol-13-No-04.txt",
+      "candidates": [
+        {
+          "value": "1997-01-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A talk by Ulysses Torassa given at Balwin-Wallace College, Berea, Ohio, January 21, 1997 for the South Shore",
+          "segment": 232
+        },
+        {
+          "value": "1997-02-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Journal, February 8, 1997, totally at random.",
+          "segment": 358
+        }
+      ]
+    },
+    {
       "documentId": "doc-13870e1407da",
       "path": "Archives-for-the-Unexplained/documents/South-Shore-Skeptic---Vol-13-No-05.txt",
       "candidates": [
@@ -46321,6 +47503,30 @@
           "method": "unclassified-mention",
           "evidence": "pendence, Ohio, April 9, 1997 in solving \"mysteries\" and His investigation of a weep-",
           "segment": 202
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f279a9cdc88c",
+      "path": "Archives-for-the-Unexplained/documents/South-Shore-Skeptic---Vol-13-No-06.txt",
+      "candidates": [
+        {
+          "value": "1997-09-19",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: September 19, 1997 liam Cohen-Kiraly, a by skeptics, we will also ven-",
+          "segment": 2
+        },
+        {
+          "value": "1997-05-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A talk by Dr. Joe Bauer given at Baldwin-Wallace College, Berea, Ohio, May 16, 1997 for",
+          "segment": 228
         }
       ]
     },
@@ -66332,6 +67538,21 @@
       ]
     },
     {
+      "documentId": "doc-46177e14f4e8",
+      "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S01E16---Life-On-Mars---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1993-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A NASA statement from August 21, 1993",
+          "segment": 238
+        }
+      ]
+    },
+    {
       "documentId": "doc-9b8f958bb106",
       "path": "Archives-for-the-Unexplained/documents/Unsealed-Alien-Files---S01E18---Aliens-and-the-Military---transcript-automated-.txt",
       "candidates": [
@@ -68342,6 +69563,30 @@
       ]
     },
     {
+      "documentId": "doc-fd33e1c662d5",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-02---Track-56---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1959-12-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 24, 1959, the Inspector General of the Air Force notified",
+          "segment": 4
+        },
+        {
+          "value": "1962-04-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On the night of April 18, 1962, a",
+          "segment": 233
+        }
+      ]
+    },
+    {
       "documentId": "doc-436bcc814a07",
       "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-02---Track-56.tsv",
       "candidates": [
@@ -68773,6 +70018,39 @@
           "method": "unclassified-mention",
           "evidence": "been talking to her by telephone today, September 29, 1968.",
           "segment": 8
+        }
+      ]
+    },
+    {
+      "documentId": "doc-35dec51c3da4",
+      "path": "Archives-for-the-Unexplained/documents/Wendy-Connors---Disc-04---Track-98---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1964-04-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "early evening of April 24, 1964.",
+          "segment": 76
+        },
+        {
+          "value": "1967-04-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "high noon on April 28, 1967.",
+          "segment": 398
+        },
+        {
+          "value": "1967-09-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On September 6, 1967, at about 10.30 p.m., Dr. Edward Goldstein was driving along a desolate",
+          "segment": 472
         }
       ]
     },
@@ -70357,6 +71635,48 @@
           "method": "unclassified-mention",
           "evidence": "44 Lionel Beer is interviewed on August 20, 1971.",
           "segment": 61
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5b36744276f9",
+      "path": "Archives-for-the-Unexplained/documents/audio-material-wendy-connors-disc-04---Project-Blue-Book.txt",
+      "candidates": [
+        {
+          "value": "1958-01-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Skies, January 20, 1958.",
+          "segment": 63
+        },
+        {
+          "value": "1966-03-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "60: Congressman Gerald Ford comments on the Michigan UFO wave on March 27, 1966.",
+          "segment": 94
+        },
+        {
+          "value": "1966-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "62: Dr. J. Allen Hynek is interviewed on the Merv Griffin show, July 13, 1966.",
+          "segment": 96
+        },
+        {
+          "value": "1958-03-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "87: Wilbert B. Smith lectures on the Philosophy of the Saucers, March 16, 1958.",
+          "segment": 125
         }
       ]
     },
@@ -291983,6 +293303,21 @@
       ]
     },
     {
+      "documentId": "doc-e1441c201fff6d6bb1a9a77a",
+      "path": "France-GEIPAN/paired/cases/2008-07-02314/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-07-28",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: On July 28, 2008, around 8:30 PM, a witness walking his dog noticed, in the north-northwest above the tennis court fence of his village, an orange-colored cloud with a black outline. This large, elongated cloud was completely motionless, and the witness did not hear ",
+          "segment": "seg-548b4018d2c9c357542bc97e"
+        }
+      ]
+    },
+    {
       "documentId": "doc-5305fc2df3343286425beb4a",
       "path": "France-GEIPAN/paired/cases/2008-07-02388/en/translation.txt",
       "candidates": [
@@ -292055,6 +293390,21 @@
       ]
     },
     {
+      "documentId": "doc-da39e0fb8802553977f0792a",
+      "path": "France-GEIPAN/paired/cases/2008-08-02106/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-08-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Saturday, August 30, 2008, at 11:45 PM, a witness was stargazing with the naked eye when their attention was suddenly drawn to the presence, slightly to the left vertically, of a yellow sphere surrounded by shimmering objects of all colors. They observed it with b",
+          "segment": "seg-14ff59aba76ff5fec7ded098"
+        }
+      ]
+    },
+    {
       "documentId": "doc-d5ce9fe34a3520dfa902b9f8",
       "path": "France-GEIPAN/paired/cases/2008-08-02183/en/translation.txt",
       "candidates": [
@@ -292105,6 +293455,21 @@
           "method": "relative-date-exclusion",
           "evidence": "Description: On August 8, 2008, a witness contacted the GEIPAN by phone to describe a previous observation. After August 15, 2007 (the witness cannot recall the exact date) and between 10:30 PM and 11:00 PM, this person observed two bright yellow spheres moving side by side towar",
           "segment": "seg-29368ca917a3fbd6103a6e3d"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9c64c4aa4197fc20d4b06f46",
+      "path": "France-GEIPAN/paired/cases/2008-09-02065/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-09-25",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On the evening of September 25, 2008, around 11 PM, numerous witnesses in southern Brittany or southern France observed a spectacular light phenomenon crossing the sky from northeast to southwest. Many reported their observations to the GEIPAN via phone (5), email (5",
+          "segment": "seg-9a7a6f61b652240b4823b6e0"
         }
       ]
     },
@@ -292280,6 +293645,36 @@
       ]
     },
     {
+      "documentId": "doc-e86e9aa459cd781316dda7f1",
+      "path": "France-GEIPAN/paired/cases/2008-12-01960/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-12-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 21, 2008, at 7:46 PM, a driver and his passenger noticed a phenomenon in the sky that intrigued them. After parking their car, the witnesses observed in silence for several minutes three yellow-orange light circles that moved. The description of the pheno",
+          "segment": "seg-a1de461e41fc33fe42657be8"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0b6f5254a75836a14ef7cb92",
+      "path": "France-GEIPAN/paired/cases/2008-12-01964/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2008-12-23",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On December 23, 2008, multiple witnesses across different departments in France observed a brief passage of a luminous phenomenon in the night sky. Four testimonies were collected. All four testimonies from that day (Labarthe-Inard (31), Aureil (87), Roquelaure (32),",
+          "segment": "seg-65d0f185f234c8cdde27f49b"
+        }
+      ]
+    },
+    {
       "documentId": "doc-c1c5328f2f1c7f4aecb928fb",
       "path": "France-GEIPAN/paired/cases/2008-12-01988/en/translation.txt",
       "candidates": [
@@ -292420,6 +293815,21 @@
           "method": "event-language",
           "evidence": "Description: On January 13, 2009, at 6:42 a.m., a driver on Highway A20 near Réaville observed through their windshield an object passing quickly at an altitude of approximately 50 meters. The object was the size of a grapefruit and had a yellow-orange color. No noise was heard. ",
           "segment": "seg-b66ea4e3a1289805c40caa06"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8f1c1d56eadaaa2bfa4ed5f0",
+      "path": "France-GEIPAN/paired/cases/2009-01-01962/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2009-01-25",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: Numerous reports of an atmospheric reentry of a meteoroid (fireball of magnitude -10) on January 25, 2009 at approximately 21:22 UTC (22:22 local time) have been received by the GEIPAN and various internet sites (see the REFORME network file: Bolide 25janvier2009_21h",
+          "segment": "seg-2bd00b8b7838f3c5866ab69b"
         }
       ]
     },
@@ -292762,6 +294172,30 @@
           "method": "event-language",
           "evidence": "Description: The GEIPAN was contacted by email on July 7, 2010, by a witness who briefly describes an old observation case that occurred on February 3, 2009, between 7:00 and 7:15 PM. The witness, walking down a street, was intrigued by the passage of several orange oval lights t",
           "segment": "seg-746f350c8d852ad0e6e869bd"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3089388586d34210418657c7",
+      "path": "France-GEIPAN/paired/cases/2009-02-02717/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2009-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On February 28, 2009, between 6:30 PM and 7:35 PM, individuals at a ski resort observed, from various locations, two spherical lights of differing sizes. The observations were made from a great distance, but the witnesses noted the movement of these bright spheres in",
+          "segment": "seg-f3aa0a4dc708921bf8ba0427"
+        },
+        {
+          "value": "2011-03-04",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On February 28, 2009, between 6:30 PM and 7:35 PM, individuals at a ski resort observed, from various locations, two spherical lights of differing sizes. The observations were made from a great distance, but the witnesses noted the movement of these bright spheres in",
+          "segment": "seg-f3aa0a4dc708921bf8ba0427"
         }
       ]
     },
