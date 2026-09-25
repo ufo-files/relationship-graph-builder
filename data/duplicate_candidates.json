@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "3c60283a61ce4fbe5501292cee2ba48eec85b0fd"
+    "revision": "ed218db4652cbce695485b07f51d4332b601d9bf"
   },
-  "count": 384,
-  "totalCount": 384,
-  "shownCount": 384,
+  "count": 385,
+  "totalCount": 385,
+  "shownCount": 385,
   "candidates": [
     {
       "category": "organization",
@@ -479,8 +479,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 547,
-        "documentCount": 280
+        "mentions": 549,
+        "documentCount": 282
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -740,8 +740,24 @@
       },
       "right": {
         "name": "Institutes of Health",
-        "mentions": 5,
-        "documentCount": 4
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "similarity": 0.974,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "program",
+      "left": {
+        "name": "Project Coordinator",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Project Co-ordinator",
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.974,
       "reason": "similar name",
@@ -1327,8 +1343,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 520,
-        "documentCount": 276
+        "mentions": 521,
+        "documentCount": 277
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -2383,8 +2399,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 163,
-        "documentCount": 54
+        "mentions": 164,
+        "documentCount": 55
       },
       "right": {
         "name": "Kings Island",
@@ -2863,8 +2879,8 @@
       "category": "organization",
       "left": {
         "name": "University of Kansas",
-        "mentions": 17,
-        "documentCount": 15
+        "mentions": 18,
+        "documentCount": 16
       },
       "right": {
         "name": "University of Arkansas",
@@ -3492,8 +3508,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 399,
-        "documentCount": 57
+        "mentions": 400,
+        "documentCount": 58
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -3663,8 +3679,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 635,
-        "documentCount": 360
+        "mentions": 636,
+        "documentCount": 361
       },
       "right": {
         "name": "Stanton Freedman",
@@ -5007,8 +5023,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 105,
-        "documentCount": 82
+        "mentions": 106,
+        "documentCount": 83
       },
       "right": {
         "name": "Mohave Desert",
@@ -5055,8 +5071,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Health",
-        "mentions": 35,
-        "documentCount": 27
+        "mentions": 37,
+        "documentCount": 29
       },
       "right": {
         "name": "Department of Earth",
@@ -5567,8 +5583,8 @@
       "category": "government_agency",
       "left": {
         "name": "Joint Intelligence Bureau",
-        "mentions": 24,
-        "documentCount": 12
+        "mentions": 25,
+        "documentCount": 13
       },
       "right": {
         "name": "Joint Inielligcnce Bureau",
