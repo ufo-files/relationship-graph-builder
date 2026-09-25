@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "757c3f9dd5ea94053d8ae55ba85e0e41361c4c31"
+    "revision": "3c60283a61ce4fbe5501292cee2ba48eec85b0fd"
   },
-  "count": 383,
-  "totalCount": 383,
-  "shownCount": 383,
+  "count": 384,
+  "totalCount": 384,
+  "shownCount": 384,
   "candidates": [
     {
       "category": "organization",
@@ -383,8 +383,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 474,
-        "documentCount": 230
+        "mentions": 477,
+        "documentCount": 231
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -479,8 +479,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 546,
-        "documentCount": 279
+        "mentions": 547,
+        "documentCount": 280
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -1327,8 +1327,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 518,
-        "documentCount": 275
+        "mentions": 520,
+        "documentCount": 276
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1359,8 +1359,8 @@
       "category": "location",
       "left": {
         "name": "White Mountains",
-        "mentions": 41,
-        "documentCount": 33
+        "mentions": 42,
+        "documentCount": 34
       },
       "right": {
         "name": "White Mountain",
@@ -1855,8 +1855,8 @@
       "category": "location",
       "left": {
         "name": "Vandenberg Air Force Base",
-        "mentions": 185,
-        "documentCount": 104
+        "mentions": 186,
+        "documentCount": 105
       },
       "right": {
         "name": "Vandenburg Air Force Base",
@@ -2220,6 +2220,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "John Michell",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "John Mitchell",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Uintah County",
@@ -2431,8 +2447,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 92,
-        "documentCount": 70
+        "mentions": 94,
+        "documentCount": 72
       },
       "right": {
         "name": "Northeastern University",
@@ -2463,8 +2479,8 @@
       "category": "person",
       "left": {
         "name": "Paul Hellyer",
-        "mentions": 53,
-        "documentCount": 35
+        "mentions": 55,
+        "documentCount": 36
       },
       "right": {
         "name": "Paul Heller",
@@ -3599,8 +3615,8 @@
       "category": "organization",
       "left": {
         "name": "American Institute of Aeronautics and Astronautics",
-        "mentions": 57,
-        "documentCount": 30
+        "mentions": 58,
+        "documentCount": 31
       },
       "right": {
         "name": "American Institute of Astronautics and Aeronautics",
@@ -4319,8 +4335,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 92,
-        "documentCount": 70
+        "mentions": 94,
+        "documentCount": 72
       },
       "right": {
         "name": "Northwest University",
@@ -4351,8 +4367,8 @@
       "category": "government_agency",
       "left": {
         "name": "Investigations Officer",
-        "mentions": 17,
-        "documentCount": 12
+        "mentions": 19,
+        "documentCount": 13
       },
       "right": {
         "name": "Investigating Officer's",
@@ -4431,8 +4447,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 291,
-        "documentCount": 151
+        "mentions": 293,
+        "documentCount": 152
       },
       "right": {
         "name": "George Adamsky",
@@ -4783,8 +4799,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 474,
-        "documentCount": 230
+        "mentions": 477,
+        "documentCount": 231
       },
       "right": {
         "name": "University Colorado",
@@ -4943,8 +4959,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 291,
-        "documentCount": 151
+        "mentions": 293,
+        "documentCount": 152
       },
       "right": {
         "name": "George Adams",
@@ -4959,8 +4975,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 226,
-        "documentCount": 120
+        "mentions": 227,
+        "documentCount": 121
       },
       "right": {
         "name": "Natural Investigations Committee",
@@ -5039,8 +5055,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Health",
-        "mentions": 34,
-        "documentCount": 26
+        "mentions": 35,
+        "documentCount": 27
       },
       "right": {
         "name": "Department of Earth",
@@ -5212,6 +5228,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "program",
+      "left": {
+        "name": "Project Sine",
+        "mentions": 9,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Project Sincer",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Okanagan Lake",
@@ -5349,22 +5381,6 @@
       "right": {
         "name": "Johnny Mac Institute",
         "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "program",
-      "left": {
-        "name": "Project Sine",
-        "mentions": 5,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Project Sincer",
-        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.923,
@@ -5695,8 +5711,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 169,
-        "documentCount": 104
+        "mentions": 170,
+        "documentCount": 105
       },
       "right": {
         "name": "Steven Hawking",
@@ -5748,8 +5764,8 @@
       },
       "right": {
         "name": "Joe Gastright",
-        "mentions": 46,
-        "documentCount": 18
+        "mentions": 51,
+        "documentCount": 19
       },
       "similarity": 0.897,
       "reason": "similar person name",
@@ -5887,8 +5903,8 @@
       "category": "person",
       "left": {
         "name": "Allen Heineck",
-        "mentions": 18,
-        "documentCount": 13
+        "mentions": 19,
+        "documentCount": 14
       },
       "right": {
         "name": "Alan Heineck",
