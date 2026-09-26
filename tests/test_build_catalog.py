@@ -2002,6 +2002,23 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(payload["documents"], [{"id": "doc-1", "path": "Example/moon.txt", "title": "Moon", "source": "Example"}])
         self.assertNotIn("observations", payload["astronomy"])
 
+    def test_astronomy_bootstrap_omits_bulk_ids_without_changing_full_catalog(self):
+        observation_ids = [f"astro-{index:012d}" for index in range(120000)]
+        target = {"targetId": "moon", "observationIds": observation_ids,
+                  "mentionCount": len(observation_ids), "documentIds": ["doc-1"],
+                  "evidence": [{"documentId": "doc-1", "excerpt": "Moon"}]}
+        catalog = {"schema": "catalog", "generatedAt": "today", "input": {},
+                   "counts": {}, "sources": [], "documents": [{"id": "doc-1", "title": "Moon"}],
+                   "astronomy": {"schema": "astronomy", "taxonomyVersion": "1", "scope": "test",
+                                 "targets": [target], "reviewCandidates": []}}
+        self.assertGreater(len(json.dumps(catalog).encode()), 2 * 1024 * 1024)
+        payload = astronomy_bootstrap_payload(catalog)
+        self.assertLess(len(json.dumps(payload).encode()), 2000)
+        self.assertEqual(payload["astronomy"]["targets"][0],
+                         {key: value for key, value in target.items() if key != "observationIds"})
+        self.assertEqual(catalog["astronomy"]["targets"][0]["observationIds"], observation_ids)
+        self.assertEqual(payload["documents"], catalog["documents"])
+
     def test_claim_evidence_is_bound_to_the_reviewed_source_blob(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / "machine-data"
