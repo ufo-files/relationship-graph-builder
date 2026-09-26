@@ -4105,7 +4105,10 @@ def astronomy_bootstrap_payload(catalog: dict) -> dict:
             "schema": astronomy["schema"],
             "taxonomyVersion": astronomy["taxonomyVersion"],
             "scope": astronomy["scope"],
-            "targets": astronomy["targets"],
+            # The bootstrap omits observations, so their IDs serve no purpose
+            # here and grow with every corpus update. Keep them in the full catalog.
+            "targets": [{key: value for key, value in target.items() if key != "observationIds"}
+                        for target in astronomy["targets"]],
             "reviewCandidates": astronomy["reviewCandidates"],
         },
     }

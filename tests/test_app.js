@@ -115,6 +115,7 @@ test("Galactic Entities boots from a compact astronomy payload", () => {
   assert.deepEqual(new Set(payload.documents.map(document => document.id)), referencedDocumentIds);
   assert.ok(payload.documents.every(document => document.id && document.path && document.source));
   assert.equal(payload.astronomy.observations, undefined);
+  assert.ok(payload.astronomy.targets.every(target => target.observationIds === undefined));
   assert.ok(Buffer.byteLength(payloadText) < 2 * 1024 * 1024);
   assert.match(source, /state\.config\.type === "solar"/);
   assert.match(source, /fetch\("data\/astronomy\.json", \{ cache: "no-store" \}\)/);
