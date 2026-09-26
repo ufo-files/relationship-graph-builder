@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 from scripts.build_catalog import Candidate, astronomy_observations_for_segment, astronomy_target_summaries, attach_event_entities, build, case_records, classify_phrase, comparison_key, compile_astronomy_taxonomy, coverage_aggregate, craft_class_summaries, craft_measurements, craft_observations_for_segment, curated_discussion_matches, curated_events, duplicate_candidates, entity_key, epistemic_qualifiers_for_segment, extract_mentions, extract_title_mentions, git_blob_sha, inflation_risk, load_epistemic_qualifier_rules, load_registry, machine_data_paths, merge_events, normalized_date, overlay_curated_events, read_language_pair, read_portuguese_pair, reported_event_date_review, reviewed_event_titles, sentence_segments, significance_metrics, signal_frequency_summaries, signal_observations_for_segment, source_lineage_assignments, source_title_from_path, species_class_summaries, species_observations_for_segment, stable_id, temporal_candidates, validate_claim_source_blobs, write_document_shards
-from scripts.build_catalog import astronomy_bootstrap_payload
+from scripts.build_catalog import astronomy_bootstrap_payload, write_source_family_shards
 
 
 class ClassificationTests(unittest.TestCase):
@@ -1927,6 +1927,32 @@ class CatalogTests(unittest.TestCase):
         self.assertTrue(all(item.get("sourcePath") for item in decisions.values()))
         self.assertTrue(all(re.fullmatch(r"[0-9a-f]{40}", item.get("sourceBlobSha", "")) for item in decisions.values()))
 
+    def test_source_family_shards_round_trip_with_byte_limits_and_cleanup(self):
+        families = [{"id": str(i), "label": "étoile 🛸" * 3, "documentIds": ["a", "b"]} for i in range(8)]
+        with tempfile.TemporaryDirectory() as directory:
+            data_dir = Path(directory)
+            shard_dir = data_dir / "source-families"
+            manifest = write_source_family_shards(shard_dir, families, data_dir, max_bytes=350)
+            self.assertGreater(len(manifest), 1)
+            restored = []
+            for item in manifest:
+                raw = (data_dir / item["path"]).read_bytes()
+                self.assertLessEqual(len(raw), 350)
+                self.assertEqual(item["bytes"], len(raw))
+                self.assertEqual(item["version"], hashlib.sha256(raw).hexdigest())
+                payload = json.loads(raw)
+                self.assertEqual(payload["schema"], "ufo-files-source-families/v1")
+                self.assertEqual(item["families"], len(payload["sourceFamilies"]))
+                restored.extend(payload["sourceFamilies"])
+            self.assertEqual(restored, families)
+            self.assertEqual(write_source_family_shards(shard_dir, families, data_dir, max_bytes=350), manifest)
+            write_source_family_shards(shard_dir, families[:1], data_dir, max_bytes=350)
+            self.assertEqual(len(list(shard_dir.glob("*.json"))), 1)
+            self.assertEqual(write_source_family_shards(shard_dir, [], data_dir), [])
+            self.assertEqual(list(shard_dir.glob("*.json")), [])
+            with self.assertRaisesRegex(ValueError, "exceeds shard byte limit"):
+                write_source_family_shards(shard_dir, families, data_dir, max_bytes=100)
+
     def test_document_shards_are_source_specific_and_remove_stale_files(self):
         documents = [
             {"id": "a", "source": "UPDB-MUFON", "title": "One"},
@@ -2463,6 +2489,10 @@ class CatalogTests(unittest.TestCase):
             self.assertEqual(catalog["counts"]["mappedLocations"], 1)
             self.assertTrue(output.exists())
             published = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(published["sourceFamilies"], [])
+            restored_families = [family for item in published["sourceFamilyShards"]
+                                 for family in json.loads((output.parent / item["path"]).read_text())["sourceFamilies"]]
+            self.assertEqual(restored_families, catalog["sourceFamilies"])
             self.assertEqual(published["documents"], [])
             self.assertEqual(published["documentShards"][0]["source"], "Example")
             shard = json.loads((output.parent / published["documentShards"][0]["path"]).read_text(encoding="utf-8"))

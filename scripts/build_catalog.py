@@ -4042,7 +4042,11 @@ def build(
         validate_claim_source_blobs(input_root, claims_path, documents)
     output.parent.mkdir(parents=True, exist_ok=True)
     document_shards = write_document_shards(output.parent / "source-documents", documents, output.parent)
-    published_catalog = {**catalog, "documents": [], "documentShards": document_shards}
+    family_shards = write_source_family_shards(output.parent / "source-families", source_families, output.parent)
+    published_catalog = {
+        **catalog, "documents": [], "documentShards": document_shards,
+        "sourceFamilies": [], "sourceFamilyShards": family_shards,
+    }
     output.write_text(json.dumps(published_catalog, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     write_astronomy_bootstrap(output.with_name("astronomy.json"), catalog)
     if duplicate_report:
@@ -4112,6 +4116,47 @@ def write_astronomy_bootstrap(path: Path, catalog: dict) -> None:
         json.dumps(astronomy_bootstrap_payload(catalog), ensure_ascii=False, separators=(",", ":")) + "\n",
         encoding="utf-8",
     )
+
+
+def write_source_family_shards(shard_dir: Path, families: list[dict], data_dir: Path,
+                               max_bytes: int = 8 * 1024 * 1024) -> list[dict]:
+    """Keep lineage records out of the bootstrap without dropping evidence."""
+    prefix = '{"schema":"ufo-files-source-families/v1","sourceFamilies":['
+    suffix = "]}\n"
+    overhead = len((prefix + suffix).encode("utf-8"))
+    chunks: list[list[str]] = []
+    current: list[str] = []
+    size = overhead
+    for family in families:
+        encoded = json.dumps(family, ensure_ascii=False, separators=(",", ":"))
+        record_bytes = len(encoded.encode("utf-8"))
+        if overhead + record_bytes > max_bytes:
+            raise ValueError(f"Source family {family.get('id')} exceeds shard byte limit {max_bytes}")
+        if current and size + 1 + record_bytes > max_bytes:
+            chunks.append(current)
+            current, size = [], overhead
+        size += record_bytes + bool(current)
+        current.append(encoded)
+    if current:
+        chunks.append(current)
+
+    shard_dir.mkdir(parents=True, exist_ok=True)
+    manifest = []
+    expected = set()
+    for index, chunk in enumerate(chunks, 1):
+        path = shard_dir / f"families-{index:03d}.json"
+        payload = (prefix + ",".join(chunk) + suffix).encode("utf-8")
+        path.write_bytes(payload)
+        expected.add(path)
+        manifest.append({
+            "path": path.relative_to(data_dir).as_posix(),
+            "families": len(chunk), "bytes": len(payload),
+            "version": hashlib.sha256(payload).hexdigest(),
+        })
+    for stale in shard_dir.glob("*.json"):
+        if stale not in expected:
+            stale.unlink()
+    return manifest
 
 
 def write_document_shards(shard_dir: Path, documents: list[dict], data_dir: Path) -> list[dict]:
