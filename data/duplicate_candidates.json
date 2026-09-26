@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "119bdd051c5efb860903d488221ffe55ca14aee0"
+    "revision": "9c0f00178fa3ef2e12be53cdca9efd37d8314365"
   },
-  "count": 480,
-  "totalCount": 480,
-  "shownCount": 480,
+  "count": 484,
+  "totalCount": 484,
+  "shownCount": 484,
   "candidates": [
     {
       "category": "organization",
@@ -398,14 +398,14 @@
     {
       "category": "person",
       "left": {
+        "name": "James Franklin Heineman",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
         "name": "James Franklin Heinemann",
         "mentions": 5,
         "documentCount": 5
-      },
-      "right": {
-        "name": "James Franklin Heineman",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.979,
       "reason": "similar name",
@@ -479,8 +479,8 @@
       "category": "location",
       "left": {
         "name": "Holloman Air Force Base",
-        "mentions": 215,
-        "documentCount": 113
+        "mentions": 217,
+        "documentCount": 114
       },
       "right": {
         "name": "Hollman Air Force Base",
@@ -543,8 +543,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 626,
-        "documentCount": 335
+        "mentions": 631,
+        "documentCount": 336
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -836,8 +836,8 @@
       },
       "right": {
         "name": "Operation IceBridge",
-        "mentions": 34,
-        "documentCount": 25
+        "mentions": 35,
+        "documentCount": 26
       },
       "similarity": 0.974,
       "reason": "similar name",
@@ -927,8 +927,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 259,
-        "documentCount": 168
+        "mentions": 264,
+        "documentCount": 171
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -968,6 +968,22 @@
         "documentCount": 3
       },
       "similarity": 0.973,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Linda Moulton Howe",
+        "mentions": 264,
+        "documentCount": 171
+      },
+      "right": {
+        "name": "Linda Moulton-How",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.971,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1103,13 +1119,13 @@
       "category": "program",
       "left": {
         "name": "Project Stargate",
-        "mentions": 23,
-        "documentCount": 15
+        "mentions": 25,
+        "documentCount": 17
       },
       "right": {
         "name": "Project Star Gate",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 6,
+        "documentCount": 6
       },
       "similarity": 0.97,
       "reason": "similar name",
@@ -1343,8 +1359,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 195,
-        "documentCount": 124
+        "mentions": 199,
+        "documentCount": 126
       },
       "right": {
         "name": "Stephen Hawkings",
@@ -1455,8 +1471,8 @@
       "category": "person",
       "left": {
         "name": "Thomas Winterton",
-        "mentions": 9,
-        "documentCount": 7
+        "mentions": 10,
+        "documentCount": 8
       },
       "right": {
         "name": "Thomas Winerton",
@@ -1503,8 +1519,8 @@
       "category": "location",
       "left": {
         "name": "Rogers Dry Lake",
-        "mentions": 4,
-        "documentCount": 4
+        "mentions": 5,
+        "documentCount": 5
       },
       "right": {
         "name": "Rodgers Dry Lake",
@@ -1663,8 +1679,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 634,
-        "documentCount": 336
+        "mentions": 635,
+        "documentCount": 337
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1919,8 +1935,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 590,
-        "documentCount": 369
+        "mentions": 594,
+        "documentCount": 372
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1935,13 +1951,13 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 532,
-        "documentCount": 233
+        "mentions": 533,
+        "documentCount": 234
       },
       "right": {
         "name": "Jacques Valle",
-        "mentions": 13,
-        "documentCount": 6
+        "mentions": 15,
+        "documentCount": 7
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -1983,8 +1999,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 175,
-        "documentCount": 130
+        "mentions": 177,
+        "documentCount": 131
       },
       "right": {
         "name": "Bruce Macabee",
@@ -2015,8 +2031,8 @@
       "category": "location",
       "left": {
         "name": "O'Hare Airport",
-        "mentions": 36,
-        "documentCount": 31
+        "mentions": 37,
+        "documentCount": 32
       },
       "right": {
         "name": "Ohare Airport",
@@ -2047,8 +2063,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Valle",
-        "mentions": 13,
-        "documentCount": 6
+        "mentions": 15,
+        "documentCount": 7
       },
       "right": {
         "name": "Jacques Valley",
@@ -2316,6 +2332,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "William Anders",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "William Ander",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Base Cormander",
@@ -2415,8 +2447,8 @@
       "category": "location",
       "left": {
         "name": "Vandenberg Air Force Base",
-        "mentions": 237,
-        "documentCount": 146
+        "mentions": 243,
+        "documentCount": 151
       },
       "right": {
         "name": "Vandenburg Air Force Base",
@@ -2431,8 +2463,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 134,
-        "documentCount": 106
+        "mentions": 135,
+        "documentCount": 107
       },
       "right": {
         "name": "George Noorey",
@@ -2447,8 +2479,8 @@
       "category": "person",
       "left": {
         "name": "Timothy Good",
-        "mentions": 120,
-        "documentCount": 77
+        "mentions": 121,
+        "documentCount": 78
       },
       "right": {
         "name": "Timothy Goods",
@@ -2495,8 +2527,8 @@
       "category": "person",
       "left": {
         "name": "Allen Heineck",
-        "mentions": 82,
-        "documentCount": 46
+        "mentions": 83,
+        "documentCount": 47
       },
       "right": {
         "name": "Allen Hineck",
@@ -2748,6 +2780,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "John Michell",
+        "mentions": 10,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "John Michelle",
+        "mentions": 6,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Red Mountain",
@@ -2758,22 +2806,6 @@
         "name": "Read Mountain",
         "mentions": 9,
         "documentCount": 5
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "John Michell",
-        "mentions": 10,
-        "documentCount": 8
-      },
-      "right": {
-        "name": "John Michelle",
-        "mentions": 5,
-        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -3020,11 +3052,27 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Press Officer",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Press Office",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Malmstrom Air Force Base",
-        "mentions": 149,
-        "documentCount": 88
+        "mentions": 152,
+        "documentCount": 89
       },
       "right": {
         "name": "Maelstrom Air Force Base",
@@ -3103,8 +3151,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 174,
-        "documentCount": 60
+        "mentions": 175,
+        "documentCount": 61
       },
       "right": {
         "name": "Kings Island",
@@ -3135,8 +3183,8 @@
       "category": "person",
       "left": {
         "name": "David Jacobs",
-        "mentions": 137,
-        "documentCount": 91
+        "mentions": 138,
+        "documentCount": 92
       },
       "right": {
         "name": "David Jacob",
@@ -4079,8 +4127,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 259,
-        "documentCount": 168
+        "mentions": 264,
+        "documentCount": 171
       },
       "right": {
         "name": "Linda Moulton-Howell",
@@ -4214,6 +4262,22 @@
         "name": "University of Colo",
         "mentions": 4,
         "documentCount": 4
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Linda Moulton Howes",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Linda Moulton-How",
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.944,
       "reason": "similar name",
@@ -4527,8 +4591,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 681,
-        "documentCount": 393
+        "mentions": 690,
+        "documentCount": 398
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4735,8 +4799,8 @@
       "category": "location",
       "left": {
         "name": "Malmstrom Air Force Base",
-        "mentions": 149,
-        "documentCount": 88
+        "mentions": 152,
+        "documentCount": 89
       },
       "right": {
         "name": "Momstrom Air Force Base",
@@ -4884,8 +4948,8 @@
       },
       "right": {
         "name": "Sol Foundation",
-        "mentions": 48,
-        "documentCount": 27
+        "mentions": 49,
+        "documentCount": 28
       },
       "similarity": 0.933,
       "reason": "similar name",
@@ -5020,6 +5084,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Robert Traylans",
+        "mentions": 7,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Robert Traylons",
+        "mentions": 6,
+        "documentCount": 3
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Special Access Programs Control Office",
@@ -5038,9 +5118,25 @@
     {
       "category": "person",
       "left": {
+        "name": "Robert Traylins",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
         "name": "Robert Traylans",
-        "mentions": 6,
-        "documentCount": 5
+        "mentions": 7,
+        "documentCount": 6
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Robert Traylins",
+        "mentions": 5,
+        "documentCount": 4
       },
       "right": {
         "name": "Robert Traylons",
@@ -5061,38 +5157,6 @@
       "right": {
         "name": "Thomas Costello",
         "mentions": 7,
-        "documentCount": 3
-      },
-      "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Robert Traylins",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Robert Traylans",
-        "mentions": 6,
-        "documentCount": 5
-      },
-      "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Robert Traylins",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Robert Traylons",
-        "mentions": 6,
         "documentCount": 3
       },
       "similarity": 0.933,
@@ -5503,8 +5567,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 532,
-        "documentCount": 233
+        "mentions": 533,
+        "documentCount": 234
       },
       "right": {
         "name": "Jacques Valley",
@@ -5519,8 +5583,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 389,
-        "documentCount": 191
+        "mentions": 390,
+        "documentCount": 192
       },
       "right": {
         "name": "George Adamsky",
@@ -5535,8 +5599,8 @@
       "category": "person",
       "left": {
         "name": "Robert Bigelow",
-        "mentions": 309,
-        "documentCount": 164
+        "mentions": 313,
+        "documentCount": 166
       },
       "right": {
         "name": "Robert Bigalow",
@@ -5599,8 +5663,8 @@
       "category": "location",
       "left": {
         "name": "O'Hare Airport",
-        "mentions": 36,
-        "documentCount": 31
+        "mentions": 37,
+        "documentCount": 32
       },
       "right": {
         "name": "O'Hara Airport",
@@ -6159,8 +6223,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 389,
-        "documentCount": 191
+        "mentions": 390,
+        "documentCount": 192
       },
       "right": {
         "name": "George Adams",
@@ -6334,14 +6398,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Michael Saleh",
-        "mentions": 8,
-        "documentCount": 6
+        "name": "Brandon Fugal",
+        "mentions": 26,
+        "documentCount": 21
       },
       "right": {
-        "name": "Michael Salah",
-        "mentions": 22,
-        "documentCount": 8
+        "name": "Brandon Fugle",
+        "mentions": 6,
+        "documentCount": 4
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -6350,14 +6414,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Brandon Fugal",
-        "mentions": 24,
-        "documentCount": 19
+        "name": "Michael Saleh",
+        "mentions": 8,
+        "documentCount": 6
       },
       "right": {
-        "name": "Brandon Fugle",
-        "mentions": 5,
-        "documentCount": 3
+        "name": "Michael Salah",
+        "mentions": 22,
+        "documentCount": 8
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -6447,8 +6511,8 @@
       "category": "organization",
       "left": {
         "name": "Committee for the Scientific",
-        "mentions": 21,
-        "documentCount": 19
+        "mentions": 22,
+        "documentCount": 20
       },
       "right": {
         "name": "Committee for Scientific",
@@ -6516,8 +6580,8 @@
       },
       "right": {
         "name": "Jacques Valle",
-        "mentions": 13,
-        "documentCount": 6
+        "mentions": 15,
+        "documentCount": 7
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -6588,6 +6652,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Dr. Daniel Golden",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Daniel Goldin",
+        "mentions": 7,
+        "documentCount": 6
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Okanagan Lake",
@@ -6629,22 +6709,6 @@
       "right": {
         "name": "John Schusler",
         "mentions": 7,
-        "documentCount": 4
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Daniel Goldin",
-        "mentions": 7,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "Dr. Daniel Golden",
-        "mentions": 4,
         "documentCount": 4
       },
       "similarity": 0.923,
@@ -6700,6 +6764,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "John Michelle",
+        "mentions": 6,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "John Mitchell",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Office of In",
@@ -6710,22 +6790,6 @@
         "name": "Office of Info",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "John Michelle",
-        "mentions": 5,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "John Mitchell",
-        "mentions": 4,
-        "documentCount": 3
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -7007,8 +7071,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 178,
-        "documentCount": 118
+        "mentions": 180,
+        "documentCount": 120
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -7028,8 +7092,8 @@
       },
       "right": {
         "name": "Ben Johnson",
-        "mentions": 5,
-        "documentCount": 2
+        "mentions": 6,
+        "documentCount": 3
       },
       "similarity": 0.909,
       "reason": "similar person name",
@@ -7103,8 +7167,8 @@
       "category": "person",
       "left": {
         "name": "Mark Kelly",
-        "mentions": 20,
-        "documentCount": 12
+        "mentions": 22,
+        "documentCount": 13
       },
       "right": {
         "name": "Mary Kelly",
@@ -7119,8 +7183,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 195,
-        "documentCount": 124
+        "mentions": 199,
+        "documentCount": 126
       },
       "right": {
         "name": "Steven Hawking",
@@ -7295,8 +7359,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 136,
-        "documentCount": 107
+        "mentions": 139,
+        "documentCount": 109
       },
       "right": {
         "name": "George HW Bush",
@@ -7311,8 +7375,8 @@
       "category": "person",
       "left": {
         "name": "Allen Heineck",
-        "mentions": 82,
-        "documentCount": 46
+        "mentions": 83,
+        "documentCount": 47
       },
       "right": {
         "name": "Alan Heineck",
@@ -7455,8 +7519,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 259,
-        "documentCount": 168
+        "mentions": 264,
+        "documentCount": 171
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
@@ -7646,6 +7710,22 @@
     {
       "category": "person",
       "left": {
+        "name": "David Griffin",
+        "mentions": 8,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "David Ray Griffin",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.867,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Ken Shoulders",
         "mentions": 7,
         "documentCount": 4
@@ -7660,27 +7740,11 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "person",
-      "left": {
-        "name": "David Griffin",
-        "mentions": 6,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "David Ray Griffin",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "similarity": 0.867,
-      "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 42023,
-        "documentCount": 10157
+        "mentions": 42562,
+        "documentCount": 10343
       },
       "right": {
         "name": "North American Space Agency",
