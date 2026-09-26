@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "870111a4c5abc035750630ce0f8ba098d5e2d02d"
+    "revision": "c4b03af88e5f233d9dd7ea66b028fa2acb5d081c"
   },
-  "count": 450,
-  "totalCount": 450,
-  "shownCount": 450,
+  "count": 451,
+  "totalCount": 451,
+  "shownCount": 451,
   "candidates": [
     {
       "category": "organization",
@@ -127,8 +127,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 741,
-        "documentCount": 466
+        "mentions": 742,
+        "documentCount": 467
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -143,8 +143,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 741,
-        "documentCount": 466
+        "mentions": 742,
+        "documentCount": 467
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -335,8 +335,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 78,
-        "documentCount": 52
+        "mentions": 79,
+        "documentCount": 53
       },
       "right": {
         "name": "Department of Transports",
@@ -415,8 +415,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 519,
-        "documentCount": 260
+        "mentions": 520,
+        "documentCount": 261
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -511,8 +511,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 608,
-        "documentCount": 317
+        "mentions": 609,
+        "documentCount": 318
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -1132,6 +1132,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Chihuahuan Desert",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Chihuahua Desert",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "book",
       "left": {
         "name": "The Case for the UfO",
@@ -1167,8 +1183,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 741,
-        "documentCount": 466
+        "mentions": 742,
+        "documentCount": 467
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -1183,8 +1199,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 741,
-        "documentCount": 466
+        "mentions": 742,
+        "documentCount": 467
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1199,8 +1215,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 741,
-        "documentCount": 466
+        "mentions": 742,
+        "documentCount": 467
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1231,8 +1247,8 @@
       "category": "person",
       "left": {
         "name": "Michael Shermer",
-        "mentions": 101,
-        "documentCount": 66
+        "mentions": 102,
+        "documentCount": 67
       },
       "right": {
         "name": "Michael Schermer",
@@ -2158,6 +2174,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Neil Saunders",
+        "mentions": 5,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Neil Sanders",
+        "mentions": 237,
+        "documentCount": 22
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Frank Edwards",
         "mentions": 220,
         "documentCount": 100
@@ -2175,29 +2207,13 @@
       "category": "location",
       "left": {
         "name": "Vandenberg Air Force Base",
-        "mentions": 216,
-        "documentCount": 130
+        "mentions": 217,
+        "documentCount": 131
       },
       "right": {
         "name": "Vandenburg Air Force Base",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Neil Saunders",
-        "mentions": 5,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Neil Sanders",
-        "mentions": 208,
-        "documentCount": 21
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2238,25 +2254,9 @@
     {
       "category": "person",
       "left": {
-        "name": "Jim Penniston",
-        "mentions": 89,
-        "documentCount": 39
-      },
-      "right": {
-        "name": "Jim Peniston",
-        "mentions": 14,
-        "documentCount": 5
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
         "name": "Philip Corso",
-        "mentions": 88,
-        "documentCount": 69
+        "mentions": 101,
+        "documentCount": 71
       },
       "right": {
         "name": "Colonel Phillip Corso",
@@ -2270,9 +2270,25 @@
     {
       "category": "person",
       "left": {
+        "name": "Jim Penniston",
+        "mentions": 90,
+        "documentCount": 40
+      },
+      "right": {
+        "name": "Jim Peniston",
+        "mentions": 14,
+        "documentCount": 5
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Allen Heineck",
-        "mentions": 58,
-        "documentCount": 36
+        "mentions": 62,
+        "documentCount": 37
       },
       "right": {
         "name": "Allen Hineck",
@@ -2303,8 +2319,8 @@
       "category": "location",
       "left": {
         "name": "Mount Palomar",
-        "mentions": 33,
-        "documentCount": 23
+        "mentions": 34,
+        "documentCount": 24
       },
       "right": {
         "name": "Mount Paloma",
@@ -2335,8 +2351,8 @@
       "category": "location",
       "left": {
         "name": "Marin County",
-        "mentions": 20,
-        "documentCount": 17
+        "mentions": 21,
+        "documentCount": 18
       },
       "right": {
         "name": "Marion County",
@@ -2895,8 +2911,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 114,
-        "documentCount": 88
+        "mentions": 116,
+        "documentCount": 90
       },
       "right": {
         "name": "Northeastern University",
@@ -2927,8 +2943,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 78,
-        "documentCount": 52
+        "mentions": 79,
+        "documentCount": 53
       },
       "right": {
         "name": "Department of Trancport",
@@ -2943,8 +2959,8 @@
       "category": "person",
       "left": {
         "name": "Paul Hellyer",
-        "mentions": 57,
-        "documentCount": 38
+        "mentions": 58,
+        "documentCount": 39
       },
       "right": {
         "name": "Paul Heller",
@@ -2959,8 +2975,8 @@
       "category": "person",
       "left": {
         "name": "David Clarke",
-        "mentions": 38,
-        "documentCount": 26
+        "mentions": 39,
+        "documentCount": 27
       },
       "right": {
         "name": "David Clark",
@@ -3039,8 +3055,8 @@
       "category": "person",
       "left": {
         "name": "Barbara Lamb",
-        "mentions": 4,
-        "documentCount": 3
+        "mentions": 6,
+        "documentCount": 4
       },
       "right": {
         "name": "Barbara Lam",
@@ -3380,8 +3396,8 @@
       },
       "right": {
         "name": "University of Arkansas",
-        "mentions": 16,
-        "documentCount": 15
+        "mentions": 17,
+        "documentCount": 16
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -4052,8 +4068,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 416,
-        "documentCount": 63
+        "mentions": 417,
+        "documentCount": 64
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -4239,8 +4255,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 673,
-        "documentCount": 386
+        "mentions": 675,
+        "documentCount": 388
       },
       "right": {
         "name": "Stanton Freedman",
@@ -4559,8 +4575,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 78,
-        "documentCount": 52
+        "mentions": 79,
+        "documentCount": 53
       },
       "right": {
         "name": "Department of Tramport",
@@ -4580,8 +4596,8 @@
       },
       "right": {
         "name": "Sol Foundation",
-        "mentions": 46,
-        "documentCount": 25
+        "mentions": 47,
+        "documentCount": 26
       },
       "similarity": 0.933,
       "reason": "similar name",
@@ -4702,9 +4718,9 @@
     {
       "category": "person",
       "left": {
-        "name": "Robert Traylins",
-        "mentions": 3,
-        "documentCount": 2
+        "name": "Robert Traylans",
+        "mentions": 4,
+        "documentCount": 3
       },
       "right": {
         "name": "Robert Traylons",
@@ -4718,14 +4734,14 @@
     {
       "category": "person",
       "left": {
+        "name": "Robert Traylins",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
         "name": "Robert Traylons",
         "mentions": 6,
         "documentCount": 3
-      },
-      "right": {
-        "name": "Robert Traylans",
-        "mentions": 3,
-        "documentCount": 2
       },
       "similarity": 0.933,
       "reason": "similar name",
@@ -4766,12 +4782,12 @@
     {
       "category": "person",
       "left": {
-        "name": "Robert Traylins",
-        "mentions": 3,
-        "documentCount": 2
+        "name": "Robert Traylans",
+        "mentions": 4,
+        "documentCount": 3
       },
       "right": {
-        "name": "Robert Traylans",
+        "name": "Robert Traylins",
         "mentions": 3,
         "documentCount": 2
       },
@@ -4959,13 +4975,13 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 114,
-        "documentCount": 88
+        "mentions": 116,
+        "documentCount": 90
       },
       "right": {
         "name": "Northwest University",
-        "mentions": 4,
-        "documentCount": 2
+        "mentions": 5,
+        "documentCount": 3
       },
       "similarity": 0.93,
       "reason": "similar name",
@@ -5038,12 +5054,12 @@
     {
       "category": "location",
       "left": {
-        "name": "Loring Air Force Base",
+        "name": "Old Man of the Mountain",
         "mentions": 5,
         "documentCount": 5
       },
       "right": {
-        "name": "Lauring Air Force Base",
+        "name": "Oman of the Mountain",
         "mentions": 2,
         "documentCount": 2
       },
@@ -5054,12 +5070,12 @@
     {
       "category": "location",
       "left": {
-        "name": "Old Man of the Mountain",
-        "mentions": 4,
-        "documentCount": 4
+        "name": "Loring Air Force Base",
+        "mentions": 5,
+        "documentCount": 5
       },
       "right": {
-        "name": "Oman of the Mountain",
+        "name": "Lauring Air Force Base",
         "mentions": 2,
         "documentCount": 2
       },
@@ -5583,8 +5599,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 519,
-        "documentCount": 260
+        "mentions": 520,
+        "documentCount": 261
       },
       "right": {
         "name": "University Colorado",
@@ -5823,8 +5839,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 122,
-        "documentCount": 94
+        "mentions": 123,
+        "documentCount": 95
       },
       "right": {
         "name": "Mohave Desert",
@@ -6079,8 +6095,8 @@
       "category": "organization",
       "left": {
         "name": "Committee for the Scientific",
-        "mentions": 15,
-        "documentCount": 14
+        "mentions": 16,
+        "documentCount": 15
       },
       "right": {
         "name": "Committee for Scientific",
@@ -6102,6 +6118,22 @@
         "name": "Directorate of Air",
         "mentions": 12,
         "documentCount": 7
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "David Morrison",
+        "mentions": 10,
+        "documentCount": 10
+      },
+      "right": {
+        "name": "David Morris",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -6140,22 +6172,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "person",
-      "left": {
-        "name": "David Morrison",
-        "mentions": 9,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "David Morris",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "location",
       "left": {
         "name": "Okanagan Lake",
@@ -6182,6 +6198,22 @@
         "name": "Chaves County",
         "mentions": 9,
         "documentCount": 8
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "John Schuster",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "John Schusler",
+        "mentions": 7,
+        "documentCount": 4
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -6293,22 +6325,6 @@
       "right": {
         "name": "John Mitchell",
         "mentions": 4,
-        "documentCount": 3
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "John Schuster",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "John Schusler",
-        "mentions": 5,
         "documentCount": 3
       },
       "similarity": 0.923,
@@ -6895,8 +6911,8 @@
       "category": "person",
       "left": {
         "name": "Allen Heineck",
-        "mentions": 58,
-        "documentCount": 36
+        "mentions": 62,
+        "documentCount": 37
       },
       "right": {
         "name": "Dr. Alan Heineck",
@@ -7199,8 +7215,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 38809,
-        "documentCount": 8800
+        "mentions": 39070,
+        "documentCount": 8903
       },
       "right": {
         "name": "North American Space Agency",
