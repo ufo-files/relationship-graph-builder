@@ -6715,6 +6715,25 @@ async function loadFullCatalogPayload() {
       throw new Error(`Document shard count mismatch: expected ${catalog.counts.documents}, loaded ${catalog.documents.length}`);
     }
   }
+  if (Array.isArray(catalog.sourceFamilyShards)) {
+    const payloads = await Promise.all(catalog.sourceFamilyShards.map(async shard => {
+      const version = encodeURIComponent(shard.version || catalog.input?.revision || catalog.generatedAt || "current");
+      const response = await fetch(`data/${shard.path}?v=${version}`);
+      if (!response.ok) throw new Error(`Source family shard ${shard.path}: ${response.status} ${response.statusText}`);
+      const payload = await response.json();
+      if (payload.schema !== "ufo-files-source-families/v1" || !Array.isArray(payload.sourceFamilies)) {
+        throw new Error(`Source family shard invalid: ${shard.path}`);
+      }
+      if (payload.sourceFamilies.length !== shard.families) {
+        throw new Error(`Source family shard count mismatch: ${shard.path}`);
+      }
+      return payload.sourceFamilies;
+    }));
+    catalog.sourceFamilies = payloads.flat();
+    if (catalog.sourceFamilies.length !== catalog.counts.sourceFamilies) {
+      throw new Error(`Source family total count mismatch: expected ${catalog.counts.sourceFamilies}, loaded ${catalog.sourceFamilies.length}`);
+    }
+  }
   return { catalog, claimCatalog: await claimResponse.json(), programCatalog: await programResponse.json() };
 }
 

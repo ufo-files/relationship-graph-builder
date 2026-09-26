@@ -5,6 +5,15 @@ const vm = require("node:vm");
 
 function loadCatalogFixture() {
   const catalog = JSON.parse(fs.readFileSync("data/catalog.json", "utf8"));
+  if (Array.isArray(catalog.sourceFamilyShards)) {
+    catalog.sourceFamilies = catalog.sourceFamilyShards.flatMap(shard => {
+      const payload = JSON.parse(fs.readFileSync(`data/${shard.path}`, "utf8"));
+      assert.equal(payload.schema, "ufo-files-source-families/v1");
+      assert.equal(payload.sourceFamilies.length, shard.families);
+      return payload.sourceFamilies;
+    });
+    assert.equal(catalog.sourceFamilies.length, catalog.counts.sourceFamilies);
+  }
   if (!Array.isArray(catalog.documentShards) || catalog.documentShards.length === 0) return catalog;
 
   catalog.documents = catalog.documentShards.flatMap(shard => {
@@ -57,6 +66,40 @@ test("startup loads and validates source-specific document shards", () => {
   assert.match(source, /Document shard count mismatch/);
 });
 
+test("full catalog loader restores source families and rejects incomplete shards", async () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const loader = source.slice(source.indexOf("async function loadFullCatalogPayload()"), source.indexOf("function installFullCatalog("));
+  const families = [{ id: "sf-étoile", documentIds: ["doc-1"] }];
+  const catalog = { counts: { sourceFamilies: 1 }, sourceFamilies: [], sourceFamilyShards: [
+    { path: "source-families/families-001.json", families: 1, version: "abc" }
+  ] };
+  let shard = { schema: "ufo-files-source-families/v1", sourceFamilies: families };
+  let ok = true;
+  const urls = [];
+  const context = vm.createContext({ fetch: async url => {
+    urls.push(url);
+    return { ok: url.includes("source-families/") ? ok : true, status: 404, statusText: "Not Found",
+      json: async () => structuredClone(url === "data/catalog.json" ? catalog : url.includes("source-families/") ? shard : {}) };
+  } });
+  vm.runInContext(loader, context);
+  const result = await context.loadFullCatalogPayload();
+  assert.deepEqual(Array.from(result.catalog.sourceFamilies), families);
+  assert.ok(urls.includes("data/source-families/families-001.json?v=abc"));
+  ok = false;
+  await assert.rejects(context.loadFullCatalogPayload(), /Source family shard.*404/);
+  ok = true;
+  shard = { schema: "wrong", sourceFamilies: families };
+  await assert.rejects(context.loadFullCatalogPayload(), /Source family shard invalid/);
+  shard = { schema: "ufo-files-source-families/v1", sourceFamilies: [] };
+  await assert.rejects(context.loadFullCatalogPayload(), /Source family shard count mismatch/);
+  shard.sourceFamilies = families;
+  catalog.counts.sourceFamilies = 2;
+  await assert.rejects(context.loadFullCatalogPayload(), /Source family total count mismatch/);
+  delete catalog.sourceFamilyShards;
+  catalog.sourceFamilies = families;
+  assert.deepEqual((await context.loadFullCatalogPayload()).catalog.sourceFamilies, families);
+});
+
 test("Galactic Entities boots from a compact astronomy payload", () => {
   const source = fs.readFileSync("app.js", "utf8");
   const html = fs.readFileSync("index.html", "utf8");
@@ -86,7 +129,7 @@ test("Galactic Entities boots from a compact astronomy payload", () => {
   assert.match(source, /state\.publicDossierPayload \|\| publicDossierPayloadFromHash\(\)/);
   assert.match(source, /requestId === null \|\| requestId === state\.typeRequestId\) showCatalogError/);
   assert.match(source, /async function openDossierDialog\(\)[\s\S]*ensureFullCatalog\(\)[\s\S]*initializeDossier\(\)/);
-  assert.match(html, /app\.js\?v=astronomy-renderer-v2/);
+  assert.match(html, /app\.js\?v=source-family-shards-v1/);
   assert.match(html, /map-globe\.js\?v=astronomy-renderer-v2/);
   assert.match(html, /solar-system\.js\?v=astronomy-renderer-v2/);
   assert.match(fs.readFileSync("solar-system.js", "utf8"), /three\.module\.min\.js\?v=astronomy-renderer-v2/);
