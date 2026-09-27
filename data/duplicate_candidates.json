@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "ce00b25f4340186988d9a389d25ee5ff03085096"
+    "revision": "5bd30f2da0ee989b7fa33eda45119f25a22c5574"
   },
-  "count": 527,
-  "totalCount": 527,
-  "shownCount": 527,
+  "count": 528,
+  "totalCount": 528,
+  "shownCount": 528,
   "candidates": [
     {
       "category": "organization",
@@ -255,8 +255,8 @@
       "category": "location",
       "left": {
         "name": "White Sands Missile Range",
-        "mentions": 87,
-        "documentCount": 72
+        "mentions": 88,
+        "documentCount": 73
       },
       "right": {
         "name": "White Sands Missle Range",
@@ -975,8 +975,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 266,
-        "documentCount": 173
+        "mentions": 267,
+        "documentCount": 174
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -1007,8 +1007,8 @@
       "category": "government_agency",
       "left": {
         "name": "Sheriff Department",
-        "mentions": 8,
-        "documentCount": 4
+        "mentions": 9,
+        "documentCount": 5
       },
       "right": {
         "name": "Sheriffs Department",
@@ -1023,8 +1023,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 266,
-        "documentCount": 173
+        "mentions": 267,
+        "documentCount": 174
       },
       "right": {
         "name": "Linda Moulton-How",
@@ -1167,8 +1167,8 @@
       "category": "organization",
       "left": {
         "name": "James Randi Educational Foundation",
-        "mentions": 52,
-        "documentCount": 40
+        "mentions": 53,
+        "documentCount": 41
       },
       "right": {
         "name": "James Randi Education Foundation",
@@ -1455,8 +1455,8 @@
       "category": "person",
       "left": {
         "name": "Michael Shermer",
-        "mentions": 108,
-        "documentCount": 73
+        "mentions": 109,
+        "documentCount": 74
       },
       "right": {
         "name": "Michael Schermer",
@@ -1775,8 +1775,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 662,
-        "documentCount": 350
+        "mentions": 666,
+        "documentCount": 352
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1791,8 +1791,8 @@
       "category": "location",
       "left": {
         "name": "White Mountains",
-        "mentions": 62,
-        "documentCount": 46
+        "mentions": 63,
+        "documentCount": 47
       },
       "right": {
         "name": "White Mountain",
@@ -1854,6 +1854,22 @@
     {
       "category": "person",
       "left": {
+        "name": "James Penniston",
+        "mentions": 8,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "James Peniston",
+        "mentions": 9,
+        "documentCount": 4
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Frederick Myers",
         "mentions": 13,
         "documentCount": 11
@@ -1865,22 +1881,6 @@
       },
       "similarity": 0.966,
       "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "James Penniston",
-        "mentions": 7,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "James Peniston",
-        "mentions": 9,
-        "documentCount": 4
-      },
-      "similarity": 0.966,
-      "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -2063,8 +2063,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 536,
-        "documentCount": 237
+        "mentions": 537,
+        "documentCount": 238
       },
       "right": {
         "name": "Jacques Valle",
@@ -2639,8 +2639,8 @@
       "category": "person",
       "left": {
         "name": "Jim Penniston",
-        "mentions": 93,
-        "documentCount": 43
+        "mentions": 95,
+        "documentCount": 44
       },
       "right": {
         "name": "Jim Peniston",
@@ -2910,6 +2910,22 @@
     {
       "category": "person",
       "left": {
+        "name": "James Mosley",
+        "mentions": 9,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "James Moseley",
+        "mentions": 9,
+        "documentCount": 8
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Joseph Burks",
         "mentions": 4,
         "documentCount": 3
@@ -2934,22 +2950,6 @@
         "name": "Mike Cleland",
         "mentions": 13,
         "documentCount": 9
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "James Mosley",
-        "mentions": 9,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "James Moseley",
-        "mentions": 8,
-        "documentCount": 7
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -3119,8 +3119,8 @@
       "category": "person",
       "left": {
         "name": "Arthur Clarke",
-        "mentions": 6,
-        "documentCount": 6
+        "mentions": 7,
+        "documentCount": 7
       },
       "right": {
         "name": "Arthur Clark",
@@ -3359,8 +3359,8 @@
       "category": "person",
       "left": {
         "name": "James Randi",
-        "mentions": 347,
-        "documentCount": 242
+        "mentions": 351,
+        "documentCount": 244
       },
       "right": {
         "name": "James Randin",
@@ -3519,8 +3519,8 @@
       "category": "person",
       "left": {
         "name": "David Clarke",
-        "mentions": 46,
-        "documentCount": 34
+        "mentions": 47,
+        "documentCount": 35
       },
       "right": {
         "name": "David Clark",
@@ -3550,14 +3550,14 @@
     {
       "category": "person",
       "left": {
-        "name": "David Marlar",
-        "mentions": 33,
-        "documentCount": 14
+        "name": "Tim Schwartz",
+        "mentions": 30,
+        "documentCount": 17
       },
       "right": {
-        "name": "David Marla",
-        "mentions": 4,
-        "documentCount": 3
+        "name": "Tim Schwarz",
+        "mentions": 8,
+        "documentCount": 8
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -3566,14 +3566,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Tim Schwartz",
-        "mentions": 28,
-        "documentCount": 16
+        "name": "David Marlar",
+        "mentions": 33,
+        "documentCount": 14
       },
       "right": {
-        "name": "Tim Schwarz",
-        "mentions": 8,
-        "documentCount": 8
+        "name": "David Marla",
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -3868,14 +3868,14 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
+      "category": "location",
       "left": {
-        "name": "Federal Bureau Of Inve",
-        "mentions": 2,
-        "documentCount": 2
+        "name": "King County",
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
-        "name": "Federal Bureau of Invest",
+        "name": "Kings County",
         "mentions": 2,
         "documentCount": 2
       },
@@ -3884,14 +3884,14 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "location",
+      "category": "government_agency",
       "left": {
-        "name": "King County",
+        "name": "Federal Bureau Of Inve",
         "mentions": 2,
         "documentCount": 2
       },
       "right": {
-        "name": "Kings County",
+        "name": "Federal Bureau of Invest",
         "mentions": 2,
         "documentCount": 2
       },
@@ -4047,13 +4047,13 @@
       "category": "organization",
       "left": {
         "name": "University of Kansas",
-        "mentions": 23,
-        "documentCount": 21
+        "mentions": 24,
+        "documentCount": 22
       },
       "right": {
         "name": "University of Arkansas",
-        "mentions": 23,
-        "documentCount": 22
+        "mentions": 24,
+        "documentCount": 23
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -4108,6 +4108,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "National Institute of Discovery",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "National Institute for Discovery",
+        "mentions": 8,
+        "documentCount": 6
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Meteorological Office",
@@ -4118,22 +4134,6 @@
         "name": "Meteorlogical Officer",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "National Institute of Discovery",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "National Institute for Discovery",
-        "mentions": 8,
-        "documentCount": 6
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -4463,8 +4463,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 266,
-        "documentCount": 173
+        "mentions": 267,
+        "documentCount": 174
       },
       "right": {
         "name": "Linda Moulton-Howell",
@@ -5364,8 +5364,8 @@
       },
       "right": {
         "name": "Sol Foundation",
-        "mentions": 71,
-        "documentCount": 29
+        "mentions": 72,
+        "documentCount": 30
       },
       "similarity": 0.933,
       "reason": "similar name",
@@ -6031,8 +6031,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 536,
-        "documentCount": 237
+        "mentions": 537,
+        "documentCount": 238
       },
       "right": {
         "name": "Jacques Valley",
@@ -6063,8 +6063,8 @@
       "category": "person",
       "left": {
         "name": "Robert Bigelow",
-        "mentions": 359,
-        "documentCount": 188
+        "mentions": 361,
+        "documentCount": 190
       },
       "right": {
         "name": "Robert Bigalow",
@@ -6271,8 +6271,8 @@
       "category": "person",
       "left": {
         "name": "Joseph Farrell",
-        "mentions": 12,
-        "documentCount": 10
+        "mentions": 13,
+        "documentCount": 11
       },
       "right": {
         "name": "Joseph Ferrell",
@@ -6292,8 +6292,8 @@
       },
       "right": {
         "name": "George Harris's",
-        "mentions": 6,
-        "documentCount": 3
+        "mentions": 7,
+        "documentCount": 4
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -6719,8 +6719,8 @@
       "category": "government_agency",
       "left": {
         "name": "U.S. Air Force",
-        "mentions": 8578,
-        "documentCount": 3006
+        "mentions": 8580,
+        "documentCount": 3008
       },
       "right": {
         "name": "US Air Forces",
@@ -7486,6 +7486,22 @@
     {
       "category": "person",
       "left": {
+        "name": "John Michael",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "John McMichael",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Richard Davis",
         "mentions": 3,
         "documentCount": 3
@@ -7711,8 +7727,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 186,
-        "documentCount": 126
+        "mentions": 187,
+        "documentCount": 127
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -8079,13 +8095,13 @@
       "category": "person",
       "left": {
         "name": "Steven Tango",
-        "mentions": 18,
-        "documentCount": 11
+        "mentions": 21,
+        "documentCount": 14
       },
       "right": {
         "name": "Stephen Tango",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 7,
+        "documentCount": 7
       },
       "similarity": 0.88,
       "reason": "similar person name",
@@ -8175,8 +8191,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 266,
-        "documentCount": 173
+        "mentions": 267,
+        "documentCount": 174
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
@@ -8286,14 +8302,14 @@
     {
       "category": "person",
       "left": {
-        "name": "James Hansen",
-        "mentions": 10,
-        "documentCount": 9
+        "name": "Jean Chapman",
+        "mentions": 17,
+        "documentCount": 17
       },
       "right": {
-        "name": "Jane Hansen",
-        "mentions": 11,
-        "documentCount": 7
+        "name": "Ken Chapman",
+        "mentions": 5,
+        "documentCount": 3
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -8302,14 +8318,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Jean Chapman",
-        "mentions": 16,
-        "documentCount": 16
+        "name": "James Hansen",
+        "mentions": 10,
+        "documentCount": 9
       },
       "right": {
-        "name": "Ken Chapman",
-        "mentions": 5,
-        "documentCount": 3
+        "name": "Jane Hansen",
+        "mentions": 11,
+        "documentCount": 7
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -8367,8 +8383,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Jay Gould",
-        "mentions": 48,
-        "documentCount": 36
+        "mentions": 49,
+        "documentCount": 37
       },
       "right": {
         "name": "Stephen Gould",
@@ -8431,8 +8447,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 45119,
-        "documentCount": 11196
+        "mentions": 45353,
+        "documentCount": 11263
       },
       "right": {
         "name": "North American Space Agency",
