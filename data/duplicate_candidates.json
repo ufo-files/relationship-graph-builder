@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9c0f00178fa3ef2e12be53cdca9efd37d8314365"
+    "revision": "4c980471e072694a3c861cab5175a8d18368a878"
   },
-  "count": 484,
-  "totalCount": 484,
-  "shownCount": 484,
+  "count": 486,
+  "totalCount": 486,
+  "shownCount": 486,
   "candidates": [
     {
       "category": "organization",
@@ -399,8 +399,8 @@
       "category": "person",
       "left": {
         "name": "James Franklin Heineman",
-        "mentions": 4,
-        "documentCount": 4
+        "mentions": 5,
+        "documentCount": 5
       },
       "right": {
         "name": "James Franklin Heinemann",
@@ -1476,8 +1476,8 @@
       },
       "right": {
         "name": "Thomas Winerton",
-        "mentions": 6,
-        "documentCount": 5
+        "mentions": 7,
+        "documentCount": 6
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -1838,6 +1838,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Charles Schultz",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Charles Schulz",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Steven Hawkings",
         "mentions": 3,
         "documentCount": 3
@@ -1862,22 +1878,6 @@
         "name": "Records Administration Branch",
         "mentions": 4,
         "documentCount": 4
-      },
-      "similarity": 0.966,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Charles Schultz",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Charles Schulz",
-        "mentions": 3,
-        "documentCount": 2
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -1935,8 +1935,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 594,
-        "documentCount": 372
+        "mentions": 595,
+        "documentCount": 373
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1999,8 +1999,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 177,
-        "documentCount": 131
+        "mentions": 178,
+        "documentCount": 132
       },
       "right": {
         "name": "Bruce Macabee",
@@ -2142,6 +2142,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Frank Kaufman",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Frank Kaufmann",
+        "mentions": 8,
+        "documentCount": 6
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Professor Hermann Oberth",
         "mentions": 3,
         "documentCount": 3
@@ -2158,14 +2174,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Frank Kaufman",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Frank Kaufmann",
+        "name": "Stephen Browdy",
         "mentions": 8,
         "documentCount": 6
+      },
+      "right": {
+        "name": "Stephen Brody",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -2180,22 +2196,6 @@
       },
       "right": {
         "name": "Donald Spencer",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Stephen Browdy",
-        "mentions": 7,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Stephen Brody",
         "mentions": 3,
         "documentCount": 3
       },
@@ -3084,6 +3084,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Chicago Police Department",
+        "mentions": 5,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Chico Police Department",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Division of Radiophysice",
@@ -3183,8 +3199,8 @@
       "category": "person",
       "left": {
         "name": "David Jacobs",
-        "mentions": 138,
-        "documentCount": 92
+        "mentions": 140,
+        "documentCount": 93
       },
       "right": {
         "name": "David Jacob",
@@ -4671,8 +4687,8 @@
       "category": "location",
       "left": {
         "name": "McCarran Airport",
-        "mentions": 13,
-        "documentCount": 11
+        "mentions": 14,
+        "documentCount": 12
       },
       "right": {
         "name": "McCarren Airport",
@@ -5599,8 +5615,8 @@
       "category": "person",
       "left": {
         "name": "Robert Bigelow",
-        "mentions": 313,
-        "documentCount": 166
+        "mentions": 314,
+        "documentCount": 167
       },
       "right": {
         "name": "Robert Bigalow",
@@ -5870,6 +5886,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Brian Forrester",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Brian Forster",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "William Pollan",
         "mentions": 7,
         "documentCount": 4
@@ -5910,22 +5942,6 @@
         "name": "Albert Hofmann",
         "mentions": 4,
         "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Brian Forrester",
-        "mentions": 5,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Brian Forster",
-        "mentions": 4,
-        "documentCount": 4
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -6239,8 +6255,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 332,
-        "documentCount": 172
+        "mentions": 333,
+        "documentCount": 173
       },
       "right": {
         "name": "Natural Investigations Committee",
@@ -6255,8 +6271,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 332,
-        "documentCount": 172
+        "mentions": 333,
+        "documentCount": 173
       },
       "right": {
         "name": "National Investigative Committee",
@@ -6382,14 +6398,14 @@
     {
       "category": "person",
       "left": {
-        "name": "John Peterson",
-        "mentions": 21,
-        "documentCount": 14
+        "name": "Brandon Fugal",
+        "mentions": 27,
+        "documentCount": 22
       },
       "right": {
-        "name": "John Petersen",
-        "mentions": 12,
-        "documentCount": 2
+        "name": "Brandon Fugle",
+        "mentions": 7,
+        "documentCount": 5
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -6398,14 +6414,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Brandon Fugal",
-        "mentions": 26,
-        "documentCount": 21
+        "name": "John Peterson",
+        "mentions": 21,
+        "documentCount": 14
       },
       "right": {
-        "name": "Brandon Fugle",
-        "mentions": 6,
-        "documentCount": 4
+        "name": "John Petersen",
+        "mentions": 12,
+        "documentCount": 2
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -6516,8 +6532,8 @@
       },
       "right": {
         "name": "Committee for Scientific",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -7295,8 +7311,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Browdy",
-        "mentions": 7,
-        "documentCount": 5
+        "mentions": 8,
+        "documentCount": 6
       },
       "right": {
         "name": "Steven Browdy",
@@ -7566,14 +7582,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Joseph Stalin",
-        "mentions": 24,
-        "documentCount": 23
+        "name": "Jean Houston",
+        "mentions": 23,
+        "documentCount": 14
       },
       "right": {
-        "name": "Joe Stalin",
-        "mentions": 6,
-        "documentCount": 4
+        "name": "Dr. Ken Houston",
+        "mentions": 7,
+        "documentCount": 5
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -7582,14 +7598,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Jean Houston",
-        "mentions": 22,
-        "documentCount": 13
+        "name": "Joseph Stalin",
+        "mentions": 24,
+        "documentCount": 23
       },
       "right": {
-        "name": "Dr. Ken Houston",
-        "mentions": 7,
-        "documentCount": 5
+        "name": "Joe Stalin",
+        "mentions": 6,
+        "documentCount": 4
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -7695,13 +7711,29 @@
       "category": "person",
       "left": {
         "name": "Stephen Jay Gould",
-        "mentions": 37,
-        "documentCount": 30
+        "mentions": 38,
+        "documentCount": 31
       },
       "right": {
         "name": "Stephen Gould",
         "mentions": 3,
         "documentCount": 2
+      },
+      "similarity": 0.867,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Stephen Jones",
+        "mentions": 10,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Stephen Lee Jones",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.867,
       "reason": "similar person name",
@@ -7743,8 +7775,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 42562,
-        "documentCount": 10343
+        "mentions": 42654,
+        "documentCount": 10369
       },
       "right": {
         "name": "North American Space Agency",

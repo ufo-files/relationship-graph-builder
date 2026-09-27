@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-26T22:59:12Z",
+  "generatedAt": "2026-09-27T01:06:01Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9c0f00178fa3ef2e12be53cdca9efd37d8314365"
+    "revision": "4c980471e072694a3c861cab5175a8d18368a878"
   },
-  "documentsWithCandidates": 12709,
+  "documentsWithCandidates": 12731,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -10163,6 +10163,21 @@
       ]
     },
     {
+      "documentId": "doc-345ea1b3ab6f",
+      "path": "Archives-for-the-Unexplained/documents/2010-01-05_BBC_Presenter-profile-Mark-Murphy.txt",
+      "candidates": [
+        {
+          "value": "2010-01-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Page last updated at 11:50 GMT, Tuesday, 5 January 2010",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-a92570138efd",
       "path": "Archives-for-the-Unexplained/documents/2010-02-05---NASA-s-Kennedy-Space-Center---SDO-Spacecraft-and-Vehicle-Flow_Cp8txp4VH4g---transcript-automated-.txt",
       "candidates": [
@@ -13265,6 +13280,21 @@
       ]
     },
     {
+      "documentId": "doc-f7d60a369353",
+      "path": "Archives-for-the-Unexplained/documents/2015-07-09---Hubble-Space-Telescope---Hubble-Finds-Giant-Halo-Around-the-Andromeda-Galaxy_Of9bQNNLxuk---transcript-automated-_image.txt",
+      "candidates": [
+        {
+          "value": "2015-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thursday July 9, 2015 3pm EDT",
+          "segment": 1
+        }
+      ]
+    },
+    {
       "documentId": "doc-a90f1ef07d0a",
       "path": "Archives-for-the-Unexplained/documents/2015-07-10---NASA-Jet-Propulsion-Laboratory---Five-Ways-Mariner-4-Changed-Mars-Exploration_-yyzw45ouPQ---transcript-automated-.txt",
       "candidates": [
@@ -14800,6 +14830,21 @@
           "method": "relative-date-exclusion",
           "evidence": "between July 8 1947 beyond the airport",
           "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3079de1510ba",
+      "path": "Archives-for-the-Unexplained/documents/2017-08-29---NASA-Jet-Propulsion-Laboratory---Cassini-A-Saturn-Odyssey_fHaaIX-iSqM---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1997-10-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Cassini launch October 15, 1997",
+          "segment": 54
         }
       ]
     },
@@ -48494,6 +48539,75 @@
       ]
     },
     {
+      "documentId": "doc-03a6b4686df9",
+      "path": "Archives-for-the-Unexplained/documents/Georgia-Skeptics---Vol-06-No-03.txt",
+      "candidates": [
+        {
+          "value": "1993-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sunday, July 18, 1993, at the Steak and Ale Restaurant on Northlake",
+          "segment": 35
+        },
+        {
+          "value": "1993-09-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 19, 1993, at the home of Dale and Ann Heatherington in",
+          "segment": 49
+        },
+        {
+          "value": "1993-06-14",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "For immediate release, June 14, 1993",
+          "segment": 111
+        },
+        {
+          "value": "1993-07-14",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "For immediate release, July 14, 1993",
+          "segment": 130
+        },
+        {
+          "value": "1993-07-26",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "For immediate release, July 26, 1993",
+          "segment": 151
+        },
+        {
+          "value": "1976-10-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "9:00 a.m. on October 17, 1976, Mafia boss John Gotti had exactly",
+          "segment": 221
+        },
+        {
+          "value": "1993-06-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Interestingly, according to the June 12, 1993, edition of",
+          "segment": 499
+        }
+      ]
+    },
+    {
       "documentId": "doc-e3cf1599c85f",
       "path": "Archives-for-the-Unexplained/documents/Georgia-Skeptics---Vol-06-No-04.txt",
       "candidates": [
@@ -62543,6 +62657,21 @@
       ]
     },
     {
+      "documentId": "doc-6c5dc1d96a2d",
+      "path": "Archives-for-the-Unexplained/documents/Rich-Planet-TV---Andrew-Johnson-Life-on-Mars---1-OF-3__18MuTUlX98---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2004-02-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "certain of it was February 15 2004",
+          "segment": 677
+        }
+      ]
+    },
+    {
       "documentId": "doc-1976c5bd63ab",
       "path": "Archives-for-the-Unexplained/documents/Rich-Planet-TV---Andrew-Johnson-Life-on-Mars---2-OF-3_uAm6SfbYA34---transcript-automated-.txt",
       "candidates": [
@@ -64894,6 +65023,48 @@
           "method": "unclassified-mention",
           "evidence": "directory update goes to press on February 15, 1997.",
           "segment": 286
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5ce8ae9d89c4",
+      "path": "Archives-for-the-Unexplained/documents/SearchLites---Vol-03-No-2.txt",
+      "candidates": [
+        {
+          "value": "1997-04-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "There are those of April 15, 1997: IEEE, Stevens Inst. of Tech., Hoboken NJ.",
+          "segment": 148
+        },
+        {
+          "value": "1997-04-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "our members who want to be left alone to pursue their pas- April 26, 1997: Keystone VHF Club, York PA.",
+          "segment": 149
+        },
+        {
+          "value": "1997-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Each must coordinate with his or her May 30 - June 1, 1997: Rochester Hamfest and ARRL",
+          "segment": 158
+        },
+        {
+          "value": "1997-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "all together, where to point their dish and what frequencies to August 28 - September 1, 1997: Lonestarcon 2 / 1997",
+          "segment": 164
         }
       ]
     },
@@ -69214,6 +69385,21 @@
           "method": "unclassified-mention",
           "evidence": "other to seek help. (Source: Winnipeg Free Press, November 19, 1982",
           "segment": 710
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0a8c6393bab8",
+      "path": "Archives-for-the-Unexplained/documents/TMZ-Presents-UFO-Revolution---S01E01---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-07",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "It was actually July 7, 1947, when the outside world found out something unusual had happened near",
+          "segment": 754
         }
       ]
     },
@@ -237245,7 +237431,7 @@
           "confidence": 0.94,
           "kind": "event_date",
           "method": "milestone-language",
-          "evidence": "The highest representation of the Ministry of Defense and within what, according to the Forces, is the true account in the files of their subordinate agencies, have confirmed not only the existence of such information, but also some occurrences involving alleged UFOs and their cr",
+          "evidence": "The highest representation of the Ministry of Defense and within what, the forces claim, is the true account in the files of their subordinate agencies, confirmed not only the existence of such information, but also some occurrences involving alleged UFOs and their crew, as well ",
           "segment": "seg-c99d525b9b6349f5663f6213"
         },
         {
@@ -303374,6 +303560,57 @@
       ]
     },
     {
+      "documentId": "doc-03ea2178058a7d78e2f732bb",
+      "path": "France-GEIPAN/paired/cases/1954-10-09227/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1954-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** Les 2 et 4 octobre 1954, plusieurs personnes de la commune de Poncey-sur-l'Ignon (21) ont été témoins de phénomènes qui les ont intrigués. Le rapport détaille deux séries d'événements distincts dans la même zone, traités ici par ordre chronologique. **Premier évé",
+          "segment": "seg-c9f3555330f097ff4eda4409"
+        },
+        {
+          "value": "1954-10-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** Les 2 et 4 octobre 1954, plusieurs personnes de la commune de Poncey-sur-l'Ignon (21) ont été témoins de phénomènes qui les ont intrigués. Le rapport détaille deux séries d'événements distincts dans la même zone, traités ici par ordre chronologique. **Premier évé",
+          "segment": "seg-c9f3555330f097ff4eda4409"
+        },
+        {
+          "value": "1954-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** Les 2 et 4 octobre 1954, plusieurs personnes de la commune de Poncey-sur-l'Ignon (21) ont été témoins de phénomènes qui les ont intrigués. Le rapport détaille deux séries d'événements distincts dans la même zone, traités ici par ordre chronologique. **Premier évé",
+          "segment": "seg-c9f3555330f097ff4eda4409"
+        },
+        {
+          "value": "1954-10-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** Les 2 et 4 octobre 1954, plusieurs personnes de la commune de Poncey-sur-l'Ignon (21) ont été témoins de phénomènes qui les ont intrigués. Le rapport détaille deux séries d'événements distincts dans la même zone, traités ici par ordre chronologique. **Premier évé",
+          "segment": "seg-c9f3555330f097ff4eda4409"
+        },
+        {
+          "value": "1954-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** Les 2 et 4 octobre 1954, plusieurs personnes de la commune de Poncey-sur-l'Ignon (21) ont été témoins de phénomènes qui les ont intrigués. Le rapport détaille deux séries d'événements distincts dans la même zone, traités ici par ordre chronologique. **Premier évé",
+          "segment": "seg-c9f3555330f097ff4eda4409"
+        }
+      ]
+    },
+    {
       "documentId": "doc-dc01adbd7bea8529065c82a9",
       "path": "France-GEIPAN/paired/cases/1954-10-09243/en/translation.txt",
       "candidates": [
@@ -304099,6 +304336,30 @@
           "method": "event-language",
           "evidence": "Description: On February 5, 1976, at 12:45 AM, two individuals observed a stationary flying object in a luminous formation. The witnesses placed it 25 meters from the house and 15 meters above the ground. Two silhouettes were seen inside the craft, which disappeared slowly toward",
           "segment": "seg-ada2b9d6bb339e8dfe5c4ce1"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9fa4d7723e3237a44a6c7776",
+      "path": "France-GEIPAN/paired/cases/1976-02-00288/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1976-02-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On February 9, 1976, at 2:05 AM, a motorist and his passengers were first intrigued and then frightened by the presence of a luminous mass in the slightly overcast sky. Their observation begins at the exit of Luzon (85). After parking their vehicle at the exit of Beu",
+          "segment": "seg-8e43dc443d30057b64e03cf3"
+        },
+        {
+          "value": "1976-02-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On February 9, 1976, at 2:05 AM, a motorist and his passengers were first intrigued and then frightened by the presence of a luminous mass in the slightly overcast sky. Their observation begins at the exit of Luzon (85). After parking their vehicle at the exit of Beu",
+          "segment": "seg-8e43dc443d30057b64e03cf3"
         }
       ]
     },
@@ -309251,6 +309512,30 @@
       ]
     },
     {
+      "documentId": "doc-3f4d0e8b4fee5b803f53a478",
+      "path": "France-GEIPAN/paired/cases/1980-03-01696/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1980-03-10",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: The GEIPAN continues to publish its entire archives on its public website www.geipan.fr. In its publications, it includes older cases classified at the time (A, B, C, or D) that are now being re-examined, with the sole purpose of being more relevant in the conclusion",
+          "segment": "seg-99f5aa142e3f1dd316082701"
+        },
+        {
+          "value": "1980-12-10",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: The GEIPAN continues to publish its entire archives on its public website www.geipan.fr. In its publications, it includes older cases classified at the time (A, B, C, or D) that are now being re-examined, with the sole purpose of being more relevant in the conclusion",
+          "segment": "seg-99f5aa142e3f1dd316082701"
+        }
+      ]
+    },
+    {
       "documentId": "doc-47ba62052b0646675107a0ff",
       "path": "France-GEIPAN/paired/cases/1980-03-01698/en/translation.txt",
       "candidates": [
@@ -309781,6 +310066,21 @@
           "method": "event-language",
           "evidence": "Description: On August 16, 1980, around 3:30 AM, while returning from a popular dance, a witness observed above a field an object shaped like a mushroom cap. With a diameter of 50 feet, it emitted a very intense red light. After approaching to within approximately 400 meters, the",
           "segment": "seg-88b9208c99836e054a639df1"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cee2369f71afeaf8af592259",
+      "path": "France-GEIPAN/paired/cases/1980-09-00797/en/translation.txt",
+      "candidates": [
+        {
+          "value": "1980-08-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 17, 1980, at 1:30 a.m., two witnesses were driving on National Road 1. Upon arriving at Cape Houssaye, they spot for a few seconds three stationary human-like forms on a hill overlooking the sea, about fifteen meters from the edge of the road. These shapes,",
+          "segment": "seg-b9d11b7552fe937003a98ecd"
         }
       ]
     },
@@ -321848,6 +322148,21 @@
       ]
     },
     {
+      "documentId": "doc-6e42edf6392ce3072ee3a9ec",
+      "path": "France-GEIPAN/paired/cases/2009-02-08354/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2009-02-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On February 5, 2009, around 7:00 PM, two people in a car observed above a four-lane highway three blue, white, and red lights forming a floating triangle at 30 or 40 meters high, moving slowly. The GEIPAN received only one testimony by email. The observation was made",
+          "segment": "seg-235a1ceadef75bd509f2f7fe"
+        }
+      ]
+    },
+    {
       "documentId": "doc-62baf686960dd0e5f03cbda0",
       "path": "France-GEIPAN/paired/cases/2009-02-09010/en/translation.txt",
       "candidates": [
@@ -327020,6 +327335,21 @@
       ]
     },
     {
+      "documentId": "doc-96e690be56af0c88b8c0301b",
+      "path": "France-GEIPAN/paired/cases/2011-08-02820/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2011-08-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: After a submarine dive at 10:00 AM on August 20, 2011 at the \"Punta d'Arco\" site in the Bastia region, witnesses were surprised to observe for five minutes in the sky a stationary luminous phenomenon that suddenly disappeared and then reappeared with a different form",
+          "segment": "seg-f7ea0b48796fa837b5850646"
+        }
+      ]
+    },
+    {
       "documentId": "doc-4bc36c916e9e00dac24e5bf3",
       "path": "France-GEIPAN/paired/cases/2011-08-02835/en/translation.txt",
       "candidates": [
@@ -329519,6 +329849,21 @@
       ]
     },
     {
+      "documentId": "doc-c6b0b8d968c00b9d7a44c738",
+      "path": "France-GEIPAN/paired/cases/2012-09-08333/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2012-09-17",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On September 17, 2012, at 2:20 PM, a witness noticed in the sky a black ball that seemed stationary. The witness observed this black object in the sky, appearing immobile, at a low altitude on the horizon. The witness turned around it a quarter turn, which proves the",
+          "segment": "seg-b9e17ec35446d542a4aec1b2"
+        }
+      ]
+    },
+    {
       "documentId": "doc-d47fdc9ab40743c0a0224392",
       "path": "France-GEIPAN/paired/cases/2012-09-08334/en/translation.txt",
       "candidates": [
@@ -330157,6 +330502,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On January 1, 2013, between 4:00 p.m. and 4:30 p.m., a witness observed the passage from west to east of a first group of lights, followed by another group, always following the same trajectory. The objects moved without making any noise and disappeared on the horizo",
           "segment": "seg-af2eecbaca37fe95dbd7b0f4"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c4624898e9c9d761f2b60d9f",
+      "path": "France-GEIPAN/paired/cases/2013-01-08663/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-01-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On January 7, 2013, at 4:13 a.m., a driver observed for 3 seconds a flash in the sky followed by a ball from which several fragments detached. No other testimony was collected. The witness's description corresponds exactly to the appearance of a meteor (atmospheric e",
+          "segment": "seg-9b8921d141698a7edfc77b91"
         }
       ]
     },
@@ -331913,6 +332273,21 @@
       ]
     },
     {
+      "documentId": "doc-3291fd4fec45c17594b9ab61",
+      "path": "France-GEIPAN/paired/cases/2013-08-08587/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-08-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 4, 2013, during a very hot night, a witness (estimated time around 3 or 4 AM) took a photo of the storms in the distance before going to bed (photo DSCN5593). Later in his sleep, a violent light wakes him and his spouse: both think it's a storm. The witness",
+          "segment": "seg-71d89a51776fabb5f392e722"
+        }
+      ]
+    },
+    {
       "documentId": "doc-e446e0e5240e6c8c3061c6ee",
       "path": "France-GEIPAN/paired/cases/2013-08-08592/en/translation.txt",
       "candidates": [
@@ -331939,6 +332314,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On August 19, 2013, around 11 PM, a witness observed a star that initially seemed to enter the atmosphere, then stopped, lit up the sky, and departed in the opposite direction of its initial trajectory. Based on the objective evidence gathered (see the investigation ",
           "segment": "seg-9fc9fc2ad0017bf33481cd80"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c7b8ff4cd5ade87de93b4017",
+      "path": "France-GEIPAN/paired/cases/2013-08-09577/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-08-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 4, 2013, at 10:12 PM, a couple observed the passage of a white, glowing point moving at the same speed as a commercial jet, but without flickering, in a straight line, without sound. The witness takes two photos with a camera and is amazed by what he gets w",
+          "segment": "seg-9af4c4b234f79cc266c6047f"
         }
       ]
     },
@@ -332636,6 +333026,21 @@
       ]
     },
     {
+      "documentId": "doc-dcc19a50856a0160a40f948d",
+      "path": "France-GEIPAN/paired/cases/2014-03-08670/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-03-09",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On March 9, 2014, at 7:50 PM, a witness observed from their home for a few seconds a faintly glowing phenomenon followed by a long, white streak in the sky. This observation of a glowing ball followed by a streak, crossing the sky in a straight line in 2 or 3 seconds",
+          "segment": "seg-93bba0e78e04c61ce6105d51"
+        }
+      ]
+    },
+    {
       "documentId": "doc-52a97a0984640a65e189851a",
       "path": "France-GEIPAN/paired/cases/2014-03-08672/en/translation.txt",
       "candidates": [
@@ -333269,6 +333674,21 @@
       ]
     },
     {
+      "documentId": "doc-b0b49deeb888c4b41e5a8b15",
+      "path": "France-GEIPAN/paired/cases/2014-10-09030/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-10-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On October 19, 2014, at 10:50 PM, a witness observed for 8 to 10 seconds the silent passage across the sky of 7 to 9 orange lights. The entire formation moved on a north-south trajectory. The phenomenon was then obscured by the urban landscape. No other testimonies w",
+          "segment": "seg-14a07bc4e50836308d002414"
+        }
+      ]
+    },
+    {
       "documentId": "doc-c3c73a84b97067f334572d91",
       "path": "France-GEIPAN/paired/cases/2014-10-09041/en/translation.txt",
       "candidates": [
@@ -333685,6 +334105,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Saturday, February 21, 2015, at 11:30 PM, a motorist and their passenger were intrigued by several silent, orange glowing objects moving across the Lille sky. Only one statement was collected. The observation of orange balls crossing the sky in a matter of minutes",
           "segment": "seg-d5e466c0e09853ce68afbe46"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d26bcf8c83eebd9c04460e30",
+      "path": "France-GEIPAN/paired/cases/2015-02-09133/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-02-10",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: On Tuesday, February 10, 2015, at 9:05 PM, a witness observed for 5 to 7 minutes five orange balls seemingly approaching silently, with a brighter halo surrounding them. These balls disappeared one after the other. The observation of orange balls in the sky in just a",
+          "segment": "seg-97873614c48f14f7a1d765e2"
         }
       ]
     },
@@ -334315,6 +334750,36 @@
           "method": "unclassified-mention",
           "evidence": "Description: On September 07, 2015, around 21:43, a witness observed two brief flashes separated by a few seconds in a clear sky. Only one testimony was collected. Of average strangeness but sufficient consistency, this case turns out to be a misperception with a satellite reflec",
           "segment": "seg-f3cd9a84632ccaa1fa845c51"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-73777e7b1442acbfdd9edab4",
+      "path": "France-GEIPAN/paired/cases/2015-09-09318/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-09-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 26, 2015, at 11:59 PM, a witness observed approximately twenty lights in the sky, resembling streetlamps but mobile. Only one testimony was collected. The observation of orange balls crossing the sky in a few minutes, on a weekend night, strongly suggest",
+          "segment": "seg-772134b462abe3e8c8615ab5"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9e0565d2bbe2990ab456447a",
+      "path": "France-GEIPAN/paired/cases/2015-09-09326/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-09-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 26, 2015, at 3:00 PM, a witness observed for approximately 5 minutes, in a clear blue sky, 5 white points slowly approaching without any noise. The formation continued to fly, then entered a cloud and disappeared from the witness's view. Only one testimo",
+          "segment": "seg-6c082c3bb0877cce045abcbb"
         }
       ]
     },
