@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-27T10:38:06Z",
+  "generatedAt": "2026-09-27T11:42:44Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5fdd4fe70a2dd42ca25048c17f71bcd4b7991d4a"
+    "revision": "b5648164822e362ebf87fe839fd0a27d4162140a"
   },
-  "documentsWithCandidates": 12930,
+  "documentsWithCandidates": 12965,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -5252,6 +5252,21 @@
       ]
     },
     {
+      "documentId": "doc-2e4d146f7029",
+      "path": "Archives-for-the-Unexplained/documents/1986-03-08_Houston-Chronicle-TX_SUFOG-scan_SUFOG-DVD.txt",
+      "candidates": [
+        {
+          "value": "1986-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CHRONICLE, Houston, TX - March 8, 1986",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-ac87c2d8a5a0",
       "path": "Archives-for-the-Unexplained/documents/1986-03-11_Washington-Stars-and-Stripes-DC_SUFOG-scan_SUFOG-DVD.txt",
       "candidates": [
@@ -5385,6 +5400,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "TRIBUNE, Chicago, IL - April 30, 1986 CR: G. Eberhart",
+          "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2ac45c6d4a90",
+      "path": "Archives-for-the-Unexplained/documents/1986-07-11_Tempe-Daily-News-AZ_SUFOG-scan_SUFOG-DVD.txt",
+      "candidates": [
+        {
+          "value": "1966-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DAlLY , TCIIC>O, AZ - July 11, 1966",
           "segment": 0
         }
       ]
@@ -5580,6 +5610,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "HERALD-NEWS, Hodgenville, KY - April 30, 1987",
+          "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-129812c580b6",
+      "path": "Archives-for-the-Unexplained/documents/1987-05-04_Linns-Stamp-News_SUFOG-scan_SUFOG-DVD.txt",
+      "candidates": [
+        {
+          "value": "1987-05-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LINN'S STAMP NEWS , (City & Stata Unknovn) -May 4, 1987",
           "segment": 0
         }
       ]
@@ -8069,6 +8114,21 @@
       ]
     },
     {
+      "documentId": "doc-97c9dbaf6e40",
+      "path": "Archives-for-the-Unexplained/documents/2006-09-19_Space-com_Atlantis-Landing-Delayed-After-Mystery-Object-Spotted.txt",
+      "candidates": [
+        {
+          "value": "2006-09-19",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "published 19 September 2006",
+          "segment": 8
+        }
+      ]
+    },
+    {
       "documentId": "doc-e756e533e2c1",
       "path": "Archives-for-the-Unexplained/documents/2006-09-21_Animation-World-Network_The-Science-of-Sleep-Another-UFO-From-Michel-Gondry.txt",
       "candidates": [
@@ -8560,6 +8620,21 @@
           "method": "context-exclusion",
           "evidence": "On July 8, 1947, a local military office issued a press release saying that pieces of a “crashed disk” were recovered.",
           "segment": 26
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e492dbc70105",
+      "path": "Archives-for-the-Unexplained/documents/2007-07-05_BBC_Wales-New-details-on-UFO-case-released.txt",
+      "candidates": [
+        {
+          "value": "2007-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "News Front Page Last Updated: Thursday, 5 July 2007, 12:39 GMT 13:39 UK",
+          "segment": 3
         }
       ]
     },
@@ -9224,6 +9299,30 @@
       ]
     },
     {
+      "documentId": "doc-23c389006aac",
+      "path": "Archives-for-the-Unexplained/documents/2008-05-14_BBC_Files-released-on-UFO-sightings.txt",
+      "candidates": [
+        {
+          "value": "2008-05-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "News Front Page Page last updated at 00:31 GMT, Wednesday, 14 May 2008 01:31 UK",
+          "segment": 1
+        },
+        {
+          "value": "1982-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A further document reveals how, on 21 February 1982",
+          "segment": 61
+        }
+      ]
+    },
+    {
       "documentId": "doc-88d98b9dad37",
       "path": "Archives-for-the-Unexplained/documents/2008-05-14_BBC_In-pictures-The-UFO-files.txt",
       "candidates": [
@@ -9817,6 +9916,21 @@
           "method": "unclassified-mention",
           "evidence": "News Front Page Page last updated at 12:22 GMT, Monday, 20 October 2008 13:22 UK",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5f9380a3140f",
+      "path": "Archives-for-the-Unexplained/documents/2008-10-20_KRCG_Britain-releases-UFO-files-dispels-some-mysteries.txt",
+      "candidates": [
+        {
+          "value": "2008-10-20",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Mon, 20 Oct 2008 14:29:14 GMT — LONDON (AP) - Britain's National Archives has released 19 more files related to UFOs.",
+          "segment": 29
         }
       ]
     },
@@ -14228,6 +14342,21 @@
       ]
     },
     {
+      "documentId": "doc-0805ab80724b",
+      "path": "Archives-for-the-Unexplained/documents/2015-09-25---OpenMindsTV---New-York-UFO-Video---Open-Minds-UFO-Report_4vx29_1ltSA---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2015-04-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "object at 10:30 p.m. on April 17 2015",
+          "segment": 444
+        }
+      ]
+    },
+    {
       "documentId": "doc-4058117528eb",
       "path": "Archives-for-the-Unexplained/documents/2015-10-06---NASA-Astrobiology---AbSciCon-2015---Astrobiology-Memorial-Presentation_1KuAxmxH_xY---transcript-automated-.txt",
       "candidates": [
@@ -14636,6 +14765,21 @@
       ]
     },
     {
+      "documentId": "doc-926dd3780b0b",
+      "path": "Archives-for-the-Unexplained/documents/2016-05-16---NASA-Armstrong-Flight-Research-Center---Lancaster-Academy-of-Multimedia-Programming-and-Engineering-Workshop_EUyDZN7rWIY---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2016-04-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">> On April 25, 2016, the NASA AERO Institute",
+          "segment": 2
+        }
+      ]
+    },
+    {
       "documentId": "doc-ae8ea34a798f",
       "path": "Archives-for-the-Unexplained/documents/2016-07-03---NASA-Jet-Propulsion-Laboratory---NASA-s-Eyes-App-See-Juno-Get-to-Jupiter_O-9r_kRjFm8---transcript-automated-_image.txt",
       "candidates": [
@@ -14647,6 +14791,21 @@
           "method": "unclassified-mention",
           "evidence": "July 04, 2016 12:30:03 PM",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7590998ed324",
+      "path": "Archives-for-the-Unexplained/documents/2016-07-08---skepticzonepodcast---The-Skeptic-Zone-387---20.Mar.2016_8KUZovJkMH8---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2016-03-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "number 14 March 2016 some of the reports",
+          "segment": 586
         }
       ]
     },
@@ -14875,6 +15034,21 @@
           "method": "unclassified-mention",
           "evidence": "of the September 11 2001 attack on the",
           "segment": 9
+        }
+      ]
+    },
+    {
+      "documentId": "doc-54d44b1eff4a",
+      "path": "Archives-for-the-Unexplained/documents/2016-08-04---NASA-Jet-Propulsion-Laboratory---Curiosity-Rover-Report-August-5-2016-Four-Years-on-Mars_E6t1kxX-EpI---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2012-08-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Gale crater on August 5, 2012.",
+          "segment": 6
         }
       ]
     },
@@ -17870,6 +18044,93 @@
       ]
     },
     {
+      "documentId": "doc-b253688f82ff",
+      "path": "Archives-for-the-Unexplained/documents/2018-04-27---NASA-s-Marshall-Space-Flight-Center---First-Ten-Lives-of-Saturn-I_Z-OhfVNbtqk---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1961-10-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ago on October 27, 1961.",
+          "segment": 56
+        },
+        {
+          "value": "1949-02-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On February 24, 1949, a WAC corporal placed",
+          "segment": 92
+        },
+        {
+          "value": "1958-01-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On January 31, 1958, only six weeks after",
+          "segment": 132
+        },
+        {
+          "value": "1958-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "fact, on July 26, 1958, ARPA, the Advanced",
+          "segment": 142
+        },
+        {
+          "value": "1958-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On August 15, 1958, the Saturn Project was",
+          "segment": 164
+        },
+        {
+          "value": "1961-09-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On September 13, 1961, contracts were let",
+          "segment": 542
+        },
+        {
+          "value": "1961-10-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "from Launch Complex 34 on October 27, 1961",
+          "segment": 570
+        },
+        {
+          "value": "1964-01-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On January 29, 1964, NASA launched the fifth",
+          "segment": 606
+        },
+        {
+          "value": "1964-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On September 8, 1964, SA-7 launched the second",
+          "segment": 655
+        }
+      ]
+    },
+    {
       "documentId": "doc-8d854f432ef2",
       "path": "Archives-for-the-Unexplained/documents/2018-04-30---UFO-HUB---Tom-DeLonge-E.T.-Disclosure-Portal-Technology-and-Experiencer-DNA-Markers-Grant-Cameron_Sc7Q9hgcukw---transcript-automated-.txt",
       "candidates": [
@@ -19442,6 +19703,21 @@
       ]
     },
     {
+      "documentId": "doc-5225b867d1b9",
+      "path": "Archives-for-the-Unexplained/documents/2018-12-08---Nyxx-Media---Heidi-Gadd-Natasha-Nyxx-Review-the-new-Bob-Lazar-Film_HRuDPvvQVDA---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2018-12-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday December 8 2018 and we're well",
+          "segment": 18
+        }
+      ]
+    },
+    {
       "documentId": "doc-76d49867cf88",
       "path": "Archives-for-the-Unexplained/documents/2018-12-10---FADE-TO-BLACK-Radio---Ep.-962-FADE-to-BLACK-w-Billy-Carson-LIVE_951TL06-VBI---transcript-automated-.txt",
       "candidates": [
@@ -20077,6 +20353,36 @@
           "method": "unclassified-mention",
           "evidence": "November 9 9 9 maybe September 9 2009",
           "segment": 2884
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6c8818987ce4",
+      "path": "Archives-for-the-Unexplained/documents/2019-04-25---UFO-HUB---Disclosure-and-the-AATIP-Program-Nick-Pope_ke_upBeK2i0---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2009-01-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "also have a January 24 2009 letter from",
+          "segment": 685
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8e1d56a0d435",
+      "path": "Archives-for-the-Unexplained/documents/2019-04-29---NASA-s-Marshall-Space-Flight-Center---Marshall-Remembers-Apollo-Ed-Buckbee_LxrD9NnEGKg---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1961-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "we launched Alan Shepard May 5 1961",
+          "segment": 674
         }
       ]
     },
@@ -23036,6 +23342,21 @@
       ]
     },
     {
+      "documentId": "doc-9077f682510f",
+      "path": "Archives-for-the-Unexplained/documents/2023-03-03---Eyes-On-Cinema-RealEOC-presents-Eyes-On-UFOs---Eyewitnesses-talk-about-the-North-Bergen-New-Jersey-UFO-encounters-1975-1993_gltmKizN_eM---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1986-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "in the early evening of July 6 1986 Wall",
+          "segment": 258
+        }
+      ]
+    },
+    {
       "documentId": "doc-bb50ee92bf50",
       "path": "Archives-for-the-Unexplained/documents/2023-03-06---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Monday-March-06-2023_hdE4uU56uJk---transcript-automated-.txt",
       "candidates": [
@@ -23632,6 +23953,21 @@
           "method": "unclassified-mention",
           "evidence": "posted January 17 2018 on the BBC",
           "segment": 269
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3f655c0c9fbc",
+      "path": "Archives-for-the-Unexplained/documents/2023-04-22---skepticzonepodcast---The-Skeptic-Zone-759---23.April.2023_TBaRHv98StU---transcript-automated-_image.txt",
+      "candidates": [
+        {
+          "value": "2023-04-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Episode 759 - 23 April 2023",
+          "segment": 0
         }
       ]
     },
@@ -32414,6 +32750,39 @@
       ]
     },
     {
+      "documentId": "doc-2b16e0b9f3a9",
+      "path": "Archives-for-the-Unexplained/documents/Bilk---no-057---1994-01.txt",
+      "candidates": [
+        {
+          "value": "1994-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "From Jan 1, 1994, my address will be",
+          "segment": 1
+        },
+        {
+          "value": "1993-09-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of Sept 3, 1993, reported on an expedition to raise Nessie by Doe Shiels-like magic",
+          "segment": 36
+        },
+        {
+          "value": "1916-12-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "had exploded on Dec 7, 1916 after ramming a sea mine.",
+          "segment": 124
+        }
+      ]
+    },
+    {
       "documentId": "doc-66d1ce3fe5a0",
       "path": "Archives-for-the-Unexplained/documents/Bilk---no-059---1994-05.txt",
       "candidates": [
@@ -40159,6 +40528,30 @@
           "method": "unclassified-mention",
           "evidence": "Subject.: Sl and H Experimentation, 23 October 1951.",
           "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-526cac3df5cf",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000190523.txt",
+      "candidates": [
+        {
+          "value": "1951-10-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUBJECT: Sl and H Experimentation, 16 October 1951.",
+          "segment": 0
+        },
+        {
+          "value": "1951-10-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Tuesday, 16 October 1951, Messrs.",
+          "segment": 1
         }
       ]
     },
@@ -50135,6 +50528,180 @@
       ]
     },
     {
+      "documentId": "doc-d827b41a8ddf",
+      "path": "Archives-for-the-Unexplained/documents/False-Memory-Syndrome-Foundation---Vol-14-No-01---2005-janfeb.txt",
+      "candidates": [
+        {
+          "value": "2004-11-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Alan Gold, Attorney, November 7, 2004",
+          "segment": 10
+        },
+        {
+          "value": "2005-01-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "aliens, however, are ultimately benign, trying January 31, 2005.",
+          "segment": 731
+        },
+        {
+          "value": "2004-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to support you?” July 6, 2004",
+          "segment": 820
+        }
+      ]
+    },
+    {
+      "documentId": "doc-046e1fc1dda1",
+      "path": "Archives-for-the-Unexplained/documents/False-Memory-Syndrome-Foundation---Vol-14-No-02---2005-marapril.txt",
+      "candidates": [
+        {
+          "value": "2005-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Retrieved on February 21, 2005 from",
+          "segment": 48
+        },
+        {
+          "value": "2005-02-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Retrieved February 9, 2005, that *traumatic* events—terrifying",
+          "segment": 115
+        },
+        {
+          "value": "2005-02-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Advisory Board and Members who Richard McNally, February 7, 2005",
+          "segment": 132
+        },
+        {
+          "value": "2005-02-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On February 7, 2005, a Boston Shanley is one of the few priests to be stop giving the teacher a hard time and",
+          "segment": 143
+        },
+        {
+          "value": "2005-02-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Retrieved February 9, 2005, members of the American Some Large Clergy Settlements",
+          "segment": 256
+        },
+        {
+          "value": "2004-12-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "stoday.com/medicalnews.php?newsid=17604 On December 11, 2004, Kevin M.",
+          "segment": 299
+        },
+        {
+          "value": "2005-02-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On February 2, 2005, Lindsey",
+          "segment": 362
+        },
+        {
+          "value": "2004-11-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 20, 2004, Trauma: Scientific, Cultural",
+          "segment": 475
+        },
+        {
+          "value": "2005-01-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and Personal Perspectives; January 15, 2005, Ways really worth arguing about.”",
+          "segment": 476
+        },
+        {
+          "value": "2005-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Houghton Mifflin, March 5, 2005, Recovery, Peer Support, Retrieved on January 23, 2005 from",
+          "segment": 479
+        },
+        {
+          "value": "2005-01-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Houghton Mifflin, March 5, 2005, Recovery, Peer Support, Retrieved on January 23, 2005 from",
+          "segment": 479
+        },
+        {
+          "value": "2004-12-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Moyers, PBS, December 3, 2004. \u0001 2005/011905/bodymind.shtml",
+          "segment": 481
+        },
+        {
+          "value": "2005-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Retrieved on February 19, 2005. ed, controlled experiments have shown",
+          "segment": 570
+        },
+        {
+          "value": "2005-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "February 19, 2005. with honorable intentions.[37] It works read and write independent of facilitation.",
+          "segment": 576
+        },
+        {
+          "value": "1997-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "teacher that her father was molesting her, Nature magazine (July 17, 1997",
+          "segment": 990
+        }
+      ]
+    },
+    {
       "documentId": "doc-f38ceb25cb1c",
       "path": "Archives-for-the-Unexplained/documents/False-Memory-Syndrome-Foundation---Vol-14-No-05---2005-septoct.txt",
       "candidates": [
@@ -52889,6 +53456,21 @@
       ]
     },
     {
+      "documentId": "doc-cdfd03901d80",
+      "path": "Archives-for-the-Unexplained/documents/Historys-Greatest-Mysteries---S02E04---Houdini-s-Lost-Diaries---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1926-10-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "And we would lose Harry Houdini on October 31, 1926.",
+          "segment": 1440
+        }
+      ]
+    },
+    {
       "documentId": "doc-ffb69c1e3944",
       "path": "Archives-for-the-Unexplained/documents/Historys-Greatest-Mysteries---S03E01---The-Amber-Room---transcript-automated-.txt",
       "candidates": [
@@ -54079,6 +54661,84 @@
           "method": "unclassified-mention",
           "evidence": "From \"POLITICA\", Tuesday, July 13, 1999",
           "segment": 2097
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4d76a5793950",
+      "path": "Archives-for-the-Unexplained/documents/INEXPLICATA-06.txt",
+      "candidates": [
+        {
+          "value": "1997-04-12",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "contents, dated April 12, 1997: \"The esteemed Roque Prestes died",
+          "segment": 84
+        },
+        {
+          "value": "1994-01-04",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "witnessed a glowing UFO on January 4, 1994 in Santana de",
+          "segment": 443
+        },
+        {
+          "value": "1957-10-15",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "event involving the driver before October 15, 1957 coincided",
+          "segment": 541
+        },
+        {
+          "value": "1958-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "in Fontes' office on February 22, 1958 and witnessed by",
+          "segment": 555
+        },
+        {
+          "value": "1957-10-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On October 5, 1957, Villas Boas went to bed at 11:00 p.m.",
+          "segment": 566
+        },
+        {
+          "value": "1978-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On March 3, 1978, in the small hours of the morning",
+          "segment": 679
+        },
+        {
+          "value": "1982-11-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On the evening of November 30, 1982, Juan Valerio da Silva",
+          "segment": 724
+        },
+        {
+          "value": "1980-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "pm on the night of July 27, 1980, a DC-9 flying between Bologna",
+          "segment": 1468
         }
       ]
     },
@@ -62123,6 +62783,102 @@
       ]
     },
     {
+      "documentId": "doc-09af6a23b9d0",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-23-No-06---2009.txt",
+      "candidates": [
+        {
+          "value": "2009-06-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 23 June 2009 Number 6 http://www.ntskeptics.org",
+          "segment": 0
+        },
+        {
+          "value": "2009-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Starting 1 July 2009 the new fee structure will be as",
+          "segment": 192
+        },
+        {
+          "value": "2009-06-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "20 June 2009 — 15 August 2009 — printer, which is what I do. The newsletter",
+          "segment": 215
+        },
+        {
+          "value": "2009-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "20 June 2009 — 15 August 2009 — printer, which is what I do. The newsletter",
+          "segment": 215
+        },
+        {
+          "value": "2009-09-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"truth\" vs evident 19 September 2009 — Enjoy.",
+          "segment": 218
+        },
+        {
+          "value": "2009-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "18 July 2009 — and nutrition myths.",
+          "segment": 219
+        },
+        {
+          "value": "2009-10-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "present material from 17 October 2009 John Blanton",
+          "segment": 220
+        },
+        {
+          "value": "2009-11-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of homeopathy in 14 November 2009 skeptic75287@yahoo.com",
+          "segment": 222
+        },
+        {
+          "value": "2009-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Armstrong Atlantic State University 9 January 2009",
+          "segment": 295
+        },
+        {
+          "value": "2009-01-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Tri-Cities IDEA Club 15 January 2009",
+          "segment": 314
+        }
+      ]
+    },
+    {
       "documentId": "doc-5986fc84bc31",
       "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-23-No-09---2009.txt",
       "candidates": [
@@ -66506,6 +67262,30 @@
       ]
     },
     {
+      "documentId": "doc-03d71ab84420",
+      "path": "Archives-for-the-Unexplained/documents/Repas-Ufologiques---2008-12-.txt",
+      "candidates": [
+        {
+          "value": "2008-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2 décembre 2008 CHRISTEL SEVAL qui du fait de la",
+          "segment": 17
+        },
+        {
+          "value": "2008-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "celle du 4 juillet 2008 prise dans la région d’Apt. Un",
+          "segment": 84
+        }
+      ]
+    },
+    {
       "documentId": "doc-4ccaf401da11",
       "path": "Archives-for-the-Unexplained/documents/Repas-Ufologiques---2009-11.txt",
       "candidates": [
@@ -68902,6 +69682,48 @@
           "method": "unclassified-mention",
           "evidence": "died of natural causes on October 5, 1995.",
           "segment": 330
+        }
+      ]
+    },
+    {
+      "documentId": "doc-88053ca3196c",
+      "path": "Archives-for-the-Unexplained/documents/SearchLites---Vol-02-Special.txt",
+      "candidates": [
+        {
+          "value": "1996-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LITTLE FERRY, NJ.., August 7, 1996 -- The",
+          "segment": 1
+        },
+        {
+          "value": "1996-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "around nearby Sun-like stars suggests that there are indeed August 7, 1996, NASA electrified the scientific",
+          "segment": 22
+        },
+        {
+          "value": "1996-08-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "His early findings were dismissed by many bio- Daniel S. Goldin, August 6, 1996",
+          "segment": 30
+        },
+        {
+          "value": "1996-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On August 7, 1996, NASA announced a startling",
+          "segment": 68
         }
       ]
     },
@@ -81538,6 +82360,39 @@
           "method": "unclassified-mention",
           "evidence": "But on the night of August 18, 2006, he sees something that changes his",
           "segment": 585
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f888f035e594",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Hunters---S01E10---Invasion-Texas-2008---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2008-01-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "occurred on January 19, 2008.",
+          "segment": 438
+        },
+        {
+          "value": "1995-05-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 25, 1995, Captain Eugene Tollefson of America West",
+          "segment": 1242
+        },
+        {
+          "value": "2008-03-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 21, 2008, a resident of Aransas Pass, Texas",
+          "segment": 1613
         }
       ]
     },
@@ -169111,6 +169966,246 @@
           "method": "context-exclusion",
           "evidence": "September 21, 2022, and assigned it FOIA case number 22-F-1364.",
           "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a21f85b9b910",
+      "path": "Black-Vault-UFO/pdfs/dodd-5122-05.txt",
+      "candidates": [
+        {
+          "value": "2017-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Effective: August 7, 2017",
+          "segment": 2
+        },
+        {
+          "value": "2008-09-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Affairs (ASD(PA)),” September 5, 2008",
+          "segment": 7
+        },
+        {
+          "value": "2012-10-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Defense,” October 5, 2012",
+          "segment": 9
+        },
+        {
+          "value": "2017-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoDD 5122.05, August 7, 2017",
+          "segment": 14
+        },
+        {
+          "value": "2017-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoDD 5122.05, August 7, 2017",
+          "segment": 30
+        },
+        {
+          "value": "2017-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoDD 5122.05, August 7, 2017",
+          "segment": 40
+        },
+        {
+          "value": "2017-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoDD 5122.05, August 7, 2017",
+          "segment": 73
+        },
+        {
+          "value": "2017-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoDD 5122.05, August 7, 2017",
+          "segment": 105
+        },
+        {
+          "value": "2017-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoDD 5122.05, August 7, 2017",
+          "segment": 143
+        },
+        {
+          "value": "2017-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoDD 5122.05, August 7, 2017",
+          "segment": 159
+        },
+        {
+          "value": "2017-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoDD 5122.05, August 7, 2017",
+          "segment": 176
+        },
+        {
+          "value": "2017-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoDD 5122.05, August 7, 2017",
+          "segment": 217
+        },
+        {
+          "value": "2017-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoDD 5122.05, August 7, 2017",
+          "segment": 232
+        },
+        {
+          "value": "2017-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoDD 5122.05, August 7, 2017",
+          "segment": 256
+        },
+        {
+          "value": "2017-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoDD 5122.05, August 7, 2017",
+          "segment": 287
+        },
+        {
+          "value": "2017-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoDD 5122.05, August 7, 2017",
+          "segment": 292
+        },
+        {
+          "value": "2003-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the Public by the Department of Defense,” February 10, 2003",
+          "segment": 294
+        },
+        {
+          "value": "2007-12-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoD Directive 5105.74, “Defense Media Activity,” December 18, 2007",
+          "segment": 296
+        },
+        {
+          "value": "2008-08-22",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "DoD Directive 5230.09, “Clearance of DoD Information for Public Release,” August 22, 2008",
+          "segment": 297
+        },
+        {
+          "value": "2008-01-02",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "DoD Directive 5400.07, “DoD Freedom of Information Act (FOIA) Program,” January 2, 2008",
+          "segment": 298
+        },
+        {
+          "value": "2014-10-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoD Directive 5400.11, “DoD Privacy Program,” October 29, 2014",
+          "segment": 299
+        },
+        {
+          "value": "2008-10-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Operate on DoD Installations,” October 24, 2008",
+          "segment": 301
+        },
+        {
+          "value": "2016-08-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoD Instruction 5025.01, “DoD Issuances Program,” August 1, 2016, as amended",
+          "segment": 302
+        },
+        {
+          "value": "2016-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Compartmented Information (SCI),” April 21, 2016",
+          "segment": 305
+        },
+        {
+          "value": "2014-05-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DoD Instruction 8910.01, “Information Collection and Reporting,” May 19, 2014",
+          "segment": 309
+        },
+        {
+          "value": "2002-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Federal Register, Volume 67, Pages 8452-8460, February 22, 2002",
+          "segment": 311
         }
       ]
     },
@@ -340640,6 +341735,21 @@
       ]
     },
     {
+      "documentId": "doc-7d22b088a0d9c2d035766847",
+      "path": "France-GEIPAN/paired/cases/2014-09-08988/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-09-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 7, 2014, around 7 PM, a driver observed in a clear sky, just above some white trails left by planes, a horizontal black line very far away, followed by a bright white flash. The witness looked at the road and lost sight of the phenomenon. Only one testim",
+          "segment": "seg-1392ea230dc656ea13d90ba6"
+        }
+      ]
+    },
+    {
       "documentId": "doc-82e81a19fbd14a05b64c59b8",
       "path": "France-GEIPAN/paired/cases/2014-09-09002/en/translation.txt",
       "candidates": [
@@ -341444,6 +342554,21 @@
       ]
     },
     {
+      "documentId": "doc-ac063a572869f12115fda051",
+      "path": "France-GEIPAN/paired/cases/2015-05-09186/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-05-26",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On May 26, 2015, from 9:45 PM to 10:00 PM, a witness observed a phenomenon similar to one seen a few weeks prior, which intrigued them. It was a glowing point, \"less bright than Venus,\" static, with changing colors (green, red, yellow), visible to the naked eye, appe",
+          "segment": "seg-eb91865878f4a754e12d8ff0"
+        }
+      ]
+    },
+    {
       "documentId": "doc-1d39a3088aa3d89ed0696de4",
       "path": "France-GEIPAN/paired/cases/2015-05-09204/en/translation.txt",
       "candidates": [
@@ -341999,6 +343124,21 @@
       ]
     },
     {
+      "documentId": "doc-09b4561bf427aaef082b334b",
+      "path": "France-GEIPAN/paired/cases/2015-11-09369/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-11-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Sunday, November 29, 2015 (not November 30 as indicated in the protocol) a driver was surprised to see four orange lights appear successively in the night sky. All of them move slowly on a straight trajectory without any noise. The witness films the scene with his",
+          "segment": "seg-93f9eebd00bf6fd3e1039ce5"
+        }
+      ]
+    },
+    {
       "documentId": "doc-6df68259add2d53d3c96ba00",
       "path": "France-GEIPAN/paired/cases/2015-12-09373/en/translation.txt",
       "candidates": [
@@ -342473,6 +343613,21 @@
       ]
     },
     {
+      "documentId": "doc-ca3f7cea4cbe64f460a1fe61",
+      "path": "France-GEIPAN/paired/cases/2017-04-50363/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On April 1, 2017, at 10:30 PM, a witness and two others were intrigued by the presence of a very bright point at low altitude in the night sky. This point seems to blink in different colors. Only one testimony is collected. The observation is consistent with that of ",
+          "segment": "seg-36819464c83c8a7ae5134b4a"
+        }
+      ]
+    },
+    {
       "documentId": "doc-fbfbb26df2aed9f512a93d09",
       "path": "France-GEIPAN/paired/cases/2017-07-09698/en/translation.txt",
       "candidates": [
@@ -342583,6 +343738,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Wednesday, October 3, 2018, at 11:00 PM, a witness observing from their home's doorstep saw and photographed three glowing points of light that moved slowly and silently across a clear, starry sky. The points formed a triangle and disappeared rapidly on an upward ",
           "segment": "seg-332d7e5b2af65a5deb1a5fdd"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b2395a99441ff1f971afdacc",
+      "path": "France-GEIPAN/paired/cases/2019-03-50729/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2019-03-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 16, 2019, at 01:55 (not 03 or 15 March as incorrectly indicated in the questionnaire), a witness in their garden had their attention drawn to the silent passage of 7 points described as \"white disks, somewhat blurry\" in the sky. This geometric formation cros",
+          "segment": "seg-9bb4a8435904827f37bab3a3"
         }
       ]
     },
@@ -342700,6 +343870,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Sunday, November 22, 2020, at approximately 6:00 PM (just after sunset), the witness observed a red-orange light at 20° to the east. The speed appears low at first, then higher as the witness gets closer. Other PAN appear, generally bright, roughly circular, about",
           "segment": "seg-18b94c88cf31f0ec245c806e"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-18f4f92ee412aa72771345e6",
+      "path": "France-GEIPAN/paired/cases/2021-06-51209/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2021-06-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 22, 2021 at 17:25, two witnesses, on their terrace, were intrigued by the passage in the sky of a very bright object. One of the witnesses has time to take photographs with his camera. No noise was perceived during the object's movement, which followed an upw",
+          "segment": "seg-f88cd7878caeb2056b46ccf0"
         }
       ]
     },
@@ -342862,6 +344047,21 @@
           "method": "milestone-language",
           "evidence": "Description: On August 21, 2022, at 9:30 PM, four witnesses reported observing from the terrace of a rural house in the commune of Pierrefort (15), several oval-shaped, white-colored light phenomena. These objects moved regularly, traveling in close pairs along a straight, slight",
           "segment": "seg-10f714da2f1283e72de9c665"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4a46a5e109c422e16b752a9c",
+      "path": "France-GEIPAN/paired/cases/2023-02-51420/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2023-02-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On February 14, 2023, the witness is at his home. While closing his shutters at 01:30 AM, he spots in the sky a bright, sparkling light that appears larger than a star. He initially thinks it's an airplane, but after 10 minutes, and especially upon returning to his o",
+          "segment": "seg-0c63dead87b8d4abc3bebeff"
         }
       ]
     },
