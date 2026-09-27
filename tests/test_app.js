@@ -130,7 +130,7 @@ test("Galactic Entities boots from a compact astronomy payload", () => {
   assert.match(source, /state\.publicDossierPayload \|\| publicDossierPayloadFromHash\(\)/);
   assert.match(source, /requestId === null \|\| requestId === state\.typeRequestId\) showCatalogError/);
   assert.match(source, /async function openDossierDialog\(\)[\s\S]*ensureFullCatalog\(\)[\s\S]*initializeDossier\(\)/);
-  assert.match(html, /app\.js\?v=source-family-shards-v1/);
+  assert.match(html, /app\.js\?v=large-catalog-extents-v1/);
   assert.match(html, /map-globe\.js\?v=astronomy-renderer-v2/);
   assert.match(html, /solar-system\.js\?v=astronomy-renderer-v2/);
   assert.match(fs.readFileSync("solar-system.js", "utf8"), /three\.module\.min\.js\?v=astronomy-renderer-v2/);
