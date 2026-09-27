@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-27T07:25:58Z",
+  "generatedAt": "2026-09-27T08:29:03Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "8b1d0e58143f5e05302d954d8ac81fe48ceafd0c"
+    "revision": "ad5ee27be67ea163dff2473ba715555f3ea47bf4"
   },
-  "documentsWithCandidates": 12819,
+  "documentsWithCandidates": 12864,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -5345,6 +5345,21 @@
       ]
     },
     {
+      "documentId": "doc-6e1b473dcfdf",
+      "path": "Archives-for-the-Unexplained/documents/1986-06-22_Chicago-Sunday-Tribune-IL_SUFOG-scan_SUFOG-DVD.txt",
+      "candidates": [
+        {
+          "value": "1986-04-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TRIBUNE, Chicago, IL - April 30, 1986 CR: G. Eberhart",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-f860ac54ceae",
       "path": "Archives-for-the-Unexplained/documents/1986-07-12_New-York-Daily-News-NY_SUFOG-scan_SUFOG-DVD.txt",
       "candidates": [
@@ -5525,6 +5540,30 @@
       ]
     },
     {
+      "documentId": "doc-c960d4f55956",
+      "path": "Archives-for-the-Unexplained/documents/1987-05-04_Philadelphia-Inquirer-PA_SUFOG-scan_SUFOG-DVD.txt",
+      "candidates": [
+        {
+          "value": "1987-05-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "INQUIRER, Philadelphia, PA - May 4, 1987",
+          "segment": 0
+        },
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "after June 24, 1947, when Kenneth",
+          "segment": 92
+        }
+      ]
+    },
+    {
       "documentId": "doc-5558b65ff341",
       "path": "Archives-for-the-Unexplained/documents/1987-05-14_Glenwood-Springs-Post-CO_SUFOG-scan_SUFOG-DVD.txt",
       "candidates": [
@@ -5550,6 +5589,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "DAILY MAIL, Hull, England - May 15, 1987",
+          "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-880dfb7805b9",
+      "path": "Archives-for-the-Unexplained/documents/1987-05-20_Frisco-Summit-Sentinel-CO_SUFOG-scan_SUFOG-DVD.txt",
+      "candidates": [
+        {
+          "value": "1987-05-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUMMIT SENTINEL, Frisco, CO - May 20, 1987",
           "segment": 0
         }
       ]
@@ -5645,6 +5699,21 @@
       ]
     },
     {
+      "documentId": "doc-8d97f4e3ceca",
+      "path": "Archives-for-the-Unexplained/documents/1987-06-28_Duluth-News-Tribune-Herald_AFU-scan_CFI-archive_keyword-UFO.txt",
+      "candidates": [
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ed UFO sighting on June 24, 1947. searches UFOs, says extraterrestrial beings briefly",
+          "segment": 14
+        }
+      ]
+    },
+    {
       "documentId": "doc-f891f9d1f115",
       "path": "Archives-for-the-Unexplained/documents/1987-07-11_Albuquerque-Journal-NM_SUFOG-scan_SUFOG-DVD.txt",
       "candidates": [
@@ -5716,6 +5785,21 @@
           "method": "unclassified-mention",
           "evidence": "DAILY RECORD, Monday, February 8, 1988",
           "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7f296352242a",
+      "path": "Archives-for-the-Unexplained/documents/1988-02-25_Celebrity-Pt-3-_SUFOG-scan_SUFOG-DVD.txt",
+      "candidates": [
+        {
+          "value": "1980-11-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The object waa hovering over November 28, 1980, he was on",
+          "segment": 12
         }
       ]
     },
@@ -5830,6 +5914,21 @@
           "method": "unclassified-mention",
           "evidence": "Then on November 5, 1975, six members of an Arizona",
           "segment": 124
+        }
+      ]
+    },
+    {
+      "documentId": "doc-dd8029c844dd",
+      "path": "Archives-for-the-Unexplained/documents/1989-03-05_The-Clarion-Ledger-Jackson-Daily-News_AFU-scan_CFI-archive_keyword-UFO.txt",
+      "candidates": [
+        {
+          "value": "1989-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Clarion-Ledger I Jackson Daily News • Sunday, March 5, 1989",
+          "segment": 0
         }
       ]
     },
@@ -7537,6 +7636,30 @@
           "method": "unclassified-mention",
           "evidence": "May 10, 2006 17:54:00 in Video, Game, Posted by darkhorse_log",
           "segment": 31
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1df85384a2cc",
+      "path": "Archives-for-the-Unexplained/documents/2006-05-11_BBC_Technology-History-repeats-for-former-hacker.txt",
+      "candidates": [
+        {
+          "value": "2006-05-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "News Front Page Last Updated: Thursday, 11 May 2006, 12:47 GMT 13:47 UK",
+          "segment": 2
+        },
+        {
+          "value": "1996-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Kuji as he was known, and he was arrested on 21 June 1996.",
+          "segment": 64
         }
       ]
     },
@@ -10703,6 +10826,21 @@
       ]
     },
     {
+      "documentId": "doc-cb4188a327ba",
+      "path": "Archives-for-the-Unexplained/documents/2011-01-10---NASA-s-Ames-Research-Center---Kepler-The-Search-for-Earth-Size-Planets-Begins_5Azfehl2tBU---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2009-03-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NARRATOR: On March 6, 2009 the Kepler Spacecraft rocketed into the night sky",
+          "segment": 8
+        }
+      ]
+    },
+    {
       "documentId": "doc-3b32afbb727f",
       "path": "Archives-for-the-Unexplained/documents/2011-01-18---OpenMindsTV---Richard-Dolan-discusses-his-latest-book-Open-Minds-Radio_9fTliwvtBQU---transcript-automated-.txt",
       "candidates": [
@@ -10897,6 +11035,30 @@
           "method": "unclassified-mention",
           "evidence": "been identified a May 26 2011 Argentina",
           "segment": 45
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0c99972ce53a",
+      "path": "Archives-for-the-Unexplained/documents/2011-07-06---NASA-s-Kennedy-Space-Center---STS-135---The-Final-Shuttle-Mission_HZYysEnvYO4---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1986-01-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Challenger broke up 73 seconds into flight on January 28, 1986.",
+          "segment": 102
+        },
+        {
+          "value": "2003-02-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "re-entry and was lost over Texas and Louisiana on February 1, 2003.",
+          "segment": 106
         }
       ]
     },
@@ -13157,6 +13319,21 @@
       ]
     },
     {
+      "documentId": "doc-0bb549697ab7",
+      "path": "Archives-for-the-Unexplained/documents/2015-02-23---Hubble-Space-Telescope---Hubble-at-25-The-Original-Hubble_N5uZyW9-wms---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1906-05-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Meet on May 6, 1906, clearing the high bar",
+          "segment": 24
+        }
+      ]
+    },
+    {
       "documentId": "doc-80db84dd1132",
       "path": "Archives-for-the-Unexplained/documents/2015-02-26---OpenMindsTV---IUFOC-UFO-Researcher-of-the-Year-2015-John-Burroughs_CFsfR4XiyoU---transcript-automated-.txt",
       "candidates": [
@@ -13996,6 +14173,21 @@
           "method": "unclassified-mention",
           "evidence": "October 15 1984 1984 Wow yeah that is I",
           "segment": 2719
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a8830ad50279",
+      "path": "Archives-for-the-Unexplained/documents/2016-05-12---NASA-Goddard---NASA-s-MMS-Captures-Magnetic-Reconnection-in-Action_0vY4nDPrEKg---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2015-10-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On October 16, 2015, MMS",
+          "segment": 28
         }
       ]
     },
@@ -16723,6 +16915,30 @@
           "method": "relative-date-exclusion",
           "evidence": "between July 8 1947 here on the airport",
           "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5025753fa45d",
+      "path": "Archives-for-the-Unexplained/documents/2018-02-06---Grant-Cameron-Whitehouse-UFO---Grant-Cameron-Ricardo-Gonzalez-Part-6-Alien-Message.-Are-the-Apunians-us-in-the-Future-_USY3UFJHsgw---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2015-04-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "gave me on April 12, 2015",
+          "segment": 123
+        },
+        {
+          "value": "2015-04-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 12, 2015 they gave me this",
+          "segment": 127
         }
       ]
     },
@@ -20606,6 +20822,30 @@
       ]
     },
     {
+      "documentId": "doc-a4ff2180021e",
+      "path": "Archives-for-the-Unexplained/documents/2021-06-28---The-Black-Vault-Originals---Internal-NASA-Document-Reveals-UFO-UAP-Talking-Points---Are-They-Going-Off-Script-_V7kpkwnUUqs---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2021-06-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "hear on June 10 2021, you",
+          "segment": 86
+        },
+        {
+          "value": "2021-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "for the search was March 3 2021",
+          "segment": 89
+        }
+      ]
+    },
+    {
       "documentId": "doc-4a8974235f1c",
       "path": "Archives-for-the-Unexplained/documents/2021-07-02---The-Black-Vault-Originals---Pentagon-Refuses-to-Comment-on-Newest-Leaked-UFO-Video-Despite-Past-Actions_kHCSkX_BXw4---transcript-automated-.txt",
       "candidates": [
@@ -21218,6 +21458,21 @@
       ]
     },
     {
+      "documentId": "doc-5bda741b8d37",
+      "path": "Archives-for-the-Unexplained/documents/2022-11-29---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Tuesday-November-29th-2022_BTrQ7iRpP3E---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2022-11-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "news for Tuesday November 29 2022",
+          "segment": 285
+        }
+      ]
+    },
+    {
       "documentId": "doc-6e12c6e3acea",
       "path": "Archives-for-the-Unexplained/documents/2022-12-01---The-Black-Vault-Originals---What-is-the-Pentagon-s-Newest-UFO-Office-AARO-Up-To-_nAKSU2earlg---transcript-automated-.txt",
       "candidates": [
@@ -21305,6 +21560,21 @@
       ]
     },
     {
+      "documentId": "doc-20483b3467ea",
+      "path": "Archives-for-the-Unexplained/documents/2022-12-06---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Tuesday-December-6-2022_UrnoplN3bcY---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2022-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 6 2022 remnants of fireplaces",
+          "segment": 41
+        }
+      ]
+    },
+    {
       "documentId": "doc-d60820115d90",
       "path": "Archives-for-the-Unexplained/documents/2022-12-07---NASA-Goddard---NASA-s-Fermi-Swift-Capture-Revolutionary-Gamma-Ray-Burst_FQLZPm34Chg---transcript-automated-.txt",
       "candidates": [
@@ -21362,6 +21632,21 @@
       ]
     },
     {
+      "documentId": "doc-a95d75e46b1a",
+      "path": "Archives-for-the-Unexplained/documents/2022-12-12---Podcast-UFO-Live-Shows---AudioBlog-UFOs-and-the-Police-in-Colby-Kansas_CCdllVZAwAU---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1972-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 12 1972 issue in it he wrote I",
+          "segment": 355
+        }
+      ]
+    },
+    {
       "documentId": "doc-8dfbdf178fe8",
       "path": "Archives-for-the-Unexplained/documents/2022-12-13---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Tuesday-December-13-2022_E7RzsxFb1MM---transcript-automated-.txt",
       "candidates": [
@@ -21373,6 +21658,21 @@
           "method": "unclassified-mention",
           "evidence": "this Tuesday December 13 2022 I'm Jimmy",
           "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-90818adeb264",
+      "path": "Archives-for-the-Unexplained/documents/2022-12-14---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Wednesday-December-14-2022_HjoCZrtpQXE---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2022-12-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "news for this Wednesday December 14 2022",
+          "segment": 4
         }
       ]
     },
@@ -21614,6 +21914,21 @@
       ]
     },
     {
+      "documentId": "doc-8bc7414981fe",
+      "path": "Archives-for-the-Unexplained/documents/2023-01-10---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Tuesday-January-10-2023_V4aSEvHMkX4---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-01-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 10 2023 I'm Jimmy church and",
+          "segment": 290
+        }
+      ]
+    },
+    {
       "documentId": "doc-fb7f0c3de4e8",
       "path": "Archives-for-the-Unexplained/documents/2023-01-11---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Wednesday-January-11-2023_z-GAA1p0jww---transcript-automated-.txt",
       "candidates": [
@@ -21800,6 +22115,21 @@
       ]
     },
     {
+      "documentId": "doc-37a9a9d0dc51",
+      "path": "Archives-for-the-Unexplained/documents/2023-01-18---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Wednesday-January-18-2023_GpaKhyL0wc8---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-01-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "news for this Wednesday January 18 2023",
+          "segment": 5
+        }
+      ]
+    },
+    {
       "documentId": "doc-d8154d7f71c4",
       "path": "Archives-for-the-Unexplained/documents/2023-01-19---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Thursday-January-19-2023_u0PjSYoAWvs---transcript-automated-.txt",
       "candidates": [
@@ -21854,6 +22184,30 @@
       ]
     },
     {
+      "documentId": "doc-9c59a83d2097",
+      "path": "Archives-for-the-Unexplained/documents/2023-01-26---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Thursday-January-26-2023_PMoZYQo5b-Y---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "news for this Thursday January 26 2023",
+          "segment": 5
+        },
+        {
+          "value": "2023-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 26 2023 breaking news is",
+          "segment": 336
+        }
+      ]
+    },
+    {
       "documentId": "doc-1afbd764205a",
       "path": "Archives-for-the-Unexplained/documents/2023-01-30---Ryan-Sprague---The-Mosul-Orb-UFOs-at-the-UN-and-UFO-Video-of-the-Week-EP-02_dkRUBw19yDs---transcript-automated-.txt",
       "candidates": [
@@ -21904,6 +22258,36 @@
           "method": "unclassified-mention",
           "evidence": "uh October oh maybe not October 16 2020",
           "segment": 3413
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0f0c1f7a623a",
+      "path": "Archives-for-the-Unexplained/documents/2023-02-06---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Monday-February-06-2023_2uglD59OMFY---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1992-05-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "born on May 11 1992 bobi is now 30 years",
+          "segment": 190
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5e698f2e8972",
+      "path": "Archives-for-the-Unexplained/documents/2023-02-07---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Tuesday-February-07-2023_6s1HPuDmTGs---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-02-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Tuesday February 7 2023 it is all of the",
+          "segment": 340
         }
       ]
     },
@@ -21994,6 +22378,39 @@
           "method": "unclassified-mention",
           "evidence": "Valentine's Day February 14 2023 this is",
           "segment": 249
+        }
+      ]
+    },
+    {
+      "documentId": "doc-39b5bd775910",
+      "path": "Archives-for-the-Unexplained/documents/2023-02-15---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Wednesday-February-15-2023_yJIhgcOH-1s---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-02-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "news for this Wednesday February 15 2023",
+          "segment": 5
+        },
+        {
+          "value": "2022-11-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "place between November 13 2022 and",
+          "segment": 189
+        },
+        {
+          "value": "2023-02-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "February 15 2023 this is all of the news",
+          "segment": 323
         }
       ]
     },
@@ -22184,6 +22601,21 @@
       ]
     },
     {
+      "documentId": "doc-eb4748001559",
+      "path": "Archives-for-the-Unexplained/documents/2023-03-13---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Monday-March-13-2023_rYGjNOsrPvA---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 13 2023 this is Fade to Black",
+          "segment": 5
+        }
+      ]
+    },
+    {
       "documentId": "doc-8d657ec84821",
       "path": "Archives-for-the-Unexplained/documents/2023-03-13---Podcast-UFO-Live-Shows---AudioBlog-UFO-Abduction-Research-Gone-Sideways_RDC5jV9R--U---transcript-automated-.txt",
       "candidates": [
@@ -22210,6 +22642,21 @@
           "method": "unclassified-mention",
           "evidence": "26. wow March 13 1997 the Phoenix Lights",
           "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fb8f32a752c7",
+      "path": "Archives-for-the-Unexplained/documents/2023-03-14---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Tuesday-March-14-2023_aT4K4K7iF7k---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-03-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "you need for Tuesday March 14 2023 happy",
+          "segment": 324
         }
       ]
     },
@@ -22442,6 +22889,21 @@
       ]
     },
     {
+      "documentId": "doc-b3de6e846976",
+      "path": "Archives-for-the-Unexplained/documents/2023-04-06---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Thursday-April-06-2023_BE6J0yyE0Es---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-04-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "for this Thursday April 6 2023 Fade to",
+          "segment": 281
+        }
+      ]
+    },
+    {
       "documentId": "doc-b9741c4bf7b7",
       "path": "Archives-for-the-Unexplained/documents/2023-04-14---The-Black-Vault-Originals---UAP-Task-Force-Budget-Details-Classified-and-Exempt-From-Disclosure-_FX5kn7fPLNc---transcript-automated-.txt",
       "candidates": [
@@ -22453,6 +22915,21 @@
           "method": "unclassified-mention",
           "evidence": "July 15 2022 memo, where they",
           "segment": 155
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0b06d772e07b",
+      "path": "Archives-for-the-Unexplained/documents/2023-04-17---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Monday-April-17-2023_Uh4DGjpNU3s---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-04-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 17 2023 I'm Yours Jimmy Church",
+          "segment": 7
         }
       ]
     },
@@ -22609,6 +23086,30 @@
           "method": "unclassified-mention",
           "evidence": "this Wednesday April 26 2023 Fade to",
           "segment": 269
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bd1d5ae24359",
+      "path": "Archives-for-the-Unexplained/documents/2023-04-27---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Thursday-April-27st-2023_0ZIqyf0ENpI---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2023-04-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "this Thursday April 27 2023 this is all",
+          "segment": 4
+        },
+        {
+          "value": "2023-04-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thursday April 27 2023 Fade to Black",
+          "segment": 359
         }
       ]
     },
@@ -26156,6 +26657,30 @@
       ]
     },
     {
+      "documentId": "doc-1e29a43f07af",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S14E07---The-Druid-Connection---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1985-12-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "New York's Hudson Valley, December 26, 1985.",
+          "segment": 62
+        },
+        {
+          "value": "1975-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Salem, New Hampshire, July 9, 1975.",
+          "segment": 300
+        }
+      ]
+    },
+    {
       "documentId": "doc-283125caa906",
       "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S14E08---The-Reptilian-Agenda---transcript-automated-.txt",
       "candidates": [
@@ -26197,6 +26722,21 @@
           "method": "unclassified-mention",
           "evidence": "The Salyut 7 Space Station, July 12, 1984",
           "segment": 969
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7dcfe69dcdee",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S14E12---Islands-of-Fire---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2014-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Pahoa, Hawaii, June 27, 2014.",
+          "segment": 1232
         }
       ]
     },
@@ -26350,6 +26890,48 @@
           "method": "unclassified-mention",
           "evidence": "Los Angeles, California, November 25, 2019",
           "segment": 647
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e0ac55820860",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Aliens---S15E04---The-Real-Men-in-Black---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "So June 21, 1947, Dahl was right off the island here",
+          "segment": 173
+        },
+        {
+          "value": "1947-08-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "They left just after midnight on August 1, 1947.",
+          "segment": 274
+        },
+        {
+          "value": "1947-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "So here we are on August 14, 1947.",
+          "segment": 319
+        },
+        {
+          "value": "1966-11-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On November 15, 1966, in Point Pleasant, West Virginia",
+          "segment": 903
         }
       ]
     },
@@ -31486,6 +32068,336 @@
           "method": "unclassified-mention",
           "evidence": "samninicus. (Frankfurter Allgemeine Zeitung, 27 March 1998, p.",
           "segment": 243
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f5b6e8028b86",
+      "path": "Archives-for-the-Unexplained/documents/Bilk---no-085---1998-09.txt",
+      "candidates": [
+        {
+          "value": "1998-08-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "in the Suddeutsche Zeitung 3 August 1998, p.",
+          "segment": 7
+        },
+        {
+          "value": "1998-08-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Suddeutsche Zeitung 4 August 1998, p.",
+          "segment": 11
+        },
+        {
+          "value": "1998-08-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "9; taz 4 August 1998, p.",
+          "segment": 12
+        },
+        {
+          "value": "1998-03-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Inverness Courier 20 March 1998) * 1970s: Ian Cameron was fishing with a",
+          "segment": 23
+        },
+        {
+          "value": "1998-06-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "fans, sees Nessie (for the second time...) (Inverness Courier 2 June 1998) *",
+          "segment": 29
+        },
+        {
+          "value": "1997-10-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "24 October 1997: Martin Wragg sees, from the jetty at Fort Augustus abbey, \"a",
+          "segment": 30
+        },
+        {
+          "value": "1998-03-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Inverness Courier 17 March 1998) There were several sightings of seals at",
+          "segment": 38
+        },
+        {
+          "value": "1998-04-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "talking about! * 18 April 1998: According to the \"Weekly World News\", diver",
+          "segment": 41
+        },
+        {
+          "value": "1998-05-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "prints. * 30 May 1998: a woman from Wiltshire sees, at Urquhart Castle, at",
+          "segment": 44
+        },
+        {
+          "value": "1998-06-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Inverness Courier 2 June 1998) This is similar to my \"Nessie-sighting\" of",
+          "segment": 46
+        },
+        {
+          "value": "1998-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "veteran Adrian Shine, were at Storsjo on August 15, 1998, to search for the",
+          "segment": 52
+        },
+        {
+          "value": "1998-08-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "great orm. As the International Herald Tribune, 17 August 1998, p.",
+          "segment": 53
+        },
+        {
+          "value": "1998-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by the owner. (taz 29 June 1998, p.",
+          "segment": 74
+        },
+        {
+          "value": "1998-07-13",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Arabian newspaper El Bilad (and in the taz, 13 July 1998, p.",
+          "segment": 77
+        },
+        {
+          "value": "1998-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Zeitung 14 August 1998, p.l2",
+          "segment": 88
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "again, although still in a coma in the hospital. (Bild 28 July 1998, p.",
+          "segment": 93
+        },
+        {
+          "value": "1998-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "discovered the body of a dead sea serpent on 14 April 1998.",
+          "segment": 97
+        },
+        {
+          "value": "1998-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Der Spiegel had a cover story on sea monsters in the July 27, 1998 issue, but",
+          "segment": 102
+        },
+        {
+          "value": "1998-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "• A National Geographic documentary shown on 19 July 1998 on German TV channel",
+          "segment": 104
+        },
+        {
+          "value": "1998-06-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "• South Corea: A mysterious submarine was caught on 22 June 1998 by a South",
+          "segment": 112
+        },
+        {
+          "value": "1998-06-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Suddeutsche Zeitung 23 June 1998, p.",
+          "segment": 117
+        },
+        {
+          "value": "1998-08-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Finnish torpedo. (Bild 1 August 1998, p.",
+          "segment": 120
+        },
+        {
+          "value": "1998-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "a reward, Leach has secured the sub and hides it. (Bild, 31 July 1998, p.",
+          "segment": 125
+        },
+        {
+          "value": "1998-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "It was the trail of a meteor. (Bild, 13 July 1998",
+          "segment": 128
+        },
+        {
+          "value": "1998-06-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Germans, Slavs, Arabs and Russians) by using sonar. (taz, 16 June 1998, p.",
+          "segment": 136
+        },
+        {
+          "value": "1998-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "owner. (taz, 26 June 1998, p.",
+          "segment": 151
+        },
+        {
+          "value": "1998-08-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Grune said. (taz 13 August 1998, p.",
+          "segment": 160
+        },
+        {
+          "value": "1998-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "16 and 14 August 1998, p.",
+          "segment": 161
+        },
+        {
+          "value": "1998-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Zeitung, 14 August 1998, p.",
+          "segment": 162
+        },
+        {
+          "value": "1998-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "discount all additional reports. (taz 15 August 1998, p.",
+          "segment": 169
+        },
+        {
+          "value": "1998-02-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Depeche du Midi, Toulouse, 5 February 1998, p.",
+          "segment": 202
+        },
+        {
+          "value": "1998-07-08",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "to the newspaper \"Beeld\". (SQddeutsche Zeitung, 8 July 1998, p.",
+          "segment": 223
+        },
+        {
+          "value": "1998-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "shark off Mallorca\" blared the German tabloid \"Bild\" on July 27, 1998, p.",
+          "segment": 224
+        },
+        {
+          "value": "1998-06-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to help them digest. (Frankfurter Allgemeine Zeitung 18 June 1998, p.",
+          "segment": 234
+        },
+        {
+          "value": "1998-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Frankfurter Allgemeine Zeitung 25 June 1998, p.",
+          "segment": 241
+        },
+        {
+          "value": "1998-03-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the researchers noted. (SQddeutsche Zeitung, 19 March 1998, p.",
+          "segment": 245
         }
       ]
     },
@@ -37185,6 +38097,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "TO Chief, Technical Branch DATE: 28 October 1953",
+          "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c546f305d7e1",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000146386.txt",
+      "candidates": [
+        {
+          "value": "1950-01-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TO Chief, Inspec~on & Soourity DATE: 5 January 1950",
           "segment": 1
         }
       ]
@@ -50579,6 +51506,30 @@
       ]
     },
     {
+      "documentId": "doc-30d4a50696ed",
+      "path": "Archives-for-the-Unexplained/documents/Historys-Greatest-Mysteries---S01E02---Titanic-s-Lost-Evidence---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1912-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 14, 1912, early evening.",
+          "segment": 376
+        },
+        {
+          "value": "1912-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sunday evening, April 14, 1912.",
+          "segment": 510
+        }
+      ]
+    },
+    {
       "documentId": "doc-ffb69c1e3944",
       "path": "Archives-for-the-Unexplained/documents/Historys-Greatest-Mysteries---S03E01---The-Amber-Room---transcript-automated-.txt",
       "candidates": [
@@ -52897,6 +53848,21 @@
           "method": "unclassified-mention",
           "evidence": "November 23, 1980, an earthquake measuring 7.2 on the Richter scale devastated an area",
           "segment": 418
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c7694d39182d",
+      "path": "Archives-for-the-Unexplained/documents/In-Search-of-Aliens---S01E04---The-Roswell-Rock---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-07",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "On July 7, 1947, an unidentified object crashed on a ranch just outside the town of Roswell, New",
+          "segment": 18
         }
       ]
     },
@@ -60707,6 +61673,66 @@
       ]
     },
     {
+      "documentId": "doc-5e4431cd859a",
+      "path": "Archives-for-the-Unexplained/documents/PV-n-1644-2010310283-.txt",
+      "candidates": [
+        {
+          "value": "2010-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le dimanche 27 juin 2010 à 16 heures 05 minutes",
+          "segment": 2
+        },
+        {
+          "value": "2010-06-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 3 juin 2010 à 10 heures",
+          "segment": 10
+        },
+        {
+          "value": "2010-06-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 2 juin 2010 à 20 heures 30, M.",
+          "segment": 13
+        },
+        {
+          "value": "2010-06-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le jeudi 3 juin 2010 à 10 heures 10 minutes",
+          "segment": 26
+        },
+        {
+          "value": "2009-06-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "- Hier soir, le 02 juin 2009, aux environs de 20h30 - 20h45, je me trouvais face à ma porte-",
+          "segment": 38
+        },
+        {
+          "value": "2010-06-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "le 03 juin 2010 à 10 heures 30, lecture faite par moi des renseignements d'état",
+          "segment": 53
+        }
+      ]
+    },
+    {
       "documentId": "doc-e2c8ba06c3af",
       "path": "Archives-for-the-Unexplained/documents/PV-n-1690-2008311918-.txt",
       "candidates": [
@@ -61051,6 +62077,21 @@
           "method": "unclassified-mention",
           "evidence": "Le 26 novembre 1979 a 10 heures QU•",
           "segment": 27
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fc433c16bfc6",
+      "path": "Archives-for-the-Unexplained/documents/PV-n-32-1998307830-.txt",
+      "candidates": [
+        {
+          "value": "1903-05-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Vu les articles: 59 et 298 du décret du 20 mai 1903 portant règlement sur 1 'organisation",
+          "segment": 6
         }
       ]
     },
@@ -61438,6 +62479,21 @@
           "method": "unclassified-mention",
           "evidence": "Aimee Hoffman went missing on November 23, 1982.",
           "segment": 19
+        }
+      ]
+    },
+    {
+      "documentId": "doc-549d67006891",
+      "path": "Archives-for-the-Unexplained/documents/Passage-ISS-calsky.txt",
+      "candidates": [
+        {
+          "value": "2010-06-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Used satellite data set is from 5 June 2010",
+          "segment": 29
         }
       ]
     },
@@ -66578,6 +67634,48 @@
       ]
     },
     {
+      "documentId": "doc-09a3186638df",
+      "path": "Archives-for-the-Unexplained/documents/SearchLites---Vol-04-No-1.txt",
+      "candidates": [
+        {
+          "value": "1998-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "not necessarily equate to support of The SETI League, and is March 29, 1998: SETI League Annual Membership Meeting, Little",
+          "segment": 29
+        },
+        {
+          "value": "1998-10-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 28 - October 7, 1998: International Amateur Radio",
+          "segment": 48
+        },
+        {
+          "value": "1998-10-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 3, 1998: Mid Atlantic VHF Conference, Horsham PA",
+          "segment": 50
+        },
+        {
+          "value": "1998-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "they landed in what is now Hungary; the tribes of Europe n6tx@setileague.org, not later than 1 March 1998.",
+          "segment": 154
+        }
+      ]
+    },
+    {
       "documentId": "doc-15660f1e7d8e",
       "path": "Archives-for-the-Unexplained/documents/SearchLites---Vol-04-No-2.txt",
       "candidates": [
@@ -69880,6 +70978,21 @@
           "method": "unclassified-mention",
           "evidence": "Saturday, February 17, 2001, 2 pm - 3:30 pm SIGN HIS BOOK, WHICH",
           "segment": 12
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fecfbe73d5a2",
+      "path": "Archives-for-the-Unexplained/documents/Shadow-of-a-Doubt---2001-03.txt",
+      "candidates": [
+        {
+          "value": "2001-03-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "By contrast from Bob Park's \"What's New\" for March 2, 2001]: Aside from bio-medicine, the president's budget provides",
+          "segment": 54
         }
       ]
     },
@@ -334751,6 +335864,21 @@
       ]
     },
     {
+      "documentId": "doc-3150088b07ed175e3dc3a18a",
+      "path": "France-GEIPAN/paired/cases/2013-09-08559/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-09-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Sunday, September 22, 2013, at 7:45 a.m., a witness walking to his workplace was intrigued by the presence in the sky of a very thin and long cylinder-like object moving faster than any previously seen plane. The object disappeared into the sky towards the southwe",
+          "segment": "seg-5617b54b3ed6228b3c5b6db0"
+        }
+      ]
+    },
+    {
       "documentId": "doc-d75d5939dc65399017c314bb",
       "path": "France-GEIPAN/paired/cases/2013-09-08560/en/translation.txt",
       "candidates": [
@@ -335714,6 +336842,21 @@
       ]
     },
     {
+      "documentId": "doc-8810d9fdba84be41372e9d1d",
+      "path": "France-GEIPAN/paired/cases/2014-06-08719/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-06-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 7, 2014, between 2 a.m. and 4 a.m., an individual was surprised and intrigued by the observation of luminous phenomena in the night sky. The observation is divided into three phases: - Just after 2:30 a.m.: Three objects moving from south to north; according ",
+          "segment": "seg-ab0573583c85edd9403a77c3"
+        }
+      ]
+    },
+    {
       "documentId": "doc-d16beaf7e7af345c70140a87",
       "path": "France-GEIPAN/paired/cases/2014-06-08724/en/translation.txt",
       "candidates": [
@@ -336289,6 +337432,21 @@
           "method": "milestone-language",
           "evidence": "Description: On December 25, 2014, around 1 a.m., a witness observes the movement of two orange lights in the sky. The lights follow the same trajectory, with a few seconds interval. Only one testimony is collected. The observation of orange balls crossing the sky in a few minute",
           "segment": "seg-d19041ef9108d9392f025e03"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-05c1cd980702a74cca3705dd",
+      "path": "France-GEIPAN/paired/cases/2014-12-09072/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-12-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 21, 2014, at 21:09, a witness, positioned on their balcony facing the ocean, was intrigued by a luminous phenomenon floating above the ocean. They observed this glow through binoculars and distinguished a dark object with a lower section glowing an orange",
+          "segment": "seg-a2f8f485ee3b293cb6f2713c"
         }
       ]
     },
@@ -337028,6 +338186,21 @@
       ]
     },
     {
+      "documentId": "doc-88a5206463f2a94f00d730a3",
+      "path": "France-GEIPAN/paired/cases/2015-08-09265/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-08-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 5, 2015, between 10 PM and 10:30 PM, two individuals in the same commune observed the silent passage of several orange orbs that shimmered in the clear sky. The intensity of these orbs gradually diminished until they faded away. The observation of orange or",
+          "segment": "seg-d9cf4ec7fdac4ba9f792206f"
+        }
+      ]
+    },
+    {
       "documentId": "doc-add618f8e5cfe6e81d319ca5",
       "path": "France-GEIPAN/paired/cases/2015-08-09266/en/translation.txt",
       "candidates": [
@@ -337534,6 +338707,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Monday, June 6, 2016, around 9:30 PM, a witness observed for more than 10 minutes a large, cloudy white point with a white trail. When viewed through binoculars, this object appeared to be composed of several dozen smaller objects. The white point eventually faded",
           "segment": "seg-70ea7df24a3bb7be77de1030"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-61055d302f41689fcd54dfdf",
+      "path": "France-GEIPAN/paired/cases/2016-06-09487/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 26, 2016, around midnight to 12:15 a.m., a witness observed from their window facing west a bright red/orange point of light crossing the sky. This point moved silently at a low speed towards the northwest before being hidden by trees. The observation lasted ",
+          "segment": "seg-c9eee072aa7b41d7b1299e6d"
         }
       ]
     },
