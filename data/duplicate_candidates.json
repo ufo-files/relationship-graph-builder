@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "4c980471e072694a3c861cab5175a8d18368a878"
+    "revision": "adf26a718e2a9452af1d8761a5bbc0d6d297d12c"
   },
-  "count": 486,
-  "totalCount": 486,
-  "shownCount": 486,
+  "count": 493,
+  "totalCount": 493,
+  "shownCount": 493,
   "candidates": [
     {
       "category": "organization",
@@ -543,8 +543,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 631,
-        "documentCount": 336
+        "mentions": 632,
+        "documentCount": 337
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -660,6 +660,22 @@
       },
       "right": {
         "name": "CONTINUING IN LINE WITH BUREAU INSTRUCTIONS",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.977,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Menott Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Mennott Air Force Base",
         "mentions": 2,
         "documentCount": 2
       },
@@ -824,6 +840,22 @@
         "documentCount": 2
       },
       "similarity": 0.976,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Brasoria County Chief Deputy Billy McCoy",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Brazoria County Chief Deputy Billy McCoy",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.975,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1078,6 +1110,22 @@
         "name": "Aerospace Vehicles",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "book",
+      "left": {
+        "name": "Hatcher's Notebook",
+        "mentions": 1,
+        "documentCount": 1
+      },
+      "right": {
+        "name": "Hatchers Notebook",
+        "mentions": 1,
+        "documentCount": 1
       },
       "similarity": 0.971,
       "reason": "similar name",
@@ -1375,8 +1423,8 @@
       "category": "person",
       "left": {
         "name": "Michael Shermer",
-        "mentions": 105,
-        "documentCount": 70
+        "mentions": 106,
+        "documentCount": 71
       },
       "right": {
         "name": "Michael Schermer",
@@ -1679,8 +1727,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 635,
-        "documentCount": 337
+        "mentions": 636,
+        "documentCount": 338
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1935,8 +1983,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 595,
-        "documentCount": 373
+        "mentions": 597,
+        "documentCount": 375
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -1967,13 +2015,13 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 260,
-        "documentCount": 166
+        "mentions": 261,
+        "documentCount": 167
       },
       "right": {
         "name": "Major Donald Keyhole",
-        "mentions": 14,
-        "documentCount": 9
+        "mentions": 16,
+        "documentCount": 10
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -1983,8 +2031,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 260,
-        "documentCount": 166
+        "mentions": 261,
+        "documentCount": 167
       },
       "right": {
         "name": "Major Donald Keyhoes",
@@ -2527,8 +2575,8 @@
       "category": "person",
       "left": {
         "name": "Allen Heineck",
-        "mentions": 83,
-        "documentCount": 47
+        "mentions": 84,
+        "documentCount": 48
       },
       "right": {
         "name": "Allen Hineck",
@@ -2566,6 +2614,22 @@
         "name": "Mount Paloma",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Robert Baker",
+        "mentions": 30,
+        "documentCount": 25
+      },
+      "right": {
+        "name": "Robert Bakker",
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2796,6 +2860,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "James Mosley",
+        "mentions": 9,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "James Moseley",
+        "mentions": 7,
+        "documentCount": 6
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Red Mountain",
@@ -2821,22 +2901,6 @@
       "right": {
         "name": "Chris Mullin",
         "mentions": 6,
-        "documentCount": 6
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "James Mosley",
-        "mentions": 8,
-        "documentCount": 8
-      },
-      "right": {
-        "name": "James Moseley",
-        "mentions": 7,
         "documentCount": 6
       },
       "similarity": 0.96,
@@ -5244,6 +5308,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Brasoria County",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Brazoria County",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Office of Current Intelligence",
@@ -5599,8 +5679,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 390,
-        "documentCount": 192
+        "mentions": 391,
+        "documentCount": 193
       },
       "right": {
         "name": "George Adamsky",
@@ -5790,6 +5870,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Major Donald Keyhole",
+        "mentions": 16,
+        "documentCount": 10
+      },
+      "right": {
+        "name": "Major Donald Keyhoes",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "George Harrison",
         "mentions": 13,
         "documentCount": 10
@@ -5814,22 +5910,6 @@
         "name": "Joseph Ferrell",
         "mentions": 7,
         "documentCount": 7
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Major Donald Keyhole",
-        "mentions": 14,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "Major Donald Keyhoes",
-        "mentions": 4,
-        "documentCount": 4
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -6108,6 +6188,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Minot Air Force Base",
+        "mentions": 27,
+        "documentCount": 23
+      },
+      "right": {
+        "name": "Menott Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.927,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "University of Toronto",
@@ -6239,8 +6335,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 390,
-        "documentCount": 192
+        "mentions": 391,
+        "documentCount": 193
       },
       "right": {
         "name": "George Adams",
@@ -6255,8 +6351,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 333,
-        "documentCount": 173
+        "mentions": 334,
+        "documentCount": 174
       },
       "right": {
         "name": "Natural Investigations Committee",
@@ -6271,8 +6367,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 333,
-        "documentCount": 173
+        "mentions": 334,
+        "documentCount": 174
       },
       "right": {
         "name": "National Investigative Committee",
@@ -6319,8 +6415,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 128,
-        "documentCount": 99
+        "mentions": 129,
+        "documentCount": 100
       },
       "right": {
         "name": "Mohave Desert",
@@ -6399,8 +6495,8 @@
       "category": "person",
       "left": {
         "name": "Brandon Fugal",
-        "mentions": 27,
-        "documentCount": 22
+        "mentions": 28,
+        "documentCount": 23
       },
       "right": {
         "name": "Brandon Fugle",
@@ -7391,8 +7487,8 @@
       "category": "person",
       "left": {
         "name": "Allen Heineck",
-        "mentions": 83,
-        "documentCount": 47
+        "mentions": 84,
+        "documentCount": 48
       },
       "right": {
         "name": "Alan Heineck",
@@ -7544,6 +7640,22 @@
         "documentCount": 16
       },
       "similarity": 0.878,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Marc Lee",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Mark Lee",
+        "mentions": 14,
+        "documentCount": 4
+      },
+      "similarity": 0.875,
       "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -7711,8 +7823,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Jay Gould",
-        "mentions": 38,
-        "documentCount": 31
+        "mentions": 39,
+        "documentCount": 32
       },
       "right": {
         "name": "Stephen Gould",
@@ -7775,8 +7887,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 42654,
-        "documentCount": 10369
+        "mentions": 42755,
+        "documentCount": 10402
       },
       "right": {
         "name": "North American Space Agency",
