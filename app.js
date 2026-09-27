@@ -1844,13 +1844,19 @@ function documentRelationshipNetworks(documents, displayedDocuments, maximumNeig
 }
 
 function valueExtent(data, key) {
-  const values = data.map(item => Number(item[key]) || 0);
-  return [Math.min(...values, 0), Math.max(...values, 1)];
+  let minimum = 0;
+  let maximum = 1;
+  for (const item of data) {
+    const value = Number(item[key]) || 0;
+    minimum = Math.min(minimum, value);
+    maximum = Math.max(maximum, value);
+  }
+  return [minimum, maximum];
 }
 
 function robustValueExtent(data, key, percentile = .95) {
   const values = data.map(item => Number(item[key]) || 0).sort((a, b) => a - b);
-  const extent = [Math.min(...values, 0), Math.max(...values, 1)];
+  const extent = [Math.min(values[0] ?? 0, 0), Math.max(values.at(-1) ?? 1, 1)];
   if (values.length < 20) return { extent, capped: false };
   const index = Math.min(values.length - 1, Math.max(0, Math.ceil(values.length * percentile) - 1));
   const cap = values[index];
