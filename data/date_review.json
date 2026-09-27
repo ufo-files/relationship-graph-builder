@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-27T04:16:03Z",
+  "generatedAt": "2026-09-27T05:19:06Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "ccca1de08f65ddc9ee0fc8221cf3006eb242b425"
+    "revision": "ffef1503e2d725903fce2dec72e6cd209db111da"
   },
-  "documentsWithCandidates": 12775,
+  "documentsWithCandidates": 12777,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7424,6 +7424,21 @@
       ]
     },
     {
+      "documentId": "doc-664e279734eb",
+      "path": "Archives-for-the-Unexplained/documents/2006-05-07_BBC_UK-UFO-study-finds-no-sign-of-aliens.txt",
+      "candidates": [
+        {
+          "value": "2006-05-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "News Front Page Last Updated: Sunday, 7 May 2006, 12:35 GMT 13:35 UK",
+          "segment": 2
+        }
+      ]
+    },
+    {
       "documentId": "doc-7fcbe5cc4154",
       "path": "Archives-for-the-Unexplained/documents/2006-05-07_Live-Science_The-Story-Behind-the-Alien-Autopsy-Hoax.txt",
       "candidates": [
@@ -13060,6 +13075,21 @@
           "method": "unclassified-mention",
           "evidence": "Wednesday March 11, 2015 3pm EST 8pm UT, 9pm CET",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-317a6ca39a6e",
+      "path": "Archives-for-the-Unexplained/documents/2015-03-12---Hubble-Space-Telescope---Hubble-Observations-Suggest-Subsurface-Ocean-on-Jupiter-s-Largest-Moon-Ganymede_PKc6CaI9ZcQ---transcript-automated-_image.txt",
+      "candidates": [
+        {
+          "value": "2015-03-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thursday March 12, 2015 3pm EDT 7pm UT, 8pm CET",
+          "segment": 2
         }
       ]
     },
