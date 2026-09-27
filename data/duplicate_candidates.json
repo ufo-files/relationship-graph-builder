@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "ec0a476785d65108c3b68b32aef97b5c37b84cfc"
+    "revision": "36baa70428864f1937f9df9f2017993e19a34ef8"
   },
-  "count": 541,
-  "totalCount": 541,
-  "shownCount": 541,
+  "count": 543,
+  "totalCount": 543,
+  "shownCount": 543,
   "candidates": [
     {
       "category": "book",
@@ -495,8 +495,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 549,
-        "documentCount": 284
+        "mentions": 550,
+        "documentCount": 285
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -591,8 +591,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 643,
-        "documentCount": 346
+        "mentions": 646,
+        "documentCount": 348
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -1519,8 +1519,8 @@
       "category": "person",
       "left": {
         "name": "Michael Shermer",
-        "mentions": 112,
-        "documentCount": 76
+        "mentions": 113,
+        "documentCount": 77
       },
       "right": {
         "name": "Michael Schermer",
@@ -1839,8 +1839,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 676,
-        "documentCount": 359
+        "mentions": 677,
+        "documentCount": 360
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -3471,8 +3471,8 @@
       "category": "person",
       "left": {
         "name": "James Randi",
-        "mentions": 369,
-        "documentCount": 254
+        "mentions": 371,
+        "documentCount": 256
       },
       "right": {
         "name": "James Randin",
@@ -6687,8 +6687,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 549,
-        "documentCount": 284
+        "mentions": 550,
+        "documentCount": 285
       },
       "right": {
         "name": "University Colorado",
@@ -6774,6 +6774,22 @@
         "name": "Trump Administration",
         "mentions": 9,
         "documentCount": 4
+      },
+      "similarity": 0.927,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "University of Northern",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "University of North",
+        "mentions": 8,
+        "documentCount": 7
       },
       "similarity": 0.927,
       "reason": "similar name",
@@ -7694,6 +7710,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Stephen Bryan",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Stephen Brian",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Karen Anderson",
         "mentions": 3,
         "documentCount": 2
@@ -8494,14 +8526,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Jean Chapman",
-        "mentions": 17,
-        "documentCount": 17
+        "name": "James Hansen",
+        "mentions": 10,
+        "documentCount": 9
       },
       "right": {
-        "name": "Ken Chapman",
-        "mentions": 5,
-        "documentCount": 3
+        "name": "Jane Hansen",
+        "mentions": 13,
+        "documentCount": 8
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -8510,14 +8542,14 @@
     {
       "category": "person",
       "left": {
-        "name": "James Hansen",
-        "mentions": 10,
-        "documentCount": 9
+        "name": "Jean Chapman",
+        "mentions": 17,
+        "documentCount": 17
       },
       "right": {
-        "name": "Jane Hansen",
-        "mentions": 11,
-        "documentCount": 7
+        "name": "Ken Chapman",
+        "mentions": 5,
+        "documentCount": 3
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -8655,8 +8687,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 45744,
-        "documentCount": 11398
+        "mentions": 45824,
+        "documentCount": 11420
       },
       "right": {
         "name": "North American Space Agency",

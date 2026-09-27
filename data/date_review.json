@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-27T18:21:20Z",
+  "generatedAt": "2026-09-27T19:29:22Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "ec0a476785d65108c3b68b32aef97b5c37b84cfc"
+    "revision": "36baa70428864f1937f9df9f2017993e19a34ef8"
   },
-  "documentsWithCandidates": 13103,
+  "documentsWithCandidates": 13112,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -6053,6 +6053,21 @@
       ]
     },
     {
+      "documentId": "doc-d4dbeb1e755a",
+      "path": "Archives-for-the-Unexplained/documents/1987-06-27_Gastonia-Gazette-NC_SUFOG-scan_SUFOG-DVD.txt",
+      "candidates": [
+        {
+          "value": "1987-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "GAZETTE, Gastonia, NC - June 27, 1987",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-8d97f4e3ceca",
       "path": "Archives-for-the-Unexplained/documents/1987-06-28_Duluth-News-Tribune-Herald_AFU-scan_CFI-archive_keyword-UFO.txt",
       "candidates": [
@@ -11584,6 +11599,21 @@
           "method": "unclassified-mention",
           "evidence": "URL: https://www.austinchronicle.com/events/film/2009-11-06/the-fourth-kind/",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-76b3082ebb5b",
+      "path": "Archives-for-the-Unexplained/documents/2009-11-10_The-Guardian_Close-encounters-of-the-faked-kind.txt",
+      "candidates": [
+        {
+          "value": "2009-11-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Tue 10 Nov 2009 08.53 GMT",
+          "segment": 9
         }
       ]
     },
@@ -80674,6 +80704,48 @@
           "method": "unclassified-mention",
           "evidence": "should, however, be possible to determine the dif- April 16, 2017, 1300 EDT: Twenty Third SETI",
           "segment": 173
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8cc318511e8a",
+      "path": "Archives-for-the-Unexplained/documents/SearchLites---Vol-22-No-3.txt",
+      "candidates": [
+        {
+          "value": "2016-04-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "17 April 2016, Eventide Inc., Little Ferry, NJ • responded to several dozen email and telephone",
+          "segment": 339
+        },
+        {
+          "value": "2017-04-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "FTP and email lists on his server, with an April 15, 2017, 0000 UTC - 2359 UTC:: Seven-",
+          "segment": 489
+        },
+        {
+          "value": "2017-04-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 23, 2017, 1300 EDT: Twenty Third SETI",
+          "segment": 495
+        },
+        {
+          "value": "2017-04-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "next meet on Sunday, 23 April 2017, imme-",
+          "segment": 511
         }
       ]
     },
@@ -252654,12 +252726,21 @@
           "segment": "seg-8d819cb3f6e1d037697a29d4"
         },
         {
+          "value": "1994-05-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "13 GUIDE MANUALS 5. Exceptional Entry Provisions Decree No. 6.657, Regulating Article 310 of 2008 Provisional Measure No. 441, of August 29, NAME LINK (Amnestied by Law No. 8.878-94 2008, regarding the compensation of employees amnestied by Law No. 8.878 of 1994 who return to pub",
+          "segment": "seg-f01e221b429bbb380845a916"
+        },
+        {
           "value": "1990-03-16",
           "precision": "day",
           "confidence": 0.72,
           "kind": "relative_date",
           "method": "relative-date-exclusion",
-          "evidence": "**Link:** https://www.gov.br/servidor/pt-br/ **Subject:** Anistia for Federal Public Servants and Related Procedures **Frequently Asked Questions (FAQs):** **1. Law No. 8.878/1994:** This law grants amnesty to federal public servants who were dismissed or discharged between March",
+          "evidence": "**NAME** **LINK** **RETURN OF ANISTIATES:** https://www.gov.br/servidor/pt-br/aces-so-a-informacao/gestao-de-pessoas/movimentacao-de-pessoal/central-de-conteudo-1/perguntas-frequentes?_authenticator=2409a496b3e6e1ff5dd0d- 1. **Law No. 8.878/1994** Grants amnesty to federal public",
           "segment": "seg-8cc7ed2aa91b2c8b42024b8d"
         },
         {
@@ -252668,7 +252749,7 @@
           "confidence": 0.72,
           "kind": "relative_date",
           "method": "relative-date-exclusion",
-          "evidence": "**Link:** https://www.gov.br/servidor/pt-br/ **Subject:** Anistia for Federal Public Servants and Related Procedures **Frequently Asked Questions (FAQs):** **1. Law No. 8.878/1994:** This law grants amnesty to federal public servants who were dismissed or discharged between March",
+          "evidence": "**NAME** **LINK** **RETURN OF ANISTIATES:** https://www.gov.br/servidor/pt-br/aces-so-a-informacao/gestao-de-pessoas/movimentacao-de-pessoal/central-de-conteudo-1/perguntas-frequentes?_authenticator=2409a496b3e6e1ff5dd0d- 1. **Law No. 8.878/1994** Grants amnesty to federal public",
           "segment": "seg-8cc7ed2aa91b2c8b42024b8d"
         },
         {
@@ -252686,7 +252767,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "The Dimension 2 structure the system of careers and positions 2.1 ORGANIZATION OF THE SYSTEM OF Frequently Asked Questions (FAQs) of the Federal Executive Branch, establishing principles, guidelines, and instruments that guide functional development and the valuation of public se",
+          "evidence": "A Dimension 2 structures the federal executive branch's career and position system, establishing principles, guidelines, and instruments that guide functional development and the valuation of public servants. **2.1 ORGANIZATION OF THE SYSTEM** **FAQs** This structure outlines the",
           "segment": "seg-bb8399914561d192a435c41f"
         },
         {
@@ -252695,7 +252776,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "The Dimension 2 structure the system of careers and positions 2.1 ORGANIZATION OF THE SYSTEM OF Frequently Asked Questions (FAQs) of the Federal Executive Branch, establishing principles, guidelines, and instruments that guide functional development and the valuation of public se",
+          "evidence": "A Dimension 2 structures the federal executive branch's career and position system, establishing principles, guidelines, and instruments that guide functional development and the valuation of public servants. **2.1 ORGANIZATION OF THE SYSTEM** **FAQs** This structure outlines the",
           "segment": "seg-bb8399914561d192a435c41f"
         },
         {
@@ -252713,7 +252794,7 @@
           "confidence": 0.9,
           "kind": "non_ufo_event",
           "method": "subject-exclusion",
-          "evidence": "The Federal Program for Addressing Harassment and Discrimination (PFPEAD) was established through Decree No. 12,122 of July 30, 2024. The program emerged from the need to combat instances of harassment and discrimination in the federal public administration and, consequently, the",
+          "evidence": "The Federal Program for Addressing Harassment and Discrimination (PFPEAD) was established by means of Decree No. 12.122 of July 30, 2024. The program emerged from the need to combat harassment and discrimination incidents in the federal public administration and, consequently, th",
           "segment": "seg-db5c462ef6ab4f273838f101"
         },
         {
@@ -252722,7 +252803,7 @@
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "The Federal Program for Addressing Harassment and Discrimination (PFPEAD) was established through Decree No. 12,122 of July 30, 2024. The program emerged from the need to combat instances of harassment and discrimination in the federal public administration and, consequently, the",
+          "evidence": "The Federal Program for Addressing Harassment and Discrimination (PFPEAD) was established by means of Decree No. 12.122 of July 30, 2024. The program emerged from the need to combat harassment and discrimination incidents in the federal public administration and, consequently, th",
           "segment": "seg-db5c462ef6ab4f273838f101"
         },
         {
@@ -252731,7 +252812,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "A pension for death in the federal public service is intended for the dependents of the deceased servant, as per Constitutional Amendment No. 103/2019. The grant and management are regulated by Portaria nº 4.645 of May 24, 2022, as amended by SRT/MGI Order No. 10.722 of November ",
+          "evidence": "A pension for death in the federal public service is intended for the dependents of the deceased servant, in accordance with Constitutional Amendment No. 103/2019. The concession and management are regulated by Portaria nº 4.645 of May 24, 2022, as amended by SRT/MGI Order No. 10",
           "segment": "seg-de643023be264755472e6dac"
         },
         {
@@ -252740,7 +252821,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "A pension for death in the federal public service is intended for the dependents of the deceased servant, as per Constitutional Amendment No. 103/2019. The grant and management are regulated by Portaria nº 4.645 of May 24, 2022, as amended by SRT/MGI Order No. 10.722 of November ",
+          "evidence": "A pension for death in the federal public service is intended for the dependents of the deceased servant, in accordance with Constitutional Amendment No. 103/2019. The concession and management are regulated by Portaria nº 4.645 of May 24, 2022, as amended by SRT/MGI Order No. 10",
           "segment": "seg-de643023be264755472e6dac"
         },
         {
@@ -353801,6 +353882,21 @@
       ]
     },
     {
+      "documentId": "doc-3e3e529cc3afbc9fc211323f",
+      "path": "France-GEIPAN/paired/cases/2016-11-09585/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-11-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On November 14, 2016, at 6:14 PM, a driver observed the movement of a white light in the sky for approximately 10 seconds. Having already seen shooting stars, he remains astonished that this one does not burn up and continues on its path towards the West. No other te",
+          "segment": "seg-622c9085991867cdda5e8f23"
+        }
+      ]
+    },
+    {
       "documentId": "doc-1f8a79fe1e331e77b0759842",
       "path": "France-GEIPAN/paired/cases/2016-11-09592/en/translation.txt",
       "candidates": [
@@ -353999,6 +354095,30 @@
       ]
     },
     {
+      "documentId": "doc-279ea541269b0af76289cbb5",
+      "path": "France-GEIPAN/paired/cases/2017-12-50092/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 12, 2017, around 9 PM, a witness was walking his dog along a small road adjacent to a railway track when he noticed a silent, bright object passing through the clear sky. It was round and matte white, resembling a \"ping-pong ball\" and seemed to be interna",
+          "segment": "seg-54d832f73a7ab87b25bebff9"
+        },
+        {
+          "value": "2018-03-15",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On December 12, 2017, around 9 PM, a witness was walking his dog along a small road adjacent to a railway track when he noticed a silent, bright object passing through the clear sky. It was round and matte white, resembling a \"ping-pong ball\" and seemed to be interna",
+          "segment": "seg-54d832f73a7ab87b25bebff9"
+        }
+      ]
+    },
+    {
       "documentId": "doc-fd5fed4bd8df0f7b7e940d7c",
       "path": "France-GEIPAN/paired/cases/2018-05-50534/en/translation.txt",
       "candidates": [
@@ -354043,6 +354163,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On July 12, 2018, around 11:20 PM, a witness, on their terrace, observed in the sky a black triangular shape \"composed of two distinct parts\" and \"round lights.\" The UFO quickly disappears, hidden by a house. No noise was heard during the phenomenon's straight-line p",
           "segment": "seg-ba374f8fe964395cf9802bb7"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4716b70434d142e7ead0e56d",
+      "path": "France-GEIPAN/paired/cases/2018-08-50620/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2018-08-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 11, 2018, around 10:25 PM, in Limoux (11), while observing shooting stars from his terrace, the witness spots a PAN almost vertical. The object moves linearly from southeast to northwest, appearing to fly at a low altitude. Bright, abnormally large, and bli",
+          "segment": "seg-d3dd7a0bee6ef0d6a635329e"
         }
       ]
     },
@@ -354218,6 +354353,21 @@
       ]
     },
     {
+      "documentId": "doc-8250a7b71c0bb2cff0cc9aa0",
+      "path": "France-GEIPAN/paired/cases/2020-08-51146/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2023-08-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 28, 2023, around 9 PM, Witness No. 1 spotted in the sky a white patch, about the size of a soccer ball, slightly glowing, moving rather quickly, erratically, in loops and zigzags, first in front of and then behind them, over a large perimeter. The sky is fa",
+          "segment": "seg-018832b3b163ffef472bd2e3"
+        }
+      ]
+    },
+    {
       "documentId": "doc-3369130d6f42298870ff31c4",
       "path": "France-GEIPAN/paired/cases/2020-11-51134/en/translation.txt",
       "candidates": [
@@ -354377,6 +354527,21 @@
       ]
     },
     {
+      "documentId": "doc-38430e104b61a93800436b1d",
+      "path": "France-GEIPAN/paired/cases/2022-07-51451/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2022-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The sole witness to this observation case is on the terrace of his home in the commune of La Montagne (44) on July 14, 2022, around 10:17 a.m., when he observes towards the east in the sky a PAN of an oblong shape and a light off-white color moving silently, accordin",
+          "segment": "seg-710ce222b98276feaff558c0"
+        }
+      ]
+    },
+    {
       "documentId": "doc-fa2eacd825eaad7f3615ef23",
       "path": "France-GEIPAN/paired/cases/2022-08-51386/en/translation.txt",
       "candidates": [
@@ -354481,6 +354646,21 @@
           "method": "event-language",
           "evidence": "**Description:** On October 29, 2023, at 4:55 PM, the witness, at their home in Fontainebleau (77), observed a \"ballet of four bright lights\" resembling four white and bright stars in motion. This observation lasted approximately three minutes during which the bright points moved",
           "segment": "seg-2068d6488289df320e6ce8c1"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-00eb04d78b509848d53bb7ed",
+      "path": "France-GEIPAN/paired/cases/2024-08-51561/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2024-08-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 31, 2024, between 10:35 PM and 10:55 PM, a witness observing from their garden in Porchères (33) saw several fast-appearing and disappearing orange lights in the low-altitude sky between south and west. The observation occurred as a thunderstorm was approac",
+          "segment": "seg-e9a26fdbfd19fa43abe0ffeb"
         }
       ]
     },
