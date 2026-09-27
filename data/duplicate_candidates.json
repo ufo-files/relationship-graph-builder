@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "08fb82450ce9c3cd08a25148a370390571646f1e"
+    "revision": "d2a326cbef3a21e66ebc29b93d412578b8d49290"
   },
-  "count": 545,
-  "totalCount": 545,
-  "shownCount": 545,
+  "count": 546,
+  "totalCount": 546,
+  "shownCount": 546,
   "candidates": [
     {
       "category": "book",
@@ -2127,8 +2127,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 608,
-        "documentCount": 385
+        "mentions": 609,
+        "documentCount": 386
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -2654,14 +2654,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Donald Keyhoe",
-        "mentions": 268,
-        "documentCount": 171
+        "name": "Frank Edwards",
+        "mentions": 267,
+        "documentCount": 112
       },
       "right": {
-        "name": "Major Donald Keyho",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "Frank Edward",
+        "mentions": 5,
+        "documentCount": 5
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2670,14 +2670,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Frank Edwards",
-        "mentions": 266,
-        "documentCount": 111
+        "name": "Donald Keyhoe",
+        "mentions": 268,
+        "documentCount": 171
       },
       "right": {
-        "name": "Frank Edward",
-        "mentions": 5,
-        "documentCount": 5
+        "name": "Major Donald Keyho",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2799,8 +2799,8 @@
       "category": "person",
       "left": {
         "name": "Robert Baker",
-        "mentions": 34,
-        "documentCount": 28
+        "mentions": 35,
+        "documentCount": 29
       },
       "right": {
         "name": "Robert Bakker",
@@ -3631,8 +3631,8 @@
       "category": "person",
       "left": {
         "name": "David Clarke",
-        "mentions": 47,
-        "documentCount": 35
+        "mentions": 48,
+        "documentCount": 36
       },
       "right": {
         "name": "David Clark",
@@ -4143,8 +4143,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Division",
-        "mentions": 65,
-        "documentCount": 34
+        "mentions": 66,
+        "documentCount": 35
       },
       "right": {
         "name": "Intelligonce Division",
@@ -4495,7 +4495,7 @@
       "category": "government_agency",
       "left": {
         "name": "Ministry of the Army",
-        "mentions": 10,
+        "mentions": 19,
         "documentCount": 7
       },
       "right": {
@@ -5103,8 +5103,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 728,
-        "documentCount": 415
+        "mentions": 732,
+        "documentCount": 418
       },
       "right": {
         "name": "Stanton Freedman",
@@ -5119,8 +5119,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 728,
-        "documentCount": 415
+        "mentions": 732,
+        "documentCount": 418
       },
       "right": {
         "name": "Stanton Freidman",
@@ -7023,8 +7023,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 146,
-        "documentCount": 116
+        "mentions": 147,
+        "documentCount": 117
       },
       "right": {
         "name": "Mohave Desert",
@@ -7884,6 +7884,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Head of the Teaching Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Head of the EsSA Teaching Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.921,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Joint Intelligence Bureau",
@@ -8015,8 +8031,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Schwartz",
-        "mentions": 26,
-        "documentCount": 22
+        "mentions": 27,
+        "documentCount": 23
       },
       "right": {
         "name": "Steven Schwartz",
@@ -8271,8 +8287,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 151,
-        "documentCount": 119
+        "mentions": 152,
+        "documentCount": 120
       },
       "right": {
         "name": "George HW Bush",
@@ -8335,8 +8351,8 @@
       "category": "person",
       "left": {
         "name": "Steven Tango",
-        "mentions": 22,
-        "documentCount": 15
+        "mentions": 23,
+        "documentCount": 16
       },
       "right": {
         "name": "Stephen Tango",
@@ -8719,8 +8735,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 46054,
-        "documentCount": 11491
+        "mentions": 46131,
+        "documentCount": 11512
       },
       "right": {
         "name": "North American Space Agency",
