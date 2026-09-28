@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "6882445a139fe289f88a4ecdff8d91351abff868"
+    "revision": "452fd24df78307b29514b42d02abb2a1f6822906"
   },
   "count": 573,
   "totalCount": 573,
@@ -399,8 +399,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 84,
-        "documentCount": 57
+        "mentions": 86,
+        "documentCount": 58
       },
       "right": {
         "name": "Department of Transports",
@@ -511,8 +511,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 551,
-        "documentCount": 286
+        "mentions": 552,
+        "documentCount": 287
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -527,8 +527,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 293,
-        "documentCount": 169
+        "mentions": 295,
+        "documentCount": 171
       },
       "right": {
         "name": "Kirtland Airforce Base",
@@ -1039,8 +1039,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 326,
-        "documentCount": 179
+        "mentions": 327,
+        "documentCount": 180
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -1103,8 +1103,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 326,
-        "documentCount": 179
+        "mentions": 327,
+        "documentCount": 180
       },
       "right": {
         "name": "Linda Moulton-How",
@@ -1919,8 +1919,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 555,
-        "documentCount": 252
+        "mentions": 556,
+        "documentCount": 253
       },
       "right": {
         "name": "Jacques Vallees",
@@ -2223,8 +2223,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 555,
-        "documentCount": 252
+        "mentions": 556,
+        "documentCount": 253
       },
       "right": {
         "name": "Jacques Valle",
@@ -3615,8 +3615,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 293,
-        "documentCount": 169
+        "mentions": 295,
+        "documentCount": 171
       },
       "right": {
         "name": "Kirkland Air Force Base",
@@ -3631,8 +3631,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 293,
-        "documentCount": 169
+        "mentions": 295,
+        "documentCount": 171
       },
       "right": {
         "name": "Kirtland Alr Force Base",
@@ -3727,8 +3727,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 84,
-        "documentCount": 57
+        "mentions": 86,
+        "documentCount": 58
       },
       "right": {
         "name": "Department of Trancport",
@@ -4703,8 +4703,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 326,
-        "documentCount": 179
+        "mentions": 327,
+        "documentCount": 180
       },
       "right": {
         "name": "Linda Moulton-Howell",
@@ -5247,8 +5247,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 748,
-        "documentCount": 429
+        "mentions": 767,
+        "documentCount": 430
       },
       "right": {
         "name": "Stanton Freedman",
@@ -5263,8 +5263,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 748,
-        "documentCount": 429
+        "mentions": 767,
+        "documentCount": 430
       },
       "right": {
         "name": "Stanton Freidman",
@@ -5679,8 +5679,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 84,
-        "documentCount": 57
+        "mentions": 86,
+        "documentCount": 58
       },
       "right": {
         "name": "Department of Tramport",
@@ -6415,8 +6415,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 555,
-        "documentCount": 252
+        "mentions": 556,
+        "documentCount": 253
       },
       "right": {
         "name": "Jacques Valley",
@@ -6447,8 +6447,8 @@
       "category": "person",
       "left": {
         "name": "Robert Bigelow",
-        "mentions": 390,
-        "documentCount": 202
+        "mentions": 393,
+        "documentCount": 203
       },
       "right": {
         "name": "Robert Bigalow",
@@ -6700,6 +6700,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Patrick Hughes",
+        "mentions": 13,
+        "documentCount": 13
+      },
+      "right": {
+        "name": "Patrick Huyghe",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Sand Mountain",
@@ -6710,22 +6726,6 @@
         "name": "Sandia Mountain",
         "mentions": 11,
         "documentCount": 5
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Patrick Hughes",
-        "mentions": 12,
-        "documentCount": 12
-      },
-      "right": {
-        "name": "Patrick Huyghe",
-        "mentions": 4,
-        "documentCount": 4
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -6991,8 +6991,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 551,
-        "documentCount": 286
+        "mentions": 552,
+        "documentCount": 287
       },
       "right": {
         "name": "University Colorado",
@@ -7215,8 +7215,8 @@
       "category": "government_agency",
       "left": {
         "name": "U.S. Air Force",
-        "mentions": 8634,
-        "documentCount": 3036
+        "mentions": 8637,
+        "documentCount": 3039
       },
       "right": {
         "name": "US Air Forces",
@@ -8335,8 +8335,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 193,
-        "documentCount": 133
+        "mentions": 194,
+        "documentCount": 134
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -8383,8 +8383,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Schwartz",
-        "mentions": 33,
-        "documentCount": 28
+        "mentions": 35,
+        "documentCount": 29
       },
       "right": {
         "name": "Steven Schwartz",
@@ -8783,8 +8783,8 @@
       "category": "person",
       "left": {
         "name": "Mike Williams",
-        "mentions": 10,
-        "documentCount": 6
+        "mentions": 12,
+        "documentCount": 7
       },
       "right": {
         "name": "Ken Williams",
@@ -8863,8 +8863,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 326,
-        "documentCount": 179
+        "mentions": 327,
+        "documentCount": 180
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
@@ -8926,6 +8926,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Joseph Stalin",
+        "mentions": 29,
+        "documentCount": 27
+      },
+      "right": {
+        "name": "Joe Stalin",
+        "mentions": 6,
+        "documentCount": 4
+      },
+      "similarity": 0.87,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Jean Houston",
         "mentions": 27,
         "documentCount": 18
@@ -8942,14 +8958,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Joseph Stalin",
-        "mentions": 28,
-        "documentCount": 26
+        "name": "James Hansen",
+        "mentions": 10,
+        "documentCount": 9
       },
       "right": {
-        "name": "Joe Stalin",
-        "mentions": 6,
-        "documentCount": 4
+        "name": "Jane Hansen",
+        "mentions": 17,
+        "documentCount": 12
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -8982,22 +8998,6 @@
         "name": "Joseph Walker",
         "mentions": 12,
         "documentCount": 6
-      },
-      "similarity": 0.87,
-      "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "James Hansen",
-        "mentions": 10,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "Jane Hansen",
-        "mentions": 15,
-        "documentCount": 10
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -9167,8 +9167,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 47331,
-        "documentCount": 11785
+        "mentions": 47443,
+        "documentCount": 11800
       },
       "right": {
         "name": "North American Space Agency",
