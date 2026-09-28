@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "3a2283c30921638160fd8ef683da8d609ec130c6"
+    "revision": "6e88c01197bc7b997ceace8bff102da21a6a6fc8"
   },
   "count": 568,
   "totalCount": 568,
@@ -1871,8 +1871,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 558,
-        "documentCount": 255
+        "mentions": 559,
+        "documentCount": 256
       },
       "right": {
         "name": "Jacques Vallees",
@@ -2175,8 +2175,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 558,
-        "documentCount": 255
+        "mentions": 559,
+        "documentCount": 256
       },
       "right": {
         "name": "Jacques Valle",
@@ -2286,14 +2286,14 @@
     {
       "category": "person",
       "left": {
+        "name": "Jacques Valley",
+        "mentions": 15,
+        "documentCount": 15
+      },
+      "right": {
         "name": "Jacques Valle",
         "mentions": 15,
         "documentCount": 7
-      },
-      "right": {
-        "name": "Jacques Valley",
-        "mentions": 14,
-        "documentCount": 14
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -4268,22 +4268,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
-      "left": {
-        "name": "Office of the Director",
-        "mentions": 13,
-        "documentCount": 12
-      },
-      "right": {
-        "name": "Office of the Direct",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "organization",
       "left": {
         "name": "National Institute of Discovery",
@@ -4310,6 +4294,22 @@
         "name": "Advanced Aerospace Threat Identification",
         "mentions": 11,
         "documentCount": 11
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office of the Director",
+        "mentions": 12,
+        "documentCount": 11
+      },
+      "right": {
+        "name": "Office of the Direct",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -6367,13 +6367,13 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 558,
-        "documentCount": 255
+        "mentions": 559,
+        "documentCount": 256
       },
       "right": {
         "name": "Jacques Valley",
-        "mentions": 14,
-        "documentCount": 14
+        "mentions": 15,
+        "documentCount": 15
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -9087,8 +9087,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 47580,
-        "documentCount": 11834
+        "mentions": 47584,
+        "documentCount": 11838
       },
       "right": {
         "name": "North American Space Agency",

@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-28T14:23:55Z",
+  "generatedAt": "2026-09-28T15:36:24Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "3a2283c30921638160fd8ef683da8d609ec130c6"
+    "revision": "6e88c01197bc7b997ceace8bff102da21a6a6fc8"
   },
-  "documentsWithCandidates": 13330,
+  "documentsWithCandidates": 13337,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -46060,6 +46060,21 @@
           "method": "unclassified-mention",
           "evidence": "The N'ew York Tirr.es, 6 June 1978",
           "segment": 193
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fa60180e145a",
+      "path": "Archives-for-the-Unexplained/documents/Dessin-Temoin.txt",
+      "candidates": [
+        {
+          "value": "1994-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "France) - 12 août 1994 à 23H45",
+          "segment": 4
         }
       ]
     },
@@ -270039,13 +270054,22 @@
           "segment": "seg-c0f1f1fea7b514025bc17fdb"
         },
         {
+          "value": "1991-01-02",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "I received your letter dated January 02, 1991, together with the photos. Enclosed is a form to be completed and I hope to count on your collaboration, regards",
+          "segment": "seg-0f38e967125c1df01a0c1149"
+        },
+        {
           "value": "1982-02-04",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "If on February 4, 1982, at exactly 8:05 PM, I were in a local bare field, observing the conditions of a tape when I noticed a strange ultraviolet light flying at a 10-degree angle from the west, as seen by the lost-east horizon.",
-          "segment": "seg-f859c039e4320132b0438b4f"
+          "evidence": "Brig. £A r Ronaldo Eduardo Jaeckel Dear Sir I am writing to you regarding a matter that I believe is a mistake. If on February 4, 1982, at precisely 20:05 hours, I was not at the local bar, nor was I drinking, but rather observing...",
+          "segment": "seg-20d454526147be2376f65e59"
         },
         {
           "value": "1991-03-18",
@@ -270053,8 +270077,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "BRASÍLIA, March 18, 1991",
-          "segment": "seg-703567e26957d92d4bb75117"
+          "evidence": "AÍOOOâ.Oâ^.S/lQj. BRASÍLIA, March 18, 1991",
+          "segment": "seg-7b55a15c9a6ab8cfe6be3e62"
         },
         {
           "value": "1986-05-18",
@@ -270062,35 +270086,17 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "BRAZIL . DF 5th Air Force. Brasilia — The first UFO seen in Brasilia dates back to 1959, when citizen Raimundu Nascimento Teixeira gathered a crowd in Núcleo Bandeirante to observe a \"disc-shaped object\" moving at high speed, according to some mystics. Brasilia is said to receive",
-          "segment": "seg-7644cbd4682ba86d6d243cbf"
+          "evidence": "5 Aerial. Brasília — The first UFO seen in Brasília dates back to 1959, when father Raimundo Nascimento Teixeira gathered, in Núcleo Bandeirante, a crowd to observe a \"disc-shaped object that moved at great speed,\" according to some mystics, Brasília receives periodic visits from",
+          "segment": "seg-d7d0915b3128cf61cec3d33d"
         },
         {
-          "value": "1991-04-26",
+          "value": "1991-04-06",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Brasília, April 26, 1991 OF.NEFP.GEU/002/9i",
-          "segment": "seg-90f968f1550af4df74d2db4d"
-        },
-        {
-          "value": "1991-04-04",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "0 UFO Study Group - GEU, from the University of Brazil, associated with NEFP/CEAM, is investigating data regarding an incident that occurred on April 04, 1991, at 7:45 PM in the region known as Papuda, as noted in an official report from the Social Communication Center of the Min",
-          "segment": "seg-334251d17615d9ce5ccee41b"
-        },
-        {
-          "value": "1999-04-26",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Brasília, April 26, 1999 OF.NEFP.GEU/O03/9i",
-          "segment": "seg-ab261a22caa68aff6b23ea36"
+          "evidence": "UNB of 2 6 April 1991 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
+          "segment": "seg-27c1510da83707abea29fd3b"
         },
         {
           "value": "1977-10-18",
@@ -270111,139 +270117,13 @@
           "segment": "seg-a80430572a1bd61c567780c6"
         },
         {
-          "value": "1977-10-16",
+          "value": "1977-10-19",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "- RAYMOND NONATO BARBOSA \"BIRRO\", aged 48 years, laborer. DATE/TIME - October 16, 1977, 5:30 hours. He was returning to his residence (a dirt road leading to a neighbor's house) when, as he approached his friend's house, he felt as if he were losing strength, the sap in one of hi",
-          "segment": "seg-cc3120a311f0fb4e7a1b1132"
-        },
-        {
-          "value": "1977-10-23",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "- JOSE JORGE DOS SANTOS, age 48, primary instruction. DATE/TIME OF INCIDENT - 23 October 1977, at 01:00 hours.",
-          "segment": "seg-f55864e20f93210d917a2eb8"
-        },
-        {
-          "value": "1977-10-21",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "# **Report of a UFO Encounter and Strange Occurrences** **Witnesses:** - **Jose Jorge** (23 years old), primary education. - **Domingas Maria dos Santos** (22 years old), primary education. - **Selma Maria dos Santos** (21 years old), primary education. - **Jose Zilton Oliveira**",
-          "segment": "seg-f02c5e2825afc1627cca1a7e"
-        },
-        {
-          "value": "1977-10-23",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "# **Report of a UFO Encounter and Strange Occurrences** **Witnesses:** - **Jose Jorge** (23 years old), primary education. - **Domingas Maria dos Santos** (22 years old), primary education. - **Selma Maria dos Santos** (21 years old), primary education. - **Jose Zilton Oliveira**",
-          "segment": "seg-f02c5e2825afc1627cca1a7e"
-        },
-        {
-          "value": "1977-10-27",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "- Maria Beatriz Leal Ferreira, aged 42 years, was alarmed. DATE/TIME - 27 October 1977, at 00:35 hours. When she prepared to go to sleep, she noticed an unusual bright light (already described by others), being overcome by a nervous crisis. As in the previous case, she was assist",
-          "segment": "seg-29b9059451bb741b022e92e9"
-        },
-        {
-          "value": "1977-10-18",
-          "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "GLAUDXOMIRA RODRIGUES DA PAIXÃO, age 35, was awakened at approximately 11:00 PM on October 18, 1977. She reported seeing a luminous object (a light from the city had gone out at 10:00 PM) that moved throughout her body (like a worm), starting from her left side. It sucked her lef",
-          "segment": "seg-72333559ccd9b305c3c62cec"
-        },
-        {
-          "value": "1977-10-15",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "From a distance, he observed a \"light\" of an intense, mixed color (compared to the rays of the sun at sunset in a mirror), which suddenly appeared close to his canoe, prompting his companions to suggest \"running alongside\" (to get closer to see better and escape if necessary); in",
-          "segment": "seg-ae88c1a10367254f2e2a0205"
-        },
-        {
-          "value": "1977-11-04",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "DATE/TIME - Nov 4, 1977 24:00 (estimated",
-          "segment": "seg-3a365e1d4facd087759c4ace"
-        },
-        {
-          "value": "1977-10-20",
-          "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "DATE/TIME - 20 October 1977, 9:30 PM. An luminous object was observed moving and in a superior altitude, above 35,000 feet, rumbling/northern clear (light blue) bright, moving at high speed, regular jet-like with uniform motion. (Prov.s) DATE/TIME - 22 October 1977, 7:00 PM. Two ",
-          "segment": "seg-ffa5209e252d955c5d7d799e"
-        },
-        {
-          "value": "1977-10-22",
-          "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "DATE/TIME - 20 October 1977, 9:30 PM. An luminous object was observed moving and in a superior altitude, above 35,000 feet, rumbling/northern clear (light blue) bright, moving at high speed, regular jet-like with uniform motion. (Prov.s) DATE/TIME - 22 October 1977, 7:00 PM. Two ",
-          "segment": "seg-ffa5209e252d955c5d7d799e"
-        },
-        {
-          "value": "1977-10-22",
-          "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "DATE/TIME - 20 October 1977, 9:30 PM. An luminous object was observed moving and in a superior altitude, above 35,000 feet, rumbling/northern clear (light blue) bright, moving at high speed, regular jet-like with uniform motion. (Prov.s) DATE/TIME - 22 October 1977, 7:00 PM. Two ",
-          "segment": "seg-ffa5209e252d955c5d7d799e"
-        },
-        {
-          "value": "1977-10-22",
-          "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "DATE/TIME - 20 October 1977, 9:30 PM. An luminous object was observed moving and in a superior altitude, above 35,000 feet, rumbling/northern clear (light blue) bright, moving at high speed, regular jet-like with uniform motion. (Prov.s) DATE/TIME - 22 October 1977, 7:00 PM. Two ",
-          "segment": "seg-ffa5209e252d955c5d7d799e"
-        },
-        {
-          "value": "1977-10-22",
-          "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "DATE/TIME - 20 October 1977, 9:30 PM. An luminous object was observed moving and in a superior altitude, above 35,000 feet, rumbling/northern clear (light blue) bright, moving at high speed, regular jet-like with uniform motion. (Prov.s) DATE/TIME - 22 October 1977, 7:00 PM. Two ",
-          "segment": "seg-ffa5209e252d955c5d7d799e"
-        },
-        {
-          "value": "1977-11-04",
-          "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "•DATE/TIME - Nov 4, 1977 23:00 - Colores, - A bright (0) object was observed moving at a medium altitude of 12,000 feet (4,000 meters) SB/NW, appearing from the tip of the Bacuri, approaching the Sour, with a yellow-red light, varying in intensity and speed (accelerating smoothly",
-          "segment": "seg-6990bf1ec7a5c60b8e62af00"
-        },
-        {
-          "value": "1977-11-05",
-          "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "DATE/TIME - Nov 5, 1977 7:00 AM - A luminous object was observed moving at a medium altitude (6,000 ft), at a high velocity, with a yellow-red color, in the northern sky, at an estimated distance of 15 km, with an approximate size of a large airplane (jet). It approached the righ",
-          "segment": "seg-eea453d978d6ff29819faa9a"
+          "evidence": "ANTONIO ACÁCIO DE OLIVEIRA, aged 53, was found dead. DATE/TIME - October 19, 1977 at 7:30 PM",
+          "segment": "seg-a5df80af8ff82efd9dea498e"
         }
       ]
     },
@@ -272399,26 +272279,35 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "PART N2 076/ACC/86 Brasília-DF, May 2, 1986",
-          "segment": "seg-0a7aa9e56e5975360e94a0e4"
+          "evidence": "OPERATIONS Brasília-DF, May 2, 1986 From ACC To CCTA Subject: Occurrence Transcription",
+          "segment": "seg-48008207874af91d70509e1a"
         },
         {
-          "value": "1986-04-30",
+          "value": "1986-05-28",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "I - Transcribed the event occurrence in the LRO of ACC BS, on the date of April 30, 1986, turn 14C0/2200P",
-          "segment": "seg-3739e037d63cb581dc285987"
+          "evidence": "Brasília-DF, May 28, 1986 From",
+          "segment": "seg-751a34cd6bcbce6578f35e80"
         },
         {
-          "value": "1986-05-27",
+          "value": "1986-05-29",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "I - I communicate to you for the record that on May 27, 1986, TF 402 SBSP/SBVG, FL 090, DEP 2207, when encountering radial 055, approximately 33 nautical miles from BGC, it reported seeing a strong light at 9 hours, apparently at a lower level. At the time of the report, the ACC ",
-          "segment": "seg-6a9daf42512ab0f45fd1d4c3"
+          "evidence": "Brasília-DF, May 29, 1986",
+          "segment": "seg-35cf56e1eb632aef2987cf00"
+        },
+        {
+          "value": "1986-05-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 29, 1986",
+          "segment": "seg-fdc4bb1b582440394d380ab0"
         },
         {
           "value": "1986-05-29",
@@ -272436,7 +272325,43 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "On June 4, 1986, at approximately 8:00 PM*, a person identifying himself as JOSÉ APARECIDO MARTINS, a resident of BANDEIRANTE, northern Paraná, reported via telephone that he and others had witnessed a Unidentified Flying Object (UFO) with a rounded shape emitting a sequence of l",
-          "segment": "seg-d2243d8f97c42e5330cd356d"
+          "segment": "seg-3314bac5e5c3145acad73181"
+        },
+        {
+          "value": "1986-06-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Brasília-DF, June 5, 1986",
+          "segment": "seg-fe0021fe8fe066377fadc57c"
+        },
+        {
+          "value": "1986-06-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "from the dia of June 12, 1986, to realize a mission of interc...",
+          "segment": "seg-410b6f306e87a441445aa0d1"
+        },
+        {
+          "value": "1986-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Brasília-DF, June 24, 1986 From",
+          "segment": "seg-5daf84118cde1f81e1d229b8"
+        },
+        {
+          "value": "1986-06-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Brasília-DF, June 13, 1986",
+          "segment": "seg-5c0656575a17a3bb20a1ec64"
         },
         {
           "value": "1986-10-13",
@@ -272444,35 +272369,35 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Part no 156/CCTA/86 Brasília-DF, October 13, 1986",
-          "segment": "seg-9baa00b6d3adf4cb7139e540"
+          "evidence": "Brasília-DF, October 13, 1986",
+          "segment": "seg-deeedaaae560a59ac6241af7"
         },
         {
-          "value": "1986-08-12",
+          "value": "1986-08-18",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "\"- And between 2140Z and 2150Z, we received reports from aircraft: SC 144 (GL/CT F 310) and TF 536 (SP/DN FL 160), concerning unidentified aerial movements. After the landing of these same aircraft, the (Zanandantes) entered into contact with the ACC BS, and then the 'Interrogati",
-          "segment": "seg-1af67739146ce898a0613508"
-        },
-        {
-          "value": "1986-10-18",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "CONTINUATION ANNEX I I — MENSRET, COm 1 - AGO/86 Brasília-DF, October 18, 1986",
+          "evidence": "CONTINUATION ANNEX I I — MENSRET, COpM 1 - AGO/86 Brasília-DF, August 18, 1986 From A J CC To Cap Franciscângelis SUBJECT: Occurrence",
           "segment": "seg-c2a9a8690e86b37f504b1070"
+        },
+        {
+          "value": "1986-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Brasília-DF, September 1, 1986",
+          "segment": "seg-9003a91f89e10c2cea8e3873"
         },
         {
           "value": "1986-08-28",
           "precision": "day",
-          "confidence": 0.94,
-          "kind": "event_date",
-          "method": "milestone-language",
-          "evidence": "I - Incident report released in the log of the Assistant Controller, turn from 1400 to 2200 hours, on the date 28 August 1986: At 00:00Z, CTA ESPINDOLA informed us that the TF-585 was observed near the airport, overflying unidentified airborne objects (UAO) around Uberaba. We req",
-          "segment": "seg-cc0bb10ace6d787511c732d2"
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 28, 1986: As",
+          "segment": "seg-51e49dac4cfc7b732ae588a0"
         },
         {
           "value": "1986-09-01",
@@ -272489,8 +272414,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "I - Transcription of incident reported in the logbook of the Controller's Assistant, from 22:00 to 06:00, on the night of August 29, 1986",
-          "segment": "seg-9c0555795111093c9815dd01"
+          "evidence": "I - Transcription of incident recorded in the logbook of the Assistant Controller's office, shift from 22:00 to 06:00, on the date 29 August 1986: \"At 0816Z, VP 285 turned on the SL/GL route, modulating on the frequency",
+          "segment": "seg-7def86ad9317f6ad375070a2"
         },
         {
           "value": "1986-09-01",
@@ -272502,31 +272427,40 @@
           "segment": "seg-2281cb35dec0567ad7da0a5a"
         },
         {
-          "value": "1986-08-31",
-          "precision": "day",
-          "confidence": 0.98,
-          "kind": "administrative_date",
-          "method": "context-exclusion",
-          "evidence": "I - Occurrence transcript released in the logbook of the Assistant Controller, shift from 1400 to 2200, on the date 31 August 1986",
-          "segment": "seg-afc0b4cae73a0ee2acfa4966"
-        },
-        {
           "value": "1986-11-04",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "PROTOCOL - GENERAL COMMAND OF THE AIR FORCE (Case No. 43-01/ C-329/86 - Refer to Case No. N9 038/ CMDO/C-329 of November 4, 1986, from the Air Defense Command) .",
-          "segment": "seg-b386ba8058f4f2dd41562c62"
+          "evidence": "Brasília - DF, Is >4 November 1986",
+          "segment": "seg-cc7b75676997f79c0965a5e6"
+        },
+        {
+          "value": "1986-09-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Brasília-DF, September 22, 1986 From 2S BCT FERNANDO AUGUSTO DA COSTA HEXSEL To the Chief of COpM Subject: Enclosure",
+          "segment": "seg-52b5d13f798f628ade066481"
+        },
+        {
+          "value": "1986-09-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 25, 1986.",
+          "segment": "seg-16003ed97e0ed46cd2bd6e8d"
         },
         {
           "value": "1986-05-19",
           "precision": "day",
-          "confidence": 0.98,
-          "kind": "administrative_date",
-          "method": "context-exclusion",
-          "evidence": "This Report has as its final objective to inform the authorities of the Ministry of Aeronautics specifically the Minister, about the facts occurred during the night of May 19, 1986, regarding the information received from the Air Traffic Control and Defense of the Air Force, as w",
-          "segment": "seg-4fdd4cd3db702ffe4148376c"
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "facts occurring in the night of May 19, 1986, regarding the information of the Uruguay Air Traffic Control Services of the Air Defense and, in particular, of the pilots involved and sent back",
+          "segment": "seg-42b95ef92537c6614cd03c03"
         },
         {
           "value": "1985-12-09",
@@ -272534,35 +272468,26 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Part __UFO_PROTECTED_000__ n/s Conclusions, 09 December 1985",
-          "segment": "seg-e7bfd29b2f3f2baf108dc635"
+          "evidence": "Conclusions, 09 December 1985 From",
+          "segment": "seg-0170d7c5c11591f48e1f481f"
         },
         {
-          "value": "1985-11-30",
+          "value": "1986-05-29",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "I - I n f o r m a t i o n - r e p o r t s from the L.R.O. of ABP on the date 30 November 1985 * between 2200 and 0600 hours, recorded the following: \"At 2200 hours, upon receiving the call, FAB 1876, CMTE Maj Rocha, was located over the NDB BHZ runway, in the \"ESTE\" sector, for t",
-          "segment": "seg-f3f0745b8d01cb2c90fecf8a"
+          "evidence": "Brasília-DF, May 29, 1986",
+          "segment": "seg-d2a7407ae74b418e46883218"
         },
         {
-          "value": "1985-11-30",
+          "value": "1986-05-27",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "DATE - November 30, 1985 at 10:00 PM",
-          "segment": "seg-8bda38d30b11ea4939131d95"
-        },
-        {
-          "value": "1978-08-07",
-          "precision": "day",
-          "confidence": 0.72,
-          "kind": "referenced_document_date",
-          "method": "dated-reference",
-          "evidence": "I - This document concerns a report related to the observation of Unidentified Flying Objects (UFOs) in the area of UBERABA/MG, on the dates of August 5th and 28th, 1986. II - I am forwarding this to you in accordance with the instructions contained in Circular Order n9 15/ A-2/C",
-          "segment": "seg-df247a10ed3ae3ccfd24f8a7"
+          "evidence": "Brasília - DF, May 27, 1986 From 1? TEN ESP CTA JOSÉ AUGUSTO",
+          "segment": "seg-2209eabe587e8fda2299f296"
         },
         {
           "value": "1986-05-24",
@@ -272570,8 +272495,17 @@
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "3S Barros (ACC BS) received a call from TF3 on the Operational Team Chief's desk at 0050Z on 24 May 1986. The person identified themselves as having a strong connection to BAST (probably the official day/operations office of BAST) informing that they had been receiving numerous t",
-          "segment": "seg-7078d0fd04e879e26ae02d42"
+          "evidence": "Received via telephone (DDD) at 0040Z on the date 24 May 1986 from Ten C el Dias (COMAT) informing that his subordinates",
+          "segment": "seg-a8b3e0d146674705ce8404ff"
+        },
+        {
+          "value": "1986-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "died on May 24, 1986. The person",
+          "segment": "seg-3f72dd48dd3ad4fa37d85fcc"
         },
         {
           "value": "1986-05-24",
@@ -272579,7 +272513,7 @@
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "Received contact TF2-314 (CF3U3) from 2nd Intelligence on the period 0227/0238Z on the date 24 May 1986 reporting observation of UFO at SBRP. The questionnaire seen in IS/018/CCTA was transcribed.",
+          "evidence": "Received contact TF2-314 (CF3U3) via 2S ITICE during the period 0227/0238Z on the date 24 May 1986 reporting",
           "segment": "seg-d62452445779156e3b854d0d"
         },
         {
@@ -272588,44 +272522,17 @@
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "Received telephone call at 1735Z on 26 May 1986 reporting an UFO sighting. Using the questionnaire prevised in IS/Ü18/JCTA below transcribed",
+          "evidence": "Received telephone call at 1735Z on 26 May 1986, reporting UFO sighting. Using the questionnaire provided in IS/Ü18/JCTA, the following transcript is as follows: 1) 1730Z, 26 May 86; 2) rising side of the sun, 4 to 5 objects; 3) blinking streak; 4) indefinite; 5) unable to provid",
           "segment": "seg-167e880c99cad731f41d3434"
         },
         {
-          "value": "1986-05-26",
+          "value": "1986-05-24",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "1) 1730Z, May 26, 1986; 2) On the sunrise side, 4 to 5 objects; 3) Flashing streak; 4) Indefinite; 5) Unable to provide conditions; 6) Faint colors, indefinite, changing from silver to white; 7) Slow movement; 8) Disordered formation; 9) No; 10) No; 11) Moving towards the right o",
-          "segment": "seg-0b69b03531f6dc8480004811"
-        },
-        {
-          "value": "1986-05-23",
-          "precision": "day",
-          "confidence": 0.98,
-          "kind": "administrative_date",
-          "method": "context-exclusion",
-          "evidence": "Received telephone call at 2323Z on 23 May 1986. Utilized the questionnaire previously reviewed in IS/018/CCTA and transcribed",
-          "segment": "seg-3213ccd92aa4df4366011926"
-        },
-        {
-          "value": "1986-05-24",
-          "precision": "day",
-          "confidence": 0.98,
-          "kind": "administrative_date",
-          "method": "context-exclusion",
-          "evidence": "3S Barros (ACC BS) received a call from TF3 on the Operational Chief's desk at 0000Z on the day 24 May 1986. The person identified themselves as a perceptive and persistent individual from BAST (probably the Official of the Day and/or Operations of BAST), informing that they had ",
-          "segment": "seg-f2c5557581805be408478c53"
-        },
-        {
-          "value": "1986-05-24",
-          "precision": "day",
-          "confidence": 0.98,
-          "kind": "administrative_date",
-          "method": "context-exclusion",
-          "evidence": "Received contact from TF2-314 (CI 3U3) by 2S ITIC during the period of O227/0238Z on the date 24 May 1986 reporting the sighting of a UFO at SBRP. Utilized the questionnaire reviewed at IS/018/CCTA to document the encounter.",
-          "segment": "seg-15a5b415758e15778de31614"
+          "evidence": "Make a phone call (DDD) at 0040Z on the day May 24, 1986",
+          "segment": "seg-941e038c84f3c7851eab8ffb"
         },
         {
           "value": "1986-05-24",
@@ -272633,8 +272540,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "1) 011SZ, May 24, 1986; 2) an object, approximately QDR 240 from RP; 3) a luminous point, stationary; 4) unknown; 5) larger than a star; 6) green, alternately flashing vermilion; 7) stationary; 8) no; 9) no; 10) no; 11) stationary; 12) unable to provide information; 13) approxima",
-          "segment": "seg-c016e5c6860062d5f31c9e72"
+          "evidence": "died on May 24, 1986. The person",
+          "segment": "seg-8b5128fce018671009d5f102"
         },
         {
           "value": "1986-11-26",
@@ -272642,17 +272549,8 @@
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "Received telephone call at 1735Z on 26 November 1986, reporting observation of UFO. The questionnaire previously provided in IS/t>18/fcCTA below was utilized",
+          "evidence": "Received telephone call at 1735Z on 26 November 1986, reporting avlotaaonto of O V N I . U t i l i z a d o the questionnaire previously transcribed below: 1) 1730Z, 26 May 86; 2) side that rises at the sun, 4-5 objects; 3) blinking streak; 4) indefinite; 5) unable to inform; 6) f",
           "segment": "seg-16cd4b7b3ee79da06bf369e7"
-        },
-        {
-          "value": "1986-05-26",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "1) 1730Z, May 26, 1986; 2) Rising side of the sun, 4-5 objects; 3) Flashing streak; 4) Indefinable; 5) Unable to provide details; 6) Faint colors, indefinable, changing from silver to white; 7) Slow movement; 8) Disordered formation; 9) No; 10) No; 11) Possibly a group, directly ",
-          "segment": "seg-a973f77c1a9dcaf85ea039a7"
         },
         {
           "value": "1986-05-29",
@@ -272662,33 +272560,6 @@
           "method": "unclassified-mention",
           "evidence": "Brasília-DF, May 29, 1986",
           "segment": "seg-e36ef492e6f53dc80bb32873"
-        },
-        {
-          "value": "1986-05-29",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Brasilia-UP, 29 May 1986",
-          "segment": "seg-2de1373853eb19cfcca8a1db"
-        },
-        {
-          "value": "1986-05-20",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "- Pilot of PT-MBZ, Sr. ALCIR PEREIRA DA SILVA, resident in São José dos Campos, Av. JOÃO BATISTA CLARES DE QUEIROZ 1875 (phone 227624), a EMBRAER employee, stated that upon approaching SBSJ, he observed two large red objects. He was unable to validate their speed or equipment. Th",
-          "segment": "seg-327b65f5a9a11de0c8b64cc8"
-        },
-        {
-          "value": "1986-05-20",
-          "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "- Pilot of PT-MBZ, Sr. ALCIR PEREIRA DA SILVA, resident in São José dos Campos, Av. JOÃO BATISTA CLARES DE QUEIROZ 1875 (phone 227624), a EMBRAER employee, stated that upon approaching SBSJ, he observed two large red objects. He was unable to validate their speed or equipment. Th",
-          "segment": "seg-327b65f5a9a11de0c8b64cc8"
         }
       ]
     },
@@ -365018,6 +364889,21 @@
       ]
     },
     {
+      "documentId": "doc-a0f9826c3e0b99e5daf525a6",
+      "path": "France-GEIPAN/paired/cases/2015-08-09269/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-08-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 5, 2015 at 11:10 PM, a witness is intrigued by a bright white glowing point that moves across the sky before disappearing. This witness testimony of observing a very bright point crossing a portion of the sky is very precise, both in terms of dating and the",
+          "segment": "seg-746ccdbd584fbc62b91e3b60"
+        }
+      ]
+    },
+    {
       "documentId": "doc-7e93f6b936e3fdb39d3e57d8",
       "path": "France-GEIPAN/paired/cases/2015-08-09275/en/translation.txt",
       "candidates": [
@@ -365693,6 +365579,21 @@
       ]
     },
     {
+      "documentId": "doc-6dd489e7529424fca1fd5e87",
+      "path": "France-GEIPAN/paired/cases/2016-07-09492/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On July 26, 2016, at approximately 7:14 PM, a witness observing from their outdoor terrace noticed the rapid and silent passage of a spherical object surrounded by a ring moving from North-North-East. The object was reflecting sunlight. No trail was observed. The wit",
+          "segment": "seg-39df528b3d932f128c129c2d"
+        }
+      ]
+    },
+    {
       "documentId": "doc-6fba584c2e7747669027fced",
       "path": "France-GEIPAN/paired/cases/2016-07-09501/en/translation.txt",
       "candidates": [
@@ -366211,6 +366112,21 @@
           "method": "event-language",
           "evidence": "Description: On December 12, 2017, around 9 PM, a witness was walking his dog along a small road adjacent to a railway track when he noticed a silent, bright object passing through the clear sky. It was round and matte white, resembling a \"ping-pong ball\" and seemed to be interna",
           "segment": "seg-54d832f73a7ab87b25bebff9"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-13879d68245a3a4b2e59b037",
+      "path": "France-GEIPAN/paired/cases/2018-01-50470/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2018-01-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Thursday, January 18, 2018, at 6:27 PM, two witnesses were intrigued by the movement in the sky of a rounded shape of very intense orange-red color that suddenly changed direction. No noise was heard during the observations. T1 takes a photograph. The round shape,",
+          "segment": "seg-f58d48bcfd9de97a518f6189"
         }
       ]
     },
@@ -366749,6 +366665,21 @@
       ]
     },
     {
+      "documentId": "doc-8cd51f78d1ac2fa88782edcb",
+      "path": "France-GEIPAN/paired/cases/2022-01-51316/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2022-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On January 9, 2022, at 7:53 PM, an observer captivated by an astronomical observation of the Moon, using his A2-GTI mount equipped with a Nikon P1000, observed towards the red star Betelgeuse, two white glowing points that seemed fixed at the height of that star. The",
+          "segment": "seg-cb855e49d9ebe5be1c17b987"
+        }
+      ]
+    },
+    {
       "documentId": "doc-861d7d8e60e27e90d357ed28",
       "path": "France-GEIPAN/paired/cases/2022-03-51314/en/translation.txt",
       "candidates": [
@@ -367016,6 +366947,21 @@
       ]
     },
     {
+      "documentId": "doc-e24f6263b85ae64de892d506",
+      "path": "France-GEIPAN/paired/cases/2023-11-51497/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2023-11-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On November 12, 2023, during an transatlantic flight, a pilot and his crew observed moving lights following apparently random trajectories. Initially, they considered them to be satellites, but remained perplexed by these unusual displays. Of low strangeness and good",
+          "segment": "seg-a9759ffda426eea7248573c9"
+        }
+      ]
+    },
+    {
       "documentId": "doc-56dba4c464eb6e0292d99f11",
       "path": "France-GEIPAN/paired/cases/2024-07-51591/en/translation.txt",
       "candidates": [
@@ -367141,6 +367087,21 @@
           "method": "event-language",
           "evidence": "Description: On the morning of September 6, 2025, a witness, along with their partner, observed a unique light phenomenon moving in a straight line across the sky above a star from the terrace of their home in Saint-François (Guadeloupe - 971). The scene was filmed for just over ",
           "segment": "seg-53f62880e73125f5ddf0273e"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6b529f777f0c67962436d0aa",
+      "path": "France-GEIPAN/paired/cases/2025-10-51702/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2025-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On October 4, 2025, at 3:00 AM, the main witness (T1) began ascending Mount Piton de la Fournaise (Réunion Island) from the volcano refuge, accompanied by three people, including a second witness (T2), to watch the sunrise from the summit. Approximately two-thirds of",
+          "segment": "seg-c4ebcb4ba31d23188cbeaca9"
         }
       ]
     },
