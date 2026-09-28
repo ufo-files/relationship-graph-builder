@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "77f4ad97261715e6b31ccb83044a1758a826234a"
+    "revision": "0b64dcf624f8282bb8306aea841c0cab42b8ec72"
   },
-  "count": 553,
-  "totalCount": 553,
-  "shownCount": 553,
+  "count": 568,
+  "totalCount": 568,
+  "shownCount": 568,
   "candidates": [
     {
       "category": "book",
@@ -159,8 +159,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 802,
-        "documentCount": 493
+        "mentions": 803,
+        "documentCount": 494
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -175,8 +175,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 802,
-        "documentCount": 493
+        "mentions": 803,
+        "documentCount": 494
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -399,8 +399,8 @@
       "category": "organization",
       "left": {
         "name": "Johns Hopkins University",
-        "mentions": 52,
-        "documentCount": 44
+        "mentions": 53,
+        "documentCount": 45
       },
       "right": {
         "name": "John Hopkins University",
@@ -591,8 +591,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 648,
-        "documentCount": 350
+        "mentions": 650,
+        "documentCount": 352
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -988,6 +988,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Permanent Committee",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "PERMANENT COMMITTEES",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.974,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "book",
       "left": {
         "name": "UFO Crash AtRoswell",
@@ -1007,8 +1023,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 324,
-        "documentCount": 177
+        "mentions": 326,
+        "documentCount": 179
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -1071,8 +1087,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 324,
-        "documentCount": 177
+        "mentions": 326,
+        "documentCount": 179
       },
       "right": {
         "name": "Linda Moulton-How",
@@ -1148,6 +1164,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "PRESIDING OFFICERS",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Presiding Officer",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Fort George Island",
@@ -1173,22 +1205,6 @@
       "right": {
         "name": "Deputy Base Commander Charles Halt",
         "mentions": 3,
-        "documentCount": 2
-      },
-      "similarity": 0.971,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "PRESIDING OFFICERS",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "The Presiding Officer",
-        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.971,
@@ -1231,8 +1247,8 @@
       "category": "organization",
       "left": {
         "name": "James Randi Educational Foundation",
-        "mentions": 58,
-        "documentCount": 46
+        "mentions": 60,
+        "documentCount": 47
       },
       "right": {
         "name": "James Randi Education Foundation",
@@ -1247,8 +1263,8 @@
       "category": "person",
       "left": {
         "name": "Charles Lindbergh",
-        "mentions": 30,
-        "documentCount": 18
+        "mentions": 32,
+        "documentCount": 19
       },
       "right": {
         "name": "Charles Lindberg",
@@ -1270,6 +1286,22 @@
         "name": "Project Star Gate",
         "mentions": 7,
         "documentCount": 7
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of De",
+        "mentions": 29,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Department of DEM",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.97,
       "reason": "similar name",
@@ -1455,8 +1487,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 802,
-        "documentCount": 493
+        "mentions": 803,
+        "documentCount": 494
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -1471,8 +1503,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 802,
-        "documentCount": 493
+        "mentions": 803,
+        "documentCount": 494
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1487,8 +1519,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 802,
-        "documentCount": 493
+        "mentions": 803,
+        "documentCount": 494
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1503,8 +1535,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 222,
-        "documentCount": 140
+        "mentions": 223,
+        "documentCount": 141
       },
       "right": {
         "name": "Stephen Hawkings",
@@ -1631,8 +1663,8 @@
       "category": "government_agency",
       "left": {
         "name": "Regional Office",
-        "mentions": 17,
-        "documentCount": 12
+        "mentions": 18,
+        "documentCount": 13
       },
       "right": {
         "name": "Regional Offices",
@@ -1764,8 +1796,8 @@
       },
       "right": {
         "name": "Department of National Defense",
-        "mentions": 13,
-        "documentCount": 11
+        "mentions": 14,
+        "documentCount": 12
       },
       "similarity": 0.967,
       "reason": "similar name",
@@ -1852,11 +1884,27 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Jacques Vallee",
+        "mentions": 554,
+        "documentCount": 251
+      },
+      "right": {
+        "name": "Jacques Vallees",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "White Mountains",
-        "mentions": 64,
-        "documentCount": 48
+        "mentions": 65,
+        "documentCount": 49
       },
       "right": {
         "name": "White Mountain",
@@ -2127,8 +2175,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 613,
-        "documentCount": 389
+        "mentions": 615,
+        "documentCount": 390
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -2159,13 +2207,13 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 269,
-        "documentCount": 172
+        "mentions": 270,
+        "documentCount": 173
       },
       "right": {
         "name": "Major Donald Keyhole",
-        "mentions": 17,
-        "documentCount": 11
+        "mentions": 18,
+        "documentCount": 12
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -2175,8 +2223,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 269,
-        "documentCount": 172
+        "mentions": 270,
+        "documentCount": 173
       },
       "right": {
         "name": "Major Donald Keyhoes",
@@ -2191,8 +2239,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 182,
-        "documentCount": 136
+        "mentions": 184,
+        "documentCount": 138
       },
       "right": {
         "name": "Bruce Macabee",
@@ -2270,14 +2318,14 @@
     {
       "category": "person",
       "left": {
+        "name": "David Halperin",
+        "mentions": 14,
+        "documentCount": 8
+      },
+      "right": {
         "name": "David Halpern",
         "mentions": 7,
         "documentCount": 2
-      },
-      "right": {
-        "name": "David Halperin",
-        "mentions": 13,
-        "documentCount": 7
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -2332,6 +2380,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Donald Spence",
+        "mentions": 11,
+        "documentCount": 11
+      },
+      "right": {
+        "name": "Donald Spencer",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Carroll County",
@@ -2358,22 +2422,6 @@
         "name": "Frank Kaufmann",
         "mentions": 8,
         "documentCount": 6
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Donald Spence",
-        "mentions": 9,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "Donald Spencer",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -2486,6 +2534,22 @@
         "name": "Airforce Base",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "PRB Department",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "PR Department",
+        "mentions": 4,
+        "documentCount": 2
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -2655,8 +2719,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 269,
-        "documentCount": 172
+        "mentions": 270,
+        "documentCount": 173
       },
       "right": {
         "name": "Major Donald Keyho",
@@ -2671,8 +2735,8 @@
       "category": "person",
       "left": {
         "name": "Frank Edwards",
-        "mentions": 267,
-        "documentCount": 112
+        "mentions": 268,
+        "documentCount": 113
       },
       "right": {
         "name": "Frank Edward",
@@ -2751,8 +2815,8 @@
       "category": "person",
       "left": {
         "name": "Philip Corso",
-        "mentions": 102,
-        "documentCount": 72
+        "mentions": 104,
+        "documentCount": 73
       },
       "right": {
         "name": "Colonel Phillip Corso",
@@ -2956,6 +3020,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Robert Baval",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Robert Bauval",
+        "mentions": 18,
+        "documentCount": 16
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Army Reserve",
@@ -2966,22 +3046,6 @@
         "name": "Army Reserves",
         "mentions": 4,
         "documentCount": 3
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Robert Baval",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Robert Bauval",
-        "mentions": 17,
-        "documentCount": 15
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -3164,6 +3228,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Lake Monsters",
+        "mentions": 10,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Lake Monster",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Arthur Clarke",
@@ -3174,22 +3254,6 @@
         "name": "Arthur Clark",
         "mentions": 4,
         "documentCount": 4
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Lake Monsters",
-        "mentions": 9,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "Lake Monster",
-        "mentions": 4,
-        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -3468,6 +3532,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Dr. Donald Menzel of Harvard University",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Dr. Donald Manziel of Harvard University",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Lockborn Air Force Base",
@@ -3487,8 +3567,8 @@
       "category": "person",
       "left": {
         "name": "James Randi",
-        "mentions": 393,
-        "documentCount": 267
+        "mentions": 403,
+        "documentCount": 274
       },
       "right": {
         "name": "James Randin",
@@ -3567,8 +3647,8 @@
       "category": "person",
       "left": {
         "name": "David Jacobs",
-        "mentions": 147,
-        "documentCount": 99
+        "mentions": 150,
+        "documentCount": 100
       },
       "right": {
         "name": "David Jacob",
@@ -3652,8 +3732,8 @@
       },
       "right": {
         "name": "David Clark",
-        "mentions": 17,
-        "documentCount": 10
+        "mentions": 18,
+        "documentCount": 11
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -3775,8 +3855,8 @@
       "category": "location",
       "left": {
         "name": "Lake County",
-        "mentions": 17,
-        "documentCount": 11
+        "mentions": 18,
+        "documentCount": 12
       },
       "right": {
         "name": "Lake Country",
@@ -3916,6 +3996,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "David Prince",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "David Price",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Mari Island",
@@ -3942,22 +4038,6 @@
         "name": "Henry Maday",
         "mentions": 5,
         "documentCount": 2
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "David Prince",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "David Price",
-        "mentions": 5,
-        "documentCount": 5
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -4175,13 +4255,13 @@
       "category": "organization",
       "left": {
         "name": "University of Arkansas",
-        "mentions": 26,
-        "documentCount": 25
+        "mentions": 27,
+        "documentCount": 26
       },
       "right": {
         "name": "University of Kansas",
-        "mentions": 24,
-        "documentCount": 22
+        "mentions": 26,
+        "documentCount": 24
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -4591,8 +4671,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 324,
-        "documentCount": 177
+        "mentions": 326,
+        "documentCount": 179
       },
       "right": {
         "name": "Linda Moulton-Howell",
@@ -4892,6 +4972,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Chairman of the Committee",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Chairman of the Subcommittee",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.943,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Department of War",
@@ -5108,8 +5204,8 @@
       },
       "right": {
         "name": "Investigating Committee",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.939,
       "reason": "similar name",
@@ -5119,8 +5215,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 745,
-        "documentCount": 427
+        "mentions": 747,
+        "documentCount": 428
       },
       "right": {
         "name": "Stanton Freedman",
@@ -5135,8 +5231,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 745,
-        "documentCount": 427
+        "mentions": 747,
+        "documentCount": 428
       },
       "right": {
         "name": "Stanton Freidman",
@@ -5196,6 +5292,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "program",
+      "left": {
+        "name": "Project Artichoke",
+        "mentions": 23,
+        "documentCount": 21
+      },
+      "right": {
+        "name": "Project ARTICHO",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Eric Von Daniken",
@@ -5205,22 +5317,6 @@
       "right": {
         "name": "Eric Von Danikin",
         "mentions": 4,
-        "documentCount": 2
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "program",
-      "left": {
-        "name": "Project Artichoke",
-        "mentions": 22,
-        "documentCount": 20
-      },
-      "right": {
-        "name": "Project ARTICHO",
-        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.938,
@@ -5334,6 +5430,22 @@
         "name": "US Intelligence",
         "mentions": 5,
         "documentCount": 4
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of PR",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of PP",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.938,
       "reason": "similar name",
@@ -5556,8 +5668,24 @@
       },
       "right": {
         "name": "Sol Foundation",
-        "mentions": 76,
-        "documentCount": 34
+        "mentions": 77,
+        "documentCount": 35
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "FMS Foundation Newsletter March",
+        "mentions": 27,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "FMS Foundation Newsletter May",
+        "mentions": 28,
+        "documentCount": 2
       },
       "similarity": 0.933,
       "reason": "similar name",
@@ -5647,8 +5775,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of National Defense",
-        "mentions": 13,
-        "documentCount": 11
+        "mentions": 14,
+        "documentCount": 12
       },
       "right": {
         "name": "DEPARTMENT OF NATIONAL DEPENCE",
@@ -6255,13 +6383,13 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 403,
-        "documentCount": 202
+        "mentions": 405,
+        "documentCount": 203
       },
       "right": {
         "name": "George Adamsky",
-        "mentions": 7,
-        "documentCount": 5
+        "mentions": 8,
+        "documentCount": 6
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -6271,8 +6399,8 @@
       "category": "person",
       "left": {
         "name": "Robert Bigelow",
-        "mentions": 388,
-        "documentCount": 200
+        "mentions": 390,
+        "documentCount": 202
       },
       "right": {
         "name": "Robert Bigalow",
@@ -6319,8 +6447,8 @@
       "category": "organization",
       "left": {
         "name": "University of North Carolina",
-        "mentions": 47,
-        "documentCount": 33
+        "mentions": 48,
+        "documentCount": 34
       },
       "right": {
         "name": "University of South Carolina",
@@ -6463,8 +6591,8 @@
       "category": "person",
       "left": {
         "name": "Major Donald Keyhole",
-        "mentions": 17,
-        "documentCount": 11
+        "mentions": 18,
+        "documentCount": 12
       },
       "right": {
         "name": "Major Donald Keyhoes",
@@ -6502,6 +6630,22 @@
         "name": "George Harris's",
         "mentions": 7,
         "documentCount": 4
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Jacques Valle",
+        "mentions": 15,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Jacques Vallees",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -6549,6 +6693,22 @@
       "right": {
         "name": "Sheet Mountain",
         "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "PRB Department",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "PSB Department",
+        "mentions": 6,
         "documentCount": 2
       },
       "similarity": 0.929,
@@ -6636,6 +6796,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "George Hamilton",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "George Hilton",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "The Air Force Base",
@@ -6646,6 +6822,22 @@
         "name": "Alr Force Base",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "PSB Department",
+        "mentions": 6,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "PHS Department",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -6783,8 +6975,8 @@
       "category": "organization",
       "left": {
         "name": "University of Toronto",
-        "mentions": 30,
-        "documentCount": 29
+        "mentions": 31,
+        "documentCount": 30
       },
       "right": {
         "name": "University of Trento",
@@ -6908,6 +7100,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "FMs Foundation Newsletter",
+        "mentions": 9,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "FMS Foundation Newsletter May",
+        "mentions": 28,
+        "documentCount": 2
+      },
+      "similarity": 0.926,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Skeptical Area Network Effort",
@@ -6959,8 +7167,8 @@
       "category": "government_agency",
       "left": {
         "name": "U.S. Air Force",
-        "mentions": 8625,
-        "documentCount": 3032
+        "mentions": 8629,
+        "documentCount": 3035
       },
       "right": {
         "name": "US Air Forces",
@@ -6975,8 +7183,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 403,
-        "documentCount": 202
+        "mentions": 405,
+        "documentCount": 203
       },
       "right": {
         "name": "George Adams",
@@ -6991,8 +7199,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 362,
-        "documentCount": 185
+        "mentions": 364,
+        "documentCount": 186
       },
       "right": {
         "name": "Natural Investigations Committee",
@@ -7007,8 +7215,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 362,
-        "documentCount": 185
+        "mentions": 364,
+        "documentCount": 186
       },
       "right": {
         "name": "National Investigative Committee",
@@ -7055,8 +7263,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 150,
-        "documentCount": 120
+        "mentions": 151,
+        "documentCount": 121
       },
       "right": {
         "name": "Mohave Desert",
@@ -7276,6 +7484,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "David Spergel",
+        "mentions": 21,
+        "documentCount": 13
+      },
+      "right": {
+        "name": "David Spiegel",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Aerospace Engineer",
@@ -7305,6 +7529,22 @@
       },
       "similarity": 0.923,
       "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Major Donald Keyhole",
+        "mentions": 18,
+        "documentCount": 12
+      },
+      "right": {
+        "name": "Major Donald Keyho",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -7342,14 +7582,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Major Donald Keyhole",
-        "mentions": 17,
-        "documentCount": 11
+        "name": "George Adams",
+        "mentions": 8,
+        "documentCount": 7
       },
       "right": {
-        "name": "Major Donald Keyho",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "George Adamsky",
+        "mentions": 8,
+        "documentCount": 6
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -7366,22 +7606,6 @@
         "name": "The Directorate of Air Fo",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "George Adams",
-        "mentions": 8,
-        "documentCount": 7
-      },
-      "right": {
-        "name": "George Adamsky",
-        "mentions": 7,
-        "documentCount": 5
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -7686,6 +7910,22 @@
         "name": "John McMichael",
         "mentions": 5,
         "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "PR Department",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "PT Department",
+        "mentions": 4,
+        "documentCount": 2
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -8031,8 +8271,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 193,
-        "documentCount": 133
+        "mentions": 192,
+        "documentCount": 132
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -8063,8 +8303,8 @@
       "category": "person",
       "left": {
         "name": "Allen Greenfield",
-        "mentions": 29,
-        "documentCount": 17
+        "mentions": 30,
+        "documentCount": 18
       },
       "right": {
         "name": "Alan Greenfield",
@@ -8127,8 +8367,8 @@
       "category": "person",
       "left": {
         "name": "Mark Kelly",
-        "mentions": 25,
-        "documentCount": 16
+        "mentions": 26,
+        "documentCount": 17
       },
       "right": {
         "name": "Mary Kelly",
@@ -8159,8 +8399,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 222,
-        "documentCount": 140
+        "mentions": 223,
+        "documentCount": 141
       },
       "right": {
         "name": "Steven Hawking",
@@ -8335,8 +8575,8 @@
       "category": "person",
       "left": {
         "name": "Robert Wood Johnson",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "right": {
         "name": "Robert Underwood Johnson",
@@ -8431,8 +8671,8 @@
       "category": "person",
       "left": {
         "name": "Steven Tango",
-        "mentions": 24,
-        "documentCount": 17
+        "mentions": 25,
+        "documentCount": 18
       },
       "right": {
         "name": "Stephen Tango",
@@ -8559,8 +8799,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 324,
-        "documentCount": 177
+        "mentions": 326,
+        "documentCount": 179
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
@@ -8676,8 +8916,8 @@
       },
       "right": {
         "name": "Jane Hansen",
-        "mentions": 14,
-        "documentCount": 9
+        "mentions": 15,
+        "documentCount": 10
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -8687,8 +8927,8 @@
       "category": "person",
       "left": {
         "name": "Jean Chapman",
-        "mentions": 18,
-        "documentCount": 18
+        "mentions": 20,
+        "documentCount": 20
       },
       "right": {
         "name": "Ken Chapman",
@@ -8767,8 +9007,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Jay Gould",
-        "mentions": 51,
-        "documentCount": 38
+        "mentions": 52,
+        "documentCount": 39
       },
       "right": {
         "name": "Stephen Gould",
@@ -8831,8 +9071,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Pelletier",
-        "mentions": 4,
-        "documentCount": 4
+        "mentions": 6,
+        "documentCount": 5
       },
       "right": {
         "name": "Ken Pelletier",
@@ -8847,8 +9087,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 46815,
-        "documentCount": 11687
+        "mentions": 47068,
+        "documentCount": 11733
       },
       "right": {
         "name": "North American Space Agency",
