@@ -5,28 +5,12 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "762d411a1dd73ee982ec79825b7cf2dbef801296"
+    "revision": "50b9a12ffd521943defcef3afa49d9eaf110dfd2"
   },
-  "count": 575,
-  "totalCount": 575,
-  "shownCount": 575,
+  "count": 568,
+  "totalCount": 568,
+  "shownCount": 568,
   "candidates": [
-    {
-      "category": "book",
-      "left": {
-        "name": "Incidents in Varginha — Creatures from Space in Southern Minas",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "right": {
-        "name": "Incident in Varginha – Creatures from Space in Southern Minas",
-        "mentions": 1,
-        "documentCount": 1
-      },
-      "similarity": 0.992,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
     {
       "category": "organization",
       "left": {
@@ -1167,8 +1151,8 @@
       "category": "government_agency",
       "left": {
         "name": "PRESIDING OFFICERS",
-        "mentions": 4,
-        "documentCount": 3
+        "mentions": 3,
+        "documentCount": 2
       },
       "right": {
         "name": "Presiding Officer",
@@ -1292,22 +1276,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of De",
-        "mentions": 29,
-        "documentCount": 7
-      },
-      "right": {
-        "name": "Department of DEM",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.97,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "program",
       "left": {
         "name": "Project Redlight",
@@ -1348,8 +1316,8 @@
       },
       "right": {
         "name": "Committee Report",
-        "mentions": 12,
-        "documentCount": 3
+        "mentions": 11,
+        "documentCount": 2
       },
       "similarity": 0.97,
       "reason": "similar name",
@@ -1551,8 +1519,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 229,
-        "documentCount": 145
+        "mentions": 230,
+        "documentCount": 146
       },
       "right": {
         "name": "Stephen Hawkings",
@@ -2550,22 +2518,6 @@
         "name": "Charles Hixon",
         "mentions": 4,
         "documentCount": 3
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "PRB Department",
-        "mentions": 4,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "PR Department",
-        "mentions": 4,
-        "documentCount": 2
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -3599,8 +3551,8 @@
       "category": "person",
       "left": {
         "name": "James Randi",
-        "mentions": 417,
-        "documentCount": 283
+        "mentions": 419,
+        "documentCount": 284
       },
       "right": {
         "name": "James Randin",
@@ -4639,13 +4591,13 @@
       "category": "government_agency",
       "left": {
         "name": "Ministry of the Navy",
-        "mentions": 5,
-        "documentCount": 4
+        "mentions": 8,
+        "documentCount": 5
       },
       "right": {
         "name": "Minister of the Navy",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.95,
       "reason": "similar name",
@@ -5484,22 +5436,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
-      "left": {
-        "name": "Department of PR",
-        "mentions": 4,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Department of PP",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "book",
       "left": {
         "name": "Top Secret/Majic",
@@ -5743,8 +5679,8 @@
       "category": "location",
       "left": {
         "name": "Trindade Island",
-        "mentions": 34,
-        "documentCount": 17
+        "mentions": 35,
+        "documentCount": 18
       },
       "right": {
         "name": "Trinidad Island",
@@ -5759,8 +5695,8 @@
       "category": "location",
       "left": {
         "name": "Trindade Island",
-        "mentions": 34,
-        "documentCount": 17
+        "mentions": 35,
+        "documentCount": 18
       },
       "right": {
         "name": "Trendade Island",
@@ -6764,22 +6700,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
-      "left": {
-        "name": "PRB Department",
-        "mentions": 4,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "PSB Department",
-        "mentions": 6,
-        "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "person",
       "left": {
         "name": "Brian Forrester",
@@ -6860,6 +6780,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "George Hamilton",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "George Hilton",
+        "mentions": 5,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "The Air Force Base",
@@ -6870,38 +6806,6 @@
         "name": "Alr Force Base",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "George Hamilton",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "George Hilton",
-        "mentions": 4,
-        "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "PSB Department",
-        "mentions": 6,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "PHS Department",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -7996,22 +7900,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
-      "left": {
-        "name": "PR Department",
-        "mentions": 4,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "PT Department",
-        "mentions": 4,
-        "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "location",
       "left": {
         "name": "Camino Island",
@@ -8495,8 +8383,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 229,
-        "documentCount": 145
+        "mentions": 230,
+        "documentCount": 146
       },
       "right": {
         "name": "Steven Hawking",
