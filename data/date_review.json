@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-28T04:58:58Z",
+  "generatedAt": "2026-09-28T06:09:06Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "0b64dcf624f8282bb8306aea841c0cab42b8ec72"
+    "revision": "5dd6689eb413c722c20e8157da5e275862a69449"
   },
-  "documentsWithCandidates": 13275,
+  "documentsWithCandidates": 13283,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -5570,6 +5570,21 @@
       ]
     },
     {
+      "documentId": "doc-3363b8064e43",
+      "path": "Archives-for-the-Unexplained/documents/1986-03-28_Bradford-Star_SUFOG-scan_SUFOG-DVD.txt",
+      "candidates": [
+        {
+          "value": "1986-03-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Bradford Star, Friday, March 28, 1986",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-679738bd3ef0",
       "path": "Archives-for-the-Unexplained/documents/1986-04-02_Watford-West-Herts-Post_SUFOG-scan_SUFOG-DVD.txt",
       "candidates": [
@@ -5862,6 +5877,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "WOLFE CO. NEWS, Campton, KY - March 20, 1987",
+          "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0c974d8afe40",
+      "path": "Archives-for-the-Unexplained/documents/1987-03-30_Boston-Globe-MA_SUFOG-scan_SUFOG-DVD.txt",
+      "candidates": [
+        {
+          "value": "1917-03-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CLOJI, loatoD, MA - March 30, 1917",
           "segment": 0
         }
       ]
@@ -10342,6 +10372,30 @@
           "method": "unclassified-mention",
           "evidence": "Posted: Nov 12, 2007 8:14 pm",
           "segment": 29
+        }
+      ]
+    },
+    {
+      "documentId": "doc-74cc9478ef71",
+      "path": "Archives-for-the-Unexplained/documents/2007-12-00_Journal-of-the-Royal-Anthropological-Institute---Vol-13-No-4--Saethre.txt",
+      "candidates": [
+        {
+          "value": "2007-08-16",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "reptilian_credo_1.pdf; http://www.v72.org/PDF/reptilian_credo_2.pdf, accessed 16 August 2007).",
+          "segment": 712
+        },
+        {
+          "value": "2007-08-16",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "2005NRH.pdf, accessed 16 August 2007).",
+          "segment": 773
         }
       ]
     },
@@ -22019,6 +22073,21 @@
       ]
     },
     {
+      "documentId": "doc-3a8800b511bd",
+      "path": "Archives-for-the-Unexplained/documents/2018-11-03---ShatteredRealityPodcast---61-Kate-and-Fahrusha-shatter-a-little-REALITY_03jONe8KWkg---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2018-01-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 19 2018 and this is our first",
+          "segment": 16
+        }
+      ]
+    },
+    {
       "documentId": "doc-88b1467fafa4",
       "path": "Archives-for-the-Unexplained/documents/2018-11-12---FADE-TO-BLACK-Radio---Ep.-949-FADE-to-BLACK-w-Chris-O-Brien-Stalking-the-Herd-Part-1-LIVE_nvkaYPaM7ws---transcript-automated-.txt",
       "candidates": [
@@ -24259,6 +24328,66 @@
           "method": "unclassified-mention",
           "evidence": "destroyed on July 1 1985.",
           "segment": 1447
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0ebfb909c8f1",
+      "path": "Archives-for-the-Unexplained/documents/2021-06-23---The-Black-Vault-Originals---American-Airlines-Flight-2292-UFO-Encounter-February-21-2021_-hqRM5LplfM---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2021-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "February 21 2021, had a strang",
+          "segment": 102
+        },
+        {
+          "value": "2021-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and Phoenix on February 21 2021",
+          "segment": 212
+        },
+        {
+          "value": "2021-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mexico on February 21 2021.",
+          "segment": 237
+        },
+        {
+          "value": "2021-03-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "here, the date of March 2 2021.",
+          "segment": 609
+        },
+        {
+          "value": "2021-02-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "put a pin in February 24 2021.",
+          "segment": 939
+        },
+        {
+          "value": "2021-03-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "coincidence, March 2 2021, is",
+          "segment": 991
         }
       ]
     },
@@ -27586,6 +27715,39 @@
           "method": "unclassified-mention",
           "evidence": "breaking news for Thursday June 15 2023",
           "segment": 7
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fc10eee44858",
+      "path": "Archives-for-the-Unexplained/documents/2023-06-16---Witness-Citizen---6.16.23-ROGUE-INTEL-MEDIA-MANIPULATION-PHENOMENON_MJYOQPSQ8VI---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1970-12-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "from the Sun Journal December 17 1970",
+          "segment": 392
+        },
+        {
+          "value": "1977-11-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "South Dakota on November 16 1977 with",
+          "segment": 659
+        },
+        {
+          "value": "1975-11-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "but in November 11 1975 directive from",
+          "segment": 991
         }
       ]
     },
@@ -72782,6 +72944,30 @@
       ]
     },
     {
+      "documentId": "doc-2212abb1d3c4",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-19-No-08---2005.txt",
+      "candidates": [
+        {
+          "value": "2005-08-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 19 August 2005 Number 8 http://www.ntskeptics.org",
+          "segment": 0
+        },
+        {
+          "value": "2005-12-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Fraternally, December 10 2005",
+          "segment": 34
+        }
+      ]
+    },
+    {
       "documentId": "doc-b354f08f22a1",
       "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-20-No-02---2006.txt",
       "candidates": [
@@ -112285,6 +112471,21 @@
           "method": "unclassified-mention",
           "evidence": "So you bring it up to December 17, 1969.",
           "segment": 544
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a2bedf0ce538",
+      "path": "Archives-for-the-Unexplained/documents/UFOs-Hard-Evidence---S01E05---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-06-30",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The next photograph we want to get is the one that's dated June 30, 1947, that there was nothing",
+          "segment": 388
         }
       ]
     },
@@ -274022,42 +274223,6 @@
       "documentId": "doc-932297d8ca894ec6119be99f",
       "path": "Brazil-Government-UAP/paired/Upload/varginha IPM 06 IPM 06 2/en/translation.txt",
       "candidates": [
-        {
-          "value": "2023-01-20",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "2023-01-20] UFO **Translation Note:** The text provided appears to be a date (\"2023-01-20\") followed by the word \"UFO\". Without additional context, it's impossible to determine the intended meaning of \"SoUrenUD\". It appears to be a misspelling or potentially a placeholder. Theref",
-          "segment": "seg-ceef30c5a53add081c68f6ca"
-        },
-        {
-          "value": "2023-01-20",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "2023-01-20] UFO **Translation Note:** The text provided appears to be a date (\"2023-01-20\") followed by the word \"UFO\". Without additional context, it's impossible to determine the intended meaning of \"SoUrenUD\". It appears to be a misspelling or potentially a placeholder. Theref",
-          "segment": "seg-ceef30c5a53add081c68f6ca"
-        },
-        {
-          "value": "1997-07-02",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "B10}NOp 9 witness UFO at 10ynop evening, ‘above 0 2 July 1997 ‘above 10}n0q Observation Scientific reflection on a strange object seen on April 978 1997 by [name] in [location] 2 SeID Bred [aARLIOJUODSap BLS ‘osed OF [description of object] as it flew over [area] oeu onb azonbyen",
-          "segment": "seg-38724fe384e54d623286dbc4"
-        },
-        {
-          "value": "1999-09-19",
-          "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "A associated press reports a UFO sighting near __UFO_PROTECTED_000__ on September 19, 1999. Witnesses describe a bright, disk-shaped object moving erratically at a low altitude. The object was observed for approximately 10 minutes before disappearing suddenly. Local authorities h",
-          "segment": "seg-c8deb4178168ff22a5da219c"
-        },
         {
           "value": "1997-01-29",
           "precision": "day",
