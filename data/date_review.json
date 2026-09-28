@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-28T18:05:22Z",
+  "generatedAt": "2026-09-28T19:18:28Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "45830f63e35e50810e4f9efd582d8790da293dea"
+    "revision": "743bc7b3f543175aea1f81102b633db48ce7e6f8"
   },
-  "documentsWithCandidates": 13416,
+  "documentsWithCandidates": 13440,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -6506,6 +6506,21 @@
       ]
     },
     {
+      "documentId": "doc-3ab2e1bd24d7",
+      "path": "Archives-for-the-Unexplained/documents/1987-07-10_Daily-Press_AFU-scan_CFI-archive_keyword-UFO.txt",
+      "candidates": [
+        {
+          "value": "1987-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Daily Press, Friday, July 10, 1987",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-f891f9d1f115",
       "path": "Archives-for-the-Unexplained/documents/1987-07-11_Albuquerque-Journal-NM_SUFOG-scan_SUFOG-DVD.txt",
       "candidates": [
@@ -7074,6 +7089,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "DAILY STAR, Tuesday, October 10, 1989",
+          "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0d791ae8a796",
+      "path": "Archives-for-the-Unexplained/documents/1989-11-23_Western-Leader_SUFOG-scan_SUFOG-DVD_keyword-New-Zealand.txt",
+      "candidates": [
+        {
+          "value": "1989-11-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thursday, November 23, 1989 No.136",
           "segment": 0
         }
       ]
@@ -19277,6 +19307,39 @@
       ]
     },
     {
+      "documentId": "doc-d444ccec9b43",
+      "path": "Archives-for-the-Unexplained/documents/2017-09-27---Inception-Radio-Network---UFO-Headline-News-Thursday-September-21st-2017_dR1cLINRmjw---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "this sighting is September 12 2017 it",
+          "segment": 696
+        },
+        {
+          "value": "2017-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 12 2017 I meditated using the",
+          "segment": 742
+        },
+        {
+          "value": "2005-02-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "there on February 24 2005 George a 91",
+          "segment": 972
+        }
+      ]
+    },
+    {
       "documentId": "doc-c170bc3145c1",
       "path": "Archives-for-the-Unexplained/documents/2017-09-27---Inception-Radio-Network---UFO-Headline-News-Tuesday-September-19th-2017_hET7w7XihV0---transcript-automated-.txt",
       "candidates": [
@@ -19787,6 +19850,21 @@
       ]
     },
     {
+      "documentId": "doc-79648f26752b",
+      "path": "Archives-for-the-Unexplained/documents/2017-12-09---Inception-Radio-Network---UFO-Headline-News-Friday-December-8th-2017_N2_kl8jS6Zk---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-09-27",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "September 27 2017 we received the",
+          "segment": 501
+        }
+      ]
+    },
+    {
       "documentId": "doc-3b5a6855c122",
       "path": "Archives-for-the-Unexplained/documents/2017-12-13---Inception-Radio-Network---UFO-Headline-News-Tuesday-December-12th-2017_Xo3wFK9Ag8Q---transcript-automated-.txt",
       "candidates": [
@@ -19879,6 +19957,21 @@
           "method": "unclassified-mention",
           "evidence": "experiencing today on December 16 2017",
           "segment": 2309
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ffe76330fb08",
+      "path": "Archives-for-the-Unexplained/documents/2017-12-16---Inception-Radio-Network---UFO-Headline-News-Friday-December-15th-2017_sy2TE_upVG8---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-06-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 15 2017 object traveled in",
+          "segment": 295
         }
       ]
     },
@@ -20884,6 +20977,21 @@
           "method": "unclassified-mention",
           "evidence": "gone and that happened on 6 July 2009",
           "segment": 3281
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1a4b89a32736",
+      "path": "Archives-for-the-Unexplained/documents/2018-02-19---Inception-Radio-Network---UFO-Headline-News-Friday-February-9th-2018_88ECvtMbLp4---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2015-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 15 2015 from my front porch",
+          "segment": 205
         }
       ]
     },
@@ -23969,6 +24077,21 @@
       ]
     },
     {
+      "documentId": "doc-3f30fe186a81",
+      "path": "Archives-for-the-Unexplained/documents/2019-05-20---Ryan-Sprague---Somewhere-in-the-Skies-Witness-Accounts-Volume-Six_NLon_hcyOmQ---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2009-11-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "at about 444 p.m. on November 26 2009",
+          "segment": 1468
+        }
+      ]
+    },
+    {
       "documentId": "doc-968289b8ecf2",
       "path": "Archives-for-the-Unexplained/documents/2019-05-31---New-Thinking-Allowed-with-Jeffrey-Mishlove---Crop-Circles-and-Chemtrails-with-John-B.-Alexander_FbIy1Jal_nY---transcript-automated-.txt",
       "candidates": [
@@ -23995,6 +24118,21 @@
           "method": "unclassified-mention",
           "evidence": "become known from December 16 2017 to",
           "segment": 2167
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b86e41d7475e",
+      "path": "Archives-for-the-Unexplained/documents/2019-06-13---NASA-s-Kennedy-Space-Center---Celebrating-Apollo-Explore-Humans-in-Space_6t6SG5-AjbA---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1967-01-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 27 1967 during a pre-flight test",
+          "segment": 419
         }
       ]
     },
@@ -25475,6 +25613,30 @@
       ]
     },
     {
+      "documentId": "doc-e4d4c00fe89c",
+      "path": "Archives-for-the-Unexplained/documents/2021-07-13---NASA-Goddard---12th-Annual-Goddard-Film-Festival_yEYHDsYuhzc---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2021-05-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On May 8, 2021, NOAA satellites observed a von Kármán",
+          "segment": 49
+        },
+        {
+          "value": "1972-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "launched on July 23, 1972.",
+          "segment": 1521
+        }
+      ]
+    },
+    {
       "documentId": "doc-cbafb37c8374",
       "path": "Archives-for-the-Unexplained/documents/2021-07-22---The-Black-Vault-Originals---NASA-The-Classified-UAPTF-Briefing-About-UFOs_IOhQARzUB7E---transcript-automated-.txt",
       "candidates": [
@@ -25987,6 +26149,30 @@
           "method": "unclassified-mention",
           "evidence": "on January 15 2022 the uninhabited",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-66e9f1600324",
+      "path": "Archives-for-the-Unexplained/documents/2022-09-23---Rob-McConnell---The-X-Zone-with-Rob-McConnell-Interviews---JOHN-HORRIGAN---Folklore-UFOs-Bigfoot-and-More_9LEr3uwNM08---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1961-09-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "husband Barney September 19 1961 driving",
+          "segment": 686
+        },
+        {
+          "value": "1945-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "site was July 16 1945 in almost two",
+          "segment": 1284
         }
       ]
     },
@@ -36953,6 +37139,30 @@
       ]
     },
     {
+      "documentId": "doc-db94e1162db0",
+      "path": "Archives-for-the-Unexplained/documents/Bilk---no-036---1990-07.txt",
+      "candidates": [
+        {
+          "value": "1986-10-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "usual object in Lago de Cote on October 25, 1986, at 9 a.m.: \"First",
+          "segment": 22
+        },
+        {
+          "value": "1989-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "• Octopus attack in the Phillipines, on Dec 12, 1989: INFO 59, p.30.",
+          "segment": 105
+        }
+      ]
+    },
+    {
       "documentId": "doc-97decdec7d2f",
       "path": "Archives-for-the-Unexplained/documents/Bilk---no-037---1990-09.txt",
       "candidates": [
@@ -41663,6 +41873,57 @@
       ]
     },
     {
+      "documentId": "doc-3b704cd65960",
+      "path": "Archives-for-the-Unexplained/documents/Bulleten-EEAPPR---2007-No-9.txt",
+      "candidates": [
+        {
+          "value": "2002-06-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "01. Интервью с Н. Субботиным, рассказ о наблюдении НЛО в Шале (2002-06-19",
+          "segment": 30
+        },
+        {
+          "value": "2003-05-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "02. Призрак в галерее (2003-05-20",
+          "segment": 31
+        },
+        {
+          "value": "2003-05-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "03. Пермские уфологи (2003-05-20",
+          "segment": 32
+        },
+        {
+          "value": "2003-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "05. Бункер в лесу (2003-07-04",
+          "segment": 34
+        },
+        {
+          "value": "2003-08-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "06. Круги на поле (2003-08-19",
+          "segment": 35
+        }
+      ]
+    },
+    {
       "documentId": "doc-6379528ecbcb",
       "path": "Archives-for-the-Unexplained/documents/Bulleten-EEAPPR---2009-No-4.txt",
       "candidates": [
@@ -44917,6 +45178,21 @@
           "method": "dated-reference",
           "evidence": "1. ‹Attached hereto is a memorandun dated September 29, 1951",
           "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e3736185b19d",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000149438.txt",
+      "candidates": [
+        {
+          "value": "1954-01-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January to 15 January 1954.",
+          "segment": 1
         }
       ]
     },
@@ -55813,6 +56089,39 @@
           "method": "unclassified-mention",
           "evidence": "Saturday, April 25, 1992 quickly as possible.",
           "segment": 216
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4e9d06ead7c3",
+      "path": "Archives-for-the-Unexplained/documents/False-Memory-Syndrome-Foundation---Vol-01-No-02---1992-april.txt",
+      "candidates": [
+        {
+          "value": "1992-04-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, April 11, 1992 who have abandoned their false memories of",
+          "segment": 109
+        },
+        {
+          "value": "1992-04-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, April 25, 1992 Gloria Grady by Glenna Whitley that appeared in",
+          "segment": 123
+        },
+        {
+          "value": "1992-05-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday May 16, 1992 Kenneth Laming, National Center for the",
+          "segment": 155
         }
       ]
     },
@@ -74588,6 +74897,21 @@
       ]
     },
     {
+      "documentId": "doc-0a67d1bfed3d",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-16-No-08---2002.txt",
+      "candidates": [
+        {
+          "value": "1967-12-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "More than a year after Mothman's first appearance, around 5:00 in the evening on December 15, 1967, the 700-foot",
+          "segment": 212
+        }
+      ]
+    },
+    {
       "documentId": "doc-f05248545fb9",
       "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-16-No-11---2002.txt",
       "candidates": [
@@ -74623,6 +74947,39 @@
           "method": "unclassified-mention",
           "evidence": "Your parents got you hooked on food December 14, 2002",
           "segment": 7
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6aea65ae69b9",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-17-No-02---2003.txt",
+      "candidates": [
+        {
+          "value": "2003-02-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 17 February 2003 Number 2 http://www.ntskeptics.org",
+          "segment": 0
+        },
+        {
+          "value": "2003-02-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "erything you hate” and do not believe in. ESP guided me to your web-site Saturday, February 8, 2003 at",
+          "segment": 6
+        },
+        {
+          "value": "2003-02-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "shocked, but apparently a Florida lawyer has filed a suit claiming February 1, 2003",
+          "segment": 376
         }
       ]
     },
@@ -75562,6 +75919,75 @@
           "method": "unclassified-mention",
           "evidence": "scientists by Joe Barton (R-TX), Energy Committee Chairman December 9, 2006",
           "segment": 343
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9ffcefb2c70a",
+      "path": "Archives-for-the-Unexplained/documents/North-Texas-Skeptic---Vol-20-No-04---2006.txt",
+      "candidates": [
+        {
+          "value": "2006-04-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Volume 20 April 2006 Number 4 http://www.ntskeptics.org",
+          "segment": 0
+        },
+        {
+          "value": "2006-04-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In particular, he hints the attack on the Pentagon did not in- 8 April 2006",
+          "segment": 6
+        },
+        {
+          "value": "2001-09-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "cist U.S. Government that this country was attacked on 11 September 2001 by a band Meeting",
+          "segment": 26
+        },
+        {
+          "value": "2006-03-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "http://www.usatoday.com/tech/science/2006-03-26 ¦ The FSM wants everyone to talk and dress",
+          "segment": 175
+        },
+        {
+          "value": "2006-03-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 23 March 2006, D2Fusion, Inc., a subsidiary of Solar",
+          "segment": 275
+        },
+        {
+          "value": "1989-03-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "years ago, on 23 March 1989, the University of Utah held a Rep. Bob Inglis (R-SC), Research Subcommittee Chair, an-",
+          "segment": 279
+        },
+        {
+          "value": "1989-03-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On March 23, 1989 in Salt Lake City, the University of Utah School spirit: 8 out of 10 academics say",
+          "segment": 325
         }
       ]
     },
@@ -79592,6 +80018,21 @@
       ]
     },
     {
+      "documentId": "doc-549d67006891",
+      "path": "Archives-for-the-Unexplained/documents/Passage-ISS-calsky.txt",
+      "candidates": [
+        {
+          "value": "2010-06-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Used satellite data set is from 5 June 2010",
+          "segment": 29
+        }
+      ]
+    },
+    {
       "documentId": "doc-bf31167a0d83",
       "path": "Archives-for-the-Unexplained/documents/Passages-ISS-calsky.txt",
       "candidates": [
@@ -82576,6 +83017,21 @@
           "method": "unclassified-mention",
           "evidence": "morning of March 16 1967 I got a call",
           "segment": 65
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9c0325e0ffa7",
+      "path": "Archives-for-the-Unexplained/documents/Rich-Planet-TV---The-Phantoms---5-OF-5_Ar5jKxVcg5M---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2013-10-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "phase of Smith man fares 9 October 2013",
+          "segment": 864
         }
       ]
     },
@@ -88756,6 +89212,30 @@
           "method": "unclassified-mention",
           "evidence": "Last Change: February 5, 1996",
           "segment": 67
+        }
+      ]
+    },
+    {
+      "documentId": "doc-dd650d7ca8ba",
+      "path": "Archives-for-the-Unexplained/documents/Shadow-of-a-Doubt---1996-03.txt",
+      "candidates": [
+        {
+          "value": "1996-03-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, March 23, 1996, 2:00 -- 3:30pm",
+          "segment": 15
+        },
+        {
+          "value": "1996-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Last Change: March 8, 1996",
+          "segment": 55
         }
       ]
     },
@@ -272823,15 +273303,6 @@
           "segment": "seg-44c36b5382b0d931676eac02"
         },
         {
-          "value": "1977-11-02",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "DAY 03 NOV 77 - In the area since 22:20, waiting for the tide to pass through. Vigilance for the rest of the night without abnormalities DAY 04 NOV 77 - Continued contact with various elements, informed the team that on the previous day, around 22:00 hours, they were observed sev",
-          "segment": "seg-5ede289d6a53b63c58697f7d"
-        },
-        {
           "value": "1977-10-24",
           "precision": "day",
           "confidence": 0.45,
@@ -272857,15 +273328,6 @@
           "method": "unclassified-mention",
           "evidence": "November 1, 1977 at 7:00 PM (2nd time",
           "segment": "seg-127d280cc8bb3e6ee13df769"
-        },
-        {
-          "value": "1977-01-01",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "At 7:00 PM on January 01, 1977, for the first time, elements of the 2nd. Section observed a \"light\" moving in a south/northwest direction at an estimated altitude of below 6,000m, more precisely 3.000\" (observation 1S FLATC). DESCRIPTION: Bright light, blue/green in color, with a",
-          "segment": "seg-8f991fa285d1a478220b6480"
         },
         {
           "value": "1977-10-25",
@@ -272928,6 +273390,15 @@
           "segment": "seg-7b55a15c9a6ab8cfe6be3e62"
         },
         {
+          "value": "1986-05-19",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "There are already thousands of confirmed instances of Unidentified Flying Objects (UFOs) passing over various parts of the world. But none was as thoroughly documented as the pursuit of two dozen UFOs by six FAB F-5 and Mirage supersonic fighters between São Paulo, São José dos C",
+          "segment": "seg-5d00bf0a08dd965b23b78d04"
+        },
+        {
           "value": "1986-05-18",
           "precision": "day",
           "confidence": 0.45,
@@ -272937,12 +273408,12 @@
           "segment": "seg-d7d0915b3128cf61cec3d33d"
         },
         {
-          "value": "1991-04-06",
+          "value": "1991-04-26",
           "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "UNB of 2 6 April 1991 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "UNB dated 26 Apr 1991. x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.",
           "segment": "seg-27c1510da83707abea29fd3b"
         },
         {
@@ -273138,103 +273609,40 @@
       "path": "Brazil-Government-UAP/paired/Upload/BR_AN_BSB_ARX_003_007 BR_AN_BSB_ARX_003_007/en/translation.txt",
       "candidates": [
         {
-          "value": "2023-10-05",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "RECEIVING DATE/TIME: /# / 03 / 2023-10-05 (assuming 'Q G J CÓM Z' is a date format, e.g., year/month/day",
-          "segment": "seg-fb7346e62070fff2bfd2a8ea"
-        },
-        {
-          "value": "1991-06-27",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "June 27, 1991 CONFIDENTIAL P Emp",
-          "segment": "seg-395975a34a6b380fd6bdc551"
-        },
-        {
-          "value": "1991-06-27",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": ". June 27, 1991 P Emp",
-          "segment": "seg-7bedf35f38dd027b6a689822"
-        },
-        {
-          "value": "1996-04-24",
-          "precision": "day",
-          "confidence": 0.94,
-          "kind": "event_date",
-          "method": "milestone-language",
-          "evidence": "Guarujá (SP), April 24, 1996. CONDABRA TO: COMMANDANT RE: __UFO_PROTECTED_000__",
-          "segment": "seg-a2be1bcafed6c6aa8aef3cbb"
-        },
-        {
           "value": "1995-06-01",
           "precision": "day",
           "confidence": 0.94,
           "kind": "event_date",
           "method": "milestone-language",
-          "evidence": "On June 1, 1995, we initiated the process of recording a communication (copy attached) regarding document #95/113, but we did not receive a written response, which we would appreciate from this Command. On the other hand, we have established an excellent relationship with Col. Co",
-          "segment": "seg-d22e033899604bad563ddd8e"
-        },
-        {
-          "value": "1991-06-27",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "June 27, 1991 CONFIDENTIAL FOR EYES OF AUTHORITY ONLY P Emp • .f",
-          "segment": "seg-85c7f297902bcac738c5726a"
-        },
-        {
-          "value": "1995-10-01",
-          "precision": "day",
-          "confidence": 0.94,
-          "kind": "event_date",
-          "method": "milestone-language",
-          "evidence": "A •ORB*\" ufology surge at the end of last year, brought to light, in Brazil a substantial body of physical evidence. Following the confirmation of the sighting, it was investigated by QUO - Together with the IRA (National Institute for the Investigation of Aerial Phenomenon). Thi",
-          "segment": "seg-83bbc680ee7780749887516e"
-        },
-        {
-          "value": "1995-10-29",
-          "precision": "day",
-          "confidence": 0.98,
-          "kind": "administrative_date",
-          "method": "context-exclusion",
-          "evidence": "There have been instances where various types of phenomena have been witnessed in connection with UFO cases of high degree, which are the subject of scientific investigation — such as the effect on vegetation and burning caused by the intense light from a UFO, as well as the four",
-          "segment": "seg-c0cbd27ffa2b47dd6231df0f"
+          "evidence": "On June 1, 1995, we initiated the writing of a letter (a copy of which is attached) regarding No. 95/113, but we did not receive a written response, which we would like this Command to provide. On the other hand, we have initiated an excellent telephone relationship with Col. Coe",
+          "segment": "seg-a0a630a2592128022c975f3a"
         },
         {
           "value": "1999-12-12",
           "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Another interesting event occurred in Santa Catarina during the early hours of December 12, 1999, around 2:00 PM, with Mr. [NAME REDACTED] as the protagonist.",
-          "segment": "seg-592c308f5c923bfeb140be63"
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "weak lighting, equal to one lux. *went*, the same thing occurred *to* the moon in oxen, which left her extremely frightened. She thought she wouldn't believe what she was hearing. The next day, she went to the place where that moon was, surprising herself by finding everything — ",
+          "segment": "seg-b0b99ecdcbdb6ef37345bd7f"
         },
         {
           "value": "1996-01-04",
           "precision": "day",
-          "confidence": 0.98,
-          "kind": "administrative_date",
-          "method": "context-exclusion",
-          "evidence": "Adilson and some friends went to the location; they found the reaction completely obscured. Person named Alexandra Calandra visited the location on January 4, 1996, pursuing investigations, the results of which were published in her newsletter, issue 21, titled \"UNEXPLAINED.\"",
-          "segment": "seg-80aeb55ff2535683f73ef0bc"
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "weak lighting, equal to one lux. *went*, the same thing occurred *to* the moon in oxen, which left her extremely frightened. She thought she wouldn't believe what she was hearing. The next day, she went to the place where that moon was, surprising herself by finding everything — ",
+          "segment": "seg-b0b99ecdcbdb6ef37345bd7f"
         },
         {
           "value": "1996-03-22",
           "precision": "day",
-          "confidence": 0.98,
-          "kind": "administrative_date",
-          "method": "context-exclusion",
-          "evidence": "We wait to see I 0 The ZH HOUR newspaper of March 22, 1996, page 53, reported that a circular burn appeared in a soybean field in the Machadinho region, northeast of Rio Grande do Sul. 0 The burned circle within the soybean field had a diameter of 20 meters and presented a 10-met",
-          "segment": "seg-d228b2dfb942ec9570078cf0"
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "weak lighting, equal to one lux. *went*, the same thing occurred *to* the moon in oxen, which left her extremely frightened. She thought she wouldn't believe what she was hearing. The next day, she went to the place where that moon was, surprising herself by finding everything — ",
+          "segment": "seg-b0b99ecdcbdb6ef37345bd7f"
         },
         {
           "value": "1996-02-26",
@@ -273242,35 +273650,35 @@
           "confidence": 0.94,
           "kind": "event_date",
           "method": "milestone-language",
-          "evidence": "On February 26, 1996, \"At sunset, a bright red moon was in the sky.\" Farmer Wilmar Wagner, 41, saw \"a ball of fire in the air\" and called his brother Waldsriao, 45, to witness the phenomenon. The object, a very bright red moon, moved rapidly in a straight line, and when it was ab",
-          "segment": "seg-a21f44b16259a3774a8d34af"
+          "evidence": "weak lighting, equal to one lux. *went*, the same thing occurred *to* the moon in oxen, which left her extremely frightened. She thought she wouldn't believe what she was hearing. The next day, she went to the place where that moon was, surprising herself by finding everything — ",
+          "segment": "seg-b0b99ecdcbdb6ef37345bd7f"
         },
         {
           "value": "1996-04-14",
           "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Around 23:00 on April 14, 1996, Mr.",
-          "segment": "seg-1eb20a517d6187caa7d35ebb"
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "A sample from the crop of the Werghsr brothers' farm, where an UFO was allegedly landed, was analyzed by agronomist Hamilton Lanar Canteleghe from the Hatching Farm. The television camera operator's equipment malfunctioned when entering the circle, and was struck by a magnetic di",
+          "segment": "seg-85bee44acb64a35674f34b31"
         },
         {
           "value": "1996-03-24",
           "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "In the early years, several people claimed to have seen strange lights in the days leading up to the reported contact with the Parciliano family. A ufologist, Ra/satelite Piras from Mirassol, SP, investigated a landing that occurred on March 24, 1996, on the Maracujá farm, in the",
-          "segment": "seg-3874038e37a85ae03a68dc00"
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "A sample from the crop of the Werghsr brothers' farm, where an UFO was allegedly landed, was analyzed by agronomist Hamilton Lanar Canteleghe from the Hatching Farm. The television camera operator's equipment malfunctioned when entering the circle, and was struck by a magnetic di",
+          "segment": "seg-85bee44acb64a35674f34b31"
         },
         {
           "value": "1996-04-09",
           "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "On April 09, 1996, around 7:30 PM, a UFO appeared between the axes that form a divide, flying over a farm surrounded by a barbed wire fence. The fact was witnessed by several people who live in the area where the incident occurred, known as the Canpinho neighborhood, in the borde",
-          "segment": "seg-4d25a72c1ed51f30340a1021"
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "tes. The last landing news we had was published in the newspaper O ATJR CÍPIO, on 27/04/1996, regarding a trip undertaken by ufologist and professor Francisco Doniietti Varanda. On April 9, 1996, around 7:30 pm, a UFO appeared between the axes that form a divide, landing on a fie",
+          "segment": "seg-d37dec3c03e47bf47a8252e5"
         },
         {
           "value": "1991-09-18",
@@ -273278,17 +273686,71 @@
           "confidence": 0.72,
           "kind": "referenced_document_date",
           "method": "dated-reference",
-          "evidence": "In 1991, the RPO (Regional Police Office) based in Curitiba-PB received a report that was considered unique at the time. It contained the only available information about a UFO sighting up to that moment. A ufologist seeks the truth about flying objects in a letter dated Septembe",
-          "segment": "seg-4039768d5346e293b67b3770"
+          "evidence": "BAIO PB 86...' COWTIBPA 0 SILEHCIO | To Edison Boaventura Junior, the coordinator of 000. At approximately 1 km from the national radar station, an important event occurred involving OVRIS and the Brazilian Air Force, which took place in the early morning of May 1st, 1996, when s",
+          "segment": "seg-a1cfd8cfbe430d6b202fcf14"
         },
         {
-          "value": "1996-05-19",
+          "value": "1996-01-27",
           "precision": "day",
           "confidence": 0.94,
           "kind": "event_date",
           "method": "milestone-language",
-          "evidence": "SUPYSÁUA The conclusions of the organs under investigation are that the occurrences took place during the night and that \"spots\" (points on the radar screens of the air defense control) appeared. He further stated that the entire military defense apparatus of the air space was mo",
-          "segment": "seg-cb8252ad41bbd35c83f76018"
+          "evidence": "OTMI CPXIMA PUMTACCSS PI MATOIOCA MO lqOlPQB \"Pente» Jemal Diário de Poro, 2J.03.1996 - Pàg.13. The appearance \"of a unidentified flying object (UFO) in the San *• Asa *» oidade equatorial of Fortovleje, on Tuesday, March 19.1996, burned extensive fields of cassava, infor-mating ",
+          "segment": "seg-e9a3c9a70505134e7c5003b3"
+        },
+        {
+          "value": "1996-01-06",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "OTMI CPXIMA PUMTACCSS PI MATOIOCA MO lqOlPQB \"Pente» Jemal Diário de Poro, 2J.03.1996 - Pàg.13. The appearance \"of a unidentified flying object (UFO) in the San *• Asa *» oidade equatorial of Fortovleje, on Tuesday, March 19.1996, burned extensive fields of cassava, infor-mating ",
+          "segment": "seg-e9a3c9a70505134e7c5003b3"
+        },
+        {
+          "value": "1996-03-19",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "U in a quick manner, invaded the sky of the region, an object seen by several people, on the 9th day of the month of March, 1996. On March 19, 1996, an OTMZ burned manioc plantations at the Equator, in the locality of Hanabi, 390 km from Quito. The event was reported by the newsp",
+          "segment": "seg-20299f8a762425b6ec5deea5"
+        },
+        {
+          "value": "1996-04-10",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "U in a quick manner, invaded the sky of the region, an object seen by several people, on the 9th day of the month of March, 1996. On March 19, 1996, an OTMZ burned manioc plantations at the Equator, in the locality of Hanabi, 390 km from Quito. The event was reported by the newsp",
+          "segment": "seg-20299f8a762425b6ec5deea5"
+        },
+        {
+          "value": "1996-04-14",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "U in a quick manner, invaded the sky of the region, an object seen by several people, on the 9th day of the month of March, 1996. On March 19, 1996, an OTMZ burned manioc plantations at the Equator, in the locality of Hanabi, 390 km from Quito. The event was reported by the newsp",
+          "segment": "seg-20299f8a762425b6ec5deea5"
+        },
+        {
+          "value": "1996-04-07",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "U in a quick manner, invaded the sky of the region, an object seen by several people, on the 9th day of the month of March, 1996. On March 19, 1996, an OTMZ burned manioc plantations at the Equator, in the locality of Hanabi, 390 km from Quito. The event was reported by the newsp",
+          "segment": "seg-20299f8a762425b6ec5deea5"
+        },
+        {
+          "value": "1996-04-13",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "U in a quick manner, invaded the sky of the region, an object seen by several people, on the 9th day of the month of March, 1996. On March 19, 1996, an OTMZ burned manioc plantations at the Equator, in the locality of Hanabi, 390 km from Quito. The event was reported by the newsp",
+          "segment": "seg-20299f8a762425b6ec5deea5"
         },
         {
           "value": "1996-05-15",
@@ -273296,170 +273758,17 @@
           "confidence": 0.94,
           "kind": "event_date",
           "method": "milestone-language",
-          "evidence": "SUPYSÁUA The conclusions of the organs under investigation are that the occurrences took place during the night and that \"spots\" (points on the radar screens of the air defense control) appeared. He further stated that the entire military defense apparatus of the air space was mo",
-          "segment": "seg-cb8252ad41bbd35c83f76018"
-        },
-        {
-          "value": "1996-04-02",
-          "precision": "day",
-          "confidence": 0.94,
-          "kind": "event_date",
-          "method": "milestone-language",
-          "evidence": "SUPYSÁUA The conclusions of the organs under investigation are that the occurrences took place during the night and that \"spots\" (points on the radar screens of the air defense control) appeared. He further stated that the entire military defense apparatus of the air space was mo",
-          "segment": "seg-cb8252ad41bbd35c83f76018"
-        },
-        {
-          "value": "1996-03-19",
-          "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "An appearance of an \"unidentified flying object\" (UFO) in the San *• Asa *\"equatorial district\" of Fortovleje, on Tuesday, March 19, 1996, \"burned extensive areas of cassava crops,\" causing damage to local farmers.",
-          "segment": "seg-e9a3c9a70505134e7c5003b3"
-        },
-        {
-          "value": "1996-01-27",
-          "precision": "day",
-          "confidence": 0.98,
-          "kind": "administrative_date",
-          "method": "context-exclusion",
-          "evidence": "A release from January 27, 1996, from the city of Tera Cru, in the state of Excelence, reports that hundreds of people witnessed a gigantic rectangular object. The witness is referred to as 'Mr.'.",
-          "segment": "seg-e9748c7f79619f87659468be"
-        },
-        {
-          "value": "1996-01-06",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Many canoeists captured footage of an unusual object on January 6, 1996, near Littleton, Ohio, England. The object was described as a cylindrical flying craft emitting colorful lights.",
-          "segment": "seg-c4c1366fa40946d5e401014c"
-        },
-        {
-          "value": "1996-03-19",
-          "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "U at an unusual time, a UFO invaded the region's sky, witnessed by several people, on the 9th of the month of April, 1996. On March 19, 1996, an OTMZ (unidentified flying object) burned fields of cassava at the Equator, in the locality of Hanabi, 390 kilometers from Quito. The ev",
+          "evidence": "U in a quick manner, invaded the sky of the region, an object seen by several people, on the 9th day of the month of March, 1996. On March 19, 1996, an OTMZ burned manioc plantations at the Equator, in the locality of Hanabi, 390 km from Quito. The event was reported by the newsp",
           "segment": "seg-20299f8a762425b6ec5deea5"
         },
         {
-          "value": "1996-04-10",
-          "precision": "day",
-          "confidence": 0.98,
-          "kind": "administrative_date",
-          "method": "context-exclusion",
-          "evidence": "U at an unusual time, a UFO invaded the region's sky, witnessed by several people, on the 9th of the month of April, 1996. On March 19, 1996, an OTMZ (unidentified flying object) burned fields of cassava at the Equator, in the locality of Hanabi, 390 kilometers from Quito. The ev",
-          "segment": "seg-20299f8a762425b6ec5deea5"
-        },
-        {
-          "value": "1996-04-10",
-          "precision": "day",
-          "confidence": 0.98,
-          "kind": "administrative_date",
-          "method": "context-exclusion",
-          "evidence": "U at an unusual time, a UFO invaded the region's sky, witnessed by several people, on the 9th of the month of April, 1996. On March 19, 1996, an OTMZ (unidentified flying object) burned fields of cassava at the Equator, in the locality of Hanabi, 390 kilometers from Quito. The ev",
-          "segment": "seg-20299f8a762425b6ec5deea5"
-        },
-        {
-          "value": "1996-04-07",
-          "precision": "day",
-          "confidence": 0.98,
-          "kind": "administrative_date",
-          "method": "context-exclusion",
-          "evidence": "U at an unusual time, a UFO invaded the region's sky, witnessed by several people, on the 9th of the month of April, 1996. On March 19, 1996, an OTMZ (unidentified flying object) burned fields of cassava at the Equator, in the locality of Hanabi, 390 kilometers from Quito. The ev",
-          "segment": "seg-20299f8a762425b6ec5deea5"
-        },
-        {
-          "value": "1996-04-13",
+          "value": "1996-01-30",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "U at an unusual time, a UFO invaded the region's sky, witnessed by several people, on the 9th of the month of April, 1996. On March 19, 1996, an OTMZ (unidentified flying object) burned fields of cassava at the Equator, in the locality of Hanabi, 390 kilometers from Quito. The ev",
-          "segment": "seg-20299f8a762425b6ec5deea5"
-        },
-        {
-          "value": "1996-04-15",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "U at an unusual time, a UFO invaded the region's sky, witnessed by several people, on the 9th of the month of April, 1996. On March 19, 1996, an OTMZ (unidentified flying object) burned fields of cassava at the Equator, in the locality of Hanabi, 390 kilometers from Quito. The ev",
-          "segment": "seg-20299f8a762425b6ec5deea5"
-        },
-        {
-          "value": "1996-01-20",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "PIABIO Dl TARDINHA Here, in the vicinity of the small town of Varginha, Brazil, I present a series of events that have gained significant attention, day by day, regarding a phenomenon of great importance occurring in Israel: January 20, 1996 - 1:00 AM - A farmer, Oralia Augusta d",
-          "segment": "seg-c0da4f54534fd62e81caa9f2"
-        },
-        {
-          "value": "1996-01-20",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "PIABIO Dl TARDINHA Here, in the vicinity of the small town of Varginha, Brazil, I present a series of events that have gained significant attention, day by day, regarding a phenomenon of great importance occurring in Israel: January 20, 1996 - 1:00 AM - A farmer, Oralia Augusta d",
-          "segment": "seg-c0da4f54534fd62e81caa9f2"
-        },
-        {
-          "value": "1996-01-20",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "PIABIO Dl TARDINHA Here, in the vicinity of the small town of Varginha, Brazil, I present a series of events that have gained significant attention, day by day, regarding a phenomenon of great importance occurring in Israel: January 20, 1996 - 1:00 AM - A farmer, Oralia Augusta d",
-          "segment": "seg-c0da4f54534fd62e81caa9f2"
-        },
-        {
-          "value": "1996-01-20",
-          "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "\"SUPYSÂUA 29.04.96\" - Z2i05 H - A report of a strange occurrence. Three witnesses saw a UFO at 3:00 a.m. They described it as a dark object with lights. Later, Luisa reported to the press that she had seen a strange being on January 20, 1996. O4.O5.96 - Throughout the day - A sig",
-          "segment": "seg-4e93b53a1dbcf7f534a9a06f"
-        },
-        {
-          "value": "1991-06-27",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": ". June 27, 1991 CONFIDENTIAL P Emp",
-          "segment": "seg-ea274471d2565fedd5aa4984"
-        },
-        {
-          "value": "1991-08-18",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "On August 18, 1991, the Social Communication Office of the Aeronautics Ministry, through Letter No. 042/DJR, addressed to Mr. Rafael Ory of Curitiba, Paraná, informed that the incident had been thoroughly investigated and that the resulting conclusions indicated magnetic anomalie",
-          "segment": "seg-53ab3e618274a91716341c8d"
-        },
-        {
-          "value": "1996-07-17",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "On August 18, 1991, the Social Communication Office of the Aeronautics Ministry, through Letter No. 042/DJR, addressed to Mr. Rafael Ory of Curitiba, Paraná, informed that the incident had been thoroughly investigated and that the resulting conclusions indicated magnetic anomalie",
-          "segment": "seg-53ab3e618274a91716341c8d"
-        },
-        {
-          "value": "1986-05-19",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "On August 18, 1991, the Social Communication Office of the Aeronautics Ministry, through Letter No. 042/DJR, addressed to Mr. Rafael Ory of Curitiba, Paraná, informed that the incident had been thoroughly investigated and that the resulting conclusions indicated magnetic anomalie",
-          "segment": "seg-53ab3e618274a91716341c8d"
+          "evidence": "## Translation of Text on Varginha Incident **Strange Creatures -** To date, we have confirmed the capture of two beings, likely one of which received three shots from a FAL (assumed to be an alien weapon as EBEs (Biological Entities) confirmed by military personnel who participa",
+          "segment": "seg-8ea3ac6662bd62a6f98a59dd"
         },
         {
           "value": "1996-11-11",
@@ -273467,8 +273776,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Brasília, DF. November 11, 1996",
-          "segment": "seg-eb659cb31a371b9ba4007ba7"
+          "evidence": "UNIVERSITY OF BRASÍLIA - UNB CENTER FOR ADVANCED MULTIDISCIPLINARY STUDIES - CEAM NUCLEAR STUDY GROUP FOR PARANORMAL PHENOMENA - NEFP UFOLOGICAL STUDY GROUP - GEU Brasília, DF. November 11, 1996 Excellency, Air Force Minister Brigadier General - Léko Viana Lobo",
+          "segment": "seg-c19a277adca3c7f3efc6c7ff"
         },
         {
           "value": "1991-04-11",
@@ -273476,8 +273785,8 @@
           "confidence": 0.9,
           "kind": "event_date",
           "method": "event-language",
-          "evidence": "Location and general characteristics of Papuda Prison Located DF 001 kilometers from the highway at the 4th kilometer mark, is the access road to the security area of Papuda Prison. It is approximately 465 kilometers southeast of Brasília's Planaltina district, situated in a vall",
-          "segment": "seg-b9c08c315179a49329c00728"
+          "evidence": "made with 10 high-powered searchlights. It has 10 guardhouses for superior guard and guard posts on land. It was in this environment that on April 11, 1991, from 7:10 pm to 10:40 pm, an Unidentified Flying Object (UFO) was observed. The observation was made by Lt. Damasceno and t",
+          "segment": "seg-a941024602ddc48993072432"
         },
         {
           "value": "1991-07-10",
@@ -273487,6 +273796,15 @@
           "method": "unclassified-mention",
           "evidence": "The clarification note from the Social Communication Center of the Ministry of Aeronautics - CECOMSAER, confirms in item I, the \"observation of a signal that, processed by the computers of that center (CENDACTA I), was not characterized as any aircraft operating in the area.\" The",
           "segment": "seg-047c8edeeaac1d0ed7180111"
+        },
+        {
+          "value": "2018-09-18",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "seconds later it went out, leaving him to have seen a plane that was flying—while the Air Force did not confirm a colorful trail, like neon, witnessed from Santa Cruz do Sul. \"If there was an UFO, a predominance of green was noted.\" \"The fireworks were being fired on the southern",
+          "segment": "seg-20702a9497c63f9ff5ccf134"
         },
         {
           "value": "1996-12-04",
@@ -273504,7 +273822,7 @@
           "kind": "event_date",
           "method": "event-language",
           "evidence": "I request the House, after hearing the plenary and fulfilling the regulatory formalities, to instruct the Head of CECOMSAER - the Air Force Social Communication Center on the Esplanada dos Ministérios in Brasília - DF - to inform this Legislative House on what else occurred, beyo",
-          "segment": "seg-6b6823f681bf140dc6b1947d"
+          "segment": "seg-c99b23e303a1a5b9401cbc81"
         },
         {
           "value": "1996-12-03",
@@ -273513,7 +273831,7 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "MEETING ROOM, December 3, 1996",
-          "segment": "seg-cc503aba7eb1c2c225f68219"
+          "segment": "seg-4301e35cfab80f366d7c598c"
         },
         {
           "value": "1986-05-19",
@@ -273521,8 +273839,17 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "When a distinguished dentist, naked in the history of humanity, has always been beyond radar, stated that something existed that apparently moved like jet planes, competent individuals who promulgated laws of what is technically possible, from 250 to 1,500 km/h in a fraction of a",
-          "segment": "seg-33fcee4fd875a79edccb27b6"
+          "evidence": "The night of May 19, 1986, could not pass without a statement from the Aeronautics authorities. After all, Col. Ozires Silva himself was part of those events, ones that our scientists still refuse to accept.",
+          "segment": "seg-38ce03c3440d21b07ee2f135"
+        },
+        {
+          "value": "1986-05-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The worldwide casuistry proves that the pursuit of planes by UFOs has not been as rare as one might think. When a distinguished dentist, who has always been on the radar of history, stated that something apparently existed that moved like jet planes, it was almost certainly compe",
+          "segment": "seg-9660caef951f74a5719cdfa0"
         },
         {
           "value": "1986-05-22",
@@ -273530,8 +273857,8 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Tracks like conventional aircrafts, this whole situation has been officially reported, and it's less than 20% of what actually happened. In official circles, many things were discussed that weren't mentioned in the testimonies, such as: when the F-5E was being followed by thirtee",
-          "segment": "seg-56907fff786abfa5ac7cd095"
+          "evidence": "Brazilian and other country's urologists are already accustomed to this vicious circle, in which every time; a UFO fact happens in public knowledge, some scientists, almost always the same ones, give interviews to the media totally against the flying saucer hypothesis. Object fil",
+          "segment": "seg-6c5eb3f1f6661436db099657"
         }
       ]
     },
@@ -273549,21 +273876,21 @@
           "segment": "seg-13b1143a8bdb79fe9a1a4722"
         },
         {
-          "value": "1997-05-17",
+          "value": "1997-05-11",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "4 On Sunday, May 17, 1997",
+          "evidence": "4 Daily Life Sunday, May 11, 1997",
           "segment": "seg-edb42867c4d235dc07c272bf"
         },
         {
-          "value": "1975-04-27",
+          "value": "1974-04-28",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "MAURICIO STYCER from Local Reporting The Brazilian military regime (1964-1985) investigated, in the 1970s, cases of alleged UFO sightings and spied on the activities of Brazilian specialists in ET (extraterrestrials). Documents from the former Dops (Department of Political and So",
+          "evidence": "MAURICIO STYCER Local Reporting The Brazilian military regime (1964-1985) investigated alleged flying-saucer sightings in the 70s and spied on the activities of Brazilian specialists in ETs (extraterrestrials). Documents from the former Dops (Department of Political and Social Or",
           "segment": "seg-4932890d9765e3058fec3c80"
         },
         {
@@ -273590,7 +273917,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Ministerial Notice No. S-001 / Min, of Feb 28, 1989.",
+          "evidence": "Ministerial Notice no. S-001 / Min, of February 28, 1989.",
           "segment": "seg-15b0f2bf01a1760092660e10"
         },
         {
@@ -273601,15 +273928,6 @@
           "method": "unclassified-mention",
           "evidence": "IkasãnvDF November 11, 1996",
           "segment": "seg-4318eb01281cfb073c343ba1"
-        },
-        {
-          "value": "1991-04-11",
-          "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "Located off Highway DF 001, at kilometer 4, is DF 465, the access road to the security area of the Papuda Prison. At approximately 1.5 kilometers southeast of Brasília's Plano Piloto, it is situated in a valley with a symmetrical altitude of 990 meters on average. Surrounding are",
-          "segment": "seg-6c9dc4a0c93a15b59ff6c715"
         },
         {
           "value": "1991-07-10",
@@ -273653,7 +273971,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Biologist Prof. Flávio Augusto Pereira, author of the historic Book Red of Flying Saucers, and one of the main characters in Brazilian UFOlogy, will receive the X-Files Star Quest Award during the third National Convention of Exological Affairs (C.O.N.A.X.) to be held by the X-Fi",
+          "evidence": "Biologist Prof. Flávio Augusto Pereira, author of the historic Red Book of Flying Saucers and a leading figure in Brazilian UFOlogy, will receive the Arquivo-X Star Quest Award during the third National Convention on Exological Affairs (C.O.N.A.X.), to be held by Clube Arquivo-X ",
           "segment": "seg-228b8fdaeb7ec8b3ecabee73"
         },
         {
@@ -273677,9 +273995,9 @@
         {
           "value": "1997-03-13",
           "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
           "evidence": "Mysterious lights over Phoenix Something spectacular appears to have taken place in the skies of Phoenix, Arizona, USA, starting at 8:00 PM on March 13, 1997. Thousands of people witnessed lights arranged in a \"V\" formation slowly moving over the city. Films were made and appear ",
           "segment": "seg-399e34157484d112b17ca28a"
         },
@@ -273713,10 +274031,10 @@
         {
           "value": "1997-08-04",
           "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "The oficio n° 021/DIR/R-059 of Aug 4, 1997 from the Executive Group for the Implementation of the Test Field Brig.-do-Ar Haroldo Coimbra Velloso forwarded to this Department the two parts S/N as attached. This General Director received the fax as attached and classified the sourc",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "oficio n° 021/DIR/R-059 dated August 4, 1997, from the Executive Group for Implementation of the Brig.-do-Ar Haroldo Coimbra Velloso Test Range forwarded the two unnumbered reports S/N in the attachment to this Department. This Director-General received the attached fax and class",
           "segment": "seg-225b38df0bb6ab5ca18eeb8e"
         },
         {
@@ -273727,15 +274045,6 @@
           "method": "unclassified-mention",
           "evidence": "Cachimbó - PA, July 15, 1997.",
           "segment": "seg-38e8d16bacaf83351ce7ec28"
-        },
-        {
-          "value": "1997-10-07",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Around 9:30 pm on October 7, 1997 (Thursday), military personnel on duty at this post (3 S Rodrigues (BINFA 6), CBEdM (IGCC), S2 Ramos (BINFA 6), and S2 Guerra (BINFA 6)) observed a silent object with red and blue lights rotating at a distance of approximately 800 meters. When th",
-          "segment": "seg-1c9138e4328617ec73fce610"
         },
         {
           "value": "1997-07-23",
@@ -273770,7 +274079,7 @@
           "confidence": 0.94,
           "kind": "event_date",
           "method": "milestone-language",
-          "evidence": "Dear Sirs of the Division of Jomaism of CECOMSAER, As it falls within your Division's responsibilities to monitor and analyze news reported by the press of interest to the Ministry of Aeronautics, we request your confirmation of what was reported in the television program *Fantás",
+          "evidence": "Dear members of CECOMSAER's Journalism Division, Since your Division is responsible for monitoring and analyzing press reports of interest to the Ministry of Aeronautics, we request confirmation of the account broadcast on the television program Fantástico on July 20, 1997. In it",
           "segment": "seg-b6b47549799d622e919c8cf0"
         },
         {
@@ -273779,7 +274088,7 @@
           "confidence": 0.94,
           "kind": "event_date",
           "method": "milestone-language",
-          "evidence": "Dear Sirs of the Division of Jomaism of CECOMSAER, As it falls within your Division's responsibilities to monitor and analyze news reported by the press of interest to the Ministry of Aeronautics, we request your confirmation of what was reported in the television program *Fantás",
+          "evidence": "Dear members of CECOMSAER's Journalism Division, Since your Division is responsible for monitoring and analyzing press reports of interest to the Ministry of Aeronautics, we request confirmation of the account broadcast on the television program Fantástico on July 20, 1997. In it",
           "segment": "seg-b6b47549799d622e919c8cf0"
         },
         {
@@ -273788,16 +274097,16 @@
           "confidence": 0.94,
           "kind": "event_date",
           "method": "milestone-language",
-          "evidence": "Dear Sirs of the Division of Jomaism of CECOMSAER, As it falls within your Division's responsibilities to monitor and analyze news reported by the press of interest to the Ministry of Aeronautics, we request your confirmation of what was reported in the television program *Fantás",
+          "evidence": "Dear members of CECOMSAER's Journalism Division, Since your Division is responsible for monitoring and analyzing press reports of interest to the Ministry of Aeronautics, we request confirmation of the account broadcast on the television program Fantástico on July 20, 1997. In it",
           "segment": "seg-b6b47549799d622e919c8cf0"
         },
         {
-          "value": "1996-06-17",
+          "value": "1996-07-17",
           "precision": "day",
           "confidence": 0.94,
           "kind": "event_date",
           "method": "milestone-language",
-          "evidence": "Dear Sirs of the Division of Jomaism of CECOMSAER, As it falls within your Division's responsibilities to monitor and analyze news reported by the press of interest to the Ministry of Aeronautics, we request your confirmation of what was reported in the television program *Fantás",
+          "evidence": "Dear members of CECOMSAER's Journalism Division, Since your Division is responsible for monitoring and analyzing press reports of interest to the Ministry of Aeronautics, we request confirmation of the account broadcast on the television program Fantástico on July 20, 1997. In it",
           "segment": "seg-b6b47549799d622e919c8cf0"
         },
         {
@@ -273806,7 +274115,7 @@
           "confidence": 0.94,
           "kind": "event_date",
           "method": "milestone-language",
-          "evidence": "Dear Sirs of the Division of Jomaism of CECOMSAER, As it falls within your Division's responsibilities to monitor and analyze news reported by the press of interest to the Ministry of Aeronautics, we request your confirmation of what was reported in the television program *Fantás",
+          "evidence": "Dear members of CECOMSAER's Journalism Division, Since your Division is responsible for monitoring and analyzing press reports of interest to the Ministry of Aeronautics, we request confirmation of the account broadcast on the television program Fantástico on July 20, 1997. In it",
           "segment": "seg-b6b47549799d622e919c8cf0"
         },
         {
@@ -273837,21 +274146,12 @@
           "segment": "seg-840a50a557186558be8eecca"
         },
         {
-          "value": "1986-02-05",
-          "precision": "day",
-          "confidence": 0.94,
-          "kind": "event_date",
-          "method": "milestone-language",
-          "evidence": "\"Petition Oftetote» carnurecac.» SocW, Cap.-Av. Diógenes Camargo Soaras. - On February 5, 1986, the document no. 01/EM-3AÍ337 from (Pueeco Fadara), Third Regional Command, addressed to Mr. MondW, informed that \"in accordance with your letter, the said petition was forwarded to th",
-          "segment": "seg-40d97ab88ffa26f86b91513a"
-        },
-        {
           "value": "1996-09-17",
           "precision": "day",
           "confidence": 0.94,
           "kind": "event_date",
           "method": "milestone-language",
-          "evidence": "\"Petition Oftetote» carnurecac.» SocW, Cap.-Av. Diógenes Camargo Soaras. - On February 5, 1986, the document no. 01/EM-3AÍ337 from (Pueeco Fadara), Third Regional Command, addressed to Mr. MondW, informed that \"in accordance with your letter, the said petition was forwarded to th",
+          "evidence": "by the Social Communication Officer, Cap.-Av. Diógenes Camargo Soares. - On February 05 of [1996?], ofício nr. 01/EM-3/0337 from [ILLEGIBLE] Federal Public Service, Third Regional Air Command, addressed to Mr. [ILLEGIBLE], stated: \"In response to your letter sent to this Air Comm",
           "segment": "seg-40d97ab88ffa26f86b91513a"
         },
         {
@@ -274410,30 +274710,30 @@
       "path": "Brazil-Government-UAP/paired/Upload/CENDOC ENVELOPE 01   1980 CENDOC_ENVELOPE_01_1980/en/translation.txt",
       "candidates": [
         {
-          "value": "1930-07-27",
+          "value": "1980-08-11",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Testimony of CRIVA \"DE DOUZA MELO On the 11th day of the month of October, 1920, he attended the meeting of the Board of Directors of the Caioba, residing in the state of Bahia, identified by the number 32029, expediented by the Public Security Secretariat of Rio Grande do Norte,",
+          "evidence": "1 - Testimony of Mr. IVAN DE SOUZA MELO On August 11, 1980, Mr. Ivan de Souza Melo, 34 years old, a crew member residing aboard the tug CAIOBA SEAHORSE, appeared at this Field to give testimony concerning the event reported in TLX R-282053Z from the III Naval District. His identi",
           "segment": "seg-4f1793a6f5c86ab1ec3366d6"
         },
         {
-          "value": "1980-10-11",
+          "value": "1980-07-27",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "On October 11, 1980, at 1:30 PM, attended",
-          "segment": "seg-e0dc298fd3c9ca1d86dd1356"
+          "evidence": "1 - Testimony of Mr. IVAN DE SOUZA MELO On August 11, 1980, Mr. Ivan de Souza Melo, 34 years old, a crew member residing aboard the tug CAIOBA SEAHORSE, appeared at this Field to give testimony concerning the event reported in TLX R-282053Z from the III Naval District. His identi",
+          "segment": "seg-4f1793a6f5c86ab1ec3366d6"
         },
         {
-          "value": "1966-09-09",
+          "value": "1966-08-09",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "by Low directed employees of the University, on September 9, 1966",
+          "evidence": "by Low and addressed to University employees on August 9, 1966",
           "segment": "seg-a5b0874dfca158e8491ee263"
         },
         {
@@ -274444,6 +274744,15 @@
           "method": "unclassified-mention",
           "evidence": "From Low's memorandum for the first time it became shockingly clear. On January 19, 1968",
           "segment": "seg-9f9dffc052818e18be83bbfc"
+        },
+        {
+          "value": "1967-02-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "When, on February 7, 1967",
+          "segment": "seg-d933307068a64ec7fa336e95"
         },
         {
           "value": "1952-05-07",
@@ -274944,6 +275253,15 @@
           "segment": "seg-48008207874af91d70509e1a"
         },
         {
+          "value": "1986-04-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ded in the ACC BS LRO, on April 30, 1986, shift 14C0/2200P",
+          "segment": "seg-64d115ea2d026cf83a5b50f7"
+        },
+        {
           "value": "1986-05-28",
           "precision": "day",
           "confidence": 0.45,
@@ -275025,12 +275343,12 @@
           "segment": "seg-5c0656575a17a3bb20a1ec64"
         },
         {
-          "value": "1986-10-13",
+          "value": "1986-08-13",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "Brasília-DF, October 13, 1986",
+          "evidence": "Brasília-DF, August 13, 1986",
           "segment": "seg-deeedaaae560a59ac6241af7"
         },
         {
@@ -275088,6 +275406,15 @@
           "segment": "seg-2281cb35dec0567ad7da0a5a"
         },
         {
+          "value": "1986-08-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 31, 1986: \"At around 1920Z, ACC CW informed us that",
+          "segment": "seg-e2c0016da5f84a12e69a1c03"
+        },
+        {
           "value": "1986-11-04",
           "precision": "day",
           "confidence": 0.45,
@@ -275120,7 +275447,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "facts occurring in the night of May 19, 1986, regarding the information of the Uruguay Air Traffic Control Services of the Air Defense and, in particular, of the pilots involved and sent back",
+          "evidence": "events that occurred on the night of May 19, 1986, concerning information from Air Traffic Control and Air Defense agencies, as well as the interceptor pilots involved",
           "segment": "seg-42b95ef92537c6614cd03c03"
         },
         {
@@ -275131,6 +275458,15 @@
           "method": "unclassified-mention",
           "evidence": "Conclusions, 09 December 1985 From",
           "segment": "seg-0170d7c5c11591f48e1f481f"
+        },
+        {
+          "value": "1985-11-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I - I inform you that the ABP L.R.O. for November 30, 1985 * shift from 2200 to 0600P, records",
+          "segment": "seg-618024a876873792367cd9d7"
         },
         {
           "value": "1986-05-29",
@@ -275149,6 +275485,15 @@
           "method": "unclassified-mention",
           "evidence": "Brasília - DF, May 27, 1986 From 1? TEN ESP CTA JOSÉ AUGUSTO",
           "segment": "seg-2209eabe587e8fda2299f296"
+        },
+        {
+          "value": "1986-05-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "at 2323Z on May 23, 1986. Uti-",
+          "segment": "seg-a77dc6c5301644af24f7a00f"
         },
         {
           "value": "1986-05-24",
@@ -275183,7 +275528,7 @@
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "Received telephone call at 1735Z on 26 May 1986, reporting UFO sighting. Using the questionnaire provided in IS/Ü18/JCTA, the following transcript is as follows: 1) 1730Z, 26 May 86; 2) rising side of the sun, 4 to 5 objects; 3) blinking streak; 4) indefinite; 5) unable to provid",
+          "evidence": "A telephone call was received at 1735Z on May 26, 1986, reporting a UFO sighting. The questionnaire specified in IS/018/CCTA was used, as transcribed below: 1) 1730Z, 26 May 86; 2) the side where the sun rises, 4 to 5 objects; 3) blinking star; 4) indefinite; 5) no basis for prov",
           "segment": "seg-167e880c99cad731f41d3434"
         },
         {
@@ -275205,12 +275550,12 @@
           "segment": "seg-8b5128fce018671009d5f102"
         },
         {
-          "value": "1986-11-26",
+          "value": "1986-05-26",
           "precision": "day",
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "Received telephone call at 1735Z on 26 November 1986, reporting avlotaaonto of O V N I . U t i l i z a d o the questionnaire previously transcribed below: 1) 1730Z, 26 May 86; 2) side that rises at the sun, 4-5 objects; 3) blinking streak; 4) indefinite; 5) unable to inform; 6) f",
+          "evidence": "A telephone call was received at 1735Z on May 26, 1986, reporting a UFO sighting. The questionnaire specified in IS/018/CCTA was used, as transcribed below: 1) 1730Z, 26 May 86; 2) the side where the sun rises, 4 to 5 objects; 3) blinking star; 4) indefinite; 5) no basis for prov",
           "segment": "seg-16cd4b7b3ee79da06bf369e7"
         },
         {
@@ -276072,6 +276417,15 @@
           "segment": "seg-7b1a3d355b425837c7c7d68a"
         },
         {
+          "value": "1978-12-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "REPORT NO 022/D0-45/78 Brasilia-DF, December 22, 1978",
+          "segment": "seg-cbae984c00cc14e67f303b39"
+        },
+        {
           "value": "1978-12-06",
           "precision": "day",
           "confidence": 0.45,
@@ -276081,12 +276435,30 @@
           "segment": "seg-1ef7a9c64b95fa24eb0a11a4"
         },
         {
+          "value": "1978-10-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Brasília-DF, on October 17, 1978",
+          "segment": "seg-ba5aad85149bd5017b873303"
+        },
+        {
+          "value": "1978-06-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Report I, S2 [ILLEGIBLE], was brought by the sergeant on duty to reinforce surveillance at this DPV-DT's microwave installation, because an alert had been given about a possible attack on the THF station, also belonging to this DPV-DT. After arriving at the designated location, I",
+          "segment": "seg-6a50b9f3ab9658c846f8446b"
+        },
+        {
           "value": "1978-10-19",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "PEESP Piracicaba, October 19, 1978 Cr PART No 1BFRv~700/22 i 12 BP Rv From Subtenent to Commander of the 28th Platoon Es Uia To the Commander of the 2nd Company Subject: Strange objects - Regarding Annex: Part 8/no of the 1st Set FX PETTO!",
+          "evidence": "PMESP CPI 1st B P Rv 2nd Company Piracicaba, October 19, 1978 REPORT No. 1BPRv-700/22 From the Military Police (PM) Sub-Lieutenant Acting Commander of the 2nd Platoon To the Commander of the 2nd Company Subject: Concerning strange objects Attachment: Unnumbered report from Milita",
           "segment": "seg-29ad5d817e02c87ded9a6cbb"
         },
         {
@@ -276113,17 +276485,26 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "While on duty on August 22, 1978, Fondil was contacted by the Commander of the QD-460 regarding traffic at a specific position, corresponding to 09:00 hours on the clock. Upon our denial, he reported traffic at the mentioned location; when inquired about the existence of such tra",
+          "evidence": "While on duty on August 22, 1978, we were questioned by the captain of QD-460 about the presence of traffic at the nine o'clock position. After we replied in the negative, he reported traffic at that position. When asked about the presence of this traffic, he confirmed it again a",
           "segment": "seg-aab7ced9578d41f035d4b9f3"
         },
         {
-          "value": "1978-05-23",
+          "value": "1978-09-12",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "I - Transcription of the recording from ACC SBBR, on 23 May 1978, related to UFOs and aircraft, in the 'INACA' area.",
-          "segment": "seg-6139097f0be035edbca93e9d"
+          "evidence": "REPORT NO 020/D0-45/78 Brasilia-DF, September 12, 1978",
+          "segment": "seg-f7228c3e39b5755e3ca15913"
+        },
+        {
+          "value": "1978-06-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "OF.N9 011/C0-1/C-4/)/78 Brasília-DF, June 23, 1978.",
+          "segment": "seg-329323384a002da880a1aba4"
         },
         {
           "value": "1978-06-20",
@@ -276157,6 +276538,24 @@
           "method": "unclassified-mention",
           "evidence": "July 11, 1989",
           "segment": "seg-4f87b4112c934ee5a436a815"
+        },
+        {
+          "value": "1989-06-12",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "On June 12, 1989, this Directorate received a note from the President of C.R.I.D.O.V.N.I. (Receiving and Investigating Commission",
+          "segment": "seg-d26da42c6f6f30a25fae0388"
+        },
+        {
+          "value": "1969-04-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "São Paulo, April 15, 1969. pctioa who takes I f.rimio ticüoso I r.\" psnsiV.cl J by r.': !»;,:• • ! • :-j •..'lo't (Ari 12. n.\" 7? IKT, Je , 06.Cl 77 ) (7.. :''rmc:ito pira Salv.- j t J li» r",
+          "segment": "seg-7499cb16070b12aee8387c97"
         }
       ]
     },
@@ -276837,6 +277236,15 @@
           "segment": "seg-cddf5d2193dc42629ecefe51"
         },
         {
+          "value": "2008-02-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Oficio no 12 86 OFFICE Brasilia, February 14, 2008.",
+          "segment": "seg-c47f3dc30d9e81cbe309da5d"
+        },
+        {
           "value": "2008-01-18",
           "precision": "day",
           "confidence": 0.45,
@@ -276873,6 +277281,15 @@
           "segment": "seg-cef67cccade9f2f0ccf9cfb4"
         },
         {
+          "value": "2009-02-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ofício no 202 À /OFFICE Brasília, February 26, 2009.",
+          "segment": "seg-ba6a20085a79e9700871acb2"
+        },
+        {
           "value": "2009-01-14",
           "precision": "day",
           "confidence": 0.72,
@@ -276880,15 +277297,6 @@
           "method": "dated-reference",
           "evidence": "I am forwarding to Your Excellency, for analysis and comment to support the response of this Ministry, the attached copy of Ofício no 033/09-SAJ, dated January 14, 2009, whereby the Deputy Chief for Legal Affairs of the Civil House of the Presidency of the Republic forwards corre",
           "segment": "seg-ff2b85af1bd928fa14b53cb1"
-        },
-        {
-          "value": "2010-07-07",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Office 37/ [Cabinet Brasilia, July 7, 2010.",
-          "segment": "seg-1c4932037f6ac63953b1a972"
         },
         {
           "value": "2009-12-03",
@@ -276927,6 +277335,15 @@
           "segment": "seg-74b3212c62295ee247a8a335"
         },
         {
+          "value": "2008-05-12",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "In response to the request contained in Ofício no 4817/GABINETE of May 12, 2008, from this Office, I inform Your Excellency that the Most Excellent Commander of the Air Force has recommended to the respective subordinate organizations the cataloging, declassification of the level",
+          "segment": "seg-4cb1f2970348432562690dac"
+        },
+        {
           "value": "2008-10-30",
           "precision": "day",
           "confidence": 0.45,
@@ -276934,6 +277351,33 @@
           "method": "unclassified-mention",
           "evidence": "Brasília, October 30, 2008.",
           "segment": "seg-f3f96ae7f894f40fdff583b9"
+        },
+        {
+          "value": "2008-10-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In response to Ofício no 11946/GABINETE of October 22, 2008, from this Office, I inform Your Excellency that the material gathered in the archives of this Command, relating to the period from 1950 to 1970 and connected to the aforementioned request, is currently in the final stag",
+          "segment": "seg-46e9d03dbc5816d3ed79baee"
+        },
+        {
+          "value": "2008-11-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In response to Ofício no 11946/GABINETE of October 22, 2008, from this Office, I inform Your Excellency that the material gathered in the archives of this Command, relating to the period from 1950 to 1970 and connected to the aforementioned request, is currently in the final stag",
+          "segment": "seg-46e9d03dbc5816d3ed79baee"
+        },
+        {
+          "value": "2009-04-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Of no 44/GC3/563 Brasilia, April 02, 2009. To His Excellency Mr. MURILO MARQUES BARBOZA Chief of the Office of the Minister of State for Defense Esplanada dos Ministérios - Block \"Q\" - 6th Floor 70.049-900 - Brasília-DF",
+          "segment": "seg-8dab3bf9d0b855d6afb6cd77"
         },
         {
           "value": "2009-02-26",
@@ -276954,40 +277398,13 @@
           "segment": "seg-37b7995efae1abece387ff3d"
         },
         {
-          "value": "1971-03-03",
+          "value": "1962-08-31",
           "precision": "day",
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "In the air on March 3, 1971, a strange object was observed [in the] __UFO_PROTECTED_000__ area/Division by Security. Request for information on the __UFO_PROTECTED_000__ document is evident.",
-          "segment": "seg-c6e69afd7dc0249bdc3c19a8"
-        },
-        {
-          "value": "1975-05-03",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Alfredo 1st International Congress of Ufology May 3, 1975 Modoyr de Mendonça Response to your letter of March 5, 1975 To: Ten. Brig. Air Force Paulo Date: June 20, 1975 From: Eibeito Goncalves Subject: Response to the report.",
-          "segment": "seg-e598d2cc3096b7dd864cd7f0"
-        },
-        {
-          "value": "1975-03-05",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Alfredo 1st International Congress of Ufology May 3, 1975 Modoyr de Mendonça Response to your letter of March 5, 1975 To: Ten. Brig. Air Force Paulo Date: June 20, 1975 From: Eibeito Goncalves Subject: Response to the report.",
-          "segment": "seg-e598d2cc3096b7dd864cd7f0"
-        },
-        {
-          "value": "1975-06-20",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Alfredo 1st International Congress of Ufology May 3, 1975 Modoyr de Mendonça Response to your letter of March 5, 1975 To: Ten. Brig. Air Force Paulo Date: June 20, 1975 From: Eibeito Goncalves Subject: Response to the report.",
-          "segment": "seg-e598d2cc3096b7dd864cd7f0"
+          "evidence": "Dr. Freitas Guimarães case | 16/06/1956 | Luiz do Rosário Real (president of SPIPDV Pelotas, April 1976). Professor João de Freitas Guimarães's account of an alleged trip in a flying saucer. Location: São Sebastião. The date refers to the professor's encounter with the flying sau",
+          "segment": "seg-dd109ebfea142c537908a5b9"
         },
         {
           "value": "1979-05-03",
@@ -276999,13 +277416,13 @@
           "segment": "seg-24394e692b41b24b8a016918"
         },
         {
-          "value": "2023-05-15",
+          "value": "2009-01-21",
           "precision": "day",
-          "confidence": 0.9,
-          "kind": "event_date",
-          "method": "event-language",
-          "evidence": "A bright, rapidly moving object was observed by several people in the sky over __UFO_PROTECTED_000__ on 2023-05-15 at approximately 20:30 local time. The object was described as a bright white light with a distinct tail. It moved at an extremely high speed, changing direction rap",
-          "segment": "seg-fbf7af23d32d1d7fdb7f7c03"
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "1. Upon greeting you, I turn to the matter related to the request from the Legal Affairs Subchief of the Civil House of the Presidency of the Republic, forwarded to this Command through this Ministry, to fulfill the request of the Brazilian UFOlogy Commission regarding access to ",
+          "segment": "seg-dbc244cc83bdadf0f4b70248"
         },
         {
           "value": "1991-01-08",
@@ -277013,16 +277430,16 @@
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "5. It is appropriate to note that this activity is guided by the provisions of Article 4 of Law No. 8,159 of January 8, 1991, as well as Article 6, paragraph 4(i) of Law No. 11,111 of May 1, 2005, which establish, respectively, the National Policy for Public and Private Archives.",
+          "evidence": "5. It should be recorded that this activity is based on the provisions expressly set out in Article 4 of Law No. 8.159, dated January 8, 1991, as well as item II, paragraph 4, of Article 6 of Law No. 11.111, dated May 5, 2005, which respectively provide the basis for the National",
           "segment": "seg-315c3563af05c609ce7e198f"
         },
         {
-          "value": "2005-05-01",
+          "value": "2005-05-05",
           "precision": "day",
           "confidence": 0.98,
           "kind": "administrative_date",
           "method": "context-exclusion",
-          "evidence": "5. It is appropriate to note that this activity is guided by the provisions of Article 4 of Law No. 8,159 of January 8, 1991, as well as Article 6, paragraph 4(i) of Law No. 11,111 of May 1, 2005, which establish, respectively, the National Policy for Public and Private Archives.",
+          "evidence": "5. It should be recorded that this activity is based on the provisions expressly set out in Article 4 of Law No. 8.159, dated January 8, 1991, as well as item II, paragraph 4, of Article 6 of Law No. 11.111, dated May 5, 2005, which respectively provide the basis for the National",
           "segment": "seg-315c3563af05c609ce7e198f"
         },
         {
@@ -277053,12 +277470,30 @@
           "segment": "seg-dc5d7a5698c0bd4ff9bf69dd"
         },
         {
+          "value": "2010-02-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Carta 60-3/2010-GM-60 SA/TM/61 083.3 F-125/2010 DT-2010/02-16979 CT61-003 Brasília, February 4, 2010.",
+          "segment": "seg-6dd419012bac2d08b12cc89b"
+        },
+        {
           "value": "2009-10-15",
           "precision": "day",
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "In response to the email of October 15, 2009, I was instructed by 60-3, Navy Commander's Office, to forward to you the Certificate of February 3, 2010, from this Office.",
+          "evidence": "In response to the email of October 15, 2009, the Chief of Staff to the Commander of the Navy instructed me to transmit to you Certificate no 60-3, dated February 3, 2010, from this Office.",
+          "segment": "seg-8d27370e7db22743f18790fe"
+        },
+        {
+          "value": "2010-02-03",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "In response to the email of October 15, 2009, the Chief of Staff to the Commander of the Navy instructed me to transmit to you Certificate no 60-3, dated February 3, 2010, from this Office.",
           "segment": "seg-8d27370e7db22743f18790fe"
         },
         {
@@ -277067,16 +277502,7 @@
           "confidence": 0.45,
           "kind": "unknown",
           "method": "unclassified-mention",
-          "evidence": "In response to the email of October 15, 2009, I was instructed by 60-3, Navy Commander's Office, to forward to you the Certificate of February 3, 2010, from this Office.",
-          "segment": "seg-8d27370e7db22743f18790fe"
-        },
-        {
-          "value": "2010-02-03",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "In compliance with the order of the CHIEF OF STAFF OF THE MARINE COMMANDER, to provide an affidavit to the BRAZILIAN COMMISSION OF UFOLOGISTS — CBU regarding information and access to documents concerning non-identified flying objects (UFOs) that exist, as of today, in the Navy's",
+          "evidence": "In compliance with the determination of the CHIEF OF STAFF TO THE COMMANDER OF THE NAVY to issue a certificate concerning the request from the BRAZILIAN COMMISSION OF UFOLOGISTS — CBU for information and access to documents related to unidentified flying objects held, to date, in",
           "segment": "seg-f9ebbcfd68e3bfa85044cb9e"
         },
         {
@@ -366017,6 +366443,21 @@
       ]
     },
     {
+      "documentId": "doc-53b1c05a547bd6d6bbbdfba8",
+      "path": "France-GEIPAN/paired/cases/2014-07-08742/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On July 17, 2014, around 00:15, a witness observed in the sky a bright yellow-orange point of light approaching the color of stars, with a very peculiar trajectory (straight line, descent, half turn, ascending zigzag) before disappearing very quickly. No other testim",
+          "segment": "seg-172001341dd786cccc06e9b1"
+        }
+      ]
+    },
+    {
       "documentId": "doc-2ac3ca7635107299e93fbe25",
       "path": "France-GEIPAN/paired/cases/2014-07-08945/en/translation.txt",
       "candidates": [
@@ -366895,6 +367336,21 @@
           "method": "milestone-language",
           "evidence": "Description: On February 8, 2015, between midnight and 12:20 a.m., a witness briefly spotted through their window a flickering red light moving silently from right to left across their field of view. The object suddenly changed direction and disappeared very quickly. The observat",
           "segment": "seg-ba382f53489ad4b3f64d3b4c"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7c662d80a619b2e0df88969c",
+      "path": "France-GEIPAN/paired/cases/2015-02-09110/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On February 22, 2015, at 3:03 AM, a witness noticed through a window a movement of an orange glow in the clear sky. The witness eventually counted 27 identical lights coming from the NNE and disappearing towards the East \"in a blinding manner.\" No noise was heard dur",
+          "segment": "seg-f50ac62fe995853ce6544726"
         }
       ]
     },
@@ -367814,6 +368270,21 @@
       ]
     },
     {
+      "documentId": "doc-82e3ab44163f24ea4fb98485",
+      "path": "France-GEIPAN/paired/cases/2015-08-09339/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-08-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 6, 2015, at 10:20 PM, a witness observed in the sky the quick passage of a translucent triangular shape that intrigued them. No noise, no flashing, no trail is observed. Only one testimony is collected. The witness observes the phenomenon moving from southw",
+          "segment": "seg-f81e2e85def6eda7c563b6ad"
+        }
+      ]
+    },
+    {
       "documentId": "doc-131e7579a4924ddb1f105133",
       "path": "France-GEIPAN/paired/cases/2015-09-09307/en/translation.txt",
       "candidates": [
@@ -368470,6 +368941,30 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Friday, August 26, 2016, at 10:39 PM, a witness and his wife were surprised to witness the silent, NO-SE passage of three orange lights in the clear night sky. The size of these lights was compared to that of a golf ball held at arm's length. The three lights were",
           "segment": "seg-5cd1797e9c75bffea3be9973"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-99d839db1d5ee4a1cc3e5d7d",
+      "path": "France-GEIPAN/paired/cases/2016-08-09564/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-08-07",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: The observation of the phenomenon took place from the witness's garden during an early summer night, around 23:00 on August 7, 2016, while stargazing. Only one testimony was collected. The witness reported a \"first bright red/orange light,\" \"very vivid\" and \"oval in ",
+          "segment": "seg-f0b241b57af55b7ebb4ad749"
+        },
+        {
+          "value": "2016-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The observation of the phenomenon took place from the witness's garden during an early summer night, around 23:00 on August 7, 2016, while stargazing. Only one testimony was collected. The witness reported a \"first bright red/orange light,\" \"very vivid\" and \"oval in ",
+          "segment": "seg-f0b241b57af55b7ebb4ad749"
         }
       ]
     },
