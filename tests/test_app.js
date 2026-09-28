@@ -130,7 +130,7 @@ test("Galactic Entities boots from a compact astronomy payload", () => {
   assert.match(source, /state\.publicDossierPayload \|\| publicDossierPayloadFromHash\(\)/);
   assert.match(source, /requestId === null \|\| requestId === state\.typeRequestId\) showCatalogError/);
   assert.match(source, /async function openDossierDialog\(\)[\s\S]*ensureFullCatalog\(\)[\s\S]*initializeDossier\(\)/);
-  assert.match(html, /app\.js\?v=source-family-shards-v1/);
+  assert.match(html, /app\.js\?v=large-catalog-extents-v1/);
   assert.match(html, /map-globe\.js\?v=astronomy-renderer-v2/);
   assert.match(html, /solar-system\.js\?v=astronomy-renderer-v2/);
   assert.match(fs.readFileSync("solar-system.js", "utf8"), /three\.module\.min\.js\?v=astronomy-renderer-v2/);
@@ -4878,4 +4878,28 @@ test("epistemic qualifier candidates are visible without changing graph semantic
   assert.match(source, /relationshipEvidenceCount/);
   assert.match(source, /\[\.\.\.dateEvidence, \.\.\.qualifierEvidence\]/);
   assert.match(source, /epistemicAdjustedEvidenceCount/);
+});
+
+
+test("value extents handle catalogs larger than the JavaScript argument limit", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  const result = JSON.parse(vm.runInContext(`JSON.stringify((() => {
+    const documents = Array.from({ length: 250000 }, (_, index) => ({ value: index + 1 }));
+    documents[0].value = -5;
+    documents[documents.length - 1].value = 10000000;
+    return {
+      ordinary: valueExtent(documents, "value"),
+      robust: robustValueExtent(documents, "value"),
+      empty: valueExtent([], "value"),
+      emptyRobust: robustValueExtent([], "value"),
+      invalid: valueExtent([{ value: "bad" }, { value: null }, { value: "4" }], "value")
+    };
+  })())`, context));
+  assert.deepEqual(result.ordinary, [-5, 10000000]);
+  assert.deepEqual(result.robust, { extent: [-5, 237500], capped: true });
+  assert.deepEqual(result.empty, [0, 1]);
+  assert.deepEqual(result.emptyRobust, { extent: [0, 1], capped: false });
+  assert.deepEqual(result.invalid, [0, 4]);
 });
