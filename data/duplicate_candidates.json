@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d2a326cbef3a21e66ebc29b93d412578b8d49290"
+    "revision": "ab584516c3a2bd8f268804f7b9e4a1ad1d4d87c9"
   },
-  "count": 546,
-  "totalCount": 546,
-  "shownCount": 546,
+  "count": 548,
+  "totalCount": 548,
+  "shownCount": 548,
   "candidates": [
     {
       "category": "book",
@@ -591,8 +591,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 647,
-        "documentCount": 349
+        "mentions": 648,
+        "documentCount": 350
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -948,8 +948,8 @@
       },
       "right": {
         "name": "Institutes of Health",
-        "mentions": 7,
-        "documentCount": 6
+        "mentions": 8,
+        "documentCount": 7
       },
       "similarity": 0.974,
       "reason": "similar name",
@@ -1007,8 +1007,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 322,
-        "documentCount": 175
+        "mentions": 323,
+        "documentCount": 176
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -1071,8 +1071,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 322,
-        "documentCount": 175
+        "mentions": 323,
+        "documentCount": 176
       },
       "right": {
         "name": "Linda Moulton-How",
@@ -1503,8 +1503,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 219,
-        "documentCount": 138
+        "mentions": 221,
+        "documentCount": 139
       },
       "right": {
         "name": "Stephen Hawkings",
@@ -1759,8 +1759,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of National Defence",
-        "mentions": 59,
-        "documentCount": 55
+        "mentions": 61,
+        "documentCount": 56
       },
       "right": {
         "name": "Department of National Defense",
@@ -1775,8 +1775,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of National Defence",
-        "mentions": 59,
-        "documentCount": 55
+        "mentions": 61,
+        "documentCount": 56
       },
       "right": {
         "name": "DEPARTMENT OF NATIONAL DEPENCE",
@@ -1871,8 +1871,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Bassett",
-        "mentions": 55,
-        "documentCount": 45
+        "mentions": 56,
+        "documentCount": 46
       },
       "right": {
         "name": "Stephen Basset",
@@ -2366,6 +2366,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Donald Spence",
+        "mentions": 9,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Donald Spencer",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Stephen Browdy",
         "mentions": 9,
         "documentCount": 7
@@ -2393,22 +2409,6 @@
       },
       "similarity": 0.963,
       "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Donald Spence",
-        "mentions": 8,
-        "documentCount": 8
-      },
-      "right": {
-        "name": "Donald Spencer",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -3388,6 +3388,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "program",
+      "left": {
+        "name": "Project HAARP",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Project Harp",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Press Officer",
@@ -3471,8 +3487,8 @@
       "category": "person",
       "left": {
         "name": "James Randi",
-        "mentions": 378,
-        "documentCount": 259
+        "mentions": 381,
+        "documentCount": 261
       },
       "right": {
         "name": "James Randin",
@@ -3615,8 +3631,8 @@
       "category": "person",
       "left": {
         "name": "Paul Hellyer",
-        "mentions": 69,
-        "documentCount": 46
+        "mentions": 70,
+        "documentCount": 47
       },
       "right": {
         "name": "Paul Heller",
@@ -4158,14 +4174,14 @@
     {
       "category": "organization",
       "left": {
+        "name": "University of Arkansas",
+        "mentions": 26,
+        "documentCount": 25
+      },
+      "right": {
         "name": "University of Kansas",
         "mentions": 24,
         "documentCount": 22
-      },
-      "right": {
-        "name": "University of Arkansas",
-        "mentions": 24,
-        "documentCount": 23
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -4575,8 +4591,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 322,
-        "documentCount": 175
+        "mentions": 323,
+        "documentCount": 176
       },
       "right": {
         "name": "Linda Moulton-Howell",
@@ -5103,8 +5119,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 732,
-        "documentCount": 418
+        "mentions": 735,
+        "documentCount": 420
       },
       "right": {
         "name": "Stanton Freedman",
@@ -5119,8 +5135,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 732,
-        "documentCount": 418
+        "mentions": 735,
+        "documentCount": 420
       },
       "right": {
         "name": "Stanton Freidman",
@@ -5564,6 +5580,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Edgar Allen Poe",
+        "mentions": 11,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "Edgar Allan Poe",
+        "mentions": 16,
+        "documentCount": 13
+      },
+      "similarity": 0.933,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Trumball County",
@@ -5577,22 +5609,6 @@
       },
       "similarity": 0.933,
       "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Edgar Allen Poe",
-        "mentions": 9,
-        "documentCount": 7
-      },
-      "right": {
-        "name": "Edgar Allan Poe",
-        "mentions": 16,
-        "documentCount": 13
-      },
-      "similarity": 0.933,
-      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -6927,8 +6943,8 @@
       "category": "government_agency",
       "left": {
         "name": "U.S. Air Force",
-        "mentions": 8595,
-        "documentCount": 3017
+        "mentions": 8596,
+        "documentCount": 3018
       },
       "right": {
         "name": "US Air Forces",
@@ -7708,6 +7724,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of Califan",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "University of Cali",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Bimini Island",
@@ -8031,8 +8063,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Schwartz",
-        "mentions": 27,
-        "documentCount": 23
+        "mentions": 28,
+        "documentCount": 24
       },
       "right": {
         "name": "Steven Schwartz",
@@ -8095,13 +8127,29 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 219,
-        "documentCount": 138
+        "mentions": 221,
+        "documentCount": 139
       },
       "right": {
         "name": "Steven Hawking",
         "mentions": 4,
         "documentCount": 2
+      },
+      "similarity": 0.897,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Stephen Bassett",
+        "mentions": 56,
+        "documentCount": 46
+      },
+      "right": {
+        "name": "Steven Bassett",
+        "mentions": 18,
+        "documentCount": 14
       },
       "similarity": 0.897,
       "reason": "similar person name",
@@ -8118,22 +8166,6 @@
         "name": "James Steinberg",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.897,
-      "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Stephen Bassett",
-        "mentions": 55,
-        "documentCount": 45
-      },
-      "right": {
-        "name": "Steven Bassett",
-        "mentions": 18,
-        "documentCount": 14
       },
       "similarity": 0.897,
       "reason": "similar person name",
@@ -8228,8 +8260,8 @@
       },
       "right": {
         "name": "Steven Browdy",
-        "mentions": 8,
-        "documentCount": 7
+        "mentions": 9,
+        "documentCount": 8
       },
       "similarity": 0.889,
       "reason": "similar person name",
@@ -8287,8 +8319,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 152,
-        "documentCount": 120
+        "mentions": 153,
+        "documentCount": 121
       },
       "right": {
         "name": "George HW Bush",
@@ -8463,8 +8495,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 322,
-        "documentCount": 175
+        "mentions": 323,
+        "documentCount": 176
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
@@ -8591,8 +8623,8 @@
       "category": "person",
       "left": {
         "name": "Jean Chapman",
-        "mentions": 17,
-        "documentCount": 17
+        "mentions": 18,
+        "documentCount": 18
       },
       "right": {
         "name": "Ken Chapman",
@@ -8692,8 +8724,8 @@
       },
       "right": {
         "name": "David Ray Griffin",
-        "mentions": 8,
-        "documentCount": 5
+        "mentions": 9,
+        "documentCount": 6
       },
       "similarity": 0.867,
       "reason": "similar person name",
@@ -8735,8 +8767,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 46131,
-        "documentCount": 11512
+        "mentions": 46303,
+        "documentCount": 11546
       },
       "right": {
         "name": "North American Space Agency",
