@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "c7f03e47dee56c8a5d6fc2411ff17c3d8e68d8e7"
+    "revision": "77f4ad97261715e6b31ccb83044a1758a826234a"
   },
-  "count": 551,
-  "totalCount": 551,
-  "shownCount": 551,
+  "count": 553,
+  "totalCount": 553,
+  "shownCount": 553,
   "candidates": [
     {
       "category": "book",
@@ -271,8 +271,8 @@
       "category": "location",
       "left": {
         "name": "White Sands Missile Range",
-        "mentions": 88,
-        "documentCount": 73
+        "mentions": 89,
+        "documentCount": 74
       },
       "right": {
         "name": "White Sands Missle Range",
@@ -1263,8 +1263,8 @@
       "category": "program",
       "left": {
         "name": "Project Stargate",
-        "mentions": 25,
-        "documentCount": 17
+        "mentions": 26,
+        "documentCount": 18
       },
       "right": {
         "name": "Project Star Gate",
@@ -1503,8 +1503,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 221,
-        "documentCount": 139
+        "mentions": 222,
+        "documentCount": 140
       },
       "right": {
         "name": "Stephen Hawkings",
@@ -1839,8 +1839,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 685,
-        "documentCount": 367
+        "mentions": 686,
+        "documentCount": 368
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -1902,6 +1902,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Frederick Myers",
+        "mentions": 14,
+        "documentCount": 12
+      },
+      "right": {
+        "name": "Frederic Myers",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "similarity": 0.966,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Dr. Richard Sautter",
         "mentions": 6,
         "documentCount": 2
@@ -1913,22 +1929,6 @@
       },
       "similarity": 0.966,
       "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Frederick Myers",
-        "mentions": 13,
-        "documentCount": 11
-      },
-      "right": {
-        "name": "Frederic Myers",
-        "mentions": 5,
-        "documentCount": 4
-      },
-      "similarity": 0.966,
-      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -2127,8 +2127,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 612,
-        "documentCount": 388
+        "mentions": 613,
+        "documentCount": 389
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -2143,8 +2143,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 549,
-        "documentCount": 248
+        "mentions": 554,
+        "documentCount": 251
       },
       "right": {
         "name": "Jacques Valle",
@@ -2703,8 +2703,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 142,
-        "documentCount": 110
+        "mentions": 143,
+        "documentCount": 111
       },
       "right": {
         "name": "George Noorey",
@@ -2767,8 +2767,8 @@
       "category": "person",
       "left": {
         "name": "Allen Heineck",
-        "mentions": 94,
-        "documentCount": 53
+        "mentions": 95,
+        "documentCount": 54
       },
       "right": {
         "name": "Allen Hineck",
@@ -2831,8 +2831,8 @@
       "category": "location",
       "left": {
         "name": "Marin County",
-        "mentions": 22,
-        "documentCount": 19
+        "mentions": 24,
+        "documentCount": 20
       },
       "right": {
         "name": "Marion County",
@@ -2908,6 +2908,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Marin County",
+        "mentions": 24,
+        "documentCount": 20
+      },
+      "right": {
+        "name": "Martin County",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "George Earley",
@@ -2918,22 +2934,6 @@
         "name": "George Early",
         "mentions": 16,
         "documentCount": 6
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Marin County",
-        "mentions": 22,
-        "documentCount": 19
-      },
-      "right": {
-        "name": "Martin County",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -3487,8 +3487,8 @@
       "category": "person",
       "left": {
         "name": "James Randi",
-        "mentions": 384,
-        "documentCount": 264
+        "mentions": 393,
+        "documentCount": 267
       },
       "right": {
         "name": "James Randin",
@@ -3551,8 +3551,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 175,
-        "documentCount": 61
+        "mentions": 176,
+        "documentCount": 62
       },
       "right": {
         "name": "Kings Island",
@@ -3583,8 +3583,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 136,
-        "documentCount": 105
+        "mentions": 137,
+        "documentCount": 106
       },
       "right": {
         "name": "Northeastern University",
@@ -3663,13 +3663,13 @@
       "category": "person",
       "left": {
         "name": "John Edwards",
-        "mentions": 9,
-        "documentCount": 8
+        "mentions": 10,
+        "documentCount": 9
       },
       "right": {
         "name": "John Edward",
-        "mentions": 38,
-        "documentCount": 28
+        "mentions": 40,
+        "documentCount": 29
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -4111,8 +4111,8 @@
       "category": "organization",
       "left": {
         "name": "Institute of Atmospheric Physics",
-        "mentions": 20,
-        "documentCount": 13
+        "mentions": 21,
+        "documentCount": 14
       },
       "right": {
         "name": "Institute for Atmospheric Physics",
@@ -5119,8 +5119,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 741,
-        "documentCount": 425
+        "mentions": 745,
+        "documentCount": 427
       },
       "right": {
         "name": "Stanton Freedman",
@@ -5135,8 +5135,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 741,
-        "documentCount": 425
+        "mentions": 745,
+        "documentCount": 427
       },
       "right": {
         "name": "Stanton Freidman",
@@ -5158,6 +5158,22 @@
         "name": "Office of the Secretary of Defense",
         "mentions": 316,
         "documentCount": 85
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Condon Committee",
+        "mentions": 152,
+        "documentCount": 93
+      },
+      "right": {
+        "name": "Condom Committee",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.938,
       "reason": "similar name",
@@ -5540,8 +5556,8 @@
       },
       "right": {
         "name": "Sol Foundation",
-        "mentions": 75,
-        "documentCount": 33
+        "mentions": 76,
+        "documentCount": 34
       },
       "similarity": 0.933,
       "reason": "similar name",
@@ -6047,8 +6063,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 136,
-        "documentCount": 105
+        "mentions": 137,
+        "documentCount": 106
       },
       "right": {
         "name": "Northwest University",
@@ -6223,8 +6239,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 549,
-        "documentCount": 248
+        "mentions": 554,
+        "documentCount": 251
       },
       "right": {
         "name": "Jacques Valley",
@@ -6255,8 +6271,8 @@
       "category": "person",
       "left": {
         "name": "Robert Bigelow",
-        "mentions": 387,
-        "documentCount": 199
+        "mentions": 388,
+        "documentCount": 200
       },
       "right": {
         "name": "Robert Bigalow",
@@ -6847,8 +6863,8 @@
       "category": "organization",
       "left": {
         "name": "University of Southern",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 4,
+        "documentCount": 4
       },
       "right": {
         "name": "University of South",
@@ -6943,8 +6959,8 @@
       "category": "government_agency",
       "left": {
         "name": "U.S. Air Force",
-        "mentions": 8615,
-        "documentCount": 3026
+        "mentions": 8625,
+        "documentCount": 3032
       },
       "right": {
         "name": "US Air Forces",
@@ -7039,8 +7055,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 149,
-        "documentCount": 119
+        "mentions": 150,
+        "documentCount": 120
       },
       "right": {
         "name": "Mohave Desert",
@@ -7406,13 +7422,13 @@
     {
       "category": "person",
       "left": {
-        "name": "Daniel Goldin",
-        "mentions": 8,
-        "documentCount": 7
+        "name": "John Schuster",
+        "mentions": 5,
+        "documentCount": 4
       },
       "right": {
-        "name": "Dr. Daniel Golden",
-        "mentions": 5,
+        "name": "John Schusler",
+        "mentions": 8,
         "documentCount": 5
       },
       "similarity": 0.923,
@@ -7470,14 +7486,14 @@
     {
       "category": "person",
       "left": {
-        "name": "John Schuster",
-        "mentions": 5,
-        "documentCount": 4
+        "name": "Daniel Goldin",
+        "mentions": 7,
+        "documentCount": 7
       },
       "right": {
-        "name": "John Schusler",
-        "mentions": 7,
-        "documentCount": 4
+        "name": "Dr. Daniel Golden",
+        "mentions": 5,
+        "documentCount": 5
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -7724,6 +7740,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Karen Anderson",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Ken Anderson",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.923,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "University of Califan",
@@ -7785,22 +7817,6 @@
       },
       "similarity": 0.923,
       "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Karen Anderson",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Ken Anderson",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.923,
-      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -8015,8 +8031,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 192,
-        "documentCount": 132
+        "mentions": 193,
+        "documentCount": 133
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -8143,8 +8159,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 221,
-        "documentCount": 139
+        "mentions": 222,
+        "documentCount": 140
       },
       "right": {
         "name": "Steven Hawking",
@@ -8367,8 +8383,8 @@
       "category": "person",
       "left": {
         "name": "Allen Heineck",
-        "mentions": 94,
-        "documentCount": 53
+        "mentions": 95,
+        "documentCount": 54
       },
       "right": {
         "name": "Alan Heineck",
@@ -8415,8 +8431,8 @@
       "category": "person",
       "left": {
         "name": "Steven Tango",
-        "mentions": 23,
-        "documentCount": 16
+        "mentions": 24,
+        "documentCount": 17
       },
       "right": {
         "name": "Stephen Tango",
@@ -8606,14 +8622,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Joseph Stalin",
+        "name": "Jean Houston",
         "mentions": 27,
-        "documentCount": 25
+        "documentCount": 18
       },
       "right": {
-        "name": "Joe Stalin",
-        "mentions": 6,
-        "documentCount": 4
+        "name": "Dr. Ken Houston",
+        "mentions": 7,
+        "documentCount": 5
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -8622,14 +8638,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Jean Houston",
-        "mentions": 25,
-        "documentCount": 16
+        "name": "Joseph Stalin",
+        "mentions": 28,
+        "documentCount": 26
       },
       "right": {
-        "name": "Dr. Ken Houston",
-        "mentions": 7,
-        "documentCount": 5
+        "name": "Joe Stalin",
+        "mentions": 6,
+        "documentCount": 4
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -8660,8 +8676,8 @@
       },
       "right": {
         "name": "Jane Hansen",
-        "mentions": 13,
-        "documentCount": 8
+        "mentions": 14,
+        "documentCount": 9
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -8687,7 +8703,7 @@
       "category": "person",
       "left": {
         "name": "Daniel Goldin",
-        "mentions": 8,
+        "mentions": 7,
         "documentCount": 7
       },
       "right": {
@@ -8812,11 +8828,27 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Kenneth Pelletier",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Ken Pelletier",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.867,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 46633,
-        "documentCount": 11643
+        "mentions": 46815,
+        "documentCount": 11687
       },
       "right": {
         "name": "North American Space Agency",
