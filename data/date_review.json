@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-29T20:51:32Z",
+  "generatedAt": "2026-09-29T21:58:58Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a4754edf952c7568a65cd0e71ffdc55da2bf94cf"
+    "revision": "69849ca4a633b654fc08ee89decf3253aacaae0c"
   },
-  "documentsWithCandidates": 13839,
+  "documentsWithCandidates": 13840,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8182,6 +8182,30 @@
           "method": "unclassified-mention",
           "evidence": "20040511-Re_BULLSHIT Update_ April 27, 2004-53268.html[12/03/2022 10:12:33",
           "segment": 153
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9a1e37964df1",
+      "path": "Archives-for-the-Unexplained/documents/20040605-http___groups.msn.com_ThePlanetX-53286.txt",
+      "candidates": [
+        {
+          "value": "2004-05-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Re: CRAP Update: May 18, 2004",
+          "segment": 0
+        },
+        {
+          "value": "2004-05-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Subject: Re: CRAP Update: May 18, 2004",
+          "segment": 1
         }
       ]
     },
