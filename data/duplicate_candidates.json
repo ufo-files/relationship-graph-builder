@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "4491a345ffafb588059380df93e93a8384312924"
+    "revision": "50a4831ba9858239b13370895d451c8ec2008c9f"
   },
-  "count": 584,
-  "totalCount": 584,
-  "shownCount": 584,
+  "count": 586,
+  "totalCount": 586,
+  "shownCount": 586,
   "candidates": [
     {
       "category": "organization",
@@ -591,8 +591,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 661,
-        "documentCount": 360
+        "mentions": 662,
+        "documentCount": 361
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -2036,8 +2036,8 @@
       },
       "right": {
         "name": "Sea-Tac Airport",
-        "mentions": 7,
-        "documentCount": 7
+        "mentions": 8,
+        "documentCount": 8
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -2470,6 +2470,22 @@
         "name": "Stephen Brody",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Bruce Cornett",
+        "mentions": 9,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Bruce Cornette",
+        "mentions": 4,
+        "documentCount": 2
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -3198,14 +3214,14 @@
     {
       "category": "person",
       "left": {
-        "name": "John Michell",
-        "mentions": 10,
-        "documentCount": 8
+        "name": "Bruce Cornett",
+        "mentions": 9,
+        "documentCount": 6
       },
       "right": {
-        "name": "John Michelle",
-        "mentions": 6,
-        "documentCount": 3
+        "name": "Bruce Cornet",
+        "mentions": 8,
+        "documentCount": 8
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -3214,14 +3230,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Bruce Cornett",
-        "mentions": 8,
-        "documentCount": 5
+        "name": "John Michell",
+        "mentions": 10,
+        "documentCount": 8
       },
       "right": {
-        "name": "Bruce Cornet",
-        "mentions": 8,
-        "documentCount": 8
+        "name": "John Michelle",
+        "mentions": 6,
+        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -4094,6 +4110,22 @@
     {
       "category": "location",
       "left": {
+        "name": "King County",
+        "mentions": 7,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Kings County",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "Mari Island",
         "mentions": 2,
         "documentCount": 2
@@ -4149,22 +4181,6 @@
       "right": {
         "name": "Paul Hellier",
         "mentions": 3,
-        "documentCount": 2
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "King County",
-        "mentions": 5,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Kings County",
-        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.957,
@@ -5951,8 +5967,8 @@
       "category": "location",
       "left": {
         "name": "County Line Road",
-        "mentions": 7,
-        "documentCount": 7
+        "mentions": 8,
+        "documentCount": 8
       },
       "right": {
         "name": "County Line Rd",
@@ -7343,8 +7359,8 @@
       "category": "government_agency",
       "left": {
         "name": "U.S. Air Force",
-        "mentions": 8728,
-        "documentCount": 3100
+        "mentions": 8732,
+        "documentCount": 3102
       },
       "right": {
         "name": "US Air Forces",
@@ -7941,6 +7957,22 @@
       "right": {
         "name": "Moorie Island",
         "mentions": 7,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Bruce Cornet",
+        "mentions": 8,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "Bruce Cornette",
+        "mentions": 4,
         "documentCount": 2
       },
       "similarity": 0.923,
@@ -9343,8 +9375,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49238,
-        "documentCount": 12416
+        "mentions": 49260,
+        "documentCount": 12423
       },
       "right": {
         "name": "North American Space Agency",
