@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "1e47ed451ca8b8e317975c8949f90d5219466dfa"
+    "revision": "a9925e2bef34824c52d124792d8e71d34680e0cd"
   },
-  "count": 580,
-  "totalCount": 580,
-  "shownCount": 580,
+  "count": 581,
+  "totalCount": 581,
+  "shownCount": 581,
   "candidates": [
     {
       "category": "organization",
@@ -255,8 +255,8 @@
       "category": "location",
       "left": {
         "name": "White Sands Missile Range",
-        "mentions": 89,
-        "documentCount": 74
+        "mentions": 91,
+        "documentCount": 76
       },
       "right": {
         "name": "White Sands Missle Range",
@@ -1231,8 +1231,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 204,
-        "documentCount": 143
+        "mentions": 205,
+        "documentCount": 144
       },
       "right": {
         "name": "Steven Spielbergs",
@@ -2799,8 +2799,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 146,
-        "documentCount": 114
+        "mentions": 147,
+        "documentCount": 115
       },
       "right": {
         "name": "George Noorey",
@@ -3695,8 +3695,8 @@
       "category": "person",
       "left": {
         "name": "David Jacobs",
-        "mentions": 155,
-        "documentCount": 104
+        "mentions": 156,
+        "documentCount": 105
       },
       "right": {
         "name": "David Jacob",
@@ -3974,6 +3974,22 @@
         "name": "Mori Island",
         "mentions": 13,
         "documentCount": 10
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Nancy Meyer",
+        "mentions": 12,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Nancy Meyers",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -6876,6 +6892,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Ball Aerospace",
+        "mentions": 8,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Bell Aerospace",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Brian Forrester",
@@ -6886,22 +6918,6 @@
         "name": "Brian Forster",
         "mentions": 5,
         "documentCount": 5
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Ball Aerospace",
-        "mentions": 7,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Bell Aerospace",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -7279,8 +7295,8 @@
       "category": "government_agency",
       "left": {
         "name": "U.S. Air Force",
-        "mentions": 8674,
-        "documentCount": 3064
+        "mentions": 8678,
+        "documentCount": 3067
       },
       "right": {
         "name": "US Air Forces",
@@ -8447,8 +8463,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 204,
-        "documentCount": 143
+        "mentions": 205,
+        "documentCount": 144
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -8478,14 +8494,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Allen Greenfield",
-        "mentions": 30,
-        "documentCount": 18
+        "name": "Stephen Schwartz",
+        "mentions": 37,
+        "documentCount": 31
       },
       "right": {
-        "name": "Alan Greenfield",
-        "mentions": 15,
-        "documentCount": 9
+        "name": "Steven Schwartz",
+        "mentions": 8,
+        "documentCount": 7
       },
       "similarity": 0.903,
       "reason": "similar person name",
@@ -8494,14 +8510,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Stephen Schwartz",
-        "mentions": 36,
-        "documentCount": 30
+        "name": "Allen Greenfield",
+        "mentions": 30,
+        "documentCount": 18
       },
       "right": {
-        "name": "Steven Schwartz",
-        "mentions": 8,
-        "documentCount": 7
+        "name": "Alan Greenfield",
+        "mentions": 15,
+        "documentCount": 9
       },
       "similarity": 0.903,
       "reason": "similar person name",
@@ -8783,8 +8799,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 162,
-        "documentCount": 126
+        "mentions": 165,
+        "documentCount": 127
       },
       "right": {
         "name": "George HW Bush",
@@ -9023,13 +9039,13 @@
       "category": "person",
       "left": {
         "name": "Dan Wilson",
-        "mentions": 750,
-        "documentCount": 574
+        "mentions": 756,
+        "documentCount": 575
       },
       "right": {
         "name": "Daniel Wilson",
-        "mentions": 8,
-        "documentCount": 3
+        "mentions": 13,
+        "documentCount": 4
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -9220,8 +9236,8 @@
       },
       "right": {
         "name": "David Ray Griffin",
-        "mentions": 9,
-        "documentCount": 6
+        "mentions": 11,
+        "documentCount": 8
       },
       "similarity": 0.867,
       "reason": "similar person name",
@@ -9279,8 +9295,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 48713,
-        "documentCount": 12253
+        "mentions": 48911,
+        "documentCount": 12312
       },
       "right": {
         "name": "North American Space Agency",
