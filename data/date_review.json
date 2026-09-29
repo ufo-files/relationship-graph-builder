@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-29T07:50:25Z",
+  "generatedAt": "2026-09-29T08:57:55Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "538311704465a7b4d5a4a2b9f5ee14ffdf669cd0"
+    "revision": "49d793f49030eee6ad0182b8c8e8930be572d640"
   },
-  "documentsWithCandidates": 13587,
+  "documentsWithCandidates": 13601,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9806,6 +9806,30 @@
       ]
     },
     {
+      "documentId": "doc-f4f9ab332e20",
+      "path": "Archives-for-the-Unexplained/documents/20060524-Re__ALTERNATIVE-3_-LUNAR-TRANSFER-BASE-DISASTER-55631.txt",
+      "candidates": [
+        {
+          "value": "2006-05-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Thu, 25 May 2006 07:35:03 +1200, Sir Gilligan Horry <GM@ga7rm5er.com> wrote",
+          "segment": 4
+        },
+        {
+          "value": "2006-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 22 May 2006 15:14:14 -0700, rem460@aol.com wrote",
+          "segment": 5
+        }
+      ]
+    },
+    {
       "documentId": "doc-bfdf509e6a9d",
       "path": "Archives-for-the-Unexplained/documents/2007-00-00_Journal-of-Personality-and-Social-Psychology---Vol-92-No-5---Laura-King.txt",
       "candidates": [
@@ -11939,6 +11963,39 @@
       ]
     },
     {
+      "documentId": "doc-03b4bf888204",
+      "path": "Archives-for-the-Unexplained/documents/20080107-Re_The-Howland-Company-57137.txt",
+      "candidates": [
+        {
+          "value": "1963-11-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Re: Where were you on November 22, 1963?",
+          "segment": 0
+        },
+        {
+          "value": "1963-11-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Subject: Re: Where were you on November 22, 1963?",
+          "segment": 1
+        },
+        {
+          "value": "1963-11-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Where were you on November 22, 1963?",
+          "segment": 7
+        }
+      ]
+    },
+    {
       "documentId": "doc-312f17bd371e",
       "path": "Archives-for-the-Unexplained/documents/2009-00-00_Sociology-of-Religion---Vol-70-No-1---Mencken.txt",
       "candidates": [
@@ -13682,6 +13739,21 @@
       ]
     },
     {
+      "documentId": "doc-0a64da44bed9",
+      "path": "Archives-for-the-Unexplained/documents/20100602-Re_-Unofficial-NTS-family-tour--59611.txt",
+      "candidates": [
+        {
+          "value": "2010-06-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Wed, 2 Jun 2010 08:45:20 -0700 (PDT), Desert Shadow",
+          "segment": 3
+        }
+      ]
+    },
+    {
       "documentId": "doc-40f30ca5ba50",
       "path": "Archives-for-the-Unexplained/documents/2011-01-10---NASA-Goddard---NASA-Terrestrial-Gamma-ray-Flashes-Create-Antimatter_lXKt7UVjd-I---transcript-automated-.txt",
       "candidates": [
@@ -14257,6 +14329,54 @@
           "method": "unclassified-mention",
           "evidence": "object on November 12 2010 in this",
           "segment": 19
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a3f34ab13e90",
+      "path": "Archives-for-the-Unexplained/documents/20110829-Re_Skunk-Works-inconsistencies-60607.txt",
+      "candidates": [
+        {
+          "value": "2011-08-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sat, 27 Aug 2011 22:37:16 -0700 (PDT), \"miso@sushi.com\"",
+          "segment": 3
+        },
+        {
+          "value": "1978-12-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "saw I filed December 22, 1978, they hurriedly",
+          "segment": 80
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6806b6685227",
+      "path": "Archives-for-the-Unexplained/documents/20110920-Underground-Bases-Blown-Up.-Part-3.-60713.txt",
+      "candidates": [
+        {
+          "value": "2001-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "hand over the gold starting on September 12, 2001.",
+          "segment": 16
+        },
+        {
+          "value": "2001-09-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Instead, on September 11, 2001, as you all know, they gave the world the",
+          "segment": 17
         }
       ]
     },
@@ -15127,6 +15247,21 @@
           "method": "unclassified-mention",
           "evidence": "his cell phone on April 11 2008 I had my",
           "segment": 36
+        }
+      ]
+    },
+    {
+      "documentId": "doc-37b269983f5a",
+      "path": "Archives-for-the-Unexplained/documents/20130604-Re_Please-FWD-to-Loving-Souls-to-whom-it-may-concern.-Thank-you-Blessings-in-advance.-_D-61327.txt",
+      "candidates": [
+        {
+          "value": "2013-06-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Mon, 3 Jun 2013 20:18:45 -0700 (PDT), Lord Ashtar Sheran-Avatar",
+          "segment": 6
         }
       ]
     },
@@ -124541,6 +124676,21 @@
       ]
     },
     {
+      "documentId": "doc-bf32a4e9ed13",
+      "path": "Archives-for-the-Unexplained/documents/a08-002-025b42c349.txt",
+      "candidates": [
+        {
+          "value": "1997-01-08",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Wed, 8 Jan 1997 10:48:49 -0800",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-ec26dccd3335",
       "path": "Archives-for-the-Unexplained/documents/a09-003.txt",
       "candidates": [
@@ -124552,6 +124702,75 @@
           "method": "document-header",
           "evidence": "Date: Thu, 9 Jan 1997 15:28:55 -0800",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-800c12f1d8ca",
+      "path": "Archives-for-the-Unexplained/documents/a11-009.txt",
+      "candidates": [
+        {
+          "value": "1997-01-10",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Fri, 10 Jan 1997 00:54:41 -0800",
+          "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-07c919dcf0e5",
+      "path": "Archives-for-the-Unexplained/documents/a24-004.txt",
+      "candidates": [
+        {
+          "value": "1997-04-23",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Wed, 23 Apr 1997 07:41:25 -0800",
+          "segment": 3
+        },
+        {
+          "value": "1997-04-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Tuesday, April 22, 1997 http://www.aufora.org/",
+          "segment": 8
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1f70c8d8e06d",
+      "path": "Archives-for-the-Unexplained/documents/a29-003-0149c9bca7.txt",
+      "candidates": [
+        {
+          "value": "1997-05-28",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Wed, 28 May 1997 19:26:11 -0800",
+          "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ab35cf8894c6",
+      "path": "Archives-for-the-Unexplained/documents/aav_960807.txt",
+      "candidates": [
+        {
+          "value": "1996-08-07",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Wed, 07 Aug 1996 22:20:08 -0700",
+          "segment": 2
         }
       ]
     },
@@ -125399,6 +125618,30 @@
       ]
     },
     {
+      "documentId": "doc-de3746707896",
+      "path": "Archives-for-the-Unexplained/documents/london_960720.txt",
+      "candidates": [
+        {
+          "value": "1996-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 12 Sep 1996 08:39:43 -0400",
+          "segment": 67
+        },
+        {
+          "value": "1996-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 12 Sep 1996 15:58:28 +1000",
+          "segment": 71
+        }
+      ]
+    },
+    {
       "documentId": "doc-ac916a1a6e8c",
       "path": "Archives-for-the-Unexplained/documents/periodical_UFO_catalog.txt",
       "candidates": [
@@ -125518,6 +125761,21 @@
           "method": "unclassified-mention",
           "evidence": "Vimana (Detroit Flying Saucer Club): #1 (Oct 15, 1954), #3 (Jan 30, 1955",
           "segment": 614
+        }
+      ]
+    },
+    {
+      "documentId": "doc-953805369059",
+      "path": "Archives-for-the-Unexplained/documents/reno_951004.txt",
+      "candidates": [
+        {
+          "value": "1995-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reno Gazette-Journal October 4, 1995",
+          "segment": 1
         }
       ]
     },
@@ -374353,6 +374611,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On November 2, 2025, around 23:25, from their home in Ellecourt (Seine-Maritime), two witnesses observed a series of unusual nighttime light phenomena in the sky. The observation, initially through a window, was continued from outside to obtain an optimal field of vi",
           "segment": "seg-07dcc3a4e51cbbf682489db2"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b3c47f0ad7a5cd46507a3c1f",
+      "path": "France-GEIPAN/paired/cases/2025-12-51727/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2025-12-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 10, 2025 at 10:22 PM, from the terrace of his home in San-Gavino-di-Tenda, South Corsica, the main witness (T1) observes to the southeast a PAN of point-like shape, with changing colors, shifting from white to blue, green, and red, and exhibiting particul",
+          "segment": "seg-5175fbafb39264de98622067"
         }
       ]
     },
