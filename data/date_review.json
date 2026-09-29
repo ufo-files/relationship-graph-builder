@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-29T16:19:19Z",
+  "generatedAt": "2026-09-29T17:27:49Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "50a4831ba9858239b13370895d451c8ec2008c9f"
+    "revision": "e42ef7f36db7cf673da283007e208cfbaa2143e6"
   },
-  "documentsWithCandidates": 13774,
+  "documentsWithCandidates": 13791,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8477,6 +8477,21 @@
       ]
     },
     {
+      "documentId": "doc-144699f9a835",
+      "path": "Archives-for-the-Unexplained/documents/20050520-The-50th-Anniversary-public-celebration-of-Area-51-on-May-28-2005-54115.txt",
+      "candidates": [
+        {
+          "value": "2005-05-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "20050520-The 50th Anniversary public celebration of Area 51 on May 28, 2005-54115.html[12/03/2022 10:14:10",
+          "segment": 8
+        }
+      ]
+    },
+    {
       "documentId": "doc-2c1a688c0269",
       "path": "Archives-for-the-Unexplained/documents/20050531-Carnevale_-Japanese-Farmers-discover-rich-vein-of-gold-ore-in-Japan-54389.txt",
       "candidates": [
@@ -14261,6 +14276,30 @@
       ]
     },
     {
+      "documentId": "doc-3be861899e17",
+      "path": "Archives-for-the-Unexplained/documents/20090313-Is-new-Groom-hangar-the-home-of-ISIS_-58084.txt",
+      "candidates": [
+        {
+          "value": "1964-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Washington, February 10, 1964.",
+          "segment": 7
+        },
+        {
+          "value": "1962-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Memoranda, 01 March 1962-30 April 1965, Box 9.",
+          "segment": 9
+        }
+      ]
+    },
+    {
       "documentId": "doc-71f1548f98ec",
       "path": "Archives-for-the-Unexplained/documents/20090721-Re_Area-51-Gets-New-UFO-To-Reverse-Engineer--58544.txt",
       "candidates": [
@@ -15826,6 +15865,36 @@
           "method": "unclassified-mention",
           "evidence": "Sent: Monday, October 24, 2011",
           "segment": 9
+        }
+      ]
+    },
+    {
+      "documentId": "doc-787e9aef636e",
+      "path": "Archives-for-the-Unexplained/documents/20111031-13-Crystal-Skull-Going-To-LA.-Part-2-of-2.-946.txt",
+      "candidates": [
+        {
+          "value": "2011-11-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The seminar will take place on Sunday, November 13, 2011.",
+          "segment": 15
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1c94daec3ac7",
+      "path": "Archives-for-the-Unexplained/documents/20111101-A-vision-that-sealed-the-fate-of-Libya.-60798.txt",
+      "candidates": [
+        {
+          "value": "2011-11-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The seminar will take place on Sunday, November 13, 2011.",
+          "segment": 15
         }
       ]
     },
@@ -126857,6 +126926,21 @@
       ]
     },
     {
+      "documentId": "doc-91499f97b7c0",
+      "path": "Archives-for-the-Unexplained/documents/a07-001-1440681438.txt",
+      "candidates": [
+        {
+          "value": "1997-05-06",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Tue, 06 May 1997 09:42:35 -0700",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-d60b30772e22",
       "path": "Archives-for-the-Unexplained/documents/a07-001.txt",
       "candidates": [
@@ -127299,6 +127383,21 @@
           "kind": "document_date",
           "method": "document-header",
           "evidence": "Date: Wed, 26 Mar 1997 17:32:46 -0800",
+          "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-668b26bf27eb",
+      "path": "Archives-for-the-Unexplained/documents/a27-007-1b55efc5b8.txt",
+      "candidates": [
+        {
+          "value": "1997-05-27",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Tue, 27 May 1997 08:37:11 -0800",
           "segment": 4
         }
       ]
@@ -128390,6 +128489,21 @@
       ]
     },
     {
+      "documentId": "doc-42ac539e0a40",
+      "path": "Archives-for-the-Unexplained/documents/cameraman.txt",
+      "candidates": [
+        {
+          "value": "1995-08-31",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: 31 Aug 1995 15:10:07 GMT",
+          "segment": 2
+        }
+      ]
+    },
+    {
       "documentId": "doc-84102ae89692",
       "path": "Archives-for-the-Unexplained/documents/charleston_960622.txt",
       "candidates": [
@@ -128753,6 +128867,21 @@
       ]
     },
     {
+      "documentId": "doc-387c17a244a4",
+      "path": "Archives-for-the-Unexplained/documents/gwu_940802.txt",
+      "candidates": [
+        {
+          "value": "1994-08-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 2, 1994 (202) 994-6460",
+          "segment": 3
+        }
+      ]
+    },
+    {
       "documentId": "doc-3e1a4a74a590",
       "path": "Archives-for-the-Unexplained/documents/heft.txt",
       "candidates": [
@@ -128779,6 +128908,21 @@
           "method": "unclassified-mention",
           "evidence": "Posted April 14, 1996 by Glenn Campbell, Area 51 Research Center, PO Box 448, Rachel, NV 89001.",
           "segment": 103
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5fb2a9696074",
+      "path": "Archives-for-the-Unexplained/documents/inq_871016.txt",
+      "candidates": [
+        {
+          "value": "1987-10-16",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "DATE: FRIDAY October 16, 1987",
+          "segment": 0
         }
       ]
     },
@@ -129109,6 +129253,21 @@
           "method": "unclassified-mention",
           "evidence": "Printed in the \"Tell Me a Story\" column in Las Vegas Review- Journal, July 31, 1995.",
           "segment": 83
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e66060853737",
+      "path": "Archives-for-the-Unexplained/documents/real_reason_960402a-1a372f862f.txt",
+      "candidates": [
+        {
+          "value": "1996-04-01",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: 1 Apr 1996 20:59:58 GMT",
+          "segment": 2
         }
       ]
     },
@@ -372962,6 +373121,21 @@
       ]
     },
     {
+      "documentId": "doc-4b95ceb9b6f7179f6375c9d9",
+      "path": "France-GEIPAN/paired/cases/2014-01-08689/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-01-28",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On January 28, 2014, around 10:15 PM, a witness outside observed for 2 to 3 minutes the movement of a PAN bright light in the shape of a halo, then a very bright red ball with a small blue tail. The trajectory is complex (straight, then stop, followed by a half-turn ",
+          "segment": "seg-f87175d039133b69bf39825b"
+        }
+      ]
+    },
+    {
       "documentId": "doc-736e66cb16cf4cb851e4363c",
       "path": "France-GEIPAN/paired/cases/2014-02-08656/en/translation.txt",
       "candidates": [
@@ -374873,6 +375047,21 @@
       ]
     },
     {
+      "documentId": "doc-907d0318fde7cff76b452323",
+      "path": "France-GEIPAN/paired/cases/2015-04-09182/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-04-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Monday, April 13, 2015, around 10:45 a.m., a person, on the terrace of a café with friends, observed the silent passage of a very bright object in the clear sky. Only one testimony is collected. A bright object in the sun, appearing metallic, rotating and crossing",
+          "segment": "seg-1f0ddb3dc8046d213e1888c0"
+        }
+      ]
+    },
+    {
       "documentId": "doc-57d26f52e156ec54fc9f206d",
       "path": "France-GEIPAN/paired/cases/2015-05-09168/en/translation.txt",
       "candidates": [
@@ -375814,6 +376003,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On October 28, 2015, at 4:30 a.m., a witness was intrigued by the presence in the southeastern sky of two very bright white points. During an observation lasting approximately thirty minutes, no unusual noises were heard. The two points moved little on a straight upw",
           "segment": "seg-ad495ffaa4ba2343f93f00c8"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f4f905c79d7a8fdd55d334e4",
+      "path": "France-GEIPAN/paired/cases/2015-10-09356/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-10-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Saturday, October 24, 2015, at 8:30 PM, several people observed in the sky the slow, one-after-the-other movement of numerous red-orange lights appearing at low altitude near Mollèges (13) and eventually disappearing vertically between Saint-Sixte (13) and Le Cont",
+          "segment": "seg-6d9310edb99cab6ec65a4083"
         }
       ]
     },
@@ -377147,6 +377351,21 @@
       ]
     },
     {
+      "documentId": "doc-d77fd08c4a8c8e57485ee73f",
+      "path": "France-GEIPAN/paired/cases/2018-12-50686/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2018-12-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Monday, December 10, 2018, between 07:20 and 07:40, a witness driving down the alleyway in front of their home was intrigued by an unusual phenomenon to the west, above a field at a low altitude. The witness stops and describes the PAN as a \"electric\" yellow bar w",
+          "segment": "seg-966b224564bd6686ef2db614"
+        }
+      ]
+    },
+    {
       "documentId": "doc-b2395a99441ff1f971afdacc",
       "path": "France-GEIPAN/paired/cases/2019-03-50729/en/translation.txt",
       "candidates": [
@@ -377509,6 +377728,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Sunday, November 22, 2020, at approximately 6:00 PM (just after sunset), the witness observed a red-orange light at 20° to the east. The speed appears low at first, then higher as the witness gets closer. Other PAN appear, generally bright, roughly circular, about",
           "segment": "seg-18b94c88cf31f0ec245c806e"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-93096ebe66d6edc624abd66e",
+      "path": "France-GEIPAN/paired/cases/2021-02-51171/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2021-02-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On February 20, 2021, at approximately 07:10, while standing in front of his entrance door, the witness's attention was drawn to a bright white light that appeared in the overcast sky. This phenomenon moved silently towards the west, with limited ground lighting. The",
+          "segment": "seg-388480cde6682653273f3bef"
         }
       ]
     },
@@ -377960,6 +378194,21 @@
       ]
     },
     {
+      "documentId": "doc-037faee7f4c63fbe21b5ae41",
+      "path": "France-GEIPAN/paired/cases/2022-11-51400/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2022-11-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On November 8, 2022, at 07:45, during a trip on D944, near the town of Les Petites-Loges (51), a witness observed a very bright point moving quickly towards the west, without a trail, and then disappearing. The phenomenon lasts for a short time, approximately 1 to 2 ",
+          "segment": "seg-7c6fb17015a02f3e1c6e9fbe"
+        }
+      ]
+    },
+    {
       "documentId": "doc-75a715f5084d7d770568a0c3",
       "path": "France-GEIPAN/paired/cases/2022-12-51412/en/translation.txt",
       "candidates": [
@@ -378238,6 +378487,30 @@
           "method": "unclassified-mention",
           "evidence": "Description: On September 7, 2024, at 03:30, from his garden in Perpignan (Pyrénées-Orientales, 66), the witness observed the passage of an unidentified aerospacial phenomenon (PAN) composed of five white glowing points. This group followed a straight trajectory oriented from nor",
           "segment": "seg-1c5d8bade06fcde39c300f43"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4bc82b423201c361daaf1de1",
+      "path": "France-GEIPAN/paired/cases/2024-09-51600/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2024-09-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 15, 2024, at approximately 8:42 PM, a driver traveling on N145 observed, through her vehicle's window, a stationary gray point in the sky, located above a tree. Intrigued, she took a picture of the object before it suddenly disappeared after a few minute",
+          "segment": "seg-23e185896147cb1fe03dbd40"
+        },
+        {
+          "value": "2024-12-10",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On September 15, 2024, at approximately 8:42 PM, a driver traveling on N145 observed, through her vehicle's window, a stationary gray point in the sky, located above a tree. Intrigued, she took a picture of the object before it suddenly disappeared after a few minute",
+          "segment": "seg-23e185896147cb1fe03dbd40"
         }
       ]
     },
