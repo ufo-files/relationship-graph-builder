@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-29T06:43:32Z",
+  "generatedAt": "2026-09-29T07:50:25Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a9925e2bef34824c52d124792d8e71d34680e0cd"
+    "revision": "538311704465a7b4d5a4a2b9f5ee14ffdf669cd0"
   },
-  "documentsWithCandidates": 13551,
+  "documentsWithCandidates": 13587,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7943,6 +7943,45 @@
       ]
     },
     {
+      "documentId": "doc-5088e36b3685",
+      "path": "Archives-for-the-Unexplained/documents/20040217-Re_First-Moonwalk_-A-Russian-Perspective-52849.txt",
+      "candidates": [
+        {
+          "value": "2004-02-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Tue, 17 Feb 2004 13:16:34 -0500, \" George\" <George@george.net>",
+          "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7280d96330db",
+      "path": "Archives-for-the-Unexplained/documents/20040408-Re_Did-NASA-really-make-it-to-Mars_-53200.txt",
+      "candidates": [
+        {
+          "value": "2004-04-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 7 Apr 2004 16:45:18 -0700, u2r2h@gmx.net (Jeanne Newton) posted",
+          "segment": 9
+        },
+        {
+          "value": "2001-09-11",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "many is that since September 11, 2001?",
+          "segment": 23
+        }
+      ]
+    },
+    {
       "documentId": "doc-66fece4a4026",
       "path": "Archives-for-the-Unexplained/documents/2005-06-03_Funeral-Notices_Click-here-to-view-the-tribute-page-for-Michael-Billington.txt",
       "candidates": [
@@ -14569,6 +14608,30 @@
           "method": "unclassified-mention",
           "evidence": "On September 16, 2012, NASA's Swift noticed a new and",
           "segment": 15
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2ffbff73c236",
+      "path": "Archives-for-the-Unexplained/documents/2012-10-10---NASA---Dragon-launches-on-historic-mission-to-the-ISS-on-This-Week-NASA_rq99ZuIe40c---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2002-10-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ten years ago, on October 7, 2002, Space Shuttle",
+          "segment": 336
+        },
+        {
+          "value": "1926-03-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "he successfully launched on March 16, 1926",
+          "segment": 366
         }
       ]
     },
@@ -27578,6 +27641,21 @@
       ]
     },
     {
+      "documentId": "doc-5636866d7af9",
+      "path": "Archives-for-the-Unexplained/documents/2023-02-10---Eyes-On-Cinema-RealEOC-presents-Eyes-On-UFOs---Woman-claims-dissected-like-frogs-on-UFO---Sandy-Larson-s-alien-abduction-experience-1975_gkvZvIp0D8g---5d718a38c431.txt",
+      "candidates": [
+        {
+          "value": "1975-08-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 26 1975 Mrs Sandy Larson of Fargo",
+          "segment": 1
+        }
+      ]
+    },
+    {
       "documentId": "doc-fbf9b69f06bf",
       "path": "Archives-for-the-Unexplained/documents/2023-02-14---FADE-TO-BLACK-Radio---F2B-BREAKING-NEWS-Tuesday-February-14-2023_YUCbbxfJUNc---transcript-automated-.txt",
       "candidates": [
@@ -29008,6 +29086,21 @@
           "method": "unclassified-mention",
           "evidence": "at 5 30 a.m on Thursday February 28 1974",
           "segment": 138
+        }
+      ]
+    },
+    {
+      "documentId": "doc-dde1bc0ce583",
+      "path": "Archives-for-the-Unexplained/documents/2023-06-03---Eyes-On-Cinema-RealEOC-presents-Eyes-On-UFOs---Multiple-witnesses-saw-huge-UFO-hovering-above-the-Bonaventure-hotel-Montr-al-Canada-Nov.-7-1990_hTHeoP-267e73aac8c3.txt",
+      "candidates": [
+        {
+          "value": "1990-11-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on November 7 1990 a tourist floating in",
+          "segment": 5
         }
       ]
     },
@@ -90722,6 +90815,30 @@
       ]
     },
     {
+      "documentId": "doc-707d35d1bb6d",
+      "path": "Archives-for-the-Unexplained/documents/Sightings-S05E12---The-Heartland-Ghost-Echo-Missile-Encounter-IN-THE-NEWS-Crop-Circle-Video-Myste_I-8jacEWUms---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1967-03-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "But on March 16, 1967, America's first line of defense was tampered with.",
+          "segment": 352
+        },
+        {
+          "value": "1999-12-31",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "extraterrestrial life on or before December 31, 1999.",
+          "segment": 535
+        }
+      ]
+    },
+    {
       "documentId": "doc-72d597f8ba24",
       "path": "Archives-for-the-Unexplained/documents/Sightings-S05E19---To-Catch-A-Killer-Unearthing-Atlantis-IN-THE-NEWS-White-Lady-Of-Avenel-Myster_Vjk2MCtFx-Q---transcript-automated-.txt",
       "candidates": [
@@ -119468,6 +119585,108 @@
       ]
     },
     {
+      "documentId": "doc-d60fe35f99f9",
+      "path": "Archives-for-the-Unexplained/documents/Unsolved-Mysteries---S01E13---fj65Vz0wxp---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1988-10-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On October 8, 1988, Lee Selva would fight for his life",
+          "segment": 84
+        },
+        {
+          "value": "1984-09-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On September 22, 1984, Stephen Cox vanished",
+          "segment": 420
+        },
+        {
+          "value": "1980-02-13",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "The night of February 13, 1980, a month after he was released from a drug rehab program",
+          "segment": 557
+        },
+        {
+          "value": "1980-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Three months later, on May 21, 1980",
+          "segment": 672
+        },
+        {
+          "value": "1980-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Then on July 15, 1980, the Baldwin police issued a warrant for Michael Rosenblum's arrest.",
+          "segment": 787
+        },
+        {
+          "value": "1986-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On February 19, 1986, Roger St. Cain told his sister that he was going to a local hardware store.",
+          "segment": 932
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7e145462b700",
+      "path": "Archives-for-the-Unexplained/documents/Unsolved-Mysteries---S02E11---Etg6hPvWA9---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1987-09-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "His only reply was, I am in receipt of your letter of September 22, 1987.",
+          "segment": 508
+        },
+        {
+          "value": "1988-11-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On November 16, 1988, almost three years after their daughter died, the state medical examiner",
+          "segment": 519
+        },
+        {
+          "value": "1950-11-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Judge Camille Kelly resigned on November 11, 1950.",
+          "segment": 786
+        },
+        {
+          "value": "1980-12-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 8, 1980, Greg Adams was laid to rest",
+          "segment": 1169
+        }
+      ]
+    },
+    {
       "documentId": "doc-3554bf976c7d",
       "path": "Archives-for-the-Unexplained/documents/Unsolved-Mysteries---S03E03---qWnv5vzEW0---transcript-automated-.txt",
       "candidates": [
@@ -119582,6 +119801,30 @@
       ]
     },
     {
+      "documentId": "doc-8cd518277b84",
+      "path": "Archives-for-the-Unexplained/documents/Unsolved-Mysteries---S09E16---btKMFT7h7u---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1994-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 30, 1994 was a red-letter day for drug enforcement agent Richard Fass.",
+          "segment": 440
+        },
+        {
+          "value": "1979-02-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Then on February 27, 1979, Roxy was rushed to the hospital.",
+          "segment": 919
+        }
+      ]
+    },
+    {
       "documentId": "doc-c8cd168ffad9",
       "path": "Archives-for-the-Unexplained/documents/Unsolved-Mysteries---S10E06---VkFEKiCCQ---transcript-automated-.txt",
       "candidates": [
@@ -119611,6 +119854,30 @@
           "method": "unclassified-mention",
           "evidence": "March 19, 1960, Independence Missouri.",
           "segment": 730
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5b1b32067964",
+      "path": "Archives-for-the-Unexplained/documents/Unsolved-Mysteries---S10E07---k0YDSCV70---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1996-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 7, 1996 was Paul Herzilius' birthday.",
+          "segment": 103
+        },
+        {
+          "value": "1993-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "morning of July 28, 1993",
+          "segment": 976
         }
       ]
     },
@@ -124259,6 +124526,36 @@
       ]
     },
     {
+      "documentId": "doc-89479f1b55d7",
+      "path": "Archives-for-the-Unexplained/documents/a05-001-001786e6ac.txt",
+      "candidates": [
+        {
+          "value": "1997-06-04",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Wed, 04 Jun 1997 21:19:17 -0700",
+          "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ec26dccd3335",
+      "path": "Archives-for-the-Unexplained/documents/a09-003.txt",
+      "candidates": [
+        {
+          "value": "1997-01-09",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Thu, 9 Jan 1997 15:28:55 -0800",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-59c4f28e63ec",
       "path": "Archives-for-the-Unexplained/documents/audio-material-wendy-connors-disc-03---UFOs-across-the-Ponds.txt",
       "candidates": [
@@ -125273,6 +125570,48 @@
       ]
     },
     {
+      "documentId": "doc-39fa002a26bb",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d11-26t-3d2202-26sid-3d4d33f71f93d235681182d499459ffdcd.txt",
+      "candidates": [
+        {
+          "value": "2012-09-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by IsaacKoi » Fri Sep 28, 2012 10:50 pm",
+          "segment": 5
+        },
+        {
+          "value": "2007-11-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Wed Nov 07, 2007 12:30 pm",
+          "segment": 50
+        },
+        {
+          "value": "2012-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by philliman » Sun Oct 21, 2012 8:12 pm",
+          "segment": 65
+        },
+        {
+          "value": "2010-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Sun Jul 11, 2010 1:51 pm",
+          "segment": 67
+        }
+      ]
+    },
+    {
       "documentId": "doc-4c9522c5d3a2",
       "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d11-26t-3d2227-26p-3d38183-26sid-3d5ee69c49363d4244fb9a84dc85b9c0cb.txt",
       "candidates": [
@@ -125317,6 +125656,180 @@
           "method": "unclassified-mention",
           "evidence": "Joined: Tue Dec 21, 2010 2:19 am",
           "segment": 9
+        }
+      ]
+    },
+    {
+      "documentId": "doc-32e6622646a9",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d16-26p-3d21367.txt",
+      "candidates": [
+        {
+          "value": "2008-10-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Access Denied on Wed Oct 08, 2008 8:40 am",
+          "segment": 4
+        },
+        {
+          "value": "2007-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Tue Jan 09, 2007 6:32 am",
+          "segment": 12
+        },
+        {
+          "value": "2008-10-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by mojo on Wed Oct 08, 2008 11:00 am",
+          "segment": 16
+        },
+        {
+          "value": "2008-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Thu Jun 26, 2008 3:00 pm",
+          "segment": 18
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8e9f16ca5d65",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d19-26t-3d1284-26start-3d15.txt",
+      "candidates": [
+        {
+          "value": "2008-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by calcoastseeker on Tue Oct 21, 2008 8:00 am",
+          "segment": 5
+        },
+        {
+          "value": "2008-10-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon Oct 20, 2008 11:17 pm",
+          "segment": 22
+        },
+        {
+          "value": "2008-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Access Denied on Tue Oct 21, 2008 8:33 am",
+          "segment": 24
+        },
+        {
+          "value": "2007-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Tue Jan 09, 2007 6:32 am",
+          "segment": 37
+        },
+        {
+          "value": "2008-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by torbjon on Tue Oct 21, 2008 9:17 pm",
+          "segment": 39
+        },
+        {
+          "value": "2008-04-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Thu Apr 03, 2008 6:08 am",
+          "segment": 51
+        },
+        {
+          "value": "2008-10-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by lost_shaman on Wed Oct 22, 2008 6:38 am",
+          "segment": 53
+        },
+        {
+          "value": "2006-12-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Fri Dec 15, 2006 7:56 am",
+          "segment": 69
+        },
+        {
+          "value": "2008-10-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by ryguy on Wed Oct 22, 2008 1:24 pm",
+          "segment": 71
+        },
+        {
+          "value": "2006-02-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Thu Feb 23, 2006 2:49 am",
+          "segment": 87
+        },
+        {
+          "value": "2008-10-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by torbjon on Sat Oct 25, 2008 3:44 am",
+          "segment": 91
+        },
+        {
+          "value": "2008-04-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Thu Apr 03, 2008 6:08 am",
+          "segment": 98
+        },
+        {
+          "value": "2008-10-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by lost_shaman on Sat Oct 25, 2008 6:23 am",
+          "segment": 100
+        },
+        {
+          "value": "2006-12-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Fri Dec 15, 2006 7:56 am",
+          "segment": 110
         }
       ]
     },
@@ -125455,6 +125968,84 @@
           "method": "unclassified-mention",
           "evidence": "Joined: Wed Nov 07, 2007 12:30 pm",
           "segment": 68
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2f7089a06a5f",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d28-26p-3d37560-26sid-3db2679b6855a02a34c5fe1816d465b9d6.txt",
+      "candidates": [
+        {
+          "value": "2011-12-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by cerebcat » Wed Dec 14, 2011 10:41 pm",
+          "segment": 4
+        },
+        {
+          "value": "2010-11-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon Nov 08, 2010 7:17 pm",
+          "segment": 40
+        },
+        {
+          "value": "2011-12-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by cerebcat » Wed Dec 14, 2011 11:21 pm",
+          "segment": 55
+        },
+        {
+          "value": "2010-11-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon Nov 08, 2010 7:17 pm",
+          "segment": 142
+        },
+        {
+          "value": "2011-12-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by ryguy » Mon Dec 19, 2011 3:29 pm",
+          "segment": 144
+        },
+        {
+          "value": "2006-02-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Thu Feb 23, 2006 3:49 am",
+          "segment": 167
+        },
+        {
+          "value": "2012-01-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by cerebcat » Sun Jan 15, 2012 6:47 am",
+          "segment": 171
+        },
+        {
+          "value": "2010-11-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon Nov 08, 2010 7:17 pm",
+          "segment": 174
         }
       ]
     },
@@ -125605,6 +126196,63 @@
           "method": "unclassified-mention",
           "evidence": "Joined: Mon Oct 08, 2007 6:02 pm",
           "segment": 10
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4d9b91ae3251",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d29-26t-3d1408.txt",
+      "candidates": [
+        {
+          "value": "2008-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Chorlton » Tue Jul 29, 2008 2:06 pm",
+          "segment": 4
+        },
+        {
+          "value": "2007-10-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon Oct 08, 2007 6:02 pm",
+          "segment": 10
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1a683caca259",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d3-26p-3d38135-26sid-3dd86280f8ee57c2a8e818f4f6fe04e7df.txt",
+      "candidates": [
+        {
+          "value": "2013-08-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Smersh » Fri Aug 23, 2013 3:57 pm",
+          "segment": 5
+        },
+        {
+          "value": "2013-08-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "As of August 22, 2013, The00skyview has not addressed any of these questions.",
+          "segment": 38
+        },
+        {
+          "value": "2011-06-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Tue Jun 07, 2011 10:58 pm",
+          "segment": 63
         }
       ]
     },
@@ -125837,6 +126485,180 @@
       ]
     },
     {
+      "documentId": "doc-59194ecc3071",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d47-26t-3d1042-26sid-3d2e827ed3911e7a7b318add7acf2e58fc-26start-3d60.txt",
+      "candidates": [
+        {
+          "value": "2008-02-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Zep Tepi » Fri Feb 08, 2008 8:50 pm",
+          "segment": 3
+        },
+        {
+          "value": "2006-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Wed Feb 22, 2006 12:59 pm",
+          "segment": 5
+        },
+        {
+          "value": "2008-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by ryguy » Sun Feb 10, 2008 3:39 pm",
+          "segment": 19
+        },
+        {
+          "value": "2006-02-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Thu Feb 23, 2006 3:49 am",
+          "segment": 37
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ed985a93c650",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d47-26t-3d1168.txt",
+      "candidates": [
+        {
+          "value": "2008-02-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Chorlton on Tue Feb 26, 2008 10:02 am",
+          "segment": 4
+        },
+        {
+          "value": "2007-10-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon Oct 08, 2007 5:02 pm",
+          "segment": 17
+        },
+        {
+          "value": "2008-02-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by caleban on Wed Feb 27, 2008 3:06 am",
+          "segment": 19
+        },
+        {
+          "value": "2007-11-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Tue Nov 13, 2007 3:33 am",
+          "segment": 32
+        },
+        {
+          "value": "2008-02-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Access Denied on Wed Feb 27, 2008 5:14 am",
+          "segment": 33
+        },
+        {
+          "value": "2007-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Tue Jan 09, 2007 6:32 am",
+          "segment": 41
+        },
+        {
+          "value": "2008-02-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by IgnoreTheFacts on Wed Feb 27, 2008 2:22 pm",
+          "segment": 43
+        },
+        {
+          "value": "2007-10-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon Oct 15, 2007 12:37 am",
+          "segment": 53
+        },
+        {
+          "value": "2008-02-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Access Denied on Wed Feb 27, 2008 3:07 pm",
+          "segment": 54
+        },
+        {
+          "value": "2007-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Tue Jan 09, 2007 6:32 am",
+          "segment": 62
+        },
+        {
+          "value": "2008-02-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by IgnoreTheFacts on Wed Feb 27, 2008 10:30 pm",
+          "segment": 63
+        },
+        {
+          "value": "2007-10-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon Oct 15, 2007 12:37 am",
+          "segment": 65
+        },
+        {
+          "value": "2008-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Chorlton on Thu Feb 28, 2008 8:27 am",
+          "segment": 66
+        },
+        {
+          "value": "2007-10-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon Oct 08, 2007 5:02 pm",
+          "segment": 74
+        }
+      ]
+    },
+    {
       "documentId": "doc-a3340606c439",
       "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d47-26t-3d1295-26p-3d18233.txt",
       "candidates": [
@@ -125881,6 +126703,57 @@
           "method": "unclassified-mention",
           "evidence": "Joined: Tue Jan 09, 2007 6:32 am",
           "segment": 125
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6ec61315046d",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d49-26p-3d37774.txt",
+      "candidates": [
+        {
+          "value": "2012-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by MikeJamieson » Sat Mar 03, 2012 2:06 am",
+          "segment": 6
+        },
+        {
+          "value": "2006-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Thu Jun 29, 2006 4:53 pm",
+          "segment": 13
+        },
+        {
+          "value": "2012-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Smersh » Thu Mar 08, 2012 2:24 am",
+          "segment": 28
+        },
+        {
+          "value": "2011-11-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Posted by Brenda Maples on November 20, 2011 at 1:15pm in General discussion",
+          "segment": 31
+        },
+        {
+          "value": "2011-06-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Tue Jun 07, 2011 10:58 pm",
+          "segment": 39
         }
       ]
     },
@@ -125942,6 +126815,30 @@
       ]
     },
     {
+      "documentId": "doc-bface358fca2",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d50-26t-3d2184-26p-3d37749-26sid-3d8df11b2b2f6c9ba03e3b39f5e5e836d8.txt",
+      "candidates": [
+        {
+          "value": "2012-02-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by m0r1arty » Fri Feb 24, 2012 4:47 pm",
+          "segment": 5
+        },
+        {
+          "value": "2010-02-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon Feb 15, 2010 1:54 pm",
+          "segment": 20
+        }
+      ]
+    },
+    {
       "documentId": "doc-00f1579ba8f4",
       "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d52-26t-3d1683-26p-3d25045-26sid-3de58a6bc16ffcef5c581b82fd4d4d4acf.txt",
       "candidates": [
@@ -125962,6 +126859,81 @@
           "method": "unclassified-mention",
           "evidence": "Joined: Tue Jan 09, 2007 7:32 am",
           "segment": 30
+        }
+      ]
+    },
+    {
+      "documentId": "doc-84c5a32f3ad6",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d52-26t-3d1686-26sid-3de58a6bc16ffcef5c581b82fd4d4d4acf.txt",
+      "candidates": [
+        {
+          "value": "2010-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Access Denied » Mon Mar 01, 2010 3:55 am",
+          "segment": 10
+        },
+        {
+          "value": "2007-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Tue Jan 09, 2007 7:32 am",
+          "segment": 17
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4341024ba22c",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d52-26t-3d1886-26sid-3de6c5f9066888e1af107b4fe5ceeac538.txt",
+      "candidates": [
+        {
+          "value": "2010-11-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Tim Hebert » Mon Nov 08, 2010 7:26 pm",
+          "segment": 5
+        },
+        {
+          "value": "1968-06-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Of particular interest is the June 6, 1968 sighting as briefly detailed below.",
+          "segment": 7
+        },
+        {
+          "value": "1968-06-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "•June 6, 1968 - Southwest of Minot ND. An MP. got a call to one of the missile silos.",
+          "segment": 19
+        },
+        {
+          "value": "1968-06-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 6, 1968 - Southwest of Minot ND. An MP. got a call to one of the missile silos.",
+          "segment": 29
+        },
+        {
+          "value": "2010-05-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Thu May 20, 2010 11:29 pm",
+          "segment": 70
         }
       ]
     },
@@ -126004,6 +126976,30 @@
           "method": "unclassified-mention",
           "evidence": "Joined: Fri Jul 23, 2010 9:03 pm",
           "segment": 30
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a2c71da132ee",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d56-26t-3d1939-26sid-3de6c5f9066888e1af107b4fe5ceeac538.txt",
+      "candidates": [
+        {
+          "value": "2010-12-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by m0r1arty » Tue Dec 14, 2010 6:30 am",
+          "segment": 5
+        },
+        {
+          "value": "2010-02-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon Feb 15, 2010 1:54 pm",
+          "segment": 13
         }
       ]
     },
@@ -126419,6 +127415,204 @@
       ]
     },
     {
+      "documentId": "doc-688372c3e36d",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d9-26t-3d1621-26sid-3d75934e9864bc1cacade46dbdddec6a06-26start-3d15.txt",
+      "candidates": [
+        {
+          "value": "2009-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by longhaircowboy » Thu Jul 09, 2009 9:43 pm",
+          "segment": 6
+        },
+        {
+          "value": "2007-02-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon Feb 12, 2007 3:05 am",
+          "segment": 12
+        },
+        {
+          "value": "2009-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Access Denied » Thu Jul 30, 2009 4:50 pm",
+          "segment": 27
+        },
+        {
+          "value": "2007-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Tue Jan 09, 2007 7:32 am",
+          "segment": 44
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7c14718b6ac6",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d9-26t-3d871.txt",
+      "candidates": [
+        {
+          "value": "2007-05-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by ryguy » Sun May 20, 2007 12:09 pm",
+          "segment": 2
+        },
+        {
+          "value": "2006-02-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Thu Feb 23, 2006 2:49 am",
+          "segment": 41
+        },
+        {
+          "value": "2007-05-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by JayKew » Sun May 20, 2007 5:44 pm",
+          "segment": 54
+        },
+        {
+          "value": "2006-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Wed May 24, 2006 7:51 pm",
+          "segment": 65
+        },
+        {
+          "value": "2007-05-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by ryguy » Sun May 20, 2007 11:49 pm",
+          "segment": 66
+        },
+        {
+          "value": "2006-02-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Thu Feb 23, 2006 2:49 am",
+          "segment": 80
+        },
+        {
+          "value": "2007-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Springer » Tue May 22, 2007 9:05 pm",
+          "segment": 82
+        },
+        {
+          "value": "2006-05-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Tue May 30, 2006 9:36 pm",
+          "segment": 94
+        },
+        {
+          "value": "2011-05-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by savvys84 » Sat May 14, 2011 7:08 pm",
+          "segment": 98
+        },
+        {
+          "value": "2011-04-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Tue Apr 12, 2011 6:58 am",
+          "segment": 100
+        },
+        {
+          "value": "2011-05-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Access Denied » Sat May 14, 2011 7:30 pm",
+          "segment": 102
+        },
+        {
+          "value": "2007-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Tue Jan 09, 2007 6:32 am",
+          "segment": 108
+        },
+        {
+          "value": "2011-05-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by ryguy » Wed May 18, 2011 4:34 pm",
+          "segment": 110
+        },
+        {
+          "value": "2006-02-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Thu Feb 23, 2006 2:49 am",
+          "segment": 119
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9485bbea953d",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-f-3d9-26t-3d895-26p-3d12100-26sid-3d75934e9864bc1cacade46dbdddec6a06.txt",
+      "candidates": [
+        {
+          "value": "2007-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Max » Thu Jun 21, 2007 7:20 pm",
+          "segment": 4
+        },
+        {
+          "value": "2006-12-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon Dec 04, 2006 9:45 pm",
+          "segment": 8
+        }
+      ]
+    },
+    {
       "documentId": "doc-cfe5b6a60dab",
       "path": "Archives-for-the-Unexplained/documents/viewtopic_php-p-3d25040-26sid-3d6af7b3a01884913efef5894a98fdcc62.txt",
       "candidates": [
@@ -126703,6 +127897,75 @@
           "method": "unclassified-mention",
           "evidence": "Joined: Wed Feb 22, 2006 11:59 am",
           "segment": 7
+        }
+      ]
+    },
+    {
+      "documentId": "doc-69d9dd3e336e",
+      "path": "Archives-for-the-Unexplained/documents/viewtopic_php-t-3d2225-26p-3d38172.txt",
+      "candidates": [
+        {
+          "value": "2013-11-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by wallarookiller » Tue Nov 12, 2013 9:44 am",
+          "segment": 4
+        },
+        {
+          "value": "2013-11-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Last edited by wallarookiller on Wed Nov 20, 2013 4:23 am, edited 1 time in total.",
+          "segment": 11
+        },
+        {
+          "value": "2009-05-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon May 18, 2009 10:32 pm",
+          "segment": 12
+        },
+        {
+          "value": "2013-11-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by James Carlson » Wed Nov 13, 2013 7:21 am",
+          "segment": 25
+        },
+        {
+          "value": "2010-03-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Sat Mar 06, 2010 6:11 am",
+          "segment": 37
+        },
+        {
+          "value": "2013-11-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by wallarookiller » Wed Nov 20, 2013 4:22 am",
+          "segment": 40
+        },
+        {
+          "value": "2009-05-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Joined: Mon May 18, 2009 10:32 pm",
+          "segment": 53
         }
       ]
     },
@@ -367586,6 +368849,21 @@
       ]
     },
     {
+      "documentId": "doc-2105150ddde2b7bee27d1c42",
+      "path": "France-GEIPAN/paired/cases/2013-12-08621/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2013-12-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Sunday, December 15, 2013, at 6:30 PM, a witness is intrigued by an orange glowing point larger than an airplane, silent, and stationary in the clear sky. After a few minutes, the object moves away and quickly disappears on an ascending trajectory. The GEIPAN anal",
+          "segment": "seg-87c83f7287cc670986529484"
+        }
+      ]
+    },
+    {
       "documentId": "doc-cdfd131f5ba6754a634166e0",
       "path": "France-GEIPAN/paired/cases/2013-12-08622/en/translation.txt",
       "candidates": [
@@ -369302,6 +370580,21 @@
       ]
     },
     {
+      "documentId": "doc-9f84b711c78730725442b143",
+      "path": "France-GEIPAN/paired/cases/2015-01-09093/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-01-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On January 30, 2015, around 7 PM, a driver on the Bordeaux ring road, near the commune of Carbon-Blanc (33), was suddenly startled by a very intense blue light that \"covered the entire environment in his field of vision\" (see the witness's drawing). No unusual noises",
+          "segment": "seg-f83fe342ee231c5e029b87a8"
+        }
+      ]
+    },
+    {
       "documentId": "doc-4c72e6cd08f42381e9a457f1",
       "path": "France-GEIPAN/paired/cases/2015-01-09102/en/translation.txt",
       "candidates": [
@@ -370307,6 +371600,21 @@
       ]
     },
     {
+      "documentId": "doc-2c643f7f0dbd238dda0296db",
+      "path": "France-GEIPAN/paired/cases/2015-08-09292/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 14, 2015, around 5:00 PM, a witness spotted in the sky a triangular shape moving slowly with a swinging motion. Using binoculars, he distinguished a purple-blue color when the object flew overhead. The object remained below the clouds and moved silently fro",
+          "segment": "seg-3aed7b6405f8bc9516c233cb"
+        }
+      ]
+    },
+    {
       "documentId": "doc-86305457f29c9e39cde8cc33",
       "path": "France-GEIPAN/paired/cases/2015-08-09300/en/translation.txt",
       "candidates": [
@@ -371072,6 +372380,21 @@
       ]
     },
     {
+      "documentId": "doc-78b70d24f09a4ebd4334de2d",
+      "path": "France-GEIPAN/paired/cases/2016-08-09522/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-08-06",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "**Description:** On August 6, 2016, at approximately 9:00 PM, a driver and her passenger observed two stationary light phenomena in the sky. The driver stopped to take two photographs with a camera. Only one statement was collected. The witness saw two PANs: a stationary light tr",
+          "segment": "seg-4e119c2fbb060b08a03afc07"
+        }
+      ]
+    },
+    {
       "documentId": "doc-586913495d518e275dc2ec33",
       "path": "France-GEIPAN/paired/cases/2016-08-09530/en/translation.txt",
       "candidates": [
@@ -371648,6 +372971,21 @@
       ]
     },
     {
+      "documentId": "doc-db3981a772a0cbc93f0ed37c",
+      "path": "France-GEIPAN/paired/cases/2018-04-50508/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2018-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Wednesday, April 4, 2018 at 9:00 PM, a witness is intrigued by the presence in the night sky of a very bright and stationary PAN. The witness describes a flickering, circular object with what appear to be long filaments. They observe the phenomenon for 40 minutes ",
+          "segment": "seg-88adbd151d6d782fcd3cb0e0"
+        }
+      ]
+    },
+    {
       "documentId": "doc-fd5fed4bd8df0f7b7e940d7c",
       "path": "France-GEIPAN/paired/cases/2018-05-50534/en/translation.txt",
       "candidates": [
@@ -372017,6 +373355,21 @@
       ]
     },
     {
+      "documentId": "doc-00fb463c11040c1219c9fb92",
+      "path": "France-GEIPAN/paired/cases/2020-05-50963/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2020-05-17",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On Sunday, May 17, 2020, at 1:00 AM, a witness observed for 10 seconds an object with a very unusual appearance, in the shape of a triangle, flying at a constant speed with a face parallel to the ground and featuring 3 white glowing points at each of its angles. Its ",
+          "segment": "seg-35160c2936d7a11d38bccb63"
+        }
+      ]
+    },
+    {
       "documentId": "doc-bff22a296184ed9a4b27aedd",
       "path": "France-GEIPAN/paired/cases/2020-06-51034/en/translation.txt",
       "candidates": [
@@ -372313,6 +373666,21 @@
           "method": "unclassified-mention",
           "evidence": "**Description:** On March 3, 2022, at SAUSSINES (34), around 00:20, witnesses, from their home, observed a bright, curious \"star\" to the west. Intrigued by its intense brightness and glowing rays, they went outside to the terrace and continued observing it for half an hour. The P",
           "segment": "seg-f7eb32bce915795600a3d7c6"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f5298865d61e07e906d8bea0",
+      "path": "France-GEIPAN/paired/cases/2022-03-51326/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2022-03-02",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: On March 02, 2022, the witness, driving between Gan (64) and Sévignacq-Meyracq (64), decided to stop to take some photographs of the sky and clouds, without seeing any PAN. The Sun is present in the field of view of each of the photographs. Upon returning home, she n",
+          "segment": "seg-582159d3f7f1a69924f165fb"
         }
       ]
     },
