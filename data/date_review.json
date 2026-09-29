@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-29T08:57:55Z",
+  "generatedAt": "2026-09-29T10:05:19Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "49d793f49030eee6ad0182b8c8e8930be572d640"
+    "revision": "2255460ee8cac15b6f0879f8a2e826a40cefd1d5"
   },
-  "documentsWithCandidates": 13601,
+  "documentsWithCandidates": 13609,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7943,6 +7943,21 @@
       ]
     },
     {
+      "documentId": "doc-d976f30c4080",
+      "path": "Archives-for-the-Unexplained/documents/20040108-CIA-May-Use-High-Tech-Against-Saddam-Hussein-52685.txt",
+      "candidates": [
+        {
+          "value": "2003-12-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 31 Dec 2003 15:34:32 -0800, cropwalk2004@hotmail.com (He Who Walks",
+          "segment": 12
+        }
+      ]
+    },
+    {
       "documentId": "doc-5088e36b3685",
       "path": "Archives-for-the-Unexplained/documents/20040217-Re_First-Moonwalk_-A-Russian-Perspective-52849.txt",
       "candidates": [
@@ -8230,6 +8245,36 @@
           "method": "unclassified-mention",
           "evidence": "Home Last Updated: Thursday October 13 2005 14:44 GMT",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-09df47bc22d2",
+      "path": "Archives-for-the-Unexplained/documents/20050813-Re_Groom-Lake-Historical-Site-....-paved--54747.txt",
+      "candidates": [
+        {
+          "value": "2005-08-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sat, 13 Aug 2005 12:50:55 -0400, \"NC\" <nc@nocrap.com> wrote",
+          "segment": 9
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4bd3b0c9e3f1",
+      "path": "Archives-for-the-Unexplained/documents/20051124-Re_Mike-s-post_-CIA-Psy-Ops-on-the-Internet-55177.txt",
+      "candidates": [
+        {
+          "value": "2005-11-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 14 Nov 2005 12:05:20 -0800, \"Yankee Doodle Refugee\"",
+          "segment": 6
         }
       ]
     },
@@ -14887,6 +14932,21 @@
           "method": "unclassified-mention",
           "evidence": "reported on March 26 2012 net was given",
           "segment": 273
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9087f0262dbb",
+      "path": "Archives-for-the-Unexplained/documents/20120125-Michael-Row-The-Boat-Ashore-------1059.txt",
+      "candidates": [
+        {
+          "value": "2012-01-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "An Hour with an Ang-l, January 23, 2012",
+          "segment": 14
         }
       ]
     },
@@ -124721,6 +124781,39 @@
       ]
     },
     {
+      "documentId": "doc-6f02ef3e18b7",
+      "path": "Archives-for-the-Unexplained/documents/a19-005.txt",
+      "candidates": [
+        {
+          "value": "1997-01-19",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Sun, 19 Jan 1997 19:29:50 -0800",
+          "segment": 3
+        },
+        {
+          "value": "1997-01-19",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Sun, 19 Jan 1997 02:10:08 -0500 (EST",
+          "segment": 6
+        },
+        {
+          "value": "1997-01-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Subject: Laugh Of The Day - Sun, Jan 19 1997",
+          "segment": 8
+        }
+      ]
+    },
+    {
       "documentId": "doc-07c919dcf0e5",
       "path": "Archives-for-the-Unexplained/documents/a24-004.txt",
       "candidates": [
@@ -124741,6 +124834,54 @@
           "method": "unclassified-mention",
           "evidence": "Tuesday, April 22, 1997 http://www.aufora.org/",
           "segment": 8
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e37610112b8e",
+      "path": "Archives-for-the-Unexplained/documents/a27-004-00f3599199.txt",
+      "candidates": [
+        {
+          "value": "1997-03-26",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Wed, 26 Mar 1997 17:32:46 -0800",
+          "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2877d4d37884",
+      "path": "Archives-for-the-Unexplained/documents/a28-003.txt",
+      "candidates": [
+        {
+          "value": "1997-02-28",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Fri, 28 Feb 1997 09:14:34 -0800",
+          "segment": 3
+        },
+        {
+          "value": "1997-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 28 February 1997 10:19",
+          "segment": 6
+        },
+        {
+          "value": "1997-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "February 28 1997 WORLD NEWS",
+          "segment": 9
         }
       ]
     },
@@ -125761,6 +125902,21 @@
           "method": "unclassified-mention",
           "evidence": "Vimana (Detroit Flying Saucer Club): #1 (Oct 15, 1954), #3 (Jan 30, 1955",
           "segment": 614
+        }
+      ]
+    },
+    {
+      "documentId": "doc-39cd07312943",
+      "path": "Archives-for-the-Unexplained/documents/rat_29_hens-0427b97efe.txt",
+      "candidates": [
+        {
+          "value": "1995-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Printed in the \"Tell Me a Story\" column in Las Vegas Review- Journal, July 31, 1995.",
+          "segment": 83
         }
       ]
     },
