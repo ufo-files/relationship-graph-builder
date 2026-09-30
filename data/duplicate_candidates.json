@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "435667885553b76a5568a7654ed8e013767fa364"
+    "revision": "f839cfa691c04a3abcbafa050234158dd7d134e1"
   },
-  "count": 588,
-  "totalCount": 588,
-  "shownCount": 588,
+  "count": 590,
+  "totalCount": 590,
+  "shownCount": 590,
   "candidates": [
     {
       "category": "organization",
@@ -380,6 +380,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Malmstrom Air Force Base",
+        "mentions": 160,
+        "documentCount": 97
+      },
+      "right": {
+        "name": "Malstrom Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.979,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
@@ -486,6 +502,22 @@
         "name": "Officer Training School",
         "mentions": 5,
         "documentCount": 2
+      },
+      "similarity": 0.979,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Malstrom Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Maelstrom Air Force Base",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.979,
       "reason": "similar name",
@@ -1972,8 +2004,8 @@
       },
       "right": {
         "name": "White Mountain",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -2942,14 +2974,14 @@
     {
       "category": "location",
       "left": {
-        "name": "Mount Palomar",
-        "mentions": 37,
-        "documentCount": 27
+        "name": "Marin County",
+        "mentions": 28,
+        "documentCount": 23
       },
       "right": {
-        "name": "Mount Paloma",
-        "mentions": 2,
-        "documentCount": 2
+        "name": "Marion County",
+        "mentions": 11,
+        "documentCount": 10
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -2958,14 +2990,14 @@
     {
       "category": "location",
       "left": {
-        "name": "Marin County",
-        "mentions": 26,
-        "documentCount": 22
+        "name": "Mount Palomar",
+        "mentions": 37,
+        "documentCount": 27
       },
       "right": {
-        "name": "Marion County",
-        "mentions": 11,
-        "documentCount": 10
+        "name": "Mount Paloma",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -3004,6 +3036,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Marin County",
+        "mentions": 28,
+        "documentCount": 23
+      },
+      "right": {
+        "name": "Martin County",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Edgar Fouché",
@@ -3030,22 +3078,6 @@
         "name": "Jekyll Island",
         "mentions": 25,
         "documentCount": 15
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Marin County",
-        "mentions": 26,
-        "documentCount": 22
-      },
-      "right": {
-        "name": "Martin County",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -7391,8 +7423,8 @@
       "category": "government_agency",
       "left": {
         "name": "U.S. Air Force",
-        "mentions": 8737,
-        "documentCount": 3107
+        "mentions": 8738,
+        "documentCount": 3108
       },
       "right": {
         "name": "US Air Forces",
@@ -8108,6 +8140,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Camino Island",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Camano Island",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Office of In",
@@ -8181,22 +8229,6 @@
       "right": {
         "name": "Appropriations Committees",
         "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Camino Island",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Camano Island",
-        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.923,
@@ -9407,8 +9439,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49312,
-        "documentCount": 12450
+        "mentions": 49316,
+        "documentCount": 12454
       },
       "right": {
         "name": "North American Space Agency",
