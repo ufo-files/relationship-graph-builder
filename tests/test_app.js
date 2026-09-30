@@ -487,7 +487,7 @@ test("Reptilians artwork crops its lower transparent margin at the lineup baseli
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
   vm.runInContext(source, context);
-  assert.equal(vm.runInContext('SPECIES_LINEUP_INK_BOUNDS.get("rigelians").bottom', context), 1480);
+  assert.equal(vm.runInContext('SPECIES_LINEUP_INK_BOUNDS.get("rigelians").bottom', context), 1502);
 });
 
 test("bar rows use the plot height through the balanced bottom margin", () => {

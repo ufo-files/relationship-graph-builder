@@ -198,7 +198,7 @@ const SPECIES_LINEUP_INK_BOUNDS = new Map([
   ["orb_light_beings", { top: 24, bottom: 1462 }],
   ["pleiadians", { top: 36, bottom: 1490 }],
   ["renegade_pleiadians", { top: 58, bottom: 1478 }],
-  ["rigelians", { top: 45, bottom: 1480 }],
+  ["rigelians", { top: 45, bottom: 1502 }],
   ["skinny_bob", { top: 60, bottom: 1477 }],
   ["synthetics", { top: 52, bottom: 1504 }],
   ["venusians", { top: 36, bottom: 1500 }],
