@@ -15,6 +15,8 @@ import difflib
 import functools
 import hashlib
 import json
+import os
+import stat
 import re
 import unicodedata
 from dataclasses import dataclass, field
@@ -2192,6 +2194,28 @@ def read_ocr(path: Path) -> tuple[dict, list[str]] | None:
     return metadata, list(sentence_segments(body))
 
 
+def validate_input_tree(input_root: Path) -> None:
+    """Fail before reading corpus/config files if checkout entries can escape.
+
+    Git can carry symlinks in any position, including metadata sidecars and
+    paired-document directories. Reject all of them, including in-root links,
+    rather than relying on the individual parsers' format checks.
+    """
+    if input_root.is_symlink() or not input_root.is_dir():
+        raise ValueError("Source input root must be a regular directory")
+
+    def walk_error(error):
+        raise ValueError("Cannot inspect source input tree") from error
+
+    for directory, directories, files in os.walk(input_root, followlinks=False, onerror=walk_error):
+        for name in directories + files:
+            path = Path(directory) / name
+            mode = path.lstat().st_mode
+            if not (stat.S_ISDIR(mode) or stat.S_ISREG(mode)):
+                relative = path.relative_to(input_root)
+                raise ValueError(f"Unsafe source input entry (symlink or special file): {relative}")
+
+
 def machine_data_paths(input_root: Path, paired_language: str = "en") -> list[Path]:
     """Select one textual representation per collection.
 
@@ -2200,6 +2224,7 @@ def machine_data_paths(input_root: Path, paired_language: str = "en") -> list[Pa
     the root-language exports and canonical source-language copies. Legacy
     collections without paired data retain their existing traversal.
     """
+    validate_input_tree(input_root)
     paired_collections = {
         child.name for child in input_root.iterdir()
         if child.is_dir() and (child / "paired").is_dir()
@@ -3450,6 +3475,7 @@ def build(
     claims_path: Path | None = None,
     paired_language: str = "en",
 ) -> dict:
+    paths = machine_data_paths(input_root, paired_language)
     data_dir = Path(__file__).resolve().parents[1] / "data"
     registry = load_registry([data_dir / "curated_entities.json", data_dir / "entity_aliases.json", data_dir / "book_catalog.json"])
     location_coordinates = json.loads((data_dir / "location_coordinates.json").read_text(encoding="utf-8"))
@@ -3490,7 +3516,6 @@ def build(
     segment_entity_qualifiers: dict[str, dict[str, list[dict]]] = collections.defaultdict(dict)
     lineage_records: list[dict] = []
 
-    paths = machine_data_paths(input_root, paired_language)
     for path in paths:
         relative = path.relative_to(input_root).as_posix()
         source = relative.split("/", 1)[0]
@@ -4288,7 +4313,7 @@ def main() -> None:
     )
     args = parser.parse_args()
     catalog = build(
-        args.input.resolve(),
+        args.input.absolute(),
         args.output.resolve(),
         args.max_entities,
         args.max_edges,
