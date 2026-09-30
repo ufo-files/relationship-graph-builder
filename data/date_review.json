@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-30T14:05:36Z",
+  "generatedAt": "2026-09-30T15:15:26Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "aa24bf90f7b87840ccd7c176af8dd75dca246c0d"
+    "revision": "56d1bff8f387a329d34c9687a0eb465a32a3d693"
   },
-  "documentsWithCandidates": 13982,
+  "documentsWithCandidates": 13996,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -7919,6 +7919,30 @@
       ]
     },
     {
+      "documentId": "doc-82b12b0c8498",
+      "path": "Archives-for-the-Unexplained/documents/20031006-Re_GALACTIC-FEDERATION-Update_-September-23-2003-52344.txt",
+      "candidates": [
+        {
+          "value": "2003-09-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Re: GALACTIC FEDERATION Update: September 23, 2003",
+          "segment": 0
+        },
+        {
+          "value": "2003-09-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Subject: Re: GALACTIC FEDERATION Update: September 23, 2003",
+          "segment": 1
+        }
+      ]
+    },
+    {
       "documentId": "doc-e3018d7248a3",
       "path": "Archives-for-the-Unexplained/documents/20031103-Re_GALACTIC-FEDERATION-Update_-September-23-2003-52410.txt",
       "candidates": [
@@ -8365,6 +8389,30 @@
           "method": "context-exclusion",
           "evidence": "New documentary to be released on July 1, 2004",
           "segment": 12
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7c66687abce9",
+      "path": "Archives-for-the-Unexplained/documents/20040824-GALACTIC-FEDERATION-Update_-August-10-2004-53348.txt",
+      "candidates": [
+        {
+          "value": "2004-08-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Mon, 23 Aug 2004 03:31:23 GMT, Denis Gaudet <gaudetd@telus.net>",
+          "segment": 2
+        },
+        {
+          "value": "2004-08-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "20040824-GALACTIC FEDERATION Update_ August 10, 2004-53348.html[12/03/2022 10:12:37",
+          "segment": 16
         }
       ]
     },
@@ -12401,6 +12449,30 @@
       ]
     },
     {
+      "documentId": "doc-12a1a6d39ca7",
+      "path": "Archives-for-the-Unexplained/documents/20070527-Re_Disclosure-Project-56430.txt",
+      "candidates": [
+        {
+          "value": "2007-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Thu, 24 May 2007 21:43:05 -0400, Phoon Hencman <H...@ican.net>",
+          "segment": 4
+        },
+        {
+          "value": "2007-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 2007-05-24 04:08:36 -0400, \"npsm\" <n...@aol.com> said",
+          "segment": 5
+        }
+      ]
+    },
+    {
       "documentId": "doc-6d04046dbe37",
       "path": "Archives-for-the-Unexplained/documents/20070527-Re_FS_-Barely-used-Time-Machine-56434.txt",
       "candidates": [
@@ -15911,6 +15983,21 @@
       ]
     },
     {
+      "documentId": "doc-3f002c52f79e",
+      "path": "Archives-for-the-Unexplained/documents/20100904-Re_Me-in-Guangzhou-China.-Canton-China.-59771.txt",
+      "candidates": [
+        {
+          "value": "2010-09-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sat, 4 Sep 2010 08:14:30 -0700, \"Hagar\" <hagen@sahm,name> wrote",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-d688fca83482",
       "path": "Archives-for-the-Unexplained/documents/20101026-Re_Possible-UFO-or-Cow-spotted-above-Creech-AFB-59852.txt",
       "candidates": [
@@ -16570,6 +16657,30 @@
           "method": "unclassified-mention",
           "evidence": "On Mon, 11 Apr 2011 13:36:44 -0400, Kenneth Edmund Fischer",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-de3fb6f0c6f1",
+      "path": "Archives-for-the-Unexplained/documents/20110411-Re_airfoil-patent-4-066-226---Paper-10.jpg-1_1---Paper-11.jpg-1_1---Paper-12.jpg-1_1---Paper-13.jpg-0_1--60122.txt",
+      "candidates": [
+        {
+          "value": "2011-04-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Mon, 11 Apr 2011 13:38:31 -0400, Kenneth Edmund Fischer",
+          "segment": 4
+        },
+        {
+          "value": "2011-04-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Mon, 11 Apr 2011 13:37:45 -0400, Kenneth Edmund Fischer",
+          "segment": 6
         }
       ]
     },
@@ -94853,6 +94964,21 @@
       ]
     },
     {
+      "documentId": "doc-c870a19a0efe",
+      "path": "Archives-for-the-Unexplained/documents/Sightings-Bentwaters-UFO-Case-April-1993---eKxb-SpJZ54---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1980-12-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "It was here on December 26, 1980, members of base security claimed to have witnessed",
+          "segment": 33
+        }
+      ]
+    },
+    {
       "documentId": "doc-a8f544a6f2ea",
       "path": "Archives-for-the-Unexplained/documents/Sightings-Contact-at-Socorro-1-27-96---eVgz16vSW34---transcript-automated-.txt",
       "candidates": [
@@ -130331,6 +130457,21 @@
       ]
     },
     {
+      "documentId": "doc-05b173ea9790",
+      "path": "Archives-for-the-Unexplained/documents/autopsy_local.txt",
+      "candidates": [
+        {
+          "value": "1995-09-11",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Mon, Sep 11, 1995 1:47 PM PDT",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-85b24d9cb046",
       "path": "Archives-for-the-Unexplained/documents/autopsy_prop.txt",
       "candidates": [
@@ -130973,6 +131114,21 @@
       ]
     },
     {
+      "documentId": "doc-ee306d7814ca",
+      "path": "Archives-for-the-Unexplained/documents/gwu_941110.txt",
+      "candidates": [
+        {
+          "value": "1994-10-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Counsel in Washington, D.C. On October 19, 1994, however, Counsel",
+          "segment": 48
+        }
+      ]
+    },
+    {
       "documentId": "doc-3e1a4a74a590",
       "path": "Archives-for-the-Unexplained/documents/heft.txt",
       "candidates": [
@@ -131044,6 +131200,21 @@
           "method": "document-header",
           "evidence": "DATE: FRIDAY October 16, 1987",
           "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7cafdf907d6f",
+      "path": "Archives-for-the-Unexplained/documents/inside_951215.txt",
+      "candidates": [
+        {
+          "value": "1995-12-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Broadcast date: December 15, 1995 19:00 EST",
+          "segment": 2
         }
       ]
     },
@@ -376355,6 +376526,21 @@
       ]
     },
     {
+      "documentId": "doc-e61e966ef931cd02150a82b0",
+      "path": "France-GEIPAN/paired/cases/2014-06-09090/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-06-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Sunday, June 22, 2014 at 12:55 AM, a witness, exiting their residence, observed the movement of two powerful, orange lights in the night sky. The witness followed the silent movements of the phenomena until they were out of sight. No other testimony was collected.",
+          "segment": "seg-7188d9e54b56ffb438d0a92b"
+        }
+      ]
+    },
+    {
       "documentId": "doc-ef72fb9b00316fa3d6aa54fc",
       "path": "France-GEIPAN/paired/cases/2014-06-09122/en/translation.txt",
       "candidates": [
@@ -376924,6 +377110,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On October 4, 2014, between 11:00 PM and 11:30 PM, a witness observed for 10 minutes from their balcony a column of lights forming an \"S\" in the sky above a nearby hill. The observation of orange orbs in the sky for several minutes on a weekend night strongly suggest",
           "segment": "seg-703fa5421820cd0868e5a26c"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-010919f459526911808d67f2",
+      "path": "France-GEIPAN/paired/cases/2014-10-09023/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-10-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On October 03, 2014, at 05:28, a witness is intrigued by the silent passage across the sky of a yellow-orange (fireball) light phenomenon (ball of fire) in the sky. Based on the evidence collected (see the investigation report), namely the PAN's movement with the win",
+          "segment": "seg-6ef7733cd244ba41cc418afe"
         }
       ]
     },
@@ -378185,6 +378386,21 @@
       ]
     },
     {
+      "documentId": "doc-b7658c68e54abb34e88bb2c0",
+      "path": "France-GEIPAN/paired/cases/2015-06-09220/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-06-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Sunday, June 14, 2015, at approximately 5:10 a.m., a witness looking out their window was intrigued by the successive and silent passage of 7 to 8 orange, spherical, and luminous phenomena across the sky. The observation lasted approximately 10 minutes before they",
+          "segment": "seg-0a484d477dbf53d43d1fcf4f"
+        }
+      ]
+    },
+    {
       "documentId": "doc-8a2a695120865220f4798df5",
       "path": "France-GEIPAN/paired/cases/2015-06-09234/en/translation.txt",
       "candidates": [
@@ -379268,6 +379484,21 @@
       ]
     },
     {
+      "documentId": "doc-b24eba89df2a7d49d7758434",
+      "path": "France-GEIPAN/paired/cases/2016-01-09423/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-01-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Sunday, January 24, 2016, at approximately 12:45, a witness was intrigued by the O-E passage of a luminous flying object with an oval shape. The Pan disappeared as a gray point on the horizon. No particular noise was heard during the observation. The phenomenon de",
+          "segment": "seg-0e82619296597f93069168dd"
+        }
+      ]
+    },
+    {
       "documentId": "doc-f23fa996ff81374889e4a934",
       "path": "France-GEIPAN/paired/cases/2016-02-09413/en/translation.txt",
       "candidates": [
@@ -380131,6 +380362,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On August 4, 2017, between 1:55 PM and 2:10 PM, a witness was intrigued by an object at the altitude of commercial airline cruising flights. The witness, using binoculars, observes a vertical cylinder in the sky. The upper third of the cylinder is red-orange, while t",
           "segment": "seg-f8983fa319ac0aade213fc24"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-96813561bdf164c4aa8a4eb3",
+      "path": "France-GEIPAN/paired/cases/2017-08-09722/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-08-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 19, 2017, between 10:00 PM and 10:10 PM, a witness and his wife, observing from their apartment's terrace on the second floor, witnessed the movement of approximately twenty white glowing points forming a formation on a straight trajectory in a clear sky. N",
+          "segment": "seg-d0e4c1fc938dff64531da346"
         }
       ]
     },
