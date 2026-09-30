@@ -1310,6 +1310,68 @@ class ClassificationTests(unittest.TestCase):
         self.assertIsNone(classify_phrase("Beatrice Villareal"))
         self.assertIsNone(classify_phrase("Stranger Things"))
 
+    def test_domain_words_do_not_suppress_person_mentions(self):
+        data_dir = Path(__file__).resolve().parents[1] / "data"
+        reviewed = load_registry([data_dir / "curated_entities.json", data_dir / "entity_aliases.json"])
+        for registry in ({}, reviewed):
+            for phrase, identity in (
+                ("Investigator John Smith", "john smith"),
+                ("Officer John Smith", "john smith"),
+                ("Officer Jane Doe", "jane doe"),
+                ("Contactee George Adamski", "george adamski"),
+                ("Forest Whitaker", "forest whitaker"),
+                ("Tom Lake", "tom lake"),
+                ("John Smith", "john smith"),
+            ):
+                with self.subTest(phrase=phrase, reviewed=bool(registry)):
+                    self.assertEqual(classify_phrase(phrase)[0], "person")
+                    mentions = extract_mentions(phrase + " described the event.", registry)
+                    self.assertEqual([(entity_key(name, category), category)
+                                      for _, name, category, _, _ in mentions], [(identity, "person")])
+
+    def test_person_precedence_preserves_institutions_places_and_acronyms(self):
+        for phrase, category in (
+            ("Lake Michigan", "location"),
+            ("Edwards Air Force Base", "location"),
+            ("John Smith Air Force Base", "location"),
+            ("University of Colorado", "organization"),
+            ("George Washington University", "organization"),
+            ("Federal Intelligence Office", "government_agency"),
+            ("Project Blue Book", "program"),
+        ):
+            with self.subTest(phrase=phrase):
+                mentions = extract_mentions(phrase + " was mentioned.", {})
+                self.assertTrue(any(item[2] == category for item in mentions), mentions)
+                self.assertFalse(any(item[2] == "person" for item in mentions), mentions)
+        mentions = extract_mentions("Officer Jane Doe consulted DOE and the Department of Energy.", {})
+        self.assertEqual({(item[1], item[2]) for item in mentions}, {
+            ("Officer Jane Doe", "person"), ("Department of Energy", "government_agency"),
+        })
+
+    def test_person_surname_is_not_agency_evidence_in_title(self):
+        self.assertEqual(extract_title_mentions("Officer Jane Doe", {}), [])
+        self.assertEqual({item[1] for item in extract_title_mentions("DOE", {})}, {"Department of Energy"})
+
+    def test_catalog_publishes_domain_word_names_as_people(self):
+        phrases = ["Investigator John Smith", "Officer Jane Doe", "Contactee George Adamski",
+                   "Forest Whitaker", "Tom Lake"]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "machine-data"
+            source = root / "Example"
+            source.mkdir(parents=True)
+            for index in range(3):
+                text = "\n".join(f"{phrase} described observation {index}." for phrase in phrases)
+                metadata = {"schema": "ufo-files-archive-ocr/v1", "source_file": f"report-{index}.pdf", "source_bytes": 100}
+                (source / f"report-{index}.txt").write_text(json.dumps(metadata) + "\n\n" + text, encoding="utf-8")
+            output = Path(directory) / "catalog.json"
+            catalog = build(root, output, 100, 100, require_data=True)
+            serialized = json.loads(output.read_text(encoding="utf-8"))
+        expected = {entity_key(phrase, "person") for phrase in phrases}
+        people = {entity_key(entity["canonicalName"], "person") for entity in serialized["entities"]
+                  if entity["category"] == "person"}
+        self.assertTrue(expected <= people, (expected, people))
+        self.assertFalse(any(entity["canonicalName"] == "Department of Energy" for entity in catalog["entities"]))
+
     def test_reviewed_location_gazetteer_covers_prominent_unambiguous_places(self):
         path = Path(__file__).resolve().parents[1] / "data" / "location_coordinates.json"
         coordinates = json.loads(path.read_text(encoding="utf-8"))
