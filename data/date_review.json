@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-30T01:25:20Z",
+  "generatedAt": "2026-09-30T02:34:29Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "b8feca26673b9f31e1b55386f938dd1414d47efe"
+    "revision": "314dde79358c61a3971a9c69f3f7a1db429a9762"
   },
-  "documentsWithCandidates": 13865,
+  "documentsWithCandidates": 13868,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -130195,6 +130195,21 @@
           "method": "dated-reference",
           "evidence": "The following are responses to the questions you asked in your letter dated March 26, 1996",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-66d05b56651b",
+      "path": "Archives-for-the-Unexplained/documents/resume.txt",
+      "candidates": [
+        {
+          "value": "1997-12-02",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Tue, 02 Dec 1997 13:39:19 -0800",
+          "segment": 0
         }
       ]
     },
@@ -374387,6 +374402,21 @@
       ]
     },
     {
+      "documentId": "doc-a7ae0f5517172af2b35cb072",
+      "path": "France-GEIPAN/paired/cases/2014-04-08683/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-04-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On April 16, 2014, around 8:00 PM, a witness taking bird photos noticed a peculiar, rapidly flickering light. He then observed through his camera a black, translucent object that did not appear in the photos. No other testimonies were collected. Based on the objectiv",
+          "segment": "seg-a685e00844276edecaef8133"
+        }
+      ]
+    },
+    {
       "documentId": "doc-a3b10a17c9f76503b99a8e90",
       "path": "France-GEIPAN/paired/cases/2014-04-08684/en/translation.txt",
       "candidates": [
@@ -375286,6 +375316,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On October 13, 2014, around 6:10 a.m., a driver and their passenger were surprised to see a bright point in the sky moving in a comma-shaped trajectory. No trail, no sound was noticed. The phenomenon suddenly disappeared. Only one testimony was collected. Based on th",
           "segment": "seg-2eda752f7dce99299a941571"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9879359e5b5e4bdff6e0c1c8",
+      "path": "France-GEIPAN/paired/cases/2014-11-09032/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On November 2, 2014, at 6:25 PM, a witness observed the silent movement of an orange glowing point that advanced towards them, then changed course before ascending into a clear sky. The observation of a slowly moving orange point in the sky resembles a Thai lantern c",
+          "segment": "seg-ccad3aac362167c254320e57"
         }
       ]
     },
