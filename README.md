@@ -249,7 +249,7 @@ Imports reject other schema versions and malformed record groups. The additive `
 From this directory:
 
 ```sh
-python3 -m http.server 4173
+python3 scripts/serve_preview.py --port 4173
 ```
 
 ## Entity identity review
