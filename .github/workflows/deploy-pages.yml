@@ -33,6 +33,7 @@ jobs:
       - name: Check out latest graph
         uses: actions/checkout@v7
         with:
+          persist-credentials: false
           ref: main
 
       - name: Stage static site

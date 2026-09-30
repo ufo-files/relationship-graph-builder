@@ -97,6 +97,7 @@ jobs:
       - name: Check out builder history
         uses: actions/checkout@v7
         with:
+          persist-credentials: false
           fetch-depth: 0
 
       - name: Detect catalog inputs
@@ -185,10 +186,13 @@ jobs:
     steps:
       - name: Check out builder
         uses: actions/checkout@v7
+        with:
+          persist-credentials: false
 
       - name: Check out machine-data
         uses: actions/checkout@v7
         with:
+          persist-credentials: false
           repository: ufo-files/machine-data
           path: _machine-data
 
@@ -237,6 +241,8 @@ jobs:
     steps:
       - name: Check out builder
         uses: actions/checkout@v7
+        with:
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v7
@@ -281,10 +287,13 @@ jobs:
     steps:
       - name: Check out builder
         uses: actions/checkout@v7
+        with:
+          persist-credentials: false
 
       - name: Check out machine-data
         uses: actions/checkout@v7
         with:
+          persist-credentials: false
           repository: ufo-files/machine-data
           path: _machine-data
 
@@ -354,6 +363,7 @@ jobs:
       - name: Check out machine-data
         uses: actions/checkout@v7
         with:
+          persist-credentials: false
           repository: ufo-files/machine-data
           ref: ${{ steps.upstream.outputs.revision }}
           path: _machine-data

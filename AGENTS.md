@@ -32,7 +32,7 @@
 - For user-visible changes, capture before and after screenshots at the same viewport, graph configuration, and interaction state. Documentation-only, test-only, and nonvisual changes do not need screenshots.
 - Store task-specific review images in `screenshots/`; do not overwrite the generated README gallery in `assets/screenshots/`.
 - Check desktop and mobile layouts when responsive behavior could be affected. Inspect dense labels, empty states, focus/hover states, and long text where relevant.
-- Serve previews with `python3 -m http.server 4173 --bind 0.0.0.0`. In the PR, include a Tailnet URL a reviewer can actually reach, including the exact path or hash needed to reproduce the view. Keep the server available during review, or say explicitly when it is no longer running.
+- Serve previews with `python3 scripts/serve_preview.py --port 4173` (loopback only; expose through an authenticated Tailnet proxy when remote review is needed). In the PR, include a Tailnet URL a reviewer can actually reach, including the exact path or hash needed to reproduce the view. Keep the server available during review, or say explicitly when it is no longer running.
 
 ## Pull requests
 
