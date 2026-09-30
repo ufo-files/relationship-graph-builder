@@ -428,13 +428,13 @@ FIRST_NAMES = {
     "barbara", "ben", "benjamin", "bill", "bob", "brandon", "brian", "bruce", "carl", "carol",
     "charles", "chris", "christopher", "dan", "daniel", "david", "diana", "donald", "dorothy",
     "edgar", "edward", "elizabeth", "eric", "ernest", "eugene", "francis", "frank", "fred",
-    "frederick", "gary", "george", "gerald", "glenn", "gordon", "harold", "harry", "helen",
+    "forest", "frederick", "gary", "george", "gerald", "glenn", "gordon", "harold", "harry", "helen",
     "henry", "herbert", "howard", "jack", "james", "jane", "jean", "jeremy", "jim", "joe",
     "john", "jose", "joseph", "judith", "karen", "keith", "kelly", "ken", "kenneth", "laura",
     "lee", "linda", "margaret", "mark", "mary", "michael", "mike", "milton", "monica", "nancy",
     "neil", "nikola", "paul", "peter", "philip", "raymond", "richard", "robert", "ronald",
     "russell", "sam", "samuel", "scott", "sidney", "staphen", "stanley", "stanton", "stephen",
-    "steven", "susan", "thomas", "tim", "timothy", "walter", "william",
+    "steven", "susan", "thomas", "tom", "tim", "timothy", "walter", "william",
 }
 FIRST_NAMES.update({
     "alain", "andre", "antoine", "benoit", "bernard", "brigitte", "camille", "catherine",
@@ -444,7 +444,7 @@ FIRST_NAMES.update({
     "patrick", "pierre", "rene", "sebastien", "sophie", "stephane", "thierry", "valerie",
     "veronique", "vincent", "xavier",
 })
-ROLE_PREFIX = re.compile(r"^(?:President|Professor|Senator|Congressman|Congresswoman|Secretary|Admiral|General|Colonel|Captain)\s+", re.I)
+ROLE_PREFIX = re.compile(r"^(?:President|Professor|Senator|Congressman|Congresswoman|Secretary|Admiral|General|Colonel|Captain|Officer|Investigator|Contactee)\s+", re.I)
 FIELD_LABELS = {
     "date", "document", "from", "memorandum", "name", "page", "reference", "subject", "to",
 }
@@ -2361,6 +2361,25 @@ def read_portuguese_pair(path: Path) -> dict | None:
     return read_language_pair(path)
 
 
+def classify_person_name(raw: str) -> tuple[str, float] | None:
+    """Recognize name structure; callers still apply entity/heading exclusions."""
+    role_match = ROLE_PREFIX.match(raw)
+    stripped = ROLE_PREFIX.sub("", HONORIFIC.sub("", raw))
+    person_words = stripped.split()
+    valid_words = all(
+        re.fullmatch(rf"(?:[{LATIN_UPPER}][{LATIN_LETTER}'’-]{{1,25}}|[{LATIN_UPPER}]\.)", word)
+        for word in person_words
+    )
+    given_names = comparison_key(person_words[0].rstrip(".")).split() if person_words else []
+    has_first_name = bool(given_names) and all(name in FIRST_NAMES for name in given_names)
+    if role_match and len(person_words) > 2 and not has_first_name:
+        return None
+    if ((2 <= len(person_words) <= 4 and has_first_name) or (role_match and 1 <= len(person_words) <= 4)) and valid_words:
+        if person_words[0].lower() not in {"chapter", "figure", "table", "section", "appendix"}:
+            return "person", 0.72 if has_first_name else 0.67
+    return None
+
+
 def classify_phrase(raw: str) -> tuple[str, float] | None:
     raw = clean_space(raw)
     if raw.casefold() in PERSON_HARD_NEGATIVES:
@@ -2388,6 +2407,17 @@ def classify_phrase(raw: str) -> tuple[str, float] | None:
         return None
     if lower.endswith((" of", " the", " and", " for")):
         return None
+    # A place word can also be a surname. Only prefer a two-part, recognized
+    # given-name/surname shape here; known places and longer place names win.
+    person_words = ROLE_PREFIX.sub("", HONORIFIC.sub("", raw)).split()
+    if (
+        len(person_words) == 2
+        and person_words[-1].casefold() in {"lake", "river", "mount", "mountain", "range"}
+        and comparison_key(person_words[0]) in FIRST_NAMES
+        and not raw.isupper()
+        and classify_person_name(raw)
+    ):
+        return "person", 0.72
     if any(re.search(rf"\b{re.escape(word)}\b", lower) for word in LOCATION_WORDS):
         return "location", 0.79
     if any(word in NON_NAME_WORDS for word in words):
@@ -2396,28 +2426,14 @@ def classify_phrase(raw: str) -> tuple[str, float] | None:
         return None
     if key in {"united nations", "united press", "associated press", "aviation week", "abc news", "big media"}:
         return "organization", 0.88
-    if any(word in lower for word in ORG_WORDS):
-        category = "government_agency" if any(word in lower for word in ("agency", "bureau", "department", "air force", "army", "navy", "office")) else "organization"
+    if any(re.search(rf"\b{re.escape(word)}\b", lower) for word in ORG_WORDS):
+        category = "government_agency" if any(re.search(rf"\b{re.escape(word)}\b", lower) for word in ("agency", "bureau", "department", "air force", "army", "navy", "office")) else "organization"
         return category, 0.82
     if any(lower.startswith(word + " ") for word in PROGRAM_WORDS):
         return "program", 0.82
     if raw.isupper() or words[0] in {"mg", "rel", "please", "district"}:
         return None
-    role_match = ROLE_PREFIX.match(raw)
-    stripped = ROLE_PREFIX.sub("", HONORIFIC.sub("", raw))
-    person_words = stripped.split()
-    valid_words = all(
-        re.fullmatch(rf"(?:[{LATIN_UPPER}][{LATIN_LETTER}'’-]{{1,25}}|[{LATIN_UPPER}]\.)", word)
-        for word in person_words
-    )
-    given_names = comparison_key(person_words[0].rstrip(".")).split() if person_words else []
-    has_first_name = bool(given_names) and all(name in FIRST_NAMES for name in given_names)
-    if role_match and len(person_words) > 2 and not has_first_name:
-        return None
-    if ((2 <= len(person_words) <= 4 and has_first_name) or (role_match and 1 <= len(person_words) <= 4)) and valid_words:
-        if person_words[0].lower() not in {"chapter", "figure", "table", "section", "appendix"}:
-            return "person", 0.72 if has_first_name else 0.67
-    return None
+    return classify_person_name(raw)
 
 
 class EntityRegistry(dict[str, tuple[str, str]]):
@@ -3115,13 +3131,29 @@ def source_lineage_assignments(records: list[dict]) -> tuple[list[dict], dict[st
     return families, assignments
 
 
+def acronym_overlaps_person(match: re.Match, lookup: str, person_spans: list[tuple[int, int]]) -> bool:
+    """Do not interpret a mixed-case surname such as Doe as the acronym DOE."""
+    return (
+        lookup.isupper()
+        and not match.group(0).isupper()
+        and any(start <= match.start() and match.end() <= end and match.span() != (start, end)
+                for start, end in person_spans)
+    )
+
+
 def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list[tuple[str, str, str, float, bool]]:
     found: dict[str, tuple[str, str, str, float, bool]] = {}
+    phrases = list(CAP_PHRASE.finditer(segment))
+    classifications = {match.span(): classify_phrase(match.group(0)) for match in phrases}
+    person_spans = [span for span, classification in classifications.items()
+                    if classification and classification[0] == "person"]
     known_spans = []
     for match in KNOWN_PATTERN.finditer(segment):
         raw = match.group(0)
         lookup = KNOWN_LOOKUP.get(known_lookup_key(raw))
         if lookup is None:
+            continue
+        if acronym_overlaps_person(match, lookup, person_spans):
             continue
         known_spans.append(match.span())
         canonical, category = KNOWN[lookup]
@@ -3201,7 +3233,7 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
                 if not directly_cued:
                     continue
             found[entity_key(canonical, category)] = (raw, canonical, category, 0.98, True)
-    for match in CAP_PHRASE.finditer(segment):
+    for match in phrases:
         if any(
             match.start() < end
             and match.end() > start
@@ -3228,7 +3260,7 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
                 continue
             found.setdefault(entity_key(canonical, category), (raw, canonical, category, 0.98, True))
             continue
-        classification = classify_phrase(raw)
+        classification = classifications[match.span()]
         if not classification:
             continue
         category, confidence = classification
@@ -3241,10 +3273,12 @@ def extract_title_mentions(title: str, registry: dict[str, tuple[str, str]]) -> 
     """Use document titles as curated identity evidence without treating arbitrary title case as NER."""
     words = clean_space(title).split()
     found: dict[str, tuple[str, str, str, float, bool]] = {}
+    person_spans = [match.span() for match in CAP_PHRASE.finditer(title)
+                    if (classify_phrase(match.group(0)) or (None,))[0] == "person"]
     for match in KNOWN_PATTERN.finditer(title):
         raw = match.group(0)
         lookup = KNOWN_LOOKUP.get(known_lookup_key(raw))
-        if lookup is None:
+        if lookup is None or acronym_overlaps_person(match, lookup, person_spans):
             continue
         canonical, category = KNOWN[lookup]
         key = f"{category}:{entity_key(canonical, category)}"
