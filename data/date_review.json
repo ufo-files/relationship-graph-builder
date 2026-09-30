@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-09-30T00:17:41Z",
+  "generatedAt": "2026-09-30T01:25:20Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e70dd2c4e73f8a2643ef47da9734a55d9acea4f4"
+    "revision": "b8feca26673b9f31e1b55386f938dd1414d47efe"
   },
-  "documentsWithCandidates": 13856,
+  "documentsWithCandidates": 13865,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -129140,6 +129140,21 @@
       ]
     },
     {
+      "documentId": "doc-85b24d9cb046",
+      "path": "Archives-for-the-Unexplained/documents/autopsy_prop.txt",
+      "candidates": [
+        {
+          "value": "1995-08-31",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Thu, Aug 31, 1995 2:28 PM PDT",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-47bca7f94e00",
       "path": "Archives-for-the-Unexplained/documents/birth_cert.txt",
       "candidates": [
@@ -130164,6 +130179,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Reno Gazette-Journal October 4, 1995",
+          "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1f0dca5970f7",
+      "path": "Archives-for-the-Unexplained/documents/reply_960329-2a56dc0ddd.txt",
+      "candidates": [
+        {
+          "value": "1996-03-26",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The following are responses to the questions you asked in your letter dated March 26, 1996",
           "segment": 1
         }
       ]
@@ -375779,6 +375809,21 @@
       ]
     },
     {
+      "documentId": "doc-f9701b1558b2081f5b3a62a0",
+      "path": "France-GEIPAN/paired/cases/2015-02-09125/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Thursday, February 19, 2015, around 2:30-3:00 PM, a driver observes while driving a craft resembling a commercial airliner but larger, flying much lower. The object is uniformly white and appears stationary. It disappears suddenly. This brief observation of a whit",
+          "segment": "seg-b2146e6a123b242627ac14d1"
+        }
+      ]
+    },
+    {
       "documentId": "doc-d26bcf8c83eebd9c04460e30",
       "path": "France-GEIPAN/paired/cases/2015-02-09133/en/translation.txt",
       "candidates": [
@@ -376871,6 +376916,21 @@
       ]
     },
     {
+      "documentId": "doc-29e41deda3956d427a528e83",
+      "path": "France-GEIPAN/paired/cases/2015-08-09461/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2014-08-31",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: Recent testimony (April 2015) of an older observation (August 2014). The witness reports that on August 31, 2014, between 3 a.m. and 5:30 a.m., they observed, along with a friend, various light phenomena in the sky (shooting stars, planes). However, the particular si",
+          "segment": "seg-5b8381196c709b1e0121deb1"
+        }
+      ]
+    },
+    {
       "documentId": "doc-131e7579a4924ddb1f105133",
       "path": "France-GEIPAN/paired/cases/2015-09-09307/en/translation.txt",
       "candidates": [
@@ -377735,6 +377795,21 @@
       ]
     },
     {
+      "documentId": "doc-6bd697327525d81deb81266f",
+      "path": "France-GEIPAN/paired/cases/2016-08-50289/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-08-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 8, 2016, the witness, with three friends, decided to observe the stars from a fallow field. The witness, turning their head, discovered in the sky the presence of a bright white light object silently following a straight trajectory. The brightness quickly f",
+          "segment": "seg-4a216aea6000854d4ad89dbe"
+        }
+      ]
+    },
+    {
       "documentId": "doc-6b5da5d71e75425ae817ddb1",
       "path": "France-GEIPAN/paired/cases/2016-08-50312/en/translation.txt",
       "candidates": [
@@ -378365,6 +378440,21 @@
       ]
     },
     {
+      "documentId": "doc-82a39090f79c39defd21d1f4",
+      "path": "France-GEIPAN/paired/cases/2018-07-50575/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2018-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On the morning of July 26, 2018, around 4:00 AM, two people by Lake Annecy were intrigued by white lights above Mont Veyrier. Six or seven bright points lit up one after the other, forming a line. After a few seconds, the points ascended into the sky and disappeared.",
+          "segment": "seg-c5c8c42d444cfdd87d540044"
+        }
+      ]
+    },
+    {
       "documentId": "doc-c0db02c67b6a4cb1c3a575b4",
       "path": "France-GEIPAN/paired/cases/2018-08-50596/en/translation.txt",
       "candidates": [
@@ -378787,6 +378877,30 @@
           "method": "unclassified-mention",
           "evidence": "Description: On July 5, 2020, around 8:30 PM, a witness, observing through a window of their 3rd-floor apartment, is intrigued by a black streak just below the Moon. The witness initially thinks it is the shadow cast by a cloud, taking several photographs. As they continue observ",
           "segment": "seg-9b4771149dc569af3bfb9bb6"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bbe0c1b572dcd8898b8652e2",
+      "path": "France-GEIPAN/paired/cases/2020-07-51031/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2020-07-29",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "**Description:** On the morning of July 29, 2020, two residents of SAINT-OUEN-LES-VIGNES (37) distinctly observed a white, strobe-light emitting object. Every 5 to 6 sequences, a bright red light ascends from below the object, illuminating the entire object. The PAN (presumed to ",
+          "segment": "seg-f4afe1fecdb3f27e3995fc55"
+        },
+        {
+          "value": "2020-07-29",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "**Description:** On the morning of July 29, 2020, two residents of SAINT-OUEN-LES-VIGNES (37) distinctly observed a white, strobe-light emitting object. Every 5 to 6 sequences, a bright red light ascends from below the object, illuminating the entire object. The PAN (presumed to ",
+          "segment": "seg-f4afe1fecdb3f27e3995fc55"
         }
       ]
     },
@@ -379220,6 +379334,21 @@
       ]
     },
     {
+      "documentId": "doc-257691e7d9140b0c2bc31267",
+      "path": "France-GEIPAN/paired/cases/2022-05-51347/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2022-05-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** On May 16, 2022, at 11:26 PM, three individuals in a vehicle driving on D2 towards Mourenx (64) in Arbus (64) observed four bright white lights in the sky that appeared aligned and stationary. The phenomenon disappeared suddenly after two minutes of observation. ",
+          "segment": "seg-0864567d0c3f84dfedce3d9f"
+        }
+      ]
+    },
+    {
       "documentId": "doc-aecafbfe21bef765d037fba7",
       "path": "France-GEIPAN/paired/cases/2022-06-51405/en/translation.txt",
       "candidates": [
@@ -379615,6 +379744,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On August 4, 2024, at 11:23 PM, a witness on a beach in Saint-Michel-en-Grève (22) observed a PAN in the form of a short, blue streak moving from northwest to southeast. The witness took the time to capture a 30-second exposure photograph, clearly showing the object.",
           "segment": "seg-75aeb822c1cae234b5a7e573"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-97a0774e8f7b6f8dcd06d69f",
+      "path": "France-GEIPAN/paired/cases/2024-07-51544/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2024-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On July 14, 2024, around 04:00, the witness, on the terrace of their residence in Maule (78), observes what they describe as two \"balls the size of a star\" flying in parallel from the northeast. The objects appear less white than the surrounding stars and slightly re",
+          "segment": "seg-3e6ac12c69dc3d3ea5ed2997"
         }
       ]
     },
