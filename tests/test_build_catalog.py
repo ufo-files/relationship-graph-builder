@@ -510,8 +510,8 @@ class ClassificationTests(unittest.TestCase):
         taxonomy = self.species_taxonomy()
 
         self.assertEqual(taxonomy["schema"], "ufo-files-species-taxonomy/v1")
-        self.assertEqual(len(taxonomy["classes"]), 86)
-        self.assertEqual(len({item["id"] for item in taxonomy["classes"]}), 86)
+        self.assertEqual(len(taxonomy["classes"]), 88)
+        self.assertEqual(len({item["id"] for item in taxonomy["classes"]}), 88)
         self.assertEqual(len(taxonomy["categories"]), 6)
         self.assertEqual(taxonomy["groundingSource"]["role"], "Local taxonomy grounding only; not corpus evidence")
         self.assertEqual(taxonomy["normalizationNotes"][0]["canonical"], "Mothman")
@@ -691,6 +691,32 @@ class ClassificationTests(unittest.TestCase):
         )
 
         self.assertEqual(observations[0]["appearanceEvidence"], [])
+
+    def test_tall_whites_and_nordics_are_distinct_corpus_profiles(self):
+        taxonomy = self.species_taxonomy()
+        for text in (
+            "The alien accounts mention Tall Whites, Nordics and Pleiadians.",
+            "A Tall White being met a Nordic alien and Pleiadians.",
+        ):
+            with self.subTest(text=text):
+                observations, _ = species_observations_for_segment(text, "doc", "Example", 0, taxonomy)
+                self.assertEqual({item["classId"] for item in observations}, {"tall_whites", "nordics", "pleiadians"})
+                summaries = {item["classId"]: item for item in species_class_summaries(taxonomy, observations)}
+                for class_id in ("tall_whites", "nordics"):
+                    self.assertEqual(summaries[class_id]["documentCount"], 1)
+                    self.assertFalse(summaries[class_id].get("physicalHeight"))
+
+    def test_nordic_geography_and_appearance_adjectives_are_not_profiles(self):
+        taxonomy = self.species_taxonomy()
+        for text in (
+            "The Nordics hosted a skiing competition.",
+            "The Nordic countries discussed trade.",
+            "The alien Pleiadians were Nordic-looking.",
+            "He wore tall white boots.",
+        ):
+            with self.subTest(text=text):
+                observations, _ = species_observations_for_segment(text, "doc", "Example", 0, taxonomy)
+                self.assertFalse({item["classId"] for item in observations} & {"nordics", "tall_whites"})
 
     def test_species_common_names_require_extraterrestrial_context(self):
         taxonomy = self.species_taxonomy()
