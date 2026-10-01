@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-01T09:11:04Z",
+  "generatedAt": "2026-10-01T10:25:45Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e70dba446029a8f39e1220adb27a2bdfd75e7108"
+    "revision": "bc183c10f59679d3c41b9a7b8beb4632df288c6e"
   },
-  "documentsWithCandidates": 14145,
+  "documentsWithCandidates": 14147,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -18190,6 +18190,21 @@
           "method": "unclassified-mention",
           "evidence": "saw I filed December 22, 1978, they hurriedly",
           "segment": 80
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1ee5f8f2f5a8",
+      "path": "Archives-for-the-Unexplained/documents/20110829-St.-Germain.-60605.txt",
+      "candidates": [
+        {
+          "value": "2011-08-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SaLuSa to me.Your Power is Limitless , 27 Aug 2011 Galactic Federation",
+          "segment": 7
         }
       ]
     },
@@ -259828,6 +259843,39 @@
           "method": "unclassified-mention",
           "evidence": "Generated on Jul 2, 2021 9:40:17 AM by ZL Technologies Inc.",
           "segment": 2024
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4a78badb8eb9",
+      "path": "Black-Vault-UFO/pdfs/the-dod-inspector-general-s-evaluation-of-the-dod-s-actions-regarding-unidentified-aerial-phenomena-8.txt",
+      "candidates": [
+        {
+          "value": "2021-05-04",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "No. D2021-DEV0SN-0116.000.” We received your request on May 4, 2021, and assigned it",
+          "segment": 7
+        },
+        {
+          "value": "2024-08-22",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "By emails dated August 22, 2024, and February 6, 2025",
+          "segment": 9
+        },
+        {
+          "value": "2025-02-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "By emails dated August 22, 2024, and February 6, 2025",
+          "segment": 9
         }
       ]
     },
