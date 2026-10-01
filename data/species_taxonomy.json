@@ -1,7 +1,7 @@
 {
   "schema": "ufo-files-species-taxonomy/v1",
-  "version": "1.2.0",
-  "reviewedAt": "2026-08-11",
+  "version": "1.3.0",
+  "reviewedAt": "2026-10-01",
   "methodology": "Reviewed literal names and aliases identify mentions in corpus text. Ambiguous common-language names require nearby extraterrestrial context. Source-scoped aliases additionally require their reviewed local context and do not generalize beyond the named collection. Separately reviewed appearance rules identify only passages that explicitly attach physical descriptors to the named profile. A match records what the corpus says; it does not verify that a described species exists or that separately named profiles share an identity.",
   "appearanceEvidenceMethodology": "Each rule was manually reviewed against the current corpus. All match phrases must occur within the named observation's local seven-segment window. The published excerpt is corpus text and the descriptor labels are reviewer summaries. A profile without a qualifying excerpt uses the neutral faceless figure in the lineup.",
   "groundingSource": {
@@ -26,6 +26,8 @@
     "alien", "aliens", "extraterrestrial", "extraterrestrials", "ET", "ETs", "reptilian", "reptilians", "insectoid", "insectoids", "contactee", "contactees", "abduction", "abductions", "UFO", "UFOs", "UAP", "UAPs"
   ],
   "classes": [
+    {"id": "tall_whites", "label": "Tall Whites", "category": "human", "groundingType": "corpus", "aliases": ["Tall Whites", "Tall White alien", "Tall White aliens", "Tall White being", "Tall White beings"], "identityNote": "Named humanoid profile reported in corpus accounts, including discussions of Charles Hall. Kept separate from Nordics, Pleiadians, and tall Greys; similar descriptions do not establish a shared identity."},
+    {"id": "nordics", "label": "Nordics", "category": "human", "groundingType": "corpus", "requiresContext": true, "aliases": ["Nordics", "Nordic alien", "Nordic aliens", "Nordic being", "Nordic beings", "Nordic extraterrestrial", "Nordic extraterrestrials"], "identityNote": "Reported humanoid profile. Generic geographic uses and the adjective Nordic alone are not species aliases. Kept separate from Pleiadians and Venusians even when those profiles are described as Nordic-looking."},
     {"id": "agarthans", "label": "Agarthans", "category": "human", "aliases": ["Agarthans", "Agarthan"]},
     {"id": "altarians", "label": "Altarians", "category": "human", "aliases": ["Altarians", "Altarian"]},
     {"id": "andromedans", "label": "Andromedans", "category": "human", "aliases": ["Andromedans", "Andromedan"], "groundingAppearance": "Blue-skinned, hairless, humanlike beings; the reference describes female, male, and androgynous forms.", "physicalHeight": {"minFeet": 5.5, "maxFeet": 6.5, "representativeFeet": 6.0, "label": "5′6″–6′6″", "basis": "Combined female and male ranges stated in the grounding source"}},
