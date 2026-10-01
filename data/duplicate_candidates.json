@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "962721d85c515265671e34a2fadbf22738289999"
+    "revision": "e5cb81024be1f7c07cbaa1442236c8372e125d8c"
   },
-  "count": 569,
-  "totalCount": 569,
-  "shownCount": 569,
+  "count": 570,
+  "totalCount": 570,
+  "shownCount": 570,
   "candidates": [
     {
       "category": "organization",
@@ -102,6 +102,22 @@
         "name": "Advanced Research Project Agency",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.985,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Defense Office of Prepublication",
+        "mentions": 18,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Defense Office of Pre-publication",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.985,
       "reason": "similar name",
@@ -447,8 +463,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Committee",
-        "mentions": 41,
-        "documentCount": 36
+        "mentions": 42,
+        "documentCount": 37
       },
       "right": {
         "name": "INTELLIGENCE COMMITTEES",
@@ -495,8 +511,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 673,
-        "documentCount": 367
+        "mentions": 674,
+        "documentCount": 368
       },
       "right": {
         "name": "Edward Air Force Base",
@@ -511,8 +527,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 673,
-        "documentCount": 367
+        "mentions": 674,
+        "documentCount": 368
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -4111,8 +4127,8 @@
       "category": "organization",
       "left": {
         "name": "Under Secretary of Defense for Intelligence",
-        "mentions": 115,
-        "documentCount": 63
+        "mentions": 120,
+        "documentCount": 64
       },
       "right": {
         "name": "Undersecretary for Defense for Intelligence",
@@ -4174,14 +4190,14 @@
     {
       "category": "organization",
       "left": {
-        "name": "National Institute of Discovery",
-        "mentions": 5,
-        "documentCount": 5
+        "name": "Advanced Aerospace Threat and Identification",
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
-        "name": "National Institute for Discovery",
-        "mentions": 9,
-        "documentCount": 7
+        "name": "Advanced Aerospace Threat Identification",
+        "mentions": 13,
+        "documentCount": 12
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -4190,14 +4206,14 @@
     {
       "category": "organization",
       "left": {
-        "name": "Advanced Aerospace Threat and Identification",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "National Institute of Discovery",
+        "mentions": 5,
+        "documentCount": 5
       },
       "right": {
-        "name": "Advanced Aerospace Threat Identification",
-        "mentions": 11,
-        "documentCount": 11
+        "name": "National Institute for Discovery",
+        "mentions": 9,
+        "documentCount": 7
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -4767,8 +4783,8 @@
       "category": "organization",
       "left": {
         "name": "Directorate of Science and Technology",
-        "mentions": 22,
-        "documentCount": 16
+        "mentions": 23,
+        "documentCount": 17
       },
       "right": {
         "name": "Directorate of Science & Technology",
@@ -5039,13 +5055,13 @@
       "category": "government_agency",
       "left": {
         "name": "Office of Secretary of Defense",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 4,
+        "documentCount": 3
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 317,
-        "documentCount": 86
+        "mentions": 319,
+        "documentCount": 87
       },
       "similarity": 0.938,
       "reason": "similar name",
@@ -5924,8 +5940,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 317,
-        "documentCount": 86
+        "mentions": 319,
+        "documentCount": 87
       },
       "similarity": 0.932,
       "reason": "similar name",
@@ -6068,8 +6084,8 @@
       },
       "right": {
         "name": "Base Aérea El Bosque",
-        "mentions": 10,
-        "documentCount": 9
+        "mentions": 11,
+        "documentCount": 10
       },
       "similarity": 0.93,
       "reason": "similar name",
@@ -6079,8 +6095,8 @@
       "category": "location",
       "left": {
         "name": "Loring Air Force Base",
-        "mentions": 8,
-        "documentCount": 7
+        "mentions": 9,
+        "documentCount": 8
       },
       "right": {
         "name": "Lauring Air Force Base",
@@ -6207,8 +6223,8 @@
       "category": "person",
       "left": {
         "name": "Robert Bigelow",
-        "mentions": 396,
-        "documentCount": 206
+        "mentions": 399,
+        "documentCount": 207
       },
       "right": {
         "name": "Robert Bigalow",
@@ -7103,8 +7119,8 @@
       "category": "person",
       "left": {
         "name": "Brandon Fugal",
-        "mentions": 32,
-        "documentCount": 27
+        "mentions": 33,
+        "documentCount": 28
       },
       "right": {
         "name": "Brandon Fugle",
@@ -7500,6 +7516,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Chavez County",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Chaves County",
+        "mentions": 10,
+        "documentCount": 9
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Linda Moulton Howes",
@@ -7558,22 +7590,6 @@
         "name": "Bruce Cornette",
         "mentions": 4,
         "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Chavez County",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Chaves County",
-        "mentions": 9,
-        "documentCount": 8
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -9103,8 +9119,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49505,
-        "documentCount": 12582
+        "mentions": 49511,
+        "documentCount": 12584
       },
       "right": {
         "name": "North American Space Agency",
