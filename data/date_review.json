@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-01T00:28:23Z",
+  "generatedAt": "2026-10-01T03:00:06Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "8f9795faddf873ccb9ec6cac9142f954edad18f7"
+    "revision": "56ebaae5ef344b0e22b95739ae632b5c65589e6d"
   },
-  "documentsWithCandidates": 14129,
+  "documentsWithCandidates": 14141,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -244,6 +244,39 @@
           "method": "unclassified-mention",
           "evidence": "One night, on July 11, 1961, he and his colleagues noticed something truly bizarre.",
           "segment": 944
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e0512e99f14b",
+      "path": "American-Alchemy/16-alien-bodies-crashed-here-and-we-just-found-proof-OZ_oCpKYQJ0.tsv",
+      "candidates": [
+        {
+          "value": "1948-03-25",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "On March 25, 1948, something crashed in the New Mexico desert.",
+          "segment": 0
+        },
+        {
+          "value": "1948-03-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On March 25, 1948, a spacecraft of origins unknown",
+          "segment": 816
+        },
+        {
+          "value": "1950-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On March 8, 1950, Newton took the stage as the mysterious Scientist X.",
+          "segment": 844
         }
       ]
     },
@@ -9118,6 +9151,21 @@
           "method": "unclassified-mention",
           "evidence": "and Part II (KLAS-TV \"Eyewitness News\", May 21, 2005",
           "segment": 10
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bf1760e4482a",
+      "path": "Archives-for-the-Unexplained/documents/20050525-Famous-Names-Famous-Iraqi-Places-54233.txt",
+      "candidates": [
+        {
+          "value": "2005-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Tue, 24 May 2005 18:54:42 +0200, \" bipartisan\"",
+          "segment": 3
         }
       ]
     },
@@ -379730,6 +379778,30 @@
       ]
     },
     {
+      "documentId": "doc-d7be90191130f8798394f071",
+      "path": "France-GEIPAN/paired/cases/2015-01-09086/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-01-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On January 31, 2015, around 5:45 PM, two children in two different rooms of their house, observed through the window, the same unknown phenomenon: a gray, oval object with colored lights moving at low altitude and in close proximity to the house. Each reports their o",
+          "segment": "seg-e931de0e0ac5ec82e0b91b73"
+        },
+        {
+          "value": "2015-01-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On January 31, 2015, around 5:45 PM, two children in two different rooms of their house, observed through the window, the same unknown phenomenon: a gray, oval object with colored lights moving at low altitude and in close proximity to the house. Each reports their o",
+          "segment": "seg-e931de0e0ac5ec82e0b91b73"
+        }
+      ]
+    },
+    {
       "documentId": "doc-9f84b711c78730725442b143",
       "path": "France-GEIPAN/paired/cases/2015-01-09093/en/translation.txt",
       "candidates": [
@@ -380957,6 +381029,21 @@
       ]
     },
     {
+      "documentId": "doc-0a63230f2ff65f87ad79ff74",
+      "path": "France-GEIPAN/paired/cases/2015-08-09284/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-08-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 11, 2015, at 1:15 PM, a family was intrigued by the silent passage across the sky of two black, boomerang-shaped objects with a triangular front. The objects quickly disappeared behind trees. The trajectory of the first object was straight, while the second",
+          "segment": "seg-ae4e123ccd29a3a1bceb4d02"
+        }
+      ]
+    },
+    {
       "documentId": "doc-8c4d677ef24c3a614f0fefc0",
       "path": "France-GEIPAN/paired/cases/2015-08-09286/en/translation.txt",
       "candidates": [
@@ -381986,6 +382073,21 @@
       ]
     },
     {
+      "documentId": "doc-f08fffe86af2051286d58436",
+      "path": "France-GEIPAN/paired/cases/2016-08-09507/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-08-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Saturday, August 6, 2016, at 11:05 PM, a couple in a garden observed the sky and saw four bright points flying silently in formation to the south-south-east above a nearby building. The PAN converged towards a single point, moved vertically upwards, then disappear",
+          "segment": "seg-b2e77b22d7fe30ad51f14b02"
+        }
+      ]
+    },
+    {
       "documentId": "doc-dcb48b7e354c841b669746b9",
       "path": "France-GEIPAN/paired/cases/2016-08-09511/en/translation.txt",
       "candidates": [
@@ -382787,6 +382889,21 @@
       ]
     },
     {
+      "documentId": "doc-e1411c8bad09df7a6696704e",
+      "path": "France-GEIPAN/paired/cases/2018-03-50493/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2020-03-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: At 1:00 AM on Sunday, March 11, 2020, a driver was surprised to see in the Toulouse sky the rapid movement of a very bright point. No particular noise was heard during the movement. The witness observed several successive extinguishments, then after 6 seconds of obse",
+          "segment": "seg-21e10e40b5f39ba8f5b8d0a3"
+        }
+      ]
+    },
+    {
       "documentId": "doc-782ef78c594fbef080d037f8",
       "path": "France-GEIPAN/paired/cases/2018-03-50504/en/translation.txt",
       "candidates": [
@@ -383347,6 +383464,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On March 8, 2020, around 3:00 PM, a witness, in a field, observed the passage of a dark, triangular but rounded-corner PAN. The witness attempted to take a photo, but the PAN was already distant. The witness then compared the PAN to \"a dense palm tree head in its cen",
           "segment": "seg-d9d5a6dde7570ad1aded15b6"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-adb92be334e0466b5bc6ab85",
+      "path": "France-GEIPAN/paired/cases/2020-04-50962/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2020-04-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: During the month of April 2020, five observations in the Île-de-France region are reported to the GEIPAN. These observations are made in different communes on different dates. All reports describe the unusual presence near Venus of a bright light phenomenon. The test",
+          "segment": "seg-be06a8c2976b43d37322df57"
         }
       ]
     },
@@ -383914,6 +384046,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On February 15, 2022, at 07:30, a passenger on TGV INOUI 8483 traveling from Paris to Poitiers observed a very bright white point in the sky. Despite several plausible explanation hypotheses put forward by the witness, the latter considers that none of them correspon",
           "segment": "seg-e2160c7dc641a71fdbe52896"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-42ddcb8065ff71dcaff67116",
+      "path": "France-GEIPAN/paired/cases/2022-02-51334/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2022-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On February 22, 2022, at noon, a driver was traveling on Departmental Road 16 between Magescq and Dax (40), with his daughter. On a long straight stretch, they observed from the left what the driver described as an airplane wing accompanied by a portion of its fusela",
+          "segment": "seg-af0ba229299832b2aae589d7"
         }
       ]
     },
@@ -384545,6 +384692,21 @@
       ]
     },
     {
+      "documentId": "doc-630048bf88a6c898b06d39b9",
+      "path": "France-GEIPAN/paired/cases/2023-12-51509/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2023-12-25",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: On December 25, 2023, around 7:15 PM, witnesses observed two fixed, immobile white lights below the planet Jupiter from their terrace in Elne (66), at a southerly azimuth. After one to two minutes of observation, these lights gradually faded out. The consistency of t",
+          "segment": "seg-fa4d741ac7e15a2ba28a1c47"
+        }
+      ]
+    },
+    {
       "documentId": "doc-2db62bd3c1d093aacc7c862d",
       "path": "France-GEIPAN/paired/cases/2024-03-51533/en/translation.txt",
       "candidates": [
@@ -385102,6 +385264,30 @@
           "method": "milestone-language",
           "evidence": "Description: On October 9, 2025, at approximately 8:48 PM, a witness observed from the terrace of their home in Colomiers (31) three bright points at very high altitude, arranged in an equilateral triangle, with consistent size, moving in a straight and regular line along a south",
           "segment": "seg-e04f565ca23b9c2a9ee21192"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-97aff1bce178ac0168729c32",
+      "path": "France-GEIPAN/paired/cases/2025-11-51711/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2025-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The witness reports that during their flight on November 18, 2025, they again observe, as they did the previous day (see the [AERO] case of AMSTERDAM (NL.1118) to NANTES (44) on November 17, 2025), up to 9 or 10 mobile and varying intensity points in the sky. Only on",
+          "segment": "seg-b4ef1175cfc3c41a691e2ebe"
+        },
+        {
+          "value": "2025-11-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The witness reports that during their flight on November 18, 2025, they again observe, as they did the previous day (see the [AERO] case of AMSTERDAM (NL.1118) to NANTES (44) on November 17, 2025), up to 9 or 10 mobile and varying intensity points in the sky. Only on",
+          "segment": "seg-b4ef1175cfc3c41a691e2ebe"
         }
       ]
     },
@@ -403057,6 +403243,21 @@
           "method": "dated-reference",
           "evidence": "dated 18 October 1954, attached herewith is a report sub-",
           "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-11a646a70825",
+      "path": "National-Archives-of-Australia-UFO/documents/3083715/0118.txt",
+      "candidates": [
+        {
+          "value": "1954-06-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ARGUS, Wednesday, June 9, 1954",
+          "segment": 0
         }
       ]
     },
@@ -515326,6 +515527,39 @@
           "method": "unclassified-mention",
           "evidence": "B) Revise Option year dates to be I Oct 2009 to 30 September 2010",
           "segment": 86
+        }
+      ]
+    },
+    {
+      "documentId": "doc-135644eaae76",
+      "path": "War-Gov-PURSUE/release-06/documents/dow-uap-d130-aawsap-dird-technological-approaches-to-controlling-external-devices-march-23-2010.txt",
+      "candidates": [
+        {
+          "value": "2009-05-12",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "8 Websites www .emotiv.com , www.ocztechnology .com , and www.neurosky .com , last accessed 12 May 2009.",
+          "segment": 442
+        },
+        {
+          "value": "2009-05-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 12, 2009); Available from: http ://www .technologyreview .com/Biztech/19833/?a=f.",
+          "segment": 1407
+        },
+        {
+          "value": "2009-05-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2007 [May 12, 2009]; Available from",
+          "segment": 1410
         }
       ]
     },
