@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-01T15:17:32Z",
+  "generatedAt": "2026-10-01T16:32:15Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "c7a751a17f12d167d1dce50389c13620ce2a60b1"
+    "revision": "672c95767bf3564c05ad7b09661634cefb1583d8"
   },
-  "documentsWithCandidates": 14148,
+  "documentsWithCandidates": 14150,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -390086,6 +390086,21 @@
       ]
     },
     {
+      "documentId": "doc-faeef78534a1",
+      "path": "National-Archives-UAP-Bulk/documents/23857158/23857158-005-034.txt",
+      "candidates": [
+        {
+          "value": "1955-09-09",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "Between 02452 and 02532, 9 September 1955",
+          "segment": 22
+        }
+      ]
+    },
+    {
       "documentId": "doc-81530a0d8fbd",
       "path": "National-Archives-UAP-Bulk/documents/23857158/23857158-005-059.txt",
       "candidates": [
@@ -398830,6 +398845,30 @@
           "method": "unclassified-mention",
           "evidence": "Reference your unidentified observation of 16 October 1966.",
           "segment": 15
+        }
+      ]
+    },
+    {
+      "documentId": "doc-aec0caddb1fb",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302557213.txt",
+      "candidates": [
+        {
+          "value": "1966-10-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Sighting, 18 October 1966",
+          "segment": 9
+        },
+        {
+          "value": "1966-10-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference your unidentified observation of 18 October 1966.",
+          "segment": 11
         }
       ]
     },
