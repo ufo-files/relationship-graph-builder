@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "356bcc522375d6089bdd05a7ec313700b9b2c841"
+    "revision": "6b9572997a590293c558af0f6e0b1aff21eb27f4"
   },
-  "count": 585,
-  "totalCount": 585,
-  "shownCount": 585,
+  "count": 587,
+  "totalCount": 587,
+  "shownCount": 587,
   "candidates": [
     {
       "category": "organization",
@@ -127,8 +127,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 831,
-        "documentCount": 507
+        "mentions": 833,
+        "documentCount": 508
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -143,8 +143,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 831,
-        "documentCount": 507
+        "mentions": 833,
+        "documentCount": 508
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -232,6 +232,22 @@
         "documentCount": 5
       },
       "similarity": 0.982,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Range Fouler Reporting Form",
+        "mentions": 94,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Range Fouler Reportin Form",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.981,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -1150,6 +1166,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Air Technical Intelligence Center",
+        "mentions": 185,
+        "documentCount": 118
+      },
+      "right": {
+        "name": "Air Technical Intelligence Conter",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "James Randi Educational Foundation",
         "mentions": 61,
         "documentCount": 48
@@ -1375,8 +1407,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 831,
-        "documentCount": 507
+        "mentions": 833,
+        "documentCount": 508
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -1391,8 +1423,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 831,
-        "documentCount": 507
+        "mentions": 833,
+        "documentCount": 508
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1407,8 +1439,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 831,
-        "documentCount": 507
+        "mentions": 833,
+        "documentCount": 508
       },
       "right": {
         "name": "Weight-Patterson Air Force Base",
@@ -1423,8 +1455,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 831,
-        "documentCount": 507
+        "mentions": 833,
+        "documentCount": 508
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -4380,6 +4412,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Area Contact Latitute",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Area Contact Latltute",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Intelligence Haterial",
@@ -4390,22 +4438,6 @@
         "name": "Intelligence Material",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Area Contact Latitute",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Area Contact Latltute",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -9359,8 +9391,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49623,
-        "documentCount": 12601
+        "mentions": 49628,
+        "documentCount": 12602
       },
       "right": {
         "name": "North American Space Agency",
