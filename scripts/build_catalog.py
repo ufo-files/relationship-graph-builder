@@ -2188,7 +2188,7 @@ def read_ocr(path: Path) -> tuple[dict, list[str]] | None:
             return None
         metadata["segment_ids"] = [segment.get("segment_id") for segment in accepted]
         return metadata, [clean_space(segment["text"]) for segment in accepted]
-    elif schema != "ufo-files-archive-ocr/v1":
+    elif schema not in {"ufo-files-archive-ocr/v1", "ufo-files-archive-html/v1"}:
         return None
     body = re.sub(r"(?m)^\{\"alpha_words\".*?\}\s*$", "", body)
     return metadata, list(sentence_segments(body))
