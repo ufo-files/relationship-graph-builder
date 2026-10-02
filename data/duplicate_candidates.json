@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "58721c438013b8c625eb1d489ba825b56ef0522c"
+    "revision": "e3343af0b186a0dd1c80797a2b23ad595fb3ac36"
   },
-  "count": 579,
-  "totalCount": 579,
-  "shownCount": 579,
+  "count": 585,
+  "totalCount": 585,
+  "shownCount": 585,
   "candidates": [
     {
       "category": "organization",
@@ -1135,8 +1135,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 206,
-        "documentCount": 145
+        "mentions": 207,
+        "documentCount": 146
       },
       "right": {
         "name": "Steven Spielbergs",
@@ -1396,6 +1396,22 @@
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patterson Air Force Base",
+        "mentions": 826,
+        "documentCount": 505
+      },
+      "right": {
+        "name": "Weight-Patterson Air Force Base",
         "mentions": 2,
         "documentCount": 2
       },
@@ -4451,6 +4467,22 @@
         "documentCount": 4
       },
       "right": {
+        "name": "Weight-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.951,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Paterson Air Force Base",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
         "mentions": 2,
         "documentCount": 2
@@ -4479,6 +4511,22 @@
       "category": "location",
       "left": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Wright Patterson Airforce Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.951,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Weight-Patterson Air Force Base",
         "mentions": 2,
         "documentCount": 2
       },
@@ -5555,6 +5603,22 @@
         "documentCount": 2
       },
       "right": {
+        "name": "Weight-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patterson Air Foroe Base",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
         "mentions": 2,
         "documentCount": 2
@@ -5567,6 +5631,38 @@
       "category": "location",
       "left": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Weight-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "WRICHT-PATTERSON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "WRIGHT PATTIRSON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Weight-Patterson Air Force Base",
         "mentions": 2,
         "documentCount": 2
       },
@@ -6943,8 +7039,8 @@
       "category": "location",
       "left": {
         "name": "Minot Air Force Base",
-        "mentions": 29,
-        "documentCount": 25
+        "mentions": 30,
+        "documentCount": 26
       },
       "right": {
         "name": "Menott Air Force Base",
@@ -7388,6 +7484,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Aerospace Engineer",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Aerospace Engineering",
+        "mentions": 20,
+        "documentCount": 18
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Charles Maney",
@@ -7414,22 +7526,6 @@
         "name": "Project Sincer",
         "mentions": 3,
         "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Aerospace Engineer",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Aerospace Engineering",
-        "mentions": 20,
-        "documentCount": 18
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -8287,8 +8383,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 206,
-        "documentCount": 145
+        "mentions": 207,
+        "documentCount": 146
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -9263,8 +9359,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49605,
-        "documentCount": 12600
+        "mentions": 49623,
+        "documentCount": 12601
       },
       "right": {
         "name": "North American Space Agency",
