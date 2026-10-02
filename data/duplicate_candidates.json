@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "6e6ecc6bcb71d17aa80fba7f5ac6aa4d097a7123"
+    "revision": "937b8ebaf4c59e556ec3e0cc20d90f6ac706b2de"
   },
-  "count": 570,
-  "totalCount": 570,
-  "shownCount": 570,
+  "count": 572,
+  "totalCount": 572,
+  "shownCount": 572,
   "candidates": [
     {
       "category": "organization",
@@ -415,8 +415,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 566,
-        "documentCount": 298
+        "mentions": 569,
+        "documentCount": 299
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -500,8 +500,8 @@
       },
       "right": {
         "name": "Investigations Division",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.978,
       "reason": "similar name",
@@ -1028,6 +1028,22 @@
       },
       "right": {
         "name": "For George Island",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "University of Cali",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "University of Cal",
         "mentions": 2,
         "documentCount": 2
       },
@@ -5196,6 +5212,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Aerospace Sciences Meeting and Exhibit",
+        "mentions": 9,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "AIAA Aerospace Sciences Meeting and Exhibit",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Anthony Bragalia",
@@ -5222,22 +5254,6 @@
         "name": "George Williamson",
         "mentions": 6,
         "documentCount": 4
-      },
-      "similarity": 0.938,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Aerospace Sciences Meeting and Exhibit",
-        "mentions": 7,
-        "documentCount": 7
-      },
-      "right": {
-        "name": "AIAA Aerospace Sciences Meeting and Exhibit",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.938,
       "reason": "similar name",
@@ -5525,6 +5541,22 @@
       "right": {
         "name": "FMS Foundation Newsletter March",
         "mentions": 27,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Navy Department",
+        "mentions": 45,
+        "documentCount": 18
+      },
+      "right": {
+        "name": "Nary Department",
+        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.933,
@@ -5999,8 +6031,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 317,
-        "documentCount": 142
+        "mentions": 318,
+        "documentCount": 143
       },
       "right": {
         "name": "Department of the Army",
@@ -6767,8 +6799,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 566,
-        "documentCount": 298
+        "mentions": 569,
+        "documentCount": 299
       },
       "right": {
         "name": "University Colorado",
@@ -6783,8 +6815,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 317,
-        "documentCount": 142
+        "mentions": 318,
+        "documentCount": 143
       },
       "right": {
         "name": "DEPARTMENT OF THE AL",
@@ -9119,8 +9151,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49511,
-        "documentCount": 12584
+        "mentions": 49514,
+        "documentCount": 12585
       },
       "right": {
         "name": "North American Space Agency",

@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-01T22:48:23Z",
+  "generatedAt": "2026-10-02T00:04:33Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "6e6ecc6bcb71d17aa80fba7f5ac6aa4d097a7123"
+    "revision": "937b8ebaf4c59e556ec3e0cc20d90f6ac706b2de"
   },
-  "documentsWithCandidates": 14164,
+  "documentsWithCandidates": 14172,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8447,6 +8447,30 @@
       ]
     },
     {
+      "documentId": "doc-54431ed5fc12",
+      "path": "Archives-for-the-Unexplained/documents/20040426-Re_Kerry-Admits-Being-Shot-In-The-ASS-639484.txt",
+      "candidates": [
+        {
+          "value": "2004-04-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sun, 25 Apr 2004 16:44:38 +1000, Duggy <jc122739@jcu.edu.au> wrote",
+          "segment": 4
+        },
+        {
+          "value": "2004-04-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sat, 24 Apr 2004, Center For Justice wrote",
+          "segment": 5
+        }
+      ]
+    },
+    {
       "documentId": "doc-ca4bdcfe8e25",
       "path": "Archives-for-the-Unexplained/documents/20040511-Re_BULLSHIT-Update_-April-27-2004-53268.txt",
       "candidates": [
@@ -8560,6 +8584,21 @@
           "method": "context-exclusion",
           "evidence": "New documentary to be released on July 1, 2004",
           "segment": 12
+        }
+      ]
+    },
+    {
+      "documentId": "doc-693510eeec48",
+      "path": "Archives-for-the-Unexplained/documents/20040815-Re_Quote-Mine-Project_-Gould_Eldredge-and-Punctuated-Equilibria-Quotes-652770.txt",
+      "candidates": [
+        {
+          "value": "2004-08-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Wed, 11 Aug 2004 dford3@gl.umbc.edu (david ford) wrote in news:<dford3-",
+          "segment": 5
         }
       ]
     },
@@ -9046,6 +9085,21 @@
           "method": "unclassified-mention",
           "evidence": "On Fri, 21 Jan 2005 21:04:17 -0500, Tommy <nospam@nospam.com> drained",
           "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c9b7eda177d5",
+      "path": "Archives-for-the-Unexplained/documents/20050313-Re_Stalled-SETI-Client.-142776.txt",
+      "candidates": [
+        {
+          "value": "2005-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sun, 13 Mar 2005 12:59:56 GMT, \"Zilva Zanga\"",
+          "segment": 6
         }
       ]
     },
@@ -19579,6 +19633,21 @@
           "method": "unclassified-mention",
           "evidence": "Last night on Friday June 7, 2012, at 10:00 PM there was a",
           "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6e82e7f4ff61",
+      "path": "Archives-for-the-Unexplained/documents/20120622-The-Eyes-Of-The-Galaxy-Are-Upon-Us.-1349-60c1d81aa0.txt",
+      "candidates": [
+        {
+          "value": "2012-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Subject: The Eyes Of The Galaxy Are Upon Us. June 21, 2012.",
+          "segment": 4
         }
       ]
     },
@@ -130738,6 +130807,39 @@
           "method": "document-header",
           "evidence": "Date: Fri, 13 Jun 1997 15:15:58 -0800",
           "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8a4fd4f73e41",
+      "path": "Archives-for-the-Unexplained/documents/a14-003-420ff532c6.txt",
+      "candidates": [
+        {
+          "value": "1997-02-14",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Fri, 14 Feb 1997 14:32:30 -0800",
+          "segment": 4
+        },
+        {
+          "value": "1997-02-11",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Tue, 11 Feb 1997 13:30:25 -0800",
+          "segment": 8
+        },
+        {
+          "value": "1997-02-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 11 Feb 1997 14:12:00",
+          "segment": 23
         }
       ]
     },
@@ -242233,6 +242335,759 @@
           "method": "unclassified-mention",
           "evidence": "Sent: Monday, September 25, 2017 11:23 AM",
           "segment": 232
+        }
+      ]
+    },
+    {
+      "documentId": "doc-829b695a0dc1",
+      "path": "Black-Vault-UFO/pdfs/menzel-donald-2.txt",
+      "candidates": [
+        {
+          "value": "1946-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised that on November 2, 1946, DONAID MENZEL was",
+          "segment": 692
+        },
+        {
+          "value": "1946-11-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised that he learned on November 4, 1946 of a",
+          "segment": 711
+        },
+        {
+          "value": "1946-12-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised that on December 9, 1946 an unidentified",
+          "segment": 755
+        },
+        {
+          "value": "1946-12-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised that on December 16, 1946, DONALD MENZEL",
+          "segment": 764
+        },
+        {
+          "value": "1947-01-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised that on January 11, 1947 Dr. MINZEL contacted",
+          "segment": 775
+        },
+        {
+          "value": "1947-01-14",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "advised that on January 14, 1947 MENZEL received a telegram",
+          "segment": 783
+        },
+        {
+          "value": "1946-11-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Their records show that through November 24, 1946 he has",
+          "segment": 786
+        },
+        {
+          "value": "1947-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised that on January 14, 1947 DONALD MENZEL contacted",
+          "segment": 840
+        },
+        {
+          "value": "1947-01-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised that on January 17, 1947 DONALD MENZEL exchanged some",
+          "segment": 858
+        },
+        {
+          "value": "1947-01-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised that on January 27, 1947 DONALD MENZEL",
+          "segment": 867
+        },
+        {
+          "value": "1947-01-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised on January 28, 1947 that he learned from DONALD MINZEL",
+          "segment": 871
+        },
+        {
+          "value": "1947-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised on April 1, 1947 Dr: BERNARD COnN contacted the",
+          "segment": 902
+        },
+        {
+          "value": "1946-04-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised on April 30, 1946",
+          "segment": 912
+        },
+        {
+          "value": "1947-06-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on June 12, 1947 advised that DR. MUNZEL contacted",
+          "segment": 939
+        },
+        {
+          "value": "1947-06-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Jon June 13, 1947 advised",
+          "segment": 956
+        },
+        {
+          "value": "1947-06-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on June 18, 1947 advised MARJORIE LANSING contaoted",
+          "segment": 977
+        },
+        {
+          "value": "1947-06-19",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "on June 19, 1947 advised or. MENZEL received a telegram from",
+          "segment": 1006
+        },
+        {
+          "value": "1947-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on June 21, 1947 advised DONALD MENZEL contäcted MALTER O.",
+          "segment": 1015
+        },
+        {
+          "value": "1947-08-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on August 22, 1947 but could not secure return passage until after September.",
+          "segment": 1126
+        },
+        {
+          "value": "1947-08-05",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "lon August 5, 1947 advised that Dr. DONALD H. MENZEL received",
+          "segment": 1143
+        },
+        {
+          "value": "1947-08-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised on August 18, 1947, thät",
+          "segment": 1211
+        },
+        {
+          "value": "1947-09-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised on September 18, 1947 that",
+          "segment": 1219
+        },
+        {
+          "value": "1947-11-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on November 13, 1947 advised",
+          "segment": 1230
+        },
+        {
+          "value": "1948-01-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on January 8, 1948 advised an unidentified man contacted HARIOW",
+          "segment": 1246
+        },
+        {
+          "value": "1948-10-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On October 29, 1948 the writer reviewed serials through number 50 in",
+          "segment": 1580
+        },
+        {
+          "value": "1946-12-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised that on December 9, 1946 the Subject",
+          "segment": 1603
+        },
+        {
+          "value": "1948-06-25",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "ReBulet dated June 25, 1948.",
+          "segment": 1714
+        },
+        {
+          "value": "1949-01-10",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "in instant case dated January 10, 1949-",
+          "segment": 1716
+        },
+        {
+          "value": "1949-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "bridge, Mass., on February 3, 1949, carried a news item announcing",
+          "segment": 1762
+        },
+        {
+          "value": "1949-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 1, 1949 in connection with the above-mentioned",
+          "segment": 1930
+        },
+        {
+          "value": "1947-03-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BART BOK on March 12, 1947, honoring the visiting delegation",
+          "segment": 2027
+        },
+        {
+          "value": "1947-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "group retured to Russia about April 14, 1947.",
+          "segment": 2037
+        },
+        {
+          "value": "1949-02-13",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Its issue of February 13, 1949, described P. M. BLACKITT's book",
+          "segment": 2044
+        },
+        {
+          "value": "1948-01-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Harvard Crimson for January 6, 1948, carried'",
+          "segment": 2066
+        },
+        {
+          "value": "1949-09-16",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "dated September 16, 1949, in connection with the above-mentioned",
+          "segment": 2073
+        },
+        {
+          "value": "1942-03-25",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "for Demoractic and Intellectual Freedom\" dated March 25, 1942",
+          "segment": 2079
+        },
+        {
+          "value": "1943-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Activities Report of June 25, 1943, page 13 and Report",
+          "segment": 2087
+        },
+        {
+          "value": "1944-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of March 29, 1944, page 87.",
+          "segment": 2088
+        },
+        {
+          "value": "1949-09-14",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "dated September 14, 1949, in connection with the above-",
+          "segment": 2089
+        },
+        {
+          "value": "1901-04-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 11, 1901 at Florence, Colorado",
+          "segment": 2116
+        },
+        {
+          "value": "1952-11-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of known reliability on November 7, 1952",
+          "segment": 2221
+        },
+        {
+          "value": "1953-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on February 3, 1953, informed the",
+          "segment": 2245
+        },
+        {
+          "value": "1953-02-25",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "On February 25, 1953, the writer received by mail from",
+          "segment": 2256
+        },
+        {
+          "value": "1953-03-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The writer again consulted with the informant on March 2, 1953.",
+          "segment": 2273
+        },
+        {
+          "value": "1941-12-24",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "dated December 24, 1941 entitled \"THE AMERICAN COMMITTEE FOR DEMOCRATIC AND",
+          "segment": 2508
+        },
+        {
+          "value": "1941-10-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 20, 1941 MENZEL, was elected to the national executive committee of",
+          "segment": 2510
+        },
+        {
+          "value": "1948-05-15",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference is made to Bureau SAC Letter No. 77 dated May 15, 1948, Section B.",
+          "segment": 2513
+        },
+        {
+          "value": "1948-06-25",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "ReBulet dated June 25, 1948.",
+          "segment": 2532
+        },
+        {
+          "value": "1949-01-10",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Jin instant case dated January 10, 1949.",
+          "segment": 2534
+        },
+        {
+          "value": "1932-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 1, 1932 and September 1, 1935 was made an Associate",
+          "segment": 3231
+        },
+        {
+          "value": "1935-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 1, 1932 and September 1, 1935 was made an Associate",
+          "segment": 3231
+        },
+        {
+          "value": "1938-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "for one year and reappointed for another year September 1, 1938.",
+          "segment": 3235
+        },
+        {
+          "value": "1939-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On September 1, 1939 he was made Professor of Astrophysics and",
+          "segment": 3236
+        },
+        {
+          "value": "1948-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Harvard College Observatory and July 1, 1948 made a member of the",
+          "segment": 3239
+        },
+        {
+          "value": "1943-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "He took a leave of absence from February 1, to July 1, 1943 which?",
+          "segment": 3241
+        },
+        {
+          "value": "1943-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "was extended from July 1, 1943 to November 5, 1945 for military",
+          "segment": 3242
+        },
+        {
+          "value": "1945-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "was extended from July 1, 1943 to November 5, 1945 for military",
+          "segment": 3242
+        },
+        {
+          "value": "1949-08-25",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Bureau telotype to Boston, dated August 25, 1949, emptioned",
+          "segment": 3255
+        },
+        {
+          "value": "1949-04-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lounge on April 3, 1949.",
+          "segment": 3475
+        },
+        {
+          "value": "1948-01-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Harvard, Grinson for January 6, 1948, carried a news Itam reclecting",
+          "segment": 3494
+        },
+        {
+          "value": "1901-04-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "date, April 11, 1901 in Florence, Colorador residenco in August, 7940",
+          "segment": 3510
+        },
+        {
+          "value": "1947-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 13, 1947, at 12.30 p.m. bras WENt inquired ar to whether",
+          "segment": 3514
+        },
+        {
+          "value": "1949-08-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Boston I A furnished on August 29, 1949, a Harvard Collage Observatory",
+          "segment": 3530
+        },
+        {
+          "value": "1948-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Boston 7-8 advised on January 26, 1948, that HARLON STAPLEY",
+          "segment": 3552
+        },
+        {
+          "value": "1949-02-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "February 18, 1949, dororibed the latter book as the beat defende",
+          "segment": 3561
+        },
+        {
+          "value": "1949-06-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 5, 1949, botwoon the app",
+          "segment": 3576
+        },
+        {
+          "value": "1949-08-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 16, 1949, in the ICD case on this applicent.",
+          "segment": 3589
+        },
+        {
+          "value": "1950-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 24, 1950 and make an appointment to discuss it with him You",
+          "segment": 3799
+        },
+        {
+          "value": "1949-07-18",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "By lottor dated July 18, 1949, a proliminary inquiry was institutod",
+          "segment": 3928
+        },
+        {
+          "value": "1949-06-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "fron tho Boston Office dated June 13, 1949, captioned Harlow Shaploy.",
+          "segment": 3931
+        },
+        {
+          "value": "1943-01-10",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "A report dated January 10, 1943, fron the Bonton Office in Wie",
+          "segment": 3942
+        },
+        {
+          "value": "1948-05-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1 Paro Offico datou May 3, 1948, captionedẠin.",
+          "segment": 3959
+        },
+        {
+          "value": "1944-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Aotivitios or March 29, 1944",
+          "segment": 4011
+        },
+        {
+          "value": "1949-07-18",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "ReBulet dated July 18, 1949 under this caption.",
+          "segment": 4039
+        },
+        {
+          "value": "1949-06-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "forth in Boston letter to the Bureau dated June 13, 1949, and entitled \"HARLOW",
+          "segment": 4073
+        },
+        {
+          "value": "1919-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of July 18, 1919 was prepared.",
+          "segment": 4077
+        },
+        {
+          "value": "1942-11-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "By Iptten dated November 13, 1942, the New York Office advised that",
+          "segment": 4144
+        },
+        {
+          "value": "1949-09-14",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Rerep SA DON M. MALTERS dated September 14, 1949, at",
+          "segment": 4234
+        },
+        {
+          "value": "1950-05-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "hearing was to be held in Massachusetts on May 28, 1950.",
+          "segment": 4245
+        },
+        {
+          "value": "1949-09-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 14, 1949, at New York, NextrUtI",
+          "segment": 4327
+        },
+        {
+          "value": "1949-08-24",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "dated August 24, 1949, at Lovar",
+          "segment": 4330
+        },
+        {
+          "value": "1945-08-23",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "dated August 23, 1945, at San francisco",
+          "segment": 4332
+        },
+        {
+          "value": "1949-10-05",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Seruice Commiasion by letter dated October 5, 1949, for Its",
+          "segment": 4361
         }
       ]
     },
@@ -397265,6 +398120,21 @@
       ]
     },
     {
+      "documentId": "doc-29e8037e4783",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-3/28982470.txt",
+      "candidates": [
+        {
+          "value": "1959-03-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "object on 16 March 1959, 2030-2100. - While driving home from a service",
+          "segment": 27
+        }
+      ]
+    },
+    {
       "documentId": "doc-bcad345c57c7",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-3/28983056.txt",
       "candidates": [
@@ -519460,6 +520330,48 @@
           "method": "unclassified-mention",
           "evidence": "2007 [May 12, 2009]; Available from",
           "segment": 1410
+        }
+      ]
+    },
+    {
+      "documentId": "doc-856792710b1a",
+      "path": "War-Gov-PURSUE/release-06/documents/dow-uap-d149-aawsap-dird-mhd-air-breathing-propulsion-and-power-for-aerospace-applications-november-21-2010.txt",
+      "candidates": [
+        {
+          "value": "2002-06-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Voltage Nanosecond Pulses,\" IEEE Transactions on Plasma Science, Vol. 30 No. 3 June 2002, pp. 130 l -",
+          "segment": 1085
+        },
+        {
+          "value": "2004-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Control ofHypersonic Flows of Weakly Ionized Plasmas,\" AIAA Journal , Vol. 42, No. 7 July 2004, pp.",
+          "segment": 1092
+        },
+        {
+          "value": "2004-11-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Virtual Cowl ,\" AJAA Journal, Vol. 42, No. 11 November 2004, pp. 2294-2302.",
+          "segment": 1144
+        },
+        {
+          "value": "2004-12-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "US 6,834,492 B2, December 28, 2004.",
+          "segment": 1186
         }
       ]
     },
