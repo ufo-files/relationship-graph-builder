@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-02T15:41:47Z",
+  "generatedAt": "2026-10-02T16:59:10Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "8978d85ce34aab1a1338ccd30732db81d318002d"
+    "revision": "85b265d26620c293390cbb9ae063911e98b21e3f"
   },
-  "documentsWithCandidates": 14312,
+  "documentsWithCandidates": 14316,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -130697,6 +130697,30 @@
       ]
     },
     {
+      "documentId": "doc-942aa6bef10e",
+      "path": "Archives-for-the-Unexplained/documents/a01-003.txt",
+      "candidates": [
+        {
+          "value": "1997-04-01",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Tue, 1 Apr 1997 07:36:58 -0800",
+          "segment": 4
+        },
+        {
+          "value": "1997-03-27",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Thu, 27 Mar 1997 07:47:59 -0500",
+          "segment": 8
+        }
+      ]
+    },
+    {
       "documentId": "doc-c34c61e51132",
       "path": "Archives-for-the-Unexplained/documents/a01-005-1095ca633d.txt",
       "candidates": [
@@ -131413,6 +131437,21 @@
           "method": "document-header",
           "evidence": "Date: Mon, 20 Jan 1997 09:50:08 -0500",
           "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9a6a410dcfda",
+      "path": "Archives-for-the-Unexplained/documents/a21-001-46ea03333d.txt",
+      "candidates": [
+        {
+          "value": "1997-03-20",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Thu, 20 Mar 1997 16:53:55 -0800",
+          "segment": 2
         }
       ]
     },
@@ -411347,6 +411386,30 @@
       ]
     },
     {
+      "documentId": "doc-077fe4ff3b32",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28953481.txt",
+      "candidates": [
+        {
+          "value": "1953-02-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The following sightings were made in Russian from November 1952 to 20 February 1953",
+          "segment": 4
+        },
+        {
+          "value": "1953-02-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The following sightings were made in Russien From November 1952 to 20 February 1953",
+          "segment": 22
+        }
+      ]
+    },
+    {
       "documentId": "doc-44a2b2282cd4",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28953939.txt",
       "candidates": [
@@ -414868,6 +414931,30 @@
           "method": "unclassified-mention",
           "evidence": "Reference your unidentified observation of 17 August 1966.",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4a4e62e81898",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302555300.txt",
+      "candidates": [
+        {
+          "value": "1966-08-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Observer number 1 - 29 August 1966, 0300Z.",
+          "segment": 46
+        },
+        {
+          "value": "1966-08-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Observer number 2 - 29 August 1966, 0245%.",
+          "segment": 47
         }
       ]
     },
