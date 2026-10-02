@@ -1999,6 +1999,25 @@ class ClassificationTests(unittest.TestCase):
 
 
 class CatalogTests(unittest.TestCase):
+    def test_html_archive_transcript_is_read_and_selected(self):
+        from scripts.build_catalog import read_ocr
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            path = root / "Americans-for-Safe-Aerospace" / "pages" / "report.txt"
+            path.parent.mkdir(parents=True)
+            metadata = {"schema": "ufo-files-archive-html/v1", "source_file": "pages/report.html",
+                        "source_url": "https://www.safeaerospace.org/reports/test", "source_bytes": 100}
+            body = "The pilot reported an unidentified object near the aircraft."
+            path.write_text(json.dumps(metadata) + "\n\n" + body + "\n")
+            self.assertEqual(machine_data_paths(root), [path])
+            parsed_metadata, segments = read_ocr(path)
+            self.assertEqual(parsed_metadata, metadata)
+            self.assertIn(body, " ".join(segments))
+            metadata["schema"] = "unknown-format/v1"
+            path.write_text(json.dumps(metadata) + "\n" + body)
+            self.assertIsNone(read_ocr(path))
+
+
     def test_historical_date_review_registry_records_every_screened_decision(self):
         payload = json.loads(
             (Path(__file__).resolve().parents[1] / "data" / "reported_event_date_reviews.json").read_text(encoding="utf-8")
