@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-02T02:35:04Z",
+  "generatedAt": "2026-10-02T04:17:59Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "996e160b55f4050891170083bafaff6cc51c20d9"
+    "revision": "6ca9e3b8d69583ea9eedacb80d39671d96e00c3c"
   },
-  "documentsWithCandidates": 14286,
+  "documentsWithCandidates": 14288,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -414446,6 +414446,21 @@
       ]
     },
     {
+      "documentId": "doc-4fc111fa9994",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302562953.txt",
+      "candidates": [
+        {
+          "value": "1967-03-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Zulu time-date group of sighting: 11 March 1967/2145-2200Z",
+          "segment": 31
+        }
+      ]
+    },
+    {
       "documentId": "doc-9aab19571c70",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302563346.txt",
       "candidates": [
@@ -416146,6 +416161,48 @@
           "method": "unclassified-mention",
           "evidence": "UFO Observation, 2 January 1968",
           "segment": 27
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9f511d794505",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302573732.txt",
+      "candidates": [
+        {
+          "value": "1968-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UPO Observation, 14 January 1968",
+          "segment": 7
+        },
+        {
+          "value": "1968-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "occurred on 14 January 1968, at approximately 5 pm.",
+          "segment": 13
+        },
+        {
+          "value": "1968-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Re: Your letter TDPT (UFO) - UFO Observation, 14 Jan 1968",
+          "segment": 27
+        },
+        {
+          "value": "1968-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1700 hours on 14 January 1968 in regard to any unusual objects.",
+          "segment": 30
         }
       ]
     },
