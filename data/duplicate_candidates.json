@@ -5,12 +5,28 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a41e2e293418c9c47b5018d67da8516b3f913ec8"
+    "revision": "c9a2ccc0e4ffeab52e1d095b664a00c379ba5368"
   },
-  "count": 620,
-  "totalCount": 620,
-  "shownCount": 620,
+  "count": 625,
+  "totalCount": 625,
+  "shownCount": 625,
   "candidates": [
+    {
+      "category": "organization",
+      "left": {
+        "name": "Communications Instructions for Reporting Vital Intelligence",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Communication Instructions for Reporting Vital Intelligence",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.992,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
     {
       "category": "organization",
       "left": {
@@ -127,8 +143,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 844,
-        "documentCount": 512
+        "mentions": 845,
+        "documentCount": 513
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -143,8 +159,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 844,
-        "documentCount": 512
+        "mentions": 845,
+        "documentCount": 513
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -302,6 +318,22 @@
     {
       "category": "location",
       "left": {
+        "name": "VHF OMNIDIRECTIONAL RANGE",
+        "mentions": 8,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "VHF Omni-Directional Range",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.98,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "HEADQUARTERS ASTERN AREA",
         "mentions": 2,
         "documentCount": 2
@@ -335,8 +367,8 @@
       "category": "location",
       "left": {
         "name": "Malmstrom Air Force Base",
-        "mentions": 160,
-        "documentCount": 97
+        "mentions": 164,
+        "documentCount": 98
       },
       "right": {
         "name": "Malstrom Air Force Base",
@@ -447,8 +479,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 576,
-        "documentCount": 303
+        "mentions": 581,
+        "documentCount": 308
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -463,8 +495,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 308,
-        "documentCount": 180
+        "mentions": 313,
+        "documentCount": 184
       },
       "right": {
         "name": "Kirtland Airforce Base",
@@ -559,8 +591,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 680,
-        "documentCount": 370
+        "mentions": 682,
+        "documentCount": 372
       },
       "right": {
         "name": "Edward Air Force Base",
@@ -575,8 +607,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 680,
-        "documentCount": 370
+        "mentions": 682,
+        "documentCount": 372
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -828,6 +860,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Communications Instructions for Reporting Visual Intelligence",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Communications Instructions for Reporting Vital Intelligence",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.975,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Brasoria County Chief Deputy Billy McCoy",
@@ -943,8 +991,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 337,
-        "documentCount": 186
+        "mentions": 339,
+        "documentCount": 187
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -1039,8 +1087,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 337,
-        "documentCount": 186
+        "mentions": 339,
+        "documentCount": 187
       },
       "right": {
         "name": "Linda Moulton-How",
@@ -1054,14 +1102,14 @@
     {
       "category": "location",
       "left": {
-        "name": "LaGuardia Airport",
-        "mentions": 5,
-        "documentCount": 5
+        "name": "Laguardia Airport",
+        "mentions": 7,
+        "documentCount": 7
       },
       "right": {
         "name": "La Guardia Airport",
-        "mentions": 11,
-        "documentCount": 9
+        "mentions": 12,
+        "documentCount": 10
       },
       "similarity": 0.971,
       "reason": "similar name",
@@ -1199,8 +1247,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 189,
-        "documentCount": 119
+        "mentions": 192,
+        "documentCount": 122
       },
       "right": {
         "name": "Air Technical Intelligence Cen'er",
@@ -1215,8 +1263,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 189,
-        "documentCount": 119
+        "mentions": 192,
+        "documentCount": 122
       },
       "right": {
         "name": "Air Technical Intelligence Conter",
@@ -1455,8 +1503,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 844,
-        "documentCount": 512
+        "mentions": 845,
+        "documentCount": 513
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1471,8 +1519,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 844,
-        "documentCount": 512
+        "mentions": 845,
+        "documentCount": 513
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -1487,8 +1535,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 844,
-        "documentCount": 512
+        "mentions": 845,
+        "documentCount": 513
       },
       "right": {
         "name": "Weight-Patterson Air Force Base",
@@ -1503,8 +1551,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 844,
-        "documentCount": 512
+        "mentions": 845,
+        "documentCount": 513
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1887,13 +1935,13 @@
       "category": "organization",
       "left": {
         "name": "Communications Instructions for Reporting Visual Intelligence",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
         "name": "Communication Instructions for Reporting Vital Intelligence",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.967,
       "reason": "similar name",
@@ -1903,8 +1951,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 714,
-        "documentCount": 382
+        "mentions": 715,
+        "documentCount": 383
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -2191,8 +2239,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 634,
-        "documentCount": 403
+        "mentions": 637,
+        "documentCount": 405
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -2223,8 +2271,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 275,
-        "documentCount": 177
+        "mentions": 282,
+        "documentCount": 179
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -2239,8 +2287,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 275,
-        "documentCount": 177
+        "mentions": 282,
+        "documentCount": 179
       },
       "right": {
         "name": "Major Donald Keyhoes",
@@ -2255,8 +2303,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 191,
-        "documentCount": 143
+        "mentions": 192,
+        "documentCount": 144
       },
       "right": {
         "name": "Bruce Macabee",
@@ -2271,8 +2319,8 @@
       "category": "location",
       "left": {
         "name": "O'Hare Airport",
-        "mentions": 40,
-        "documentCount": 34
+        "mentions": 49,
+        "documentCount": 35
       },
       "right": {
         "name": "Ohare Airport",
@@ -2751,8 +2799,8 @@
       "category": "person",
       "left": {
         "name": "Frank Edwards",
-        "mentions": 286,
-        "documentCount": 116
+        "mentions": 287,
+        "documentCount": 117
       },
       "right": {
         "name": "Frank Edward",
@@ -2767,8 +2815,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 275,
-        "documentCount": 177
+        "mentions": 282,
+        "documentCount": 179
       },
       "right": {
         "name": "Major Donald Keyho",
@@ -2799,8 +2847,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 148,
-        "documentCount": 116
+        "mentions": 150,
+        "documentCount": 117
       },
       "right": {
         "name": "George Noorey",
@@ -2815,8 +2863,8 @@
       "category": "person",
       "left": {
         "name": "Timothy Good",
-        "mentions": 134,
-        "documentCount": 89
+        "mentions": 143,
+        "documentCount": 91
       },
       "right": {
         "name": "Timothy Goods",
@@ -2911,8 +2959,8 @@
       "category": "location",
       "left": {
         "name": "Marin County",
-        "mentions": 28,
-        "documentCount": 23
+        "mentions": 29,
+        "documentCount": 24
       },
       "right": {
         "name": "Marion County",
@@ -2975,8 +3023,8 @@
       "category": "location",
       "left": {
         "name": "Marin County",
-        "mentions": 28,
-        "documentCount": 23
+        "mentions": 29,
+        "documentCount": 24
       },
       "right": {
         "name": "Martin County",
@@ -3583,8 +3631,8 @@
       "category": "location",
       "left": {
         "name": "Malmstrom Air Force Base",
-        "mentions": 160,
-        "documentCount": 97
+        "mentions": 164,
+        "documentCount": 98
       },
       "right": {
         "name": "Maelstrom Air Force Base",
@@ -3695,8 +3743,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 308,
-        "documentCount": 180
+        "mentions": 313,
+        "documentCount": 184
       },
       "right": {
         "name": "Kirkland Air Force Base",
@@ -3711,8 +3759,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 308,
-        "documentCount": 180
+        "mentions": 313,
+        "documentCount": 184
       },
       "right": {
         "name": "Kirtland Alr Force Base",
@@ -3727,8 +3775,8 @@
       "category": "program",
       "left": {
         "name": "Project Sign",
-        "mentions": 186,
-        "documentCount": 108
+        "mentions": 189,
+        "documentCount": 110
       },
       "right": {
         "name": "Project SIG",
@@ -3743,8 +3791,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 181,
-        "documentCount": 63
+        "mentions": 185,
+        "documentCount": 67
       },
       "right": {
         "name": "Kings Island",
@@ -4124,6 +4172,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Army Ranger",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Army Rangers",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "King County",
@@ -4133,22 +4197,6 @@
       "right": {
         "name": "Kings County",
         "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Army Ranger",
-        "mentions": 6,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "Army Rangers",
-        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.957,
@@ -4687,8 +4735,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8225,
-        "documentCount": 2014
+        "mentions": 8228,
+        "documentCount": 2017
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -4927,8 +4975,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 337,
-        "documentCount": 186
+        "mentions": 339,
+        "documentCount": 187
       },
       "right": {
         "name": "Linda Moulton-Howell",
@@ -5471,8 +5519,8 @@
       "category": "organization",
       "left": {
         "name": "American Institute of Aeronautics and Astronautics",
-        "mentions": 62,
-        "documentCount": 35
+        "mentions": 64,
+        "documentCount": 37
       },
       "right": {
         "name": "American Institute of Astronautics and Aeronautics",
@@ -5535,8 +5583,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 792,
-        "documentCount": 451
+        "mentions": 793,
+        "documentCount": 452
       },
       "right": {
         "name": "Stanton Freedman",
@@ -5551,8 +5599,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 792,
-        "documentCount": 451
+        "mentions": 793,
+        "documentCount": 452
       },
       "right": {
         "name": "Stanton Freidman",
@@ -5583,8 +5631,8 @@
       "category": "organization",
       "left": {
         "name": "Condon Committee",
-        "mentions": 161,
-        "documentCount": 96
+        "mentions": 162,
+        "documentCount": 97
       },
       "right": {
         "name": "Condom Committee",
@@ -5855,8 +5903,8 @@
       "category": "location",
       "left": {
         "name": "Malmstrom Air Force Base",
-        "mentions": 160,
-        "documentCount": 97
+        "mentions": 164,
+        "documentCount": 98
       },
       "right": {
         "name": "Momstrom Air Force Base",
@@ -5935,8 +5983,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8225,
-        "documentCount": 2014
+        "mentions": 8228,
+        "documentCount": 2017
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -5951,8 +5999,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 844,
-        "documentCount": 512
+        "mentions": 845,
+        "documentCount": 513
       },
       "right": {
         "name": "Wright-Fattorson Air Force Base",
@@ -6111,8 +6159,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 250,
-        "documentCount": 128
+        "mentions": 251,
+        "documentCount": 129
       },
       "right": {
         "name": "Army Air Fcrces",
@@ -6469,6 +6517,22 @@
       "right": {
         "name": "UNIVERSITY OF THE STARS",
         "mentions": 6,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Argentinian Navy",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Argentina Navy",
+        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.933,
@@ -6879,8 +6943,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 634,
-        "documentCount": 403
+        "mentions": 637,
+        "documentCount": 405
       },
       "right": {
         "name": "Selt Lake City",
@@ -6959,8 +7023,8 @@
       "category": "person",
       "left": {
         "name": "Richard Haines",
-        "mentions": 86,
-        "documentCount": 62
+        "mentions": 87,
+        "documentCount": 63
       },
       "right": {
         "name": "Richard Haynes",
@@ -6991,8 +7055,8 @@
       "category": "location",
       "left": {
         "name": "O'Hare Airport",
-        "mentions": 40,
-        "documentCount": 34
+        "mentions": 49,
+        "documentCount": 35
       },
       "right": {
         "name": "O'Hara Airport",
@@ -7292,6 +7356,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Argentine Navy",
+        "mentions": 8,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Argentina Navy",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Ball Aerospace",
@@ -7471,8 +7551,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 576,
-        "documentCount": 303
+        "mentions": 581,
+        "documentCount": 308
       },
       "right": {
         "name": "University Colorado",
@@ -7487,8 +7567,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 576,
-        "documentCount": 303
+        "mentions": 581,
+        "documentCount": 308
       },
       "right": {
         "name": "University of Color",
@@ -7711,8 +7791,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 369,
-        "documentCount": 190
+        "mentions": 377,
+        "documentCount": 198
       },
       "right": {
         "name": "Natural Investigations Committee",
@@ -7727,8 +7807,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 369,
-        "documentCount": 190
+        "mentions": 377,
+        "documentCount": 198
       },
       "right": {
         "name": "National Investigative Committee",
@@ -7743,8 +7823,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 257,
-        "documentCount": 172
+        "mentions": 258,
+        "documentCount": 173
       },
       "right": {
         "name": "Intelligence Cf'nter",
@@ -7759,8 +7839,8 @@
       "category": "program",
       "left": {
         "name": "Project Sign",
-        "mentions": 186,
-        "documentCount": 108
+        "mentions": 189,
+        "documentCount": 110
       },
       "right": {
         "name": "Project Signed",
@@ -7791,8 +7871,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 161,
-        "documentCount": 128
+        "mentions": 163,
+        "documentCount": 129
       },
       "right": {
         "name": "Mohave Desert",
@@ -9502,6 +9582,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Joe Campbell",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "John Campbell",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "similarity": 0.88,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Carl Rogers",
         "mentions": 4,
         "documentCount": 4
@@ -9534,22 +9630,6 @@
     {
       "category": "person",
       "left": {
-        "name": "Joe Campbell",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "John Campbell",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "similarity": 0.88,
-      "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
         "name": "Gary Johnson",
         "mentions": 3,
         "documentCount": 2
@@ -9567,8 +9647,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 337,
-        "documentCount": 186
+        "mentions": 339,
+        "documentCount": 187
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
@@ -9694,6 +9774,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Joe Walker",
+        "mentions": 17,
+        "documentCount": 14
+      },
+      "right": {
+        "name": "Joseph Walker",
+        "mentions": 12,
+        "documentCount": 6
+      },
+      "similarity": 0.87,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "James Hansen",
         "mentions": 11,
         "documentCount": 10
@@ -9710,25 +9806,9 @@
     {
       "category": "person",
       "left": {
-        "name": "Joe Walker",
-        "mentions": 15,
-        "documentCount": 12
-      },
-      "right": {
-        "name": "Joseph Walker",
-        "mentions": 12,
-        "documentCount": 6
-      },
-      "similarity": 0.87,
-      "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
         "name": "Tom Tulien",
-        "mentions": 22,
-        "documentCount": 5
+        "mentions": 23,
+        "documentCount": 6
       },
       "right": {
         "name": "Thomas Tulien",
@@ -9919,8 +9999,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49659,
-        "documentCount": 12607
+        "mentions": 49732,
+        "documentCount": 12626
       },
       "right": {
         "name": "North American Space Agency",
