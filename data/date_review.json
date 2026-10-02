@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-02T20:46:51Z",
+  "generatedAt": "2026-10-02T22:04:03Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "c9a2ccc0e4ffeab52e1d095b664a00c379ba5368"
+    "revision": "ea1bee7e63d5f02845f030c651ede3a4fb9303da"
   },
-  "documentsWithCandidates": 14377,
+  "documentsWithCandidates": 14381,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8062,6 +8062,21 @@
           "method": "unclassified-mention",
           "evidence": "9-11 U.S. Federal Grand Jury Filing in Denver, Co. July 3, 2003",
           "segment": 65
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7203c2a9d7cf",
+      "path": "Archives-for-the-Unexplained/documents/20031216-Re_Europeans_-Not-Indians_-Were-First-Humans-in-Virginia-625386.txt",
+      "candidates": [
+        {
+          "value": "2003-12-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 15 Dec 2003 16:41:09 -0800, paleocity@hotmail.com (Lee Olsen",
+          "segment": 4
         }
       ]
     },
@@ -308597,6 +308612,66 @@
       ]
     },
     {
+      "documentId": "doc-dd534c55ac1c",
+      "path": "DPIArchive/documents/116153-unusual-sightings-and-incidents-11-79-6-90.txt",
+      "candidates": [
+        {
+          "value": "1983-11-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "5/4/Air Pt1 (25) 23 November 1983",
+          "segment": 170
+        },
+        {
+          "value": "1983-11-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "5/4 / Air Pt1 (23 ) 23 November 1983",
+          "segment": 176
+        },
+        {
+          "value": "1983-11-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "5/4/Air Pt1 (19) 22 November 1983",
+          "segment": 215
+        },
+        {
+          "value": "1983-11-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "5 / 4/Air Pt1 (17 ) 23 November 1983",
+          "segment": 221
+        },
+        {
+          "value": "1981-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "5/4/AIR(9) 21 October 1981",
+          "segment": 353
+        },
+        {
+          "value": "1981-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "21 October 1981, herewith proforma.",
+          "segment": 356
+        }
+      ]
+    },
+    {
       "documentId": "doc-f0e2cca5f0a3",
       "path": "DPIArchive/documents/116159-flying-saucer-reports.txt",
       "candidates": [
@@ -424553,6 +424628,21 @@
       ]
     },
     {
+      "documentId": "doc-7db1623f3f8f",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302552935.txt",
+      "candidates": [
+        {
+          "value": "1966-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference your unidentified observation of 8 July 1966.",
+          "segment": 154
+        }
+      ]
+    },
+    {
       "documentId": "doc-215559d33aa4",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302552948.txt",
       "candidates": [
@@ -425071,6 +425161,30 @@
           "method": "unclassified-mention",
           "evidence": "Reference your unidentified observation of 8 October 1966.",
           "segment": 45
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9a4b017306ba",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302556755.txt",
+      "candidates": [
+        {
+          "value": "1966-10-10",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "This office received a call on 10 October 1966, from Mr.",
+          "segment": 70
+        },
+        {
+          "value": "1966-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "* Reference message number 1 540 0039 66 14 October 1966",
+          "segment": 143
         }
       ]
     },
