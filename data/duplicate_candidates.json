@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e27e6e3ac778c849a87cb0146a6dd54d8657f5cb"
+    "revision": "a41e2e293418c9c47b5018d67da8516b3f913ec8"
   },
-  "count": 617,
-  "totalCount": 617,
-  "shownCount": 617,
+  "count": 620,
+  "totalCount": 620,
+  "shownCount": 620,
   "candidates": [
     {
       "category": "organization",
@@ -127,8 +127,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 837,
-        "documentCount": 511
+        "mentions": 844,
+        "documentCount": 512
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -143,8 +143,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 837,
-        "documentCount": 511
+        "mentions": 844,
+        "documentCount": 512
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -559,8 +559,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 678,
-        "documentCount": 369
+        "mentions": 680,
+        "documentCount": 370
       },
       "right": {
         "name": "Edward Air Force Base",
@@ -575,8 +575,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 678,
-        "documentCount": 369
+        "mentions": 680,
+        "documentCount": 370
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -956,6 +956,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Bureau of Standards",
+        "mentions": 156,
+        "documentCount": 22
+      },
+      "right": {
+        "name": "Bureau of Standard",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.973,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Luke Air Force Base",
@@ -1012,8 +1028,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 439,
-        "documentCount": 71
+        "mentions": 442,
+        "documentCount": 72
       },
       "similarity": 0.971,
       "reason": "similar name",
@@ -1439,8 +1455,24 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 837,
-        "documentCount": 511
+        "mentions": 844,
+        "documentCount": 512
+      },
+      "right": {
+        "name": "WRICHT-PATTERSON AIR FORCE BASE",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patterson Air Force Base",
+        "mentions": 844,
+        "documentCount": 512
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -1455,24 +1487,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 837,
-        "documentCount": 511
-      },
-      "right": {
-        "name": "WRICHT-PATTERSON AIR FORCE BASE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.968,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Wright-Patterson Air Force Base",
-        "mentions": 837,
-        "documentCount": 511
+        "mentions": 844,
+        "documentCount": 512
       },
       "right": {
         "name": "Weight-Patterson Air Force Base",
@@ -1487,8 +1503,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 837,
-        "documentCount": 511
+        "mentions": 844,
+        "documentCount": 512
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1887,8 +1903,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 712,
-        "documentCount": 381
+        "mentions": 714,
+        "documentCount": 382
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -2175,8 +2191,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 632,
-        "documentCount": 402
+        "mentions": 634,
+        "documentCount": 403
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -2476,6 +2492,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "The Air Force Base",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Airforce Base",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "George Peddley",
@@ -2517,22 +2549,6 @@
       "right": {
         "name": "John Humphrys",
         "mentions": 5,
-        "documentCount": 3
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "The Air Force Base",
-        "mentions": 6,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "Airforce Base",
-        "mentions": 3,
         "documentCount": 3
       },
       "similarity": 0.963,
@@ -4084,8 +4100,8 @@
       },
       "right": {
         "name": "Ken Johnson",
-        "mentions": 4,
-        "documentCount": 3
+        "mentions": 5,
+        "documentCount": 4
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -4463,8 +4479,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Division",
-        "mentions": 70,
-        "documentCount": 38
+        "mentions": 72,
+        "documentCount": 39
       },
       "right": {
         "name": "Intelligonce Division",
@@ -4671,8 +4687,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8221,
-        "documentCount": 2012
+        "mentions": 8225,
+        "documentCount": 2014
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -4691,9 +4707,9 @@
         "documentCount": 4
       },
       "right": {
-        "name": "Wright-Patterson Air Foroe Base",
+        "name": "WRICHT-PATTERSON AIR FORCE BASE",
         "mentions": 3,
-        "documentCount": 2
+        "documentCount": 3
       },
       "similarity": 0.951,
       "reason": "similar name",
@@ -4707,8 +4723,8 @@
         "documentCount": 4
       },
       "right": {
-        "name": "WRICHT-PATTERSON AIR FORCE BASE",
-        "mentions": 2,
+        "name": "Wright-Patterson Air Foroe Base",
+        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.951,
@@ -4750,9 +4766,9 @@
     {
       "category": "location",
       "left": {
-        "name": "Wright-Patterson Air Foroe Base",
+        "name": "WRICHT-PATTERSON AIR FORCE BASE",
         "mentions": 3,
-        "documentCount": 2
+        "documentCount": 3
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -4766,8 +4782,8 @@
     {
       "category": "location",
       "left": {
-        "name": "WRICHT-PATTERSON AIR FORCE BASE",
-        "mentions": 2,
+        "name": "Wright-Patterson Air Foroe Base",
+        "mentions": 3,
         "documentCount": 2
       },
       "right": {
@@ -5268,8 +5284,24 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 439,
-        "documentCount": 71
+        "mentions": 442,
+        "documentCount": 72
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Police Department",
+        "mentions": 112,
+        "documentCount": 82
+      },
+      "right": {
+        "name": "Polioe Department",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -5356,6 +5388,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Kansas University",
+        "mentions": 5,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Kansai University",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Richard Niemtzow",
@@ -5369,22 +5417,6 @@
       },
       "similarity": 0.941,
       "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Kansas University",
-        "mentions": 5,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Kansai University",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -5583,8 +5615,8 @@
       "category": "organization",
       "left": {
         "name": "Air Intelligence",
-        "mentions": 100,
-        "documentCount": 38
+        "mentions": 101,
+        "documentCount": 39
       },
       "right": {
         "name": "Alr Intelligence",
@@ -5903,8 +5935,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8221,
-        "documentCount": 2012
+        "mentions": 8225,
+        "documentCount": 2014
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -5919,8 +5951,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 837,
-        "documentCount": 511
+        "mentions": 844,
+        "documentCount": 512
       },
       "right": {
         "name": "Wright-Fattorson Air Force Base",
@@ -5950,12 +5982,44 @@
     {
       "category": "location",
       "left": {
+        "name": "WRICHT-PATTERSON AIR FORCE BASE",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
         "name": "Wright-Patterson Air Foroe Base",
         "mentions": 3,
         "documentCount": 2
       },
-      "right": {
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Weight-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "WRICHT-PATTERSON AIR FORCE BASE",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "WRIGHT PATTIRSON AIR FORCE BASE",
         "mentions": 2,
         "documentCount": 2
       },
@@ -6030,38 +6094,6 @@
     {
       "category": "location",
       "left": {
-        "name": "WRICHT-PATTERSON AIR FORCE BASE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Weight-Patterson Air Force Base",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.935,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "WRICHT-PATTERSON AIR FORCE BASE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "WRIGHT PATTIRSON AIR FORCE BASE",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.935,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
         "name": "Weight-Patterson Air Force Base",
         "mentions": 2,
         "documentCount": 2
@@ -6079,8 +6111,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 249,
-        "documentCount": 127
+        "mentions": 250,
+        "documentCount": 128
       },
       "right": {
         "name": "Army Air Fcrces",
@@ -6639,8 +6671,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 336,
-        "documentCount": 147
+        "mentions": 339,
+        "documentCount": 148
       },
       "right": {
         "name": "Department of the Army",
@@ -6655,8 +6687,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 336,
-        "documentCount": 147
+        "mentions": 339,
+        "documentCount": 148
       },
       "right": {
         "name": "The Department of the Armr",
@@ -6840,6 +6872,22 @@
         "documentCount": 1
       },
       "similarity": 0.93,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Salt Lake City",
+        "mentions": 634,
+        "documentCount": 403
+      },
+      "right": {
+        "name": "Selt Lake City",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -7260,6 +7308,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "The Air Force Base",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Alr Force Base",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Brian Forrester",
@@ -7286,22 +7350,6 @@
         "name": "Albert Hofmann",
         "mentions": 4,
         "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "The Air Force Base",
-        "mentions": 6,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "Alr Force Base",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -7455,8 +7503,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 336,
-        "documentCount": 147
+        "mentions": 339,
+        "documentCount": 148
       },
       "right": {
         "name": "DEPARTMENT OF THE AL",
@@ -8927,8 +8975,8 @@
       "category": "person",
       "left": {
         "name": "Ken Johnson",
-        "mentions": 4,
-        "documentCount": 3
+        "mentions": 5,
+        "documentCount": 4
       },
       "right": {
         "name": "Ben Johnson",
@@ -9726,12 +9774,12 @@
     {
       "category": "person",
       "left": {
-        "name": "Allen Vaughn",
-        "mentions": 3,
+        "name": "Mike Johnson",
+        "mentions": 4,
         "documentCount": 3
       },
       "right": {
-        "name": "Alan Vaughn",
+        "name": "Ken Johnson",
         "mentions": 5,
         "documentCount": 4
       },
@@ -9742,14 +9790,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Mike Johnson",
-        "mentions": 4,
+        "name": "Allen Vaughn",
+        "mentions": 3,
         "documentCount": 3
       },
       "right": {
-        "name": "Ken Johnson",
-        "mentions": 4,
-        "documentCount": 3
+        "name": "Alan Vaughn",
+        "mentions": 5,
+        "documentCount": 4
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -9871,8 +9919,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49656,
-        "documentCount": 12605
+        "mentions": 49659,
+        "documentCount": 12607
       },
       "right": {
         "name": "North American Space Agency",
