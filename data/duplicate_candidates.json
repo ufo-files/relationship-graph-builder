@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d0233c7203f5f8544d2bcad49170e2fc873563be"
+    "revision": "e80fb8e982dec85f15994ba3cb7b1fd99e5a4db8"
   },
-  "count": 628,
-  "totalCount": 628,
-  "shownCount": 628,
+  "count": 630,
+  "totalCount": 630,
+  "shownCount": 630,
   "candidates": [
     {
       "category": "organization",
@@ -420,8 +420,8 @@
       },
       "right": {
         "name": "John Hopkins University",
-        "mentions": 6,
-        "documentCount": 6
+        "mentions": 7,
+        "documentCount": 7
       },
       "similarity": 0.979,
       "reason": "similar name",
@@ -1023,8 +1023,8 @@
       "category": "government_agency",
       "left": {
         "name": "Bureau of Standards",
-        "mentions": 156,
-        "documentCount": 22
+        "mentions": 158,
+        "documentCount": 23
       },
       "right": {
         "name": "Bureau of Standard",
@@ -1461,6 +1461,22 @@
       "right": {
         "name": "Russell Callaghan",
         "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Com",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of Co",
+        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.97,
@@ -3516,6 +3532,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "BUREAU OF IN",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Bureau of Inv",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "AF Base Unit",
@@ -3574,22 +3606,6 @@
         "name": "John Lumbergh",
         "mentions": 4,
         "documentCount": 2
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "BUREAU OF IN",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Bureau of Inv",
-        "mentions": 4,
-        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -4383,12 +4399,28 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Army",
-        "mentions": 127,
-        "documentCount": 55
+        "mentions": 128,
+        "documentCount": 56
       },
       "right": {
         "name": "The Department of the Armr",
         "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.955,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Office of the Secretary",
+        "mentions": 32,
+        "documentCount": 28
+      },
+      "right": {
+        "name": "Office of the Secreta",
+        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.955,
@@ -4655,8 +4687,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of In",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 6,
+        "documentCount": 6
       },
       "right": {
         "name": "Federal Bureau of Inve",
@@ -4767,8 +4799,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8494,
-        "documentCount": 2028
+        "mentions": 8561,
+        "documentCount": 2030
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -5375,8 +5407,8 @@
       "category": "government_agency",
       "left": {
         "name": "Police Department",
-        "mentions": 114,
-        "documentCount": 83
+        "mentions": 115,
+        "documentCount": 84
       },
       "right": {
         "name": "Polioe Department",
@@ -5652,8 +5684,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 335,
-        "documentCount": 89
+        "mentions": 338,
+        "documentCount": 90
       },
       "similarity": 0.938,
       "reason": "similar name",
@@ -6015,8 +6047,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8494,
-        "documentCount": 2028
+        "mentions": 8561,
+        "documentCount": 2030
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -6708,8 +6740,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 335,
-        "documentCount": 89
+        "mentions": 338,
+        "documentCount": 90
       },
       "similarity": 0.932,
       "reason": "similar name",
@@ -6783,13 +6815,13 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 353,
-        "documentCount": 149
+        "mentions": 355,
+        "documentCount": 150
       },
       "right": {
         "name": "Department of the Army",
-        "mentions": 127,
-        "documentCount": 55
+        "mentions": 128,
+        "documentCount": 56
       },
       "similarity": 0.93,
       "reason": "similar name",
@@ -6799,8 +6831,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 353,
-        "documentCount": 149
+        "mentions": 355,
+        "documentCount": 150
       },
       "right": {
         "name": "The Department of the Armr",
@@ -7631,8 +7663,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 353,
-        "documentCount": 149
+        "mentions": 355,
+        "documentCount": 150
       },
       "right": {
         "name": "DEPARTMENT OF THE AL",
@@ -7919,8 +7951,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 166,
-        "documentCount": 131
+        "mentions": 167,
+        "documentCount": 132
       },
       "right": {
         "name": "Mohave Desert",
@@ -8702,6 +8734,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Richard Davis",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Richard David",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Karen Anderson",
         "mentions": 3,
         "documentCount": 2
@@ -8742,22 +8790,6 @@
         "name": "University of Cali",
         "mentions": 4,
         "documentCount": 4
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Richard Davis",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Richard David",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -10047,8 +10079,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49787,
-        "documentCount": 12649
+        "mentions": 49789,
+        "documentCount": 12650
       },
       "right": {
         "name": "North American Space Agency",
