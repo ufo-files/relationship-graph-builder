@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a72fac6fb49eb5dcc90b5c798c96c47c66dc08b1"
+    "revision": "7fcbf3380a391f587b11d62d27091c2d3fed19e5"
   },
-  "count": 636,
-  "totalCount": 636,
-  "shownCount": 636,
+  "count": 641,
+  "totalCount": 641,
+  "shownCount": 641,
   "candidates": [
     {
       "category": "organization",
@@ -159,8 +159,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 882,
-        "documentCount": 531
+        "mentions": 893,
+        "documentCount": 533
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -175,8 +175,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 882,
-        "documentCount": 531
+        "mentions": 893,
+        "documentCount": 533
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -287,13 +287,29 @@
       "category": "location",
       "left": {
         "name": "White Sands Missile Range",
-        "mentions": 96,
-        "documentCount": 81
+        "mentions": 100,
+        "documentCount": 82
       },
       "right": {
         "name": "White Sands Missle Range",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.98,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "White Sands Missile Range",
+        "mentions": 100,
+        "documentCount": 82
+      },
+      "right": {
+        "name": "White Sand Missile Range",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.98,
       "reason": "similar name",
@@ -495,8 +511,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 607,
-        "documentCount": 312
+        "mentions": 638,
+        "documentCount": 313
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -527,8 +543,8 @@
       "category": "location",
       "left": {
         "name": "Holloman Air Force Base",
-        "mentions": 227,
-        "documentCount": 121
+        "mentions": 228,
+        "documentCount": 122
       },
       "right": {
         "name": "Hollman Air Force Base",
@@ -607,8 +623,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 688,
-        "documentCount": 376
+        "mentions": 689,
+        "documentCount": 377
       },
       "right": {
         "name": "Edward Air Force Base",
@@ -623,8 +639,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 688,
-        "documentCount": 376
+        "mentions": 689,
+        "documentCount": 377
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -1295,8 +1311,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 198,
-        "documentCount": 128
+        "mentions": 204,
+        "documentCount": 129
       },
       "right": {
         "name": "Air Technical Intelligence Cen'er",
@@ -1311,8 +1327,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 198,
-        "documentCount": 128
+        "mentions": 204,
+        "documentCount": 129
       },
       "right": {
         "name": "Air Technical Intelligence Conter",
@@ -1567,8 +1583,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 882,
-        "documentCount": 531
+        "mentions": 893,
+        "documentCount": 533
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1583,8 +1599,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 882,
-        "documentCount": 531
+        "mentions": 893,
+        "documentCount": 533
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -1599,8 +1615,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 882,
-        "documentCount": 531
+        "mentions": 893,
+        "documentCount": 533
       },
       "right": {
         "name": "Weight-Patterson Air Force Base",
@@ -1615,8 +1631,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 882,
-        "documentCount": 531
+        "mentions": 893,
+        "documentCount": 533
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1685,6 +1701,22 @@
       "right": {
         "name": "AREA NAVI GATION",
         "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Trindade Island",
+        "mentions": 37,
+        "documentCount": 20
+      },
+      "right": {
+        "name": "Trinidade Island",
+        "mentions": 4,
         "documentCount": 2
       },
       "similarity": 0.968,
@@ -1820,6 +1852,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "The Technical Incelligence Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Technical Intelligence Division",
+        "mentions": 5,
+        "documentCount": 3
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Single Site ASR",
@@ -1830,6 +1878,22 @@
         "name": "Single Site ARSR",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Trinidad Island",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Trinidade Island",
+        "mentions": 4,
+        "documentCount": 2
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -1892,22 +1956,6 @@
       },
       "right": {
         "name": "Iright-Patterson AIr Force Base",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.968,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "The Technical Incelligence Division",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Technical Intelligence Division",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2015,8 +2063,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 720,
-        "documentCount": 387
+        "mentions": 726,
+        "documentCount": 388
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -2031,8 +2079,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 574,
-        "documentCount": 270
+        "mentions": 579,
+        "documentCount": 271
       },
       "right": {
         "name": "Jacques Vallees",
@@ -2319,8 +2367,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 642,
-        "documentCount": 409
+        "mentions": 643,
+        "documentCount": 410
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -2335,8 +2383,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 574,
-        "documentCount": 270
+        "mentions": 579,
+        "documentCount": 271
       },
       "right": {
         "name": "Jacques Valle",
@@ -2351,8 +2399,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 285,
-        "documentCount": 181
+        "mentions": 289,
+        "documentCount": 182
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -2367,8 +2415,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 285,
-        "documentCount": 181
+        "mentions": 289,
+        "documentCount": 182
       },
       "right": {
         "name": "Major Donald Keyhoes",
@@ -2508,6 +2556,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Professor Hermann Oberth",
+        "mentions": 8,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Professor Herman Oberth",
+        "mentions": 9,
+        "documentCount": 9
+      },
+      "similarity": 0.963,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "Project Stigma",
@@ -2553,22 +2617,6 @@
       },
       "similarity": 0.963,
       "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Professor Hermann Oberth",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Professor Herman Oberth",
-        "mentions": 9,
-        "documentCount": 9
-      },
-      "similarity": 0.963,
-      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -2620,6 +2668,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "George Peddley",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "George Pedley",
+        "mentions": 8,
+        "documentCount": 4
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "The Air Force Base",
@@ -2630,22 +2694,6 @@
         "name": "Airforce Base",
         "mentions": 4,
         "documentCount": 4
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "George Peddley",
-        "mentions": 4,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "George Pedley",
-        "mentions": 6,
-        "documentCount": 3
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -2879,8 +2927,8 @@
       "category": "person",
       "left": {
         "name": "Frank Edwards",
-        "mentions": 287,
-        "documentCount": 117
+        "mentions": 312,
+        "documentCount": 118
       },
       "right": {
         "name": "Frank Edward",
@@ -2895,8 +2943,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 285,
-        "documentCount": 181
+        "mentions": 289,
+        "documentCount": 182
       },
       "right": {
         "name": "Major Donald Keyho",
@@ -3180,6 +3228,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "James Mosley",
+        "mentions": 9,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "James Moseley",
+        "mentions": 13,
+        "documentCount": 10
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Army Reserve",
@@ -3222,22 +3286,6 @@
         "name": "Lake Monster",
         "mentions": 4,
         "documentCount": 3
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "James Mosley",
-        "mentions": 9,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "James Moseley",
-        "mentions": 10,
-        "documentCount": 9
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -3493,6 +3541,22 @@
       "right": {
         "name": "Paul Shartle",
         "mentions": 6,
+        "documentCount": 4
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Bill Kaufmann",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Bill Kaufman",
+        "mentions": 5,
         "documentCount": 4
       },
       "similarity": 0.96,
@@ -3804,6 +3868,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "White Sands Missle Range",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "White Sand Missile Range",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.958,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "James Randi",
@@ -3855,8 +3935,8 @@
       "category": "program",
       "left": {
         "name": "Project Sign",
-        "mentions": 191,
-        "documentCount": 111
+        "mentions": 195,
+        "documentCount": 112
       },
       "right": {
         "name": "Project SIG",
@@ -5631,8 +5711,8 @@
       "category": "organization",
       "left": {
         "name": "American Institute of Aeronautics and Astronautics",
-        "mentions": 68,
-        "documentCount": 41
+        "mentions": 69,
+        "documentCount": 42
       },
       "right": {
         "name": "American Institute of Astronautics and Aeronautics",
@@ -5743,8 +5823,8 @@
       "category": "organization",
       "left": {
         "name": "Condon Committee",
-        "mentions": 163,
-        "documentCount": 98
+        "mentions": 164,
+        "documentCount": 99
       },
       "right": {
         "name": "Condom Committee",
@@ -6111,8 +6191,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 882,
-        "documentCount": 531
+        "mentions": 893,
+        "documentCount": 533
       },
       "right": {
         "name": "Wright-Fattorson Air Force Base",
@@ -7087,8 +7167,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 642,
-        "documentCount": 409
+        "mentions": 643,
+        "documentCount": 410
       },
       "right": {
         "name": "Selt Lake City",
@@ -7103,8 +7183,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 574,
-        "documentCount": 270
+        "mentions": 579,
+        "documentCount": 271
       },
       "right": {
         "name": "Jacques Valley",
@@ -7119,8 +7199,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 427,
-        "documentCount": 209
+        "mentions": 443,
+        "documentCount": 210
       },
       "right": {
         "name": "George Adamsky",
@@ -7727,8 +7807,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 607,
-        "documentCount": 312
+        "mentions": 638,
+        "documentCount": 313
       },
       "right": {
         "name": "University Colorado",
@@ -7743,8 +7823,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 607,
-        "documentCount": 312
+        "mentions": 638,
+        "documentCount": 313
       },
       "right": {
         "name": "University of Color",
@@ -7951,8 +8031,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 427,
-        "documentCount": 209
+        "mentions": 443,
+        "documentCount": 210
       },
       "right": {
         "name": "George Adams",
@@ -7967,8 +8047,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 380,
-        "documentCount": 200
+        "mentions": 389,
+        "documentCount": 201
       },
       "right": {
         "name": "Natural Investigations Committee",
@@ -7983,8 +8063,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 380,
-        "documentCount": 200
+        "mentions": 389,
+        "documentCount": 201
       },
       "right": {
         "name": "National Investigative Committee",
@@ -7999,8 +8079,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 268,
-        "documentCount": 180
+        "mentions": 274,
+        "documentCount": 182
       },
       "right": {
         "name": "Intelligence Cf'nter",
@@ -8015,8 +8095,8 @@
       "category": "program",
       "left": {
         "name": "Project Sign",
-        "mentions": 191,
-        "documentCount": 111
+        "mentions": 195,
+        "documentCount": 112
       },
       "right": {
         "name": "Project Signed",
@@ -8047,8 +8127,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 169,
-        "documentCount": 134
+        "mentions": 170,
+        "documentCount": 135
       },
       "right": {
         "name": "Mohave Desert",
@@ -8063,8 +8143,8 @@
       "category": "person",
       "left": {
         "name": "Howard Menger",
-        "mentions": 64,
-        "documentCount": 36
+        "mentions": 66,
+        "documentCount": 37
       },
       "right": {
         "name": "Howard Manger",
@@ -8079,8 +8159,8 @@
       "category": "person",
       "left": {
         "name": "Howard Menger",
-        "mentions": 64,
-        "documentCount": 36
+        "mentions": 66,
+        "documentCount": 37
       },
       "right": {
         "name": "Howard Mender",
@@ -8335,8 +8415,8 @@
       "category": "person",
       "left": {
         "name": "Charles Bowen",
-        "mentions": 15,
-        "documentCount": 12
+        "mentions": 16,
+        "documentCount": 13
       },
       "right": {
         "name": "Col. Charles Brown",
@@ -8638,6 +8718,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Professor Hermann Oberth",
+        "mentions": 8,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Professor Hermann Ober",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Peter Lavenda",
         "mentions": 3,
         "documentCount": 3
@@ -8774,22 +8870,6 @@
         "name": "Johnny Mac Institute",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Professor Hermann Oberth",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Professor Hermann Ober",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -10175,8 +10255,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49811,
-        "documentCount": 12656
+        "mentions": 49825,
+        "documentCount": 12660
       },
       "right": {
         "name": "North American Space Agency",
