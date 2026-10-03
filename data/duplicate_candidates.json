@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d6617fd6391417f5aa400cc49e6f14fed772f6d0"
+    "revision": "45ffc0e1ebbc885057241ecc79f88bd8da68fd83"
   },
-  "count": 630,
-  "totalCount": 630,
-  "shownCount": 630,
+  "count": 633,
+  "totalCount": 633,
+  "shownCount": 633,
   "candidates": [
     {
       "category": "organization",
@@ -134,6 +134,22 @@
         "name": "Advanced Research Project Agency",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.985,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Directors of Central Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "The Director of Central Intelligence",
+        "mentions": 15,
+        "documentCount": 12
       },
       "similarity": 0.985,
       "reason": "similar name",
@@ -806,6 +822,22 @@
         "name": "Intelligence Services",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.976,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Intelligence Program",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Intelligence Programs",
+        "mentions": 16,
+        "documentCount": 7
       },
       "similarity": 0.976,
       "reason": "similar name",
@@ -4078,6 +4110,22 @@
     {
       "category": "person",
       "left": {
+        "name": "John Deutsch",
+        "mentions": 8,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "John Deutch",
+        "mentions": 12,
+        "documentCount": 8
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Peter Levin",
         "mentions": 15,
         "documentCount": 10
@@ -4166,22 +4214,6 @@
         "name": "Nancy Meyers",
         "mentions": 3,
         "documentCount": 2
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "John Deutsch",
-        "mentions": 8,
-        "documentCount": 6
-      },
-      "right": {
-        "name": "John Deutch",
-        "mentions": 7,
-        "documentCount": 7
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -4399,8 +4431,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Army",
-        "mentions": 129,
-        "documentCount": 57
+        "mentions": 131,
+        "documentCount": 59
       },
       "right": {
         "name": "The Department of the Armr",
@@ -4542,9 +4574,25 @@
     {
       "category": "organization",
       "left": {
+        "name": "Directors of Central Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Directór of Centrel Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.954,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Under Secretary of Defense for Intelligence",
-        "mentions": 126,
-        "documentCount": 65
+        "mentions": 144,
+        "documentCount": 66
       },
       "right": {
         "name": "Undersecretary for Defense for Intelligence",
@@ -4575,8 +4623,8 @@
       "category": "organization",
       "left": {
         "name": "University of Chicago",
-        "mentions": 120,
-        "documentCount": 91
+        "mentions": 121,
+        "documentCount": 92
       },
       "right": {
         "name": "University of Chicaco",
@@ -4639,8 +4687,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of the Director",
-        "mentions": 13,
-        "documentCount": 12
+        "mentions": 14,
+        "documentCount": 13
       },
       "right": {
         "name": "Office of the Direct",
@@ -4799,8 +4847,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8564,
-        "documentCount": 2032
+        "mentions": 8567,
+        "documentCount": 2033
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -5684,8 +5732,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 338,
-        "documentCount": 90
+        "mentions": 339,
+        "documentCount": 91
       },
       "similarity": 0.938,
       "reason": "similar name",
@@ -5711,8 +5759,8 @@
       "category": "organization",
       "left": {
         "name": "RAND Corporation",
-        "mentions": 130,
-        "documentCount": 78
+        "mentions": 133,
+        "documentCount": 79
       },
       "right": {
         "name": "R-nd Corporation",
@@ -6047,8 +6095,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8564,
-        "documentCount": 2032
+        "mentions": 8567,
+        "documentCount": 2033
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -6740,8 +6788,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 338,
-        "documentCount": 90
+        "mentions": 339,
+        "documentCount": 91
       },
       "similarity": 0.932,
       "reason": "similar name",
@@ -6820,8 +6868,8 @@
       },
       "right": {
         "name": "Department of the Army",
-        "mentions": 129,
-        "documentCount": 57
+        "mentions": 131,
+        "documentCount": 59
       },
       "similarity": 0.93,
       "reason": "similar name",
@@ -7903,8 +7951,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 262,
-        "documentCount": 176
+        "mentions": 264,
+        "documentCount": 177
       },
       "right": {
         "name": "Intelligence Cf'nter",
@@ -8782,6 +8830,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Joint Intelligence",
+        "mentions": 5,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Joint Intelligence Or",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "University of Califan",
         "mentions": 2,
         "documentCount": 2
@@ -8900,22 +8964,6 @@
       },
       "right": {
         "name": "Mercer County",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Joint Intelligence",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Joint Intelligence Or",
         "mentions": 2,
         "documentCount": 2
       },
