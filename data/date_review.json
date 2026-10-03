@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-03T22:27:00Z",
+  "generatedAt": "2026-10-03T23:46:25Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "faa689edd0928a4a8b001def275dc3ee3d68c566"
+    "revision": "91fb63040b0cfd687ce287bca191c21bc74ce74d"
   },
-  "documentsWithCandidates": 14654,
+  "documentsWithCandidates": 14666,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9154,6 +9154,39 @@
           "method": "unclassified-mention",
           "evidence": "On Sat, 24 Apr 2004, Center For Justice wrote",
           "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d555f3f7e67a",
+      "path": "Archives-for-the-Unexplained/documents/20040502-Re_ID-CD_-A-Proposal-640151.txt",
+      "candidates": [
+        {
+          "value": "2004-05-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sun, 2 May 2004 03:35:41 +0000 (UTC), john_SPAM@wilkins.id.au (John",
+          "segment": 2
+        },
+        {
+          "value": "2004-05-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sat, 1 May 2004 14:48:57 +0000 (UTC), Matt Silberstein",
+          "segment": 4
+        },
+        {
+          "value": "2004-04-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Fri, 30 Apr 2004 22:09:01 +0000 (UTC), Matt Silberstein",
+          "segment": 7
         }
       ]
     },
@@ -19354,6 +19387,21 @@
           "method": "unclassified-mention",
           "evidence": "John S-allman | July 31, 2011 at",
           "segment": 11
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d07bc039bc15",
+      "path": "Archives-for-the-Unexplained/documents/20110809-It-Looks-Like-I-Made-Another-Mistake.-790-5fce5012d3.txt",
+      "candidates": [
+        {
+          "value": "2011-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "By Kaitlin D-rbin Jul 23, 2011",
+          "segment": 41
         }
       ]
     },
@@ -132898,6 +132946,21 @@
           "method": "document-header",
           "evidence": "Date: Thu, 30 Jan 1997 16:53:57 -0500 (EST",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ffeff6f288ad",
+      "path": "Archives-for-the-Unexplained/documents/a31-001-48f38a0c80.txt",
+      "candidates": [
+        {
+          "value": "1997-05-29",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Thu, 29 May 1997 20:31:43 -0700",
+          "segment": 2
         }
       ]
     },
@@ -371054,6 +371117,39 @@
       ]
     },
     {
+      "documentId": "doc-fb43808cca3b",
+      "path": "DPIArchive/documents/127725-apro-bulletin-september-1956.txt",
+      "candidates": [
+        {
+          "value": "1956-09-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sept 15, 1956 APt'tOBulletin",
+          "segment": 268
+        },
+        {
+          "value": "1956-06-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Cute bartoon ln the Atlslnson Graphic, Atkj.nson, Nebraska for June 8, 1956",
+          "segment": 493
+        },
+        {
+          "value": "1956-09-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "15 Sept 1956 JrPROBulletln",
+          "segment": 850
+        }
+      ]
+    },
+    {
       "documentId": "doc-60e43256fbff",
       "path": "DPIArchive/documents/127728-apro-bulletin-december-1955.txt",
       "candidates": [
@@ -411653,6 +411749,21 @@
       ]
     },
     {
+      "documentId": "doc-abe561e253ef5c19d59d192f",
+      "path": "France-GEIPAN/paired/cases/2015-07-09251/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Wednesday, July 15, 2015, at 10:37 PM, a witness on a parking lot observed three very bright red lights forming a triangle and flying at low altitude. The object emerged from behind a forest, headed towards the witness's building, then made a 45-degree turn and di",
+          "segment": "seg-bcc303070c91948fa6eebb90"
+        }
+      ]
+    },
+    {
       "documentId": "doc-fcd8b04aaa9c08cb6caec23b",
       "path": "France-GEIPAN/paired/cases/2015-07-09256/en/translation.txt",
       "candidates": [
@@ -412570,6 +412681,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Sunday, November 1, 2015, around 7 a.m., a witness was observing the stars and noticed a random bright point, which then appeared to split into two. Using his camcorder, he watched and zoomed in, finding the multicolored diamond shape curious. No other witnesses w",
           "segment": "seg-7c9e5bdf8d209b3a0e9b9698"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6d4ed8911e0e08f30af7daaf",
+      "path": "France-GEIPAN/paired/cases/2015-11-09355/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-11-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On November 7, 2015, at 12:20 AM, a witness outside their home is intrigued by the presence in the overcast sky of a stationary, brightly glowing, colored phenomenon. The phenomenon has a high luminosity and appears to flicker. The witness then notices that their nea",
+          "segment": "seg-6682c23586c333477a17585e"
         }
       ]
     },
@@ -413939,6 +414065,21 @@
       ]
     },
     {
+      "documentId": "doc-a079f33574febd7f81ca86de",
+      "path": "France-GEIPAN/paired/cases/2017-02-09636/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-02-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On February 6, 2017, at 7:16 PM, a witness in front of their garage observed a dark triangle with two white lights moving slowly above their house. The observation lasted 30 seconds, not long enough for the witness to take a photograph. Only one testimony was collect",
+          "segment": "seg-cfd1572a59bba81e7fa2ade2"
+        }
+      ]
+    },
+    {
       "documentId": "doc-efe4584e47a8596e8a6848f0",
       "path": "France-GEIPAN/paired/cases/2017-02-09637/en/translation.txt",
       "candidates": [
@@ -415049,6 +415190,21 @@
       ]
     },
     {
+      "documentId": "doc-efcaa977246a8901f1af9e70",
+      "path": "France-GEIPAN/paired/cases/2018-12-50719/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2018-12-21",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: On December 21, 2018, between 6:55 PM and 7:00 PM, a driver was surprised to see 5 or 6 glowing objects moving silently in the sky. The witness draws one of the PAN she quickly saw in the sky and completes her report with an image and a newspaper article about the ph",
+          "segment": "seg-ddeaac391b4d7d6dec3f69c7"
+        }
+      ]
+    },
+    {
       "documentId": "doc-49a6169642ab0069aad5224c",
       "path": "France-GEIPAN/paired/cases/2019-01-50683/en/translation.txt",
       "candidates": [
@@ -416008,6 +416164,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On February 20, 2021, at approximately 07:10, while standing in front of his entrance door, the witness's attention was drawn to a bright white light that appeared in the overcast sky. This phenomenon moved silently towards the west, with limited ground lighting. The",
           "segment": "seg-388480cde6682653273f3bef"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4fe5ce0fb9f13b17c38c2f19",
+      "path": "France-GEIPAN/paired/cases/2021-03-51169/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2021-03-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** On March 27, 2021, around 4:50 a.m., the witness, accompanied by his son, drives from the village of BRUGNY-VAUDANCOURT (51) towards NANCY (54) on the RN4 highway. At the village of SOUDE (51), he spots numerous lights in the sky that remind him of \"an antenna\" i",
+          "segment": "seg-e8073d414f940f67afa3de67"
         }
       ]
     },
@@ -417083,6 +417254,21 @@
       ]
     },
     {
+      "documentId": "doc-ae09044172560a59bf1e7e22",
+      "path": "France-GEIPAN/paired/cases/2022-11-51410/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2022-11-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On November 15, 2022, around 9:30 PM, in the village of Orphin, a witness, there to retrieve his vehicle, observed a PAN in the shape of a \"Y,\" very bright and stationary. He pointed it out to his present father, who didn't pay attention. The witness then observed se",
+          "segment": "seg-78de352552317abc85fda409"
+        }
+      ]
+    },
+    {
       "documentId": "doc-533dd29a5f0fe707bcc6f227",
       "path": "France-GEIPAN/paired/cases/2022-11-51618/en/translation.txt",
       "candidates": [
@@ -417934,6 +418120,21 @@
           "method": "event-language",
           "evidence": "Description: On September 15, 2024, at approximately 8:42 PM, a driver traveling on N145 observed, through her vehicle's window, a stationary gray point in the sky, located above a tree. Intrigued, she took a picture of the object before it suddenly disappeared after a few minute",
           "segment": "seg-23e185896147cb1fe03dbd40"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bf38c0a17739ef09ebc4f6fd",
+      "path": "France-GEIPAN/paired/cases/2024-10-51585/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2024-10-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Report:** On October 20, 2024, around 8:15 PM, from his home in Villars-les-Dombes (01), the witness observed the sky as part of his follow-up of the Tsuchinshan-Atlas comet. He noticed a dark shape composed of several identical and blurry bright points. The whole scene, remini",
+          "segment": "seg-72493f1ed6136936205c7190"
         }
       ]
     },
@@ -439801,6 +440002,48 @@
           "method": "unclassified-mention",
           "evidence": "HOT 50 was handled by RAPCON from 0112 to 0129 hours CST on 1 July 1966.-",
           "segment": 76
+        }
+      ]
+    },
+    {
+      "documentId": "doc-21d3fb4a7df0",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302553257.txt",
+      "candidates": [
+        {
+          "value": "1966-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUBJECT: UFO Report for 19 July 1966 (TDETR Ltr, 2 Aug 1966",
+          "segment": 13
+        },
+        {
+          "value": "1966-08-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUBJECT: UFO Report for 19 July 1966 (TDETR Ltr, 2 Aug 1966",
+          "segment": 13
+        },
+        {
+          "value": "1966-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Uro Report for 19 July 1966'",
+          "segment": 26
+        },
+        {
+          "value": "1966-07-19",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The report is dated 19 July 1966.",
+          "segment": 29
         }
       ]
     },
