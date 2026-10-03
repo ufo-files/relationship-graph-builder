@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "7f975c67828fc0f5554927308ff25a4b745bc0ce"
+    "revision": "faa689edd0928a4a8b001def275dc3ee3d68c566"
   },
-  "count": 647,
-  "totalCount": 647,
-  "shownCount": 647,
+  "count": 649,
+  "totalCount": 649,
+  "shownCount": 649,
   "candidates": [
     {
       "category": "organization",
@@ -159,8 +159,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 894,
-        "documentCount": 534
+        "mentions": 895,
+        "documentCount": 535
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -175,8 +175,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 894,
-        "documentCount": 534
+        "mentions": 895,
+        "documentCount": 535
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -412,14 +412,14 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "location",
+      "category": "organization",
       "left": {
-        "name": "Malmstrom Air Force Base",
-        "mentions": 165,
-        "documentCount": 99
+        "name": "Directorate of Air Staff",
+        "mentions": 171,
+        "documentCount": 12
       },
       "right": {
-        "name": "Malstrom Air Force Base",
+        "name": "Directorate of Airstaff",
         "mentions": 2,
         "documentCount": 2
       },
@@ -428,14 +428,14 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "organization",
+      "category": "location",
       "left": {
-        "name": "Directorate of Air Staff",
-        "mentions": 153,
-        "documentCount": 11
+        "name": "Malmstrom Air Force Base",
+        "mentions": 165,
+        "documentCount": 99
       },
       "right": {
-        "name": "Directorate of Airstaff",
+        "name": "Malstrom Air Force Base",
         "mentions": 2,
         "documentCount": 2
       },
@@ -671,8 +671,8 @@
       "category": "location",
       "left": {
         "name": "MacDill Air Force Base",
-        "mentions": 189,
-        "documentCount": 99
+        "mentions": 190,
+        "documentCount": 100
       },
       "right": {
         "name": "McDill Air Force Base",
@@ -687,8 +687,8 @@
       "category": "location",
       "left": {
         "name": "MacDill Air Force Base",
-        "mentions": 189,
-        "documentCount": 99
+        "mentions": 190,
+        "documentCount": 100
       },
       "right": {
         "name": "Macdill Airforce Base",
@@ -798,6 +798,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Public Records Office",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Public Record Office",
+        "mentions": 60,
+        "documentCount": 14
+      },
+      "similarity": 0.976,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Department of Supply",
         "mentions": 55,
         "documentCount": 23
@@ -828,22 +844,6 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
-      "left": {
-        "name": "Public Records Office",
-        "mentions": 6,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Public Record Office",
-        "mentions": 21,
-        "documentCount": 12
-      },
-      "similarity": 0.976,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "organization",
       "left": {
         "name": "Intelligence Service",
@@ -852,8 +852,8 @@
       },
       "right": {
         "name": "Intelligence Services",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.976,
       "reason": "similar name",
@@ -975,8 +975,8 @@
       "category": "program",
       "left": {
         "name": "Operation Main Brace",
-        "mentions": 27,
-        "documentCount": 12
+        "mentions": 31,
+        "documentCount": 13
       },
       "right": {
         "name": "Operation Main Race",
@@ -1327,8 +1327,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 208,
-        "documentCount": 147
+        "mentions": 209,
+        "documentCount": 148
       },
       "right": {
         "name": "Steven Spielbergs",
@@ -1615,8 +1615,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 894,
-        "documentCount": 534
+        "mentions": 895,
+        "documentCount": 535
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1631,8 +1631,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 894,
-        "documentCount": 534
+        "mentions": 895,
+        "documentCount": 535
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -1647,8 +1647,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 894,
-        "documentCount": 534
+        "mentions": 895,
+        "documentCount": 535
       },
       "right": {
         "name": "Weight-Patterson Air Force Base",
@@ -1663,8 +1663,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 894,
-        "documentCount": 534
+        "mentions": 895,
+        "documentCount": 535
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -1711,8 +1711,8 @@
       "category": "location",
       "left": {
         "name": "Marshall Islands",
-        "mentions": 63,
-        "documentCount": 31
+        "mentions": 64,
+        "documentCount": 32
       },
       "right": {
         "name": "Marshall Island",
@@ -2095,8 +2095,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 728,
-        "documentCount": 390
+        "mentions": 729,
+        "documentCount": 391
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -2111,8 +2111,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 579,
-        "documentCount": 271
+        "mentions": 581,
+        "documentCount": 272
       },
       "right": {
         "name": "Jacques Vallees",
@@ -2415,8 +2415,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 579,
-        "documentCount": 271
+        "mentions": 581,
+        "documentCount": 272
       },
       "right": {
         "name": "Jacques Valle",
@@ -2774,6 +2774,22 @@
         "name": "George Koehler",
         "mentions": 6,
         "documentCount": 6
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Records Office",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Record Office",
+        "mentions": 7,
+        "documentCount": 3
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -4959,8 +4975,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8680,
-        "documentCount": 2038
+        "mentions": 8681,
+        "documentCount": 2039
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -5887,8 +5903,8 @@
       "category": "organization",
       "left": {
         "name": "Air Intelligence",
-        "mentions": 106,
-        "documentCount": 40
+        "mentions": 107,
+        "documentCount": 41
       },
       "right": {
         "name": "Alr Intelligence",
@@ -6223,8 +6239,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8680,
-        "documentCount": 2038
+        "mentions": 8681,
+        "documentCount": 2039
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -6239,8 +6255,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 894,
-        "documentCount": 534
+        "mentions": 895,
+        "documentCount": 535
       },
       "right": {
         "name": "Wright-Fattorson Air Force Base",
@@ -7263,8 +7279,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 579,
-        "documentCount": 271
+        "mentions": 581,
+        "documentCount": 272
       },
       "right": {
         "name": "Jacques Valley",
@@ -8556,6 +8572,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Directorate of Air",
+        "mentions": 17,
+        "documentCount": 11
+      },
+      "right": {
+        "name": "The Directorate of Air Fo",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Daniel Goldin",
@@ -8566,22 +8598,6 @@
         "name": "Dr. Daniel Golden",
         "mentions": 8,
         "documentCount": 6
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Directorate of Air",
-        "mentions": 16,
-        "documentCount": 10
-      },
-      "right": {
-        "name": "The Directorate of Air Fo",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -9230,12 +9246,12 @@
     {
       "category": "government_agency",
       "left": {
-        "name": "Office of the Assistant",
-        "mentions": 29,
-        "documentCount": 25
+        "name": "Joint Intelligence Bureau",
+        "mentions": 30,
+        "documentCount": 18
       },
       "right": {
-        "name": "The Office of the Assistant Chi",
+        "name": "Joint Inielligcnce Bureau",
         "mentions": 2,
         "documentCount": 2
       },
@@ -9246,12 +9262,12 @@
     {
       "category": "government_agency",
       "left": {
-        "name": "Joint Intelligence Bureau",
+        "name": "Office of the Assistant",
         "mentions": 29,
-        "documentCount": 17
+        "documentCount": 25
       },
       "right": {
-        "name": "Joint Inielligcnce Bureau",
+        "name": "The Office of the Assistant Chi",
         "mentions": 2,
         "documentCount": 2
       },
@@ -9375,8 +9391,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 208,
-        "documentCount": 147
+        "mentions": 209,
+        "documentCount": 148
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -10254,6 +10270,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Ken Collins",
+        "mentions": 1,
+        "documentCount": 1
+      },
+      "right": {
+        "name": "Mike Collins",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "similarity": 0.87,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Tim Gallaudet",
         "mentions": 68,
         "documentCount": 22
@@ -10351,8 +10383,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49857,
-        "documentCount": 12664
+        "mentions": 49858,
+        "documentCount": 12665
       },
       "right": {
         "name": "North American Space Agency",
