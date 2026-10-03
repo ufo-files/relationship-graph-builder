@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-03T19:49:04Z",
+  "generatedAt": "2026-10-03T21:06:32Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "3a053b5e6cb7a637a69ee2e754745af34a06add5"
+    "revision": "7f975c67828fc0f5554927308ff25a4b745bc0ce"
   },
-  "documentsWithCandidates": 14638,
+  "documentsWithCandidates": 14647,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -313802,6 +313802,30 @@
       ]
     },
     {
+      "documentId": "doc-e07f36badf30",
+      "path": "Chile-SEFAA/documents/CASO-N-1917-08092023.txt",
+      "candidates": [
+        {
+          "value": "2023-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "09-08-04-38-20-238(0).mp4”, “Screenrecorder-2023-09-08-04-38-20-",
+          "segment": 10
+        },
+        {
+          "value": "2023-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "238(1)(0).mp4” y “Screenrecorder-2023-09-08-04-38-20-238(1)(1).mp4”.",
+          "segment": 11
+        }
+      ]
+    },
+    {
       "documentId": "doc-afbc8f49398c",
       "path": "Chile-SEFAA/documents/CASO-N-1929-30102023.txt",
       "candidates": [
@@ -369824,6 +369848,39 @@
       ]
     },
     {
+      "documentId": "doc-944b17a0b156",
+      "path": "DPIArchive/documents/127801-embalming-et-article-from-the-american-funeral-director-relating-to-et-bodies-recovered-from-the-roswell-crash-november-1994.txt",
+      "candidates": [
+        {
+          "value": "1947-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "New Mexico on July 7, 1947.",
+          "segment": 468
+        },
+        {
+          "value": "1954-04-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 19, 1954, which describes a",
+          "segment": 555
+        },
+        {
+          "value": "1954-02-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "February 20, 1954, visit to Edwards",
+          "segment": 556
+        }
+      ]
+    },
+    {
       "documentId": "doc-9aa73fb8d060",
       "path": "DPIArchive/documents/127819-statement-for-congressional-record-9-9-25.txt",
       "candidates": [
@@ -371686,6 +371743,21 @@
           "method": "unclassified-mention",
           "evidence": "SECRET//REL TO USA, FVEY Declassified on: 24 October 2025",
           "segment": 164
+        }
+      ]
+    },
+    {
+      "documentId": "doc-faefc31a0918",
+      "path": "DPIArchive/documents/130330-dow-uap-d62-mission-report-strait-of-hormuz-september-2020-pdf.txt",
+      "candidates": [
+        {
+          "value": "2026-01-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Declassified or: 22 January 2026",
+          "segment": 2
         }
       ]
     },
@@ -410312,6 +410384,21 @@
       ]
     },
     {
+      "documentId": "doc-082ce18efb8671894394931d",
+      "path": "France-GEIPAN/paired/cases/2015-07-09250/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-07-19",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On July 19, 2015, around midnight, two people observed through binoculars a line of several orange lights in the sky. The objects shimmered, and the whole scene resembled a formation flight moving from West to East. One witness noticed a last light quickly joining th",
+          "segment": "seg-5278f8ce345db35c0069db0e"
+        }
+      ]
+    },
+    {
       "documentId": "doc-fcd8b04aaa9c08cb6caec23b",
       "path": "France-GEIPAN/paired/cases/2015-07-09256/en/translation.txt",
       "candidates": [
@@ -411821,6 +411908,21 @@
       ]
     },
     {
+      "documentId": "doc-7bcdb06565c7d221a9aff40b",
+      "path": "France-GEIPAN/paired/cases/2016-05-09466/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-05-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: The witness is outside their building in Oullins (69) on May 20, 2016, at 11:15 PM when they observe three bright orange triangular lights in the sky moving slowly, without flickering or noise. The witness films the scene with their smartphone and notes that they ali",
+          "segment": "seg-12572d156f11bf2349ecf6c1"
+        }
+      ]
+    },
+    {
       "documentId": "doc-d2e8e935a17fb3bc284bb953",
       "path": "France-GEIPAN/paired/cases/2016-05-09471/en/translation.txt",
       "candidates": [
@@ -413117,6 +413219,21 @@
       ]
     },
     {
+      "documentId": "doc-30bff193d80e76d75a816096",
+      "path": "France-GEIPAN/paired/cases/2017-10-50440/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On October 14, 2017, at 21:00, a witness looking up at the sky was intrigued by a dozen white points arranged regularly and forming a curved shape moving silently. Just behind these points, the witness distinguished an opaque rounded shape. Only one testimony was col",
+          "segment": "seg-22be7d5329f3bfbe839ee1da"
+        }
+      ]
+    },
+    {
       "documentId": "doc-99a4b2ee371cb6ffd2313e55",
       "path": "France-GEIPAN/paired/cases/2017-10-50442/en/translation.txt",
       "candidates": [
@@ -414040,6 +414157,21 @@
           "method": "milestone-language",
           "evidence": "Description: On October 5, 2019, during the performance of the show \"LE BAL DES OISEAUX FANTÔMES\" at the \"Le Puy du Fou\" park, the witness, before the show started, looked around, especially up into the sky, to check for any potential birds or raptors. That's when they spotted an",
           "segment": "seg-36b2591301a5dd0c46f3b047"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3d25c4fe73faedb8f71c840b",
+      "path": "France-GEIPAN/paired/cases/2019-11-50860/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2019-11-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On November 15, 2019, around midnight, while a snowstorm was hitting the area, a witness observed and filmed several pink flashes from their home. Only one testimony was collected. The witness's strange feeling resulted from watching their video in slow motion, as th",
+          "segment": "seg-8290c089e9c69a3151c97235"
         }
       ]
     },
@@ -415043,6 +415175,21 @@
       ]
     },
     {
+      "documentId": "doc-3ec113d0375f20485e3941af",
+      "path": "France-GEIPAN/paired/cases/2021-11-51271/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2021-11-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On November 12, 2021, between 18:08 and 18:25, the witness, on their terrace with their two daughters, noticed in the sky to the southeast, at an elevation of approximately 20°, two very bright white light points located right next to each other, and at the same heig",
+          "segment": "seg-f0e61066e6ec2df177aa6fff"
+        }
+      ]
+    },
+    {
       "documentId": "doc-9e0e1f9aa881cbc68bbeaedd",
       "path": "France-GEIPAN/paired/cases/2021-11-51286/en/translation.txt",
       "candidates": [
@@ -416038,6 +416185,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: In Beynac (87), on August 15, 2023, at 10:30 PM, the witness sees a glow appear in the sky. He observes for 40 seconds an \"object\" that moves relatively slowly. The witness then takes photos. He distinguishes a \"yellow square of light\" in a low position and an \"orang",
           "segment": "seg-044b12f742c1bffcc58576b2"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f7fc9d914fc661df244ce7f9",
+      "path": "France-GEIPAN/paired/cases/2023-08-51654/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2023-08-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: After his work day on August 23, 2023, which ends around 23:00/23:30, the witness decides to go to a gym in Batz-sur-Mer (44) for a nighttime fitness session between 00:30 and 01:30. On his way back to the campsite where he was staying for his vacation, he decided to",
+          "segment": "seg-af26ca74eccf88565d1160b8"
         }
       ]
     },

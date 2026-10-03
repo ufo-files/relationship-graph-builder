@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "3a053b5e6cb7a637a69ee2e754745af34a06add5"
+    "revision": "7f975c67828fc0f5554927308ff25a4b745bc0ce"
   },
   "count": 647,
   "totalCount": 647,
@@ -5807,8 +5807,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 793,
-        "documentCount": 452
+        "mentions": 796,
+        "documentCount": 453
       },
       "right": {
         "name": "Stanton Freedman",
@@ -5823,8 +5823,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 793,
-        "documentCount": 452
+        "mentions": 796,
+        "documentCount": 453
       },
       "right": {
         "name": "Stanton Freidman",
@@ -8620,6 +8620,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Chavez County",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Chaves County",
+        "mentions": 11,
+        "documentCount": 10
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Robert Simpson",
@@ -8694,22 +8710,6 @@
         "name": "Okanogan Lake",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Chavez County",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Chaves County",
-        "mentions": 10,
-        "documentCount": 9
       },
       "similarity": 0.923,
       "reason": "similar name",
