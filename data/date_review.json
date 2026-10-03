@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-03T03:10:34Z",
+  "generatedAt": "2026-10-03T04:25:57Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "df339ea3c468ad08363c9af51daa8b1ad2e89d83"
+    "revision": "d0233c7203f5f8544d2bcad49170e2fc873563be"
   },
-  "documentsWithCandidates": 14515,
+  "documentsWithCandidates": 14516,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -424966,6 +424966,57 @@
           "method": "unclassified-mention",
           "evidence": "I advised that at 1935 hours MST, on 4 December 1949, he had",
           "segment": 28
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ef822b52a268",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-1/28937459.txt",
+      "candidates": [
+        {
+          "value": "1950-03-15",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "this office, dated 15 March 1950, subject as",
+          "segment": 6
+        },
+        {
+          "value": "1950-02-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "approximately 1358 hours, 24 February 1950.",
+          "segment": 17
+        },
+        {
+          "value": "1949-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "12 August 1949, and OSI Headquarters File No. 24-185.",
+          "segment": 25
+        },
+        {
+          "value": "1950-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "N. Arno, Albuquerque, New Mexico, was interviewed on 1 March 1950.",
+          "segment": 28
+        },
+        {
+          "value": "1950-02-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Time and date of sighting: 2115 hours, 25 February 1950",
+          "segment": 29
         }
       ]
     },
