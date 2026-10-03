@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "7fcbf3380a391f587b11d62d27091c2d3fed19e5"
+    "revision": "be48c6b07e9c88977543fa8b91c01f2abeecd92d"
   },
-  "count": 641,
-  "totalCount": 641,
-  "shownCount": 641,
+  "count": 643,
+  "totalCount": 643,
+  "shownCount": 643,
   "candidates": [
     {
       "category": "organization",
@@ -431,8 +431,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 100,
-        "documentCount": 59
+        "mentions": 105,
+        "documentCount": 60
       },
       "right": {
         "name": "Department of Transports",
@@ -511,8 +511,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 638,
-        "documentCount": 313
+        "mentions": 642,
+        "documentCount": 314
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -527,8 +527,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 323,
-        "documentCount": 188
+        "mentions": 325,
+        "documentCount": 189
       },
       "right": {
         "name": "Kirtland Airforce Base",
@@ -543,8 +543,8 @@
       "category": "location",
       "left": {
         "name": "Holloman Air Force Base",
-        "mentions": 228,
-        "documentCount": 122
+        "mentions": 229,
+        "documentCount": 123
       },
       "right": {
         "name": "Hollman Air Force Base",
@@ -2399,8 +2399,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 289,
-        "documentCount": 182
+        "mentions": 290,
+        "documentCount": 183
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -2415,8 +2415,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 289,
-        "documentCount": 182
+        "mentions": 290,
+        "documentCount": 183
       },
       "right": {
         "name": "Major Donald Keyhoes",
@@ -2943,8 +2943,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 289,
-        "documentCount": 182
+        "mentions": 290,
+        "documentCount": 183
       },
       "right": {
         "name": "Major Donald Keyho",
@@ -3903,8 +3903,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 323,
-        "documentCount": 188
+        "mentions": 325,
+        "documentCount": 189
       },
       "right": {
         "name": "Kirkland Air Force Base",
@@ -3919,13 +3919,29 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 323,
-        "documentCount": 188
+        "mentions": 325,
+        "documentCount": 189
       },
       "right": {
         "name": "Kirtland Alr Force Base",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "King Island",
+        "mentions": 217,
+        "documentCount": 70
+      },
+      "right": {
+        "name": "Kings Island",
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -3942,22 +3958,6 @@
         "name": "Project SIG",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "King Island",
-        "mentions": 190,
-        "documentCount": 69
-      },
-      "right": {
-        "name": "Kings Island",
-        "mentions": 4,
-        "documentCount": 4
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -3999,8 +3999,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 100,
-        "documentCount": 59
+        "mentions": 105,
+        "documentCount": 60
       },
       "right": {
         "name": "Department of Trancport",
@@ -4396,6 +4396,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Office Memo",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Office Memof",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Mari Island",
@@ -4421,22 +4437,6 @@
       "right": {
         "name": "Henry Maday",
         "mentions": 5,
-        "documentCount": 2
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Office Memo",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Office Memof",
-        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.957,
@@ -4703,8 +4703,8 @@
       "category": "organization",
       "left": {
         "name": "University of Chicago",
-        "mentions": 123,
-        "documentCount": 93
+        "mentions": 124,
+        "documentCount": 94
       },
       "right": {
         "name": "University of Chicaco",
@@ -4927,8 +4927,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8638,
-        "documentCount": 2036
+        "mentions": 8680,
+        "documentCount": 2038
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -5535,8 +5535,8 @@
       "category": "government_agency",
       "left": {
         "name": "Police Department",
-        "mentions": 115,
-        "documentCount": 84
+        "mentions": 116,
+        "documentCount": 85
       },
       "right": {
         "name": "Polioe Department",
@@ -5596,6 +5596,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Knoxvillo Airport",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Knoxville Airport",
+        "mentions": 8,
+        "documentCount": 7
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "University of St",
@@ -5606,22 +5622,6 @@
         "name": "University of West",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Knoxvillo Airport",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Knoxville Airport",
-        "mentions": 7,
-        "documentCount": 6
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -5996,6 +5996,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Advisory Committee for Aeronautics",
+        "mentions": 7,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Advisory Committee for Aeronau",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Stanton Freidman",
@@ -6111,8 +6127,8 @@
       "category": "organization",
       "left": {
         "name": "Institute of Meteoritics",
-        "mentions": 33,
-        "documentCount": 19
+        "mentions": 35,
+        "documentCount": 20
       },
       "right": {
         "name": "Institute of Meteorites",
@@ -6175,8 +6191,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8638,
-        "documentCount": 2036
+        "mentions": 8680,
+        "documentCount": 2038
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -6367,8 +6383,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 100,
-        "documentCount": 59
+        "mentions": 105,
+        "documentCount": 60
       },
       "right": {
         "name": "Department of Tramport",
@@ -6943,8 +6959,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 360,
-        "documentCount": 153
+        "mentions": 362,
+        "documentCount": 154
       },
       "right": {
         "name": "Department of the Army",
@@ -6959,8 +6975,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 360,
-        "documentCount": 153
+        "mentions": 362,
+        "documentCount": 154
       },
       "right": {
         "name": "The Department of the Armr",
@@ -7807,8 +7823,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 638,
-        "documentCount": 313
+        "mentions": 642,
+        "documentCount": 314
       },
       "right": {
         "name": "University Colorado",
@@ -7823,8 +7839,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 638,
-        "documentCount": 313
+        "mentions": 642,
+        "documentCount": 314
       },
       "right": {
         "name": "University of Color",
@@ -7839,8 +7855,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 360,
-        "documentCount": 153
+        "mentions": 362,
+        "documentCount": 154
       },
       "right": {
         "name": "DEPARTMENT OF THE AL",
@@ -7854,9 +7870,25 @@
     {
       "category": "organization",
       "left": {
+        "name": "University of Torino",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
         "name": "University of Toronto",
-        "mentions": 31,
-        "documentCount": 30
+        "mentions": 33,
+        "documentCount": 31
+      },
+      "similarity": 0.927,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "University of Toronto",
+        "mentions": 33,
+        "documentCount": 31
       },
       "right": {
         "name": "University of Trento",
@@ -8127,8 +8159,8 @@
       "category": "location",
       "left": {
         "name": "Mojave Desert",
-        "mentions": 170,
-        "documentCount": 135
+        "mentions": 171,
+        "documentCount": 136
       },
       "right": {
         "name": "Mohave Desert",
@@ -8180,8 +8212,8 @@
       },
       "right": {
         "name": "Department of Earth",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -9828,8 +9860,8 @@
       },
       "right": {
         "name": "Ken Williams",
-        "mentions": 5,
-        "documentCount": 4
+        "mentions": 6,
+        "documentCount": 5
       },
       "similarity": 0.88,
       "reason": "similar person name",
@@ -10255,8 +10287,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49825,
-        "documentCount": 12660
+        "mentions": 49848,
+        "documentCount": 12662
       },
       "right": {
         "name": "North American Space Agency",
