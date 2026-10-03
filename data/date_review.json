@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-03T09:30:28Z",
+  "generatedAt": "2026-10-03T10:45:37Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "b78af692c47a197239165c16b2ea60886e3b30e0"
+    "revision": "d6617fd6391417f5aa400cc49e6f14fed772f6d0"
   },
-  "documentsWithCandidates": 14533,
+  "documentsWithCandidates": 14542,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -19393,6 +19393,21 @@
           "method": "unclassified-mention",
           "evidence": "Roberto Sol 0rion Dallas, Texas 1 February 2001",
           "segment": 20
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a13bc2a7528c",
+      "path": "Archives-for-the-Unexplained/documents/20111013-What-CAC-Predicted-On-Dec.-1-2010.-915-60c4be5574.txt",
+      "candidates": [
+        {
+          "value": "2010-12-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CAC Reading 12-1-10 (December 1, 2010) Forecast for 2011.",
+          "segment": 9
         }
       ]
     },
@@ -131434,6 +131449,21 @@
           "method": "document-header",
           "evidence": "Date: Mon, 03 Mar 1997 11:23:37 -0500",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-dbf800e778de",
+      "path": "Archives-for-the-Unexplained/documents/a04-002-4eace88cd5.txt",
+      "candidates": [
+        {
+          "value": "1997-02-03",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Mon, 3 Feb 1997 22:18:03 -0600",
+          "segment": 3
         }
       ]
     },
@@ -278105,6 +278135,102 @@
       ]
     },
     {
+      "documentId": "doc-1d132a5d6487",
+      "path": "Black-Vault-UFO/pdfs/the-path-to-the-stars-a-collection-of-science-fiction-works.txt",
+      "candidates": [
+        {
+          "value": "1966-11-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "FTD-MT- 65-243 ,.DaU 21 Nov 1966",
+          "segment": 9
+        },
+        {
+          "value": "1930-04-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "28 April 1930) ..... o... .o...... ........ o... ..",
+          "segment": 126
+        },
+        {
+          "value": "1935-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Only Fantasy? \"Komsomolskaya Pravda,\" 23 July 1935.",
+          "segment": 12783
+        },
+        {
+          "value": "1958-05-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "15 May 1958, there were used solar batteries feeding its radio equipment.",
+          "segment": 12936
+        },
+        {
+          "value": "1935-09-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In \"Pravda\" 14 September 1935 there appeared the text of document, entering",
+          "segment": 13084
+        },
+        {
+          "value": "1935-09-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "19 September 1935 the great Russian scientist Konstantin Eduardovich was no",
+          "segment": 13096
+        },
+        {
+          "value": "1957-09-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "K. E. Tsiolkovskiy, on 17 September 1957 a monument was erected to him on Leningrad",
+          "segment": 13104
+        },
+        {
+          "value": "1958-05-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 15 May 1958 there was launched into orbit the third Soviet artificial earth",
+          "segment": 13111
+        },
+        {
+          "value": "1959-01-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 2 January 1959 in Soviet Union there was launched a space rocket, which for",
+          "segment": 13114
+        },
+        {
+          "value": "1959-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 4 October 1959, the second anmi-ersary since lachirg of first ar*Sioial Soviet",
+          "segment": 13137
+        }
+      ]
+    },
+    {
       "documentId": "doc-bbe58231ecf8",
       "path": "Black-Vault-UFO/pdfs/the-pentagon-says-aatip-wasn-t-about-ufos-but-the-man-slated-to-take-it-over-ended-up-designing-the-government-s-uap-strategy-2.txt",
       "candidates": [
@@ -345938,6 +346064,246 @@
       ]
     },
     {
+      "documentId": "doc-13bfcd953e6b",
+      "path": "DPIArchive/documents/124106-clifford-stone-operation-blue-fly.txt",
+      "candidates": [
+        {
+          "value": "1953-08-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "was created. on August 26, 1953 this \"special unit\" was",
+          "segment": 108
+        },
+        {
+          "value": "1954-08-12",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "AFR 200-2, dated August 12, 1954, stated, \"The Air Defense",
+          "segment": 113
+        },
+        {
+          "value": "1987-11-25",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Enclosure 3, dated November 25, 1987, entitled, \" UFO",
+          "segment": 205
+        },
+        {
+          "value": "1965-12-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PA. on December 9, 1965?",
+          "segment": 617
+        },
+        {
+          "value": "1953-01-03",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Defense Regulation 24-4, dated January 3, 1953 and was",
+          "segment": 637
+        },
+        {
+          "value": "1953-08-26",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Force Regulation 200-2 dated August 26, 1953.",
+          "segment": 639
+        },
+        {
+          "value": "1973-07-26",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Peturned to Earth, dated July 26, 1973).",
+          "segment": 653
+        },
+        {
+          "value": "1989-12-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 7, 1989, entitled Soviet Aircrew Sightings of",
+          "segment": 691
+        },
+        {
+          "value": "1967-08-17",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "A once classified DIA document, dated August 17, 1967 out",
+          "segment": 781
+        },
+        {
+          "value": "1967-08-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "about the object found in Sudan on August 17, 1967 and the",
+          "segment": 784
+        },
+        {
+          "value": "1965-12-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Acme, PA. incident of December 9, 1965.",
+          "segment": 798
+        },
+        {
+          "value": "1989-12-25",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "request of December 25, 1989.",
+          "segment": 859
+        },
+        {
+          "value": "1990-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of the FOTA on 25 July 1990.",
+          "segment": 875
+        },
+        {
+          "value": "1991-03-12",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "for review by letter dated 12 March 1991.",
+          "segment": 903
+        },
+        {
+          "value": "1963-12-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "principle of UN Resolution 1962 of December 13, 1963 (State",
+          "segment": 967
+        },
+        {
+          "value": "1966-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "fragment from same vehicle landed in Peru July 9, 1966.",
+          "segment": 972
+        },
+        {
+          "value": "1963-12-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "cit under UN Resolution 1962 (XVIII) of December 13, 1963",
+          "segment": 989
+        },
+        {
+          "value": "1971-12-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and Libraly of Corgress, December 9, 1971.",
+          "segment": 1024
+        },
+        {
+          "value": "1970-08-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On August 28, 1970, a Soviet satellite",
+          "segment": 1035
+        },
+        {
+          "value": "1948-01-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On January 22, 1948 Project Sign was established to -",
+          "segment": 1103
+        },
+        {
+          "value": "1948-12-10",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "their own report, dated December 10, 1948, entitled",
+          "segment": 1110
+        },
+        {
+          "value": "1967-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "OBSERVATION OF ANOMALOUS PHONOMENA 17 July 1967",
+          "segment": 2154
+        },
+        {
+          "value": "1967-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Observation points 17 July 1967: four digit",
+          "segment": 2375
+        },
+        {
+          "value": "1967-09-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Observation points 19 September 1967",
+          "segment": 2379
+        },
+        {
+          "value": "1967-10-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Observation points 18 October 1967: four",
+          "segment": 2384
+        },
+        {
+          "value": "1969-12-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Project Blue Book was terminated on December 17, 1969 thus",
+          "segment": 2419
+        }
+      ]
+    },
+    {
       "documentId": "doc-0dfa68f129b8",
       "path": "DPIArchive/documents/124127-cifford-stone-randy-kitchur.txt",
       "candidates": [
@@ -359237,6 +359603,246 @@
       ]
     },
     {
+      "documentId": "doc-e1e223394d44",
+      "path": "DPIArchive/documents/127364-norton-afb-illustrations-and-reference-material-internal.txt",
+      "candidates": [
+        {
+          "value": "1990-12-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "AVIATION WEEK & SPACE TECHNOLOGY/December 24, 1990",
+          "segment": 263
+        },
+        {
+          "value": "1990-12-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "AVIATION WEEK & SPACE TECHNOLOGY/December 24, 1990",
+          "segment": 420
+        },
+        {
+          "value": "1983-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "U.S.NEWS & WORLD REPORT, July 18, 1983",
+          "segment": 711
+        },
+        {
+          "value": "1983-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "U.S.NEWS & WORLD REPORT, July 18, 1983",
+          "segment": 916
+        },
+        {
+          "value": "1983-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "U.S.NEWS & WORLD REPORT, July 18, 1983",
+          "segment": 1026
+        },
+        {
+          "value": "1914-06-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 19, 1914, the son of a Los",
+          "segment": 1034
+        },
+        {
+          "value": "1950-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Cultice was born June 24, 1950 in",
+          "segment": 1327
+        },
+        {
+          "value": "1965-05-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "N.Y., May 13, 1965 and graduated",
+          "segment": 1596
+        },
+        {
+          "value": "1985-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "* Saturday, July 27, 1985 • The Sun B-5",
+          "segment": 1801
+        },
+        {
+          "value": "1990-02-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUNDAY, February 4, 1990 The Sun /A13",
+          "segment": 2039
+        },
+        {
+          "value": "1990-02-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUNDAY, February 4, 1990 The Sun /A13",
+          "segment": 2077
+        },
+        {
+          "value": "1990-02-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUNDAY, February 4, 1990 The Sun /A13",
+          "segment": 2256
+        },
+        {
+          "value": "1986-11-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "/ Ine Sun SUNDAY, November 16, 1986",
+          "segment": 2293
+        },
+        {
+          "value": "1988-04-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "• Saturday, April 2, 1988",
+          "segment": 2472
+        },
+        {
+          "value": "1971-06-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Final Report (10 June 1971 to 10 December 1972",
+          "segment": 2684
+        },
+        {
+          "value": "1972-12-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Final Report (10 June 1971 to 10 December 1972",
+          "segment": 2684
+        },
+        {
+          "value": "1989-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "FLIGHT INTERNATIONAL, 1 April 1989",
+          "segment": 2912
+        },
+        {
+          "value": "1989-03-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "B6 The Republic, Columbus, Ind. Monday, March 20, 1989",
+          "segment": 2913
+        },
+        {
+          "value": "1989-03-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "* Monday A.M., March 20, 1989 / Fort Worth Star-Telegram / Section 1, Page 7",
+          "segment": 3123
+        },
+        {
+          "value": "1989-03-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "* Monday A.M. March 20, 1989 / Fort Worth Star-Telegram / Section 1, Page 7",
+          "segment": 3235
+        },
+        {
+          "value": "1985-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sunday, May 22, 1985 / Fort Worth Star-Telegram / Section 8, Page 3",
+          "segment": 3532
+        },
+        {
+          "value": "1988-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sunday, May 22, 1988 / Fort Worth Star-Tele",
+          "segment": 3632
+        },
+        {
+          "value": "1968-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Section 8, Page 6 / Fort Worth Star-Telegram / Sunday, May 22, 1968",
+          "segment": 4072
+        },
+        {
+          "value": "1988-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sunday, May 22, 1988 / Fort Worth Star-Telegram / Section 8, Page 0",
+          "segment": 4663
+        },
+        {
+          "value": "1988-05-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "FLIGHT INTERNATIONAL, 28 May 1988",
+          "segment": 5165
+        },
+        {
+          "value": "1988-06-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "FLIGHT INTERNATIONAL, 4 June 1988",
+          "segment": 5196
+        }
+      ]
+    },
+    {
       "documentId": "doc-26be28434e99",
       "path": "DPIArchive/documents/127372-jack-pickett-interview-transcript-internal.txt",
       "candidates": [
@@ -363812,6 +364418,39 @@
       ]
     },
     {
+      "documentId": "doc-b96221bc43a1",
+      "path": "DPIArchive/documents/127707-apro-bulletin-september-1959.txt",
+      "candidates": [
+        {
+          "value": "1959-08-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "As it approached, it appeared to be 4 August 1959.",
+          "segment": 161
+        },
+        {
+          "value": "1959-08-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "lr Felton, California, 8 August 1959.",
+          "segment": 185
+        },
+        {
+          "value": "1957-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On the night of August 14, 1957' a killed.",
+          "segment": 419
+        }
+      ]
+    },
+    {
       "documentId": "doc-4045c9c8f196",
       "path": "DPIArchive/documents/127708-apro-bulletin-july-1959.txt",
       "candidates": [
@@ -366475,6 +367114,21 @@
           "method": "unclassified-mention",
           "evidence": "http://www.space.com/scienceastronomy/solarsystem/nuke_meteor_010524.html, May 24, 2001.",
           "segment": 1206
+        }
+      ]
+    },
+    {
+      "documentId": "doc-184e770ff2dd",
+      "path": "DPIArchive/documents/130666-dow-uap-d121-aawsap-dird-pulsed-high-power-microwave-source-technology-january-28-2010-pdf.txt",
+      "candidates": [
+        {
+          "value": "2001-05-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "weapons, on 28 May 2001, a U.S. Commanche helicopter, flying in New York",
+          "segment": 152
         }
       ]
     },
@@ -428630,6 +429284,21 @@
       ]
     },
     {
+      "documentId": "doc-d39f253a74bd",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302539432.txt",
+      "candidates": [
+        {
+          "value": "1965-07-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "obeerred oa the night of 3 July 1965.",
+          "segment": 11
+        }
+      ]
+    },
+    {
       "documentId": "doc-061986f63f01",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302539688.txt",
       "candidates": [
@@ -435790,6 +436459,21 @@
           "method": "dated-reference",
           "evidence": "Your letter dated 15 May 1980 requesting a copy of a report of the",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1e4093c4e1b8",
+      "path": "National-Archives-of-Australia-UFO/documents/10491375/0141.txt",
+      "candidates": [
+        {
+          "value": "1978-11-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "FLIGHT International, 4 November 1978",
+          "segment": 0
         }
       ]
     },
