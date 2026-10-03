@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-03T06:57:50Z",
+  "generatedAt": "2026-10-03T08:14:37Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "c9c5c845def1912c9ee4037a1f5bb7ed3141468a"
+    "revision": "a190a02451b5b7cdc49b990322c36d51239151c5"
   },
-  "documentsWithCandidates": 14522,
+  "documentsWithCandidates": 14529,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9198,6 +9198,30 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "On Wed, 11 Aug 2004 dford3@gl.umbc.edu (david ford) wrote in news:<dford3-",
+          "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6e664eb334a2",
+      "path": "Archives-for-the-Unexplained/documents/20040822-Re_Evidence-654309.txt",
+      "candidates": [
+        {
+          "value": "2004-08-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sun, 22 Aug 2004 14:11:47 +0000 (UTC), Lizz Holmans",
+          "segment": 3
+        },
+        {
+          "value": "2004-08-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sun, 22 Aug 2004 05:48:24 +0000 (UTC), Karl Johanson",
           "segment": 5
         }
       ]
@@ -132016,6 +132040,66 @@
           "method": "document-header",
           "evidence": "Date: Sun, 16 Mar 1997 23:09:14 -0500 (EST",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f660fdc2d9bd",
+      "path": "Archives-for-the-Unexplained/documents/a17-004-2c1170b294.txt",
+      "candidates": [
+        {
+          "value": "1997-05-16",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Fri, 16 May 1997 16:28:58 -0800",
+          "segment": 4
+        },
+        {
+          "value": "1997-05-14",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Wed, 14 May 1997 16:32:18 -0400 (EDT",
+          "segment": 7
+        },
+        {
+          "value": "1997-05-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 14 May 1997 21:07:44 -0400 (EDT",
+          "segment": 20
+        },
+        {
+          "value": "1997-04-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sun, 20 Apr 1997 00:27:13 -0400",
+          "segment": 26
+        },
+        {
+          "value": "1997-05-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 16 May 1997 06:42:05 -0400 (EDT",
+          "segment": 35
+        },
+        {
+          "value": "1997-05-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 15 May 1997 11:23:35 -0700",
+          "segment": 51
         }
       ]
     },
@@ -419966,6 +420050,66 @@
       ]
     },
     {
+      "documentId": "doc-3e28479b63f6",
+      "path": "National-Archives-UAP-Bulk/documents/23857122/333336409.txt",
+      "candidates": [
+        {
+          "value": "1953-01-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The weather on the night of 29 January 1953 in the Horry County area was clear",
+          "segment": 87
+        },
+        {
+          "value": "1953-01-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "flying object on the night of January 29, 1953.",
+          "segment": 108
+        },
+        {
+          "value": "1953-02-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "THE FIBLD, Consy, S. C., Thursday, February 5, 1953",
+          "segment": 124
+        },
+        {
+          "value": "1953-02-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "FLYING SAUCER (The Field, Conway, S. C., 5 February 1953",
+          "segment": 203
+        },
+        {
+          "value": "1953-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "THE FIBID, Convay S. C., Thursday, February 19, 1953",
+          "segment": 212
+        },
+        {
+          "value": "1953-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "THE FIELD (Conway, S. C., 19 February 1953",
+          "segment": 241
+        }
+      ]
+    },
+    {
       "documentId": "doc-c8d0bac556bd",
       "path": "National-Archives-UAP-Bulk/documents/23857122/333336428.txt",
       "candidates": [
@@ -430643,6 +430787,21 @@
       ]
     },
     {
+      "documentId": "doc-b3191dcc7461",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302556047.txt",
+      "candidates": [
+        {
+          "value": "1966-09-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference your unidentified observation of 23 September 1966.",
+          "segment": 60
+        }
+      ]
+    },
+    {
       "documentId": "doc-f56cad0a2cb0",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302556215.txt",
       "candidates": [
@@ -432046,6 +432205,102 @@
           "method": "unclassified-mention",
           "evidence": "A further check with the FAA on 18 April 1967 revealed",
           "segment": 41
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e80af10e93fa",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302565002.txt",
+      "candidates": [
+        {
+          "value": "1967-04-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UTO Observation, 19 April 1967",
+          "segment": 14
+        },
+        {
+          "value": "1967-04-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUBJECT: UFO Observation, 19 April 1967",
+          "segment": 21
+        },
+        {
+          "value": "1967-04-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Observation, Burney, California, 19 April 1967",
+          "segment": 119
+        },
+        {
+          "value": "1967-04-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Observation, Burney, California, 19 April 1967",
+          "segment": 136
+        },
+        {
+          "value": "1967-04-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "U70 Observation, 18 April 1967, Burney, Califorcia",
+          "segment": 146
+        },
+        {
+          "value": "1967-04-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ooject (UPO) report from Burney, Califoria on 19 April 1967.",
+          "segment": 148
+        },
+        {
+          "value": "1966-04-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "duration launched on 18 April 1966 was reported in the fall 1966 is-",
+          "segment": 159
+        },
+        {
+          "value": "1967-04-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "19 April 1967, Burney, Calir.",
+          "segment": 168
+        },
+        {
+          "value": "1967-04-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Uro Observation, Burney, California, 19 April 1967",
+          "segment": 207
+        },
+        {
+          "value": "1967-04-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUBJECT: UFO Observation, Burney, California, 19 April 1967",
+          "segment": 217
         }
       ]
     },
@@ -433927,6 +434182,21 @@
           "method": "unclassified-mention",
           "evidence": "UFO Observations 26 August 1968",
           "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ebd84266fb62",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302580329.txt",
+      "candidates": [
+        {
+          "value": "1968-10-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAF-OICC/Miss Turnure/76525/October 23, 1968",
+          "segment": 9
         }
       ]
     },
@@ -550285,6 +550555,93 @@
           "method": "unclassified-mention",
           "evidence": "downloaded on August 8, 2010.",
           "segment": 1454
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6b6dcbfaafe0",
+      "path": "War-Gov-PURSUE/release-06/documents/dow-uap-d148-aawsap-dird-detection-and-high-resolution-tracking-of-vehicles-at-hypersonic-velocities-november-20-2010.txt",
+      "candidates": [
+        {
+          "value": "1961-09-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 9 September 1961, for example, a Naval",
+          "segment": 459
+        },
+        {
+          "value": "2008-10-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "atmosphere on 7 October 2008 over Sudan .18 The meteor's path left a wake that was visible",
+          "segment": 541
+        },
+        {
+          "value": "1996-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 4 October 1996, a station in",
+          "segment": 834
+        },
+        {
+          "value": "1993-12-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 9 December 1993, the network",
+          "segment": 868
+        },
+        {
+          "value": "1992-01-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 30 January 1992, the network was also used to detect the",
+          "segment": 871
+        },
+        {
+          "value": "1961-12-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ionospheric Refraction,\" Naval Research Laboratory Report, AD596673, December 1, 1961 .",
+          "segment": 1178
+        },
+        {
+          "value": "2007-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "13 Barricklow, Sam, \"Aurigid Meteor Shower Radio Echoes, September 1, 2007,\" http://www.k5kj.net/Aurigid_ 2007.htm",
+          "segment": 1182
+        },
+        {
+          "value": "1992-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Technologies Conference, Huntsville, AL, March 24, 1992.",
+          "segment": 1195
+        },
+        {
+          "value": "2001-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "http://www.space.com/scienceastronomy/solarsystem/nuke_meteor_010524.html, May 24, 2001.",
+          "segment": 1206
         }
       ]
     },
