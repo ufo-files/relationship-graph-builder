@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a190a02451b5b7cdc49b990322c36d51239151c5"
+    "revision": "b78af692c47a197239165c16b2ea60886e3b30e0"
   },
   "count": 630,
   "totalCount": 630,
@@ -3468,6 +3468,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "AF Base Unit",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "AAF Base Unit",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Robert Greene",
@@ -3542,22 +3558,6 @@
         "name": "Bureau of Inv",
         "mentions": 4,
         "documentCount": 3
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "AF Base Unit",
-        "mentions": 5,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "AAF Base Unit",
-        "mentions": 3,
-        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -4799,8 +4799,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8561,
-        "documentCount": 2030
+        "mentions": 8562,
+        "documentCount": 2031
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -5599,8 +5599,8 @@
       "category": "organization",
       "left": {
         "name": "Air Intelligence Report",
-        "mentions": 4,
-        "documentCount": 3
+        "mentions": 5,
+        "documentCount": 4
       },
       "right": {
         "name": "Air Intelligence Report No",
@@ -6047,8 +6047,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8561,
-        "documentCount": 2030
+        "mentions": 8562,
+        "documentCount": 2031
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -9855,8 +9855,8 @@
       "category": "person",
       "left": {
         "name": "Joe Walker",
-        "mentions": 18,
-        "documentCount": 15
+        "mentions": 19,
+        "documentCount": 16
       },
       "right": {
         "name": "Joseph Walker",
@@ -10079,8 +10079,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49793,
-        "documentCount": 12651
+        "mentions": 49794,
+        "documentCount": 12652
       },
       "right": {
         "name": "North American Space Agency",
