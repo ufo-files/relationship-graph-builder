@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-04T02:21:46Z",
+  "generatedAt": "2026-10-04T03:38:31Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "fd76a0cb32a0f1bb56f77fe325deecdb743967f2"
+    "revision": "23369828748d962af4a5fb74d1fd02e26f0f9731"
   },
-  "documentsWithCandidates": 14664,
+  "documentsWithCandidates": 14670,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -152087,6 +152087,147 @@
       ]
     },
     {
+      "documentId": "doc-49f8755296d3",
+      "path": "Black-Vault-UFO/documents/the-black-vault-launches-searchable-ufo-files-release-archive/pdfs/dow-uap-d49-launch-summary-february-2000.txt",
+      "candidates": [
+        {
+          "value": "1992-06-01",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "non_ufo_event",
+          "method": "subject-exclusion",
+          "evidence": "ACC Air Combat Command (Strategic Air Command [SAC] prior to 1 June 1992.",
+          "segment": 27
+        },
+        {
+          "value": "1992-07-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "AFMC Air Force Materiel Command (Air Force Systems Command [AFSC] prior to 1 July 1992.",
+          "segment": 31
+        },
+        {
+          "value": "1961-04-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "AFSC Air Force Systems Command (Air Research & Development Command [ARDC] prior to 1 Apr 1961.",
+          "segment": 32
+        },
+        {
+          "value": "1971-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CRL USAF Cambridge Research Laboratories (Merged into AFSC on 1 April 1971",
+          "segment": 45
+        },
+        {
+          "value": "1963-07-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "DASO Demonstration and Shakedown Operation {Category III before 1 July 1963",
+          "segment": 47
+        },
+        {
+          "value": "1963-07-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "FOT Follow-on Operational Test (Replaced by OT PHASE II) (Category IV before 1 July 1963",
+          "segment": 59
+        },
+        {
+          "value": "1963-07-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "OT Operational Test (Now OT PHASE I) (Category III before 1 July 1963",
+          "segment": 106
+        },
+        {
+          "value": "1963-07-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "R&D Research and Development (Category 1 & II before 1 July 1963",
+          "segment": 115
+        },
+        {
+          "value": "1997-08-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2The Delta II program was operated by McDonnell Douglas Aerospace until the company was purchased by Boeing Aerospace, 4 August 1997.",
+          "segment": 198
+        },
+        {
+          "value": "1994-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "** This number includes OSC's Taurus launch on 13 March 1994.",
+          "segment": 2060
+        },
+        {
+          "value": "1997-08-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Delta program was originally operated by McDonnell Douglas Aerospace until the company was bought out by The' Boeing Company on 4 August 1997.",
+          "segment": 2101
+        },
+        {
+          "value": "1964-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "★Transferred from U.S. Naval Missile Facility, Point Arguello, to USAF Vandenberg AFB, 1 July 1964.",
+          "segment": 2204
+        },
+        {
+          "value": "1964-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "★Transferred from U.S. Naval Missile Facility, Point Arguello, to USAF Vandenberg AFB, 1 July 1964.",
+          "segment": 2227
+        },
+        {
+          "value": "1967-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "★Transferred from National Aeronautics and Space Administration (NASA) to USAF Vandenberg AFB, 1 July 1967",
+          "segment": 2253
+        },
+        {
+          "value": "1965-08-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "★'Transferred from National Aeronautics and Space Administration (NASA) to USAF Vandenberg AFB, 16 August 1965",
+          "segment": 2277
+        }
+      ]
+    },
+    {
       "documentId": "doc-37f825e38de0",
       "path": "Black-Vault-UFO/documents/the-black-vault-launches-searchable-ufo-files-release-archive/pdfs/dow-uap-d60-mission-report-persian-gulf-august-2020.txt",
       "candidates": [
@@ -191815,6 +191956,30 @@
           "method": "unclassified-mention",
           "evidence": "Thls refen to your letter of January 27, 1978, reprdln&",
           "segment": 8062
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7bf36827db3c",
+      "path": "Black-Vault-UFO/pdfs/canufodoc-3-pdf.txt",
+      "candidates": [
+        {
+          "value": "1950-04-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ZAST ~ (tiD 12 Apr 1950) and Mary-A n&~ JACUU (DD ll Har 1950 1 qf ~te .",
+          "segment": 1872
+        },
+        {
+          "value": "1969-04-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the night of April 22, 1969 •",
+          "segment": 4560
         }
       ]
     },
@@ -413360,6 +413525,21 @@
       ]
     },
     {
+      "documentId": "doc-4d26904e032c971ab810ea2b",
+      "path": "France-GEIPAN/paired/cases/2015-08-50303/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-09-18",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "**Description:** From his room in Avolsheim (67), the witness observed during the night of Saturday, August 1st to Sunday, August 2nd, 2015, around 2:25 am, 10 to 20 white \"balls\" that shimmered and \"moved very slightly on themselves\" in a clear sky. The general positioning of th",
+          "segment": "seg-d3dea0f534054a0262ee469f"
+        }
+      ]
+    },
+    {
       "documentId": "doc-131e7579a4924ddb1f105133",
       "path": "France-GEIPAN/paired/cases/2015-09-09307/en/translation.txt",
       "candidates": [
@@ -413938,6 +414118,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On December 25, 2015 at 18:40, two witnesses observed the passage of a red-orange light in the clear sky. The trajectory is irregular and no particular noise is heard. The observation lasts 1 to 2 minutes before the phenomenon disappears towards the North. Only one t",
           "segment": "seg-a2d1fd33eddb773f870aa21b"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cf3dc39b4ad3b7c5d506be60",
+      "path": "France-GEIPAN/paired/cases/2015-12-09384/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-12-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 30, 2015 at 7:50 a.m., a driver at a roundabout observed for 30 seconds a large red glowing point descending very slowly from a clear sky along a very gentle curved trajectory. The witness parks but will not have time to pull out their phone to take a pic",
+          "segment": "seg-1a24466562fdeb35011481d6"
         }
       ]
     },
@@ -415357,6 +415552,48 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Wednesday, June 14, 2017, at 5:00 AM, a witness is intrigued by the presence in the sky of a very bright stationary phenomenon. The witness describes a white, double-lobed PAN with a red dot in the middle and notes that, aside from the Moon, no stars are visible i",
           "segment": "seg-a24d7ff0e37e029777f2a78d"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fe7396d5a710d64659d18576",
+      "path": "France-GEIPAN/paired/cases/2017-06-50388/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-06-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Monday, June 19, 2017, around 10:30 PM to 11:00 PM, a witness observed a bright, sparkling light below Venus in the sky. Its movement and disappearance within a halo intrigued the witness. After half an hour to three-quarters of an hour, the witness again sees the",
+          "segment": "seg-a990431ccd2da232587ce77a"
+        },
+        {
+          "value": "2012-05-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Monday, June 19, 2017, around 10:30 PM to 11:00 PM, a witness observed a bright, sparkling light below Venus in the sky. Its movement and disappearance within a halo intrigued the witness. After half an hour to three-quarters of an hour, the witness again sees the",
+          "segment": "seg-a990431ccd2da232587ce77a"
+        },
+        {
+          "value": "2012-04-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Monday, June 19, 2017, around 10:30 PM to 11:00 PM, a witness observed a bright, sparkling light below Venus in the sky. Its movement and disappearance within a halo intrigued the witness. After half an hour to three-quarters of an hour, the witness again sees the",
+          "segment": "seg-a990431ccd2da232587ce77a"
+        },
+        {
+          "value": "2015-05-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Monday, June 19, 2017, around 10:30 PM to 11:00 PM, a witness observed a bright, sparkling light below Venus in the sky. Its movement and disappearance within a halo intrigued the witness. After half an hour to three-quarters of an hour, the witness again sees the",
+          "segment": "seg-a990431ccd2da232587ce77a"
         }
       ]
     },
@@ -442159,6 +442396,93 @@
           "method": "unclassified-mention",
           "evidence": "On 1 February 1967, at 1030 hours",
           "segment": 17
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b7c9e7ca9814",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302560715.txt",
+      "candidates": [
+        {
+          "value": "1965-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "12 August 1965, Ramona, California.",
+          "segment": 18
+        },
+        {
+          "value": "1966-02-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "26 February 1966, Bartlett, New Hampshire",
+          "segment": 25
+        },
+        {
+          "value": "1966-02-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I have in my files for 26 February 1966, Manchester",
+          "segment": 26
+        },
+        {
+          "value": "1966-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "17 July 1966, Centerville, Ohio.",
+          "segment": 29
+        },
+        {
+          "value": "1967-02-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "9 February 1967, Odessa, Delaware.",
+          "segment": 30
+        },
+        {
+          "value": "1967-02-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "12 February 1967, Grand Rapids, Michigan.",
+          "segment": 35
+        },
+        {
+          "value": "1967-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1 April 1967, Wellington or Loco, Texas.",
+          "segment": 39
+        },
+        {
+          "value": "1967-02-09",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Committee on Aerial Phenomena Sighting Summary dated 9 February 1967.",
+          "segment": 44
+        },
+        {
+          "value": "1957-06-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "dispatched until 1 June 1957.",
+          "segment": 46
         }
       ]
     },

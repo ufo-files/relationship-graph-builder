@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "fd76a0cb32a0f1bb56f77fe325deecdb743967f2"
+    "revision": "23369828748d962af4a5fb74d1fd02e26f0f9731"
   },
   "count": 648,
   "totalCount": 648,
@@ -447,8 +447,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 105,
-        "documentCount": 60
+        "mentions": 106,
+        "documentCount": 61
       },
       "right": {
         "name": "Department of Transports",
@@ -1156,8 +1156,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 532,
-        "documentCount": 77
+        "mentions": 533,
+        "documentCount": 78
       },
       "similarity": 0.971,
       "reason": "similar name",
@@ -1999,8 +1999,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of National Defence",
-        "mentions": 72,
-        "documentCount": 62
+        "mentions": 73,
+        "documentCount": 63
       },
       "right": {
         "name": "Department of National Defense",
@@ -2015,8 +2015,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of National Defence",
-        "mentions": 72,
-        "documentCount": 62
+        "mentions": 73,
+        "documentCount": 63
       },
       "right": {
         "name": "DEPARTMENT OF NATIONAL DEPENCE",
@@ -3007,8 +3007,8 @@
       "category": "location",
       "left": {
         "name": "Vandenberg Air Force Base",
-        "mentions": 275,
-        "documentCount": 175
+        "mentions": 283,
+        "documentCount": 176
       },
       "right": {
         "name": "Vandenburg Air Force Base",
@@ -4047,8 +4047,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 105,
-        "documentCount": 60
+        "mentions": 106,
+        "documentCount": 61
       },
       "right": {
         "name": "Department of Trancport",
@@ -5572,8 +5572,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 532,
-        "documentCount": 77
+        "mentions": 533,
+        "documentCount": 78
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -5583,8 +5583,8 @@
       "category": "government_agency",
       "left": {
         "name": "Police Department",
-        "mentions": 117,
-        "documentCount": 86
+        "mentions": 118,
+        "documentCount": 87
       },
       "right": {
         "name": "Polioe Department",
@@ -6431,8 +6431,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
-        "mentions": 105,
-        "documentCount": 60
+        "mentions": 106,
+        "documentCount": 61
       },
       "right": {
         "name": "Department of Tramport",
@@ -8828,6 +8828,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Suffolk County AFB",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "SUFFOLK COUNTY AFB NY",
+        "mentions": 8,
+        "documentCount": 8
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Peter Lavenda",
@@ -8884,22 +8900,6 @@
       },
       "right": {
         "name": "Stephen Baer",
-        "mentions": 7,
-        "documentCount": 7
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Suffolk County AFB",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "SUFFOLK COUNTY AFB NY",
         "mentions": 7,
         "documentCount": 7
       },
@@ -10367,8 +10367,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49854,
-        "documentCount": 12660
+        "mentions": 49935,
+        "documentCount": 12661
       },
       "right": {
         "name": "North American Space Agency",
