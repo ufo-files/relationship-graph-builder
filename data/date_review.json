@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-04T18:05:27Z",
+  "generatedAt": "2026-10-04T19:25:35Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "41e5c2b9c5d50e65b53e5372b9e065bcee9e4375"
+    "revision": "26662c0d8ceb540cc55566157ed43012f58fd34d"
   },
-  "documentsWithCandidates": 14749,
+  "documentsWithCandidates": 14759,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -273443,6 +273443,21 @@
       ]
     },
     {
+      "documentId": "doc-097d3a2525e3",
+      "path": "Black-Vault-UFO/pdfs/range-fouler-reports-unknown-timeframe-released-december-2023.txt",
+      "candidates": [
+        {
+          "value": "2022-07-11",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Your Freedom of Information Act (FOIA) /Privacy Act (PA) request dated July 11, 2022 was received in this",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-ad28c6e28d93",
       "path": "Black-Vault-UFO/pdfs/recent-uss-stout-encounter-with-unidentified-uas-revealed-in-foia-request-on-uaps-2.txt",
       "candidates": [
@@ -290617,6 +290632,48 @@
           "method": "unclassified-mention",
           "evidence": "22 Soplamber 2000- 28 September 2010",
           "segment": 599
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1b0c079b0c62",
+      "path": "Black-Vault-UFO/pdfs/transcript-of-communications-between-air-traffic-control-and-jal-1628.txt",
+      "candidates": [
+        {
+          "value": "1987-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Subject: INFORMATION: Transcription concerning the Date : January 9, 1987",
+          "segment": 3
+        },
+        {
+          "value": "1986-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on November 18, 1986 at approximately 0218 UTC.",
+          "segment": 5
+        },
+        {
+          "value": "1986-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This transcription covers the time period from November 18, 1986, 0214 UTC to",
+          "segment": 7
+        },
+        {
+          "value": "1986-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 18, 1986, 0259 UTC.",
+          "segment": 8
         }
       ]
     },
@@ -365639,6 +365696,102 @@
       ]
     },
     {
+      "documentId": "doc-84dad959d790",
+      "path": "DPIArchive/documents/125300-cejka-homopolar-high-frequency-non-reluctant-generator-wjf-muller.txt",
+      "candidates": [
+        {
+          "value": "1984-03-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 16, 1984, letter to Dr. Carl Reich",
+          "segment": 90
+        },
+        {
+          "value": "1984-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ding to Science from 10 February 1984, on June 25 the US",
+          "segment": 92
+        },
+        {
+          "value": "1984-02-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "February 24, 1984, letter to Bill Muller",
+          "segment": 97
+        },
+        {
+          "value": "1983-12-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 30, 1983, letter to Bill Muller",
+          "segment": 103
+        },
+        {
+          "value": "1983-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 16, 1983, letter to Dr. Reich",
+          "segment": 110
+        },
+        {
+          "value": "1984-01-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 23, 1984, letter toBill Muller",
+          "segment": 124
+        },
+        {
+          "value": "1984-04-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 27, 1984, letter to Bill Muller: See Attached",
+          "segment": 129
+        },
+        {
+          "value": "1983-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 24, 1983, letter to Bill Muller",
+          "segment": 272
+        },
+        {
+          "value": "1983-08-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 25, 1983, Report to Bill Muller",
+          "segment": 294
+        },
+        {
+          "value": "1983-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "FROM THE VATICAN, September 8, 1983",
+          "segment": 572
+        }
+      ]
+    },
+    {
       "documentId": "doc-40fd1772c687",
       "path": "DPIArchive/documents/125301-cejka-patent-3149253.txt",
       "candidates": [
@@ -419558,6 +419711,21 @@
       ]
     },
     {
+      "documentId": "doc-c3ad7bc48df96e360f39e2dd",
+      "path": "France-GEIPAN/paired/cases/2018-05-50594/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2018-05-31",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "**Case Description:** On May 31, 2018, at 10:00 PM, a teenager was intrigued by the very yellow color of a stormy sky and filmed the sky with her smartphone from the balcony. A few minutes later, she told her mother she had filmed \"something strange.\" Her mother corroborated her ",
+          "segment": "seg-49037a5386f9bc22a701cf57"
+        }
+      ]
+    },
+    {
       "documentId": "doc-dcb9327ba9ae19e91f89a805",
       "path": "France-GEIPAN/paired/cases/2018-05-50945/en/translation.txt",
       "candidates": [
@@ -420674,6 +420842,57 @@
       ]
     },
     {
+      "documentId": "doc-3b36a9976ae88f6008dd5aa0",
+      "path": "France-GEIPAN/paired/cases/2020-06-51129/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2020-06-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Documents: Datation IPACO.PNG Meteo.PNG Google Earth Paint.png Temoin photo DSC_0072.JPG Questionnaire terre-R.pdf Stellarium 20 juin 2020 22h02.PNG",
+          "segment": "seg-e9b1adf74e1ebec64dfaeb74"
+        },
+        {
+          "value": "2020-12-03",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: On December 03, 2020, the GEIPAN received a questionnaire and a photographic file of a PAN observed by the witness on June 21, 2020 at 00:02 in the Bordeaux sky. Only one testimony will be collected on this phenomenon. The witness, while waiting for his friend in a c",
+          "segment": "seg-a246b7f4e24dc597f411906f"
+        },
+        {
+          "value": "2020-06-21",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: On December 03, 2020, the GEIPAN received a questionnaire and a photographic file of a PAN observed by the witness on June 21, 2020 at 00:02 in the Bordeaux sky. Only one testimony will be collected on this phenomenon. The witness, while waiting for his friend in a c",
+          "segment": "seg-a246b7f4e24dc597f411906f"
+        },
+        {
+          "value": "2020-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 03, 2020, the GEIPAN received a questionnaire and a photographic file of a PAN observed by the witness on June 21, 2020 at 00:02 in the Bordeaux sky. Only one testimony will be collected on this phenomenon. The witness, while waiting for his friend in a c",
+          "segment": "seg-a246b7f4e24dc597f411906f"
+        },
+        {
+          "value": "2020-06-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On December 03, 2020, the GEIPAN received a questionnaire and a photographic file of a PAN observed by the witness on June 21, 2020 at 00:02 in the Bordeaux sky. Only one testimony will be collected on this phenomenon. The witness, while waiting for his friend in a c",
+          "segment": "seg-a246b7f4e24dc597f411906f"
+        }
+      ]
+    },
+    {
       "documentId": "doc-6725806c246623decb14ab47",
       "path": "France-GEIPAN/paired/cases/2020-07-50905/en/translation.txt",
       "candidates": [
@@ -421720,6 +421939,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On April 10, 2022, at 5:23 PM, a witness observing from their garden saw in the sky the slow movement of an object that intrigued them. The last one spins erratically on itself, reflecting sunlight while maintaining a straight trajectory SE-NO. The observation lasts ",
           "segment": "seg-6c62c94880e1dc50580d285d"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8a496495b2120de7d3e621d4",
+      "path": "France-GEIPAN/paired/cases/2022-04-51338/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2022-04-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On April 10, 2022, around 10 a.m., the witness observed from his window a bright point, very high in the sky, moving slowly and without a trail. He was engaged in household tasks in his children's room. His attention was drawn to an object appearing as a seemingly fi",
+          "segment": "seg-b70a707348c4ce86f340bc19"
         }
       ]
     },
@@ -422827,6 +423061,21 @@
           "method": "milestone-language",
           "evidence": "Description: On the evening of March 24, 2024, the witness is in their living room in Le Mans (72) when they observe the full moon and notice the presence of a PAN next to it, appearing as a golden yellow sphere. They take a photograph, with the window open, using their phone and",
           "segment": "seg-0bfa1d1672fa55b2753b0551"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6b1a5a78cf750215940cec8e",
+      "path": "France-GEIPAN/paired/cases/2024-04-51536/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2024-04-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Report:** On April 29, 2024, at 6:18 PM local time, a witness on vacation in the commune of Les Trois-Ilets, Martinique, observed from their apartment balcony a PAN resembling a rocket or missile traveling on a nearly vertical trajectory. The witness was able to capture video o",
+          "segment": "seg-058273e981302a48a9f04c8b"
         }
       ]
     },
@@ -424000,6 +424249,30 @@
           "method": "unclassified-mention",
           "evidence": "Description: On January 1, 2026, at 8:44 PM, from the terrace of his home in Rumilly (Haute-Savoie), the main witness (T1) observes to the east a first PAN, in the form of a point, yellow in color with a red halo, followed by a phenomenon described as a \"combustion cone\" and inte",
           "segment": "seg-ea38e59eafdc9b9afe58da41"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e00575b6547d8b42de94d88f",
+      "path": "France-GEIPAN/paired/cases/2026-01-51731/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2026-01-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: A witness reports in January 2026 having made multiple nocturnal observations of an unexplained phenomenon with friends and colleagues on several occasions. He witnesses this nocturnal phenomenon again on January 12, 2026. White lights, sometimes with a reddish refle",
+          "segment": "seg-afbb4ea46099e653f33bfd8b"
+        },
+        {
+          "value": "2026-01-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: A witness reports in January 2026 having made multiple nocturnal observations of an unexplained phenomenon with friends and colleagues on several occasions. He witnesses this nocturnal phenomenon again on January 12, 2026. White lights, sometimes with a reddish refle",
+          "segment": "seg-afbb4ea46099e653f33bfd8b"
         }
       ]
     },
@@ -443068,6 +443341,21 @@
           "method": "unclassified-mention",
           "evidence": "Ex July 8, 1965 I retirl",
           "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8748d17b3398",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302540054.txt",
+      "candidates": [
+        {
+          "value": "1965-07-12",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Objects observed on the night of 12 July 1965 are regerded",
+          "segment": 10
         }
       ]
     },
@@ -567703,6 +567991,21 @@
           "method": "unclassified-mention",
           "evidence": "Graham-Rowe, Duncan: Cool colours, man, New Scientist, 21 April 2001",
           "segment": 681
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3bcf4b059492",
+      "path": "War-Gov-PURSUE/release-06/documents/dow-uap-d122-aawsap-dird-invisibility-cloaking-theory-and-experiments-march-2-2010.txt",
+      "candidates": [
+        {
+          "value": "2006-05-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Their theories appeared in Science Express on 25 May 2006 and",
+          "segment": 298
         }
       ]
     },
