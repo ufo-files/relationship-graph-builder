@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-03T23:46:25Z",
+  "generatedAt": "2026-10-04T01:04:12Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "91fb63040b0cfd687ce287bca191c21bc74ce74d"
+    "revision": "536b1815047b55bdca5a87d368ec6636bb7d28bc"
   },
-  "documentsWithCandidates": 14666,
+  "documentsWithCandidates": 14671,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -132416,6 +132416,21 @@
       ]
     },
     {
+      "documentId": "doc-747601f1dce8",
+      "path": "Archives-for-the-Unexplained/documents/a17-001.txt",
+      "candidates": [
+        {
+          "value": "1997-02-17",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Mon, 17 Feb 1997 11:18:40 -0800",
+          "segment": 3
+        }
+      ]
+    },
+    {
       "documentId": "doc-f660fdc2d9bd",
       "path": "Archives-for-the-Unexplained/documents/a17-004-2c1170b294.txt",
       "candidates": [
@@ -198823,6 +198838,156 @@
           "method": "unclassified-mention",
           "evidence": "I am writing to acknowledge receipt of your letters dated 14 and 17 February 2002.",
           "segment": 1044
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2755c66314be",
+      "path": "Black-Vault-UFO/pdfs/defe-24-2064-1.txt",
+      "candidates": [
+        {
+          "value": "2006-01-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This page was last modified 20:26, 25 January 2006.",
+          "segment": 84
+        },
+        {
+          "value": "1996-11-10",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Howe regarding The People article on 10 November 1996 stating that \"the",
+          "segment": 512
+        },
+        {
+          "value": "1996-10-24",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Found - Letter from Martin Redmond dated 24 October 1996 to Michael",
+          "segment": 531
+        },
+        {
+          "value": "1996-10-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Portillo regarding an alleged incident on 5 October 1996 (Enc42).",
+          "segment": 532
+        },
+        {
+          "value": "1996-11-11",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "LM to ACAS from DAO dated 11 November 1996 who were looking into the",
+          "segment": 533
+        },
+        {
+          "value": "1996-11-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "dated 13 November 1996 (Encs61 & 62",
+          "segment": 537
+        },
+        {
+          "value": "1996-11-21",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Final letter to Martin Redmond dated 21 November 1996 (Enc64).",
+          "segment": 538
+        },
+        {
+          "value": "1996-11-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "LM to Sec(AS)2a1 from DI55 dated 1 November 1996 (Enc96).",
+          "segment": 541
+        },
+        {
+          "value": "1996-11-05",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "LM to ADGE1 from Sec(AS)2a1 dated 5 November 1996 (Enc97",
+          "segment": 542
+        },
+        {
+          "value": "1996-11-20",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "LM to Sec(AS)2a1 from ADGE 1 dated 20 November 1996 (Enc 101",
+          "segment": 543
+        },
+        {
+          "value": "1996-11-26",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "LM to DI55c from Sec(AS)2a1 dated 26 November 1996 (Enc 102",
+          "segment": 544
+        },
+        {
+          "value": "1996-11-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DAO’s report of 13 November 1996 states that the video has already been",
+          "segment": 547
+        },
+        {
+          "value": "1993-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by lIIand rugh July 28, 1993",
+          "segment": 975
+        },
+        {
+          "value": "1996-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Smith) on 7 August 1996, a copy Blaenau Gwent Mr. Soames: I wiII write to the ~.---_.,,.. . ~- ~.~.",
+          "segment": 1296
+        },
+        {
+          "value": "1996-09-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "policy towards unidentified flying Department’s Blackpool on 28 September 1996 had crashed near",
+          "segment": 1340
+        },
+        {
+          "value": "1990-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Kcw on 1 September 1990. ~",
+          "segment": 1422
         }
       ]
     },
@@ -317774,6 +317939,21 @@
       ]
     },
     {
+      "documentId": "doc-631812813232",
+      "path": "DPIArchive/documents/116196-royal-australian-air-force-unusual-sightings-incidents-9-60-2-68.txt",
+      "candidates": [
+        {
+          "value": "1966-07-31",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "ASI 3/A/5 dated 31 July 1966 outlines the action to be taken",
+          "segment": 370
+        }
+      ]
+    },
+    {
       "documentId": "doc-b101bb10062b",
       "path": "DPIArchive/documents/116207-ufo-s-enquiries-from-members-of-the-public-and-research-organizations.txt",
       "candidates": [
@@ -323491,6 +323671,48 @@
           "method": "dated-reference",
           "evidence": "Stamp dated 17 November 1990",
           "segment": 58
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1f35efb381b3",
+      "path": "DPIArchive/documents/116566-project-blue-book-ohio-1966.txt",
+      "candidates": [
+        {
+          "value": "1966-04-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "S nothing on radar on 17 April 1966 between 0530 And 0615.",
+          "segment": 487
+        },
+        {
+          "value": "1966-04-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "WIND DATA tor the Northeaatern Ohio Area 17 April 1966",
+          "segment": 531
+        },
+        {
+          "value": "1966-04-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SYRACUSE HERALD-JOURNAL, Monday, April 18, 1966",
+          "segment": 817
+        },
+        {
+          "value": "1966-04-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Pittsburgh Poot Gazette, April 10, 1966 •",
+          "segment": 931
         }
       ]
     },
@@ -439576,6 +439798,21 @@
           "method": "unclassified-mention",
           "evidence": "0450Z - 0915Z, 22 May 1966.",
           "segment": 33
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f70215e333ba",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302551126.txt",
+      "candidates": [
+        {
+          "value": "1966-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference your recent unidentified observation of 22 May 1966.",
+          "segment": 15
         }
       ]
     },
