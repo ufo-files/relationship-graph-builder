@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-04T10:12:06Z",
+  "generatedAt": "2026-10-04T11:29:52Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "8804bf3a7305b09ecf33abb14321ec784ee4fc0d"
+    "revision": "bd3235d089e378296c1adebeee93b135c7142279"
   },
-  "documentsWithCandidates": 14713,
+  "documentsWithCandidates": 14717,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -132955,6 +132955,21 @@
           "method": "document-header",
           "evidence": "Date: Wed, 26 Mar 1997 20:03:08 -0800",
           "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e2068ceb0991",
+      "path": "Archives-for-the-Unexplained/documents/a27-003-5d7d55dcbd.txt",
+      "candidates": [
+        {
+          "value": "1997-03-26",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Wed, 26 Mar 1997 20:34:53 -0800",
+          "segment": 4
         }
       ]
     },
@@ -418808,6 +418823,30 @@
       ]
     },
     {
+      "documentId": "doc-302ef4de874873bc404e70ad",
+      "path": "France-GEIPAN/paired/cases/2018-11-50827/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2019-09-23",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: The witness reports a nocturnal observation of 10 to 15 seconds of the slow and silent passage over Tarbes (65) of a dark triangular PAN with 5 low-intensity lights arranged in a V. The witness declared on September 23, 2019, an observation made on November 6, 2018 a",
+          "segment": "seg-143ffeb1b328246eaba182cf"
+        },
+        {
+          "value": "2018-11-06",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: The witness reports a nocturnal observation of 10 to 15 seconds of the slow and silent passage over Tarbes (65) of a dark triangular PAN with 5 low-intensity lights arranged in a V. The witness declared on September 23, 2019, an observation made on November 6, 2018 a",
+          "segment": "seg-143ffeb1b328246eaba182cf"
+        }
+      ]
+    },
+    {
       "documentId": "doc-7d7d8bc0e84094e673726a45",
       "path": "France-GEIPAN/paired/cases/2018-12-50667/en/translation.txt",
       "candidates": [
@@ -421001,6 +421040,21 @@
       ]
     },
     {
+      "documentId": "doc-46681a3b329ac9913d6805fd",
+      "path": "France-GEIPAN/paired/cases/2022-09-51393/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2022-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 2, 2022, at 6:35 AM, during a strong storm, a resident of Frontignan stepped onto their terrace. The sky was very overcast and low, and it was still dark; they then spotted a very bright, flickering green light in the sky, visible above the roof of a nei",
+          "segment": "seg-dcb70e6878942a3daa0fdb59"
+        }
+      ]
+    },
+    {
       "documentId": "doc-7977926bd9552c52e2d6ae9c",
       "path": "France-GEIPAN/paired/cases/2022-09-51395/en/translation.txt",
       "candidates": [
@@ -421912,6 +421966,57 @@
           "method": "event-language",
           "evidence": "Description: On Thursday, September 19, just before 10:30 a.m., while waiting for a meeting, the witness took photos of the Eiffel Tower and the La Défense district, visible in the distance from the window of a room on the 6th floor of a building in the 15th arrondissement of Par",
           "segment": "seg-73cc48988e17ad4c3d8df494"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-73bd15b7331aba6759d8b0b0",
+      "path": "France-GEIPAN/paired/cases/2024-09-51574/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2024-09-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 15, 2024, around 10:45 PM, witness T1, along with his spouse, observed from their house terrace a black circular shape vertical to their position moving towards the southwest. The sky is clear. The circular shape remains stationary for a few minutes and ",
+          "segment": "seg-235f475f41a29701352d6274"
+        },
+        {
+          "value": "2024-09-16",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: On September 15, 2024, around 10:45 PM, witness T1, along with his spouse, observed from their house terrace a black circular shape vertical to their position moving towards the southwest. The sky is clear. The circular shape remains stationary for a few minutes and ",
+          "segment": "seg-235f475f41a29701352d6274"
+        },
+        {
+          "value": "2024-10-04",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: On September 15, 2024, around 10:45 PM, witness T1, along with his spouse, observed from their house terrace a black circular shape vertical to their position moving towards the southwest. The sky is clear. The circular shape remains stationary for a few minutes and ",
+          "segment": "seg-235f475f41a29701352d6274"
+        },
+        {
+          "value": "2024-10-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 15, 2024, around 10:45 PM, witness T1, along with his spouse, observed from their house terrace a black circular shape vertical to their position moving towards the southwest. The sky is clear. The circular shape remains stationary for a few minutes and ",
+          "segment": "seg-235f475f41a29701352d6274"
+        },
+        {
+          "value": "2024-09-15",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Description: On September 15, 2024, around 10:45 PM, witness T1, along with his spouse, observed from their house terrace a black circular shape vertical to their position moving towards the southwest. The sky is clear. The circular shape remains stationary for a few minutes and ",
+          "segment": "seg-235f475f41a29701352d6274"
         }
       ]
     },
