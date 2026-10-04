@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "0f7c143ee89f0449ca4154f00e76b37d883b7d16"
+    "revision": "8804bf3a7305b09ecf33abb14321ec784ee4fc0d"
   },
-  "count": 651,
-  "totalCount": 651,
-  "shownCount": 651,
+  "count": 653,
+  "totalCount": 653,
+  "shownCount": 653,
   "candidates": [
     {
       "category": "organization",
@@ -415,8 +415,8 @@
       "category": "organization",
       "left": {
         "name": "Directorate of Air Staff",
-        "mentions": 188,
-        "documentCount": 13
+        "mentions": 212,
+        "documentCount": 14
       },
       "right": {
         "name": "Directorate of Airstaff",
@@ -527,8 +527,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 647,
-        "documentCount": 317
+        "mentions": 649,
+        "documentCount": 318
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -3999,8 +3999,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 217,
-        "documentCount": 70
+        "mentions": 218,
+        "documentCount": 71
       },
       "right": {
         "name": "Kings Island",
@@ -4111,8 +4111,8 @@
       "category": "person",
       "left": {
         "name": "David Clarke",
-        "mentions": 51,
-        "documentCount": 38
+        "mentions": 57,
+        "documentCount": 39
       },
       "right": {
         "name": "David Clark",
@@ -5007,8 +5007,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8704,
-        "documentCount": 2046
+        "mentions": 8705,
+        "documentCount": 2047
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -6271,8 +6271,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8704,
-        "documentCount": 2046
+        "mentions": 8705,
+        "documentCount": 2047
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -6460,6 +6460,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Directorate of Air Staff",
+        "mentions": 212,
+        "documentCount": 14
+      },
+      "right": {
+        "name": "Directorate Air Staff",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Department of Transport",
@@ -6629,6 +6645,22 @@
       "right": {
         "name": "Air Foroe Intelligence",
         "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "program",
+      "left": {
+        "name": "Project Condign",
+        "mentions": 13,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Project Condine",
+        "mentions": 8,
         "documentCount": 2
       },
       "similarity": 0.933,
@@ -7919,8 +7951,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 647,
-        "documentCount": 317
+        "mentions": 649,
+        "documentCount": 318
       },
       "right": {
         "name": "University Colorado",
@@ -7935,8 +7967,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 647,
-        "documentCount": 317
+        "mentions": 649,
+        "documentCount": 318
       },
       "right": {
         "name": "University of Color",
@@ -10415,8 +10447,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 49944,
-        "documentCount": 12664
+        "mentions": 49947,
+        "documentCount": 12666
       },
       "right": {
         "name": "North American Space Agency",
