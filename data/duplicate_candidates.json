@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "26662c0d8ceb540cc55566157ed43012f58fd34d"
+    "revision": "372765dc1a78a05fe63caf72737acf12ad1ac036"
   },
   "count": 670,
   "totalCount": 670,
@@ -628,8 +628,8 @@
       },
       "right": {
         "name": "Investigations Division",
-        "mentions": 4,
-        "documentCount": 3
+        "mentions": 5,
+        "documentCount": 4
       },
       "similarity": 0.978,
       "reason": "similar name",
@@ -2270,6 +2270,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Captain Kenjyu Terauchi",
+        "mentions": 8,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "Captain Kenju Terauchi",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.966,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "George Adamsky",
         "mentions": 8,
         "documentCount": 6
@@ -2281,22 +2297,6 @@
       },
       "similarity": 0.966,
       "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Captain Kenjyu Terauchi",
-        "mentions": 8,
-        "documentCount": 8
-      },
-      "right": {
-        "name": "Captain Kenju Terauchi",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.966,
-      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -4655,8 +4655,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of the Secretary",
-        "mentions": 32,
-        "documentCount": 28
+        "mentions": 33,
+        "documentCount": 29
       },
       "right": {
         "name": "Office of the Secreta",
@@ -5087,8 +5087,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8710,
-        "documentCount": 2051
+        "mentions": 8738,
+        "documentCount": 2052
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -6463,8 +6463,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8710,
-        "documentCount": 2051
+        "mentions": 8738,
+        "documentCount": 2052
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
