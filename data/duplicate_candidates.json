@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "23369828748d962af4a5fb74d1fd02e26f0f9731"
+    "revision": "85281403c8b4b239621e4eaddb349a98356961fa"
   },
-  "count": 648,
-  "totalCount": 648,
-  "shownCount": 648,
+  "count": 650,
+  "totalCount": 650,
+  "shownCount": 650,
   "candidates": [
     {
       "category": "organization",
@@ -1156,8 +1156,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 533,
-        "documentCount": 78
+        "mentions": 540,
+        "documentCount": 80
       },
       "similarity": 0.971,
       "reason": "similar name",
@@ -4031,8 +4031,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 144,
-        "documentCount": 113
+        "mentions": 145,
+        "documentCount": 114
       },
       "right": {
         "name": "Northeastern University",
@@ -4470,6 +4470,22 @@
         "name": "Mauri Island",
         "mentions": 6,
         "documentCount": 5
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Mount Baker",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Mount Barker",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -5572,8 +5588,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 533,
-        "documentCount": 78
+        "mentions": 540,
+        "documentCount": 80
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -5583,8 +5599,8 @@
       "category": "government_agency",
       "left": {
         "name": "Police Department",
-        "mentions": 118,
-        "documentCount": 87
+        "mentions": 119,
+        "documentCount": 88
       },
       "right": {
         "name": "Polioe Department",
@@ -7055,8 +7071,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 144,
-        "documentCount": 113
+        "mentions": 145,
+        "documentCount": 114
       },
       "right": {
         "name": "Northwest University",
@@ -7934,6 +7950,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Stanford University",
+        "mentions": 258,
+        "documentCount": 193
+      },
+      "right": {
+        "name": "Stanford University In",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.927,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "University of Torino",
         "mentions": 3,
         "documentCount": 2
@@ -8175,8 +8207,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 275,
-        "documentCount": 183
+        "mentions": 276,
+        "documentCount": 184
       },
       "right": {
         "name": "Intelligence Cf'nter",
