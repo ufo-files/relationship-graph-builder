@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-04T01:04:12Z",
+  "generatedAt": "2026-10-04T02:21:46Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "536b1815047b55bdca5a87d368ec6636bb7d28bc"
+    "revision": "fd76a0cb32a0f1bb56f77fe325deecdb743967f2"
   },
-  "documentsWithCandidates": 14671,
+  "documentsWithCandidates": 14664,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -132491,6 +132491,57 @@
       ]
     },
     {
+      "documentId": "doc-a522a2aaf912",
+      "path": "Archives-for-the-Unexplained/documents/a17-008.txt",
+      "candidates": [
+        {
+          "value": "1997-01-17",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Fri, 17 Jan 1997 13:45:22 -0500 (EST",
+          "segment": 3
+        },
+        {
+          "value": "1997-01-17",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Fri, 17 Jan 1997 10:14:17 -0800",
+          "segment": 7
+        },
+        {
+          "value": "1997-01-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 17 Jan 1997 09:25:27 +0000",
+          "segment": 34
+        },
+        {
+          "value": "1997-01-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 17 Jan 1997 08:57:54 -0800",
+          "segment": 44
+        },
+        {
+          "value": "1997-01-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, Jan 17, 1997 12:00 PM EDT",
+          "segment": 56
+        }
+      ]
+    },
+    {
       "documentId": "doc-6115a0f34667",
       "path": "Archives-for-the-Unexplained/documents/a18-002-02bc8a9a66.txt",
       "candidates": [
@@ -139252,39 +139303,6 @@
           "method": "unclassified-mention",
           "evidence": "Operation Majestic 12 was established by a special classified presidential order on 24 September 1947 at the recommendation of Secretary of Defense James V. Forrestal and Dr. Vannevar Bush, Chairman of the Joint Research and Development Board.",
           "segment": 112
-        }
-      ]
-    },
-    {
-      "documentId": "doc-60d4a1457b80",
-      "path": "Argentina-CIAE-CEFAE/documents/informe_cefae_2017.txt",
-      "candidates": [
-        {
-          "value": "2009-12-09",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Jim Oberg (USA): por sus trabajos: “Norway Spiral of December 9, 2009” y “2006´s GreatTomsk",
-          "segment": 686
-        },
-        {
-          "value": "2016-10-26",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Sky Spiral (Review draft 1, October 26, 2016)”.",
-          "segment": 687
-        },
-        {
-          "value": "2013-04-25",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "4) Gilles Fernandez, “La Vidéo d'Aguadilla, Puerto Rico, 25 avril 2013: Quelques Contre-",
-          "segment": 1145
         }
       ]
     },
@@ -191504,6 +191522,39 @@
       ]
     },
     {
+      "documentId": "doc-c96c5cd86989",
+      "path": "Black-Vault-UFO/pdfs/canufodoc-18-pdf.txt",
+      "candidates": [
+        {
+          "value": "1967-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "• frc:.- the Winnipea Tribune of Monday, May 22, 1967, with a pi~ture of •",
+          "segment": 1070
+        },
+        {
+          "value": "1967-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Re:~ A»ticle ~Saskatoon Star Phoenix October 14, 1967",
+          "segment": 2413
+        },
+        {
+          "value": "1967-12-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Re: Your letter of 18 December 1967, file V 2000-4 Vol 4 (0 Ops}.",
+          "segment": 3094
+        }
+      ]
+    },
+    {
       "documentId": "doc-d2bc67cc2db3",
       "path": "Black-Vault-UFO/pdfs/canufodoc-25-pdf.txt",
       "candidates": [
@@ -198713,6 +198764,678 @@
       ]
     },
     {
+      "documentId": "doc-250f1e0e75a6",
+      "path": "Black-Vault-UFO/pdfs/defe-24-2056-1.txt",
+      "candidates": [
+        {
+          "value": "1979-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "26 January 1979 at 2045.",
+          "segment": 51
+        },
+        {
+          "value": "1980-11-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "29 November 1980 at 0500-0550.",
+          "segment": 60
+        },
+        {
+          "value": "1980-11-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "We have no UFO report from PC Alan Godfrey on 29 November 1980.",
+          "segment": 72
+        },
+        {
+          "value": "1979-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "26 January 1979 - 2045 Denbigh, North Wales",
+          "segment": 81
+        },
+        {
+          "value": "1980-11-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "29 November 1980 - 0500-0550 Todmorden, West Yorkshire",
+          "segment": 84
+        },
+        {
+          "value": "1980-11-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Division of this Force on 21 November 1980.",
+          "segment": 218
+        },
+        {
+          "value": "2005-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 21 September 2005 14:47",
+          "segment": 258
+        },
+        {
+          "value": "2005-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 21 September 2005 16:24",
+          "segment": 285
+        },
+        {
+          "value": "2005-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 21 September 2005 15:15",
+          "segment": 290
+        },
+        {
+          "value": "1977-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "can be found under The National Archives reference of DEFE 71/34 (UFO Reports 1 Jan 1977 -",
+          "segment": 484
+        },
+        {
+          "value": "1977-05-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "31 May 1977) and DEFE 71/35 (UFO Reports 1 June 1977 - 30 September 1977).",
+          "segment": 485
+        },
+        {
+          "value": "1977-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "31 May 1977) and DEFE 71/35 (UFO Reports 1 June 1977 - 30 September 1977).",
+          "segment": 485
+        },
+        {
+          "value": "1977-09-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "31 May 1977) and DEFE 71/35 (UFO Reports 1 June 1977 - 30 September 1977).",
+          "segment": 485
+        },
+        {
+          "value": "1991-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on the 21 April 1991 concerning an Alitalia jet. You will notice that this was an 'Occurrence",
+          "segment": 486
+        },
+        {
+          "value": "1994-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Dunfermline, Fife on 19 February 1994.",
+          "segment": 521
+        },
+        {
+          "value": "1990-08-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO report and photograph taken at Calvine, Tayside on 4 August 1990.",
+          "segment": 526
+        },
+        {
+          "value": "1991-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Copies of all MOD, RAF and CAA papers on the 21 April 1991 UFO 'nearmiss' with Alitalia jet over the",
+          "segment": 541
+        },
+        {
+          "value": "1994-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "at Craigluscar Reservoir near Dunfermline, Fife, 19 February 1994.",
+          "segment": 543
+        },
+        {
+          "value": "1994-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "at Craigluscar Reservior near Dunfermline, Fife, 19 February 1994.",
+          "segment": 549
+        },
+        {
+          "value": "1991-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Copies of all MOD, RAF and CAA papers on the 21 April 1991 UFO 'nearmiss' with Alitalia jet over the",
+          "segment": 561
+        },
+        {
+          "value": "1994-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "at Craigluscar Reservoir near Dunfermline, Fife, 19 February 1994.",
+          "segment": 563
+        },
+        {
+          "value": "2005-04-25",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Date request received: 25 April 2005",
+          "segment": 566
+        },
+        {
+          "value": "1991-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Copies of all MOD, RAF and CAA papers on the 21 April 1991 UFO 'nearmiss' with Alitalia jet over the North Sea.",
+          "segment": 652
+        },
+        {
+          "value": "1995-01-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Copies of all MOD, RAF and CAA papers on the 6 January 1995 'nearmiss' with BA jet descending into",
+          "segment": 657
+        },
+        {
+          "value": "1994-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "at Craigluscar Reservoir near Dunfermline, Fife, 19 February 1994.",
+          "segment": 659
+        },
+        {
+          "value": "1977-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and DEFE 71/35 (UFO Reports 1 June 1977 - 30 September 1977).",
+          "segment": 673
+        },
+        {
+          "value": "1977-09-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and DEFE 71/35 (UFO Reports 1 June 1977 - 30 September 1977).",
+          "segment": 673
+        },
+        {
+          "value": "2005-04-25",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Did you receive an email from me dated 25 April 2005?",
+          "segment": 695
+        },
+        {
+          "value": "1995-01-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Copies of all MOD, RAF and CAA papers on the 6 January 1995",
+          "segment": 699
+        },
+        {
+          "value": "1994-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "near Dunfermline, Fife, 19 February 1994.",
+          "segment": 704
+        },
+        {
+          "value": "1972-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Reponto 1 June 1972-8995",
+          "segment": 1109
+        },
+        {
+          "value": "1991-05-06",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "8) Article from 'The Independent' newspaper dated 6 May 1991",
+          "segment": 1283
+        },
+        {
+          "value": "1991-04-25",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "CAA Incident Report dated 25 April 1991",
+          "segment": 1284
+        },
+        {
+          "value": "1991-05-09",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference: D/sec(As) 12/2 dated 9 May 1991",
+          "segment": 1386
+        },
+        {
+          "value": "1991-05-21",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference: D/Sec (AS) 8/1 dated 21 May 1991",
+          "segment": 1433
+        },
+        {
+          "value": "1991-05-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thank you for your letter of 6 May 1991 regarding the sighting of",
+          "segment": 1448
+        },
+        {
+          "value": "1991-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thank you for your letter of 21 May 1991 regarding the report of",
+          "segment": 1467
+        },
+        {
+          "value": "1991-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "an air incident on Sunday 21 April 1991.",
+          "segment": 1468
+        },
+        {
+          "value": "1991-05-21",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "A. D/Sec (AS) 8/1 dated 21 May 1991",
+          "segment": 1504
+        },
+        {
+          "value": "1991-05-09",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference: D/Sec(AS) 12/2 dated 9 May 1991",
+          "segment": 1528
+        },
+        {
+          "value": "1991-05-06",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "s letter dated 6 May 1991 I",
+          "segment": 1529
+        },
+        {
+          "value": "1991-05-21",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference: D/Sec(AS)8/1 dated 21 May 1991",
+          "segment": 1540
+        },
+        {
+          "value": "1991-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Copies of all MOD, RAF and CAA Papers on the 21 April 1991 UFO 'nearmiss'",
+          "segment": 1856
+        },
+        {
+          "value": "1995-01-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Copies of all MOD, RAF and CAA papers on the 6 January 1995 'nearmiss' with BA jet",
+          "segment": 1858
+        },
+        {
+          "value": "2005-08-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 09 August 2005 10:02",
+          "segment": 1953
+        },
+        {
+          "value": "2005-08-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 08 August 2005 16:53",
+          "segment": 1956
+        },
+        {
+          "value": "2005-08-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 08 August 2005 16:38",
+          "segment": 1958
+        },
+        {
+          "value": "2005-08-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 08 August 2005 16:22",
+          "segment": 1964
+        },
+        {
+          "value": "1991-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the object similar to a missile which passed the Alitalia jet on 21 April 1991.",
+          "segment": 1965
+        },
+        {
+          "value": "2005-08-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 08 August 2005 11:02",
+          "segment": 1976
+        },
+        {
+          "value": "2005-08-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 08 August 2005 10:53",
+          "segment": 1981
+        },
+        {
+          "value": "2005-08-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 08 August 2005 10:43",
+          "segment": 1982
+        },
+        {
+          "value": "1991-05-21",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference: D/Sec(AS) 8/1 dated 21 May 1991",
+          "segment": 2060
+        },
+        {
+          "value": "1991-05-09",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference: D/Sec(As) 12/2 dated 9 May 1991",
+          "segment": 2195
+        },
+        {
+          "value": "1991-05-06",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "References: A) Letter from Mr N Redfern dated 6 May 1991",
+          "segment": 2210
+        },
+        {
+          "value": "1991-05-06",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "B) Article from 'The Independent' newspaper dated 6 May 1991",
+          "segment": 2211
+        },
+        {
+          "value": "1991-04-25",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "C) CAA Incident Report dated 25 April 1991",
+          "segment": 2212
+        },
+        {
+          "value": "1991-05-21",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference: D/Sec(AS)8/1 dated 21 May 1991",
+          "segment": 2426
+        },
+        {
+          "value": "1991-05-21",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "A. D/Sec (AS)8/1 dated 21 May 1991",
+          "segment": 2435
+        },
+        {
+          "value": "1991-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "an air incident on Sunday 21 April 1991.",
+          "segment": 2568
+        },
+        {
+          "value": "1991-05-21",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference: D/Sec(AS)8/1 dated 21 May 1991",
+          "segment": 2585
+        },
+        {
+          "value": "1990-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "reported to the MOD on or around 5 May 1990 in the UK, specifically the Somerset area.",
+          "segment": 2830
+        },
+        {
+          "value": "2005-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 29 June 2005 15:38",
+          "segment": 3141
+        },
+        {
+          "value": "2005-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 29 June 2005 12:33",
+          "segment": 3159
+        },
+        {
+          "value": "2005-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 29 June 2005 12:19",
+          "segment": 3162
+        },
+        {
+          "value": "2005-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 29 June 2005 15:38",
+          "segment": 3178
+        },
+        {
+          "value": "2005-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 29 June 2005 12:33",
+          "segment": 3195
+        },
+        {
+          "value": "2005-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 29 June 2005 12:19",
+          "segment": 3198
+        },
+        {
+          "value": "2005-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 29 June 2005 12:19",
+          "segment": 3210
+        },
+        {
+          "value": "2005-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 29 June 2005 12:33",
+          "segment": 3232
+        },
+        {
+          "value": "2005-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 29 June 2005 12:19",
+          "segment": 3236
+        },
+        {
+          "value": "2005-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 29 June 2005 09:56",
+          "segment": 3250
+        },
+        {
+          "value": "2005-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 29 June 2005 09:38",
+          "segment": 3257
+        },
+        {
+          "value": "2005-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 29 June 2005 09:25",
+          "segment": 3266
+        }
+      ]
+    },
+    {
       "documentId": "doc-d4d9f3fef37e",
       "path": "Black-Vault-UFO/pdfs/defe-24-2057-1.txt",
       "candidates": [
@@ -199003,6 +199726,174 @@
           "method": "unclassified-mention",
           "evidence": "Secretary’s residence on 8 March 1997.",
           "segment": 24
+        }
+      ]
+    },
+    {
+      "documentId": "doc-3c40ed09d149",
+      "path": "Black-Vault-UFO/pdfs/defe-24-2072-1.txt",
+      "candidates": [
+        {
+          "value": "1996-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mr.Smith) on 7 August 1996. a copy of which has been",
+          "segment": 279
+        },
+        {
+          "value": "1996-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mr.Smith) on 7 August 1996. a copy of which has been copy of the letter will be placed in the Library of the",
+          "segment": 380
+        },
+        {
+          "value": "1990-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Department’s assessment ofthe incident that occurred on 5 November 1990 when a",
+          "segment": 713
+        },
+        {
+          "value": "1993-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The sighting on 31 March 1993 was one of a number reported from",
+          "segment": 740
+        },
+        {
+          "value": "1990-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Tornado aircrew on 5 November 1990 suggested that they may have seen",
+          "segment": 744
+        },
+        {
+          "value": "1993-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on 30 and 31 March 1993, that probed our fields and raced our",
+          "segment": 839
+        },
+        {
+          "value": "1990-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "5 November 1990, which suggested that they may have in fact seen a",
+          "segment": 1008
+        },
+        {
+          "value": "1990-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "incident that occurred on 5 November 1990 when a patrol",
+          "segment": 1184
+        },
+        {
+          "value": "1993-03-31",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "of many forthcoming tenders to be published in the hours of 31 March 1993. (39246",
+          "segment": 1192
+        },
+        {
+          "value": "1990-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on 5 November 1990 and 31 March 1993 were not of defence significance; [2898",
+          "segment": 1228
+        },
+        {
+          "value": "1993-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on 5 November 1990 and 31 March 1993 were not of defence significance; [2898",
+          "segment": 1228
+        },
+        {
+          "value": "1996-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mr. Soames: I refer the hon. Member to the answer that I gave him on 8 July 1996",
+          "segment": 1232
+        },
+        {
+          "value": "1993-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The sighting on 31 March 1993 was one of a number reported",
+          "segment": 1241
+        },
+        {
+          "value": "1990-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The report by Tornado aircrew on 5 November 1990",
+          "segment": 1245
+        },
+        {
+          "value": "1996-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Report, 24 July 1996, Col 424, which the MP cites in his question",
+          "segment": 1251
+        },
+        {
+          "value": "1996-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "investigating ’UFO’ reports (Official Report, 8 July 1996, Col 26",
+          "segment": 1254
+        },
+        {
+          "value": "1990-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "incident that occurred on 5 November 1990 when a patrol",
+          "segment": 1293
+        },
+        {
+          "value": "1996-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "started an 4 July 1996 and is expected to be completed by Defence, pursuant to his answer to the hon. Member for",
+          "segment": 1366
         }
       ]
     },
@@ -199363,6 +200254,309 @@
           "method": "unclassified-mention",
           "evidence": "Reissued by C&L(F&S)Legal on 4 July 2003",
           "segment": 1227
+        }
+      ]
+    },
+    {
+      "documentId": "doc-58fb10f65edf",
+      "path": "Black-Vault-UFO/pdfs/defe-24-2094-1.txt",
+      "candidates": [
+        {
+          "value": "1993-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "D/Sec(AS) 12/7 A Unidentified Flying Objects (UFOs)-Incident 31 March 1993",
+          "segment": 94
+        },
+        {
+          "value": "1993-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "D/See(AS) 12/7 A Unidentified Flying Objects (UFOs)- Incident 31 March 1993",
+          "segment": 379
+        },
+        {
+          "value": "2006-11-17",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "For reauest received 17 November 2006",
+          "segment": 786
+        },
+        {
+          "value": "2006-12-17",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "For Reauest dated 17 December 2006",
+          "segment": 792
+        },
+        {
+          "value": "2006-12-19",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "For request received 19 December 2006",
+          "segment": 795
+        },
+        {
+          "value": "2007-08-02",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "E-mail received 2 August 2007",
+          "segment": 803
+        },
+        {
+          "value": "2006-12-20",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "E-mail dated 20 December 2006",
+          "segment": 809
+        },
+        {
+          "value": "2007-01-19",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "E-mail dated 19 January 2007",
+          "segment": 810
+        },
+        {
+          "value": "2007-07-23",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "E-mail dated 23 July 2007",
+          "segment": 811
+        },
+        {
+          "value": "2007-08-06",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "E-mail dated 6 August 2007",
+          "segment": 812
+        },
+        {
+          "value": "2007-08-06",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "E-mail dated 6 August 2007",
+          "segment": 813
+        },
+        {
+          "value": "1997-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I) 14 October 1997 Lords Hansard (Written Answer): Lt Charles Halt",
+          "segment": 877
+        },
+        {
+          "value": "1998-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2) 15 July 1998 Lords Hansard (Written Answer HL2612]): Unidentified",
+          "segment": 879
+        },
+        {
+          "value": "1993-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Shawbury on 31 March 1993; and whether, when the craft has not been",
+          "segment": 882
+        },
+        {
+          "value": "2001-01-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "3)25 January 2001 Lords Hansard [Written Answer HL303]: Lord Hill",
+          "segment": 885
+        },
+        {
+          "value": "2001-01-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "4)25 January 2001 Lords Hansard [Written Answer HL301]: Lord Hill",
+          "segment": 889
+        },
+        {
+          "value": "2001-01-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "5)30 January 2001 Lords Hansard [Written Answer HL322]: Lord Hill",
+          "segment": 895
+        },
+        {
+          "value": "1996-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Prime Minister: We have recently issued several Sovours, dared /2 November 1996",
+          "segment": 1009
+        },
+        {
+          "value": "1993-04-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "The Prime Minister: Since 1 April 1993, the British (4)how many British Aerospace personnel (a)did and",
+          "segment": 1033
+        },
+        {
+          "value": "1991-01-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "for Defence at what time on the 20 and 21 January 1991",
+          "segment": 1047
+        },
+        {
+          "value": "1992-01-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "for Defence at what time on the 20 and 21 January 1992",
+          "segment": 1055
+        },
+        {
+          "value": "1990-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "objects on 5 November 1990 and 31 March 1993 we",
+          "segment": 1058
+        },
+        {
+          "value": "1993-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "objects on 5 November 1990 and 31 March 1993 we",
+          "segment": 1058
+        },
+        {
+          "value": "1991-01-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2) for what reasons his Department assessed lhe 5 ghtings of a deteCted at Dhahran on 2Q and 21 January 1991.",
+          "segment": 1060
+        },
+        {
+          "value": "1996-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I gave him on 8 July 1996, Official Report.column 26.",
+          "segment": 1066
+        },
+        {
+          "value": "1990-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "My Department supports the DTI’s small business incident that occurred on 5 November 1990 when a patrol",
+          "segment": 1100
+        },
+        {
+          "value": "1993-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "hours of 31 March 1993, (392461",
+          "segment": 1110
+        },
+        {
+          "value": "1980-12-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "26 December 1980). contributions and allowing me to interview him in person.",
+          "segment": 1225
+        },
+        {
+          "value": "1981-01-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Bentwaters on 13 January 1981.",
+          "segment": 1247
+        },
+        {
+          "value": "1981-01-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Officer atKAF Bentwaters on 13 January 1981.\"",
+          "segment": 1256
+        },
+        {
+          "value": "1982-10-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to have been opened as a registered file on 25 October 1982.",
+          "segment": 1259
+        },
+        {
+          "value": "1980-12-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "26 December 1980). former Special Agent Wayne Persinger, Deputy Commander, Air",
+          "segment": 1413
+        },
+        {
+          "value": "1981-01-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "memorandum dated 13 January 1981 compare to the building at Camberley and work is currently under way",
+          "segment": 1441
         }
       ]
     },
@@ -257906,6 +259100,21 @@
       ]
     },
     {
+      "documentId": "doc-70cfa2549102",
+      "path": "Black-Vault-UFO/pdfs/letters-about-ufo-folder-6-and-7.txt",
+      "candidates": [
+        {
+          "value": "1987-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on March 5, 1987 the results ef its investigation of the",
+          "segment": 539
+        }
+      ]
+    },
+    {
       "documentId": "doc-8544a1d1353a",
       "path": "Black-Vault-UFO/pdfs/long-john-nebel-aka-john-zimmerman.txt",
       "candidates": [
@@ -259963,6 +261172,129 @@
           "method": "unclassified-mention",
           "evidence": "usual aircraft eeen near Montgomery, Alabama, July 24, 1948, stories con-",
           "segment": 317
+        }
+      ]
+    },
+    {
+      "documentId": "doc-67a9f001ce0d",
+      "path": "Black-Vault-UFO/pdfs/miscellaneous.txt",
+      "candidates": [
+        {
+          "value": "1987-03-05",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "release on March 5, 1987.",
+          "segment": 47
+        },
+        {
+          "value": "1987-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A press conference, (March 5, 1987, 10:00 am) with one week prior",
+          "segment": 57
+        },
+        {
+          "value": "1987-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "approximately 10:00 am of March 5, 1987.",
+          "segment": 74
+        },
+        {
+          "value": "1987-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "491 orders filled as of August 14, 1987 *",
+          "segment": 135
+        },
+        {
+          "value": "1987-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "10 :00 am March 5, 1987.",
+          "segment": 174
+        },
+        {
+          "value": "1987-03-05",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "release on March 5, 1987.",
+          "segment": 179
+        },
+        {
+          "value": "1987-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A press conference, (March 5, 1987, 10:00 am) with one week prior",
+          "segment": 186
+        },
+        {
+          "value": "1987-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "approximately 10:00 am of March 5, 1987.",
+          "segment": 204
+        },
+        {
+          "value": "1986-11-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Kenju Terauchi to ok off fr om Iceland November 17, 1986, in a Japan Air Lines",
+          "segment": 238
+        },
+        {
+          "value": "1986-11-17",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "of t h e JAL airliner who observed a huge UFO over Alaska on November 17, 1986",
+          "segment": 354
+        },
+        {
+          "value": "1955-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "companions spotted the UFO s on October 4, 1955, while traveling by rail",
+          "segment": 476
+        },
+        {
+          "value": "1955-11-04",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "And an FBI memo dated November 4, 1955, also discusses the",
+          "segment": 509
+        },
+        {
+          "value": "1969-05-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Founded on May 31, 1969, MUFON's phenomenal success may be attributed to the \"grass roots\" nature of the",
+          "segment": 680
         }
       ]
     },
@@ -315020,531 +316352,6 @@
       ]
     },
     {
-      "documentId": "doc-dbb5ee0da332",
-      "path": "Chile-SEFAA/documents/CASO-N--1971-29022024.txt",
-      "candidates": [
-        {
-          "value": "2024-02-29",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Junto al reporte se ingresó el archivo “WhatsApp Image 2024-02-29 at 6.38.32 PM.jpeg” y",
-          "segment": 13
-        }
-      ]
-    },
-    {
-      "documentId": "doc-55376845ee26",
-      "path": "Chile-SEFAA/documents/CASO-N--2019-27102024.txt",
-      "candidates": [
-        {
-          "value": "2024-10-25",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "pantalla “Captura de pantalla 2024-10-25 221820.png” y “Captura de pantalla",
-          "segment": 12
-        }
-      ]
-    },
-    {
-      "documentId": "doc-a8c3e146b8cf",
-      "path": "Chile-SEFAA/documents/CASO-N--2021-06112024.txt",
-      "candidates": [
-        {
-          "value": "2024-11-01",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Junto al reporte se ingresó el archivo de video “WhatsApp Video 2024-11-01 at",
-          "segment": 23
-        },
-        {
-          "value": "2024-11-01",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "596dcbe99c23.jpeg”, “WhatsApp Image 2024-11-01 at 23.00.40.jpeg”.",
-          "segment": 27
-        },
-        {
-          "value": "2024-11-01",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "acuerdo a su nombre, “WhatsApp Video 2024-11-01 at 22.47.47.mp4”, debería",
-          "segment": 35
-        }
-      ]
-    },
-    {
-      "documentId": "doc-6aab1cd22ae9",
-      "path": "Chile-SEFAA/documents/CASO-N--2141-15072025.txt",
-      "candidates": [
-        {
-          "value": "2025-07-15",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Video 2025-07-15 at 17.28.22.mp4”.",
-          "segment": 8
-        }
-      ]
-    },
-    {
-      "documentId": "doc-a2f55a8494c7",
-      "path": "Chile-SEFAA/documents/CASO-N--2143-22072025.txt",
-      "candidates": [
-        {
-          "value": "2025-07-22",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "captura de pantalla “Captura de pantalla 2025-07-22 a la(s) 12.23.48.png” de la",
-          "segment": 28
-        },
-        {
-          "value": "2025-07-22",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Figura 1. “Captura de pantalla 2025-07-22 a la(s) 12.23.48.png”",
-          "segment": 29
-        }
-      ]
-    },
-    {
-      "documentId": "doc-8d559974377d",
-      "path": "Chile-SEFAA/documents/CASO-N--2192-14122025.txt",
-      "candidates": [
-        {
-          "value": "2025-12-14",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "El caso se estudió a partir de los archivos de video “WhatsApp Video 2025-12-14",
-          "segment": 31
-        },
-        {
-          "value": "2025-12-14",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "at 12.57.38 AM.mp4”, “WhatsApp Video 2025-12-14 at 12.57.38 AM (1).mp4” y",
-          "segment": 32
-        },
-        {
-          "value": "2025-12-14",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "“WhatsApp Video 2025-12-14 at 12.57.38 AM (2).mp4”.",
-          "segment": 33
-        }
-      ]
-    },
-    {
-      "documentId": "doc-4603e2268019",
-      "path": "Chile-SEFAA/documents/CASO-N--2248-11062021.txt",
-      "candidates": [
-        {
-          "value": "2026-06-11",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Junto al reporte se ingresó el archivo “WhatsApp Video 2026-06-11 at",
-          "segment": 16
-        }
-      ]
-    },
-    {
-      "documentId": "doc-c76c8ba8f373",
-      "path": "Chile-SEFAA/documents/CASO-N--2250-13062021.txt",
-      "candidates": [
-        {
-          "value": "2026-06-12",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Junto al reporte se ingresaron los archivos “PHOTO-2026-06-12-21-42-05 (1).jpg”",
-          "segment": 17
-        },
-        {
-          "value": "2026-06-12",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "y “PHOTO-2026-06-12-21-42-05.jpg”.",
-          "segment": 18
-        },
-        {
-          "value": "2026-06-12",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "PHOTO-2026-06-12-21-42-05.jpg 2250-1 960 x 1280 1x1",
-          "segment": 25
-        },
-        {
-          "value": "2026-06-12",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "PHOTO-2026-06-12-21-42-05 (1).jpg 2250-2 960 x 1280 1x1",
-          "segment": 26
-        }
-      ]
-    },
-    {
-      "documentId": "doc-e65af03e0f5d",
-      "path": "Chile-SEFAA/documents/CASO-N--2251-1-13062026.txt",
-      "candidates": [
-        {
-          "value": "2026-06-12",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Junto al reporte se ingresaron los archivos “PHOTO-2026-06-12-21-42-05 (1).jpg”",
-          "segment": 17
-        },
-        {
-          "value": "2026-06-12",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "y “PHOTO-2026-06-12-21-42-05.jpg”.",
-          "segment": 18
-        },
-        {
-          "value": "2026-06-12",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "PHOTO-2026-06-12-21-42-05.jpg 2250-A 960 x 1280 1x1",
-          "segment": 35
-        },
-        {
-          "value": "2026-06-12",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "PHOTO-2026-06-12-21-42-05 (1).jpg 2250-B 960 x 1280 1x1",
-          "segment": 36
-        }
-      ]
-    },
-    {
-      "documentId": "doc-88711dd5070f",
-      "path": "Chile-SEFAA/documents/CASO-N--2258-12072026.txt",
-      "candidates": [
-        {
-          "value": "2026-07-12",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Video 2026-07-12 at 02.06.05.mp4”, cuyo metadato confirmó que fue alterado por",
-          "segment": 21
-        }
-      ]
-    },
-    {
-      "documentId": "doc-033d42245276",
-      "path": "Chile-SEFAA/documents/CASO-N--2267-29072026.txt",
-      "candidates": [
-        {
-          "value": "2026-07-29",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Junto al reporte se ingresó el archivo “WhatsApp Image 2026-07-29 at",
-          "segment": 9
-        }
-      ]
-    },
-    {
-      "documentId": "doc-e07f36badf30",
-      "path": "Chile-SEFAA/documents/CASO-N-1917-08092023.txt",
-      "candidates": [
-        {
-          "value": "2023-09-08",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "09-08-04-38-20-238(0).mp4”, “Screenrecorder-2023-09-08-04-38-20-",
-          "segment": 10
-        },
-        {
-          "value": "2023-09-08",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "238(1)(0).mp4” y “Screenrecorder-2023-09-08-04-38-20-238(1)(1).mp4”.",
-          "segment": 11
-        }
-      ]
-    },
-    {
-      "documentId": "doc-afbc8f49398c",
-      "path": "Chile-SEFAA/documents/CASO-N-1929-30102023.txt",
-      "candidates": [
-        {
-          "value": "2023-10-28",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "10-28 a las 00.54.54_72e957.mp4”, “Vídeo de WhatsApp 2023-10-28 a las",
-          "segment": 20
-        },
-        {
-          "value": "2023-10-28",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "31.01.14_f58bf9.mp4”, “Vídeo de WhatsApp 2023-10-28 a las",
-          "segment": 21
-        },
-        {
-          "value": "2023-10-28",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "01.31.15_627e10.mp4”, “Vídeo de WhatsApp 2023-10-28 a las",
-          "segment": 22
-        },
-        {
-          "value": "2023-10-28",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "31.01.16_b39e6b.mp4” y “Vídeo de WhatsApp 2023-10-28 a las",
-          "segment": 23
-        }
-      ]
-    },
-    {
-      "documentId": "doc-ee0434549c4a",
-      "path": "Chile-SEFAA/documents/CASO-N-1965-20012024.txt",
-      "candidates": [
-        {
-          "value": "2024-01-20",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Junto al reporte se ingresó el archivo “Video de WhatsApp 2024-01-20 a las",
-          "segment": 19
-        }
-      ]
-    },
-    {
-      "documentId": "doc-80bc2149963e",
-      "path": "Chile-SEFAA/documents/CASO-N-800-19032018.txt",
-      "candidates": [
-        {
-          "value": "2018-07-20",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "De la filmación se extrae la imagen vlcsnap-2018-07-20-13h17m42s611.",
-          "segment": 12
-        }
-      ]
-    },
-    {
-      "documentId": "doc-204db0717fa1",
-      "path": "Chile-SEFAA/documents/INFORME-CASO-No-1135.txt",
-      "candidates": [
-        {
-          "value": "2020-07-03",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "“WhatsApp Video 2020-07-03 at 00.10.11”.",
-          "segment": 54
-        }
-      ]
-    },
-    {
-      "documentId": "doc-05ec5f6307e4",
-      "path": "Chile-SEFAA/documents/Informe-de-Publicacion-de-caso-N--1781-17052022.txt",
-      "candidates": [
-        {
-          "value": "2022-05-17",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Junto a su reporte ingresó el archivo “WhatsApp Image 2022-05-17 at 9.26.18",
-          "segment": 15
-        }
-      ]
-    },
-    {
-      "documentId": "doc-9576e2b00a45",
-      "path": "Chile-SEFAA/documents/Informe-de-Publicacion-de-caso-N--1821-05102022.txt",
-      "candidates": [
-        {
-          "value": "2022-10-03",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "“WhatsApp Video 2022-10-03 at 21.17.14.mp4”.",
-          "segment": 17
-        }
-      ]
-    },
-    {
-      "documentId": "doc-7a1b6ecf40d9",
-      "path": "Chile-SEFAA/documents/Informe-de-Publicacion-de-caso-N--1835-01112022.txt",
-      "candidates": [
-        {
-          "value": "2022-10-29",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Video 2022-10-29 at 20.39.55.mp4”.",
-          "segment": 14
-        }
-      ]
-    },
-    {
-      "documentId": "doc-16dc867655c9",
-      "path": "Chile-SEFAA/documents/Informe-de-Publicacion-de-caso-N-1889-23052023.txt",
-      "candidates": [
-        {
-          "value": "2023-04-13",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Junto al reporte se ingresaron los archivos “Video 2023-04-13.mp4” e “Image 2023-04-",
-          "segment": 25
-        },
-        {
-          "value": "2023-04-13",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Lo estudiado en el archivo “Image 2023-04-13.jpeg”.",
-          "segment": 29
-        }
-      ]
-    },
-    {
-      "documentId": "doc-840bafdf0182",
-      "path": "Chile-SEFAA/documents/Informe-de-Publicacion-de-caso-N-1899-17072023.txt",
-      "candidates": [
-        {
-          "value": "2023-07-17",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Junto al reporte se ingresó el archivo “WhatsApp Video 2023-07-17 at 17.55.21.mp4”.",
-          "segment": 15
-        }
-      ]
-    },
-    {
-      "documentId": "doc-d5bf45c80880",
-      "path": "Chile-SEFAA/documents/Informe-de-Publicacion-de-caso-N-836-11072018.txt",
-      "candidates": [
-        {
-          "value": "2018-07-10",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Junto al reporte ingresó dos archivos en video: “2018-07-10-VIDEO-00002505.mp4” y",
-          "segment": 12
-        },
-        {
-          "value": "2018-07-10",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "“2018-07-10-00002506.mp4”.",
-          "segment": 13
-        }
-      ]
-    },
-    {
-      "documentId": "doc-81f4bbc8d40f",
-      "path": "Chile-SEFAA/documents/Informe-de-Publicacion-de-caso-N-959-10062019.txt",
-      "candidates": [
-        {
-          "value": "2019-05-09",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "“MVI_874.mp4”, “WhatsApp Video 2019-05-09 at 18.14.54.mp4” y WhatsApp Video",
-          "segment": 21
-        },
-        {
-          "value": "2019-05-09",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "2019-05-09 at 18.19.45.mp4”.",
-          "segment": 22
-        },
-        {
-          "value": "2019-05-09",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Para finalizar, en los videos recibidos Video 2019-05-09 18.14.54 y Video 2019-05-09",
-          "segment": 44
-        },
-        {
-          "value": "2019-05-09",
-          "precision": "day",
-          "confidence": 0.45,
-          "kind": "unknown",
-          "method": "unclassified-mention",
-          "evidence": "Para finalizar, en los videos recibidos Video 2019-05-09 18.14.54 y Video 2019-05-09",
-          "segment": 44
-        }
-      ]
-    },
-    {
       "documentId": "doc-33303c7b9a0c",
       "path": "DPIArchive/documents/114772-area-51-burning-revealed.txt",
       "candidates": [
@@ -367310,6 +368117,21 @@
       ]
     },
     {
+      "documentId": "doc-b7db662b9877",
+      "path": "DPIArchive/documents/127511-flying-saucer-seen-by-u-s-marine-from-cherry-point-nc-on-scaffolding-at-undisclosed-location-during-december-1963-2024-joseph-wraith.txt",
+      "candidates": [
+        {
+          "value": "1973-10-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "It was on October 11, 1973, that the",
+          "segment": 1333
+        }
+      ]
+    },
+    {
       "documentId": "doc-ec27321c9de7",
       "path": "DPIArchive/documents/127515-breaking-down-the-black-budget.txt",
       "candidates": [
@@ -412340,6 +413162,21 @@
       ]
     },
     {
+      "documentId": "doc-c2aa7f75082ed2d0c433b13f",
+      "path": "France-GEIPAN/paired/cases/2015-08-09296/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-08-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 16, 2015, between 12:40 and 12:45 AM, a witness, accompanied by friends, observed in the sky three equally spaced white lights forming a perfect triangle. The object moved slowly and silently before suddenly disappearing. His friends did not have time to se",
+          "segment": "seg-8e5ec87f31f787b9ad953792"
+        }
+      ]
+    },
+    {
       "documentId": "doc-7088310224a76819246d20d6",
       "path": "France-GEIPAN/paired/cases/2015-08-09297/en/translation.txt",
       "candidates": [
@@ -413735,6 +414572,21 @@
       ]
     },
     {
+      "documentId": "doc-2210d630587b6ec7b6dfe5a5",
+      "path": "France-GEIPAN/paired/cases/2016-08-09498/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-08-02",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: The GEIPAN has finalized the review of certain cases under investigation that had been pending classification. He publishes this synthesis today with the available elements from both the testimony and investigation gathered at the time. On August 02, 2016, a witness ",
+          "segment": "seg-a47bf2d9966e914ef7d7ef6d"
+        }
+      ]
+    },
+    {
       "documentId": "doc-f08fffe86af2051286d58436",
       "path": "France-GEIPAN/paired/cases/2016-08-09507/en/translation.txt",
       "candidates": [
@@ -415010,6 +415862,21 @@
       ]
     },
     {
+      "documentId": "doc-7ccb75bedda24318e442e748",
+      "path": "France-GEIPAN/paired/cases/2018-02-50500/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2018-02-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Report:** On February 15, 2018, around 9:30 PM, a witness driving on the A19 highway between Beaune-la-Rolande (45) and Chilleurs-aux-Bois (45) observed, on their right, a PAN in the shape of a triangle with two red lights. Initially, the witness thought it was an airplane, but",
+          "segment": "seg-bd55efc51b8ba74d5b0bfe30"
+        }
+      ]
+    },
+    {
       "documentId": "doc-e1411c8bad09df7a6696704e",
       "path": "France-GEIPAN/paired/cases/2018-03-50493/en/translation.txt",
       "candidates": [
@@ -415997,6 +416864,21 @@
       ]
     },
     {
+      "documentId": "doc-1182821cc401eb7a3a3aa723",
+      "path": "France-GEIPAN/paired/cases/2020-04-50946/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2020-04-05",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "**Report:** On April 5, 2020, at 12:55, a witness in their garden observed a white object passing quickly across the sky on a straight trajectory from east to west. No noise was heard, and no trail was observed. Only one testimony was collected. This testimony is of average consi",
+          "segment": "seg-099386c15d18740db09d0c9c"
+        }
+      ]
+    },
+    {
       "documentId": "doc-adb92be334e0466b5bc6ab85",
       "path": "France-GEIPAN/paired/cases/2020-04-50962/en/translation.txt",
       "candidates": [
@@ -416968,6 +417850,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On February 15, 2022, at 07:30, a passenger on TGV INOUI 8483 traveling from Paris to Poitiers observed a very bright white point in the sky. Despite several plausible explanation hypotheses put forward by the witness, the latter considers that none of them correspon",
           "segment": "seg-e2160c7dc641a71fdbe52896"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4afb29df0c39b06ac4f087da",
+      "path": "France-GEIPAN/paired/cases/2022-02-51332/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2022-02-19",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On February 19, 2022, around 12:15, a driver was traveling in SAINT-JUNIEN (87) when they observed an \"unconventional\" aerial phenomenon that they described as a \"singularity.\" He sees, in the very cloudy sky, at low altitude, 4 static lights of extremely intense whi",
+          "segment": "seg-8bde593d41cb4a6791250d72"
         }
       ]
     },
@@ -418021,6 +418918,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On December 11, 2023, around 7:10 PM, the witness, in the midst of a conversation on the 7th floor of a building, spotted through the glass bay five bright orbs of different colors moving in the sky. These objects form geometric figures as well as random trajectories",
           "segment": "seg-03c4fb99cbd02f7f4a7b8529"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6e61285333873cbb85629f8d",
+      "path": "France-GEIPAN/paired/cases/2023-12-51505/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2023-12-13",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: On the evening of December 13, 2023, during a TVF flight from Yerevan (Armenia) to Paris (France), a line pilot and his colleague observed strange luminescent phenomena in the sky through the cockpit windows. The observation began around 7:00 PM UTC, over the western",
+          "segment": "seg-059c45e5a5dbd141291887d3"
         }
       ]
     },
@@ -437489,6 +438401,30 @@
       ]
     },
     {
+      "documentId": "doc-47b8c1810862",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302536459.txt",
+      "candidates": [
+        {
+          "value": "1954-11-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "these lst Three were Nov 6, 1954 at the Airport.",
+          "segment": 20
+        },
+        {
+          "value": "1964-11-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "these lest Three were Nov 6, 1964 at the Airport.",
+          "segment": 72
+        }
+      ]
+    },
+    {
       "documentId": "doc-a64bdcda3714",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302536607.txt",
       "candidates": [
@@ -437725,6 +438661,30 @@
           "method": "unclassified-mention",
           "evidence": "interview on 2 February 1965.",
           "segment": 46
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fd13606e7738",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302537593.txt",
+      "candidates": [
+        {
+          "value": "1965-02-03",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "report of 3 February 1965.",
+          "segment": 8
+        },
+        {
+          "value": "1905-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On the night of Wednesday, February 3, 1905, on the o100 block",
+          "segment": 24
         }
       ]
     },
@@ -441145,6 +442105,21 @@
           "method": "unclassified-mention",
           "evidence": "News Clipping, 31 Jan 1967",
           "segment": 32
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cd7ad6b8cfa0",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302560559.txt",
+      "candidates": [
+        {
+          "value": "1967-04-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Taking the entries in the section labelled \"April 3, 1967\" in",
+          "segment": 20
         }
       ]
     },
