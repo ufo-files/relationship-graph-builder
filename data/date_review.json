@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-04T07:35:59Z",
+  "generatedAt": "2026-10-04T08:53:15Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "48fe748e380e0e3a8d395e1d73fb0134eee53f95"
+    "revision": "0f7c143ee89f0449ca4154f00e76b37d883b7d16"
   },
-  "documentsWithCandidates": 14695,
+  "documentsWithCandidates": 14705,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -245492,6 +245492,489 @@
       ]
     },
     {
+      "documentId": "doc-022ede4619fb",
+      "path": "Black-Vault-UFO/pdfs/foia-released-emails-mention-alleged-triangular-uap-photo-former-uap-task-force-director-speaks-out-2.txt",
+      "candidates": [
+        {
+          "value": "2020-12-14",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "This is a final response to your December 14, 2020 Freedom of Information Act (FOIA",
+          "segment": 3
+        },
+        {
+          "value": "2020-12-15",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "December 15, 2020, and assigned it FOIA case number 21-F-0299.",
+          "segment": 7
+        },
+        {
+          "value": "2020-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Friday, August 14, 2020 6:14 PM",
+          "segment": 55
+        },
+        {
+          "value": "2020-12-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Friday, December 4 2020 11:22 AM",
+          "segment": 71
+        },
+        {
+          "value": "2020-12-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Thursday, December 3, 2020 2:37 PM",
+          "segment": 80
+        },
+        {
+          "value": "2020-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Debrief, 2 December 2020... by Tim McMillan",
+          "segment": 108
+        },
+        {
+          "value": "2020-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Tuesday, January 14, 2020 4:28 PM",
+          "segment": 337
+        },
+        {
+          "value": "2020-11-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Monday, November 30, 2020 10:11 AM",
+          "segment": 459
+        },
+        {
+          "value": "2021-01-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Tuesday, January 12, 2021 10:17 AM",
+          "segment": 499
+        },
+        {
+          "value": "2020-11-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Monday, November 30, 2020 1:02 PM",
+          "segment": 528
+        },
+        {
+          "value": "2020-11-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Thu, Nov 19, 2020 at 1:00 PM (\"6) <(b)(6) < Caution-",
+          "segment": 536
+        },
+        {
+          "value": "2020-01-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Thursday, January 16, 2020 6:35 AM",
+          "segment": 565
+        },
+        {
+          "value": "2018-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "someone who is verifiably associated with of the DIRDs described in a January 9, 2018 letter to the",
+          "segment": 580
+        },
+        {
+          "value": "2020-03-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Wednesday, March 18, 2020 10:49 AM",
+          "segment": 617
+        },
+        {
+          "value": "2020-05-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Tuesday, May 19, 2020 12:10 PM",
+          "segment": 649
+        },
+        {
+          "value": "2021-01-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: We nes ay, January 13, 2021 5:41 PM",
+          "segment": 696
+        },
+        {
+          "value": "2020-01-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, Jan 13, 2020 at 3:30 PM",
+          "segment": 708
+        },
+        {
+          "value": "2020-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Friday, August 14, 2020 4:34 PM",
+          "segment": 723
+        },
+        {
+          "value": "2020-12-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Wednesday, December 16, 2020 2:44 AM",
+          "segment": 736
+        },
+        {
+          "value": "2020-12-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Tue, Dec 15, 2020 at 3:42 PM CIV OSD PA USA",
+          "segment": 745
+        },
+        {
+          "value": "2020-12-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Monday, December 14, 2020 5:48 AM",
+          "segment": 753
+        },
+        {
+          "value": "2020-01-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Tuesday, January 21, 2020 6:05 AM",
+          "segment": 807
+        },
+        {
+          "value": "2018-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "someone who is verifiably associated with of the DIRDs described in a January 9, 2018 letter to the",
+          "segment": 821
+        },
+        {
+          "value": "2020-01-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Wed, Jan 15, 2020 at 7:04 PM CIV OSD PA (USA",
+          "segment": 858
+        },
+        {
+          "value": "2020-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: tuesday, January 14, 2020 at 4:29:10 PM",
+          "segment": 862
+        },
+        {
+          "value": "2020-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Tue, Jan 14, 2020 at 7:52 PM111=1- CIV OSD PA (USA",
+          "segment": 939
+        },
+        {
+          "value": "2020-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Tuesday, January 14, 2020 12:59 PM",
+          "segment": 948
+        },
+        {
+          "value": "2020-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Tuesday, January 14, 2020 6:08 AM",
+          "segment": 955
+        },
+        {
+          "value": "2020-04-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Wednesday, April 29, 2020 5:35 PM",
+          "segment": 1010
+        },
+        {
+          "value": "2020-04-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Wed, Apr 29, 2020 at 10:20 PM CIV OSD PA (USA",
+          "segment": 1037
+        },
+        {
+          "value": "2020-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Wednesday, December 2, 2020 3:13 PM",
+          "segment": 1071
+        },
+        {
+          "value": "2020-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Wednesday, December 2, 2020 3:06 PM",
+          "segment": 1080
+        },
+        {
+          "value": "2020-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Wednesday, December 2, 2020 2:50 PM",
+          "segment": 1085
+        },
+        {
+          "value": "2020-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Wednesday, December 2, 2020 2:20 PM",
+          "segment": 1093
+        },
+        {
+          "value": "2020-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Wednesday, December 2, 2020 10:42 AM",
+          "segment": 1097
+        },
+        {
+          "value": "2020-03-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Navy officials provided a classified briefing to the House Armed Services Committee on March 11, 2020.",
+          "segment": 1107
+        },
+        {
+          "value": "2020-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Wednesday, December 2, 2020 10:19 AM",
+          "segment": 1116
+        },
+        {
+          "value": "2020-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Wednesday, December 02, 2020 10:02 AM",
+          "segment": 1123
+        },
+        {
+          "value": "2020-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Wednesday, December 2, 2020 8:44 AM",
+          "segment": 1137
+        },
+        {
+          "value": "2020-08-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Monday, August 17, 2020 10:36 AM",
+          "segment": 1417
+        },
+        {
+          "value": "2020-12-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Friday, December 4, 2020 8:17 AM",
+          "segment": 1424
+        },
+        {
+          "value": "2020-12-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Friday, December 4, 2020 8:16 AM",
+          "segment": 1431
+        },
+        {
+          "value": "2020-12-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Frida December 4 2020 at 8:10:06 AM",
+          "segment": 1440
+        },
+        {
+          "value": "2020-12-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Thursday, December 3, 2020 8:23 PM",
+          "segment": 1445
+        },
+        {
+          "value": "2020-08-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Monday, August 17, 2020 10:36 AM",
+          "segment": 1713
+        },
+        {
+          "value": "2020-08-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Tuesday, August 18, 2020 6:28 AM",
+          "segment": 1720
+        },
+        {
+          "value": "2020-08-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Vice Motherboard, 17 August 2020... by MJ Banias and Tim McMillan",
+          "segment": 1726
+        },
+        {
+          "value": "2020-08-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Monday, August 17, 2020 4:18 PM",
+          "segment": 1784
+        },
+        {
+          "value": "2020-10-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Thursday, October 22 2020 9:32 AM",
+          "segment": 1798
+        },
+        {
+          "value": "2020-10-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Thursday, October 22, 2020 8:42 AM",
+          "segment": 1823
+        },
+        {
+          "value": "2020-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: ,Nednesday, October 21, 2020 10:31 AM",
+          "segment": 1828
+        },
+        {
+          "value": "2020-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wednesday, October 21, 2020 at 9:07:25 AM",
+          "segment": 1839
+        },
+        {
+          "value": "2020-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Wednesday, October 21, 2020 6:55 AM",
+          "segment": 1843
+        }
+      ]
+    },
+    {
       "documentId": "doc-fe91f8deaf97",
       "path": "Black-Vault-UFO/pdfs/foia-request-on-uap-keywords-produces-minimal-results-heavy-redactions-from-energy-department-2.txt",
       "candidates": [
@@ -374504,6 +374987,21 @@
       ]
     },
     {
+      "documentId": "doc-fca7e1f89753",
+      "path": "DPIArchive/documents/130265-059uap00013-pdf.txt",
+      "candidates": [
+        {
+          "value": "2023-09-16",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date/DTG: Sep 16, 2023 / 160150Z SEP 23",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-f7dc9c943249",
       "path": "DPIArchive/documents/130267-65-hs1-834228961-62-hq-83894-section-6-pdf.txt",
       "candidates": [
@@ -376075,6 +376573,21 @@
           "method": "unclassified-mention",
           "evidence": "Center on June 12, 1965.",
           "segment": 23
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8d0ca479685e",
+      "path": "DPIArchive/documents/130540-dow-uap-d093-analysis-of-flying-object-incidents-in-the-us-1948-pdf.txt",
+      "candidates": [
+        {
+          "value": "1947-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 7 July 1947, five Portland, Orecc,n police o.fficerc re­",
+          "segment": 371
         }
       ]
     },
@@ -415292,6 +415805,30 @@
       ]
     },
     {
+      "documentId": "doc-01cbfd53208f31d844330b19",
+      "path": "France-GEIPAN/paired/cases/2016-03-09435/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-03-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 26, 2016 (not September 26 as indicated in the free text) between 9:50 and 9:55 AM, a witness from a parking lot observed a bright, spherical object passing over the city. He described a sphere joining two other \"balls.\" The entire group then flew in formati",
+          "segment": "seg-330475d2d2b0c0ee8a4590e6"
+        },
+        {
+          "value": "2016-03-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 26, 2016 (not September 26 as indicated in the free text) between 9:50 and 9:55 AM, a witness from a parking lot observed a bright, spherical object passing over the city. He described a sphere joining two other \"balls.\" The entire group then flew in formati",
+          "segment": "seg-330475d2d2b0c0ee8a4590e6"
+        }
+      ]
+    },
+    {
       "documentId": "doc-b5ce9b930fd4e0fd6855c469",
       "path": "France-GEIPAN/paired/cases/2016-03-09442/en/translation.txt",
       "candidates": [
@@ -416735,6 +417272,21 @@
       ]
     },
     {
+      "documentId": "doc-6a5bbe129f1d5dbfea03442f",
+      "path": "France-GEIPAN/paired/cases/2017-09-50422/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 02, 2017, around 21:20, two witnesses, located 1.3 km apart in Albi, observed the silent passage of an orange ball in the sky. A few moments later, a second orange-lit ball was observed on the same trajectory as the first. One of the witnesses (T2) manag",
+          "segment": "seg-2e2218a51587466908b102bd"
+        }
+      ]
+    },
+    {
       "documentId": "doc-5ae50235cb96dff916fbc8bd",
       "path": "France-GEIPAN/paired/cases/2017-09-50429/en/translation.txt",
       "candidates": [
@@ -417715,6 +418267,30 @@
           "method": "unclassified-mention",
           "evidence": "Description: On August 25, 2019, in the morning, a witness was surprised to see in the clear sky the silent movement of an object shaped like a \"wavy tube\" that was black with twinkling lights. The witness went to retrieve his nearby mobile phone and, hindered by the sun, lost si",
           "segment": "seg-22c24d968ee045b0045d7a32"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-77b9bf580134b2cc03255b64",
+      "path": "France-GEIPAN/paired/cases/2019-09-50818/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2019-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Monday, September 2, 2019, at approximately 5:40 AM, a witness on their terrace facing south noticed a sparkling light point located in the southeast of a clear sky. Viewed through binoculars, the witness described a disk with three distinct flickers in the form o",
+          "segment": "seg-12ed4598da4b18c17084cecb"
+        },
+        {
+          "value": "2019-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Monday, September 2, 2019, at approximately 5:40 AM, a witness on their terrace facing south noticed a sparkling light point located in the southeast of a clear sky. Viewed through binoculars, the witness described a disk with three distinct flickers in the form o",
+          "segment": "seg-12ed4598da4b18c17084cecb"
         }
       ]
     },
@@ -418792,6 +419368,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Tuesday, October 19, 2021, at 1:20 PM, two friends were having lunch on a terrace on the top floor when they were intrigued by the straight, low-altitude passage of a dark, \"flat below\" and \"bulged on top\" object. No unusual noises were heard. The PAN made a sligh",
           "segment": "seg-75c80f027fb739823e2ccb3f"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e1b21d813b8b429b1ff241ea",
+      "path": "France-GEIPAN/paired/cases/2021-10-51262/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2021-10-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On October 16, 2021, at 10:00 PM, the witness randomly saw an oval object that he believed to be a lost Mylar balloon moving at a constant speed in the clear sky. He called out to his father, who also saw it. The PAN continued its progression without any apparent cha",
+          "segment": "seg-f6ed0c5b1b19f3015cdb90a1"
         }
       ]
     },
@@ -419887,6 +420478,30 @@
           "method": "unclassified-mention",
           "evidence": "**Description:** The witnesses are by their pool, near their home in the commune of Cessieu (38), on July 16, 2023, at 4:30 PM, when they observe several PAN in the sky, moving slowly from southeast to northwest. Witness (T1) describes these PAN as a line of 4 or 5 objects, thems",
           "segment": "seg-4835cd8c6973ba61b6c3657c"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9a914e644c69561c04dd8362",
+      "path": "France-GEIPAN/paired/cases/2023-07-51467/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2023-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Documents: Compte rendu enquete.pdf Temoin images.zip Questionnaire technique-R.pdf Temoin Video 2023-07-13 at 21.42.17.mp4",
+          "segment": "seg-5c66e735f57a3402a4e46457"
+        },
+        {
+          "value": "2023-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Description:** On the evening of July 13, 2023, a resident of Toulouse (31) was standing outside in front of his building, in the midst of a phone conversation, when he spotted a PAN in the sky. He took two photographs and a video of the observation on this occasion. The case p",
+          "segment": "seg-16bc7bf44c1039a02d8180a2"
         }
       ]
     },
@@ -438716,6 +439331,21 @@
       ]
     },
     {
+      "documentId": "doc-81493920bce1",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28956897.txt",
+      "candidates": [
+        {
+          "value": "1953-11-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "at approxinately 0830 hours, 20 November 1953, he, ac-",
+          "segment": 29
+        }
+      ]
+    },
+    {
       "documentId": "doc-e7d84b2d4b98",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28958532.txt",
       "candidates": [
@@ -440797,6 +441427,21 @@
           "method": "unclassified-mention",
           "evidence": "Subject report was forwarded hy this office 1 September 1965.",
           "segment": 17
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c7d622c92db8",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302544424.txt",
+      "candidates": [
+        {
+          "value": "1965-09-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "tion on the night of 6 Sep 1965.",
+          "segment": 33
         }
       ]
     },
