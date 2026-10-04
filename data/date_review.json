@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-04T16:46:33Z",
+  "generatedAt": "2026-10-04T18:05:27Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5e202f8fffc9c3ff8ec9802fbd008365de86e1eb"
+    "revision": "41e5c2b9c5d50e65b53e5372b9e065bcee9e4375"
   },
-  "documentsWithCandidates": 14745,
+  "documentsWithCandidates": 14749,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -416822,6 +416822,21 @@
       ]
     },
     {
+      "documentId": "doc-a18939cd190aafaa076aa5bd",
+      "path": "France-GEIPAN/paired/cases/2015-09-09323/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2015-09-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 28, 2015, at 5:26 AM, a witness outside observed for 5 seconds the silent passage across the sky of a red triangular shape (round red ends, the object itself being less bright than its ends). The PAN moved parallel to the horizon, in a straight line, and",
+          "segment": "seg-b102fe8d6b422383eac580f2"
+        }
+      ]
+    },
+    {
       "documentId": "doc-9e0565d2bbe2990ab456447a",
       "path": "France-GEIPAN/paired/cases/2015-09-09326/en/translation.txt",
       "candidates": [
@@ -418186,6 +418201,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: The observation of the phenomenon took place from the witness's garden during an early summer night, around 23:00 on August 7, 2016, while stargazing. Only one testimony was collected. The witness reported a \"first bright red/orange light,\" \"very vivid\" and \"oval in ",
           "segment": "seg-f0b241b57af55b7ebb4ad749"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8f3f2a6f9557c1b79e6911b9",
+      "path": "France-GEIPAN/paired/cases/2016-08-50284/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-08-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 25, 2016, a family observed the starry sky with a telescope. At 10:30 PM, they observed with the naked eye the very quick passage of a phenomenon composed of 5 lights of a yellow-orange color trending towards reddish. No particular noise was heard during th",
+          "segment": "seg-24625dd1bd6b8b9b1321b9f4"
         }
       ]
     },
@@ -441233,6 +441263,21 @@
       ]
     },
     {
+      "documentId": "doc-402faad54431",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-1/28947332.txt",
+      "candidates": [
+        {
+          "value": "1952-08-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "at approximetoly 2110 ITEM, 2 August 1952 at Aahiya Air Base",
+          "segment": 11
+        }
+      ]
+    },
+    {
       "documentId": "doc-4545093a28b3",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-1/28948053.txt",
       "candidates": [
@@ -448516,6 +448561,30 @@
           "method": "unclassified-mention",
           "evidence": "If you were a witness to an UFO sighting on 6 February 1968",
           "segment": 11
+        }
+      ]
+    },
+    {
+      "documentId": "doc-eb4e1aeecb72",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302574356.txt",
+      "candidates": [
+        {
+          "value": "1968-02-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "20 February 1968 and 21 February 1963 by",
+          "segment": 9
+        },
+        {
+          "value": "1963-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "20 February 1968 and 21 February 1963 by",
+          "segment": 9
         }
       ]
     },
