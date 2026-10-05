@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-05T18:07:54Z",
+  "generatedAt": "2026-10-05T19:29:39Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "b1745262e89909a4a9a984ae338b8d6db8011170"
+    "revision": "c7d5ef5bd6baf3d8a95d99a2b5f10963b1be5669"
   },
-  "documentsWithCandidates": 14888,
+  "documentsWithCandidates": 14897,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -8581,6 +8581,21 @@
           "method": "unclassified-mention",
           "evidence": "Monday, May 12, 2003 Posted: 4:19 PM EDT (2019 GMT",
           "segment": 21
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4223a280ace2",
+      "path": "Archives-for-the-Unexplained/documents/20031027-Re_Fatal-Error_-100---Solved____-134907.txt",
+      "candidates": [
+        {
+          "value": "2003-10-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Mon, 27 Oct 2003 07:15:03 UTC, \"D.\" <Dereka_k@NotSoHotmail.com>",
+          "segment": 18
         }
       ]
     },
@@ -133570,6 +133585,30 @@
           "method": "document-header",
           "evidence": "Date: Thu, 29 May 1997 20:31:43 -0700",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ae32deea2da1",
+      "path": "Archives-for-the-Unexplained/documents/a31-002-608a12225c.txt",
+      "candidates": [
+        {
+          "value": "1997-03-31",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Mon, 31 Mar 1997 16:09:15 -0800",
+          "segment": 4
+        },
+        {
+          "value": "1997-03-28",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Fri, 28 Mar 1997 18:46:34 +0000",
+          "segment": 7
         }
       ]
     },
@@ -390038,6 +390077,147 @@
       ]
     },
     {
+      "documentId": "doc-795fff6038c7",
+      "path": "DPIArchive/documents/130470-cia-uap-015-project-blue-book-special-report-no-14-pdf.txt",
+      "candidates": [
+        {
+          "value": "1955-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of Unidentified Aerial Objects, 5 May 1955) started in 1953.",
+          "segment": 152
+        },
+        {
+          "value": "1954-08-12",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Short Title: UFOB) dated 12 August 1954.",
+          "segment": 181
+        },
+        {
+          "value": "1955-01-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "sulted, since 1 January 1955, in reducing the insufficient information cases",
+          "segment": 190
+        },
+        {
+          "value": "1955-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The period l January 1955 to 5 May 1955 accounted for 131 unidentified",
+          "segment": 192
+        },
+        {
+          "value": "1952-04-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I were dated subsequent to April 30, 1952, and are believed to be the result",
+          "segment": 319
+        },
+        {
+          "value": "1952-04-29",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "This letter is dated 29 April 1952.",
+          "segment": 377
+        },
+        {
+          "value": "1948-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "bridge at 0955 hours on July 29, 1948, when they saw an object glide across I",
+          "segment": 1418
+        },
+        {
+          "value": "1952-04-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "drive-in movie from 2115 to 2240 hours on April 20, 1952, during which",
+          "segment": 1427
+        },
+        {
+          "value": "1952-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on July 19, 1952, when they looked up and saw two cigar-shaped objects.",
+          "segment": 1452
+        },
+        {
+          "value": "1948-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I A pilot and copilot were flying a DC-3 at 0340 hours on July 24, 1948",
+          "segment": 1458
+        },
+        {
+          "value": "1952-12-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Air Force base on December 22, 1952, saw an object from his car at 1930",
+          "segment": 1470
+        },
+        {
+          "value": "1952-06-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "0842 hours on June 6, 1952.",
+          "segment": 1483
+        },
+        {
+          "value": "1948-07-31",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "facing west, at 0825 hours on July 31, 1948, when he first sighted an object.",
+          "segment": 1494
+        },
+        {
+          "value": "1950-03-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I On March 20, 1950, a Reserve Air Force Captain and an airlines",
+          "segment": 1522
+        },
+        {
+          "value": "1952-08-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I At 0535 on the morning of August 25, 1952, a musician for a radio",
+          "segment": 1555
+        }
+      ]
+    },
+    {
       "documentId": "doc-8f6d81155a26",
       "path": "DPIArchive/documents/130475-dow-uap-d088-us-airforce-analysis-of-flying-objects-in-the-us-101-172-pdf.txt",
       "candidates": [
@@ -430727,6 +430907,21 @@
       ]
     },
     {
+      "documentId": "doc-62a18b846bf03730543ea025",
+      "path": "France-GEIPAN/paired/cases/2016-11-09587/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2016-11-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On Thursday, November 17, 2016, around 10 PM, two people were intrigued by the presence in the cloudy sky of a green trail. One of the witnesses takes several photographs. Two testimonies are collected. The green streak in the sky results from laser spots from the To",
+          "segment": "seg-8b68d60deb32d544b1737f0a"
+        }
+      ]
+    },
+    {
       "documentId": "doc-1f8a79fe1e331e77b0759842",
       "path": "France-GEIPAN/paired/cases/2016-11-09592/en/translation.txt",
       "candidates": [
@@ -445694,6 +445889,66 @@
       ]
     },
     {
+      "documentId": "doc-970265fa7472",
+      "path": "National-Archives-UAP-Bulk/documents/17618564/40989189.txt",
+      "candidates": [
+        {
+          "value": "1947-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sta EDCMR 29 June 1947 Race (IT) Comp (AUS",
+          "segment": 118
+        },
+        {
+          "value": "1947-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Hq this Sta JDUNE 13 July 1947 Race (H",
+          "segment": 122
+        },
+        {
+          "value": "1947-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CORRACTION (M/R 27 June 1947",
+          "segment": 132
+        },
+        {
+          "value": "1947-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TOX to Dy Eff 18 July 1947 Dy 405",
+          "segment": 162
+        },
+        {
+          "value": "1947-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ho this Sta EDCIR 22 July 1947",
+          "segment": 168
+        },
+        {
+          "value": "1947-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Jd from enroute Eff 24 July 1947",
+          "segment": 172
+        }
+      ]
+    },
+    {
       "documentId": "doc-7b41e7fddf80",
       "path": "National-Archives-UAP-Bulk/documents/17618564/40989194.txt",
       "candidates": [
@@ -454754,6 +455009,21 @@
       ]
     },
     {
+      "documentId": "doc-278a95e3beb9",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28954885.txt",
+      "candidates": [
+        {
+          "value": "1953-06-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On the night of 9 June 1953 at appreximately 2345-",
+          "segment": 23
+        }
+      ]
+    },
+    {
       "documentId": "doc-e34424c761de",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28955294.txt",
       "candidates": [
@@ -455227,6 +455497,21 @@
           "method": "dated-reference",
           "evidence": "extracted from Capt Deranian's Report dated 31 August 1960",
           "segment": 14
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4daf43543b98",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-4/28989662.txt",
+      "candidates": [
+        {
+          "value": "1960-10-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ing occurred on 12 October 1960 in",
+          "segment": 11
         }
       ]
     },
@@ -456337,6 +456622,21 @@
           "method": "unclassified-mention",
           "evidence": "graph of an unidentified object which was taken on April 15, 1965.",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ee846c310818",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302538645.txt",
+      "candidates": [
+        {
+          "value": "1965-04-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "29 April 1965 has been evaluated ae ECHO I which was",
+          "segment": 5
         }
       ]
     },
@@ -461911,6 +462211,30 @@
           "method": "unclassified-mention",
           "evidence": "UFO Observation, 2 January 1968",
           "segment": 27
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e4820102795c",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302573627.txt",
+      "candidates": [
+        {
+          "value": "1967-05-29",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Reference is made to a UFO report dated 29 May 1967, which",
+          "segment": 8
+        },
+        {
+          "value": "1967-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "te the afternoon of March 5, 1967",
+          "segment": 28
         }
       ]
     },

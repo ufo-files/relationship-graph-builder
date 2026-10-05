@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "b1745262e89909a4a9a984ae338b8d6db8011170"
+    "revision": "c7d5ef5bd6baf3d8a95d99a2b5f10963b1be5669"
   },
-  "count": 686,
-  "totalCount": 686,
-  "shownCount": 686,
+  "count": 689,
+  "totalCount": 689,
+  "shownCount": 689,
   "candidates": [
     {
       "category": "organization",
@@ -159,8 +159,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 926,
-        "documentCount": 546
+        "mentions": 927,
+        "documentCount": 547
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -175,8 +175,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 926,
-        "documentCount": 546
+        "mentions": 927,
+        "documentCount": 547
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -351,8 +351,8 @@
       "category": "location",
       "left": {
         "name": "McClellan Air Force Base",
-        "mentions": 47,
-        "documentCount": 35
+        "mentions": 48,
+        "documentCount": 36
       },
       "right": {
         "name": "McClelland Air Force Base",
@@ -1375,8 +1375,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 211,
-        "documentCount": 134
+        "mentions": 213,
+        "documentCount": 135
       },
       "right": {
         "name": "Air Technical Intelligence Cen'er",
@@ -1391,11 +1391,27 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 211,
-        "documentCount": 134
+        "mentions": 213,
+        "documentCount": 135
       },
       "right": {
         "name": "Air Technical Intelligence Conter",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Technical Intelligence Center",
+        "mentions": 213,
+        "documentCount": 135
+      },
+      "right": {
+        "name": "AIR TECHNICAL INTELLIGENCE GENTER",
         "mentions": 2,
         "documentCount": 2
       },
@@ -1647,8 +1663,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 926,
-        "documentCount": 546
+        "mentions": 927,
+        "documentCount": 547
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1663,8 +1679,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 926,
-        "documentCount": 546
+        "mentions": 927,
+        "documentCount": 547
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -1679,8 +1695,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 926,
-        "documentCount": 546
+        "mentions": 927,
+        "documentCount": 547
       },
       "right": {
         "name": "Weight-Patterson Air Force Base",
@@ -1695,8 +1711,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 926,
-        "documentCount": 546
+        "mentions": 927,
+        "documentCount": 547
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -2143,8 +2159,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 740,
-        "documentCount": 400
+        "mentions": 741,
+        "documentCount": 401
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -3998,12 +4014,12 @@
     {
       "category": "organization",
       "left": {
-        "name": "Central Intelligence Agen",
+        "name": "Air Intelligence Service",
         "mentions": 5,
-        "documentCount": 2
+        "documentCount": 5
       },
       "right": {
-        "name": "CENTRAL INTELLIGENCE AG",
+        "name": "Air Intelligence Servioe",
         "mentions": 2,
         "documentCount": 2
       },
@@ -4014,12 +4030,12 @@
     {
       "category": "organization",
       "left": {
-        "name": "Air Intelligence Service",
-        "mentions": 4,
-        "documentCount": 4
+        "name": "Central Intelligence Agen",
+        "mentions": 5,
+        "documentCount": 2
       },
       "right": {
-        "name": "Air Intelligence Servioe",
+        "name": "CENTRAL INTELLIGENCE AG",
         "mentions": 2,
         "documentCount": 2
       },
@@ -4975,8 +4991,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Division",
-        "mentions": 80,
-        "documentCount": 45
+        "mentions": 81,
+        "documentCount": 46
       },
       "right": {
         "name": "Intelligonce Division",
@@ -5540,8 +5556,8 @@
       },
       "right": {
         "name": "Intelligence Section",
-        "mentions": 9,
-        "documentCount": 8
+        "mentions": 10,
+        "documentCount": 9
       },
       "similarity": 0.947,
       "reason": "similar name",
@@ -5887,8 +5903,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of War",
-        "mentions": 46,
-        "documentCount": 22
+        "mentions": 47,
+        "documentCount": 23
       },
       "right": {
         "name": "Department of Air",
@@ -6196,6 +6212,38 @@
       },
       "right": {
         "name": "Air Technical Intelligence Conter",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.939,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Technical Intelligence Cen'er",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "AIR TECHNICAL INTELLIGENCE GENTER",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.939,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Technical Intelligence Conter",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "AIR TECHNICAL INTELLIGENCE GENTER",
         "mentions": 2,
         "documentCount": 2
       },
@@ -6687,8 +6735,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 926,
-        "documentCount": 546
+        "mentions": 927,
+        "documentCount": 547
       },
       "right": {
         "name": "Wright-Fattorson Air Force Base",
@@ -8735,8 +8783,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 295,
-        "documentCount": 188
+        "mentions": 296,
+        "documentCount": 189
       },
       "right": {
         "name": "Intelligence Cf'nter",
