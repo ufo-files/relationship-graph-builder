@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "f5bc0f3353ae198d38de28c997366658852bd0f2"
+    "revision": "5766f8bf660800ac553f7c5cd03a6732305127ff"
   },
-  "count": 680,
-  "totalCount": 680,
-  "shownCount": 680,
+  "count": 682,
+  "totalCount": 682,
+  "shownCount": 682,
   "candidates": [
     {
       "category": "organization",
@@ -3004,6 +3004,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Greater Pittsburgh Airport",
+        "mentions": 11,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Greater Pittaburgh Airport",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.962,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Division of the Air Forcos",
@@ -4927,8 +4943,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Division",
-        "mentions": 79,
-        "documentCount": 44
+        "mentions": 80,
+        "documentCount": 45
       },
       "right": {
         "name": "Intelligonce Division",
@@ -5846,6 +5862,22 @@
         "name": "Department of Air",
         "mentions": 543,
         "documentCount": 83
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Army Intelligence",
+        "mentions": 207,
+        "documentCount": 91
+      },
+      "right": {
+        "name": "Army Int-lligence",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.941,
       "reason": "similar name",
