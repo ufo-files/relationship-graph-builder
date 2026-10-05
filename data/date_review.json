@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-05T19:29:39Z",
+  "generatedAt": "2026-10-05T21:07:19Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "c7d5ef5bd6baf3d8a95d99a2b5f10963b1be5669"
+    "revision": "6a539060eb74c1dc735f1bc3151253ccd4aea7bb"
   },
-  "documentsWithCandidates": 14897,
+  "documentsWithCandidates": 14901,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -431348,6 +431348,21 @@
       ]
     },
     {
+      "documentId": "doc-0ad5061e51e47931866a7147",
+      "path": "France-GEIPAN/paired/cases/2017-06-09678/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-06-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 5, 2017 (not 2015, as incorrectly indicated by the witness in the free text) between 11:58 and 12:03, a witness observed in the clear sky a phenomenon that intrigued them. The witness sees in the northwest at an average altitude, 2 lights projected side by si",
+          "segment": "seg-34fd1d5467eca94bfb299b3d"
+        }
+      ]
+    },
+    {
       "documentId": "doc-21b6e5128492fe99d3c39f41",
       "path": "France-GEIPAN/paired/cases/2017-06-09735/en/translation.txt",
       "candidates": [
@@ -432682,6 +432697,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: At 23:00 on March 28, 2019, a witness observed in a clear sky a bright red rectangle followed by several orange disks forming a pyramid-like structure. This structure rose and disappeared into the clouds, leaving for a few seconds traces resembling \"snow spotted with",
           "segment": "seg-2a8682cb8ca13ced66b89edd"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-74afc3377133cc5e4e523426",
+      "path": "France-GEIPAN/paired/cases/2019-04-50749/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2019-04-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On April 24, 2019, around 11:20 PM, the witness is at their home and their gaze is drawn to the window. They then see, for 5 seconds, two non-flashing white spheres moving side by side in the sky. Their partner also catches sight of them, but will not testify. Only o",
+          "segment": "seg-fb280d376662dc8b9cb6cd89"
         }
       ]
     },
@@ -434051,6 +434081,21 @@
       ]
     },
     {
+      "documentId": "doc-c9a0a43836658df010daffa2",
+      "path": "France-GEIPAN/paired/cases/2021-07-51215/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2021-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On July 23, 2021, at 10:14 a.m., a mother and her daughter at the beach were intrigued by the silent passage, in a clear sky, of a dark PAN of \"slightly oval\" shape with \"legs.\" The slow movement was initially horizontal, then the PAN seemed to hover before ascending",
+          "segment": "seg-70459336faf9525c3e8ab1c2"
+        }
+      ]
+    },
+    {
       "documentId": "doc-b0eb5ac2ebc2c68784dfd1e9",
       "path": "France-GEIPAN/paired/cases/2021-07-51218/en/translation.txt",
       "candidates": [
@@ -435343,6 +435388,21 @@
           "method": "event-language",
           "evidence": "Description: On February 26, 2023, at 1 a.m., the witness observed from their home a fiery flying object with orange flames, moving at the same speed and altitude as a tourist plane. The PAN appeared to be coming from the commune of Silly-le-Long and heading towards Roissy Charle",
           "segment": "seg-19ceb8fc704d746c14490cf9"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-34bea89a0e65c34f14e5d51e",
+      "path": "France-GEIPAN/paired/cases/2023-03-51427/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2023-03-18",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On March 18, 2023, between 8:12 PM and 8:40 PM, the witness observed from their home in ROSHEIM (67) a bright light in the sky. After a few seconds, the light dimmed slightly, then intensified again, dimmed a second time, and ultimately grew 4-5 times its original si",
+          "segment": "seg-70c83c53464f7e83de866f27"
         }
       ]
     },
