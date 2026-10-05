@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "67ee0f9faed911d702c9d768968fd5f6944d067e"
+    "revision": "8a2cfbe3ea357592e91754f913930d691765ced2"
   },
-  "count": 682,
-  "totalCount": 682,
-  "shownCount": 682,
+  "count": 685,
+  "totalCount": 685,
+  "shownCount": 685,
   "candidates": [
     {
       "category": "organization",
@@ -415,8 +415,8 @@
       "category": "organization",
       "left": {
         "name": "Directorate of Air Staff",
-        "mentions": 220,
-        "documentCount": 16
+        "mentions": 230,
+        "documentCount": 17
       },
       "right": {
         "name": "Directorate of Airstaff",
@@ -847,8 +847,8 @@
       "category": "location",
       "left": {
         "name": "Warren Air Force Base",
-        "mentions": 28,
-        "documentCount": 16
+        "mentions": 36,
+        "documentCount": 17
       },
       "right": {
         "name": "Warren Airforce Base",
@@ -1071,8 +1071,8 @@
       "category": "location",
       "left": {
         "name": "County Commissioner",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
         "name": "County Commissioners",
@@ -2004,6 +2004,22 @@
       },
       "right": {
         "name": "Department of Natural Resourcas",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "program",
+      "left": {
+        "name": "Project MKULTRA",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Project MK-ULTRA",
         "mentions": 2,
         "documentCount": 2
       },
@@ -4159,8 +4175,8 @@
       "category": "person",
       "left": {
         "name": "David Jacobs",
-        "mentions": 158,
-        "documentCount": 107
+        "mentions": 159,
+        "documentCount": 108
       },
       "right": {
         "name": "David Jacob",
@@ -5167,8 +5183,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8809,
-        "documentCount": 2062
+        "mentions": 8850,
+        "documentCount": 2064
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -5311,8 +5327,8 @@
       "category": "organization",
       "left": {
         "name": "Defense Intelligence",
-        "mentions": 330,
-        "documentCount": 153
+        "mentions": 331,
+        "documentCount": 154
       },
       "right": {
         "name": "Defonse Intelligence",
@@ -5508,8 +5524,8 @@
       },
       "right": {
         "name": "Intelligence Section",
-        "mentions": 7,
-        "documentCount": 7
+        "mentions": 9,
+        "documentCount": 8
       },
       "similarity": 0.947,
       "reason": "similar name",
@@ -5612,6 +5628,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "North Eastern Area",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "North Western Area",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "University of Paris",
@@ -5636,22 +5668,6 @@
       },
       "right": {
         "name": "Linda Moulton-How",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "similarity": 0.944,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "North Eastern Area",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "North-Western Area",
         "mentions": 4,
         "documentCount": 3
       },
@@ -5710,14 +5726,14 @@
     {
       "category": "location",
       "left": {
-        "name": "Clinton County AFB",
-        "mentions": 2,
-        "documentCount": 2
+        "name": "County Commission",
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
-        "name": "Clinton County AAF",
-        "mentions": 4,
-        "documentCount": 2
+        "name": "County Commissioner",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.944,
       "reason": "similar name",
@@ -5726,13 +5742,13 @@
     {
       "category": "location",
       "left": {
-        "name": "County Commission",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "Clinton County AFB",
+        "mentions": 2,
+        "documentCount": 2
       },
       "right": {
-        "name": "County Commissioner",
-        "mentions": 2,
+        "name": "Clinton County AAF",
+        "mentions": 4,
         "documentCount": 2
       },
       "similarity": 0.944,
@@ -5908,6 +5924,22 @@
       },
       "right": {
         "name": "Office of Specicl",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Temple University",
+        "mentions": 32,
+        "documentCount": 29
+      },
+      "right": {
+        "name": "Tem-le University",
         "mentions": 2,
         "documentCount": 2
       },
@@ -6623,8 +6655,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 8809,
-        "documentCount": 2062
+        "mentions": 8850,
+        "documentCount": 2064
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -6815,8 +6847,8 @@
       "category": "organization",
       "left": {
         "name": "Directorate of Air Staff",
-        "mentions": 220,
-        "documentCount": 16
+        "mentions": 230,
+        "documentCount": 17
       },
       "right": {
         "name": "Directorate Air Staff",
@@ -7791,8 +7823,8 @@
       "category": "organization",
       "left": {
         "name": "University of North Carolina",
-        "mentions": 52,
-        "documentCount": 37
+        "mentions": 53,
+        "documentCount": 38
       },
       "right": {
         "name": "University of South Carolina",
@@ -8324,6 +8356,22 @@
       },
       "right": {
         "name": "AND FORWARD PHOTOS TO BUREAU",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "program",
+      "left": {
+        "name": "Project Ultra",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Project MKULTRA",
         "mentions": 2,
         "documentCount": 2
       },
@@ -9796,8 +9844,8 @@
       },
       "right": {
         "name": "Headquarters Southern Area",
-        "mentions": 8,
-        "documentCount": 4
+        "mentions": 9,
+        "documentCount": 5
       },
       "similarity": 0.92,
       "reason": "similar name",
@@ -10911,8 +10959,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 51704,
-        "documentCount": 12691
+        "mentions": 51705,
+        "documentCount": 12692
       },
       "right": {
         "name": "North American Space Agency",
