@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "3dbbb3bb59956508c3adb5d786d2325932be9ab0"
+    "revision": "a7b750fef9db2ca8cd2a9bd043e6b1c1f09e5ee8"
   },
-  "count": 693,
-  "totalCount": 693,
-  "shownCount": 693,
+  "count": 702,
+  "totalCount": 702,
+  "shownCount": 702,
   "candidates": [
     {
       "category": "organization",
@@ -159,8 +159,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 933,
-        "documentCount": 551
+        "mentions": 934,
+        "documentCount": 552
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -175,8 +175,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 933,
-        "documentCount": 551
+        "mentions": 934,
+        "documentCount": 552
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -415,8 +415,8 @@
       "category": "organization",
       "left": {
         "name": "Directorate of Air Staff",
-        "mentions": 302,
-        "documentCount": 21
+        "mentions": 335,
+        "documentCount": 22
       },
       "right": {
         "name": "Directorate of Airstaff",
@@ -542,9 +542,25 @@
     {
       "category": "organization",
       "left": {
+        "name": "Institute of Atmospheric",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Institute of Atmospheri",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.979,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "University of Colorado",
-        "mentions": 664,
-        "documentCount": 325
+        "mentions": 671,
+        "documentCount": 327
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1310,6 +1326,22 @@
     {
       "category": "location",
       "left": {
+        "name": "Area of Operation",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Area of Operations",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "Deputy Base Commander Charles Holt",
         "mentions": 2,
         "documentCount": 2
@@ -1372,27 +1404,11 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "person",
-      "left": {
-        "name": "Steven Spielberg",
-        "mentions": 213,
-        "documentCount": 150
-      },
-      "right": {
-        "name": "Steven Spielbergs",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.97,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 213,
-        "documentCount": 135
+        "mentions": 217,
+        "documentCount": 136
       },
       "right": {
         "name": "Air Technical Intelligence Cen'er",
@@ -1407,8 +1423,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 213,
-        "documentCount": 135
+        "mentions": 217,
+        "documentCount": 136
       },
       "right": {
         "name": "Air Technical Intelligence Conter",
@@ -1423,13 +1439,29 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 213,
-        "documentCount": 135
+        "mentions": 217,
+        "documentCount": 136
       },
       "right": {
         "name": "AIR TECHNICAL INTELLIGENCE GENTER",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Steven Spielberg",
+        "mentions": 214,
+        "documentCount": 151
+      },
+      "right": {
+        "name": "Steven Spielbergs",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.97,
       "reason": "similar name",
@@ -1679,8 +1711,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 933,
-        "documentCount": 551
+        "mentions": 934,
+        "documentCount": 552
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1695,8 +1727,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 933,
-        "documentCount": 551
+        "mentions": 934,
+        "documentCount": 552
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -1711,8 +1743,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 933,
-        "documentCount": 551
+        "mentions": 934,
+        "documentCount": 552
       },
       "right": {
         "name": "Weight-Patterson Air Force Base",
@@ -1727,8 +1759,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 933,
-        "documentCount": 551
+        "mentions": 934,
+        "documentCount": 552
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -2191,8 +2223,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 741,
-        "documentCount": 401
+        "mentions": 743,
+        "documentCount": 402
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -2207,8 +2239,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 582,
-        "documentCount": 273
+        "mentions": 584,
+        "documentCount": 274
       },
       "right": {
         "name": "Jacques Vallees",
@@ -2492,6 +2524,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "COMMUNICATIONS INSTRUCTIONS REPORTING VITAL INTELLIGENCE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Communications Instructions for Reporting Vital Intelligence",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Seattle Weather Buruau Office",
@@ -2543,8 +2591,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 582,
-        "documentCount": 273
+        "mentions": 584,
+        "documentCount": 274
       },
       "right": {
         "name": "Jacques Valle",
@@ -2559,8 +2607,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 291,
-        "documentCount": 184
+        "mentions": 292,
+        "documentCount": 185
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -2575,8 +2623,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 291,
-        "documentCount": 184
+        "mentions": 292,
+        "documentCount": 185
       },
       "right": {
         "name": "Major Donald Keyhoes",
@@ -2597,6 +2645,22 @@
       "right": {
         "name": "Bruce Macabee",
         "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Kelly Johnson",
+        "mentions": 132,
+        "documentCount": 43
+      },
+      "right": {
+        "name": "Kelly Johnston",
+        "mentions": 3,
         "documentCount": 3
       },
       "similarity": 0.963,
@@ -3135,8 +3199,8 @@
       "category": "person",
       "left": {
         "name": "Frank Edwards",
-        "mentions": 316,
-        "documentCount": 122
+        "mentions": 317,
+        "documentCount": 123
       },
       "right": {
         "name": "Frank Edward",
@@ -3151,8 +3215,8 @@
       "category": "location",
       "left": {
         "name": "Vandenberg Air Force Base",
-        "mentions": 302,
-        "documentCount": 179
+        "mentions": 303,
+        "documentCount": 180
       },
       "right": {
         "name": "Vandenburg Air Force Base",
@@ -3167,8 +3231,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 291,
-        "documentCount": 184
+        "mentions": 292,
+        "documentCount": 185
       },
       "right": {
         "name": "Major Donald Keyho",
@@ -4207,8 +4271,8 @@
       "category": "program",
       "left": {
         "name": "Project Sign",
-        "mentions": 198,
-        "documentCount": 114
+        "mentions": 199,
+        "documentCount": 115
       },
       "right": {
         "name": "Project SIG",
@@ -4796,6 +4860,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "COMMUNICATIONS INSTRUCTIONS REPORTING VITAL INTELLIGENCE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Communication Instructions for Reporting Vital Intelligence",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Office Mell",
@@ -5263,8 +5343,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9028,
-        "documentCount": 2073
+        "mentions": 9036,
+        "documentCount": 2074
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -5407,8 +5487,8 @@
       "category": "organization",
       "left": {
         "name": "Defense Intelligence",
-        "mentions": 380,
-        "documentCount": 158
+        "mentions": 381,
+        "documentCount": 159
       },
       "right": {
         "name": "Defonse Intelligence",
@@ -5614,6 +5694,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "NAnONAL STANDARDS LABORATORY",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "NATIONAL STANDARDS LABORATORY",
+        "mentions": 7,
+        "documentCount": 4
+      },
+      "similarity": 0.947,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Forces Intelligence",
         "mentions": 7,
         "documentCount": 6
@@ -5672,6 +5768,22 @@
         "documentCount": 2
       },
       "similarity": 0.945,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "United States Navy",
+        "mentions": 1701,
+        "documentCount": 790
+      },
+      "right": {
+        "name": "Uniteo States Navy",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.944,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -6204,6 +6316,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Communications Instructions for Reporting Visual Intelligence",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "COMMUNICATIONS INSTRUCTIONS REPORTING VITAL INTELLIGENCE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.94,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Department of Physics and Astronomy",
@@ -6399,8 +6527,8 @@
       "category": "organization",
       "left": {
         "name": "Air Intelligence",
-        "mentions": 117,
-        "documentCount": 44
+        "mentions": 120,
+        "documentCount": 45
       },
       "right": {
         "name": "Alr Intelligence",
@@ -6783,8 +6911,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9028,
-        "documentCount": 2073
+        "mentions": 9036,
+        "documentCount": 2074
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -6799,8 +6927,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 933,
-        "documentCount": 551
+        "mentions": 934,
+        "documentCount": 552
       },
       "right": {
         "name": "Wright-Fattorson Air Force Base",
@@ -6959,8 +7087,8 @@
       "category": "organization",
       "left": {
         "name": "Directorate of Air Staff",
-        "mentions": 302,
-        "documentCount": 21
+        "mentions": 335,
+        "documentCount": 22
       },
       "right": {
         "name": "Directorate Air Staff",
@@ -7388,6 +7516,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Brasoria County",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Brazoria County",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Argentinian Navy",
@@ -7414,22 +7558,6 @@
         "name": "Shepherd Air Force Base",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.933,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Brasoria County",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Brazoria County",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.933,
       "reason": "similar name",
@@ -7615,8 +7743,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 385,
-        "documentCount": 159
+        "mentions": 391,
+        "documentCount": 161
       },
       "right": {
         "name": "Department of the Army",
@@ -7631,8 +7759,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 385,
-        "documentCount": 159
+        "mentions": 391,
+        "documentCount": 161
       },
       "right": {
         "name": "The Department of the Armr",
@@ -7855,8 +7983,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 582,
-        "documentCount": 273
+        "mentions": 584,
+        "documentCount": 274
       },
       "right": {
         "name": "Jacques Valley",
@@ -7935,8 +8063,8 @@
       "category": "government_agency",
       "left": {
         "name": "Phoenix Office",
-        "mentions": 91,
-        "documentCount": 18
+        "mentions": 97,
+        "documentCount": 19
       },
       "right": {
         "name": "Phoeniz Office",
@@ -8527,8 +8655,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 664,
-        "documentCount": 325
+        "mentions": 671,
+        "documentCount": 327
       },
       "right": {
         "name": "University of Color",
@@ -8543,8 +8671,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 664,
-        "documentCount": 325
+        "mentions": 671,
+        "documentCount": 327
       },
       "right": {
         "name": "University Colorado",
@@ -8559,8 +8687,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 385,
-        "documentCount": 159
+        "mentions": 391,
+        "documentCount": 161
       },
       "right": {
         "name": "DEPARTMENT OF THE AL",
@@ -8575,8 +8703,8 @@
       "category": "organization",
       "left": {
         "name": "Stanford University",
-        "mentions": 258,
-        "documentCount": 193
+        "mentions": 259,
+        "documentCount": 194
       },
       "right": {
         "name": "Stanford University In",
@@ -8815,8 +8943,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 391,
-        "documentCount": 203
+        "mentions": 392,
+        "documentCount": 204
       },
       "right": {
         "name": "Natural Investigations Committee",
@@ -8831,8 +8959,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 391,
-        "documentCount": 203
+        "mentions": 392,
+        "documentCount": 204
       },
       "right": {
         "name": "National Investigative Committee",
@@ -8847,8 +8975,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 297,
-        "documentCount": 190
+        "mentions": 298,
+        "documentCount": 191
       },
       "right": {
         "name": "Intelligence Cf'nter",
@@ -8863,8 +8991,8 @@
       "category": "program",
       "left": {
         "name": "Project Sign",
-        "mentions": 198,
-        "documentCount": 114
+        "mentions": 199,
+        "documentCount": 115
       },
       "right": {
         "name": "Project Signed",
@@ -9532,6 +9660,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of Geneva",
+        "mentions": 6,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "University of Genoa",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Office of In",
@@ -10079,8 +10223,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 213,
-        "documentCount": 150
+        "mentions": 214,
+        "documentCount": 151
       },
       "right": {
         "name": "Stephen Spielberg",
@@ -10351,8 +10495,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Schiff",
-        "mentions": 9,
-        "documentCount": 7
+        "mentions": 10,
+        "documentCount": 8
       },
       "right": {
         "name": "Steven Schiff",
@@ -10900,8 +11044,8 @@
       },
       "right": {
         "name": "Tom Valone",
-        "mentions": 3,
-        "documentCount": 2
+        "mentions": 5,
+        "documentCount": 3
       },
       "similarity": 0.87,
       "reason": "similar person name",
@@ -11087,8 +11231,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 51737,
-        "documentCount": 12703
+        "mentions": 51814,
+        "documentCount": 12710
       },
       "right": {
         "name": "North American Space Agency",
