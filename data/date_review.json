@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-06T12:16:36Z",
+  "generatedAt": "2026-10-06T13:36:38Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "6edc9d03e9ce6dc01856404f1002fa66847cd789"
+    "revision": "250f5f1f59181e9bf16dc1eb035695616cc40fe6"
   },
-  "documentsWithCandidates": 14986,
+  "documentsWithCandidates": 14990,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9592,6 +9592,21 @@
           "method": "unclassified-mention",
           "evidence": "On Fri, 18 Jun 2004 23:34:39 -0500, \"Black Helicopter Pilot\"",
           "segment": 10
+        }
+      ]
+    },
+    {
+      "documentId": "doc-078dc4aacd5b",
+      "path": "Archives-for-the-Unexplained/documents/20040629-Re_Upload-problem__-138653.txt",
+      "candidates": [
+        {
+          "value": "2004-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2004-06-29 23:06:33 [SETI@home] Error on file upload: can't open",
+          "segment": 8
         }
       ]
     },
@@ -197659,6 +197674,39 @@
           "method": "unclassified-mention",
           "evidence": "tion-Reduction Reactions, Science, July 6, 1973, 181, pp.Vol. 74-76.",
           "segment": 1002
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f8de89b582c1",
+      "path": "Black-Vault-UFO/pdfs/defe-24-1955-1.txt",
+      "candidates": [
+        {
+          "value": "1991-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CORN CmCLES have been Wiltshire, on July 17, 1991.",
+          "segment": 1
+        },
+        {
+          "value": "1970-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "British periodical WEEKEND, on July 22, 1970. ,----",
+          "segment": 886
+        },
+        {
+          "value": "1990-10-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 6, 1990, revealed that a source of his (a Security Officer working in the tmmels",
+          "segment": 1109
         }
       ]
     },
@@ -388442,6 +388490,21 @@
       ]
     },
     {
+      "documentId": "doc-1b3c21259c62",
+      "path": "DPIArchive/documents/126370-project-blue-book-mariana-ufo-incident.txt",
+      "candidates": [
+        {
+          "value": "1950-10-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "q'.tarters on 9 October 1950 that l!r. had be9n apnroached",
+          "segment": 36
+        }
+      ]
+    },
+    {
       "documentId": "doc-6ad230349d9f",
       "path": "DPIArchive/documents/126375-project-blue-book-great-falls-montana-ufo-incident-1950.txt",
       "candidates": [
@@ -458551,6 +458614,39 @@
           "method": "context-exclusion",
           "evidence": "A weather balloon was released at 2100 hours, 28 September 1953",
           "segment": 25
+        }
+      ]
+    },
+    {
+      "documentId": "doc-054959bb3ac2",
+      "path": "National-Archives-UAP-Bulk/documents/23857122/333336838.txt",
+      "candidates": [
+        {
+          "value": "1953-09-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Approximately 2130 hours, 28 September 1953.",
+          "segment": 16
+        },
+        {
+          "value": "1953-09-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "A weather balloon was released at 2100 hours, 28 September 1953 from",
+          "segment": 24
+        },
+        {
+          "value": "1953-09-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Approximately 2130 hours, 28 September 1953.",
+          "segment": 242
         }
       ]
     },
