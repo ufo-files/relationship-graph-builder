@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-06T19:01:45Z",
+  "generatedAt": "2026-10-06T20:24:10Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "44c6b411dec582290671b0a5f0d6703292c1c57b"
+    "revision": "8942ab827b10d41dc427346a103a009eb68bae20"
   },
-  "documentsWithCandidates": 15019,
+  "documentsWithCandidates": 15027,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -10339,6 +10339,75 @@
           "method": "unclassified-mention",
           "evidence": "20050512-Re_GALACTIC FEDERATION Update_ April 26, 2005-54052.html[12/03/2022 10:14:07",
           "segment": 29
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d2cf8d43264a",
+      "path": "Archives-for-the-Unexplained/documents/20050512-Re_GALACTIC-FEDERATION-Update_-April-26-2005-54062.txt",
+      "candidates": [
+        {
+          "value": "2005-05-13",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "PRESS RELEASE - May 13, 2005",
+          "segment": 4
+        },
+        {
+          "value": "2005-05-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The 50th Anniversary public celebration of Area 51 on May 28, 2005",
+          "segment": 5
+        },
+        {
+          "value": "2005-05-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, May 28, 2005 the largest of these gatherings will be held",
+          "segment": 23
+        },
+        {
+          "value": "2005-04-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "20050512-Re_GALACTIC FEDERATION Update_ April 26, 2005-54062.html[12/03/2022 10:14:08",
+          "segment": 57
+        },
+        {
+          "value": "2003-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "taken on Thursday, July 24, 2003: Color Satelllite Photo of Area 51",
+          "segment": 67
+        },
+        {
+          "value": "2003-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "taken on Thursday, July 24, 2003",
+          "segment": 68
+        },
+        {
+          "value": "2005-04-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "20050512-Re_GALACTIC FEDERATION Update_ April 26, 2005-54062.html[12/03/2022 10:14:08",
+          "segment": 76
         }
       ]
     },
@@ -343022,6 +343091,30 @@
       ]
     },
     {
+      "documentId": "doc-ff1d7d58d3d3",
+      "path": "DPIArchive/documents/116179-reports-on-flying-saucers-and-aerial-objects-10-8-84.txt",
+      "candidates": [
+        {
+          "value": "1970-02-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of February 8, 1970 1.ssue of Awake.",
+          "segment": 2969
+        },
+        {
+          "value": "1968-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "was the reentry, on March 3, 1968, of a light waves are. Malfunctions of the equip-",
+          "segment": 3176
+        }
+      ]
+    },
+    {
       "documentId": "doc-60f2d7857f42",
       "path": "DPIArchive/documents/116180-aerial-phenomenon-general-7-17-82.txt",
       "candidates": [
@@ -354001,6 +354094,138 @@
           "method": "unclassified-mention",
           "evidence": "From a November 21, 1950 (authenticated) top secret Canadian document",
           "segment": 106
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b980b060425c",
+      "path": "DPIArchive/documents/116984-special-presidential-brief-pres-elect-joe-biden-november-2020.txt",
+      "candidates": [
+        {
+          "value": "1991-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "a) NRO document - 28 July 1991 - note the distribution list which names",
+          "segment": 105
+        },
+        {
+          "value": "1996-08-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "from Dr. Greer to Congressman Cox - 30 August 1996 relating to secrecy",
+          "segment": 108
+        },
+        {
+          "value": "1950-11-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "c) Canadian Department of Transportation Document - November 21, 1950",
+          "segment": 110
+        },
+        {
+          "value": "1950-03-22",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "d) Memo to J. Edgar Hoover dated 22 March 1950 mentioning retrieved",
+          "segment": 113
+        },
+        {
+          "value": "1994-06-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 9, 1994 discussing use of UFOs for \"psychological warfare",
+          "segment": 116
+        },
+        {
+          "value": "1950-11-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "OTTATA, Catario, November 21, 1950.",
+          "segment": 373
+        },
+        {
+          "value": "1986-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "contained in his of 8 July 1986.",
+          "segment": 439
+        },
+        {
+          "value": "1986-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Iron 0156 UIC, Bovember 18, 1986 to 023D UTC, November 18, 1986.",
+          "segment": 1298
+        },
+        {
+          "value": "1986-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "corch of Fairbanks, Alesia on November 18, 1986 at 0218 UTG.",
+          "segment": 1311
+        },
+        {
+          "value": "1986-11-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TIC. Noventer 17, 1986 to 0630 November 16, 1986 I was on duty",
+          "segment": 1340
+        },
+        {
+          "value": "1952-12-10",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Request of the Director of 10 December 1952",
+          "segment": 2232
+        },
+        {
+          "value": "1952-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "near Trementon, Utah on 2 July 1952.",
+          "segment": 2236
+        },
+        {
+          "value": "2000-10-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Senate Environment and Public Works Committee (October 18, 2000).",
+          "segment": 2762
+        },
+        {
+          "value": "2004-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Aviation Week & Space Technology, March 1, 2004",
+          "segment": 2768
         }
       ]
     },
@@ -445517,6 +445742,21 @@
       ]
     },
     {
+      "documentId": "doc-c2b57145f7d434228b1ad7e8",
+      "path": "France-GEIPAN/paired/cases/2018-12-50695/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2019-04-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On April 28, 2019, at 21:35, a witness at their window was intrigued by the presence in the sky of a \"craft\" with irregularly flashing white lights. The PAN seemed stationary, then moved at a slow speed, followed by a very fast speed at low altitude. The witness made",
+          "segment": "seg-c6dab6ce52828d0d2e078739"
+        }
+      ]
+    },
+    {
       "documentId": "doc-efcaa977246a8901f1af9e70",
       "path": "France-GEIPAN/paired/cases/2018-12-50719/en/translation.txt",
       "candidates": [
@@ -447047,6 +447287,21 @@
       ]
     },
     {
+      "documentId": "doc-ce6bc145c1d1842130419bf3",
+      "path": "France-GEIPAN/paired/cases/2021-03-51168/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2021-03-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 25, 2021, at 10:15 PM, a witness is intrigued by the presence and movement of colored lights in the night sky. These lights form a large PAN triangle. A weak, muffled, and subdued noise is heard. Only one testimony is collected. The aeronautical context of t",
+          "segment": "seg-caeba2f80d8fe5fd334e4ca3"
+        }
+      ]
+    },
+    {
       "documentId": "doc-4fe5ce0fb9f13b17c38c2f19",
       "path": "France-GEIPAN/paired/cases/2021-03-51169/en/translation.txt",
       "candidates": [
@@ -448490,6 +448745,21 @@
       ]
     },
     {
+      "documentId": "doc-847b9091e1fc0f83d5c22511",
+      "path": "France-GEIPAN/paired/cases/2022-11-51409/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2022-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On November 5, 2022, at 10:42 PM, the witness is at their home in Clamart. He observes, in the sky, an intriguing light activity: types of round-oval light reflections, positioned in a triangle, making ping-pong like back-and-forth movements, in a regular, continuous",
+          "segment": "seg-58dd5ff1c68a44cec8fe4fb4"
+        }
+      ]
+    },
+    {
       "documentId": "doc-ae09044172560a59bf1e7e22",
       "path": "France-GEIPAN/paired/cases/2022-11-51410/en/translation.txt",
       "candidates": [
@@ -449809,6 +450079,21 @@
           "method": "event-language",
           "evidence": "Description: On September 15, 2024, at approximately 8:42 PM, a driver traveling on N145 observed, through her vehicle's window, a stationary gray point in the sky, located above a tree. Intrigued, she took a picture of the object before it suddenly disappeared after a few minute",
           "segment": "seg-23e185896147cb1fe03dbd40"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-85ee4d7dc3396111cda4fd9a",
+      "path": "France-GEIPAN/paired/cases/2024-10-51583/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2024-10-15",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On October 15, 2024, at 08:00 UTC, the witness, from the cockpit of an airplane crossing the ocean, observed a luminous phenomenon. The aircraft was then near the coordinates 50°30'N, 52°W, at an altitude of approximately 30,000 feet (approximately 9,000 meters). By ",
+          "segment": "seg-a43c7cb2690dbf97cddadba2"
         }
       ]
     },
@@ -476566,6 +476851,21 @@
           "method": "unclassified-mention",
           "evidence": "Reference your recent letter of October 25, 1967.",
           "segment": 7
+        }
+      ]
+    },
+    {
+      "documentId": "doc-878adf8251b0",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302571975.txt",
+      "candidates": [
+        {
+          "value": "1967-11-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Observation, 21 November 1967",
+          "segment": 4
         }
       ]
     },
