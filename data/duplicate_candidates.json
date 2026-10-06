@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "250f5f1f59181e9bf16dc1eb035695616cc40fe6"
+    "revision": "b1d2463624ff405bf72edd87d158e10cfb616f80"
   },
   "count": 706,
   "totalCount": 706,
@@ -159,8 +159,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 937,
-        "documentCount": 554
+        "mentions": 938,
+        "documentCount": 555
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -175,8 +175,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 937,
-        "documentCount": 554
+        "mentions": 938,
+        "documentCount": 555
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -575,8 +575,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 338,
-        "documentCount": 193
+        "mentions": 340,
+        "documentCount": 194
       },
       "right": {
         "name": "Kirtland Airforce Base",
@@ -1727,8 +1727,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 937,
-        "documentCount": 554
+        "mentions": 938,
+        "documentCount": 555
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1743,8 +1743,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 937,
-        "documentCount": 554
+        "mentions": 938,
+        "documentCount": 555
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -1759,8 +1759,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 937,
-        "documentCount": 554
+        "mentions": 938,
+        "documentCount": 555
       },
       "right": {
         "name": "Weight-Patterson Air Force Base",
@@ -1775,8 +1775,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 937,
-        "documentCount": 554
+        "mentions": 938,
+        "documentCount": 555
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -4287,8 +4287,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 338,
-        "documentCount": 193
+        "mentions": 340,
+        "documentCount": 194
       },
       "right": {
         "name": "Kirkland Air Force Base",
@@ -4303,8 +4303,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 338,
-        "documentCount": 193
+        "mentions": 340,
+        "documentCount": 194
       },
       "right": {
         "name": "Kirtland Alr Force Base",
@@ -4975,8 +4975,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of the Secretary",
-        "mentions": 33,
-        "documentCount": 29
+        "mentions": 34,
+        "documentCount": 30
       },
       "right": {
         "name": "Office of the Secreta",
@@ -5407,8 +5407,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9043,
-        "documentCount": 2078
+        "mentions": 9045,
+        "documentCount": 2079
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -5631,8 +5631,8 @@
       "category": "organization",
       "left": {
         "name": "Committee for the Scientific",
-        "mentions": 24,
-        "documentCount": 22
+        "mentions": 25,
+        "documentCount": 23
       },
       "right": {
         "name": "Committee for the Scientific In",
@@ -6975,8 +6975,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9043,
-        "documentCount": 2078
+        "mentions": 9045,
+        "documentCount": 2079
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -6991,8 +6991,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 937,
-        "documentCount": 554
+        "mentions": 938,
+        "documentCount": 555
       },
       "right": {
         "name": "Wright-Fattorson Air Force Base",
@@ -9244,6 +9244,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Committee for the Scientific",
+        "mentions": 25,
+        "documentCount": 23
+      },
+      "right": {
+        "name": "Committee for Scientific",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "Project Stork",
@@ -9269,22 +9285,6 @@
       "right": {
         "name": "Project Signed",
         "mentions": 5,
-        "documentCount": 3
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Committee for the Scientific",
-        "mentions": 24,
-        "documentCount": 22
-      },
-      "right": {
-        "name": "Committee for Scientific",
-        "mentions": 3,
         "documentCount": 3
       },
       "similarity": 0.923,
