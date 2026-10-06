@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-06T21:45:11Z",
+  "generatedAt": "2026-10-06T23:06:21Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "36f03467d7f2d7d6aa5978fdca447f58938ba99e"
+    "revision": "fbb378bb4f6b9d77cb2ab7eee69ff454a2aa978e"
   },
-  "documentsWithCandidates": 15034,
+  "documentsWithCandidates": 15035,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -401302,6 +401302,21 @@
           "method": "document-header",
           "evidence": "Date/DTG: Sep 16, 2023 / 160150Z SEP 23",
           "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c1b7837c4e8c",
+      "path": "DPIArchive/documents/130266-dos-uap-d1-cable-1-papua-new-guinea-january-1985-pdf.txt",
+      "candidates": [
+        {
+          "value": "1985-01-28",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date/DTG: Jan 28, 1985 / 280000Z Jan 85",
+          "segment": 2
         }
       ]
     },
