@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "8942ab827b10d41dc427346a103a009eb68bae20"
+    "revision": "36f03467d7f2d7d6aa5978fdca447f58938ba99e"
   },
-  "count": 712,
-  "totalCount": 712,
-  "shownCount": 712,
+  "count": 716,
+  "totalCount": 716,
+  "shownCount": 716,
   "candidates": [
     {
       "category": "organization",
@@ -575,8 +575,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 672,
-        "documentCount": 328
+        "mentions": 680,
+        "documentCount": 329
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1236,8 +1236,8 @@
       },
       "right": {
         "name": "University of Color",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.973,
       "reason": "similar name",
@@ -1252,8 +1252,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 546,
-        "documentCount": 84
+        "mentions": 569,
+        "documentCount": 85
       },
       "similarity": 0.971,
       "reason": "similar name",
@@ -1348,6 +1348,22 @@
       },
       "right": {
         "name": "University of Cal",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "University of Colo",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "University of Col",
         "mentions": 2,
         "documentCount": 2
       },
@@ -3295,8 +3311,8 @@
       "category": "person",
       "left": {
         "name": "Frank Edwards",
-        "mentions": 317,
-        "documentCount": 123
+        "mentions": 318,
+        "documentCount": 124
       },
       "right": {
         "name": "Frank Edward",
@@ -5455,8 +5471,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9135,
-        "documentCount": 2085
+        "mentions": 9136,
+        "documentCount": 2086
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -5868,6 +5884,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Directorate of Air Porce Intelligence",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Directorate of Air Fbrce Intelligence",
+        "mentions": 5,
+        "documentCount": 2
+      },
+      "similarity": 0.946,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Army Air Corps Intelligence",
@@ -6060,6 +6092,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of Color",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "University of Col",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Clinton County AFB",
@@ -6180,8 +6228,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 546,
-        "documentCount": 84
+        "mentions": 569,
+        "documentCount": 85
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -6404,6 +6452,22 @@
       },
       "right": {
         "name": "University of PA",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "University of Cal",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "University of Col",
         "mentions": 2,
         "documentCount": 2
       },
@@ -7023,8 +7087,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9135,
-        "documentCount": 2085
+        "mentions": 9136,
+        "documentCount": 2086
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -8815,13 +8879,13 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 672,
-        "documentCount": 328
+        "mentions": 680,
+        "documentCount": 329
       },
       "right": {
         "name": "University of Color",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.927,
       "reason": "similar name",
@@ -8831,8 +8895,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 672,
-        "documentCount": 328
+        "mentions": 680,
+        "documentCount": 329
       },
       "right": {
         "name": "University Colorado",
@@ -11391,8 +11455,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 51858,
-        "documentCount": 12723
+        "mentions": 51859,
+        "documentCount": 12724
       },
       "right": {
         "name": "North American Space Agency",
