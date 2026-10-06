@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-06T05:33:13Z",
+  "generatedAt": "2026-10-06T06:54:51Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "4eedfb724c2f2c9463af6dc054cc33e4fc026fb1"
+    "revision": "64645f58d6bfb5ad3326436151c3f3f6bb40d26a"
   },
-  "documentsWithCandidates": 14949,
+  "documentsWithCandidates": 14951,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9000,6 +9000,30 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "January 13, 2004 1 Etznab, 11 Chen, 12 Manik",
+          "segment": 9
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7d0099edd84a",
+      "path": "Archives-for-the-Unexplained/documents/20040131-Re_In-the-News_-Georgia-Takes-on-_Evolution_-630591.txt",
+      "candidates": [
+        {
+          "value": "2004-01-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Fri, 30 Jan 2004 20:13:11 +0000 (UTC",
+          "segment": 5
+        },
+        {
+          "value": "2004-01-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Fri, 30 Jan 2004 16:00:50 +0000, Maverick wrote",
           "segment": 9
         }
       ]
@@ -471163,6 +471187,21 @@
           "method": "unclassified-mention",
           "evidence": "but has not done so as of 24 September 1968.",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9cbaa350afd6",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302578528.txt",
+      "candidates": [
+        {
+          "value": "1968-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Observation , 29 July 1968",
+          "segment": 9
         }
       ]
     },
