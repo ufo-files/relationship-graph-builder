@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-06T16:20:18Z",
+  "generatedAt": "2026-10-06T17:40:43Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "60eef8cfcb45f316ebb2f766b0e0fdf6625c4123"
+    "revision": "487f1b77406a7bc887dc223dfc4f2239ea47ebde"
   },
-  "documentsWithCandidates": 15003,
+  "documentsWithCandidates": 15017,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9674,6 +9674,21 @@
       ]
     },
     {
+      "documentId": "doc-a823fe743435",
+      "path": "Archives-for-the-Unexplained/documents/20040720-Re_Australia-Skeptic-Society-are-FRAUDS-649323.txt",
+      "candidates": [
+        {
+          "value": "2003-01-16",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: 2003-01-16 13:41:09 PST",
+          "segment": 9
+        }
+      ]
+    },
+    {
       "documentId": "doc-03b8d09e1892",
       "path": "Archives-for-the-Unexplained/documents/20040804-Re_Please-move-distributed-computing-discussions-to-comp.distributed-140001.txt",
       "candidates": [
@@ -14355,6 +14370,30 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "On 24 Jan 2007 22:08:26 -0800, miso@sushi.com wrote",
+          "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9a3ec13a0494",
+      "path": "Archives-for-the-Unexplained/documents/20070129-Re_high-activity-at-the-Nellis-bombing-range-........-56184.txt",
+      "candidates": [
+        {
+          "value": "2007-01-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sun, 28 Jan 2007 16:16:49 -0800, krackula <<krackula@i.am>> wrote",
+          "segment": 3
+        },
+        {
+          "value": "2007-01-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sun, 28 Jan 2007 09:46:31 -0800, 1gunnut <gunnut@nowhere.com >",
           "segment": 4
         }
       ]
@@ -151127,6 +151166,705 @@
       ]
     },
     {
+      "documentId": "doc-9a891430315b",
+      "path": "Black-Vault-UFO/documents/the-black-vault-launches-searchable-ufo-files-release-archive/pdfs/65_hs1-834228961_62-hq-83894_section_4.txt",
+      "candidates": [
+        {
+          "value": "1947-10-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to : DIRECTOR, FBI DATE; October 9, 1947",
+          "segment": 2
+        },
+        {
+          "value": "1947-09-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference is made to Portland teletype dated September 13, 1947.",
+          "segment": 3
+        },
+        {
+          "value": "1947-09-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on duty in District 14 with Officer DONALD W. COALING on September 11, 1947",
+          "segment": 65
+        },
+        {
+          "value": "1947-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 12, 1947, describes the object as seen by Chief of Police JENKINS and",
+          "segment": 71
+        },
+        {
+          "value": "1947-11-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to : Director, FBI DATE: November 1, 1947",
+          "segment": 124
+        },
+        {
+          "value": "1947-09-17",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Bureau dated September 17, 1947.",
+          "segment": 129
+        },
+        {
+          "value": "1947-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Your letter postmarked November 5, 1947",
+          "segment": 144
+        },
+        {
+          "value": "1947-11-02",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Your letter dated November 2, 1947",
+          "segment": 150
+        },
+        {
+          "value": "1947-11-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Fallowing the appearance in this town on November 6, 1947",
+          "segment": 163
+        },
+        {
+          "value": "1943-01-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Your letter of January 5, 1943, has been",
+          "segment": 186
+        },
+        {
+          "value": "1948-02-04",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "enclosure dated February 4, 1948 received from Lieutenant Colonel DONALD SPRINGS",
+          "segment": 213
+        },
+        {
+          "value": "1947-10-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "tained in Bureau Bulletin No. 57, Series 1947, dated October 1, 1947, in *",
+          "segment": 227
+        },
+        {
+          "value": "1948-02-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAC San Francisco February 20, 1948",
+          "segment": 301
+        },
+        {
+          "value": "1948-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "in the above-captioned matter datpd February 19, 1948.",
+          "segment": 315
+        },
+        {
+          "value": "1948-02-04",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "dated February 4, 1948, entitled, \"Investigation and Reporting of ’Flying Disc’",
+          "segment": 318
+        },
+        {
+          "value": "1948-02-12",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "•dated February 12, 1948, raises the question as to whether there has",
+          "segment": 339
+        },
+        {
+          "value": "1948-03-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Your letter of March 22, 1948",
+          "segment": 408
+        },
+        {
+          "value": "1948-03-14",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Your letter dated March 14, 1948",
+          "segment": 427
+        },
+        {
+          "value": "1948-10-15",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Your lett r dated October 15, 1948, has been",
+          "segment": 559
+        },
+        {
+          "value": "1948-10-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 7, 1948 62-833945—Project \"SIGN\"",
+          "segment": 567
+        },
+        {
+          "value": "1948-12-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TO MR. D. M. date: December 28 1948",
+          "segment": 764
+        },
+        {
+          "value": "1948-12-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference is made to the teletype of December 28, 1948 Mr. Quinn Tamm___",
+          "segment": 767
+        },
+        {
+          "value": "1948-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Monday afternoon December 6, 1948, at about",
+          "segment": 1077
+        },
+        {
+          "value": "1948-12-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "11:30 A.M. on Sunday, December 5, 1948, for California by",
+          "segment": 1103
+        },
+        {
+          "value": "1948-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mr. PERSON in Hollywood on Monday, December 6, 1948, and",
+          "segment": 1107
+        },
+        {
+          "value": "1948-12-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 7, 1948 we went out in Mr. NATHAN",
+          "segment": 1111
+        },
+        {
+          "value": "1948-12-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Company the following Monday which would be December 13, 1948.",
+          "segment": 1210
+        },
+        {
+          "value": "1949-01-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAC, Houston January 25, 1949",
+          "segment": 1266
+        },
+        {
+          "value": "1949-01-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Nr: 0SI-1-9C 31 January 1949",
+          "segment": 1366
+        },
+        {
+          "value": "1948-12-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "with Information contained in your letter of 16 December 1948 to",
+          "segment": 1457
+        },
+        {
+          "value": "1949-01-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "To DIRECTOR, FBI January 31, 1949",
+          "segment": 1473
+        },
+        {
+          "value": "1949-01-06",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "January 6, 1949, another similar object was sighted in the same area.",
+          "segment": 1506
+        },
+        {
+          "value": "1948-08-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to the Bureau doted August 10, 1948, entitled, \"MADELINE G'TNNE MERCHANT",
+          "segment": 1556
+        },
+        {
+          "value": "1949-03-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DIRECTOR, FBI DATE: March 22, 1949",
+          "segment": 1612
+        },
+        {
+          "value": "1949-01-31",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Re San Antonio letter to the Director dated January 31, 1949, which outlined",
+          "segment": 1614
+        },
+        {
+          "value": "1949-02-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "G-2, 4th Anny, advised on February 16, 1949, a conference was held at Los",
+          "segment": 1623
+        },
+        {
+          "value": "1943-12-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "which began about December 5, 1943.",
+          "segment": 1625
+        },
+        {
+          "value": "1949-03-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DIRECTOR, FBI March 22, 1949",
+          "segment": 1639
+        },
+        {
+          "value": "1943-12-05",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "It was brought out that since December 5, 1943 there have been more than",
+          "segment": 1640
+        },
+        {
+          "value": "1948-11-01",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "G-2 also advised that as of November 1, 1948, information had been received",
+          "segment": 1645
+        },
+        {
+          "value": "1949-02-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Further, on February 14, 1949, higher Military authorities advised",
+          "segment": 1648
+        },
+        {
+          "value": "1949-03-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "It is further noted that about 7:30 p.m., March 6, 1949, what was at first",
+          "segment": 1651
+        },
+        {
+          "value": "1949-03-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "flare was noticed at 1:45 a.m,, March 7, 1949, approximately three miles from",
+          "segment": 1654
+        },
+        {
+          "value": "1948-12-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Houston, Texas, December 27, 1948 INTERNAL SECURITY M",
+          "segment": 1670
+        },
+        {
+          "value": "1988-12-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Houston, Texas, December 27, 1988 INTERNAL SECURITT K",
+          "segment": 1697
+        },
+        {
+          "value": "1949-04-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "HARRISON stated that at 5:25 p.m., Saturday, April 16, 1949",
+          "segment": 1852
+        },
+        {
+          "value": "1949-04-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The officer then related that the day previous, Friday, April 15, 1949",
+          "segment": 1878
+        },
+        {
+          "value": "1949-04-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAC - San Antonio April 26, 1949",
+          "segment": 1963
+        },
+        {
+          "value": "1949-04-04",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference is made to your letter dated April 4, 1949, captioned",
+          "segment": 1964
+        },
+        {
+          "value": "1949-04-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 3, 1949, your attention is directed to SAC Letter No. 38 dated March 25",
+          "segment": 1969
+        },
+        {
+          "value": "1949-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to : Director, FBI date: April 4, 1949",
+          "segment": 1978
+        },
+        {
+          "value": "1949-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "^l^that at 11:50 P.M. March 31, 1949 a lighted object about the size of a basketball",
+          "segment": 1985
+        },
+        {
+          "value": "1949-03-31",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "The object sighted on March 31, 1949 was reported as being of a",
+          "segment": 2007
+        },
+        {
+          "value": "1949-04-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 3, 1949, stated that \"flying dises\" seen in this coun ry definitely",
+          "segment": 2010
+        },
+        {
+          "value": "1949-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On April 4, 1949, G-2, 4th Army, contacted Office, inquiring as",
+          "segment": 2011
+        },
+        {
+          "value": "1949-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Letter to Director April 4, 1949",
+          "segment": 2017
+        },
+        {
+          "value": "1949-04-27",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Your letter of April 27, 1949, has been received",
+          "segment": 2027
+        },
+        {
+          "value": "1949-04-29",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Enclosed is a photostatic copy of a letter dated April 29, 1949",
+          "segment": 2087
+        },
+        {
+          "value": "1949-05-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "To : Director, FBI DATE: May 13, 1949",
+          "segment": 2112
+        },
+        {
+          "value": "1949-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On May 5, 1949 Mr. MEL HODELL, a reporter for the Sun-Star",
+          "segment": 2114
+        },
+        {
+          "value": "1949-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on the night of April 4, 1949, at approximately 2220.",
+          "segment": 2135
+        },
+        {
+          "value": "1949-04-29",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "I ish to acknowledge your letter dated April 29, 1949, and to",
+          "segment": 2246
+        },
+        {
+          "value": "1948-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On July 25, 1948, I mailed a letter enclosing .35 cents In coin",
+          "segment": 2641
+        },
+        {
+          "value": "1948-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "or \"mysterious” aircraft seen near Montgomery, Alabama, July 24, 1948, by two",
+          "segment": 2644
+        },
+        {
+          "value": "1948-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "usual aircraft seen near Montgomery, Alabama, July 24, 1948, stories con­",
+          "segment": 2666
+        },
+        {
+          "value": "1949-05-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 12, 1949- The BureauTEay'TIe^^ to refer this to the Department",
+          "segment": 2776
+        },
+        {
+          "value": "1949-05-19",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Philadelphia, Pennsylvania, dated May 19, 1949",
+          "segment": 2954
+        },
+        {
+          "value": "1949-04-21",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "had been received through the mail on April 21, 1949, an ash sample with a re­",
+          "segment": 2960
+        },
+        {
+          "value": "1947-08-14",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "office likevri.se reflect that MARQUARDT by letter received August 14, 1947",
+          "segment": 3036
+        },
+        {
+          "value": "1949-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TO : DIRECTOR, FBI DATE: July 21, 1949",
+          "segment": 3057
+        },
+        {
+          "value": "1949-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAC, Phoenix June 30, 1949",
+          "segment": 3091
+        },
+        {
+          "value": "1949-06-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reurlet June 8, 1949, captioned \"Flying Discs.\"",
+          "segment": 3092
+        },
+        {
+          "value": "1947-09-04",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "your office dated September 4, 1947* and not September 9# 1947.",
+          "segment": 3097
+        },
+        {
+          "value": "1949-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to : Hr, H. B. Fletche date: June 30, 1949",
+          "segment": 3107
+        },
+        {
+          "value": "1947-09-09",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Refer Phoenix letter to Bureau, dated September 9, 1947",
+          "segment": 3137
+        },
+        {
+          "value": "1949-06-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On June 7, 1949, Mr. LYNN C. ALDRICH, OSI representative",
+          "segment": 3145
+        },
+        {
+          "value": "1949-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TO THE DIRECTOR DATE: -July 20, 1949",
+          "segment": 3184
+        }
+      ]
+    },
+    {
       "documentId": "doc-6911994d3704",
       "path": "Black-Vault-UFO/documents/the-black-vault-launches-searchable-ufo-files-release-archive/pdfs/65_hs1-834228961_62-hq-83894_section_5.txt",
       "candidates": [
@@ -194818,6 +195556,21 @@
           "method": "unclassified-mention",
           "evidence": "September 19, 1997, 2021 MDT",
           "segment": 384
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2aa8583f7281",
+      "path": "Black-Vault-UFO/pdfs/canufodoc-14-pdf.txt",
+      "candidates": [
+        {
+          "value": "1979-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On September 01, 1979 Cornelius BLANCHARD",
+          "segment": 3897
         }
       ]
     },
@@ -305351,6 +306104,1497 @@
       ]
     },
     {
+      "documentId": "doc-d35bdc0f85cd",
+      "path": "Black-Vault-UFO/pdfs/the-roswell-report-case-closed.txt",
+      "candidates": [
+        {
+          "value": "1947-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Rowe11 Daily Record, July 9, 1947.",
+          "segment": 127
+        },
+        {
+          "value": "1992-11-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Announcement from November 4, 1992 Socorro (N.M.) Defensor",
+          "segment": 128
+        },
+        {
+          "value": "1955-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Cover of September 12, 1955 Time Magazine Depicting",
+          "segment": 151
+        },
+        {
+          "value": "1992-11-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the Socorro (N.M.) Defensor Chieftan on November 4, 1992, on behalf of",
+          "segment": 367
+        },
+        {
+          "value": "1947-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 9, 1947 Roswe,, Lx/y",
+          "segment": 401
+        },
+        {
+          "value": "1960-08-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "feet on August 16, 1960. over",
+          "segment": 870
+        },
+        {
+          "value": "1957-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Life, September 2, 1957.",
+          "segment": 893
+        },
+        {
+          "value": "1957-10-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This equipment place on October 8, 1957, in",
+          "segment": 909
+        },
+        {
+          "value": "1947-06-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "now Holloman AFB), N.M., on June 4, 1947, was found by the rancher",
+          "segment": 1102
+        },
+        {
+          "value": "1953-10-27",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "mistaken for a UFO, was launched on October 27, 1953.7RAccording",
+          "segment": 1196
+        },
+        {
+          "value": "1957-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "launch and orbit of SPUTSIK1 on October 4, 1957.",
+          "segment": 1264
+        },
+        {
+          "value": "1976-09-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "AFB on September 14, 1976.",
+          "segment": 1543
+        },
+        {
+          "value": "1947-07-07",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "On July 7, 1947, Dennis alleged he received a series of phone",
+          "segment": 2202
+        },
+        {
+          "value": "1989-08-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "interview conducted by Stanton T. Friedman on August 5, 1989.",
+          "segment": 2233
+        },
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The following day, July 8, 1947, Dennis attempted to telephone the",
+          "segment": 2260
+        },
+        {
+          "value": "1947-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1947) or the next day (July 9, 1947).32 However, some time later Dennis",
+          "segment": 2284
+        },
+        {
+          "value": "1947-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the days alleged, July 8 or July 9, 1947. -1” The morning reports of the",
+          "segment": 2345
+        },
+        {
+          "value": "1947-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Records indicated that one nurse was reassigned on July 23, 1947, over",
+          "segment": 2349
+        },
+        {
+          "value": "1946-12-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 26, 1946 until September",
+          "segment": 2388
+        },
+        {
+          "value": "1947-09-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 4, 1947 was to be admitted to Brooke General Hospital, Ft. Sam",
+          "segment": 2425
+        },
+        {
+          "value": "1952-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "It was implemented on April 1, 1952.” Prior",
+          "segment": 2532
+        },
+        {
+          "value": "1949-05-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The U.S. Air Force did not begin racial integration until the May 11, 1949",
+          "segment": 2539
+        },
+        {
+          "value": "1947-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "5’6” tall, was transferredfi-om Roswell AAF to Korea on August 21, 1947.8’",
+          "segment": 2601
+        },
+        {
+          "value": "1947-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "reassignedfrom Ft. GeorgeWright, Wash. to Roswell AAF on August 7, 1947.“’",
+          "segment": 2610
+        },
+        {
+          "value": "1956-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The accident occurred on June 26, 1956, 8.8 statute miles south",
+          "segment": 2779
+        },
+        {
+          "value": "1956-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the crash,June 27, 1956,autopsiesof three of the victims were accomplished by",
+          "segment": 2802
+        },
+        {
+          "value": "1947-08-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "One of the first exploitation attempts involved a fatal August 1, 1947",
+          "segment": 2825
+        },
+        {
+          "value": "1956-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 26, 1956 KC-97 accident",
+          "segment": 2885
+        },
+        {
+          "value": "1956-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "identification specialist arrived at Walker AFB on June 27, 1956 and made",
+          "segment": 2945
+        },
+        {
+          "value": "1956-06-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "positive identifications of the 11 crewmen on June 28, 1956.15d",
+          "segment": 2946
+        },
+        {
+          "value": "1959-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "northwest of Roswell.‘“6 The accident occurred on May 21, 1959, 10 miles",
+          "segment": 3034
+        },
+        {
+          "value": "1957-06-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "All three of the USAF June 2, 1957.",
+          "segment": 3048
+        },
+        {
+          "value": "1962-12-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 13, 1962, Kittinger and U.S. Navy civilian astronomer William C.",
+          "segment": 3106
+        },
+        {
+          "value": "1959-05-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The first training mission scheduledfor May 19, 1959 was canceled",
+          "segment": 3195
+        },
+        {
+          "value": "1959-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The second training flight, launched at 2:41 a.m. on May 21, 1959",
+          "segment": 3202
+        },
+        {
+          "value": "1959-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Just after sunriseon May 21, 1959,following a",
+          "segment": 3215
+        },
+        {
+          "value": "1959-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on May 21, 1959 by Balloon",
+          "segment": 3256
+        },
+        {
+          "value": "1959-11-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "feet on November 16, 1959: 74,700 feet on December I I, 1959; and 102,800 feet",
+          "segment": 3389
+        },
+        {
+          "value": "1958-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the 509th BW was reassigned to PeaseAFB, NH on July 1, 1958).219The",
+          "segment": 3539
+        },
+        {
+          "value": "1959-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "accident on May 21, 1959.",
+          "segment": 3571
+        },
+        {
+          "value": "1959-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "accident on May 21, 1959.",
+          "segment": 3632
+        },
+        {
+          "value": "1959-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "according to his clinical record from May 21, 1959, an “Extensive",
+          "segment": 3634
+        },
+        {
+          "value": "1959-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Three days later on May 24, 1959, the balloon pilots were",
+          "segment": 3677
+        },
+        {
+          "value": "1959-11-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ground, November 16, 1959.",
+          "segment": 3797
+        },
+        {
+          "value": "1947-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I. Roswell Daily Record, July 9, 1947, I.",
+          "segment": 3856
+        },
+        {
+          "value": "1992-11-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Socorro (N.M.) Defensor Chieftan, November 4, 1992.",
+          "segment": 3857
+        },
+        {
+          "value": "1949-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Summary of Flights, July 15, 1949.",
+          "segment": 3886
+        },
+        {
+          "value": "1950-09-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Air Materiel Command, September 18, 1950), 10-l 1.",
+          "segment": 3889
+        },
+        {
+          "value": "1929-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of Parachutes, November 2, 1929.",
+          "segment": 3894
+        },
+        {
+          "value": "1954-09-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "No. 301200, September 17, 1954, National Archives and Records",
+          "segment": 3903
+        },
+        {
+          "value": "1954-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 1951: 118, Collier’s, June 25, 1954, Time, September 12, 1955",
+          "segment": 3947
+        },
+        {
+          "value": "1955-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "January 1951: 118, Collier’s, June 25, 1954, Time, September 12, 1955",
+          "segment": 3947
+        },
+        {
+          "value": "1956-05-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Maintenance, Model F-95 Anthropomorphic Test Dummies,” May 3, 1956",
+          "segment": 3986
+        },
+        {
+          "value": "1995-09-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "James McAndrew, September 5, 1995.",
+          "segment": 3989
+        },
+        {
+          "value": "1956-05-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Maintenance,Model F-95 Anthropomorphic Test Dummies,” May 3, 1956.1",
+          "segment": 3991
+        },
+        {
+          "value": "1995-05-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Pilot, telephone interview with 1st Lt. James McAndrew, May 1, 1995.",
+          "segment": 3993
+        },
+        {
+          "value": "1956-03-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Beverly Hills Citizen, March 12, 1956,7.",
+          "segment": 3995
+        },
+        {
+          "value": "1951-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Report No. 93.03, ConstantLevel Balloons, Operations,March 1, 1951, 105",
+          "segment": 3999
+        },
+        {
+          "value": "1995-05-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "interviewed by 1st Lt. James McAndrew, May 28, 1995, and",
+          "segment": 4003
+        },
+        {
+          "value": "1949-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "@Flights, July 15, 1949,32, in HeadquartersUnited StatesAir Force, The",
+          "segment": 4019
+        },
+        {
+          "value": "1955-10-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Balloons”, October 31, 1955, Air Force Historical Research Agency",
+          "segment": 4023
+        },
+        {
+          "value": "1962-08-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1, 1957- Aug 10, 1962, Air Force Historical Research Agency",
+          "segment": 4030
+        },
+        {
+          "value": "1956-10-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 12, 1956 March 14, 1961.",
+          "segment": 4033
+        },
+        {
+          "value": "1961-03-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 12, 1956 March 14, 1961.",
+          "segment": 4033
+        },
+        {
+          "value": "1960-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Flight Summary, DISCOVERER Balloon Flights, March 31, 1960.",
+          "segment": 4034
+        },
+        {
+          "value": "1960-04-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 22, 1960, Air Force Historical Research Agency, Maxwell, AFB",
+          "segment": 4035
+        },
+        {
+          "value": "1949-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Constant Level Balloons, Section 3, Summary of Flights, July 15, 1949",
+          "segment": 4053
+        },
+        {
+          "value": "1956-10-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 12, 1956 - March 14, 1961; “Summary of Balloon Flights",
+          "segment": 4059
+        },
+        {
+          "value": "1961-03-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 12, 1956 - March 14, 1961; “Summary of Balloon Flights",
+          "segment": 4059
+        },
+        {
+          "value": "1995-08-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "James McAndrew, August 16, 1995.",
+          "segment": 4073
+        },
+        {
+          "value": "1993-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "James Ragsdale, interview with Donald R. Schmitt, January 26, 1993.",
+          "segment": 4079
+        },
+        {
+          "value": "1995-06-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1st Lt. James McAndrew, June 23, 1995.",
+          "segment": 4084
+        },
+        {
+          "value": "1992-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Karl T. Pflock, November 2, 1992, 18-19.",
+          "segment": 4200
+        },
+        {
+          "value": "1992-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "T. Pflock, November 2, 1992.",
+          "segment": 4214
+        },
+        {
+          "value": "1989-08-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "W. Glenn Dennis, interview with Stanton T. Friedman, August 5, 1989.",
+          "segment": 4221
+        },
+        {
+          "value": "1992-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "W. Glenn Dennis, interview with Karl T. Pflock, November 2, 1992.",
+          "segment": 4223
+        },
+        {
+          "value": "1992-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "W. Glenn Dennis, interview with Karl T. Pflock, November 2, 1992.",
+          "segment": 4225
+        },
+        {
+          "value": "1992-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "W. Glenn Dennis, interview with Karl T. Pflock, November 2, 1992.",
+          "segment": 4231
+        },
+        {
+          "value": "1992-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "with Karl T. Pflock, November 2, 1992.",
+          "segment": 4234
+        },
+        {
+          "value": "1989-08-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "36 W. Glenn Dennis, interview with Stanton T. Friedman, August 5, 1989.",
+          "segment": 4237
+        },
+        {
+          "value": "1989-08-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "with Stanton T. Friedman, August 5, 1989.",
+          "segment": 4255
+        },
+        {
+          "value": "1958-04-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Discharge”, April 30, 1958, Personnel tile of Capt.",
+          "segment": 4261
+        },
+        {
+          "value": "1992-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "with Karl T. Pflock, November 2, 1992, 11, 15.",
+          "segment": 4278
+        },
+        {
+          "value": "1947-09-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "WD MD FORM %A, “Clinical Record Brief,” September 5, 1947, and",
+          "segment": 4282
+        },
+        {
+          "value": "1955-08-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Fanton, August 24, 1955, Personnel Record of Capt.",
+          "segment": 4288
+        },
+        {
+          "value": "1989-08-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "W. Glenn Dennis, interview with Stanton T. Friedman, August 5, 1989",
+          "segment": 4291
+        },
+        {
+          "value": "1992-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and W. Glenn Dennis, interview with Karl T. Pflock, November 2, 1992.",
+          "segment": 4292
+        },
+        {
+          "value": "1989-08-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "W. Glenn Dennis, interview with Stanton T. Friedman, August 5, 1989.",
+          "segment": 4293
+        },
+        {
+          "value": "1996-04-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 25, 1996, and Dr. Frank B. Nordstrom, Signed Sworn Statement",
+          "segment": 4298
+        },
+        {
+          "value": "1996-04-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Charles E. Clouthier, Signed Sworn Statement, April 26, 1996",
+          "segment": 4299
+        },
+        {
+          "value": "1952-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "72. “4 Rank Titles Change,“Air Force Times, March 29, 1952, 1, 22.",
+          "segment": 4305
+        },
+        {
+          "value": "1992-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "with Karl T. Pflock, November 2, 1992.",
+          "segment": 4316
+        },
+        {
+          "value": "1992-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "with Karl T. Pflock, November 2, 1992.",
+          "segment": 4321
+        },
+        {
+          "value": "1992-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "W. Glenn Dennis, interview with Karl T. Pflock, November 2, 1992.",
+          "segment": 4322
+        },
+        {
+          "value": "1947-10-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1947 through October 1, 1947, and WD AGO FORM 66, “Ofticer’s",
+          "segment": 4326
+        },
+        {
+          "value": "1947-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sq. “M,” August 7, 1947, National Archives and Records",
+          "segment": 4334
+        },
+        {
+          "value": "1995-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "James McAndrew, May 5, 1995 and July 3, 1996, and Mary Hoadley",
+          "segment": 4341
+        },
+        {
+          "value": "1996-07-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "James McAndrew, May 5, 1995 and July 3, 1996, and Mary Hoadley",
+          "segment": 4341
+        },
+        {
+          "value": "1995-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 5, 1995, and Mary L. Wiggins, Maj., USAF (Ret), telephone",
+          "segment": 4343
+        },
+        {
+          "value": "1995-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "interview with 1st Lt. James McAndrew, May 5, 1995.",
+          "segment": 4344
+        },
+        {
+          "value": "1995-04-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1st Lt. James McAndrew, April 28, 1995.",
+          "segment": 4361
+        },
+        {
+          "value": "1948-08-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "USAF, subj: Investigation of B-29 Crash, 18 August 1948, Aircraft",
+          "segment": 4364
+        },
+        {
+          "value": "1948-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Clinical Record Brief,” 12 August 1948, Personnel records of Air Force",
+          "segment": 4367
+        },
+        {
+          "value": "1949-05-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "WD AGO Form 8-33, “Clinical Record Brief,” 16 May 1949, Personnel",
+          "segment": 4370
+        },
+        {
+          "value": "1949-05-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "20 May 1949, Aircraft Accident No. 49-5-16, Aircraft #43-48401, Air",
+          "segment": 4375
+        },
+        {
+          "value": "1949-05-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "WD AGO Form 8-33, “Clinical Record Brief,” 16 May 1949, Personnel",
+          "segment": 4377
+        },
+        {
+          "value": "1949-12-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "19 December 1949, Aircraft Accident No. 49-12-15-2, Air Force",
+          "segment": 4382
+        },
+        {
+          "value": "1949-12-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "WD AGO Form 8-33, “Clinical Record Brief,” 19 December 1949, and",
+          "segment": 4384
+        },
+        {
+          "value": "1950-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "WD AGO Form 8-33, “Clinical Record Brief,” 1 June 1950, Personnel",
+          "segment": 4388
+        },
+        {
+          "value": "1955-06-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Standard form 503, “Autopsy Protocol,” June 16, 1955 of",
+          "segment": 4392
+        },
+        {
+          "value": "1955-06-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DD Form 481-3, “Clinical Record Cover Sheet,” June 16, 1955",
+          "segment": 4395
+        },
+        {
+          "value": "1955-06-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Standard form 503, “Autopsy Protocol,” June 16, 1955, of",
+          "segment": 4399
+        },
+        {
+          "value": "1955-10-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Aircraft Accident,” 3 October 1955, Aircraft Accident No. 55-10-3-6",
+          "segment": 4403
+        },
+        {
+          "value": "1955-10-12",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "October 12, 1955, Accession No. 342-65A-6025, Box 25/28, folder",
+          "segment": 4407
+        },
+        {
+          "value": "1955-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "History,” 4 October 1955, Personnel Record of Air Force member",
+          "segment": 4411
+        },
+        {
+          "value": "1955-10-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Aircraft Accident,” 3 October 1955,Aircraft Accident No. 55-10-3-6",
+          "segment": 4415
+        },
+        {
+          "value": "1956-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Standard form 503, “Autopsy Protocol,” June 27, 1956, Personnel",
+          "segment": 4417
+        },
+        {
+          "value": "1956-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Official Trip Report Walker AFB, N.M. 27 June through 30 June 1956",
+          "segment": 4421
+        },
+        {
+          "value": "1956-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Standard form 503, “Autopsy Protocol,” June 27, 1956, Personnel Record",
+          "segment": 4427
+        },
+        {
+          "value": "1956-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Report of an Individual Involved in AF Aircraft Accident,” June 26, 1956",
+          "segment": 4431
+        },
+        {
+          "value": "1960-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "AF Form 697, “Identification Findings and Conclusions,” 3 Feb 1960",
+          "segment": 4433
+        },
+        {
+          "value": "1956-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Official Trip Report Walker AFB, N.M. 27 June through 30 June 1956",
+          "segment": 4442
+        },
+        {
+          "value": "1995-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "James McAndrew, January 26, 1995, and John C. Walter, MSgt., USAF",
+          "segment": 4449
+        },
+        {
+          "value": "1995-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "James McAndrew, June 29, 1995",
+          "segment": 4451
+        },
+        {
+          "value": "1956-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Official Trip Report Walker AFB, N.M. 27 June through 30 June 1956",
+          "segment": 4452
+        },
+        {
+          "value": "1956-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DD Form 481-3, “Clinical Record Cover Sheet,” June 26, 1956",
+          "segment": 4461
+        },
+        {
+          "value": "1953-11-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Whenry, Walters, and Air Force Manual 143-1, 1 November 1953",
+          "segment": 4464
+        },
+        {
+          "value": "1956-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Standard form 503, “Autopsy Protocol,” June 27, 1956, Personnel",
+          "segment": 4468
+        },
+        {
+          "value": "1956-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Standard form 503, “‘Autopsy Protocol,” June 27, 1956, Personnel",
+          "segment": 4473
+        },
+        {
+          "value": "1956-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Standard form 503, ‘Autopsy Protocol,” June 27, 1956, Personnel",
+          "segment": 4477
+        },
+        {
+          "value": "1956-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DD Form 481-3, “Clinical Record Cover Sheet,” June 26, 1956",
+          "segment": 4483
+        },
+        {
+          "value": "1955-10-12",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "October 12, 1955, Accession No. 342-65A-6025, Box 25/28, folder",
+          "segment": 4491
+        },
+        {
+          "value": "1960-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Findings and Conclusions,” 3 Feb 1960, Personnel Records of Air",
+          "segment": 4495
+        },
+        {
+          "value": "1953-11-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Air Force Manual 143-1, 1 November 1953, “Mortuary Affairs,” 28-29",
+          "segment": 4498
+        },
+        {
+          "value": "1956-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Official Trip Report- Walker AFB, N.M. 27 June through 30 June 1956",
+          "segment": 4501
+        },
+        {
+          "value": "1956-07-05",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Memorial Affairs Branch, July 5, 1956, Accession No. 342.65A-6025",
+          "segment": 4503
+        },
+        {
+          "value": "1995-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "James McAndrew, June 29, 1995 and July 12, 1996.",
+          "segment": 4509
+        },
+        {
+          "value": "1996-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "James McAndrew, June 29, 1995 and July 12, 1996.",
+          "segment": 4509
+        },
+        {
+          "value": "1953-11-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Air Force Manual 143-1, 1 November 1953, “Mortuary Affairs,” 27",
+          "segment": 4517
+        },
+        {
+          "value": "1956-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Official Trip Report Walker AFB, N.M. 27 June through 30 June 1956",
+          "segment": 4520
+        },
+        {
+          "value": "1956-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Memorial Affairs Branch, Air Force ServicesDivision, July 5, 1956",
+          "segment": 4522
+        },
+        {
+          "value": "1956-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "30 June 1956, George Schwaderer, Identification Specialist to Thomas",
+          "segment": 4529
+        },
+        {
+          "value": "1956-07-05",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "July 5, 1956, Accession No. 342.65A-6025, Box 25/28, folder Trip",
+          "segment": 4531
+        },
+        {
+          "value": "1996-06-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "McAndrew, June 28, 1996.",
+          "segment": 4536
+        },
+        {
+          "value": "1953-11-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Air Force Manual 143-1, 1 November 1953, “Mortuary Affairs,” 27",
+          "segment": 4537
+        },
+        {
+          "value": "1995-10-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Aircraft Crash Fatalities, October 13, 1995.",
+          "segment": 4544
+        },
+        {
+          "value": "1956-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Standard form 503, “Autopsy Protocol,” June 27, 1956, Personnel",
+          "segment": 4547
+        },
+        {
+          "value": "1959-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DD FORM 481-3, “Clinical Record Cover Sheet,” May 21, 1959",
+          "segment": 4565
+        },
+        {
+          "value": "1959-05-20",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Request- Project 7222/4.2- “Manned Gondola Flight,” May 20, 1959",
+          "segment": 4570
+        },
+        {
+          "value": "1959-02-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Vehicles,” February 24, 1959, 30-3 1, National Archives and Record",
+          "segment": 4575
+        },
+        {
+          "value": "1995-05-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1st Lt. James McAndrew, May 28, 1995.",
+          "segment": 4594
+        },
+        {
+          "value": "1959-05-19",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Project 7222/4.2- “Manned Gondola Flight,” May 19, 1959, Accession",
+          "segment": 4596
+        },
+        {
+          "value": "1959-05-20",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Project 7222/4.2- “Manned Gondola Flight,” May 20, 1959, Accession",
+          "segment": 4600
+        },
+        {
+          "value": "1995-06-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1st Lt. James McAndrew, June 23, 1995.",
+          "segment": 4603
+        },
+        {
+          "value": "1995-05-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1st Lt. James McAndrew, May 31, 1995.",
+          "segment": 4609
+        },
+        {
+          "value": "1995-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "with 1st Lt. James McAndrew, May 24, 1995.",
+          "segment": 4611
+        },
+        {
+          "value": "1959-05-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Project 7222/4.2- “Manned Gondola Flight,” May 19, 1959, Accessio",
+          "segment": 4633
+        },
+        {
+          "value": "1959-05-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MDWXB, subj: Project 7222, 8 May 1959.",
+          "segment": 4637
+        },
+        {
+          "value": "1995-05-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1st Lt. James McAndrew, May 31, 1995.",
+          "segment": 4650
+        },
+        {
+          "value": "1965-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Phenomena Branch, December 6, 1965, National Air Intelligence",
+          "segment": 4653
+        },
+        {
+          "value": "1959-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DD Form 640, “Nursing Notes,” May 24, 1959, and DD Form 728",
+          "segment": 4660
+        },
+        {
+          "value": "1959-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“Doctor’s Orders,” May 22, 1959, Personnel Record of Col. Dan D.",
+          "segment": 4661
+        },
+        {
+          "value": "1996-04-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: 26 April 1996 Place: Farmington, NM",
+          "segment": 4720
+        },
+        {
+          "value": "1996-04-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: 25 April 1996 Place: Aatec, NM",
+          "segment": 5352
+        },
+        {
+          "value": "1992-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "* W. Glenn Dennis, interview with Karl T, Pflock, November 2, 1992",
+          "segment": 5836
+        }
+      ]
+    },
+    {
       "documentId": "doc-b0438dff22cc",
       "path": "Black-Vault-UFO/pdfs/the-somewhat-lost-top-secret-1948-ufo-report-a-glimpse-into-america-s-early-encounter-with-the-unknown-3.txt",
       "candidates": [
@@ -396638,6 +398882,372 @@
       ]
     },
     {
+      "documentId": "doc-be691356d1fc",
+      "path": "DPIArchive/documents/130226-65-hs1-834228961-62-hq-83894-section-2-pdf.txt",
+      "candidates": [
+        {
+          "value": "1947-07-28",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference is made to my letter to the Bureau dated July 28, 1947",
+          "segment": 6
+        },
+        {
+          "value": "1947-08-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ultter to Bureau August 13, 1947",
+          "segment": 67
+        },
+        {
+          "value": "1947-08-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "stated thai::. on Sunday, August 3, 1947, at 8: 00 p.m., he was standing",
+          "segment": 99
+        },
+        {
+          "value": "1947-07-09",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Copy of unsigned t~legram received by HQ. AAF 9 July 1947,in which",
+          "segment": 292
+        },
+        {
+          "value": "1947-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TAJa: V DA.TB: August 15, 1947",
+          "segment": 612
+        },
+        {
+          "value": "1947-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Myrtle Creek, Oregon on August 12, 1947.",
+          "segment": 663
+        },
+        {
+          "value": "1947-09-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Director DATE: September 5, 1947",
+          "segment": 791
+        },
+        {
+          "value": "1947-08-15",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": ". ~eference is made to my teletype dated August 15, 1947 advising that",
+          "segment": 793
+        },
+        {
+          "value": "1947-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "a Mr. J ~ T of Agate Beach, Oregon had reported on August 7, 1947 that he",
+          "segment": 794
+        },
+        {
+          "value": "1947-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mr. BAR1'L stated that on August 7, 1947 he was residing at Agate B~ach, Oregon and",
+          "segment": 798
+        },
+        {
+          "value": "1947-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 30, 1947 re the above .",
+          "segment": 828
+        },
+        {
+          "value": "1947-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "in her front yard at 6 :00 A. M. on July 26, 1947.",
+          "segment": 831
+        },
+        {
+          "value": "1947-09-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAC, Springfield September 5, 1947",
+          "segment": 853
+        },
+        {
+          "value": "1947-08-20",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "With reference to your letter, dated August 20, 1947, it is desired",
+          "segment": 854
+        },
+        {
+          "value": "1947-08-22",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "matter dated August 22, 1947, which irrlicates that Special Agent Griffee !",
+          "segment": 902
+        },
+        {
+          "value": "1947-08-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "vicinity of TWin lia.11s, Idaho, on or about August 19, 1947.",
+          "segment": 906
+        },
+        {
+          "value": "1947-08-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "in the area of T\\ri.n lia.11s, Idaho, on or a bout August 19, 1947, which would",
+          "segment": 912
+        },
+        {
+          "value": "1947-08-14",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The attached let ,er dated August 14, 1947 f rom Mrs .",
+          "segment": 1045
+        },
+        {
+          "value": "1947-08-28",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Harbo, dated August 28, 1947, requesting vice as to the final disposi-",
+          "segment": 1055
+        },
+        {
+          "value": "1947-08-28",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference is made to San Francisco letter dated August 28, 1947, \\",
+          "segment": 1070
+        },
+        {
+          "value": "1947-08-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In view of which, on the morning on August 30, 1947, when Mr. RHODES",
+          "segment": 1186
+        },
+        {
+          "value": "1947-09-04",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Refer San Francisco letter dated September 4, 1947.",
+          "segment": 1265
+        },
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "without consulting any records that on June 24, 1947,while prospecting at a",
+          "segment": 1267
+        },
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on June 24, 1947 he had in his possession a combination compass and watch.",
+          "segment": 1288
+        },
+        {
+          "value": "1947-09-04",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "By let te r dated September 4, 1947, the New York Office",
+          "segment": 1662
+        },
+        {
+          "value": "1947-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "387 , Boise, Idaho, who reported that on July 12, 1947 he had seen ine strange",
+          "segment": 1694
+        },
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Flying\\~sc s first reported in this area 24 June 1947 near Mt .",
+          "segment": 1718
+        },
+        {
+          "value": "1947-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Unidentified object reported 9 July 1947 at appr oximately 1277 near Boise, Idaho",
+          "segment": 1720
+        },
+        {
+          "value": "1947-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "4 July 1947 • ei ght minutes out of Boise , Idaho . (Incl 3 MOIC, Incl 7 News Clippings",
+          "segment": 1724
+        },
+        {
+          "value": "1947-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "attempt to verify statements made by Mr. Kenneth Arnold on 26 June 1947",
+          "segment": 2037
+        },
+        {
+          "value": "1947-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 12 July 1947 , Captain Smith, of the United Airlines , was",
+          "segment": 2255
+        },
+        {
+          "value": "1947-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 15 July 1947 , S/Sgt Edward R .",
+          "segment": 2309
+        },
+        {
+          "value": "1947-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TO Director FBI DATE: September 2, 1947",
+          "segment": 2351
+        },
+        {
+          "value": "1947-08-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Remy-tel August 20, 1947.",
+          "segment": 2352
+        },
+        {
+          "value": "1947-08-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "sitting on their front poroh at appro;rlmately 9s30 P. M., August 19, 1947.",
+          "segment": 2357
+        },
+        {
+          "value": "1947-08-28",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Fhclosed is a copy of a letter dated August 28, 1947",
+          "segment": 2421
+        },
+        {
+          "value": "1947-07-30",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "with Bureau Bulletin #42, dated July 30, 1947, Anchorage is",
+          "segment": 2427
+        },
+        {
+          "value": "1947-08-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "their reported sighting of a flying object on August 4, 1947.",
+          "segment": 2430
+        },
+        {
+          "value": "1947-07-15",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "by LA./R::NC~ R. KIN, , JR. , Special A~ent CIC AdC dated July 15, 1947 .",
+          "segment": 2458
+        },
+        {
+          "value": "1947-08-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TO D~TOR, FBI DATE: August 27, 1947",
+          "segment": 2465
+        }
+      ]
+    },
+    {
       "documentId": "doc-abfcced65a2e",
       "path": "DPIArchive/documents/130228-dow-uap-d65-mission-report-persian-gulf-july-2020-pdf.txt",
       "candidates": [
@@ -441938,6 +444548,30 @@
       ]
     },
     {
+      "documentId": "doc-af220352a8a6f76199199ffe",
+      "path": "France-GEIPAN/paired/cases/2017-08-50463/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 21, 2017, and for several consecutive nights, a witness observes in the sky a bright white light with variable brightness. The object maintains a consistent general trajectory but slightly shifts over the course of the nights. Due to its relatively low stra",
+          "segment": "seg-fba909c349c4c7242f074b04"
+        },
+        {
+          "value": "2017-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 21, 2017, and for several consecutive nights, a witness observes in the sky a bright white light with variable brightness. The object maintains a consistent general trajectory but slightly shifts over the course of the nights. Due to its relatively low stra",
+          "segment": "seg-fba909c349c4c7242f074b04"
+        }
+      ]
+    },
+    {
       "documentId": "doc-6a5bbe129f1d5dbfea03442f",
       "path": "France-GEIPAN/paired/cases/2017-09-50422/en/translation.txt",
       "candidates": [
@@ -442039,6 +444673,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On October 5, 2017, at 1:30 PM, a witness, lying on the ground during a physical exercise, was surprised by the fast west-to-east passage of an opaque white ball. The witness noticed no trace in the sky left by the phenomenon. No noise was heard. The observation last",
           "segment": "seg-564b21877a8571090826b2e7"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2bebaecd43600b3c7b6d8a23",
+      "path": "France-GEIPAN/paired/cases/2017-10-50439/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-10-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On October 11, 2017, around 2:30 PM, a witness lying on a chaise lounge was looking at the sky to the South. He suddenly became intrigued by the rapid passage to the East of a white, round object, about the size of a \"handball,\" in the sky. The observation lasted one",
+          "segment": "seg-4b015ce13557b1756bcca3bf"
         }
       ]
     },
@@ -443431,6 +446080,21 @@
           "method": "milestone-language",
           "evidence": "Description: On October 5, 2019, during the performance of the show \"LE BAL DES OISEAUX FANTÔMES\" at the \"Le Puy du Fou\" park, the witness, before the show started, looked around, especially up into the sky, to check for any potential birds or raptors. That's when they spotted an",
           "segment": "seg-36b2591301a5dd0c46f3b047"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-496035da2913c4c2c4e8d139",
+      "path": "France-GEIPAN/paired/cases/2019-10-50869/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2019-10-25",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On October 25, 2019, at 11 a.m., a witness, from his terrace, observed, in the presence of his daughter and his wife, a luminous object, stationary over the sea, which he believed exhibited unusual behavior. Intrigued, the witness took his binoculars and then his cam",
+          "segment": "seg-f342847fd3fc2141d237f2b8"
         }
       ]
     },
@@ -444910,6 +447574,30 @@
           "method": "unclassified-mention",
           "evidence": "Description: On October 15, 2021, early in the evening, a couple of motorists are traveling to Switzerland. Due to a significant traffic jam on highway A9/E27, they are stopped, on a large bridge, at the exit of a tunnel near Fort de Chillon. The witness then has the impression o",
           "segment": "seg-6a49ebf6db54eec4e634b8b5"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5d45a493e73541039ff09f3b",
+      "path": "France-GEIPAN/paired/cases/2021-11-51263/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2021-11-01",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: On Monday, November 1, 2021, around 6:15 PM, a driver on the A86 highway heading towards Paris and at the exit #27, was intrigued by the presence of two very bright white oval-shaped orbs, side by side, at the same height, and moving slowly in the sky. His observatio",
+          "segment": "seg-829867f5972d335f3f4f2302"
+        },
+        {
+          "value": "2021-11-01",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Description: On Monday, November 1, 2021, around 6:15 PM, a driver on the A86 highway heading towards Paris and at the exit #27, was intrigued by the presence of two very bright white oval-shaped orbs, side by side, at the same height, and moving slowly in the sky. His observatio",
+          "segment": "seg-829867f5972d335f3f4f2302"
         }
       ]
     },
@@ -447730,6 +450418,21 @@
           "method": "unclassified-mention",
           "evidence": "**Report:** On August 6, 2025, at 10:25 UTC, at the Nouméa-Magenta airport, a pilot reporting by radio the presence of an unidentified object at the vertical of the runway, estimated to be between 150 and 200 feet altitude during rolling. An air traffic controller confirmed the v",
           "segment": "seg-9ff6bcbb068ff19873f1b321"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-23a4dd220569e57154026239",
+      "path": "France-GEIPAN/paired/cases/2025-08-51672/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2025-08-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On the evening of August 25, 2025, a resident of Gueux, Marne, observed from her terrace in the countryside a slow-moving white streak on a straight trajectory from west to east before gradually disappearing. The observation was shared by two other witnesses and docu",
+          "segment": "seg-7e597d780b1e224d3b794c5c"
         }
       ]
     },
@@ -460307,6 +463010,21 @@
       ]
     },
     {
+      "documentId": "doc-283ee8b81bf8",
+      "path": "National-Archives-UAP-Bulk/documents/23857158/23857158-001-012.txt",
+      "candidates": [
+        {
+          "value": "1954-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2215 Zulu, 28 October 1954.",
+          "segment": 16
+        }
+      ]
+    },
+    {
       "documentId": "doc-2cc1736ebc62",
       "path": "National-Archives-UAP-Bulk/documents/23857158/23857158-001-080.txt",
       "candidates": [
@@ -470720,6 +473438,48 @@
       ]
     },
     {
+      "documentId": "doc-3c291c546874",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302554749.txt",
+      "candidates": [
+        {
+          "value": "1966-08-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "As per our telephone conversation 19 August 1966, attached is",
+          "segment": 12
+        },
+        {
+          "value": "1966-08-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Tights were seen at 0252 Zulu, 19 August 1966, from",
+          "segment": 17
+        },
+        {
+          "value": "1966-08-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At about 1952 local time, Thursday evening, 18 August 1966, I was sitting on the",
+          "segment": 23
+        },
+        {
+          "value": "1966-08-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Captain Thomas G. Seeberger -3- 19 August 1966",
+          "segment": 77
+        }
+      ]
+    },
+    {
       "documentId": "doc-4a4e62e81898",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302555300.txt",
       "candidates": [
@@ -472720,6 +475480,48 @@
           "method": "unclassified-mention",
           "evidence": "UFO Observation ,3 May 1957",
           "segment": 11
+        }
+      ]
+    },
+    {
+      "documentId": "doc-970022d1ddfc",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302565663.txt",
+      "candidates": [
+        {
+          "value": "1967-06-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "observation of June 4, 1967.",
+          "segment": 3
+        },
+        {
+          "value": "1967-06-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Observation, 4 June 1967",
+          "segment": 8
+        },
+        {
+          "value": "1967-06-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On the morning of June 4, 1967 I sighted this light in the at about",
+          "segment": 17
+        },
+        {
+          "value": "1967-06-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Observation, 4 June 1967",
+          "segment": 107
         }
       ]
     },
