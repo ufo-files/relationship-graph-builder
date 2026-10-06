@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-06T17:40:43Z",
+  "generatedAt": "2026-10-06T19:01:45Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "487f1b77406a7bc887dc223dfc4f2239ea47ebde"
+    "revision": "44c6b411dec582290671b0a5f0d6703292c1c57b"
   },
-  "documentsWithCandidates": 15017,
+  "documentsWithCandidates": 15019,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -402686,6 +402686,21 @@
       ]
     },
     {
+      "documentId": "doc-d22d66d6be7c",
+      "path": "DPIArchive/documents/130464-cia-uap-019-australian-dept-of-defense-scientific-and-intel-aspects-of-the-ufo-problem-pdf.txt",
+      "candidates": [
+        {
+          "value": "1953-02-16",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Th~ CIJ. 1 ho-ever, in a report dated 16 February 1953 aho'o,c,d",
+          "segment": 84
+        }
+      ]
+    },
+    {
       "documentId": "doc-795fff6038c7",
       "path": "DPIArchive/documents/130470-cia-uap-015-project-blue-book-special-report-no-14-pdf.txt",
       "candidates": [
@@ -469093,6 +469108,21 @@
           "method": "unclassified-mention",
           "evidence": "In Ain Sefra, on the night of 12 August 1952, a railroad agent observed a",
           "segment": 7
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7f474bf9ba5d",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28949190.txt",
+      "candidates": [
+        {
+          "value": "1952-08-10",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "by special requisition on 10 August 1952, but have not been received",
+          "segment": 57
         }
       ]
     },
