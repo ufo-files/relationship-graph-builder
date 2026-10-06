@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-06T02:48:32Z",
+  "generatedAt": "2026-10-06T04:10:09Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "50efb063adb45f78dfa41708d859534353875eb8"
+    "revision": "e8a049d3432914af18732bd5eeab085a68c52003"
   },
-  "documentsWithCandidates": 14930,
+  "documentsWithCandidates": 14938,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -200648,6 +200648,1893 @@
       ]
     },
     {
+      "documentId": "doc-a661147ea097",
+      "path": "Black-Vault-UFO/pdfs/defe-24-2028.txt",
+      "candidates": [
+        {
+          "value": "2000-06-02",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference: D/Sec(AS)/ D/Sec(AS)'64/3/ l dated 2 June 2000",
+          "segment": 494
+        },
+        {
+          "value": "2000-05-24",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Session 1999-2000 published on 24 May 2000: ·",
+          "segment": 506
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "'· fuly1998and 0100 hrs on 28 July 1999.",
+          "segment": 509
+        },
+        {
+          "value": "1998-11-20",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Report No, 1 was received on 20 November 1998 and concerned a sighting on",
+          "segment": 532
+        },
+        {
+          "value": "1998-11-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "19 November 1998 by a commercial pilot, reported to be of an object",
+          "segment": 533
+        },
+        {
+          "value": "1999-02-15",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Report No, 2 was received on 15 February 1999 (page 2 is incorrectly dated",
+          "segment": 536
+        },
+        {
+          "value": "2000-03-23",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference: D/Sec(AS)/ D/Sec(AS)/64/3/1 dated 23 March 2000",
+          "segment": 603
+        },
+        {
+          "value": "2000-05-24",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "PCA 4th Report, Session 1999-2000 published 24 May 2000, Case No: A.7/00-",
+          "segment": 622
+        },
+        {
+          "value": "2000-03-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "* Mr N was provided with the information in a letter of 23 March 2000.",
+          "segment": 655
+        },
+        {
+          "value": "2000-05-24",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Session 1999-2000 published on 24 May 2000",
+          "segment": 659
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 1998 and 0100 hrs on 28 July 1999.",
+          "segment": 662
+        },
+        {
+          "value": "1998-11-20",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Report No. 1 was received on 20 November 1998 and concerned a sighting on",
+          "segment": 685
+        },
+        {
+          "value": "1998-11-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "19 November 1998 by a commercial pilot, reported to be of an object",
+          "segment": 686
+        },
+        {
+          "value": "1999-02-15",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Report No. 2 was received on 15 February 1999 (page 2 is incorrectly dated",
+          "segment": 689
+        },
+        {
+          "value": "2000-05-24",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Session 1999-2000 published on 24 May 2000",
+          "segment": 706
+        },
+        {
+          "value": "1998-11-20",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Report No. 1 was received on 20 November 1998 and concerned a sighting on",
+          "segment": 732
+        },
+        {
+          "value": "1998-11-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "19 November 1998 by a commercial pilot, reported to be of an object",
+          "segment": 733
+        },
+        {
+          "value": "1999-02-15",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Report No.2 was received on 15 February 1999 (page 2 is incorrectly dated",
+          "segment": 736
+        },
+        {
+          "value": "2000-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 01 June 2000 18:30",
+          "segment": 874
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "regarding UFO rlghtings mark between 28 July 1998 and 28 July 1999.",
+          "segment": 919
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "regarding UFO rlghtings mark between 28 July 1998 and 28 July 1999.",
+          "segment": 919
+        },
+        {
+          "value": "1998-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "5.4 On 30 July 1998, MOD wrote ~ ~of their review ofboth his",
+          "segment": 966
+        },
+        {
+          "value": "1999-07-21",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "5.5 on 21 July 1999~ MOD wid\\ a more narrowly focussed request tbr",
+          "segment": 974
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "period (28 July 1998 to 28 July 1999).",
+          "segment": 1081
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "period (28 July 1998 to 28 July 1999).",
+          "segment": 1081
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mandatory Occurrence Reports regarding UFOs for the period 28 July 1998 to 28 July 1999 which have",
+          "segment": 1133
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mandatory Occurrence Reports regarding UFOs for the period 28 July 1998 to 28 July 1999 which have",
+          "segment": 1133
+        },
+        {
+          "value": "2000-03-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PubRel Report Pagelofl 27 March 2000",
+          "segment": 1147
+        },
+        {
+          "value": "2000-03-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PubRel Report Page 1 of 1 27 March 2000",
+          "segment": 1175
+        },
+        {
+          "value": "2000-04-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Further to my letter of 20 April 2000 I am now able to confirm tha , where reports concerning UFOs have",
+          "segment": 1181
+        },
+        {
+          "value": "2000-05-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PubRel Report Page 1 of3 03 May 2000",
+          "segment": 1230
+        },
+        {
+          "value": "2000-05-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PubRel Report Page 2 of3 03 May 2000",
+          "segment": 1268
+        },
+        {
+          "value": "2000-04-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: M:>nday, April 10, 2000 12:51 :00 PM",
+          "segment": 1330
+        },
+        {
+          "value": "2000-04-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: fvbnday, April 10, 2000 12:50:59 PM",
+          "segment": 1333
+        },
+        {
+          "value": "2000-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 24 March 2000 13:55",
+          "segment": 1343
+        },
+        {
+          "value": "2000-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 24 March 2000 13:52",
+          "segment": 1347
+        },
+        {
+          "value": "2000-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 24 March 2000 11 :14",
+          "segment": 1351
+        },
+        {
+          "value": "1998-11-20",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Report No. 1 was received on 20 November 1998 and co cerned a sighting on 19",
+          "segment": 1374
+        },
+        {
+          "value": "1999-02-15",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Report No.2 was received on 15 February 1999 (page 2 s incorrectly dated) and",
+          "segment": 1379
+        },
+        {
+          "value": "2000-03-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "provided with the information in a letter of 23 March 2000.",
+          "segment": 1441
+        },
+        {
+          "value": "1998-11-20",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Report No. 1 was received on 20 November 1998 and c9ncemed a sighting on 19",
+          "segment": 1462
+        },
+        {
+          "value": "1999-02-15",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Report No.2 was received on 15 February 1999 (page 2 ~s incorrectly dated) and",
+          "segment": 1467
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Hrs 28 July 1998 and 0100 Hrs on 28 July 1999.",
+          "segment": 1500
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Hrs 28 July 1998 and 0100 Hrs on 28 July 1999.",
+          "segment": 1500
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "flying objects' for the period 01.00 hours 1998 to 01.00 hours 28 July 1999, and enclose a",
+          "segment": 1522
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "28 July 1998 to 0100 hours 28 July 1999 being carried out is to ,identify any reports from",
+          "segment": 1534
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "28 July 1998 to 0100 hours 28 July 1999 being carried out is to ,identify any reports from",
+          "segment": 1534
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Hrs 28 July 1998 and 0100 Hrs on 28 July 1999.",
+          "segment": 1546
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Hrs 28 July 1998 and 0100 Hrs on 28 July 1999.",
+          "segment": 1546
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between 0100 Hrs 28 July 1998 and 0100 Hrs on 28 July 1999.:Details required.-",
+          "segment": 1553
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between 0100 Hrs 28 July 1998 and 0100 Hrs on 28 July 1999.:Details required.-",
+          "segment": 1553
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "flying objects' for the period 01.00 hours 28 July 1998 to 01.00 hours 28 July 1999, and enclose a",
+          "segment": 1571
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "flying objects' for the period 01.00 hours 28 July 1998 to 01.00 hours 28 July 1999, and enclose a",
+          "segment": 1571
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of 'unidentified flying objects' for the period 01.00 hours 28 July 1998 to 01.00 hours",
+          "segment": 1587
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "28 July 1999, and enclose a cheque for £75.",
+          "segment": 1588
+        },
+        {
+          "value": "1998-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "wrote to MOD on 24 May 1998 asking for information about incidents in the",
+          "segment": 1634
+        },
+        {
+          "value": "1957-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "An incident occurred on 4 April 1957 and was ·tnessed by radar operators at the",
+          "segment": 1640
+        },
+        {
+          "value": "1998-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 10 July 1998 wrote to MOD about the three",
+          "segment": 1656
+        },
+        {
+          "value": "1998-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 30 July 1998, MOD wrote about the tcome of their review of both his",
+          "segment": 1659
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "On 28 July 1999 wrote to MOD with a narrowly focussed request for",
+          "segment": 1667
+        },
+        {
+          "value": "1999-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MOD replied on 14 October 1999.",
+          "segment": 1675
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between 28 July 1998 and 28 July 1999, the Permanent",
+          "segment": 1696
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between 28 July 1998 and 28 July 1999, the Permanent",
+          "segment": 1696
+        },
+        {
+          "value": "2000-02-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "report into the complaint by enclosed your letter of 8 February 2000.",
+          "segment": 1785
+        },
+        {
+          "value": "2000-02-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 17 February 2000 17:59",
+          "segment": 1819
+        },
+        {
+          "value": "2000-02-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 17 February 2000 17:55",
+          "segment": 1824
+        },
+        {
+          "value": "1999-12-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A. D/DOMD/2/1 0 of 23 December 1999",
+          "segment": 1829
+        },
+        {
+          "value": "2000-01-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "B. D/PUS/23/7 (1301) of 12 January 2000",
+          "segment": 1830
+        },
+        {
+          "value": "2000-02-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "C. A.7/00 of 8 February 2000",
+          "segment": 1831
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "case for the period 28 July 1998 to 28 July 1999.",
+          "segment": 1897
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "case for the period 28 July 1998 to 28 July 1999.",
+          "segment": 1897
+        },
+        {
+          "value": "2000-02-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 17 February 2000 16:09",
+          "segment": 1977
+        },
+        {
+          "value": "1999-12-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A. D/DOMD/2/1 0/ of 23 December 1999",
+          "segment": 1981
+        },
+        {
+          "value": "2000-01-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "B. D/PUS/23/7 (1301) of 12 January 2000",
+          "segment": 1982
+        },
+        {
+          "value": "2000-02-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "C. A.7/00 of 8 February 2000",
+          "segment": 1983
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "case for the period 28 July 1998 to 28 July 1999.",
+          "segment": 2046
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "case for the period 28 July 1998 to 28 July 1999.",
+          "segment": 2046
+        },
+        {
+          "value": "2000-02-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference: OMD14 e-mail of 14.56 16 February 2000",
+          "segment": 2108
+        },
+        {
+          "value": "1999-12-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A. D/DOMD/2/10/ of 23 December 1999",
+          "segment": 2138
+        },
+        {
+          "value": "2000-01-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "B. D/PUS/23/7 (1301) of 12 January 2000",
+          "segment": 2139
+        },
+        {
+          "value": "2000-02-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "C. A.7/00 of 8 February 2000",
+          "segment": 2140
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "case for the period 28 July 1998 to 28 July 1999.",
+          "segment": 2191
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "case for the period 28 July 1998 to 28 July 1999.",
+          "segment": 2191
+        },
+        {
+          "value": "2000-02-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "endosed with your letter of 8 February 2000.",
+          "segment": 2233
+        },
+        {
+          "value": "1999-12-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A. D/DOMD/2/10/ of 23 December 1999",
+          "segment": 2259
+        },
+        {
+          "value": "2000-01-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "B. D/PUS/23/7 (1301) of 12 January 2000",
+          "segment": 2260
+        },
+        {
+          "value": "2000-02-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "C. A.?/00 of 8 February 2000",
+          "segment": 2261
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "case for the period 28 July 1998 to 28 July 1999.",
+          "segment": 2311
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "case for the period 28 July 1998 to 28 July 1999.",
+          "segment": 2311
+        },
+        {
+          "value": "2000-02-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "- enclosed with your letter of 8 February 2000.",
+          "segment": 2362
+        },
+        {
+          "value": "2000-02-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I should be grateful if, by 23 February 2000, you would me know whether you agree",
+          "segment": 2393
+        },
+        {
+          "value": "1998-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2 to MOD on 24 May 1998 asking for t\"r•toJrtrultto'n about incidents in the",
+          "segment": 2402
+        },
+        {
+          "value": "1957-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "An incident occurred on 4 April 1957 and was wi essed by radar operators at the",
+          "segment": 2409
+        },
+        {
+          "value": "1957-04-30",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "DDI(Tech)/C.290/3/, report dated 30 April 1957 ~ PR File AIR 20/9321 ).",
+          "segment": 2413
+        },
+        {
+          "value": "1998-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "had earlier written separately to MOD pn 25 June 1998, asking for",
+          "segment": 2419
+        },
+        {
+          "value": "1998-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 30 July 1998, MOD wrote t~about the ~utcome of their review of both",
+          "segment": 2427
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "On 28 July 1999~ote to MOD with a narrowly focussed request for",
+          "segment": 2436
+        },
+        {
+          "value": "1999-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MOD replied on 14 October 1999.",
+          "segment": 2444
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "sightings between 28 July 1998 and 28 July 1999, the Secretary said that he",
+          "segment": 2465
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "sightings between 28 July 1998 and 28 July 1999, the Secretary said that he",
+          "segment": 2465
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "that, apart from the delay in replying to his letter : of 28 July 1999, which was",
+          "segment": 2540
+        },
+        {
+          "value": "1999-12-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PUS has seen your minute (2/1 0) of 23 December 1999.",
+          "segment": 2558
+        },
+        {
+          "value": "1998-07-06",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The reply given D/Sec(AS)/64/3 dated 6 July 1998) explained that all the",
+          "segment": 2583
+        },
+        {
+          "value": "1996-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "explained to - on several occasions, as early as 12 August 1996.",
+          "segment": 2596
+        },
+        {
+          "value": "1998-03-01",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "This is a narrowing of a request made in March 1 1998 for \"all information relating to",
+          "segment": 2609
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "letter of 28 July 1999 within 20 working days.",
+          "segment": 2668
+        },
+        {
+          "value": "1999-12-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 23 December 1999 17:25",
+          "segment": 2685
+        },
+        {
+          "value": "1996-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "12 August 1996 that is referred to in the submission.",
+          "segment": 2692
+        },
+        {
+          "value": "1999-12-16",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "A. D/PUS/23/7(1259) dated 16 December 1999",
+          "segment": 2694
+        },
+        {
+          "value": "2000-01-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "however, agreed an extension to 12 January 2000.",
+          "segment": 2700
+        },
+        {
+          "value": "1999-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In his letter of 2 December 1999 (ref A. 7 Director of the",
+          "segment": 2701
+        },
+        {
+          "value": "1999-05-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "commented on 27 May 1999 (ref. D/PUS/23/7(225)).",
+          "segment": 2720
+        },
+        {
+          "value": "1998-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1998 and 6 July 1998 that all the information regarding these statements had been",
+          "segment": 2740
+        },
+        {
+          "value": "1998-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "internal review of 30 July 1998, and was repeated by USofS in his letter of 14 October",
+          "segment": 2743
+        },
+        {
+          "value": "1996-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "early as their letter of 12 August 1996 (copy attached) MOD's current policy on",
+          "segment": 2746
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "- h e n narrowed the timescale for his request down to the period 28 July 1998",
+          "segment": 2758
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\\.__, to 28 July 1999, In his reply of 14 October 1999, USofS indicated that this still could",
+          "segment": 2759
+        },
+        {
+          "value": "1999-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\\.__, to 28 July 1999, In his reply of 14 October 1999, USofS indicated that this still could",
+          "segment": 2759
+        },
+        {
+          "value": "1996-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the letter from Sec(AS) as early as 12 August 1996 and as late as USofS's letter to his",
+          "segment": 2776
+        },
+        {
+          "value": "1999-10-14",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "MP dated 14 October 1999.",
+          "segment": 2777
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 1998 to 28 July 1999 would involve a considerable amount ofwork, both",
+          "segment": 2786
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "request for reports of UFO sightings between 28 July 1998 and 28 July 1999.",
+          "segment": 2811
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "request for reports of UFO sightings between 28 July 1998 and 28 July 1999.",
+          "segment": 2811
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "identified shortcoming was the failure to letter of 28 July 1999",
+          "segment": 2832
+        },
+        {
+          "value": "1998-07-06",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The reply given to-(D/Sec(AS)/64/3 dated 6 July 1998) explained that all",
+          "segment": 2871
+        },
+        {
+          "value": "1996-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "has been explained to~n several occasions, as early as 12 August 1996.",
+          "segment": 2884
+        },
+        {
+          "value": "1998-03-01",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "This is a narrowing of a request made in March 1 1998 for \"all information relating to",
+          "segment": 2898
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of 28 July 1999 within 20 working days.",
+          "segment": 2966
+        },
+        {
+          "value": "1999-12-16",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "A. D/PUS/2317(1259) dated 16 December 1999",
+          "segment": 2983
+        },
+        {
+          "value": "2000-01-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "however, agreed an extension to 12 January 2000.",
+          "segment": 2989
+        },
+        {
+          "value": "1999-05-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "commented on 27 May 1999 (ref. D/PUS/23/7(225)).",
+          "segment": 3011
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "~ for the period 28 July 1998 to 28 July 1999.",
+          "segment": 3029
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "~ for the period 28 July 1998 to 28 July 1999.",
+          "segment": 3029
+        },
+        {
+          "value": "1998-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1998 and 6 July 1998 that all the information regarding these statements had been",
+          "segment": 3031
+        },
+        {
+          "value": "1996-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "early as their letter of 12 August 1996 MOD's current policy on UFOs i11 tQQir l~er",
+          "segment": 3037
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "~en narrowed the timescale for his request down to the period 28 July 1998",
+          "segment": 3050
+        },
+        {
+          "value": "1999-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In his reply of 14 October 1999, USofS indicated that this still could",
+          "segment": 3051
+        },
+        {
+          "value": "1996-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the letter from Sec(AS) as early as 12 August 1996 and as late as USofS's letter to",
+          "segment": 3068
+        },
+        {
+          "value": "1999-10-14",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "his MP dated 14 October 1999 9f l 1\\m; 100~.",
+          "segment": 3069
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "request for reports of UFO sightings between 28 July 1998 and 28",
+          "segment": 3102
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "failure to answ~letter of 28 July 1999 within 20 working days .",
+          "segment": 3124
+        },
+        {
+          "value": "1998-07-06",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The reply given t~D/Sec(AS)/64/3 dated 6 July 1998) explained that all",
+          "segment": 3159
+        },
+        {
+          "value": "1998-03-01",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "This is a narrowing of a request made in March 1 1998 for 44 all information",
+          "segment": 3184
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "28 July 1998 to 28 July 1999 would involve a considerable amount of work, both",
+          "segment": 3196
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "28 July 1998 to 28 July 1999 would involve a considerable amount of work, both",
+          "segment": 3196
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "· was the failure to ans of 28 July 1999",
+          "segment": 3248
+        },
+        {
+          "value": "1999-12-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 22 December 1999 17:29",
+          "segment": 3264
+        },
+        {
+          "value": "1999-12-16",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "A. D/PUS/2317(1259) dated 16 December 1999",
+          "segment": 3276
+        },
+        {
+          "value": "2000-01-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "however, agreed an extension to 12 January 2000.",
+          "segment": 3282
+        },
+        {
+          "value": "1999-05-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "commented on 27 May 1999 (ref. D/PUS/2317(225)).",
+          "segment": 3302
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 1998 to 28 July 1999 would involve a considerable amount of work, both",
+          "segment": 3344
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "request for reports of UFO sightings between 28 July 1998 and 28 July 1999.",
+          "segment": 3368
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "request for reports of UFO sightings between 28 July 1998 and 28 July 1999.",
+          "segment": 3368
+        },
+        {
+          "value": "1998-07-06",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The reply given dated 6 July 1998) explained that all",
+          "segment": 3424
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1 28th July 1998 and 0100 Hrs 28 July 1999.",
+          "segment": 3451
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1998 to 28 July 1999 would involve a considerable amount of work, both because of",
+          "segment": 3464
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "failure to answer - letter of 28 July 1999 within 20 working days.",
+          "segment": 3510
+        },
+        {
+          "value": "1999-12-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 22 December 1999 17:29",
+          "segment": 3523
+        },
+        {
+          "value": "1999-12-16",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "A. D/PUS/23/7(1259) dated 16 December 1999",
+          "segment": 3534
+        },
+        {
+          "value": "2000-01-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "however, agreed an extension to 12 January 2000.",
+          "segment": 3540
+        },
+        {
+          "value": "1999-05-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "commented on 27 May 1999 (ref D/PUS/23/7(225)).",
+          "segment": 3560
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "it to the period 28 July 1998 to 28 July 1999.",
+          "segment": 3581
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "it to the period 28 July 1998 to 28 July 1999.",
+          "segment": 3581
+        },
+        {
+          "value": "1998-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1998 and 6 July 1998 that all the information regarding these statements had been",
+          "segment": 3583
+        },
+        {
+          "value": "1998-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MOD's current policy on UFOs in their letter of 1 June 1998, copy attached",
+          "segment": 3589
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "request down to the period 28 July 1998 to 28 July 1999.",
+          "segment": 3599
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "request down to the period 28 July 1998 to 28 July 1999.",
+          "segment": 3599
+        },
+        {
+          "value": "1998-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the letter from Sec(AS) of 1 June 1998.",
+          "segment": 3617
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 1998 to 28 July 1999 would involve a considerable amount of work, both",
+          "segment": 3626
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "request for reports of UFO sightings between 28 July 1998 and 28 July 1999.",
+          "segment": 3649
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "request for reports of UFO sightings between 28 July 1998 and 28 July 1999.",
+          "segment": 3649
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "l~ letter of 28 July 1999 within 20 working days.",
+          "segment": 3670
+        },
+        {
+          "value": "1998-07-06",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The reply given to- (D/Sec(AS)/64/3 dated 6 July 1998) explained that all",
+          "segment": 3706
+        },
+        {
+          "value": "1999-12-16",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Reference: DIPUSI23n dated 16 December 1999",
+          "segment": 3804
+        },
+        {
+          "value": "1998-09-24",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "CS{RM)/416/37 dated 24 September 1998); DRO should, therefore be able to provide a copy of the",
+          "segment": 3810
+        },
+        {
+          "value": "1998-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "• A copy of the MOD internal review submission (D/Sec(AS)/64/3 (MF 159/98) of 15 July 1998).",
+          "segment": 3879
+        },
+        {
+          "value": "1998-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MOD's response to~/DOMD/2/3/2 of 30 July 1998).",
+          "segment": 3880
+        },
+        {
+          "value": "1999-06-04",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "of23 May 1999 and MOD's response dated 4 June 1999.",
+          "segment": 3881
+        },
+        {
+          "value": "1999-09-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ieuan Wyn Jones' letter of 20 September 1999 covering~f 28 July and the Under",
+          "segment": 3882
+        },
+        {
+          "value": "1999-10-14",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Secretary of State's response dated 14 October 1999.",
+          "segment": 3883
+        },
+        {
+          "value": "1998-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "wrote to MOD on 24 May 1998 about incidents in the · 1950s",
+          "segment": 3917
+        },
+        {
+          "value": "1957-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "An incident occurred on 4 April 1957 and was witnessed by radar",
+          "segment": 3925
+        },
+        {
+          "value": "1957-04-30",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "and origin (Ref DDI(fech)/C.290/3/, report dated 30 April 1957, PRO Fil~.",
+          "segment": 3929
+        },
+        {
+          "value": "1998-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ii) wrote again to MOD on 25 June 1998, asking for information",
+          "segment": 3937
+        },
+        {
+          "value": "1998-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "iv) On 30 July 1998, MOD wrote to about the outcome of their",
+          "segment": 3946
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "v) On 28 July 1999, wrote to ,~the MOD with a more narrowly",
+          "segment": 3956
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "0100 Hrs 28 July 1998 and 0100 Hrs on 28 July 1999.",
+          "segment": 3960
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "0100 Hrs 28 July 1998 and 0100 Hrs on 28 July 1999.",
+          "segment": 3960
+        },
+        {
+          "value": "1999-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "vi) MOD replied on 14 October 1999.",
+          "segment": 3967
+        },
+        {
+          "value": "1998-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "i) wrote to MOD on 24 May 1998 about incidents in the 1950s",
+          "segment": 4008
+        },
+        {
+          "value": "1957-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "An incident occurred on 4 April 1957 and was witnessed by radar",
+          "segment": 4016
+        },
+        {
+          "value": "1957-04-30",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "and origin (Ref DDI(Tech)/C.290/3/, report dated 30 April 1957, PRO File",
+          "segment": 4020
+        },
+        {
+          "value": "1998-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ii) wrote again to MOD on 25 June 1998, asking for infonnation",
+          "segment": 4029
+        },
+        {
+          "value": "1998-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "iii) On 10 July 1998, wrote to MOD about the three statements",
+          "segment": 4035
+        },
+        {
+          "value": "1998-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "iv) On 30 July 1998, MOD wrote to about the outcome of their",
+          "segment": 4038
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "v) On 28 July 1999, wrote to lthe MOD with a more narrowly",
+          "segment": 4048
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "0100 Hrs 28 July 1998 and 0100 Hrs on 28 July 1999.",
+          "segment": 4052
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "0100 Hrs 28 July 1998 and 0100 Hrs on 28 July 1999.",
+          "segment": 4052
+        },
+        {
+          "value": "1999-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "vi) MOD replied on 14 October 1999.",
+          "segment": 4059
+        },
+        {
+          "value": "1998-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "i) wrote to MOD on 24 May 1998 about incidents in the 1950s",
+          "segment": 4099
+        },
+        {
+          "value": "1957-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "An incident occurred on 4 April 1957 and was witnessed by radar",
+          "segment": 4107
+        },
+        {
+          "value": "1957-04-30",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "and origin (Ref DDI(Tech)/G.290/3/, report dated 30 April 1957, PRO File",
+          "segment": 4111
+        },
+        {
+          "value": "1998-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ii) wrote again to MOD on 25 June 1998, asking for information",
+          "segment": 4119
+        },
+        {
+          "value": "1998-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "iii) On 10 July 1998, wrote to MOD about the three statements",
+          "segment": 4124
+        },
+        {
+          "value": "1998-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "iv) On 30 July 1998, MOD wrote to about the outcome of their",
+          "segment": 4127
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "v) On 28 July 1999, wrote to •.the MOD with a more narrowly",
+          "segment": 4137
+        },
+        {
+          "value": "1998-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "0100 Hrs 28 July 1998 and 0100 Hrs on 28 July 1999.",
+          "segment": 4141
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "0100 Hrs 28 July 1998 and 0100 Hrs on 28 July 1999.",
+          "segment": 4141
+        },
+        {
+          "value": "1999-10-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "vi) MOD replied on 14 October 1999.",
+          "segment": 4148
+        }
+      ]
+    },
+    {
       "documentId": "doc-01f34187b537",
       "path": "Black-Vault-UFO/pdfs/defe-24-2032.txt",
       "candidates": [
@@ -207439,6 +209326,813 @@
           "method": "context-exclusion",
           "evidence": "I have just received your letter dated 15 June 2005.",
           "segment": 1279
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0e75c0018b9b",
+      "path": "Black-Vault-UFO/pdfs/defe-24-2089-1.txt",
+      "candidates": [
+        {
+          "value": "2005-02-03",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Thank you for your letter dated 3 February 2005, also the press cutting from the Daily Mail",
+          "segment": 4885
+        },
+        {
+          "value": "1975-03-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "pleted on March 21, 1975.",
+          "segment": 5983
+        },
+        {
+          "value": "2007-10-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I am writing with reference to your e.mail on the 31 October 2007, to the MOD regarding who to contact to",
+          "segment": 6049
+        },
+        {
+          "value": "2007-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 02 November 2007 08:44",
+          "segment": 6058
+        },
+        {
+          "value": "2007-10-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 31 October 2007 21:33",
+          "segment": 6085
+        },
+        {
+          "value": "2007-10-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "October 31, 2007 at 21:32:49",
+          "segment": 6088
+        },
+        {
+          "value": "2007-09-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thank you for your letter of 28 September 2007 regarding a sighting over Dumfries on 21",
+          "segment": 6127
+        },
+        {
+          "value": "2007-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "similar sighting for 21 August 2007.",
+          "segment": 6130
+        },
+        {
+          "value": "2007-09-12",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Thank you for your letter dated 12 September 2007.",
+          "segment": 6139
+        },
+        {
+          "value": "2007-09-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Tue, 11 Sep 2007 9.18am",
+          "segment": 6163
+        },
+        {
+          "value": "2007-08-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 30 August 2007 12:51",
+          "segment": 6182
+        },
+        {
+          "value": "2007-08-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 24 August 2007 00:55",
+          "segment": 6208
+        },
+        {
+          "value": "2007-09-03",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "I am writing regarding your letter dated 3 September 2007.",
+          "segment": 6227
+        },
+        {
+          "value": "2005-08-26",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Please refer to article in The Times August 26 2005.",
+          "segment": 6239
+        },
+        {
+          "value": "2007-08-17",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "I am sorry for the mistake of the date of your sighting report in your letter dated 17 August 2007.",
+          "segment": 6428
+        },
+        {
+          "value": "2007-08-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 24 August 2007 11:39",
+          "segment": 6436
+        },
+        {
+          "value": "2007-08-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 23 August 2007 12:24",
+          "segment": 6441
+        },
+        {
+          "value": "2007-08-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Thank you for your letter dated 13 August 2007.",
+          "segment": 6454
+        },
+        {
+          "value": "2007-08-21",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "event_date",
+          "method": "milestone-language",
+          "evidence": "Thank you for your enquiry of 21 August 2007.",
+          "segment": 6481
+        },
+        {
+          "value": "2007-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 21 August 2007 11:58",
+          "segment": 6487
+        },
+        {
+          "value": "2007-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 21 August 2007 11:52",
+          "segment": 6495
+        },
+        {
+          "value": "2007-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "It was submitted on Tuesday, August 21, 2007 at 11:51:45",
+          "segment": 6499
+        },
+        {
+          "value": "2007-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 21 August 2007 16:26",
+          "segment": 6504
+        },
+        {
+          "value": "2007-08-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "I am writing concerning your letter dated 8 August 2007.",
+          "segment": 6520
+        },
+        {
+          "value": "1986-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Finally on 1 April 1986 I was so possessed by this UFO that I got angry broke my",
+          "segment": 6678
+        },
+        {
+          "value": "1986-04-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "local news channel in L.A from the 1s April - 10 April 1986. they said what they",
+          "segment": 6750
+        },
+        {
+          "value": "2007-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 31 July 2007 09:06",
+          "segment": 6763
+        },
+        {
+          "value": "2007-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "1 am writing with reference to your letter dated 8 July 2007.",
+          "segment": 7015
+        },
+        {
+          "value": "2007-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I am pleased to tell you that we can pay you Jobseeker's Allowance from 26 June 2007.",
+          "segment": 7037
+        },
+        {
+          "value": "2004-04-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "We have used the tax years ending 5 April 2004 and 5 April 2005 to assess your claim.",
+          "segment": 7038
+        },
+        {
+          "value": "2005-04-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "We have used the tax years ending 5 April 2004 and 5 April 2005 to assess your claim.",
+          "segment": 7038
+        },
+        {
+          "value": "2007-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Jun 26, 2007, at 5:04 AM",
+          "segment": 7074
+        },
+        {
+          "value": "2007-05-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thank you for your e-mail of 30 May 2007 regarding reports in the press that the Ministry of",
+          "segment": 7075
+        },
+        {
+          "value": "2007-05-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thank you for your e-mail of 4 May 2007 to the Secretary of State for Defence, the Rt Hon Des",
+          "segment": 7084
+        },
+        {
+          "value": "2007-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 01 June 2007 09:42",
+          "segment": 7117
+        },
+        {
+          "value": "2007-05-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 30 May 2007 18:35:22 +0100",
+          "segment": 7147
+        },
+        {
+          "value": "2007-05-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "txtrequest: The Guardian reported on May 3, 2007 that the MoD would be releasing the",
+          "segment": 7152
+        },
+        {
+          "value": "2007-05-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 15 May 2007 12:32:44-0700 (PDT",
+          "segment": 7259
+        },
+        {
+          "value": "2007-05-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Wednesday, May 09, 2007 11:16 AM",
+          "segment": 7296
+        },
+        {
+          "value": "2007-04-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Further to my letter of 24 April 2007 that furnished you with copies of photographs",
+          "segment": 7480
+        },
+        {
+          "value": "2007-05-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thank you for your e-mail of 2 May 2007.",
+          "segment": 7491
+        },
+        {
+          "value": "1987-05-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Square at the heigth of the cold war on May 28, 1987?",
+          "segment": 7499
+        },
+        {
+          "value": "2007-04-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thank you for your letter of 9 April 2007 asking if there was any military aircraft activity in the",
+          "segment": 7651
+        },
+        {
+          "value": "2007-03-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "| Section 4] 28 March 2007",
+          "segment": 7676
+        },
+        {
+          "value": "2007-03-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I am writing regarding your message left on DAS answerphone on the 26 March 2007.",
+          "segment": 7677
+        },
+        {
+          "value": "2007-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 13 March 2007 14:03",
+          "segment": 7687
+        },
+        {
+          "value": "2007-03-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 21 March 2007 11:37",
+          "segment": 7699
+        },
+        {
+          "value": "2002-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At 17.50pm on July 13, 2002, an",
+          "segment": 7808
+        },
+        {
+          "value": "2004-05-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ject: RE: balloons Date: 07 May 2004 05:45",
+          "segment": 7916
+        },
+        {
+          "value": "2003-07-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This is a letter that I sent to Michael Hanlon at the Daily Mail, July 3, 2003 in response to his recent de-",
+          "segment": 8022
+        },
+        {
+          "value": "2007-03-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 02 March 2007 09:08",
+          "segment": 8573
+        },
+        {
+          "value": "2007-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "_ Thank you for your e-mail of 1 March 2007.",
+          "segment": 8575
+        },
+        {
+          "value": "2007-02-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of 27 February 2007 regarding previous",
+          "segment": 8933
+        },
+        {
+          "value": "2007-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 21 February 2007 12:33",
+          "segment": 8957
+        },
+        {
+          "value": "2007-02-16",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "I am writing concerning my previous e.mail dated 16 February 2007, regarding UFO sighting reports for 2006.",
+          "segment": 8987
+        },
+        {
+          "value": "2007-01-19",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "I am writing with reference to your e.mail that we received on the 19 January 2007 on the das-ufo-",
+          "segment": 9017
+        },
+        {
+          "value": "2007-01-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 19 January 2007 19:56",
+          "segment": 9036
+        },
+        {
+          "value": "2006-11-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "reports for 3 November 2006.",
+          "segment": 9168
+        },
+        {
+          "value": "2006-11-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 08 November 2006 15:06",
+          "segment": 9356
+        },
+        {
+          "value": "2006-10-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 15 October 2006 11:20",
+          "segment": 9401
+        },
+        {
+          "value": "2006-10-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Friday, October 20, 2006",
+          "segment": 9419
+        },
+        {
+          "value": "2006-10-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 03 October 2006 12:02",
+          "segment": 9434
+        },
+        {
+          "value": "2006-09-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 29 September 2006 16:04",
+          "segment": 9462
+        },
+        {
+          "value": "2006-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Section 40 14 August 2006 has been passed to me to deal with.",
+          "segment": 9525
+        },
+        {
+          "value": "2006-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 14 August 2006 23:34",
+          "segment": 9539
+        },
+        {
+          "value": "2006-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 15 August 2006 14:11",
+          "segment": 9548
+        },
+        {
+          "value": "2006-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 15 August 2006 13:23",
+          "segment": 9553
+        },
+        {
+          "value": "2006-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 15 August 2006 08:39",
+          "segment": 9556
+        },
+        {
+          "value": "2006-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 14 August 2006 23:34",
+          "segment": 9567
+        },
+        {
+          "value": "2006-08-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 31 August 2006 08:19",
+          "segment": 9599
+        },
+        {
+          "value": "2006-08-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 17 August 2006 10:55",
+          "segment": 9602
+        },
+        {
+          "value": "2006-08-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 17 August 2006 10:14",
+          "segment": 9605
+        },
+        {
+          "value": "2006-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 14 August 2006 23:34",
+          "segment": 9617
+        },
+        {
+          "value": "2006-09-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 07 September 2006 09:25",
+          "segment": 9687
+        },
+        {
+          "value": "1996-06-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "information in comparison to your sighting on the 9 June 1996.",
+          "segment": 9739
+        },
+        {
+          "value": "2006-08-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 26 August 2006 10:44",
+          "segment": 9745
+        },
+        {
+          "value": "2006-08-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 08 August 2006 06:37",
+          "segment": 9778
+        },
+        {
+          "value": "2006-08-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 22 Aug 2006 15:07:51 +0100",
+          "segment": 9795
+        },
+        {
+          "value": "2006-08-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "6.0.3790.2444); Tue, 22 Aug 2006 07:09:25 -0700",
+          "segment": 9797
+        },
+        {
+          "value": "2006-08-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">; Tue, 22 Aug 2006 14:09:24 GMT",
+          "segment": 9799
+        },
+        {
+          "value": "2006-08-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SCOLO 06 August 2006 00:15",
+          "segment": 10126
+        },
+        {
+          "value": "2006-08-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "o secretary, 6 August 2006, forwarding em",
+          "segment": 10132
+        },
+        {
+          "value": "2006-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I am writing concerning your e.mail that you sent on the 7 August 2006.",
+          "segment": 10180
+        },
+        {
+          "value": "2006-08-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "With regard to the particular orange lights that were seen over Sunderland on 5 August 2006",
+          "segment": 10186
+        },
+        {
+          "value": "2006-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "It was submitted on Monday, August 7, 2006 at 00:14:48",
+          "segment": 10213
+        },
+        {
+          "value": "2006-07-11",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "dated 11 July 2006, that you passed to",
+          "segment": 10234
+        },
+        {
+          "value": "2006-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Queensferry on the 26 June 2006 at 10:40pm on that day.",
+          "segment": 10249
+        },
+        {
+          "value": "2006-07-19",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "| am writing with reference to your e.mail dated 19 July 2006, that you sent to the das-ufo-",
+          "segment": 10281
+        },
+        {
+          "value": "2006-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 19 July 2006 13:37",
+          "segment": 10291
         }
       ]
     },
@@ -272110,6 +274804,192 @@
           "method": "dated-reference",
           "evidence": "Reference 1s made to your letter dated 24 October 1958, con-",
           "segment": 167
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e5dd13324fac",
+      "path": "Black-Vault-UFO/pdfs/klass-phil.txt",
+      "candidates": [
+        {
+          "value": "1957-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Measures', by PHILIP J. KLASS, in 18 November 1957 and 25",
+          "segment": 156
+        },
+        {
+          "value": "1963-01-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On January 29, 1963 1 Philip J. Klass, who",
+          "segment": 598
+        },
+        {
+          "value": "1963-05-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On May 4, 1963, a confidential source, who has",
+          "segment": 619
+        },
+        {
+          "value": "1964-09-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On September 18, 1964, captioned sub;·ect",
+          "segment": 624
+        },
+        {
+          "value": "1964-09-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "with him on September 19, 1964, at the Wash~i~n~g~o~n~s~a~inl~i~n~g~ b6",
+          "segment": 626
+        },
+        {
+          "value": "1964-09-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On September 19, 1964. at 11:15 a.m., a Special",
+          "segment": 627
+        },
+        {
+          "value": "1964-10-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Apartment 904 at that address on October 31, 1964.",
+          "segment": 641
+        },
+        {
+          "value": "1964-11-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On November 27, 1964, Special Agents of the",
+          "segment": 642
+        },
+        {
+          "value": "1964-11-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On November 30, 1964; a second confidential source",
+          "segment": 650
+        },
+        {
+          "value": "1964-11-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "advised that on November 27, 1964, a cocktail party was",
+          "segment": 651
+        },
+        {
+          "value": "1988-02-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SER - ' February 11, 1988",
+          "segment": 1415
+        },
+        {
+          "value": "1988-01-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Your January 20, 1988, letter regarding lecturers for",
+          "segment": 1417
+        },
+        {
+          "value": "1976-05-03",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "On 3 May 1976, I received the attached information at my home",
+          "segment": 1595
+        },
+        {
+          "value": "1976-04-20",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "On the morning of April 20, 1976¥ he received in",
+          "segment": 1892
+        },
+        {
+          "value": "1976-04-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "at T.tos Angeles., on April 16, 1976 ..",
+          "segment": 1895
+        },
+        {
+          "value": "1976-05-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TO Director, FBI DATE: May 7, 1976",
+          "segment": 2401
+        },
+        {
+          "value": "1976-10-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the U. S. Mail at the Times-Picayune on October 22, 1976. b7C",
+          "segment": 2859
+        },
+        {
+          "value": "1976-10-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the U. S. Mail at the Times-Picayune on October 22, 1976.",
+          "segment": 2875
+        },
+        {
+          "value": "1958-01-23",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Remylet dated January 23, 1958.",
+          "segment": 2945
+        },
+        {
+          "value": "1958-07-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "To /SAC, Washington Field (65-7638) DATE: July 3, 1958",
+          "segment": 2950
         }
       ]
     },
@@ -383069,6 +385949,336 @@
       ]
     },
     {
+      "documentId": "doc-158543edbc93",
+      "path": "DPIArchive/documents/126074-cash-landrum-case-huffman-tx-december-29-1980-quest-publications-file-civil-action.txt",
+      "candidates": [
+        {
+          "value": "1984-03-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "M/D Mar 26, 1984, by Counsel.",
+          "segment": 69
+        },
+        {
+          "value": "1985-01-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Affiendments & New Parties Jan 17, 1985",
+          "segment": 77
+        },
+        {
+          "value": "1985-02-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "M/D Feb 4, 1985 by Clerk",
+          "segment": 81
+        },
+        {
+          "value": "1985-09-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Case is reset for Docket Call on Sep 3, 1985, ll:OOAM.",
+          "segment": 88
+        },
+        {
+          "value": "1985-01-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "M/D Jan 6, 1985 by clerk. dkt'd 12-19-85",
+          "segment": 93
+        },
+        {
+          "value": "1985-08-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DISMISS AND/OR FOR SUMMARY JUDGMENT on August 30, 1985 b y delivery",
+          "segment": 186
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "encounter with a \"UFO\" on December 29, 1980.",
+          "segment": 218
+        },
+        {
+          "value": "1982-12-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 27, 1982 plaintiffs filed their admin-",
+          "segment": 247
+        },
+        {
+          "value": "1983-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "denied on September 2, 1983 .",
+          "segment": 251
+        },
+        {
+          "value": "1984-01-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On January 18, 1984 the plaintiffs",
+          "segment": 252
+        },
+        {
+          "value": "1984-03-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "a ted: March 23, 1984 Respectfully submitted",
+          "segment": 439
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On the evening of December 29, 1980 plaintiff Betty",
+          "segment": 490
+        },
+        {
+          "value": "1985-01-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "occurred on January 11, 1985, January 14, 1985, and January 16",
+          "segment": 706
+        },
+        {
+          "value": "1985-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "occurred on January 11, 1985, January 14, 1985, and January 16",
+          "segment": 706
+        },
+        {
+          "value": "1985-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "discovery process can occur by March 1, 1985.",
+          "segment": 715
+        },
+        {
+          "value": "1985-01-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "consideration on Monday, January 28, 1985 at 10:00 a.m. or as i·",
+          "segment": 731
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "encounter with a \"UFO\" on December 29, 1980 .",
+          "segment": 748
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At approximately 9:00p.m. on December 29, 1980, plaintiffs",
+          "segment": 776
+        },
+        {
+          "value": "1982-12-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 27, 1982 plaintiffs filed their",
+          "segment": 801
+        },
+        {
+          "value": "1984-01-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On January 18, 1984 the plaintiffs filed",
+          "segment": 804
+        },
+        {
+          "value": "1985-01-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to Dismiss and/or for Summary Judgment filed January 17, 1985. ,-",
+          "segment": 1184
+        },
+        {
+          "value": "1985-03-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "being March 18, 1985 at which time various objections were made",
+          "segment": 1197
+        },
+        {
+          "value": "1985-01-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On January 17, 1985 the United States submitted a .Motion",
+          "segment": 1200
+        },
+        {
+          "value": "1985-09-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the pleadings, this Court on September 3, 1985 heard oral",
+          "segment": 1202
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "about December 29, 1980, I was the Chief of NASA's Aircraft",
+          "segment": 1222
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "plaintiffs on December 29, 1980, \"approximately 9:00 p.m. on FM",
+          "segment": 1231
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "California; on and about December 29, 1980, that helicopter was",
+          "segment": 1245
+        },
+        {
+          "value": "1984-05-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Executed on 31 May 1984.",
+          "segment": 1279
+        },
+        {
+          "value": "1984-01-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1) Plaintiffs filed this action on January 19, 1984.",
+          "segment": 1296
+        },
+        {
+          "value": "1984-03-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 16, 1984, and filed its Answer on April 5, 1984 ..",
+          "segment": 1298
+        },
+        {
+          "value": "1984-04-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 16, 1984, and filed its Answer on April 5, 1984 ..",
+          "segment": 1298
+        },
+        {
+          "value": "1984-04-24",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "3) On April 24, 1984, plaintiffs submitted a request for",
+          "segment": 1299
+        },
+        {
+          "value": "1985-03-18",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "agreements between counsel, on March 18, 1985.",
+          "segment": 1301
+        },
+        {
+          "value": "1985-01-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "4) On January 17, 1985, the United States filed a Motion to",
+          "segment": 1302
+        },
+        {
+          "value": "1985-09-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "5) At a Docket Call on September 3, 1985, the Court heard",
+          "segment": 1305
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "about December 29, 1980.",
+          "segment": 1391
+        }
+      ]
+    },
+    {
       "documentId": "doc-6f2777cd0c93",
       "path": "DPIArchive/documents/126075-white-sands-missile-range-double-sphere-ufo-encounter.txt",
       "candidates": [
@@ -394405,6 +397615,84 @@
           "method": "unclassified-mention",
           "evidence": "B) Revise Option year dates to be I Oct 2009 to 30 September 2010",
           "segment": 86
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b48baabe474a",
+      "path": "DPIArchive/documents/130624-dow-uap-d111-aawsap-solicitation-and-original-order-september-22-2008-pdf.txt",
+      "candidates": [
+        {
+          "value": "2008-09-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Base Year: 22 September 2008 • 29 September 2009",
+          "segment": 71
+        },
+        {
+          "value": "2009-09-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Base Year: 22 September 2008 • 29 September 2009",
+          "segment": 71
+        },
+        {
+          "value": "2009-09-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Option Year: 22 September 2009 - 21 September 201 O",
+          "segment": 99
+        },
+        {
+          "value": "1975-05-07",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "i ) In t he Republic of Vietnam between February 28 , 1961, and May 7, 1975; or",
+          "segment": 2312
+        },
+        {
+          "value": "1964-08-05",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "ii ) Between August 5, 1964 , and May 7, 1975, in all other cases ; or",
+          "segment": 2322
+        },
+        {
+          "value": "1975-05-07",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "ii ) Between August 5, 1964 , and May 7, 1975, in all other cases ; or",
+          "segment": 2322
+        },
+        {
+          "value": "1964-08-05",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "i i ) Between August 5, 1964 , and May 7, 1975, in all other cases .",
+          "segment": 2326
+        },
+        {
+          "value": "1975-05-07",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "i i ) Between August 5, 1964 , and May 7, 1975, in all other cases .",
+          "segment": 2326
         }
       ]
     },
@@ -436304,6 +439592,21 @@
       ]
     },
     {
+      "documentId": "doc-eba2547a7d42cee0bd9dcc05",
+      "path": "France-GEIPAN/paired/cases/2018-10-50630/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2018-10-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On October 9, 2018, around 9 PM, two people in the same vehicle were driving on highway A11 between ANCENIS (44) and NANTES (44). Suddenly, their attention was drawn by one or two very bright lights moving from left to right in the clear sky. The observation was very",
+          "segment": "seg-f09c759ebad1cfce988d0561"
+        }
+      ]
+    },
+    {
       "documentId": "doc-e6afd6c88eafb29b2551b5ba",
       "path": "France-GEIPAN/paired/cases/2018-10-50631/en/translation.txt",
       "candidates": [
@@ -439028,6 +442331,21 @@
       ]
     },
     {
+      "documentId": "doc-57a7d46d26cbe957e723a1b8",
+      "path": "France-GEIPAN/paired/cases/2022-08-51388/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2023-08-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 16, 2023, the main witness, from their home in Solomiac (32), observed from 2:00 to 2:30 a.m. in the northeast, at a low altitude above the horizon, a very bright PAN of round shape slowly rising into the sky. This PAN maintained a constant shape throughout",
+          "segment": "seg-e8df99545d3591e1dc488f25"
+        }
+      ]
+    },
+    {
       "documentId": "doc-603ce4fb7b706ebb8b364f82",
       "path": "France-GEIPAN/paired/cases/2022-08-51396/en/translation.txt",
       "candidates": [
@@ -440233,6 +443551,30 @@
           "method": "unclassified-mention",
           "evidence": "Description: On September 7, 2024, at 03:30, from his garden in Perpignan (Pyrénées-Orientales, 66), the witness observed the passage of an unidentified aerospacial phenomenon (PAN) composed of five white glowing points. This group followed a straight trajectory oriented from nor",
           "segment": "seg-1c5d8bade06fcde39c300f43"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cc97451553b9ff9c278441f4",
+      "path": "France-GEIPAN/paired/cases/2024-09-51563/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2024-09-12",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Description: On September 12, 2024, at 01:35, in Carentan-les-Marais (50), a witness observed from their home an unusual nocturnal light phenomenon. Their attention was drawn to a fixed, bright, white light that appeared twice in succession. A second, fainter light then moved tow",
+          "segment": "seg-97288c7b029e00fad627d17f"
+        },
+        {
+          "value": "2024-11-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On September 12, 2024, at 01:35, in Carentan-les-Marais (50), a witness observed from their home an unusual nocturnal light phenomenon. Their attention was drawn to a fixed, bright, white light that appeared twice in succession. A second, fainter light then moved tow",
+          "segment": "seg-97288c7b029e00fad627d17f"
         }
       ]
     },
