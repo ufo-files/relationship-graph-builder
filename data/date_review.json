@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-06T10:57:31Z",
+  "generatedAt": "2026-10-06T12:16:36Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "ff20121126c3c914a09632f7bd1398f3ab04ca4b"
+    "revision": "6edc9d03e9ce6dc01856404f1002fa66847cd789"
   },
-  "documentsWithCandidates": 14978,
+  "documentsWithCandidates": 14986,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9190,6 +9190,30 @@
           "method": "unclassified-mention",
           "evidence": "On Mon, 16 Feb 2004 06:12:47 GMT, Never anonymous Butt",
           "segment": 6
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9bbc50785b29",
+      "path": "Archives-for-the-Unexplained/documents/20040229-Re_Quote-mine-project_-part-5-633918.txt",
+      "candidates": [
+        {
+          "value": "2004-02-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sun, 29 Feb 2004 02:51:25 +0000 (UTC), dford3@gl.umbc.edu (david",
+          "segment": 3
+        },
+        {
+          "value": "2004-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sat, 28 Feb 2004 04:29:06 +0000 (UTC), dford3@gl.umbc.edu (david",
+          "segment": 7
         }
       ]
     },
@@ -372272,6 +372296,39 @@
       ]
     },
     {
+      "documentId": "doc-f6e1c50895a1",
+      "path": "DPIArchive/documents/123884-witness-10314-project-aquarius-part-2-june-7-2014.txt",
+      "candidates": [
+        {
+          "value": "2014-06-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday, June 07, 2014 9:59 AM",
+          "segment": 0
+        },
+        {
+          "value": "2014-06-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Fri, 6 Jun 2014 10:58:59 -0700",
+          "segment": 4
+        },
+        {
+          "value": "1986-04-30",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The letter you are seeking, dated April 30, 1986 is provided as Attachment 2.",
+          "segment": 168
+        }
+      ]
+    },
+    {
       "documentId": "doc-7699ea81349c",
       "path": "DPIArchive/documents/123891-witness-10314-project-aquarius-part-3-june-7-2014.txt",
       "candidates": [
@@ -439952,6 +440009,21 @@
       ]
     },
     {
+      "documentId": "doc-ea4e33cfaa36a9d862617bc6",
+      "path": "France-GEIPAN/paired/cases/2017-06-50383/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-06-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 11, 2017, around 11:30 PM, a witness was intrigued by the presence in the sky of an object spinning on itself, then a red glow, and the sudden disappearance of PAN. Only one witness statement is collected regarding this phenomenon. The apparent immobility of ",
+          "segment": "seg-04c2429d9753c3050ad10af2"
+        }
+      ]
+    },
+    {
       "documentId": "doc-fe7396d5a710d64659d18576",
       "path": "France-GEIPAN/paired/cases/2017-06-50388/en/translation.txt",
       "candidates": [
@@ -440209,6 +440281,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: Witnesses emerged from an evening at the theater in BUSSANG (Vosges) on Saturday, August 5, 2017, around 10:45 PM. They spotted three red-orange spheres floating in the air and moving slowly towards the east, seemingly located in the direction of \"La tête des neufs B",
           "segment": "seg-39502707ba4e1932ca86e1af"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d67eef8b6649f25263d5f492",
+      "path": "France-GEIPAN/paired/cases/2017-08-50415/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2017-08-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On August 25, 2017, at 02:15 (time confirmed by T2), two witnesses observed in the night sky colored lights (one red and one green) that intrigued them. At first perceived as stationary, these two lights moved together, changing trajectory, and were quickly hidden by",
+          "segment": "seg-27e4aee1c0c71730e0a7440d"
         }
       ]
     },
@@ -441457,6 +441544,48 @@
           "method": "unclassified-mention",
           "evidence": "Description: On Friday, June 21, 2019, at 11:40 PM, a witness (T1) on their balcony observed several white balls rapidly moving, especially in circles, in the cloudy night sky. The witness called their son (T2), who in turn saw white balls spinning in the sky and filmed the scene",
           "segment": "seg-ba40e8f1293bac9617a1906b"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f205f058cbb06be083802b4b",
+      "path": "France-GEIPAN/paired/cases/2019-06-50913/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2019-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 30, 2019 at 12:05 AM, from his home in Angers, the witness observed the stars after opening the window, his attention was drawn to one of them which disappeared and reappeared on the side, in a random manner. The following day, the minor witness reported his ",
+          "segment": "seg-389fa6db45f448d89b42264a"
+        },
+        {
+          "value": "2020-02-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 30, 2019 at 12:05 AM, from his home in Angers, the witness observed the stars after opening the window, his attention was drawn to one of them which disappeared and reappeared on the side, in a random manner. The following day, the minor witness reported his ",
+          "segment": "seg-389fa6db45f448d89b42264a"
+        },
+        {
+          "value": "2019-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 30, 2019 at 12:05 AM, from his home in Angers, the witness observed the stars after opening the window, his attention was drawn to one of them which disappeared and reappeared on the side, in a random manner. The following day, the minor witness reported his ",
+          "segment": "seg-389fa6db45f448d89b42264a"
+        },
+        {
+          "value": "2021-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On June 30, 2019 at 12:05 AM, from his home in Angers, the witness observed the stars after opening the window, his attention was drawn to one of them which disappeared and reappeared on the side, in a random manner. The following day, the minor witness reported his ",
+          "segment": "seg-389fa6db45f448d89b42264a"
         }
       ]
     },
@@ -444335,6 +444464,21 @@
       ]
     },
     {
+      "documentId": "doc-f748949c42a205f402b07213",
+      "path": "France-GEIPAN/paired/cases/2023-05-51443/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2023-05-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On May 28, 2023, around 4:00 PM, two witnesses (T1 and T2) observed two PAN in the sky over the commune of Mâron (36). One of the PAN is round-oval in shape and dark in color, and the other is long, thin, and black. The PAN at low altitude are moving on a descending ",
+          "segment": "seg-0ec8075f1d44c42f9fab1d5d"
+        }
+      ]
+    },
+    {
       "documentId": "doc-6147b904363e1ea37eda039f",
       "path": "France-GEIPAN/paired/cases/2023-05-51529/en/translation.txt",
       "candidates": [
@@ -445717,6 +445861,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On March 2, 2025, at 6:40 a.m., the sole witness is at the window of their home in Vals-des-Tilles (Haute-Marne) when they spot to the west a bright point at approximately 40° elevation, moving at a regular speed comparable to that of the ISS. As it advances, the UFO",
           "segment": "seg-322ecaf8cd7d9829e82f13a1"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b95db731ac689e28b36fba45",
+      "path": "France-GEIPAN/paired/cases/2025-03-51630/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2025-03-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "**Case Description:** On March 6, 2025, around 1 a.m., a witness located in Vicq (52) took their dog out onto their terrace when they observed two bright white lights relatively low in the sky, just above other buildings. They immediately went inside to retrieve their smartphone ",
+          "segment": "seg-913d36d1e10f1551c8403d73"
         }
       ]
     },
@@ -471790,6 +471949,21 @@
           "method": "unclassified-mention",
           "evidence": "Reference your recent letter of October 25, 1967.",
           "segment": 7
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ca3f4a487538",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302572653.txt",
+      "candidates": [
+        {
+          "value": "1967-11-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Report 13 or 14 November 1967",
+          "segment": 4
         }
       ]
     },
