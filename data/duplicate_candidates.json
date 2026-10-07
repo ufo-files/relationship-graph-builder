@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5d7e0a2297b061160d7714489bdeaf572582a669"
+    "revision": "a2d8da77c327ec6fdd0d6078304e6314c5c97739"
   },
   "count": 731,
   "totalCount": 731,
@@ -1300,8 +1300,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 577,
-        "documentCount": 86
+        "mentions": 578,
+        "documentCount": 87
       },
       "similarity": 0.971,
       "reason": "similar name",
@@ -1503,8 +1503,24 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 218,
-        "documentCount": 137
+        "mentions": 220,
+        "documentCount": 138
+      },
+      "right": {
+        "name": "AIR TECHNICAL INTELLIGENCE GENTER",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Technical Intelligence Center",
+        "mentions": 220,
+        "documentCount": 138
       },
       "right": {
         "name": "Air Technical Intelligence Conter",
@@ -1519,27 +1535,11 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 218,
-        "documentCount": 137
+        "mentions": 220,
+        "documentCount": 138
       },
       "right": {
         "name": "Air Technical Intelligence Cen'er",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.97,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Air Technical Intelligence Center",
-        "mentions": 218,
-        "documentCount": 137
-      },
-      "right": {
-        "name": "AIR TECHNICAL INTELLIGENCE GENTER",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2351,8 +2351,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 748,
-        "documentCount": 405
+        "mentions": 749,
+        "documentCount": 406
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -4303,8 +4303,8 @@
       "category": "organization",
       "left": {
         "name": "Air Intelligence Service",
-        "mentions": 5,
-        "documentCount": 5
+        "mentions": 6,
+        "documentCount": 6
       },
       "right": {
         "name": "Air Intelligence Servioe",
@@ -4684,6 +4684,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Forest Hills",
+        "mentions": 13,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "Forest Hill",
+        "mentions": 8,
+        "documentCount": 7
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Lake County",
@@ -4694,22 +4710,6 @@
         "name": "Lake Country",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Forest Hills",
-        "mentions": 13,
-        "documentCount": 8
-      },
-      "right": {
-        "name": "Forest Hill",
-        "mentions": 7,
-        "documentCount": 6
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -6356,8 +6356,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 577,
-        "documentCount": 86
+        "mentions": 578,
+        "documentCount": 87
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -6702,9 +6702,9 @@
     {
       "category": "organization",
       "left": {
-        "name": "Air Technical Intelligence Cen'er",
-        "mentions": 2,
-        "documentCount": 2
+        "name": "AIR TECHNICAL INTELLIGENCE GENTER",
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
         "name": "Air Technical Intelligence Conter",
@@ -6718,14 +6718,30 @@
     {
       "category": "organization",
       "left": {
-        "name": "Air Technical Intelligence Conter",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "Air Technical Intelligence Cen'er",
+        "mentions": 2,
+        "documentCount": 2
       },
       "right": {
         "name": "AIR TECHNICAL INTELLIGENCE GENTER",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.939,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Technical Intelligence Cen'er",
         "mentions": 2,
         "documentCount": 2
+      },
+      "right": {
+        "name": "Air Technical Intelligence Conter",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.939,
       "reason": "similar name",
@@ -6740,22 +6756,6 @@
       },
       "right": {
         "name": "Federal Bureau of Inves",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.939,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Air Technical Intelligence Cen'er",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "AIR TECHNICAL INTELLIGENCE GENTER",
         "mentions": 2,
         "documentCount": 2
       },
@@ -9151,8 +9151,8 @@
       "category": "organization",
       "left": {
         "name": "Stanford University",
-        "mentions": 261,
-        "documentCount": 195
+        "mentions": 262,
+        "documentCount": 196
       },
       "right": {
         "name": "Stanford University In",
@@ -9423,8 +9423,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 313,
-        "documentCount": 194
+        "mentions": 314,
+        "documentCount": 195
       },
       "right": {
         "name": "Intelligence Cf'nter",
@@ -11423,8 +11423,8 @@
       "category": "person",
       "left": {
         "name": "Joseph Stalin",
-        "mentions": 30,
-        "documentCount": 28
+        "mentions": 31,
+        "documentCount": 29
       },
       "right": {
         "name": "Joe Stalin",
@@ -11695,8 +11695,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 51943,
-        "documentCount": 12733
+        "mentions": 51946,
+        "documentCount": 12735
       },
       "right": {
         "name": "North American Space Agency",
