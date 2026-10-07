@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-07T09:55:17Z",
+  "generatedAt": "2026-10-07T11:15:09Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a2d8da77c327ec6fdd0d6078304e6314c5c97739"
+    "revision": "e9c8413ac0f974d51f2e84f00f4b0ec975aea716"
   },
-  "documentsWithCandidates": 15103,
+  "documentsWithCandidates": 15113,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -10327,6 +10327,21 @@
           "method": "unclassified-mention",
           "evidence": "On Fri, 21 Jan 2005 21:04:17 -0500, Tommy <nospam@nospam.com> drained",
           "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5e2a71c18211",
+      "path": "Archives-for-the-Unexplained/documents/20050125-Re_Area-51-was-never-a-secret-base---a-clarification-53712.txt",
+      "candidates": [
+        {
+          "value": "2003-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Color Satellite Photo of Area 51 taken on July 24, 2003",
+          "segment": 30
         }
       ]
     },
@@ -22393,6 +22408,21 @@
           "method": "unclassified-mention",
           "evidence": "his cell phone on April 11 2008 I had my",
           "segment": 36
+        }
+      ]
+    },
+    {
+      "documentId": "doc-51008025666f",
+      "path": "Archives-for-the-Unexplained/documents/20130507-Hi-Aratzio-_--61320.txt",
+      "candidates": [
+        {
+          "value": "2013-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sun, 05 May 2013 14:39:48 +1200, Dwight D. Eisenhower",
+          "segment": 4
         }
       ]
     },
@@ -199073,6 +199103,66 @@
       ]
     },
     {
+      "documentId": "doc-f3f4b2c6722b",
+      "path": "Black-Vault-UFO/pdfs/defe-24-1942-1.txt",
+      "candidates": [
+        {
+          "value": "1989-06-13",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "request postmarked 13 June 1989 for a copy of all UFO-related",
+          "segment": 19
+        },
+        {
+          "value": "1987-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 21, 1987 NN You, N. Y. \\0017",
+          "segment": 246
+        },
+        {
+          "value": "1980-12-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 27, 1980, in ~he",
+          "segment": 276
+        },
+        {
+          "value": "1987-10-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "THE Carnival Committee take umn of October 9 1987.complain- seen by a witness",
+          "segment": 590
+        },
+        {
+          "value": "1987-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on Monday, 21 September 1987; at 10 a.m.",
+          "segment": 718
+        },
+        {
+          "value": "1950-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Press Conference, April 4, 1950) ~ \"DEFENSE DEPARTMENT ORDERS",
+          "segment": 1004
+        }
+      ]
+    },
+    {
       "documentId": "doc-66b82984737d",
       "path": "Black-Vault-UFO/pdfs/defe-24-1949-1.txt",
       "candidates": [
@@ -285304,6 +285394,57 @@
           "method": "unclassified-mention",
           "evidence": "Sent: Thursday, March 08, 2018 11:30 AM",
           "segment": 268
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5b719f561db7",
+      "path": "Black-Vault-UFO/pdfs/naval-inspector-general-complaint-about-ufos-uaps-aliens-and-much-more-january-2020-3.txt",
+      "candidates": [
+        {
+          "value": "2021-05-19",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "006817) of May 19, 2021 in which you request “a copy of records (which includes videos/photos",
+          "segment": 3
+        },
+        {
+          "value": "2020-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Sunday, January 26, 2020 1:48 PM",
+          "segment": 58
+        },
+        {
+          "value": "2020-09-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thursday, September 24, 2020 1:38:49 PM",
+          "segment": 77
+        },
+        {
+          "value": "2020-09-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Sep 24, 2020, at 9:51 AM, Federal News Network <info@federalnewsnetwork.com> wrote",
+          "segment": 78
+        },
+        {
+          "value": "2020-01-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Monday, January 27, 2020 10:37 AM",
+          "segment": 139
         }
       ]
     },
@@ -389864,6 +390005,21 @@
       ]
     },
     {
+      "documentId": "doc-acafb056791a",
+      "path": "DPIArchive/documents/124617-donald-heckert-united-states-ufo-sighting-by-kelly-johnson-dec53-via-st-jul-18.txt",
+      "candidates": [
+        {
+          "value": "1953-12-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saucer on 16 December 1953.",
+          "segment": 14
+        }
+      ]
+    },
+    {
       "documentId": "doc-e1759ed47dee",
       "path": "DPIArchive/documents/124628-eric-hecker-united-states-neutrino-light-info.txt",
       "candidates": [
@@ -407099,6 +407255,84 @@
       ]
     },
     {
+      "documentId": "doc-5c43e9a9c521",
+      "path": "DPIArchive/documents/130320-65-hs1-834228961-62-hq-83894-serial-130-pdf.txt",
+      "candidates": [
+        {
+          "value": "1947-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Time 20CI0/7., 10 July 1947",
+          "segment": 373
+        },
+        {
+          "value": "1947-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the above facts to the I ntelligence Offic er on 15 July 1947.",
+          "segment": 386
+        },
+        {
+          "value": "1947-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ti.Jae : OOJOZ hours, 11 July 1947.",
+          "segment": 410
+        },
+        {
+          "value": "1947-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At approximately 10 o'elook in the e•ening of 10 July 1947",
+          "segment": 604
+        },
+        {
+          "value": "1947-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At approxi■ately 10 •'•look in the eTentnc of 10 July 1947",
+          "segment": 632
+        },
+        {
+          "value": "1947-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Approximat ely three weeks a go, on or about 7 July 1947, I",
+          "segment": 1333
+        },
+        {
+          "value": "1947-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 23 July 1947, BYRCN c.",
+          "segment": 1636
+        },
+        {
+          "value": "1947-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1:00 and 1:30 p. •• Sunday, 29 June 1947",
+          "segment": 2211
+        }
+      ]
+    },
+    {
       "documentId": "doc-b2e0b2e42282",
       "path": "DPIArchive/documents/130326-dow-uap-d33-mission-report-greece-october-2023-pdf.txt",
       "candidates": [
@@ -408400,6 +408634,21 @@
           "method": "unclassified-mention",
           "evidence": "Flight Control (CAA) at approximate]y 2315 PST, 30 Dec 1947 that",
           "segment": 1784
+        }
+      ]
+    },
+    {
+      "documentId": "doc-09f082501794",
+      "path": "DPIArchive/documents/130514-fbi-uap-d013-wa-ufo-investigation-1952-1960-pdf.txt",
+      "candidates": [
+        {
+          "value": "1954-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "·20D OSI 24-0 · 24 June 1954",
+          "segment": 285
         }
       ]
     },
@@ -450665,6 +450914,21 @@
       ]
     },
     {
+      "documentId": "doc-5b005945fe50389c17b975c9",
+      "path": "France-GEIPAN/paired/cases/2018-03-50512/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2018-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 31, 2018, between 21:30 and 21:41, a witness from their balcony was intrigued by a bright, intense ball of light with varied colors. The PAN follows a descending trajectory and slowly disappears behind the Notre Dame de La Garde hill. Only one testimony is c",
+          "segment": "seg-83dd9a221a73d520eb3ddc7d"
+        }
+      ]
+    },
+    {
       "documentId": "doc-61910f9eec238b412971326a",
       "path": "France-GEIPAN/paired/cases/2018-03-50514/en/translation.txt",
       "candidates": [
@@ -451357,6 +451621,21 @@
           "method": "unclassified-mention",
           "evidence": "Description: On March 16, 2019, at 01:55 (not 03 or 15 March as incorrectly indicated in the questionnaire), a witness in their garden had their attention drawn to the silent passage of 7 points described as \"white disks, somewhat blurry\" in the sky. This geometric formation cros",
           "segment": "seg-9bb4a8435904827f37bab3a3"
+        }
+      ]
+    },
+    {
+      "documentId": "doc-27d16df5d6d2a7c2df57aa2b",
+      "path": "France-GEIPAN/paired/cases/2019-03-50763/en/translation.txt",
+      "candidates": [
+        {
+          "value": "2019-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Description: On March 29, 2019, during an EASYJET flight (EZY926L) from Lille (59) to Nice (06), the pilot contacted air traffic control regarding wake turbulence and potential \"heavy\" (large airliner) traffic 1000 feet below. The pilot confirms to the controller that a \"heavy\" c",
+          "segment": "seg-7dc68b5109df28152bf96096"
         }
       ]
     },
@@ -483427,6 +483706,39 @@
           "method": "unclassified-mention",
           "evidence": "sighting of 19/20 March 1963.",
           "segment": 51
+        }
+      ]
+    },
+    {
+      "documentId": "doc-af76f229f2b5",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302575342.txt",
+      "candidates": [
+        {
+          "value": "1968-03-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UPO Observation, 28 March 1968",
+          "segment": 9
+        },
+        {
+          "value": "1968-03-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UPO Observation, 28 March 1968",
+          "segment": 17
+        },
+        {
+          "value": "1968-03-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Observation 28 March 1968",
+          "segment": 40
         }
       ]
     },
