@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-07T13:57:24Z",
+  "generatedAt": "2026-10-07T15:18:33Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a0647315f005e1e6c9780dddd3e20f346d501f11"
+    "revision": "3e565aad67ea1c809029cb74391a707da73a1ea2"
   },
-  "documentsWithCandidates": 15128,
+  "documentsWithCandidates": 15131,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -398945,6 +398945,30 @@
       ]
     },
     {
+      "documentId": "doc-7cc6b1d99694",
+      "path": "DPIArchive/documents/127304-norton-airforce-base-exhibit-internal.txt",
+      "candidates": [
+        {
+          "value": "1988-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Friday, November 18, 1988",
+          "segment": 1008
+        },
+        {
+          "value": "1988-11-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "FRIDAY, November 11, 1988 The Sun /Page 5",
+          "segment": 2257
+        }
+      ]
+    },
+    {
       "documentId": "doc-01601e58ead0",
       "path": "DPIArchive/documents/127310-pilot-ufo-sighting-reports-november-15-1952-richard-haines.txt",
       "candidates": [
@@ -405697,6 +405721,21 @@
           "method": "unclassified-mention",
           "evidence": "Declassified on: 12 September 2025",
           "segment": 88
+        }
+      ]
+    },
+    {
+      "documentId": "doc-46eb6215be65",
+      "path": "DPIArchive/documents/130247-059uap00011-pdf.txt",
+      "candidates": [
+        {
+          "value": "2001-10-30",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date/DTG: Oct 30, 2001 / 3000002 Oct 01",
+          "segment": 0
         }
       ]
     },
@@ -480358,6 +480397,30 @@
           "method": "unclassified-mention",
           "evidence": "Reference your unidentified observation of 25 July 1960.",
           "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0f2c245516e1",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302554053.txt",
+      "candidates": [
+        {
+          "value": "1966-08-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sighting of August 3, 1966 by Mr. and Mrs.",
+          "segment": 3
+        },
+        {
+          "value": "1966-08-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Sighting: At about 0045, August 3, 1966, thes",
+          "segment": 7
         }
       ]
     },
