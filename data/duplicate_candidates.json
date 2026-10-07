@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "8b8a782d98344eba5fb42486bb5e694a40d153db"
+    "revision": "7a319af65a6bffc6cc85b174caa627e2f19ad873"
   },
-  "count": 718,
-  "totalCount": 718,
-  "shownCount": 718,
+  "count": 726,
+  "totalCount": 726,
+  "shownCount": 726,
   "candidates": [
     {
       "category": "organization",
@@ -196,6 +196,22 @@
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.984,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Criminal Investigation Division",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Criminal Investigations Division",
         "mentions": 2,
         "documentCount": 2
       },
@@ -540,6 +556,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Federal Bureau of Invest",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Federal Bureau of Inves",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.979,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Malstrom Air Force Base",
@@ -678,6 +710,22 @@
         "name": "Sheppard Air Force Base",
         "mentions": 7,
         "documentCount": 3
+      },
+      "similarity": 0.978,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Federal Bureau of Inve",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Federal Bureau of Inves",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.978,
       "reason": "similar name",
@@ -943,8 +991,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Program",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
         "name": "Intelligence Programs",
@@ -3231,8 +3279,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of the Undersecretary of Defense",
-        "mentions": 16,
-        "documentCount": 14
+        "mentions": 17,
+        "documentCount": 15
       },
       "right": {
         "name": "Office of the Undersecretary for Defense",
@@ -5023,8 +5071,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Army",
-        "mentions": 149,
-        "documentCount": 61
+        "mentions": 163,
+        "documentCount": 62
       },
       "right": {
         "name": "The Department of the Armr",
@@ -5199,8 +5247,8 @@
       "category": "organization",
       "left": {
         "name": "Under Secretary of Defense for Intelligence",
-        "mentions": 148,
-        "documentCount": 68
+        "mentions": 151,
+        "documentCount": 69
       },
       "right": {
         "name": "Undersecretary for Defense for Intelligence",
@@ -5311,8 +5359,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of the Director",
-        "mentions": 14,
-        "documentCount": 13
+        "mentions": 15,
+        "documentCount": 14
       },
       "right": {
         "name": "Office of the Direct",
@@ -5343,8 +5391,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of In",
-        "mentions": 6,
-        "documentCount": 6
+        "mentions": 7,
+        "documentCount": 7
       },
       "right": {
         "name": "Federal Bureau of Inve",
@@ -5471,8 +5519,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9146,
-        "documentCount": 2091
+        "mentions": 9162,
+        "documentCount": 2092
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -5615,8 +5663,8 @@
       "category": "organization",
       "left": {
         "name": "Defense Intelligence",
-        "mentions": 385,
-        "documentCount": 161
+        "mentions": 390,
+        "documentCount": 162
       },
       "right": {
         "name": "Defonse Intelligence",
@@ -5711,8 +5759,8 @@
       "category": "organization",
       "left": {
         "name": "House Intelligence Committee",
-        "mentions": 16,
-        "documentCount": 13
+        "mentions": 18,
+        "documentCount": 14
       },
       "right": {
         "name": "House Intelligence Subcommittee",
@@ -5919,8 +5967,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 1716,
-        "documentCount": 792
+        "mentions": 1719,
+        "documentCount": 793
       },
       "right": {
         "name": "Uniteo States Navy",
@@ -6181,6 +6229,22 @@
       "right": {
         "name": "Directorate of Science & Technology",
         "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.943,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Intelligence Reform and Terrorism",
+        "mentions": 10,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Intelligence Reform and Terrorism Pre",
+        "mentions": 5,
         "documentCount": 2
       },
       "similarity": 0.943,
@@ -6612,6 +6676,22 @@
       },
       "right": {
         "name": "AIR TECHNICAL INTELLIGENCE GENTER",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.939,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Federal Bureau of Investir",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Federal Bureau of Inves",
         "mentions": 2,
         "documentCount": 2
       },
@@ -7119,8 +7199,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9146,
-        "documentCount": 2091
+        "mentions": 9162,
+        "documentCount": 2092
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -7836,6 +7916,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Federal Bureau of IDVe",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Federal Bureau of Inves",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Kirtland Alr Force Base",
@@ -7871,8 +7967,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of the Undersecretary of Defense",
-        "mentions": 16,
-        "documentCount": 14
+        "mentions": 17,
+        "documentCount": 15
       },
       "right": {
         "name": "Office of the Secretary of Defense",
@@ -7967,13 +8063,13 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 397,
-        "documentCount": 163
+        "mentions": 413,
+        "documentCount": 164
       },
       "right": {
         "name": "Department of the Army",
-        "mentions": 149,
-        "documentCount": 61
+        "mentions": 163,
+        "documentCount": 62
       },
       "similarity": 0.93,
       "reason": "similar name",
@@ -7983,8 +8079,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 397,
-        "documentCount": 163
+        "mentions": 413,
+        "documentCount": 164
       },
       "right": {
         "name": "The Department of the Armr",
@@ -8015,8 +8111,8 @@
       "category": "organization",
       "left": {
         "name": "Central Intelligence",
-        "mentions": 112,
-        "documentCount": 93
+        "mentions": 121,
+        "documentCount": 94
       },
       "right": {
         "name": "CENTRAL INTELLIGENCE AG",
@@ -8084,6 +8180,22 @@
       },
       "right": {
         "name": "Lauring Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.93,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Federal Bureau of In",
+        "mentions": 7,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "Federal Bureau of Inves",
         "mentions": 2,
         "documentCount": 2
       },
@@ -8910,6 +9022,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "National Geospatial-Intelligence",
+        "mentions": 13,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "The National Geospatial-Intelligence Agen",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.928,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "University of Colorado",
         "mentions": 680,
         "documentCount": 329
@@ -8943,8 +9071,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 397,
-        "documentCount": 163
+        "mentions": 413,
+        "documentCount": 164
       },
       "right": {
         "name": "DEPARTMENT OF THE AL",
@@ -9044,8 +9172,8 @@
       },
       "right": {
         "name": "Trump Administration",
-        "mentions": 10,
-        "documentCount": 5
+        "mentions": 11,
+        "documentCount": 6
       },
       "similarity": 0.927,
       "reason": "similar name",
@@ -9231,8 +9359,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 299,
-        "documentCount": 192
+        "mentions": 305,
+        "documentCount": 193
       },
       "right": {
         "name": "Intelligence Cf'nter",
