@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "c6f0a71b49992362a03877aee3242e9d64af6ad9"
+    "revision": "5d7e0a2297b061160d7714489bdeaf572582a669"
   },
-  "count": 726,
-  "totalCount": 726,
-  "shownCount": 726,
+  "count": 731,
+  "totalCount": 731,
+  "shownCount": 731,
   "candidates": [
     {
       "category": "organization",
@@ -607,8 +607,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 680,
-        "documentCount": 329
+        "mentions": 688,
+        "documentCount": 330
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1820,6 +1820,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Federal Bureau of Investigation",
+        "mentions": 9228,
+        "documentCount": 2097
+      },
+      "right": {
+        "name": "FEDERAL BUREAU OF INVESTIGATIDN",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
@@ -2335,8 +2351,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 747,
-        "documentCount": 404
+        "mentions": 748,
+        "documentCount": 405
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -2703,8 +2719,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 651,
-        "documentCount": 415
+        "mentions": 654,
+        "documentCount": 416
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -3660,6 +3676,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Army Reserve",
+        "mentions": 18,
+        "documentCount": 17
+      },
+      "right": {
+        "name": "Army Reserves",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "James Mosley",
@@ -3670,22 +3702,6 @@
         "name": "James Moseley",
         "mentions": 13,
         "documentCount": 10
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Army Reserve",
-        "mentions": 17,
-        "documentCount": 16
-      },
-      "right": {
-        "name": "Army Reserves",
-        "mentions": 4,
-        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -4463,8 +4479,8 @@
       "category": "person",
       "left": {
         "name": "David Jacobs",
-        "mentions": 159,
-        "documentCount": 108
+        "mentions": 160,
+        "documentCount": 109
       },
       "right": {
         "name": "David Jacob",
@@ -4479,8 +4495,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 149,
-        "documentCount": 118
+        "mentions": 150,
+        "documentCount": 119
       },
       "right": {
         "name": "Northeastern University",
@@ -5071,8 +5087,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Army",
-        "mentions": 164,
-        "documentCount": 63
+        "mentions": 170,
+        "documentCount": 64
       },
       "right": {
         "name": "The Department of the Armr",
@@ -5247,8 +5263,8 @@
       "category": "organization",
       "left": {
         "name": "Under Secretary of Defense for Intelligence",
-        "mentions": 151,
-        "documentCount": 69
+        "mentions": 152,
+        "documentCount": 70
       },
       "right": {
         "name": "Undersecretary for Defense for Intelligence",
@@ -5279,8 +5295,8 @@
       "category": "organization",
       "left": {
         "name": "University of Chicago",
-        "mentions": 124,
-        "documentCount": 94
+        "mentions": 127,
+        "documentCount": 96
       },
       "right": {
         "name": "University of Chicaco",
@@ -5519,11 +5535,27 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9183,
-        "documentCount": 2094
+        "mentions": 9228,
+        "documentCount": 2097
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.951,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "National Geospatial-Intelligence Agency",
+        "mentions": 55,
+        "documentCount": 41
+      },
+      "right": {
+        "name": "NGA National Geospatial-Intelligence Agency",
         "mentions": 2,
         "documentCount": 2
       },
@@ -5663,8 +5695,8 @@
       "category": "organization",
       "left": {
         "name": "Defense Intelligence",
-        "mentions": 392,
-        "documentCount": 163
+        "mentions": 401,
+        "documentCount": 164
       },
       "right": {
         "name": "Defonse Intelligence",
@@ -5967,8 +5999,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 1720,
-        "documentCount": 794
+        "mentions": 1725,
+        "documentCount": 795
       },
       "right": {
         "name": "Uniteo States Navy",
@@ -6222,6 +6254,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "The Director of National Intelligence",
+        "mentions": 33,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "DNI Director of National Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.943,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Directorate of Science and Technology",
         "mentions": 23,
         "documentCount": 17
@@ -6351,8 +6399,8 @@
       "category": "government_agency",
       "left": {
         "name": "Office of Special",
-        "mentions": 47,
-        "documentCount": 24
+        "mentions": 48,
+        "documentCount": 25
       },
       "right": {
         "name": "Office of Specicl",
@@ -6735,8 +6783,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 800,
-        "documentCount": 455
+        "mentions": 808,
+        "documentCount": 456
       },
       "right": {
         "name": "Stanton Freedman",
@@ -6751,8 +6799,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 800,
-        "documentCount": 455
+        "mentions": 808,
+        "documentCount": 456
       },
       "right": {
         "name": "Stanton Freidman",
@@ -6772,8 +6820,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 342,
-        "documentCount": 94
+        "mentions": 348,
+        "documentCount": 95
       },
       "similarity": 0.938,
       "reason": "similar name",
@@ -6783,8 +6831,8 @@
       "category": "organization",
       "left": {
         "name": "Condon Committee",
-        "mentions": 165,
-        "documentCount": 100
+        "mentions": 166,
+        "documentCount": 101
       },
       "right": {
         "name": "Condom Committee",
@@ -7199,8 +7247,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9183,
-        "documentCount": 2094
+        "mentions": 9228,
+        "documentCount": 2097
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -7236,6 +7284,22 @@
       },
       "right": {
         "name": "ASSISTANT SECRETARY OF THe Army",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "National Intelligence Program",
+        "mentions": 17,
+        "documentCount": 8
+      },
+      "right": {
+        "name": "NIP National Intelligence Program",
         "mentions": 2,
         "documentCount": 2
       },
@@ -7972,8 +8036,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 342,
-        "documentCount": 94
+        "mentions": 348,
+        "documentCount": 95
       },
       "similarity": 0.932,
       "reason": "similar name",
@@ -8063,13 +8127,13 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 413,
-        "documentCount": 164
+        "mentions": 419,
+        "documentCount": 166
       },
       "right": {
         "name": "Department of the Army",
-        "mentions": 164,
-        "documentCount": 63
+        "mentions": 170,
+        "documentCount": 64
       },
       "similarity": 0.93,
       "reason": "similar name",
@@ -8079,8 +8143,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 413,
-        "documentCount": 164
+        "mentions": 419,
+        "documentCount": 166
       },
       "right": {
         "name": "The Department of the Armr",
@@ -8095,8 +8159,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 149,
-        "documentCount": 118
+        "mentions": 150,
+        "documentCount": 119
       },
       "right": {
         "name": "Northwest University",
@@ -8303,8 +8367,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 651,
-        "documentCount": 415
+        "mentions": 654,
+        "documentCount": 416
       },
       "right": {
         "name": "Selt Lake City",
@@ -9039,8 +9103,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 680,
-        "documentCount": 329
+        "mentions": 688,
+        "documentCount": 330
       },
       "right": {
         "name": "University of Color",
@@ -9055,8 +9119,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 680,
-        "documentCount": 329
+        "mentions": 688,
+        "documentCount": 330
       },
       "right": {
         "name": "University Colorado",
@@ -9071,8 +9135,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 413,
-        "documentCount": 164
+        "mentions": 419,
+        "documentCount": 166
       },
       "right": {
         "name": "DEPARTMENT OF THE AL",
@@ -9327,8 +9391,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 394,
-        "documentCount": 206
+        "mentions": 395,
+        "documentCount": 207
       },
       "right": {
         "name": "Natural Investigations Committee",
@@ -9343,8 +9407,8 @@
       "category": "organization",
       "left": {
         "name": "National Investigations Committee",
-        "mentions": 394,
-        "documentCount": 206
+        "mentions": 395,
+        "documentCount": 207
       },
       "right": {
         "name": "National Investigative Committee",
@@ -9359,8 +9423,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 305,
-        "documentCount": 193
+        "mentions": 313,
+        "documentCount": 194
       },
       "right": {
         "name": "Intelligence Cf'nter",
@@ -10438,6 +10502,22 @@
         "name": "FMS Foundation Newsletter JANUARY",
         "mentions": 42,
         "documentCount": 3
+      },
+      "similarity": 0.921,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "DEFENSE CONTRACT AUDIT AGENCY",
+        "mentions": 13,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "DCAA Defense Contract Audit Agency",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.921,
       "reason": "similar name",
@@ -11615,8 +11695,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 51942,
-        "documentCount": 12732
+        "mentions": 51943,
+        "documentCount": 12733
       },
       "right": {
         "name": "North American Space Agency",
