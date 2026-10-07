@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e94d79f578236033e9ccdea03653ed856755c4a2"
+    "revision": "c6f0a71b49992362a03877aee3242e9d64af6ad9"
   },
   "count": 726,
   "totalCount": 726,
@@ -175,8 +175,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 946,
-        "documentCount": 562
+        "mentions": 947,
+        "documentCount": 563
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -191,8 +191,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 946,
-        "documentCount": 562
+        "mentions": 947,
+        "documentCount": 563
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -716,6 +716,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Investigation Division",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Investigations Division",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "similarity": 0.978,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Inve",
@@ -726,22 +742,6 @@
         "name": "Federal Bureau of Inves",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.978,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Investigation Division",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Investigations Division",
-        "mentions": 5,
-        "documentCount": 4
       },
       "similarity": 0.978,
       "reason": "similar name",
@@ -1823,8 +1823,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 946,
-        "documentCount": 562
+        "mentions": 947,
+        "documentCount": 563
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -1839,8 +1839,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 946,
-        "documentCount": 562
+        "mentions": 947,
+        "documentCount": 563
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -1855,8 +1855,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 946,
-        "documentCount": 562
+        "mentions": 947,
+        "documentCount": 563
       },
       "right": {
         "name": "Weight-Patterson Air Force Base",
@@ -1871,8 +1871,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 946,
-        "documentCount": 562
+        "mentions": 947,
+        "documentCount": 563
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -2335,8 +2335,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 746,
-        "documentCount": 403
+        "mentions": 747,
+        "documentCount": 404
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -5071,8 +5071,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Army",
-        "mentions": 163,
-        "documentCount": 62
+        "mentions": 164,
+        "documentCount": 63
       },
       "right": {
         "name": "The Department of the Armr",
@@ -5519,8 +5519,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9162,
-        "documentCount": 2092
+        "mentions": 9183,
+        "documentCount": 2094
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -5663,8 +5663,8 @@
       "category": "organization",
       "left": {
         "name": "Defense Intelligence",
-        "mentions": 390,
-        "documentCount": 162
+        "mentions": 392,
+        "documentCount": 163
       },
       "right": {
         "name": "Defonse Intelligence",
@@ -5967,8 +5967,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 1719,
-        "documentCount": 793
+        "mentions": 1720,
+        "documentCount": 794
       },
       "right": {
         "name": "Uniteo States Navy",
@@ -7199,8 +7199,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9162,
-        "documentCount": 2092
+        "mentions": 9183,
+        "documentCount": 2094
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -7215,8 +7215,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 946,
-        "documentCount": 562
+        "mentions": 947,
+        "documentCount": 563
       },
       "right": {
         "name": "Wright-Fattorson Air Force Base",
@@ -8068,8 +8068,8 @@
       },
       "right": {
         "name": "Department of the Army",
-        "mentions": 163,
-        "documentCount": 62
+        "mentions": 164,
+        "documentCount": 63
       },
       "similarity": 0.93,
       "reason": "similar name",
@@ -11615,8 +11615,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 51940,
-        "documentCount": 12731
+        "mentions": 51942,
+        "documentCount": 12732
       },
       "right": {
         "name": "North American Space Agency",
