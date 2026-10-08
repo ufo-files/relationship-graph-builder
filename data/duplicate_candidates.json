@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "431d5fe52d5fd3f23c4bd7a2e8481d1e110ccbe3"
+    "revision": "55149cde33c85340e450a4183ac5913fed7ea807"
   },
-  "count": 757,
-  "totalCount": 757,
-  "shownCount": 757,
+  "count": 778,
+  "totalCount": 778,
+  "shownCount": 778,
   "candidates": [
     {
       "category": "organization",
@@ -1806,6 +1806,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Department of Na",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of Nat",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Department of Com",
         "mentions": 3,
         "documentCount": 2
@@ -1887,8 +1903,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9353,
-        "documentCount": 2107
+        "mentions": 9355,
+        "documentCount": 2108
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGATIDN",
@@ -2108,6 +2124,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Navy and Marine",
+        "mentions": 9,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Navy and Marines",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "AAF Intelligence",
@@ -2118,22 +2150,6 @@
         "name": "AF Intelligence",
         "mentions": 6,
         "documentCount": 4
-      },
-      "similarity": 0.968,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Navy and Marine",
-        "mentions": 9,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "Navy and Marines",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -2319,8 +2335,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of National Defence",
-        "mentions": 108,
-        "documentCount": 66
+        "mentions": 170,
+        "documentCount": 67
       },
       "right": {
         "name": "Department of National Defense",
@@ -2335,13 +2351,61 @@
       "category": "government_agency",
       "left": {
         "name": "Department of National Defence",
-        "mentions": 108,
-        "documentCount": 66
+        "mentions": 170,
+        "documentCount": 67
+      },
+      "right": {
+        "name": "Department of Notional Defence",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.967,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of National Defence",
+        "mentions": 170,
+        "documentCount": 67
       },
       "right": {
         "name": "DEPARTMENT OF NATIONAL DEPENCE",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.967,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Netlonal Defence",
+        "mentions": 9,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of NetlonaJ Defence",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.967,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Netlonal Defence",
+        "mentions": 9,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of Netlonel Defence",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.967,
       "reason": "similar name",
@@ -2374,6 +2438,22 @@
         "name": "THE CHICAGO OFFICE AT CHICAGO WILL",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.967,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Netlonel Defence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of Natlonel Defence",
+        "mentions": 4,
+        "documentCount": 2
       },
       "similarity": 0.967,
       "reason": "similar name",
@@ -2815,8 +2895,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 293,
-        "documentCount": 186
+        "mentions": 294,
+        "documentCount": 187
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -2831,8 +2911,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 293,
-        "documentCount": 186
+        "mentions": 294,
+        "documentCount": 187
       },
       "right": {
         "name": "Major Donald Keyhoes",
@@ -3404,6 +3484,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of National Defe",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of National De",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.962,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Division of the Air Forcos",
@@ -3487,8 +3583,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 293,
-        "documentCount": 186
+        "mentions": 294,
+        "documentCount": 187
       },
       "right": {
         "name": "Major Donald Keyho",
@@ -4623,8 +4719,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 151,
-        "documentCount": 120
+        "mentions": 152,
+        "documentCount": 121
       },
       "right": {
         "name": "Northeastern University",
@@ -5711,8 +5807,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9353,
-        "documentCount": 2107
+        "mentions": 9355,
+        "documentCount": 2108
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -6044,6 +6140,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of National Defence",
+        "mentions": 170,
+        "documentCount": 67
+      },
+      "right": {
+        "name": "Department of National Defe",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.947,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Area Control Centre",
@@ -6054,6 +6166,22 @@
         "name": "AREA CONTROL CENTER",
         "mentions": 23,
         "documentCount": 9
+      },
+      "similarity": 0.947,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of National Defense",
+        "mentions": 15,
+        "documentCount": 13
+      },
+      "right": {
+        "name": "Department of National Defe",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.947,
       "reason": "similar name",
@@ -6207,8 +6335,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 1729,
-        "documentCount": 797
+        "mentions": 1730,
+        "documentCount": 798
       },
       "right": {
         "name": "Uniteo States Navy",
@@ -6606,6 +6734,22 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Department of Navy",
+        "mentions": 135,
+        "documentCount": 9
+      },
+      "right": {
+        "name": "Department of Na",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Police Department",
         "mentions": 126,
         "documentCount": 92
@@ -6888,6 +7032,22 @@
         "documentCount": 2
       },
       "similarity": 0.94,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Environmental Protection Agency",
+        "mentions": 70,
+        "documentCount": 33
+      },
+      "right": {
+        "name": "EPA Environmental Protection Agency",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.939,
       "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
@@ -7308,6 +7468,38 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of As",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Department of Na",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Na",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of La",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "book",
       "left": {
         "name": "Top Secret/Majic",
@@ -7388,6 +7580,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "American National Standards Institute",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "ANSI American National Standards Institute",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.937,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Malmstrom Air Force Base",
@@ -7429,6 +7637,22 @@
       "right": {
         "name": "Institute of Meteorites",
         "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.936,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of National",
+        "mentions": 7,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Department of National De",
+        "mentions": 4,
         "documentCount": 2
       },
       "similarity": 0.936,
@@ -7503,8 +7727,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 9353,
-        "documentCount": 2107
+        "mentions": 9355,
+        "documentCount": 2108
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -7742,6 +7966,38 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Department of National Defence",
+        "mentions": 170,
+        "documentCount": 67
+      },
+      "right": {
+        "name": "Department of Netlonal Defence",
+        "mentions": 9,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of National Defence",
+        "mentions": 170,
+        "documentCount": 67
+      },
+      "right": {
+        "name": "Department of Natlonel Defence",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Department of Transport",
         "mentions": 118,
         "documentCount": 66
@@ -7955,6 +8211,22 @@
         "documentCount": 13
       },
       "right": {
+        "name": "Department of Notional Defence",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of National Defense",
+        "mentions": 15,
+        "documentCount": 13
+      },
+      "right": {
         "name": "DEPARTMENT OF NATIONAL DEPENCE",
         "mentions": 3,
         "documentCount": 3
@@ -8012,6 +8284,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Netlonal Defence",
+        "mentions": 9,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of Natlonel Defence",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Robert Traylans",
@@ -8022,6 +8310,22 @@
         "name": "Robert Traylons",
         "mentions": 6,
         "documentCount": 3
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Netlonal Defence",
+        "mentions": 9,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of Notional Defence",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.933,
       "reason": "similar name",
@@ -8204,6 +8508,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of Notional Defence",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "DEPARTMENT OF NATIONAL DEPENCE",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Brasoria County",
@@ -8228,6 +8548,22 @@
       },
       "right": {
         "name": "Argentina Navy",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Department of NetlonaJ Defence",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Department of Netlonel Defence",
         "mentions": 2,
         "documentCount": 2
       },
@@ -8495,8 +8831,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 151,
-        "documentCount": 120
+        "mentions": 152,
+        "documentCount": 121
       },
       "right": {
         "name": "Northwest University",
