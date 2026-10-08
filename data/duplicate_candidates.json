@@ -5,7 +5,7 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "18d186006f5cd735dba671d286bc3b8c0f7370cb"
+    "revision": "66fed5f9f1a0d922cb743cb95fc860595fcf944e"
   },
   "count": 790,
   "totalCount": 790,
@@ -479,13 +479,13 @@
       "category": "organization",
       "left": {
         "name": "Directorate of Air Staff",
-        "mentions": 360,
-        "documentCount": 26
+        "mentions": 380,
+        "documentCount": 27
       },
       "right": {
         "name": "Directorate of Airstaff",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.979,
       "reason": "similar name",
@@ -1007,13 +1007,13 @@
       "category": "government_agency",
       "left": {
         "name": "Public Records Office",
-        "mentions": 11,
-        "documentCount": 8
+        "mentions": 12,
+        "documentCount": 9
       },
       "right": {
         "name": "Public Record Office",
-        "mentions": 145,
-        "documentCount": 24
+        "mentions": 150,
+        "documentCount": 25
       },
       "similarity": 0.976,
       "reason": "similar name",
@@ -3196,6 +3196,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Records Office",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Record Office",
+        "mentions": 14,
+        "documentCount": 8
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "Project Stigma",
@@ -3222,22 +3238,6 @@
         "name": "Frank Kaufmann",
         "mentions": 10,
         "documentCount": 8
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Records Office",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Record Office",
-        "mentions": 13,
-        "documentCount": 7
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -6079,8 +6079,8 @@
       "category": "organization",
       "left": {
         "name": "Defense Intelligence",
-        "mentions": 404,
-        "documentCount": 166
+        "mentions": 419,
+        "documentCount": 167
       },
       "right": {
         "name": "Defonse Intelligence",
@@ -6399,8 +6399,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 644,
-        "documentCount": 230
+        "mentions": 645,
+        "documentCount": 231
       },
       "right": {
         "name": "The Department of Civil AviaHon",
@@ -8047,13 +8047,13 @@
       "category": "organization",
       "left": {
         "name": "Directorate of Air Staff",
-        "mentions": 360,
-        "documentCount": 26
+        "mentions": 380,
+        "documentCount": 27
       },
       "right": {
-        "name": "DIRECTORATE AIR STAFF",
-        "mentions": 4,
-        "documentCount": 3
+        "name": "Directorate Air Staff",
+        "mentions": 5,
+        "documentCount": 4
       },
       "similarity": 0.933,
       "reason": "similar name",
@@ -8844,6 +8844,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Foreign and Commonwealth Office",
+        "mentions": 14,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Foreign & Commonwealth Office",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "similarity": 0.931,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Oakland International Airport",
@@ -8854,22 +8870,6 @@
         "name": "Orlando International Airport",
         "mentions": 13,
         "documentCount": 13
-      },
-      "similarity": 0.931,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Foreign and Commonwealth Office",
-        "mentions": 14,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Foreign & Commonwealth Office",
-        "mentions": 4,
-        "documentCount": 3
       },
       "similarity": 0.931,
       "reason": "similar name",
@@ -10255,8 +10255,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 644,
-        "documentCount": 230
+        "mentions": 645,
+        "documentCount": 231
       },
       "right": {
         "name": "Department of Civil Avia",
@@ -12623,8 +12623,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 52704,
-        "documentCount": 12765
+        "mentions": 52708,
+        "documentCount": 12766
       },
       "right": {
         "name": "North American Space Agency",
@@ -12639,8 +12639,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 52704,
-        "documentCount": 12765
+        "mentions": 52708,
+        "documentCount": 12766
       },
       "right": {
         "name": "National Aeronautics and Space Agency",
