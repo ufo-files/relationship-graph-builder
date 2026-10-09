@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "bcd7f37019bbd51c8c306592a66363c36a3424a0"
+    "revision": "3f21b0d29298b2acdb00690db094a66dec57979f"
   },
-  "count": 794,
-  "totalCount": 794,
-  "shownCount": 794,
+  "count": 800,
+  "totalCount": 800,
+  "shownCount": 800,
   "candidates": [
     {
       "category": "organization",
@@ -191,8 +191,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 978,
-        "documentCount": 581
+        "mentions": 979,
+        "documentCount": 582
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -207,8 +207,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 978,
-        "documentCount": 581
+        "mentions": 979,
+        "documentCount": 582
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -1663,8 +1663,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 230,
-        "documentCount": 144
+        "mentions": 231,
+        "documentCount": 145
       },
       "right": {
         "name": "AIR TECHNICAL INTELLIGENCE GENTER",
@@ -1679,8 +1679,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 230,
-        "documentCount": 144
+        "mentions": 231,
+        "documentCount": 145
       },
       "right": {
         "name": "Air Technical Intelligence Conter",
@@ -1695,8 +1695,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 230,
-        "documentCount": 144
+        "mentions": 231,
+        "documentCount": 145
       },
       "right": {
         "name": "Air Technical Intelligence Cen'er",
@@ -2031,8 +2031,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 978,
-        "documentCount": 581
+        "mentions": 979,
+        "documentCount": 582
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -2047,8 +2047,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 978,
-        "documentCount": 581
+        "mentions": 979,
+        "documentCount": 582
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -2063,8 +2063,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 978,
-        "documentCount": 581
+        "mentions": 979,
+        "documentCount": 582
       },
       "right": {
         "name": "Weight-Patterson Air Force Base",
@@ -2079,8 +2079,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 978,
-        "documentCount": 581
+        "mentions": 979,
+        "documentCount": 582
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -5708,6 +5708,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "BUREAU OF METEOROLOGY",
+        "mentions": 83,
+        "documentCount": 34
+      },
+      "right": {
+        "name": "BUREAU Of MElEOROlOGY",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "University of Arkansas",
@@ -5718,22 +5734,6 @@
         "name": "University of Kansas",
         "mentions": 36,
         "documentCount": 32
-      },
-      "similarity": 0.952,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "BUREAU OF METEOROLOGY",
-        "mentions": 64,
-        "documentCount": 33
-      },
-      "right": {
-        "name": "BUREAU Of MElEOROlOGY",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -6479,8 +6479,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Civil",
-        "mentions": 22,
-        "documentCount": 22
+        "mentions": 23,
+        "documentCount": 23
       },
       "right": {
         "name": "DEPARTMENT OF CIV",
@@ -6956,6 +6956,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of Iowa",
+        "mentions": 11,
+        "documentCount": 10
+      },
+      "right": {
+        "name": "University of WA",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Knoxvillo Airport",
@@ -7134,6 +7150,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "University of WA",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "University of Wash",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "American Institute of Aeronautics and Astronautics",
         "mentions": 74,
         "documentCount": 47
@@ -7172,6 +7204,22 @@
       },
       "right": {
         "name": "EPA Environmental Protection Agency",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.939,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Commonwealth Bureau of Meteorology",
+        "mentions": 12,
+        "documentCount": 10
+      },
+      "right": {
+        "name": "Commonwealth Bureau of MeteorolQ",
         "mentions": 2,
         "documentCount": 2
       },
@@ -7692,6 +7740,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of PA",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "University of WA",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.938,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Office of Specicl",
@@ -7903,8 +7967,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 978,
-        "documentCount": 581
+        "mentions": 979,
+        "documentCount": 582
       },
       "right": {
         "name": "Wright-Fattorson Air Force Base",
@@ -10444,6 +10508,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "BUREAU OF METEOROLOGY",
+        "mentions": 83,
+        "documentCount": 34
+      },
+      "right": {
+        "name": "Bureau of Meteorol",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Howard Menger",
@@ -12542,6 +12622,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Dr. Joe Golden",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Joseph Golden",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.87,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Allen Vaughn",
         "mentions": 3,
         "documentCount": 3
@@ -12687,8 +12783,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 52720,
-        "documentCount": 12770
+        "mentions": 52722,
+        "documentCount": 12772
       },
       "right": {
         "name": "North American Space Agency",
@@ -12703,8 +12799,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 52720,
-        "documentCount": 12770
+        "mentions": 52722,
+        "documentCount": 12772
       },
       "right": {
         "name": "National Aeronautics and Space Agency",
