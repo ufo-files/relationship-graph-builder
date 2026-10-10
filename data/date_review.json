@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-10T20:31:18Z",
+  "generatedAt": "2026-10-10T21:55:14Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "e819358bc768ac4e6fdc7daee54640450adbed7e"
+    "revision": "7e857aa081ee385f7c9c00d42b88c7c583be8b5d"
   },
-  "documentsWithCandidates": 15468,
+  "documentsWithCandidates": 15471,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9952,6 +9952,39 @@
           "method": "document-header",
           "evidence": "Date: 2003-01-16 13:41:09 PST",
           "segment": 9
+        }
+      ]
+    },
+    {
+      "documentId": "doc-64809535c1c9",
+      "path": "Archives-for-the-Unexplained/documents/20040722-Re_Refuting-Paley----200-years-And-Counting-649642.txt",
+      "candidates": [
+        {
+          "value": "2004-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Wed, 21 Jul 2004 david ford <dford3@gl.umbc.edu> wrote",
+          "segment": 6
+        },
+        {
+          "value": "2004-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Tue, 20 Jul 2004 david ford <dford3@gl.umbc.edu> wrote",
+          "segment": 9
+        },
+        {
+          "value": "2004-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Thu, 15 Jul 2004 murphyinohio@wmconnect.com",
+          "segment": 12
         }
       ]
     },
@@ -368579,6 +368612,174 @@
       ]
     },
     {
+      "documentId": "doc-b4fa1d1db3f3",
+      "path": "DPIArchive/documents/116074-a-new-hypothesis-of-alien-abduction-martin-cannon.txt",
+      "candidates": [
+        {
+          "value": "1950-09-24",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "invented the term \"brainwashing\" in a September 24, 1950 Miami NEWS article.",
+          "segment": 1914
+        },
+        {
+          "value": "1982-05-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "18. \"Japan's Germ Warfare Experiments,\" THE GLOBE AND MAIL (Toronto), May 19, 1982.",
+          "segment": 1915
+        },
+        {
+          "value": "1986-04-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SIMS, ET AL. (No. 83-1075; decided April 16, 1986).",
+          "segment": 2017
+        },
+        {
+          "value": "1983-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Letter, P.A. Lindstrom to Robert Naeslund, July 27, 1983; copy available from Martti Koski",
+          "segment": 2027
+        },
+        {
+          "value": "1989-06-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "in Canada during the 1950s, and according to the Los Angeles TIMES (June 5, 1989), the Soviet embassy",
+          "segment": 2056
+        },
+        {
+          "value": "1979-09-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Susan Schiefelbein, \"The Invisible Threat,\" SATURDAY REVIEW, September 15, 1979.",
+          "segment": 2078
+        },
+        {
+          "value": "1968-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Research from June 1, 1968 to May 31, 1971.",
+          "segment": 2121
+        },
+        {
+          "value": "1971-05-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Research from June 1, 1968 to May 31, 1971.",
+          "segment": 2121
+        },
+        {
+          "value": "1977-12-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "John Marks interview with Victor Marchetti, December 19, 1977 (Marks files).",
+          "segment": 2140
+        },
+        {
+          "value": "1977-12-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "John Marks interview with Milton Kline, December 22, 1977 (Marks files).",
+          "segment": 2169
+        },
+        {
+          "value": "1977-12-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "John Marks interview with Milton Kline, December 22, 1977 (Marks files).",
+          "segment": 2230
+        },
+        {
+          "value": "1989-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "William Moore, \"UFOs and the U.S. Government,\" FOCUS, vol. 4, June 30, 1989.",
+          "segment": 2234
+        },
+        {
+          "value": "1984-05-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MIAMI HERALD, May 28, 1984 and June 6, 1984; NATIONAL EXAMINER, vol. 22, no. 18, April",
+          "segment": 2249
+        },
+        {
+          "value": "1984-06-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MIAMI HERALD, May 28, 1984 and June 6, 1984; NATIONAL EXAMINER, vol. 22, no. 18, April",
+          "segment": 2249
+        },
+        {
+          "value": "1988-03-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Los Angeles TIMES, March 28, 1988.",
+          "segment": 2252
+        },
+        {
+          "value": "1977-12-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "John Marks interview with Milton Kline, December 22, 1977 (Marks files).",
+          "segment": 2266
+        },
+        {
+          "value": "1968-03-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Hoover, COINTELPRO (memo), March 4, 1968.",
+          "segment": 2289
+        },
+        {
+          "value": "1978-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to control minds by hypnosis, data shows,\" THE WASHINGTON POST, February 19, 1978.",
+          "segment": 2308
+        }
+      ]
+    },
+    {
       "documentId": "doc-7d6d57f252c6",
       "path": "DPIArchive/documents/116075-email-to-cseti-june-29-2002-milabs-military-abductions-excerpt-from-eye-witness-testimony.txt",
       "candidates": [
@@ -420025,6 +420226,210 @@
           "method": "unclassified-mention",
           "evidence": "October 7, 1965, while a large",
           "segment": 269
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6129e2f9b9c2",
+      "path": "DPIArchive/documents/126042-cash-landrum-case-huffman-tx-december-29-1980-report-john-f-schuessler.txt",
+      "candidates": [
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "curred December 29, 1980, near /",
+          "segment": 73
+        },
+        {
+          "value": "1981-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Page 128, Liberty, Texas Wednesday, September 16, 1981 , in Houston.",
+          "segment": 1036
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the 29 December 1980 incident near UFOs in general. good rapport with the community.",
+          "segment": 2671
+        },
+        {
+          "value": "1982-02-24",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "O n 24 February 1982 I received a reservation .",
+          "segment": 2691
+        },
+        {
+          "value": "1982-03-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "explained that a Congressional inq uiry found CH-47s to be stationed at Ellington on Monday 15 March 1982",
+          "segment": 2699
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "been involved in the 29 December 1980 telephone numbers so he could check Maj. Haire called me on 22 March",
+          "segment": 2702
+        },
+        {
+          "value": "1982-08-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "in _ the 17 August 1982 issue .",
+          "segment": 2718
+        },
+        {
+          "value": "1982-03-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 19 March 1982 I was called by the air that night .",
+          "segment": 2724
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "in the 29 December 1980 incident .",
+          "segment": 2758
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "carry small equipment , but nothing real what went on on 29 December 1980.",
+          "segment": 2769
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "sensitive at night and try to avoid bright Guard member he doesn't know of Tex . on 29 Dec 1980.",
+          "segment": 2779
+        },
+        {
+          "value": "1982-04-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I asked him if he had Col. Sarran called on 23 April 1982",
+          "segment": 2781
+        },
+        {
+          "value": "1982-05-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "like a tiger - representing the was nothing secret about his On 25 May 1982 I m e t with Col.",
+          "segment": 2804
+        },
+        {
+          "value": "1982-05-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "interview lasted about 45 minutes and traffic and so I slowed way down and I On 26 May 1982 I called Carl",
+          "segment": 2823
+        },
+        {
+          "value": "1982-05-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At noon on 25 May 1982 Col. I got to picking out more of them and as I",
+          "segment": 2828
+        },
+        {
+          "value": "1982-05-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 26 May 1982, Chief Warrant",
+          "segment": 2839
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A portion on 29 December 1980 .",
+          "segment": 2886
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of the transcript of the Walker interview all the people in the Sheriff's Dept. had CH-47s on 29 Dec 1980.",
+          "segment": 2888
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The duty officer on 29 Dec 1980 was in a three-abreast formation .",
+          "segment": 2913
+        },
+        {
+          "value": "1982-06-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sarran called o n 2 5 June 1982",
+          "segment": 2921
+        },
+        {
+          "value": "1982-06-01",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Col. Sarran called o n 1 June 1982. author of the article, since I had no idea",
+          "segment": 2928
+        },
+        {
+          "value": "1980-12-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "By Lucille de Saint-Andre December 29, 1980 on a - .� I ,.--",
+          "segment": 2966
         }
       ]
     },
