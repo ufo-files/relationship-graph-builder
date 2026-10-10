@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "94235839039d9ca2a03a86ffcdf7bc00bec17724"
+    "revision": "3667cf20ae8f6d38ae7315a701bc61abb3c697fc"
   },
-  "count": 847,
-  "totalCount": 847,
-  "shownCount": 847,
+  "count": 848,
+  "totalCount": 848,
+  "shownCount": 848,
   "candidates": [
     {
       "category": "organization",
@@ -415,8 +415,8 @@
       "category": "location",
       "left": {
         "name": "McClellan Air Force Base",
-        "mentions": 53,
-        "documentCount": 40
+        "mentions": 54,
+        "documentCount": 41
       },
       "right": {
         "name": "McClelland Air Force Base",
@@ -431,8 +431,8 @@
       "category": "location",
       "left": {
         "name": "VHF OMNIDIRECTIONAL RANGE",
-        "mentions": 9,
-        "documentCount": 9
+        "mentions": 10,
+        "documentCount": 10
       },
       "right": {
         "name": "VHF Omni-Directional Range",
@@ -527,8 +527,8 @@
       "category": "organization",
       "left": {
         "name": "Directorate of Air Staff",
-        "mentions": 434,
-        "documentCount": 28
+        "mentions": 441,
+        "documentCount": 29
       },
       "right": {
         "name": "Directorate of Airstaff",
@@ -719,8 +719,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 749,
-        "documentCount": 342
+        "mentions": 752,
+        "documentCount": 343
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1055,13 +1055,13 @@
       "category": "government_agency",
       "left": {
         "name": "Public Records Office",
-        "mentions": 13,
-        "documentCount": 10
+        "mentions": 17,
+        "documentCount": 11
       },
       "right": {
         "name": "Public Record Office",
-        "mentions": 184,
-        "documentCount": 27
+        "mentions": 215,
+        "documentCount": 28
       },
       "similarity": 0.976,
       "reason": "similar name",
@@ -2031,8 +2031,8 @@
       "category": "government_agency",
       "left": {
         "name": "DEPARTMENT OF TH",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
         "name": "DEPARTMENT OF THY",
@@ -2254,14 +2254,14 @@
     {
       "category": "location",
       "left": {
-        "name": "Marshall Islands",
-        "mentions": 68,
-        "documentCount": 36
+        "name": "Area Navigation",
+        "mentions": 79,
+        "documentCount": 10
       },
       "right": {
-        "name": "Marshall Island",
-        "mentions": 3,
-        "documentCount": 3
+        "name": "AREA NAVI GATION",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -2270,14 +2270,14 @@
     {
       "category": "location",
       "left": {
-        "name": "Area Navigation",
-        "mentions": 69,
-        "documentCount": 9
+        "name": "Marshall Islands",
+        "mentions": 68,
+        "documentCount": 36
       },
       "right": {
-        "name": "AREA NAVI GATION",
-        "mentions": 2,
-        "documentCount": 2
+        "name": "Marshall Island",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -3324,6 +3324,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Records Office",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Record Office",
+        "mentions": 15,
+        "documentCount": 9
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "Project Stigma",
@@ -3369,22 +3385,6 @@
       },
       "similarity": 0.963,
       "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Records Office",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Record Office",
-        "mentions": 14,
-        "documentCount": 8
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -5151,8 +5151,8 @@
       "category": "person",
       "left": {
         "name": "David Clarke",
-        "mentions": 70,
-        "documentCount": 43
+        "mentions": 76,
+        "documentCount": 44
       },
       "right": {
         "name": "David Clark",
@@ -5796,8 +5796,8 @@
       },
       "right": {
         "name": "Navy Golf Alfa Two One",
-        "mentions": 6,
-        "documentCount": 6
+        "mentions": 7,
+        "documentCount": 7
       },
       "similarity": 0.955,
       "reason": "similar name",
@@ -6316,6 +6316,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Illinois Institute of Technol",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Illinois Institute of Technology",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.951,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -6415,8 +6431,8 @@
       "category": "organization",
       "left": {
         "name": "Defense Intelligence",
-        "mentions": 425,
-        "documentCount": 171
+        "mentions": 444,
+        "documentCount": 173
       },
       "right": {
         "name": "Defonse Intelligence",
@@ -6612,8 +6628,8 @@
       },
       "right": {
         "name": "AREA CONTROL CENTER",
-        "mentions": 26,
-        "documentCount": 10
+        "mentions": 29,
+        "documentCount": 11
       },
       "similarity": 0.947,
       "reason": "similar name",
@@ -6751,8 +6767,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 710,
-        "documentCount": 240
+        "mentions": 715,
+        "documentCount": 242
       },
       "right": {
         "name": "The Department of Civil AviaHon",
@@ -6783,8 +6799,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 1750,
-        "documentCount": 803
+        "mentions": 1758,
+        "documentCount": 804
       },
       "right": {
         "name": "Uniteo States Navy",
@@ -7055,8 +7071,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 710,
-        "documentCount": 240
+        "mentions": 715,
+        "documentCount": 242
       },
       "right": {
         "name": "The Department of Civil Aviat",
@@ -8196,8 +8212,8 @@
       },
       "right": {
         "name": "DEPARTMENT OF TH",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.938,
       "reason": "similar name",
@@ -8751,13 +8767,13 @@
       "category": "organization",
       "left": {
         "name": "Directorate of Air Staff",
-        "mentions": 434,
-        "documentCount": 28
+        "mentions": 441,
+        "documentCount": 29
       },
       "right": {
         "name": "Directorate Air Staff",
-        "mentions": 5,
-        "documentCount": 4
+        "mentions": 6,
+        "documentCount": 5
       },
       "similarity": 0.933,
       "reason": "similar name",
@@ -9055,8 +9071,8 @@
       "category": "government_agency",
       "left": {
         "name": "Printing Office",
-        "mentions": 17,
-        "documentCount": 14
+        "mentions": 18,
+        "documentCount": 15
       },
       "right": {
         "name": "PAINTING OFFICE",
@@ -9679,8 +9695,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 498,
-        "documentCount": 180
+        "mentions": 499,
+        "documentCount": 181
       },
       "right": {
         "name": "Department of the Army",
@@ -9695,8 +9711,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 498,
-        "documentCount": 180
+        "mentions": 499,
+        "documentCount": 181
       },
       "right": {
         "name": "The Department of the Armr",
@@ -10031,8 +10047,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 479,
-        "documentCount": 219
+        "mentions": 480,
+        "documentCount": 220
       },
       "right": {
         "name": "George Adamsky",
@@ -10751,8 +10767,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 749,
-        "documentCount": 342
+        "mentions": 752,
+        "documentCount": 343
       },
       "right": {
         "name": "University of Color",
@@ -10767,8 +10783,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 749,
-        "documentCount": 342
+        "mentions": 752,
+        "documentCount": 343
       },
       "right": {
         "name": "University Colorado",
@@ -10783,8 +10799,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 498,
-        "documentCount": 180
+        "mentions": 499,
+        "documentCount": 181
       },
       "right": {
         "name": "DEPARTMENT OF THE AL",
@@ -11039,8 +11055,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 710,
-        "documentCount": 240
+        "mentions": 715,
+        "documentCount": 242
       },
       "right": {
         "name": "Department of Civil Avia",
@@ -11055,8 +11071,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 479,
-        "documentCount": 219
+        "mentions": 480,
+        "documentCount": 220
       },
       "right": {
         "name": "George Adams",
@@ -11103,8 +11119,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 336,
-        "documentCount": 203
+        "mentions": 337,
+        "documentCount": 204
       },
       "right": {
         "name": "Intelligence Cf'nter",
@@ -11308,6 +11324,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Directorate of Air",
+        "mentions": 27,
+        "documentCount": 18
+      },
+      "right": {
+        "name": "The Directorate of Air Fo",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Dr. David Morrison",
@@ -11382,22 +11414,6 @@
         "name": "Project Signed",
         "mentions": 5,
         "documentCount": 3
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Directorate of Air",
-        "mentions": 25,
-        "documentCount": 17
-      },
-      "right": {
-        "name": "The Directorate of Air Fo",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -13535,8 +13551,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 52795,
-        "documentCount": 12799
+        "mentions": 52801,
+        "documentCount": 12801
       },
       "right": {
         "name": "North American Space Agency",
@@ -13551,8 +13567,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 52795,
-        "documentCount": 12799
+        "mentions": 52801,
+        "documentCount": 12801
       },
       "right": {
         "name": "National Aeronautics and Space Agency",
