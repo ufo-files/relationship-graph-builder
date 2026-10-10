@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-10T19:04:54Z",
+  "generatedAt": "2026-10-10T20:31:18Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "fac170b46eb3af81fec37226ebe8bf31052a6eb5"
+    "revision": "e819358bc768ac4e6fdc7daee54640450adbed7e"
   },
-  "documentsWithCandidates": 15465,
+  "documentsWithCandidates": 15468,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -422915,6 +422915,30 @@
       ]
     },
     {
+      "documentId": "doc-123a7f33bc4c",
+      "path": "DPIArchive/documents/126918-hudson-valley-new-york-tony-gonsalves-investigation-and-final-b-2-stealth-bomber-report-3.txt",
+      "candidates": [
+        {
+          "value": "1989-10-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUPPLEMENT: FRIDAY, October 13, 1989",
+          "segment": 5064
+        },
+        {
+          "value": "1982-04-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I April 8, 1982, the Northrop Corp. made an",
+          "segment": 5069
+        }
+      ]
+    },
+    {
       "documentId": "doc-0f2202a75ef4",
       "path": "DPIArchive/documents/126966-flying-acorn-exeter-california-january-10-1968-illustration-and-report.txt",
       "candidates": [
@@ -507011,6 +507035,48 @@
       ]
     },
     {
+      "documentId": "doc-67abbd523f95",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302537801.txt",
+      "candidates": [
+        {
+          "value": "1962-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "AFR 200-2, 20 July 1962, and AFR 200-2A, 30 March 1964.",
+          "segment": 7
+        },
+        {
+          "value": "1964-03-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "AFR 200-2, 20 July 1962, and AFR 200-2A, 30 March 1964.",
+          "segment": 7
+        },
+        {
+          "value": "1965-02-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1) 26 February 1965, 0220Z",
+          "segment": 19
+        },
+        {
+          "value": "1965-03-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference your letter, 6570C0, 2 March 1965, subject: UFO.",
+          "segment": 24
+        }
+      ]
+    },
+    {
       "documentId": "doc-79c0ee35a422",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302537816.txt",
       "candidates": [
@@ -513556,6 +513622,48 @@
           "method": "unclassified-mention",
           "evidence": "UFO Observation, 27 November 1967",
           "segment": 10
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2a437c637dc7",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302572956.txt",
+      "candidates": [
+        {
+          "value": "1967-11-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On November 25, 1967 I was either fortunate or unfortunate in observing the",
+          "segment": 46
+        },
+        {
+          "value": "1967-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1967, concerning UFO observation at Dallas, Texas on December 2, 1967.",
+          "segment": 70
+        },
+        {
+          "value": "1967-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Opservation, 2 December 1967",
+          "segment": 77
+        },
+        {
+          "value": "1967-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "oe “2 December 1967 be % fe",
+          "segment": 114
         }
       ]
     },
