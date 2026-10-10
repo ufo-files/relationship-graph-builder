@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "cdef816fcd90cd8c200b252c3c3aa14c1a161113"
+    "revision": "94235839039d9ca2a03a86ffcdf7bc00bec17724"
   },
-  "count": 845,
-  "totalCount": 845,
-  "shownCount": 845,
+  "count": 847,
+  "totalCount": 847,
+  "shownCount": 847,
   "candidates": [
     {
       "category": "organization",
@@ -116,6 +116,22 @@
       },
       "right": {
         "name": "Borderland Sciences Research Foundation",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.987,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Intensity of Laboratory Generated HGWs",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Intensity of Laboratory Generated HFGWs",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2028,6 +2044,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "RAAF Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "RAF Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "West' Australian Divisioral Office",
@@ -2095,8 +2127,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 10176,
-        "documentCount": 2128
+        "mentions": 10271,
+        "documentCount": 2130
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGATIDN",
@@ -3087,8 +3119,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 667,
-        "documentCount": 424
+        "mentions": 668,
+        "documentCount": 425
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -4476,6 +4508,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Clair County",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Claire County",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Paul Schartle",
@@ -4534,22 +4582,6 @@
         "name": "Robert Green",
         "mentions": 5,
         "documentCount": 5
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Clair County",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Claire County",
-        "mentions": 4,
-        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -5484,14 +5516,14 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "location",
+      "category": "government_agency",
       "left": {
-        "name": "King County",
+        "name": "Office Memo",
         "mentions": 8,
-        "documentCount": 6
+        "documentCount": 8
       },
       "right": {
-        "name": "Kings County",
+        "name": "Office Memof",
         "mentions": 2,
         "documentCount": 2
       },
@@ -5500,14 +5532,14 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "government_agency",
+      "category": "location",
       "left": {
-        "name": "Office Memo",
-        "mentions": 7,
-        "documentCount": 7
+        "name": "King County",
+        "mentions": 8,
+        "documentCount": 6
       },
       "right": {
-        "name": "Office Memof",
+        "name": "Kings County",
         "mentions": 2,
         "documentCount": 2
       },
@@ -6175,8 +6207,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 10176,
-        "documentCount": 2128
+        "mentions": 10271,
+        "documentCount": 2130
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -6719,8 +6751,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 708,
-        "documentCount": 239
+        "mentions": 710,
+        "documentCount": 240
       },
       "right": {
         "name": "The Department of Civil AviaHon",
@@ -7023,8 +7055,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 708,
-        "documentCount": 239
+        "mentions": 710,
+        "documentCount": 240
       },
       "right": {
         "name": "The Department of Civil Aviat",
@@ -8431,8 +8463,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 10176,
-        "documentCount": 2128
+        "mentions": 10271,
+        "documentCount": 2130
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -8799,8 +8831,8 @@
       "category": "organization",
       "left": {
         "name": "University of Washington",
-        "mentions": 94,
-        "documentCount": 72
+        "mentions": 95,
+        "documentCount": 73
       },
       "right": {
         "name": "University of Washing",
@@ -8863,8 +8895,8 @@
       "category": "government_agency",
       "left": {
         "name": "Navy Department",
-        "mentions": 54,
-        "documentCount": 21
+        "mentions": 56,
+        "documentCount": 22
       },
       "right": {
         "name": "Nary Department",
@@ -9967,8 +9999,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 667,
-        "documentCount": 424
+        "mentions": 668,
+        "documentCount": 425
       },
       "right": {
         "name": "Selt Lake City",
@@ -10460,6 +10492,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Harrison County",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Harris County",
+        "mentions": 5,
+        "documentCount": 3
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Brian Forrester",
@@ -10550,22 +10598,6 @@
         "name": "John McCormack",
         "mentions": 4,
         "documentCount": 4
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Harrison County",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Harris County",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -10798,14 +10830,14 @@
     {
       "category": "organization",
       "left": {
-        "name": "University of Torino",
-        "mentions": 3,
-        "documentCount": 2
-      },
-      "right": {
         "name": "University of Toronto",
         "mentions": 34,
         "documentCount": 32
+      },
+      "right": {
+        "name": "University of Trento",
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.927,
       "reason": "similar name",
@@ -10814,14 +10846,14 @@
     {
       "category": "organization",
       "left": {
+        "name": "University of Torino",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
         "name": "University of Toronto",
         "mentions": 34,
         "documentCount": 32
-      },
-      "right": {
-        "name": "University of Trento",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.927,
       "reason": "similar name",
@@ -11007,8 +11039,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 708,
-        "documentCount": 239
+        "mentions": 710,
+        "documentCount": 240
       },
       "right": {
         "name": "Department of Civil Avia",
@@ -13503,8 +13535,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 52792,
-        "documentCount": 12796
+        "mentions": 52795,
+        "documentCount": 12799
       },
       "right": {
         "name": "North American Space Agency",
@@ -13519,8 +13551,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 52792,
-        "documentCount": 12796
+        "mentions": 52795,
+        "documentCount": 12799
       },
       "right": {
         "name": "National Aeronautics and Space Agency",
