@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-11T21:37:53Z",
+  "generatedAt": "2026-10-11T22:58:47Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "7d587277689a3a4f0ea0cf640b22195edee0c366"
+    "revision": "2583b4d75319c5b2d2c23dc2d79b96b17f10381d"
   },
-  "documentsWithCandidates": 15569,
+  "documentsWithCandidates": 15574,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -15343,6 +15343,39 @@
           "method": "unclassified-mention",
           "evidence": "In Fri, 27 Apr 2007 14:11:10 -0700, \"Lumpy\"",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2e8dab664c9e",
+      "path": "Archives-for-the-Unexplained/documents/20070514-Years.-56362.txt",
+      "candidates": [
+        {
+          "value": "2007-02-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Doug Yur-hey, Feb 27, 2007",
+          "segment": 8
+        },
+        {
+          "value": "2007-03-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Last Updated: Friday, March 02, 2007 11:14:10 PM",
+          "segment": 10
+        },
+        {
+          "value": "2003-09-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "'WASHINGTON, September 18, 2003 - Newly discovered traces of ancient",
+          "segment": 120
         }
       ]
     },
@@ -161531,6 +161564,39 @@
       ]
     },
     {
+      "documentId": "doc-345fdd49e30f",
+      "path": "Black-Vault-UFO/documents/zip-archive-of-entire-collection-below/A703_554-1-30_Part 2_12055824.txt",
+      "candidates": [
+        {
+          "value": "1963-04-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "went before the House of Representatives on April 30, 1963, 1'",
+          "segment": 412
+        },
+        {
+          "value": "1969-12-17",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "IMMEDIATE RELEASE December 17, 1969 NO. 1077-69",
+          "segment": 1443
+        },
+        {
+          "value": "1951-05-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "23 May 1951) of magnesium which had been purified by ei~Jhl",
+          "segment": 3748
+        }
+      ]
+    },
+    {
       "documentId": "doc-e507a3684f2f",
       "path": "Black-Vault-UFO/documents/zip-archive-of-entire-collection-below/A703_554-1-30_Part 3_12055850.txt",
       "candidates": [
@@ -303289,6 +303355,30 @@
           "method": "unclassified-mention",
           "evidence": "Tuesday, October 24, 2017",
           "segment": 8158
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0e81af53e30d",
+      "path": "Black-Vault-UFO/pdfs/inside-the-pentagon-s-release-of-three-ufo-videos-17.txt",
+      "candidates": [
+        {
+          "value": "2017-02-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Committee on Concept of Operations for Military Environmental Control Units by February 1, 2017.",
+          "segment": 204
+        },
+        {
+          "value": "2017-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "OSD Legislative Affairs to the committee on June 30, 2017.",
+          "segment": 205
         }
       ]
     },
@@ -458600,6 +458690,39 @@
       ]
     },
     {
+      "documentId": "doc-aa5539da54c4",
+      "path": "DPIArchive/documents/130466-ica-uap-d001-analysis-colorado-springs-uap-incident-pdf.txt",
+      "candidates": [
+        {
+          "value": "2022-02-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "/Colorado at 0935 MNT on 15 February 2022, was possibly",
+          "segment": 4
+        },
+        {
+          "value": "2022-02-15",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "/members On 15 February 2022, an airborne object was observed",
+          "segment": 11
+        },
+        {
+          "value": "2022-02-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "/ At 0945 MST on February 15, 2022, in Colorado Springs",
+          "segment": 22
+        }
+      ]
+    },
+    {
       "documentId": "doc-795fff6038c7",
       "path": "DPIArchive/documents/130470-cia-uap-015-project-blue-book-special-report-no-14-pdf.txt",
       "candidates": [
@@ -530515,6 +530638,21 @@
           "method": "unclassified-mention",
           "evidence": "July 2, 1956-Predating Fourth",
           "segment": 20
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bdcb5640d5fc",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28966199.txt",
+      "candidates": [
+        {
+          "value": "1956-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Case 167, Los Angeles, Cal., July 16, 1956-We quote from",
+          "segment": 5
         }
       ]
     },
