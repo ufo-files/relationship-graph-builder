@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-11T07:42:19Z",
+  "generatedAt": "2026-10-11T09:06:38Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "ac0f9f41d1f1926682bb3a616002061242a5223e"
+    "revision": "d0888482323f1db5d9d6545bc6346824f52330b1"
   },
-  "documentsWithCandidates": 15507,
+  "documentsWithCandidates": 15509,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -438524,6 +438524,48 @@
       ]
     },
     {
+      "documentId": "doc-8162f72bc980",
+      "path": "DPIArchive/documents/127720-apro-bulletin-july-1957.txt",
+      "candidates": [
+        {
+          "value": "1947-06-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on June 10, 1947 when she made her like a sore thumb: After several cxperts dous thing, as the following details will",
+          "segment": 362
+        },
+        {
+          "value": "1954-11-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On November 22, 1954, the window of his room, at thc \"Canobi",
+          "segment": 830
+        },
+        {
+          "value": "1954-08-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On August 6, 1954, at 5:00",
+          "segment": 938
+        },
+        {
+          "value": "1957-05-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 10, 1957,at Beaucourt'sur'Ancre, a made trees swirl and sway.",
+          "segment": 1158
+        }
+      ]
+    },
+    {
       "documentId": "doc-2054654ecb4e",
       "path": "DPIArchive/documents/127724-apro-bulletin-november-1956.txt",
       "candidates": [
@@ -516868,6 +516910,21 @@
           "method": "unclassified-mention",
           "evidence": "29 April 1965 has been evaluated ae ECHO I which was",
           "segment": 5
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9fcc350de029",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302539120.txt",
+      "candidates": [
+        {
+          "value": "1965-06-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "a so 5 June 1965. mich you",
+          "segment": 11
         }
       ]
     },

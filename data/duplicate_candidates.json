@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "ac0f9f41d1f1926682bb3a616002061242a5223e"
+    "revision": "d0888482323f1db5d9d6545bc6346824f52330b1"
   },
-  "count": 902,
-  "totalCount": 902,
-  "shownCount": 902,
+  "count": 903,
+  "totalCount": 903,
+  "shownCount": 903,
   "candidates": [
     {
       "category": "organization",
@@ -799,8 +799,8 @@
       "category": "location",
       "left": {
         "name": "Holloman Air Force Base",
-        "mentions": 239,
-        "documentCount": 129
+        "mentions": 240,
+        "documentCount": 130
       },
       "right": {
         "name": "Hollman Air Force Base",
@@ -2548,8 +2548,8 @@
       },
       "right": {
         "name": "AF Intelligence",
-        "mentions": 7,
-        "documentCount": 5
+        "mentions": 8,
+        "documentCount": 6
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -13886,6 +13886,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Marie Celeste",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Mary Celeste",
+        "mentions": 27,
+        "documentCount": 11
+      },
+      "similarity": 0.88,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Jane Goodall",
         "mentions": 10,
         "documentCount": 9
@@ -14415,8 +14431,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 53021,
-        "documentCount": 12826
+        "mentions": 53033,
+        "documentCount": 12828
       },
       "right": {
         "name": "North American Space Agency",
@@ -14431,8 +14447,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 53021,
-        "documentCount": 12826
+        "mentions": 53033,
+        "documentCount": 12828
       },
       "right": {
         "name": "National Aeronautics and Space Agency",
