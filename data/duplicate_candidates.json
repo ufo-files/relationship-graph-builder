@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "eef63cb77e2e3bfaa976b172f05ba8157bff9ce6"
+    "revision": "a7e8026305c329dd3bf1cc02cf64cc0c3c24e659"
   },
-  "count": 909,
-  "totalCount": 909,
-  "shownCount": 909,
+  "count": 917,
+  "totalCount": 917,
+  "shownCount": 917,
   "candidates": [
     {
       "category": "organization",
@@ -799,8 +799,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 385,
-        "documentCount": 209
+        "mentions": 386,
+        "documentCount": 210
       },
       "right": {
         "name": "Kirtland Airforce Base",
@@ -1583,8 +1583,8 @@
       "category": "government_agency",
       "left": {
         "name": "Bureau of Standards",
-        "mentions": 160,
-        "documentCount": 25
+        "mentions": 161,
+        "documentCount": 26
       },
       "right": {
         "name": "Bureau of Standard",
@@ -2319,8 +2319,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 10451,
-        "documentCount": 2158
+        "mentions": 10461,
+        "documentCount": 2160
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGATIDN",
@@ -2404,6 +2404,22 @@
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patterson Air Force Base",
+        "mentions": 1024,
+        "documentCount": 601
+      },
+      "right": {
+        "name": "WRIGHT-PATTERBON AIR FORCE BASE",
         "mentions": 2,
         "documentCount": 2
       },
@@ -2975,8 +2991,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 766,
-        "documentCount": 418
+        "mentions": 772,
+        "documentCount": 419
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -3244,6 +3260,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "government_agency",
+      "left": {
+        "name": "Projects Office",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Project Office",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Steven Hawkings",
@@ -3254,22 +3286,6 @@
         "name": "Steven Hawking",
         "mentions": 4,
         "documentCount": 2
-      },
-      "similarity": 0.966,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "government_agency",
-      "left": {
-        "name": "Projects Office",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Project Office",
-        "mentions": 5,
-        "documentCount": 5
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -4684,6 +4700,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "AF Base Unit",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "AAF Base Unit",
+        "mentions": 7,
+        "documentCount": 4
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Mike McCarthy",
@@ -4710,22 +4742,6 @@
         "name": "Nancy Talbott",
         "mentions": 5,
         "documentCount": 4
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "AF Base Unit",
-        "mentions": 6,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "AAF Base Unit",
-        "mentions": 5,
-        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -5311,8 +5327,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 385,
-        "documentCount": 209
+        "mentions": 386,
+        "documentCount": 210
       },
       "right": {
         "name": "Kirkland Air Force Base",
@@ -5327,8 +5343,8 @@
       "category": "location",
       "left": {
         "name": "Kirtland Air Force Base",
-        "mentions": 385,
-        "documentCount": 209
+        "mentions": 386,
+        "documentCount": 210
       },
       "right": {
         "name": "Kirtland Alr Force Base",
@@ -6607,8 +6623,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 10451,
-        "documentCount": 2158
+        "mentions": 10461,
+        "documentCount": 2160
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -6708,6 +6724,22 @@
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.951,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Paterson Air Force Base",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "WRIGHT-PATTERBON AIR FORCE BASE",
         "mentions": 2,
         "documentCount": 2
       },
@@ -6820,6 +6852,22 @@
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.951,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright Patterson Airforce Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "WRIGHT-PATTERBON AIR FORCE BASE",
         "mentions": 2,
         "documentCount": 2
       },
@@ -7183,8 +7231,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 743,
-        "documentCount": 255
+        "mentions": 744,
+        "documentCount": 256
       },
       "right": {
         "name": "The Department of Civil AviaHon",
@@ -7215,8 +7263,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 1898,
-        "documentCount": 815
+        "mentions": 1899,
+        "documentCount": 816
       },
       "right": {
         "name": "Uniteo States Navy",
@@ -7519,8 +7567,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 743,
-        "documentCount": 255
+        "mentions": 744,
+        "documentCount": 256
       },
       "right": {
         "name": "The Department of Civil Aviat",
@@ -8956,6 +9004,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Institute of Electronica",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Institute of Electrical",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.936,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Department of Transports",
@@ -8972,27 +9036,11 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "organization",
-      "left": {
-        "name": "Institute of Electronica",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Institute of Electrical",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.936,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 10451,
-        "documentCount": 2158
+        "mentions": 10461,
+        "documentCount": 2160
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -9134,6 +9182,22 @@
     {
       "category": "location",
       "left": {
+        "name": "WRICHT-PATTERSON AIR FORCE BASE",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "WRIGHT-PATTERBON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "Wright-Patterson Air Foroe Base",
         "mentions": 3,
         "documentCount": 2
@@ -9172,6 +9236,22 @@
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patterson Air Foroe Base",
+        "mentions": 3,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "WRIGHT-PATTERBON AIR FORCE BASE",
         "mentions": 2,
         "documentCount": 2
       },
@@ -9246,12 +9326,60 @@
     {
       "category": "location",
       "left": {
+        "name": "Wrighü-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "WRIGHT-PATTERBON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "Weight-Patterson Air Force Base",
         "mentions": 2,
         "documentCount": 2
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Weight-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "WRIGHT-PATTERBON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "WRIGHT PATTIRSON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "WRIGHT-PATTERBON AIR FORCE BASE",
         "mentions": 2,
         "documentCount": 2
       },
@@ -9295,8 +9423,8 @@
       "category": "government_agency",
       "left": {
         "name": "Army Air Forces",
-        "mentions": 321,
-        "documentCount": 142
+        "mentions": 323,
+        "documentCount": 143
       },
       "right": {
         "name": "Army Air Fcrces",
@@ -11855,8 +11983,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 743,
-        "documentCount": 255
+        "mentions": 744,
+        "documentCount": 256
       },
       "right": {
         "name": "Department of Civil Avia",
@@ -12284,6 +12412,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Charles Maney",
+        "mentions": 25,
+        "documentCount": 19
+      },
+      "right": {
+        "name": "Professor Charles Meany",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "program",
       "left": {
         "name": "Project Sine",
@@ -12293,22 +12437,6 @@
       "right": {
         "name": "Project Signed",
         "mentions": 5,
-        "documentCount": 3
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Charles Maney",
-        "mentions": 24,
-        "documentCount": 18
-      },
-      "right": {
-        "name": "Professor Charles Meany",
-        "mentions": 3,
         "documentCount": 3
       },
       "similarity": 0.923,
