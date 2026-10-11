@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-11T18:53:35Z",
+  "generatedAt": "2026-10-11T20:14:47Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "37dfe5ee6ab3e90d2f0735c26efc4b2ddb3135a3"
+    "revision": "0a3e467d46661704bbf163d3ebd6d95a48569817"
   },
-  "documentsWithCandidates": 15556,
+  "documentsWithCandidates": 15558,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -524255,6 +524255,21 @@
       ]
     },
     {
+      "documentId": "doc-8d0013b88615",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-1/28929475.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DA: OF TO 6, 7, or 8 July 1947",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-89b06ee319c5",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-1/28930829.txt",
       "candidates": [
@@ -534514,6 +534529,30 @@
           "method": "unclassified-mention",
           "evidence": "Reference your recent letter of October 25, 1967.",
           "segment": 7
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0c20805d0940",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302571795.txt",
+      "candidates": [
+        {
+          "value": "1967-10-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UPO Observation, October 25, 1967",
+          "segment": 2
+        },
+        {
+          "value": "1967-10-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "observation of October 25, 1967.",
+          "segment": 3
         }
       ]
     },
