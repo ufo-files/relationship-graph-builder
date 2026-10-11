@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-10T23:18:06Z",
+  "generatedAt": "2026-10-11T00:46:20Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a6d233f9cd2c932aaaa0eadf999b742de9cf8025"
+    "revision": "7f5848d548cd912b0ac5c744a957a03e33f5c03d"
   },
-  "documentsWithCandidates": 15475,
+  "documentsWithCandidates": 15482,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -50803,6 +50803,21 @@
           "method": "dated-reference",
           "evidence": "In accordance with your memo dated 12 December 1990",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ef09e44a0823",
+      "path": "Archives-for-the-Unexplained/documents/CIA-RDP96-00792R000100140008-4.txt",
+      "candidates": [
+        {
+          "value": "1981-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TO~'------------~ DNE 2 September 1981",
+          "segment": 1
         }
       ]
     },
@@ -133970,6 +133985,21 @@
       ]
     },
     {
+      "documentId": "doc-48af699a6efe",
+      "path": "Archives-for-the-Unexplained/documents/a09-001-6262e7c38b.txt",
+      "candidates": [
+        {
+          "value": "1997-05-08",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Thu, 8 May 1997 22:51:08 -0800",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-6a67b99499fa",
       "path": "Archives-for-the-Unexplained/documents/a09-001.txt",
       "candidates": [
@@ -134281,6 +134311,21 @@
           "method": "unclassified-mention",
           "evidence": "Date: Tue, 11 Feb 1997 14:12:00",
           "segment": 23
+        }
+      ]
+    },
+    {
+      "documentId": "doc-715198477a1e",
+      "path": "Archives-for-the-Unexplained/documents/a14-004-5298657126.txt",
+      "candidates": [
+        {
+          "value": "1997-01-14",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Tue, 14 Jan 1997 15:32:11 -0500 (EST",
+          "segment": 1
         }
       ]
     },
@@ -371051,6 +371096,48 @@
       ]
     },
     {
+      "documentId": "doc-ad8060d077aa",
+      "path": "DPIArchive/documents/116198-investigation-of-flying-saucers-policy-various-documents.txt",
+      "candidates": [
+        {
+          "value": "1967-03-03",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "As requested in your l e tter 554/ 1/ 30( 123) of 3 March 1967, we are",
+          "segment": 167
+        },
+        {
+          "value": "1955-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The period 1 January 1955 to 5 May 1955 accounted tor 1.31 unidentii'ied",
+          "segment": 2581
+        },
+        {
+          "value": "1955-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The period 1 January 1955 to 5 May 1955 accounted tor 1.31 unidentii'ied",
+          "segment": 2581
+        },
+        {
+          "value": "1959-01-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Evaluations - Category Breakdown by Months 1 January 1959",
+          "segment": 2768
+        }
+      ]
+    },
+    {
       "documentId": "doc-09ecdaad0b20",
       "path": "DPIArchive/documents/116199-reports-on-flying-saucers-and-aerial-objects-australian-defence-department-multiple-document-reports-part-18-september-8-1984.txt",
       "candidates": [
@@ -438019,6 +438106,111 @@
           "method": "unclassified-mention",
           "evidence": "OpUon Year; 22 September 2009 • 21 September 2010",
           "segment": 40
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a9ff279d66d7",
+      "path": "DPIArchive/documents/130635-dow-uap-d123-aawsap-dird-positron-aerospace-propulsion-march-2-2010-pdf.txt",
+      "candidates": [
+        {
+          "value": "2005-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Final Report, Research Subaward No. 07605- 003-048, September 1, 2005 - March 31, 2006.",
+          "segment": 889
+        },
+        {
+          "value": "2006-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Final Report, Research Subaward No. 07605- 003-048, September 1, 2005 - March 31, 2006.",
+          "segment": 889
+        },
+        {
+          "value": "2005-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Final Report, Research Subaward No. 07605- 003-048, September 1, 2005 - March 31, 2006.",
+          "segment": 893
+        },
+        {
+          "value": "2006-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Final Report, Research Subaward No. 07605- 003-048, September 1, 2005 - March 31, 2006.",
+          "segment": 893
+        },
+        {
+          "value": "2005-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "07605 - 003 -048, September 1, 2005 - March 31, 2006.",
+          "segment": 905
+        },
+        {
+          "value": "2006-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "07605 - 003 -048, September 1, 2005 - March 31, 2006.",
+          "segment": 905
+        },
+        {
+          "value": "2005-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "07605-003-048, September 1, 2005 - March 31, 2006.",
+          "segment": 909
+        },
+        {
+          "value": "2006-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "07605-003-048, September 1, 2005 - March 31, 2006.",
+          "segment": 909
+        },
+        {
+          "value": "2005-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "07605-003 -048, September 1, 2005 - March 31 , 2006.",
+          "segment": 932
+        },
+        {
+          "value": "2005-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "07605-003-048, September 1, 2005 - March 31, 2006 .",
+          "segment": 940
+        },
+        {
+          "value": "2006-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "07605-003-048, September 1, 2005 - March 31, 2006 .",
+          "segment": 940
         }
       ]
     },
@@ -514628,6 +514820,30 @@
       ]
     },
     {
+      "documentId": "doc-7f4a49a4b20a",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302565812.txt",
+      "candidates": [
+        {
+          "value": "1967-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference your letter of September 21, 1967 in which you inclosed",
+          "segment": 39
+        },
+        {
+          "value": "1957-06-01",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Our letter of June 1, 1957 requested the original negative.",
+          "segment": 41
+        }
+      ]
+    },
+    {
       "documentId": "doc-e5d268e79c1d",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302565853.txt",
       "candidates": [
@@ -516007,6 +516223,21 @@
           "method": "unclassified-mention",
           "evidence": "UFO Observation, 10 January 1968",
           "segment": 11
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cbbc29e06985",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302573711.txt",
+      "candidates": [
+        {
+          "value": "1968-01-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UPO Observation, 12 January 1968",
+          "segment": 92
         }
       ]
     },

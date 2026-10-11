@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "a6d233f9cd2c932aaaa0eadf999b742de9cf8025"
+    "revision": "7f5848d548cd912b0ac5c744a957a03e33f5c03d"
   },
-  "count": 878,
-  "totalCount": 878,
-  "shownCount": 878,
+  "count": 890,
+  "totalCount": 890,
+  "shownCount": 890,
   "candidates": [
     {
       "category": "organization",
@@ -767,8 +767,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 760,
-        "documentCount": 346
+        "mentions": 762,
+        "documentCount": 347
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -927,8 +927,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 769,
-        "documentCount": 396
+        "mentions": 770,
+        "documentCount": 397
       },
       "right": {
         "name": "Edward Air Force Base",
@@ -943,8 +943,8 @@
       "category": "location",
       "left": {
         "name": "Edwards Air Force Base",
-        "mentions": 769,
-        "documentCount": 396
+        "mentions": 770,
+        "documentCount": 397
       },
       "right": {
         "name": "Edwards AirForce Base",
@@ -1151,8 +1151,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Supply",
-        "mentions": 59,
-        "documentCount": 26
+        "mentions": 61,
+        "documentCount": 27
       },
       "right": {
         "name": "Department of Supplys",
@@ -1614,14 +1614,30 @@
     {
       "category": "government_agency",
       "left": {
+        "name": "Auotralian Scientific Liaison Office",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "AUSTRALIAN SCIENTIFIC LIAISON OFFICE",
+        "mentions": 8,
+        "documentCount": 7
+      },
+      "similarity": 0.972,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
         "name": "Department of Fair",
         "mentions": 5,
         "documentCount": 2
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 704,
-        "documentCount": 103
+        "mentions": 709,
+        "documentCount": 104
       },
       "similarity": 0.971,
       "reason": "similar name",
@@ -1871,8 +1887,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 237,
-        "documentCount": 150
+        "mentions": 238,
+        "documentCount": 151
       },
       "right": {
         "name": "AIR TECHNICAL INTELLIGENCE GENTER",
@@ -1887,8 +1903,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 237,
-        "documentCount": 150
+        "mentions": 238,
+        "documentCount": 151
       },
       "right": {
         "name": "Air Technical Intelligence Conter",
@@ -1903,8 +1919,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 237,
-        "documentCount": 150
+        "mentions": 238,
+        "documentCount": 151
       },
       "right": {
         "name": "Air Technical Intelligence Cen'er",
@@ -1951,8 +1967,8 @@
       "category": "person",
       "left": {
         "name": "Charles Lindbergh",
-        "mentions": 33,
-        "documentCount": 20
+        "mentions": 34,
+        "documentCount": 21
       },
       "right": {
         "name": "Charles Lindberg",
@@ -2516,8 +2532,8 @@
       },
       "right": {
         "name": "AF Intelligence",
-        "mentions": 6,
-        "documentCount": 4
+        "mentions": 7,
+        "documentCount": 5
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -2895,8 +2911,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 764,
-        "documentCount": 416
+        "mentions": 765,
+        "documentCount": 417
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -3055,8 +3071,8 @@
       "category": "person",
       "left": {
         "name": "Captain Kenjyu Terauchi",
-        "mentions": 8,
-        "documentCount": 8
+        "mentions": 9,
+        "documentCount": 9
       },
       "right": {
         "name": "Captain Kenju Terauchi",
@@ -4524,6 +4540,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "ORGANIZATION AND LOCATION",
+        "mentions": 13,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "ORGANIZATION ANO LOCATION",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Chris Mullins",
@@ -4534,22 +4566,6 @@
         "name": "Chris Mullin",
         "mentions": 6,
         "documentCount": 6
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "ORGANIZATION AND LOCATION",
-        "mentions": 12,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "ORGANIZATION ANO LOCATION",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -6223,8 +6239,24 @@
       "category": "government_agency",
       "left": {
         "name": "BUREAU OF METEOROLOGY",
-        "mentions": 86,
-        "documentCount": 36
+        "mentions": 88,
+        "documentCount": 37
+      },
+      "right": {
+        "name": "Bureau of Keteorology",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "BUREAU OF METEOROLOGY",
+        "mentions": 88,
+        "documentCount": 37
       },
       "right": {
         "name": "BUREAU Of MElEOROlOGY",
@@ -6246,6 +6278,22 @@
         "name": "University of Kansas",
         "mentions": 36,
         "documentCount": 32
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Meteorological Office",
+        "mentions": 57,
+        "documentCount": 20
+      },
+      "right": {
+        "name": "Meteorologioal Office",
+        "mentions": 2,
+        "documentCount": 2
       },
       "similarity": 0.952,
       "reason": "similar name",
@@ -6420,6 +6468,22 @@
       },
       "right": {
         "name": "Edwards AirForce Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.952,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "The Federal Avlation Administration",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Federal Avaiation Administration",
         "mentions": 2,
         "documentCount": 2
       },
@@ -6671,8 +6735,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Supply",
-        "mentions": 59,
-        "documentCount": 26
+        "mentions": 61,
+        "documentCount": 27
       },
       "right": {
         "name": "The Department of Surply",
@@ -6900,8 +6964,8 @@
       },
       "right": {
         "name": "Intelligence Section",
-        "mentions": 10,
-        "documentCount": 9
+        "mentions": 11,
+        "documentCount": 10
       },
       "similarity": 0.947,
       "reason": "similar name",
@@ -6991,8 +7055,8 @@
       "category": "organization",
       "left": {
         "name": "Directorate of Air Porce Intelligence",
-        "mentions": 4,
-        "documentCount": 3
+        "mentions": 5,
+        "documentCount": 4
       },
       "right": {
         "name": "Directorate of Air Fbrce Intelligence",
@@ -7007,8 +7071,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 725,
-        "documentCount": 250
+        "mentions": 736,
+        "documentCount": 251
       },
       "right": {
         "name": "The Department of Civil AviaHon",
@@ -7039,8 +7103,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 1791,
-        "documentCount": 810
+        "mentions": 1793,
+        "documentCount": 811
       },
       "right": {
         "name": "Uniteo States Navy",
@@ -7327,8 +7391,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 725,
-        "documentCount": 250
+        "mentions": 736,
+        "documentCount": 251
       },
       "right": {
         "name": "The Department of Civil Aviat",
@@ -7460,8 +7524,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 704,
-        "documentCount": 103
+        "mentions": 709,
+        "documentCount": 104
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -7471,8 +7535,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Air",
-        "mentions": 704,
-        "documentCount": 103
+        "mentions": 709,
+        "documentCount": 104
       },
       "right": {
         "name": "Department of Ail",
@@ -8527,8 +8591,8 @@
       "category": "organization",
       "left": {
         "name": "INTELLIGENCE SOURCES AND METHODS INVOLVED",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
         "name": "INTELLIGENCE SOURCES OR METHODS INVOLVED",
@@ -9267,6 +9331,22 @@
         "documentCount": 9
       },
       "right": {
+        "name": "Air Porce Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "Air Forces Intelligence",
+        "mentions": 27,
+        "documentCount": 9
+      },
+      "right": {
         "name": "Air Foroe Intelligence",
         "mentions": 2,
         "documentCount": 2
@@ -9868,6 +9948,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "The Directorate of Air Fo",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Directorate of Air Foroe",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.933,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Kirtland Alr Force Base",
@@ -10015,8 +10111,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 503,
-        "documentCount": 185
+        "mentions": 504,
+        "documentCount": 186
       },
       "right": {
         "name": "Department of the Army",
@@ -10031,8 +10127,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 503,
-        "documentCount": 185
+        "mentions": 504,
+        "documentCount": 186
       },
       "right": {
         "name": "The Department of the Armr",
@@ -10068,6 +10164,22 @@
       },
       "right": {
         "name": "CENTRAL INTELLIGENCE AG",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.93,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "BUREAU OF METEOROLOGY",
+        "mentions": 88,
+        "documentCount": 37
+      },
+      "right": {
+        "name": "Bureau of Jleteorology",
         "mentions": 2,
         "documentCount": 2
       },
@@ -10270,6 +10382,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Air Porce Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Airforce Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.93,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "Air Foroe Intelligence",
         "mentions": 2,
         "documentCount": 2
@@ -10292,6 +10420,22 @@
       },
       "right": {
         "name": "Airforce Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.93,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "government_agency",
+      "left": {
+        "name": "Bureau of Keteorology",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Bureau of Jleteorology",
         "mentions": 2,
         "documentCount": 2
       },
@@ -11167,8 +11311,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 760,
-        "documentCount": 346
+        "mentions": 762,
+        "documentCount": 347
       },
       "right": {
         "name": "University of Color",
@@ -11183,8 +11327,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 760,
-        "documentCount": 346
+        "mentions": 762,
+        "documentCount": 347
       },
       "right": {
         "name": "University Colorado",
@@ -11199,8 +11343,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 503,
-        "documentCount": 185
+        "mentions": 504,
+        "documentCount": 186
       },
       "right": {
         "name": "DEPARTMENT OF THE AL",
@@ -11215,8 +11359,8 @@
       "category": "organization",
       "left": {
         "name": "Stanford University",
-        "mentions": 271,
-        "documentCount": 200
+        "mentions": 273,
+        "documentCount": 201
       },
       "right": {
         "name": "Stanford University In",
@@ -11406,6 +11550,22 @@
     {
       "category": "location",
       "left": {
+        "name": "Mount Stromlo Observatory",
+        "mentions": 23,
+        "documentCount": 14
+      },
+      "right": {
+        "name": "MOUNT STROMLO OBSERVATORY SBa",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.926,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "Skeptical Area Network Effort",
         "mentions": 10,
         "documentCount": 9
@@ -11468,11 +11628,27 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Commonwealth Scientific and Industrial Research Organisation",
+        "mentions": 51,
+        "documentCount": 13
+      },
+      "right": {
+        "name": "COMMONWEALTH SCIENnFIC AND INOOSTRIAL RESEARCH ORGANIZATION",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.924,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Department of Civil Aviation",
-        "mentions": 725,
-        "documentCount": 250
+        "mentions": 736,
+        "documentCount": 251
       },
       "right": {
         "name": "Department of Civil Avia",
@@ -11535,8 +11711,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 371,
-        "documentCount": 206
+        "mentions": 372,
+        "documentCount": 207
       },
       "right": {
         "name": "Intelligence Cf'nter",
@@ -11599,8 +11775,8 @@
       "category": "government_agency",
       "left": {
         "name": "BUREAU OF METEOROLOGY",
-        "mentions": 86,
-        "documentCount": 36
+        "mentions": 88,
+        "documentCount": 37
       },
       "right": {
         "name": "Bureau of Meteorol",
@@ -11740,6 +11916,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "Directorate of Air",
+        "mentions": 29,
+        "documentCount": 20
+      },
+      "right": {
+        "name": "The Directorate of Air Fo",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "William Blake",
@@ -11756,14 +11948,14 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "organization",
+      "category": "location",
       "left": {
-        "name": "Directorate of Air",
-        "mentions": 28,
-        "documentCount": 19
+        "name": "Perth Airport",
+        "mentions": 27,
+        "documentCount": 18
       },
       "right": {
-        "name": "The Directorate of Air Fo",
+        "name": "Porth Airport",
         "mentions": 2,
         "documentCount": 2
       },
@@ -12815,8 +13007,8 @@
       "category": "government_agency",
       "left": {
         "name": "Joint Intelligence Bureau",
-        "mentions": 38,
-        "documentCount": 20
+        "mentions": 39,
+        "documentCount": 21
       },
       "right": {
         "name": "Joint Inielligcnce Bureau",
@@ -14031,8 +14223,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 52886,
-        "documentCount": 12815
+        "mentions": 52923,
+        "documentCount": 12817
       },
       "right": {
         "name": "North American Space Agency",
@@ -14047,8 +14239,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 52886,
-        "documentCount": 12815
+        "mentions": 52923,
+        "documentCount": 12817
       },
       "right": {
         "name": "National Aeronautics and Space Agency",
