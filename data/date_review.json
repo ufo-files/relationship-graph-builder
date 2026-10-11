@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-11T00:46:20Z",
+  "generatedAt": "2026-10-11T02:09:56Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "7f5848d548cd912b0ac5c744a957a03e33f5c03d"
+    "revision": "b30550658c263cf9c26c1e90186b018ea6158d4a"
   },
-  "documentsWithCandidates": 15482,
+  "documentsWithCandidates": 15484,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -241555,6 +241555,120 @@
           "method": "unclassified-mention",
           "evidence": "On the morning of July 4, 1997, in an auditorium in Roswell, New Mexico, hundreds of news reporters and other interested onlookers",
           "segment": 220
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5205c54e246d",
+      "path": "Black-Vault-UFO/pdfs/executive-order-11652.txt",
+      "candidates": [
+        {
+          "value": "1972-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Executive Order 11652, approved on 8 March 1972 and effective",
+          "segment": 3
+        },
+        {
+          "value": "1972-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of the NSC directive also would be effective 1 June 1972.",
+          "segment": 22
+        },
+        {
+          "value": "1972-06-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "Information originated after 1 June 1972.",
+          "segment": 116
+        },
+        {
+          "value": "1972-06-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "Information originated before 1 June 1972.",
+          "segment": 168
+        },
+        {
+          "value": "1972-06-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "b) All other information classified before 1 June 1972",
+          "segment": 173
+        },
+        {
+          "value": "1972-06-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "c) Information classified before 1 June 1972 which is",
+          "segment": 176
+        },
+        {
+          "value": "1953-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Executive Order No. 10501 of November 5, 1953, as",
+          "segment": 697
+        },
+        {
+          "value": "1999-05-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "amended by Exccutive Orders No. 10816 of May 8, 1999",
+          "segment": 698
+        },
+        {
+          "value": "1961-01-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "No. 10901 of January 11, 1961, No. 10964 of Septem-",
+          "segment": 699
+        },
+        {
+          "value": "1962-01-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ber 20, 1961, No. 10985 of January 15, 1962, No. 11097",
+          "segment": 700
+        },
+        {
+          "value": "1963-03-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of March 6, 1963 and by Section 1(a) of No. 11382 of",
+          "segment": 701
+        },
+        {
+          "value": "1967-11-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 28, 1967, is superseded as of the effective",
+          "segment": 702
         }
       ]
     },
@@ -508792,6 +508906,21 @@
           "method": "unclassified-mention",
           "evidence": "Thank you for your lattar of July 20, 1964, with",
           "segment": 31
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d24da85844d5",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302534711.txt",
+      "candidates": [
+        {
+          "value": "1904-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "IE. Beon on the evening of 27 July 1904.",
+          "segment": 36
         }
       ]
     },
