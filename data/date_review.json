@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-11T09:06:38Z",
+  "generatedAt": "2026-10-11T10:29:59Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "d0888482323f1db5d9d6545bc6346824f52330b1"
+    "revision": "00f2f3eb5eb402e78a4cabc1be83a528c1f08a77"
   },
-  "documentsWithCandidates": 15509,
+  "documentsWithCandidates": 15516,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -9509,6 +9509,30 @@
       ]
     },
     {
+      "documentId": "doc-2af468167164",
+      "path": "Archives-for-the-Unexplained/documents/20040409-Re_What-do-you-think-of-these-websites_-638308.txt",
+      "candidates": [
+        {
+          "value": "2004-04-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 7 Apr 2004 14:44:21 -0700, The Big Creep wrote",
+          "segment": 3
+        },
+        {
+          "value": "2004-04-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Wed, 07 Apr 2004 07:03:56 -0700, The Big Creep wrote",
+          "segment": 6
+        }
+      ]
+    },
+    {
       "documentId": "doc-47afbb595c83",
       "path": "Archives-for-the-Unexplained/documents/20040413-Re_GALACTIC-FEDERATION-Update_-March-30-2004-53228.txt",
       "candidates": [
@@ -15027,6 +15051,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "On 6 Jan 2007 05:48:49 -0800, \"blackwingbear@gmail.com\"",
+          "segment": 4
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8b64025fafe3",
+      "path": "Archives-for-the-Unexplained/documents/20070120-Yay-I-finally-figured-out......-145618.txt",
+      "candidates": [
+        {
+          "value": "2000-12-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "SETI@home member since 13 Dec 2000",
           "segment": 4
         }
       ]
@@ -22656,6 +22695,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "Sent: Friday, June 01, 2012",
+          "segment": 10
+        }
+      ]
+    },
+    {
+      "documentId": "doc-39809bec59e7",
+      "path": "Archives-for-the-Unexplained/documents/20120608-Organic-Computers.-1320.txt",
+      "candidates": [
+        {
+          "value": "2012-06-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Friday, June 08, 2012",
           "segment": 10
         }
       ]
@@ -202154,6 +202208,21 @@
       ]
     },
     {
+      "documentId": "doc-eab865e6e145",
+      "path": "Black-Vault-UFO/pdfs/canufodoc-9-pdf.txt",
+      "candidates": [
+        {
+          "value": "1975-10-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On October 17, 1975 at 10 : 20 P.M . , Mr. c.",
+          "segment": 1322
+        }
+      ]
+    },
+    {
       "documentId": "doc-1a72fa9328b3",
       "path": "Black-Vault-UFO/pdfs/captain-scott-chesbrough-chief-of-staff-office-of-naval-intelligence-uap-ufo-e-mails-3.txt",
       "candidates": [
@@ -215482,6 +215551,786 @@
           "method": "unclassified-mention",
           "evidence": "Sent: 13 June 2003 16:26",
           "segment": 1710
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fb80ac62bbf4",
+      "path": "Black-Vault-UFO/pdfs/defe-24-2039.txt",
+      "candidates": [
+        {
+          "value": "2004-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thank you for your e.mails dated 5 July and 23 July 2004.",
+          "segment": 8
+        },
+        {
+          "value": "2004-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 26 July 2004 16:39",
+          "segment": 14
+        },
+        {
+          "value": "2004-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thank you for your e. mail that you sent to my col 23 July 2004.",
+          "segment": 16
+        },
+        {
+          "value": "2004-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 14 July 2004 23:18",
+          "segment": 24
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "USAF on 8 September 1970.",
+          "segment": 35
+        },
+        {
+          "value": "2004-04-18",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "request of 18 April 2004 for file D/Sec(AS)l2/6 and your letter response o f",
+          "segment": 65
+        },
+        {
+          "value": "1993-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thank you for your letter of 3 March 1993 concerning the",
+          "segment": 242
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "crash of an RAF Lightning on 8 September 1970, has been passed to this office.",
+          "segment": 670
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 8, 1970, a single Lightning jet fighter took oft",
+          "segment": 905
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "-September 8, 1970, a single Lightning jet fighter took off",
+          "segment": 964
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "t of September 8, 1970, the night the contacted by· former airmen who had been Four years ago, when the Evening Telegraph",
+          "segment": 1117
+        },
+        {
+          "value": "1992-10-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "EVENING TELEGRAPH, Monday, October 12 1992 9",
+          "segment": 1283
+        },
+        {
+          "value": "1992-10-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "EVENING TELEGRAPH, Tuesday, October 13, 1992 11",
+          "segment": 1341
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "· crashed on September 8, 1970.",
+          "segment": 1379
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 8 September 1970, RAF Binb'!:\"ook- was taking part in a 'facti cal",
+          "segment": 1498
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "occurred on 8 September 1970, involving a Lightning F6 aircraft from RAP",
+          "segment": 1533
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "concerning the crash of a Lightning F6 on 8 September 1970.",
+          "segment": 1556
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "that a Lightning F6 aircraft crashed on 8 September 1970, during an encounter",
+          "segment": 1571
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "when we spoke about the crash of a Lightning F6 aircraft, on 8 September 1970.",
+          "segment": 1942
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "rather than return to North September 8, 1970, in an isolated building",
+          "segment": 2056
+        },
+        {
+          "value": "1970-09-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Wednesday, September 9, 1970, and a GCI.",
+          "segment": 2401
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "crash of an RAF Lightning on 8 September 1970, has been passed to this office.",
+          "segment": 2565
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: 8 September 1970 i",
+          "segment": 2742
+        },
+        {
+          "value": "2004-06-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Thank you for your letter dated 13 June 2004.",
+          "segment": 2935
+        },
+        {
+          "value": "2004-04-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "- The Stratford Standard, Friday April 16, 2004",
+          "segment": 2960
+        },
+        {
+          "value": "2004-06-07",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Thank you for your letter dated 7 June 2004.",
+          "segment": 3004
+        },
+        {
+          "value": "2004-06-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 12 June 2004 03:03",
+          "segment": 3068
+        },
+        {
+          "value": "2004-06-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 10 June 2004 09:01",
+          "segment": 3072
+        },
+        {
+          "value": "2004-06-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 04 June 2004 11 :05",
+          "segment": 3092
+        },
+        {
+          "value": "2004-06-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Nr Southampton 8 June 2004",
+          "segment": 3416
+        },
+        {
+          "value": "1997-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Michael Howard's home on 8 March 1997, MOD Air Defence staff have",
+          "segment": 4046
+        },
+        {
+          "value": "1997-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Secretary's residence on 8 March 1997.",
+          "segment": 4256
+        },
+        {
+          "value": "1997-03-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "report from Hythe, Kent dated 8 March 1997.",
+          "segment": 4446
+        },
+        {
+          "value": "1997-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Home Secretary's house on 8 March 1997.",
+          "segment": 4519
+        },
+        {
+          "value": "1997-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Secretary's house on 8 March 1997.",
+          "segment": 4530
+        },
+        {
+          "value": "1998-01-19",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "We are aware that an article appeared in the Daily Mail on 19 January 1998 which alleged that, on",
+          "segment": 4610
+        },
+        {
+          "value": "1997-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the 8 March 1997, a 'UFO' had been seen within the vicinity ofthe Kent home ofthe former",
+          "segment": 4611
+        },
+        {
+          "value": "2004-05-09",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Thank you for your letter of 9 May 2004 concerning newspaper reports of a sighting of a",
+          "segment": 4650
+        },
+        {
+          "value": "1974-10-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "RAF Gayton closed on 31 October 1974.",
+          "segment": 4671
+        },
+        {
+          "value": "1997-08-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Standard, Friday, August 22, 1997 s",
+          "segment": 4687
+        },
+        {
+          "value": "2004-04-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Stratford Standard, Friday April 16, 2004",
+          "segment": 4734
+        },
+        {
+          "value": "2004-04-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Observer, Thursday April 22, 2004",
+          "segment": 4802
+        },
+        {
+          "value": "2004-04-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thursday April 29, 2004 -",
+          "segment": 4803
+        },
+        {
+          "value": "2004-05-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Observer, Thursday May 6, 2004",
+          "segment": 4834
+        },
+        {
+          "value": "2004-05-07",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Thank you for your letter dated 7 May 2004.",
+          "segment": 4927
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "'UFOs: Alleged UFO incident- Crash of Lightning F6, 8 September 1970' - v",
+          "segment": 5071
+        },
+        {
+          "value": "2004-04-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 23 April 2004 15:26",
+          "segment": 5119
+        },
+        {
+          "value": "1970-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "D/SEC(AS) 12/6 'lJFO' s: Alleged UFO incident -Crash of lightening F6, 8 September 1970'",
+          "segment": 5148
+        },
+        {
+          "value": "2004-04-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 16 April 2004 16:49",
+          "segment": 5326
+        },
+        {
+          "value": "2004-04-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 16 April 2004 11:51",
+          "segment": 5349
+        },
+        {
+          "value": "2004-04-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 15 April 2004 13:07",
+          "segment": 5369
+        },
+        {
+          "value": "2004-03-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 02 March 2004 12:52",
+          "segment": 5420
+        },
+        {
+          "value": "2004-03-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 02 March 2004 09:44",
+          "segment": 5434
+        },
+        {
+          "value": "2004-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 01 March 2004 10:02",
+          "segment": 5441
+        },
+        {
+          "value": "2004-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 01 March 2004 02:51",
+          "segment": 5448
+        },
+        {
+          "value": "2004-03-03",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Thank you for your letter dated 3 March 2004 .",
+          "segment": 5574
+        },
+        {
+          "value": "2004-01-27",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "In your letter of 27 January 2004, you requested a list of UFO reports received by MOD in 2004",
+          "segment": 5575
+        },
+        {
+          "value": "2004-02-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thank you for your letter of 6 February 2004 concerning information about 'unidentified flying",
+          "segment": 5604
+        },
+        {
+          "value": "2004-02-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 17 February 2004 21:45",
+          "segment": 5808
+        },
+        {
+          "value": "2004-02-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 17 February 2004 11 :46",
+          "segment": 6037
+        },
+        {
+          "value": "2004-02-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 17 February 2004 11 :38",
+          "segment": 6045
+        },
+        {
+          "value": "2004-02-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 06 February 2004 11:52",
+          "segment": 6054
+        },
+        {
+          "value": "2004-01-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thank you for your e-mail of 10 January 2004 following the BBC Documentary 'Britain's",
+          "segment": 6079
+        },
+        {
+          "value": "2004-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "X-Files' broadcast on January 9 2004.",
+          "segment": 6080
+        },
+        {
+          "value": "1995-10-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on 24 October 1995, the orbital inclination means that it would not have been visible from",
+          "segment": 6143
+        },
+        {
+          "value": "2004-01-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 30 January 2004 14:10",
+          "segment": 6151
+        },
+        {
+          "value": "1995-10-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Turning to the second part of the question; there was a Shuttle in orbit on 24 October 1995, but this was in a 39",
+          "segment": 6161
+        },
+        {
+          "value": "1995-10-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "No satellites decayed in the Earth's atmosphere on 24 October 1995.",
+          "segment": 6165
+        },
+        {
+          "value": "2004-01-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 29 January 2004 17:38",
+          "segment": 6174
+        },
+        {
+          "value": "1995-10-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "them to check their records for anything over Newmarket, Suffolk on 24 October 1995.",
+          "segment": 6181
+        },
+        {
+          "value": "2003-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 12 December 2003 09:37",
+          "segment": 6337
+        },
+        {
+          "value": "2004-01-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Police, military, press etc) 8 January 2004.",
+          "segment": 6395
+        },
+        {
+          "value": "1977-11-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "their front page on 7 November 1977",
+          "segment": 6398
+        },
+        {
+          "value": "2003-12-30",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Thank you for your letters dated 30 December 2003 and 13 January 2004, regarding your views",
+          "segment": 6476
+        },
+        {
+          "value": "2004-01-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thank you for your letters dated 30 December 2003 and 13 January 2004, regarding your views",
+          "segment": 6476
+        },
+        {
+          "value": "1976-10-02",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "September, HMS ARK ROYAL arrived in Lisbon and remained in port until 2 October 1976.",
+          "segment": 6550
+        },
+        {
+          "value": "2003-11-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ref: Your unreferenced Chots of 19 November 2003 ( 10.16",
+          "segment": 6556
+        },
+        {
+          "value": "1976-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "alongside in Devenport from 17 July to 2 September 1976, having returned",
+          "segment": 6558
+        },
+        {
+          "value": "2003-11-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 04 November 2003 11 :37",
+          "segment": 6592
+        },
+        {
+          "value": "2003-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 28 October 2003 15:05",
+          "segment": 6605
+        },
+        {
+          "value": "2003-11-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 03 November 2003 09:36",
+          "segment": 6613
+        },
+        {
+          "value": "2003-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 28 October 2003 15:05",
+          "segment": 6619
+        },
+        {
+          "value": "2003-05-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "encow.1ter >.;;.•itli Humberside Police helicopter on May 30, 2003; your information and",
+          "segment": 6628
+        },
+        {
+          "value": "1976-09-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "tiles AF/7464172 Pt V (1976) and AF/616 (1 - 30 September 1976)~ however I llili",
+          "segment": 6642
+        },
+        {
+          "value": "2003-11-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 07 November 2003 11 :43",
+          "segment": 6678
+        },
+        {
+          "value": "2003-11-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Friday, November 07, 2003 11 :34:02 AM",
+          "segment": 6679
         }
       ]
     },
@@ -516029,6 +516878,21 @@
       ]
     },
     {
+      "documentId": "doc-78243a77bb8f",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302533521.txt",
+      "candidates": [
+        {
+          "value": "1964-06-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on June 5, 1964, near Texarkana.",
+          "segment": 31
+        }
+      ]
+    },
+    {
       "documentId": "doc-3d6e2a8f98a3",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302533528.txt",
       "candidates": [
@@ -520789,6 +521653,21 @@
           "method": "unclassified-mention",
           "evidence": "UFO Sighting, 11 November 1966",
           "segment": 3
+        }
+      ]
+    },
+    {
+      "documentId": "doc-00fe06282874",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302558655.txt",
+      "candidates": [
+        {
+          "value": "1966-11-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Approximate time 7:50-8:00 PM EST, 22 November 1966.",
+          "segment": 59
         }
       ]
     },
