@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-12T08:53:25Z",
+  "generatedAt": "2026-10-12T10:17:37Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9a4e3876f09fa687741620e27d2e8f0ab193691f"
+    "revision": "2061fbd61d3e92fcb9a64b560fe3e9a83ce4861b"
   },
-  "documentsWithCandidates": 15612,
+  "documentsWithCandidates": 15613,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -459469,6 +459469,30 @@
           "method": "unclassified-mention",
           "evidence": "Office on August 5, 1952, Major H. B. ELIRIIGE advised that OSI is no longer",
           "segment": 3984
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0209c7cf9b99",
+      "path": "DPIArchive/documents/130269-65-hs1-834228961-62-hq-83894-sub-a-pdf.txt",
+      "candidates": [
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 24, 1947, that he had balloons with dangling strips r",
+          "segment": 2616
+        },
+        {
+          "value": "1947-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "craft came on June 25, 1947, to the scare of over a hundred 11nag111ed, the story would have",
+          "segment": 2851
         }
       ]
     },
