@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-12T01:50:33Z",
+  "generatedAt": "2026-10-12T03:13:46Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "8f43061351374bf36a5551789d980d11389435b3"
+    "revision": "209ff55f69a1ae781b88180bd9a3cb58d90ced66"
   },
-  "documentsWithCandidates": 15586,
+  "documentsWithCandidates": 15588,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -530930,6 +530930,21 @@
       ]
     },
     {
+      "documentId": "doc-f01316f4893b",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28949490.txt",
+      "candidates": [
+        {
+          "value": "1952-09-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Time of sighting was 1730 hours Zebra, 29 September 1952.",
+          "segment": 21
+        }
+      ]
+    },
+    {
       "documentId": "doc-03872ddfa80d",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28949879.txt",
       "candidates": [
@@ -535984,6 +535999,21 @@
           "method": "unclassified-mention",
           "evidence": "It wes Friday night, June 17, 1966, at precisely 10 P.M., that",
           "segment": 23
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4182753cb420",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302552153.txt",
+      "candidates": [
+        {
+          "value": "1966-06-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference your unidentified observation of 18 June 1966.",
+          "segment": 64
         }
       ]
     },
