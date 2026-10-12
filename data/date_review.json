@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-12T10:17:37Z",
+  "generatedAt": "2026-10-12T11:45:29Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "2061fbd61d3e92fcb9a64b560fe3e9a83ce4861b"
+    "revision": "7a31057cc2d0d91fa930278c42cae093b29e9d2c"
   },
-  "documentsWithCandidates": 15613,
+  "documentsWithCandidates": 15619,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -523013,6 +523013,48 @@
       ]
     },
     {
+      "documentId": "doc-be6b7616e110",
+      "path": "National-Archives-UAP-Bulk/documents/23857122/333335394.txt",
+      "candidates": [
+        {
+          "value": "1949-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"On the night of 29 March 1949 I took off from Shemya at 2140",
+          "segment": 88
+        },
+        {
+          "value": "1949-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 29 March 1949 crew members of B-29 #4-6220%, assigned",
+          "segment": 110
+        },
+        {
+          "value": "1949-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "iạ On March 29, 1949 at approximately 2330 hours BST I was standing",
+          "segment": 177
+        },
+        {
+          "value": "1949-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"On the night of 29 March 1949 I took off from Shemya at 2140",
+          "segment": 189
+        }
+      ]
+    },
+    {
       "documentId": "doc-2b9312b6337e",
       "path": "National-Archives-UAP-Bulk/documents/23857122/333335820.txt",
       "candidates": [
@@ -532166,6 +532208,30 @@
       ]
     },
     {
+      "documentId": "doc-cb811e3b23b9",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-1/28935911.txt",
+      "candidates": [
+        {
+          "value": "1949-07-20",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Ified message, this headquarters, 25 ADD 71, dated 20 July 1949",
+          "segment": 27
+        },
+        {
+          "value": "1949-07-17",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "\"Between the hours of 1430 and 1530 on 17 July 1949, the wife",
+          "segment": 28
+        }
+      ]
+    },
+    {
       "documentId": "doc-588390fd44c5",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-1/28936278.txt",
       "candidates": [
@@ -534242,6 +534308,48 @@
       ]
     },
     {
+      "documentId": "doc-f660a163fcd3",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-3/28977306.txt",
+      "candidates": [
+        {
+          "value": "1958-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 8 March 1958 personnel of the Air Technical Intelligence Section",
+          "segment": 22
+        },
+        {
+          "value": "1957-10-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At 1830 hours (JST) on 31 October 1957 fishermen observed a pillar",
+          "segment": 28
+        },
+        {
+          "value": "1958-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "4e At 2034 hours (JST) on 1 March 1958 fishermen observed a luminous",
+          "segment": 29
+        },
+        {
+          "value": "1958-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At approximately 0959 hours (JST) on 19 February 1958 an unknown",
+          "segment": 34
+        }
+      ]
+    },
+    {
       "documentId": "doc-031cb1d39fc3",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-3/28977619.txt",
       "candidates": [
@@ -534559,6 +534667,21 @@
           "method": "unclassified-mention",
           "evidence": "Time and Date: 1749-1755, 11 February 1963.",
           "segment": 16
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9ff983986444",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-4/29000283.txt",
+      "candidates": [
+        {
+          "value": "1963-02-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "• DATE OF INFORMATION: 17 February 1963",
+          "segment": 17
         }
       ]
     },
@@ -537451,6 +537574,30 @@
           "method": "unclassified-mention",
           "evidence": "to Scout's on March 23, 1966..",
           "segment": 26
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e03492af7810",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302547975.txt",
+      "candidates": [
+        {
+          "value": "1966-03-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Observation, 23 March 1966",
+          "segment": 9
+        },
+        {
+          "value": "1966-03-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Sighting, 23 March 1966, Fort Bragg, California",
+          "segment": 20
         }
       ]
     },
@@ -544366,6 +544513,30 @@
           "method": "unclassified-mention",
           "evidence": "UFO Observation 17 December 1968",
           "segment": 9
+        }
+      ]
+    },
+    {
+      "documentId": "doc-df2693e1bdb3",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302581417.txt",
+      "candidates": [
+        {
+          "value": "1968-04-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The observer has a sighting for 19 April 1968 and 29 August",
+          "segment": 0
+        },
+        {
+          "value": "1968-12-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The 30 December 1968 sightings appears to be",
+          "segment": 1
         }
       ]
     },
