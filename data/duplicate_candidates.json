@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "354d48d66872c1dc1a6b108ab5728fd3d7baa427"
+    "revision": "aea588f9a311ef9a4b468f3f4a62b3faf42ec187"
   },
-  "count": 927,
-  "totalCount": 927,
-  "shownCount": 927,
+  "count": 929,
+  "totalCount": 929,
+  "shownCount": 929,
   "candidates": [
     {
       "category": "organization",
@@ -591,8 +591,8 @@
       "category": "organization",
       "left": {
         "name": "Directorate of Air Staff",
-        "mentions": 494,
-        "documentCount": 34
+        "mentions": 503,
+        "documentCount": 35
       },
       "right": {
         "name": "Directorate of Airstaff",
@@ -655,8 +655,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Assessment",
-        "mentions": 11,
-        "documentCount": 11
+        "mentions": 12,
+        "documentCount": 12
       },
       "right": {
         "name": "Intelligence Assessments",
@@ -1172,8 +1172,8 @@
       },
       "right": {
         "name": "Public Record Office",
-        "mentions": 262,
-        "documentCount": 35
+        "mentions": 282,
+        "documentCount": 36
       },
       "similarity": 0.976,
       "reason": "similar name",
@@ -1684,8 +1684,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 807,
-        "documentCount": 109
+        "mentions": 809,
+        "documentCount": 110
       },
       "similarity": 0.971,
       "reason": "similar name",
@@ -2351,8 +2351,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 10629,
-        "documentCount": 2163
+        "mentions": 10633,
+        "documentCount": 2165
       },
       "right": {
         "name": "FEDERAL BUREAU GF INVESTIGATION",
@@ -2367,8 +2367,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 10629,
-        "documentCount": 2163
+        "mentions": 10633,
+        "documentCount": 2165
       },
       "right": {
         "name": "Federal Bureau of Inveatigation",
@@ -2383,8 +2383,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 10629,
-        "documentCount": 2163
+        "mentions": 10633,
+        "documentCount": 2165
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGATIDN",
@@ -3071,8 +3071,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 774,
-        "documentCount": 420
+        "mentions": 775,
+        "documentCount": 421
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -3519,8 +3519,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 310,
-        "documentCount": 195
+        "mentions": 311,
+        "documentCount": 196
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -3535,8 +3535,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 310,
-        "documentCount": 195
+        "mentions": 311,
+        "documentCount": 196
       },
       "right": {
         "name": "Major Donald Keyhoes",
@@ -3700,8 +3700,8 @@
       },
       "right": {
         "name": "Record Office",
-        "mentions": 19,
-        "documentCount": 11
+        "mentions": 20,
+        "documentCount": 12
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -3775,8 +3775,8 @@
       "category": "person",
       "left": {
         "name": "Frank Kaufman",
-        "mentions": 6,
-        "documentCount": 6
+        "mentions": 7,
+        "documentCount": 7
       },
       "right": {
         "name": "Frank Kaufmann",
@@ -4239,8 +4239,8 @@
       "category": "location",
       "left": {
         "name": "Vandenberg Air Force Base",
-        "mentions": 325,
-        "documentCount": 187
+        "mentions": 331,
+        "documentCount": 188
       },
       "right": {
         "name": "Vandenburg Air Force Base",
@@ -4255,8 +4255,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 310,
-        "documentCount": 195
+        "mentions": 311,
+        "documentCount": 196
       },
       "right": {
         "name": "Major Donald Keyho",
@@ -4271,8 +4271,8 @@
       "category": "person",
       "left": {
         "name": "Timothy Good",
-        "mentions": 157,
-        "documentCount": 97
+        "mentions": 169,
+        "documentCount": 98
       },
       "right": {
         "name": "Timothy Goods",
@@ -4302,6 +4302,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Philip Corso",
+        "mentions": 115,
+        "documentCount": 81
+      },
+      "right": {
+        "name": "Colonel Phillip Corso",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "similarity": 0.96,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Jim Penniston",
         "mentions": 101,
         "documentCount": 48
@@ -4313,22 +4329,6 @@
       },
       "similarity": 0.96,
       "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Philip Corso",
-        "mentions": 114,
-        "documentCount": 80
-      },
-      "right": {
-        "name": "Colonel Phillip Corso",
-        "mentions": 6,
-        "documentCount": 6
-      },
-      "similarity": 0.96,
-      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -6719,8 +6719,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 10629,
-        "documentCount": 2163
+        "mentions": 10633,
+        "documentCount": 2165
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -6975,8 +6975,8 @@
       "category": "organization",
       "left": {
         "name": "Defense Intelligence",
-        "mentions": 527,
-        "documentCount": 185
+        "mentions": 534,
+        "documentCount": 187
       },
       "right": {
         "name": "Defonse Intelligence",
@@ -7359,8 +7359,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 1901,
-        "documentCount": 817
+        "mentions": 1904,
+        "documentCount": 818
       },
       "right": {
         "name": "Uniteo States Navy",
@@ -7796,8 +7796,8 @@
       },
       "right": {
         "name": "Department of Air",
-        "mentions": 807,
-        "documentCount": 109
+        "mentions": 809,
+        "documentCount": 110
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -7807,13 +7807,13 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Air",
-        "mentions": 807,
-        "documentCount": 109
+        "mentions": 809,
+        "documentCount": 110
       },
       "right": {
         "name": "Department of Ail",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -8046,6 +8046,22 @@
     {
       "category": "organization",
       "left": {
+        "name": "Foroa Intelligence",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "FOR INTELLIGENCE",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
         "name": "DePaul University",
         "mentions": 3,
         "documentCount": 3
@@ -8223,8 +8239,8 @@
       "category": "organization",
       "left": {
         "name": "American Institute of Aeronautics and Astronautics",
-        "mentions": 80,
-        "documentCount": 50
+        "mentions": 82,
+        "documentCount": 51
       },
       "right": {
         "name": "American Institute of Astronautics and Aeronautics",
@@ -8463,8 +8479,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 815,
-        "documentCount": 460
+        "mentions": 816,
+        "documentCount": 461
       },
       "right": {
         "name": "Stanton Freedman",
@@ -8479,8 +8495,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 815,
-        "documentCount": 460
+        "mentions": 816,
+        "documentCount": 461
       },
       "right": {
         "name": "Stanton Freidman",
@@ -8500,8 +8516,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 359,
-        "documentCount": 100
+        "mentions": 361,
+        "documentCount": 101
       },
       "similarity": 0.938,
       "reason": "similar name",
@@ -8527,8 +8543,8 @@
       "category": "organization",
       "left": {
         "name": "Air Intelligence",
-        "mentions": 157,
-        "documentCount": 57
+        "mentions": 158,
+        "documentCount": 58
       },
       "right": {
         "name": "Alr Intelligence",
@@ -9135,8 +9151,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 10629,
-        "documentCount": 2163
+        "mentions": 10633,
+        "documentCount": 2165
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -9535,8 +9551,8 @@
       "category": "organization",
       "left": {
         "name": "Directorate of Air Staff",
-        "mentions": 494,
-        "documentCount": 34
+        "mentions": 503,
+        "documentCount": 35
       },
       "right": {
         "name": "Directorate Air Staff",
@@ -10452,8 +10468,8 @@
       },
       "right": {
         "name": "Office of the Secretary of Defense",
-        "mentions": 359,
-        "documentCount": 100
+        "mentions": 361,
+        "documentCount": 101
       },
       "similarity": 0.932,
       "reason": "similar name",
@@ -10671,8 +10687,8 @@
       "category": "government_agency",
       "left": {
         "name": "Washington Navy Yard",
-        "mentions": 32,
-        "documentCount": 31
+        "mentions": 33,
+        "documentCount": 32
       },
       "right": {
         "name": "WASHINGTON NAVY YARD DC",
@@ -11055,8 +11071,8 @@
       "category": "person",
       "left": {
         "name": "Richard Haines",
-        "mentions": 99,
-        "documentCount": 69
+        "mentions": 100,
+        "documentCount": 70
       },
       "right": {
         "name": "Richard Haynes",
@@ -11247,8 +11263,8 @@
       "category": "person",
       "left": {
         "name": "George Harrison",
-        "mentions": 16,
-        "documentCount": 12
+        "mentions": 17,
+        "documentCount": 13
       },
       "right": {
         "name": "George Harris's",
@@ -11839,8 +11855,8 @@
       "category": "organization",
       "left": {
         "name": "Stanford University",
-        "mentions": 276,
-        "documentCount": 203
+        "mentions": 277,
+        "documentCount": 204
       },
       "right": {
         "name": "Stanford University In",
@@ -12031,8 +12047,8 @@
       "category": "location",
       "left": {
         "name": "Mount Stromlo Observatory",
-        "mentions": 25,
-        "documentCount": 15
+        "mentions": 26,
+        "documentCount": 16
       },
       "right": {
         "name": "MOUNT STROMLO OBSERVATORY SBa",
@@ -12207,8 +12223,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 380,
-        "documentCount": 209
+        "mentions": 381,
+        "documentCount": 210
       },
       "right": {
         "name": "Intelligence Cf'nter",
@@ -12223,8 +12239,8 @@
       "category": "program",
       "left": {
         "name": "Project Mogul",
-        "mentions": 224,
-        "documentCount": 63
+        "mentions": 227,
+        "documentCount": 64
       },
       "right": {
         "name": "Project Mogui",
@@ -13902,6 +13918,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Jim Weiner",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Tim Weiner",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.9,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Stephen Hawking",
         "mentions": 246,
         "documentCount": 153
@@ -14815,8 +14847,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 53217,
-        "documentCount": 12841
+        "mentions": 53291,
+        "documentCount": 12845
       },
       "right": {
         "name": "North American Space Agency",
@@ -14831,8 +14863,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 53217,
-        "documentCount": 12841
+        "mentions": 53291,
+        "documentCount": 12845
       },
       "right": {
         "name": "National Aeronautics and Space Agency",
