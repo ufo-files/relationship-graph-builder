@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-12T20:19:35Z",
+  "generatedAt": "2026-10-12T22:10:28Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9ea1b1be455bb4a7265f325c062fe684a4191f12"
+    "revision": "cc39bc8976d98526f62a1119a7e1a5a8fce63df4"
   },
-  "documentsWithCandidates": 15644,
+  "documentsWithCandidates": 15654,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -135017,6 +135017,48 @@
       ]
     },
     {
+      "documentId": "doc-1abec534cf97",
+      "path": "Archives-for-the-Unexplained/documents/a13-001-1d10368d73.txt",
+      "candidates": [
+        {
+          "value": "1997-05-12",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Mon, 12 May 1997 13:29:41 -0800",
+          "segment": 1
+        },
+        {
+          "value": "1997-05-09",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Fri, 9 May 1997 09:47:25 -0500",
+          "segment": 6
+        },
+        {
+          "value": "1997-05-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 9 May 1997 15:20:46 GMT",
+          "segment": 13
+        },
+        {
+          "value": "1997-05-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 09 May 1997 12:36:12 -0700",
+          "segment": 16
+        }
+      ]
+    },
+    {
       "documentId": "doc-632db818a327",
       "path": "Archives-for-the-Unexplained/documents/a13-002-56cab3e962.txt",
       "candidates": [
@@ -136303,6 +136345,21 @@
           "method": "document-header",
           "evidence": "Date: Mon, 28 Apr 1997 11:28:25 -0400 (EDT",
           "segment": 6
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8b6342347382",
+      "path": "Archives-for-the-Unexplained/documents/a30-002-43792096ca.txt",
+      "candidates": [
+        {
+          "value": "1997-05-29",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Thu, 29 May 1997 08:33:15 -0800",
+          "segment": 3
         }
       ]
     },
@@ -137746,6 +137803,30 @@
           "method": "unclassified-mention",
           "evidence": "File Created: Mar 7, 1997",
           "segment": 100
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fe688000a1b7",
+      "path": "Archives-for-the-Unexplained/documents/d08-001-4fd1bec5ca.txt",
+      "candidates": [
+        {
+          "value": "1997-03-08",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Sat, 8 Mar 1997 11:51:45 -0800",
+          "segment": 4
+        },
+        {
+          "value": "1997-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "File Created: Mar 8, 1997",
+          "segment": 65
         }
       ]
     },
@@ -204110,6 +204191,21 @@
       ]
     },
     {
+      "documentId": "doc-9681d213b5a5",
+      "path": "Black-Vault-UFO/pdfs/cendoc-envelope-09-1978.txt",
+      "candidates": [
+        {
+          "value": "1979-02-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Brasilia, February 19, 1979",
+          "segment": 2354
+        }
+      ]
+    },
+    {
       "documentId": "doc-7386f9f8dd66",
       "path": "Black-Vault-UFO/pdfs/central-intelligence-agency-releases-multiple-documents-after-a-request-was-filed-to-the-dia-in-2009-2.txt",
       "candidates": [
@@ -226543,6 +226639,273 @@
           "method": "unclassified-mention",
           "evidence": "Stafford area during the evening of 16 May 1988.",
           "segment": 98
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e29a789b0d0a",
+      "path": "Black-Vault-UFO/pdfs/defe-24-2076-1.txt",
+      "candidates": [
+        {
+          "value": "1981-01-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "reported by Lieutenant Colonel Halt in his memorandum dated 13 January 1981.",
+          "segment": 91
+        },
+        {
+          "value": "2001-06-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 13 June 2001 08:41",
+          "segment": 151
+        },
+        {
+          "value": "1981-01-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lieutenant Colonel Halt on 13 January 1981 (copy attached), we do not believe that it",
+          "segment": 180
+        },
+        {
+          "value": "1981-01-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "the comments contained in Lieutenant Colonel Halt’s letter dated 13 January 1981.",
+          "segment": 210
+        },
+        {
+          "value": "1998-03-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Defence, pursuant to his answers of 30 March 1998.",
+          "segment": 289
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Jaguar Peacetime establishmem 60 on 24 March 1997 were the result of aircraft breaking the",
+          "segment": 297
+        },
+        {
+          "value": "1998-04-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "As at 3 April 1998 date in question. to state precisely where military aircraft",
+          "segment": 301
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mr. Alasdair Morgan: To ask the Secretary of State the evening of 24 March 1997.",
+          "segment": 305
+        },
+        {
+          "value": "1998-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on 1 April 1998, Official Report, columns 547-48.",
+          "segment": 318
+        },
+        {
+          "value": "1998-03-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of State for Defence about depleted uranium shells at hon. Friend to the answer I gave her on 30 March 1998.",
+          "segment": 324
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "hours local time on the evening of 24 March 1997.",
+          "segment": 346
+        },
+        {
+          "value": "1998-03-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "gave her on 30 March 1998 (Off c al Report, Col 414).",
+          "segment": 360
+        },
+        {
+          "value": "1998-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "in the answer I gave her on 1 April 1998 (Official Report, Cols",
+          "segment": 365
+        },
+        {
+          "value": "1998-03-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to the answer I gave her on 30 March 1998 (Official Report, Col",
+          "segment": 371
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "24 March 1997 a number of witnesses located in and around the",
+          "segment": 378
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "hours local time on 24 March 1997; over an hour before the",
+          "segment": 393
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and 2107 hours local time on the evening of 24 March 1997.",
+          "segment": 409
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on 24 March 1997 a number of witnesses located in and around",
+          "segment": 432
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2030 and 2107 hours local time on 24 March 1997; over an hour",
+          "segment": 447
+        },
+        {
+          "value": "1998-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "in the answer 1 gave her on 1 April 1998 (Official Report, Cols",
+          "segment": 490
+        },
+        {
+          "value": "1998-03-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to the answer 1 gave her on 30 March 1998 (Official Report, Col",
+          "segment": 496
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "24 March 1997 a number of witnesses located in and around the",
+          "segment": 503
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "hours local time on 24 March 1997; over an hour before the",
+          "segment": 518
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and 2107 hours local time on the evening of 24 March 1997.",
+          "segment": 534
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on 24 March 1997 a number of witnesses located in and around",
+          "segment": 557
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2030 and 2107 hours local time on 24 March 1997; over an hour",
+          "segment": 572
+        },
+        {
+          "value": "1998-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Wednesday 1 April 1998 24361",
+          "segment": 974
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on 24 March 1997 a number of witnesses reported hearing a",
+          "segment": 997
+        },
+        {
+          "value": "1997-03-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on 24 March 1997 a number of witnesses reported hearing a",
+          "segment": 1063
         }
       ]
     },
@@ -329648,6 +330011,336 @@
       ]
     },
     {
+      "documentId": "doc-d6f2e68e53d6",
+      "path": "Black-Vault-UFO/pdfs/pdf-file-2-35-megs-2.txt",
+      "candidates": [
+        {
+          "value": "1953-02-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "·4. · Ple~se inform the . undersi~~cd by 25 February 1953 if you do '",
+          "segment": 8210
+        },
+        {
+          "value": "1965-08-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "20 August 1965 1tlue ot YJ Sr.o publ1ahe4 a f:oolnt ~ crx ( CHclW 1",
+          "segment": 9125
+        },
+        {
+          "value": "1967-02-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUBJECT: Visit of Dr. Condon to NPIC, 20 February 1967",
+          "segment": 9788
+        },
+        {
+          "value": "1967-02-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "' • • suBJEcT: Visit or Dr. Condon to NPIC I 20 February 1967",
+          "segment": 9819
+        },
+        {
+          "value": "1952-08-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DATE DIST. :f 1 Aug 1952",
+          "segment": 10424
+        },
+        {
+          "value": "1952-06-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PUBUSHED 22 May - ~6 Jun 1952",
+          "segment": 10428
+        },
+        {
+          "value": "1952-07-03",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "·elatms to have observed a :t'l)\"iug saucer above Dakar at o6o8 hours ou 3 July 1952.",
+          "segment": 10487
+        },
+        {
+          "value": "1952-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 13 July 1952,. tvo inhabitants or J'eda.la reported baTitl8 seen, at",
+          "segment": 10500
+        },
+        {
+          "value": "1952-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At 2300 hours on 15 July 1952, i.n the town o~ l5oukanefis, two bakers cl.ea.rl3'",
+          "segment": 10595
+        },
+        {
+          "value": "1952-10-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PU9USHEO 17 JQl - 8 Oct 1952 -",
+          "segment": 10704
+        },
+        {
+          "value": "1952-09-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I' OD the mo:.ru1ng or 6 September 1952, a uteorologi•t vu tat1ns weather",
+          "segment": 10765
+        },
+        {
+          "value": "1952-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 21 September 1952, at 1815. hcw-1, MD7 .Peopi~. ~t a beach 17 kilameten",
+          "segment": 10803
+        },
+        {
+          "value": "1952-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "j OD 21 September 1952, at 181.8 haan, 'the ~teri0118 n11ng object aeen 1D",
+          "segment": 10834
+        },
+        {
+          "value": "1952-10-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "bCI'Iln on 3 October 1952, a bright green 11sht fiaahe4 1'10m the eaat aero•• tbe ..'.• •",
+          "segment": 10851
+        },
+        {
+          "value": "1952-10-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "· - OD 6 October 1952, at 1830 hour•, a lll11liDOUI object vas 1een flying tor eev-",
+          "segment": 10928
+        },
+        {
+          "value": "1953-05-20",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "PUBLISHED U Mar • 20 May 1953 n::aut",
+          "segment": 10962
+        },
+        {
+          "value": "1953-12-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1.8, 19, and 20 December 1953.",
+          "segment": 11195
+        },
+        {
+          "value": "1953-12-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "17 December 1953, vhUe n11D& in a DC-3 over Skaaue, the7 sighted a m;rste- .",
+          "segment": 11202
+        },
+        {
+          "value": "1953-05-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the incident de6cribea bel.ov, vhich occurred on 26 May 1953.",
+          "segment": 11396
+        },
+        {
+          "value": "1953-12-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PUBUSHED 10 Dec 1953·2 Mar 19~ •",
+          "segment": 11545
+        },
+        {
+          "value": "1954-04-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At 2000 houre on 16 April 1954, C. Born of Worcester sav vhat appeared •",
+          "segment": 11726
+        },
+        {
+          "value": "1954-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "- BelnDJU !u:r1Dg :the eclipse on. 30 June 1954.",
+          "segment": 11826
+        },
+        {
+          "value": "1976-09-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "An unusual incident was obser\\'ed during a 10 September 1976 British",
+          "segment": 12805
+        },
+        {
+          "value": "1976-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "~- CD 25 June 1976,. ••d met vitb ~'{.·'_,, :..::-~~-- ;!1-J.._·~~ •",
+          "segment": 15191
+        },
+        {
+          "value": "1952-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Utah, 2 July 1952 and Great Falls, WOntana",
+          "segment": 15740
+        },
+        {
+          "value": "1952-08-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Bellefontaine,· Ohio (1 August 1952); Tremonton, Utah",
+          "segment": 15774
+        },
+        {
+          "value": "1952-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2 July 1952); .Great Falls",
+          "segment": 15775
+        },
+        {
+          "value": "1950-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Hon·:&na (15 August 1950); ·",
+          "segment": 15776
+        },
+        {
+          "value": "1952-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ya.&k, ·uonta.n& ·( 1 September 1952); llashinston, D.C. .",
+          "segment": 15777
+        },
+        {
+          "value": "1952-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "area (19 July 1952) ; and Baneda A .F .B., J'apan · : · · •",
+          "segment": 15778
+        },
+        {
+          "value": "1952-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "5 Au~t 1952), Port -Huron, ltichigan (29 July 1952",
+          "segment": 15779
+        },
+        {
+          "value": "1952-10-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and Presque Isle, Uaine. (10 October 1952) • •",
+          "segment": 15780
+        },
+        {
+          "value": "1949-04-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "•• On 24 April 1949, at 3 m1leR _·north ot ·Arrey, New .Mexico, (1070",
+          "segment": 16875
+        },
+        {
+          "value": "1952-12-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ite:1 3 of the F~no..1~es of lAC 1-!eetizlg, 4 December 1952",
+          "segment": 17901
+        },
+        {
+          "value": "1953-04-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "osrt§i}'ll:!tv (23 April 1953) • •",
+          "segment": 18345
+        },
+        {
+          "value": "1957-01-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thank you for ·your letter of 2 January 1957",
+          "segment": 18982
+        }
+      ]
+    },
+    {
       "documentId": "doc-08120252ee2a",
       "path": "Black-Vault-UFO/pdfs/pentagon-destroyed-e-mails-of-former-intelligence-official-tied-to-ufo-investigation-claims-2.txt",
       "candidates": [
@@ -396586,6 +397279,21 @@
           "method": "unclassified-mention",
           "evidence": "10 - THE COURIER, July 29, 1971 100 cold for 1uo· tu tel .m •n tbr nc.r",
           "segment": 2318
+        }
+      ]
+    },
+    {
+      "documentId": "doc-48afb1bf98d5",
+      "path": "DPIArchive/documents/116187-reports-on-flying-saucers-and-aerial-objects-australian-defence-department-multiple-document-reports-part-6-september-8-1984.txt",
+      "candidates": [
+        {
+          "value": "1966-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Our 5/6/Air(167) 16 Sep 1966 /",
+          "segment": 304
         }
       ]
     },
@@ -539288,6 +539996,39 @@
       ]
     },
     {
+      "documentId": "doc-5822e2022282",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302549072.txt",
+      "candidates": [
+        {
+          "value": "1966-04-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference your unidentified observation of 2 April 1966.",
+          "segment": 8
+        },
+        {
+          "value": "1966-04-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference your unidentified observation of 2 April 1966.",
+          "segment": 16
+        },
+        {
+          "value": "1966-04-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference your unidentified observation of 2 April 1966.",
+          "segment": 26
+        }
+      ]
+    },
+    {
       "documentId": "doc-cf41cc31fd74",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302549287.txt",
       "candidates": [
@@ -541499,6 +542240,21 @@
       ]
     },
     {
+      "documentId": "doc-729d73919896",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302558007.txt",
+      "candidates": [
+        {
+          "value": "1967-02-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference your letter of 15 February 1967 regarding your observation",
+          "segment": 3
+        }
+      ]
+    },
+    {
       "documentId": "doc-e137901d2845",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302558081.txt",
       "candidates": [
@@ -542413,6 +543169,39 @@
           "method": "unclassified-mention",
           "evidence": "3 April 1967, Pittsburgh, Pennsylvania.",
           "segment": 172
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7e37fd2cc733",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302564140.txt",
+      "candidates": [
+        {
+          "value": "1967-11-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "as November 3, 1967, when a",
+          "segment": 11
+        },
+        {
+          "value": "1967-04-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2 April 1967, Shively, Kentucky.",
+          "segment": 17
+        },
+        {
+          "value": "1967-04-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "3 April 1967, Pittsburgh, Pennsylvania.",
+          "segment": 22
         }
       ]
     },
