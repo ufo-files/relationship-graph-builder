@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-13T05:30:16Z",
+  "generatedAt": "2026-10-13T06:59:52Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "1df2036b85dba467382bcf25cd981e9106124e3c"
+    "revision": "f701d9ed21c0e0dfa50e8bf38e1c3abe64bc8db6"
   },
-  "documentsWithCandidates": 15726,
+  "documentsWithCandidates": 15764,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -5654,6 +5654,21 @@
       ]
     },
     {
+      "documentId": "doc-1cccb744782d",
+      "path": "Archives-for-the-Unexplained/documents/1982-03-16_Jefferson-County-Union_AFU-scan_CFI-archive_keyword-UFO.txt",
+      "candidates": [
+        {
+          "value": "1982-03-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Tuesday, March 30, 1982 � 'manager, a position he still holds. who spent 21 years in the U.S. Air",
+          "segment": 85
+        }
+      ]
+    },
+    {
       "documentId": "doc-b116b45e0de0",
       "path": "Archives-for-the-Unexplained/documents/1982-03-25_Daily-Record_AFU-scan_CFI-archive_keyword-UFO.txt",
       "candidates": [
@@ -5694,6 +5709,21 @@
           "kind": "unknown",
           "method": "unclassified-mention",
           "evidence": "THE SUN, Friday, August 20, 1982",
+          "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2583b5525757",
+      "path": "Archives-for-the-Unexplained/documents/1983-04-13_Perth-WA_AFU-scan_Contact-International-archive.txt",
+      "candidates": [
+        {
+          "value": "1983-04-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Wednesday, April 13, 1983",
           "segment": 0
         }
       ]
@@ -34238,6 +34268,21 @@
       ]
     },
     {
+      "documentId": "doc-aebf2a2cbfb7",
+      "path": "Archives-for-the-Unexplained/documents/2020-02-25---FADE-TO-BLACK-Radio---Ep.-1163-FADE-to-BLACK-Jimmy-Church-w-Billy-Carson-The-Creation-Story_vk9vEy6_Wa0---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Forces",
+          "segment": 4
+        }
+      ]
+    },
+    {
       "documentId": "doc-fb509b0a1290",
       "path": "Archives-for-the-Unexplained/documents/2020-03-02---NASA-Goddard---OSIRIS-REx-Observes-a-Black-Hole_Erry315AwmI---transcript-automated-.txt",
       "candidates": [
@@ -34723,6 +34768,48 @@
           "method": "unclassified-mention",
           "evidence": "uh April 16 2014. so I was looking over",
           "segment": 2664
+        }
+      ]
+    },
+    {
+      "documentId": "doc-9293ca59562a",
+      "path": "Archives-for-the-Unexplained/documents/2021-00-00_Social-Sciences-and-Humanities-Open---Vol-3-No-1---Escola-Gascon.txt",
+      "candidates": [
+        {
+          "value": "2020-09-18",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Received 18 September 2020; Received in revised form 20 January 2021; Accepted 26 January 2021",
+          "segment": 55
+        },
+        {
+          "value": "2021-01-20",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Received 18 September 2020; Received in revised form 20 January 2021; Accepted 26 January 2021",
+          "segment": 55
+        },
+        {
+          "value": "2021-01-26",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Received 18 September 2020; Received in revised form 20 January 2021; Accepted 26 January 2021",
+          "segment": 55
+        },
+        {
+          "value": "2021-02-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Available online 5 February 2021",
+          "segment": 56
         }
       ]
     },
@@ -36875,6 +36962,30 @@
       ]
     },
     {
+      "documentId": "doc-110b704c8e8d",
+      "path": "Archives-for-the-Unexplained/documents/2023-02-08---Spaced-Out-Radio---SPIRITUALITY-FINDING-YOUR-ZEN-CHI-AND-ALIENS-_XXw2WsKEjgg---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2001-06-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on June 16 2001 about 8 30 PM while out",
+          "segment": 5881
+        },
+        {
+          "value": "2002-04-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Washington on April 12 2002 she recorded",
+          "segment": 6086
+        }
+      ]
+    },
+    {
       "documentId": "doc-3c3664268b9a",
       "path": "Archives-for-the-Unexplained/documents/2023-02-09---Podcast-UFO-Live-Shows---AudioBlog-UFO-Abduction-Claims-by-the-End-of-the-1970s_LZHtvKyJBdM---transcript-automated-.txt",
       "candidates": [
@@ -38630,6 +38741,21 @@
       ]
     },
     {
+      "documentId": "doc-4732397fc0e0",
+      "path": "Archives-for-the-Unexplained/documents/2023-07-05---Eyes-On-Cinema-RealEOC-presents-Eyes-On-UFOs---USSR-space-probe-Phobos-II-photographed-UFO-near-Martian-moon-before-losing-radio-contact-1989_oAjBIOEb-027e9ccfaaac.txt",
+      "candidates": [
+        {
+          "value": "1989-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on March 1 1989 these pictures of a",
+          "segment": 496
+        }
+      ]
+    },
+    {
       "documentId": "doc-73a38039f5e9",
       "path": "Archives-for-the-Unexplained/documents/2023-07-28---The-Black-Vault-Originals---Viewing-Party-July-26-2023-House-UAP-Hearing_Axux_INFMZ4---transcript-automated-.txt",
       "candidates": [
@@ -38776,6 +38902,48 @@
           "method": "unclassified-mention",
           "evidence": "Date: 9 Sep 1996 02:24:54 GMT",
           "segment": 111
+        }
+      ]
+    },
+    {
+      "documentId": "doc-71915d1b9d2c",
+      "path": "Archives-for-the-Unexplained/documents/ACUFOS-Journal-vol-4-no-6.txt",
+      "candidates": [
+        {
+          "value": "1982-07-13",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Upon my request, on July 13, 1982, the Director of Naval Intelligence (DNI) declas­",
+          "segment": 504
+        },
+        {
+          "value": "1982-05-26",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "On May 26, 1982, the Department of Transport (now Aviation) released to me their",
+          "segment": 541
+        },
+        {
+          "value": "1982-11-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "During my November 19, 1982, visit to the Bureau of Air Safety I nvestigation, I had",
+          "segment": 549
+        },
+        {
+          "value": "1982-12-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The (Sydney) Sun, December 8, 1982.",
+          "segment": 582
         }
       ]
     },
@@ -39226,6 +39394,21 @@
           "method": "relative-date-exclusion",
           "evidence": "between Laredo and Del Rio, and the date as \"6 December 1950,\" precisely",
           "segment": 396
+        }
+      ]
+    },
+    {
+      "documentId": "doc-eed62e6988a2",
+      "path": "Archives-for-the-Unexplained/documents/APCIC---Vol-10-No-10---1985.txt",
+      "candidates": [
+        {
+          "value": "1985-08-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "But on stardate 26 August 1985, this They were also talking about a BUT THE BULK of reports, at",
+          "segment": 566
         }
       ]
     },
@@ -39992,6 +40175,39 @@
       ]
     },
     {
+      "documentId": "doc-ff57533b6ffb",
+      "path": "Archives-for-the-Unexplained/documents/Alternate-Horizons-Newsletter---Vol-3-No-1.txt",
+      "candidates": [
+        {
+          "value": "1968-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "attributed to the Hamilton Spectator, July 13, 1968, police constable Walt Jewel sighted",
+          "segment": 30
+        },
+        {
+          "value": "1967-11-24",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Another article, this by Diane Stepp in the Atlanta Constitution, November 24, 1967, tells",
+          "segment": 213
+        },
+        {
+          "value": "1968-11-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "seeking\" on the night of November 27, 1968.",
+          "segment": 222
+        }
+      ]
+    },
+    {
       "documentId": "doc-ec4f38cee2db",
       "path": "Archives-for-the-Unexplained/documents/Amskaya---No-021---1991-01.txt",
       "candidates": [
@@ -40003,6 +40219,21 @@
           "method": "unclassified-mention",
           "evidence": "\"R. Gordon now relates how, on 6 June 1967, he and a friend were viewing Mars through",
           "segment": 131
+        }
+      ]
+    },
+    {
+      "documentId": "doc-28794d7f6e02",
+      "path": "Archives-for-the-Unexplained/documents/Amskaya---No-091---2012-04.txt",
+      "candidates": [
+        {
+          "value": "2009-10-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 17 October 2009, driving back from a meal inDevizes to the Beckhampton I Avebury",
+          "segment": 71
         }
       ]
     },
@@ -43639,6 +43870,21 @@
           "method": "unclassified-mention",
           "evidence": "ately ignoring the true research of others �� the on May 15, 1994 was to the point.",
           "segment": 356
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4a23e02dfa26",
+      "path": "Archives-for-the-Unexplained/documents/Ancient-Skies---Vol-24-No-4.txt",
+      "candidates": [
+        {
+          "value": "1944-05-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 3, 1944 , Mr. Kaschel is a German citizen.",
+          "segment": 49
         }
       ]
     },
@@ -53594,6 +53840,30 @@
       ]
     },
     {
+      "documentId": "doc-cded4ec1b644",
+      "path": "Archives-for-the-Unexplained/documents/Civlilian-Saucer-Intellligence-of-New-York---No-13.txt",
+      "candidates": [
+        {
+          "value": "1956-04-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Publto Meeting of April 28, 1956",
+          "segment": 1
+        },
+        {
+          "value": "1954-08-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Fin~lly. on August 3, 1954. they issued an order notifying me that I must say what",
+          "segment": 320
+        }
+      ]
+    },
+    {
       "documentId": "doc-f231ea7d16b9",
       "path": "Archives-for-the-Unexplained/documents/Close-Encounters-Down-Under---S01E03---transcript-automated-.txt",
       "candidates": [
@@ -54319,6 +54589,75 @@
           "method": "unclassified-mention",
           "evidence": "7/90 Kenneth Boulding's AGLS lecture Nov 4, 1966;\" \"Winnipeg, June 3",
           "segment": 307
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b86d1c3edfb3",
+      "path": "Archives-for-the-Unexplained/documents/DOC_0000017449.txt",
+      "candidates": [
+        {
+          "value": "1955-04-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "through 30 April 1955, recommended in connection with subproject _ __",
+          "segment": 31
+        },
+        {
+          "value": "1955-09-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TSS/OC;~(26 September 1955",
+          "segment": 95
+        },
+        {
+          "value": "1955-09-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TO - - • Chief, TS3 Chemical Divisio!l DATB: - 20 September 1955",
+          "segment": 97
+        },
+        {
+          "value": "1955-09-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "14 September 1955 ,-establlsbing-:_a,:l::irnp_~_s.i.::i'l,ll1d for NKULTRA -",
+          "segment": 101
+        },
+        {
+          "value": "1955-09-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "14 September 1955, ~:i~~Ushing-__t'!l_j.mpl'~~:t.-~d for MiroLTM",
+          "segment": 143
+        },
+        {
+          "value": "1955-09-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "fSS/CD ~(14 September 1955",
+          "segment": 248
+        },
+        {
+          "value": "1955-06-17",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "meriiorandum dated 17 June 1955 which was approved by Gen. ~",
+          "segment": 335
         }
       ]
     },
@@ -74483,6 +74822,48 @@
       ]
     },
     {
+      "documentId": "doc-1e524ea5c4dc",
+      "path": "Archives-for-the-Unexplained/documents/JUFOF---Issue-243---2019-03-.txt",
+      "candidates": [
+        {
+          "value": "2017-09-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "als reale Fakten in die Ermittlungsergebnisse Version-2017-09-23.pdf, gesichtet am",
+          "segment": 610
+        },
+        {
+          "value": "2011-11-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "für die Betroffenen, die plötzlich mit Erinne- Version-2011-11-08.pdf 8.11.2011",
+          "segment": 899
+        },
+        {
+          "value": "2017-09-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Version-2017-09-23.pdf 23.9.2017 Fiedler, Peter: Dissoziative Störungen und",
+          "segment": 935
+        },
+        {
+          "value": "2017-09-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Version-2017-09-23.pdf, gesichtet am irdische die Erde retten wollen – ein un-",
+          "segment": 941
+        }
+      ]
+    },
+    {
       "documentId": "doc-325d6eb8d40b",
       "path": "Archives-for-the-Unexplained/documents/Jones-William-E---Inventory.txt",
       "candidates": [
@@ -74801,6 +75182,57 @@
       ]
     },
     {
+      "documentId": "doc-3d6c6691b313",
+      "path": "Archives-for-the-Unexplained/documents/Journal-of-UFO-History---Vol-2-No-2.txt",
+      "candidates": [
+        {
+          "value": "1952-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Utah on July 2, 1952, and his wife who I asked Newhouse if it was correct that he",
+          "segment": 284
+        },
+        {
+          "value": "1970-05-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "a May 4, 1970, letter from McDonald to have been in 1954, and Al Chop was also",
+          "segment": 292
+        },
+        {
+          "value": "1965-10-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Oct 19, 1965: ABC-1V Nightlife program cut off headUghts, and shorted out",
+          "segment": 378
+        },
+        {
+          "value": "1966-05-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 10, 1966: CBS-1V, New York, \"CBS of solid, maneuverable objects of",
+          "segment": 391
+        },
+        {
+          "value": "1960-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Could we call them July 5, 1960",
+          "segment": 434
+        }
+      ]
+    },
+    {
       "documentId": "doc-f105b027850d",
       "path": "Archives-for-the-Unexplained/documents/Kalamazoo-Flying-Saucer-Study-Club---No-07.txt",
       "candidates": [
@@ -74872,6 +75304,39 @@
           "method": "unclassified-mention",
           "evidence": "OBSERVATION RENTREE ATMOSPHERIQUE D’UN BOLIDE LE 24 janvier 2012",
           "segment": 0
+        }
+      ]
+    },
+    {
+      "documentId": "doc-818f0ce6c547",
+      "path": "Archives-for-the-Unexplained/documents/Little-Listening-Post--1955-06-07---Vol-02-No-03.txt",
+      "candidates": [
+        {
+          "value": "1952-11-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Since the memorable November 20, 1952",
+          "segment": 265
+        },
+        {
+          "value": "1952-12-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "and since December 13, 1952 when George Adamski was able to make photographs",
+          "segment": 267
+        },
+        {
+          "value": "1952-12-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "saucer of December 13, 1952.",
+          "segment": 271
         }
       ]
     },
@@ -74950,6 +75415,30 @@
           "method": "unclassified-mention",
           "evidence": "network on October 28, 1995, that from surrounding tissues to support",
           "segment": 254
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f60fbb04aed0",
+      "path": "Archives-for-the-Unexplained/documents/MUFON-Arizona---1998-05-27---Vol-07-No-05.txt",
+      "candidates": [
+        {
+          "value": "1997-05-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MEETING DATE: Wednesday, May 27, 1997 *MEETING TIME: 7:30p.m.",
+          "segment": 8
+        },
+        {
+          "value": "1998-04-04",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "creatures weren't benevolent aliens who In a story dated April 4, 1998� that",
+          "segment": 266
         }
       ]
     },
@@ -77617,6 +78106,39 @@
           "method": "unclassified-mention",
           "evidence": "Editor: JOHN HARNEY No. 26 April 2000",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-927648357c4c",
+      "path": "Archives-for-the-Unexplained/documents/Magonia-Supplement---No-55---2005-03-15.txt",
+      "candidates": [
+        {
+          "value": "2004-11-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "9- 1 1 November 2004 marked the listening to a local radio talk show when",
+          "segment": 23
+        },
+        {
+          "value": "1974-06-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The diver, Mr Mark Stamey, age 26, Levittown, Pennsylvania, 14 June 1974-",
+          "segment": 216
+        },
+        {
+          "value": "1974-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "13:30, 38-40; Rev. 14:15-20; 2 Carbondale matter on 6 December 1974 copy of his report to Dr Hynek on the",
+          "segment": 345
         }
       ]
     },
@@ -82855,6 +83377,57 @@
           "method": "unclassified-mention",
           "evidence": "operation on December 17, 1969, that the Air Force terminated Project Moon",
           "segment": 1073
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fb1327eb255a",
+      "path": "Archives-for-the-Unexplained/documents/Missing-Link---1992-04---no-115.txt",
+      "candidates": [
+        {
+          "value": "1964-06-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On June 10, 1964 I lead a group of people to the aerie I had discovered earlier near Anderson Peak at",
+          "segment": 188
+        },
+        {
+          "value": "1964-08-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On August 28, 1964, I lead a convoy up the Pacific Coast Highway through Pismo Beach, past Hearst",
+          "segment": 203
+        },
+        {
+          "value": "1964-08-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On August 31, 1964, the B.U. telescope arrived on site with its truck and its caravan of people for a 30",
+          "segment": 213
+        },
+        {
+          "value": "1973-11-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 3, 1973 20:25 Over 150 km from Bogota",
+          "segment": 767
+        },
+        {
+          "value": "1974-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 25, 1974 05:00 Bogota (Cundinamarca, Colombia",
+          "segment": 955
         }
       ]
     },
@@ -89408,6 +89981,21 @@
       ]
     },
     {
+      "documentId": "doc-bba9eeb24b0d",
+      "path": "Archives-for-the-Unexplained/documents/Northern-UFO-News---No-150.txt",
+      "candidates": [
+        {
+          "value": "1969-04-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Finally (cage 6918) on 25 April 1969 Mr 8 WG8 a t",
+          "segment": 460
+        }
+      ]
+    },
+    {
       "documentId": "doc-14f4be1c8b44",
       "path": "Archives-for-the-Unexplained/documents/Northern-UFO-News---No-178.txt",
       "candidates": [
@@ -89666,6 +90254,21 @@
       ]
     },
     {
+      "documentId": "doc-ff82deeb8e9a",
+      "path": "Archives-for-the-Unexplained/documents/Notiziario-UFO---1980-04-05---Vol-3-No-4-5.txt",
+      "candidates": [
+        {
+          "value": "1978-11-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "circa di venerdì 24 novembre 1978 ed",
+          "segment": 150
+        }
+      ]
+    },
+    {
       "documentId": "doc-cab49c50b9d1",
       "path": "Archives-for-the-Unexplained/documents/Notiziario-UFO---1982-01-12---Vol-17-No-100-English-abstracts.txt",
       "candidates": [
@@ -89902,6 +90505,99 @@
           "method": "unclassified-mention",
           "evidence": "then one veered off. (BBC News 11 February 2009",
           "segment": 527
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cfbdf96f57d3",
+      "path": "Archives-for-the-Unexplained/documents/Ouranos---Nouvelle-Serie---no-05---2e-trim-1972.txt",
+      "candidates": [
+        {
+          "value": "1971-02-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Analyse du cas de la photographie prise en Corse le 12 février 1971",
+          "segment": 150
+        },
+        {
+          "value": "1971-05-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Allemagne - 23 mai 1971 L'objet. toutefois, ne se posa à aucun moment sur le sol.",
+          "segment": 215
+        },
+        {
+          "value": "1971-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le. 16 septembre 1971, à 20 h 35, temps c iv i l , l e standard tél é­ se déplace rapidement.",
+          "segment": 294
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1f32e2f22e56",
+      "path": "Archives-for-the-Unexplained/documents/Ovni-Presence---No-36.txt",
+      "candidates": [
+        {
+          "value": "1985-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le cas italo-suisse du 15 août 1985",
+          "segment": 1
+        },
+        {
+          "value": "1985-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Elle a pour but l'étude du phéno­ dans le ciel italien, près de la frontière suisse, le jeudi 15 août 1985",
+          "segment": 16
+        },
+        {
+          "value": "1981-09-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 17 septembre 1981, un \"objet\" est",
+          "segment": 207
+        },
+        {
+          "value": "1985-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Genève (pas de réponse , donc , au suj et du Mme D. Greub : non , leurs informations ways, le 10 juillet 1985, le pilode d'un Air",
+          "segment": 217
+        },
+        {
+          "value": "1985-08-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "reçu rent beau coup de t éléphones de Zurich, 26 août 1985; deR. G. , 29 août et 5 septembre",
+          "segment": 257
+        },
+        {
+          "value": "1954-10-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Deux-Sèvres, le 3 octobre 1954: mécanismes d'un canular, manipula­ notre interlocuteur a indiqué que ce qui lui avait est relatée le 13 sept. en p.2, et le 16 sept . en",
+          "segment": 420
         }
       ]
     },
@@ -91270,6 +91966,48 @@
           "method": "unclassified-mention",
           "evidence": "Aimee Hoffman went missing on November 23, 1982.",
           "segment": 19
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d1c180304d38",
+      "path": "Archives-for-the-Unexplained/documents/Paranthropology---Vol-3-No-1---2012-01.txt",
+      "candidates": [
+        {
+          "value": "2011-06-08",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "accessed 08 June 2011). psychodynamic",
+          "segment": 378
+        },
+        {
+          "value": "2004-06-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Schroll from Dr. Tart’s presentation June 16, 2004, at of the paranormal is bringing science and spirit together.",
+          "segment": 1146
+        },
+        {
+          "value": "2011-11-18",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "shamans in Buriatiia, who are striving to reinvigorate many.html [Accessed 18 November 2011].",
+          "segment": 2306
+        },
+        {
+          "value": "2011-11-21",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Los Exam_Ectoplasm.pdf [Accessed 21 November 2011].",
+          "segment": 2368
         }
       ]
     },
@@ -94553,6 +95291,30 @@
       ]
     },
     {
+      "documentId": "doc-c2f833cc1b20",
+      "path": "Archives-for-the-Unexplained/documents/SPACE---No-05---1957-05.txt",
+      "candidates": [
+        {
+          "value": "1954-08-12",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "was, Aviation f.Bga.zine would probably have Force Regulation 200-2, dated August 12, 1954",
+          "segment": 65
+        },
+        {
+          "value": "1957-04-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DALIAS, TEXAS-----April 5, 1957.",
+          "segment": 146
+        }
+      ]
+    },
+    {
       "documentId": "doc-508f0478ff48",
       "path": "Archives-for-the-Unexplained/documents/SPACE---No-37---1960-01.txt",
       "candidates": [
@@ -96652,6 +97414,21 @@
           "method": "unclassified-mention",
           "evidence": "Guernsey Eve. Press, 31 May 1999. you don't believe in UFOs.",
           "segment": 264
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a47f8edcbdc9",
+      "path": "Archives-for-the-Unexplained/documents/Saucer-Smear---Vol-52-No-02---2005.txt",
+      "candidates": [
+        {
+          "value": "2002-03-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A patent was granted on March 26, 2002 for \"The Motionless Magnetic",
+          "segment": 334
         }
       ]
     },
@@ -102482,6 +103259,102 @@
       ]
     },
     {
+      "documentId": "doc-a1fa1aa3b4c8",
+      "path": "Archives-for-the-Unexplained/documents/Skeptic---2007---Vol-20-No-2.txt",
+      "candidates": [
+        {
+          "value": "2007-01-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Retrieved on 10 January 2007 from teaching of evolutionary biology. journal of Biological",
+          "segment": 601
+        },
+        {
+          "value": "2007-01-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "New Scientist, retrieved on 10 January 2007 from Triumph ofan Idea (pxi) London: William Heinemann.",
+          "segment": 605
+        },
+        {
+          "value": "2007-01-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Retrieved on 10 January 2007 from",
+          "segment": 611
+        },
+        {
+          "value": "2007-01-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Guardian, retrieved on 10 Truth in Science (n.d.) Retrieved 10 January 2007",
+          "segment": 622
+        },
+        {
+          "value": "2006-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "option would have been partisans of ID as understood Retrieved 26 January 2006 from http://news. bbc. co.",
+          "segment": 982
+        },
+        {
+          "value": "2006-10-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Independent, 12 October 2006.",
+          "segment": 995
+        },
+        {
+          "value": "2006-01-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "one they would all have heard of, and they may well not Retrieved 30 January 2006 from http://www. mori. com",
+          "segment": 998
+        },
+        {
+          "value": "2007-03-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "how much extraneous prayer is being if this would turn out to be a stable Retrieved 11 March 2007 from",
+          "segment": 1390
+        },
+        {
+          "value": "2007-03-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Well, this surely Retrieved 11 March 2007 from",
+          "segment": 1405
+        },
+        {
+          "value": "2007-03-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Retrieved 11 March 2007 from",
+          "segment": 1420
+        }
+      ]
+    },
+    {
       "documentId": "doc-82f7541d5a03",
       "path": "Archives-for-the-Unexplained/documents/Skeptical-Eye---Vol-16-No-2---2004.txt",
       "candidates": [
@@ -102973,6 +103846,93 @@
           "method": "unclassified-mention",
           "evidence": "31.9 FPS 2020-05-30 21:45:27 UTC+02:00",
           "segment": 1
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e4f9911f4df6",
+      "path": "Archives-for-the-Unexplained/documents/Stigmata---Issue-22.txt",
+      "candidates": [
+        {
+          "value": "1961-06-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "'1be first incident was discovered oo June 14, 1961 as l£:Mery crossed his pa.Sture",
+          "segment": 82
+        },
+        {
+          "value": "1983-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the Myatt's claim. (Source: SHEBotAN DEMX:RAT, July 31, 1983",
+          "segment": 414
+        },
+        {
+          "value": "1984-10-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "en Friday, October 19, 1984 at approx.",
+          "segment": 658
+        },
+        {
+          "value": "1984-10-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "en t-bnday, October 22, 1984, at approx.",
+          "segment": 679
+        },
+        {
+          "value": "1984-10-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On t-bnday, October 22, 1984, at approx.",
+          "segment": 689
+        },
+        {
+          "value": "1984-10-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Q1 Tues., October 23, 1984, this investigator and Dep. carl Veltri of the L.A.",
+          "segment": 700
+        },
+        {
+          "value": "1984-12-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Then- the incident of December 21, 1984.",
+          "segment": 1050
+        },
+        {
+          "value": "1984-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "OKLAHOMAN & TIMES (Okla.City,OK), April 21, 1984",
+          "segment": 1123
+        },
+        {
+          "value": "1984-11-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Source : r:NUMCI.J\\W a:xJRIER-IIflW.D, November 1, 1984",
+          "segment": 1174
         }
       ]
     },
@@ -114866,6 +115826,456 @@
       ]
     },
     {
+      "documentId": "doc-79628d83d9a9",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Newsclipping-Service---1978-11---no-112.txt",
+      "candidates": [
+        {
+          "value": "1978-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1) l;~t•. ol lntidcnt ; July 6, 1978 electrical di•charges, stat\"d that \"It is a Vf'ridical case\", but \"I",
+          "segment": 1423
+        },
+        {
+          "value": "1978-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "They declared h~vi n1 notic.>d that something strange wa• happening, when 1) Date of incident: July 6, 1978",
+          "segment": 1443
+        },
+        {
+          "value": "1978-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"the plclo. u;> that ~~s in front of their 1930 modr.i faded from vif'w .os if )) Name of paper and d .He of clip: Cr6nica, September 2, 1978",
+          "segment": 1444
+        },
+        {
+          "value": "1978-08-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "3) !lame of pi>p~r and dat<O of clip: CrGnica- August 31, 1978 to severe technical tests two local professionals who claimed having seen",
+          "segment": 1473
+        },
+        {
+          "value": "1978-09-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "• Data of incid~nt: September 6, 1978",
+          "segment": 1520
+        },
+        {
+          "value": "1978-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"lhey could see that thf'y were In a city unknown to them wl tt.out appar<\"nt 2) Date of incident : September 8, 1978",
+          "segment": 1583
+        },
+        {
+          "value": "1978-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "2) Date of i n cident : September 8, 1978 national aericultural project.",
+          "segment": 1644
+        }
+      ]
+    },
+    {
+      "documentId": "doc-480f49d1e4f7",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Newsclipping-Service---1980-01---no-126.txt",
+      "candidates": [
+        {
+          "value": "1979-08-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Val Johnson on August 27, 1979 . page was not due to a mechanical He described the UFO as about 40",
+          "segment": 57
+        },
+        {
+          "value": "1976-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The photo was taken on April 14, 1976. them back again to Tar Heel ing the thirJ quarter.",
+          "segment": 1304
+        },
+        {
+          "value": "1979-11-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "cmenon has al.l'!gedly ceer. &ften ':y others although it vas not poaaibl'l to f'!rv1 Na•e of paper and date of clip: La ilaz6n, November 28, 1979",
+          "segment": 2197
+        },
+        {
+          "value": "1979-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Bame of paper and date of clip: La Opini6n, Noveaber 29, 1979 Naae of papar and date of clip: La Razl!n, December 12, 1979",
+          "segment": 2244
+        },
+        {
+          "value": "1979-12-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date of incident: December 1, 1979 City and country of incident• Las Palma& (Canary Islands), Spain",
+          "segment": 2269
+        },
+        {
+          "value": "1979-12-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Jilaae of paper and date of clip: La Nacion, December 2, 1979 Date of incident• June 4, 1979",
+          "segment": 2270
+        },
+        {
+          "value": "1979-06-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Jilaae of paper and date of clip: La Nacion, December 2, 1979 Date of incident• June 4, 1979",
+          "segment": 2270
+        },
+        {
+          "value": "1979-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "aet free without being charged, what made those LD favor ot an ab- Date of incident• July 1, 1979 '",
+          "segment": 2308
+        },
+        {
+          "value": "1979-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "duction\" presume that their st~ry was true or that, at least, it de- Name and date of papera La Vanguardia, July 4, 1979",
+          "segment": 2309
+        },
+        {
+          "value": "1979-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Name of paper and date of clip: Cr<'inica, December 6, 1979 Arguete beach, making the water boil.",
+          "segment": 2327
+        },
+        {
+          "value": "1979-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "aove at great speed and at time~ I thought they ver~ motionl~sa and Name and date of papera ABC, July 5, 1979",
+          "segment": 2346
+        },
+        {
+          "value": "1979-12-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date of incident: December 4, 1979",
+          "segment": 2378
+        },
+        {
+          "value": "1979-12-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "lfa2e of paper and date of clip: La Raz6n, December 8, 1979",
+          "segment": 2382
+        }
+      ]
+    },
+    {
+      "documentId": "doc-bfa0c2234901",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Newsclipping-Service---1990-07---no-252.txt",
+      "candidates": [
+        {
+          "value": "1988-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 21, 1988, in Gulf Breeze, a city fakes.",
+          "segment": 26
+        },
+        {
+          "value": "1988-05-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "~ 1987 and May 21, 1988 in Gulf Breeze, a Panhandle city peal,\" which Walters' book has in aces.",
+          "segment": 89
+        },
+        {
+          "value": "1990-06-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO spotter sought by group DAILY NEWS, Los Angeles, CA - June 4, 1990",
+          "segment": 413
+        },
+        {
+          "value": "1990-06-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "POST, New York, NY- June 7, 1990",
+          "segment": 477
+        },
+        {
+          "value": "1961-04-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I Recall April 18, 1961, and he told",
+          "segment": 512
+        },
+        {
+          "value": "1961-04-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Qj 1961 when he told of a flying to the county judge, then Frank the April 18, 1961, experience",
+          "segment": 529
+        },
+        {
+          "value": "1990-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "continued from page 5 - SENTINEL, Gulf Breeze, FL - June 21, 1990",
+          "segment": 752
+        },
+        {
+          "value": "1990-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "continued from page 6 - SENTINEL, Gulf Breeze, FL - June 21, 1990",
+          "segment": 913
+        },
+        {
+          "value": "1987-11-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "home soon after the sun had set on the night of November 11, 1987.",
+          "segment": 994
+        },
+        {
+          "value": "1990-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SENTINEL, Gulf Breeze, FL - June 21, 1990 CR: R. Reid",
+          "segment": 1052
+        },
+        {
+          "value": "1990-04-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to media types from around the world and would be deeply hurt if it turns April 30, 1990 CR: J. Fry/COUD-I",
+          "segment": 1055
+        },
+        {
+          "value": "1988-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "sacola Bay on July 8, 1988 looked said she met Walters some time after and T-shirts at the Hilton.",
+          "segment": 1297
+        },
+        {
+          "value": "1990-06-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ity it was some of their LETTERS June 28, 1990",
+          "segment": 1413
+        },
+        {
+          "value": "1990-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "POST-DISPATCH, St. Louis, HO - June 24, 1990 CR: H. Beach The Mutual UFO Network thoroughl y",
+          "segment": 1428
+        },
+        {
+          "value": "1990-06-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SENTINEL, Gulf Breeze, FL - June 28, 1990 CR: R. Reid p.m.",
+          "segment": 1590
+        },
+        {
+          "value": "1990-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "calling on reinforcements from the 500 yards from White Wells, on the tion.\" experience UFO-type phenomena may KS - July 13, 1990",
+          "segment": 1775
+        },
+        {
+          "value": "1990-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "FARMING NEWS, London, England - June 1, 1990 Broadcasting House",
+          "segment": 1955
+        },
+        {
+          "value": "1990-06-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "HAll., Oxford, England- June 8, 1990 CR: T. Good",
+          "segment": 2129
+        },
+        {
+          "value": "1990-06-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by Gareth Hughes before had ever seen any- June 3, 1990 CR: T. Good field and late r discm·-",
+          "segment": 2159
+        },
+        {
+          "value": "1990-06-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "HID-DEVON ADVERTISER, Devon - June 15, 1990 CR: T. Good",
+          "segment": 2232
+        },
+        {
+          "value": "1990-06-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "RHYL & PRESTATYN VISITOR, Wales- June 7, 1990 CK: T. Good",
+          "segment": 2399
+        },
+        {
+          "value": "1990-06-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 14, 1990 CR: T. Good",
+          "segment": 2485
+        },
+        {
+          "value": "1990-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUN, Melbourne, Vi ctoria, Australia - July 9, 1990 CR: VUFORS",
+          "segment": 2506
+        },
+        {
+          "value": "1990-06-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "lights bame June 13, 1990",
+          "segment": 2529
+        },
+        {
+          "value": "1990-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "OBSERVER, Charlotte, NC - June 24, 1990 CR: G. Fawcett CHRONICLE, San Francisco, CA- July 6, 1990",
+          "segment": 2625
+        },
+        {
+          "value": "1990-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "OBSERVER, Charlotte, NC - June 24, 1990 CR: G. Fawcett CHRONICLE, San Francisco, CA- July 6, 1990",
+          "segment": 2625
+        },
+        {
+          "value": "1990-04-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 27, 1990 CR: H. Bauer /COUD-1 for little green men with misshap-",
+          "segment": 2712
+        },
+        {
+          "value": "1990-03-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DISPATCH, Columbus, OH -March 28, 1990 CR: J. Fry/COUD-1",
+          "segment": 2742
+        }
+      ]
+    },
+    {
       "documentId": "doc-c44039e6d177",
       "path": "Archives-for-the-Unexplained/documents/UFO-Newsclipping-Service---2004-05---no-418.txt",
       "candidates": [
@@ -115084,6 +116494,174 @@
           "method": "unclassified-mention",
           "evidence": "EASTERN OKLAHOMA COUNTY TODAY, Oklahoma City, OK· March 4, 2004",
           "segment": 1974
+        }
+      ]
+    },
+    {
+      "documentId": "doc-843199127aed",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Newsclipping-Service---2005-05---no-430.txt",
+      "candidates": [
+        {
+          "value": "2005-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "INDEPENDENT RECORD, Helena, MT - April 14, 2005",
+          "segment": 1
+        },
+        {
+          "value": "2005-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Helens, MT - April 14, 2005",
+          "segment": 81
+        },
+        {
+          "value": "2005-04-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DAILY TIMES, Farmington, NM - April 3, 2005 CA: R. Swiatek",
+          "segment": 213
+        },
+        {
+          "value": "2005-04-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "HERALD, Circleville, OH - April 27, 2005 CR: J. Fry",
+          "segment": 214
+        },
+        {
+          "value": "1968-10-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by a \"shoot down\" policy imple- Doreen Chavez of Nageezi said alien antennas. on 24 October 1968.",
+          "segment": 269
+        },
+        {
+          "value": "1964-04-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In an April 13, 1964, letter to",
+          "segment": 734
+        },
+        {
+          "value": "1964-03-12",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between me and the two RAF appren-· tory explanations from the authorities memo of March 12, 1964.",
+          "segment": 741
+        },
+        {
+          "value": "1990-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 5, 1990, whose.crewmen",
+          "segment": 1383
+        },
+        {
+          "value": "1979-11-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Taylor on November 9, 1979.",
+          "segment": 1442
+        },
+        {
+          "value": "2005-04-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 6, 2005- www.infoba.e.com -URUGUAY: ENIGMATIC FIREBALL CAUSES CONCERN-",
+          "segment": 1501
+        },
+        {
+          "value": "2005-04-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 6, 2005- Planeta UFO, Argentina - MORE UFO ACTIVITY OVER MEXICO -This report was",
+          "segment": 1521
+        },
+        {
+          "value": "2005-04-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 6, 2005- El Sol Matutino, Argentina- ARGENTINA : PHANTOM AIRCRAFT CRASHES?- A",
+          "segment": 1532
+        },
+        {
+          "value": "2005-04-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 6, 2005 - Planeta UFO, Argentina - ARGENTINA: STRANGE LIGHT IS PHANTOM AIR-",
+          "segment": 1549
+        },
+        {
+          "value": "2005-04-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 21, 2005- Planeta UFO, Argentina- ARGENTINA: Animal Mutilations at La Arana by Raul Oscar",
+          "segment": 1622
+        },
+        {
+          "value": "2005-04-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Chaves- Two mutilated animals were found on April 19, 2005 at a rural establishment located on Provincial",
+          "segment": 1623
+        },
+        {
+          "value": "2005-04-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 22, 2005 - CIUFOS-LA Pampa, La Pampa, Argentina- ARGENTINA : STRANGE SPHERE",
+          "segment": 1644
+        },
+        {
+          "value": "2005-04-15",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "On April 15, 2005 at 1600 hours, Lorena Urban and Matias Bonifacino witnessed a spherical object",
+          "segment": 1654
+        },
+        {
+          "value": "2005-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DISPATCH, Columbua, OH- March 8, 2005 CR: J. Fry",
+          "segment": 1850
         }
       ]
     },
@@ -115372,6 +116950,93 @@
           "method": "unclassified-mention",
           "evidence": "aircraft enroute from Majorca, Spain to Britain on September 10, 1967.",
           "segment": 75
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a67eecb4a7e2",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Research-Australia-newsletter-vol-5-no-5.txt",
+      "candidates": [
+        {
+          "value": "1983-03-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of March 27, 1983, near GorkY.",
+          "segment": 160
+        },
+        {
+          "value": "1984-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by the author on September 8, 1984. not give it much attention .",
+          "segment": 219
+        },
+        {
+          "value": "1979-12-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "car. The witness decided to stop and have on December 23, 1979, at the time of. a",
+          "segment": 565
+        },
+        {
+          "value": "1973-06-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "FSR. June 28, 1973, CoJumia",
+          "segment": 615
+        },
+        {
+          "value": "1958-06-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "<3> June 12, 1958, LeBrusc, France.",
+          "segment": 631
+        },
+        {
+          "value": "1974-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 29, 1974, To�o, October 15, 1973, A I lentown, P e nn. , USA.",
+          "segment": 635
+        },
+        {
+          "value": "1973-10-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "March 29, 1974, To�o, October 15, 1973, A I lentown, P e nn. , USA.",
+          "segment": 635
+        },
+        {
+          "value": "1966-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "<4> March 31, 1966, Peoria, If linois, USA. Zimbabwe <Rhodesia>.",
+          "segment": 640
+        },
+        {
+          "value": "1967-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 12, 1967, Ithca, New York, USA. he had somehow covered several kilometres",
+          "segment": 654
         }
       ]
     },
@@ -117746,6 +119411,57 @@
       ]
     },
     {
+      "documentId": "doc-985c173ed02e",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Researcher---2001-vol-13-no-2.txt",
+      "candidates": [
+        {
+          "value": "2001-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the night 11/12 July 2001.",
+          "segment": 347
+        },
+        {
+          "value": "2001-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "appeared itself in the night 26/27 June 2001 in headed by Mr. Luk asz Tet l a k of Klodzko and Miss",
+          "segment": 378
+        },
+        {
+          "value": "2001-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In the night 11/12 July 2001, the Wylatowo",
+          "segment": 403
+        },
+        {
+          "value": "2001-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "···Because in the night 2 4/25 July 2001 there",
+          "segment": 416
+        },
+        {
+          "value": "1979-08-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "itself in the Earth's atmosphere in this lovely and nice evening of the 20 August 1979? .",
+          "segment": 589
+        }
+      ]
+    },
+    {
       "documentId": "doc-aa660b13bfb0",
       "path": "Archives-for-the-Unexplained/documents/UFO-Showtime---S01E02---transcript-automated-.txt",
       "candidates": [
@@ -117922,6 +119638,63 @@
           "method": "unclassified-mention",
           "evidence": "2016-06-16 http://www.afu.se/afu2/",
           "segment": 76
+        }
+      ]
+    },
+    {
+      "documentId": "doc-59fb79b662f8",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Times---No-08---Jul-1990-Numbered-7-in-error.txt",
+      "candidates": [
+        {
+          "value": "1990-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Number 7 July 1990 rssN o958-4846",
+          "segment": 59
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6e46df47cf41",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Times---No-09---Sep-1990.txt",
+      "candidates": [
+        {
+          "value": "1990-09-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Nunber 9 September 1990 rssN 0958-4845",
+          "segment": 0
+        },
+        {
+          "value": "1990-09-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Nunber 9 September 1990 rssN 0958-4845",
+          "segment": 60
+        },
+        {
+          "value": "1989-03-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "computer, This data was stored on a Vo lume 5 Nurnber 4 March 1989 pages 99 to",
+          "segment": 584
+        },
+        {
+          "value": "1978-09-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "seen at 19:00 on 26 September 1978 over",
+          "segment": 780
         }
       ]
     },
@@ -118153,6 +119926,4017 @@
           "method": "unclassified-mention",
           "evidence": "Fwd Date: Fri, 01 Nov 1996 16:08:11 -0400",
           "segment": 1709
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b46b528d8f5d",
+      "path": "Archives-for-the-Unexplained/documents/UFO-UpDates_2011_07_July.txt",
+      "candidates": [
+        {
+          "value": "2011-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PRG Update - June 30, 2011 - Stephen Bassett [117",
+          "segment": 4
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PRG Update - July 18, 2011 - Stephen Bassett [55",
+          "segment": 74
+        },
+        {
+          "value": "2011-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PRG Update - June 30, 2011",
+          "segment": 149
+        },
+        {
+          "value": "2011-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PRG Update - June 30, 2011",
+          "segment": 153
+        },
+        {
+          "value": "2011-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 30 Jun 2011 18:40:37 -0700",
+          "segment": 155
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 01 Jul 2011 07:54:51 -0400",
+          "segment": 156
+        },
+        {
+          "value": "2011-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Subject: PRG Update - June 30, 2011",
+          "segment": 157
+        },
+        {
+          "value": "2011-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PRG Update - June 30, 2011",
+          "segment": 158
+        },
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On July 8, 1947 General Roger Ramey held a press event in which",
+          "segment": 186
+        },
+        {
+          "value": "2011-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PRG Update - June 30, 2011",
+          "segment": 203
+        },
+        {
+          "value": "2011-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PRG Update - June 30, 2011",
+          "segment": 257
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 1 Jul 2011 11:00:01 +0200",
+          "segment": 276
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 01 Jul 2011 08:03:02 -0400",
+          "segment": 277
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 1 Jul 2011 13:52:59 +0200",
+          "segment": 515
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 01 Jul 2011 08:22:02 -0400",
+          "segment": 516
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 1 Jul 2011 07:27:08 -0500",
+          "segment": 540
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 01 Jul 2011 08:52:31 -0400",
+          "segment": 541
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Fri, 1 Jul 2011 13:52:59 +0200",
+          "segment": 544
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 1 Jul 2011 06:34:46 -0400",
+          "segment": 572
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 01 Jul 2011 09:37:21 -0400",
+          "segment": 573
+        },
+        {
+          "value": "1978-05-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On May 6, 1978 at 1730 hours, residents of the communities along",
+          "segment": 578
+        },
+        {
+          "value": "1978-05-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 6, 1978, a U.S. photographic monitoring satellite - ID 1972-",
+          "segment": 652
+        },
+        {
+          "value": "1972-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "placed in orbit on 7 July 1972 from Vandenberg AFB aboard a",
+          "segment": 654
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 1 Jul 2011 09:23:36 -0400",
+          "segment": 699
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 01 Jul 2011 09:38:48 -0400",
+          "segment": 700
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Fri, 1 Jul 2011 07:27:08 -0500",
+          "segment": 703
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 1 Jul 2011 10:01:29 -0400",
+          "segment": 742
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 01 Jul 2011 10:31:09 -0400",
+          "segment": 743
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Fri, 1 Jul 2011 09:23:36 -0400",
+          "segment": 746
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Fri, 1 Jul 2011 07:27:08 -0500",
+          "segment": 749
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 1 Jul 2011 15:15:56 -0400",
+          "segment": 792
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 01 Jul 2011 18:51:16 -0400",
+          "segment": 793
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Fri, 1 Jul 2011 10:01:29 -0400",
+          "segment": 796
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 1 Jul 2011 23:55:02 -0500",
+          "segment": 850
+        },
+        {
+          "value": "2011-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 02 Jul 2011 05:53:12 -0400",
+          "segment": 851
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Fri, 1 Jul 2011 15:15:56 -0400",
+          "segment": 854
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Fri, 1 Jul 2011 10:01:29 -0400",
+          "segment": 857
+        },
+        {
+          "value": "2011-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 2 Jul 2011 11:33:14 +0100",
+          "segment": 929
+        },
+        {
+          "value": "2011-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 02 Jul 2011 07:24:11 -0400",
+          "segment": 930
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Fri, 1 Jul 2011 23:55:02 -0500",
+          "segment": 933
+        },
+        {
+          "value": "2011-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 2 Jul 2011 08:26:19 -0500",
+          "segment": 967
+        },
+        {
+          "value": "2011-07-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sun, 03 Jul 2011 12:49:01 -0400",
+          "segment": 968
+        },
+        {
+          "value": "2011-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sat, 2 Jul 2011 11:33:14 +0100",
+          "segment": 971
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Fri, 1 Jul 2011 23:55:02 -0500",
+          "segment": 974
+        },
+        {
+          "value": "2011-07-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sun, 3 Jul 2011 17:12:57 +0200",
+          "segment": 1015
+        },
+        {
+          "value": "2011-07-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sun, 03 Jul 2011 12:52:23 -0400",
+          "segment": 1016
+        },
+        {
+          "value": "2011-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sat, 2 Jul 2011 11:33:14 +0100",
+          "segment": 1019
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Fri, 1 Jul 2011 23:55:02 -0500",
+          "segment": 1022
+        },
+        {
+          "value": "2011-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 4 Jul 2011 12:45:25 -0500 (GMT-05:00",
+          "segment": 1059
+        },
+        {
+          "value": "2011-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 05 Jul 2011 07:35:48 -0400",
+          "segment": 1060
+        },
+        {
+          "value": "2011-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Washington, D.C., July 4, 2011 - Forty-five years after",
+          "segment": 1071
+        },
+        {
+          "value": "2009-03-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In his March 19, 2009 government-wide memo on",
+          "segment": 1090
+        },
+        {
+          "value": "2011-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 5 Jul 2011 08:40:32 -0400",
+          "segment": 1132
+        },
+        {
+          "value": "2011-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 05 Jul 2011 08:52:57 -0400",
+          "segment": 1133
+        },
+        {
+          "value": "2011-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 5 Jul 2011 06:03:48 -0700",
+          "segment": 1189
+        },
+        {
+          "value": "2011-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 05 Jul 2011 10:01:33 -0400",
+          "segment": 1190
+        },
+        {
+          "value": "2011-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Mon, 4 Jul 2011 12:45:25 -0500 (GMT-05:00",
+          "segment": 1194
+        },
+        {
+          "value": "2011-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Washington, D.C., July 4, 2011 - Forty-five years after",
+          "segment": 1205
+        },
+        {
+          "value": "2011-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 5 Jul 2011 07:56:54 -0700",
+          "segment": 1257
+        },
+        {
+          "value": "2011-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 05 Jul 2011 12:28:19 -0400",
+          "segment": 1258
+        },
+        {
+          "value": "2011-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Fri, 1 Jul 2011 13:52:59 +0200",
+          "segment": 1261
+        },
+        {
+          "value": "2011-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 6 Jul 2011 00:18:48 -0400",
+          "segment": 1364
+        },
+        {
+          "value": "2011-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 06 Jul 2011 09:47:54 -0400",
+          "segment": 1365
+        },
+        {
+          "value": "2011-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Tue, 5 Jul 2011 07:56:54 -0700",
+          "segment": 1368
+        },
+        {
+          "value": "2011-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 6 Jul 2011 16:03:51 -0400",
+          "segment": 1429
+        },
+        {
+          "value": "2011-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 07 Jul 2011 09:50:07 -0400",
+          "segment": 1430
+        },
+        {
+          "value": "2011-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 7 Jul 2011 09:29:04 -0400 (EDT",
+          "segment": 1454
+        },
+        {
+          "value": "2011-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 07 Jul 2011 12:32:23 -0400",
+          "segment": 1455
+        },
+        {
+          "value": "2011-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 7 Jul 2011 08:57:49 -0500",
+          "segment": 1491
+        },
+        {
+          "value": "2011-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 07 Jul 2011 12:33:56 -0400",
+          "segment": 1492
+        },
+        {
+          "value": "2011-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Wed, 6 Jul 2011 16:03:51 -0400",
+          "segment": 1495
+        },
+        {
+          "value": "2011-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 7 Jul 2011 06:58:57 -0700",
+          "segment": 1521
+        },
+        {
+          "value": "2011-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 07 Jul 2011 18:41:44 -0400",
+          "segment": 1522
+        },
+        {
+          "value": "2011-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 07 Jul 2011 16:07:59 +0100",
+          "segment": 1549
+        },
+        {
+          "value": "2011-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 07 Jul 2011 18:46:46 -0400",
+          "segment": 1550
+        },
+        {
+          "value": "2011-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 7 Jul 2011 15:26:03 -0400",
+          "segment": 1587
+        },
+        {
+          "value": "2011-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 07 Jul 2011 18:53:34 -0400",
+          "segment": 1588
+        },
+        {
+          "value": "2011-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 8 Jul 2011 06:26:04 -0400",
+          "segment": 1646
+        },
+        {
+          "value": "2011-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 08 Jul 2011 08:34:11 -0400",
+          "segment": 1647
+        },
+        {
+          "value": "2011-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 7 Jul 2011 09:29:04 -0400 (EDT",
+          "segment": 1650
+        },
+        {
+          "value": "2011-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 9 Jul 2011 10:46:49 -0700",
+          "segment": 1675
+        },
+        {
+          "value": "2011-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 09 Jul 2011 19:19:44 -0400",
+          "segment": 1676
+        },
+        {
+          "value": "2011-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 7 Jul 2011 08:57:49 -0500",
+          "segment": 1679
+        },
+        {
+          "value": "2011-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Wed, 6 Jul 2011 16:03:51 -0400",
+          "segment": 1682
+        },
+        {
+          "value": "2011-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 9 Jul 2011 15:42:49 -0400 (EDT",
+          "segment": 1753
+        },
+        {
+          "value": "2011-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sun, 10 Jul 2011 07:25:23 -0400",
+          "segment": 1754
+        },
+        {
+          "value": "2011-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sun, 10 Jul 2011 05:51:32 -0700",
+          "segment": 1780
+        },
+        {
+          "value": "2011-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sun, 10 Jul 2011 09:27:23 -0400",
+          "segment": 1781
+        },
+        {
+          "value": "2011-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sun, 10 Jul 2011 12:48:18 -0500",
+          "segment": 1808
+        },
+        {
+          "value": "2011-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sun, 10 Jul 2011 14:52:30 -0400",
+          "segment": 1809
+        },
+        {
+          "value": "2011-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sun, 10 Jul 2011 05:51:32 -0700",
+          "segment": 1812
+        },
+        {
+          "value": "2011-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sun, 10 Jul 2011 16:49:34 -0300",
+          "segment": 1836
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Mon, 11 Jul 2011 05:58:03 -0400",
+          "segment": 1837
+        },
+        {
+          "value": "2011-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sun, 10 Jul 2011 12:48:18 -0500",
+          "segment": 1840
+        },
+        {
+          "value": "2011-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Sun, 10 Jul 2011 05:51:32 -0700",
+          "segment": 1843
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 11 Jul 2011 01:00:20 -0400 (EDT",
+          "segment": 1877
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Mon, 11 Jul 2011 06:00:09 -0400",
+          "segment": 1878
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 11 Jul 2011 10:38:55 -0400",
+          "segment": 1909
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Mon, 11 Jul 2011 12:55:47 -0400",
+          "segment": 1910
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 11 Jul 2011 11:14:27 -0400",
+          "segment": 1934
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Mon, 11 Jul 2011 12:57:53 -0400",
+          "segment": 1935
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Mon, 11 Jul 2011 01:00:20 -0400 (EDT",
+          "segment": 1938
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 11 Jul 2011 19:29:38 -0700 (PDT",
+          "segment": 1971
+        },
+        {
+          "value": "2011-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 12 Jul 2011 06:44:45 -0400",
+          "segment": 1972
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Mon, 11 Jul 2011 11:14:27 -0400",
+          "segment": 1975
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Mon, 11 Jul 2011 01:00:20 -0400 (EDT",
+          "segment": 1978
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 11 Jul 2011 13:22:27 -0700",
+          "segment": 2024
+        },
+        {
+          "value": "2011-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 12 Jul 2011 06:48:15 -0400",
+          "segment": 2025
+        },
+        {
+          "value": "2011-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 12 Jul 2011 10:39:22 +0100",
+          "segment": 2108
+        },
+        {
+          "value": "2011-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 12 Jul 2011 06:49:09 -0400",
+          "segment": 2109
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Mon, 11 Jul 2011 01:00:20 -0400 (EDT",
+          "segment": 2112
+        },
+        {
+          "value": "2011-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 12 Jul 2011 17:35:39 +0100",
+          "segment": 2130
+        },
+        {
+          "value": "2011-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 13 Jul 2011 07:13:04 -0400",
+          "segment": 2131
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Mon, 11 Jul 2011 13:22:27 -0700",
+          "segment": 2134
+        },
+        {
+          "value": "2011-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 13 Jul 2011 00:59:47 -0400 (EDT",
+          "segment": 2287
+        },
+        {
+          "value": "2011-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 13 Jul 2011 07:15:10 -0400",
+          "segment": 2288
+        },
+        {
+          "value": "2011-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Tue, 12 Jul 2011 10:39:22 +0100",
+          "segment": 2291
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Mon, 11 Jul 2011 01:00:20 -0400 (EDT",
+          "segment": 2294
+        },
+        {
+          "value": "2011-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 13 Jul 2011 15:34:11 +0700 (GMT+07:00",
+          "segment": 2333
+        },
+        {
+          "value": "2011-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 13 Jul 2011 07:17:00 -0400",
+          "segment": 2334
+        },
+        {
+          "value": "2011-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Jul 13, 2011 4:23 AM",
+          "segment": 2337
+        },
+        {
+          "value": "2011-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 13 Jul 2011 08:22:41 -0500",
+          "segment": 2363
+        },
+        {
+          "value": "2011-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 13 Jul 2011 10:21:14 -0400",
+          "segment": 2364
+        },
+        {
+          "value": "2011-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Wed, 13 Jul 2011 00:59:47 -0400 (EDT",
+          "segment": 2367
+        },
+        {
+          "value": "2011-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Tue, 12 Jul 2011 10:39:22 +0100",
+          "segment": 2370
+        },
+        {
+          "value": "2011-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>>Date: Mon, 11 Jul 2011 01:00:20 -0400 (EDT",
+          "segment": 2373
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 14 Jul 2011 01:05:48 +0100",
+          "segment": 2405
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 14 Jul 2011 09:13:27 -0400",
+          "segment": 2406
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 14 Jul 2011 08:36:34 -0500",
+          "segment": 2428
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 14 Jul 2011 10:57:03 -0400",
+          "segment": 2429
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 14 Jul 2011 01:05:48 +0100",
+          "segment": 2432
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 14 Jul 2011 17:12:31 +0200",
+          "segment": 2467
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 14 Jul 2011 12:01:25 -0400",
+          "segment": 2468
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 14 Jul 2011 01:05:48 +0100",
+          "segment": 2471
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 14 Jul 2011 17:04:48 +0100",
+          "segment": 2522
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 14 Jul 2011 12:28:37 -0400",
+          "segment": 2523
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 14 Jul 2011 12:25:12 EDT",
+          "segment": 2558
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 14 Jul 2011 12:51:12 -0400",
+          "segment": 2559
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 14 Jul 2011 17:12:31 +0200",
+          "segment": 2562
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Thu, 14 Jul 2011 01:05:48 +0100",
+          "segment": 2565
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 14 Jul 2011 10:11:12 -0700",
+          "segment": 2647
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 14 Jul 2011 14:27:07 -0400",
+          "segment": 2648
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 14 Jul 2011 01:05:48 +0100",
+          "segment": 2651
+        },
+        {
+          "value": "2011-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 15 Jul 2011 21:52:40 +0700 (GMT+07:00",
+          "segment": 2684
+        },
+        {
+          "value": "2011-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 15 Jul 2011 20:28:17 -0400",
+          "segment": 2685
+        },
+        {
+          "value": "2011-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The brief obit carried in the Baltimore Sun on July 13, 2011.",
+          "segment": 2688
+        },
+        {
+          "value": "2011-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On July 8, 2011, WILLIAM ROGER CORLISS, age 84.",
+          "segment": 2689
+        },
+        {
+          "value": "2011-07-13",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Published in Baltimore Sun on July 13, 2011",
+          "segment": 2704
+        },
+        {
+          "value": "2011-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Jul 14, 2011 11:50 PM",
+          "segment": 2707
+        },
+        {
+          "value": "2011-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 15 Jul 2011 18:18:04 +0000",
+          "segment": 2749
+        },
+        {
+          "value": "2011-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 15 Jul 2011 20:32:53 -0400",
+          "segment": 2750
+        },
+        {
+          "value": "2011-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 15 Jul 2011 12:15:49 -0700",
+          "segment": 2833
+        },
+        {
+          "value": "2011-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 15 Jul 2011 20:35:10 -0400",
+          "segment": 2834
+        },
+        {
+          "value": "2011-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 15 Jul 2011 12:58:59 -0700 (PDT",
+          "segment": 2872
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 16 Jul 2011 08:37:45 -0400",
+          "segment": 2873
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 16 Jul 2011 09:06:51 -0400 (EDT",
+          "segment": 2896
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 16 Jul 2011 09:32:23 -0400",
+          "segment": 2897
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 16 Jul 2011 13:19:22 -0300",
+          "segment": 2918
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 16 Jul 2011 16:14:53 -0400",
+          "segment": 2919
+        },
+        {
+          "value": "2011-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Fri, 15 Jul 2011 12:58:59 -0700 (PDT",
+          "segment": 2922
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 16 Jul 2011 13:29:45 -0300",
+          "segment": 2954
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 16 Jul 2011 16:16:08 -0400",
+          "segment": 2955
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sat, 16 Jul 2011 09:06:51 -0400 (EDT",
+          "segment": 2958
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 16 Jul 2011 15:01:05 -0300",
+          "segment": 2981
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 16 Jul 2011 16:19:15 -0400",
+          "segment": 2982
+        },
+        {
+          "value": "2011-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Fri, 15 Jul 2011 12:58:59 -0700 (PDT",
+          "segment": 2986
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 16 Jul 2011 19:37:32 +0000",
+          "segment": 3030
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 16 Jul 2011 16:41:17 -0400",
+          "segment": 3031
+        },
+        {
+          "value": "2011-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Fri, 15 Jul 2011 12:58:59 -0700 (PDT",
+          "segment": 3034
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 16 Jul 2011 15:34:03 -0500",
+          "segment": 3083
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 16 Jul 2011 16:45:58 -0400",
+          "segment": 3084
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sat, 16 Jul 2011 13:19:22 -0300",
+          "segment": 3087
+        },
+        {
+          "value": "2011-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Fri, 15 Jul 2011 12:58:59 -0700 (PDT",
+          "segment": 3090
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 16 Jul 2011 17:22:42 -0400 (EDT",
+          "segment": 3132
+        },
+        {
+          "value": "2011-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sun, 17 Jul 2011 06:51:30 -0400",
+          "segment": 3133
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sat, 16 Jul 2011 13:29:45 -0300",
+          "segment": 3136
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Sat, 16 Jul 2011 09:06:51 -0400 (EDT",
+          "segment": 3139
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 16 Jul 2011 19:37:57 -0400",
+          "segment": 3165
+        },
+        {
+          "value": "2011-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sun, 17 Jul 2011 06:54:43 -0400",
+          "segment": 3166
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sat, 16 Jul 2011 15:01:05 -0300",
+          "segment": 3169
+        },
+        {
+          "value": "2011-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sun, 17 Jul 2011 12:56:12 +0200",
+          "segment": 3208
+        },
+        {
+          "value": "2011-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sun, 17 Jul 2011 07:25:28 -0400",
+          "segment": 3209
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sat, 16 Jul 2011 17:22:42 -0400 (EDT",
+          "segment": 3212
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Sat, 16 Jul 2011 13:29:45 -0300",
+          "segment": 3215
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>>Date: Sat, 16 Jul 2011 09:06:51 -0400 (EDT",
+          "segment": 3218
+        },
+        {
+          "value": "2011-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sun, 17 Jul 2011 14:57:16 -0300",
+          "segment": 3238
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Mon, 18 Jul 2011 08:03:06 -0400",
+          "segment": 3239
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sat, 16 Jul 2011 19:37:57 -0400",
+          "segment": 3242
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Sat, 16 Jul 2011 15:01:05 -0300",
+          "segment": 3245
+        },
+        {
+          "value": "2011-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sun, 17 Jul 2011 19:23:12 +0000",
+          "segment": 3315
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Mon, 18 Jul 2011 08:04:52 -0400",
+          "segment": 3316
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sat, 16 Jul 2011 13:19:22 -0300",
+          "segment": 3319
+        },
+        {
+          "value": "2011-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Fri, 15 Jul 2011 12:58:59 -0700 (PDT",
+          "segment": 3322
+        },
+        {
+          "value": "2011-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sun, 17 Jul 2011 07:09:34 -0700",
+          "segment": 3359
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Mon, 18 Jul 2011 08:09:52 -0400",
+          "segment": 3360
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 18 Jul 2011 12:24:51 +0700 (GMT+07:00",
+          "segment": 3395
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Mon, 18 Jul 2011 08:15:00 -0400",
+          "segment": 3396
+        },
+        {
+          "value": "2011-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Jul 17, 2011 10:07 PM",
+          "segment": 3406
+        },
+        {
+          "value": "1968-10-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "In the early morning hours on 24 October 1968, United States Air",
+          "segment": 3414
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 18 Jul 2011 08:52:13 -0400",
+          "segment": 3464
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Mon, 18 Jul 2011 09:33:25 -0400",
+          "segment": 3465
+        },
+        {
+          "value": "2011-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sun, 17 Jul 2011 14:57:16 -0300",
+          "segment": 3468
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 18 Jul 2011 13:54:47 -0300",
+          "segment": 3564
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Mon, 18 Jul 2011 13:49:38 -0400",
+          "segment": 3565
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Mon, 18 Jul 2011 08:52:13 -0400",
+          "segment": 3568
+        },
+        {
+          "value": "2011-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Sun, 17 Jul 2011 14:57:16 -0300",
+          "segment": 3571
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 18 Jul 2011 13:14:09 -0400 (EDT",
+          "segment": 3683
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Mon, 18 Jul 2011 13:55:34 -0400",
+          "segment": 3684
+        },
+        {
+          "value": "2011-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sun, 17 Jul 2011 07:09:34 -0700",
+          "segment": 3687
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 18 Jul 2011 14:03:58 -0400",
+          "segment": 3766
+        },
+        {
+          "value": "2011-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 19 Jul 2011 18:10:30 -0400",
+          "segment": 3767
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Mon, 18 Jul 2011 13:54:47 -0300",
+          "segment": 3770
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 18 Jul 2011 13:17:32 -0500",
+          "segment": 3821
+        },
+        {
+          "value": "2011-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 19 Jul 2011 18:11:36 -0400",
+          "segment": 3822
+        },
+        {
+          "value": "2011-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sun, 17 Jul 2011 14:57:16 -0300",
+          "segment": 3825
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Sat, 16 Jul 2011 19:37:57 -0400",
+          "segment": 3828
+        },
+        {
+          "value": "2011-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>>Date: Sat, 16 Jul 2011 15:01:05 -0300",
+          "segment": 3831
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 18 Jul 2011 21:48:38 +0100",
+          "segment": 3862
+        },
+        {
+          "value": "2011-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 19 Jul 2011 18:15:35 -0400",
+          "segment": 3863
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PRG Update - July 18, 2011",
+          "segment": 3884
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PRG Update - July 18, 2011",
+          "segment": 3888
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 18 Jul 2011 20:15:27 -0700",
+          "segment": 3890
+        },
+        {
+          "value": "2011-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 19 Jul 2011 18:18:24 -0400",
+          "segment": 3891
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Subject: PRG Update - July 18, 2011",
+          "segment": 3892
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PRG Update - July 18, 2011",
+          "segment": 3893
+        },
+        {
+          "value": "2012-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The development plan for WDD going forward to July 8, 2012 is as",
+          "segment": 3902
+        },
+        {
+          "value": "2012-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "into July 8, 2012 , 5) launch a broad media effort in early",
+          "segment": 3907
+        },
+        {
+          "value": "2012-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "Should Disclosure take place prior to July 8, 2012, WDD will",
+          "segment": 3909
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PRG Update - July 18, 2011",
+          "segment": 3929
+        },
+        {
+          "value": "2011-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 19 Jul 2011 17:40:43 +0000",
+          "segment": 3953
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 20 Jul 2011 06:22:45 -0400",
+          "segment": 3954
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Mon, 18 Jul 2011 13:54:47 -0300",
+          "segment": 3957
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Mon, 18 Jul 2011 08:52:13 -0400",
+          "segment": 3960
+        },
+        {
+          "value": "2011-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>>Date: Sun, 17 Jul 2011 14:57:16 -0300",
+          "segment": 3963
+        },
+        {
+          "value": "2011-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 19 Jul 2011 23:32:13 +0100",
+          "segment": 4037
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 20 Jul 2011 06:24:41 -0400",
+          "segment": 4038
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 20 Jul 2011 11:58:39 +0100",
+          "segment": 4066
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 20 Jul 2011 07:15:38 -0400",
+          "segment": 4067
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Mon, 18 Jul 2011 21:48:38 +0100",
+          "segment": 4071
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 20 Jul 2011 07:33:39 -0500",
+          "segment": 4111
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 20 Jul 2011 10:37:53 -0400",
+          "segment": 4112
+        },
+        {
+          "value": "2011-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Tue, 19 Jul 2011 17:40:43 +0000",
+          "segment": 4115
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 20 Jul 2011 10:17:09 -0400",
+          "segment": 4145
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 20 Jul 2011 10:39:44 -0400",
+          "segment": 4146
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Mon, 18 Jul 2011 21:48:38 +0100",
+          "segment": 4150
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 20 Jul 2011 11:05:39 -0400",
+          "segment": 4181
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 20 Jul 2011 11:23:50 -0400",
+          "segment": 4182
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Wed, 20 Jul 2011 11:58:39 +0100",
+          "segment": 4185
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Mon, 18 Jul 2011 21:48:38 +0100",
+          "segment": 4189
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 20 Jul 2011 12:14:56 -0400",
+          "segment": 4245
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 20 Jul 2011 14:01:22 -0400",
+          "segment": 4246
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 20 Jul 2011 12:21:14 -0400",
+          "segment": 4274
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 20 Jul 2011 15:45:17 -0400",
+          "segment": 4275
+        },
+        {
+          "value": "2011-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Tue, 19 Jul 2011 23:32:13 +0100",
+          "segment": 4279
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 20 Jul 2011 15:19:56 -0300",
+          "segment": 4336
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 20 Jul 2011 15:47:04 -0400",
+          "segment": 4337
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Wed, 20 Jul 2011 07:33:39 -0500",
+          "segment": 4340
+        },
+        {
+          "value": "2011-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Tue, 19 Jul 2011 17:40:43 +0000",
+          "segment": 4343
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 20 Jul 2011 15:09:32 -0400",
+          "segment": 4381
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 20 Jul 2011 15:48:19 -0400",
+          "segment": 4382
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Wed, 20 Jul 2011 10:17:09 -0400",
+          "segment": 4385
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Mon, 18 Jul 2011 21:48:38 +0100",
+          "segment": 4389
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 20 Jul 2011 15:06:47 -0400 (EDT",
+          "segment": 4425
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 20 Jul 2011 15:50:31 -0400",
+          "segment": 4426
+        },
+        {
+          "value": "2011-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Tue, 19 Jul 2011 17:40:43 +0000",
+          "segment": 4429
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 20 Jul 2011 16:50:00 +0100",
+          "segment": 4493
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 21 Jul 2011 07:27:40 -0400",
+          "segment": 4494
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Wed, 20 Jul 2011 10:17:09 -0400",
+          "segment": 4497
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Mon, 18 Jul 2011 21:48:38 +0100",
+          "segment": 4501
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 20 Jul 2011 16:00:29 -0400",
+          "segment": 4536
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 21 Jul 2011 07:29:58 -0400",
+          "segment": 4537
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Wed, 20 Jul 2011 15:19:56 -0300",
+          "segment": 4540
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 20 Jul 2011 17:26:09 -0300",
+          "segment": 4580
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 21 Jul 2011 07:31:59 -0400",
+          "segment": 4581
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Wed, 20 Jul 2011 15:09:32 -0400",
+          "segment": 4584
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Wed, 20 Jul 2011 10:17:09 -0400",
+          "segment": 4587
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>>Date: Mon, 18 Jul 2011 21:48:38 +0100",
+          "segment": 4591
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 20 Jul 2011 17:49:48 -0300",
+          "segment": 4628
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 21 Jul 2011 07:35:05 -0400",
+          "segment": 4629
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Wed, 20 Jul 2011 12:21:14 -0400",
+          "segment": 4632
+        },
+        {
+          "value": "2011-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Tue, 19 Jul 2011 23:32:13 +0100",
+          "segment": 4636
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 20 Jul 2011 21:34:04 -0400 (EDT",
+          "segment": 4697
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 21 Jul 2011 07:44:21 -0400",
+          "segment": 4698
+        },
+        {
+          "value": "2011-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Tue, 19 Jul 2011 17:40:43 +0000",
+          "segment": 4701
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 21 Jul 2011 13:06:09 +0100",
+          "segment": 4750
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 21 Jul 2011 08:35:32 -0400",
+          "segment": 4751
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Wed, 20 Jul 2011 17:49:48 -0300",
+          "segment": 4754
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 21 Jul 2011 08:29:13 -0400",
+          "segment": 4785
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 21 Jul 2011 08:37:02 -0400",
+          "segment": 4786
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Wed, 20 Jul 2011 17:49:48 -0300",
+          "segment": 4789
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Wed, 20 Jul 2011 12:21:14 -0400",
+          "segment": 4792
+        },
+        {
+          "value": "2011-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>>Date: Tue, 19 Jul 2011 23:32:13 +0100",
+          "segment": 4796
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 21 Jul 2011 14:30:12 +0100",
+          "segment": 4857
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 21 Jul 2011 14:00:07 -0400",
+          "segment": 4858
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 21 Jul 2011 08:29:13 -0400",
+          "segment": 4861
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Wed, 20 Jul 2011 17:49:48 -0300",
+          "segment": 4864
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 21 Jul 2011 12:30:33 -0300",
+          "segment": 4888
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 21 Jul 2011 14:01:21 -0400",
+          "segment": 4889
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 21 Jul 2011 13:06:09 +0100",
+          "segment": 4892
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Wed, 20 Jul 2011 17:49:48 -0300",
+          "segment": 4895
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 21 Jul 2011 14:30:12 +0100",
+          "segment": 4938
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 21 Jul 2011 14:00:07 -0400",
+          "segment": 4939
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 21 Jul 2011 08:29:13 -0400",
+          "segment": 4942
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Wed, 20 Jul 2011 17:49:48 -0300",
+          "segment": 4945
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 21 Jul 2011 12:42:02 -0300",
+          "segment": 4971
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 21 Jul 2011 14:06:11 -0400",
+          "segment": 4972
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Wed, 20 Jul 2011 16:50:00 +0100",
+          "segment": 4975
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Wed, 20 Jul 2011 10:17:09 -0400",
+          "segment": 4978
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>>Date: Mon, 18 Jul 2011 21:48:38 +0100",
+          "segment": 4982
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 21 Jul 2011 20:15:18 +0100",
+          "segment": 5026
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 22 Jul 2011 07:53:47 -0400",
+          "segment": 5027
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 21 Jul 2011 12:42:02 -0300",
+          "segment": 5030
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Wed, 20 Jul 2011 16:50:00 +0100",
+          "segment": 5033
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>>Date: Wed, 20 Jul 2011 10:17:09 -0400",
+          "segment": 5036
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>>>Date: Mon, 18 Jul 2011 21:48:38 +0100",
+          "segment": 5040
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 21 Jul 2011 21:00:57 +0000 (UTC",
+          "segment": 5091
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 22 Jul 2011 07:56:00 -0400",
+          "segment": 5092
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Wednesday, July 20, 2011 14:46",
+          "segment": 5095
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 21 Jul 2011 23:37:41 +0100 (BST",
+          "segment": 5125
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 22 Jul 2011 07:59:26 -0400",
+          "segment": 5126
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 22 Jul 2011 09:21:11 -0300",
+          "segment": 5155
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 22 Jul 2011 08:36:38 -0400",
+          "segment": 5156
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 21 Jul 2011 21:00:57 +0000 (UTC",
+          "segment": 5160
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Wednesday, July 20, 2011 14:46",
+          "segment": 5163
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 22 Jul 2011 15:27:49 +0100",
+          "segment": 5197
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 22 Jul 2011 12:29:38 -0400",
+          "segment": 5198
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 22 Jul 2011 12:31:00 -0400",
+          "segment": 5239
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 22 Jul 2011 12:56:34 -0400",
+          "segment": 5240
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 21 Jul 2011 23:37:41 +0100 (BST",
+          "segment": 5243
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 22 Jul 2011 19:14:56 +0000",
+          "segment": 5296
+        },
+        {
+          "value": "2011-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 23 Jul 2011 07:00:09 -0400",
+          "segment": 5297
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 22 Jul 2011 09:36:37 -0800",
+          "segment": 5301
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 22 Jul 2011 20:15:19 +0000",
+          "segment": 5345
+        },
+        {
+          "value": "2011-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 23 Jul 2011 07:02:05 -0400",
+          "segment": 5346
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Wed, 20 Jul 2011 21:34:04 -0400 (EDT",
+          "segment": 5349
+        },
+        {
+          "value": "2011-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Tue, 19 Jul 2011 17:40:43 +0000",
+          "segment": 5352
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 22 Jul 2011 17:31:57 -0400",
+          "segment": 5410
+        },
+        {
+          "value": "2011-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 23 Jul 2011 07:03:20 -0400",
+          "segment": 5411
+        },
+        {
+          "value": "2011-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 21 Jul 2011 13:06:09 +0100",
+          "segment": 5414
+        },
+        {
+          "value": "2011-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Wed, 20 Jul 2011 17:49:48 -0300",
+          "segment": 5417
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 22 Jul 2011 23:14:36 -0400 (EDT",
+          "segment": 5468
+        },
+        {
+          "value": "2011-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 23 Jul 2011 07:06:27 -0400",
+          "segment": 5469
+        },
+        {
+          "value": "2011-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 23 Jul 2011 12:34:19 +0100",
+          "segment": 5493
+        },
+        {
+          "value": "2011-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 23 Jul 2011 07:48:16 -0400",
+          "segment": 5494
+        },
+        {
+          "value": "2011-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Fri, 22 Jul 2011 17:31:57 -0400",
+          "segment": 5497
+        },
+        {
+          "value": "2011-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 25 Jul 2011 01:15:21 +0100",
+          "segment": 5549
+        },
+        {
+          "value": "2011-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Mon, 25 Jul 2011 08:46:26 -0400",
+          "segment": 5550
+        },
+        {
+          "value": "2011-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 25 Jul 2011 12:34:52 +0700 (GMT+07:00",
+          "segment": 5582
+        },
+        {
+          "value": "2011-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Mon, 25 Jul 2011 08:52:50 -0400",
+          "segment": 5583
+        },
+        {
+          "value": "2011-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Jul 25, 2011 1:49 AM",
+          "segment": 5585
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 26 Jul 2011 14:19:16 +0100",
+          "segment": 5617
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 26 Jul 2011 11:39:51 -0400",
+          "segment": 5618
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Mon, 18 Jul 2011 21:48:38 +0100",
+          "segment": 5622
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 26 Jul 2011 16:03:06 +0100",
+          "segment": 5654
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 26 Jul 2011 11:42:09 -0400",
+          "segment": 5655
+        },
+        {
+          "value": "1990-04-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "one in each corner, taken April 4, 1990 in Petit Rechain, near",
+          "segment": 5671
+        },
+        {
+          "value": "2011-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Mon, 25 Jul 2011 18:50:01 -0400 (EDT",
+          "segment": 5727
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 26 Jul 2011 12:24:56 -0400",
+          "segment": 5728
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 26 Jul 2011 12:58:21 -0300",
+          "segment": 5751
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 26 Jul 2011 12:27:48 -0400",
+          "segment": 5752
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Tue, 26 Jul 2011 14:19:16 +0100",
+          "segment": 5756
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Mon, 18 Jul 2011 21:48:38 +0100",
+          "segment": 5760
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 26 Jul 2011 10:59:25 -0500",
+          "segment": 5796
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Tue, 26 Jul 2011 12:29:06 -0400",
+          "segment": 5797
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Tue, 26 Jul 2011 16:03:06 +0100",
+          "segment": 5801
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 28 Jul 2011 07:07:29 -0400",
+          "segment": 5820
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 28 Jul 2011 07:07:29 -0400",
+          "segment": 5821
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Posted on July 28, 2011 by Dr David Clarke",
+          "segment": 5828
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 26 Jul 2011 13:07:34 -0300",
+          "segment": 5864
+        },
+        {
+          "value": "2011-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 27 Jul 2011 19:34:44 -0400",
+          "segment": 5865
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Tue, 26 Jul 2011 14:19:16 +0100",
+          "segment": 5869
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Mon, 18 Jul 2011 21:48:38 +0100",
+          "segment": 5873
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 26 Jul 2011 12:14:20 -0400 (EDT",
+          "segment": 5906
+        },
+        {
+          "value": "2011-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 27 Jul 2011 19:36:06 -0400",
+          "segment": 5907
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Tue, 26 Jul 2011 16:03:06 +0100",
+          "segment": 5911
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">July 26, 2011 1:16 p.m.",
+          "segment": 5913
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 26 Jul 2011 12:26:46 -0400 (EDT",
+          "segment": 5945
+        },
+        {
+          "value": "2011-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 27 Jul 2011 19:38:39 -0400",
+          "segment": 5946
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Tue, 26 Jul 2011 17:18:04 -0400 (EDT",
+          "segment": 5982
+        },
+        {
+          "value": "2011-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 27 Jul 2011 19:40:59 -0400",
+          "segment": 5983
+        },
+        {
+          "value": "2011-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 27 Jul 2011 19:52:15 +0000",
+          "segment": 6015
+        },
+        {
+          "value": "2011-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Wed, 27 Jul 2011 19:45:32 -0400",
+          "segment": 6016
+        },
+        {
+          "value": "2011-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Mon, 25 Jul 2011 12:34:52 +0700 (GMT+07:00",
+          "segment": 6020
+        },
+        {
+          "value": "2011-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Sent: Jul 25, 2011 1:49 AM",
+          "segment": 6022
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 28 Jul 2011 03:41:50 +0200",
+          "segment": 6055
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 28 Jul 2011 07:48:52 -0400",
+          "segment": 6056
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Tue, 26 Jul 2011 14:19:16 +0100",
+          "segment": 6060
+        },
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Mon, 18 Jul 2011 21:48:38 +0100",
+          "segment": 6064
+        },
+        {
+          "value": "2011-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Wed, 27 Jul 2011 23:41:20 -0400 (EDT",
+          "segment": 6100
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 28 Jul 2011 07:51:42 -0400",
+          "segment": 6101
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 28 Jul 2011 11:42:46 +0100",
+          "segment": 6152
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 28 Jul 2011 07:53:35 -0400",
+          "segment": 6153
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 28 Jul 2011 12:11:35 -0400",
+          "segment": 6226
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 28 Jul 2011 14:55:32 -0400",
+          "segment": 6227
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 28 Jul 2011 18:03:11 +0000",
+          "segment": 6246
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 28 Jul 2011 14:58:01 -0400",
+          "segment": 6247
+        },
+        {
+          "value": "2011-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Tue, 26 Jul 2011 17:18:04 -0400 (EDT",
+          "segment": 6250
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Thu, 28 Jul 2011 20:03:21 +0200",
+          "segment": 6291
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Thu, 28 Jul 2011 15:01:17 -0400",
+          "segment": 6292
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 28 Jul 2011 11:42:46 +0100",
+          "segment": 6295
+        },
+        {
+          "value": "2011-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 27, 2011 - 16 minutes feature",
+          "segment": 6367
+        },
+        {
+          "value": "2011-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 29 Jul 2011 10:14:48 -0400",
+          "segment": 6395
+        },
+        {
+          "value": "2011-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 29 Jul 2011 10:14:48 -0400",
+          "segment": 6396
+        },
+        {
+          "value": "2011-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 29 Jul 2011 12:47:55 +0100",
+          "segment": 6419
+        },
+        {
+          "value": "2011-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 29 Jul 2011 10:15:44 -0400",
+          "segment": 6420
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 28 Jul 2011 20:03:21 +0200",
+          "segment": 6423
+        },
+        {
+          "value": "2011-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 29 Jul 2011 04:43:33 -0700 (PDT",
+          "segment": 6448
+        },
+        {
+          "value": "2011-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 29 Jul 2011 10:17:12 -0400",
+          "segment": 6449
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 28 Jul 2011 12:11:35 -0400",
+          "segment": 6453
+        },
+        {
+          "value": "2011-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 29 Jul 2011 12:47:55 +0100",
+          "segment": 6475
+        },
+        {
+          "value": "2011-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Fri, 29 Jul 2011 10:15:44 -0400",
+          "segment": 6476
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Thu, 28 Jul 2011 20:03:21 +0200",
+          "segment": 6479
+        },
+        {
+          "value": "2011-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Fri, 29 Jul 2011 13:36:38 -0400",
+          "segment": 6506
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 30 Jul 2011 10:06:57 -0400",
+          "segment": 6507
+        },
+        {
+          "value": "2011-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Fri, 29 Jul 2011 10:14:48 -0400",
+          "segment": 6511
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 30 Jul 2011 10:11:17 -0400",
+          "segment": 6537
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 30 Jul 2011 10:11:17 -0400",
+          "segment": 6538
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 30 Jul 2011 18:01:53 +0200",
+          "segment": 6568
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 30 Jul 2011 12:36:22 -0400",
+          "segment": 6569
+        },
+        {
+          "value": "2011-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Fri, 29 Jul 2011 12:47:55 +0100",
+          "segment": 6572
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Thu, 28 Jul 2011 20:03:21 +0200",
+          "segment": 6575
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 30 Jul 2011 11:37:24 -0500",
+          "segment": 6626
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 30 Jul 2011 14:06:08 -0400",
+          "segment": 6627
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sat, 30 Jul 2011 10:11:17 -0400",
+          "segment": 6630
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Archived: Sat, 30 Jul 2011 10:11:17 -0400",
+          "segment": 6631
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 30 Jul 2011 13:22:23 -0400 (EDT",
+          "segment": 6651
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 30 Jul 2011 14:08:36 -0400",
+          "segment": 6652
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sat, 30 Jul 2011 18:01:53 +0200",
+          "segment": 6655
+        },
+        {
+          "value": "2011-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Fri, 29 Jul 2011 12:47:55 +0100",
+          "segment": 6658
+        },
+        {
+          "value": "2011-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>>Date: Thu, 28 Jul 2011 20:03:21 +0200",
+          "segment": 6661
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 30 Jul 2011 13:39:48 -0400 (EDT",
+          "segment": 6719
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 30 Jul 2011 14:11:15 -0400",
+          "segment": 6720
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sat, 30 Jul 2011 21:01:53 +0200",
+          "segment": 6793
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sat, 30 Jul 2011 16:22:56 -0400",
+          "segment": 6794
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sat, 30 Jul 2011 18:01:53 +0200",
+          "segment": 6797
+        },
+        {
+          "value": "2011-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">>Date: Fri, 29 Jul 2011 12:47:55 +0100",
+          "segment": 6800
+        },
+        {
+          "value": "2011-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sun, 31 Jul 2011 13:22:28 -0400",
+          "segment": 6961
+        },
+        {
+          "value": "2011-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sun, 31 Jul 2011 14:38:10 -0400",
+          "segment": 6962
+        },
+        {
+          "value": "2011-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sun, 31 Jul 2011 14:08:42 -0400",
+          "segment": 7022
+        },
+        {
+          "value": "2011-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sun, 31 Jul 2011 14:39:17 -0400",
+          "segment": 7023
+        },
+        {
+          "value": "2011-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": ">Date: Sat, 30 Jul 2011 13:39:48 -0400 (EDT",
+          "segment": 7027
+        },
+        {
+          "value": "2011-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sun, 31 Jul 2011 13:04:25 -0700 (PDT",
+          "segment": 7057
+        },
+        {
+          "value": "2011-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sun, 31 Jul 2011 18:14:39 -0400",
+          "segment": 7058
+        },
+        {
+          "value": "2011-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date: Sun, 31 Jul 2011 18:01:45 -0300",
+          "segment": 7079
+        },
+        {
+          "value": "2011-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Archived: Sun, 31 Jul 2011 18:22:16 -0400",
+          "segment": 7080
         }
       ]
     },
@@ -137407,6 +143191,30 @@
           "method": "unclassified-mention",
           "evidence": "It landed August 1, 1978 at approximately 1037 p.m. about two miles south and a quarter",
           "segment": 7
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c7d8bfb5cdb8",
+      "path": "Archives-for-the-Unexplained/documents/Woodrew-Update---Vol-1-No-6.txt",
+      "candidates": [
+        {
+          "value": "1978-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "February 22, 1978, numbered K5634 to K5651",
+          "segment": 456
+        },
+        {
+          "value": "1982-03-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On March 4, 1982, the All-Party UFO Gr o up Foundation, thus allowing the subscrib e r",
+          "segment": 477
         }
       ]
     },
