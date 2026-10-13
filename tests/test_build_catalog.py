@@ -2629,6 +2629,7 @@ class CatalogTests(unittest.TestCase):
             pair = brazil / "paired" / "Camara" / "RIC-679" / "document-one"
             (pair / "en").mkdir(parents=True)
             (pair / "pt-BR").mkdir()
+            (pair / "provenance.json").write_text(json.dumps({"schema": "ufo-files-portuguese-provenance/v1"}))
             (brazil / "legacy-portuguese.txt").write_text(
                 json.dumps({"schema": "ufo-files-archive-ocr/v1", "source_file": "legacy.pdf"})
                 + "\n\nSomente o documento português deve ser excluído.", encoding="utf-8"
