@@ -2020,6 +2020,7 @@ PAIRED_SCHEMA_FAMILIES = {"pt-BR": "portuguese", "fr-FR": "french"}
 PAIRED_SEARCH_SCHEMAS = {
     f"ufo-files-{family}-search-text/v1" for family in PAIRED_SCHEMA_FAMILIES.values()
 }
+PAIRED_SEARCH_SCHEMAS.add("ufo-files-multilingual-search-text/v1")
 PAIRED_FAMILY_LANGUAGES = {family: language for language, family in PAIRED_SCHEMA_FAMILIES.items()}
 
 
@@ -2068,7 +2069,69 @@ def paired_segments(artifact: object) -> list[dict] | None:
     return segments
 
 
+def read_multilingual_export(path: Path) -> tuple[dict, list[str]] | None:
+    """Read audited Spanish/Italian pairs without treating their plain text as OCR."""
+    if path.name != "translation.txt" or path.parent.name != "en":
+        return None
+    root = path.parent.parent
+    try:
+        provenance = json.loads((root / "provenance.json").read_text(encoding="utf-8"))
+        qa = json.loads((root / "qa.json").read_text(encoding="utf-8"))
+        schema = provenance.get("schema")
+        if not re.fullmatch(r"multilingual-paired/v[1-9]\d*", str(schema)) or provenance.get("version") != schema or qa.get("status") != "pass":
+            return None
+        source, extraction = provenance["source"], provenance["extraction"]
+        code = str(source.get("original_language", "")).split("-")[0]
+        if code not in {"es", "it"}:
+            return None
+        sha = provenance.get("source_sha256")
+        ocr_sha = provenance.get("ocr_sha256")
+        source_rel = provenance.get("source_rel")
+        source_path = Path(source_rel)
+        if source_path.is_absolute() or ".." in source_path.parts:
+            return None
+        paired = next(parent for parent in root.parents if parent.name == "paired")
+        expected_source = paired.parent.name + "/" + root.parent.relative_to(paired).as_posix()
+        if (source_rel != expected_source or source.get("relative_path") != "/".join(source_path.parts[1:])
+                or not re.fullmatch(r"[a-f0-9]{64}", str(sha)) or not re.fullmatch(r"[a-f0-9]{64}", str(ocr_sha))
+                or source.get("sha256") != sha or extraction.get("source_sha256") != sha
+                or (extraction.get("source_file") or extraction.get("source_rel")) != source_rel):
+            return None
+        canonical = json.loads((root / code / "canonical.json").read_text(encoding="utf-8"))
+        translation = json.loads(path.with_suffix(".json").read_text(encoding="utf-8"))
+        if (canonical.get("schema") != schema or translation.get("schema") != schema
+                or canonical.get("language") != code or translation.get("language") != "en"
+                or translation.get("machine_translated") is not True):
+            return None
+        originals, translated = canonical["segments"], translation["segments"]
+        if not isinstance(originals, list) or not isinstance(translated, list) or not originals:
+            return None
+        ids = [s["id"] for s in originals]
+        if len(set(ids)) != len(ids) or any(not isinstance(i, str) or not i for i in ids) or [s["id"] for s in translated] != ids:
+            return None
+        if any(not isinstance(s["text"], str) or not s["text"].strip() for s in originals + translated):
+            return None
+        if "".join(s["text"] for s in originals) + "\n" != (root / code / "canonical.txt").read_text(encoding="utf-8"):
+            return None
+        if "\n".join(s["text"] for s in translated) + "\n" != path.read_text(encoding="utf-8"):
+            return None
+        metadata = dict(schema="ufo-files-multilingual-search-text/v1", source_file=source_rel,
+                        source_title=source.get("title"), source_bytes=source.get("bytes"), source_sha256=sha,
+                        original_language=source.get("original_language"), available_languages=[code, "en"],
+                        translation_available=True, translation_review_status="needs-review",
+                        canonical_path=f"{code}/canonical.json", translation_path="en/translation.json",
+                        document_id=hashlib.sha256((source_rel + ":" + sha).encode()).hexdigest()[:24],
+                        segment_ids=ids, country_code=source.get("country"), jurisdiction=source.get("institution"),
+                        created_at=provenance.get("generated_at"), engine=extraction.get("engine"),
+                        pair_version=int(schema.rsplit("v", 1)[1]))
+        return metadata, [clean_space(s["text"]) for s in translated]
+    except (OSError, ValueError, TypeError, KeyError, StopIteration, AttributeError):
+        return None
+
+
 def read_ocr(path: Path) -> tuple[dict, list[str]] | None:
+    if path.name == "translation.txt" and (path.parent.parent / "provenance.json").is_file():
+        return read_multilingual_export(path)
     try:
         text = path.read_text(encoding="utf-8", errors="replace")
     except OSError:
@@ -2230,6 +2293,7 @@ def machine_data_paths(input_root: Path, paired_language: str = "en") -> list[Pa
         if child.is_dir() and (child / "paired").is_dir()
     }
     selected = []
+    multilingual = {}
     for path in input_root.rglob("*"):
         if not path.is_file() or (path.suffix.lower() not in {".txt", ".tsv"} and path.name != "document.json"):
             continue
@@ -2259,8 +2323,18 @@ def machine_data_paths(input_root: Path, paired_language: str = "en") -> list[Pa
                 continue
         elif path.name == "document.json":
             continue
+        if path.name == "translation.txt" and (path.parent.parent / "provenance.json").is_file():
+            parsed = read_multilingual_export(path)
+            if parsed is None:
+                continue
+            metadata = parsed[0]
+            key = (metadata["source_file"], metadata["source_sha256"])
+            rank = (metadata["pair_version"], metadata.get("created_at") or "", path.as_posix())
+            if key not in multilingual or rank > multilingual[key][0]:
+                multilingual[key] = (rank, path)
+            continue
         selected.append(path)
-    return sorted(selected)
+    return sorted(selected + [entry[1] for entry in multilingual.values()])
 
 
 def read_tsv(path: Path) -> tuple[dict, list[str], int] | None:
