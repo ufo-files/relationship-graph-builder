@@ -94,11 +94,11 @@ jobs:
     outputs:
       catalog: ${{ steps.detect.outputs.catalog }}
     steps:
-      - name: Check out builder history
+      - name: Check out builder comparison
         uses: actions/checkout@v7
         with:
           persist-credentials: false
-          fetch-depth: 0
+          fetch-depth: 2
 
       - name: Detect catalog inputs
         id: detect
@@ -129,6 +129,14 @@ jobs:
             echo "Catalog rebuild required: true (no usable base revision)" >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
+
+          # Generated catalog history is large. Fetch only missing comparison
+          # commits instead of downloading every previous catalog revision.
+          for revision in "$base_sha" "$head_sha"; do
+            if ! git cat-file -e "$revision^{commit}" 2>/dev/null; then
+              git fetch --no-tags --depth=1 origin "$revision"
+            fi
+          done
 
           catalog=false
           if ! git diff --quiet "$base_sha" "$head_sha" -- \
