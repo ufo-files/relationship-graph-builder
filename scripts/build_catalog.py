@@ -2069,6 +2069,17 @@ def paired_segments(artifact: object) -> list[dict] | None:
     return segments
 
 
+def is_multilingual_export(path: Path) -> bool:
+    """Dispatch by schema: older French/Portuguese pairs also carry provenance."""
+    if path.name != "translation.txt" or path.parent.name != "en":
+        return False
+    try:
+        provenance = json.loads((path.parent.parent / "provenance.json").read_text(encoding="utf-8"))
+        return bool(re.fullmatch(r"multilingual-paired/v[1-9]\d*", str(provenance.get("schema"))))
+    except (OSError, ValueError, AttributeError):
+        return False
+
+
 def read_multilingual_export(path: Path) -> tuple[dict, list[str]] | None:
     """Read audited Spanish/Italian pairs without treating their plain text as OCR."""
     if path.name != "translation.txt" or path.parent.name != "en":
@@ -2130,7 +2141,7 @@ def read_multilingual_export(path: Path) -> tuple[dict, list[str]] | None:
 
 
 def read_ocr(path: Path) -> tuple[dict, list[str]] | None:
-    if path.name == "translation.txt" and (path.parent.parent / "provenance.json").is_file():
+    if is_multilingual_export(path):
         return read_multilingual_export(path)
     try:
         text = path.read_text(encoding="utf-8", errors="replace")
@@ -2323,7 +2334,7 @@ def machine_data_paths(input_root: Path, paired_language: str = "en") -> list[Pa
                 continue
         elif path.name == "document.json":
             continue
-        if path.name == "translation.txt" and (path.parent.parent / "provenance.json").is_file():
+        if is_multilingual_export(path):
             parsed = read_multilingual_export(path)
             if parsed is None:
                 continue

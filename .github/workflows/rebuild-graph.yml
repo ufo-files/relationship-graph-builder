@@ -228,15 +228,16 @@ jobs:
             --claims _empty-claims.json \
             --output _source-output/catalog.json \
             --duplicate-report _source-output/duplicate_candidates.json \
-            --date-review-report _source-output/date_review.json \
-            --require-data
+            --date-review-report _source-output/date_review.json
           python3 - <<'PY'
           import json
           from pathlib import Path
           catalog = json.loads(Path("_source-output/catalog.json").read_text())
           shards = catalog.get("documentShards", [])
-          if not shards:
-              raise SystemExit("Source build emitted no document shard")
+          # Searchable documents need not mention a recognized graph entity.
+          # The full-corpus build below still requires both documents and entities.
+          if not catalog.get("counts", {}).get("documents") or not shards:
+              raise SystemExit("Source build emitted no searchable documents")
           limit = 95 * 1024 * 1024
           paths = [Path("_source-output/catalog.json"), Path("_source-output/astronomy.json"), *Path("_source-output/source-documents").glob("*.json"), *Path("_source-output/source-families").glob("*.json")]
           oversized = [(path, path.stat().st_size) for path in paths if path.stat().st_size > limit]
