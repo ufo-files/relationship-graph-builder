@@ -446,8 +446,25 @@ jobs:
             fi
             git fetch origin main
             if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD^)" ]; then
-              echo "Main advanced after the build; refusing to publish stale catalog artifacts. Rebuild from current main." >&2
-              exit 1
+              base_revision="$(git rev-parse HEAD^)"
+              if ! git merge-base --is-ancestor "$base_revision" origin/main; then
+                echo "Main advanced after the build; refusing to publish stale catalog artifacts. Rebuild from current main." >&2
+                exit 1
+              fi
+              capture_only=true
+              while IFS= read -r -d '' changed_path; do
+                case "$changed_path" in
+                  README.md|assets/screenshots/*) ;;
+                  *) capture_only=false ;;
+                esac
+              done < <(git diff --name-only -z "$base_revision" origin/main)
+              if [ "$capture_only" != true ]; then
+                echo "Main advanced after the build; refusing to publish stale catalog artifacts. Rebuild from current main." >&2
+                exit 1
+              fi
+              # Capture publication does not change catalog inputs. Preserve it
+              # while replaying only this build's generated catalog commit.
+              git rebase --onto origin/main "$base_revision"
             fi
             sleep $((attempt * 2))
           done

@@ -13,7 +13,7 @@ class CatalogPublishingTests(unittest.TestCase):
         # Exercise the actual workflow push/retry block, not a modeled algorithm.
         tail = publish[publish.index('          for attempt in 1 2 3; do'):]
         script = textwrap.dedent(tail)
-        for advanced in (False, True):
+        for advanced in (False, True, 'screenshots'):
             with self.subTest(advanced=advanced), tempfile.TemporaryDirectory() as tmp:
                 root = Path(tmp)
                 environment = dict(os.environ, GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull,
@@ -34,27 +34,46 @@ class CatalogPublishingTests(unittest.TestCase):
                 git('commit', '-m', 'base', cwd=builder)
                 git('push', 'origin', 'HEAD:main', cwd=builder)
                 base = git('rev-parse', 'HEAD', cwd=builder)
+                if advanced == 'screenshots':
+                    # Production checkout starts with only the current base.
+                    (builder / '.git' / 'shallow').write_text(base + '\n')
                 git('clone', str(remote), 'writer')
                 writer = root / 'writer'
                 (builder / 'catalog.json').write_text('generated for version one')
                 git('commit', '-am', 'generated catalog', cwd=builder)
                 generated = git('rev-parse', 'HEAD', cwd=builder)
                 if advanced:
-                    (writer / 'builder.txt').write_text('version two')
-                    git('commit', '-am', 'new builder', cwd=writer)
+                    if advanced == 'screenshots':
+                        capture = writer / 'assets' / 'screenshots' / 'timeline.png'
+                        capture.parent.mkdir(parents=True)
+                        capture.write_bytes(b'fresh screenshot')
+                        (writer / 'README.md').write_text('fresh gallery')
+                        git('add', '.', cwd=writer)
+                        git('commit', '-m', 'refresh screenshots', cwd=writer)
+                    else:
+                        (writer / 'builder.txt').write_text('version two')
+                        git('commit', '-am', 'new builder', cwd=writer)
                     git('push', 'origin', 'HEAD:main', cwd=writer)
                 before = git('rev-parse', 'main', cwd=remote)
                 result = subprocess.run(['bash', '-e', '-c', script], cwd=builder, env=environment,
                                         capture_output=True, text=True, timeout=20)
                 after = git('rev-parse', 'main', cwd=remote)
-                if advanced:
+                if advanced is True:
                     self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
                     self.assertIn('refusing to publish stale catalog', result.stderr)
                     self.assertEqual(after, before)
                     self.assertEqual(git('show', 'main:catalog.json', cwd=remote), 'original catalog')
+                elif advanced == 'screenshots':
+                    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                    self.assertEqual(git('rev-parse', 'main^', cwd=remote), before)
+                    self.assertEqual(git('show', 'main:catalog.json', cwd=remote), 'generated for version one')
+                    self.assertEqual(git('show', 'main:assets/screenshots/timeline.png', cwd=remote), 'fresh screenshot')
+                    self.assertEqual(git('show', 'main:README.md', cwd=remote), 'fresh gallery')
+                    self.assertEqual(git('rev-parse', 'HEAD', cwd=builder), after)
                 else:
                     self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
                     self.assertEqual(after, generated)
                     self.assertEqual(git('rev-parse', 'main^', cwd=remote), base)
                     self.assertEqual(git('show', 'main:catalog.json', cwd=remote), 'generated for version one')
-                self.assertEqual(git('rev-parse', 'HEAD', cwd=builder), generated)
+                if advanced != 'screenshots':
+                    self.assertEqual(git('rev-parse', 'HEAD', cwd=builder), generated)
