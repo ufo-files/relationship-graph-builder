@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "014b6c57f9623c3b6275f7b1cb5e3bf6804754fd"
+    "revision": "928dea9f1ad6e20c20068f1e4d156acbd889c784"
   },
-  "count": 1537,
-  "totalCount": 1537,
-  "shownCount": 1537,
+  "count": 1538,
+  "totalCount": 1538,
+  "shownCount": 1538,
   "candidates": [
     {
       "category": "organization",
@@ -287,8 +287,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1194,
-        "documentCount": 704
+        "mentions": 1195,
+        "documentCount": 705
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -303,8 +303,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1194,
-        "documentCount": 704
+        "mentions": 1195,
+        "documentCount": 705
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -3247,8 +3247,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1194,
-        "documentCount": 704
+        "mentions": 1195,
+        "documentCount": 705
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -3263,8 +3263,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1194,
-        "documentCount": 704
+        "mentions": 1195,
+        "documentCount": 705
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -3279,8 +3279,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1194,
-        "documentCount": 704
+        "mentions": 1195,
+        "documentCount": 705
       },
       "right": {
         "name": "WRIGHT-PATTERBON AIR FORCE BASE",
@@ -3295,8 +3295,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1194,
-        "documentCount": 704
+        "mentions": 1195,
+        "documentCount": 705
       },
       "right": {
         "name": "Wright-Patterson Atr Force Base",
@@ -3311,8 +3311,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1194,
-        "documentCount": 704
+        "mentions": 1195,
+        "documentCount": 705
       },
       "right": {
         "name": "WRIGHT PATThRSON AIR FORCE BASE",
@@ -3327,8 +3327,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1194,
-        "documentCount": 704
+        "mentions": 1195,
+        "documentCount": 705
       },
       "right": {
         "name": "Wrighü-Patterson Air Force Base",
@@ -3343,8 +3343,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1194,
-        "documentCount": 704
+        "mentions": 1195,
+        "documentCount": 705
       },
       "right": {
         "name": "Weight-Patterson Air Force Base",
@@ -3359,8 +3359,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1194,
-        "documentCount": 704
+        "mentions": 1195,
+        "documentCount": 705
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -4542,6 +4542,22 @@
     {
       "category": "person",
       "left": {
+        "name": "David MacDonald",
+        "mentions": 7,
+        "documentCount": 7
+      },
+      "right": {
+        "name": "David McDonald",
+        "mentions": 7,
+        "documentCount": 6
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "George Adamsky",
         "mentions": 10,
         "documentCount": 8
@@ -4566,22 +4582,6 @@
         "name": "Dr. Paul Santorini",
         "mentions": 10,
         "documentCount": 8
-      },
-      "similarity": 0.966,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "David MacDonald",
-        "mentions": 7,
-        "documentCount": 7
-      },
-      "right": {
-        "name": "David McDonald",
-        "mentions": 6,
-        "documentCount": 5
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -7004,6 +7004,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Jekyl Island",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Jekyll Island",
+        "mentions": 35,
+        "documentCount": 24
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "John Williams",
@@ -7030,22 +7046,6 @@
         "name": "Edgar Fouché",
         "mentions": 30,
         "documentCount": 18
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Jekyl Island",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Jekyll Island",
-        "mentions": 33,
-        "documentCount": 23
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -8207,8 +8207,8 @@
       "category": "person",
       "left": {
         "name": "Richard Hall",
-        "mentions": 1413,
-        "documentCount": 208
+        "mentions": 1414,
+        "documentCount": 209
       },
       "right": {
         "name": "Richard Hal",
@@ -11407,8 +11407,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 2321,
-        "documentCount": 1038
+        "mentions": 2322,
+        "documentCount": 1039
       },
       "right": {
         "name": "Uniteo States Navy",
@@ -11781,6 +11781,22 @@
       "right": {
         "name": "Clinton County AAB",
         "mentions": 3,
+        "documentCount": 2
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "LA County Sheriff",
+        "mentions": 5,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "Lake County Sheriff's",
+        "mentions": 2,
         "documentCount": 2
       },
       "similarity": 0.944,
@@ -14175,8 +14191,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1194,
-        "documentCount": 704
+        "mentions": 1195,
+        "documentCount": 705
       },
       "right": {
         "name": "Wright-Fattorson Air Force Base",
@@ -16415,8 +16431,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 547,
-        "documentCount": 210
+        "mentions": 548,
+        "documentCount": 211
       },
       "right": {
         "name": "Department of the Army",
@@ -16431,8 +16447,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 547,
-        "documentCount": 210
+        "mentions": 548,
+        "documentCount": 211
       },
       "right": {
         "name": "The Department of the Armr",
@@ -17087,8 +17103,8 @@
       "category": "person",
       "left": {
         "name": "Robert Bigelow",
-        "mentions": 638,
-        "documentCount": 330
+        "mentions": 640,
+        "documentCount": 331
       },
       "right": {
         "name": "Robert Bigalow",
@@ -17324,6 +17340,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "program",
+      "left": {
+        "name": "Project Orion",
+        "mentions": 25,
+        "documentCount": 18
+      },
+      "right": {
+        "name": "Project Horizon",
+        "mentions": 21,
+        "documentCount": 13
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Michael Collins",
@@ -17334,22 +17366,6 @@
         "name": "Michel Collin",
         "mentions": 5,
         "documentCount": 2
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "program",
-      "left": {
-        "name": "Project Orion",
-        "mentions": 23,
-        "documentCount": 17
-      },
-      "right": {
-        "name": "Project Horizon",
-        "mentions": 21,
-        "documentCount": 13
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -18463,8 +18479,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of the Air",
-        "mentions": 547,
-        "documentCount": 210
+        "mentions": 548,
+        "documentCount": 211
       },
       "right": {
         "name": "DEPARTMENT OF THE AL",
@@ -20047,8 +20063,8 @@
       "category": "person",
       "left": {
         "name": "Charles Maney",
-        "mentions": 30,
-        "documentCount": 24
+        "mentions": 31,
+        "documentCount": 25
       },
       "right": {
         "name": "Professor Charles Meany",
@@ -24543,8 +24559,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 66124,
-        "documentCount": 14449
+        "mentions": 66126,
+        "documentCount": 14450
       },
       "right": {
         "name": "North American Space Agency",
@@ -24575,8 +24591,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 66124,
-        "documentCount": 14449
+        "mentions": 66126,
+        "documentCount": 14450
       },
       "right": {
         "name": "National Aeronautics and Space Agency",
