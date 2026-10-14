@@ -2650,9 +2650,11 @@ test("README screenshots capture the Far Side during its foreground transit", ()
   assert.match(script, /label && !label\.hidden/);
   assert.match(script, /page\.locator\("\.stage"\)\.screenshot/);
   assert.match(workflow, /npm run screenshots/);
-  assert.match(workflow, /github\.event_name == 'workflow_dispatch' \|\|\s+github\.event\.workflow_run\.conclusion == 'success'/);
-  assert.doesNotMatch(workflow, /github\.event_name == 'push'/);
-  assert.doesNotMatch(workflow, /workflow_run\.conclusion == 'failure'/);
+  assert.match(workflow, /\n  push:\n\s+branches: \[main\]/);
+  assert.match(workflow, /- "data\/\*\*"/);
+  assert.match(workflow, /- "!assets\/screenshots\/\*\*"/);
+  assert.doesNotMatch(workflow, /workflow_run:/);
+  assert.match(workflow, /group: relationship-graph-screenshots\s+[\s\S]*cancel-in-progress: false/);
   assert.match(readme, /<table>[\s\S]*far-side-moon\.png[\s\S]*<\/table>/);
   assert.doesNotMatch(readme, /<p align="center">\s*<strong>Far Side of the Moon<\/strong>/);
 });
