@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-14T15:53:42Z",
+  "generatedAt": "2026-10-14T20:14:01Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "928dea9f1ad6e20c20068f1e4d156acbd889c784"
+    "revision": "e556c3350f104686731c5b1bd14e37abaee97151"
   },
-  "documentsWithCandidates": 17679,
+  "documentsWithCandidates": 17725,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -19649,6 +19649,21 @@
       ]
     },
     {
+      "documentId": "doc-1f5bee5914d2",
+      "path": "Archives-for-the-Unexplained/documents/1981-02-00_McCall-s_AFU-scan_CFI-archive_keyword-UFO.txt",
+      "candidates": [
+        {
+          "value": "1977-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "police departments, it began on July 6, 1977.",
+          "segment": 19
+        }
+      ]
+    },
+    {
       "documentId": "doc-0d298d9e43ca",
       "path": "Archives-for-the-Unexplained/documents/1981-02-00_McCalls_AFU-scan_CFI-archive_keyword-UFO.txt",
       "candidates": [
@@ -21703,6 +21718,21 @@
           "method": "relative-date-exclusion",
           "evidence": "after June 24, 1947, when Kenneth",
           "segment": 92
+        }
+      ]
+    },
+    {
+      "documentId": "doc-cf567f64aec8",
+      "path": "Archives-for-the-Unexplained/documents/1987-05-14_Bristol-Journal_AFU-scan_CFI-archive_keyword-UFO.txt",
+      "candidates": [
+        {
+          "value": "1987-05-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thursday May 14, 1987 33",
+          "segment": 0
         }
       ]
     },
@@ -24635,6 +24665,48 @@
       ]
     },
     {
+      "documentId": "doc-6e116dd48cdf",
+      "path": "Archives-for-the-Unexplained/documents/20030626-Re_science-of-astrology-590308.txt",
+      "candidates": [
+        {
+          "value": "2003-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Wed, 25 Jun 2003, hugh jeffcoat wrote",
+          "segment": 3
+        },
+        {
+          "value": "2003-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Wed, 25 Jun 2003 14:38:18 -0400, Jim Phillips <jphillip@bcpl.net>",
+          "segment": 4
+        },
+        {
+          "value": "2003-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Wed, 25 Jun 2003, hugh jeffcoat wrote",
+          "segment": 5
+        },
+        {
+          "value": "2003-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Wed, 25 Jun 2003 08:51:50 -0400, Jim Phillips <jphillip@bcpl.net>",
+          "segment": 6
+        }
+      ]
+    },
+    {
       "documentId": "doc-2542e8c6af6e",
       "path": "Archives-for-the-Unexplained/documents/20030627-Re_FBI-raids-researchers-home-near-Area-51-51977.txt",
       "candidates": [
@@ -24886,6 +24958,21 @@
           "method": "unclassified-mention",
           "evidence": "On Mon, 11 Aug 2003 13:43:58 -0700 (PDT), mikehammer001@webtv.net",
           "segment": 17
+        }
+      ]
+    },
+    {
+      "documentId": "doc-66e233264fb9",
+      "path": "Archives-for-the-Unexplained/documents/20030822-Re_Excuses-604530.txt",
+      "candidates": [
+        {
+          "value": "2003-08-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "alt.usenet.kooks on Fri, 22 Aug 2003 12:47:39 GMT and unloaded a furious mass of text known as",
+          "segment": 2
         }
       ]
     },
@@ -37682,6 +37769,39 @@
       ]
     },
     {
+      "documentId": "doc-e97d16b260c4",
+      "path": "Archives-for-the-Unexplained/documents/2009-10-22_Boulder-Weekly_Rock-trio-Chevelle-more-grounded-as-latest-album-explores-UFOs.txt",
+      "candidates": [
+        {
+          "value": "2023-12-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Boulder Weekly Staff - December 28, 2023",
+          "segment": 57
+        },
+        {
+          "value": "2023-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Alan Sculley - December 12, 2023",
+          "segment": 58
+        },
+        {
+          "value": "2023-11-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Jezy J. Gray - November 15, 2023",
+          "segment": 59
+        }
+      ]
+    },
+    {
       "documentId": "doc-708b19301909",
       "path": "Archives-for-the-Unexplained/documents/2009-10-22_Space-com_Apocalypse-2012-The-Truth-About-the-End-of-the-World.txt",
       "candidates": [
@@ -42490,6 +42610,21 @@
           "method": "unclassified-mention",
           "evidence": "21 April 2007 in front of the B-yer headquarters in Brussels.",
           "segment": 36
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7597fdae632f",
+      "path": "Archives-for-the-Unexplained/documents/20120417-From-Where-Did-Some-Of-The-American-Indians-Come_-Part-4-of-4.-1219-1582f7da29.txt",
+      "candidates": [
+        {
+          "value": "2012-05-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Deadline for registration is May 3, 2012",
+          "segment": 107
         }
       ]
     },
@@ -48655,6 +48790,30 @@
           "method": "unclassified-mention",
           "evidence": "November 15 2015 at 3 a.m. and will end",
           "segment": 750
+        }
+      ]
+    },
+    {
+      "documentId": "doc-fbe81e013139",
+      "path": "Archives-for-the-Unexplained/documents/2017-11-13---Spaced-Out-Radio---Scott-Varden---UFOs---Extraterrestrials---Experiencers---ET-Contact-with-Scott-Varden_0ARA1MROVoM---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2014-09-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "morning hours of September 15 2014",
+          "segment": 2383
+        },
+        {
+          "value": "2014-09-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 15 2014 at 3 o'clock where I",
+          "segment": 2411
         }
       ]
     },
@@ -60563,6 +60722,21 @@
       ]
     },
     {
+      "documentId": "doc-822ecd241e88",
+      "path": "Archives-for-the-Unexplained/documents/2023-05-02---Spaced-Out-Radio---UFO-REVELATIONS-AND-THE-ACCIDENTAL-TRUTH_XkxVpcYcpgs---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1969-06-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "disappeared on June 14 1969 while on a",
+          "segment": 5712
+        }
+      ]
+    },
+    {
       "documentId": "doc-ef7d66a98883",
       "path": "Archives-for-the-Unexplained/documents/2023-05-03---Spaced-Out-Radio---ALIEN-CONTACT-ET-HYBRIDS-AND-SUPERNATURAL-SECRETS_S5FqpSgc07Y---transcript-automated-.txt",
       "candidates": [
@@ -65788,6 +65962,93 @@
           "method": "unclassified-mention",
           "evidence": "The ordinary thief Plymouth, England, 2 November 1958.",
           "segment": 958
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c06e2ede6c61",
+      "path": "Archives-for-the-Unexplained/documents/APRO-Bulletin---1960-03-00---March.txt",
+      "candidates": [
+        {
+          "value": "1957-09-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Physical Evidence On September 14, 1957, Mr. Ibrahim",
+          "segment": 6
+        },
+        {
+          "value": "1960-01-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on Sunday, the 14th, which would be the answer to his letter of 25 January 1960, Observed through binoculars, the ob­",
+          "segment": 194
+        },
+        {
+          "value": "1957-09-24",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "No. 15 001,\" dated September 24, 1957, pattern of the material by the Powder",
+          "segment": 214
+        },
+        {
+          "value": "1960-03-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "nated the cabin of a Western Airlines Cleveland Plain Dealer, March 6, 1960",
+          "segment": 346
+        },
+        {
+          "value": "1959-02-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "red ball in the sky for nearly five min­ Airlines pilots on 24 February 1959; this",
+          "segment": 385
+        },
+        {
+          "value": "1958-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "magazine 0 CRUZEIRO (March 8, 1958). was on January 16, at 12:15 p.m.",
+          "segment": 511
+        },
+        {
+          "value": "1958-02-24",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "A. The ship stopped to publish the case only after authori­ On February 24, 1958, the newspaper",
+          "segment": 639
+        },
+        {
+          "value": "1958-01-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"Some days later I was called again. \"On the morning of January 16, 1958, it disappeared into the horizon.",
+          "segment": 712
+        },
+        {
+          "value": "1958-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "JORNAL, etc., February 22, 1958 ) the object.",
+          "segment": 787
         }
       ]
     },
@@ -74075,6 +74336,21 @@
       ]
     },
     {
+      "documentId": "doc-c0b9ffd88ec1",
+      "path": "Archives-for-the-Unexplained/documents/Australian-Flying-Saucer-Review---1968-00---no-8-VUFORS.txt",
+      "candidates": [
+        {
+          "value": "1967-05-02",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Tuesday, May 2, 1967 transmission by Post as a Newspaper. llant white Urht\"-whlch",
+          "segment": 568
+        }
+      ]
+    },
+    {
       "documentId": "doc-7e5b7ff03e16",
       "path": "Archives-for-the-Unexplained/documents/Australian-UFO-Bulletin---1970-06---June.txt",
       "candidates": [
@@ -74197,6 +74473,48 @@
           "method": "unclassified-mention",
           "evidence": "�irplane at the Eldorado Airport on May 5, 1977. \\-.'hat made' this paftictilat landing different was that the pilot at",
           "segment": 376
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6519c0a7ce5a",
+      "path": "Archives-for-the-Unexplained/documents/Australian-UFO-Bulletin---1978-08---August.txt",
+      "candidates": [
+        {
+          "value": "1977-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Buckland, Tas. , July 18, 1977",
+          "segment": 129
+        },
+        {
+          "value": "1978-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Parkhurst, Qld., June 1, 1978: . ·",
+          "segment": 214
+        },
+        {
+          "value": "1978-06-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "��eadows, S. A., June 22, 1978",
+          "segment": 233
+        },
+        {
+          "value": "1978-01-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of his strange expe rience nea r Armidale, N SW, on Jan 10, 1978 ( reported in feb. Bulletin, p.",
+          "segment": 669
         }
       ]
     },
@@ -74404,6 +74722,75 @@
           "method": "unclassified-mention",
           "evidence": "the o r d e r o f 2 ft , a s a s s u m e d b e f o re , a n d a t 1 , 0 0 0 ft t h e i r a n g u l a r size wo u l d June 8, 1994",
           "segment": 494
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a9821e935760",
+      "path": "Archives-for-the-Unexplained/documents/Australian-UFO-Bulletin---1996-03---March.txt",
+      "candidates": [
+        {
+          "value": "1995-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "It was reported on the computer network on October 28, 1995, that two compelling pieces of evidence the UFO intel­ cal deceptions that exploit",
+          "segment": 117
+        },
+        {
+          "value": "1995-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "·It was announced on July 24, 1995 that a new",
+          "segment": 228
+        },
+        {
+          "value": "2004-09-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "New pictures from NASA's Hubble Space On September 29, 2004, Toutatis will pass by",
+          "segment": 298
+        },
+        {
+          "value": "1995-08-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 24, 1995 EDITCIRJPIIIBUS>HER: LUCIUS FARISH",
+          "segment": 349
+        },
+        {
+          "value": "1995-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Police are playing down the sighting saying � may England, July 19, 1995.",
+          "segment": 369
+        },
+        {
+          "value": "1995-11-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Introducing the VUFORS Web Site rfrager@teleport.com Volume 16 - Number 3 November 1995",
+          "segment": 444
+        },
+        {
+          "value": "1995-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On September 16, 1995, the American program Using the Roswell web page, it will be possible",
+          "segment": 752
         }
       ]
     },
@@ -78113,6 +78500,120 @@
       ]
     },
     {
+      "documentId": "doc-3d3f76835c56",
+      "path": "Archives-for-the-Unexplained/documents/Beyond-Reality-UFO-Special-Issue-2.txt",
+      "candidates": [
+        {
+          "value": "1976-12-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 4, 1976 on KDKA-TV channel2, Pittsburg, PA and popular phrase to describe UFOs.",
+          "segment": 34
+        },
+        {
+          "value": "1952-07-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "O Delbert C. Newhouse, Utah, July 2, 1952",
+          "segment": 235
+        },
+        {
+          "value": "1974-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "0 Miochael Bonne, France, March 31, 1974",
+          "segment": 242
+        },
+        {
+          "value": "1945-12-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I once happened on December 5, 1945, ''First of (lll, let me put it this",
+          "segment": 383
+        },
+        {
+          "value": "1974-02-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Abruptly one of the students, the \"spreading ailment was 'mass February 20, 1974: The San",
+          "segment": 746
+        },
+        {
+          "value": "1973-12-30",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "wondered if a newly laid library aches , and later released in good December 30, 1973: An Associat­",
+          "segment": 761
+        },
+        {
+          "value": "1969-04-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 13, 1969: Approximately 20 sonic weapon that could kill at this may be an atmospheric de­",
+          "segment": 808
+        },
+        {
+          "value": "1924-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "his associates, they were of such a On August 21, 1924, astrono­",
+          "segment": 871
+        },
+        {
+          "value": "1928-10-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Station WOR, Newark, New In addition to his broadcasting October 24, 1928.",
+          "segment": 904
+        },
+        {
+          "value": "1969-10-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "behind the Andes now. So, here you Group at Quincy, MCJB80Chusettes, October 5, 1969.",
+          "segment": 1953
+        },
+        {
+          "value": "1957-11-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "dama� the jarring sounds had November 25 1957.",
+          "segment": 2560
+        },
+        {
+          "value": "1955-05-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "by the Baron de Guldenstubbe in On May 23, 1955, a weird",
+          "segment": 3117
+        }
+      ]
+    },
+    {
       "documentId": "doc-ad3bfede1d44",
       "path": "Archives-for-the-Unexplained/documents/Bigfoot-Abstract---No-3---1988.txt",
       "candidates": [
@@ -78412,6 +78913,75 @@
           "method": "unclassified-mention",
           "evidence": "JOHN GREEN writes ( August 6, 1970) : \"The survey is",
           "segment": 166
+        }
+      ]
+    },
+    {
+      "documentId": "doc-ebc5fdf6444c",
+      "path": "Archives-for-the-Unexplained/documents/Bigfoot-Bulletin---No-22---1970.txt",
+      "candidates": [
+        {
+          "value": "1970-10-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BIGFOOT BULLETIN October 31, 1970 No. 22",
+          "segment": 48
+        },
+        {
+          "value": "1970-10-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BIGFOOT BULLETIN October 31, 1970 No. 22",
+          "segment": 103
+        },
+        {
+          "value": "1970-10-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BIGFOOT BULLETIN October 31, 1970 No. 22",
+          "segment": 160
+        },
+        {
+          "value": "1970-08-14",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "The following p aragraph . is quoted, from a l etter dated August 14, 1970",
+          "segment": 162
+        },
+        {
+          "value": "1970-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mr. E. Kleiss Brown writes, October 28, 1970, in a letter to George F.",
+          "segment": 170
+        },
+        {
+          "value": "1970-08-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DICK GROVER, Everet t, Washington, writes (August 10, 1970) : \"On August",
+          "segment": 193
+        },
+        {
+          "value": "1970-10-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BIGFOOT BULLETIN October 31, 1970 No. 22",
+          "segment": 212
         }
       ]
     },
@@ -87317,6 +87887,39 @@
       ]
     },
     {
+      "documentId": "doc-a978604dc019",
+      "path": "Archives-for-the-Unexplained/documents/Circulaire-CIGU---No-02---1988-nov.txt",
+      "candidates": [
+        {
+          "value": "1978-11-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ordres de leur gourou que le 19 novembre 1978, les adeptes de cette",
+          "segment": 101
+        },
+        {
+          "value": "1988-02-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "libérer du démon 11 • (Nord-Eclair, 9 février 1988, p .",
+          "segment": 136
+        },
+        {
+          "value": "1938-10-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 30 octobre 1938 , Orson WELLES et le Mercury Theater On The Air",
+          "segment": 357
+        }
+      ]
+    },
+    {
       "documentId": "doc-1410d0fbf684",
       "path": "Archives-for-the-Unexplained/documents/Circulaire-CIGU---No-07-08---1989-avri-.mai.txt",
       "candidates": [
@@ -88693,6 +89296,156 @@
           "method": "unclassified-mention",
           "evidence": "Friday, :March 19, 1965 T hornv.ale Barracks at t h e same",
           "segment": 1355
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b21fd4e4f0af",
+      "path": "Archives-for-the-Unexplained/documents/Controversial-Phenomena-Bulletin---No-10---Vol-2-No-4---Jul-Aug-1965.txt",
+      "candidates": [
+        {
+          "value": "1964-11-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of the utmost importance; for, on November 28, 1964, the headlines leaped out at",
+          "segment": 198
+        },
+        {
+          "value": "1964-11-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on November 29, 1964, scientists at Jet Propulsion Laboratories in Pasadena, Ca-",
+          "segment": 208
+        },
+        {
+          "value": "1964-11-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Providence Journal - November 30, 1964 t to the heavens and said: 11 Maybe it",
+          "segment": 213
+        },
+        {
+          "value": "1965-06-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "conditions (for life on Mars) are quite ii June 22, 1965 - Pasadena, Calif. (AP) -",
+          "segment": 281
+        },
+        {
+          "value": "1965-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "until .•• March 3, 1965, when scientists ii Y ysis.",
+          "segment": 297
+        },
+        {
+          "value": "1965-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "cipents, sender and receiver.) June 24, 1965 - rcvd.",
+          "segment": 401
+        },
+        {
+          "value": "1954-04-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ttThe following recording was made April 17, 1954, at San Diego, California •••••",
+          "segment": 433
+        },
+        {
+          "value": "1965-06-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Worcester Telegram - - June 14, 1965 - - (excerpts) - - -",
+          "segment": 588
+        },
+        {
+          "value": "1965-04-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sani tar~um on April 23, 1965 after a sudden attack of",
+          "segment": 654
+        },
+        {
+          "value": "1965-06-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "HAUNTED! - June 9, 1965 - Gazette - 1 goings-on in the e~pty, echoing tombs",
+          "segment": 685
+        },
+        {
+          "value": "1965-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "London, Saturday.- AN ANCIENT DEATH CURSE SET BY THE February 28, 1965",
+          "segment": 945
+        },
+        {
+          "value": "1965-06-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Evening Gazette - Worcester, Massachusetts - June 2, 1965 •••••",
+          "segment": 1099
+        },
+        {
+          "value": "1965-03-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Australian Post - March 18, 1965 **** Credit - Elliott Rockmore of New York -Rep",
+          "segment": 1118
+        },
+        {
+          "value": "1965-06-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 25, 1965 - WREX-TV - Rock~rd, Illinois (reported to CPB by Stephen Anderson",
+          "segment": 1363
+        },
+        {
+          "value": "1965-07-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Boston Sunday Advertiser - July 4, !965 ------- Arkansas Democrat - · July 3, 1965",
+          "segment": 1427
+        },
+        {
+          "value": "1965-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "AID BY U.S., IDSSIA Thursday - July 15, 1965",
+          "segment": 1565
         }
       ]
     },
@@ -104441,6 +105194,21 @@
       ]
     },
     {
+      "documentId": "doc-6e79266c124b",
+      "path": "Archives-for-the-Unexplained/documents/En-Gal-Gal-Verden---1994-No-07.txt",
+      "candidates": [
+        {
+          "value": "1974-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Dewey arrestert og satt bak lås og dollar den 5 mars 1974.",
+          "segment": 1467
+        }
+      ]
+    },
+    {
       "documentId": "doc-5b6ee0829365",
       "path": "Archives-for-the-Unexplained/documents/Enigma---No-04---1994.txt",
       "candidates": [
@@ -106780,6 +107548,102 @@
           "method": "unclassified-mention",
           "evidence": "Feb 16, 2001 In 1996 I won my appeal and was granted a new trial.",
           "segment": 846
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a83952152e3c",
+      "path": "Archives-for-the-Unexplained/documents/False-Memory-Syndrome-Foundation---Vol-10-No-05---2001-septoct.txt",
+      "candidates": [
+        {
+          "value": "2001-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Indeed, memory research in the 90s has seen phenomenal I. Caro1yn Hax, Albuquerque Journal, Jul 13, 2001.",
+          "segment": 96
+        },
+        {
+          "value": "2001-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "According to a July 1, July 31, 2001, however, Dr. Wait sive priest.",
+          "segment": 239
+        },
+        {
+          "value": "2001-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"pop culture\" Vancouver Sun, July 7, 2001.",
+          "segment": 278
+        },
+        {
+          "value": "2001-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On July 31, 2001, Honnah and Jonathan Sims were former Wenatchee Police Chief Ken Badley; Douglas",
+          "segment": 381
+        },
+        {
+          "value": "2001-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The jury said that the city ofWenatchee was neg- On July 6, 2001, in a 5-0 ruling, the Massachusetts",
+          "segment": 395
+        },
+        {
+          "value": "2001-07-07",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "potential release,\" July 7, 2001. convicted on recovered memories,\" Colorado on August 2, 200 I.",
+          "segment": 450
+        },
+        {
+          "value": "2001-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"Studies have shown that children N(ltional Post (Canada) July 10, 2001.",
+          "segment": 451
+        },
+        {
+          "value": "2001-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Street Jonmal, July 9, 2001. stated, \"Unless they are mindless crea-",
+          "segment": 514
+        },
+        {
+          "value": "2001-10-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "RECONCILIATION AND EXONERATION: Saturday October 13, 2001, 1:00PM- 5:00PM",
+          "segment": 917
+        },
+        {
+          "value": "2001-11-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Saturday November 3, 2001, • Karen and Charles Johnson \"History of 3rd-Party",
+          "segment": 918
         }
       ]
     },
@@ -110327,6 +111191,21 @@
       ]
     },
     {
+      "documentId": "doc-7868904998c4",
+      "path": "Archives-for-the-Unexplained/documents/Flying-Saucer-News---1969-08---August.txt",
+      "candidates": [
+        {
+          "value": "1968-02-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "were fired by Condon on February 9, 1968 for in­",
+          "segment": 89
+        }
+      ]
+    },
+    {
       "documentId": "doc-5a215a7f3e7e",
       "path": "Archives-for-the-Unexplained/documents/Flying-Saucer-News-Bulletin---No-06.txt",
       "candidates": [
@@ -111274,6 +112153,30 @@
           "method": "unclassified-mention",
           "evidence": "November 21, 1954, National Airlines report",
           "segment": 283
+        }
+      ]
+    },
+    {
+      "documentId": "doc-845b6c7d9b0c",
+      "path": "Archives-for-the-Unexplained/documents/Fortean-Society-Magazine---No-01.txt",
+      "candidates": [
+        {
+          "value": "1937-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "corrected azimuths, called Laplace azimuths, On the afternoon of July 7, 1937, when the in human form that it calls itself a Congress­",
+          "segment": 41
+        },
+        {
+          "value": "1932-05-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Charles Fort died May 3, 1932, at the age",
+          "segment": 1301
         }
       ]
     },
@@ -113878,6 +114781,39 @@
           "method": "unclassified-mention",
           "evidence": "LOGGERS FACE \"HEAVY CURSE\" - July 25, 1988",
           "segment": 312
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7a07e11b7461",
+      "path": "Archives-for-the-Unexplained/documents/Ghost-Trackers-Newsletter---Vol-10-No-1---1991-02.txt",
+      "candidates": [
+        {
+          "value": "1990-09-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "that occurred on the night of September 14, 1990.",
+          "segment": 150
+        },
+        {
+          "value": "1990-02-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BURNING BOY A PUZ Z LE Beijing (Reuter) February 5, 1990",
+          "segment": 479
+        },
+        {
+          "value": "1990-04-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "THAI MEN FEAR SEX-STARVED GHOSTS - Bangkok (AFP) April 15, 1990",
+          "segment": 492
         }
       ]
     },
@@ -147608,6 +148544,30 @@
       ]
     },
     {
+      "documentId": "doc-ad9052edd9fc",
+      "path": "Archives-for-the-Unexplained/documents/MUFON-Arizona---1995-07-17---Vol-04-No-07.txt",
+      "candidates": [
+        {
+          "value": "1995-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MEETING DATE: Monday, July 17, 1995 + MEETING TIME: 7:30p.m.",
+          "segment": 1
+        },
+        {
+          "value": "1990-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Atlanta, GA on 6 July 1990.",
+          "segment": 304
+        }
+      ]
+    },
+    {
       "documentId": "doc-39caa4424a14",
       "path": "Archives-for-the-Unexplained/documents/MUFON-Arizona---1996-02-28---Vol-05-No-02.txt",
       "candidates": [
@@ -152359,6 +153319,21 @@
           "method": "unclassified-mention",
           "evidence": "KEYHOE, acter - the Durante noses, and the 22 February 1964. \"The Bellero Shield\"",
           "segment": 610
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f645a8b5eefe",
+      "path": "Archives-for-the-Unexplained/documents/Magonia---No-43---1992-07.txt",
+      "candidates": [
+        {
+          "value": "1974-03-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "18 March 1974: The machine had evidently reached too high",
+          "segment": 276
         }
       ]
     },
@@ -160540,6 +161515,21 @@
           "method": "unclassified-mention",
           "evidence": "Puget Sound which is part of_ the ocean.\" 10 February 1989, p.?40: \"most ocean. water",
           "segment": 199
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f38a41912ba3",
+      "path": "Archives-for-the-Unexplained/documents/New-Atlantean-Journal---1975---Vol-03-No-02.txt",
+      "candidates": [
+        {
+          "value": "1967-04-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Alvar Larsson disappeared on April 16, 1967 and Paul Virtanen",
+          "segment": 234
         }
       ]
     },
@@ -169391,6 +170381,21 @@
       ]
     },
     {
+      "documentId": "doc-5c5d0f27176a",
+      "path": "Archives-for-the-Unexplained/documents/Norwegian-UFO-Newsletter---1982-No-3.txt",
+      "candidates": [
+        {
+          "value": "1982-03-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "T hursday on March 11 1982, at",
+          "segment": 383
+        }
+      ]
+    },
+    {
       "documentId": "doc-544b9dcf4260",
       "path": "Archives-for-the-Unexplained/documents/Note-enquete.txt",
       "candidates": [
@@ -171502,6 +172507,57 @@
           "method": "relative-date-exclusion",
           "evidence": "until July 27, 1947 and the separation of",
           "segment": 2342
+        }
+      ]
+    },
+    {
+      "documentId": "doc-784696bf7e59",
+      "path": "Archives-for-the-Unexplained/documents/Ohio-UFO-Notebook---No-21---2000.txt",
+      "candidates": [
+        {
+          "value": "1971-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Kansas November 2, 1971 Event ...",
+          "segment": 9
+        },
+        {
+          "value": "1999-11-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "u November 6, 1999 at a meeting of MOFON of Ohio",
+          "segment": 482
+        },
+        {
+          "value": "1966-03-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "At midnight on March 26, 1966, my r'",
+          "segment": 777
+        },
+        {
+          "value": "1947-12-30",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "until December 30, 1947 that Maj. Gen. Lauence Craigie signed the order making the unofficial",
+          "segment": 1105
+        },
+        {
+          "value": "1999-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "playpen of the mentally unstable, charlatans, and the (Albuquerque Journal, Thursday, July 15, 1999, page",
+          "segment": 1296
         }
       ]
     },
@@ -182462,6 +183518,66 @@
       ]
     },
     {
+      "documentId": "doc-f06e06d4aa40",
+      "path": "Archives-for-the-Unexplained/documents/Phenomena---No-06---1991-11.txt",
+      "candidates": [
+        {
+          "value": "1991-10-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le vent peut transporter 16 octobre 1991",
+          "segment": 387
+        },
+        {
+          "value": "1975-09-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 4 septembre 1975, sacrifices rituels.",
+          "segment": 535
+        },
+        {
+          "value": "1952-11-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "18 novembre 1952, adressé au vaincant.",
+          "segment": 595
+        },
+        {
+          "value": "1947-07-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "En fait de «Manipulateurs», nous (7 ) Petrakis, P., «Roswell, 3 juillet 1947...",
+          "segment": 727
+        },
+        {
+          "value": "1991-01-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le quartier hurlaient à la mort, l'ovni le 16 janvier 1991, entre 17h45 et",
+          "segment": 779
+        },
+        {
+          "value": "1988-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1) Pourquoi Pas ?, 14 janvier 1988.",
+          "segment": 958
+        }
+      ]
+    },
+    {
       "documentId": "doc-107916679cbc",
       "path": "Archives-for-the-Unexplained/documents/Phenomena---No-09---1992-05.txt",
       "candidates": [
@@ -187048,6 +188164,138 @@
           "method": "unclassified-mention",
           "evidence": "Observation du 15 août 2013 – Rencontre avec le témoin le 2 septembre 2013.",
           "segment": 112
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a6cbb9ddef69",
+      "path": "Archives-for-the-Unexplained/documents/Rencontres-Ufologiques---2013-12-25---No-021-.txt",
+      "candidates": [
+        {
+          "value": "2013-12-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Hier soir 24 décembre 2013 vers 23h30 heure locale plusieurs personnes de plusieurs départements français ont",
+          "segment": 8
+        },
+        {
+          "value": "2013-12-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Quinze personnes se sont retrouvées le jeudi 5 décembre 2013 à l’Atlantic Oak de Saint-Martin-d’Hères pour",
+          "segment": 66
+        },
+        {
+          "value": "2014-02-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "La prochaine réunion OVNI Grenoble se tiendra le jeudi 6 février 2014 à « La Raiponce en épi », 4 rue de la",
+          "segment": 77
+        },
+        {
+          "value": "2013-12-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le dimanche 08 décembre 2013 a vu la",
+          "segment": 89
+        },
+        {
+          "value": "2013-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Compte rendu du repas « Ovni à Table » du 6 décembre 2013 à Bourg-en-Bresse",
+          "segment": 142
+        },
+        {
+          "value": "2014-03-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le prochain repas se tiendra le vendredi 7 mars 2014 avec une conférence qu’il reste encore à définir pour plus",
+          "segment": 195
+        },
+        {
+          "value": "2013-12-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "- Samedi 14 décembre 2013 à 20h à Lyon : conférence « L’histoire extraordinaire de deux rencontres » par Jeanine",
+          "segment": 200
+        },
+        {
+          "value": "2014-01-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "- Dimanche 5 janvier 2014 à 12h45 au Flunch de Lons le Saunier, repas animé par Raymond Taffin",
+          "segment": 202
+        },
+        {
+          "value": "2014-01-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "- Mardi 7 janvier 2014 à partir de 18h30 à Paris, repas organisé par Guy Loterre, avec Vincent et Stéphane Leroux qui",
+          "segment": 203
+        },
+        {
+          "value": "2013-11-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "- Voix de l’Ain du vendredi 29 novembre 2013, 2nd cahier « Vie Locale Bresse-Revermont » en page 47.",
+          "segment": 210
+        },
+        {
+          "value": "2013-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "- Le Progrès du vendredi 6 décembre 2013 en page 18 (édition Bourg - Bresse - Val-de-Saône).",
+          "segment": 212
+        },
+        {
+          "value": "2013-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "- Voix de l’Ain du vendredi 6 décembre 2013, 2nd cahier « Vie Locale Bresse-Revermont » en page 44.",
+          "segment": 214
+        },
+        {
+          "value": "2013-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "- Radio Aléo (104.8 FM) du mercredi 4 au vendredi 6 décembre 2013.",
+          "segment": 216
+        },
+        {
+          "value": "2014-12-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "mercredi 11 décembre 2014 vers 19H00 sur France 3.",
+          "segment": 348
         }
       ]
     },
@@ -192182,6 +193430,30 @@
       ]
     },
     {
+      "documentId": "doc-b5b19bc4bd3c",
+      "path": "Archives-for-the-Unexplained/documents/SUN-72-Summer-2002-.txt",
+      "candidates": [
+        {
+          "value": "1947-06-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "example, civil format: June 22, 1947; military format: 2i June 1947; EBD format: 22 June, 1947.] I recalled",
+          "segment": 48
+        },
+        {
+          "value": "2001-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "example, a study of the NIDS transcripts for the Carteret, NJ, sightings of July 15, 2001, leaves little doubt",
+          "segment": 275
+        }
+      ]
+    },
+    {
       "documentId": "doc-b1e7b389ce7c",
       "path": "Archives-for-the-Unexplained/documents/SUN-75-Spring-2003-.txt",
       "candidates": [
@@ -196126,6 +197398,21 @@
           "method": "unclassified-mention",
           "evidence": "On June 30, 1908, a gigantic who said: \"The blast may have been the",
           "segment": 479
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4237ccbda6c3",
+      "path": "Archives-for-the-Unexplained/documents/Saucers-Space-Science---No-33.txt",
+      "candidates": [
+        {
+          "value": "1963-06-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "San Antonio Express, June 17, 1963�",
+          "segment": 448
         }
       ]
     },
@@ -202763,6 +204050,30 @@
       ]
     },
     {
+      "documentId": "doc-3ded5e043bfa",
+      "path": "Archives-for-the-Unexplained/documents/Skeptic---1990---Vol-4-No-3.txt",
+      "candidates": [
+        {
+          "value": "1990-01-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "a book by Strieber.Luckily, before I could do anything termi­ Evening Herald for 30 January 1990 carried a piece by the",
+          "segment": 343
+        },
+        {
+          "value": "1985-12-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "leading scientific journal Nature, 5 December 1985, volume attend, but one-a leading local practitioner-withdrew at",
+          "segment": 440
+        }
+      ]
+    },
+    {
       "documentId": "doc-25fde6bf5ee4",
       "path": "Archives-for-the-Unexplained/documents/Skeptic---1992---Vol-6-No-1.txt",
       "candidates": [
@@ -203767,6 +205078,48 @@
           "method": "unclassified-mention",
           "evidence": "Jag Länstidningen, Östersund, 12 mars 1969.",
           "segment": 1239
+        }
+      ]
+    },
+    {
+      "documentId": "doc-43ef9d0ae9ba",
+      "path": "Archives-for-the-Unexplained/documents/Sokaren---1980-No-09.txt",
+      "candidates": [
+        {
+          "value": "1979-03-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Tusentals männi­ Psycho - Neurosis Ca l led Chris ti­ 18 mars 1979.",
+          "segment": 245
+        },
+        {
+          "value": "1978-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "tydelse, främst iden att i ett ogift Hennes sexuella hunger väcktes Den 13 mars 1978 innehöll Time",
+          "segment": 395
+        },
+        {
+          "value": "1979-03-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "481.) När kvinnan på der besattheten intog de bland an­ Den 7 mars 1979 hade A us tin",
+          "segment": 425
+        },
+        {
+          "value": "1972-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Pl 1486, 44020 Vårgårda. (Pris 49 kr. skaper i dagens läge utgår från evo­ larna och funktionerna skett samti­ ger dock samma vetenskapsmän att Den 3 mars 1972 sändes en rymd­ man världen finner man likväl att",
+          "segment": 694
         }
       ]
     },
@@ -224258,6 +225611,291 @@
       ]
     },
     {
+      "documentId": "doc-d02e9ba2a90b",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Newsclipping-Service---1983-08---no-169.txt",
+      "candidates": [
+        {
+          "value": "1983-06-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ENTERPRISE, Beaumont, TX- June 7, 1983",
+          "segment": 3
+        },
+        {
+          "value": "1983-06-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MISSISSIPPI PRESS, Pascagoula, MS - June 10, 1983",
+          "segment": 232
+        },
+        {
+          "value": "1983-07-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TRIBUNE, Mesa, A!- July 10, 1983",
+          "segment": 233
+        },
+        {
+          "value": "1983-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"We feel most of the other organizations have TIMES, Washington, DC- July 29, 1983 CR: F. Whiting & W. Leet",
+          "segment": 283
+        },
+        {
+          "value": "1983-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "GAZETTE, Gastonia, NC- July 31, 1983 CR: G. Fawcett",
+          "segment": 342
+        },
+        {
+          "value": "1983-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ENQU IRER, Cincinnati, OH- July 19, 1983 CR: B. Pratt",
+          "segment": 366
+        },
+        {
+          "value": "1983-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "San Diego, CA- July 26, 1983) HERALD, Everett, WA- July 22 1 1983 CR: L. Williford",
+          "segment": 588
+        },
+        {
+          "value": "1964-04-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "in Seminole, Okla., Jordan heard Zamora's radio call, Bursum says he can understand Zamora's reticence. book on the events surrounding April 24, 1964.",
+          "segment": 879
+        },
+        {
+          "value": "1983-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BULlETIN , Latrobe , PA- July 29, 1983 CR: S. Gordon",
+          "segment": 954
+        },
+        {
+          "value": "1983-05-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BECKENHAM JOURNAL, Kent, England - May 12, 1983",
+          "segment": 1043
+        },
+        {
+          "value": "1983-05-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUN, Melbourne, Victoria, Australia- May 27, 1983 CR: P. No~",
+          "segment": 1048
+        },
+        {
+          "value": "1983-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Oloee, BI-ckley, who stopped mTh;n\\itnJstTy of Defence BERROtiS WORCESTER JOURNAL, England- June 30, 1983",
+          "segment": 1103
+        },
+        {
+          "value": "1983-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DAILY MIRROR, Sydney, N.S.W., Australia - June 30, 1983 CR: M. stot t",
+          "segment": 1191
+        },
+        {
+          "value": "1983-06-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "» ~ were outside Bromley '\"\";) June 11, 1983 CR: J. Magee",
+          "segment": 1214
+        },
+        {
+          "value": "1983-06-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BROMLEY TI ~rns , Kent , England- June 2, 1983 0\"'",
+          "segment": 1340
+        },
+        {
+          "value": "1983-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "WESTERN DA I LY PRESS, Bristol, England - July 12, 1983",
+          "segment": 1428
+        },
+        {
+          "value": "1983-05-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date of inci dent: May 20, 1983",
+          "segment": 1543
+        },
+        {
+          "value": "1983-05-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Name of pa per and date of clip: DIARIO DE SABADEU., May 25, 1983 City and country of incident: Ca' Bianca de Varzi, Pavia, Italy",
+          "segment": 1544
+        },
+        {
+          "value": "1983-06-05",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "City and country of newspaper: Sabadell (Barcelona), Spain Date of incident: June 5, 1983",
+          "segment": 1545
+        },
+        {
+          "value": "1983-06-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Name of paper and date of clip: LA NOTTE, June 9, 1983",
+          "segment": 1546
+        },
+        {
+          "value": "1983-07-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Name of paper and date of clip: SUR, July 3, 1983 very afraid.",
+          "segment": 1591
+        },
+        {
+          "value": "1983-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "HERALD, Everett , WA - July 25, 1983 CR: L. Williford",
+          "segment": 1719
+        },
+        {
+          "value": "1983-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "GLOBB, Boston, MA - July 22, 1983",
+          "segment": 1748
+        },
+        {
+          "value": "1983-06-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "HERALD, IVerett, WA - June J, 1983 CR: L. Villitord RIO GRANDI SUH 1 Ia panola, NM - June 23, 1983 CJt s T. ~",
+          "segment": 1995
+        },
+        {
+          "value": "1983-07-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "HERALD-JOURNAL, Syracuse_, NY - July 9, 1983",
+          "segment": 2060
+        },
+        {
+          "value": "1983-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TRIBUNE, New York, NY - July 30, 1983 He said there have been seven re-",
+          "segment": 2095
+        },
+        {
+          "value": "1981-06-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "erE!- ~~~~~og.e:::: =r though Arkansas harbors a number on June 14, 1981 as Lowery crossed",
+          "segment": 2126
+        },
+        {
+          "value": "1983-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "flo~i~~~~ 9 j DIAMOND, Murfreesboro, AR- June 30, 1983",
+          "segment": 2228
+        },
+        {
+          "value": "1983-06-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "HIRALD, Everett 1 VA June 29, 1983 CRs J. Weetu.n & L. Wlllitorcl",
+          "segment": 2235
+        },
+        {
+          "value": "1983-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PRESS, Sheboygan, WI - July 11, 1983 CR: R. Heiden ed you .",
+          "segment": 2267
+        },
+        {
+          "value": "1983-06-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "WISCONSIN STATE JOURNAL, Madison, WI - June 16, 1983",
+          "segment": 2290
+        }
+      ]
+    },
+    {
       "documentId": "doc-af03bc332380",
       "path": "Archives-for-the-Unexplained/documents/UFO-Newsclipping-Service---1984-09---no-182.txt",
       "candidates": [
@@ -224974,6 +226612,192 @@
           "method": "unclassified-mention",
           "evidence": "Okanagan's Ogopogo eludes proof lmefi, San Dieqo, CA - July 30, 1985 CX: D. Clements",
           "segment": 2077
+        }
+      ]
+    },
+    {
+      "documentId": "doc-36009141590b",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Newsclipping-Service---1985-09---no-194.txt",
+      "candidates": [
+        {
+          "value": "1985-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "STANDARD-TIMES, San Angelo, TX - July 18, 1985 CR: L Whitehurst",
+          "segment": 159
+        },
+        {
+          "value": "1985-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "FAIRPRESS, Yorktown Heights, NY- July 17, 1985 CR: R. Collins BULLETIN, Latrobe, PA - Aug. 13, 1985 CR: S. Gordon",
+          "segment": 250
+        },
+        {
+          "value": "1985-03-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ADVOCATE, Fairfield, CT- March 27, 1985",
+          "segment": 526
+        },
+        {
+          "value": "1985-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NE.WS, Underwood, ND- July 31, 1985",
+          "segment": 556
+        },
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "witnessed by many in June 24, 1947. just are! is - having been in the Air Force However, materialism took over",
+          "segment": 572
+        },
+        {
+          "value": "1966-06-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On June 9, 1966, the Air Force",
+          "segment": 736
+        },
+        {
+          "value": "1985-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "HIDDELBURG OBSERVER, Transvaal, South Africa -July 12, 1985 CR: C. Hind",
+          "segment": 1502
+        },
+        {
+          "value": "1985-06-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NATAL MERCURY, Durban, South Africa - June 27, 1985 CR: C. Hind DAILY EXPRESS, London, England",
+          "segment": 1527
+        },
+        {
+          "value": "1985-05-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 18, 1985 CR: D. Speed",
+          "segment": 1528
+        },
+        {
+          "value": "1985-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "GUARDIAN, London, England - July 13, 1985 CR: T. Good",
+          "segment": 1576
+        },
+        {
+          "value": "1985-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 30, 1985 CR: P. Norman",
+          "segment": 1843
+        },
+        {
+          "value": "1985-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "~mystery Date of incident: July 21, 1985",
+          "segment": 1911
+        },
+        {
+          "value": "1985-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1-o that there must be a log- pinkish red colour with Name of paper and date of clip: KRONOBERGAREN, July 25, 1985",
+          "segment": 1912
+        },
+        {
+          "value": "1985-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "e9 on Aug. 4 reported seeing a Date of incident: July 20, 1985",
+          "segment": 1992
+        },
+        {
+          "value": "1985-08-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "~ humanoid about 1.20 meters tall Name of paper and date of clip: SMALANNINGEN, August 2, 1985",
+          "segment": 1993
+        },
+        {
+          "value": "1985-08-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Name of paper and date of clip: 0 GLOBO, August 21, 1985",
+          "segment": 2040
+        },
+        {
+          "value": "1985-08-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "~ame of paper and date of c lip: 0 GLOBO, August 25, 1985 It was thought that they were dealing with a UFO case as the material",
+          "segment": 2156
+        },
+        {
+          "value": "1985-06-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PlAIN DEALER, Cleve land, OH - June 16, 1985 CR: B. Robbins",
+          "segment": 2163
+        },
+        {
+          "value": "1985-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "EXAMINER & CHRONICLE (\"This World\"), San Francisco, CA - July 14, 1985 They gave it their best shot, and the results",
+          "segment": 2264
+        },
+        {
+          "value": "1985-07-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "continued fran page 18 - EXAMINER & CHROOICLE (''This World\"), San Francisco, CA - July 14, 1985",
+          "segment": 2448
         }
       ]
     },
@@ -229744,6 +231568,102 @@
           "method": "unclassified-mention",
           "evidence": "continued from page 19- REPORTER, Oak Lawn, IL- Oct 14, 1999",
           "segment": 2061
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f4a58f85ab97",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Newsclipping-Service---2000-10---no-375.txt",
+      "candidates": [
+        {
+          "value": "2000-03-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TUNBRIDGE WELLS COURIER, Kent, England- March 10, 2000",
+          "segment": 1034
+        },
+        {
+          "value": "2000-06-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DAILY STAR, London, Eng land - June 13, 2000 CR : N. O li ver",
+          "segment": 1048
+        },
+        {
+          "value": "2000-05-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SOUTH WALES ARGUS, Newport, Wales - May 16, 2000",
+          "segment": 1073
+        },
+        {
+          "value": "1977-02-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "spheres floating 2,000ft in the air. were said to resemble ball bearings. • February 14, 1977 - pupils at",
+          "segment": 1182
+        },
+        {
+          "value": "1996-11-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "member of the South Wales UFO He said there had been many UFOs • November 21, 1996- a black",
+          "segment": 1191
+        },
+        {
+          "value": "2000-06-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "WEEKEND, London, England - June 3, 2000",
+          "segment": 1223
+        },
+        {
+          "value": "1996-01-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Bournemouth and \"We liaised with the police the possibility of resuming Similarly, on January 20 1996 four men discov-",
+          "segment": 1274
+        },
+        {
+          "value": "2000-06-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "GUARDIAN, London, England- June 10, 2000 ~~ ,.Chased·' by UFO",
+          "segment": 1455
+        },
+        {
+          "value": "1979-01-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "' £6.99) January 18, 1979 -has been res-",
+          "segment": 1466
+        },
+        {
+          "value": "2000-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "continued from page 19- CITY PAGES, Minneapolis, liN- Oct 4, 2000",
+          "segment": 1875
         }
       ]
     },
@@ -240794,6 +242714,228 @@
       ]
     },
     {
+      "documentId": "doc-3e2ceae69834",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Research-Newsletter---1977-02-03---Vol-05-No-04.txt",
+      "candidates": [
+        {
+          "value": "1977-01-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "car, stated the Los Angeles Times, January 9, 1977.",
+          "segment": 6
+        },
+        {
+          "value": "1976-09-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Journal, September 7, 1976.",
+          "segment": 30
+        },
+        {
+          "value": "1976-11-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Subscription rates (12 issues) : Item, November 17, 1976.",
+          "segment": 60
+        },
+        {
+          "value": "1976-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Times, September 2, 1976, Winter photographed the UFO with \"a 600",
+          "segment": 85
+        },
+        {
+          "value": "1976-12-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Danbury, Conn. , the December 20, 1976, edition of Midnight. \"Then I made out the",
+          "segment": 92
+        },
+        {
+          "value": "1976-08-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 30, 1976 saucer shape and realized that the craft was zig-zagging from side",
+          "segment": 93
+        },
+        {
+          "value": "1976-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the November 5, 1976, edition of the Gastonia",
+          "segment": 127
+        },
+        {
+          "value": "1976-11-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 1, 1976 retreated back into the house.",
+          "segment": 135
+        },
+        {
+          "value": "1976-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lake View, S.C., October 28, 1976 two dark eyes, and no neck.",
+          "segment": 157
+        },
+        {
+          "value": "1976-11-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ence, S. C., Morning News, November 14, 1976. \"He kept saying 'it was horrib 1e, don't 1et",
+          "segment": 162
+        },
+        {
+          "value": "1976-09-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 23, 1976 traffic light in Coral Gables at 7:45a.m.",
+          "segment": 180
+        },
+        {
+          "value": "1976-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sources: Bad Axe, Mich., Huron paiZy Tribune, September 8, 1976; and Saginaw, Mich.",
+          "segment": 226
+        },
+        {
+          "value": "1976-09-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "News, September 25, 1976).",
+          "segment": 227
+        },
+        {
+          "value": "1976-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "News-Advocate, September 21, 1976, stated.",
+          "segment": 230
+        },
+        {
+          "value": "1976-08-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "above the ground near El Paso, stated the El Paso Times, August 31, 1976.",
+          "segment": 243
+        },
+        {
+          "value": "1977-01-03",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "witpess sta�ed iQ hi� report to UFOR dated January 3, 1977.",
+          "segment": 252
+        },
+        {
+          "value": "1976-10-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Grand Tetons,\" Havemann related in the October 8, 1976, edition of the Pocatello, Idaho",
+          "segment": 260
+        },
+        {
+          "value": "1976-10-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ness related in the Twin Falls Times-News, October 11, 1976. \"It was spraying off sparks",
+          "segment": 279
+        },
+        {
+          "value": "1976-08-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "According to the August 28, 1976, edition of the Stockton, Calif., Reaord",
+          "segment": 291
+        },
+        {
+          "value": "1976-08-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "corrmunications satellite, ANIK,\" the Kitchner, Ontario, Reaord, August 25, 1976, said.",
+          "segment": 309
+        },
+        {
+          "value": "1976-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "pheric pressure,\" according to the September 16, 1976, edition of the Buenos Aires Cla�on.",
+          "segment": 316
+        },
+        {
+          "value": "1976-09-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "port control tower officials, according to the Tehran JournaZ, September 20, 1976.",
+          "segment": 325
+        },
+        {
+          "value": "1976-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The September 21, 1976, edition of the Kayhan (Iran) International, however, contended",
+          "segment": 340
+        },
+        {
+          "value": "1973-10-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "now-classic Pascagoula, Miss., abduction case of October 11, 1973, is the inner focal",
+          "segment": 442
+        }
+      ]
+    },
+    {
       "documentId": "doc-5e8d97ddb9fb",
       "path": "Archives-for-the-Unexplained/documents/UFO-Research-Newsletter---1978-02-03---Vol-05-No-10.txt",
       "candidates": [
@@ -241069,6 +243211,30 @@
           "method": "unclassified-mention",
           "evidence": "October 18, 1981, 10 .20 p. m.",
           "segment": 501
+        }
+      ]
+    },
+    {
+      "documentId": "doc-756c23904220",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Research-of-Finland-Annual-Report-1982-83.txt",
+      "candidates": [
+        {
+          "value": "1982-06-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 2, 1982, at 15.00 -15.50, Turku.",
+          "segment": 89
+        },
+        {
+          "value": "1981-12-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 16, 1981, at 17.00 - 17.15, Patterinhaka, Turku.",
+          "segment": 102
         }
       ]
     },
@@ -716771,6 +718937,21 @@
       ]
     },
     {
+      "documentId": "doc-eaa741e3f8b3",
+      "path": "Archives-for-the-Unexplained/documents/US-Air-Force---Aids-to-Identification-of-Flying-Objects.txt",
+      "candidates": [
+        {
+          "value": "1955-05-05",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "This report, dated May 5, 1955, reported conclusions reached",
+          "segment": 1111
+        }
+      ]
+    },
+    {
       "documentId": "doc-21de06cc5d35",
       "path": "Archives-for-the-Unexplained/documents/US-Library-of-Congress---Smith-Marcia---Possibility-of-intelligent-life-elsewhere-in-the-universe---1977.txt",
       "candidates": [
@@ -728467,6 +730648,21 @@
           "method": "document-header",
           "evidence": "Date: Mon, 28 Apr 1997 11:28:25 -0400 (EDT",
           "segment": 6
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7032ca430ac9",
+      "path": "Archives-for-the-Unexplained/documents/a30-002-3e2f9ac5d0.txt",
+      "candidates": [
+        {
+          "value": "1997-03-30",
+          "precision": "day",
+          "confidence": 0.94,
+          "kind": "document_date",
+          "method": "document-header",
+          "evidence": "Date: Sun, 30 Mar 1997 07:35:08 -0800",
+          "segment": 1
         }
       ]
     },
@@ -797081,6 +799277,48 @@
       ]
     },
     {
+      "documentId": "doc-793f5d2ec253",
+      "path": "Black-Vault-UFO/pdfs/canufodoc-8-pdf.txt",
+      "candidates": [
+        {
+          "value": "1974-10-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Montreal, le 17 octobre 1974 • '",
+          "segment": 414
+        },
+        {
+          "value": "1974-12-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 4, 1974, the tollQWing r,eport waa pven",
+          "segment": 1319
+        },
+        {
+          "value": "1975-03-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On March 4, 1975, the ro~Oidng report. was Aiven over the",
+          "segment": 2234
+        },
+        {
+          "value": "1975-05-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "aircraft over Cornwall on May 6, 1975 between 21.:1) and 21.:15.",
+          "segment": 5363
+        }
+      ]
+    },
+    {
       "documentId": "doc-eab865e6e145",
       "path": "Black-Vault-UFO/pdfs/canufodoc-9-pdf.txt",
       "candidates": [
@@ -811595,6 +813833,417 @@
       ]
     },
     {
+      "documentId": "doc-0e977bf4a13b",
+      "path": "Black-Vault-UFO/pdfs/defe-24-2033-1.txt",
+      "candidates": [
+        {
+          "value": "2001-03-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 13 March 2001 15:33",
+          "segment": 1
+        },
+        {
+          "value": "2001-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 28 February 2001 11 :54",
+          "segment": 22
+        },
+        {
+          "value": "1981-01-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "reported by Lieutenant Colonel Halt in his memorandum dated 13 January 1981.",
+          "segment": 34
+        },
+        {
+          "value": "1994-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "conversion training programmes on 28 February 1994 Baroness Symons of Vernham Dean: Records dating",
+          "segment": 301
+        },
+        {
+          "value": "1994-03-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and 17 March 1994 respectively. from 1980 no longer exist.",
+          "segment": 302
+        },
+        {
+          "value": "2000-11-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to 18 30 November 2000) infonnation has come to light over the last 20 years to",
+          "segment": 356
+        },
+        {
+          "value": "1981-01-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "13 January 1981. test veterans.",
+          "segment": 412
+        },
+        {
+          "value": "1997-10-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "letter of 22 October 1997.",
+          "segment": 557
+        },
+        {
+          "value": "2001-01-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DATE FOR RETURN 12:00 ON 22 January 2001",
+          "segment": 664
+        },
+        {
+          "value": "2001-01-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "~<.rE FOR RETURN 12:00 ON 18 January 2001",
+          "segment": 944
+        },
+        {
+          "value": "1999-07-28",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "involvement by the Suffolk Police is limited to a letter dated 28 July 1999 from",
+          "segment": 1070
+        },
+        {
+          "value": "1998-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 30 June 1998 Member of Parliament isolated case of radiat",
+          "segment": 1219
+        },
+        {
+          "value": "1981-01-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Bentwaters on 13 January 1981.",
+          "segment": 1277
+        },
+        {
+          "value": "2001-01-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DATE FOR RETURN 12:00 ON 18 January 2001",
+          "segment": 1393
+        },
+        {
+          "value": "1997-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 6 July 1997, almost seventeen years after the call was made",
+          "segment": 1440
+        },
+        {
+          "value": "1999-07-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Also, on 22 July 1999,I wrote to the secretariat of the Ministry",
+          "segment": 2017
+        },
+        {
+          "value": "2001-01-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "l~:QO ON 18 January 2001",
+          "segment": 2169
+        },
+        {
+          "value": "1990-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Nuclear Weapons 30 and 31 March 1990; when the unidentified flying",
+          "segment": 2260
+        },
+        {
+          "value": "1981-01-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "13 January 1981, were judged to have posed any threat",
+          "segment": 2278
+        },
+        {
+          "value": "2001-01-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "12:00 ON 18 January 2001",
+          "segment": 2315
+        },
+        {
+          "value": "1997-09-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "as air, soil, chemical, replied to Gilbert’s letter on 22 September 1997",
+          "segment": 2517
+        },
+        {
+          "value": "2000-06-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: 02 June 2000 09:47",
+          "segment": 2704
+        },
+        {
+          "value": "2000-01-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "gent: 18 January 2000 10:32",
+          "segment": 2710
+        },
+        {
+          "value": "1997-05-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "How many times, since 1 May 1997, a redress of the Anti-Ballistic Missile Treaty is a matter for the",
+          "segment": 2719
+        },
+        {
+          "value": "1997-05-01",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "complaint submitted since 1 May 1997 which took Trade Organisation negotiations, they will support",
+          "segment": 2726
+        },
+        {
+          "value": "1998-10-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the evening of 8 October 1998.",
+          "segment": 2809
+        },
+        {
+          "value": "1998-12-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "D/MIN(DP}/JWG/6/1 December 1998",
+          "segment": 2893
+        },
+        {
+          "value": "1998-06-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of the Defence Planning Committee on 11 June 1998 ,20 October, the only role of the 5th Space Surveillance",
+          "segment": 3025
+        },
+        {
+          "value": "1997-12-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "agreement talks on 10 December 1997. [HL3363] independent investigators.",
+          "segment": 3437
+        },
+        {
+          "value": "1998-06-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "General’s announcement on 4 June 1998 that the 1988 rather than tax avoidance. [HL3434",
+          "segment": 3524
+        },
+        {
+          "value": "1957-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Force Ventor on 29 July 1957\".",
+          "segment": 3589
+        },
+        {
+          "value": "1957-12-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "9 December 1957: \"December 1957: Description large",
+          "segment": 3593
+        },
+        {
+          "value": "1952-07-28",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "State for Air, Lord Cheswell, dated 28 July 1952. \"What",
+          "segment": 3622
+        },
+        {
+          "value": "1952-08-09",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "State for Air, what recentinvestigations have been made dated 9 August 1952, dismissing stories about flying",
+          "segment": 3626
+        },
+        {
+          "value": "1957-04-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "6 April 1957 froD) the News Chronicle and the Evening",
+          "segment": 3635
+        },
+        {
+          "value": "1957-04-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Islands from the Daily Sketch of 6 April 1957. references and titles of all closed files in the Public",
+          "segment": 3637
+        },
+        {
+          "value": "1997-06-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Copies wi!] activities on 23 June 1997 C.191 concerning the period",
+          "segment": 3701
+        },
+        {
+          "value": "1998-04-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "29 April 1998 my right honourable friend the Secretary",
+          "segment": 3978
+        },
+        {
+          "value": "1993-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "hostile or unauthorised foreign military activity and RAF Shawbury on 31 March 1993; and whether",
+          "segment": 4025
+        },
+        {
+          "value": "1993-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "necessary. reports of unidentified flying objects are sighting in the West Midlands on 31 March 1993.",
+          "segment": 4033
+        },
+        {
+          "value": "1997-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "de Judge Haworth he&rd on 15 August 1997 against the nuclear weapons were stored at RAF Bentwaters and",
+          "segment": 4073
+        },
+        {
+          "value": "1981-01-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "memorandum dated 13 January 1981 compare to the",
+          "segment": 4253
+        },
+        {
+          "value": "1990-03-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "N uclear Weapons 30 and 31 March 1990; when the unidentified flying",
+          "segment": 4364
+        },
+        {
+          "value": "1981-01-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "13 January 1981, were judged to have posed any threat",
+          "segment": 4381
+        },
+        {
+          "value": "1990-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "My Department supports the DTl’s sman business incident that occurred on 5 November 1990 when a patrol",
+          "segment": 4426
+        }
+      ]
+    },
+    {
       "documentId": "doc-267e3e3f4376",
       "path": "Black-Vault-UFO/pdfs/defe-24-2034-1.txt",
       "candidates": [
@@ -814726,6 +817375,255 @@
           "method": "unclassified-mention",
           "evidence": "Sent: Friday, November 07, 2003 11 :34:02 AM",
           "segment": 6679
+        }
+      ]
+    },
+    {
+      "documentId": "doc-66539f3ec8da",
+      "path": "Black-Vault-UFO/pdfs/defe-24-2040.txt",
+      "candidates": [
+        {
+          "value": "2004-03-26",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Thank you for you letter dated 26 March 2004.",
+          "segment": 39
+        },
+        {
+          "value": "2004-03-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "I was interested to see that you had a report from Lowestoft in Sutli>lk for the 1 March 2004, and wonder if",
+          "segment": 131
+        },
+        {
+          "value": "2003-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Monday, 08 September 2003",
+          "segment": 257
+        },
+        {
+          "value": "2002-06-13",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "~anted to know if we had received any reports for Thursday 13 June 2002",
+          "segment": 624
+        },
+        {
+          "value": "2001-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Turning to your second email of 1 July 2001.",
+          "segment": 642
+        },
+        {
+          "value": "2000-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "curred in the Newcastle area on 7 July 2000.",
+          "segment": 644
+        },
+        {
+          "value": "2001-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "With effect from 31 July 2001",
+          "segment": 658
+        },
+        {
+          "value": "2000-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "We have in our possesion video footage from July 7, 2000 of a Civilian",
+          "segment": 666
+        },
+        {
+          "value": "2001-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sent: Sunday, June 24, 2001 12:11 AM",
+          "segment": 678
+        },
+        {
+          "value": "2001-06-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "> Date: 23 Jun 2001 15:48:04 -0000",
+          "segment": 680
+        },
+        {
+          "value": "2001-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "> is July 12, 2001, but NIDS has confirmed that many FAA offices",
+          "segment": 704
+        },
+        {
+          "value": "2001-05-18",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Thank you for your letter dated 18 May 2001.",
+          "segment": 800
+        },
+        {
+          "value": "2000-09-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Thursday 28 September 2000@ 09:00",
+          "segment": 895
+        },
+        {
+          "value": "2001-01-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "reports for 14 January 2001 from the Isle of Man or from anywhere in the United Kingdom.",
+          "segment": 983
+        },
+        {
+          "value": "2000-03-09",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Thank you for your letter dated 9 March 2000.",
+          "segment": 1091
+        },
+        {
+          "value": "1999-04-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 2, 1999 at Chatham, Kent",
+          "segment": 1094
+        },
+        {
+          "value": "1999-08-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 13, 1999 at Tenterden, Kent",
+          "segment": 1095
+        },
+        {
+          "value": "1999-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 12, 1999 at Sellindge, Kent",
+          "segment": 1096
+        },
+        {
+          "value": "1999-11-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 15, 1999 at Beckenham, Kent",
+          "segment": 1097
+        },
+        {
+          "value": "1999-08-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "unusual aerial activity in the Kent or Essex areas for Sunday August 1, 1999 and are satisfied that",
+          "segment": 1105
+        },
+        {
+          "value": "1999-08-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 13, 1999 at Tenterden, Kent.",
+          "segment": 1180
+        },
+        {
+          "value": "1999-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "September 12, 1999 at Sellindge, Kent",
+          "segment": 1181
+        },
+        {
+          "value": "1999-08-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "With regard to my question in my previous letter concerning Sunday, August 1, 1999.",
+          "segment": 1186
+        },
+        {
+          "value": "1999-08-01",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "witnesses of the objects sighted over Kent on Sunday, August 1, 1999?",
+          "segment": 1192
+        },
+        {
+          "value": "1997-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Home Secretary's house on 8 March 1997.",
+          "segment": 1590
+        },
+        {
+          "value": "1997-03-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Secretary's house on 8 March 1997.",
+          "segment": 1601
+        },
+        {
+          "value": "1997-03-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "report from Hythe, Kent dated 8 March 1997.",
+          "segment": 1690
         }
       ]
     },
@@ -929743,6 +932641,21 @@
           "method": "unclassified-mention",
           "evidence": "nomenon observed at Lock Raven Dam on October 26, 1958, when",
           "segment": 1410
+        }
+      ]
+    },
+    {
+      "documentId": "doc-550d444da7e9",
+      "path": "Black-Vault-UFO/pdfs/project-blue-book-mariana-ufo-incident-august-15-1950-3.txt",
+      "candidates": [
+        {
+          "value": "1950-10-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "q'.tarters on 9 October 1950 that l!r. had be9n apnroached",
+          "segment": 43
         }
       ]
     },
@@ -1140281,6 +1143194,48 @@
       ]
     },
     {
+      "documentId": "doc-a8ef805c24ed",
+      "path": "National-Archives-UAP-Bulk/documents/23857158/23857158-014-016.txt",
+      "candidates": [
+        {
+          "value": "1954-08-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "12 August 1954, the attached AF Form is forvarded.",
+          "segment": 12
+        },
+        {
+          "value": "1954-08-13",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "AFR 200-2, dated 13 August 1954",
+          "segment": 18
+        },
+        {
+          "value": "1956-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "were observed at 2230 hours on 14 August 1956, moving over Kelly AFB, Texas.",
+          "segment": 22
+        },
+        {
+          "value": "1954-08-12",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "In compliance with par 7a(2), AR 200-2, dated 12 August 1954, the following",
+          "segment": 25
+        }
+      ]
+    },
+    {
       "documentId": "doc-32563d44b533",
       "path": "National-Archives-UAP-Bulk/documents/23857158/23857158-014-024.txt",
       "candidates": [
@@ -1154240,6 +1157195,30 @@
       ]
     },
     {
+      "documentId": "doc-05b2e85890c7",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302563160.txt",
+      "candidates": [
+        {
+          "value": "1967-03-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Observation, 16 March 1967",
+          "segment": 42
+        },
+        {
+          "value": "1967-03-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Observation, March 16, 1967",
+          "segment": 49
+        }
+      ]
+    },
+    {
       "documentId": "doc-ee4c89b752ef",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302563304.txt",
       "candidates": [
@@ -1157563,6 +1160542,30 @@
           "method": "unclassified-mention",
           "evidence": "UPo Observation, 10 April 1963",
           "segment": 11
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f293cb1bebfa",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302576044.txt",
+      "candidates": [
+        {
+          "value": "1968-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Observation, 14 April 1968",
+          "segment": 14
+        },
+        {
+          "value": "1968-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Uro Observation, 14 April 1968",
+          "segment": 120
         }
       ]
     },
