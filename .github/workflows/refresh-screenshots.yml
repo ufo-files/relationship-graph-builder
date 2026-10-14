@@ -1,10 +1,23 @@
 name: Refresh README graph screenshots
 
 on:
-  workflow_run:
-    workflows: ["Deploy latest graph to Pages"]
-    types: [completed]
+  # Capture the committed app and catalog directly. Pages can publish through
+  # its built-in branch deployment while the separate deploy workflow is queued.
+  push:
     branches: [main]
+    paths:
+      - "index.html"
+      - "*.js"
+      - "styles.css"
+      - "data/**"
+      - "vendor/**"
+      - "assets/**"
+      - "!assets/screenshots/**"
+      - "package.json"
+      - "package-lock.json"
+      - "scripts/capture_graph_screenshots.mjs"
+      - "scripts/serve_preview.py"
+      - ".github/workflows/refresh-screenshots.yml"
   workflow_dispatch:
 
 permissions:
@@ -12,14 +25,12 @@ permissions:
 
 jobs:
   refresh:
-    if: >-
-      github.event_name == 'workflow_dispatch' ||
-      github.event.workflow_run.conclusion == 'success'
     # Playwright's managed Chromium image is not available for this ARM64 host.
     runs-on: ubuntu-latest
     concurrency:
-      group: relationship-graph-pages
-      cancel-in-progress: ${{ github.event_name == 'workflow_run' }}
+      group: relationship-graph-screenshots
+      # Finish the current capture; GitHub keeps the latest pending refresh.
+      cancel-in-progress: false
     permissions:
       contents: read
     steps:
