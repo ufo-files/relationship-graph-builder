@@ -1244,7 +1244,7 @@ function renderControls() {
   } else if (state.config.type === "signals") {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Explicit numeric frequency mentions</option></select></div><div class="control"><div class="control-title">X axis</div><select disabled><option>Logarithmic radio frequency</option></select></div>`;
   } else if (state.config.type === "blood") {
-    roles = `<div class="control"><div class="control-title">X · Documents</div><div class="control-title">Y · Mentions</div></div>`;
+    roles = controlSelect("bloodView", "View", [{ value: "scatter", label: "Scatter" }, { value: "table", label: "Table" }]);
   } else if (state.config.type === "programs") {
     roles = `<div class="control"><div class="control-title">Rows</div><select disabled><option>Reviewed projects, operations, and offices</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Active intervals + relationship bridges</option></select></div>`;
   } else if (state.config.type === "scatter") {
@@ -1428,11 +1428,16 @@ function renderControls() {
   if (state.config.type === "blood") {
     const types = [...new Set((state.catalog.bloodTypes?.observations || []).map(item => item.bloodType).filter(specifiedBloodType))].sort();
     $("#filterControls").innerHTML = controlSelect("bloodType", "Blood type / Rh", [{ value: "all", label: "All mentions" }, ...types.map(value => ({ value, label: value }))])
-      + `<div class="control"><label for="bloodSearch">Search evidence</label><input id="bloodSearch" class="text-input" type="search" value="${escapeHTML(state.config.bloodSearch)}" placeholder="Search excerpt, title, or collection" data-blood-search></div><div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div>`;
+      + `<div class="control"><label for="bloodSearch">Search evidence</label><input id="bloodSearch" class="text-input" type="search" value="${escapeHTML(state.config.bloodSearch)}" placeholder="Search excerpt, title, or collection" data-blood-search></div><div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div><button class="button" type="button" data-blood-reset>Reset filters</button>`;
   }
   $("[data-blood-search]")?.addEventListener("input", event => {
     state.config.bloodSearch = event.target.value;
     persistHash(); renderGraph();
+  });
+
+  $("[data-blood-reset]")?.addEventListener("click", () => {
+    Object.assign(state.config, { bloodType: "all", bloodSearch: "", sources: [], allSources: true });
+    closeInspector(); renderControls(); commitConfig(false);
   });
 
   if (state.config.type === "solar") {
@@ -1585,6 +1590,7 @@ async function setType(type) {
 function updateConfig(key, value, rerenderControls = false) {
   const previousValue = state.config[key];
   state.config[key] = value;
+  if (key === "bloodView") closeInspector();
   if (["x", "size", "y", "tableSort"].includes(key) && CORROBORATION_METRICS.includes(value)) state.config.corroborationMetric = value;
   if (["triageSort", "triageDirection"].includes(key)) state.config.triageCaseId = "";
   if (key === "aggregation") {
@@ -4353,7 +4359,7 @@ function bloodMentionGroups(observations) {
 function bloodOverviewHTML(observations, config) {
   const groups = bloodMentionGroups(observations);
   const table = config.bloodView === "table";
-  return `<section aria-label="Blood type overview"><div class="blood-view-switch" role="group" aria-label="Blood type view">${["scatter", "table"].map(view => `<button type="button" data-blood-view="${view}" aria-pressed="${(table ? "table" : "scatter") === view}">${view === "scatter" ? "Scatter" : "Table"}</button>`).join("")}<button class="button" type="button" data-blood-reset>Reset filters</button></div>
+  return `<section aria-label="Blood type overview">
     ${table ? `<div class="blood-overview"><table><thead><tr><th scope="col">Type / Rh</th><th scope="col">Mentions</th><th scope="col">Documents</th><th scope="col">Collections</th></tr></thead><tbody>${groups.map(group => `<tr><th scope="row"><button type="button" data-blood-pick="${escapeHTML(group.type)}">${escapeHTML(group.type)}</button></th><td>${formatNumber(group.mentions)}</td><td>${formatNumber(group.documents.size)}</td><td>${formatNumber(group.sources.size)}</td></tr>`).join("")}</tbody></table></div>` : `<svg class="blood-scatter" role="group" aria-label="Blood type mentions versus distinct documents"></svg>`}
   </section>`;
 }
@@ -4435,17 +4441,6 @@ function renderBloodTypes() {
     if (button.tagName.toLowerCase() === "g") button.addEventListener("keydown", event => {
       if (["Enter", " "].includes(event.key)) { event.preventDefault(); selectEvidence(button.dataset.bloodPick); }
     });
-  });
-  queue.querySelectorAll("[data-blood-view]").forEach(button => button.addEventListener("click", () => {
-    state.config.bloodView = button.dataset.bloodView;
-    closeInspector();
-    persistHash(); renderGraph();
-    queue.querySelector(`[data-blood-view="${state.config.bloodView}"]`).focus({ preventScroll: true });
-  }));
-  queue.querySelector("[data-blood-reset]")?.addEventListener("click", () => {
-    Object.assign(state.config, { bloodType: "all", bloodSearch: "", sources: [], allSources: true });
-    closeInspector();
-    renderControls(); commitConfig(false);
   });
   setSummary(`${formatNumber(items.length)} mentions · ${formatNumber(new Set(items.map(item => item.documentId)).size)} documents · ${formatNumber(new Set(items.map(item => item.source)).size)} collections`, "blood");
 }
