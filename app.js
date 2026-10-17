@@ -4365,20 +4365,13 @@ function drawBloodScatter(svg, observations, config) {
   const chartTop = svg.getBoundingClientRect().top - viewport.getBoundingClientRect().top + viewport.scrollTop;
   const width = Math.max(280, svg.parentElement.clientWidth);
   const height = Math.max(240, viewport.clientHeight - chartTop - bottomPadding);
-  const margin = { left: 62, right: 24, top: 48, bottom: 62 };
+  const margin = { left: 62, right: 24, top: 20, bottom: 62 };
   const maximum = Math.max(2, ...groups.map(group => group.mentions)) * 1.45;
   const logMin = Math.log10(.75), logMax = Math.log10(maximum);
   const x = value => margin.left + (Math.log10(value) - logMin) / (logMax - logMin) * (width - margin.left - margin.right);
   const y = value => height - margin.bottom - (Math.log10(value) - logMin) / (logMax - logMin) * (height - margin.top - margin.bottom);
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
   svg.style.height = `${height}px`;
-  const largestCollectionCount = Math.max(1, ...groups.map(group => group.sources.size));
-  svg.append(el("text", { x: margin.left, y: 22, class: "blood-axis" }, "Size · collections"));
-  [...new Set([1, largestCollectionCount])].forEach((count, index) => {
-    const radius = 5 * Math.sqrt(count), cx = margin.left + 134 + index * 60;
-    svg.append(el("circle", { cx, cy: 18, r: radius, class: "blood-size-sample" }));
-    svg.append(el("text", { x: cx + radius + 5, y: 22, class: "blood-axis" }, String(count)));
-  });
   const ticks = [];
   for (let power = 0; 10 ** power <= maximum; power++) for (const multiplier of [1, 2, 5]) if (multiplier * 10 ** power <= maximum) ticks.push(multiplier * 10 ** power);
   ticks.forEach(value => {
