@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-17T20:27:28Z",
+  "generatedAt": "2026-10-17T23:00:33Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "5af792b0b9f070cd93d4156f5823e47a576173c9"
+    "revision": "83bdbf17e3446529d578a24d19889c66a9618e3c"
   },
-  "documentsWithCandidates": 18883,
+  "documentsWithCandidates": 18905,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -54563,6 +54563,30 @@
       ]
     },
     {
+      "documentId": "doc-b481d242bab7",
+      "path": "Archives-for-the-Unexplained/documents/2012-00-00_Chaotic-Modeling-and-Simulation---Vol-2---Krasnoholovets.txt",
+      "candidates": [
+        {
+          "value": "2011-07-18",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Received: 18 July 2011 / Accepted 30 March 2012",
+          "segment": 37
+        },
+        {
+          "value": "2012-03-30",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "Received: 18 July 2011 / Accepted 30 March 2012",
+          "segment": 37
+        }
+      ]
+    },
+    {
       "documentId": "doc-c5a62418c21a",
       "path": "Archives-for-the-Unexplained/documents/2012-01-10---OpenMindsTV---Noe-Torres-and-Ruben-Uriarte-discuss-the-Cisco-Grove-UFO-encounter-Open-Minds-Radio_CinISEaXrqc---transcript-automated-.txt",
       "candidates": [
@@ -70991,6 +71015,21 @@
       ]
     },
     {
+      "documentId": "doc-ab9e7bc3c4e7",
+      "path": "Archives-for-the-Unexplained/documents/2020-02-19---The-Grimerica-Show---404---Alex-Kazemi---Pop-Magick_jnqzUO7UUPk---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2016-03-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Representatives from March 14 2016",
+          "segment": 706
+        }
+      ]
+    },
+    {
       "documentId": "doc-aebf2a2cbfb7",
       "path": "Archives-for-the-Unexplained/documents/2020-02-25---FADE-TO-BLACK-Radio---Ep.-1163-FADE-to-BLACK-Jimmy-Church-w-Billy-Carson-The-Creation-Story_vk9vEy6_Wa0---transcript-automated-.txt",
       "candidates": [
@@ -72559,6 +72598,21 @@
           "method": "unclassified-mention",
           "evidence": "at knids was April 30 2002",
           "segment": 1786
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b7ffb919c9d7",
+      "path": "Archives-for-the-Unexplained/documents/2021-09-10---Spaced-Out-Radio---Bryce-Zabel---The-UFO-Narrative-What-s-being-covered-up-What-should-we-know-_XrWYA4BTPw8---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-12-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 17 2017 right that a day that",
+          "segment": 725
         }
       ]
     },
@@ -119108,6 +119162,66 @@
       ]
     },
     {
+      "documentId": "doc-95349e468ba1",
+      "path": "Archives-for-the-Unexplained/documents/Cosmic-Awareness---sr010-2012-and-the-Ascension.txt",
+      "candidates": [
+        {
+          "value": "2012-12-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This is that which will occur around the date December 21, 2012.",
+          "segment": 126
+        },
+        {
+          "value": "2012-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The Ascension date: December 12, 2012",
+          "segment": 2468
+        },
+        {
+          "value": "2012-12-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "that time that is commonly held as December 21, 2012.",
+          "segment": 3890
+        },
+        {
+          "value": "2012-12-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 21, 2012 Marks The Completion Of The Ascension Process",
+          "segment": 3891
+        },
+        {
+          "value": "2012-12-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and It now repeats that December 21, 2012 will mark the completion of the Ascension",
+          "segment": 3905
+        },
+        {
+          "value": "2012-12-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and that December 21, 2012 marks the completion of this journey.",
+          "segment": 3911
+        }
+      ]
+    },
+    {
       "documentId": "doc-9d5e70b4b003",
       "path": "Archives-for-the-Unexplained/documents/Cosmic-Awareness---sr011-Cosmic-Laws-Updated.txt",
       "candidates": [
@@ -126239,6 +126353,21 @@
       ]
     },
     {
+      "documentId": "doc-d11b0b1d2cff",
+      "path": "Archives-for-the-Unexplained/documents/Deguforum---Issue-03---1994.txt",
+      "candidates": [
+        {
+          "value": "1994-09-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1.Jahrgang Nr.3 September 1994",
+          "segment": 0
+        }
+      ]
+    },
+    {
       "documentId": "doc-7c8ccfb29e5d",
       "path": "Archives-for-the-Unexplained/documents/Deguforum---Issue-78---2013.txt",
       "candidates": [
@@ -126289,6 +126418,39 @@
           "method": "unclassified-mention",
           "evidence": "Thus, there is a need for a survey close on December 1, 2015.",
           "segment": 1763
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1f9f3c6f5579",
+      "path": "Archives-for-the-Unexplained/documents/Delve-Report---1993-12---December.txt",
+      "candidates": [
+        {
+          "value": "1993-11-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "-TORONTO STAR Wednesday, November 24, 1993",
+          "segment": 182
+        },
+        {
+          "value": "1993-11-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "THE TORONTO STAR Wednesday, November 3, 1993 THE",
+          "segment": 183
+        },
+        {
+          "value": "1993-11-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "* THE TORONTO STAR Friday, November 26, 1993",
+          "segment": 211
         }
       ]
     },
@@ -137957,6 +138119,21 @@
       ]
     },
     {
+      "documentId": "doc-d9a17386d1f1",
+      "path": "Archives-for-the-Unexplained/documents/Extraterrestres-Les---Series-2---No-11---juillet-1979.txt",
+      "candidates": [
+        {
+          "value": "1977-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 26 juillet 1977, Sergio Ottamendi, 32 ans, ar­",
+          "segment": 147
+        }
+      ]
+    },
+    {
       "documentId": "doc-0b43797c741d",
       "path": "Archives-for-the-Unexplained/documents/Extraterrestres-Les---Series-2---No-12---octobre-1979.txt",
       "candidates": [
@@ -147386,6 +147563,21 @@
       ]
     },
     {
+      "documentId": "doc-f424fc7fe259",
+      "path": "Archives-for-the-Unexplained/documents/GEPO-No-03-Sup---INFOVNI---No-1-suppl-a-Siecle-Inconnu---No-3---janv---fevrier-1977-GEPI-.txt",
+      "candidates": [
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Cet-te periode dôbute le 24 juin 1947 avec Kenneth :...m.oldo",
+          "segment": 97
+        }
+      ]
+    },
+    {
       "documentId": "doc-476f49647e63",
       "path": "Archives-for-the-Unexplained/documents/GEPO-No-13---GEPO-Information---OVNI-Informations---No-13---1978.txt",
       "candidates": [
@@ -147466,6 +147658,21 @@
           "method": "unclassified-mention",
           "evidence": "à nous poeer la que5tioneEn effet11e 3 avril 1982 noua suons edr6�s6",
           "segment": 100
+        }
+      ]
+    },
+    {
+      "documentId": "doc-e9baa13902f6",
+      "path": "Archives-for-the-Unexplained/documents/GICOFF-Information---1974-No-3.txt",
+      "candidates": [
+        {
+          "value": "1974-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "59 svensk January 26, 1974, the crews of four passenger aircrafts (British, Portuguese",
+          "segment": 272
         }
       ]
     },
@@ -194264,6 +194471,93 @@
       ]
     },
     {
+      "documentId": "doc-a43416ea7c47",
+      "path": "Archives-for-the-Unexplained/documents/MUFON-Ontario-Newsletter---1994-07---vol1.3.txt",
+      "candidates": [
+        {
+          "value": "1993-02-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "n February 4, 1993 Graham and Oechsler",
+          "segment": 509
+        },
+        {
+          "value": "1993-02-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On February 24, 1993, Labanek told the regulation five-hundred feet.",
+          "segment": 543
+        },
+        {
+          "value": "1993-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On February 28, 1993 Graham wrote the 24-hour surveillance.",
+          "segment": 572
+        },
+        {
+          "value": "1993-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Charlebois, by charging him with the RCMP on February 10, 1993!",
+          "segment": 619
+        },
+        {
+          "value": "1993-02-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "She said that they tried to get her to Haitre, started on February 15, 1993 with interviews",
+          "segment": 635
+        },
+        {
+          "value": "1991-08-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "landing in her field on the night of August 18, 1991",
+          "segment": 637
+        },
+        {
+          "value": "1994-07-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "July 17, 1994 to assess the situation.",
+          "segment": 803
+        },
+        {
+          "value": "1993-02-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "example: Case NRC 93-030, on 26 February 1993, in Cambellton.",
+          "segment": 874
+        },
+        {
+          "value": "1993-10-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The largest contributor to this increase was a single fireball event on October 30, 1993.",
+          "segment": 891
+        }
+      ]
+    },
+    {
       "documentId": "doc-d04d4ad61e18",
       "path": "Archives-for-the-Unexplained/documents/MUFON-Ontario-Newsletter---1994-09---vol-1.4.txt",
       "candidates": [
@@ -203938,6 +204232,21 @@
           "method": "unclassified-mention",
           "evidence": "« samedi 20 juillet 2013 »",
           "segment": 2
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d69503d28173",
+      "path": "Archives-for-the-Unexplained/documents/Meyn-Mamvro---No-100---Winter-2019.txt",
+      "candidates": [
+        {
+          "value": "1927-09-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "J 16-1 17 [9] Hull, Eleanor (30 Sep 1927). \"Legends and",
+          "segment": 668
         }
       ]
     },
@@ -259841,6 +260150,120 @@
       ]
     },
     {
+      "documentId": "doc-c2dc87bb17ed",
+      "path": "Archives-for-the-Unexplained/documents/SUNlite---Vol-13-No-03.txt",
+      "candidates": [
+        {
+          "value": "1966-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 26, 1966 - Pacific................................2",
+          "segment": 12
+        },
+        {
+          "value": "1961-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "experience imaging stars at night is quite familiar with the characteristic out of focus dall AFB May 22, 1961....................4-5",
+          "segment": 19
+        },
+        {
+          "value": "1966-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "June 26, 1966 - Pacific Ocean",
+          "segment": 86
+        },
+        {
+          "value": "1950-05-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 29, 1950 White Sands, N.M.",
+          "segment": 114
+        },
+        {
+          "value": "1950-05-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 29, 1950--White Sands, N. Mex. UFO spotted by two theodolite stations just before firing of",
+          "segment": 116
+        },
+        {
+          "value": "1950-08-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "An August 23, 1950 interoffice memo indicated that on May 24, personnel",
+          "segment": 168
+        },
+        {
+          "value": "1950-05-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "3. “Case file - May 24, 1950.",
+          "segment": 193
+        },
+        {
+          "value": "1950-08-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "August 23, 1950 Available WWW: https://vault.fbi.gov/UFO/UFO%20Part%2011%20of%20",
+          "segment": 198
+        },
+        {
+          "value": "1961-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The 701 club: Case 7417: Tyndall AFB, May 22, 1961",
+          "segment": 202
+        },
+        {
+          "value": "1961-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 22, 1961; Tyndall AFB, Florida.",
+          "segment": 204
+        },
+        {
+          "value": "1961-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "3. “Case file - May 22, 1961 Tyndall AFB”.",
+          "segment": 275
+        },
+        {
+          "value": "1957-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The only date given was 7 July 1957 with",
+          "segment": 696
+        }
+      ]
+    },
+    {
       "documentId": "doc-9d820134aba2",
       "path": "Archives-for-the-Unexplained/documents/SUNlite---Vol-14-No-05.txt",
       "candidates": [
@@ -262537,6 +262960,21 @@
           "method": "unclassified-mention",
           "evidence": "time.\" Ananova, 20 Aug 2004.",
           "segment": 323
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8449bd9a321a",
+      "path": "Archives-for-the-Unexplained/documents/Saucer-Smear---Vol-53-No-04---2006.txt",
+      "candidates": [
+        {
+          "value": "2005-02-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sunday, 20 Feb 2005. cel Duthamp's Fountain- a ter in Paris, the museum",
+          "segment": 354
         }
       ]
     },
@@ -268213,6 +268651,84 @@
           "method": "context-exclusion",
           "evidence": "explain to friends why we don't believe that we have received April 14, 2019, 1300 EDT: Twenty-Fifth SETI League",
           "segment": 162
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4b4c249cb1f1",
+      "path": "Archives-for-the-Unexplained/documents/SearchLites---Vol-25-No-3.txt",
+      "candidates": [
+        {
+          "value": "1930-11-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "22 November 1930 – 15 April 2019",
+          "segment": 4
+        },
+        {
+          "value": "2019-04-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "22 November 1930 – 15 April 2019",
+          "segment": 4
+        },
+        {
+          "value": "2019-04-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "24 April 2019, used by permission around a candle to collect the heat.",
+          "segment": 44
+        },
+        {
+          "value": "2019-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "14 April 2019, Eventide Inc., Little Ferry, NJ During 2018, the Executive Director",
+          "segment": 113
+        },
+        {
+          "value": "2020-04-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on Sunday 26 April 2020.",
+          "segment": 179
+        },
+        {
+          "value": "2019-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "13:41 hours EDT on 14 April 2019.",
+          "segment": 196
+        },
+        {
+          "value": "2020-04-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "health insurance premiums, as a next meet on Sunday, 26 April 2020",
+          "segment": 227
+        },
+        {
+          "value": "2020-04-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 26, 2020, 1300 EDT: Twenty-Sixth SETI",
+          "segment": 273
         }
       ]
     },
@@ -284876,6 +285392,21 @@
       ]
     },
     {
+      "documentId": "doc-e3e6e6b098d4",
+      "path": "Archives-for-the-Unexplained/documents/The-Ufologer---1959-03---March-April---Vol-2-No-4.txt",
+      "candidates": [
+        {
+          "value": "1949-04-27",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "AF press released dated April 27, 1949 Price, «There's no doubt it's authentic.» neither of these two circumstances",
+          "segment": 35
+        }
+      ]
+    },
+    {
       "documentId": "doc-5a6e2004c93d",
       "path": "Archives-for-the-Unexplained/documents/The-Ufologist---vol-1-no-6.txt",
       "candidates": [
@@ -285172,6 +285703,30 @@
           "method": "unclassified-mention",
           "evidence": "Tesla, Nikola, New York Times, \"Mr. Tesla's Vision,\" April 21, 1908, pg. 5.",
           "segment": 4328
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c1f6797fc81f",
+      "path": "Archives-for-the-Unexplained/documents/Tonnel---No-39---2011.txt",
+      "candidates": [
+        {
+          "value": "2007-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Check, E., Dolly: a hard act to follow, Nature 445(7130):802, 22 February 2007.",
+          "segment": 137
+        },
+        {
+          "value": "2005-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of the National Academy of Sciences 102(30):10604-10609, 26 July 2005.",
+          "segment": 141
         }
       ]
     },
@@ -291436,6 +291991,21 @@
           "method": "unclassified-mention",
           "evidence": "Nevada desert on February 14, 1974.",
           "segment": 91
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a20e4b3d37f8",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Magazine-News-Bulletin-issue-7.txt",
+      "candidates": [
+        {
+          "value": "1976-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "space probe- on July 4, 1976 will find the evidence- needed to either",
+          "segment": 139
         }
       ]
     },
@@ -311642,6 +312212,66 @@
       ]
     },
     {
+      "documentId": "doc-90615609019e",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Newsletter-Richard-Nolane---No-23---26-octobre-1998.txt",
+      "candidates": [
+        {
+          "value": "1993-09-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "«(...) Le 10 septembre 1993 il (Jean—Luc demandé de se montrer plus précis. il me ﬁt l‘université pour démolir le paranormal.",
+          "segment": 211
+        },
+        {
+          "value": "1998-09-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "«Le 13 septembre 1998 j‘eus l‘occasion de véhémentement n'être compose“ que de d‘édition et de presse. je me suis effectivement",
+          "segment": 231
+        },
+        {
+          "value": "1998-10-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1947 dans une autre série TV, de chez UPN cette fois. intitulée \"Seven Days‘ et dont le pilote a été programmé le 7 octobre 1998.",
+          "segment": 293
+        },
+        {
+          "value": "1989-12-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "“.\\ I8h lil. [le 5 décembre 1989). de: membres de la Bcncmrita (la police de la province) de Castro mortt la Tour Centrale de l.amcolla. lequel atertit {\\ son tout",
+          "segment": 305
+        },
+        {
+          "value": "1989-12-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Cela dit. des bémol; s‘élèvent ici et la. Ainsi. l‘ut'ologuc Manuel Cobol. qui conﬁrme que si l‘incident du 5 décembre 1989 a provoque\" l‘ouverture ”d‘un des X Files la",
+          "segment": 324
+        },
+        {
+          "value": "1998-10-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"The People“ du 25 octobre 1998",
+          "segment": 343
+        }
+      ]
+    },
+    {
       "documentId": "doc-7a8c6d44a2c7",
       "path": "Archives-for-the-Unexplained/documents/UFO-Newsletter-no-4.txt",
       "candidates": [
@@ -319615,6 +320245,30 @@
           "method": "unclassified-mention",
           "evidence": "volta il 24 novembre 1954, certo “Joe Secondo Vesco la clamorosa informa- ra. Alcuni dati sulle armi sperimentali te-",
           "segment": 3917
+        }
+      ]
+    },
+    {
+      "documentId": "doc-4a1231ca5001",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Rivista-di-Informazione-Ufologica---No-36.txt",
+      "candidates": [
+        {
+          "value": "1972-11-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "un UFO. L’11 novembre 1972, in Arizona, un",
+          "segment": 1125
+        },
+        {
+          "value": "2006-11-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "November 7, 2006 - Case 18 è dovuto a mò allora tramite la radio il coordina- NARCAP stima che l’UAP potrebbe",
+          "segment": 1605
         }
       ]
     },
@@ -1508363,6 +1509017,561 @@
       ]
     },
     {
+      "documentId": "doc-e14e8fefbac8",
+      "path": "National-Archives-UAP-Bulk/documents/17618564/40989289.txt",
+      "candidates": [
+        {
+          "value": "1951-08-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "provisions of AFR 210-3 (30 August 1951), AFR 210-3A",
+          "segment": 18
+        },
+        {
+          "value": "1953-02-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "12 February 1953) • 1953) 210-1 (September 1951) End ArR",
+          "segment": 19
+        },
+        {
+          "value": "1948-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On 8 September 1948, the Department of the Army made",
+          "segment": 106
+        },
+        {
+          "value": "1949-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Base.#24 The following day, 3 March 1949, Fort Bliss' Com-",
+          "segment": 169
+        },
+        {
+          "value": "1951-02-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "of control by the Army on 1 February 1951.",
+          "segment": 543
+        },
+        {
+          "value": "1952-06-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "consolidation proposed by the Army on 18 June 1952 be",
+          "segment": 733
+        },
+        {
+          "value": "1952-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ordered to put it into effect on 1 September 1952, 12g",
+          "segment": 797
+        },
+        {
+          "value": "1953-03-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Grounds' Program Review Board meeting of 19 March 1953.",
+          "segment": 928
+        },
+        {
+          "value": "1949-01-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ordnance Department, Hq, WSPG, G. O. 1, 7 January 1949.",
+          "segment": 1097
+        },
+        {
+          "value": "1949-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Committee, 3 February 1949.",
+          "segment": 1099
+        },
+        {
+          "value": "1948-06-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ground, Las Cruces, N. M., 26 June 1948.",
+          "segment": 1101
+        },
+        {
+          "value": "1949-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Committee, 3 February 1949.",
+          "segment": 1103
+        },
+        {
+          "value": "1949-01-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sands Proving Ground, 13 January 1949) Ordnance Depart-",
+          "segment": 1106
+        },
+        {
+          "value": "1949-03-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Fort Bliss, Texas, G. O. 23, 2 March 1949.",
+          "segment": 1109
+        },
+        {
+          "value": "1949-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Committee, 3 February 1949) Hq, AM to Chief of Stail",
+          "segment": 1111
+        },
+        {
+          "value": "1949-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Committee, 3 February 1949) Department of the Air Force",
+          "segment": 1121
+        },
+        {
+          "value": "1948-01-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "on Facilities and Services, 19 January 1948.",
+          "segment": 1128
+        },
+        {
+          "value": "1948-06-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and Services, 9 June 1948.",
+          "segment": 1134
+        },
+        {
+          "value": "1940-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and Services, 29 July 1940.",
+          "segment": 1140
+        },
+        {
+          "value": "1946-03-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "and Navy, 23 March 1946.",
+          "segment": 1152
+        },
+        {
+          "value": "1948-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Missiles Group, DCS/0, to DCS/0, circa 1 June 1948",
+          "segment": 1156
+        },
+        {
+          "value": "1950-03-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extract from JCS 1620/17, 14 March 1950.",
+          "segment": 1163
+        },
+        {
+          "value": "1950-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Force Base Ranges, 30 June 1950.",
+          "segment": 1169
+        },
+        {
+          "value": "1950-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ForceBase Ranges, 30 June 1950.",
+          "segment": 1173
+        },
+        {
+          "value": "1950-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Force Base Ranges, 30 June 1950.",
+          "segment": 1177
+        },
+        {
+          "value": "1950-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Force Base Ranges, 30 June 1950.",
+          "segment": 1181
+        },
+        {
+          "value": "1950-06-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Force Base Ranges, 30 June 1950) Hq, AMC to Director, Re-",
+          "segment": 1183
+        },
+        {
+          "value": "1950-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "search and Development, Hq, USAF, 7 August 1950.",
+          "segment": 1184
+        },
+        {
+          "value": "1950-08-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "New Mexico, 22 August 1950.",
+          "segment": 1187
+        },
+        {
+          "value": "1955-01-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "view with Colonel Baynes, 27 January 1955.",
+          "segment": 1188
+        },
+        {
+          "value": "1950-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Itr., CG, AMC to CO, HAFB, 21 September 1950.",
+          "segment": 1189
+        },
+        {
+          "value": "1950-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Consolidation Report, 6 December 1950).",
+          "segment": 1197
+        },
+        {
+          "value": "1955-01-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Colonel Baynes, 27 January 1955.",
+          "segment": 1199
+        },
+        {
+          "value": "1950-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Consolidation Report, 6 December 1950",
+          "segment": 1200
+        },
+        {
+          "value": "1955-01-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Colonel Baynes, 27 January 1955.",
+          "segment": 1205
+        },
+        {
+          "value": "1950-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Consolidation Report, 6 December 1950",
+          "segment": 1206
+        },
+        {
+          "value": "1951-02-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Proving Ground, 26 February 1951.",
+          "segment": 1213
+        },
+        {
+          "value": "1952-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ranges, 14 April 1952; also, Report of a Joint Ad Hoc",
+          "segment": 1219
+        },
+        {
+          "value": "1952-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Proving Ground, 24 July 1952.",
+          "segment": 1231
+        },
+        {
+          "value": "1952-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Hereinafter referred to as W. C. Foster, Memo, 18 July 1952).",
+          "segment": 1234
+        },
+        {
+          "value": "1952-06-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Holloman Ranges, 18 June 1952.",
+          "segment": 1236
+        },
+        {
+          "value": "1952-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "W. C. Foster, Memo, 18 July 1952.",
+          "segment": 1237
+        },
+        {
+          "value": "1952-06-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Modified Army Consolidation Plan, 18 June 1952.",
+          "segment": 1238
+        },
+        {
+          "value": "1952-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "W. C. Foster, Memo, 18 July 1952.",
+          "segment": 1239
+        },
+        {
+          "value": "1952-06-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Modified Army Consolidation Plan, 18 June 1952.",
+          "segment": 1240
+        },
+        {
+          "value": "1952-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "W. C. Foster, Memo, 18 July 1952.",
+          "segment": 1241
+        },
+        {
+          "value": "1952-07-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ostrander, 30 July 1952.",
+          "segment": 1245
+        },
+        {
+          "value": "1952-08-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sands Proving Ground, 20 August 1952.",
+          "segment": 1254
+        },
+        {
+          "value": "1952-08-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Ordnance Corps, Hq, WSPG, G. O. 27, 29 August 1952.",
+          "segment": 1255
+        },
+        {
+          "value": "1952-09-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Hq, WSPG, G. O. 30, 22 September 1952.",
+          "segment": 1257
+        },
+        {
+          "value": "1953-01-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ing firings on the Holloman-WSPG Range, 23 January 1953.",
+          "segment": 1264
+        },
+        {
+          "value": "1953-01-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Colonel Ostrander to CG, ARDC, 23 January 1953).",
+          "segment": 1266
+        },
+        {
+          "value": "1953-01-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Itr., Colonel Ostrander to CG, ARDC, 23 January 1953.",
+          "segment": 1270
+        },
+        {
+          "value": "1953-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1953), Hq, ARDC to DCS/D, Ha, USAF, 3 February 1953.",
+          "segment": 1272
+        },
+        {
+          "value": "1953-03-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "WSPG, 19 March 1953) Brigadier General G. G. Eddy to",
+          "segment": 1276
+        },
+        {
+          "value": "1953-06-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Chairman, Program Review Board, WSPG, 19 June 1953.",
+          "segment": 1277
+        },
+        {
+          "value": "1953-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Holloman WSPG Range, 1 July 1953.",
+          "segment": 1280
+        },
+        {
+          "value": "1953-04-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Consolidation, 10 April 1953.",
+          "segment": 1282
+        },
+        {
+          "value": "1953-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Range Consolidation, 6 July 1953.",
+          "segment": 1284
+        },
+        {
+          "value": "1953-09-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Air Development Center, 10 September 1953.",
+          "segment": 1286
+        },
+        {
+          "value": "1954-04-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Hq, WSPG, G. O. 1l, 27 April 1954.",
+          "segment": 1289
+        }
+      ]
+    },
+    {
       "documentId": "doc-6a8735ac2c0f",
       "path": "National-Archives-UAP-Bulk/documents/17618564/40989291.txt",
       "candidates": [
@@ -1520084,6 +1521293,30 @@
       ]
     },
     {
+      "documentId": "doc-3bf9e7f1236e",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28959076.txt",
+      "candidates": [
+        {
+          "value": "1953-08-26",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "In compliance with AFR 200-2, dated 26 August 1953, the",
+          "segment": 14
+        },
+        {
+          "value": "1953-08-26",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "AFR 200-2 dated 26 August 1953",
+          "segment": 20
+        }
+      ]
+    },
+    {
       "documentId": "doc-bb99d220c192",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28959092.txt",
       "candidates": [
@@ -1520896,6 +1522129,21 @@
           "method": "dated-reference",
           "evidence": "dated 15 July 1962, is forwarded for appropriate action.",
           "segment": 31
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f764b693cbd3",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-4/28996192.txt",
+      "candidates": [
+        {
+          "value": "1961-12-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SCIENCE NEWS LETTER for December 23, 1961",
+          "segment": 26
         }
       ]
     },
