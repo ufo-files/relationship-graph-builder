@@ -4383,6 +4383,7 @@ function drawBloodScatter(svg, observations, config) {
   const ticks = [];
   for (let power = 0; 10 ** power <= maximum; power++) for (const multiplier of [1, 2, 5]) if (multiplier * 10 ** power <= maximum) ticks.push(multiplier * 10 ** power);
   ticks.forEach(value => {
+    svg.append(el("line", { x1: margin.left, x2: width - margin.right, y1: y(value), y2: y(value), class: "grid-line" }));
     svg.append(el("text", { x: x(value), y: height - margin.bottom + 20, "text-anchor": "middle", class: "axis-label" }, String(value)));
     svg.append(el("text", { x: margin.left - 10, y: y(value) + 4, "text-anchor": "end", class: "axis-label" }, String(value)));
   });
