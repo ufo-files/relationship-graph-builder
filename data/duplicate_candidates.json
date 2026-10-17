@@ -5,11 +5,11 @@
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "22f5ce0b80130d97bec445d6653f024a5eec23dc"
+    "revision": "d8e533911515235e10ebf1467b7d6f18f939e358"
   },
-  "count": 2130,
-  "totalCount": 2130,
-  "shownCount": 2130,
+  "count": 2146,
+  "totalCount": 2146,
+  "shownCount": 2146,
   "candidates": [
     {
       "category": "organization",
@@ -212,8 +212,8 @@
       },
       "right": {
         "name": "Institute of Electrical and Electronic",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.987,
       "reason": "similar name",
@@ -351,8 +351,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1315,
-        "documentCount": 772
+        "mentions": 1317,
+        "documentCount": 774
       },
       "right": {
         "name": "Wright-Paterson Air Force Base",
@@ -367,8 +367,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1315,
-        "documentCount": 772
+        "mentions": 1317,
+        "documentCount": 774
       },
       "right": {
         "name": "Wright Patterson Airforce Base",
@@ -799,8 +799,8 @@
       "category": "location",
       "left": {
         "name": "McClellan Air Force Base",
-        "mentions": 64,
-        "documentCount": 48
+        "mentions": 66,
+        "documentCount": 49
       },
       "right": {
         "name": "McClelland Air Force Base",
@@ -1007,8 +1007,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 273,
-        "documentCount": 216
+        "mentions": 274,
+        "documentCount": 217
       },
       "right": {
         "name": "North-Western University",
@@ -1247,8 +1247,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 1215,
-        "documentCount": 551
+        "mentions": 1219,
+        "documentCount": 553
       },
       "right": {
         "name": "The University of Colo-rado",
@@ -1647,8 +1647,8 @@
       "category": "location",
       "left": {
         "name": "Airport Control Tower",
-        "mentions": 9,
-        "documentCount": 8
+        "mentions": 10,
+        "documentCount": 9
       },
       "right": {
         "name": "Airport Control Towers",
@@ -2255,8 +2255,8 @@
       "category": "organization",
       "left": {
         "name": "Stanford University",
-        "mentions": 468,
-        "documentCount": 318
+        "mentions": 469,
+        "documentCount": 319
       },
       "right": {
         "name": "Standford University",
@@ -2543,8 +2543,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 832,
-        "documentCount": 393
+        "mentions": 835,
+        "documentCount": 396
       },
       "right": {
         "name": "Linda Moulton Howes",
@@ -2575,8 +2575,8 @@
       "category": "location",
       "left": {
         "name": "Luke Air Force Base",
-        "mentions": 92,
-        "documentCount": 59
+        "mentions": 94,
+        "documentCount": 60
       },
       "right": {
         "name": "Luke Airforce Base",
@@ -2620,6 +2620,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of Cali",
+        "mentions": 19,
+        "documentCount": 17
+      },
+      "right": {
+        "name": "University of Calif",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.973,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Jean-Pierre Prévost",
@@ -2630,22 +2646,6 @@
         "name": "Jean-Pierre Prèvot",
         "mentions": 5,
         "documentCount": 3
-      },
-      "similarity": 0.973,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "University of Cali",
-        "mentions": 17,
-        "documentCount": 16
-      },
-      "right": {
-        "name": "University of Calif",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.973,
       "reason": "similar name",
@@ -2831,8 +2831,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 832,
-        "documentCount": 393
+        "mentions": 835,
+        "documentCount": 396
       },
       "right": {
         "name": "Linda Moulton-How",
@@ -2879,8 +2879,8 @@
       "category": "organization",
       "left": {
         "name": "University of Cali",
-        "mentions": 17,
-        "documentCount": 16
+        "mentions": 19,
+        "documentCount": 17
       },
       "right": {
         "name": "University of Cal",
@@ -3004,6 +3004,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "program",
+      "left": {
+        "name": "Project Mindshift",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Project Mind Shift",
+        "mentions": 6,
+        "documentCount": 2
+      },
+      "similarity": 0.971,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "organization",
       "left": {
         "name": "Intelligence Corp",
@@ -3020,27 +3036,11 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "program",
-      "left": {
-        "name": "Project Mindshift",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "Project Mind Shift",
-        "mentions": 6,
-        "documentCount": 2
-      },
-      "similarity": 0.971,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
       "category": "organization",
       "left": {
         "name": "Committee for the Scientific Investi",
-        "mentions": 4,
-        "documentCount": 4
+        "mentions": 5,
+        "documentCount": 5
       },
       "right": {
         "name": "Committee for the Scientific Inves",
@@ -3247,8 +3247,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 2948,
-        "documentCount": 1027
+        "mentions": 2950,
+        "documentCount": 1029
       },
       "right": {
         "name": "Stanton Friedmann",
@@ -3279,8 +3279,8 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 478,
-        "documentCount": 332
+        "mentions": 479,
+        "documentCount": 333
       },
       "right": {
         "name": "Steven Spielbergs",
@@ -3311,8 +3311,8 @@
       "category": "person",
       "left": {
         "name": "Michael Hesemann",
-        "mentions": 333,
-        "documentCount": 138
+        "mentions": 336,
+        "documentCount": 140
       },
       "right": {
         "name": "Michael Hessemann",
@@ -3327,8 +3327,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 309,
-        "documentCount": 199
+        "mentions": 310,
+        "documentCount": 200
       },
       "right": {
         "name": "Air Technical Intelligence Conter",
@@ -3343,8 +3343,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 309,
-        "documentCount": 199
+        "mentions": 310,
+        "documentCount": 200
       },
       "right": {
         "name": "AIR TECHNICAL INTELLIGENCE GENTER",
@@ -3359,8 +3359,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 309,
-        "documentCount": 199
+        "mentions": 310,
+        "documentCount": 200
       },
       "right": {
         "name": "Air Technical Intelligence Cen'er",
@@ -3852,6 +3852,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "book",
+      "left": {
+        "name": "Above Top Secret",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "a bove Top Secret",
+        "mentions": 1,
+        "documentCount": 1
+      },
+      "similarity": 0.97,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "DEPARTMENT OF CIV",
@@ -4095,8 +4111,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 15670,
-        "documentCount": 3345
+        "mentions": 15690,
+        "documentCount": 3356
       },
       "right": {
         "name": "FEDERAL BUREAU GF INVESTIGATION",
@@ -4111,8 +4127,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 15670,
-        "documentCount": 3345
+        "mentions": 15690,
+        "documentCount": 3356
       },
       "right": {
         "name": "Federal Bureau of Inveatigation",
@@ -4127,8 +4143,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 15670,
-        "documentCount": 3345
+        "mentions": 15690,
+        "documentCount": 3356
       },
       "right": {
         "name": "FEDERAL BUREAU Of TINESTIGATION",
@@ -4143,8 +4159,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 15670,
-        "documentCount": 3345
+        "mentions": 15690,
+        "documentCount": 3356
       },
       "right": {
         "name": "Federal Bureau of Investlgation",
@@ -4159,8 +4175,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 15670,
-        "documentCount": 3345
+        "mentions": 15690,
+        "documentCount": 3356
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGATIDN",
@@ -4175,8 +4191,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1315,
-        "documentCount": 772
+        "mentions": 1317,
+        "documentCount": 774
       },
       "right": {
         "name": "WRICHT-PATTERSON AIR FORCE BASE",
@@ -4191,8 +4207,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1315,
-        "documentCount": 772
+        "mentions": 1317,
+        "documentCount": 774
       },
       "right": {
         "name": "Wright-Patterson Air Foroe Base",
@@ -4207,8 +4223,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1315,
-        "documentCount": 772
+        "mentions": 1317,
+        "documentCount": 774
       },
       "right": {
         "name": "WRIGHT-PATTERBON AIR FORCE BASE",
@@ -4223,8 +4239,24 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1315,
-        "documentCount": 772
+        "mentions": 1317,
+        "documentCount": 774
+      },
+      "right": {
+        "name": "Wright-Patteraon Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patterson Air Force Base",
+        "mentions": 1317,
+        "documentCount": 774
       },
       "right": {
         "name": "Wright-Patterson Atr Force Base",
@@ -4239,8 +4271,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1315,
-        "documentCount": 772
+        "mentions": 1317,
+        "documentCount": 774
       },
       "right": {
         "name": "WRIGHT PATThRSON AIR FORCE BASE",
@@ -4255,8 +4287,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1315,
-        "documentCount": 772
+        "mentions": 1317,
+        "documentCount": 774
       },
       "right": {
         "name": "Wrighü-Patterson Air Force Base",
@@ -4271,8 +4303,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1315,
-        "documentCount": 772
+        "mentions": 1317,
+        "documentCount": 774
       },
       "right": {
         "name": "Weight-Patterson Air Force Base",
@@ -4287,8 +4319,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1315,
-        "documentCount": 772
+        "mentions": 1317,
+        "documentCount": 774
       },
       "right": {
         "name": "WRIGHT PATTIRSON AIR FORCE BASE",
@@ -4303,8 +4335,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 460,
-        "documentCount": 268
+        "mentions": 461,
+        "documentCount": 269
       },
       "right": {
         "name": "Stephen Hawkings",
@@ -4319,8 +4351,8 @@
       "category": "person",
       "left": {
         "name": "Albert Einstein",
-        "mentions": 455,
-        "documentCount": 338
+        "mentions": 456,
+        "documentCount": 339
       },
       "right": {
         "name": "Albert Einsteins",
@@ -4340,8 +4372,8 @@
       },
       "right": {
         "name": "Robert Sheaffer",
-        "mentions": 206,
-        "documentCount": 134
+        "mentions": 212,
+        "documentCount": 135
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -4479,8 +4511,8 @@
       "category": "person",
       "left": {
         "name": "Arthur Koestler",
-        "mentions": 41,
-        "documentCount": 33
+        "mentions": 42,
+        "documentCount": 34
       },
       "right": {
         "name": "Arthur Koestlers",
@@ -4511,8 +4543,8 @@
       "category": "person",
       "left": {
         "name": "William Hartmann",
-        "mentions": 29,
-        "documentCount": 14
+        "mentions": 30,
+        "documentCount": 15
       },
       "right": {
         "name": "Dr. William Hartman",
@@ -4564,8 +4596,8 @@
       },
       "right": {
         "name": "Jean-Claude Bou",
-        "mentions": 22,
-        "documentCount": 13
+        "mentions": 23,
+        "documentCount": 14
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -4668,6 +4700,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Robert Schaeffer",
+        "mentions": 11,
+        "documentCount": 10
+      },
+      "right": {
+        "name": "Robert Shaeffer",
+        "mentions": 8,
+        "documentCount": 6
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Palomar Mountain",
@@ -4678,22 +4726,6 @@
         "name": "Paloma Mountain",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.968,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Robert Schaeffer",
-        "mentions": 11,
-        "documentCount": 10
-      },
-      "right": {
-        "name": "Robert Shaeffer",
-        "mentions": 6,
-        "documentCount": 5
       },
       "similarity": 0.968,
       "reason": "similar name",
@@ -5044,6 +5076,22 @@
       },
       "right": {
         "name": "Single Site ARSR",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.968,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patteraon Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "WRIGHT-PATTERBON AIR FORCE BASE",
         "mentions": 3,
         "documentCount": 3
       },
@@ -5471,8 +5519,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 2715,
-        "documentCount": 357
+        "mentions": 2717,
+        "documentCount": 359
       },
       "right": {
         "name": "Bruce Maccabbee",
@@ -5487,8 +5535,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 2715,
-        "documentCount": 357
+        "mentions": 2717,
+        "documentCount": 359
       },
       "right": {
         "name": "Bruce Maccabees",
@@ -5503,8 +5551,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 2302,
-        "documentCount": 871
+        "mentions": 2303,
+        "documentCount": 872
       },
       "right": {
         "name": "Kenneth Arnolds",
@@ -5519,13 +5567,13 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 1389,
-        "documentCount": 691
+        "mentions": 1395,
+        "documentCount": 695
       },
       "right": {
-        "name": "Jacques Vallées",
-        "mentions": 6,
-        "documentCount": 6
+        "name": "Jacques Vallees",
+        "mentions": 8,
+        "documentCount": 7
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -5535,8 +5583,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 1367,
-        "documentCount": 649
+        "mentions": 1378,
+        "documentCount": 653
       },
       "right": {
         "name": "George Adamskis",
@@ -5551,8 +5599,8 @@
       "category": "person",
       "left": {
         "name": "Neil Armstrong",
-        "mentions": 441,
-        "documentCount": 265
+        "mentions": 442,
+        "documentCount": 266
       },
       "right": {
         "name": "Neil Armstrongs",
@@ -5583,8 +5631,8 @@
       "category": "person",
       "left": {
         "name": "Chris Rutkowski",
-        "mentions": 382,
-        "documentCount": 108
+        "mentions": 383,
+        "documentCount": 109
       },
       "right": {
         "name": "Chris Rutowski",
@@ -5631,8 +5679,8 @@
       "category": "person",
       "left": {
         "name": "Robert Sheaffer",
-        "mentions": 206,
-        "documentCount": 134
+        "mentions": 212,
+        "documentCount": 135
       },
       "right": {
         "name": "Robert Shaffer",
@@ -5932,6 +5980,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "David MacDonald",
+        "mentions": 11,
+        "documentCount": 11
+      },
+      "right": {
+        "name": "David McDonald",
+        "mentions": 9,
+        "documentCount": 7
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "SeaTac Airport",
@@ -5998,22 +6062,6 @@
     {
       "category": "person",
       "left": {
-        "name": "David MacDonald",
-        "mentions": 10,
-        "documentCount": 10
-      },
-      "right": {
-        "name": "David McDonald",
-        "mentions": 7,
-        "documentCount": 6
-      },
-      "similarity": 0.966,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
         "name": "Dr. John Altschuler",
         "mentions": 11,
         "documentCount": 10
@@ -6038,6 +6086,22 @@
         "name": "Stephen Basset",
         "mentions": 13,
         "documentCount": 8
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Robert Shaffer",
+        "mentions": 7,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Robert Shaeffer",
+        "mentions": 8,
+        "documentCount": 6
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -6094,17 +6158,17 @@
     {
       "category": "person",
       "left": {
-        "name": "Robert Shaffer",
-        "mentions": 7,
-        "documentCount": 6
+        "name": "Claude Mac Duff",
+        "mentions": 10,
+        "documentCount": 10
       },
       "right": {
-        "name": "Robert Shaeffer",
-        "mentions": 6,
-        "documentCount": 5
+        "name": "Claude Mc Duff",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.966,
-      "reason": "similar name",
+      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -6169,22 +6233,6 @@
       },
       "similarity": 0.966,
       "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Claude Mac Duff",
-        "mentions": 9,
-        "documentCount": 9
-      },
-      "right": {
-        "name": "Claude Mc Duff",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.966,
-      "reason": "similar person name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -6342,6 +6390,22 @@
         "name": "Projects Office",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.966,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Michael McNeil",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "Michael MacNeil",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.966,
       "reason": "similar name",
@@ -6655,8 +6719,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 2715,
-        "documentCount": 357
+        "mentions": 2717,
+        "documentCount": 359
       },
       "right": {
         "name": "Bruce Macabee",
@@ -6671,8 +6735,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 2715,
-        "documentCount": 357
+        "mentions": 2717,
+        "documentCount": 359
       },
       "right": {
         "name": "Bruce Maccabe",
@@ -6687,8 +6751,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 2302,
-        "documentCount": 871
+        "mentions": 2303,
+        "documentCount": 872
       },
       "right": {
         "name": "Kenneth Arnol",
@@ -6703,8 +6767,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 1389,
-        "documentCount": 691
+        "mentions": 1395,
+        "documentCount": 695
       },
       "right": {
         "name": "Jacques Valle",
@@ -6719,13 +6783,13 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 1367,
-        "documentCount": 649
+        "mentions": 1378,
+        "documentCount": 653
       },
       "right": {
         "name": "George Adamsk",
-        "mentions": 11,
-        "documentCount": 11
+        "mentions": 12,
+        "documentCount": 12
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -6735,8 +6799,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 1074,
-        "documentCount": 665
+        "mentions": 1079,
+        "documentCount": 668
       },
       "right": {
         "name": "Salt Lake Cit",
@@ -6751,8 +6815,8 @@
       "category": "person",
       "left": {
         "name": "Ronald Reagan",
-        "mentions": 959,
-        "documentCount": 519
+        "mentions": 963,
+        "documentCount": 522
       },
       "right": {
         "name": "Ronald Reagans",
@@ -6767,8 +6831,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 648,
-        "documentCount": 393
+        "mentions": 649,
+        "documentCount": 394
       },
       "right": {
         "name": "Major Donald Keyhole",
@@ -6783,8 +6847,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 648,
-        "documentCount": 393
+        "mentions": 649,
+        "documentCount": 394
       },
       "right": {
         "name": "Donald Keyhoes",
@@ -7007,8 +7071,8 @@
       "category": "person",
       "left": {
         "name": "Kelly Johnson",
-        "mentions": 212,
-        "documentCount": 65
+        "mentions": 213,
+        "documentCount": 66
       },
       "right": {
         "name": "Kelly Johnston",
@@ -7039,8 +7103,8 @@
       "category": "person",
       "left": {
         "name": "Peter Jennings",
-        "mentions": 182,
-        "documentCount": 43
+        "mentions": 183,
+        "documentCount": 44
       },
       "right": {
         "name": "Peter Jenning's",
@@ -7135,8 +7199,8 @@
       "category": "person",
       "left": {
         "name": "Thomas Mantell",
-        "mentions": 76,
-        "documentCount": 65
+        "mentions": 77,
+        "documentCount": 66
       },
       "right": {
         "name": "Thomas Mantel",
@@ -7199,8 +7263,8 @@
       "category": "person",
       "left": {
         "name": "Frank Kaufman",
-        "mentions": 17,
-        "documentCount": 17
+        "mentions": 18,
+        "documentCount": 18
       },
       "right": {
         "name": "Frank Kaufmann",
@@ -7422,6 +7486,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Philip Rodgers",
+        "mentions": 27,
+        "documentCount": 19
+      },
+      "right": {
+        "name": "Philip Rogers",
+        "mentions": 5,
+        "documentCount": 5
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Robert Fischer",
         "mentions": 26,
         "documentCount": 16
@@ -7502,22 +7582,6 @@
     {
       "category": "person",
       "left": {
-        "name": "Philip Rodgers",
-        "mentions": 24,
-        "documentCount": 18
-      },
-      "right": {
-        "name": "Philip Rogers",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
         "name": "Professor Herman Oberth",
         "mentions": 11,
         "documentCount": 11
@@ -7580,6 +7644,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Frank Kaufman",
+        "mentions": 18,
+        "documentCount": 18
+      },
+      "right": {
+        "name": "Frank Kauffman",
+        "mentions": 6,
+        "documentCount": 2
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Merritt Island",
@@ -7589,22 +7669,6 @@
       "right": {
         "name": "Meritt Island",
         "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Frank Kaufman",
-        "mentions": 17,
-        "documentCount": 17
-      },
-      "right": {
-        "name": "Frank Kauffman",
-        "mentions": 6,
         "documentCount": 2
       },
       "similarity": 0.963,
@@ -7647,8 +7711,8 @@
       "category": "person",
       "left": {
         "name": "George Adamsk",
-        "mentions": 11,
-        "documentCount": 11
+        "mentions": 12,
+        "documentCount": 12
       },
       "right": {
         "name": "George Adamsky",
@@ -7740,6 +7804,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "George Adamskl",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "George Adamsk",
+        "mentions": 12,
+        "documentCount": 12
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Mountain Lion",
@@ -7774,14 +7854,14 @@
     {
       "category": "person",
       "left": {
-        "name": "George Adamskl",
-        "mentions": 4,
-        "documentCount": 4
+        "name": "George Adamsk",
+        "mentions": 12,
+        "documentCount": 12
       },
       "right": {
-        "name": "George Adamsk",
-        "mentions": 11,
-        "documentCount": 11
+        "name": "George Adamskj",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.963,
       "reason": "similar name",
@@ -7838,22 +7918,6 @@
     {
       "category": "person",
       "left": {
-        "name": "George Adamsk",
-        "mentions": 11,
-        "documentCount": 11
-      },
-      "right": {
-        "name": "George Adamskj",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.963,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
         "name": "John Schussler",
         "mentions": 5,
         "documentCount": 4
@@ -7870,13 +7934,13 @@
     {
       "category": "person",
       "left": {
-        "name": "Michael Heaney",
-        "mentions": 9,
+        "name": "John Ferguson",
+        "mentions": 6,
         "documentCount": 4
       },
       "right": {
-        "name": "Michael Heany",
-        "mentions": 3,
+        "name": "John Fergusons",
+        "mentions": 7,
         "documentCount": 3
       },
       "similarity": 0.963,
@@ -7886,13 +7950,13 @@
     {
       "category": "person",
       "left": {
-        "name": "John Ferguson",
-        "mentions": 5,
-        "documentCount": 3
+        "name": "Michael Heaney",
+        "mentions": 9,
+        "documentCount": 4
       },
       "right": {
-        "name": "John Fergusons",
-        "mentions": 7,
+        "name": "Michael Heany",
+        "mentions": 3,
         "documentCount": 3
       },
       "similarity": 0.963,
@@ -8396,6 +8460,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "book",
+      "left": {
+        "name": "Alien Liaison",
+        "mentions": 4,
+        "documentCount": 4
+      },
+      "right": {
+        "name": "A lien Liaison",
+        "mentions": 1,
+        "documentCount": 1
+      },
+      "similarity": 0.963,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Green Airport",
@@ -8767,8 +8847,8 @@
       "category": "person",
       "left": {
         "name": "Ronald Reagan",
-        "mentions": 959,
-        "documentCount": 519
+        "mentions": 963,
+        "documentCount": 522
       },
       "right": {
         "name": "Ronald Regan",
@@ -8799,8 +8879,8 @@
       "category": "person",
       "left": {
         "name": "Donald Keyhoe",
-        "mentions": 648,
-        "documentCount": 393
+        "mentions": 649,
+        "documentCount": 394
       },
       "right": {
         "name": "Major Donald Keyho",
@@ -8815,8 +8895,8 @@
       "category": "person",
       "left": {
         "name": "Timothy Good",
-        "mentions": 633,
-        "documentCount": 358
+        "mentions": 636,
+        "documentCount": 361
       },
       "right": {
         "name": "Timothy Goods",
@@ -8831,8 +8911,8 @@
       "category": "person",
       "left": {
         "name": "Charles Fort",
-        "mentions": 587,
-        "documentCount": 294
+        "mentions": 594,
+        "documentCount": 298
       },
       "right": {
         "name": "Charles Forts",
@@ -8847,8 +8927,8 @@
       "category": "person",
       "left": {
         "name": "Charles Fort",
-        "mentions": 587,
-        "documentCount": 294
+        "mentions": 594,
+        "documentCount": 298
       },
       "right": {
         "name": "Charles Forte's",
@@ -8927,8 +9007,8 @@
       "category": "person",
       "left": {
         "name": "George Noory",
-        "mentions": 315,
-        "documentCount": 215
+        "mentions": 316,
+        "documentCount": 216
       },
       "right": {
         "name": "George Noorey",
@@ -8943,8 +9023,8 @@
       "category": "person",
       "left": {
         "name": "Keith Andrews",
-        "mentions": 283,
-        "documentCount": 123
+        "mentions": 301,
+        "documentCount": 125
       },
       "right": {
         "name": "Keith Andrew",
@@ -9071,8 +9151,8 @@
       "category": "person",
       "left": {
         "name": "John Michell",
-        "mentions": 92,
-        "documentCount": 63
+        "mentions": 93,
+        "documentCount": 64
       },
       "right": {
         "name": "John Mitchell",
@@ -9102,14 +9182,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Nancy Talbot",
-        "mentions": 54,
-        "documentCount": 33
+        "name": "John Michell",
+        "mentions": 93,
+        "documentCount": 64
       },
       "right": {
-        "name": "Nancy Talbott",
-        "mentions": 45,
-        "documentCount": 25
+        "name": "John Michelle",
+        "mentions": 6,
+        "documentCount": 3
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -9118,14 +9198,14 @@
     {
       "category": "person",
       "left": {
-        "name": "John Michell",
-        "mentions": 92,
-        "documentCount": 63
+        "name": "Nancy Talbot",
+        "mentions": 54,
+        "documentCount": 33
       },
       "right": {
-        "name": "John Michelle",
-        "mentions": 6,
-        "documentCount": 3
+        "name": "Nancy Talbott",
+        "mentions": 45,
+        "documentCount": 25
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -9182,14 +9262,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Margaret Fry",
-        "mentions": 70,
-        "documentCount": 49
+        "name": "Robert Baker",
+        "mentions": 72,
+        "documentCount": 54
       },
       "right": {
-        "name": "Margaret Frye",
-        "mentions": 9,
-        "documentCount": 7
+        "name": "Robert Bakker",
+        "mentions": 8,
+        "documentCount": 4
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -9198,14 +9278,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Robert Baker",
-        "mentions": 71,
-        "documentCount": 53
+        "name": "Margaret Fry",
+        "mentions": 70,
+        "documentCount": 49
       },
       "right": {
-        "name": "Robert Bakker",
-        "mentions": 8,
-        "documentCount": 4
+        "name": "Margaret Frye",
+        "mentions": 9,
+        "documentCount": 7
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -9300,8 +9380,8 @@
       },
       "right": {
         "name": "Robert Bauval",
-        "mentions": 58,
-        "documentCount": 41
+        "mentions": 59,
+        "documentCount": 42
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -9366,6 +9446,22 @@
         "name": "Arthur Clark",
         "mentions": 12,
         "documentCount": 7
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Paul Brunton",
+        "mentions": 45,
+        "documentCount": 24
+      },
+      "right": {
+        "name": "Paul Bruntons",
+        "mentions": 8,
+        "documentCount": 6
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -9494,22 +9590,6 @@
         "name": "Martin County",
         "mentions": 4,
         "documentCount": 4
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Paul Brunton",
-        "mentions": 40,
-        "documentCount": 23
-      },
-      "right": {
-        "name": "Paul Bruntons",
-        "mentions": 7,
-        "documentCount": 5
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -9710,14 +9790,14 @@
     {
       "category": "location",
       "left": {
+        "name": "Clair County",
+        "mentions": 22,
+        "documentCount": 14
+      },
+      "right": {
         "name": "Claire County",
         "mentions": 10,
         "documentCount": 6
-      },
-      "right": {
-        "name": "Clair County",
-        "mentions": 21,
-        "documentCount": 13
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -9820,6 +9900,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "George Adams",
+        "mentions": 14,
+        "documentCount": 13
+      },
+      "right": {
+        "name": "George Adamsk",
+        "mentions": 12,
+        "documentCount": 12
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Honey Island",
@@ -9846,22 +9942,6 @@
         "name": "Richard Beals",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "George Adams",
-        "mentions": 14,
-        "documentCount": 13
-      },
-      "right": {
-        "name": "George Adamsk",
-        "mentions": 11,
-        "documentCount": 11
       },
       "similarity": 0.96,
       "reason": "similar name",
@@ -10414,6 +10494,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Arthur Shutt",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Arthur Schutt",
+        "mentions": 4,
+        "documentCount": 3
+      },
+      "similarity": 0.96,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Robert Hirsh",
         "mentions": 4,
         "documentCount": 4
@@ -10549,22 +10645,6 @@
       "right": {
         "name": "University Medical Centre",
         "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.96,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Arthur Shutt",
-        "mentions": 4,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Arthur Schutt",
-        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.96,
@@ -11103,8 +11183,8 @@
       "category": "person",
       "left": {
         "name": "James Randi",
-        "mentions": 836,
-        "documentCount": 517
+        "mentions": 837,
+        "documentCount": 518
       },
       "right": {
         "name": "James Randin",
@@ -11119,13 +11199,13 @@
       "category": "person",
       "left": {
         "name": "James Randi",
-        "mentions": 836,
-        "documentCount": 517
+        "mentions": 837,
+        "documentCount": 518
       },
       "right": {
         "name": "James Randis",
-        "mentions": 3,
-        "documentCount": 3
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -11167,8 +11247,8 @@
       "category": "person",
       "left": {
         "name": "David Jacobs",
-        "mentions": 503,
-        "documentCount": 303
+        "mentions": 504,
+        "documentCount": 304
       },
       "right": {
         "name": "David Jacob",
@@ -11199,8 +11279,8 @@
       "category": "location",
       "left": {
         "name": "King Island",
-        "mentions": 423,
-        "documentCount": 112
+        "mentions": 424,
+        "documentCount": 113
       },
       "right": {
         "name": "Kings Island",
@@ -11215,8 +11295,8 @@
       "category": "location",
       "left": {
         "name": "Maury Island",
-        "mentions": 424,
-        "documentCount": 119
+        "mentions": 425,
+        "documentCount": 120
       },
       "right": {
         "name": "Mary Island",
@@ -11235,9 +11315,25 @@
         "documentCount": 195
       },
       "right": {
-        "name": "Project SIG",
-        "mentions": 5,
-        "documentCount": 5
+        "name": "Project Sig",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Edgar Cayce",
+        "mentions": 378,
+        "documentCount": 194
+      },
+      "right": {
+        "name": "Edgar Cayces",
+        "mentions": 3,
+        "documentCount": 3
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -11263,8 +11359,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 273,
-        "documentCount": 216
+        "mentions": 274,
+        "documentCount": 217
       },
       "right": {
         "name": "Northeastern University",
@@ -11279,8 +11375,8 @@
       "category": "person",
       "left": {
         "name": "Tim Matthews",
-        "mentions": 250,
-        "documentCount": 31
+        "mentions": 253,
+        "documentCount": 32
       },
       "right": {
         "name": "Tim Mathews",
@@ -11295,8 +11391,8 @@
       "category": "person",
       "left": {
         "name": "Tim Matthews",
-        "mentions": 250,
-        "documentCount": 31
+        "mentions": 253,
+        "documentCount": 32
       },
       "right": {
         "name": "Tim Matthew's",
@@ -11327,8 +11423,8 @@
       "category": "person",
       "left": {
         "name": "David Wilcox",
-        "mentions": 221,
-        "documentCount": 47
+        "mentions": 222,
+        "documentCount": 48
       },
       "right": {
         "name": "David Wilco",
@@ -11423,8 +11519,8 @@
       "category": "person",
       "left": {
         "name": "John Michell",
-        "mentions": 92,
-        "documentCount": 63
+        "mentions": 93,
+        "documentCount": 64
       },
       "right": {
         "name": "John Michel",
@@ -11471,8 +11567,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Val",
-        "mentions": 50,
-        "documentCount": 43
+        "mentions": 51,
+        "documentCount": 44
       },
       "right": {
         "name": "Jacques Vall",
@@ -11759,8 +11855,8 @@
       "category": "person",
       "left": {
         "name": "James Baker",
-        "mentions": 28,
-        "documentCount": 8
+        "mentions": 29,
+        "documentCount": 9
       },
       "right": {
         "name": "Mr. James Baeker",
@@ -11964,6 +12060,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "person",
+      "left": {
+        "name": "Allen Hynck",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Allen Hyneck",
+        "mentions": 19,
+        "documentCount": 18
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "Army Rangers",
@@ -11974,22 +12086,6 @@
         "name": "Army Ranger",
         "mentions": 11,
         "documentCount": 11
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Allen Hynck",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Allen Hyneck",
-        "mentions": 18,
-        "documentCount": 17
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -12044,6 +12140,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "location",
+      "left": {
+        "name": "Moria Island",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Mori Island",
+        "mentions": 17,
+        "documentCount": 14
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "Henry Maday",
@@ -12092,16 +12204,16 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "location",
+      "category": "person",
       "left": {
-        "name": "Moria Island",
-        "mentions": 2,
-        "documentCount": 2
+        "name": "Mike Masters",
+        "mentions": 14,
+        "documentCount": 12
       },
       "right": {
-        "name": "Mori Island",
-        "mentions": 16,
-        "documentCount": 13
+        "name": "Mike Master",
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -12142,12 +12254,12 @@
     {
       "category": "person",
       "left": {
-        "name": "Nancy Hayes",
+        "name": "Allen Hendry",
         "mentions": 14,
         "documentCount": 12
       },
       "right": {
-        "name": "Nancy HAYNES",
+        "name": "Allen Henry",
         "mentions": 3,
         "documentCount": 3
       },
@@ -12158,12 +12270,12 @@
     {
       "category": "person",
       "left": {
-        "name": "Allen Hendry",
-        "mentions": 13,
-        "documentCount": 11
+        "name": "Nancy Hayes",
+        "mentions": 14,
+        "documentCount": 12
       },
       "right": {
-        "name": "Allen Henry",
+        "name": "Nancy HAYNES",
         "mentions": 3,
         "documentCount": 3
       },
@@ -12201,22 +12313,6 @@
       },
       "similarity": 0.957,
       "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Mike Masters",
-        "mentions": 12,
-        "documentCount": 11
-      },
-      "right": {
-        "name": "Mike Master",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
       "aliasFile": "data/entity_aliases.json"
     },
     {
@@ -12668,6 +12764,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "program",
+      "left": {
+        "name": "Project Sig",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Project Stig",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.957,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "location",
       "left": {
         "name": "Lake Houston",
@@ -12758,22 +12870,6 @@
         "name": "COMMUNICATIONS INSTRUCTIONS REPORTING VITAL INTELLIGENCE",
         "mentions": 2,
         "documentCount": 2
-      },
-      "similarity": 0.957,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "program",
-      "left": {
-        "name": "Project Stig",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Project SIG",
-        "mentions": 5,
-        "documentCount": 5
       },
       "similarity": 0.957,
       "reason": "similar name",
@@ -13455,8 +13551,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 6300,
-        "documentCount": 2003
+        "mentions": 6307,
+        "documentCount": 2007
       },
       "right": {
         "name": "Department of De-ense",
@@ -13471,8 +13567,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 6300,
-        "documentCount": 2003
+        "mentions": 6307,
+        "documentCount": 2007
       },
       "right": {
         "name": "Department of Derense",
@@ -13487,8 +13583,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 1215,
-        "documentCount": 551
+        "mentions": 1219,
+        "documentCount": 553
       },
       "right": {
         "name": "University of Colora",
@@ -13503,8 +13599,8 @@
       "category": "organization",
       "left": {
         "name": "Air Technical Intelligence Center",
-        "mentions": 309,
-        "documentCount": 199
+        "mentions": 310,
+        "documentCount": 200
       },
       "right": {
         "name": "Air Technical Intelligence Cen",
@@ -13983,8 +14079,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 15670,
-        "documentCount": 3345
+        "mentions": 15690,
+        "documentCount": 3356
       },
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGAnON",
@@ -14134,6 +14230,22 @@
         "name": "RADIO AND ILICTRICAL ENGINEERING DIVISION",
         "mentions": 2,
         "documentCount": 2
+      },
+      "similarity": 0.951,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patteraon Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Wright-Paterson Air Force Base",
+        "mentions": 5,
+        "documentCount": 5
       },
       "similarity": 0.951,
       "reason": "similar name",
@@ -14414,6 +14526,22 @@
     {
       "category": "location",
       "left": {
+        "name": "Wright-Patteraon Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Wright Patterson Airforce Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.951,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "Wright-Patterson Atr Force Base",
         "mentions": 2,
         "documentCount": 2
@@ -14495,8 +14623,8 @@
       "category": "government_agency",
       "left": {
         "name": "Department of Defense",
-        "mentions": 6300,
-        "documentCount": 2003
+        "mentions": 6307,
+        "documentCount": 2007
       },
       "right": {
         "name": "Department of Defen",
@@ -14804,8 +14932,8 @@
       },
       "right": {
         "name": "Committee for the Scientific",
-        "mentions": 51,
-        "documentCount": 47
+        "mentions": 52,
+        "documentCount": 48
       },
       "similarity": 0.949,
       "reason": "similar name",
@@ -14927,8 +15055,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 832,
-        "documentCount": 393
+        "mentions": 835,
+        "documentCount": 396
       },
       "right": {
         "name": "Linda Moulton Howell",
@@ -15631,8 +15759,8 @@
       "category": "government_agency",
       "left": {
         "name": "United States Navy",
-        "mentions": 2639,
-        "documentCount": 1182
+        "mentions": 2642,
+        "documentCount": 1185
       },
       "right": {
         "name": "Uniteo States Navy",
@@ -15647,8 +15775,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 507,
-        "documentCount": 275
+        "mentions": 509,
+        "documentCount": 276
       },
       "right": {
         "name": "Intelligence Cent",
@@ -15663,8 +15791,8 @@
       "category": "organization",
       "left": {
         "name": "Cornell University",
-        "mentions": 201,
-        "documentCount": 176
+        "mentions": 202,
+        "documentCount": 177
       },
       "right": {
         "name": "Corneli University",
@@ -16126,6 +16254,22 @@
     {
       "category": "location",
       "left": {
+        "name": "Clinton County AFB",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Clinton County AAF",
+        "mentions": 4,
+        "documentCount": 2
+      },
+      "similarity": 0.944,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "Clinton County AAF",
         "mentions": 4,
         "documentCount": 2
@@ -16175,12 +16319,12 @@
       "category": "location",
       "left": {
         "name": "Clinton County AFB",
-        "mentions": 2,
-        "documentCount": 2
+        "mentions": 3,
+        "documentCount": 3
       },
       "right": {
-        "name": "Clinton County AAF",
-        "mentions": 4,
+        "name": "Clinton County AAB",
+        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.944,
@@ -16214,22 +16358,6 @@
         "name": "University of West",
         "mentions": 4,
         "documentCount": 4
-      },
-      "similarity": 0.944,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Clinton County AFB",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "right": {
-        "name": "Clinton County AAB",
-        "mentions": 3,
-        "documentCount": 2
       },
       "similarity": 0.944,
       "reason": "similar name",
@@ -16750,12 +16878,12 @@
     {
       "category": "government_agency",
       "left": {
-        "name": "Army Intelligence",
-        "mentions": 260,
-        "documentCount": 119
+        "name": "Police Department",
+        "mentions": 261,
+        "documentCount": 175
       },
       "right": {
-        "name": "Army Int-lligence",
+        "name": "Polioe Department",
         "mentions": 2,
         "documentCount": 2
       },
@@ -16766,12 +16894,12 @@
     {
       "category": "government_agency",
       "left": {
-        "name": "Police Department",
-        "mentions": 259,
-        "documentCount": 174
+        "name": "Army Intelligence",
+        "mentions": 260,
+        "documentCount": 119
       },
       "right": {
-        "name": "Polioe Department",
+        "name": "Army Int-lligence",
         "mentions": 2,
         "documentCount": 2
       },
@@ -16847,8 +16975,8 @@
       "category": "person",
       "left": {
         "name": "Wendelle C. Stevens",
-        "mentions": 72,
-        "documentCount": 41
+        "mentions": 73,
+        "documentCount": 42
       },
       "right": {
         "name": "Colonel Wendelle Stevens",
@@ -16868,8 +16996,8 @@
       },
       "right": {
         "name": "Elizabeth Englund",
-        "mentions": 45,
-        "documentCount": 36
+        "mentions": 47,
+        "documentCount": 38
       },
       "similarity": 0.941,
       "reason": "similar name",
@@ -17004,6 +17132,38 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of Cali",
+        "mentions": 19,
+        "documentCount": 17
+      },
+      "right": {
+        "name": "University of Ca",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "organization",
+      "left": {
+        "name": "University of Cali",
+        "mentions": 19,
+        "documentCount": 17
+      },
+      "right": {
+        "name": "UNIVERSITY OF Al",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.941,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "government_agency",
       "left": {
         "name": "OFFICE OF THE AIR ATTACHE",
@@ -17022,44 +17182,12 @@
     {
       "category": "organization",
       "left": {
-        "name": "University of Cali",
-        "mentions": 17,
-        "documentCount": 16
-      },
-      "right": {
-        "name": "University of Ca",
-        "mentions": 3,
-        "documentCount": 3
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
         "name": "London University",
         "mentions": 18,
         "documentCount": 15
       },
       "right": {
         "name": "Lonaon University",
-        "mentions": 2,
-        "documentCount": 2
-      },
-      "similarity": 0.941,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "University of Cali",
-        "mentions": 17,
-        "documentCount": 16
-      },
-      "right": {
-        "name": "UNIVERSITY OF Al",
         "mentions": 2,
         "documentCount": 2
       },
@@ -17775,8 +17903,8 @@
       "category": "organization",
       "left": {
         "name": "University of Pennsylvania",
-        "mentions": 416,
-        "documentCount": 146
+        "mentions": 417,
+        "documentCount": 147
       },
       "right": {
         "name": "University of Pennsylva",
@@ -18079,8 +18207,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 2948,
-        "documentCount": 1027
+        "mentions": 2950,
+        "documentCount": 1029
       },
       "right": {
         "name": "Stanton Freidman",
@@ -18095,8 +18223,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 2948,
-        "documentCount": 1027
+        "mentions": 2950,
+        "documentCount": 1029
       },
       "right": {
         "name": "Stanton Freedman",
@@ -18143,8 +18271,8 @@
       "category": "person",
       "left": {
         "name": "Elizabeth Anglin",
-        "mentions": 217,
-        "documentCount": 138
+        "mentions": 222,
+        "documentCount": 141
       },
       "right": {
         "name": "Elizabeth Angwin",
@@ -18191,8 +18319,8 @@
       "category": "person",
       "left": {
         "name": "Elizabeth Loftus",
-        "mentions": 160,
-        "documentCount": 77
+        "mentions": 161,
+        "documentCount": 78
       },
       "right": {
         "name": "Elizabeth Lortus",
@@ -19567,8 +19695,8 @@
       "category": "government_agency",
       "left": {
         "name": "Federal Bureau of Investigation",
-        "mentions": 15670,
-        "documentCount": 3345
+        "mentions": 15690,
+        "documentCount": 3356
       },
       "right": {
         "name": "FEDERAL BUREAU OF IRVESTIGATIOR",
@@ -19583,8 +19711,8 @@
       "category": "location",
       "left": {
         "name": "Wright-Patterson Air Force Base",
-        "mentions": 1315,
-        "documentCount": 772
+        "mentions": 1317,
+        "documentCount": 774
       },
       "right": {
         "name": "Wright-Fattorson Air Force Base",
@@ -19829,6 +19957,38 @@
       "right": {
         "name": "FEDERAL BUREAU OF INVESTIGATIDN",
         "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patteraon Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "WRICHT-PATTERSON AIR FORCE BASE",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patteraon Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Wright-Patterson Air Foroe Base",
+        "mentions": 3,
         "documentCount": 2
       },
       "similarity": 0.935,
@@ -20158,6 +20318,86 @@
     {
       "category": "location",
       "left": {
+        "name": "Wright-Patteraon Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Wright-Patterson Atr Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patteraon Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "WRIGHT PATThRSON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patteraon Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Wrighü-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patteraon Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "Weight-Patterson Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
+        "name": "Wright-Patteraon Air Force Base",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "right": {
+        "name": "WRIGHT PATTIRSON AIR FORCE BASE",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.935,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "Wright-Patterson Atr Force Base",
         "mentions": 2,
         "documentCount": 2
@@ -20351,8 +20591,8 @@
       "category": "person",
       "left": {
         "name": "Stanton Friedman",
-        "mentions": 2948,
-        "documentCount": 1027
+        "mentions": 2950,
+        "documentCount": 1029
       },
       "right": {
         "name": "Stanton Friedm",
@@ -20367,8 +20607,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 1367,
-        "documentCount": 649
+        "mentions": 1378,
+        "documentCount": 653
       },
       "right": {
         "name": "George Adamskiin",
@@ -20431,8 +20671,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 460,
-        "documentCount": 268
+        "mentions": 461,
+        "documentCount": 269
       },
       "right": {
         "name": "Stephen Hawkins",
@@ -20591,13 +20831,13 @@
       "category": "person",
       "left": {
         "name": "Robert Sheaffer",
-        "mentions": 206,
-        "documentCount": 134
+        "mentions": 212,
+        "documentCount": 135
       },
       "right": {
         "name": "Robert Shaeffer",
-        "mentions": 6,
-        "documentCount": 5
+        "mentions": 8,
+        "documentCount": 6
       },
       "similarity": 0.933,
       "reason": "similar name",
@@ -20639,8 +20879,8 @@
       "category": "organization",
       "left": {
         "name": "University of Washington",
-        "mentions": 170,
-        "documentCount": 136
+        "mentions": 171,
+        "documentCount": 137
       },
       "right": {
         "name": "University of Washing",
@@ -23423,8 +23663,8 @@
       "category": "organization",
       "left": {
         "name": "Northwestern University",
-        "mentions": 273,
-        "documentCount": 216
+        "mentions": 274,
+        "documentCount": 217
       },
       "right": {
         "name": "Northwest University",
@@ -24031,8 +24271,8 @@
       "category": "person",
       "left": {
         "name": "Bruce Maccabee",
-        "mentions": 2715,
-        "documentCount": 357
+        "mentions": 2717,
+        "documentCount": 359
       },
       "right": {
         "name": "Bruce Macabbee",
@@ -24047,8 +24287,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 1389,
-        "documentCount": 691
+        "mentions": 1395,
+        "documentCount": 695
       },
       "right": {
         "name": "Jacques Valley",
@@ -24063,8 +24303,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 1367,
-        "documentCount": 649
+        "mentions": 1378,
+        "documentCount": 653
       },
       "right": {
         "name": "George Adamsky",
@@ -24079,8 +24319,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 1367,
-        "documentCount": 649
+        "mentions": 1378,
+        "documentCount": 653
       },
       "right": {
         "name": "George Adamskl",
@@ -24095,8 +24335,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 1367,
-        "documentCount": 649
+        "mentions": 1378,
+        "documentCount": 653
       },
       "right": {
         "name": "George Adamskj",
@@ -24111,8 +24351,8 @@
       "category": "location",
       "left": {
         "name": "Salt Lake City",
-        "mentions": 1074,
-        "documentCount": 665
+        "mentions": 1079,
+        "documentCount": 668
       },
       "right": {
         "name": "Selt Lake City",
@@ -24175,8 +24415,8 @@
       "category": "person",
       "left": {
         "name": "Neil Armstrong",
-        "mentions": 441,
-        "documentCount": 265
+        "mentions": 442,
+        "documentCount": 266
       },
       "right": {
         "name": "Neil Armstrang",
@@ -24223,8 +24463,8 @@
       "category": "person",
       "left": {
         "name": "Robert Sheaffer",
-        "mentions": 206,
-        "documentCount": 134
+        "mentions": 212,
+        "documentCount": 135
       },
       "right": {
         "name": "Robert Shafer",
@@ -24335,8 +24575,8 @@
       "category": "organization",
       "left": {
         "name": "University of North Carolina",
-        "mentions": 65,
-        "documentCount": 49
+        "mentions": 66,
+        "documentCount": 50
       },
       "right": {
         "name": "University of South Carolina",
@@ -24494,14 +24734,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Michael Collins",
-        "mentions": 44,
-        "documentCount": 39
+        "name": "Peter Sorenson",
+        "mentions": 25,
+        "documentCount": 16
       },
       "right": {
-        "name": "Michel Collin",
-        "mentions": 5,
-        "documentCount": 2
+        "name": "Peter Sorensen",
+        "mentions": 24,
+        "documentCount": 12
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -24510,14 +24750,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Peter Sorenson",
-        "mentions": 24,
-        "documentCount": 15
+        "name": "Michael Collins",
+        "mentions": 44,
+        "documentCount": 39
       },
       "right": {
-        "name": "Peter Sorensen",
-        "mentions": 24,
-        "documentCount": 12
+        "name": "Michel Collin",
+        "mentions": 5,
+        "documentCount": 2
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -24787,9 +25027,9 @@
         "documentCount": 14
       },
       "right": {
-        "name": "Jacques Vallées",
-        "mentions": 6,
-        "documentCount": 6
+        "name": "Jacques Vallees",
+        "mentions": 8,
+        "documentCount": 7
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -24863,8 +25103,8 @@
       "category": "person",
       "left": {
         "name": "George Adamsk",
-        "mentions": 11,
-        "documentCount": 11
+        "mentions": 12,
+        "documentCount": 12
       },
       "right": {
         "name": "George Adamskis",
@@ -25134,14 +25374,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Frederick Valen",
-        "mentions": 10,
-        "documentCount": 9
+        "name": "George Adamsk",
+        "mentions": 12,
+        "documentCount": 12
       },
       "right": {
-        "name": "Frederick Val",
-        "mentions": 5,
-        "documentCount": 3
+        "name": "George Adamusky",
+        "mentions": 4,
+        "documentCount": 2
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -25150,14 +25390,14 @@
     {
       "category": "person",
       "left": {
-        "name": "George Adamsk",
-        "mentions": 11,
-        "documentCount": 11
+        "name": "Frederick Valen",
+        "mentions": 10,
+        "documentCount": 9
       },
       "right": {
-        "name": "George Adamusky",
-        "mentions": 4,
-        "documentCount": 2
+        "name": "Frederick Val",
+        "mentions": 5,
+        "documentCount": 3
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -25246,6 +25486,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Mark Richards",
+        "mentions": 6,
+        "documentCount": 6
+      },
+      "right": {
+        "name": "Mark Richardson",
+        "mentions": 7,
+        "documentCount": 5
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Marc Davenport",
         "mentions": 9,
         "documentCount": 7
@@ -25294,22 +25550,6 @@
     {
       "category": "person",
       "left": {
-        "name": "Mark Richards",
-        "mentions": 5,
-        "documentCount": 5
-      },
-      "right": {
-        "name": "Mark Richardson",
-        "mentions": 7,
-        "documentCount": 5
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
         "name": "John Scheussler",
         "mentions": 4,
         "documentCount": 3
@@ -25350,6 +25590,22 @@
         "name": "Robert Schafer",
         "mentions": 4,
         "documentCount": 4
+      },
+      "similarity": 0.929,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Robert Shafer",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Robert Shaeffer",
+        "mentions": 8,
+        "documentCount": 6
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -25454,14 +25710,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Robert Shafer",
-        "mentions": 3,
+        "name": "Thomas Johnson",
+        "mentions": 6,
         "documentCount": 3
       },
       "right": {
-        "name": "Robert Shaeffer",
-        "mentions": 6,
-        "documentCount": 5
+        "name": "Thomas Jönsson",
+        "mentions": 4,
+        "documentCount": 3
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -25510,22 +25766,6 @@
         "name": "David Wilkins",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.929,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Thomas Johnson",
-        "mentions": 6,
-        "documentCount": 3
-      },
-      "right": {
-        "name": "Thomas Jönsson",
-        "mentions": 3,
-        "documentCount": 2
       },
       "similarity": 0.929,
       "reason": "similar name",
@@ -26047,8 +26287,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 1215,
-        "documentCount": 551
+        "mentions": 1219,
+        "documentCount": 553
       },
       "right": {
         "name": "University of Color",
@@ -26063,8 +26303,8 @@
       "category": "organization",
       "left": {
         "name": "University of Colorado",
-        "mentions": 1215,
-        "documentCount": 551
+        "mentions": 1219,
+        "documentCount": 553
       },
       "right": {
         "name": "University Colorado",
@@ -26095,8 +26335,8 @@
       "category": "organization",
       "left": {
         "name": "Stanford University",
-        "mentions": 468,
-        "documentCount": 318
+        "mentions": 469,
+        "documentCount": 319
       },
       "right": {
         "name": "Stanford University In",
@@ -26111,8 +26351,8 @@
       "category": "organization",
       "left": {
         "name": "University of Arizona",
-        "mentions": 397,
-        "documentCount": 288
+        "mentions": 398,
+        "documentCount": 289
       },
       "right": {
         "name": "University of Arizor",
@@ -26127,8 +26367,8 @@
       "category": "organization",
       "left": {
         "name": "National Institute for Discovery Science",
-        "mentions": 153,
-        "documentCount": 99
+        "mentions": 154,
+        "documentCount": 100
       },
       "right": {
         "name": "National Institute of Discovery of Science",
@@ -26543,8 +26783,8 @@
       "category": "organization",
       "left": {
         "name": "Naval Research Laboratory",
-        "mentions": 107,
-        "documentCount": 72
+        "mentions": 108,
+        "documentCount": 73
       },
       "right": {
         "name": "NRL Naval Research Laboratory",
@@ -26932,8 +27172,8 @@
       },
       "right": {
         "name": "Committee for the Scientific Investi",
-        "mentions": 4,
-        "documentCount": 4
+        "mentions": 5,
+        "documentCount": 5
       },
       "similarity": 0.925,
       "reason": "similar name",
@@ -27007,8 +27247,8 @@
       "category": "person",
       "left": {
         "name": "Kenneth Arnold",
-        "mentions": 2302,
-        "documentCount": 871
+        "mentions": 2303,
+        "documentCount": 872
       },
       "right": {
         "name": "Kenneth Arno",
@@ -27023,8 +27263,8 @@
       "category": "person",
       "left": {
         "name": "Jacques Vallee",
-        "mentions": 1389,
-        "documentCount": 691
+        "mentions": 1395,
+        "documentCount": 695
       },
       "right": {
         "name": "Jacques Vall",
@@ -27039,8 +27279,8 @@
       "category": "person",
       "left": {
         "name": "George Adamski",
-        "mentions": 1367,
-        "documentCount": 649
+        "mentions": 1378,
+        "documentCount": 653
       },
       "right": {
         "name": "George Adams",
@@ -27071,8 +27311,8 @@
       "category": "person",
       "left": {
         "name": "Philip Mantle",
-        "mentions": 619,
-        "documentCount": 171
+        "mentions": 620,
+        "documentCount": 172
       },
       "right": {
         "name": "Philip Mantie",
@@ -27087,8 +27327,8 @@
       "category": "person",
       "left": {
         "name": "Philip Mantle",
-        "mentions": 619,
-        "documentCount": 171
+        "mentions": 620,
+        "documentCount": 172
       },
       "right": {
         "name": "Philip Manlle",
@@ -27135,8 +27375,8 @@
       "category": "location",
       "left": {
         "name": "Rhode Island",
-        "mentions": 509,
-        "documentCount": 325
+        "mentions": 511,
+        "documentCount": 327
       },
       "right": {
         "name": "Rhode Island--J",
@@ -27151,8 +27391,8 @@
       "category": "organization",
       "left": {
         "name": "Intelligence Center",
-        "mentions": 507,
-        "documentCount": 275
+        "mentions": 509,
+        "documentCount": 276
       },
       "right": {
         "name": "Intelligence Cf'nter",
@@ -27199,8 +27439,8 @@
       "category": "organization",
       "left": {
         "name": "University of Arizona",
-        "mentions": 397,
-        "documentCount": 288
+        "mentions": 398,
+        "documentCount": 289
       },
       "right": {
         "name": "University Arizona",
@@ -27268,8 +27508,8 @@
       },
       "right": {
         "name": "Peter Rogerson",
-        "mentions": 265,
-        "documentCount": 68
+        "mentions": 266,
+        "documentCount": 69
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -27359,8 +27599,8 @@
       "category": "person",
       "left": {
         "name": "Glenn Dennis",
-        "mentions": 177,
-        "documentCount": 80
+        "mentions": 178,
+        "documentCount": 81
       },
       "right": {
         "name": "Glenn Dennison",
@@ -27375,13 +27615,13 @@
       "category": "organization",
       "left": {
         "name": "Committee for the Scientific Investigation",
-        "mentions": 174,
-        "documentCount": 133
+        "mentions": 175,
+        "documentCount": 134
       },
       "right": {
         "name": "Committee for the Scientific Investi",
-        "mentions": 4,
-        "documentCount": 4
+        "mentions": 5,
+        "documentCount": 5
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -27503,8 +27743,8 @@
       "category": "person",
       "left": {
         "name": "Mark Dantonio",
-        "mentions": 93,
-        "documentCount": 58
+        "mentions": 95,
+        "documentCount": 60
       },
       "right": {
         "name": "Marc Dantonio",
@@ -27631,8 +27871,8 @@
       "category": "organization",
       "left": {
         "name": "University of North Carolina",
-        "mentions": 65,
-        "documentCount": 49
+        "mentions": 66,
+        "documentCount": 50
       },
       "right": {
         "name": "University of North Caro",
@@ -27663,13 +27903,29 @@
       "category": "person",
       "left": {
         "name": "James McGaha",
-        "mentions": 61,
-        "documentCount": 28
+        "mentions": 62,
+        "documentCount": 29
       },
       "right": {
         "name": "James McGayhay",
         "mentions": 3,
         "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
+        "name": "Richard Gere",
+        "mentions": 55,
+        "documentCount": 40
+      },
+      "right": {
+        "name": "Richard George",
+        "mentions": 6,
+        "documentCount": 4
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -27692,16 +27948,16 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
-      "category": "person",
+      "category": "organization",
       "left": {
-        "name": "Richard Gere",
-        "mentions": 54,
-        "documentCount": 39
+        "name": "Committee for the Scientific",
+        "mentions": 52,
+        "documentCount": 48
       },
       "right": {
-        "name": "Richard George",
+        "name": "Committee for Scientific",
         "mentions": 6,
-        "documentCount": 4
+        "documentCount": 6
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -27766,22 +28022,6 @@
         "name": "John Petersen",
         "mentions": 21,
         "documentCount": 4
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "Committee for the Scientific",
-        "mentions": 51,
-        "documentCount": 47
-      },
-      "right": {
-        "name": "Committee for Scientific",
-        "mentions": 6,
-        "documentCount": 6
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -28188,6 +28428,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of Cali",
+        "mentions": 19,
+        "documentCount": 17
+      },
+      "right": {
+        "name": "University of Califor",
+        "mentions": 11,
+        "documentCount": 11
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "John Michael",
@@ -28198,22 +28454,6 @@
         "name": "John McMichael",
         "mentions": 10,
         "documentCount": 4
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "University of Cali",
-        "mentions": 17,
-        "documentCount": 16
-      },
-      "right": {
-        "name": "University of Califor",
-        "mentions": 11,
-        "documentCount": 11
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -28428,6 +28668,22 @@
       "aliasFile": "data/entity_aliases.json"
     },
     {
+      "category": "organization",
+      "left": {
+        "name": "University of Cali",
+        "mentions": 19,
+        "documentCount": 17
+      },
+      "right": {
+        "name": "University of Califan",
+        "mentions": 2,
+        "documentCount": 2
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
       "category": "person",
       "left": {
         "name": "José Antonio Caravaca",
@@ -28502,22 +28758,6 @@
         "name": "Professor Hermann Ober",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "organization",
-      "left": {
-        "name": "University of Cali",
-        "mentions": 17,
-        "documentCount": 16
-      },
-      "right": {
-        "name": "University of Califan",
-        "mentions": 2,
-        "documentCount": 2
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -28686,6 +28926,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Mike Masters",
+        "mentions": 14,
+        "documentCount": 12
+      },
+      "right": {
+        "name": "Mike Masterson",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "George Adams",
         "mentions": 14,
         "documentCount": 13
@@ -28766,6 +29022,22 @@
     {
       "category": "location",
       "left": {
+        "name": "Suffolk County AFB",
+        "mentions": 6,
+        "documentCount": 5
+      },
+      "right": {
+        "name": "SUFFOLK COUNTY AFB NY",
+        "mentions": 9,
+        "documentCount": 9
+      },
+      "similarity": 0.923,
+      "reason": "similar name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "location",
+      "left": {
         "name": "Pima County Chapter",
         "mentions": 8,
         "documentCount": 8
@@ -28774,22 +29046,6 @@
         "name": "Pinal County Chapter",
         "mentions": 7,
         "documentCount": 7
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Mike Masters",
-        "mentions": 12,
-        "documentCount": 11
-      },
-      "right": {
-        "name": "Mike Masterson",
-        "mentions": 3,
-        "documentCount": 3
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -28870,22 +29126,6 @@
         "name": "William Broad",
         "mentions": 7,
         "documentCount": 6
-      },
-      "similarity": 0.923,
-      "reason": "similar name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "location",
-      "left": {
-        "name": "Suffolk County AFB",
-        "mentions": 4,
-        "documentCount": 4
-      },
-      "right": {
-        "name": "SUFFOLK COUNTY AFB NY",
-        "mentions": 9,
-        "documentCount": 9
       },
       "similarity": 0.923,
       "reason": "similar name",
@@ -31071,8 +31311,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 832,
-        "documentCount": 393
+        "mentions": 835,
+        "documentCount": 396
       },
       "right": {
         "name": "Linda Bolton Howe",
@@ -31119,13 +31359,13 @@
       "category": "person",
       "left": {
         "name": "Steven Spielberg",
-        "mentions": 478,
-        "documentCount": 332
+        "mentions": 479,
+        "documentCount": 333
       },
       "right": {
         "name": "Stephen Spielberg",
-        "mentions": 19,
-        "documentCount": 16
+        "mentions": 20,
+        "documentCount": 17
       },
       "similarity": 0.909,
       "reason": "similar person name",
@@ -31151,8 +31391,8 @@
       "category": "person",
       "left": {
         "name": "Tim Edwards",
-        "mentions": 108,
-        "documentCount": 27
+        "mentions": 109,
+        "documentCount": 28
       },
       "right": {
         "name": "Tom Edwards",
@@ -31519,8 +31759,8 @@
       "category": "person",
       "left": {
         "name": "Jean Dixon",
-        "mentions": 10,
-        "documentCount": 9
+        "mentions": 11,
+        "documentCount": 10
       },
       "right": {
         "name": "Jane Dixon",
@@ -31647,8 +31887,8 @@
       "category": "person",
       "left": {
         "name": "Stephen Hawking",
-        "mentions": 460,
-        "documentCount": 268
+        "mentions": 461,
+        "documentCount": 269
       },
       "right": {
         "name": "Steven Hawking",
@@ -31887,8 +32127,8 @@
       "category": "person",
       "left": {
         "name": "Jim Jones",
-        "mentions": 98,
-        "documentCount": 47
+        "mentions": 115,
+        "documentCount": 49
       },
       "right": {
         "name": "Tim Jones",
@@ -32303,8 +32543,8 @@
       "category": "person",
       "left": {
         "name": "George Bush",
-        "mentions": 323,
-        "documentCount": 225
+        "mentions": 324,
+        "documentCount": 226
       },
       "right": {
         "name": "George HW Bush",
@@ -32415,8 +32655,8 @@
       "category": "person",
       "left": {
         "name": "Jane Goodall",
-        "mentions": 29,
-        "documentCount": 26
+        "mentions": 30,
+        "documentCount": 27
       },
       "right": {
         "name": "James Goodall",
@@ -32462,6 +32702,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Mike Williams",
+        "mentions": 19,
+        "documentCount": 14
+      },
+      "right": {
+        "name": "Ken Williams",
+        "mentions": 13,
+        "documentCount": 12
+      },
+      "similarity": 0.88,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "Daniel Dennett",
         "mentions": 28,
         "documentCount": 22
@@ -32486,22 +32742,6 @@
         "name": "Steven Green",
         "mentions": 3,
         "documentCount": 3
-      },
-      "similarity": 0.88,
-      "reason": "similar person name",
-      "aliasFile": "data/entity_aliases.json"
-    },
-    {
-      "category": "person",
-      "left": {
-        "name": "Mike Williams",
-        "mentions": 19,
-        "documentCount": 14
-      },
-      "right": {
-        "name": "Ken Williams",
-        "mentions": 12,
-        "documentCount": 11
       },
       "similarity": 0.88,
       "reason": "similar person name",
@@ -32574,14 +32814,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Joe Palermo",
-        "mentions": 11,
-        "documentCount": 7
+        "name": "Carl Rogers",
+        "mentions": 13,
+        "documentCount": 10
       },
       "right": {
-        "name": "Joseph Palermo",
-        "mentions": 4,
-        "documentCount": 4
+        "name": "Charles Rogers",
+        "mentions": 3,
+        "documentCount": 2
       },
       "similarity": 0.88,
       "reason": "similar person name",
@@ -32590,14 +32830,14 @@
     {
       "category": "person",
       "left": {
-        "name": "Carl Rogers",
+        "name": "Joe Palermo",
         "mentions": 11,
-        "documentCount": 9
+        "documentCount": 7
       },
       "right": {
-        "name": "Charles Rogers",
-        "mentions": 3,
-        "documentCount": 2
+        "name": "Joseph Palermo",
+        "mentions": 4,
+        "documentCount": 4
       },
       "similarity": 0.88,
       "reason": "similar person name",
@@ -32799,8 +33039,8 @@
       "category": "person",
       "left": {
         "name": "Linda Moulton Howe",
-        "mentions": 832,
-        "documentCount": 393
+        "mentions": 835,
+        "documentCount": 396
       },
       "right": {
         "name": "Eric Linda Moulton Howe",
@@ -33023,8 +33263,8 @@
       "category": "person",
       "left": {
         "name": "Admiral Thomas Wilson",
-        "mentions": 149,
-        "documentCount": 85
+        "mentions": 150,
+        "documentCount": 86
       },
       "right": {
         "name": "Tom Wilson",
@@ -33279,8 +33519,8 @@
       "category": "person",
       "left": {
         "name": "Allen Hendry",
-        "mentions": 13,
-        "documentCount": 11
+        "mentions": 14,
+        "documentCount": 12
       },
       "right": {
         "name": "Alan Hendry",
@@ -33710,6 +33950,22 @@
     {
       "category": "person",
       "left": {
+        "name": "Joe Joseph",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "right": {
+        "name": "Joseph Joseph",
+        "mentions": 3,
+        "documentCount": 3
+      },
+      "similarity": 0.87,
+      "reason": "similar person name",
+      "aliasFile": "data/entity_aliases.json"
+    },
+    {
+      "category": "person",
+      "left": {
         "name": "John Carpenter",
         "mentions": 193,
         "documentCount": 92
@@ -33951,8 +34207,8 @@
       "category": "person",
       "left": {
         "name": "James E. McDonald",
-        "mentions": 692,
-        "documentCount": 329
+        "mentions": 693,
+        "documentCount": 330
       },
       "right": {
         "name": "James Edward McDonald",
@@ -34015,8 +34271,8 @@
       "category": "location",
       "left": {
         "name": "THE AREA",
-        "mentions": 46,
-        "documentCount": 44
+        "mentions": 47,
+        "documentCount": 45
       },
       "right": {
         "name": "AT RANGE ESTIMATED ABOUT",
@@ -34031,8 +34287,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 72505,
-        "documentCount": 15403
+        "mentions": 72555,
+        "documentCount": 15425
       },
       "right": {
         "name": "North American Space Agency",
@@ -34063,8 +34319,8 @@
       "category": "government_agency",
       "left": {
         "name": "NASA",
-        "mentions": 72505,
-        "documentCount": 15403
+        "mentions": 72555,
+        "documentCount": 15425
       },
       "right": {
         "name": "National Aeronautics and Space Agency",
