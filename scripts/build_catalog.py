@@ -641,6 +641,58 @@ def signal_frequency_label(hertz: float) -> str:
     return f"{hertz:g} Hz"
 
 
+def blood_type_observations_for_segment(text: str, document_id: str, source: str, segment: int | str) -> list[dict]:
+    """Literal English ABO/Rh references, without inferring a person's phenotype.
+
+    ABO letters need a blood/group cue; polarity words require nearby blood/Rh
+    context. Bare A+/B- tokens without a blood cue are intentionally excluded.
+    Offsets refer to the original segment, including OCR spelling and whitespace.
+    """
+    pattern = re.compile(
+        r"\b(?:blood[\s-]+(?:type|group)s?\s*(?:is\s+|was\s+|of\s+|:\s*)?(?P<abo>AB|A|B|O)\b"
+        r"(?:[\s-]*(?P<polarity>positive|negative|[+−-](?!\w)))?"
+        r"|(?P<before>AB|A|B|O)(?:[\s-]*(?P<before_polarity>positive|negative|[+−-]))?\s+blood(?:[\s-]+(?:types?|groups?))?\b"
+        r"|(?P<reverse>AB|A|B|O)[\s-]+(?P<reverse_polarity>positive|negative)\b"
+        r"|(?P<rh>Rh(?:esus)?)[\s-]*(?:factor[\s-]*)?(?P<rh_polarity>positive|negative|[+−-](?!\w))"
+        r"|(?P<unspecified>blood[\s-]+(?:types?|groups?)|Rh(?:esus)?[\s-]+factor)\b)",
+        re.IGNORECASE,
+    )
+    observations = []
+    for match in pattern.finditer(text):
+        if match.group("before") and match.group("before").upper() == "A":
+            before = text[max(0, match.start() - 12):match.start()]
+            if not match.group("before_polarity") and not (
+                re.search(r"(?:type|group)\s*$", before, re.IGNORECASE)
+                or re.search(r"blood[\s-]+(?:type|group)", match.group(), re.IGNORECASE)
+            ):
+                continue
+            if re.match(r"a\s+[+−-]", match.group()):
+                continue
+        if match.group("reverse"):
+            context = text[max(0, match.start() - 100):min(len(text), match.end() + 100)]
+            if not re.search(r"\b(?:blood|Rh|rhesus)\b", context, re.IGNORECASE):
+                continue
+            if match.group("reverse") == "a" and not re.search(
+                r"\b(?:type|group|am|is|was|or)\s*$", text[max(0, match.start() - 20):match.start()], re.IGNORECASE
+            ):
+                continue
+        abo = (match.group("abo") or match.group("before") or match.group("reverse") or "").upper()
+        polarity = match.group("polarity") or match.group("before_polarity") or match.group("reverse_polarity") or match.group("rh_polarity") or ""
+        if abo == "A" and not polarity and (match.group("abo") or match.group("before")) == "a":
+            # "blood type a person has" and "a blood test" are ordinary prose.
+            continue
+        rh = "positive" if polarity.lower() in {"positive", "+"} else "negative" if polarity else "unspecified"
+        blood_type = f"{abo}{'+' if rh == 'positive' else '-' if rh == 'negative' else ''}" if abo else f"Rh {rh}" if match.group("rh") else "Unspecified"
+        observations.append({
+            "id": stable_id("blood", f"{document_id}:{segment}:{match.start()}"),
+            "documentId": document_id, "source": source, "segment": segment,
+            "start": match.start(), "end": match.end(), "matchedText": match.group(),
+            "bloodType": blood_type, "abo": abo or "unspecified", "rh": rh,
+            "excerpt": text[max(0, match.start() - 180):min(len(text), match.end() + 220)],
+        })
+    return observations
+
+
 def signal_observations_for_segment(text: str, document_id: str, source: str, segment: int | str) -> list[dict]:
     """Retain explicit frequencies plus tightly constrained unit-elided microwave values."""
     observations = []
@@ -3597,6 +3649,7 @@ def build(
     astronomy_observations: list[dict] = []
     astronomy_candidates: list[dict] = []
     signal_observations: list[dict] = []
+    blood_type_observations: list[dict] = []
     epistemic_qualifiers_by_segment: dict[str, list[dict]] = {}
     segment_entity_qualifiers: dict[str, dict[str, list[dict]]] = collections.defaultdict(dict)
     lineage_records: list[dict] = []
@@ -3800,6 +3853,7 @@ def build(
                         target_qualifiers.append(qualifier)
             qualifiers = epistemic_qualifiers_by_segment.get(sid, [])
             signal_observations.extend(signal_observations_for_segment(segment, doc_id, source, signal_segment))
+            blood_type_observations.extend(blood_type_observations_for_segment(segment, doc_id, source, signal_segment))
             observations, review_items = craft_observations_for_segment(segment, doc_id, source, signal_segment, craft_taxonomy)
             craft_observations.extend(observations)
             craft_candidates.extend(review_items)
@@ -4161,6 +4215,11 @@ def build(
             "targets": astronomy_targets,
             "observations": astronomy_observations,
             "reviewCandidates": astronomy_review,
+        },
+        "bloodTypes": {
+            "schema": "ufo-files-blood-type-mentions/v1",
+            "language": "en",
+            "observations": blood_type_observations,
         },
         "signals": {
             "schema": "ufo-files-signal-frequency-observations/v1",

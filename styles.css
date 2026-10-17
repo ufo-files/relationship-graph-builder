@@ -713,3 +713,26 @@ body.graph-fullscreen #chart { min-height: 0; }
   .stage-header { flex-wrap: wrap; gap: 12px; }
   .stage-tools { width: 100%; justify-content: flex-end; }
 }
+.blood-view { padding: 20px; max-width: 1100px; margin: auto; }
+.blood-view-switch { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.blood-view-switch button, .blood-overview button { font: inherit; padding: 8px 12px; border: 1px solid #788177; border-radius: 4px; background: transparent; cursor: pointer; }
+.blood-view-switch button[aria-pressed="true"] { background: #253b33; color: white; }
+.blood-scatter { display: block; width: 100%; overflow: visible; }
+.blood-grid { stroke: #d7dbd2; stroke-width: 1; }
+.blood-axis, .blood-scatter-point text { font-size: 11px; fill: #28352c; }
+.blood-axis-title { font-size: 12px; fill: #28352c; }
+.blood-scatter-point { cursor: pointer; }
+.blood-scatter-point circle { fill: #466858; stroke: #fafaf5; stroke-width: 2; }
+.blood-scatter-point text { paint-order: stroke; stroke: #f7f6f0; stroke-width: 4px; stroke-linejoin: round; }
+.blood-leader { stroke: #9aa697; stroke-width: 1; }
+.blood-scatter-point:hover circle, .blood-scatter-point:focus circle, .blood-scatter-point[aria-pressed="true"] circle { fill: #111; stroke: #111; }
+.blood-scatter-point:focus { outline: none; }
+.blood-scatter-point:focus text { text-decoration: underline; }
+.blood-overview { overflow-x: auto; margin: 20px 0 28px; }
+.blood-overview table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.blood-overview th, .blood-overview td { text-align: left; padding: 12px; border-bottom: 1px solid #d6d8d1; }
+.blood-overview thead { background: #edf0e9; }
+@media (max-width: 600px) {
+  .blood-view { padding: 12px; }
+  .blood-overview th, .blood-overview td { padding: 10px 7px; font-size: 12px; }
+}

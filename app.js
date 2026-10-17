@@ -295,6 +295,7 @@ const TYPES = [
   { id: "document", label: "Documents", scope: "All corpus files", icon: "<path d='M7 2h12l5 5v11H7zM19 2v5h5M11 11h9M11 14h9'/><path d='M4 5H2v15h17v-2'/>" },
   { id: "craft", label: "Craft", scope: "Reported shapes", icon: "<path d='M3 15h25M6 15l5-8h9l5 8M11 7l4 8 5-8M4 4h23M4 2v4m23-4v4'/>" },
   { id: "species", label: "Species", scope: "ET names in corpus", icon: "<circle cx='15.5' cy='8' r='5'/><path d='M8 18c1-5 4-7 7.5-7s6.5 2 7.5 7M13 7h1m3 0h1M4 4h4m15 0h4M3 15h4m17 0h4'/>" },
+  { id: "blood", label: "Blood types", scope: "ABO + Rh mentions", icon: "<path d='M16 2C13 7 8 11 8 15a8 8 0 0 0 16 0c0-4-5-8-8-13Z'/>" },
   { id: "signals", label: "Signals", scope: "Frequencies in corpus", icon: "<path d='M2 17h27M4 17V13l2-1 2 5 2-9 2 9 3-3 2 3 2-13 2 13 2-6 2 6h3'/><path d='M4 3v3m23-3v3'/>" },
   { id: "scatter", label: "Scatter", scope: "All", icon: "<path d='M3 2v16h25'/><circle cx='9' cy='13' r='2'/><circle cx='15' cy='9' r='2'/><circle cx='22' cy='5' r='2'/>" },
   { id: "bars", label: "Bars", scope: "All collections", icon: "<path d='M3 2v16h26M7 15h4V8H7zm8 0h4V4h-4zm8 0h4v-9h-4z'/>" },
@@ -350,6 +351,7 @@ const DEFAULT = {
   speciesLayout: "lineup", speciesY: "physicalHeight", speciesSize: "documentCount", speciesSpacing: 0, speciesCategory: "all", speciesSearch: "",
   coverageRows: "collection", coverageColumns: "category", coverageMetric: "documentCount", coverageCompare: false,
   coverageACollection: "all", coverageAFrom: "", coverageATo: "", coverageBCollection: "all", coverageBFrom: "", coverageBTo: "",
+  bloodType: "all", bloodSearch: "", bloodView: "scatter",
   programStatus: "all", programKind: "all", programSearch: "",
   labelSize: 12, zoom: 1, moonTransitSeconds: 5, solarScale: "local", solarCase: "hill_fish", title: "Mentions by Documents", titleMode: "auto"
 };
@@ -366,6 +368,7 @@ const VIEW_DEFAULTS = {
   signals: { allSources: true, sources: [], labels: "top", labelSize: 12 },
   bars: { aggregation: "source", y: "words", color: "intensity" },
   timeline: { timelineRole: "event", timelineGrouping: true, timelineGroupPeriod: "month", timelineCorrelativeMarkers: true, timelineHistoricalCandidates: false, x: "startDate", y: "mentionRank", size: "eventCount", color: "eventType", categories: ["date"], labels: "top", limit: 500, relationshipLayer: "always", timelineRelevanceCutoff: DEFAULT_TIMELINE_RELEVANCE_CUTOFF, timelineRecencyYear: DEFAULT_TIMELINE_RECENCY_YEAR },
+  blood: { bloodType: "all", bloodSearch: "", bloodView: "scatter" },
   programs: { programStatus: "all", programKind: "all", programSearch: "", labelSize: 12 },
   matrix: { matrixColumns: "category", matrixNormalize: "rowShare", color: "intensity" },
   coverage: { coverageRows: "collection", coverageColumns: "category", coverageMetric: "documentCount", coverageCompare: false, coverageACollection: "all", coverageAFrom: "", coverageATo: "", coverageBCollection: "all", coverageBFrom: "", coverageBTo: "", allSources: true, sources: [] },
@@ -429,6 +432,7 @@ function loadConfig() {
       const saved = JSON.parse(decodeURIComponent(escape(atob(param))));
       if (saved.allSources === undefined) saved.allSources = !saved.sources?.length;
       const config = { ...DEFAULT, ...saved };
+      if (config.type === "blood" && config.bloodType === "Unspecified") config.bloodType = "all";
       if (saved.type === "solar" && !Object.hasOwn(saved, "solarScale")) config.solarScale = "local";
       if (!["none", "hill_fish"].includes(config.solarCase)) config.solarCase = DEFAULT.solarCase;
       config.sourceFamilyPolicy = SOURCE_FAMILY_POLICY_VERSION;
@@ -580,6 +584,8 @@ function dataAwareTitle(config) {
     title = "ET Species in the Corpus";
   } else if (config.type === "signals") {
     title = "Radio Frequencies in the Corpus";
+  } else if (config.type === "blood") {
+    title = "Blood Types in the Corpus";
   } else if (config.type === "programs") {
     title = "Government Programs & Operations";
   } else if (config.type === "bars") {
@@ -1126,6 +1132,12 @@ function triageSubtitle(config = state.config) {
 }
 
 function renderPresetControl() {
+  const presetStep = $('[data-step="2"]');
+  if (presetStep) presetStep.hidden = state.config.type === "blood";
+  if (state.config.type === "blood") {
+    $("#presetControls").innerHTML = "";
+    return;
+  }
   if (state.config.type === "programs") {
     $("#presetControls").innerHTML = `<div class="control method-note"><div class="control-title">Reviewed chronology · v1</div><p>Officially documented programs and claims entered into the congressional record remain separate. Congressional provenance does not by itself confirm a program's existence or reported purpose.</p></div>`;
     return;
@@ -1231,6 +1243,8 @@ function renderControls() {
       + controlSelect("speciesLayout", "Layout", [{ value: "lineup", label: "Lineup" }, { value: "organic", label: "Organic network" }]);
   } else if (state.config.type === "signals") {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Explicit numeric frequency mentions</option></select></div><div class="control"><div class="control-title">X axis</div><select disabled><option>Logarithmic radio frequency</option></select></div>`;
+  } else if (state.config.type === "blood") {
+    roles = `<div class="control"><div class="control-title">X · Documents</div><div class="control-title">Y · Mentions</div></div>`;
   } else if (state.config.type === "programs") {
     roles = `<div class="control"><div class="control-title">Rows</div><select disabled><option>Reviewed projects, operations, and offices</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Active intervals + relationship bridges</option></select></div>`;
   } else if (state.config.type === "scatter") {
@@ -1343,6 +1357,8 @@ function renderControls() {
       ]) + `<div class="control method-note"><div class="control-title">Mention graph</div><p>Size and shade encode prominence. Line patterns identify the reviewed reference grouping; links represent shared corpus documents.</p></div>` + labelSizeControl;
   } else if (state.config.type === "signals") {
     $("#encodeControls").innerHTML = `<div class="control"><div class="control-title">Peak height</div><select disabled><option>Corpus frequency mentions</option></select></div><div class="control method-note"><div class="control-title">Spectrum semantics</div><p>Peaks are normalized numeric frequency references in corpus text. Unit-elided values require explicit microwave-band context. They are not RF logger measurements and do not establish that a transmission occurred.</p></div>` + labelSizeControl;
+  } else if (state.config.type === "blood") {
+    $("#encodeControls").innerHTML = `<div class="control"><div class="control-title">Logarithmic axes</div></div>`;
   } else if (state.config.type === "programs") {
     $("#encodeControls").innerHTML = `<div class="control method-note"><div class="control-title">Interval semantics</div><p>Solid bars are officially documented. Dashed bars are claims entered into the congressional record but not officially confirmed. Curved bridges connect reviewed succession or transfer nodes on the relevant lanes. An arrow means active at the review date, not indefinitely active.</p></div>` + labelSizeControl;
   } else if (state.config.type === "document") {
@@ -1408,6 +1424,16 @@ function renderControls() {
     ${usesEntities ? `<div class="control method-note"><div class="control-title">Context adjustment</div><p>Counts exact repeats within one document once, counts text repeated across 3+ documents once, and excludes requester metadata. Raw mentions remain available.</p></div>` : ""}
     ${usesEntities ? `<div class="control"><div class="control-title">Inflation review</div><label class="check-chip"><input type="checkbox" data-include-high-inflation ${state.config.includeHighInflation ? "checked" : ""}><span>Include high-inflation entities</span></label></div>` : ""}
     ${["triage", "claims", "craft", "species", "signals", "coverage", "programs"].includes(state.config.type) ? "" : `<div class="control duplicate-review-control"><div class="control-title">Identity review <span>${duplicateCount} flagged</span></div><button class="button review-button" type="button" data-review-duplicates ${duplicateCount ? "" : "disabled"}>Review possible duplicates</button></div>`}`;
+
+  if (state.config.type === "blood") {
+    const types = [...new Set((state.catalog.bloodTypes?.observations || []).map(item => item.bloodType).filter(specifiedBloodType))].sort();
+    $("#filterControls").innerHTML = controlSelect("bloodType", "Blood type / Rh", [{ value: "all", label: "All mentions" }, ...types.map(value => ({ value, label: value }))])
+      + `<div class="control"><label for="bloodSearch">Search evidence</label><input id="bloodSearch" class="text-input" type="search" value="${escapeHTML(state.config.bloodSearch)}" placeholder="Search excerpt, title, or collection" data-blood-search></div><div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div>`;
+  }
+  $("[data-blood-search]")?.addEventListener("input", event => {
+    state.config.bloodSearch = event.target.value;
+    persistHash(); renderGraph();
+  });
 
   if (state.config.type === "solar") {
     $("#filterControls").innerHTML = `<div class="control method-note"><div class="control-title">Astronomical data boundary</div><p>The Gaia samples and reviewed corpus targets are fixed for this view. Corpus activity changes node area only; it never changes measured position.</p></div>`;
@@ -4299,6 +4325,140 @@ function filteredSignalFrequencies() {
   })).sort((left, right) => left.frequencyHz - right.frequencyHz);
 }
 
+function filteredBloodMentions(catalog = state.catalog, config = state.config) {
+  const query = String(config.bloodSearch || "").trim().toLowerCase();
+  const documents = new Map((catalog.documents || []).map(item => [item.id, item]));
+  return (catalog.bloodTypes?.observations || []).filter(item =>
+    specifiedBloodType(item.bloodType)
+    && sourceIsSelected(item.source, config.sources, config.allSources)
+    && (config.bloodType === "all" || item.bloodType === config.bloodType)
+    && (!query || [item.excerpt, item.source, documents.get(item.documentId)?.title, documents.get(item.documentId)?.path]
+      .some(value => String(value || "").toLowerCase().includes(query))));
+}
+
+function specifiedBloodType(value) {
+  return /^(?:(?:AB|A|B|O)[+-]?|Rh (?:positive|negative))$/.test(String(value || ""));
+}
+
+function bloodMentionGroups(observations) {
+  const groups = new Map();
+  observations.forEach(item => {
+    const group = groups.get(item.bloodType) || { type: item.bloodType, mentions: 0, documents: new Set(), sources: new Set() };
+    group.mentions += 1; group.documents.add(item.documentId); group.sources.add(item.source);
+    groups.set(item.bloodType, group);
+  });
+  return [...groups.values()].sort((a, b) => b.mentions - a.mentions || a.type.localeCompare(b.type));
+}
+
+function bloodOverviewHTML(observations, config) {
+  const groups = bloodMentionGroups(observations);
+  const table = config.bloodView === "table";
+  return `<section aria-label="Blood type overview"><div class="blood-view-switch" role="group" aria-label="Blood type view">${["scatter", "table"].map(view => `<button type="button" data-blood-view="${view}" aria-pressed="${(table ? "table" : "scatter") === view}">${view === "scatter" ? "Scatter" : "Table"}</button>`).join("")}<button class="button" type="button" data-blood-reset>Reset filters</button></div>
+    ${table ? `<div class="blood-overview"><table><thead><tr><th scope="col">Type / Rh</th><th scope="col">Mentions</th><th scope="col">Documents</th><th scope="col">Collections</th></tr></thead><tbody>${groups.map(group => `<tr><th scope="row"><button type="button" data-blood-pick="${escapeHTML(group.type)}">${escapeHTML(group.type)}</button></th><td>${formatNumber(group.mentions)}</td><td>${formatNumber(group.documents.size)}</td><td>${formatNumber(group.sources.size)}</td></tr>`).join("")}</tbody></table></div>` : `<svg class="blood-scatter" role="group" aria-label="Blood type mentions versus distinct documents"></svg>`}
+  </section>`;
+}
+
+function drawBloodScatter(svg, observations, config) {
+  const groups = bloodMentionGroups(observations);
+  const viewport = $("#tableView");
+  const bottomPadding = parseFloat(window.getComputedStyle(svg.closest(".blood-view")).paddingBottom) || 0;
+  const chartTop = svg.getBoundingClientRect().top - viewport.getBoundingClientRect().top + viewport.scrollTop;
+  const width = Math.max(280, svg.parentElement.clientWidth);
+  const height = Math.max(240, viewport.clientHeight - chartTop - bottomPadding);
+  const margin = { left: 62, right: 24, top: 20, bottom: 62 };
+  const maximum = Math.max(2, ...groups.map(group => group.mentions)) * 1.45;
+  const logMin = Math.log10(.75), logMax = Math.log10(maximum);
+  const x = value => margin.left + (Math.log10(value) - logMin) / (logMax - logMin) * (width - margin.left - margin.right);
+  const y = value => height - margin.bottom - (Math.log10(value) - logMin) / (logMax - logMin) * (height - margin.top - margin.bottom);
+  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.style.height = `${height}px`;
+  const ticks = [];
+  for (let power = 0; 10 ** power <= maximum; power++) for (const multiplier of [1, 2, 5]) if (multiplier * 10 ** power <= maximum) ticks.push(multiplier * 10 ** power);
+  ticks.forEach(value => {
+    svg.append(el("line", { x1: x(value), x2: x(value), y1: margin.top, y2: height - margin.bottom, class: "blood-grid" }));
+    svg.append(el("line", { x1: margin.left, x2: width - margin.right, y1: y(value), y2: y(value), class: "blood-grid" }));
+    svg.append(el("text", { x: x(value), y: height - margin.bottom + 20, "text-anchor": "middle", class: "blood-axis" }, String(value)));
+    svg.append(el("text", { x: margin.left - 10, y: y(value) + 4, "text-anchor": "end", class: "blood-axis" }, String(value)));
+  });
+  svg.append(el("text", { x: (width + margin.left - margin.right) / 2, y: height - 12, "text-anchor": "middle", class: "blood-axis-title" }, "Distinct documents · log scale"));
+  svg.append(el("text", { x: 16, y: height / 2, transform: `rotate(-90 16 ${height / 2})`, "text-anchor": "middle", class: "blood-axis-title" }, "Phrase mentions · log scale"));
+  const labels = [];
+  groups.slice().sort((a, b) => a.documents.size - b.documents.size || a.mentions - b.mentions).forEach(group => {
+    const px = x(group.documents.size), py = y(group.mentions), radius = 5 * Math.sqrt(group.sources.size), textWidth = group.type.length * 7 + 10;
+    let lx = Math.min(width - margin.right - textWidth, px + radius + 6), ly = py - radius - 4;
+    for (let attempt = 0; attempt < 30; attempt++) {
+      if (!labels.some(box => lx < box.x + box.width && lx + textWidth > box.x && ly - 12 < box.y + 5 && ly + 5 > box.y - 12)) break;
+      ly = py + (attempt % 2 ? -1 : 1) * (18 + Math.floor(attempt / 2) * 18);
+    }
+    ly = Math.max(margin.top + 8, Math.min(height - margin.bottom - 8, ly));
+    labels.push({ x: lx, y: ly, width: textWidth });
+    const mark = el("g", { class: "blood-scatter-point", role: "button", tabindex: "0", "data-blood-pick": group.type, "aria-pressed": String(config.bloodType === group.type), "aria-label": `${group.type}: ${group.documents.size} documents, ${group.mentions} mentions, ${group.sources.size} collections. Show source excerpts.` });
+    mark.append(el("title", {}, `${group.type} · ${group.documents.size} documents · ${group.mentions} mentions · ${group.sources.size} collections`));
+    mark.append(el("line", { x1: px, y1: py, x2: lx, y2: ly - 3, class: "blood-leader" }));
+    mark.append(el("circle", { cx: px, cy: py, r: radius }));
+    mark.append(el("text", { x: lx, y: ly }, group.type));
+    svg.append(mark);
+  });
+}
+
+function renderBloodTypes() {
+  clearChart();
+  const items = filteredBloodMentions();
+  const overviewItems = filteredBloodMentions(state.catalog, { ...state.config, bloodType: "all" });
+  const queue = $("#tableView");
+  $("#chart").setAttribute("hidden", "");
+  queue.hidden = false;
+  $("#chartWrap").classList.add("table-mode");
+  $("#legend").innerHTML = "";
+  const available = Boolean(state.catalog.bloodTypes);
+  queue.innerHTML = `<div class="blood-view">
+    ${overviewItems.length ? bloodOverviewHTML(overviewItems, state.config) : ""}
+    ${items.length ? "" : `<p role="status">${available ? "No matches." : "Blood type data unavailable."}</p>`}
+  </div>`;
+  const selectEvidence = type => {
+    state.config.bloodType = type;
+    const observations = filteredBloodMentions();
+    renderControls(); commitConfig(false);
+    showInspector("blood type", type, [
+      [observations.length, "mentions"],
+      [new Set(observations.map(item => item.documentId)).size, "documents"],
+      [new Set(observations.map(item => item.source)).size, "collections"]
+    ], observations);
+    const heading = $("#inspectorContent h3");
+    heading.setAttribute("tabindex", "-1");
+    heading.focus({ preventScroll: true });
+  };
+  const scatter = queue.querySelector(".blood-scatter");
+  if (scatter) drawBloodScatter(scatter, overviewItems, state.config);
+  queue.querySelectorAll("[data-blood-pick]").forEach(button => {
+    button.addEventListener("click", () => selectEvidence(button.dataset.bloodPick));
+    if (button.tagName.toLowerCase() === "g") button.addEventListener("keydown", event => {
+      if (["Enter", " "].includes(event.key)) { event.preventDefault(); selectEvidence(button.dataset.bloodPick); }
+    });
+  });
+  queue.querySelectorAll("[data-blood-view]").forEach(button => button.addEventListener("click", () => {
+    state.config.bloodView = button.dataset.bloodView;
+    closeInspector();
+    persistHash(); renderGraph();
+    queue.querySelector(`[data-blood-view="${state.config.bloodView}"]`).focus({ preventScroll: true });
+  }));
+  queue.querySelector("[data-blood-reset]")?.addEventListener("click", () => {
+    Object.assign(state.config, { bloodType: "all", bloodSearch: "", sources: [], allSources: true });
+    closeInspector();
+    renderControls(); commitConfig(false);
+  });
+  setSummary(`${formatNumber(items.length)} mentions · ${formatNumber(new Set(items.map(item => item.documentId)).size)} documents · ${formatNumber(new Set(items.map(item => item.source)).size)} collections`, "blood");
+}
+
+function exportBloodTypes() {
+  const rows = filteredBloodMentions().map(item => {
+    const doc = state.documentById.get(item.documentId);
+    return [item.bloodType, item.abo, item.rh, item.matchedText, item.documentId, doc?.title, item.source, item.segment, item.start, item.end, item.excerpt, doc ? machineDataDocumentURL(doc) : ""];
+  });
+  const headers = ["Type", "ABO", "Rh", "Matched phrase", "Document ID", "Title", "Collection", "Segment", "Start offset", "End offset", "Excerpt", "Source URL"];
+  downloadText("ufo-files-blood-type-mentions.csv", `${[headers, ...rows].map(row => row.map(csvCell).join(",")).join("\n")}\n`, "text/csv");
+}
+
 function renderSignals() {
   clearChart();
   const items = filteredSignalFrequencies();
@@ -5234,7 +5394,7 @@ function showEmpty() {
 
 function setSummary(text, type) {
   $("#resultSummary").textContent = text;
-  $("#graphKicker").textContent = type === "document" ? "Documents" : type === "solar" ? "Milky Way" : label(type === "bars" ? "bar chart" : type);
+  $("#graphKicker").textContent = type === "blood" ? "Blood types" : type === "document" ? "Documents" : type === "solar" ? "Milky Way" : label(type === "bars" ? "bar chart" : type);
   $("#policySummary").textContent = type === "network"
     ? state.config.nodeRole === "collection" ? `Links require ${state.config.minEvidence} shared published entities` : `Co-mentions require ${state.config.minEvidence} evidence segments · closer links have more evidence · position is approximate`
     : type === "map" ? "Places mentioned in documents—not incident coordinates · reviewed gazetteer only · ambiguous names omitted"
@@ -5251,6 +5411,7 @@ function setSummary(text, type) {
           ? "Fish identifications and Hill-reported routes are a disputed claim layer · star positions use current measured astrometry · default camera follows Fish's published Zeta Tucanae occultation constraint and comparison-diagram roll · lines are not verified travel routes · background Gaia sample is not complete or volume-corrected"
           : "Background points are high-confidence Gaia DR3 sources · enlarged corpus and Solar System markers are identified separately · inverse parallax · local sample is not complete or volume-corrected"
         : "Hou & Han: 1,853 H II regions · 1,343 molecular clouds · 735 methanol masers · Reid et al.: 199 VLBI trigonometric-parallax anchors · published fits: Norma, Scutum–Centaurus, Sagittarius–Carina, Perseus, and Local · face-on Galactocentric coordinates · 18 kpc display radius · filled points are the 2014 compilation · open circles are the separate 2019 catalog and may overlap · thin curves are the paper's H II statistical fit, not an illustration · drag to orbit · scroll to zoom · no synthetic stars, invented target coordinates, or hand-drawn morphology"
+    : type === "blood" ? ""
     : type === "signals" ? "Explicit numeric frequency mentions in corpus text · not live RF measurements · mention does not establish a transmission or cause"
     : type === "coverage" ? "Corpus gaps are not evidence that real-world events did not occur · unknown metadata remains explicit"
     : type === "timeline" ? "Correlative dates are human-curated context · Codex suggested The X-Files premiere"
@@ -5285,11 +5446,11 @@ function renderGraph() {
   if (state.config.type === "map") syncMapAnimationButton();
   $("#solarAnimationButton").hidden = state.config.type !== "solar" || state.config.solarScale === "sky";
   if (state.config.type === "solar") syncSolarAnimationButton();
-  $("#exportButton").textContent = state.config.type === "triage" ? "Export queue CSV" : "Export PDF";
+  $("#exportButton").textContent = state.config.type === "blood" ? "Export mentions CSV" : state.config.type === "triage" ? "Export queue CSV" : "Export PDF";
   $("#graphSubtitle").textContent = state.config.type === "programs"
     ? `${state.programCatalog?.reviewedIntervalCount || 0} reviewed intervals · ${state.programCatalog?.reviewedEntityCount || 0} / ${state.programCatalog?.corpusProgramCount || 0} corpus candidates reviewed`
     : graphDocumentCountSubtitle(state.catalog);
-  ({ network: renderNetwork, map: renderMap, solar: renderSolar, book: renderBook, document: renderDocument, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, programs: renderPrograms, matrix: renderMatrix, coverage: renderCoverage, table: renderTable, triage: renderTriage, claims: renderClaims, craft: renderCraft, species: renderSpecies, signals: renderSignals })[state.config.type]();
+  ({ network: renderNetwork, map: renderMap, solar: renderSolar, book: renderBook, document: renderDocument, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, programs: renderPrograms, matrix: renderMatrix, coverage: renderCoverage, table: renderTable, triage: renderTriage, claims: renderClaims, craft: renderCraft, species: renderSpecies, signals: renderSignals, blood: renderBloodTypes })[state.config.type]();
 }
 
 function evidenceHTML(evidence = []) {
@@ -6542,6 +6703,7 @@ async function addPDFGraphPage(pdf, exportedAt) {
 }
 
 async function exportCurrent() {
+  if (state.config.type === "blood") return exportBloodTypes();
   if (state.config.type === "triage") return exportTriageQueue();
   const button = $("#exportButton");
   if (!window.jspdf?.jsPDF || !window.svg2pdf) return toast("PDF export tools unavailable");
