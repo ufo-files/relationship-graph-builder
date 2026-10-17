@@ -4387,7 +4387,7 @@ function drawBloodScatter(svg, observations, config) {
   const width = Math.max(280, svg.parentElement.clientWidth);
   const height = Math.max(240, viewport.clientHeight - chartTop - bottomPadding);
   const margin = { ...AXIS_MARGIN };
-  const maximum = Math.max(2, ...groups.map(group => group.mentions)) * 1.45;
+  const maximum = Math.max(2, ...groups.map(group => group.mentions));
   const logMin = Math.log10(.75), logMax = Math.log10(maximum);
   const x = value => margin.left + (Math.log10(value) - logMin) / (logMax - logMin) * (width - margin.left - margin.right);
   const y = value => height - margin.bottom - (Math.log10(value) - logMin) / (logMax - logMin) * (height - margin.top - margin.bottom);
@@ -4397,6 +4397,7 @@ function drawBloodScatter(svg, observations, config) {
   const sourceExtent = valueExtent(groups.map(group => ({ sources: group.sources.size })), "sources");
   const ticks = [];
   for (let power = 0; 10 ** power <= maximum; power++) for (const multiplier of [1, 2, 5]) if (multiplier * 10 ** power <= maximum) ticks.push(multiplier * 10 ** power);
+  if (ticks.at(-1) !== maximum) ticks.push(maximum);
   drawAxes(svg, width, height, "Documents · log scale", "Mentions · log scale",
     [.75, maximum], [.75, maximum], {}, { yTicks: ticks.slice().reverse(), yPosition: y });
   groups.forEach(group => {
