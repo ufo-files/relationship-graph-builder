@@ -4360,7 +4360,11 @@ function bloodOverviewHTML(observations, config) {
 
 function drawBloodScatter(svg, observations, config) {
   const groups = bloodMentionGroups(observations);
-  const width = Math.max(280, svg.parentElement.clientWidth), height = Math.min(560, Math.max(400, width * .55));
+  const viewport = $("#tableView");
+  const bottomPadding = parseFloat(window.getComputedStyle(svg.closest(".blood-view")).paddingBottom) || 0;
+  const chartTop = svg.getBoundingClientRect().top - viewport.getBoundingClientRect().top + viewport.scrollTop;
+  const width = Math.max(280, svg.parentElement.clientWidth);
+  const height = Math.max(240, viewport.clientHeight - chartTop - bottomPadding);
   const margin = { left: 62, right: 24, top: 48, bottom: 62 };
   const maximum = Math.max(2, ...groups.map(group => group.mentions)) * 1.45;
   const logMin = Math.log10(.75), logMax = Math.log10(maximum);
