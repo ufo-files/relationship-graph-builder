@@ -4923,6 +4923,13 @@ test("Blood type filters and aggregates keep repeats distinct from documents", (
   assert.equal(groups[0].mentions, 2);
   assert.equal(groups[0].documents.size, 1);
   assert.equal(groups[0].sources.size, 1);
+  const mentionMap = context.bloodVisualData(rows, "mentions");
+  const documentMap = context.bloodVisualData(rows, "documents");
+  assert.equal(mentionMap.cells.find(cell => cell.type === "O-" && cell.source === "A").value, 2);
+  assert.equal(documentMap.cells.find(cell => cell.type === "O-" && cell.source === "A").value, 1);
+  assert.equal(documentMap.cells.find(cell => cell.type === "O-" && cell.source === "B").value, 0);
+  assert.equal(mentionMap.cells.reduce((sum, cell) => sum + cell.value, 0), rows.length);
+
   assert.equal(context.filteredBloodMentions(catalog, { ...config, bloodType: "Rh negative" }).length, 1);
   assert.equal(context.filteredBloodMentions(catalog, { ...config, bloodSearch: "interview" }).length, 2);
   assert.equal(context.filteredBloodMentions(catalog, { ...config, allSources: false, sources: ["B"] }).length, 1);

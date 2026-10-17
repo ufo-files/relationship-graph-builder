@@ -715,6 +715,49 @@ body.graph-fullscreen #chart { min-height: 0; }
 }
 .blood-view { padding: 20px; max-width: 1100px; margin: auto; }
 .blood-method { line-height: 1.6; }
+.blood-visual-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.blood-visual-header h2 { margin: 5px 0 12px; font-size: 22px; }
+.blood-visual-header h3 { margin: 6px 0; font-size: 16px; }
+.blood-eyebrow { text-transform: uppercase; font-size: 10px; letter-spacing: .1em; color: #586159; }
+.blood-metric { display: flex; border: 1px solid #7b837a; border-radius: 5px; overflow: hidden; }
+.blood-metric button { border: 0; padding: 10px 12px; background: transparent; font: inherit; font-size: 12px; cursor: pointer; }
+.blood-metric button[aria-pressed="true"] { color: #fff; background: #253b33; }
+.blood-totals { display: grid; grid-template-columns: repeat(3, 1fr); margin: 15px 0; padding: 18px 0; border-block: 1px solid #c4c9c0; }
+.blood-totals div { display: grid; gap: 6px; padding-left: 16px; border-left: 1px solid #c4c9c0; }
+.blood-totals div:first-child { border: 0; padding-left: 0; }
+.blood-totals strong { font-size: 30px; font-weight: 500; }
+.blood-totals span { font-size: 11px; }
+.blood-chart-help { color: #586159; font-size: 11px; line-height: 1.7; }
+.blood-panels { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 18px 0 28px; }
+.blood-panel { padding: 18px; border: 1px solid #c4c9c0; border-radius: 6px; min-width: 0; }
+.blood-panel-abo { grid-row: span 2; }
+.blood-panel header { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.blood-panel h3 { margin: 0; font-size: 15px; }
+.blood-panel header > span, .blood-panel > p { font-size: 10px; color: #586159; line-height: 1.6; }
+.blood-bars { margin-top: 15px; }
+.blood-bar { display: grid; width: 100%; grid-template-columns: 88px minmax(20px, 1fr) 32px; align-items: center; gap: 5px 8px; border: 0; border-radius: 3px; padding: 10px 6px; margin: 3px 0; font: inherit; font-size: 12px; text-align: left; background: transparent; cursor: pointer; }
+.blood-bar:hover, .blood-bar[aria-pressed="true"] { background: #e3e9df; }
+.blood-bar[aria-pressed="true"] { box-shadow: inset 3px 0 #253b33; }
+.blood-bar strong { text-align: right; }
+.blood-bar small { grid-column: 2 / -1; color: #586159; font-size: 10px; }
+.blood-bar-track { height: 17px; background: repeating-linear-gradient(90deg, #d9ded4 0, #d9ded4 1px, transparent 1px, transparent 25%); }
+.blood-bar-track > span { display: block; height: 100%; background: #385a4d; border-radius: 0 2px 2px 0; }
+.blood-panel-rh .blood-bar-track > span { background: #80564f; }
+.blood-panel-unknown .blood-bar-track > span { background: repeating-linear-gradient(135deg, #7c8176 0, #7c8176 3px, #e0e3da 3px, #e0e3da 6px); }
+.blood-shade-key { font-size: 10px; color: #586159; }
+.blood-shade-key::before { content: ""; display: inline-block; vertical-align: middle; width: 64px; height: 10px; background: linear-gradient(90deg, #f4f5ef, #263e32); margin-right: 8px; }
+.blood-map-scroll { overflow-x: auto; padding: 8px 0; }
+.blood-map { display: grid; grid-template-columns: 90px repeat(var(--blood-columns), minmax(86px, 1fr)); gap: 6px; min-width: calc(90px + var(--blood-columns) * 92px); }
+.blood-map-corner, .blood-map-source { font-size: 10px; line-height: 1.5; padding: 0 3px 10px; align-self: end; overflow-wrap: anywhere; }
+.blood-map-label { font-size: 11px; align-self: center; }
+.blood-map-cell { min-height: 30px; border: 1px solid #d3d9ce; border-radius: 3px; background: color-mix(in srgb, #263e32 var(--blood-intensity), #f4f5ef); font: inherit; font-size: 11px; cursor: pointer; }
+.blood-map-cell:disabled { cursor: default; color: #8b9486 !important; }
+.blood-map-cell:not(:disabled):hover { outline: 2px solid #253b33; outline-offset: 1px; }
+.blood-bar:focus-visible, .blood-map-cell:focus-visible, .blood-metric button:focus-visible { outline: 2px solid #253b33; outline-offset: 3px; }
+.blood-count-details { margin: 22px 0; padding-block: 14px; border-block: 1px solid #c4c9c0; }
+.blood-count-details summary { cursor: pointer; font-size: 12px; }
+.blood-evidence-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.blood-evidence-heading h2 { font-size: 18px; }
 .blood-overview { overflow-x: auto; margin: 20px 0 28px; }
 .blood-overview table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
 .blood-overview th, .blood-overview td { text-align: left; padding: 12px; border-bottom: 1px solid #d6d8d1; }
@@ -726,5 +769,12 @@ body.graph-fullscreen #chart { min-height: 0; }
 .blood-evidence > small, .blood-evidence > a { display: block; margin-top: 10px; }
 @media (max-width: 600px) {
   .blood-view { padding: 12px; }
+  .blood-panels { grid-template-columns: 1fr; }
+  .blood-panel-abo { grid-row: auto; }
+  .blood-panel { padding: 14px; }
+  .blood-totals strong { font-size: 25px; }
+  .blood-totals span { font-size: 10px; }
+  .blood-totals div { padding-left: 10px; }
+  .blood-visual-header h2 { font-size: 19px; }
   .blood-overview th, .blood-overview td { padding: 10px 7px; font-size: 12px; }
 }
