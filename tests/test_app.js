@@ -4905,3 +4905,27 @@ test("value extents handle catalogs larger than the JavaScript argument limit", 
   assert.deepEqual(result.emptyRobust, { extent: [0, 1], capped: false });
   assert.deepEqual(result.invalid, [0, 4]);
 });
+
+test("Blood type filters and aggregates keep repeats distinct from documents", () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const start = source.indexOf("function filteredBloodMentions(");
+  const end = source.indexOf("function renderBloodTypes()", start);
+  const context = vm.createContext({ sourceIsSelected: (name, selected, all) => all || selected.includes(name) });
+  vm.runInContext(source.slice(start, end), context);
+  const catalog = { documents: [{ id: "d1", title: "Witness interview" }], bloodTypes: { observations: [
+    { bloodType: "O-", documentId: "d1", source: "A", excerpt: "blood type O negative" },
+    { bloodType: "O-", documentId: "d1", source: "A", excerpt: "blood type O negative again" },
+    { bloodType: "Rh negative", documentId: "d2", source: "B", excerpt: "Rh negative" }
+  ] } };
+  const config = { bloodType: "all", bloodSearch: "", allSources: true, sources: [] };
+  const rows = context.filteredBloodMentions(catalog, config);
+  const groups = context.bloodMentionGroups(rows);
+  assert.equal(groups[0].mentions, 2);
+  assert.equal(groups[0].documents.size, 1);
+  assert.equal(groups[0].sources.size, 1);
+  assert.equal(context.filteredBloodMentions(catalog, { ...config, bloodType: "Rh negative" }).length, 1);
+  assert.equal(context.filteredBloodMentions(catalog, { ...config, bloodSearch: "interview" }).length, 2);
+  assert.equal(context.filteredBloodMentions(catalog, { ...config, allSources: false, sources: ["B"] }).length, 1);
+  assert.equal(context.filteredBloodMentions(catalog, { ...config, allSources: false }).length, 0);
+  assert.equal(context.filteredBloodMentions({}, config).length, 0);
+});
