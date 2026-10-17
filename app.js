@@ -4381,13 +4381,11 @@ function drawBloodScatter(svg, observations, config) {
   const ticks = [];
   for (let power = 0; 10 ** power <= maximum; power++) for (const multiplier of [1, 2, 5]) if (multiplier * 10 ** power <= maximum) ticks.push(multiplier * 10 ** power);
   ticks.forEach(value => {
-    svg.append(el("line", { x1: x(value), x2: x(value), y1: margin.top, y2: height - margin.bottom, class: "blood-grid" }));
-    svg.append(el("line", { x1: margin.left, x2: width - margin.right, y1: y(value), y2: y(value), class: "blood-grid" }));
-    svg.append(el("text", { x: x(value), y: height - margin.bottom + 20, "text-anchor": "middle", class: "blood-axis" }, String(value)));
-    svg.append(el("text", { x: margin.left - 10, y: y(value) + 4, "text-anchor": "end", class: "blood-axis" }, String(value)));
+    svg.append(el("text", { x: x(value), y: height - margin.bottom + 20, "text-anchor": "middle", class: "axis-label" }, String(value)));
+    svg.append(el("text", { x: margin.left - 10, y: y(value) + 4, "text-anchor": "end", class: "axis-label" }, String(value)));
   });
-  svg.append(el("text", { x: (width + margin.left - margin.right) / 2, y: height - 12, "text-anchor": "middle", class: "blood-axis-title" }, "Distinct documents · log scale"));
-  svg.append(el("text", { x: 16, y: height / 2, transform: `rotate(-90 16 ${height / 2})`, "text-anchor": "middle", class: "blood-axis-title" }, "Phrase mentions · log scale"));
+  svg.append(el("text", { x: (width + margin.left - margin.right) / 2, y: height - 12, "text-anchor": "middle", class: "axis-label" }, "Distinct documents · log scale"));
+  svg.append(el("text", { x: 16, y: height / 2, transform: `rotate(-90 16 ${height / 2})`, "text-anchor": "middle", class: "axis-label" }, "Phrase mentions · log scale"));
   const labels = [];
   groups.slice().sort((a, b) => a.documents.size - b.documents.size || a.mentions - b.mentions).forEach(group => {
     const px = x(group.documents.size), py = y(group.mentions), radius = 5 * Math.sqrt(group.sources.size), textWidth = group.type.length * 7 + 10;

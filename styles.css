@@ -716,9 +716,7 @@ body.graph-fullscreen #chart { min-height: 0; }
 .blood-view { padding: 20px; max-width: 1100px; margin: auto; }
 .blood-overview button { font: inherit; padding: 8px 12px; border: 1px solid var(--line); border-radius: 4px; background: transparent; cursor: pointer; }
 .blood-scatter { display: block; width: 100%; overflow: visible; }
-.blood-grid { stroke: var(--line); stroke-width: 1; }
-.blood-axis, .blood-scatter-point text { font-size: 11px; fill: var(--ink); }
-.blood-axis-title { font-size: 12px; fill: var(--ink); }
+.blood-scatter-point text { font-size: 11px; fill: var(--ink); }
 .blood-scatter-point { cursor: pointer; }
 .blood-scatter-point circle { fill: var(--ink); stroke: var(--paper); stroke-width: 2; }
 .blood-scatter-point text { paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; }
