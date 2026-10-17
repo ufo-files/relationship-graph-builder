@@ -1131,8 +1131,10 @@ function triageSubtitle(config = state.config) {
 }
 
 function renderPresetControl() {
+  const presetStep = $('[data-step="2"]');
+  if (presetStep) presetStep.hidden = state.config.type === "blood";
   if (state.config.type === "blood") {
-    $("#presetControls").innerHTML = `<div class="control method-note"><div class="control-title">Literal text mentions</div><p>Explore ABO and Rh references, including unspecified blood types. Counts describe the corpus, not population prevalence.</p></div>`;
+    $("#presetControls").innerHTML = "";
     return;
   }
   if (state.config.type === "programs") {
@@ -1241,7 +1243,7 @@ function renderControls() {
   } else if (state.config.type === "signals") {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Explicit numeric frequency mentions</option></select></div><div class="control"><div class="control-title">X axis</div><select disabled><option>Logarithmic radio frequency</option></select></div>`;
   } else if (state.config.type === "blood") {
-    roles = `<div class="control method-note"><div class="control-title">Evidence rows</div><p>Each row preserves one matched phrase, its source segment, and surrounding text.</p></div>`;
+    roles = `<div class="control"><div class="control-title">X · Documents</div><div class="control-title">Y · Mentions</div></div>`;
   } else if (state.config.type === "programs") {
     roles = `<div class="control"><div class="control-title">Rows</div><select disabled><option>Reviewed projects, operations, and offices</option></select></div><div class="control"><div class="control-title">Layout</div><select disabled><option>Active intervals + relationship bridges</option></select></div>`;
   } else if (state.config.type === "scatter") {
@@ -1355,7 +1357,7 @@ function renderControls() {
   } else if (state.config.type === "signals") {
     $("#encodeControls").innerHTML = `<div class="control"><div class="control-title">Peak height</div><select disabled><option>Corpus frequency mentions</option></select></div><div class="control method-note"><div class="control-title">Spectrum semantics</div><p>Peaks are normalized numeric frequency references in corpus text. Unit-elided values require explicit microwave-band context. They are not RF logger measurements and do not establish that a transmission occurred.</p></div>` + labelSizeControl;
   } else if (state.config.type === "blood") {
-    $("#encodeControls").innerHTML = `<div class="control method-note"><div class="control-title">Counting method</div><p>Raw phrase occurrences include repeats. Document and collection counts are distinct counts, not independent corroboration. Rh-only references do not imply an ABO type.</p></div>`;
+    $("#encodeControls").innerHTML = `<div class="control"><div class="control-title">Logarithmic axes</div></div>`;
   } else if (state.config.type === "programs") {
     $("#encodeControls").innerHTML = `<div class="control method-note"><div class="control-title">Interval semantics</div><p>Solid bars are officially documented. Dashed bars are claims entered into the congressional record but not officially confirmed. Curved bridges connect reviewed succession or transfer nodes on the relevant lanes. An arrow means active at the review date, not indefinitely active.</p></div>` + labelSizeControl;
   } else if (state.config.type === "document") {
@@ -4346,20 +4348,27 @@ function bloodOverviewHTML(observations, config) {
   const groups = bloodMentionGroups(observations);
   const table = config.bloodView === "table";
   return `<section aria-label="Blood type overview"><div class="blood-view-switch" role="group" aria-label="Blood type view">${["scatter", "table"].map(view => `<button type="button" data-blood-view="${view}" aria-pressed="${(table ? "table" : "scatter") === view}">${view === "scatter" ? "Scatter" : "Table"}</button>`).join("")}</div>
-    ${table ? `<div class="blood-overview"><table><thead><tr><th scope="col">Type / Rh</th><th scope="col">Mentions</th><th scope="col">Documents</th><th scope="col">Collections</th></tr></thead><tbody>${groups.map(group => `<tr><th scope="row"><button type="button" data-blood-pick="${escapeHTML(group.type)}">${escapeHTML(group.type)}</button></th><td>${formatNumber(group.mentions)}</td><td>${formatNumber(group.documents.size)}</td><td>${formatNumber(group.sources.size)}</td></tr>`).join("")}</tbody></table></div>` : `<p class="blood-chart-help">Documents on the horizontal axis; phrase mentions on the vertical axis. Both axes use a log scale so rare types remain visible. The dashed line marks one mention per document. Select a label or point to read its source excerpts.</p><svg class="blood-scatter" role="group" aria-label="Blood type mentions versus distinct documents"></svg>`}
+    ${table ? `<div class="blood-overview"><table><thead><tr><th scope="col">Type / Rh</th><th scope="col">Mentions</th><th scope="col">Documents</th><th scope="col">Collections</th></tr></thead><tbody>${groups.map(group => `<tr><th scope="row"><button type="button" data-blood-pick="${escapeHTML(group.type)}">${escapeHTML(group.type)}</button></th><td>${formatNumber(group.mentions)}</td><td>${formatNumber(group.documents.size)}</td><td>${formatNumber(group.sources.size)}</td></tr>`).join("")}</tbody></table></div>` : `<svg class="blood-scatter" role="group" aria-label="Blood type mentions versus distinct documents"></svg>`}
   </section>`;
 }
 
 function drawBloodScatter(svg, observations, config) {
   const groups = bloodMentionGroups(observations);
   const width = Math.max(280, svg.parentElement.clientWidth), height = Math.min(560, Math.max(400, width * .55));
-  const margin = { left: 62, right: 24, top: 32, bottom: 62 };
+  const margin = { left: 62, right: 24, top: 48, bottom: 62 };
   const maximum = Math.max(2, ...groups.map(group => group.mentions)) * 1.45;
   const logMin = Math.log10(.75), logMax = Math.log10(maximum);
   const x = value => margin.left + (Math.log10(value) - logMin) / (logMax - logMin) * (width - margin.left - margin.right);
   const y = value => height - margin.bottom - (Math.log10(value) - logMin) / (logMax - logMin) * (height - margin.top - margin.bottom);
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
   svg.style.height = `${height}px`;
+  const largestCollectionCount = Math.max(1, ...groups.map(group => group.sources.size));
+  svg.append(el("text", { x: margin.left, y: 22, class: "blood-axis" }, "Size · collections"));
+  [...new Set([1, largestCollectionCount])].forEach((count, index) => {
+    const radius = 5 * Math.sqrt(count), cx = margin.left + 134 + index * 60;
+    svg.append(el("circle", { cx, cy: 18, r: radius, class: "blood-size-sample" }));
+    svg.append(el("text", { x: cx + radius + 5, y: 22, class: "blood-axis" }, String(count)));
+  });
   const ticks = [];
   for (let power = 0; 10 ** power <= maximum; power++) for (const multiplier of [1, 2, 5]) if (multiplier * 10 ** power <= maximum) ticks.push(multiplier * 10 ** power);
   ticks.forEach(value => {
@@ -4373,8 +4382,8 @@ function drawBloodScatter(svg, observations, config) {
   svg.append(el("text", { x: 16, y: height / 2, transform: `rotate(-90 16 ${height / 2})`, "text-anchor": "middle", class: "blood-axis-title" }, "Phrase mentions · log scale"));
   const labels = [];
   groups.slice().sort((a, b) => a.documents.size - b.documents.size || a.mentions - b.mentions).forEach(group => {
-    const px = x(group.documents.size), py = y(group.mentions), textWidth = group.type.length * 7 + 10;
-    let lx = Math.min(width - margin.right - textWidth, px + 10), ly = py - 10;
+    const px = x(group.documents.size), py = y(group.mentions), radius = 5 * Math.sqrt(group.sources.size), textWidth = group.type.length * 7 + 10;
+    let lx = Math.min(width - margin.right - textWidth, px + radius + 6), ly = py - radius - 4;
     for (let attempt = 0; attempt < 30; attempt++) {
       if (!labels.some(box => lx < box.x + box.width && lx + textWidth > box.x && ly - 12 < box.y + 5 && ly + 5 > box.y - 12)) break;
       ly = py + (attempt % 2 ? -1 : 1) * (18 + Math.floor(attempt / 2) * 18);
@@ -4384,7 +4393,7 @@ function drawBloodScatter(svg, observations, config) {
     const mark = el("g", { class: "blood-scatter-point", role: "button", tabindex: "0", "data-blood-pick": group.type, "aria-pressed": String(config.bloodType === group.type), "aria-label": `${group.type}: ${group.documents.size} documents, ${group.mentions} mentions, ${group.sources.size} collections. Show source excerpts.` });
     mark.append(el("title", {}, `${group.type} · ${group.documents.size} documents · ${group.mentions} mentions · ${group.sources.size} collections`));
     mark.append(el("line", { x1: px, y1: py, x2: lx, y2: ly - 3, class: "blood-leader" }));
-    mark.append(el("circle", { cx: px, cy: py, r: 6 }));
+    mark.append(el("circle", { cx: px, cy: py, r: radius }));
     mark.append(el("text", { x: lx, y: ly }, group.type));
     svg.append(mark);
   });
@@ -4405,11 +4414,11 @@ function renderBloodTypes() {
   const cards = rows => rows.map(item => {
     const doc = state.documentById.get(item.documentId);
     const url = doc ? machineDataDocumentURL(doc) : "";
-    return `<article class="evidence-card blood-evidence"><h3>${escapeHTML(item.bloodType)} <small>${escapeHTML(item.matchedText)}</small></h3><p>${escapeHTML(item.excerpt)}</p><small>${escapeHTML(doc?.title || item.documentId)} · ${escapeHTML(item.source)} · segment ${escapeHTML(String(item.segment))}</small>${url ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">Inspect source evidence ↗</a>` : ""}</article>`;
+    return `<article class="evidence-card blood-evidence"><h3>${escapeHTML(item.bloodType)} <small>${escapeHTML(item.matchedText)}</small></h3><p>${escapeHTML(item.excerpt)}</p><small>${escapeHTML(doc?.title || item.documentId)} · ${escapeHTML(item.source)} · segment ${escapeHTML(String(item.segment))}</small>${url ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">Source ↗</a>` : ""}</article>`;
   }).join("");
-  queue.innerHTML = `<div class="blood-view"><p class="blood-method">Explore literal blood-type mentions in OCR and transcripts. Counts include repeated claims, questions, and denials; distinct documents may share an origin.</p>
+  queue.innerHTML = `<div class="blood-view">
     ${overviewItems.length ? bloodOverviewHTML(overviewItems, state.config) : ""}
-    ${items.length ? "" : `<p role="status">${available ? "No blood type mentions match these filters." : "Blood type extraction is unavailable in this catalog. Rebuild the catalog to populate this view."}</p>`}
+    ${items.length ? "" : `<p role="status">${available ? "No matches." : "Blood type data unavailable."}</p>`}
     <div class="blood-evidence-heading" role="region" aria-label="Selected source excerpts" tabindex="-1"><h2>Source excerpts${state.config.bloodType === "all" ? "" : ` · ${escapeHTML(state.config.bloodType)}`}</h2><button class="button" data-blood-reset type="button">Reset filters</button></div><p data-blood-page-count></p><div data-blood-evidence>${cards(items.slice(0, shown))}</div><button class="button" type="button" data-blood-more ${items.length <= shown ? "hidden" : ""}>Show more excerpts</button></div>`;
   const selectEvidence = type => {
     state.config.bloodType = state.config.bloodType === type ? "all" : type;
@@ -4435,7 +4444,7 @@ function renderBloodTypes() {
     Object.assign(state.config, { bloodType: "all", bloodSearch: "", sources: [], allSources: true });
     renderControls(); commitConfig(false);
   });
-  const updateCount = () => { queue.querySelector("[data-blood-page-count]").textContent = `Showing ${Math.min(shown, items.length)} of ${formatNumber(items.length)} matching mentions. CSV export includes every matching mention.`; };
+  const updateCount = () => { queue.querySelector("[data-blood-page-count]").textContent = `${Math.min(shown, items.length)} / ${formatNumber(items.length)} mentions`; };
   updateCount();
   queue.querySelector("[data-blood-more]").addEventListener("click", event => {
     queue.querySelector("[data-blood-evidence]").insertAdjacentHTML("beforeend", cards(items.slice(shown, shown + pageSize)));
@@ -5405,7 +5414,7 @@ function setSummary(text, type) {
           ? "Fish identifications and Hill-reported routes are a disputed claim layer · star positions use current measured astrometry · default camera follows Fish's published Zeta Tucanae occultation constraint and comparison-diagram roll · lines are not verified travel routes · background Gaia sample is not complete or volume-corrected"
           : "Background points are high-confidence Gaia DR3 sources · enlarged corpus and Solar System markers are identified separately · inverse parallax · local sample is not complete or volume-corrected"
         : "Hou & Han: 1,853 H II regions · 1,343 molecular clouds · 735 methanol masers · Reid et al.: 199 VLBI trigonometric-parallax anchors · published fits: Norma, Scutum–Centaurus, Sagittarius–Carina, Perseus, and Local · face-on Galactocentric coordinates · 18 kpc display radius · filled points are the 2014 compilation · open circles are the separate 2019 catalog and may overlap · thin curves are the paper's H II statistical fit, not an illustration · drag to orbit · scroll to zoom · no synthetic stars, invented target coordinates, or hand-drawn morphology"
-    : type === "blood" ? "Literal English ABO/Rh text matches · repeats included · source claims are not verified biology · OCR and untranslated text may be missed"
+    : type === "blood" ? ""
     : type === "signals" ? "Explicit numeric frequency mentions in corpus text · not live RF measurements · mention does not establish a transmission or cause"
     : type === "coverage" ? "Corpus gaps are not evidence that real-world events did not occur · unknown metadata remains explicit"
     : type === "timeline" ? "Correlative dates are human-curated context · Codex suggested The X-Files premiere"
