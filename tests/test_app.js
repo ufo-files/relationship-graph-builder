@@ -4915,10 +4915,13 @@ test("Blood type filters and aggregates keep repeats distinct from documents", (
   const catalog = { documents: [{ id: "d1", title: "Witness interview" }], bloodTypes: { observations: [
     { bloodType: "O-", documentId: "d1", source: "A", excerpt: "blood type O negative" },
     { bloodType: "O-", documentId: "d1", source: "A", excerpt: "blood type O negative again" },
-    { bloodType: "Rh negative", documentId: "d2", source: "B", excerpt: "Rh negative" }
+    { bloodType: "Rh negative", documentId: "d2", source: "B", excerpt: "Rh negative" },
+    { bloodType: "Unspecified", documentId: "d1", source: "A", excerpt: "blood types" }
   ] } };
   const config = { bloodType: "all", bloodSearch: "", allSources: true, sources: [] };
   const rows = context.filteredBloodMentions(catalog, config);
+  assert.equal(rows.length, 3);
+  assert.equal(rows.some(item => item.bloodType === "Unspecified"), false);
   const groups = context.bloodMentionGroups(rows);
   assert.equal(groups[0].mentions, 2);
   assert.equal(groups[0].documents.size, 1);

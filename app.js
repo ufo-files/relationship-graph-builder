@@ -432,6 +432,7 @@ function loadConfig() {
       const saved = JSON.parse(decodeURIComponent(escape(atob(param))));
       if (saved.allSources === undefined) saved.allSources = !saved.sources?.length;
       const config = { ...DEFAULT, ...saved };
+      if (config.type === "blood" && config.bloodType === "Unspecified") config.bloodType = "all";
       if (saved.type === "solar" && !Object.hasOwn(saved, "solarScale")) config.solarScale = "local";
       if (!["none", "hill_fish"].includes(config.solarCase)) config.solarCase = DEFAULT.solarCase;
       config.sourceFamilyPolicy = SOURCE_FAMILY_POLICY_VERSION;
@@ -1425,7 +1426,7 @@ function renderControls() {
     ${["triage", "claims", "craft", "species", "signals", "coverage", "programs"].includes(state.config.type) ? "" : `<div class="control duplicate-review-control"><div class="control-title">Identity review <span>${duplicateCount} flagged</span></div><button class="button review-button" type="button" data-review-duplicates ${duplicateCount ? "" : "disabled"}>Review possible duplicates</button></div>`}`;
 
   if (state.config.type === "blood") {
-    const types = [...new Set((state.catalog.bloodTypes?.observations || []).map(item => item.bloodType))].sort();
+    const types = [...new Set((state.catalog.bloodTypes?.observations || []).map(item => item.bloodType).filter(specifiedBloodType))].sort();
     $("#filterControls").innerHTML = controlSelect("bloodType", "Blood type / Rh", [{ value: "all", label: "All mentions" }, ...types.map(value => ({ value, label: value }))])
       + `<div class="control"><label for="bloodSearch">Search evidence</label><input id="bloodSearch" class="text-input" type="search" value="${escapeHTML(state.config.bloodSearch)}" placeholder="Search excerpt, title, or collection" data-blood-search></div><div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div>`;
   }
@@ -4328,10 +4329,15 @@ function filteredBloodMentions(catalog = state.catalog, config = state.config) {
   const query = String(config.bloodSearch || "").trim().toLowerCase();
   const documents = new Map((catalog.documents || []).map(item => [item.id, item]));
   return (catalog.bloodTypes?.observations || []).filter(item =>
-    sourceIsSelected(item.source, config.sources, config.allSources)
+    specifiedBloodType(item.bloodType)
+    && sourceIsSelected(item.source, config.sources, config.allSources)
     && (config.bloodType === "all" || item.bloodType === config.bloodType)
     && (!query || [item.excerpt, item.source, documents.get(item.documentId)?.title, documents.get(item.documentId)?.path]
       .some(value => String(value || "").toLowerCase().includes(query))));
+}
+
+function specifiedBloodType(value) {
+  return /^(?:(?:AB|A|B|O)[+-]?|Rh (?:positive|negative))$/.test(String(value || ""));
 }
 
 function bloodMentionGroups(observations) {
@@ -4347,7 +4353,7 @@ function bloodMentionGroups(observations) {
 function bloodOverviewHTML(observations, config) {
   const groups = bloodMentionGroups(observations);
   const table = config.bloodView === "table";
-  return `<section aria-label="Blood type overview"><div class="blood-view-switch" role="group" aria-label="Blood type view">${["scatter", "table"].map(view => `<button type="button" data-blood-view="${view}" aria-pressed="${(table ? "table" : "scatter") === view}">${view === "scatter" ? "Scatter" : "Table"}</button>`).join("")}</div>
+  return `<section aria-label="Blood type overview"><div class="blood-view-switch" role="group" aria-label="Blood type view">${["scatter", "table"].map(view => `<button type="button" data-blood-view="${view}" aria-pressed="${(table ? "table" : "scatter") === view}">${view === "scatter" ? "Scatter" : "Table"}</button>`).join("")}<button class="button" type="button" data-blood-reset>Reset filters</button></div>
     ${table ? `<div class="blood-overview"><table><thead><tr><th scope="col">Type / Rh</th><th scope="col">Mentions</th><th scope="col">Documents</th><th scope="col">Collections</th></tr></thead><tbody>${groups.map(group => `<tr><th scope="row"><button type="button" data-blood-pick="${escapeHTML(group.type)}">${escapeHTML(group.type)}</button></th><td>${formatNumber(group.mentions)}</td><td>${formatNumber(group.documents.size)}</td><td>${formatNumber(group.sources.size)}</td></tr>`).join("")}</tbody></table></div>` : `<svg class="blood-scatter" role="group" aria-label="Blood type mentions versus distinct documents"></svg>`}
   </section>`;
 }
@@ -4377,7 +4383,6 @@ function drawBloodScatter(svg, observations, config) {
     svg.append(el("text", { x: x(value), y: height - margin.bottom + 20, "text-anchor": "middle", class: "blood-axis" }, String(value)));
     svg.append(el("text", { x: margin.left - 10, y: y(value) + 4, "text-anchor": "end", class: "blood-axis" }, String(value)));
   });
-  svg.append(el("line", { x1: x(1), y1: y(1), x2: x(maximum), y2: y(maximum), class: "blood-diagonal" }));
   svg.append(el("text", { x: (width + margin.left - margin.right) / 2, y: height - 12, "text-anchor": "middle", class: "blood-axis-title" }, "Distinct documents · log scale"));
   svg.append(el("text", { x: 16, y: height / 2, transform: `rotate(-90 16 ${height / 2})`, "text-anchor": "middle", class: "blood-axis-title" }, "Phrase mentions · log scale"));
   const labels = [];
@@ -4409,22 +4414,21 @@ function renderBloodTypes() {
   $("#chartWrap").classList.add("table-mode");
   $("#legend").innerHTML = "";
   const available = Boolean(state.catalog.bloodTypes);
-  const pageSize = 50;
-  let shown = pageSize;
-  const cards = rows => rows.map(item => {
-    const doc = state.documentById.get(item.documentId);
-    const url = doc ? machineDataDocumentURL(doc) : "";
-    return `<article class="evidence-card blood-evidence"><h3>${escapeHTML(item.bloodType)} <small>${escapeHTML(item.matchedText)}</small></h3><p>${escapeHTML(item.excerpt)}</p><small>${escapeHTML(doc?.title || item.documentId)} · ${escapeHTML(item.source)} · segment ${escapeHTML(String(item.segment))}</small>${url ? `<a href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer">Source ↗</a>` : ""}</article>`;
-  }).join("");
   queue.innerHTML = `<div class="blood-view">
     ${overviewItems.length ? bloodOverviewHTML(overviewItems, state.config) : ""}
     ${items.length ? "" : `<p role="status">${available ? "No matches." : "Blood type data unavailable."}</p>`}
-    <div class="blood-evidence-heading" role="region" aria-label="Selected source excerpts" tabindex="-1"><h2>Source excerpts${state.config.bloodType === "all" ? "" : ` · ${escapeHTML(state.config.bloodType)}`}</h2><button class="button" data-blood-reset type="button">Reset filters</button></div><p data-blood-page-count></p><div data-blood-evidence>${cards(items.slice(0, shown))}</div><button class="button" type="button" data-blood-more ${items.length <= shown ? "hidden" : ""}>Show more excerpts</button></div>`;
+  </div>`;
   const selectEvidence = type => {
-    state.config.bloodType = state.config.bloodType === type ? "all" : type;
+    state.config.bloodType = type;
+    const observations = filteredBloodMentions();
     renderControls(); commitConfig(false);
-    const heading = $("#tableView").querySelector(".blood-evidence-heading");
-    heading.scrollIntoView({ block: "start" });
+    showInspector("blood type", type, [
+      [observations.length, "mentions"],
+      [new Set(observations.map(item => item.documentId)).size, "documents"],
+      [new Set(observations.map(item => item.source)).size, "collections"]
+    ], observations);
+    const heading = $("#inspectorContent h3");
+    heading.setAttribute("tabindex", "-1");
     heading.focus({ preventScroll: true });
   };
   const scatter = queue.querySelector(".blood-scatter");
@@ -4437,18 +4441,14 @@ function renderBloodTypes() {
   });
   queue.querySelectorAll("[data-blood-view]").forEach(button => button.addEventListener("click", () => {
     state.config.bloodView = button.dataset.bloodView;
+    closeInspector();
     persistHash(); renderGraph();
     queue.querySelector(`[data-blood-view="${state.config.bloodView}"]`).focus({ preventScroll: true });
   }));
-  queue.querySelector("[data-blood-reset]").addEventListener("click", () => {
+  queue.querySelector("[data-blood-reset]")?.addEventListener("click", () => {
     Object.assign(state.config, { bloodType: "all", bloodSearch: "", sources: [], allSources: true });
+    closeInspector();
     renderControls(); commitConfig(false);
-  });
-  const updateCount = () => { queue.querySelector("[data-blood-page-count]").textContent = `${Math.min(shown, items.length)} / ${formatNumber(items.length)} mentions`; };
-  updateCount();
-  queue.querySelector("[data-blood-more]").addEventListener("click", event => {
-    queue.querySelector("[data-blood-evidence]").insertAdjacentHTML("beforeend", cards(items.slice(shown, shown + pageSize)));
-    shown += pageSize; event.target.hidden = shown >= items.length; updateCount();
   });
   setSummary(`${formatNumber(items.length)} mentions · ${formatNumber(new Set(items.map(item => item.documentId)).size)} documents · ${formatNumber(new Set(items.map(item => item.source)).size)} collections`, "blood");
 }

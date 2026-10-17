@@ -714,12 +714,11 @@ body.graph-fullscreen #chart { min-height: 0; }
   .stage-tools { width: 100%; justify-content: flex-end; }
 }
 .blood-view { padding: 20px; max-width: 1100px; margin: auto; }
-.blood-view-switch { display: flex; gap: 8px; margin-bottom: 14px; }
+.blood-view-switch { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 .blood-view-switch button, .blood-overview button { font: inherit; padding: 8px 12px; border: 1px solid #788177; border-radius: 4px; background: transparent; cursor: pointer; }
 .blood-view-switch button[aria-pressed="true"] { background: #253b33; color: white; }
 .blood-scatter { display: block; width: 100%; overflow: visible; }
 .blood-grid { stroke: #d7dbd2; stroke-width: 1; }
-.blood-diagonal { stroke: #929b8e; stroke-dasharray: 5 5; }
 .blood-axis, .blood-scatter-point text { font-size: 11px; fill: #28352c; }
 .blood-axis-title { font-size: 12px; fill: #28352c; }
 .blood-scatter-point { cursor: pointer; }
@@ -730,17 +729,10 @@ body.graph-fullscreen #chart { min-height: 0; }
 .blood-scatter-point:hover circle, .blood-scatter-point:focus circle, .blood-scatter-point[aria-pressed="true"] circle { fill: #111; stroke: #111; }
 .blood-scatter-point:focus { outline: none; }
 .blood-scatter-point:focus text { text-decoration: underline; }
-.blood-evidence-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-.blood-evidence-heading h2 { font-size: 18px; }
 .blood-overview { overflow-x: auto; margin: 20px 0 28px; }
 .blood-overview table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
 .blood-overview th, .blood-overview td { text-align: left; padding: 12px; border-bottom: 1px solid #d6d8d1; }
 .blood-overview thead { background: #edf0e9; }
-.blood-evidence { margin-bottom: 14px; overflow-wrap: anywhere; }
-.blood-evidence h3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; }
-.blood-evidence h3 small { font-weight: normal; }
-.blood-evidence p { white-space: pre-wrap; line-height: 1.6; }
-.blood-evidence > small, .blood-evidence > a { display: block; margin-top: 10px; }
 @media (max-width: 600px) {
   .blood-view { padding: 12px; }
   .blood-overview th, .blood-overview td { padding: 10px 7px; font-size: 12px; }
