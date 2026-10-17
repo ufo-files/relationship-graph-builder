@@ -2266,6 +2266,22 @@ function renderNetwork() {
   setSummary(`${nodes.length} ${collectionMode ? "collections" : "entities"} · ${edges.length} relationships`, "network");
 }
 
+function scatterPointMark(x, y, value, extent, isOutlier = false) {
+  return el("circle", {
+    cx: x, cy: y, r: scale(value, extent, [4, 15]),
+    fill: "#111", "fill-opacity": scale(value, extent, [.18, .96]),
+    stroke: "#111", "stroke-width": isOutlier ? 3 : 1,
+    class: `mark${isOutlier ? " outlier-mark" : ""}`
+  });
+}
+
+function scatterPointLabel(name, x, y, radius, labelSize, maximumY, maximumLength = 26) {
+  return el("text", {
+    x, y: Math.min(maximumY, y + radius + labelSize),
+    "text-anchor": "middle", class: "chart-label node-label"
+  }, name.slice(0, maximumLength));
+}
+
 function renderScatter() {
   const { svg, width, height } = clearChart();
   const candidates = filteredEntities();
@@ -2335,10 +2351,9 @@ function renderScatter() {
   data.forEach((item, index) => {
     const { x, y } = positionFor(item);
     const radius = scale(item[state.config.size], sizeExtent, [4, 15]);
-    const shade = scale(item[state.config.size], sizeExtent, [.18, .96]);
     const isOutlier = (!categoricalX && xAxis.capped && item[state.config.x] > xExtent[1]) || (yAxis.capped && item[state.config.y] > yExtent[1]);
     const egoNetwork = egoNetworks.get(item.id);
-    const dot = el("circle", { cx: x, cy: y, r: radius, fill: "#111", "fill-opacity": shade, stroke: "#111", "stroke-width": isOutlier ? 3 : 1, class: `mark${isOutlier ? " outlier-mark" : ""}` });
+    const dot = scatterPointMark(x, y, item[state.config.size], sizeExtent, isOutlier);
     const rawMentionDetail = ["contextAdjustedMentions", "epistemicAdjustedMentions"].includes(state.config.y) ? ` · Raw mentions: ${formatNumber(item.mentions)}` : "";
     const neighborDetail = egoNetwork.neighbors.length ? ` · Strongest relationships: ${egoNetwork.neighbors.map(neighbor => neighbor.entity.name).join(", ")}` : "";
     addTitle(dot, `${item.name} · ${label(state.config.y)}: ${formatNumber(item[state.config.y])}${rawMentionDetail}${neighborDetail}${isOutlier ? " · positioned at robust axis cap" : ""}`);
@@ -2366,9 +2381,9 @@ function renderScatter() {
     const showLabel = state.config.labels === "all"
       || (state.config.labels === "top" && (index < 10 || index % tickEvery === 0));
     if (categoricalX && showLabel) {
-      svg.append(el("text", { x, y: Math.min(height - 25, y + radius + state.config.labelSize), "text-anchor": "middle", class: "chart-label node-label" }, item.name.slice(0, 20)));
+      svg.append(scatterPointLabel(item.name, x, y, radius, state.config.labelSize, height - 25, 20));
     } else if (!categoricalX && showLabel) {
-      svg.append(el("text", { x, y: Math.min(height - margin.bottom + 18, y + radius + state.config.labelSize), "text-anchor": "middle", class: "chart-label node-label" }, item.name.slice(0, 26)));
+      svg.append(scatterPointLabel(item.name, x, y, radius, state.config.labelSize, height - margin.bottom + 18));
     }
   });
   drawIntensityLegend();
@@ -4382,33 +4397,20 @@ function drawBloodScatter(svg, observations, config) {
   const sourceExtent = valueExtent(groups.map(group => ({ sources: group.sources.size })), "sources");
   const ticks = [];
   for (let power = 0; 10 ** power <= maximum; power++) for (const multiplier of [1, 2, 5]) if (multiplier * 10 ** power <= maximum) ticks.push(multiplier * 10 ** power);
-  ticks.forEach(value => {
-    svg.append(el("line", { x1: margin.left, x2: width - margin.right, y1: y(value), y2: y(value), class: "grid-line" }));
-    svg.append(el("text", { x: x(value), y: height - margin.bottom + 20, "text-anchor": "middle", class: "axis-label" }, String(value)));
-    svg.append(el("text", { x: margin.left - 10, y: y(value) + 4, "text-anchor": "end", class: "axis-label" }, String(value)));
-  });
-  svg.append(el("text", { x: (width + margin.left - margin.right) / 2, y: height - 12, "text-anchor": "middle", class: "axis-label" }, "Distinct documents · log scale"));
-  svg.append(el("text", { x: 16, y: height / 2, transform: `rotate(-90 16 ${height / 2})`, "text-anchor": "middle", class: "axis-label" }, "Phrase mentions · log scale"));
-  const labels = [];
-  groups.slice().sort((a, b) => a.documents.size - b.documents.size || a.mentions - b.mentions).forEach(group => {
+  drawAxes(svg, width, height, "Documents · log scale", "Mentions · log scale",
+    [.75, maximum], [.75, maximum], {}, { yTicks: ticks.slice().reverse(), yPosition: y });
+  groups.forEach(group => {
     const px = x(group.documents.size), py = y(group.mentions);
-    const radius = scale(group.sources.size, sourceExtent, [4, 15]);
-    const opacity = scale(group.sources.size, sourceExtent, [.18, .96]);
-    const textWidth = group.type.length * config.labelSize * .6 + 8;
-    const lx = Math.max(margin.left + textWidth / 2, Math.min(width - margin.right - textWidth / 2, px));
-    const labelStep = config.labelSize + 4;
-    const candidates = Array.from({ length: 20 }, (_, index) => index < 10
-      ? py + radius + config.labelSize + index * labelStep
-      : py - radius - 6 - (index - 10) * labelStep);
-    const ly = candidates.find(candidate => candidate >= margin.top + config.labelSize && candidate <= height - margin.bottom - 8
-      && !labels.some(box => lx - textWidth / 2 < box.x + box.width / 2 && lx + textWidth / 2 > box.x - box.width / 2 && Math.abs(candidate - box.y) < labelStep))
-      ?? Math.min(height - margin.bottom - 8, py + radius + config.labelSize);
-    labels.push({ x: lx, y: ly, width: textWidth });
-    const mark = el("g", { class: "blood-scatter-point mark", role: "button", tabindex: "0", "data-blood-pick": group.type, "aria-pressed": String(config.bloodType === group.type), "aria-label": `${group.type}: ${group.documents.size} documents, ${group.mentions} mentions, ${group.sources.size} collections. Show source excerpts.` });
-    mark.append(el("title", {}, `${group.type} · ${group.documents.size} documents · ${group.mentions} mentions · ${group.sources.size} collections`));
-    mark.append(el("circle", { cx: px, cy: py, r: radius, fill: "#111", "fill-opacity": opacity, stroke: "#111", "stroke-width": 1 }));
-    mark.append(el("text", { x: lx, y: ly, "text-anchor": "middle", class: "chart-label node-label" }, group.type));
-    svg.append(mark);
+    const point = scatterPointMark(px, py, group.sources.size, sourceExtent);
+    point.classList.add("blood-scatter-point");
+    point.setAttribute("role", "button");
+    point.setAttribute("tabindex", "0");
+    point.setAttribute("data-blood-pick", group.type);
+    point.setAttribute("aria-pressed", String(config.bloodType === group.type));
+    point.setAttribute("aria-label", `${group.type}: ${group.documents.size} documents, ${group.mentions} mentions, ${group.sources.size} collections. Show source excerpts.`);
+    addTitle(point, `${group.type} · ${group.documents.size} documents · ${group.mentions} mentions · ${group.sources.size} collections`);
+    svg.append(point);
+    svg.append(scatterPointLabel(group.type, px, py, scale(group.sources.size, sourceExtent, [4, 15]), config.labelSize, height - margin.bottom + 18));
   });
 }
 
@@ -4443,7 +4445,7 @@ function renderBloodTypes() {
   if (scatter) drawBloodScatter(scatter, overviewItems, state.config);
   queue.querySelectorAll("[data-blood-pick]").forEach(button => {
     button.addEventListener("click", () => selectEvidence(button.dataset.bloodPick));
-    if (["g", "tr"].includes(button.tagName.toLowerCase())) button.addEventListener("keydown", event => {
+    if (["g", "circle", "tr"].includes(button.tagName.toLowerCase())) button.addEventListener("keydown", event => {
       if (["Enter", " "].includes(event.key)) { event.preventDefault(); selectEvidence(button.dataset.bloodPick); }
     });
   });
