@@ -351,7 +351,7 @@ const DEFAULT = {
   speciesLayout: "lineup", speciesY: "physicalHeight", speciesSize: "documentCount", speciesSpacing: 0, speciesCategory: "all", speciesSearch: "",
   coverageRows: "collection", coverageColumns: "category", coverageMetric: "documentCount", coverageCompare: false,
   coverageACollection: "all", coverageAFrom: "", coverageATo: "", coverageBCollection: "all", coverageBFrom: "", coverageBTo: "",
-  bloodType: "all", bloodSearch: "", bloodMetric: "mentions",
+  bloodType: "all", bloodSearch: "", bloodView: "scatter",
   programStatus: "all", programKind: "all", programSearch: "",
   labelSize: 12, zoom: 1, moonTransitSeconds: 5, solarScale: "local", solarCase: "hill_fish", title: "Mentions by Documents", titleMode: "auto"
 };
@@ -368,7 +368,7 @@ const VIEW_DEFAULTS = {
   signals: { allSources: true, sources: [], labels: "top", labelSize: 12 },
   bars: { aggregation: "source", y: "words", color: "intensity" },
   timeline: { timelineRole: "event", timelineGrouping: true, timelineGroupPeriod: "month", timelineCorrelativeMarkers: true, timelineHistoricalCandidates: false, x: "startDate", y: "mentionRank", size: "eventCount", color: "eventType", categories: ["date"], labels: "top", limit: 500, relationshipLayer: "always", timelineRelevanceCutoff: DEFAULT_TIMELINE_RELEVANCE_CUTOFF, timelineRecencyYear: DEFAULT_TIMELINE_RECENCY_YEAR },
-  blood: { bloodType: "all", bloodSearch: "", bloodMetric: "mentions" },
+  blood: { bloodType: "all", bloodSearch: "", bloodView: "scatter" },
   programs: { programStatus: "all", programKind: "all", programSearch: "", labelSize: 12 },
   matrix: { matrixColumns: "category", matrixNormalize: "rowShare", color: "intensity" },
   coverage: { coverageRows: "collection", coverageColumns: "category", coverageMetric: "documentCount", coverageCompare: false, coverageACollection: "all", coverageAFrom: "", coverageATo: "", coverageBCollection: "all", coverageBFrom: "", coverageBTo: "", allSources: true, sources: [] },
@@ -4342,40 +4342,52 @@ function bloodMentionGroups(observations) {
   return [...groups.values()].sort((a, b) => b.mentions - a.mentions || a.type.localeCompare(b.type));
 }
 
-function bloodVisualData(observations, metric = "mentions") {
-  const value = group => metric === "documents" ? group.documents.size : group.mentions;
-  const groups = bloodMentionGroups(observations).sort((a, b) => value(b) - value(a) || a.type.localeCompare(b.type));
-  const sources = [...new Set(observations.map(item => item.source))].sort();
-  const bySource = new Map(sources.map(source => [source, bloodMentionGroups(observations.filter(item => item.source === source))]));
-  const cells = groups.flatMap(group => sources.map(source => {
-    const entry = bySource.get(source).find(item => item.type === group.type);
-    return { type: group.type, source, value: entry ? value(entry) : 0 };
-  }));
-  return { groups, sources, cells, value };
+function bloodOverviewHTML(observations, config) {
+  const groups = bloodMentionGroups(observations);
+  const table = config.bloodView === "table";
+  return `<section aria-label="Blood type overview"><div class="blood-view-switch" role="group" aria-label="Blood type view">${["scatter", "table"].map(view => `<button type="button" data-blood-view="${view}" aria-pressed="${(table ? "table" : "scatter") === view}">${view === "scatter" ? "Scatter" : "Table"}</button>`).join("")}</div>
+    ${table ? `<div class="blood-overview"><table><thead><tr><th scope="col">Type / Rh</th><th scope="col">Mentions</th><th scope="col">Documents</th><th scope="col">Collections</th></tr></thead><tbody>${groups.map(group => `<tr><th scope="row"><button type="button" data-blood-pick="${escapeHTML(group.type)}">${escapeHTML(group.type)}</button></th><td>${formatNumber(group.mentions)}</td><td>${formatNumber(group.documents.size)}</td><td>${formatNumber(group.sources.size)}</td></tr>`).join("")}</tbody></table></div>` : `<p class="blood-chart-help">Documents on the horizontal axis; phrase mentions on the vertical axis. Both axes use a log scale so rare types remain visible. The dashed line marks one mention per document. Select a label or point to read its source excerpts.</p><svg class="blood-scatter" role="group" aria-label="Blood type mentions versus distinct documents"></svg>`}
+  </section>`;
 }
 
-function bloodOverviewHTML(observations, config) {
-  const metric = config.bloodMetric === "documents" ? "documents" : "mentions";
-  const { groups, sources, cells, value } = bloodVisualData(observations, metric);
-  const panels = [
-    { title: "ABO references", note: "The source names an ABO type. A missing +/− means Rh was not specified.", groups: groups.filter(group => !group.type.startsWith("Rh ") && group.type !== "Unspecified"), style: "abo" },
-    { title: "Rh-only references", note: "The source names an Rh factor without an ABO type.", groups: groups.filter(group => group.type.startsWith("Rh ")), style: "rh" },
-    { title: "Unspecified references", note: "Blood type is mentioned without a specific value in the matched phrase.", groups: groups.filter(group => group.type === "Unspecified"), style: "unknown" }
-  ];
-  const maximum = Math.max(1, ...cells.map(cell => cell.value));
-  return `<section class="blood-landscape" aria-label="Blood type patterns across the corpus">
-    <div class="blood-visual-header"><div><span class="blood-eyebrow">Across selected collections</span><h2>Where blood types appear</h2></div><div class="blood-metric" role="group" aria-label="Chart measure">${["mentions", "documents"].map(key => `<button type="button" data-blood-metric="${key}" aria-pressed="${metric === key}">${key === "mentions" ? "Mentions" : "Documents"}</button>`).join("")}</div></div>
-    <div class="blood-totals"><div><strong>${formatNumber(observations.length)}</strong><span>phrase mentions</span></div><div><strong>${formatNumber(new Set(observations.map(item => item.documentId)).size)}</strong><span>distinct documents</span></div><div><strong>${formatNumber(sources.length)}</strong><span>collections</span></div></div>
-    <p class="blood-chart-help">Select a bar to read its evidence. Each panel has its own linear scale; compare the printed counts across panels. Overview follows collection and search filters.</p>
-    <div class="blood-panels">${panels.map(panel => {
-      const max = Math.max(1, ...panel.groups.map(value));
-      return `<section class="blood-panel blood-panel-${panel.style}" aria-label="${panel.title}"><header><h3>${panel.title}</h3><span>0 – ${formatNumber(max)} ${metric}</span></header><p>${panel.note}</p><div class="blood-bars">${panel.groups.length ? panel.groups.map(group => `<button class="blood-bar" type="button" data-blood-pick="${escapeHTML(group.type)}" aria-pressed="${config.bloodType === group.type}" aria-label="${escapeHTML(group.type)}: ${value(group)} ${metric}. Show source excerpts."><span class="blood-bar-name">${escapeHTML(group.type)}</span><span class="blood-bar-track"><span style="width:${value(group) / max * 100}%"></span></span><strong>${formatNumber(value(group))}</strong><small>${formatNumber(group.documents.size)} docs · ${formatNumber(group.sources.size)} collections</small></button>`).join("") : "<p>No matching references.</p>"}</div></section>`;
-    }).join("")}</div>
-    <section class="blood-collection-map" aria-labelledby="bloodCollectionTitle"><div class="blood-visual-header"><div><span class="blood-eyebrow">Distribution by collection</span><h3 id="bloodCollectionTitle">Concentrated in one source, or spread across several?</h3></div><span class="blood-shade-key">Light → dark: 1 – ${formatNumber(maximum)} ${metric}</span></div>
-    <p class="blood-chart-help">Select a square to open that type’s excerpts from one collection. Counts measure published text, not source independence. A dash means no extracted matches.</p>
-    <div class="blood-map-scroll" role="region" aria-label="Blood types by collection; scroll horizontally for more collections" tabindex="0"><div class="blood-map" style="--blood-columns:${sources.length}"><span class="blood-map-corner">Type / Rh</span>${sources.map(source => `<span class="blood-map-source">${escapeHTML(source.replaceAll("-", " "))}</span>`).join("")}${groups.map(group => `<strong class="blood-map-label">${escapeHTML(group.type)}</strong>${cells.filter(cell => cell.type === group.type).map(cell => `<button type="button" class="blood-map-cell" ${cell.value ? `data-blood-pick="${escapeHTML(cell.type)}" data-blood-source="${escapeHTML(cell.source)}"` : "disabled"} aria-label="${escapeHTML(cell.type)}, ${escapeHTML(cell.source)}: ${cell.value} ${metric}" title="${escapeHTML(cell.source)} · ${escapeHTML(cell.type)} · ${cell.value} ${metric}" style="--blood-intensity:${cell.value ? 10 + cell.value / maximum * 80 : 0}%;color:${cell.value / maximum > .5 ? "#fff" : "#202720"}">${cell.value ? formatNumber(cell.value) : "—"}</button>`).join("")}`).join("")}</div></div></section>
-    <details class="blood-count-details"><summary>View exact counts</summary><div class="blood-overview"><table><thead><tr><th scope="col">Type / Rh</th><th scope="col">Mentions</th><th scope="col">Documents</th><th scope="col">Collections</th></tr></thead><tbody>${groups.map(group => `<tr><th scope="row">${escapeHTML(group.type)}</th><td>${formatNumber(group.mentions)}</td><td>${formatNumber(group.documents.size)}</td><td>${formatNumber(group.sources.size)}</td></tr>`).join("")}</tbody></table></div></details>
-  </section>`;
+function drawBloodScatter(svg, observations, config) {
+  const groups = bloodMentionGroups(observations);
+  const width = Math.max(280, svg.parentElement.clientWidth), height = Math.min(560, Math.max(400, width * .55));
+  const margin = { left: 62, right: 24, top: 32, bottom: 62 };
+  const maximum = Math.max(2, ...groups.map(group => group.mentions)) * 1.45;
+  const logMin = Math.log10(.75), logMax = Math.log10(maximum);
+  const x = value => margin.left + (Math.log10(value) - logMin) / (logMax - logMin) * (width - margin.left - margin.right);
+  const y = value => height - margin.bottom - (Math.log10(value) - logMin) / (logMax - logMin) * (height - margin.top - margin.bottom);
+  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.style.height = `${height}px`;
+  const ticks = [];
+  for (let power = 0; 10 ** power <= maximum; power++) for (const multiplier of [1, 2, 5]) if (multiplier * 10 ** power <= maximum) ticks.push(multiplier * 10 ** power);
+  ticks.forEach(value => {
+    svg.append(el("line", { x1: x(value), x2: x(value), y1: margin.top, y2: height - margin.bottom, class: "blood-grid" }));
+    svg.append(el("line", { x1: margin.left, x2: width - margin.right, y1: y(value), y2: y(value), class: "blood-grid" }));
+    svg.append(el("text", { x: x(value), y: height - margin.bottom + 20, "text-anchor": "middle", class: "blood-axis" }, String(value)));
+    svg.append(el("text", { x: margin.left - 10, y: y(value) + 4, "text-anchor": "end", class: "blood-axis" }, String(value)));
+  });
+  svg.append(el("line", { x1: x(1), y1: y(1), x2: x(maximum), y2: y(maximum), class: "blood-diagonal" }));
+  svg.append(el("text", { x: (width + margin.left - margin.right) / 2, y: height - 12, "text-anchor": "middle", class: "blood-axis-title" }, "Distinct documents · log scale"));
+  svg.append(el("text", { x: 16, y: height / 2, transform: `rotate(-90 16 ${height / 2})`, "text-anchor": "middle", class: "blood-axis-title" }, "Phrase mentions · log scale"));
+  const labels = [];
+  groups.slice().sort((a, b) => a.documents.size - b.documents.size || a.mentions - b.mentions).forEach(group => {
+    const px = x(group.documents.size), py = y(group.mentions), textWidth = group.type.length * 7 + 10;
+    let lx = Math.min(width - margin.right - textWidth, px + 10), ly = py - 10;
+    for (let attempt = 0; attempt < 30; attempt++) {
+      if (!labels.some(box => lx < box.x + box.width && lx + textWidth > box.x && ly - 12 < box.y + 5 && ly + 5 > box.y - 12)) break;
+      ly = py + (attempt % 2 ? -1 : 1) * (18 + Math.floor(attempt / 2) * 18);
+    }
+    ly = Math.max(margin.top + 8, Math.min(height - margin.bottom - 8, ly));
+    labels.push({ x: lx, y: ly, width: textWidth });
+    const mark = el("g", { class: "blood-scatter-point", role: "button", tabindex: "0", "data-blood-pick": group.type, "aria-pressed": String(config.bloodType === group.type), "aria-label": `${group.type}: ${group.documents.size} documents, ${group.mentions} mentions, ${group.sources.size} collections. Show source excerpts.` });
+    mark.append(el("title", {}, `${group.type} · ${group.documents.size} documents · ${group.mentions} mentions · ${group.sources.size} collections`));
+    mark.append(el("line", { x1: px, y1: py, x2: lx, y2: ly - 3, class: "blood-leader" }));
+    mark.append(el("circle", { cx: px, cy: py, r: 6 }));
+    mark.append(el("text", { x: lx, y: ly }, group.type));
+    svg.append(mark);
+  });
 }
 
 function renderBloodTypes() {
@@ -4399,20 +4411,25 @@ function renderBloodTypes() {
     ${overviewItems.length ? bloodOverviewHTML(overviewItems, state.config) : ""}
     ${items.length ? "" : `<p role="status">${available ? "No blood type mentions match these filters." : "Blood type extraction is unavailable in this catalog. Rebuild the catalog to populate this view."}</p>`}
     <div class="blood-evidence-heading" role="region" aria-label="Selected source excerpts" tabindex="-1"><h2>Source excerpts${state.config.bloodType === "all" ? "" : ` · ${escapeHTML(state.config.bloodType)}`}</h2><button class="button" data-blood-reset type="button">Reset filters</button></div><p data-blood-page-count></p><div data-blood-evidence>${cards(items.slice(0, shown))}</div><button class="button" type="button" data-blood-more ${items.length <= shown ? "hidden" : ""}>Show more excerpts</button></div>`;
-  const selectEvidence = (type, source = null) => {
-    state.config.bloodType = state.config.bloodType === type && !source ? "all" : type;
-    if (source) { state.config.sources = [source]; state.config.allSources = false; }
+  const selectEvidence = type => {
+    state.config.bloodType = state.config.bloodType === type ? "all" : type;
     renderControls(); commitConfig(false);
     const heading = $("#tableView").querySelector(".blood-evidence-heading");
     heading.scrollIntoView({ block: "start" });
     heading.focus({ preventScroll: true });
   };
-  queue.querySelectorAll("[data-blood-pick]").forEach(button => button.addEventListener("click", () => selectEvidence(button.dataset.bloodPick, button.dataset.bloodSource)));
-  queue.querySelectorAll("[data-blood-metric]").forEach(button => button.addEventListener("click", () => {
-    const scrollTop = queue.scrollTop;
-    state.config.bloodMetric = button.dataset.bloodMetric;
-    persistHash(); renderGraph(); queue.scrollTop = scrollTop;
-    queue.querySelector(`[data-blood-metric="${state.config.bloodMetric}"]`).focus({ preventScroll: true });
+  const scatter = queue.querySelector(".blood-scatter");
+  if (scatter) drawBloodScatter(scatter, overviewItems, state.config);
+  queue.querySelectorAll("[data-blood-pick]").forEach(button => {
+    button.addEventListener("click", () => selectEvidence(button.dataset.bloodPick));
+    if (button.tagName.toLowerCase() === "g") button.addEventListener("keydown", event => {
+      if (["Enter", " "].includes(event.key)) { event.preventDefault(); selectEvidence(button.dataset.bloodPick); }
+    });
+  });
+  queue.querySelectorAll("[data-blood-view]").forEach(button => button.addEventListener("click", () => {
+    state.config.bloodView = button.dataset.bloodView;
+    persistHash(); renderGraph();
+    queue.querySelector(`[data-blood-view="${state.config.bloodView}"]`).focus({ preventScroll: true });
   }));
   queue.querySelector("[data-blood-reset]").addEventListener("click", () => {
     Object.assign(state.config, { bloodType: "all", bloodSearch: "", sources: [], allSources: true });
