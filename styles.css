@@ -346,7 +346,8 @@ p { max-width: 768px; }
 .timeline-candidate-ring { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 3 2; stroke-linecap: butt; vector-effect: non-scaling-stroke; }
 .timeline-event-node.timeline-candidate { fill: var(--paper); fill-opacity: 1; }
 .mark { cursor: pointer; transition: opacity .15s, filter .15s; }
-.mark:hover { filter: brightness(.88); }
+.mark:hover, .mark:focus-visible { filter: brightness(.88); }
+.mark:focus-visible { outline: none; }
 .craft-node:focus-visible { outline: none; filter: brightness(.82); }
 .craft-node:focus-visible .craft-hitbox { stroke: var(--ink); stroke-dasharray: 3 3; }
 .craft-node-circle { vector-effect: non-scaling-stroke; }
@@ -714,21 +715,8 @@ body.graph-fullscreen #chart { min-height: 0; }
   .stage-tools { width: 100%; justify-content: flex-end; }
 }
 .blood-view { padding: 20px; max-width: 1100px; margin: auto; }
-.blood-overview button { font: inherit; padding: 8px 12px; border: 1px solid var(--line); border-radius: 4px; background: transparent; cursor: pointer; }
 .blood-scatter { display: block; width: 100%; overflow: visible; }
-.blood-scatter-point text { font-size: 11px; fill: var(--ink); }
-.blood-scatter-point { cursor: pointer; }
-.blood-scatter-point circle { fill: var(--ink); stroke: var(--paper); stroke-width: 2; }
-.blood-scatter-point text { paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; }
-.blood-leader { stroke: var(--muted); stroke-width: 1; }
-.blood-scatter-point:hover circle, .blood-scatter-point:focus circle, .blood-scatter-point[aria-pressed="true"] circle { fill: var(--ink); stroke: var(--ink); }
-.blood-scatter-point:focus { outline: none; }
-.blood-scatter-point:focus text { text-decoration: underline; }
 .blood-overview { overflow-x: auto; margin: 20px 0 28px; }
-.blood-overview table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
-.blood-overview th, .blood-overview td { text-align: left; padding: 12px; border-bottom: 1px solid var(--line); }
-.blood-overview thead { background: var(--mint); }
 @media (max-width: 600px) {
   .blood-view { padding: 12px; }
-  .blood-overview th, .blood-overview td { padding: 10px 7px; font-size: 12px; }
 }

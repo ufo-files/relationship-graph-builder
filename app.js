@@ -1358,7 +1358,7 @@ function renderControls() {
   } else if (state.config.type === "signals") {
     $("#encodeControls").innerHTML = `<div class="control"><div class="control-title">Peak height</div><select disabled><option>Corpus frequency mentions</option></select></div><div class="control method-note"><div class="control-title">Spectrum semantics</div><p>Peaks are normalized numeric frequency references in corpus text. Unit-elided values require explicit microwave-band context. They are not RF logger measurements and do not establish that a transmission occurred.</p></div>` + labelSizeControl;
   } else if (state.config.type === "blood") {
-    $("#encodeControls").innerHTML = `<div class="control"><div class="control-title">Logarithmic axes</div></div>`;
+    $("#encodeControls").innerHTML = labelSizeControl;
   } else if (state.config.type === "programs") {
     $("#encodeControls").innerHTML = `<div class="control method-note"><div class="control-title">Interval semantics</div><p>Solid bars are officially documented. Dashed bars are claims entered into the congressional record but not officially confirmed. Curved bridges connect reviewed succession or transfer nodes on the relevant lanes. An arrow means active at the review date, not indefinitely active.</p></div>` + labelSizeControl;
   } else if (state.config.type === "document") {
@@ -4360,7 +4360,7 @@ function bloodOverviewHTML(observations, config) {
   const groups = bloodMentionGroups(observations);
   const table = config.bloodView === "table";
   return `<section aria-label="Blood type overview">
-    ${table ? `<div class="blood-overview"><table><thead><tr><th scope="col">Type / Rh</th><th scope="col">Mentions</th><th scope="col">Documents</th><th scope="col">Collections</th></tr></thead><tbody>${groups.map(group => `<tr><th scope="row"><button type="button" data-blood-pick="${escapeHTML(group.type)}">${escapeHTML(group.type)}</button></th><td>${formatNumber(group.mentions)}</td><td>${formatNumber(group.documents.size)}</td><td>${formatNumber(group.sources.size)}</td></tr>`).join("")}</tbody></table></div>` : `<svg class="blood-scatter" role="group" aria-label="Blood type mentions versus distinct documents"></svg>`}
+    ${table ? `<div class="blood-overview"><table class="builder-table"><thead><tr><th scope="col">Type / Rh</th><th scope="col">Mentions</th><th scope="col">Documents</th><th scope="col">Collections</th></tr></thead><tbody>${groups.map(group => `<tr tabindex="0" data-blood-pick="${escapeHTML(group.type)}" aria-label="${escapeHTML(group.type)}: ${group.mentions} mentions, ${group.documents.size} documents"><td>${escapeHTML(group.type)}</td><td>${formatNumber(group.mentions)}</td><td>${formatNumber(group.documents.size)}</td><td>${formatNumber(group.sources.size)}</td></tr>`).join("")}</tbody></table></div>` : `<svg class="blood-scatter" role="group" aria-label="Blood type mentions versus distinct documents"></svg>`}
   </section>`;
 }
 
@@ -4371,13 +4371,15 @@ function drawBloodScatter(svg, observations, config) {
   const chartTop = svg.getBoundingClientRect().top - viewport.getBoundingClientRect().top + viewport.scrollTop;
   const width = Math.max(280, svg.parentElement.clientWidth);
   const height = Math.max(240, viewport.clientHeight - chartTop - bottomPadding);
-  const margin = { left: 62, right: 24, top: 20, bottom: 62 };
+  const margin = { ...AXIS_MARGIN };
   const maximum = Math.max(2, ...groups.map(group => group.mentions)) * 1.45;
   const logMin = Math.log10(.75), logMax = Math.log10(maximum);
   const x = value => margin.left + (Math.log10(value) - logMin) / (logMax - logMin) * (width - margin.left - margin.right);
   const y = value => height - margin.bottom - (Math.log10(value) - logMin) / (logMax - logMin) * (height - margin.top - margin.bottom);
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
   svg.style.height = `${height}px`;
+  svg.style.setProperty("--graph-label-size", `${config.labelSize}px`);
+  const sourceExtent = valueExtent(groups.map(group => ({ sources: group.sources.size })), "sources");
   const ticks = [];
   for (let power = 0; 10 ** power <= maximum; power++) for (const multiplier of [1, 2, 5]) if (multiplier * 10 ** power <= maximum) ticks.push(multiplier * 10 ** power);
   ticks.forEach(value => {
@@ -4388,19 +4390,23 @@ function drawBloodScatter(svg, observations, config) {
   svg.append(el("text", { x: 16, y: height / 2, transform: `rotate(-90 16 ${height / 2})`, "text-anchor": "middle", class: "axis-label" }, "Phrase mentions · log scale"));
   const labels = [];
   groups.slice().sort((a, b) => a.documents.size - b.documents.size || a.mentions - b.mentions).forEach(group => {
-    const px = x(group.documents.size), py = y(group.mentions), radius = 5 * Math.sqrt(group.sources.size), textWidth = group.type.length * 7 + 10;
-    let lx = Math.min(width - margin.right - textWidth, px + radius + 6), ly = py - radius - 4;
-    for (let attempt = 0; attempt < 30; attempt++) {
-      if (!labels.some(box => lx < box.x + box.width && lx + textWidth > box.x && ly - 12 < box.y + 5 && ly + 5 > box.y - 12)) break;
-      ly = py + (attempt % 2 ? -1 : 1) * (18 + Math.floor(attempt / 2) * 18);
-    }
-    ly = Math.max(margin.top + 8, Math.min(height - margin.bottom - 8, ly));
+    const px = x(group.documents.size), py = y(group.mentions);
+    const radius = scale(group.sources.size, sourceExtent, [4, 15]);
+    const opacity = scale(group.sources.size, sourceExtent, [.18, .96]);
+    const textWidth = group.type.length * config.labelSize * .6 + 8;
+    const lx = Math.max(margin.left + textWidth / 2, Math.min(width - margin.right - textWidth / 2, px));
+    const labelStep = config.labelSize + 4;
+    const candidates = Array.from({ length: 20 }, (_, index) => index < 10
+      ? py + radius + config.labelSize + index * labelStep
+      : py - radius - 6 - (index - 10) * labelStep);
+    const ly = candidates.find(candidate => candidate >= margin.top + config.labelSize && candidate <= height - margin.bottom - 8
+      && !labels.some(box => lx - textWidth / 2 < box.x + box.width / 2 && lx + textWidth / 2 > box.x - box.width / 2 && Math.abs(candidate - box.y) < labelStep))
+      ?? Math.min(height - margin.bottom - 8, py + radius + config.labelSize);
     labels.push({ x: lx, y: ly, width: textWidth });
-    const mark = el("g", { class: "blood-scatter-point", role: "button", tabindex: "0", "data-blood-pick": group.type, "aria-pressed": String(config.bloodType === group.type), "aria-label": `${group.type}: ${group.documents.size} documents, ${group.mentions} mentions, ${group.sources.size} collections. Show source excerpts.` });
+    const mark = el("g", { class: "blood-scatter-point mark", role: "button", tabindex: "0", "data-blood-pick": group.type, "aria-pressed": String(config.bloodType === group.type), "aria-label": `${group.type}: ${group.documents.size} documents, ${group.mentions} mentions, ${group.sources.size} collections. Show source excerpts.` });
     mark.append(el("title", {}, `${group.type} · ${group.documents.size} documents · ${group.mentions} mentions · ${group.sources.size} collections`));
-    mark.append(el("line", { x1: px, y1: py, x2: lx, y2: ly - 3, class: "blood-leader" }));
-    mark.append(el("circle", { cx: px, cy: py, r: radius }));
-    mark.append(el("text", { x: lx, y: ly }, group.type));
+    mark.append(el("circle", { cx: px, cy: py, r: radius, fill: "#111", "fill-opacity": opacity, stroke: "#111", "stroke-width": 1 }));
+    mark.append(el("text", { x: lx, y: ly, "text-anchor": "middle", class: "chart-label node-label" }, group.type));
     svg.append(mark);
   });
 }
@@ -4436,7 +4442,7 @@ function renderBloodTypes() {
   if (scatter) drawBloodScatter(scatter, overviewItems, state.config);
   queue.querySelectorAll("[data-blood-pick]").forEach(button => {
     button.addEventListener("click", () => selectEvidence(button.dataset.bloodPick));
-    if (button.tagName.toLowerCase() === "g") button.addEventListener("keydown", event => {
+    if (["g", "tr"].includes(button.tagName.toLowerCase())) button.addEventListener("keydown", event => {
       if (["Enter", " "].includes(event.key)) { event.preventDefault(); selectEvidence(button.dataset.bloodPick); }
     });
   });
