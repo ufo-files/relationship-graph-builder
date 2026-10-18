@@ -4463,9 +4463,10 @@ function clockGroups(observations, interval = 1) {
   const groups = new Map();
   observations.forEach(item => {
     const minute = Math.floor(item.minuteOfDial / interval) * interval;
-    const group = groups.get(minute) || { minute, interval, observations: [], documents: new Set(), sources: new Set() };
+    const key = `${minute}:${item.period}`;
+    const group = groups.get(key) || { minute, interval, period: item.period, observations: [], documents: new Set(), sources: new Set() };
     group.observations.push(item); group.documents.add(item.documentId); group.sources.add(item.source);
-    groups.set(minute, group);
+    groups.set(key, group);
   });
   return [...groups.values()].sort((a, b) => a.minute - b.minute);
 }
@@ -4475,7 +4476,16 @@ function clockTimeLabel(minute) {
 }
 
 function clockGroupLabel(group) {
-  return group.interval === 1 ? clockTimeLabel(group.minute) : `${clockTimeLabel(group.minute)}–${clockTimeLabel(group.minute + group.interval - 1)}`;
+  const time = group.interval === 1 ? clockTimeLabel(group.minute) : `${clockTimeLabel(group.minute)}–${clockTimeLabel(group.minute + group.interval - 1)}`;
+  return `${time} ${clockPeriodLabel(group.period)}`;
+}
+
+function clockPeriodLabel(period) {
+  return period === "unspecified" ? "AM/PM not stated" : period.toUpperCase();
+}
+
+function clockRingRadius(period, radius) {
+  return (radius - 22) * ({ am: 1, pm: .72, unspecified: .44 })[period];
 }
 
 function clockPosition(minute, radius, cx, cy) {
@@ -4528,12 +4538,18 @@ function renderClock() {
   }
   svg.append(el("circle", { cx, cy, r: 2, fill: "var(--ink)" }));
   const extent = valueExtent(groups.map(group => ({ documents: group.documents.size })), "documents");
+  ["am", "pm", "unspecified"].filter(period => groups.some(group => group.period === period)).forEach(period => {
+    const r = clockRingRadius(period, radius);
+    svg.append(el("circle", { cx, cy, r, fill: "none", stroke: "var(--line)", "stroke-width": 1, class: "clock-ring" }));
+    svg.append(el("text", { x: cx + 20, y: cy - r - 10, class: "axis-label clock-ring-label" }, period === "unspecified" ? "Not stated" : clockPeriodLabel(period)));
+  });
   groups.forEach(group => {
-    const point = clockPosition(group.minute, radius - 22, cx, cy);
+    const point = clockPosition(group.minute, clockRingRadius(group.period, radius), cx, cy);
     const mark = scatterPointMark(point.x, point.y, group.documents.size, extent);
     mark.classList.add("clock-point");
     mark.setAttribute("role", "button"); mark.setAttribute("tabindex", "0");
     mark.setAttribute("data-clock-minute", group.minute);
+    mark.setAttribute("data-clock-period", group.period);
     mark.setAttribute("aria-label", `${clockGroupLabel(group)}: ${group.observations.length} mentions in ${group.documents.size} documents`);
     addTitle(mark, `${clockGroupLabel(group)} · ${group.observations.length} mentions · ${group.documents.size} documents`);
     mark.addEventListener("click", () => inspectClockGroup(group));
@@ -4543,7 +4559,7 @@ function renderClock() {
     svg.append(mark);
   });
   $("#legend").innerHTML = "";
-  setSummary(`${formatNumber(observations.length)} mentions · ${formatNumber(new Set(observations.map(item => item.documentId)).size)} documents · ${groups.length} ${interval === 60 ? "hours" : interval === 15 ? "intervals" : "times"}`, "clock");
+  setSummary(`${formatNumber(observations.length)} mentions · ${formatNumber(new Set(observations.map(item => item.documentId)).size)} documents · ${new Set(groups.map(group => group.minute)).size} ${interval === 60 ? "hours" : interval === 15 ? "intervals" : "times"}`, "clock");
 }
 
 function exportClockTimes() {
