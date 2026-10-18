@@ -54,66 +54,69 @@ These previews are regenerated from the latest machine-data catalog after every 
       <a href="assets/screenshots/species.png"><img src="assets/screenshots/species.png" alt="Species graph type screenshot" width="100%"></a>
     </td>
     <td width="50%" align="center">
-      <strong>Blood types</strong><br>
-      <a href="assets/screenshots/blood.png"><img src="assets/screenshots/blood.png" alt="Blood types graph type screenshot" width="100%"></a>
+      <strong>Clock</strong><br>
+      <a href="assets/screenshots/clock.png"><img src="assets/screenshots/clock.png" alt="Clock graph type screenshot" width="100%"></a>
     </td>
   </tr>
   <tr>
+    <td width="50%" align="center">
+      <strong>Blood types</strong><br>
+      <a href="assets/screenshots/blood.png"><img src="assets/screenshots/blood.png" alt="Blood types graph type screenshot" width="100%"></a>
+    </td>
     <td width="50%" align="center">
       <strong>Signals</strong><br>
       <a href="assets/screenshots/signals.png"><img src="assets/screenshots/signals.png" alt="Signals graph type screenshot" width="100%"></a>
     </td>
+  </tr>
+  <tr>
     <td width="50%" align="center">
       <strong>Scatter</strong><br>
       <a href="assets/screenshots/scatter.png"><img src="assets/screenshots/scatter.png" alt="Scatter graph type screenshot" width="100%"></a>
     </td>
-  </tr>
-  <tr>
     <td width="50%" align="center">
       <strong>Bars</strong><br>
       <a href="assets/screenshots/bars.png"><img src="assets/screenshots/bars.png" alt="Bars graph type screenshot" width="100%"></a>
     </td>
+  </tr>
+  <tr>
     <td width="50%" align="center">
       <strong>Timeline</strong><br>
       <a href="assets/screenshots/timeline.png"><img src="assets/screenshots/timeline.png" alt="Timeline graph type screenshot" width="100%"></a>
     </td>
-  </tr>
-  <tr>
     <td width="50%" align="center">
       <strong>Programs</strong><br>
       <a href="assets/screenshots/programs.png"><img src="assets/screenshots/programs.png" alt="Programs graph type screenshot" width="100%"></a>
     </td>
+  </tr>
+  <tr>
     <td width="50%" align="center">
       <strong>Matrix</strong><br>
       <a href="assets/screenshots/matrix.png"><img src="assets/screenshots/matrix.png" alt="Matrix graph type screenshot" width="100%"></a>
     </td>
-  </tr>
-  <tr>
     <td width="50%" align="center">
       <strong>Coverage</strong><br>
       <a href="assets/screenshots/coverage.png"><img src="assets/screenshots/coverage.png" alt="Coverage graph type screenshot" width="100%"></a>
     </td>
+  </tr>
+  <tr>
     <td width="50%" align="center">
       <strong>Table</strong><br>
       <a href="assets/screenshots/table.png"><img src="assets/screenshots/table.png" alt="Table graph type screenshot" width="100%"></a>
     </td>
-  </tr>
-  <tr>
     <td width="50%" align="center">
       <strong>Triage</strong><br>
       <a href="assets/screenshots/triage.png"><img src="assets/screenshots/triage.png" alt="Triage graph type screenshot" width="100%"></a>
     </td>
+  </tr>
+  <tr>
     <td width="50%" align="center">
       <strong>Claims</strong><br>
       <a href="assets/screenshots/claims.png"><img src="assets/screenshots/claims.png" alt="Claims graph type screenshot" width="100%"></a>
     </td>
-  </tr>
-  <tr>
     <td width="50%" align="center">
       <strong>Far Side of the Moon</strong><br>
       <a href="assets/screenshots/far-side-moon.png"><img src="assets/screenshots/far-side-moon.png" alt="Far Side of the Moon map screenshot" width="100%"></a>
     </td>
-    <td width="50%"></td>
   </tr>
 </table>
 <h3>Scatter presets</h3>
