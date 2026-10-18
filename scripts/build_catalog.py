@@ -26,8 +26,10 @@ from typing import Iterable
 
 try:
     from .time_mentions import time_observations_for_segment
+    from .topic_mentions import TOPICS, topic_observations_for_segment, write_topic_catalogs
 except ImportError:
     from time_mentions import time_observations_for_segment
+    from topic_mentions import TOPICS, topic_observations_for_segment, write_topic_catalogs
 
 
 SCHEMA = "ufo-files-relationship-catalog/v1"
@@ -3657,6 +3659,7 @@ def build(
     signal_observations: list[dict] = []
     blood_type_observations: list[dict] = []
     clock_observations: list[dict] = []
+    topic_observations = {topic: [] for topic in TOPICS}
     epistemic_qualifiers_by_segment: dict[str, list[dict]] = {}
     segment_entity_qualifiers: dict[str, dict[str, list[dict]]] = collections.defaultdict(dict)
     lineage_records: list[dict] = []
@@ -3862,6 +3865,8 @@ def build(
             signal_observations.extend(signal_observations_for_segment(segment, doc_id, source, signal_segment))
             blood_type_observations.extend(blood_type_observations_for_segment(segment, doc_id, source, signal_segment))
             clock_observations.extend(time_observations_for_segment(segment, doc_id, source, signal_segment))
+            for topic, rows in topic_observations_for_segment(segment, doc_id, source, signal_segment).items():
+                topic_observations[topic].extend(rows)
             observations, review_items = craft_observations_for_segment(segment, doc_id, source, signal_segment, craft_taxonomy)
             craft_observations.extend(observations)
             craft_candidates.extend(review_items)
@@ -4261,6 +4266,7 @@ def build(
     output.write_text(json.dumps(published_catalog, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     write_astronomy_bootstrap(output.with_name("astronomy.json"), catalog)
     write_clock_catalog(output.with_name("clock_times.json"), clock_observations, documents, catalog_input, catalog["generatedAt"])
+    write_topic_catalogs(output.parent / "topic-mentions", topic_observations, documents, catalog_input, catalog["generatedAt"])
     if duplicate_report:
         duplicate_report.parent.mkdir(parents=True, exist_ok=True)
         duplicate_report.write_text(json.dumps({

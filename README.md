@@ -319,6 +319,36 @@ The Significant People, Significant Places, and Significant Terms presets exclud
 
 The catalog publishes every accepted explicitly cued book, then fills the remaining slots with the highest-evidence non-book entities within the 1,200-entity payload cap. It publishes up to 4,000 accepted edges. The full accepted and published counts, along with the entity and edge caps, are explicit in the catalog metadata.
 
+## Drugs and Technologies
+
+These two corpus views use the existing monochrome scatter style: X is distinct
+documents, Y is literal mentions (both logarithmic), and node size follows the
+number of collections. Select a node for source passages. Sidebar controls filter
+by term, passage text, and collection; CSV export includes all filtered matches
+with original phrases, offsets, and source links pinned to the dataset revision.
+
+The reviewed alias list lives in `scripts/topic_mentions.py`. Drugs include LSD,
+DMT, 5-MeO-DMT, psilocybin (including spelling variants), mescaline, ayahuasca,
+ketamine, cannabis, and other named substances. Technologies include radar,
+psionics, EMP, sonar, lidar, propulsion, lasers, remote viewing, and other named
+systems or claimed capabilities. Broad ambiguous aliases such as “acid”, “pot”,
+“mushrooms”, “AI”, and “psi” are excluded. Counts describe literal language in the
+corpus; they do not establish drug use, effectiveness, or a capability's existence.
+Aliases are a finite English list, so OCR errors and unlisted names can be missed.
+
+Catalog rebuilds publish `data/topic-mentions/` manifests and occurrence files
+limited to 20 MiB each. Only the selected view's data is loaded. The initial
+datasets scan 171,409 documents at machine-data revision
+`112d91db16da7c6308abab422aad60d80d75ed51`; drug mentions occur in 3,362 documents
+and technology mentions in 36,749. A standalone rebuild uses the same source and
+paired-language readers as the full catalog:
+
+```sh
+python3 scripts/build_topic_mentions.py --input ../machine-data \
+  --input-repository ufo-files/machine-data --input-revision <commit> \
+  --paired-language en --require-data
+```
+
 ## Corpus clock
 
 The Clock view plots time-of-day mentions on a 12-hour dial. It groups by hour

@@ -4967,3 +4967,44 @@ test("Clock groups preserve AM/PM and exact dial positions without inferring uns
   assert.ok(Math.abs(twelve.x - 200) < .001 && Math.abs(twelve.y - 100) < .001);
   assert.ok(Math.abs(three.x - 300) < .001 && Math.abs(three.y - 200) < .001);
 });
+
+test("Topic views filter evidence and aggregate aliases without merging document and mention counts", () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const context = vm.createContext({ sourceIsSelected: (name, selected, all) => all || selected.includes(name) });
+  vm.runInContext(source.slice(source.indexOf("function filteredTopicMentions("), source.indexOf("function inspectTopicGroup(")), context);
+  const catalog = { terms: [{ id: "lsd", label: "LSD" }, { id: "dmt", label: "DMT" }], documents: [{ id: "one", title: "Report" }], observations: [
+    { termId: "lsd", documentId: "one", source: "A", matchedText: "LSD", excerpt: "LSD" },
+    { termId: "lsd", documentId: "one", source: "A", matchedText: "lysergic acid diethylamide", excerpt: "lysergic acid diethylamide" },
+    { termId: "dmt", documentId: "two", source: "B", matchedText: "DMT", excerpt: "DMT" }
+  ] };
+  const config = { topicTerm: "all", topicSearch: "", sources: [], allSources: true };
+  const groups = context.topicMentionGroups(context.filteredTopicMentions(catalog, config), catalog.terms);
+  assert.equal(groups.length, 2); assert.equal(groups[0].name, "LSD");
+  assert.equal(groups[0].observations.length, 2); assert.equal(groups[0].documents.size, 1);
+  assert.equal(context.filteredTopicMentions(catalog, { ...config, topicTerm: "dmt" }).length, 1);
+  assert.equal(context.filteredTopicMentions(catalog, { ...config, topicSearch: "lysergic" }).length, 1);
+  assert.equal(context.filteredTopicMentions(catalog, { ...config, topicSearch: "Report" }).length, 2);
+  assert.equal(context.filteredTopicMentions(catalog, { ...config, allSources: false, sources: ["B"] }).length, 1);
+  assert.equal(context.filteredTopicMentions(catalog, { ...config, allSources: false }).length, 0);
+});
+
+test("Topic data loader rejects partial shard data and allows a complete retry", async () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const state = { topicCatalogs: {}, topicPromises: {} };
+  let complete = false, requests = 0;
+  const context = vm.createContext({ state, fetch: async path => {
+    requests++;
+    return { ok: true, json: async () => path.endsWith('/drugs.json')
+      ? { schema: "ufo-files-topic-mentions/v1", topic: "drugs", documents: [], terms: [], parts: ["drugs-001.json"], counts: { mentions: 1 } }
+      : complete ? [{ id: "one" }] : [] };
+  } });
+  vm.runInContext(source.slice(source.indexOf("async function ensureTopicCatalog("), source.indexOf("function filteredTopicMentions(")), context);
+  await assert.rejects(context.ensureTopicCatalog("drugs"), /Mention count mismatch/);
+  assert.equal(state.topicCatalogs.drugs, undefined);
+  assert.equal(state.topicPromises.drugs, undefined);
+  complete = true;
+  const payload = await context.ensureTopicCatalog("drugs");
+  assert.equal(payload.observations.length, 1);
+  assert.equal(await context.ensureTopicCatalog("drugs"), payload);
+  assert.equal(requests, 4);
+});
