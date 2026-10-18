@@ -24,6 +24,12 @@ from pathlib import Path
 from typing import Iterable
 
 
+try:
+    from .time_mentions import time_observations_for_segment
+except ImportError:
+    from time_mentions import time_observations_for_segment
+
+
 SCHEMA = "ufo-files-relationship-catalog/v1"
 DOCUMENT_SHARD_SCHEMA = "ufo-files-source-documents/v1"
 ASTRONOMY_BOOTSTRAP_SCHEMA = "ufo-files-astronomy-bootstrap/v1"
@@ -3650,6 +3656,7 @@ def build(
     astronomy_candidates: list[dict] = []
     signal_observations: list[dict] = []
     blood_type_observations: list[dict] = []
+    clock_observations: list[dict] = []
     epistemic_qualifiers_by_segment: dict[str, list[dict]] = {}
     segment_entity_qualifiers: dict[str, dict[str, list[dict]]] = collections.defaultdict(dict)
     lineage_records: list[dict] = []
@@ -3854,6 +3861,7 @@ def build(
             qualifiers = epistemic_qualifiers_by_segment.get(sid, [])
             signal_observations.extend(signal_observations_for_segment(segment, doc_id, source, signal_segment))
             blood_type_observations.extend(blood_type_observations_for_segment(segment, doc_id, source, signal_segment))
+            clock_observations.extend(time_observations_for_segment(segment, doc_id, source, signal_segment))
             observations, review_items = craft_observations_for_segment(segment, doc_id, source, signal_segment, craft_taxonomy)
             craft_observations.extend(observations)
             craft_candidates.extend(review_items)
@@ -4252,6 +4260,7 @@ def build(
     }
     output.write_text(json.dumps(published_catalog, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     write_astronomy_bootstrap(output.with_name("astronomy.json"), catalog)
+    write_clock_catalog(output.with_name("clock_times.json"), clock_observations, documents, catalog_input, catalog["generatedAt"])
     if duplicate_report:
         duplicate_report.parent.mkdir(parents=True, exist_ok=True)
         duplicate_report.write_text(json.dumps({
@@ -4273,6 +4282,19 @@ def build(
         }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return catalog
 
+
+
+def write_clock_catalog(output: Path, observations: list[dict], documents: list[dict], catalog_input: dict, generated_at: str) -> dict:
+    ids = {item["documentId"] for item in observations}
+    payload = {
+        "schema": "ufo-files-clock-times/v1", "generatedAt": generated_at, "input": catalog_input,
+        "counts": {"scannedDocuments": len(documents), "mentions": len(observations), "documents": len(ids)},
+        "documents": [{key: doc[key] for key in ("id", "path", "title", "source") if key in doc} for doc in documents if doc["id"] in ids],
+        "observations": observations,
+    }
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    return payload
 
 def source_shard_slug(source: str) -> str:
     slug = re.sub(r"[^a-z0-9]+", "-", unicodedata.normalize("NFKD", source).encode("ascii", "ignore").decode().lower()).strip("-")

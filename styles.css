@@ -66,7 +66,7 @@ button:focus-visible, select:focus-visible, input:focus-visible, [contenteditabl
 .app-shell.inspector-collapsed .inspector { display: none; }
 .builder-panel, .inspector { background: var(--panel); overflow-y: auto; }
 .builder-panel { min-height: 0; border-right: 1px solid var(--line); }
-.inspector { min-height: 0; border-left: 1px solid var(--line); }
+.inspector { min-width: 0; min-height: 0; border-left: 1px solid var(--line); overflow-wrap: anywhere; }
 .eyebrow { margin: 0 0 7px; color: var(--ink); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 h1, h2, h3, p { margin-top: 0; }
 p { max-width: 768px; }
@@ -441,8 +441,8 @@ p { max-width: 768px; }
 .inspector .inspect-subtitle { margin: -2px 0 12px; color: var(--muted); font-size: 12px; font-weight: 600; }
 .inspector p { font-size: 11px; line-height: 1.55; }
 .inspect-category { color: var(--green-2); font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
-.metric-row { display: grid; grid-template-columns: repeat(2,1fr); gap: 7px; margin: 18px 0; }
-.metric { padding: 10px; background: var(--mint); border: 1px solid var(--line); border-radius: 6px; }
+.metric-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px; margin: 18px 0; }
+.metric { min-width: 0; padding: 10px; background: var(--mint); border: 1px solid var(--line); border-radius: 6px; }
 .metric strong, .metric small { display: block; }
 .metric strong { font: 500 16px var(--font); }
 .metric small { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; margin-top: 3px; }
