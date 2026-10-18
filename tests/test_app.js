@@ -4946,7 +4946,15 @@ test("Clock groups preserve AM/PM and exact dial positions without inferring uns
   ] };
   const config = { clockPeriod: "all", clockSearch: "", sources: [], allSources: true };
   const rows = context.filteredClockMentions(catalog, config);
-  assert.equal(context.clockGroups(rows)[0].observations.length, 2);
+  assert.equal(context.clockGroups(rows).length, 3);
+  assert.equal(context.clockGroups(rows)[0].observations.length, 1);
+  assert.equal(context.clockGroups(rows)[0].period, "am");
+  assert.equal(context.clockGroups(rows)[1].period, "pm");
+  assert.equal(context.clockGroupLabel(context.clockGroups(rows)[0]), "12:00 AM");
+  assert.equal(context.clockGroupLabel(context.clockGroups(rows)[1]), "12:00 PM");
+  assert.equal(context.clockGroupLabel(context.clockGroups(rows)[2]), "4:30 AM/PM not stated");
+  assert.ok(context.clockRingRadius("am", 150) > context.clockRingRadius("pm", 150));
+  assert.ok(context.clockRingRadius("pm", 150) > context.clockRingRadius("unspecified", 150));
   assert.equal(context.clockGroups(rows)[0].documents.size, 1);
   assert.equal(context.filteredClockMentions(catalog, { ...config, clockPeriod: "pm" }).length, 1);
   assert.equal(context.filteredClockMentions(catalog, { ...config, clockPeriod: "unspecified" }).length, 1);

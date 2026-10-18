@@ -323,6 +323,7 @@ The catalog publishes every accepted explicitly cued book, then fills the remain
 
 The Clock view plots time-of-day mentions on a 12-hour dial. It groups by hour
 initially, with 15-minute and exact-minute precision available in the builder.
+Separate labeled rings distinguish AM, PM, and mentions whose period is not stated.
 Mark size follows distinct document counts. Select a mark to inspect the original
 passages and pinned source files, or export the filtered mentions as CSV.
 
