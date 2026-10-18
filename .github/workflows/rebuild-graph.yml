@@ -271,7 +271,7 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           limit = 95 * 1024 * 1024
-          paths = [Path("data/catalog.json"), Path("data/astronomy.json"), *Path("data/source-documents").glob("*.json"), *Path("data/source-families").glob("*.json")]
+          paths = [Path("data/catalog.json"), Path("data/astronomy.json"), Path("data/clock_times.json"), *Path("data/source-documents").glob("*.json"), *Path("data/source-families").glob("*.json")]
           oversized = [(path, path.stat().st_size) for path in paths if path.stat().st_size > limit]
           if oversized:
               raise SystemExit("Generated catalog files exceed 95 MiB: " + ", ".join(f"{path} ({size} bytes)" for path, size in oversized))
@@ -334,7 +334,7 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           limit = 95 * 1024 * 1024
-          paths = [Path("data/catalog.json"), Path("data/astronomy.json"), *Path("data/source-documents").glob("*.json"), *Path("data/source-families").glob("*.json")]
+          paths = [Path("data/catalog.json"), Path("data/astronomy.json"), Path("data/clock_times.json"), *Path("data/source-documents").glob("*.json"), *Path("data/source-families").glob("*.json")]
           oversized = [(path, path.stat().st_size) for path in paths if path.stat().st_size > limit]
           if oversized:
               raise SystemExit("Generated catalog files exceed 95 MiB: " + ", ".join(f"{path} ({size} bytes)" for path, size in oversized))
@@ -403,7 +403,7 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           limit = 95 * 1024 * 1024
-          paths = [Path("data/catalog.json"), Path("data/astronomy.json"), *Path("data/source-documents").glob("*.json"), *Path("data/source-families").glob("*.json")]
+          paths = [Path("data/catalog.json"), Path("data/astronomy.json"), Path("data/clock_times.json"), *Path("data/source-documents").glob("*.json"), *Path("data/source-families").glob("*.json")]
           oversized = [(path, path.stat().st_size) for path in paths if path.stat().st_size > limit]
           if oversized:
               raise SystemExit("Generated catalog files exceed 95 MiB: " + ", ".join(f"{path} ({size} bytes)" for path, size in oversized))
@@ -423,7 +423,7 @@ jobs:
           PUBLISH_SSH_KEY: ${{ secrets.MAIN_AUTOMATION_DEPLOY_KEY }}
         shell: bash
         run: |
-          if [ -z "$(git status --porcelain -- data/catalog.json data/astronomy.json data/source-documents data/source-families data/duplicate_candidates.json data/date_review.json)" ]; then
+          if [ -z "$(git status --porcelain -- data/catalog.json data/astronomy.json data/clock_times.json data/source-documents data/source-families data/duplicate_candidates.json data/date_review.json)" ]; then
             exit 0
           fi
           # Materialize write authentication only after ingestion and validation.
@@ -438,7 +438,7 @@ jobs:
           git remote set-url origin "git@github.com:$GITHUB_REPOSITORY.git"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/catalog.json data/astronomy.json data/source-documents data/source-families data/duplicate_candidates.json data/date_review.json
+          git add data/catalog.json data/astronomy.json data/clock_times.json data/source-documents data/source-families data/duplicate_candidates.json data/date_review.json
           git commit -m "Rebuild graph from machine-data@${UPSTREAM_REVISION:0:7}"
           for attempt in 1 2 3; do
             if git push origin HEAD:main; then

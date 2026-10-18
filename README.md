@@ -316,6 +316,29 @@ The Significant People, Significant Places, and Significant Terms presets exclud
 
 The catalog publishes every accepted explicitly cued book, then fills the remaining slots with the highest-evidence non-book entities within the 1,200-entity payload cap. It publishes up to 4,000 accepted edges. The full accepted and published counts, along with the entity and edge caps, are explicit in the catalog metadata.
 
+## Corpus clock
+
+The Clock view plots time-of-day mentions on a 12-hour dial. It groups by hour
+initially, with 15-minute and exact-minute precision available in the builder.
+Mark size follows distinct document counts. Select a mark to inspect the original
+passages and pinned source files, or export the filtered mentions as CSV.
+
+AM and PM remain separate in the evidence and filters; an unstated period is
+never inferred. Time zones are preserved without conversion. Extraction accepts
+explicit AM/PM, military times, spoken clock times, noon and midnight, and colon
+times with time-of-day context. Playback offsets, durations and common chapter
+citations are excluded. These are literal text matches, so named references and
+OCR errors may still need review in their source passages.
+
+Catalog rebuilds generate `data/clock_times.json` alongside the graph catalog.
+For a clock-only rebuild using the same ingestion and paired-language rules:
+
+```sh
+python3 scripts/build_clock_times.py --input ../machine-data \
+  --input-repository ufo-files/machine-data --input-revision <commit> \
+  --paired-language en --require-data
+```
+
 ## Test
 
 ```sh

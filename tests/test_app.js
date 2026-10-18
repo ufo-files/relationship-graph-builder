@@ -4932,3 +4932,30 @@ test("Blood type filters and aggregates keep repeats distinct from documents", (
   assert.equal(context.filteredBloodMentions(catalog, { ...config, allSources: false }).length, 0);
   assert.equal(context.filteredBloodMentions({}, config).length, 0);
 });
+
+test("Clock groups preserve AM/PM and exact dial positions without inferring unspecified periods", () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const start = source.indexOf("function filteredClockMentions(");
+  const end = source.indexOf("function inspectClockGroup(", start);
+  const context = vm.createContext({ sourceIsSelected: (name, selected, all) => all || selected.includes(name) });
+  vm.runInContext(source.slice(start, end), context);
+  const catalog = { documents: [{ id: "one", title: "Interview" }], observations: [
+    { minuteOfDial: 0, period: "am", documentId: "one", source: "A", excerpt: "midnight" },
+    { minuteOfDial: 0, period: "pm", documentId: "one", source: "A", excerpt: "noon" },
+    { minuteOfDial: 270, period: "unspecified", documentId: "two", source: "B", excerpt: "at 4:30" }
+  ] };
+  const config = { clockPeriod: "all", clockSearch: "", sources: [], allSources: true };
+  const rows = context.filteredClockMentions(catalog, config);
+  assert.equal(context.clockGroups(rows)[0].observations.length, 2);
+  assert.equal(context.clockGroups(rows)[0].documents.size, 1);
+  assert.equal(context.filteredClockMentions(catalog, { ...config, clockPeriod: "pm" }).length, 1);
+  assert.equal(context.filteredClockMentions(catalog, { ...config, clockPeriod: "unspecified" }).length, 1);
+  assert.equal(context.filteredClockMentions(catalog, { ...config, clockSearch: "interview" }).length, 2);
+  assert.equal(context.filteredClockMentions(catalog, { ...config, sources: ["B"], allSources: false }).length, 1);
+  assert.equal(context.clockTimeLabel(0), "12:00");
+  assert.equal(context.clockTimeLabel(270), "4:30");
+  const twelve = context.clockPosition(0, 100, 200, 200);
+  const three = context.clockPosition(180, 100, 200, 200);
+  assert.ok(Math.abs(twelve.x - 200) < .001 && Math.abs(twelve.y - 100) < .001);
+  assert.ok(Math.abs(three.x - 300) < .001 && Math.abs(three.y - 200) < .001);
+});

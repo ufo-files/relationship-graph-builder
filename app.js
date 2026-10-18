@@ -295,6 +295,7 @@ const TYPES = [
   { id: "document", label: "Documents", scope: "All corpus files", icon: "<path d='M7 2h12l5 5v11H7zM19 2v5h5M11 11h9M11 14h9'/><path d='M4 5H2v15h17v-2'/>" },
   { id: "craft", label: "Craft", scope: "Reported shapes", icon: "<path d='M3 15h25M6 15l5-8h9l5 8M11 7l4 8 5-8M4 4h23M4 2v4m23-4v4'/>" },
   { id: "species", label: "Species", scope: "ET names in corpus", icon: "<circle cx='15.5' cy='8' r='5'/><path d='M8 18c1-5 4-7 7.5-7s6.5 2 7.5 7M13 7h1m3 0h1M4 4h4m15 0h4M3 15h4m17 0h4'/>" },
+  { id: "clock", label: "Clock", scope: "Times in documents", icon: "<circle cx='16' cy='10' r='9'/><path d='M16 4v6l4 3'/>" },
   { id: "blood", label: "Blood types", scope: "ABO + Rh mentions", icon: "<path d='M16 2C13 7 8 11 8 15a8 8 0 0 0 16 0c0-4-5-8-8-13Z'/>" },
   { id: "signals", label: "Signals", scope: "Frequencies in corpus", icon: "<path d='M2 17h27M4 17V13l2-1 2 5 2-9 2 9 3-3 2 3 2-13 2 13 2-6 2 6h3'/><path d='M4 3v3m23-3v3'/>" },
   { id: "scatter", label: "Scatter", scope: "All", icon: "<path d='M3 2v16h25'/><circle cx='9' cy='13' r='2'/><circle cx='15' cy='9' r='2'/><circle cx='22' cy='5' r='2'/>" },
@@ -351,6 +352,7 @@ const DEFAULT = {
   speciesLayout: "lineup", speciesY: "physicalHeight", speciesSize: "documentCount", speciesSpacing: 0, speciesCategory: "all", speciesSearch: "",
   coverageRows: "collection", coverageColumns: "category", coverageMetric: "documentCount", coverageCompare: false,
   coverageACollection: "all", coverageAFrom: "", coverageATo: "", coverageBCollection: "all", coverageBFrom: "", coverageBTo: "",
+  clockPeriod: "all", clockSearch: "", clockResolution: "hour",
   bloodType: "all", bloodSearch: "", bloodView: "scatter",
   programStatus: "all", programKind: "all", programSearch: "",
   labelSize: 12, zoom: 1, moonTransitSeconds: 5, solarScale: "local", solarCase: "hill_fish", title: "Mentions by Documents", titleMode: "auto"
@@ -368,6 +370,7 @@ const VIEW_DEFAULTS = {
   signals: { allSources: true, sources: [], labels: "top", labelSize: 12 },
   bars: { aggregation: "source", y: "words", color: "intensity" },
   timeline: { timelineRole: "event", timelineGrouping: true, timelineGroupPeriod: "month", timelineCorrelativeMarkers: true, timelineHistoricalCandidates: false, x: "startDate", y: "mentionRank", size: "eventCount", color: "eventType", categories: ["date"], labels: "top", limit: 500, relationshipLayer: "always", timelineRelevanceCutoff: DEFAULT_TIMELINE_RELEVANCE_CUTOFF, timelineRecencyYear: DEFAULT_TIMELINE_RECENCY_YEAR },
+  clock: { clockPeriod: "all", clockSearch: "", clockResolution: "hour", allSources: true, sources: [], labelSize: 12 },
   blood: { bloodType: "all", bloodSearch: "", bloodView: "scatter" },
   programs: { programStatus: "all", programKind: "all", programSearch: "", labelSize: 12 },
   matrix: { matrixColumns: "category", matrixNormalize: "rowShare", color: "intensity" },
@@ -383,7 +386,7 @@ const ENTITY_PRESET_DEFAULTS = {
   matrix: { matrixColumns: "entity" },
   table: { tableRole: "entity" }
 };
-const state = { catalog: null, catalogMode: null, initialCatalogPromise: null, fullCatalogPromise: null, typeRequestId: 0, claimCatalog: null, programCatalog: null, config: loadConfig(), selected: null, documentById: new Map(), historicalTimelineCandidateCount: 0, dossier: null, publicDossierPayload: null, dossierIsPublicReference: false, inspectorDossierSelection: null, dossierImportMessage: "" };
+const state = { clockCatalog: null, clockPromise: null, catalog: null, catalogMode: null, initialCatalogPromise: null, fullCatalogPromise: null, typeRequestId: 0, claimCatalog: null, programCatalog: null, config: loadConfig(), selected: null, documentById: new Map(), historicalTimelineCandidateCount: 0, dossier: null, publicDossierPayload: null, dossierIsPublicReference: false, inspectorDossierSelection: null, dossierImportMessage: "" };
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 
@@ -584,6 +587,8 @@ function dataAwareTitle(config) {
     title = "ET Species in the Corpus";
   } else if (config.type === "signals") {
     title = "Radio Frequencies in the Corpus";
+  } else if (config.type === "clock") {
+    title = "Times in the Corpus";
   } else if (config.type === "blood") {
     title = "Blood Types in the Corpus";
   } else if (config.type === "programs") {
@@ -1133,7 +1138,8 @@ function triageSubtitle(config = state.config) {
 
 function renderPresetControl() {
   const presetStep = $('[data-step="2"]');
-  if (presetStep) presetStep.hidden = state.config.type === "blood";
+  if (presetStep) presetStep.hidden = ["blood", "clock"].includes(state.config.type);
+  if (state.config.type === "clock") { $("#presetControls").innerHTML = ""; return; }
   if (state.config.type === "blood") {
     $("#presetControls").innerHTML = "";
     return;
@@ -1243,6 +1249,8 @@ function renderControls() {
       + controlSelect("speciesLayout", "Layout", [{ value: "lineup", label: "Lineup" }, { value: "organic", label: "Organic network" }]);
   } else if (state.config.type === "signals") {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Explicit numeric frequency mentions</option></select></div><div class="control"><div class="control-title">X axis</div><select disabled><option>Logarithmic radio frequency</option></select></div>`;
+  } else if (state.config.type === "clock") {
+    roles = controlSelect("clockPeriod", "Time of day", [{ value: "all", label: "All times" }, { value: "am", label: "AM" }, { value: "pm", label: "PM" }, { value: "unspecified", label: "AM/PM not stated" }]) + controlSelect("clockResolution", "Precision", [{ value: "hour", label: "Hour" }, { value: "quarter", label: "15 minutes" }, { value: "minute", label: "Minute" }]);
   } else if (state.config.type === "blood") {
     roles = controlSelect("bloodView", "View", [{ value: "scatter", label: "Scatter" }, { value: "table", label: "Table" }]);
   } else if (state.config.type === "programs") {
@@ -1357,6 +1365,8 @@ function renderControls() {
       ]) + `<div class="control method-note"><div class="control-title">Mention graph</div><p>Size and shade encode prominence. Line patterns identify the reviewed reference grouping; links represent shared corpus documents.</p></div>` + labelSizeControl;
   } else if (state.config.type === "signals") {
     $("#encodeControls").innerHTML = `<div class="control"><div class="control-title">Peak height</div><select disabled><option>Corpus frequency mentions</option></select></div><div class="control method-note"><div class="control-title">Spectrum semantics</div><p>Peaks are normalized numeric frequency references in corpus text. Unit-elided values require explicit microwave-band context. They are not RF logger measurements and do not establish that a transmission occurred.</p></div>` + labelSizeControl;
+  } else if (state.config.type === "clock") {
+    $("#encodeControls").innerHTML = labelSizeControl;
   } else if (state.config.type === "blood") {
     $("#encodeControls").innerHTML = labelSizeControl;
   } else if (state.config.type === "programs") {
@@ -1430,6 +1440,14 @@ function renderControls() {
     $("#filterControls").innerHTML = controlSelect("bloodType", "Blood type / Rh", [{ value: "all", label: "All mentions" }, ...types.map(value => ({ value, label: value }))])
       + `<div class="control"><label for="bloodSearch">Search evidence</label><input id="bloodSearch" class="text-input" type="search" value="${escapeHTML(state.config.bloodSearch)}" placeholder="Search excerpt, title, or collection" data-blood-search></div><div class="control"><div class="control-title">Collections <span>${selectedSourceCount} / ${sourceNames.length} selected</span></div><div class="check-grid">${sourceChecks}</div></div><button class="button" type="button" data-blood-reset>Reset filters</button>`;
   }
+  if (state.config.type === "clock") {
+    const clockSources = [...new Set((state.clockCatalog?.documents || []).map(doc => doc.source))].sort();
+    $("#filterControls").innerHTML = `<div class="control"><label for="clockSearch">Search passages</label><input class="text-input" id="clockSearch" type="search" value="${escapeHTML(state.config.clockSearch)}" data-clock-search></div><div class="control"><div class="control-title">Collections</div><div class="check-grid">${clockSources.map(source => `<label class="check-chip"><input type="checkbox" data-source="${escapeHTML(source)}" ${sourceMatches(source) ? "checked" : ""}><span>${escapeHTML(source)}</span></label>`).join("")}</div></div>`;
+  }
+  $("[data-clock-search]")?.addEventListener("input", event => {
+    state.config.clockSearch = event.target.value;
+    persistHash(); renderGraph();
+  });
   $("[data-blood-search]")?.addEventListener("input", event => {
     state.config.bloodSearch = event.target.value;
     persistHash(); renderGraph();
@@ -1580,6 +1598,10 @@ async function setType(type) {
   const requestId = ++state.typeRequestId;
   if (type !== "solar" && !await ensureFullCatalog(requestId)) return;
   if (requestId !== state.typeRequestId) return;
+  if (type === "clock") {
+    try { await ensureClockCatalog(); } catch (error) { showCatalogError(error); return; }
+    if (requestId !== state.typeRequestId) return;
+  }
   state.config = presetConfig("default", type);
   state.selected = null;
   $("#loadingState")?.remove();
@@ -2716,8 +2738,7 @@ function renderBook() {
   setSummary(`${data.length} books · ${formatNumber(mentions)} mentions · shade by ${label(state.config.size).toLowerCase()}`, "book");
 }
 
-function machineDataPathURL(pathValue) {
-  const input = state.catalog?.input || {};
+function machineDataPathURL(pathValue, input = state.catalog?.input || {}) {
   const repository = input.repository || "ufo-files/machine-data";
   const revision = input.revision || "main";
   const path = String(pathValue || "").split("/").map(encodeURIComponent).join("/");
@@ -4415,6 +4436,126 @@ function drawBloodScatter(svg, observations, config) {
   });
 }
 
+async function ensureClockCatalog() {
+  if (state.clockCatalog) return state.clockCatalog;
+  state.clockPromise ||= (async () => {
+    const response = await fetch("data/clock_times.json", { cache: "no-cache" });
+    if (!response.ok) throw new Error(`Clock data ${response.status}`);
+    const payload = await response.json();
+    if (payload.schema !== "ufo-files-clock-times/v1" || !Array.isArray(payload.observations) || !Array.isArray(payload.documents)) throw new Error("Clock data invalid");
+    state.clockCatalog = payload;
+    return payload;
+  })();
+  try { return await state.clockPromise; } catch (error) { state.clockPromise = null; throw error; }
+}
+
+function filteredClockMentions(catalog = state.clockCatalog, config = state.config) {
+  const query = String(config.clockSearch || "").trim().toLowerCase();
+  const documents = new Map((catalog?.documents || []).map(doc => [doc.id, doc]));
+  return (catalog?.observations || []).filter(item =>
+    sourceIsSelected(item.source, config.sources, config.allSources)
+    && (config.clockPeriod === "all" || item.period === config.clockPeriod)
+    && (!query || [item.excerpt, item.matchedText, item.source, documents.get(item.documentId)?.title]
+      .some(value => String(value || "").toLowerCase().includes(query))));
+}
+
+function clockGroups(observations, interval = 1) {
+  const groups = new Map();
+  observations.forEach(item => {
+    const minute = Math.floor(item.minuteOfDial / interval) * interval;
+    const group = groups.get(minute) || { minute, interval, observations: [], documents: new Set(), sources: new Set() };
+    group.observations.push(item); group.documents.add(item.documentId); group.sources.add(item.source);
+    groups.set(minute, group);
+  });
+  return [...groups.values()].sort((a, b) => a.minute - b.minute);
+}
+
+function clockTimeLabel(minute) {
+  return `${Math.floor(minute / 60) || 12}:${String(minute % 60).padStart(2, "0")}`;
+}
+
+function clockGroupLabel(group) {
+  return group.interval === 1 ? clockTimeLabel(group.minute) : `${clockTimeLabel(group.minute)}–${clockTimeLabel(group.minute + group.interval - 1)}`;
+}
+
+function clockPosition(minute, radius, cx, cy) {
+  const angle = minute / 720 * Math.PI * 2 - Math.PI / 2;
+  return { x: cx + Math.cos(angle) * radius, y: cy + Math.sin(angle) * radius };
+}
+
+function inspectClockGroup(group) {
+  const documents = new Map(state.clockCatalog.documents.map(doc => [doc.id, doc]));
+  const evidence = group.observations.map(item => {
+    const doc = documents.get(item.documentId);
+    return { ...item, sourceLabel: `${doc?.title || item.documentId} · ${item.source} · ${item.segment}`,
+      sourceURL: doc ? machineDataPathURL(doc.path, state.clockCatalog.input) : "" };
+  });
+  let shown = 50;
+  showInspector("time mention", clockGroupLabel(group), [
+    [evidence.length, "mentions"], [group.documents.size, "documents"],
+    [group.observations.filter(item => item.period === "am").length, "AM"],
+    [group.observations.filter(item => item.period === "pm").length, "PM"]
+  ], evidence.slice(0, shown));
+  if (evidence.length > shown) {
+    const more = document.createElement("button");
+    more.type = "button"; more.className = "button"; more.textContent = "More";
+    more.addEventListener("click", () => {
+      $("#inspectorContent .evidence-list").insertAdjacentHTML("beforeend", evidenceHTML(evidence.slice(shown, shown + 50)));
+      shown += 50; more.hidden = shown >= evidence.length;
+    });
+    $("#inspectorContent").append(more);
+  }
+  const heading = $("#inspectorContent h3");
+  heading.setAttribute("tabindex", "-1"); heading.focus({ preventScroll: true });
+}
+
+function renderClock() {
+  const { svg, width, height } = clearChart();
+  const observations = filteredClockMentions();
+  const interval = ({ hour: 60, quarter: 15, minute: 1 })[state.config.clockResolution] || 60;
+  const groups = clockGroups(observations, interval);
+  if (!groups.length) return showEmpty();
+  const radius = Math.max(40, Math.min(width, height) / 2 - 34), cx = width / 2, cy = height / 2;
+  svg.append(el("circle", { cx, cy, r: radius, fill: "none", stroke: "var(--line)", "stroke-width": 1 }));
+  for (let tick = 0; tick < 60; tick++) {
+    const outer = clockPosition(tick * 12, radius, cx, cy);
+    const inner = clockPosition(tick * 12, radius - (tick % 5 ? 4 : 10), cx, cy);
+    svg.append(el("line", { x1: inner.x, y1: inner.y, x2: outer.x, y2: outer.y, stroke: "var(--ink)", "stroke-width": 1, "stroke-opacity": tick % 5 ? .25 : .6, class: "clock-tick" }));
+  }
+  for (let hour = 0; hour < 12; hour++) {
+    const point = clockPosition(hour * 60, radius + 20, cx, cy);
+    svg.append(el("text", { x: point.x, y: point.y + 4, "text-anchor": "middle", class: "axis-label clock-hour" }, String(hour || 12)));
+  }
+  svg.append(el("circle", { cx, cy, r: 2, fill: "var(--ink)" }));
+  const extent = valueExtent(groups.map(group => ({ documents: group.documents.size })), "documents");
+  groups.forEach(group => {
+    const point = clockPosition(group.minute, radius - 22, cx, cy);
+    const mark = scatterPointMark(point.x, point.y, group.documents.size, extent);
+    mark.classList.add("clock-point");
+    mark.setAttribute("role", "button"); mark.setAttribute("tabindex", "0");
+    mark.setAttribute("data-clock-minute", group.minute);
+    mark.setAttribute("aria-label", `${clockGroupLabel(group)}: ${group.observations.length} mentions in ${group.documents.size} documents`);
+    addTitle(mark, `${clockGroupLabel(group)} · ${group.observations.length} mentions · ${group.documents.size} documents`);
+    mark.addEventListener("click", () => inspectClockGroup(group));
+    mark.addEventListener("keydown", event => {
+      if (["Enter", " "].includes(event.key)) { event.preventDefault(); inspectClockGroup(group); }
+    });
+    svg.append(mark);
+  });
+  $("#legend").innerHTML = "";
+  setSummary(`${formatNumber(observations.length)} mentions · ${formatNumber(new Set(observations.map(item => item.documentId)).size)} documents · ${groups.length} ${interval === 60 ? "hours" : interval === 15 ? "intervals" : "times"}`, "clock");
+}
+
+function exportClockTimes() {
+  const documents = new Map(state.clockCatalog.documents.map(doc => [doc.id, doc]));
+  const header = ["Matched time", "Dial time", "24-hour time", "AM/PM", "Zone", "Document", "Collection", "Segment", "Excerpt", "Source"];
+  const rows = filteredClockMentions().map(item => {
+    const doc = documents.get(item.documentId);
+    return [item.matchedText, clockTimeLabel(item.minuteOfDial), item.hour24 == null ? "" : `${String(item.hour24).padStart(2, "0")}:${String(item.minute).padStart(2, "0")}`, item.period, item.zone, doc?.title, item.source, item.segment, item.excerpt, doc ? machineDataPathURL(doc.path, state.clockCatalog.input) : ""];
+  });
+  downloadText("ufo-files-time-mentions.csv", `${[header, ...rows].map(row => row.map(csvCell).join(",")).join("\n")}\n`, "text/csv");
+}
+
 function renderBloodTypes() {
   clearChart();
   const items = filteredBloodMentions();
@@ -5414,6 +5555,7 @@ function setSummary(text, type) {
           ? "Fish identifications and Hill-reported routes are a disputed claim layer · star positions use current measured astrometry · default camera follows Fish's published Zeta Tucanae occultation constraint and comparison-diagram roll · lines are not verified travel routes · background Gaia sample is not complete or volume-corrected"
           : "Background points are high-confidence Gaia DR3 sources · enlarged corpus and Solar System markers are identified separately · inverse parallax · local sample is not complete or volume-corrected"
         : "Hou & Han: 1,853 H II regions · 1,343 molecular clouds · 735 methanol masers · Reid et al.: 199 VLBI trigonometric-parallax anchors · published fits: Norma, Scutum–Centaurus, Sagittarius–Carina, Perseus, and Local · face-on Galactocentric coordinates · 18 kpc display radius · filled points are the 2014 compilation · open circles are the separate 2019 catalog and may overlap · thin curves are the paper's H II statistical fit, not an illustration · drag to orbit · scroll to zoom · no synthetic stars, invented target coordinates, or hand-drawn morphology"
+    : type === "clock" ? ""
     : type === "blood" ? ""
     : type === "signals" ? "Explicit numeric frequency mentions in corpus text · not live RF measurements · mention does not establish a transmission or cause"
     : type === "coverage" ? "Corpus gaps are not evidence that real-world events did not occur · unknown metadata remains explicit"
@@ -5449,20 +5591,21 @@ function renderGraph() {
   if (state.config.type === "map") syncMapAnimationButton();
   $("#solarAnimationButton").hidden = state.config.type !== "solar" || state.config.solarScale === "sky";
   if (state.config.type === "solar") syncSolarAnimationButton();
-  $("#exportButton").textContent = state.config.type === "blood" ? "Export mentions CSV" : state.config.type === "triage" ? "Export queue CSV" : "Export PDF";
+  $("#exportButton").textContent = ["blood", "clock"].includes(state.config.type) ? "Export mentions CSV" : state.config.type === "triage" ? "Export queue CSV" : "Export PDF";
   $("#graphSubtitle").textContent = state.config.type === "programs"
     ? `${state.programCatalog?.reviewedIntervalCount || 0} reviewed intervals · ${state.programCatalog?.reviewedEntityCount || 0} / ${state.programCatalog?.corpusProgramCount || 0} corpus candidates reviewed`
+    : state.config.type === "clock" ? `${formatNumber(state.clockCatalog?.counts?.scannedDocuments || 0)} source documents`
     : graphDocumentCountSubtitle(state.catalog);
-  ({ network: renderNetwork, map: renderMap, solar: renderSolar, book: renderBook, document: renderDocument, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, programs: renderPrograms, matrix: renderMatrix, coverage: renderCoverage, table: renderTable, triage: renderTriage, claims: renderClaims, craft: renderCraft, species: renderSpecies, signals: renderSignals, blood: renderBloodTypes })[state.config.type]();
+  ({ network: renderNetwork, map: renderMap, solar: renderSolar, book: renderBook, document: renderDocument, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, programs: renderPrograms, matrix: renderMatrix, coverage: renderCoverage, table: renderTable, triage: renderTriage, claims: renderClaims, craft: renderCraft, species: renderSpecies, signals: renderSignals, blood: renderBloodTypes, clock: renderClock })[state.config.type]();
 }
 
 function evidenceHTML(evidence = []) {
   if (!evidence.length) return "<p>No excerpt stored for this derived summary.</p>";
   return evidence.map(item => {
     const doc = state.documentById.get(item.documentId);
-    const source = doc ? machineDataDocumentURL(doc) : "";
+    const source = item.sourceURL || (doc ? machineDataDocumentURL(doc) : "");
     const qualifiers = epistemicQualifierHTML(item.epistemicQualifiers);
-    return `<div class="evidence-card"><p>“${escapeHTML(item.excerpt)}”</p>${qualifiers}<small>${escapeHTML(doc?.path || item.documentId)}</small>${source ? `<a href="${escapeHTML(source)}" target="_blank" rel="noopener noreferrer">Inspect source evidence ↗</a>` : ""}</div>`;
+    return `<div class="evidence-card"><p>“${escapeHTML(item.excerpt)}”</p>${qualifiers}<small>${escapeHTML(item.sourceLabel || doc?.path || item.documentId)}</small>${source ? `<a href="${escapeHTML(source)}" target="_blank" rel="noopener noreferrer">Inspect source evidence ↗</a>` : ""}</div>`;
   }).join("");
 }
 
@@ -6706,6 +6849,7 @@ async function addPDFGraphPage(pdf, exportedAt) {
 }
 
 async function exportCurrent() {
+  if (state.config.type === "clock") return exportClockTimes();
   if (state.config.type === "blood") return exportBloodTypes();
   if (state.config.type === "triage") return exportTriageQueue();
   const button = $("#exportButton");
@@ -6982,6 +7126,7 @@ async function init() {
       return;
     }
     installFullCatalog(await loadFullCatalogPayload());
+    if (state.config.type === "clock") await ensureClockCatalog();
     await initializeDossier();
     renderInitialView();
     if (new URLSearchParams(location.search).get("dossier") === "open") {
