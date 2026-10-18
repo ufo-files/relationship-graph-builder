@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-18T01:32:49Z",
+  "generatedAt": "2026-10-18T04:15:25Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "0a93549d60cdc34aa8c74736b1b0d38069251818"
+    "revision": "112d91db16da7c6308abab422aad60d80d75ed51"
   },
-  "documentsWithCandidates": 18907,
+  "documentsWithCandidates": 18922,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -59060,6 +59060,21 @@
       ]
     },
     {
+      "documentId": "doc-4942cf58edf9",
+      "path": "Archives-for-the-Unexplained/documents/2015-04-01---Inception-Radio-Network---Reverend-Michael-Carter---NightVision-Radio_4F3DiQtnh-0---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1989-12-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "December 28 1989 there was no doubt",
+          "segment": 356
+        }
+      ]
+    },
+    {
       "documentId": "doc-1f7bbcce3b4c",
       "path": "Archives-for-the-Unexplained/documents/2015-04-01---NASA-s-Kennedy-Space-Center---25-Years-Started-Here-Kennedy-and-the-Launch-of-the-Hubble_jd80Yu_DAYg---transcript-automated-.txt",
       "candidates": [
@@ -61535,6 +61550,21 @@
       ]
     },
     {
+      "documentId": "doc-c794776d6edf",
+      "path": "Archives-for-the-Unexplained/documents/2017-07-23---The-Official-Paracast-Channel---The-Paracast-September-27-2015-Nick-Redfern-with-Curtis-Collins_mAhHUAJbJ_E---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1944-04-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "born in Berlin 25 April 1944 so we",
+          "segment": 6804
+        }
+      ]
+    },
+    {
       "documentId": "doc-cc472088795d",
       "path": "Archives-for-the-Unexplained/documents/2017-07-25---Inception-Radio-Network---UFO-Headline-News-the-Weekend-of-July-22ndJuly-23rd-2017_eXtmzhaB5JQ---transcript-automated-.txt",
       "candidates": [
@@ -63481,6 +63511,21 @@
           "method": "unclassified-mention",
           "evidence": "experiencing today on December 16 2017",
           "segment": 2309
+        }
+      ]
+    },
+    {
+      "documentId": "doc-432692353f12",
+      "path": "Archives-for-the-Unexplained/documents/2017-12-16---Inception-Radio-Network---Paranormal-Blender-Ep.-7-Season-Wrap-up-of-Aliens-Ghosts-Cryptids_CoQwwvX9MDw---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2017-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "actually December 12 2017 and this was",
+          "segment": 1886
         }
       ]
     },
@@ -111470,6 +111515,39 @@
       ]
     },
     {
+      "documentId": "doc-2958049e0142",
+      "path": "Archives-for-the-Unexplained/documents/CUFORG---Vol-2-No-49---1994-09.txt",
+      "candidates": [
+        {
+          "value": "1994-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "012 Kitchener-Waterloo Record, Sat., March 5, 1994",
+          "segment": 260
+        },
+        {
+          "value": "1993-12-22",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "According to the 22 December 1993 issue of the LONDON DAILY MIRROR , director",
+          "segment": 336
+        },
+        {
+          "value": "1993-12-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "EDINBURGH SCOTSMAN on 8 December 1993.",
+          "segment": 356
+        }
+      ]
+    },
+    {
       "documentId": "doc-3e1b73ca7484",
       "path": "Archives-for-the-Unexplained/documents/CUFORN-Bulletin---Vol-01-No-02---1980---Jan.txt",
       "candidates": [
@@ -112399,6 +112477,48 @@
           "method": "dated-reference",
           "evidence": "The Manual is dated April 7, 1954, and covers",
           "segment": 411
+        }
+      ]
+    },
+    {
+      "documentId": "doc-0eb08cbafaab",
+      "path": "Archives-for-the-Unexplained/documents/CUFORN-Bulletin---Vol-18-No-01---1997---Jan-Feb.txt",
+      "candidates": [
+        {
+          "value": "1994-10-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "was shown publicly at the October 12, 1994 the original. rod was cut into three equal",
+          "segment": 86
+        },
+        {
+          "value": "1995-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "EDITOR'S .NOTE: Could rods such as this January 26, 1995, the rod was x-rayed.",
+          "segment": 258
+        },
+        {
+          "value": "1981-10-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On October 2, 1981, he saw \"I'm not going to tell you that,\" said Breiland.",
+          "segment": 311
+        },
+        {
+          "value": "1997-02-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "There was an Toronto on Sunday February 23, 1997.",
+          "segment": 388
         }
       ]
     },
@@ -115870,6 +115990,2280 @@
           "method": "unclassified-mention",
           "evidence": "NIMES on April 26, 1978.",
           "segment": 3140
+        }
+      ]
+    },
+    {
+      "documentId": "doc-d8830a010981",
+      "path": "Archives-for-the-Unexplained/documents/Catalogue-Veronica---retyped-by-Patrice-Seray.txt",
+      "candidates": [
+        {
+          "value": "1951-01-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "STOCKHOLM le 26 janvier 1951.",
+          "segment": 47
+        },
+        {
+          "value": "1951-01-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 27 janvier 1951.",
+          "segment": 48
+        },
+        {
+          "value": "1951-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "RENNES le 02 novembre 1951.",
+          "segment": 69
+        },
+        {
+          "value": "1951-11-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 03 novembre 1951.",
+          "segment": 70
+        },
+        {
+          "value": "1951-11-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CALVISSON le 03 novembre 1951.",
+          "segment": 76
+        },
+        {
+          "value": "1951-11-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 04 novembre 1951.",
+          "segment": 78
+        },
+        {
+          "value": "1951-11-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ALBUQUERQUE le 10 novembre 1951.",
+          "segment": 83
+        },
+        {
+          "value": "1951-11-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 12 novembre 1951.",
+          "segment": 85
+        },
+        {
+          "value": "1951-11-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "EPINAL (Vosges) le 11 novembre 1951. Ø Ø ØE",
+          "segment": 98
+        },
+        {
+          "value": "1951-11-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 12 novembre 1951.",
+          "segment": 99
+        },
+        {
+          "value": "1952-04-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NEW YORK le 13 avril 1952. Ø Ø ØF",
+          "segment": 108
+        },
+        {
+          "value": "1952-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 14 avril 1952.",
+          "segment": 109
+        },
+        {
+          "value": "1952-04-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "OTTAWA le 17 avril 1952. Ø Ø ØG",
+          "segment": 118
+        },
+        {
+          "value": "1952-04-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 18 avril 1952.",
+          "segment": 119
+        },
+        {
+          "value": "1952-04-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MONTREAL le 22 avril 1952. Ø Ø ØH",
+          "segment": 132
+        },
+        {
+          "value": "1952-04-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 20 avril 1952.",
+          "segment": 133
+        },
+        {
+          "value": "1952-05-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 05 mai 1952.",
+          "segment": 143
+        },
+        {
+          "value": "1952-05-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "RIO DE JANIERO le 09 mai 1952.",
+          "segment": 158
+        },
+        {
+          "value": "1952-05-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 10 mai 1952.",
+          "segment": 159
+        },
+        {
+          "value": "1952-05-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 12 mai 1952.",
+          "segment": 175
+        },
+        {
+          "value": "1952-05-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LISBONNE le 14 mai 1952.",
+          "segment": 178
+        },
+        {
+          "value": "1952-05-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 14 mai 1952",
+          "segment": 190
+        },
+        {
+          "value": "1952-06-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 01 juin 1952.",
+          "segment": 202
+        },
+        {
+          "value": "1952-06-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 13 juin 1952.",
+          "segment": 213
+        },
+        {
+          "value": "1952-06-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 17 juin 1952.",
+          "segment": 223
+        },
+        {
+          "value": "1952-07-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 01 juillet 1952.",
+          "segment": 228
+        },
+        {
+          "value": "1952-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LONDRES le 06 juillet 1952.",
+          "segment": 244
+        },
+        {
+          "value": "1952-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 07 juillet 1952.",
+          "segment": 245
+        },
+        {
+          "value": "1952-07-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "RABAT le 15 juillet 1952.",
+          "segment": 266
+        },
+        {
+          "value": "1952-07-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 16 juillet 1952.",
+          "segment": 267
+        },
+        {
+          "value": "1952-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait de Midi-Libre du 19 juillet 1952.",
+          "segment": 288
+        },
+        {
+          "value": "1952-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CLERMONT-FERRAND (PDD) le 23 juillet 1952.",
+          "segment": 297
+        },
+        {
+          "value": "1952-07-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 24 juillet 1952.",
+          "segment": 298
+        },
+        {
+          "value": "1952-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 26 juillet 1952.",
+          "segment": 305
+        },
+        {
+          "value": "1952-07-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "WASHINGTON le 27 juillet 1952. Ø Ø ØX",
+          "segment": 312
+        },
+        {
+          "value": "1952-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 28 juillet 1952.",
+          "segment": 313
+        },
+        {
+          "value": "1952-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BELVIS (Aude) le 28 juillet 1952.",
+          "segment": 320
+        },
+        {
+          "value": "1952-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 29 juillet 1952.",
+          "segment": 321
+        },
+        {
+          "value": "1952-07-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 29 juillet 1952.",
+          "segment": 327
+        },
+        {
+          "value": "1952-08-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "WASHINGTON le 01 août 1952.",
+          "segment": 349
+        },
+        {
+          "value": "1952-08-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 02 août 1952.",
+          "segment": 350
+        },
+        {
+          "value": "1952-02-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "volante qui a été prise à SALEM (MASSACHUSSETTS) dans la matinée du 16 février 1952 par un marin des gardes-",
+          "segment": 352
+        },
+        {
+          "value": "1952-08-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NDLR : La photo a été publiée dans le Midi-Libre le 04 août 1952 en première page.",
+          "segment": 358
+        },
+        {
+          "value": "1952-08-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DAYTON (USA) le 01 août 1952.",
+          "segment": 359
+        },
+        {
+          "value": "1952-08-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 02 août 1952.",
+          "segment": 360
+        },
+        {
+          "value": "1952-08-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "WASHINGTON le 03 août 1952.",
+          "segment": 372
+        },
+        {
+          "value": "1952-08-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 04 août 1952.",
+          "segment": 373
+        },
+        {
+          "value": "1952-08-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LANCASTER (Californie USA) du 03 août 1952.",
+          "segment": 384
+        },
+        {
+          "value": "1952-08-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "WASHINGTON le 07 août 1952.",
+          "segment": 388
+        },
+        {
+          "value": "1952-08-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 08 août 1952.",
+          "segment": 389
+        },
+        {
+          "value": "1952-08-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 08 août 1952.",
+          "segment": 408
+        },
+        {
+          "value": "1952-10-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAINT ALEXANDRE (30130 - GARD) le 06 octobre 1952.",
+          "segment": 425
+        },
+        {
+          "value": "1954-07-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LONDRES (07 juillet 1954).",
+          "segment": 475
+        },
+        {
+          "value": "1954-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du jeudi 08 juillet 1954.",
+          "segment": 476
+        },
+        {
+          "value": "1954-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CRUXHAVEN (18 juillet 1954).",
+          "segment": 488
+        },
+        {
+          "value": "1954-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du lundi 19 juillet 1954.",
+          "segment": 489
+        },
+        {
+          "value": "1954-08-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "EVREUX (Orne) le 24 août 1954.",
+          "segment": 496
+        },
+        {
+          "value": "1954-08-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 25 août 1954.",
+          "segment": 497
+        },
+        {
+          "value": "1954-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LONDRES le 01 septembre 1954.",
+          "segment": 513
+        },
+        {
+          "value": "1954-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 02 septembre 1954.",
+          "segment": 514
+        },
+        {
+          "value": "1952-04-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date exacte 10 avril 1952.",
+          "segment": 528
+        },
+        {
+          "value": "1978-05-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ce rapport ne nous a été fait que le 06 mai 1978.",
+          "segment": 563
+        },
+        {
+          "value": "1967-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CALVISSON (Gard) 15 août 1967 ou 1968.",
+          "segment": 604
+        },
+        {
+          "value": "1972-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BUENOS AIRES le 04 octobre 1972.",
+          "segment": 668
+        },
+        {
+          "value": "1972-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Par le n° 129 de LDLN on apprenait \"Le 04 octobre 1972, entre 03h15 et 03h55 du matin, à BUENOS AIRES , dans",
+          "segment": 669
+        },
+        {
+          "value": "1973-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES le 03 février 1973.",
+          "segment": 696
+        },
+        {
+          "value": "1973-03-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MONT BOUQUET (Gard) le 28 mars 1973.",
+          "segment": 702
+        },
+        {
+          "value": "1973-09-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ALBARET ste MARIE (Lozère) le 12 septembre 1973.",
+          "segment": 710
+        },
+        {
+          "value": "1976-02-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NDLR : Le Groupe VERONICA n'a eu connaissance de cette observation que le 13 février 1976 après que M. André",
+          "segment": 722
+        },
+        {
+          "value": "1973-10-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Lozère) le 04 octobre 1973 à 14h.",
+          "segment": 760
+        },
+        {
+          "value": "1973-10-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 06 octobre 1973 à l'aube, le ciel est très dégagé, sans nuage.",
+          "segment": 773
+        },
+        {
+          "value": "1973-10-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "VALENCE (Drome) le 20 octobre 1973 à 19 heures.",
+          "segment": 808
+        },
+        {
+          "value": "1973-12-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "GALARGUES LE MONTUEUX (04 décembre 1973).",
+          "segment": 868
+        },
+        {
+          "value": "1973-12-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 04 décembre 1973, dans la nuit, 65 taureaux de la manade AUBANEL se noyaient dans le VISTRE, soit la totalité",
+          "segment": 870
+        },
+        {
+          "value": "1973-12-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "attendre une quinzaine de jours avant d'apprendre par \"MIDI LIBRE\" du 19 décembre 1973",
+          "segment": 874
+        },
+        {
+          "value": "1973-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "FABREGUES (Hérault) le 06 décembre 1973.",
+          "segment": 911
+        },
+        {
+          "value": "1973-12-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Continuons la lecture de MIDI-LIBRE du 22 décembre 1973 qui, par la plume de M. Francis ATTARD nous précise",
+          "segment": 943
+        },
+        {
+          "value": "1973-12-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES le 28 décembre 1973.",
+          "segment": 1004
+        },
+        {
+          "value": "1974-01-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES le 03 janvier 1974.",
+          "segment": 1021
+        },
+        {
+          "value": "1974-01-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PHARE DE L'ESPIGUETTE (Gard) le 22 janvier 1974.",
+          "segment": 1029
+        },
+        {
+          "value": "1974-01-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MARCOULE du mardi 22 janvier 1974, vers 18h25, était passé en vue de l'ESPIGUETTE.",
+          "segment": 1032
+        },
+        {
+          "value": "1974-01-22",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Le mardi 22 janvier 1974, à 18h25, depuis la RN 86, un Bagnolais anonyme voit un engin mystérieux, à 3 km de",
+          "segment": 1037
+        },
+        {
+          "value": "1974-01-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "M et Mme G. se dirigeait vers Bagnols/Céze le 22 janvier 1974 vers 18h25 lorsque, au lieudit \"Virage de figon\", ils",
+          "segment": 1042
+        },
+        {
+          "value": "1974-01-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LA GRANDE MOTTE (Gard)* le 27 janvier 1974.",
+          "segment": 1051
+        },
+        {
+          "value": "1974-02-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "AUBUSSARGUES (Gard) les 03 et 05 février 1974.",
+          "segment": 1066
+        },
+        {
+          "value": "1974-02-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Fermant ses volets le samedi 3 février 1974 vers 18h, il aperçut dans le ciel : \"...un ballon de rugby incandescent...\"",
+          "segment": 1074
+        },
+        {
+          "value": "1974-02-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ARPAILLARGUES (Gard) le 5 février 1974.",
+          "segment": 1083
+        },
+        {
+          "value": "1974-02-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Vers 6h30, c'est à dire un peu avant le lever du jour qui commençait à poindre, le mardi 05 février 1974, Monsieur et",
+          "segment": 1086
+        },
+        {
+          "value": "1974-02-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MONTPELLIER (Hérault) le 14 février 1974. Ø Ø 33",
+          "segment": 1108
+        },
+        {
+          "value": "1974-02-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CARNON-PLAGE (Hérault) le 14 février 1974. Ø Ø 34",
+          "segment": 1115
+        },
+        {
+          "value": "1974-02-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Vers 20h30, à CARNON-PLAGE (Hérault), le 14 février 1974, Monsieur GOALLARD",
+          "segment": 1116
+        },
+        {
+          "value": "1974-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ST CEZAIRE (Gard) le 21 février 1974. Ø Ø 38",
+          "segment": 1175
+        },
+        {
+          "value": "1974-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"le jeudi 21 février 1974 vers 19h30 ; mon père attira mon attention et celle de ma mère sur un objet lumineux d'une",
+          "segment": 1181
+        },
+        {
+          "value": "1974-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ALES (Gard) le 22 février 1974.",
+          "segment": 1192
+        },
+        {
+          "value": "1974-02-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du MIDI-LIBRE du 24 février 1974.",
+          "segment": 1194
+        },
+        {
+          "value": "1974-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le vendredi 22 février 1974, vers 21h35, Monsieur Guy GROUSSET, représentant de commerce, habitant avenue",
+          "segment": 1195
+        },
+        {
+          "value": "1974-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LE POMPIDOU (Lozère) le 22 février 1974.",
+          "segment": 1203
+        },
+        {
+          "value": "1974-02-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MONTREAL d'AUDE le 24 février 1974.",
+          "segment": 1217
+        },
+        {
+          "value": "1974-02-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 26 février 1974.",
+          "segment": 1218
+        },
+        {
+          "value": "1974-02-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ESPERAZA (Aude) le 25 février 1974.",
+          "segment": 1234
+        },
+        {
+          "value": "1974-02-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 27 février 1974.",
+          "segment": 1235
+        },
+        {
+          "value": "1974-02-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LODEVE (Hérault) le 25 février 1974.",
+          "segment": 1242
+        },
+        {
+          "value": "1974-02-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 27 février 1974 - 54 km WNW de MONTPELLIER (carte Michelin n° 83 plis n° 5).",
+          "segment": 1243
+        },
+        {
+          "value": "1974-02-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "FONS SUR LUSSAN (Gard) le 25 février 1974.",
+          "segment": 1251
+        },
+        {
+          "value": "1974-03-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "VILLEVIELLE le 02 mars 1974.",
+          "segment": 1288
+        },
+        {
+          "value": "1974-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ST CEZAIRE (Gard) les 1.2 et 5 mars 1974.",
+          "segment": 1302
+        },
+        {
+          "value": "1974-02-21",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "Depuis qu'il a vu un OVNI en forme de cône le 21 février 1974, Monsieur Didier GUIRAUD a adhéré au groupe",
+          "segment": 1304
+        },
+        {
+          "value": "1974-03-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le dimanche 10 mars 1974 vers 20h, toujours depuis SAINT-CEZAIRE, trajectoire Ouest-Sud par rapport au point",
+          "segment": 1358
+        },
+        {
+          "value": "1974-03-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MONTPELLIER (Hérault) le 20 mars 1974.",
+          "segment": 1376
+        },
+        {
+          "value": "1974-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 29 mars 1974.",
+          "segment": 1377
+        },
+        {
+          "value": "1974-03-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LAVAL PRADEL (Gard) le 20 mars 1974.",
+          "segment": 1385
+        },
+        {
+          "value": "1974-03-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ESPERAZA (Aude) le 25 mars 1974.",
+          "segment": 1397
+        },
+        {
+          "value": "1974-02-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "38 km SW de CARCASSONNE - déjà concerné - le 25 février 1974",
+          "segment": 1398
+        },
+        {
+          "value": "1974-03-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Aussi, quand le lundi 25 mars 1974, vers 20h15",
+          "segment": 1402
+        },
+        {
+          "value": "1974-03-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "PAILLETRICE (Hérault) le 27 mars 1974.",
+          "segment": 1416
+        },
+        {
+          "value": "1974-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 29 mars 1974.",
+          "segment": 1417
+        },
+        {
+          "value": "1974-03-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Dans la nuit du mercredi 27 au jeudi 28 mars 1974, vers 23h, deux habitants de CASTELNAU LE LEZ roulaient sur",
+          "segment": 1419
+        },
+        {
+          "value": "1974-03-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MONTPELLIER le 27 mars 1974.",
+          "segment": 1422
+        },
+        {
+          "value": "1974-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 29 mars 1974?",
+          "segment": 1423
+        },
+        {
+          "value": "1974-04-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAINT-CEZAIRE le 07 avril 1974.",
+          "segment": 1437
+        },
+        {
+          "value": "1974-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Banlieue W de NIMES, déjà concernée du 01 au 05 mars 1974.",
+          "segment": 1438
+        },
+        {
+          "value": "1974-04-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 25 avril 1974.",
+          "segment": 1442
+        },
+        {
+          "value": "1974-05-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "HERAULT le 13 mai 1974 (Minuit).",
+          "segment": 1449
+        },
+        {
+          "value": "1974-05-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Monsieur O. sort sur sa terrasse le 13 mai 1974 à minuit.",
+          "segment": 1450
+        },
+        {
+          "value": "1974-05-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ALES (Gard) le 20 mai 1974.",
+          "segment": 1469
+        },
+        {
+          "value": "1974-06-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "AUTOROUTE DU NORD (Paris-Lille) le 12 juin 1974.",
+          "segment": 1476
+        },
+        {
+          "value": "1974-06-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CAMMAZE LE GRAND (Aude) le 21 juin 1974.",
+          "segment": 1480
+        },
+        {
+          "value": "1974-06-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 23 juin 1974.",
+          "segment": 1481
+        },
+        {
+          "value": "1974-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ALES le 04 juillet 1974.",
+          "segment": 1486
+        },
+        {
+          "value": "1974-07-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 4 juillet 1974, de 07h15 à 19h, par un temps très clair et un fort mistral, Monsieur Guillem SALAVY, habitant au",
+          "segment": 1487
+        },
+        {
+          "value": "1974-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LA FOUILLADE - NAJAC (Aveyron) le 20 juillet 1974.",
+          "segment": 1494
+        },
+        {
+          "value": "1974-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 20 juillet 1974, Monsieur et Madame SALAVY sont à LAFOUILLADE, 12270 NAJAC, dans l'Aveyron, lorsqu'au",
+          "segment": 1495
+        },
+        {
+          "value": "1974-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "--------- I d--------------- Le 21 juillet 1974.",
+          "segment": 1499
+        },
+        {
+          "value": "1974-08-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du \"Midi-Libre\" du 13 août 1974.",
+          "segment": 1533
+        },
+        {
+          "value": "1974-10-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES le 10 octobre 1974.",
+          "segment": 1536
+        },
+        {
+          "value": "1975-10-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A noter qu'un phénomène similaire s'est reproduit au même lieu à la même heure le 10 octobre 1975.",
+          "segment": 1570
+        },
+        {
+          "value": "1974-11-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UZES (Gard) le 19 novembre 1974.",
+          "segment": 1571
+        },
+        {
+          "value": "1974-11-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le mardi 19 novembre 1974, vers 18h, Christophe FERNANDEZ, âgé de 16 ans, habitant la dernière maison du",
+          "segment": 1577
+        },
+        {
+          "value": "1974-12-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MONTPELLIER (Hérault) le 04 décembre 1974.",
+          "segment": 1601
+        },
+        {
+          "value": "1974-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 12 décembre 1974.",
+          "segment": 1620
+        },
+        {
+          "value": "1974-12-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le samedi 7 décembre 1974, à 0h15, M et Mme ESCANDE de MONTPELLIER ont aperçu dans le ciel des lumières",
+          "segment": 1621
+        },
+        {
+          "value": "1974-12-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LE PERTHUS (P.O) le 28 décembre 1974.",
+          "segment": 1629
+        },
+        {
+          "value": "1975-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Monsieur GASPERETTI, 27 ans. (10 février 1975).",
+          "segment": 1634
+        },
+        {
+          "value": "1975-01-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES le 10 janvier 1975.",
+          "segment": 1643
+        },
+        {
+          "value": "1975-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Monsieur Pierre X. (10 février 1975).",
+          "segment": 1660
+        },
+        {
+          "value": "1975-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "M. GENIN Théo de NIMES (10 février 1975).",
+          "segment": 1670
+        },
+        {
+          "value": "1975-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "M. KADER FIROUD (10 février 1975).",
+          "segment": 1674
+        },
+        {
+          "value": "1975-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Mlle Laurence MARADENE, 12 ans, écolière. (10 février 1975).",
+          "segment": 1677
+        },
+        {
+          "value": "1975-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CALVISSON (Gard) le 10 février 1975.",
+          "segment": 1685
+        },
+        {
+          "value": "1975-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAINT JEAN DE VALERISCLE (Gard) le 10 février 1975.",
+          "segment": 1695
+        },
+        {
+          "value": "1975-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UZES (Gard) le 10 février 1975.",
+          "segment": 1702
+        },
+        {
+          "value": "1975-02-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Conclusion sur ces phénomènes observés ce 10 février 1975.",
+          "segment": 1711
+        },
+        {
+          "value": "1975-01-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES le 21 janvier 1975.",
+          "segment": 1739
+        },
+        {
+          "value": "1975-01-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Madame Simone SEURANET, 30 ans, habitant NIMES, aperçoit de chez elle vers 18h15, le 21 janvier 1975, durant",
+          "segment": 1740
+        },
+        {
+          "value": "1975-02-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES le 20 février 1975.",
+          "segment": 1742
+        },
+        {
+          "value": "1975-02-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "le jeudi 20 février 1975, de 19h40 à 19h50, vers l'Ouest de la ville, semblant venir de MONTPELLIER, deux fois deux",
+          "segment": 1744
+        },
+        {
+          "value": "1975-02-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BLAUZAC (Gard) le 27 février 1975.",
+          "segment": 1757
+        },
+        {
+          "value": "1975-06-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "VALENCE (Drôme) 11 juin 1975.",
+          "segment": 1781
+        },
+        {
+          "value": "1975-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAINT AMBROIX le 12 ou 13 juillet 1975.",
+          "segment": 1928
+        },
+        {
+          "value": "1975-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "HENDAYE le 20 juillet 1975.",
+          "segment": 1936
+        },
+        {
+          "value": "1975-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ALES (Gard) le 31 juillet 1975.",
+          "segment": 1944
+        },
+        {
+          "value": "1975-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le jeudi 31 juillet 1975, à minuit, Monsieur et Madame BOISSEAU, demeurant à ALES, descendaient en voiture de",
+          "segment": 1945
+        },
+        {
+          "value": "1975-08-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LEDIGNAN (Gard) le 23 août 1975.",
+          "segment": 1952
+        },
+        {
+          "value": "1975-08-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"Le 23 août 1975, nous dit Madame SOUCHON, habitant ALES, nous étions au lieu-dit \"LE COLOMBIER\" aux",
+          "segment": 1953
+        },
+        {
+          "value": "1975-08-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAINT-GILLES (Gard) le 26 août 1975.Cas Ø Ø 90",
+          "segment": 1980
+        },
+        {
+          "value": "1975-08-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"MIDI-LIBRE du 26 août 1975 signalait que des habitants de Mas situés dans le GRAND MAGNERES, près de",
+          "segment": 1982
+        },
+        {
+          "value": "1975-08-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MEYRUELS (Lozère) le 31 août 1975.",
+          "segment": 1995
+        },
+        {
+          "value": "1975-08-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 31 août 1975, entre 22h30 et 23h, sur la RN 596 allant des VANELS à MEYRUELS, à 3 km environ avant le col",
+          "segment": 1997
+        },
+        {
+          "value": "1975-10-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAINT-GILLES DU GARD le 10 octobre 1975.",
+          "segment": 2003
+        },
+        {
+          "value": "1974-10-10",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "A rapprocher du Ø Ø 65 observé le 10 octobre 1974, dans le même ciel).",
+          "segment": 2016
+        },
+        {
+          "value": "1975-10-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "AUTOROUTE \"LA LANGUEDOCIENNE\" POSTE DE PEAGE DE VINASSAN le 07 octobre 1975.",
+          "segment": 2017
+        },
+        {
+          "value": "1976-01-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES le 27 janvier 1976.",
+          "segment": 2030
+        },
+        {
+          "value": "1976-01-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MARIGNAC (Gard) le 20 janvier 1976.",
+          "segment": 2047
+        },
+        {
+          "value": "1976-01-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LE CAILAR (Gard) le 20 janvier 1976.",
+          "segment": 2061
+        },
+        {
+          "value": "1976-01-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "M.POINTE de LE CAILAR voir passer dans le ciel une boule rapide le 20 janvier 1976.",
+          "segment": 2062
+        },
+        {
+          "value": "1976-01-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES les 27 et 28 janvier 1976.",
+          "segment": 2063
+        },
+        {
+          "value": "1976-02-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES (Gard) le 16 février 1976.",
+          "segment": 2072
+        },
+        {
+          "value": "1976-02-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le 16 février 1976, de 20h15 à 21h, M. Jean-François et Michel MOINAS, tous deux membres du Groupe",
+          "segment": 2073
+        },
+        {
+          "value": "1976-03-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MILHAUD (Gard) le 17 mars 1976.",
+          "segment": 2079
+        },
+        {
+          "value": "1976-03-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "VIVIERS (Ardèche) le 29 mars 1976.",
+          "segment": 2083
+        },
+        {
+          "value": "1976-05-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LE PONTET (Vaucluse) le 22 mai 1976.",
+          "segment": 2094
+        },
+        {
+          "value": "1976-06-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "VALMASEDA EN BISCAYE le 04 juin 1976.",
+          "segment": 2104
+        },
+        {
+          "value": "1976-06-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du MIDI LIBRE du 15 juin 1976.",
+          "segment": 2111
+        },
+        {
+          "value": "1976-06-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 20 juin 1976.",
+          "segment": 2151
+        },
+        {
+          "value": "1976-06-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du Midi-Libre du 23 juin 1976.",
+          "segment": 2158
+        },
+        {
+          "value": "1976-07-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du MIDI-LIBRE du 03 juillet 1976.",
+          "segment": 2166
+        },
+        {
+          "value": "1976-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "AGDE le 05 juillet 1976.",
+          "segment": 2179
+        },
+        {
+          "value": "1976-07-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Le lundi 05 juillet 1976 de 4h à 4h30 par une nuit claire, idéale qui permet d'apercevoir toutes les lumières de la côté",
+          "segment": 2180
+        },
+        {
+          "value": "1976-07-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extraits du MIDI-LIBRE du 13 juillet 1976.",
+          "segment": 2192
+        },
+        {
+          "value": "1976-07-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "EXTRAIT DE LA \"PRESSE LOCALE DE CASTRES\" du 18 juillet 1976.",
+          "segment": 2197
+        },
+        {
+          "value": "1976-07-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "EXTRAIT DU MIDI-LIBRE du 19 juillet 1976.",
+          "segment": 2220
+        },
+        {
+          "value": "1976-07-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extraits de \"LA DEPECHE DU MIDI\" du 25 juillet 1976.",
+          "segment": 2226
+        },
+        {
+          "value": "1976-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du MIDI-LIBRE du 31 juillet 1976.",
+          "segment": 2243
+        },
+        {
+          "value": "1976-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAINT GEORGES LES BAILLARGEAIX le 31 juillet 1976.",
+          "segment": 2256
+        },
+        {
+          "value": "1976-09-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"NOUVELLE REPUBLIQUE\" du 9 septembre 1976.",
+          "segment": 2283
+        },
+        {
+          "value": "1976-08-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BRIOUDE (Haute Loire) le 04 août 1976.",
+          "segment": 2285
+        },
+        {
+          "value": "1976-08-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"NOUVELLE REPUBLIQUE\" du 18 août 1976.",
+          "segment": 2297
+        },
+        {
+          "value": "1976-08-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAINT ALEXANDRE (Gard) le 13 août 1976.",
+          "segment": 2298
+        },
+        {
+          "value": "1976-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LA GRANDE MOTTE (Hérault) le 15 août 1976.",
+          "segment": 2305
+        },
+        {
+          "value": "1976-08-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BELLEGARDE (Gard) le 18 ou 19 août 1976.",
+          "segment": 2312
+        },
+        {
+          "value": "1976-09-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BELLEGARDE (Gard) le 02 septembre 1976.",
+          "segment": 2315
+        },
+        {
+          "value": "1976-09-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Extrait du MIDI-LIBRE du 16 septembre 1976.",
+          "segment": 2318
+        },
+        {
+          "value": "1976-09-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAUVE (Gard) le 17 septembre 1976.",
+          "segment": 2322
+        },
+        {
+          "value": "1976-11-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UZES (Gard) le 05 novembre 1976.",
+          "segment": 2338
+        },
+        {
+          "value": "1976-11-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES le 07 novembre 1976.",
+          "segment": 2347
+        },
+        {
+          "value": "1976-11-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BAGNOLS S/CEZE (Gard) le 20 novembre 1976.",
+          "segment": 2363
+        },
+        {
+          "value": "1976-11-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES le 27 novembre 1976.",
+          "segment": 2370
+        },
+        {
+          "value": "1976-12-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BLAUZAC (Gard) le 08 décembre 1976.",
+          "segment": 2388
+        },
+        {
+          "value": "1976-12-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "POULX (Gard) le 06 décembre 1976.",
+          "segment": 2397
+        },
+        {
+          "value": "1976-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BELLEGARDE (Gard) le 12 décembre 1976.",
+          "segment": 2405
+        },
+        {
+          "value": "1976-12-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DIONS (Gard) le 13 décembre 1976.",
+          "segment": 2412
+        },
+        {
+          "value": "1976-12-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ST HIPPOLYTE DU FORT le 25 décembre 1976.",
+          "segment": 2415
+        },
+        {
+          "value": "1976-12-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BLAUZAC le 30 décembre 1976.",
+          "segment": 2440
+        },
+        {
+          "value": "1978-06-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "L'enquête a été faite le 16 juin 1978.",
+          "segment": 2470
+        },
+        {
+          "value": "1977-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "RODIHAN le 12 juillet 1977 à 22h05.",
+          "segment": 2485
+        },
+        {
+          "value": "1977-02-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CODOGNAN le 01 février 1977.",
+          "segment": 2494
+        },
+        {
+          "value": "1977-02-07",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES le 07 février 1977.",
+          "segment": 2502
+        },
+        {
+          "value": "1977-02-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "VENEJAN (Gard) le 09 février 1977.",
+          "segment": 2510
+        },
+        {
+          "value": "1977-02-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MONTAREN (Gard) le 09 février 1977.",
+          "segment": 2517
+        },
+        {
+          "value": "1977-02-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES le 14 février 1977.",
+          "segment": 2529
+        },
+        {
+          "value": "1977-02-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "TAVEL le 15 février 1977 (Gard).",
+          "segment": 2531
+        },
+        {
+          "value": "1977-02-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "COLOMBIER (Gard) le 18 février 1977.",
+          "segment": 2541
+        },
+        {
+          "value": "1977-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAINT MARTIN DES FAUX - 22 février 1977.",
+          "segment": 2558
+        },
+        {
+          "value": "1977-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MAILLANE le 22 février 1977.",
+          "segment": 2561
+        },
+        {
+          "value": "1977-03-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BLAUZAC (Gard) le 6 mars 1977.",
+          "segment": 2572
+        },
+        {
+          "value": "1977-03-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "RODILHAN (Gard) le 12 mars 1977.",
+          "segment": 2585
+        },
+        {
+          "value": "1977-03-03",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LA GRAND-COMBE (Gard) le 03 mars 1977.",
+          "segment": 2596
+        },
+        {
+          "value": "1977-03-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BEAUCAIRE le 20 mars 1977.",
+          "segment": 2610
+        },
+        {
+          "value": "1977-07-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "GALLICIAN (Gard) le 11 juillet 1977.",
+          "segment": 2635
+        },
+        {
+          "value": "1977-07-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "GENOLHAC (Gard) le 12 juillet 1977.",
+          "segment": 2661
+        },
+        {
+          "value": "1977-03-12",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "NDLR : A comparer, peut-être, au phénomène vu à RODILHAN le 12 mars 1977.",
+          "segment": 2670
+        },
+        {
+          "value": "1977-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "AIGUES-MORTES (Gard) le 20 juillet 1977.",
+          "segment": 2671
+        },
+        {
+          "value": "1978-04-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "n'y avait des similitudes (phares) avec en particulier les observations de ST CHAPTES du 27 avril 1978.",
+          "segment": 2711
+        },
+        {
+          "value": "1977-11-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "DIONS (Gard) le 02 novembre 1977.",
+          "segment": 2719
+        },
+        {
+          "value": "1977-11-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CLERMONT L'HERAULT le 19 novembre 1977.",
+          "segment": 2738
+        },
+        {
+          "value": "1977-12-16",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UZES (Gard) le 16 décembre 1977.",
+          "segment": 2749
+        },
+        {
+          "value": "1977-12-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BLAUZAC (Gard) le 19 décembre 1977.",
+          "segment": 2773
+        },
+        {
+          "value": "1978-01-04",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES le 04 janvier 1978.",
+          "segment": 2781
+        },
+        {
+          "value": "1978-01-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "NIMES le 13 janvier 1978.",
+          "segment": 2795
+        },
+        {
+          "value": "1978-02-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UZES le 01 février 1978.",
+          "segment": 2808
+        },
+        {
+          "value": "1978-02-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "JONQUIERES (Vaucluse) le 11 février 1978.",
+          "segment": 2819
+        },
+        {
+          "value": "1977-11-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UZES le 30 novembre 1977.",
+          "segment": 2825
+        },
+        {
+          "value": "1978-02-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UZES le 17 février 1978.",
+          "segment": 3022
+        },
+        {
+          "value": "1978-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CENDRAS (Gard) le 21 février 1978.",
+          "segment": 3045
+        },
+        {
+          "value": "1978-02-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LA REOLE (Gironde) le 21 février 1978.",
+          "segment": 3051
+        },
+        {
+          "value": "1978-02-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "COLLIAS (Gard) le 22 février 1978.",
+          "segment": 3059
+        },
+        {
+          "value": "1978-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ALES le 28 février 1978.",
+          "segment": 3070
+        },
+        {
+          "value": "1978-02-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SALINDRES le 28 février 1978.",
+          "segment": 3076
+        },
+        {
+          "value": "1978-03-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "L'AFFENADOU (Gard) le 02 mars 1978.",
+          "segment": 3082
+        },
+        {
+          "value": "1978-04-13",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SAUVE le jeudi 13 avril 1978.",
+          "segment": 3106
+        },
+        {
+          "value": "1978-03-05",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "BOURG SAINT ANDEOL le 05 mars 1978.",
+          "segment": 3127
+        },
+        {
+          "value": "1978-04-17",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "LAUDIN (Camp de César) le 17 avril 1978.",
+          "segment": 3143
         }
       ]
     },
@@ -145969,6 +148363,21 @@
           "method": "unclassified-mention",
           "evidence": "were fired by Condon on February 9, 1968 for in­",
           "segment": 89
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1aa0944983be",
+      "path": "Archives-for-the-Unexplained/documents/Flying-Saucer-News---1977-08---August.txt",
+      "candidates": [
+        {
+          "value": "1964-04-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "vehicles bringing little green men April 24, 1964.",
+          "segment": 420
         }
       ]
     },
@@ -189461,6 +191870,30 @@
       ]
     },
     {
+      "documentId": "doc-8ccd3c2fa563",
+      "path": "Archives-for-the-Unexplained/documents/MUFON-Arizona---1993-10-18---Vol-02-No-10.txt",
+      "candidates": [
+        {
+          "value": "1993-09-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "n September 1, 1993, a Yuma man was standing in not the only family member to witness the UFO (there",
+          "segment": 104
+        },
+        {
+          "value": "1975-10-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Maurice Marchbanks on October 20, 1975, in which he claims it was he who said that, not Sylvanus.",
+          "segment": 160
+        }
+      ]
+    },
+    {
       "documentId": "doc-a1623ab8c72e",
       "path": "Archives-for-the-Unexplained/documents/MUFON-Arizona---1994-02-21---Vol-03-No-02.txt",
       "candidates": [
@@ -217820,6 +220253,48 @@
       ]
     },
     {
+      "documentId": "doc-a3594bba9c38",
+      "path": "Archives-for-the-Unexplained/documents/OVNI---2002-01---January-February.txt",
+      "candidates": [
+        {
+          "value": "2001-12-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Wednesday, December 12, 2001, \"a UFO was videotaped over the city of Araraquara,\"",
+          "segment": 392
+        },
+        {
+          "value": "2001-12-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Two days later, on Friday, December 14, 2001, \"a UFO was filmed over the satellite city",
+          "segment": 397
+        },
+        {
+          "value": "2001-12-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On Friday, December 21, 2001, at 12:30 a.m., Jeremy S. and his brother \"were in the street\"",
+          "segment": 403
+        },
+        {
+          "value": "2001-12-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Steve X an associate of Russell Penman on Sunday, December 23, 2001.",
+          "segment": 431
+        }
+      ]
+    },
+    {
       "documentId": "doc-08dbf9f55657",
       "path": "Archives-for-the-Unexplained/documents/OVNI---2002-05---May-June.txt",
       "candidates": [
@@ -244022,6 +246497,21 @@
       ]
     },
     {
+      "documentId": "doc-4092c1a46fc7",
+      "path": "Archives-for-the-Unexplained/documents/Phenomene-OVNI---No-17---juillet-1984.txt",
+      "candidates": [
+        {
+          "value": "1969-09-29",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "édi tien du 29 septembre 1969.",
+          "segment": 334
+        }
+      ]
+    },
+    {
       "documentId": "doc-dda98b8b40cf",
       "path": "Archives-for-the-Unexplained/documents/Phenomenon-The-Lost-Archives---S01E04---transcript-automated-.txt",
       "candidates": [
@@ -244261,6 +246751,21 @@
           "method": "unclassified-mention",
           "evidence": "May 22 2009, Victor was outside on his property",
           "segment": 449
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b63bca8c8bfc",
+      "path": "Archives-for-the-Unexplained/documents/Phenomenon-Times---2010-10.txt",
+      "candidates": [
+        {
+          "value": "2010-09-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Sept 27, 2010 at the National Press Club, a",
+          "segment": 494
         }
       ]
     },
@@ -255775,6 +258280,30 @@
           "method": "unclassified-mention",
           "evidence": "through the sky on December 31 1978.",
           "segment": 312
+        }
+      ]
+    },
+    {
+      "documentId": "doc-026cf9dc08de",
+      "path": "Archives-for-the-Unexplained/documents/SUFOG-Newsletter-No-151-152.txt",
+      "candidates": [
+        {
+          "value": "2003-05-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "May 15, 2003, and all of a sudden",
+          "segment": 660
+        },
+        {
+          "value": "2003-04-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "impressed with it and I am unable to come up Date: 28 April 2003",
+          "segment": 817
         }
       ]
     },
@@ -304993,6 +307522,66 @@
           "method": "unclassified-mention",
           "evidence": "SUNDAY OREGONIAN, Portland, OR - March 29, 1998",
           "segment": 2144
+        }
+      ]
+    },
+    {
+      "documentId": "doc-7e67b695014b",
+      "path": "Archives-for-the-Unexplained/documents/UFO-Newsclipping-Service---1998-12---no-353.txt",
+      "candidates": [
+        {
+          "value": "1989-04-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "But clues being collected April 27, 1989. when two teen- toundingly, a lichen-like sub-",
+          "segment": 1116
+        },
+        {
+          "value": "1998-07-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "MID-DEVON GAZETTE, Tiverton, England· July 21, 1998 SENTINEL, Stoke-on-Trent, England· Od. 19, 1998",
+          "segment": 1604
+        },
+        {
+          "value": "1997-05-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1996~ May 19, 1997, July 26, 1997",
+          "segment": 1621
+        },
+        {
+          "value": "1997-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "1996~ May 19, 1997, July 26, 1997",
+          "segment": 1621
+        },
+        {
+          "value": "1997-09-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Strange Parafba, Brazil, September 21, 1997",
+          "segment": 1623
+        },
+        {
+          "value": "1967-04-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "April 30, 1967, com pelted the town of",
+          "segment": 1948
         }
       ]
     },
@@ -1520390,6 +1522979,30 @@
       ]
     },
     {
+      "documentId": "doc-4c41c9322fbd",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-1/28940219.txt",
+      "candidates": [
+        {
+          "value": "1951-10-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "angle of about 30° was seen on/or about 2000 - 2030 hours, 28 October 1951, approxi-",
+          "segment": 22
+        },
+        {
+          "value": "1951-10-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On/or about 2000 - 2030 hours, 20 October 1951, I was at",
+          "segment": 33
+        }
+      ]
+    },
+    {
       "documentId": "doc-e46fb6e16faa",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-1/28940387.txt",
       "candidates": [
@@ -1533484,6 +1536097,39 @@
           "method": "unclassified-mention",
           "evidence": "P. Gan nas oe2en returner 25 of 10 January 1959. ; |",
           "segment": 21
+        }
+      ]
+    },
+    {
+      "documentId": "doc-38c00ee8d29f",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302580478.txt",
+      "candidates": [
+        {
+          "value": "1968-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "SUBJECT: UFO Observation 21 October 1968 in",
+          "segment": 94
+        },
+        {
+          "value": "1968-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Subj: UFO Observation, 21 October 1968, Richmond, Indiana",
+          "segment": 108
+        },
+        {
+          "value": "1968-10-21",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "called on 21 October 1968 to inform the Aerial Phenomena Branch of an",
+          "segment": 110
         }
       ]
     },
