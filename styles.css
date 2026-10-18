@@ -322,6 +322,8 @@ p { max-width: 768px; }
 .stage-footer span + span { padding-top: 8px; border-top: 1px solid var(--line); }
 .chart-label { fill: var(--ink); font-size: var(--graph-label-size, 12px); pointer-events: none; }
 .node-label { font-weight: 650; paint-order: stroke; stroke: var(--paper); stroke-width: 3px; stroke-linejoin: round; }
+.topic-label { pointer-events: none; }
+.topic-label.is-crowded:not(.is-highlighted) { visibility: hidden; }
 .book-label { font-weight: 750; pointer-events: none; }
 .book-author { opacity: .78; pointer-events: none; }
 .book-volume { transform-box: fill-box; transform-origin: center; filter: drop-shadow(1px 1px 0 rgba(17,17,17,.16)); }
