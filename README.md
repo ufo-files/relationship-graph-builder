@@ -54,6 +54,16 @@ These previews are regenerated from the latest machine-data catalog after every 
       <a href="assets/screenshots/species.png"><img src="assets/screenshots/species.png" alt="Species graph type screenshot" width="100%"></a>
     </td>
     <td width="50%" align="center">
+      <strong>Drugs</strong><br>
+      <a href="assets/screenshots/drugs.png"><img src="assets/screenshots/drugs.png" alt="Drugs graph type screenshot" width="100%"></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <strong>Technologies</strong><br>
+      <a href="assets/screenshots/technologies.png"><img src="assets/screenshots/technologies.png" alt="Technologies graph type screenshot" width="100%"></a>
+    </td>
+    <td width="50%" align="center">
       <strong>Clock</strong><br>
       <a href="assets/screenshots/clock.png"><img src="assets/screenshots/clock.png" alt="Clock graph type screenshot" width="100%"></a>
     </td>
