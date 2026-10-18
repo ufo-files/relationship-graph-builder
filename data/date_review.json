@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-17T23:00:33Z",
+  "generatedAt": "2026-10-18T01:32:49Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "83bdbf17e3446529d578a24d19889c66a9618e3c"
+    "revision": "0a93549d60cdc34aa8c74736b1b0d38069251818"
   },
-  "documentsWithCandidates": 18905,
+  "documentsWithCandidates": 18907,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1519295,6 +1519295,21 @@
       ]
     },
     {
+      "documentId": "doc-97884cc13cf0",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-1/28935962.txt",
+      "candidates": [
+        {
+          "value": "1900-07-20",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "cay, 20 July 1900, I was doing the laundry behind",
+          "segment": 10
+        }
+      ]
+    },
+    {
       "documentId": "doc-588390fd44c5",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-1/28936278.txt",
       "candidates": [
@@ -1519765,6 +1519780,30 @@
           "method": "unclassified-mention",
           "evidence": "upon being awakened by his dog at 0200, 8 April 1950, he",
           "segment": 24
+        }
+      ]
+    },
+    {
+      "documentId": "doc-aefe023fac9e",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-1/28937845.txt",
+      "candidates": [
+        {
+          "value": "1950-04-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Although this photo was taken on April 23, 1950, it",
+          "segment": 15
+        },
+        {
+          "value": "1950-04-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "N April 23, 1950, I was walking",
+          "segment": 26
         }
       ]
     },
