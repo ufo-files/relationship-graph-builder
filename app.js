@@ -4543,7 +4543,6 @@ function renderTopicMentions() {
   if (ticks.at(-1) !== maximum) ticks.push(maximum);
   drawAxes(svg, width, height, "Documents · log scale", "Mentions · log scale", [xMinimum, xMaximum], [minimum, maximum], {}, { yTicks: ticks.slice().reverse(), yPosition: y });
   const extent = valueExtent(groups.map(group => ({ sources: group.sources.size })), "sources");
-  const labels = [];
   const points = groups.map(group => ({ group, x: x(group.documents.size), y: y(group.observations.length), r: scale(group.sources.size, extent, [4, 15]) }));
   points.forEach(point => {
     const { group } = point;
@@ -4556,28 +4555,31 @@ function renderTopicMentions() {
     mark.addEventListener("keydown", event => { if (["Enter", " "].includes(event.key)) { event.preventDefault(); inspectTopicGroup(group, catalog); } });
     svg.append(mark);
   });
-  // Place native labels in nearby free space without moving the data marks.
+  const labels = [];
   points.forEach(point => {
     const text = scatterPointLabel(point.group.name, point.x, point.y, point.r, state.config.labelSize, height - margin.bottom + 18);
+    text.classList.add("topic-label");
+    text.setAttribute("data-topic-label", point.group.id);
     svg.append(text);
-    const box = text.getBBox();
-    const offsets = [point.r + state.config.labelSize + 2, -point.r - 6];
-    const candidates = offsets.map(offset => ({ dx: 0, dy: offset }));
-    for (let row = 0; row < 6; row++) for (const direction of [1, -1]) {
-      const dy = direction * row * (state.config.labelSize + 5) + state.config.labelSize / 3;
-      for (const side of [1, -1]) candidates.push({ dx: side * (point.r + box.width / 2 + 8), dy });
-    }
+    const defaultY = text.getAttribute("y");
     let placed = false;
-    for (const offset of candidates) {
-      const tx = Math.max(margin.left + box.width / 2, Math.min(width - 5 - box.width / 2, point.x + offset.dx));
-      const ty = point.y + offset.dy;
-      const candidate = { x: tx - box.width / 2 - 2, y: ty - box.height, width: box.width + 4, height: box.height + 3 };
-      if (candidate.y < 2 || candidate.y + candidate.height > height - margin.bottom + 20) continue;
-      if (labels.some(other => candidate.x < other.x + other.width && candidate.x + candidate.width > other.x && candidate.y < other.y + other.height && candidate.y + candidate.height > other.y)) continue;
-      if (points.some(other => other.x + other.r > candidate.x && other.x - other.r < candidate.x + candidate.width && other.y + other.r > candidate.y && other.y - other.r < candidate.y + candidate.height)) continue;
-      text.setAttribute("x", tx); text.setAttribute("y", ty); labels.push(candidate); placed = true; break;
+    // Keep the shared centered anchor; only try the immediate space above if below is crowded.
+    for (const baseline of [defaultY, point.y - point.r - 4]) {
+      text.setAttribute("y", baseline);
+      const box = text.getBBox();
+      const overlaps = other => box.x < other.x + other.width + 2 && box.x + box.width + 2 > other.x && box.y < other.y + other.height + 2 && box.y + box.height + 2 > other.y;
+      const touchesPoint = other => Math.hypot(other.x - Math.max(box.x, Math.min(box.x + box.width, other.x)), other.y - Math.max(box.y, Math.min(box.y + box.height, other.y))) < other.r + 2;
+      if (box.y < 0 || labels.some(overlaps) || points.some(other => other !== point && touchesPoint(other))) continue;
+      labels.push(box); placed = true; break;
     }
-    if (!placed) text.remove();
+    if (!placed) { text.setAttribute("y", defaultY); text.classList.add("is-crowded"); }
+    const mark = svg.querySelector(`[data-topic-id="${point.group.id}"]`);
+    const highlight = () => {
+      const active = mark.matches(":hover, :focus");
+      text.classList.toggle("is-highlighted", active);
+      if (active) svg.append(text);
+    };
+    ["mouseenter", "mouseleave", "focus", "blur"].forEach(event => mark.addEventListener(event, highlight));
   });
   $("#legend").innerHTML = "";
   setSummary(`${formatNumber(observations.length)} mentions · ${formatNumber(new Set(observations.map(item => item.documentId)).size)} documents · ${groups.length} ${state.config.type === "drugs" ? "drugs" : "technologies"}`, state.config.type);
