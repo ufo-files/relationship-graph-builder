@@ -295,6 +295,8 @@ const TYPES = [
   { id: "document", label: "Documents", scope: "All corpus files", icon: "<path d='M7 2h12l5 5v11H7zM19 2v5h5M11 11h9M11 14h9'/><path d='M4 5H2v15h17v-2'/>" },
   { id: "craft", label: "Craft", scope: "Reported shapes", icon: "<path d='M3 15h25M6 15l5-8h9l5 8M11 7l4 8 5-8M4 4h23M4 2v4m23-4v4'/>" },
   { id: "species", label: "Species", scope: "ET names in corpus", icon: "<circle cx='15.5' cy='8' r='5'/><path d='M8 18c1-5 4-7 7.5-7s6.5 2 7.5 7M13 7h1m3 0h1M4 4h4m15 0h4M3 15h4m17 0h4'/>" },
+  { id: "drugs", label: "Drugs", scope: "Substances in corpus", icon: "<path d='M9 3a6 6 0 0 1 8 0l6 6a6 6 0 0 1-8 8l-6-6a6 6 0 0 1 0-8ZM11 5l10 10'/>" },
+  { id: "technologies", label: "Technologies", scope: "Systems in corpus", icon: "<circle cx='16' cy='10' r='8'/><path d='M16 10l7-6M16 2v3m-8 5h3m5 8v-3m8-5h-3'/><circle cx='16' cy='10' r='2'/>" },
   { id: "clock", label: "Clock", scope: "Times in documents", icon: "<circle cx='16' cy='10' r='9'/><path d='M16 4v6l4 3'/>" },
   { id: "blood", label: "Blood types", scope: "ABO + Rh mentions", icon: "<path d='M16 2C13 7 8 11 8 15a8 8 0 0 0 16 0c0-4-5-8-8-13Z'/>" },
   { id: "signals", label: "Signals", scope: "Frequencies in corpus", icon: "<path d='M2 17h27M4 17V13l2-1 2 5 2-9 2 9 3-3 2 3 2-13 2 13 2-6 2 6h3'/><path d='M4 3v3m23-3v3'/>" },
@@ -352,6 +354,7 @@ const DEFAULT = {
   speciesLayout: "lineup", speciesY: "physicalHeight", speciesSize: "documentCount", speciesSpacing: 0, speciesCategory: "all", speciesSearch: "",
   coverageRows: "collection", coverageColumns: "category", coverageMetric: "documentCount", coverageCompare: false,
   coverageACollection: "all", coverageAFrom: "", coverageATo: "", coverageBCollection: "all", coverageBFrom: "", coverageBTo: "",
+  topicTerm: "all", topicSearch: "",
   clockPeriod: "all", clockSearch: "", clockResolution: "hour",
   bloodType: "all", bloodSearch: "", bloodView: "scatter",
   programStatus: "all", programKind: "all", programSearch: "",
@@ -370,6 +373,8 @@ const VIEW_DEFAULTS = {
   signals: { allSources: true, sources: [], labels: "top", labelSize: 12 },
   bars: { aggregation: "source", y: "words", color: "intensity" },
   timeline: { timelineRole: "event", timelineGrouping: true, timelineGroupPeriod: "month", timelineCorrelativeMarkers: true, timelineHistoricalCandidates: false, x: "startDate", y: "mentionRank", size: "eventCount", color: "eventType", categories: ["date"], labels: "top", limit: 500, relationshipLayer: "always", timelineRelevanceCutoff: DEFAULT_TIMELINE_RELEVANCE_CUTOFF, timelineRecencyYear: DEFAULT_TIMELINE_RECENCY_YEAR },
+  drugs: { topicTerm: "all", topicSearch: "", allSources: true, sources: [], labelSize: 12 },
+  technologies: { topicTerm: "all", topicSearch: "", allSources: true, sources: [], labelSize: 12 },
   clock: { clockPeriod: "all", clockSearch: "", clockResolution: "hour", allSources: true, sources: [], labelSize: 12 },
   blood: { bloodType: "all", bloodSearch: "", bloodView: "scatter" },
   programs: { programStatus: "all", programKind: "all", programSearch: "", labelSize: 12 },
@@ -386,7 +391,7 @@ const ENTITY_PRESET_DEFAULTS = {
   matrix: { matrixColumns: "entity" },
   table: { tableRole: "entity" }
 };
-const state = { clockCatalog: null, clockPromise: null, catalog: null, catalogMode: null, initialCatalogPromise: null, fullCatalogPromise: null, typeRequestId: 0, claimCatalog: null, programCatalog: null, config: loadConfig(), selected: null, documentById: new Map(), historicalTimelineCandidateCount: 0, dossier: null, publicDossierPayload: null, dossierIsPublicReference: false, inspectorDossierSelection: null, dossierImportMessage: "" };
+const state = { topicCatalogs: {}, topicPromises: {}, clockCatalog: null, clockPromise: null, catalog: null, catalogMode: null, initialCatalogPromise: null, fullCatalogPromise: null, typeRequestId: 0, claimCatalog: null, programCatalog: null, config: loadConfig(), selected: null, documentById: new Map(), historicalTimelineCandidateCount: 0, dossier: null, publicDossierPayload: null, dossierIsPublicReference: false, inspectorDossierSelection: null, dossierImportMessage: "" };
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 
@@ -587,6 +592,8 @@ function dataAwareTitle(config) {
     title = "ET Species in the Corpus";
   } else if (config.type === "signals") {
     title = "Radio Frequencies in the Corpus";
+  } else if (["drugs", "technologies"].includes(config.type)) {
+    title = config.type === "drugs" ? "Drugs in the Corpus" : "Technologies in the Corpus";
   } else if (config.type === "clock") {
     title = "Times in the Corpus";
   } else if (config.type === "blood") {
@@ -1138,8 +1145,8 @@ function triageSubtitle(config = state.config) {
 
 function renderPresetControl() {
   const presetStep = $('[data-step="2"]');
-  if (presetStep) presetStep.hidden = ["blood", "clock"].includes(state.config.type);
-  if (state.config.type === "clock") { $("#presetControls").innerHTML = ""; return; }
+  if (presetStep) presetStep.hidden = ["blood", "clock", "drugs", "technologies"].includes(state.config.type);
+  if (["clock", "drugs", "technologies"].includes(state.config.type)) { $("#presetControls").innerHTML = ""; return; }
   if (state.config.type === "blood") {
     $("#presetControls").innerHTML = "";
     return;
@@ -1249,6 +1256,8 @@ function renderControls() {
       + controlSelect("speciesLayout", "Layout", [{ value: "lineup", label: "Lineup" }, { value: "organic", label: "Organic network" }]);
   } else if (state.config.type === "signals") {
     roles = `<div class="control"><div class="control-title">Marks</div><select disabled><option>Explicit numeric frequency mentions</option></select></div><div class="control"><div class="control-title">X axis</div><select disabled><option>Logarithmic radio frequency</option></select></div>`;
+  } else if (["drugs", "technologies"].includes(state.config.type)) {
+    roles = controlSelect("topicTerm", state.config.type === "drugs" ? "Drug" : "Technology", [{ value: "all", label: "All mentions" }, ...(state.topicCatalogs[state.config.type]?.terms || []).map(term => ({ value: term.id, label: term.label }))]);
   } else if (state.config.type === "clock") {
     roles = controlSelect("clockPeriod", "Time of day", [{ value: "all", label: "All times" }, { value: "am", label: "AM" }, { value: "pm", label: "PM" }, { value: "unspecified", label: "AM/PM not stated" }]) + controlSelect("clockResolution", "Precision", [{ value: "hour", label: "Hour" }, { value: "quarter", label: "15 minutes" }, { value: "minute", label: "Minute" }]);
   } else if (state.config.type === "blood") {
@@ -1365,7 +1374,7 @@ function renderControls() {
       ]) + `<div class="control method-note"><div class="control-title">Mention graph</div><p>Size and shade encode prominence. Line patterns identify the reviewed reference grouping; links represent shared corpus documents.</p></div>` + labelSizeControl;
   } else if (state.config.type === "signals") {
     $("#encodeControls").innerHTML = `<div class="control"><div class="control-title">Peak height</div><select disabled><option>Corpus frequency mentions</option></select></div><div class="control method-note"><div class="control-title">Spectrum semantics</div><p>Peaks are normalized numeric frequency references in corpus text. Unit-elided values require explicit microwave-band context. They are not RF logger measurements and do not establish that a transmission occurred.</p></div>` + labelSizeControl;
-  } else if (state.config.type === "clock") {
+  } else if (["clock", "drugs", "technologies"].includes(state.config.type)) {
     $("#encodeControls").innerHTML = labelSizeControl;
   } else if (state.config.type === "blood") {
     $("#encodeControls").innerHTML = labelSizeControl;
@@ -1444,6 +1453,14 @@ function renderControls() {
     const clockSources = [...new Set((state.clockCatalog?.documents || []).map(doc => doc.source))].sort();
     $("#filterControls").innerHTML = `<div class="control"><label for="clockSearch">Search passages</label><input class="text-input" id="clockSearch" type="search" value="${escapeHTML(state.config.clockSearch)}" data-clock-search></div><div class="control"><div class="control-title">Collections</div><div class="check-grid">${clockSources.map(source => `<label class="check-chip"><input type="checkbox" data-source="${escapeHTML(source)}" ${sourceMatches(source) ? "checked" : ""}><span>${escapeHTML(source)}</span></label>`).join("")}</div></div>`;
   }
+  if (["drugs", "technologies"].includes(state.config.type)) {
+    const sources = [...new Set((state.topicCatalogs[state.config.type]?.documents || []).map(doc => doc.source))].sort();
+    $("#filterControls").innerHTML = `<div class="control"><label for="topicSearch">Search passages</label><input class="text-input" id="topicSearch" type="search" value="${escapeHTML(state.config.topicSearch)}" data-topic-search></div><div class="control"><div class="control-title">Collections</div><div class="check-grid">${sources.map(source => `<label class="check-chip"><input type="checkbox" data-source="${escapeHTML(source)}" ${sourceMatches(source) ? "checked" : ""}><span>${escapeHTML(source)}</span></label>`).join("")}</div></div>`;
+  }
+  $("[data-topic-search]")?.addEventListener("input", event => {
+    state.config.topicSearch = event.target.value;
+    persistHash(); renderGraph();
+  });
   $("[data-clock-search]")?.addEventListener("input", event => {
     state.config.clockSearch = event.target.value;
     persistHash(); renderGraph();
@@ -1600,6 +1617,10 @@ async function setType(type) {
   if (requestId !== state.typeRequestId) return;
   if (type === "clock") {
     try { await ensureClockCatalog(); } catch (error) { showCatalogError(error); return; }
+    if (requestId !== state.typeRequestId) return;
+  }
+  if (["drugs", "technologies"].includes(type)) {
+    try { await ensureTopicCatalog(type); } catch (error) { showCatalogError(error); return; }
     if (requestId !== state.typeRequestId) return;
   }
   state.config = presetConfig("default", type);
@@ -4436,6 +4457,144 @@ function drawBloodScatter(svg, observations, config) {
   });
 }
 
+async function ensureTopicCatalog(topic) {
+  if (state.topicCatalogs[topic]) return state.topicCatalogs[topic];
+  state.topicPromises[topic] ||= (async () => {
+    const response = await fetch(`data/topic-mentions/${topic}.json`, { cache: "no-cache" });
+    if (!response.ok) throw new Error(`Mention data ${response.status}`);
+    const payload = await response.json();
+    if (payload.schema !== "ufo-files-topic-mentions/v1" || payload.topic !== topic || !Array.isArray(payload.parts) || !Array.isArray(payload.documents) || !Array.isArray(payload.terms)) throw new Error("Mention data invalid");
+    const shards = await Promise.all(payload.parts.map(async part => {
+      if (!new RegExp(`^${topic}-\\d+\\.json$`).test(part)) throw new Error("Mention shard invalid");
+      const result = await fetch(`data/topic-mentions/${part}`, { cache: "no-cache" });
+      if (!result.ok) throw new Error(`Mention shard ${result.status}`);
+      const rows = await result.json();
+      if (!Array.isArray(rows)) throw new Error("Mention shard invalid");
+      return rows;
+    }));
+    payload.observations = shards.flat();
+    if (payload.observations.length !== payload.counts.mentions) throw new Error("Mention count mismatch");
+    state.topicCatalogs[topic] = payload;
+    return payload;
+  })();
+  try { return await state.topicPromises[topic]; } catch (error) { delete state.topicPromises[topic]; throw error; }
+}
+
+function filteredTopicMentions(catalog, config) {
+  const query = String(config.topicSearch || "").trim().toLowerCase();
+  const documents = new Map((catalog?.documents || []).map(doc => [doc.id, doc]));
+  const terms = new Map((catalog?.terms || []).map(term => [term.id, term.label]));
+  return (catalog?.observations || []).filter(item =>
+    sourceIsSelected(item.source, config.sources, config.allSources)
+    && (config.topicTerm === "all" || item.termId === config.topicTerm)
+    && (!query || [item.excerpt, item.matchedText, item.source, terms.get(item.termId), documents.get(item.documentId)?.title]
+      .some(value => String(value || "").toLowerCase().includes(query))));
+}
+
+function topicMentionGroups(observations, terms) {
+  const names = new Map(terms.map(term => [term.id, term.label]));
+  const groups = new Map();
+  observations.forEach(item => {
+    const group = groups.get(item.termId) || { id: item.termId, name: names.get(item.termId) || item.termId, observations: [], documents: new Set(), sources: new Set() };
+    group.observations.push(item); group.documents.add(item.documentId); group.sources.add(item.source);
+    groups.set(item.termId, group);
+  });
+  return [...groups.values()].sort((a, b) => b.observations.length - a.observations.length || a.name.localeCompare(b.name));
+}
+
+function inspectTopicGroup(group, catalog) {
+  const documents = new Map(catalog.documents.map(doc => [doc.id, doc]));
+  const evidence = group.observations.map(item => {
+    const doc = documents.get(item.documentId);
+    return { ...item, sourceLabel: `${doc?.title || item.documentId} · ${item.source} · ${item.segment}`,
+      sourceURL: doc ? machineDataPathURL(doc.path, catalog.input) : "" };
+  });
+  let shown = 50;
+  showInspector(catalog.topic === "drugs" ? "drug" : "technology", group.name,
+    [[evidence.length, "mentions"], [group.documents.size, "documents"], [group.sources.size, "collections"]], evidence.slice(0, shown));
+  if (evidence.length > shown) {
+    const more = document.createElement("button");
+    more.type = "button"; more.className = "button"; more.textContent = "More";
+    more.addEventListener("click", () => {
+      $("#inspectorContent .evidence-list").insertAdjacentHTML("beforeend", evidenceHTML(evidence.slice(shown, shown + 50)));
+      shown += 50; more.hidden = shown >= evidence.length;
+    });
+    $("#inspectorContent").append(more);
+  }
+  const heading = $("#inspectorContent h3");
+  heading.setAttribute("tabindex", "-1"); heading.focus({ preventScroll: true });
+}
+
+function renderTopicMentions() {
+  const { svg, width, height } = clearChart();
+  const catalog = state.topicCatalogs[state.config.type];
+  const observations = filteredTopicMentions(catalog, state.config);
+  const groups = topicMentionGroups(observations, catalog.terms);
+  if (!groups.length) return showEmpty();
+  const margin = AXIS_MARGIN;
+  const maximum = Math.max(2, ...groups.map(group => group.observations.length));
+  const minimum = Math.max(.75, Math.min(...groups.map(group => group.observations.length)) * .8);
+  const xMinimum = Math.max(.75, Math.min(...groups.map(group => group.documents.size)) * .8);
+  const xMaximum = Math.max(xMinimum * 2, ...groups.map(group => group.documents.size * 1.08));
+  const x = value => margin.left + (Math.log10(value) - Math.log10(xMinimum)) / (Math.log10(xMaximum) - Math.log10(xMinimum)) * (width - margin.left - margin.right);
+  const y = value => height - margin.bottom - (Math.log10(value) - Math.log10(minimum)) / (Math.log10(maximum) - Math.log10(minimum)) * (height - margin.top - margin.bottom);
+  const ticks = [];
+  for (let power = 0; 10 ** power <= maximum; power++) for (const multiplier of [1, 2, 5]) if (multiplier * 10 ** power >= minimum && multiplier * 10 ** power <= maximum) ticks.push(multiplier * 10 ** power);
+  if (ticks.at(-1) !== maximum) ticks.push(maximum);
+  drawAxes(svg, width, height, "Documents · log scale", "Mentions · log scale", [xMinimum, xMaximum], [minimum, maximum], {}, { yTicks: ticks.slice().reverse(), yPosition: y });
+  const extent = valueExtent(groups.map(group => ({ sources: group.sources.size })), "sources");
+  const labels = [];
+  const points = groups.map(group => ({ group, x: x(group.documents.size), y: y(group.observations.length), r: scale(group.sources.size, extent, [4, 15]) }));
+  points.forEach(point => {
+    const { group } = point;
+    const mark = scatterPointMark(point.x, point.y, group.sources.size, extent);
+    mark.classList.add("topic-point");
+    mark.setAttribute("role", "button"); mark.setAttribute("tabindex", "0"); mark.setAttribute("data-topic-id", group.id);
+    const title = `${group.name}: ${group.observations.length} mentions in ${group.documents.size} documents · ${group.sources.size} collections`;
+    mark.setAttribute("aria-label", title); addTitle(mark, title);
+    mark.addEventListener("click", () => inspectTopicGroup(group, catalog));
+    mark.addEventListener("keydown", event => { if (["Enter", " "].includes(event.key)) { event.preventDefault(); inspectTopicGroup(group, catalog); } });
+    svg.append(mark);
+  });
+  // Place native labels in nearby free space without moving the data marks.
+  points.forEach(point => {
+    const text = scatterPointLabel(point.group.name, point.x, point.y, point.r, state.config.labelSize, height - margin.bottom + 18);
+    svg.append(text);
+    const box = text.getBBox();
+    const offsets = [point.r + state.config.labelSize + 2, -point.r - 6];
+    const candidates = offsets.map(offset => ({ dx: 0, dy: offset }));
+    for (let row = 0; row < 6; row++) for (const direction of [1, -1]) {
+      const dy = direction * row * (state.config.labelSize + 5) + state.config.labelSize / 3;
+      for (const side of [1, -1]) candidates.push({ dx: side * (point.r + box.width / 2 + 8), dy });
+    }
+    let placed = false;
+    for (const offset of candidates) {
+      const tx = Math.max(margin.left + box.width / 2, Math.min(width - 5 - box.width / 2, point.x + offset.dx));
+      const ty = point.y + offset.dy;
+      const candidate = { x: tx - box.width / 2 - 2, y: ty - box.height, width: box.width + 4, height: box.height + 3 };
+      if (candidate.y < 2 || candidate.y + candidate.height > height - margin.bottom + 20) continue;
+      if (labels.some(other => candidate.x < other.x + other.width && candidate.x + candidate.width > other.x && candidate.y < other.y + other.height && candidate.y + candidate.height > other.y)) continue;
+      if (points.some(other => other.x + other.r > candidate.x && other.x - other.r < candidate.x + candidate.width && other.y + other.r > candidate.y && other.y - other.r < candidate.y + candidate.height)) continue;
+      text.setAttribute("x", tx); text.setAttribute("y", ty); labels.push(candidate); placed = true; break;
+    }
+    if (!placed) text.remove();
+  });
+  $("#legend").innerHTML = "";
+  setSummary(`${formatNumber(observations.length)} mentions · ${formatNumber(new Set(observations.map(item => item.documentId)).size)} documents · ${groups.length} ${state.config.type === "drugs" ? "drugs" : "technologies"}`, state.config.type);
+}
+
+function exportTopicMentions() {
+  const catalog = state.topicCatalogs[state.config.type];
+  const documents = new Map(catalog.documents.map(doc => [doc.id, doc]));
+  const terms = new Map(catalog.terms.map(term => [term.id, term.label]));
+  const rows = filteredTopicMentions(catalog, state.config).map(item => {
+    const doc = documents.get(item.documentId);
+    return [terms.get(item.termId), item.matchedText, doc?.title, item.source, item.segment, item.start, item.end, item.excerpt, doc ? machineDataPathURL(doc.path, catalog.input) : ""];
+  });
+  const header = ["Term", "Matched phrase", "Document", "Collection", "Segment", "Start offset", "End offset", "Excerpt", "Source"];
+  downloadText(`ufo-files-${catalog.topic}-mentions.csv`, `${[header, ...rows].map(row => row.map(csvCell).join(",")).join("\n")}\n`, "text/csv");
+}
+
 async function ensureClockCatalog() {
   if (state.clockCatalog) return state.clockCatalog;
   state.clockPromise ||= (async () => {
@@ -5571,7 +5730,7 @@ function setSummary(text, type) {
           ? "Fish identifications and Hill-reported routes are a disputed claim layer · star positions use current measured astrometry · default camera follows Fish's published Zeta Tucanae occultation constraint and comparison-diagram roll · lines are not verified travel routes · background Gaia sample is not complete or volume-corrected"
           : "Background points are high-confidence Gaia DR3 sources · enlarged corpus and Solar System markers are identified separately · inverse parallax · local sample is not complete or volume-corrected"
         : "Hou & Han: 1,853 H II regions · 1,343 molecular clouds · 735 methanol masers · Reid et al.: 199 VLBI trigonometric-parallax anchors · published fits: Norma, Scutum–Centaurus, Sagittarius–Carina, Perseus, and Local · face-on Galactocentric coordinates · 18 kpc display radius · filled points are the 2014 compilation · open circles are the separate 2019 catalog and may overlap · thin curves are the paper's H II statistical fit, not an illustration · drag to orbit · scroll to zoom · no synthetic stars, invented target coordinates, or hand-drawn morphology"
-    : type === "clock" ? ""
+    : ["clock", "drugs", "technologies"].includes(type) ? ""
     : type === "blood" ? ""
     : type === "signals" ? "Explicit numeric frequency mentions in corpus text · not live RF measurements · mention does not establish a transmission or cause"
     : type === "coverage" ? "Corpus gaps are not evidence that real-world events did not occur · unknown metadata remains explicit"
@@ -5607,12 +5766,13 @@ function renderGraph() {
   if (state.config.type === "map") syncMapAnimationButton();
   $("#solarAnimationButton").hidden = state.config.type !== "solar" || state.config.solarScale === "sky";
   if (state.config.type === "solar") syncSolarAnimationButton();
-  $("#exportButton").textContent = ["blood", "clock"].includes(state.config.type) ? "Export mentions CSV" : state.config.type === "triage" ? "Export queue CSV" : "Export PDF";
+  $("#exportButton").textContent = ["blood", "clock", "drugs", "technologies"].includes(state.config.type) ? "Export mentions CSV" : state.config.type === "triage" ? "Export queue CSV" : "Export PDF";
   $("#graphSubtitle").textContent = state.config.type === "programs"
     ? `${state.programCatalog?.reviewedIntervalCount || 0} reviewed intervals · ${state.programCatalog?.reviewedEntityCount || 0} / ${state.programCatalog?.corpusProgramCount || 0} corpus candidates reviewed`
+    : ["drugs", "technologies"].includes(state.config.type) ? `${formatNumber(state.topicCatalogs[state.config.type]?.counts.scannedDocuments || 0)} source documents`
     : state.config.type === "clock" ? `${formatNumber(state.clockCatalog?.counts?.scannedDocuments || 0)} source documents`
     : graphDocumentCountSubtitle(state.catalog);
-  ({ network: renderNetwork, map: renderMap, solar: renderSolar, book: renderBook, document: renderDocument, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, programs: renderPrograms, matrix: renderMatrix, coverage: renderCoverage, table: renderTable, triage: renderTriage, claims: renderClaims, craft: renderCraft, species: renderSpecies, signals: renderSignals, blood: renderBloodTypes, clock: renderClock })[state.config.type]();
+  ({ network: renderNetwork, map: renderMap, solar: renderSolar, book: renderBook, document: renderDocument, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, programs: renderPrograms, matrix: renderMatrix, coverage: renderCoverage, table: renderTable, triage: renderTriage, claims: renderClaims, craft: renderCraft, species: renderSpecies, signals: renderSignals, blood: renderBloodTypes, drugs: renderTopicMentions, technologies: renderTopicMentions, clock: renderClock })[state.config.type]();
 }
 
 function evidenceHTML(evidence = []) {
@@ -6865,6 +7025,7 @@ async function addPDFGraphPage(pdf, exportedAt) {
 }
 
 async function exportCurrent() {
+  if (["drugs", "technologies"].includes(state.config.type)) return exportTopicMentions();
   if (state.config.type === "clock") return exportClockTimes();
   if (state.config.type === "blood") return exportBloodTypes();
   if (state.config.type === "triage") return exportTriageQueue();
@@ -7143,6 +7304,7 @@ async function init() {
     }
     installFullCatalog(await loadFullCatalogPayload());
     if (state.config.type === "clock") await ensureClockCatalog();
+    if (["drugs", "technologies"].includes(state.config.type)) await ensureTopicCatalog(state.config.type);
     await initializeDossier();
     renderInitialView();
     if (new URLSearchParams(location.search).get("dossier") === "open") {
