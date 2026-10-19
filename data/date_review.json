@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-19T19:22:56Z",
+  "generatedAt": "2026-10-19T22:18:21Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "9dd160d38f73b31aee4df29b59638906df275cf7"
+    "revision": "ee17c9dca48f69e087e24626e2a9c280f8572115"
   },
-  "documentsWithCandidates": 19025,
+  "documentsWithCandidates": 19027,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1477232,6 +1477232,39 @@
       ]
     },
     {
+      "documentId": "doc-cf177899eb5e",
+      "path": "DPIArchive/documents/127706-apro-bulletin-november-1959.txt",
+      "candidates": [
+        {
+          "value": "1927-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Press editor. interested in the story, not proximity to humans; combinc the two born on April 1, 1927 in Pittsburgh",
+          "segment": 202
+        },
+        {
+          "value": "1959-07-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "the deck-were occasionally bending over Monday, 6 July 1959. \"At about 8:40 over to our Assistant Director of Re-",
+          "segment": 507
+        },
+        {
+          "value": "1959-07-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Brisbane, Australia, July 8, 1959, 6:37",
+          "segment": 1064
+        }
+      ]
+    },
+    {
       "documentId": "doc-b96221bc43a1",
       "path": "DPIArchive/documents/127707-apro-bulletin-september-1959.txt",
       "candidates": [
@@ -1478407,6 +1478440,66 @@
           "method": "unclassified-mention",
           "evidence": "Declassified on: 16 March 2026",
           "segment": 155
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6269f2a32164",
+      "path": "DPIArchive/documents/130230-18-100754-general-1946-7-vol-2-pdf.txt",
+      "candidates": [
+        {
+          "value": "1947-12-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Craigie, 9 December 1947, attached as listed below",
+          "segment": 8
+        },
+        {
+          "value": "1947-11-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Journal\" on 12 November 1947, and should be followed up if possibl e. •",
+          "segment": 88
+        },
+        {
+          "value": "1947-11-18",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "• Reference l etter,. subject as aboTe, dated 18 November 1947,. it is",
+          "segment": 115
+        },
+        {
+          "value": "1947-06-09",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "dated 9 June 1947, indicates that 1800 afrcraft, directly or indirectly \\",
+          "segment": 287
+        },
+        {
+          "value": "1947-10-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Field, Albuquerque, New Mexico, 2 October 1947",
+          "segment": 369
+        },
+        {
+          "value": "1947-08-22",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ro , Deputy Chief of Air Staff for Research & Development DATE 22 August 1947",
+          "segment": 420
         }
       ]
     },
