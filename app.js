@@ -5768,7 +5768,7 @@ function renderGraph() {
   if (state.config.type === "map") syncMapAnimationButton();
   $("#solarAnimationButton").hidden = state.config.type !== "solar" || state.config.solarScale === "sky";
   if (state.config.type === "solar") syncSolarAnimationButton();
-  $("#exportButton").textContent = ["blood", "clock", "drugs", "technologies"].includes(state.config.type) ? "Export mentions CSV" : state.config.type === "triage" ? "Export queue CSV" : "Export PDF";
+  $("#exportButton").textContent = "Export PDF";
   $("#graphSubtitle").textContent = state.config.type === "programs"
     ? `${state.programCatalog?.reviewedIntervalCount || 0} reviewed intervals · ${state.programCatalog?.reviewedEntityCount || 0} / ${state.programCatalog?.corpusProgramCount || 0} corpus candidates reviewed`
     : ["drugs", "technologies"].includes(state.config.type) ? `${formatNumber(state.topicCatalogs[state.config.type]?.counts.scannedDocuments || 0)} source documents`
@@ -6666,7 +6666,8 @@ function setPDFFont(pdf, size, bold = false, color = 17) {
 }
 
 function pdfVectorChart() {
-  const source = $("#chart");
+  const source = state.config.type === "blood" && state.config.bloodView !== "table"
+    ? $("#tableView .blood-scatter") : $("#chart");
   const chart = source.cloneNode(true);
   const sourceNodes = [source, ...source.querySelectorAll("*")];
   const chartNodes = [chart, ...chart.querySelectorAll("*")];
@@ -6683,7 +6684,9 @@ function pdfVectorChart() {
   chart.querySelectorAll("text").forEach(node => {
     node.style.setProperty("font-family", PDF_FONT_FAMILY);
     node.style.setProperty("font-weight", Number.parseInt(node.style.fontWeight, 10) >= 600 ? "bold" : "normal");
-    if (node.classList.contains("node-label") || node.classList.contains("timeline-historical-marker-label")) {
+    // svg2pdf paints strokes after fills and does not honor SVG paint-order.
+    // Keep text fills, but omit display-only halos from every label class.
+    if (node.style.getPropertyValue("paint-order").startsWith("stroke") || node.classList.contains("node-label") || node.classList.contains("timeline-historical-marker-label")) {
       node.style.setProperty("stroke", "none");
       node.style.setProperty("paint-order", "normal");
     }
@@ -6812,7 +6815,31 @@ function addPDFClaimContinuationPage(pdf, section) {
   return { x: 45, y: 106, width: pageWidth - 90, height: pageHeight - 176 };
 }
 
+function drawPDFTriageQueue(pdf, bounds) {
+  const originalPage = pdf.internal.getCurrentPageInfo().pageNumber;
+  let y = bounds.y + 14;
+  const bottom = bounds.y + bounds.height;
+  document.querySelectorAll("#tableView .triage-case").forEach(record => {
+    const heading = record.querySelector(".triage-case-open").innerText.trim().replace(/\s+/g, " ");
+    const detail = record.querySelector(".triage-breakdown").innerText.trim().replace(/\s+/g, " ");
+    for (const [text, bold] of [[heading, true], [detail, false]]) {
+      setPDFFont(pdf, bold ? 8 : 7, bold);
+      for (const line of pdf.splitTextToSize(text, bounds.width - 16)) {
+        if (y > bottom - 8) {
+          pdf.addPage("letter", pdf.internal.pageSize.getWidth() > pdf.internal.pageSize.getHeight() ? "landscape" : "portrait");
+          y = bounds.y + 14;
+        }
+        pdf.text(line, bounds.x + 8, y); y += 11;
+      }
+      y += 5;
+    }
+    y += 8;
+  });
+  pdf.setPage(originalPage);
+}
+
 function drawPDFTableView(pdf, bounds) {
+  if (state.config.type === "triage") return drawPDFTriageQueue(pdf, bounds);
   if (state.config.type === "claims") {
     const originalPage = pdf.internal.getCurrentPageInfo?.().pageNumber || pdf.getNumberOfPages();
     const policy = state.claimCatalog?.policy?.summary || "Published claim relationships require exact evidence and explicit review.";
@@ -6959,7 +6986,7 @@ async function addPDFGraphPage(pdf, exportedAt) {
     const chartBounds = { x: 45, y: 112, width: pageWidth - 90, height: provenanceY - 190 };
     pdf.setDrawColor(17); pdf.setLineWidth(.75); pdf.roundedRect(chartBounds.x, chartBounds.y, chartBounds.width, chartBounds.height, 6, 6);
     const inset = 2;
-    if (!$("#chart").hasAttribute("hidden") && $("#chart").children.length) {
+    if ((!$("#chart").hasAttribute("hidden") && $("#chart").children.length) || $("#tableView .blood-scatter")) {
       await pdf.svg(pdfVectorChart(), { x: chartBounds.x + inset, y: chartBounds.y + inset, width: chartBounds.width - inset * 2, height: chartBounds.height - inset * 2 });
     } else if (!$("#mapView").hidden) {
       const canvas = $("#globeCanvas");
@@ -7027,10 +7054,6 @@ async function addPDFGraphPage(pdf, exportedAt) {
 }
 
 async function exportCurrent() {
-  if (["drugs", "technologies"].includes(state.config.type)) return exportTopicMentions();
-  if (state.config.type === "clock") return exportClockTimes();
-  if (state.config.type === "blood") return exportBloodTypes();
-  if (state.config.type === "triage") return exportTriageQueue();
   const button = $("#exportButton");
   if (!window.jspdf?.jsPDF || !window.svg2pdf) return toast("PDF export tools unavailable");
   button.disabled = true;
