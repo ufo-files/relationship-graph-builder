@@ -1,0 +1,228 @@
+{
+  "version": "0.2.0",
+  "purpose": "Reproducible candidate discovery, not verification or a systematic-review completion claim",
+  "queries": [
+    {
+      "id": "origins",
+      "question": "What precedes Roswell and how did formal investigations begin?",
+      "pattern": "foo[ -]?fighters?|ghost rockets?|project (?:saucer|sign|grudge)|twining.{0,100}(?:memo|1947)|estimate of the situation",
+      "prefilterAny": [
+        "foo",
+        "ghost",
+        "project saucer",
+        "project sign",
+        "project grudge",
+        "twining",
+        "estimate of the situation"
+      ]
+    },
+    {
+      "id": "roswell",
+      "question": "What do contemporary records and later witnesses establish about Roswell?",
+      "pattern": "roswell|project mogul|mack brazel|jesse marcel|sheridan cavitt",
+      "prefilterAny": [
+        "roswell",
+        "mogul",
+        "brazel",
+        "marcel",
+        "cavitt"
+      ]
+    },
+    {
+      "id": "public-messaging",
+      "question": "What evidence exists of public persuasion, suppression, or debunking policy?",
+      "pattern": "robertson panel|durant report|condon report|special report (?:no\\.? )?14|(?:debunk|discredit|psychological warfare).{0,100}(?:ufo|flying saucer)|(?:ufo|flying saucer).{0,100}(?:debunk|discredit|psychological warfare)",
+      "prefilterAny": [
+        "robertson",
+        "durant",
+        "condon",
+        "special report",
+        "debunk",
+        "discredit",
+        "psychological warfare"
+      ]
+    },
+    {
+      "id": "modern-programs",
+      "question": "Which programs and contracts can be documented?",
+      "pattern": "aawsap|aatip|kona blue|uap task force|unidentified aerial phenomena task force|advanced aerospace (?:weapon|threat)",
+      "prefilterAny": [
+        "aawsap",
+        "aatip",
+        "kona blue",
+        "uap task force",
+        "unidentified aerial phenomena task force",
+        "advanced aerospace"
+      ]
+    },
+    {
+      "id": "retrievals",
+      "question": "What is the provenance of crash-retrieval, biological, and reverse-engineering allegations?",
+      "pattern": "crash[ -]retrieval|reverse[ -]engineer|non[ -]?human biolog|recovered (?:alien|extraterrestrial)|retrieved (?:craft|bodies)|majestic[ -]?12|magenta.{0,80}1933",
+      "prefilterAny": [
+        "crash",
+        "reverse",
+        "biolog",
+        "alien",
+        "extraterrestrial",
+        "retrieved",
+        "majestic",
+        "magenta"
+      ]
+    },
+    {
+      "id": "contractors",
+      "question": "What establishes contractor possession, transfers, or proprietary exploitation?",
+      "pattern": "lockheed|northrop|battelle|bigelow aerospace|science applications international|to the stars academy|cooperative research and development agreement",
+      "prefilterAny": [
+        "lockheed",
+        "northrop",
+        "battelle",
+        "bigelow",
+        "science applications international",
+        "to the stars academy",
+        "cooperative research and development agreement"
+      ]
+    },
+    {
+      "id": "witness-oversight",
+      "question": "What do primary testimony and oversight records actually attest?",
+      "pattern": "david (?:charles )?grusch|david fravor|ryan graves|luis elizondo|lou elizondo|tim gallaudet|michael shellenberger|immaculate constellation|(?:uap|ufo).{0,100}(?:whistleblower|retaliation|inspector general)",
+      "prefilterAny": [
+        "grusch",
+        "fravor",
+        "graves",
+        "elizondo",
+        "gallaudet",
+        "shellenberger",
+        "immaculate",
+        "whistleblower",
+        "retaliation",
+        "inspector general"
+      ]
+    },
+    {
+      "id": "consciousness",
+      "question": "What was proposed or tested concerning anomalous cognition?",
+      "pattern": "psionic|remote viewing|psychokinesis|project stargate|project sun streak|project grill flame|human consciousness anomal|consciousness.{0,60}(?:uap|ufo)|(?:uap|ufo).{0,60}consciousness",
+      "prefilterAny": [
+        "psionic",
+        "remote viewing",
+        "psychokinesis",
+        "stargate",
+        "sun streak",
+        "grill flame",
+        "consciousness"
+      ]
+    },
+    {
+      "id": "signaling",
+      "question": "What is actually disclosed about electromagnetic or mental UAP attraction?",
+      "pattern": "dog[ -]?whistle|electro[ -]?mechanical signal|machine calling|psionic calling|(?:attract|summon|vector).{0,70}(?:uap|ufo)|(?:uap|ufo).{0,70}(?:attract|summon|vector)",
+      "prefilterAny": [
+        "dog",
+        "electro",
+        "machine calling",
+        "psionic calling",
+        "attract",
+        "summon",
+        "vector"
+      ]
+    },
+    {
+      "id": "materials",
+      "question": "Which material samples have provenance and reproducible measurements?",
+      "pattern": "metallic specimen|terahertz waveguide|isotop(?:e|ic).{0,90}(?:ufo|uap|bismuth|magnesium)|(?:ufo|uap|bismuth|magnesium).{0,90}isotop|ubatuba|council bluffs|trinity crash|art.?s parts",
+      "prefilterAny": [
+        "metallic specimen",
+        "terahertz",
+        "isotop",
+        "ubatuba",
+        "council bluffs",
+        "trinity crash",
+        "parts"
+      ]
+    },
+    {
+      "id": "sensor-cases",
+      "question": "What do case records establish about observation versus inferred performance?",
+      "pattern": "nimitz|tic[ -]?tac|rendlesham|gimbal|go[ -]?fast|tehran|iran.{0,50}1976|rb[ -]?47|japan air.{0,20}1628|japan airlines|shag harbour|shag harbor",
+      "prefilterAny": [
+        "nimitz",
+        "tic",
+        "rendlesham",
+        "gimbal",
+        "fast",
+        "tehran",
+        "iran",
+        "rb",
+        "japan",
+        "shag"
+      ]
+    },
+    {
+      "id": "nuclear",
+      "question": "What supports claimed interactions with nuclear weapons or facilities?",
+      "pattern": "malmstrom|minot|bentwaters|icbm|(?:uap|ufo).{0,80}(?:nuclear|missile)|(?:nuclear|missile).{0,80}(?:uap|ufo)",
+      "prefilterAny": [
+        "malmstrom",
+        "minot",
+        "vandenberg",
+        "vandnberg",
+        "icbm",
+        "nuclear",
+        "missile"
+      ]
+    },
+    {
+      "id": "international",
+      "question": "How do national investigations and case assessments compare?",
+      "pattern": "geipan|gepan|sepra|cometa|op[ée]ration prato|opera[cç][aã]o prato|colares|hollanda|condign|se[f]?aa|cefae|ciae|trans[ -]en[ -]provence|valensole",
+      "prefilterAny": [
+        "geipan",
+        "gepan",
+        "sepra",
+        "cometa",
+        "opéra",
+        "opera",
+        "colares",
+        "hollanda",
+        "condign",
+        "sefaa",
+        "seaa",
+        "cefae",
+        "ciae",
+        "provence",
+        "valensole"
+      ]
+    },
+    {
+      "id": "scientific-method",
+      "question": "What methods, null results, physical constraints, or alternative explanations bear on the claims?",
+      "pattern": "unidentified anomalous phenomena independent study|physical constraints on unidentified|galileo project|hessdalen|sensor calibration|(?:uap|ufo).{0,80}(?:parallax|starlink|replication|controlled experiment)|(?:parallax|starlink|replication|controlled experiment).{0,80}(?:uap|ufo)",
+      "prefilterAny": [
+        "independent study",
+        "physical constraints",
+        "galileo",
+        "hessdalen",
+        "sensor calibration",
+        "parallax",
+        "starlink",
+        "replication",
+        "controlled experiment"
+      ]
+    },
+    {
+      "id": "economics",
+      "question": "What documentary evidence supports commercial or intellectual-property claims?",
+      "pattern": "(?:uap|ufo|extraterrestrial|off.world|recovered technolog).{0,120}(?:patent|proprietary|commercial|profit|intellectual property)|(?:patent|proprietary|commercial|profit|intellectual property).{0,120}(?:uap|ufo|extraterrestrial|off.world|recovered technolog)",
+      "prefilterAny": [
+        "patent",
+        "proprietary",
+        "commercial",
+        "profit",
+        "intellectual property"
+      ]
+    }
+  ]
+}

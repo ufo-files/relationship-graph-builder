@@ -40,6 +40,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html app.js map-globe.js solar-system.js styles.css .nojekyll _site/
+          cp whitepaper.html whitepaper.js whitepaper.css _site/
           cp -R assets data vendor _site/
 
       - name: Configure Pages
