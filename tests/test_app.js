@@ -5008,3 +5008,34 @@ test("Topic data loader rejects partial shard data and allows a complete retry",
   assert.equal(await context.ensureTopicCatalog("drugs"), payload);
   assert.equal(requests, 4);
 });
+
+test("PDF vector labels retain their ink without white display halos", () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const functionSource = source.slice(source.indexOf("function pdfVectorChart()"), source.indexOf("function truncatePDFText("));
+  function style(values) {
+    return { getPropertyValue: key => values[key] || "", setProperty: (key, value) => { values[key] = value; }, get fontWeight() { return values["font-weight"]; } };
+  }
+  const labels = ["craft-class-label", "species-metric-label", "signal-peak-label", "timeline-recency-guide-label"].map(name => ({
+    style: style({ fill: "rgb(17, 17, 17)", stroke: "rgb(255, 255, 255)", "paint-order": "stroke", "font-weight": "700" }), classList: { contains: value => value === name }
+  }));
+  const chart = { style: style({}), querySelectorAll: selector => selector === "text" ? labels : labels };
+  const original = { style: style({}), cloneNode: () => chart, querySelectorAll: () => labels };
+  const context = { state: { config: { type: "craft" } }, $: () => original, getComputedStyle: node => node.style, PDF_FONT_FAMILY: "Plex" };
+  vm.createContext(context); vm.runInContext(functionSource, context);
+  context.pdfVectorChart();
+  labels.forEach(node => {
+    assert.equal(node.style.getPropertyValue("fill"), "rgb(17, 17, 17)");
+    assert.equal(node.style.getPropertyValue("stroke"), "none");
+    assert.equal(node.style.getPropertyValue("paint-order"), "normal");
+  });
+});
+
+test("every view uses PDF export, including the embedded blood graph", () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const exporter = source.slice(source.indexOf("async function exportCurrent()"), source.indexOf("function publicDossierPayloadFromHash()"));
+  assert.doesNotMatch(exporter, /return export(?:TopicMentions|ClockTimes|BloodTypes|TriageQueue)/);
+  assert.match(exporter, /await addPDFGraphPage\(pdf, exportedAt\)/);
+  assert.match(source, /\$\("#exportButton"\)\.textContent = "Export PDF"/);
+  assert.match(source, /\|\| \$\("#tableView \.blood-scatter"\)/);
+  assert.match(source, /state\.config\.type === "triage"\) return drawPDFTriageQueue/);
+});
