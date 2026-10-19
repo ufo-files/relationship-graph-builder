@@ -8,6 +8,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import shutil
 import subprocess
 
 
@@ -22,7 +23,13 @@ def main():
     protocol = json.loads(query_bytes)
     queries = [(q['id'], re.compile(q['pattern'], re.I), q.get('prefilterAny', [])) for q in protocol['queries']]
     revision = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=args.corpus_root, text=True).strip()
-    listing = subprocess.check_output(['rg', '--files', '-g', '*.txt', '-g', '*.tsv'], cwd=args.corpus_root, text=True)
+    if shutil.which('rg'):
+        listing = subprocess.check_output(['rg', '--files', '-g', '*.txt', '-g', '*.tsv'], cwd=args.corpus_root, text=True).splitlines()
+    else:
+        # Minimal CI images may lack ripgrep. Keep discovery within this Git checkout.
+        raw = subprocess.check_output(['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z',
+                                       '--', '*.txt', '*.tsv'], cwd=args.corpus_root, text=True)
+        listing = [path for path in raw.split('\0') if path and not any(part.startswith('.') for part in Path(path).parts)]
     collections = Counter()
     exclusions = Counter()
     matched_by_query = Counter()
@@ -32,7 +39,7 @@ def main():
     duplicates = defaultdict(list)
     errors = []
     total_bytes = 0
-    for rel in sorted(listing.splitlines()):
+    for rel in sorted(set(listing)):
         path = Path(rel)
         if not path.parts[0][0].isupper():
             exclusions['tooling_or_metadata'] += 1

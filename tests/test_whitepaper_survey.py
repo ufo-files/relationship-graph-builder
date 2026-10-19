@@ -1,7 +1,10 @@
 import gzip
 import json
+import os
 from pathlib import Path
+import shutil
 import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -29,9 +32,13 @@ class WhitepaperSurveyTests(unittest.TestCase):
                 file.parent.mkdir(parents=True, exist_ok=True)
                 file.write_text(text)
             output = Path(directory) / 'survey'
-            subprocess.run(['python3', str(project / 'scripts/survey_whitepaper.py'),
+            binaries = Path(directory) / 'bin'
+            binaries.mkdir()
+            (binaries / 'git').symlink_to(shutil.which('git'))
+            result = subprocess.run([sys.executable, str(project / 'scripts/survey_whitepaper.py'),
                             '--corpus-root', str(root), '--output', str(output)],
-                           check=True, capture_output=True, text=True)
+                           env={**os.environ, 'PATH': str(binaries)}, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
             summary = json.loads((output / 'survey.json').read_text())
             ledger = json.loads(gzip.decompress((output / 'screening.json.gz').read_bytes()))
             candidates = {item['path']: item for item in ledger['candidates']}
