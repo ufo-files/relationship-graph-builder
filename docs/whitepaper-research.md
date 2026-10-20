@@ -1,8 +1,10 @@
 # UFO documentary research paper
 
-`whitepaper.html` presents the narrative and research apparatus from
-`data/whitepaper.json`. The graph builder links to it through **Research paper**
-on desktop and **Read the research paper** in mobile graph controls.
+Choose **Whitepaper** in the graph builder’s view selector to read the narrative
+and research apparatus from `data/whitepaper.json`. Citations open exact passages
+inside the view; copied builder links preserve the selected passage. **Export PDF**
+opens the browser’s print dialog with the complete paper, sources, and evidence
+expanded. `whitepaper.html` remains a standalone reader using the same content.
 
 The current author-reviewed synthesis contains 71 cited source files, 156
 passages, and 289 individually cited sentences across 41 sections. These counts

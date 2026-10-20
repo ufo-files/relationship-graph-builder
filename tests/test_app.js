@@ -121,7 +121,7 @@ test("Galactic Entities boots from a compact astronomy payload", () => {
   assert.match(source, /fetch\("data\/astronomy\.json", \{ cache: "no-store" \}\)/);
   assert.match(source, /state\.catalogMode = "astronomy"/);
   assert.match(source, /state\.catalog\.documents\.forEach\(item => state\.documentById\.set\(item\.id, item\)\)/);
-  assert.match(source, /type !== "solar" && !await ensureFullCatalog\(requestId\)/);
+  assert.match(source, /type !== "solar" && type !== "whitepaper" && !await ensureFullCatalog\(requestId\)/);
   assert.match(source, /const requestId = \+\+state\.typeRequestId/);
   assert.match(source, /requestId !== state\.typeRequestId/);
   assert.match(source, /state\.initialCatalogPromise = init\(\)/);
@@ -3507,7 +3507,7 @@ test("all graph types export a presentation PDF with UFO Files provenance", () =
   assert.match(source, /const PDF_FONT_FAMILY = "IBM Plex Mono"/);
   assert.match(source, /assets\/fonts\/\$\{font\.file\}[\s\S]*pdf\.addFileToVFS\(font\.file, font\.data\)[\s\S]*pdf\.addFont\(font\.file, PDF_FONT_FAMILY, font\.style\)/);
   assert.match(source, /pdfExportTitle\(\)[\s\S]*currentGraphURL\(\)[\s\S]*graphQRCode\(deepLink\)[\s\S]*new window\.jspdf\.jsPDF[\s\S]*loadPDFFonts\(pdf\)[\s\S]*addPDFCover\([\s\S]*addPDFGraphPage\([\s\S]*pdf\.save\(pdfFilename\(exportTitle\)\)/);
-  assert.doesNotMatch(source, /html2canvas|window\.print\(|toDataURL\("image\/jpeg"/i);
+  assert.doesNotMatch(source, /html2canvas|toDataURL\("image\/jpeg"/i);
   assert.doesNotMatch(source, /function export(?:SVG|CSV|DocumentCSV)/);
   assert.equal(fs.existsSync("vendor/html2canvas.min.js"), false);
   assert.ok(fs.statSync("vendor/jspdf.umd.min.js").size > 300_000);
@@ -3625,12 +3625,12 @@ test("vector PDF includes the complete stage and only rasterizes the WebGL map",
   assert.match(source, /chartWrap[\s\S]*chartRect\.width \/ chartRect\.height > 1\.25[\s\S]*landscape \? "landscape" : "portrait"/);
   assert.match(source, /const chartBounds = \{ x: 45, y: 112, width: pageWidth - 90, height: provenanceY - 190 \}/);
   assert.match(source, /const inset = 2/);
-  assert.doesNotMatch(source, /window\.print\(\)|afterprint|pdf-printing/);
+  assert.doesNotMatch(source.slice(source.indexOf("async function addPDFGraphPage("), source.indexOf("async function exportCurrent(")), /window\.print\(\)|afterprint|pdf-printing/);
   assert.match(styles, /\.stage\.pdf-exporting \{ --paper: #fff; background: #fff; \}/);
   assert.match(styles, /\.stage\.pdf-exporting \.stage-tools \{ visibility: hidden; \}/);
   assert.doesNotMatch(styles, /\.stage\.pdf-exporting \.chart-wrap/);
   assert.match(styles, /\.stage\.pdf-exporting \.scatter-relationship-line \{ opacity: \.07 !important; \}/);
-  assert.doesNotMatch(styles, /pdf-cover-render|pdf-stage-provenance|@media print|@page/);
+  assert.doesNotMatch(styles, /pdf-cover-render|pdf-stage-provenance|@page/);
 });
 
 test("shared public dossiers resolve embedded Craft classes with labels and immutable source links", async () => {
@@ -5038,4 +5038,36 @@ test("every view uses PDF export, including the embedded blood graph", () => {
   assert.match(source, /\$\("#exportButton"\)\.textContent = "Export PDF"/);
   assert.match(source, /\|\| \$\("#tableView \.blood-scatter"\)/);
   assert.match(source, /state\.config\.type === "triage"\) return drawPDFTriageQueue/);
+});
+
+
+test("whitepaper configuration preserves cited locations in shared builder links", () => {
+  const location = { hash: "" };
+  const history = { replaceState: (_state, _title, hash) => { location.hash = hash; } };
+  const context = vm.createContext({ location, history, URL, URLSearchParams, btoa: value => Buffer.from(value, "binary").toString("base64"), atob: value => Buffer.from(value, "base64").toString("binary") });
+  const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
+  vm.runInContext(source, context);
+  vm.runInContext('state.config = presetConfig("default", "whitepaper"); state.config.whitepaperAnchor = "evidence-example"; persistHash();', context);
+  const restored = vm.runInContext('loadConfig()', context);
+  assert.equal(restored.type, "whitepaper");
+  assert.equal(restored.whitepaperAnchor, "evidence-example");
+  assert.equal(restored.title, "The UFO Documentary Record");
+});
+
+test("whitepaper starts independently of the full graph catalog", async () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  let rendered = 0;
+  const errors = [];
+  const context = vm.createContext({
+    state: { config: { type: "whitepaper" } },
+    publicDossierPayloadFromHash: () => null,
+    renderInitialView: () => { rendered++; },
+    loadFullCatalogPayload: () => { throw new Error("Full catalog should not load"); },
+    showCatalogError: error => errors.push(error.message)
+  });
+  vm.runInContext(source.slice(source.indexOf("async function init()"), source.indexOf("$$('.step-heading')")), context);
+  await context.init();
+  assert.equal(rendered, 1);
+  assert.equal(context.state.catalogMode, "whitepaper");
+  assert.deepEqual(errors, []);
 });

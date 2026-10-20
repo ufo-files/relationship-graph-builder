@@ -1,5 +1,6 @@
 'use strict';
-(() => {
+window.renderWhitepaper = async function(root = document, options = {}) {
+  const find = id => root.getElementById(id);
   const el = (tag, text, className) => {
     const node = document.createElement(tag);
     if (text !== undefined) node.textContent = text;
@@ -14,11 +15,12 @@
   const labels = { record: 'Record', assessment: 'Assessment', claim: 'Attributed claim', analysis: 'Synthesis' };
   function revealTarget() {
     let id;
-    try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
-    const target = document.getElementById(id);
+    try { id = options.anchor ? options.anchor() : decodeURIComponent(location.hash.slice(1)); } catch { return; }
+    const target = find(id);
     if (!target) return;
     if (target.tagName === 'DETAILS') target.open = true;
-    target.scrollIntoView();
+    target.scrollIntoView({block: 'start'});
+    target.setAttribute('tabindex', '-1'); target.focus({preventScroll: true});
   }
   async function render() {
     const response = await fetch('data/whitepaper.json');
@@ -27,19 +29,19 @@
     const sentences = paper.chapters.flatMap(chapter => chapter.sentences);
     const evidenceNumbers = new Map(Object.keys(paper.evidence).map((id, i) => [id, i + 1]));
     const sourceNumbers = new Map(Object.keys(paper.sources).map((id, i) => [id, i + 1]));
-    document.getElementById('title').textContent = paper.title;
-    document.getElementById('subtitle').textContent = paper.subtitle;
-    document.getElementById('edition').textContent = `v${paper.version} / ${paper.editionDate}`;
-    document.getElementById('status').textContent = paper.status;
-    document.getElementById('scope').textContent = paper.scope;
-    document.getElementById('footer-version').textContent = `${paper.id} · v${paper.version}`;
+    find('title').textContent = paper.title;
+    find('subtitle').textContent = paper.subtitle;
+    find('edition').textContent = `v${paper.version} / ${paper.editionDate}`;
+    find('status').textContent = paper.status;
+    find('scope').textContent = paper.scope;
+    find('footer-version').textContent = `${paper.id} · v${paper.version}`;
     for (const [count, label] of [[paper.chapters.length, 'sections'], [sentences.length, 'cited sentences'], [Object.keys(paper.sources).length, 'cited source files'], [Object.keys(paper.evidence).length, 'evidence passages']]) {
       const metric = el('span'); metric.append(el('strong', count), document.createTextNode(label));
-      document.getElementById('metrics').append(metric);
+      find('metrics').append(metric);
     }
-    for (const method of paper.methodology) document.getElementById('method-list').append(el('li', method));
+    for (const method of paper.methodology) find('method-list').append(el('li', method));
     for (const chapter of paper.chapters) {
-      document.getElementById('contents').append(link(chapter.title, `#${chapter.id}`));
+      find('contents').append(link(chapter.title, `#${chapter.id}`));
       const section = el('section'); section.id = chapter.id;
       section.append(el('p', chapter.deck, 'eyebrow'), el('h2', chapter.title));
       for (const sentence of chapter.sentences) {
@@ -56,7 +58,7 @@
         permalink.setAttribute('aria-label', `Permanent reference to sentence ${sentence.id}`);
         p.append(permalink); section.append(p);
       }
-      document.getElementById('chapters').append(section);
+      find('chapters').append(section);
     }
     for (const dispute of paper.disputes || []) {
       const card = el('div', undefined, 'claim-card'); card.id = `dispute-${dispute.id}`;
@@ -64,19 +66,19 @@
       const links = el('p', undefined, 'backlinks');
       for (const id of dispute.sentences) links.append(link(`§ ${id}`, `#${id}`));
       card.append(links, el('p', `Research disposition: ${dispute.disposition}`));
-      document.getElementById('dispute-list').append(card);
+      find('dispute-list').append(card);
     }
     for (const claim of paper.claimLedger || []) {
       const card = el('div', undefined, 'claim-card'); card.id = `claim-${claim.id}`;
       card.append(el('h3', claim.question), link('Read the cited analysis →', `#${claim.sentence}`), el('p', claim.nextEvidence), el('p', claim.status, 'editorial'));
-      document.getElementById('claims').append(card);
+      find('claims').append(card);
     }
     for (const gap of paper.gaps) {
       const block = el('div', undefined, 'gap'); block.append(el('h3', gap.topic), el('p', gap.needed));
-      document.getElementById('gaps').append(block);
+      find('gaps').append(block);
     }
     const provenance = el('p', `Corpus snapshot: ufo-files/machine-data @ ${paper.corpusRevision}`, 'editorial');
-    document.getElementById('sources').append(provenance);
+    find('sources').append(provenance);
     for (const source of Object.values(paper.sources)) {
       const block = el('div', undefined, 'source'); block.id = `source-${source.id}`;
       block.append(el('h3', `${sourceNumbers.get(source.id)}. ${source.title}`), el('p', `${source.author} · ${source.date || source.dateNote} · ${source.kind}`, 'source-meta'));
@@ -89,7 +91,7 @@
       if (source.originalSha256) {
         const originalHash = el('p'); originalHash.append(document.createTextNode('Original SHA-256 from archive metadata: '), el('code', source.originalSha256)); block.append(originalHash);
       }
-      document.getElementById('sources').append(block);
+      find('sources').append(block);
     }
     for (const evidence of Object.values(paper.evidence)) {
       const source = paper.sources[evidence.source];
@@ -104,14 +106,14 @@
       details.append(tools);
       const backlinks = el('p', undefined, 'backlinks'); backlinks.append(document.createTextNode('Cited by: '));
       for (const sentence of sentences.filter(sentence => sentence.citations.includes(evidence.id))) backlinks.append(link(sentence.id, `#${sentence.id}`));
-      details.append(backlinks); document.getElementById('passages').append(details);
+      details.append(backlinks); find('passages').append(details);
     }
-    document.getElementById('loading').hidden = true;
-    document.getElementById('publication').hidden = false;
+    find('loading').hidden = true;
+    find('publication').hidden = false;
     renderAudit().catch(() => {
-      document.getElementById('advisor').append(el('p', 'The research audit is unavailable. Its source files remain linked below.', 'editorial'));
+      find('advisor').append(el('p', 'The research audit is unavailable. Its source files remain linked below.', 'editorial'));
     });
-    window.addEventListener('hashchange', revealTarget);
+    if (!options.navigate) window.addEventListener('hashchange', revealTarget);
     revealTarget();
   }
 
@@ -122,7 +124,7 @@
       return response.json();
     }));
     const [surveyResult, advisorResult] = results;
-    const surveyNode = document.getElementById('survey');
+    const surveyNode = find('survey');
     if (surveyResult.status === 'fulfilled') {
       const survey = surveyResult.value;
       surveyNode.append(el('h3', 'Corpus search'), el('p', `${survey.scannedDocuments.toLocaleString()} text files searched across ${Object.keys(survey.collections).length} archive collections; ${survey.candidateDocuments.toLocaleString()} files matched at least one research query. These are search candidates, not reviewed or corroborated findings.`));
@@ -137,7 +139,7 @@
     } else {
       surveyNode.append(el('p', 'Corpus screening is still in progress; no completed coverage count is claimed here.', 'editorial'));
     }
-    const advisorNode = document.getElementById('advisor');
+    const advisorNode = find('advisor');
     if (advisorResult.status !== 'fulfilled') throw new Error('Advisor audit missing');
     const advisor = advisorResult.value;
     advisorNode.append(el('h3', 'Author’s research review'), el('p', advisor.status));
@@ -148,20 +150,32 @@
     }
   }
 
-  document.getElementById('print').addEventListener('click', () => window.print());
-  let previouslyOpen = [];
-  window.addEventListener('beforeprint', () => {
-    previouslyOpen = [...document.querySelectorAll('details[open]')];
-    document.querySelectorAll('details').forEach(node => { node.open = true; });
-  });
-  window.addEventListener('afterprint', () => {
-    document.querySelectorAll('details').forEach(node => { node.open = previouslyOpen.includes(node); });
-  });
-  render().catch(error => {
+  await render().catch(error => {
     console.error('Research paper failed to load:', error);
-    const status = document.getElementById('loading');
+    const status = find('loading');
     status.textContent = 'The research paper could not be loaded. Reload this page to try again, or open the research data directly.';
     status.append(document.createTextNode(' '), link('Research data', 'data/whitepaper.json'));
     status.className = 'error';
+    throw error;
   });
-})();
+  find('print')?.addEventListener('click', () => window.print());
+  let previouslyOpen = [];
+  window.addEventListener('beforeprint', () => {
+    previouslyOpen = [...root.querySelectorAll('details[open]')];
+    root.querySelectorAll('details').forEach(node => { node.open = true; });
+  });
+  window.addEventListener('afterprint', () => {
+    root.querySelectorAll('details').forEach(node => { node.open = previouslyOpen.includes(node); });
+  });
+  if (options.navigate) root.addEventListener('click', event => {
+    const anchor = event.target.closest?.('a[data-paper-anchor], a[href^="#"]');
+    if (!anchor) return;
+    event.preventDefault(); options.navigate(anchor.dataset.paperAnchor || anchor.getAttribute('href').slice(1));
+  });
+  if (options.url) root.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.dataset.paperAnchor = anchor.getAttribute('href').slice(1);
+    anchor.href = options.url(anchor.dataset.paperAnchor);
+  });
+  return { revealTarget };
+};
+if (document.getElementById('paper')) window.renderWhitepaper().catch(() => {});
