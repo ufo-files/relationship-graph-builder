@@ -13,3 +13,5 @@
 @media print{:host{background:white;color:black}:host .cover{padding:0 0 20px}:host .layout{display:block;padding:0}:host h1{font-size:40pt}}
 :host .method ul{color:var(--muted,#666)}:host .contents nav,:host article section,:host .evidence-card,:host .claim-card,:host .audit-issue,:host footer,:host #research-audit th,:host #research-audit td{border-color:var(--line-strong,#ccc)}
 :host :focus-visible,:host [tabindex="-1"]:focus{outline:2px solid var(--ink,#111);outline-offset:3px}
+
+#publication{padding-top:24px}#caseStudies>section{padding-top:24px}#caseStudies>section:first-child{border-top:0}

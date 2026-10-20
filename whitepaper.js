@@ -12,7 +12,6 @@ window.renderWhitepaper = async function(root = document, options = {}) {
     node.href = href;
     return node;
   };
-  const labels = { record: 'Record', assessment: 'Assessment', claim: 'Attributed claim', analysis: 'Synthesis' };
   function revealTarget() {
     let id;
     try { id = options.anchor ? options.anchor() : decodeURIComponent(location.hash.slice(1)); } catch { return; }
@@ -23,30 +22,21 @@ window.renderWhitepaper = async function(root = document, options = {}) {
     target.setAttribute('tabindex', '-1'); target.focus({preventScroll: true});
   }
   async function render() {
-    const response = await fetch('data/whitepaper.json');
+    const response = await fetch('data/whitepaper.json', {cache: 'no-cache'});
     if (!response.ok) throw new Error('Research data could not be loaded.');
     const paper = await response.json();
     const sentences = paper.chapters.flatMap(chapter => chapter.sentences);
     const evidenceNumbers = new Map(Object.keys(paper.evidence).map((id, i) => [id, i + 1]));
     const sourceNumbers = new Map(Object.keys(paper.sources).map((id, i) => [id, i + 1]));
-    find('title').textContent = paper.title;
-    find('subtitle').textContent = paper.subtitle;
-    find('edition').textContent = `v${paper.version} / ${paper.editionDate}`;
-    find('status').textContent = paper.status;
-    find('scope').textContent = paper.scope;
     find('footer-version').textContent = `${paper.id} · v${paper.version}`;
-    for (const [count, label] of [[paper.chapters.length, 'sections'], [sentences.length, 'cited sentences'], [Object.keys(paper.sources).length, 'cited source files'], [Object.keys(paper.evidence).length, 'evidence passages']]) {
-      const metric = el('span'); metric.append(el('strong', count), document.createTextNode(label));
-      find('metrics').append(metric);
-    }
-    for (const method of paper.methodology) find('method-list').append(el('li', method));
     for (const chapter of paper.chapters) {
+      if (chapter.caseStudy?.order === 1) find('contents').append(link('Case studies', '#case-studies', 'eyebrow'));
       find('contents').append(link(chapter.title, `#${chapter.id}`));
       const section = el('section'); section.id = chapter.id;
       section.append(el('p', chapter.deck, 'eyebrow'), el('h2', chapter.title));
       for (const sentence of chapter.sentences) {
         const p = el('p', undefined, 'sentence'); p.id = sentence.id;
-        p.append(el('span', labels[sentence.kind], `kind ${sentence.kind}`), document.createTextNode(sentence.text));
+        p.append(document.createTextNode(sentence.text));
         for (const id of sentence.citations) {
           const evidence = paper.evidence[id];
           const citation = link(`[${evidenceNumbers.get(id)}]`, `#evidence-${id}`, 'citation');
@@ -54,11 +44,9 @@ window.renderWhitepaper = async function(root = document, options = {}) {
           citation.title = `${paper.sources[evidence.source].title} · ${evidence.locator}`;
           p.append(citation);
         }
-        const permalink = link(`§ ${sentence.id}`, `#${sentence.id}`, 'sentence-id');
-        permalink.setAttribute('aria-label', `Permanent reference to sentence ${sentence.id}`);
-        p.append(permalink); section.append(p);
+        section.append(p);
       }
-      find('chapters').append(section);
+      (chapter.caseStudy ? find('caseStudies') : find('chapters')).append(section);
     }
     for (const dispute of paper.disputes || []) {
       const card = el('div', undefined, 'claim-card'); card.id = `dispute-${dispute.id}`;
