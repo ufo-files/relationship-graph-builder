@@ -5,7 +5,7 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-PUBLIC_FILES = {"index.html", "app.js", "map-globe.js", "solar-system.js", "styles.css"}
+PUBLIC_FILES = {"index.html", "app.js", "map-globe.js", "solar-system.js", "styles.css", "whitepaper.html", "whitepaper.js", "whitepaper.css"}
 PUBLIC_DIRECTORIES = {"assets", "data", "vendor"}
 
 
