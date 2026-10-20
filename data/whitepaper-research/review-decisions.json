@@ -1,0 +1,31 @@
+{
+  "schema": "ufo-files-whitepaper-review-decisions/v1",
+  "scope": "Recorded decisions from sampled-source review; not a completed inclusion or exclusion log for the corpus",
+  "decisions": [
+    {
+      "path": "Brazil-Government-UAP/paired/Upload/prato/en/translation.txt",
+      "decision": "Not used for factual narrative in this edition",
+      "reason": "Translation status partial; protected-token failures and multiple needs-review segments; underlying article also requires author and publication provenance, not assumption of government authorship."
+    },
+    {
+      "path": "Steven-Greer-Document-Library/documents/18651-guy-hottel-1950.txt",
+      "decision": "Not used for substantive recovery assertions",
+      "reason": "Sampled extraction is heavily corrupted; obtain a better original scan and reliable transcript before using its detailed claims."
+    },
+    {
+      "path": "Whitepapers/1770107792444.txt",
+      "decision": "Not used as scientific support",
+      "reason": "Single diagram with poor OCR, missing established authorship, methods, and bibliographic provenance in reviewed text."
+    },
+    {
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302561903.txt",
+      "decision": "Not used for a nuclear-interference claim",
+      "reason": "Candidate search hit reviewed; sampled record concerns an Escanaba film request, not evidence of nuclear-system interference."
+    },
+    {
+      "path": "France-GEIPAN/paired/cases/2009-01-02324/en/translation.txt",
+      "decision": "English derivative not used as an independent source",
+      "reason": "Translation flagged needs-review; used canonical French case text and marked the narrative paraphrase for independent language review."
+    }
+  ]
+}

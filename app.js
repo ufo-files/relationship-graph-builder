@@ -288,6 +288,7 @@ function normalizeTriageSignals(signals) {
   }));
 }
 const TYPES = [
+  { id: "whitepaper", label: "Whitepaper", scope: "Narrative + citations", icon: "<path d='M6 2h14l5 5v11H6zM20 2v5h5M10 10h11M10 13h11M10 16h7'/>" },
   { id: "network", label: "Network", scope: "All", icon: "<circle cx='6' cy='8' r='3'/><circle cx='24' cy='4' r='3'/><circle cx='22' cy='16' r='3'/><path d='M9 7l12-2M9 10l10 5M23 7l-1 6'/>" },
   { id: "map", label: "Map", scope: "Locations", icon: "<circle cx='15.5' cy='10' r='8'/><path d='M7.5 10h16M15.5 2c3 3 3 13 0 16m0-16c-3 3-3 13 0 16'/>" },
   { id: "solar", label: "Galactic Entities", scope: "Reviewed astronomy", icon: "<path d='M4 13c5-9 17-9 23-4M4 7c7 9 18 9 23 3'/><circle cx='16' cy='10' r='2'/><circle cx='24' cy='6' r='1'/>" },
@@ -357,6 +358,7 @@ const DEFAULT = {
   topicTerm: "all", topicSearch: "",
   clockPeriod: "all", clockSearch: "", clockResolution: "hour",
   bloodType: "all", bloodSearch: "", bloodView: "scatter",
+  whitepaperAnchor: "",
   programStatus: "all", programKind: "all", programSearch: "",
   labelSize: 12, zoom: 1, moonTransitSeconds: 5, solarScale: "local", solarCase: "hill_fish", title: "Mentions by Documents", titleMode: "auto"
 };
@@ -569,6 +571,7 @@ function tableEntityScopeTitle(config) {
 }
 
 function dataAwareTitle(config) {
+  if (config.type === "whitepaper") return "The UFO Documentary Record";
   const entities = entityScopeTitle(config.categories);
   const defaultEntityScope = entities === "Entities";
   let title;
@@ -1224,6 +1227,10 @@ function renderTypeGrid() {
 function renderControls() {
   renderPresetControl();
   renderTypeGrid();
+  if (state.config.type === "whitepaper") {
+    $$('[data-type]').forEach(node => node.addEventListener("click", () => setType(node.dataset.type)));
+    return;
+  }
   const numericEntity = ["independentSourceFamilyCount", "epistemicAdjustedMentions", "contextAdjustedMentions", "mentions", "independentDocumentCount", "documentCount", "sourceCount", "inflationRate", "documentInflationRate", "classificationConfidence", "extractionConfidence"];
   const numericDoc = ["words", "segments", "bytes", "durationMs"];
   const relationshipTypeControl = () => controlSelect("relation", "Relationship type", [{ value: "all", label: "Any published relationship" }, { value: "co_mentioned", label: "Repeated co-mention" }, { value: "affiliated_with", label: "Affiliation cue" }, { value: "investigated", label: "Investigation cue" }]);
@@ -1613,8 +1620,20 @@ function renderControls() {
 
 async function setType(type) {
   const requestId = ++state.typeRequestId;
-  if (type !== "solar" && !await ensureFullCatalog(requestId)) return;
+  if (type !== "solar" && type !== "whitepaper" && !await ensureFullCatalog(requestId)) return;
   if (requestId !== state.typeRequestId) return;
+  if (type === "solar" && state.catalogMode === "whitepaper") {
+    try {
+      const response = await fetch("data/astronomy.json", { cache: "no-store" });
+      if (!response.ok) throw new Error(`Astronomy ${response.status} ${response.statusText}`);
+      const catalog = astronomyBootstrapCatalog(await response.json());
+      if (requestId !== state.typeRequestId) return;
+      state.catalog = catalog;
+      state.catalogMode = "astronomy";
+      state.documentById.clear();
+      state.catalog.documents.forEach(item => state.documentById.set(item.id, item));
+    } catch (error) { if (requestId === state.typeRequestId) showCatalogError(error); return; }
+  }
   if (type === "clock") {
     try { await ensureClockCatalog(); } catch (error) { showCatalogError(error); return; }
     if (requestId !== state.typeRequestId) return;
@@ -5757,8 +5776,58 @@ function syncSolarAnimationButton(playing = window.ufoSolar?.autoRotate ?? !wind
   button.setAttribute("aria-pressed", String(playing));
 }
 
+let whitepaperViewPromise = null;
+async function renderWhitepaperView() {
+  hideMapView();
+  $("#chart").setAttribute("hidden", "");
+  $("#tableView").hidden = true;
+  $("#legend").replaceChildren();
+  $("#graphKicker").textContent = "Whitepaper";
+  $("#resultSummary").textContent = "Narrative with inspectable citations";
+  $("#policySummary").textContent = "";
+  const host = $("#whitepaperView");
+  const root = host.shadowRoot || host.attachShadow({mode: "open"});
+  if (!whitepaperViewPromise) {
+    root.innerHTML = '<p role="status">Loading whitepaper…</p>';
+    whitepaperViewPromise = (async () => {
+      const response = await fetch("whitepaper.html");
+      if (!response.ok) throw new Error("Whitepaper template unavailable");
+      const template = new DOMParser().parseFromString(await response.text(), "text/html");
+      root.replaceChildren();
+      const styles = document.createElement("link"); styles.rel = "stylesheet"; styles.href = "whitepaper.css";
+      root.append(styles, template.querySelector("#paper"));
+      return window.renderWhitepaper(root, {
+        anchor: () => state.config.whitepaperAnchor,
+        url: anchor => {
+          const url = new URL(GRAPH_BUILDER_URL);
+          const config = { type: "whitepaper", whitepaperAnchor: anchor };
+          url.hash = new URLSearchParams({ config: btoa(unescape(encodeURIComponent(JSON.stringify(config)))) });
+          return url.href;
+        },
+        navigate: anchor => {
+          state.config.whitepaperAnchor = anchor; persistHash();
+          whitepaperViewPromise.then(view => view.revealTarget());
+        }
+      });
+    })();
+  }
+  try {
+    const view = await whitepaperViewPromise;
+    if (state.config.type === "whitepaper") view.revealTarget();
+  } catch (error) {
+    whitepaperViewPromise = null;
+    root.innerHTML = '<p role="alert">The whitepaper could not be loaded.</p><button type="button">Retry</button>';
+    root.querySelector("button").addEventListener("click", renderWhitepaperView);
+  }
+}
+
 function renderGraph() {
   if (!state.catalog) return;
+  const isWhitepaper = state.config.type === "whitepaper";
+  document.body.classList.toggle("whitepaper-active", isWhitepaper);
+  $("#whitepaperView").hidden = !isWhitepaper;
+  $("#chartWrap").classList.toggle("whitepaper-mode", isWhitepaper);
+  if (isWhitepaper && !$("#builderView").classList.contains("inspector-collapsed")) closeInspector();
   $("#chartWrap").classList.toggle("claims-mode", state.config.type === "claims");
   $("#chartWrap").classList.toggle("coverage-mode", state.config.type === "coverage");
   $("#emptyState").hidden = true;
@@ -5773,8 +5842,8 @@ function renderGraph() {
     ? `${state.programCatalog?.reviewedIntervalCount || 0} reviewed intervals · ${state.programCatalog?.reviewedEntityCount || 0} / ${state.programCatalog?.corpusProgramCount || 0} corpus candidates reviewed`
     : ["drugs", "technologies"].includes(state.config.type) ? `${formatNumber(state.topicCatalogs[state.config.type]?.counts.scannedDocuments || 0)} source documents`
     : state.config.type === "clock" ? `${formatNumber(state.clockCatalog?.counts?.scannedDocuments || 0)} source documents`
-    : graphDocumentCountSubtitle(state.catalog);
-  ({ network: renderNetwork, map: renderMap, solar: renderSolar, book: renderBook, document: renderDocument, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, programs: renderPrograms, matrix: renderMatrix, coverage: renderCoverage, table: renderTable, triage: renderTriage, claims: renderClaims, craft: renderCraft, species: renderSpecies, signals: renderSignals, blood: renderBloodTypes, drugs: renderTopicMentions, technologies: renderTopicMentions, clock: renderClock })[state.config.type]();
+    : state.config.type === "whitepaper" ? "" : graphDocumentCountSubtitle(state.catalog);
+  ({ whitepaper: renderWhitepaperView, network: renderNetwork, map: renderMap, solar: renderSolar, book: renderBook, document: renderDocument, scatter: renderScatter, bars: renderBars, timeline: renderTimeline, programs: renderPrograms, matrix: renderMatrix, coverage: renderCoverage, table: renderTable, triage: renderTriage, claims: renderClaims, craft: renderCraft, species: renderSpecies, signals: renderSignals, blood: renderBloodTypes, drugs: renderTopicMentions, technologies: renderTopicMentions, clock: renderClock })[state.config.type]();
 }
 
 function evidenceHTML(evidence = []) {
@@ -7054,6 +7123,14 @@ async function addPDFGraphPage(pdf, exportedAt) {
 }
 
 async function exportCurrent() {
+  if (state.config.type === "whitepaper") {
+    try {
+      if (!whitepaperViewPromise) return toast("Whitepaper is still loading");
+      await whitepaperViewPromise;
+      window.print();
+    } catch { toast("Whitepaper must load before export"); }
+    return;
+  }
   const button = $("#exportButton");
   if (!window.jspdf?.jsPDF || !window.svg2pdf) return toast("PDF export tools unavailable");
   button.disabled = true;
@@ -7316,6 +7393,12 @@ async function ensureFullCatalog(requestId = null) {
 async function init() {
   try {
     state.publicDossierPayload = publicDossierPayloadFromHash();
+    if (state.config.type === "whitepaper") {
+      state.catalog = { sources: [], documents: [], entities: [], edges: [], events: [], counts: { documents: 0 } };
+      state.catalogMode = "whitepaper";
+      renderInitialView();
+      return;
+    }
     if (state.config.type === "solar") {
       const response = await fetch("data/astronomy.json", { cache: "no-store" });
       if (!response.ok) throw new Error(`Astronomy ${response.status} ${response.statusText}`);

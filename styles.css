@@ -722,3 +722,18 @@ body.graph-fullscreen #chart { min-height: 0; }
 @media (max-width: 600px) {
   .blood-view { padding: 12px; }
 }
+
+body.whitepaper-active .builder-panel .step:not([data-step="1"]) { display: none; }
+.chart-wrap.whitepaper-mode { overflow: auto; overscroll-behavior: contain; }
+#whitepaperView { min-width: 0; }
+@media print {
+  body.whitepaper-active { height: auto; overflow: visible; background: white; }
+  body.whitepaper-active .topbar,
+  body.whitepaper-active .builder-panel,
+  body.whitepaper-active .stage-header,
+  body.whitepaper-active .inspector,
+  body.whitepaper-active #toast { display: none !important; }
+  body.whitepaper-active .app-shell,
+  body.whitepaper-active .stage,
+  body.whitepaper-active .chart-wrap { display: block; height: auto; overflow: visible; margin: 0; border: 0; }
+}

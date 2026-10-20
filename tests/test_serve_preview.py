@@ -16,6 +16,8 @@ class PreviewSecurityTests(unittest.TestCase):
             (root / '.git').mkdir()
             (root / '.git/config').write_text('FAKE_CHECKOUT_CREDENTIAL')
             (root / 'index.html').write_text('public page')
+            for name in ('whitepaper.html', 'whitepaper.js', 'whitepaper.css'):
+                (root / name).write_text('public research asset')
             (root / 'data').mkdir()
             (root / 'data/catalog.json').write_text('{}')
             (root / 'data/.secret').write_text('FAKE_SECRET')
@@ -39,7 +41,10 @@ class PreviewSecurityTests(unittest.TestCase):
                                 self.assertNotIn(b'FAKE_', response.read())
                                 connection.close()
                     for path, expected in (('/', b'public page'), ('/index.html?test=1', b'public page'),
-                                           ('/data/catalog.json', b'{}')):
+                                           ('/data/catalog.json', b'{}'),
+                                           ('/whitepaper.html', b'public research asset'),
+                                           ('/whitepaper.js', b'public research asset'),
+                                           ('/whitepaper.css', b'public research asset')):
                         connection = HTTPConnection(*server.server_address, timeout=5)
                         connection.request('GET', path)
                         response = connection.getresponse()
