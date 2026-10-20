@@ -1622,6 +1622,18 @@ async function setType(type) {
   const requestId = ++state.typeRequestId;
   if (type !== "solar" && type !== "whitepaper" && !await ensureFullCatalog(requestId)) return;
   if (requestId !== state.typeRequestId) return;
+  if (type === "solar" && state.catalogMode === "whitepaper") {
+    try {
+      const response = await fetch("data/astronomy.json", { cache: "no-store" });
+      if (!response.ok) throw new Error(`Astronomy ${response.status} ${response.statusText}`);
+      const catalog = astronomyBootstrapCatalog(await response.json());
+      if (requestId !== state.typeRequestId) return;
+      state.catalog = catalog;
+      state.catalogMode = "astronomy";
+      state.documentById.clear();
+      state.catalog.documents.forEach(item => state.documentById.set(item.id, item));
+    } catch (error) { if (requestId === state.typeRequestId) showCatalogError(error); return; }
+  }
   if (type === "clock") {
     try { await ensureClockCatalog(); } catch (error) { showCatalogError(error); return; }
     if (requestId !== state.typeRequestId) return;
