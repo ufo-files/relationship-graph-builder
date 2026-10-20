@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-20T07:07:36Z",
+  "generatedAt": "2026-10-20T09:57:41Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "f24d7dabad56490de25e1f87de0e25eac0c55bf9"
+    "revision": "00afb49542a72fb44fd1c2f58d950c50c5850e76"
   },
-  "documentsWithCandidates": 19044,
+  "documentsWithCandidates": 19049,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -35099,6 +35099,21 @@
       ]
     },
     {
+      "documentId": "doc-e8bc2dd50ef9",
+      "path": "Archives-for-the-Unexplained/documents/1946-04-21-Report-Norwegian-fireball.txt",
+      "candidates": [
+        {
+          "value": "1946-05-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Source: Buskerud Blad, May 6, 1946.",
+          "segment": 3
+        }
+      ]
+    },
+    {
       "documentId": "doc-15f1703485a3",
       "path": "Archives-for-the-Unexplained/documents/1946-05-21-Report-Rocket-like-object-over-Dalarna.txt",
       "candidates": [
@@ -68624,6 +68639,21 @@
       ]
     },
     {
+      "documentId": "doc-b544efc2e397",
+      "path": "Archives-for-the-Unexplained/documents/2017-08-14---The-Official-Paracast-Channel---The-Paracast-May-25-2014-Nick-Pope-and-John-Burroughs_0cu19603V88---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "2004-05-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "ray stanford May 18 2004",
+          "segment": 219
+        }
+      ]
+    },
+    {
       "documentId": "doc-a9efecac5e73",
       "path": "Archives-for-the-Unexplained/documents/2017-08-15---NASA-Goddard---NASA-and-ESA-Spacecraft-Track-a-Solar-Storm-Through-Space_6N8WZvZCQ7E---transcript-automated-.txt",
       "candidates": [
@@ -89839,6 +89869,48 @@
           "method": "unclassified-mention",
           "evidence": "It details the June 24, 1947",
           "segment": 1527
+        }
+      ]
+    },
+    {
+      "documentId": "doc-5e5dda7d4b12",
+      "path": "Archives-for-the-Unexplained/documents/APCIC---Vol-12-No-09---1987.txt",
+      "candidates": [
+        {
+          "value": "1976-04-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "from respecliJl .le publishing houses: · Schmarduel on April 14, 1976.",
+          "segment": 136
+        },
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "\"On 24 June 1947, a civilian pilot",
+          "segment": 313
+        },
+        {
+          "value": "1947-06-24",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On June 24, 1947, he reported research where systematic seriousness has been under-",
+          "segment": 966
+        },
+        {
+          "value": "1955-03-30",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "•On March 30, 1955, a Tucson ports filed with the Navajo County Five of the six loggers who were",
+          "segment": 1405
         }
       ]
     },
@@ -1566347,6 +1566419,21 @@
       ]
     },
     {
+      "documentId": "doc-565c70602ff4",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28964614.txt",
+      "candidates": [
+        {
+          "value": "1956-01-06",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "1952 and six (6) since 6 January 1956.",
+          "segment": 38
+        }
+      ]
+    },
+    {
       "documentId": "doc-41370067be93",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28964721.txt",
       "candidates": [
@@ -1570903,6 +1570990,21 @@
           "method": "unclassified-mention",
           "evidence": "The time and date of the sighting were 0900z, 17 April 1966.",
           "segment": 47
+        }
+      ]
+    },
+    {
+      "documentId": "doc-1cdda0d46b9d",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302549592.txt",
+      "candidates": [
+        {
+          "value": "1966-04-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "in your letter of 28 April 1966 was not sufficient for evaluation.",
+          "segment": 107
         }
       ]
     },
