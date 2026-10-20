@@ -130,7 +130,7 @@ test("Galactic Entities boots from a compact astronomy payload", () => {
   assert.match(source, /state\.publicDossierPayload \|\| publicDossierPayloadFromHash\(\)/);
   assert.match(source, /requestId === null \|\| requestId === state\.typeRequestId\) showCatalogError/);
   assert.match(source, /async function openDossierDialog\(\)[\s\S]*ensureFullCatalog\(\)[\s\S]*initializeDossier\(\)/);
-  assert.match(html, /app\.js\?v=whitepaper-view-v1/);
+  assert.match(html, /app\.js\?v=whitepaper-cases-v2/);
   assert.match(html, /map-globe\.js\?v=astronomy-renderer-v2/);
   assert.match(html, /solar-system\.js\?v=astronomy-renderer-v2/);
   assert.match(fs.readFileSync("solar-system.js", "utf8"), /three\.module\.min\.js\?v=astronomy-renderer-v2/);
@@ -5070,4 +5070,32 @@ test("whitepaper starts independently of the full graph catalog", async () => {
   assert.equal(rendered, 1);
   assert.equal(context.state.catalogMode, "whitepaper");
   assert.deepEqual(errors, []);
+});
+
+test("whitepaper includes the ten highest-priority distinct incident case studies", () => {
+  const paper = JSON.parse(fs.readFileSync("data/whitepaper.json", "utf8"));
+  const studies = paper.chapters.filter(chapter => chapter.caseStudy);
+  assert.equal(studies.length, 10);
+  const context = vm.createContext({ location: { hash: "" }, URL, URLSearchParams, catalogFixture: loadCatalogFixture() });
+  vm.runInContext(fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0], context);
+  const ranks = JSON.parse(vm.runInContext('JSON.stringify(triageCandidates(catalogFixture, presetConfig("default", "triage")))', context));
+  const seen = new Set();
+  const expected = ranks.filter(candidate => {
+    if (["publication", "program_milestone", "hearing"].includes(candidate.event.eventType)) return false;
+    const key = paper.caseStudySelection.mergedEventIds.includes(candidate.event.id) ? "roswell" : candidate.event.id;
+    if (seen.has(key)) return false;
+    seen.add(key); return true;
+  }).slice(0, 10).map(candidate => candidate.event.id);
+  assert.deepEqual(studies.map(chapter => chapter.caseStudy.eventId), paper.caseStudySelection.selection.map(item => item.eventId));
+  // The paper records a catalog snapshot; subsequent catalog refreshes may change ranks.
+  if (context.catalogFixture.input.revision === paper.caseStudySelection.catalogRevision) {
+    assert.deepEqual(studies.map(chapter => chapter.caseStudy.eventId), expected);
+  }
+  assert.equal(studies.filter(chapter => chapter.id === "roswell").length, 1);
+  assert.equal(paper.chapters.filter(chapter => chapter.id === "roswell-contemporary").length, 0);
+  assert.ok(studies.every(chapter => chapter.sentences.length >= 4));
+  for (const chapter of studies) for (const sentence of chapter.sentences) {
+    assert.ok(sentence.citations.length > 0);
+    assert.ok(sentence.citations.every(id => paper.evidence[id]));
+  }
 });

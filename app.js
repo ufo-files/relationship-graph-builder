@@ -5790,11 +5790,11 @@ async function renderWhitepaperView() {
   if (!whitepaperViewPromise) {
     root.innerHTML = '<p role="status">Loading whitepaper…</p>';
     whitepaperViewPromise = (async () => {
-      const response = await fetch("whitepaper.html");
+      const response = await fetch("whitepaper.html", { cache: "no-cache" });
       if (!response.ok) throw new Error("Whitepaper template unavailable");
       const template = new DOMParser().parseFromString(await response.text(), "text/html");
       root.replaceChildren();
-      const styles = document.createElement("link"); styles.rel = "stylesheet"; styles.href = "whitepaper.css";
+      const styles = document.createElement("link"); styles.rel = "stylesheet"; styles.href = "whitepaper.css?v=case-studies-v1";
       root.append(styles, template.querySelector("#paper"));
       return window.renderWhitepaper(root, {
         anchor: () => state.config.whitepaperAnchor,

@@ -2,8 +2,8 @@
   "schema": "ufo-files-whitepaper-cited-source-review/v1",
   "corpusRevision": "112d91db16da7c6308abab422aad60d80d75ed51",
   "querySha256": "f2918d93c760965d0120c0e77be47a644a9a7e84da6995aa73b78537abcd7a68",
-  "reviewedCitedSourceFiles": 71,
-  "reviewedCitedPassages": 156,
+  "reviewedCitedSourceFiles": 79,
+  "reviewedCitedPassages": 169,
   "sources": [
     {
       "source": "roswell",
@@ -47,12 +47,12 @@
         "origins-01",
         "origins-02",
         "origins-04",
+        "conclusions-02",
         "roswell-contemporary-04",
         "roswell-04",
         "roswell-05",
         "roswell-06",
-        "roswell-07",
-        "conclusions-02"
+        "roswell-07"
       ],
       "lineageGroup": "roswell-gao",
       "language": "en or as identified in the extract",
@@ -108,8 +108,6 @@
       ],
       "sentences": [
         "overview-01",
-        "overview-04",
-        "overview-05",
         "definitions-02",
         "definitions-06",
         "before-roswell-06",
@@ -130,7 +128,6 @@
         "contract-primary-05",
         "contractors-01",
         "contractors-02",
-        "contractors-03",
         "contractors-04",
         "contractors-05",
         "contractors-06",
@@ -141,7 +138,6 @@
         "nuclear-record-07",
         "nuclear-record-08",
         "conclusions-01",
-        "conclusions-03",
         "conclusions-05"
       ],
       "lineageGroup": "aaro-history",
@@ -166,7 +162,6 @@
         "current-record-03",
         "current-record-04",
         "current-record-05",
-        "current-record-06",
         "current-record-07",
         "conclusions-01",
         "conclusions-05"
@@ -244,7 +239,6 @@
       ],
       "sentences": [
         "overview-03",
-        "overview-05",
         "overview-08",
         "definitions-06",
         "witnesses-01",
@@ -256,7 +250,6 @@
         "witnesses-07",
         "source-independence-02",
         "conclusions-02",
-        "conclusions-03",
         "conclusions-05",
         "conclusions-08"
       ],
@@ -664,7 +657,11 @@
       "sentences": [
         "case-comparison-01",
         "case-comparison-02",
-        "case-comparison-03"
+        "case-comparison-03",
+        "case-rendlesham-01",
+        "case-rendlesham-02",
+        "case-rendlesham-03",
+        "case-rendlesham-04"
       ],
       "lineageGroup": "halt",
       "language": "en or as identified in the extract",
@@ -1155,7 +1152,11 @@
       ],
       "sentences": [
         "before-roswell-05",
-        "before-roswell-06"
+        "before-roswell-06",
+        "case-arnold-01",
+        "case-arnold-02",
+        "case-arnold-03",
+        "case-arnold-04"
       ],
       "lineageGroup": "arnold-original",
       "language": "en or as identified in the extract",
@@ -1623,6 +1624,162 @@
       "lineageGroup": "vacuum-energy",
       "language": "en or as identified in the extract",
       "scanCheckedPages": []
+    },
+    {
+      "source": "case-socorro",
+      "path": "Black-Vault-UFO/pdfs/fbi-files-on-the-socorro-ufo-landing-april-24-1964.txt",
+      "title": "FBI records concerning the Socorro sighting",
+      "decision": "Included for the specific cited case-study propositions",
+      "reviewScope": "Cited archive passages read for this case study; original scan and whole-document review are separate.",
+      "lineageGroup": "case-socorro",
+      "language": "en or archived English rendering",
+      "scanCheckedPages": [],
+      "passages": [
+        "case-socorro-10"
+      ],
+      "sentences": [
+        "case-socorro-01",
+        "case-socorro-02",
+        "case-socorro-03",
+        "case-socorro-04",
+        "case-socorro-05"
+      ]
+    },
+    {
+      "source": "case-phoenix",
+      "path": "DPIArchive/documents/126027-phoenix-lights-march-13-1997-case.txt",
+      "title": "Phoenix Lights case dossier and collected press clippings",
+      "decision": "Included for the specific cited case-study propositions",
+      "reviewScope": "Cited archive passages read for this case study; original scan and whole-document review are separate.",
+      "lineageGroup": "case-phoenix",
+      "language": "en or archived English rendering",
+      "scanCheckedPages": [],
+      "passages": [
+        "case-phoenix-16",
+        "case-phoenix-39"
+      ],
+      "sentences": [
+        "case-phoenix-01",
+        "case-phoenix-02",
+        "case-phoenix-03",
+        "case-phoenix-04"
+      ]
+    },
+    {
+      "source": "case-jal-radar",
+      "path": "Black-Vault-UFO/documents/jal1628-zip/733667-001-022.txt",
+      "title": "JAL 1628 radar images, FAA correspondence, and target analysis",
+      "decision": "Included for the specific cited case-study propositions",
+      "reviewScope": "Cited archive passages read for this case study; original scan and whole-document review are separate.",
+      "lineageGroup": "case-jal-radar",
+      "language": "en or archived English rendering",
+      "scanCheckedPages": [],
+      "passages": [
+        "case-jal-radar-10",
+        "case-jal-radar-13"
+      ],
+      "sentences": [
+        "case-jal1628-01",
+        "case-jal1628-02",
+        "case-jal1628-03",
+        "case-jal1628-05"
+      ]
+    },
+    {
+      "source": "case-jal-records",
+      "path": "Black-Vault-UFO/documents/jal1628-zip/JL1628.txt",
+      "title": "FAA responses concerning Flight JL 1628 records",
+      "decision": "Included for the specific cited case-study propositions",
+      "reviewScope": "Cited archive passages read for this case study; original scan and whole-document review are separate.",
+      "lineageGroup": "case-jal-records",
+      "language": "en or archived English rendering",
+      "scanCheckedPages": [],
+      "passages": [
+        "case-jal-records-3"
+      ],
+      "sentences": [
+        "case-jal1628-04",
+        "case-jal1628-05"
+      ]
+    },
+    {
+      "source": "case-belgium",
+      "path": "DPIArchive/documents/116135-belgian-ministry-of-defense-ufo-on-f16s-radar-march-1990.txt",
+      "title": "A UFO on the F-16’s Radar: archived English rendering of Paris Match report",
+      "decision": "Included for the specific cited case-study propositions",
+      "reviewScope": "Cited archive passages read for this case study; original scan and whole-document review are separate.",
+      "lineageGroup": "case-belgium",
+      "language": "en or archived English rendering",
+      "scanCheckedPages": [],
+      "passages": [
+        "case-belgium-1",
+        "case-belgium-2"
+      ],
+      "sentences": [
+        "case-belgium-01",
+        "case-belgium-02",
+        "case-belgium-03",
+        "case-belgium-04"
+      ]
+    },
+    {
+      "source": "case-mantell",
+      "path": "National-Archives-of-Australia-UFO/documents/3083715/0009.txt",
+      "title": "Aerial-phenomena account preserved in NAA file B5758, 5/6/AIR part 1",
+      "decision": "Included for the specific cited case-study propositions",
+      "reviewScope": "Cited archive passages read for this case study; original scan and whole-document review are separate.",
+      "lineageGroup": "case-mantell",
+      "language": "en or archived English rendering",
+      "scanCheckedPages": [],
+      "passages": [
+        "case-mantell-1"
+      ],
+      "sentences": [
+        "case-mantell-01",
+        "case-mantell-02",
+        "case-mantell-03",
+        "case-mantell-04"
+      ]
+    },
+    {
+      "source": "case-stephenville",
+      "path": "Black-Vault-UFO/pdfs/faa-radar-data-skeptical-magazine-inquiry-documents.txt",
+      "title": "FAA correspondence and radar-data release concerning Stephenville",
+      "decision": "Included for the specific cited case-study propositions",
+      "reviewScope": "Cited archive passages read for this case study; original scan and whole-document review are separate.",
+      "lineageGroup": "case-stephenville",
+      "language": "en or archived English rendering",
+      "scanCheckedPages": [],
+      "passages": [
+        "case-stephenville-2",
+        "case-stephenville-3",
+        "case-stephenville-4"
+      ],
+      "sentences": [
+        "case-stephenville-01",
+        "case-stephenville-02",
+        "case-stephenville-03",
+        "case-stephenville-04"
+      ]
+    },
+    {
+      "source": "case-tehran",
+      "path": "NSA-UFO-FOIA/pdfs/the-u-s-government-and-the-iran-case.txt",
+      "title": "The U.S. Government and the Iran Case: reproduced wire message",
+      "decision": "Included for the specific cited case-study propositions",
+      "reviewScope": "Cited archive passages read for this case study; original scan and whole-document review are separate.",
+      "lineageGroup": "case-tehran",
+      "language": "en or archived English rendering",
+      "scanCheckedPages": [],
+      "passages": [
+        "case-tehran-ff-2"
+      ],
+      "sentences": [
+        "case-tehran-01",
+        "case-tehran-02",
+        "case-tehran-03",
+        "case-tehran-04"
+      ]
     }
   ],
   "limitations": [
