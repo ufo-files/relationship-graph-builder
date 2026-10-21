@@ -18,6 +18,10 @@ const usedSources = new Set();
 let sentenceCount = 0;
 for (const chapter of paper.chapters) {
   assert(!ids.has(chapter.id), `Duplicate chapter ${chapter.id}`); ids.add(chapter.id);
+  if (chapter.paragraphs) {
+    assert(chapter.paragraphs.every(ids => ids.length >= 2), `Single-sentence paragraph: ${chapter.id}`);
+    assert.deepEqual(chapter.paragraphs.flat(), chapter.sentences.map(sentence => sentence.id), `Paragraph references are incomplete or reordered: ${chapter.id}`);
+  }
   for (const sentence of chapter.sentences) {
     sentenceCount++;
     assert(!ids.has(sentence.id), `Duplicate sentence ${sentence.id}`); ids.add(sentence.id);

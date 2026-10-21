@@ -17,7 +17,9 @@ window.renderWhitepaper = async function(root = document, options = {}) {
     try { id = options.anchor ? options.anchor() : decodeURIComponent(location.hash.slice(1)); } catch { return; }
     const target = find(id);
     if (!target) return;
-    if (target.tagName === 'DETAILS') target.open = true;
+    for (let node = target; node; node = node.parentElement) {
+      if (node.tagName === 'DETAILS') node.open = true;
+    }
     target.scrollIntoView({block: 'start'});
     target.setAttribute('tabindex', '-1'); target.focus({preventScroll: true});
   }
@@ -34,19 +36,26 @@ window.renderWhitepaper = async function(root = document, options = {}) {
       find('contents').append(link(chapter.title, `#${chapter.id}`));
       const section = el('section'); section.id = chapter.id;
       section.append(el('p', chapter.deck, 'eyebrow'), el('h2', chapter.title));
-      for (const sentence of chapter.sentences) {
-        const p = el('p', undefined, 'sentence'); p.id = sentence.id;
-        p.append(document.createTextNode(sentence.text));
-        for (const id of sentence.citations) {
-          const evidence = paper.evidence[id];
-          const citation = link(`[${evidenceNumbers.get(id)}]`, `#evidence-${id}`, 'citation');
-          citation.setAttribute('aria-label', `Evidence ${evidenceNumbers.get(id)}: ${paper.sources[evidence.source].title}, ${evidence.locator}`);
-          citation.title = `${paper.sources[evidence.source].title} · ${evidence.locator}`;
-          p.append(citation);
+      const sentencesById = new Map(chapter.sentences.map(sentence => [sentence.id, sentence]));
+      const paragraphs = chapter.paragraphs || chapter.sentences.map(sentence => [sentence.id]);
+      for (const ids of paragraphs) {
+        const paragraph = el('p', undefined, 'narrative-paragraph');
+        for (const [index, id] of ids.entries()) {
+          const sentence = sentencesById.get(id);
+          const span = el('span', sentence.text, 'sentence'); span.id = sentence.id;
+          if (index) paragraph.append(document.createTextNode(' '));
+          for (const evidenceId of sentence.citations) {
+            const evidence = paper.evidence[evidenceId];
+            const citation = link(`[${evidenceNumbers.get(evidenceId)}]`, `#evidence-${evidenceId}`, 'citation');
+            citation.setAttribute('aria-label', `Evidence ${evidenceNumbers.get(evidenceId)}: ${paper.sources[evidence.source].title}, ${evidence.locator}`);
+            citation.title = `${paper.sources[evidence.source].title} · ${evidence.locator}`;
+            span.append(citation);
+          }
+          paragraph.append(span);
         }
-        section.append(p);
+        section.append(paragraph);
       }
-      (chapter.caseStudy ? find('caseStudies') : find('chapters')).append(section);
+      (chapter.closing ? find('closing') : chapter.caseStudy ? find('caseStudies') : find('chapters')).append(section);
     }
     for (const dispute of paper.disputes || []) {
       const card = el('div', undefined, 'claim-card'); card.id = `dispute-${dispute.id}`;
@@ -150,7 +159,7 @@ window.renderWhitepaper = async function(root = document, options = {}) {
   let previouslyOpen = [];
   window.addEventListener('beforeprint', () => {
     previouslyOpen = [...root.querySelectorAll('details[open]')];
-    root.querySelectorAll('details').forEach(node => { node.open = true; });
+    root.querySelectorAll('.evidence-card').forEach(node => { node.open = true; });
   });
   window.addEventListener('afterprint', () => {
     root.querySelectorAll('details').forEach(node => { node.open = previouslyOpen.includes(node); });

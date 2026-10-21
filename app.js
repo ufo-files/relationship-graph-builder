@@ -5794,7 +5794,7 @@ async function renderWhitepaperView() {
       if (!response.ok) throw new Error("Whitepaper template unavailable");
       const template = new DOMParser().parseFromString(await response.text(), "text/html");
       root.replaceChildren();
-      const styles = document.createElement("link"); styles.rel = "stylesheet"; styles.href = "whitepaper.css?v=typography-v2";
+      const styles = document.createElement("link"); styles.rel = "stylesheet"; styles.href = "whitepaper.css?v=narrative-v4";
       root.append(styles, template.querySelector("#paper"));
       return window.renderWhitepaper(root, {
         anchor: () => state.config.whitepaperAnchor,

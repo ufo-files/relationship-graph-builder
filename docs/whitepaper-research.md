@@ -6,8 +6,8 @@ inside the view; copied builder links preserve the selected passage. **Export PD
 opens the browser’s print dialog with the complete paper, sources, and evidence
 expanded. `whitepaper.html` remains a standalone reader using the same content.
 
-The current author-reviewed synthesis contains 79 cited source files, 169
-passages, and 322 individually cited sentences, including ten case studies. These counts
+The current author-reviewed synthesis contains 37 cited source files, 70
+passages, and 113 cited sentences arranged into 42 connected paragraphs, including ten case studies. These counts
 are not counts of independent witnesses, independent works, or verified events.
 Several files come from the same dossier or repeat the same author's account.
 The research audit explicitly records remaining weaknesses rather than
@@ -132,3 +132,8 @@ Case studies follow the evidence-rich triage ranking at the recorded catalog
 snapshot, excluding publishing and institutional-administration entries. The two
 Roswell triage entries share one case study. Selection metadata is stored in
 `caseStudySelection`; triage priority does not determine an incident’s explanation.
+
+The narrative follows events and participants rather than the order of the source
+files. Paragraphs group cited sentences; source identifiers remain on inline spans
+for links and backlinks. The conclusion follows the ten cases. Detailed review
+questions and audit material are available under collapsed **Research notes**.
