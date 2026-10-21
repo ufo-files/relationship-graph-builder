@@ -7,8 +7,11 @@ opens the browser’s print dialog with the complete paper, sources, and evidenc
 expanded. `whitepaper.html` remains a standalone reader using the same content.
 
 The current author-reviewed synthesis contains 37 cited source files, 70
-passages, and 113 cited sentences arranged into 42 connected paragraphs, including ten case studies. These counts
+passages, and 120 cited sentences arranged into 45 connected paragraphs, including ten case studies. These counts
 are not counts of independent witnesses, independent works, or verified events.
+Three additional NPS/NASA historical references support Trinity, Sputnik, and
+Gagarin; they appear in the source register and are separate from the pinned
+corpus audit. Their numbered citations work in the builder and printed paper.
 Several files come from the same dossier or repeat the same author's account.
 The research audit explicitly records remaining weaknesses rather than
 presenting this as an exhaustive, independently reviewed reference publication.

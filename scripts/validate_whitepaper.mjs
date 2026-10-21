@@ -15,6 +15,7 @@ assert.match(paper.corpusRevision, /^[a-f0-9]{40}$/);
 const ids = new Set();
 const usedEvidence = new Set();
 const usedSources = new Set();
+const usedContext = new Set();
 let sentenceCount = 0;
 for (const chapter of paper.chapters) {
   assert(!ids.has(chapter.id), `Duplicate chapter ${chapter.id}`); ids.add(chapter.id);
@@ -27,11 +28,21 @@ for (const chapter of paper.chapters) {
     assert(!ids.has(sentence.id), `Duplicate sentence ${sentence.id}`); ids.add(sentence.id);
     assert(sentence.text.trim(), `Empty sentence ${sentence.id}`);
     assert(['record', 'assessment', 'claim', 'analysis'].includes(sentence.kind));
-    assert(sentence.citations.length, `Uncited sentence ${sentence.id}`);
+    assert(sentence.citations.length || sentence.contextCitations?.length, `Uncited sentence ${sentence.id}`);
+    for (const id of sentence.contextCitations || []) {
+      assert(paper.contextReferences?.[id], `Missing historical reference ${id}`);
+      usedContext.add(id);
+    }
     for (const id of sentence.citations) {
       assert(paper.evidence[id], `Missing evidence ${id}`); usedEvidence.add(id);
     }
   }
+}
+for (const [id, reference] of Object.entries(paper.contextReferences || {})) {
+  assert(!paper.evidence[id], `Conflicting citation ID ${id}`);
+  assert(usedContext.has(id), `Unused historical reference ${id}`);
+  assert(reference.title && reference.author && /^\d{4}-\d{2}-\d{2}$/.test(reference.accessed));
+  assert.equal(new URL(reference.url).protocol, 'https:');
 }
 for (const [id, evidence] of Object.entries(paper.evidence)) {
   assert.equal(id, evidence.id); assert(usedEvidence.has(id), `Unused evidence ${id}`);
