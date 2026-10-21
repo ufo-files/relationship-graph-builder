@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-21T00:24:54Z",
+  "generatedAt": "2026-10-21T03:22:47Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "64a27ec347da9750071f97e2df754410c33721f5"
+    "revision": "bd94f3cf1620375eec955f74240cdb5960c1ae3c"
   },
-  "documentsWithCandidates": 19076,
+  "documentsWithCandidates": 19083,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1574087,6 +1574087,84 @@
       ]
     },
     {
+      "documentId": "doc-24ea1d557ce1",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-1/28939464.txt",
+      "candidates": [
+        {
+          "value": "1951-08-26",
+          "precision": "day",
+          "confidence": 0.9,
+          "kind": "event_date",
+          "method": "event-language",
+          "evidence": "aerial object observed on 26 August 1951 by Mr.",
+          "segment": 9
+        },
+        {
+          "value": "1951-08-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Air Force Liaison Officer to Fourth Arny, Brooks AFB, Tex. 31 Aug 1951",
+          "segment": 11
+        },
+        {
+          "value": "1951-02-12",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "referenced_document_date",
+          "method": "dated-reference",
+          "evidence": "Number 200-1 dated 12 February 1951.",
+          "segment": 14
+        },
+        {
+          "value": "1950-09-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "States Air Force, 8 September 1950, subject",
+          "segment": 22
+        },
+        {
+          "value": "1951-02-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Letter 200-1, 12 February 1951, subject: \"Reporting of Information",
+          "segment": 24
+        },
+        {
+          "value": "1951-02-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "CONFIDENTIAL under authority of ConAC Letter 200-1, 12 February 1951.",
+          "segment": 27
+        },
+        {
+          "value": "1951-08-27",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Date of Interview 27 August 1951",
+          "segment": 34
+        },
+        {
+          "value": "1951-08-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Exact time of observation (local) 1658, 26 August 1951",
+          "segment": 35
+        }
+      ]
+    },
+    {
       "documentId": "doc-4c41c9322fbd",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-1/28940219.txt",
       "candidates": [
@@ -1575437,6 +1575515,21 @@
       ]
     },
     {
+      "documentId": "doc-2bb92445170b",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28960827.txt",
+      "candidates": [
+        {
+          "value": "1955-01-25",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "HEADQUARTERS 5TH DISTRICT OSI (IQ), Wright Patterson AFB, Ohio 25 January 1955",
+          "segment": 10
+        }
+      ]
+    },
+    {
       "documentId": "doc-7cb295b9a6da",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-2/28960972.txt",
       "candidates": [
@@ -1575751,6 +1575844,36 @@
           "method": "unclassified-mention",
           "evidence": "On the night of July 28, 1957 I saw a large phenomena in the sky.",
           "segment": 6
+        }
+      ]
+    },
+    {
+      "documentId": "doc-f8eaf47b69a7",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-3/28971158.txt",
+      "candidates": [
+        {
+          "value": "1957-08-15",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "AFCIN-4E4, your headquarters, 15 August 1957",
+          "segment": 45
+        }
+      ]
+    },
+    {
+      "documentId": "doc-b6404a707ea2",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-3/28971174.txt",
+      "candidates": [
+        {
+          "value": "1957-08-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "14 August 1957 Woodland Hills, California |9 aeeeaa?",
+          "segment": 1
         }
       ]
     },
@@ -1576483,6 +1576606,30 @@
           "method": "unclassified-mention",
           "evidence": "Your letter of December 13, 1963, addressed",
           "segment": 40
+        }
+      ]
+    },
+    {
+      "documentId": "doc-08c8b2340544",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302531557.txt",
+      "candidates": [
+        {
+          "value": "1964-02-11",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On the night of February 11, 1964 I was walking home",
+          "segment": 18
+        },
+        {
+          "value": "1964-02-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "The folloving morning, February 12, 1964, I called the",
+          "segment": 44
         }
       ]
     },
@@ -1578437,6 +1578584,30 @@
       ]
     },
     {
+      "documentId": "doc-fc414c6608e8",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302542164.txt",
+      "candidates": [
+        {
+          "value": "1965-08-19",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Wastwaron, D.C. 20818 August 19, 1965",
+          "segment": 524
+        },
+        {
+          "value": "1965-08-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "his family on the night of August 8, 1965.",
+          "segment": 531
+        }
+      ]
+    },
+    {
       "documentId": "doc-1bb703e4ed1d",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302542187.txt",
       "candidates": [
@@ -1580080,6 +1580251,21 @@
           "method": "unclassified-mention",
           "evidence": "At 1830 on 9 April 1966, Miss Regina McFadden, 1838 N. 22nd Street",
           "segment": 108
+        }
+      ]
+    },
+    {
+      "documentId": "doc-c83b2746389b",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302549332.txt",
+      "candidates": [
+        {
+          "value": "1966-04-01",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference your unidentified observation of 1 April 1966.",
+          "segment": 83
         }
       ]
     },
