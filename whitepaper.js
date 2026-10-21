@@ -116,7 +116,7 @@ window.renderWhitepaper = async function(root = document, options = {}) {
     }
     for (const [id, reference] of Object.entries(contextReferences)) {
       const block = el('div', undefined, 'source'); block.id = `context-${id}`;
-      block.append(el('h3', `[${evidenceNumbers.get(id)}] ${reference.title}`), el('p', reference.author, 'source-meta'), link('Open historical reference ↗', reference.url));
+      block.append(el('h3', `[${evidenceNumbers.get(id)}] ${reference.title}`), el('p', `${reference.author} · Accessed ${reference.accessed}`, 'source-meta'), link('Open historical reference ↗', reference.url));
       find('sources').append(block);
     }
     find('loading').hidden = true;
