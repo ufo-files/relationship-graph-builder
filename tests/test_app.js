@@ -5099,3 +5099,16 @@ test("whitepaper includes the ten highest-priority distinct incident case studie
     assert.ok(sentence.citations.every(id => paper.evidence[id]));
   }
 });
+
+test("whitepaper connects Roswell to the opening and cites historical context separately", () => {
+  const paper = JSON.parse(fs.readFileSync("data/whitepaper.json", "utf8"));
+  const opening = paper.chapters.slice(0, 2).flatMap(chapter => chapter.sentences);
+  const roswell = opening.findIndex(sentence => /July 8/.test(sentence.text) && /Roswell/.test(sentence.text));
+  const assessment = opening.findIndex(sentence => /September 1947/.test(sentence.text));
+  assert.ok(roswell >= 0 && assessment > roswell);
+  for (const id of ["trinity", "sputnik", "gagarin"]) {
+    assert.ok(paper.chapters.some(chapter => chapter.sentences.some(sentence => sentence.contextCitations?.includes(id))));
+    assert.equal(new URL(paper.contextReferences[id].url).protocol, "https:");
+    assert.ok(!paper.sources[id], "Web context must not masquerade as pinned corpus evidence");
+  }
+});

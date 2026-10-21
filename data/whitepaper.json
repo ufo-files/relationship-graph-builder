@@ -1,7 +1,7 @@
 {
   "schema": "ufo-files-whitepaper/v1",
   "id": "ufo-documentary-record",
-  "version": "0.4.0-narrative",
+  "version": "0.4.1-historical-context",
   "status": "Research edition · substantive source review in progress",
   "title": "The UFO Documentary Record",
   "subtitle": "Government investigation, recovered-technology claims, and the evidence behind the story",
@@ -9,7 +9,7 @@
   "corpusRevision": "112d91db16da7c6308abab422aad60d80d75ed51",
   "scope": "A documentary narrative drawing on 37 source files.",
   "methodology": [
-    "Every factual sentence has a stable identifier and citations to stored source passages.",
+    "Every factual sentence has a stable identifier and citations to stored archive passages or identified historical references.",
     "Record describes a documented action or recorded content; assessment attributes an investigator’s conclusion; claim attributes a witness or organization’s account; synthesis marks editorial reasoning from cited material.",
     "Government reports have mandates, methods, access limits, and institutional perspectives; their conclusions are attributed rather than treated as infallible.",
     "An original statement is primary evidence of what its author claimed, not automatic verification of the underlying event; retrospective summaries are distinguished from contemporary records.",
@@ -67,6 +67,22 @@
       "reviewScope": "Cited text passages reviewed; full document, original scans, and source-lineage audit not independently certified.",
       "relatedSources": []
     },
+    "gao": {
+      "id": "gao",
+      "path": "NSA-UFO-FOIA/pdfs/general-accounting-office-report-to-the-honorable-steven-h-schiff-house-of-representatives-government-records-results-of-a-search-for-records-concerning-the-1947-crash-ne.txt",
+      "title": "Government Records: Results of a Search for Records Concerning the 1947 Crash Near Roswell, New Mexico",
+      "author": "U.S. General Accounting Office",
+      "date": "1995-07-28",
+      "kind": "Records audit",
+      "lineageGroup": "roswell-gao",
+      "transcriptSha256": "9448ce195899ebec4099b1dcb19143999d4faee08435cdb77555d364a86ac829",
+      "originalSha256": "7be858eb714fa9460ae1c5f3b754f5fe19491fd4030bb28dc1013d0594a8b46c",
+      "url": "https://github.com/ufo-files/machine-data/blob/112d91db16da7c6308abab422aad60d80d75ed51/NSA-UFO-FOIA/pdfs/general-accounting-office-report-to-the-honorable-steven-h-schiff-house-of-representatives-government-records-results-of-a-search-for-records-concerning-the-1947-crash-ne.txt",
+      "originalPath": "NSA-UFO-FOIA/pdfs/general-accounting-office-report-to-the-honorable-steven-h-schiff-house-of-representatives-government-records-results-of-a-search-for-records-concerning-the-1947-crash-ne.pdf",
+      "dateNote": null,
+      "reviewScope": "Cited text passages reviewed; full document, original scans, and source-lineage audit not independently certified.",
+      "relatedSources": []
+    },
     "ghost-rockets": {
       "id": "ghost-rockets",
       "path": "War-Gov-PURSUE/release-05/documents/dow-uap-d099-intelligence-review-of-ghost-rocket-incidents-1947.txt",
@@ -96,6 +112,22 @@
       "originalSha256": "b79da2d091ae8e1637f58d91602758feef2341aba3c90addd9c1487cdef58109",
       "originalPath": "War-Gov-PURSUE/release-01/documents/65-hs1-834228961-62-hq-83894-section-2.pdf",
       "url": "https://github.com/ufo-files/machine-data/blob/112d91db16da7c6308abab422aad60d80d75ed51/War-Gov-PURSUE/release-01/documents/65-hs1-834228961-62-hq-83894-section-2.txt",
+      "reviewScope": "Cited text passages reviewed; full document, original scans, and source-lineage audit not independently certified.",
+      "relatedSources": []
+    },
+    "fbi-roswell": {
+      "id": "fbi-roswell",
+      "path": "FBI-Vault-UFO/pdfs/ufo-part-02.txt",
+      "title": "FBI UFO file, part 2: Dallas teletype of 8 July 1947",
+      "author": "FBI Dallas",
+      "date": "1947-07-08",
+      "dateNote": null,
+      "kind": "Contemporary teletype relaying military information",
+      "lineageGroup": "fbi-roswell",
+      "transcriptSha256": "41f05282793f59a425bd228360c5e0ef1bf2ef6054dee3d238d25e9fdae46f5f",
+      "originalSha256": "bee6e1c542fce6a70b55b83b93cc311ad3a13842d6e2ca9001b2c69e4aa58509",
+      "originalPath": "FBI-Vault-UFO/pdfs/ufo-part-02.pdf",
+      "url": "https://github.com/ufo-files/machine-data/blob/112d91db16da7c6308abab422aad60d80d75ed51/FBI-Vault-UFO/pdfs/ufo-part-02.txt",
       "reviewScope": "Cited text passages reviewed; full document, original scans, and source-lineage audit not independently certified.",
       "relatedSources": []
     },
@@ -144,22 +176,6 @@
       "originalSha256": "cd735cfeae8572a5288b6de2a5dcb60172e31c9be9ab41dfaafa8f6d23170018",
       "originalPath": "Black-Vault-UFO/pdfs/air-force-regulation-200-2.pdf",
       "url": "https://github.com/ufo-files/machine-data/blob/112d91db16da7c6308abab422aad60d80d75ed51/Black-Vault-UFO/pdfs/air-force-regulation-200-2.txt",
-      "reviewScope": "Cited text passages reviewed; full document, original scans, and source-lineage audit not independently certified.",
-      "relatedSources": []
-    },
-    "bluebook": {
-      "id": "bluebook",
-      "path": "NSA-UFO-FOIA/pdfs/united-states-air-force-fact-sheet-95-03-unidentified-flying-objects-and-air-force-project-blue-book.txt",
-      "title": "USAF Fact Sheet 95-03: Project Blue Book",
-      "author": "U.S. Air Force",
-      "date": "1995-06",
-      "kind": "Institutional summary",
-      "lineageGroup": "bluebook-usaf",
-      "transcriptSha256": "34478cd01eba44ee39083cc8da03178d17af3e1a421ece341fe22a504c07b161",
-      "originalSha256": "8a51c01cc3ee43eda78fc178953973218c1de7f6b50a65581d085fea8228466d",
-      "url": "https://github.com/ufo-files/machine-data/blob/112d91db16da7c6308abab422aad60d80d75ed51/NSA-UFO-FOIA/pdfs/united-states-air-force-fact-sheet-95-03-unidentified-flying-objects-and-air-force-project-blue-book.txt",
-      "originalPath": "NSA-UFO-FOIA/pdfs/united-states-air-force-fact-sheet-95-03-unidentified-flying-objects-and-air-force-project-blue-book.pdf",
-      "dateNote": null,
       "reviewScope": "Cited text passages reviewed; full document, original scans, and source-lineage audit not independently certified.",
       "relatedSources": []
     },
@@ -224,6 +240,22 @@
       "originalSha256": "3a11822b45f559acc6063304bdbf16977a21dc86ca3a7a743c1a60e40f98b8d1",
       "originalPath": "War-Gov-PURSUE/release-03/documents/cia-uap-003-the-central-intelligence-agency-and-overhead-reconnaissance-the-u-2-and-oxcart-programs-1954-1974.pdf",
       "url": "https://github.com/ufo-files/machine-data/blob/112d91db16da7c6308abab422aad60d80d75ed51/War-Gov-PURSUE/release-03/documents/cia-uap-003-the-central-intelligence-agency-and-overhead-reconnaissance-the-u-2-and-oxcart-programs-1954-1974.txt",
+      "reviewScope": "Cited text passages reviewed; full document, original scans, and source-lineage audit not independently certified.",
+      "relatedSources": []
+    },
+    "bluebook": {
+      "id": "bluebook",
+      "path": "NSA-UFO-FOIA/pdfs/united-states-air-force-fact-sheet-95-03-unidentified-flying-objects-and-air-force-project-blue-book.txt",
+      "title": "USAF Fact Sheet 95-03: Project Blue Book",
+      "author": "U.S. Air Force",
+      "date": "1995-06",
+      "kind": "Institutional summary",
+      "lineageGroup": "bluebook-usaf",
+      "transcriptSha256": "34478cd01eba44ee39083cc8da03178d17af3e1a421ece341fe22a504c07b161",
+      "originalSha256": "8a51c01cc3ee43eda78fc178953973218c1de7f6b50a65581d085fea8228466d",
+      "url": "https://github.com/ufo-files/machine-data/blob/112d91db16da7c6308abab422aad60d80d75ed51/NSA-UFO-FOIA/pdfs/united-states-air-force-fact-sheet-95-03-unidentified-flying-objects-and-air-force-project-blue-book.txt",
+      "originalPath": "NSA-UFO-FOIA/pdfs/united-states-air-force-fact-sheet-95-03-unidentified-flying-objects-and-air-force-project-blue-book.pdf",
+      "dateNote": null,
       "reviewScope": "Cited text passages reviewed; full document, original scans, and source-lineage audit not independently certified.",
       "relatedSources": []
     },
@@ -455,38 +487,6 @@
       "reviewScope": "Cited text passages reviewed; full document, original scans, and source-lineage audit not independently certified.",
       "relatedSources": []
     },
-    "gao": {
-      "id": "gao",
-      "path": "NSA-UFO-FOIA/pdfs/general-accounting-office-report-to-the-honorable-steven-h-schiff-house-of-representatives-government-records-results-of-a-search-for-records-concerning-the-1947-crash-ne.txt",
-      "title": "Government Records: Results of a Search for Records Concerning the 1947 Crash Near Roswell, New Mexico",
-      "author": "U.S. General Accounting Office",
-      "date": "1995-07-28",
-      "kind": "Records audit",
-      "lineageGroup": "roswell-gao",
-      "transcriptSha256": "9448ce195899ebec4099b1dcb19143999d4faee08435cdb77555d364a86ac829",
-      "originalSha256": "7be858eb714fa9460ae1c5f3b754f5fe19491fd4030bb28dc1013d0594a8b46c",
-      "url": "https://github.com/ufo-files/machine-data/blob/112d91db16da7c6308abab422aad60d80d75ed51/NSA-UFO-FOIA/pdfs/general-accounting-office-report-to-the-honorable-steven-h-schiff-house-of-representatives-government-records-results-of-a-search-for-records-concerning-the-1947-crash-ne.txt",
-      "originalPath": "NSA-UFO-FOIA/pdfs/general-accounting-office-report-to-the-honorable-steven-h-schiff-house-of-representatives-government-records-results-of-a-search-for-records-concerning-the-1947-crash-ne.pdf",
-      "dateNote": null,
-      "reviewScope": "Cited text passages reviewed; full document, original scans, and source-lineage audit not independently certified.",
-      "relatedSources": []
-    },
-    "fbi-roswell": {
-      "id": "fbi-roswell",
-      "path": "FBI-Vault-UFO/pdfs/ufo-part-02.txt",
-      "title": "FBI UFO file, part 2: Dallas teletype of 8 July 1947",
-      "author": "FBI Dallas",
-      "date": "1947-07-08",
-      "dateNote": null,
-      "kind": "Contemporary teletype relaying military information",
-      "lineageGroup": "fbi-roswell",
-      "transcriptSha256": "41f05282793f59a425bd228360c5e0ef1bf2ef6054dee3d238d25e9fdae46f5f",
-      "originalSha256": "bee6e1c542fce6a70b55b83b93cc311ad3a13842d6e2ca9001b2c69e4aa58509",
-      "originalPath": "FBI-Vault-UFO/pdfs/ufo-part-02.pdf",
-      "url": "https://github.com/ufo-files/machine-data/blob/112d91db16da7c6308abab422aad60d80d75ed51/FBI-Vault-UFO/pdfs/ufo-part-02.txt",
-      "reviewScope": "Cited text passages reviewed; full document, original scans, and source-lineage audit not independently certified.",
-      "relatedSources": []
-    },
     "roswell": {
       "id": "roswell",
       "path": "NSA-UFO-FOIA/pdfs/report-of-air-force-research-regarding-the-roswell-incident.txt",
@@ -654,6 +654,13 @@
         "review": "Author visually checked the cited propositions against the original page; not independent authentication"
       }
     },
+    "gao-2": {
+      "id": "gao-2",
+      "source": "gao",
+      "locator": "PDF page 2 (file order)",
+      "selector": 2,
+      "passage": ":\nGAO\nUnited States\n¡eneral Accounting Office\nWashington, D.C. 20548\nNational Security and\nInternational Affairs Division\nB-262046\nJuly 28, 1995\nThe Honorable Steven H. Schiff\nHouse of Representatives\nDear Mr. Schiff:\nOn July 8, 1947, the Roswell Army Air Field (RIAF) public information\noffice in Roswell, New Mexico, reported the crash and recovery of a\n'flying disc.\" Army Air Forces personnel from the RAf's 509th Bomk\nGroup were credited with the recovery. The following day, the press\nreporte dear he Conceandit Re pral one had recovered crase t\nradar-tracking (weather) balloon, not a \"flying disc.\"\nAfter nearly 50 years, speculation continues on what crashed at Roswell.\nSome observers believe that the object was of extraterrestrial origin. In the\nuly 1994 Report of Air Force Research Regarding the Roswell Inciden\nhe Air Force did not dispute that something happened near Roswell, bu\nreported that the most likely source of the wreckage was from a\n- balloon-launched classified government project designed to determine the\nstate of Soviet nuclear weapons research. The debate on what crashed at\nRoswell continues.\nConcerned that the Department of Defense (DOD) may not have provided\nyou retire eat or repring in on the nes similau asked sato determine\nRoswell and identify any government records concerning the Roswell\ncrash.\nWe conducted an extensive search for government records related to the\ncrash near Roswell. We examined a wide range of classified and\nunclassified documents dating from July 1947 through the 1950s. These\nrecords came from numerous organizations in New Mexico and elsewhere\nthroughout DOD as well as the Federal Bureau of Investigation (FBI), the\nCentral Intelligence Agency (CLA), and the National Security Council. The\nfull scope and methodology of our work are detailed at the end of this\nreport.\nPage 1\nGAONSIAD 95-187 Government Records"
+    },
     "ghost-rockets-1": {
       "id": "ghost-rockets-1",
       "source": "ghost-rockets",
@@ -682,6 +689,18 @@
       "scan": {
         "path": "assets/research-scans/arnold-original-p164.jpg",
         "sha256": "5cdf94677a5a2a16f9d546822b62f8ddf223249f4f4790ad4cd692e931da61d8",
+        "review": "Author visually checked the cited propositions against the original page; not independent authentication"
+      }
+    },
+    "fbi-roswell-5": {
+      "id": "fbi-roswell-5",
+      "source": "fbi-roswell",
+      "locator": "PDF page 5 (file order)",
+      "selector": 5,
+      "passage": "TELETYPE\nFBI DALLAS\n7-8-47\nDIRECTOR MD SAC, CINCINNATI\n6-17 PM\nURGENT\nFLYING DISCA INFORMATION CONCERNING.\nHEADQUARTESS\nEIGHTH AIR FORCE, TELEPHONICALLY ADVISED TUES OFFICE THAI AN OBJECT\nPURPORTINCTO BE A FLYING DISC. WAS RE COVERED NEAR, ROSWELL. NEU\nMEXICO, THIS DATE THE DISC IS HEXAGONAL IN SHAPE AND WAS SUSPENDED\nEROM A BALLON BY CABLE, WHICH EALLON WAS AFPROKIMATELY TWENTY\nFEET IN DIAMETER.\nFURTHER ADVISED THAT THE OBJECTORC\nFOUND RESEMBLES A HIGH ALTITUDE WEATHER BALLOON WITH A RADAR\nREFLECTOR, BUT TKAT TELEPHONIC CONVERSATION BETVEEN THEIR OFFICE\nAND WRIGHI FIELD HAD NOT SEE\nBORNE OUT IHIS BELIEE. DISC AND\nBALLOON BEING TRANSPORTED TO WRIGHT FIELD BY SPECIAL PLANE FOR EXAMINA?\nINEORMATION PROVIDED THIS OFFICE BECAUSE CE NATIONAL INTEREST IN CASE •\nEXAY AND FACT THAT NATIONAL BROADCASTING COMPANY, ASSOCIATED PRESS, AND\nOTHERS ATTEMPTING TO BREAK STORY OF LOCATION OF DISC TODAY.\nADVISED WOULD REQUEST WRIGHT FIELD TO ADVISE CINCINIATI\nOFFICE RESULTS OF EXAMINATION. NO FÜRTHER INVESTICATION BEING\nCONDUCTED.\nEND\nCLAXX ACK-IN ORDER\n1.A\nDÈ FBI CI MIW\nBPI\nH8\n8-35 PM O\n0-22 Pi OK FBI WASH DEAN\n-\nBECORDED\nK2-831+=\nEX-29. 23 MIL 221547",
+      "scan": {
+        "path": "assets/research-scans/fbi-roswell-p5.jpg",
+        "sha256": "05cf4baf1cef4b7c790f5d5bca019ec7235106c362e3d5e653a7ff88f5be7077",
         "review": "Author visually checked the cited propositions against the original page; not independent authentication"
       }
     },
@@ -746,13 +765,6 @@
       "locator": "PDF page 5 (file order)",
       "selector": 5,
       "passage": "07/31/1997\n.. 10:12\n3349535103\nAIR UNIV LIBRARY ILL\nPAGE 04\nturn this information to the Office of Legisla-\ntive Liaison for reply to the inquiry.\n(3) Process\nrequests from\ncongressional\nsources in accordance with AFR 11-7.\ng. Cooperation. All Air Force activities\nwill\ncooperate with Air Force UFO investigators to\ninsure the economical and prompt success of in-\nvestigations and analyses.\nWhen feasible, this\ncooperation will include furnishing air or ground\ntransportation and other assistance.\n4. Guidance. The thoroughness and quality of\na report or investigation of UFO's are limited\nonly by the skill and resourcefulness of the per-\nion who receives the initial inforation and/or\nprepares the report. The usefulness and value\nof any report or investigation depend on the ac-\ncuracy and timeliness of its contents. Following\nare sids for screening, evaluating, and report-\na. Careful study of the logic, consistency, and\ncoherence of the observer's report. An interview\nwith the observer by personnel preparing the re-\nport is especially valuable in determining the\nsource's reliability and the validity of the in-\nformation given.\nFactors deserving particular\nattention are the observer's age, occupation, and\neducation, and whether his occupation involves\nobservation reporting or technical knowledge.\nA report stating that a witness is completely fa-\nmiliar with certain aspects of a sighting should\nindicate his or her specific qualifications.\nb. Theodolite measurements of changes or\nazimuth, and elevation and angular size.\nc. Interception, identification, or air search, if\nappropriate and within the scope of\nair defense\nregulations.\nd. When feasible, contact with local aircraft\ncontrol and warning\n(ACW) units, and with\npilots and crews of aircraft aloft at the time\nand place of sighting. Also, contact with any\nother persons or organizations that may have\nlactual data on the UFO or can offer corrobo-\nrating evidencevisual, electronic, or other.\ne. Consultation\nwith\nmilitary\nor\ncivilian\nweather forecasters for data on tracks of weather\nballoons released\nmeteorological activity which may have a bear-\ning on the UFO.\nf. Consultation with navigators and astrono-\nmers in the area to determine whether any as-\ntronomical body or phenomenon would account\nfor the sighting.\ng. Contact with military and civilian tower\noperators, air operations units, and airlines to\nAFR 200-2\ndetermine whether the sighting could have been\nan aircraft. Local units of the Federal Aviation\nAegard (tA) are often of assistance in this\nh. Contact with persons who may know of\nexperimental aircraft of unusual: configuration,\nrocket and guided missile firinga, or aerial tests\nin the area.\ni. Contact with photographic units or labora-\ntories. Usually, these installations have several\ncameras available for specialized intelligence or\ninvestigative work. Photography is an invaluable\ntool for use, where possible, in investigating and\nanalyzing UFO sightings. (See paragraph 18).\nj. Whenever possible,\n& UFO\nsighting investigator an individual with a scien-\ntific or\ntechnical background as well as\nexpe-\nrience as an investigator.\nk. Submission of reports on all sightings even\nthough identification may be assumed by the\nPreparing officer under paragraph 16 of this regu-\n5. Reporting UFO Information. Both the As-\nsistant Chief of Staff, Intelligence, Headquarters\nUSAF, and the Air Defense Command have a\ndirect and immediate interest in the facts per-\ntaining to UFO's reported within the United\nStates. All Air Force activities will conduct UFO\ninvestigations to the extent necessary for their\nrequired reporting action (see paragraphs 14, 15,\nand 16). No activity should carry an investiga-\ntion beyond this point, unless the preparing offi-\ncer believes the magnitude (intelligence signifi-\ncance or public relations aspects) of the case\nwarrant full scale investigation. The officer may\ncontact the FTD of AFSC (CLearwater 3-7111,\next 69216/66378) at Wright-Patterson Air Force\nBase, Ohio, to obtain verbal authority for con-\ntinued investigation.\nSECTION B-PUBLIC RELATIONS,\nINFORMATION, CONTACTS, AND\nRELEASES\n6. Maintaining Public Relations. The Offce of\nInformation is responsible for:\na. In coordination with the AFSC (FTD)\nwhen necessary, maintaining contact with the\npublic and the press on all aspects of the UFO\nprogram and its related activities.\nb. Releasing\n. information on UFO sightings\nand results of investigations.\nc. Periodically releasing information on this\nsubject to the general public.\n3"
-    },
-    "bluebook-text": {
-      "id": "bluebook-text",
-      "source": "bluebook",
-      "locator": "Full extracted text; page mapping unavailable",
-      "selector": "text",
-      "passage": "FACT SHEET\nUSAF Fact Sheet 95-03\n\n\nUnidentified Flying Objects and Air Force\nProject Blue Book\nFrom 1947 to 1969, the Air Force investigated Unidentified Flying Objects under Project Blue Book.\nThe project, headquartered at Wright-Patterson Air Force Base, Ohio, was tenninated Dec. 17, 1969. Of\na total of 12,618 sightings reported to Project Blue Book, 701 remained \"unidentified.\"\n\nThe decision to discontinue UFO investigations was based on an evaluation of a report prepared by the\nUniversity of Colorado entitled, \"Scientific Study of Unidentified Flying Objects;\" a·review of the\nUniversity of Colorado's report by the National Academy of Sciences; previous UFO studies and Air\nForce experience investigating UFO reports during the 1940s, '50s and '60s.\n\nAs a result of these investigations, studies and experience gained from investigating UFO reports since\n1948, the conclusions of Project Blue Book were: (1) no UFO reported, investigated and evaluated by\nthe Air Force was ever an indication of threat to our national security; (2) there was no evidence\nsubmitted to or discovered by the Air Force that sightings categorized as \"unidentified\" represented\ntechnological developments or principles beyond the range of modem scientific knowledge; and (3)\nthere was no evidence indicating that sightings categorized as \"unidentified\" were extraterrestrial\nvehicles.\n\nWith the termination of Project Blue Book, the Air Force regulation establishing and controlling the\nprogram for investigating and analyzing UFOs was rescinded. Documentation regarding the former Blue\nBook investigation was pennanently transferred to the Modern Military Branch, National Archives and\nRecords Service, Eighth Street and Pennsylvania Avenue, N.W., Washington, D.C. 20408, and is\navailable for public review and analysis.\n\nSince the termination of Project Blue Book, nothing has occurred that would support a resumption of\nUFO investigations by the Air Force. Given the current environment of steadily decreasing defense\nbudgets, it is unlikely the Air Force would become involved in such a costly project in the foreseeable\nfuture.\n\nThere are a number of universities and professional scientific organizations that have considered UFO\nphenomena during periodic meetings and seminars. A list of private organizations interested in aerial\nphenomena may be found in Gale's Encyclopedia ofAssociations. Interest in and timely review of UFO\nreports by private groups ensures that sound evidence is not overlooked by the scientific community.\nPersons wishing to report UFO sightings should be advised to contact local law enforcement agencies.\n\nPoint of Contact\n\fNews media requiring Project Blue Book files should contact the National Archives Public Affairs\nOffice, (202)-501:.5525. Public queries should be addressed to the Project Blue Book archivist at (202)\n501-5385. For queries not related to Project Blue Book, contact the National Archives receptionist at\n(202) 501-5400.\n\n(Current as of June 1995)"
     },
     "ruppelt-ff-2": {
       "id": "ruppelt-ff-2",
@@ -828,6 +840,13 @@
       "locator": "PDF page 86 (file order)",
       "selector": 86,
       "passage": "Seeret NOFORA\nChapter 2\n73\nNot only did the airline pilots report their sightings to air-traffic\ncontrollers, but they and ground-based observers also wrote letters to\nthe Air Force unit at Wright Air Development Command in Dayton\ncharged with investigating such phenomena. This, in turn, led to the\nAir Force's Operation BLUE BOOK. Based at Wright-Patterson, the\noperation collected all reports of UFO sightings. Air Force investiga-\ntors then attempted to explain such sightings by linking them to natu-\nral phenomena. BLUE BOOK investigators regularly called on the\nAgency's Project Staff in Washington to check reported UFO sight-\nings against U-2 flight logs. This enabled the investigators to elimi-\nnate the majority of the UFO reports, although they could not reveal\nto the letter writers the true cause of the UFO sightings. U-2 and later\nOXCART flights accounted for more than one-half of all UFO reports\nduring the late 1950s and most of the 1960s.\"\nHIRING U-2 PILOTS\nIn authorizing the U-2 project, President Eisenhower told DCI Dulles\nthat he wanted the pilots of these planes to be non-US citizens. It was\n• his belief that, should a U-2 come down in hostile territory, it would\nbe much easier for the United States to deny any responsibility for the\nactivity if the pilot was not an American\nThe initial effort to find U-2 pilots was assigned to the\nDirectorate of Plans Air/Maritime Division (AMD). The DDP had ex-\ncellent contacts\neratives\ninquiries be made to see if any\nTAMD op-\nlasked that discreet\nfliers were interested in a\nhigh-paying covert project.\nbrought to the United States for training. Meanwhile, AMD hired an\nflier residing in England, and he also came to the\nUnited States for training.\nIn theory the use of foreign pilots seemed quite logical; in prac-\ntice it did not work out. The\nand\ncould only fly light aircraft. Language was also a barrier for the\nalthough several were good fliers. Because Lieutenant\nColonel Geary had taken a class of\nschool at Randolph AFB in 1950, he got the job of training the\n' Information supplied by James Cunningham to Donald E. Welzenbach (U).\nSecret"
+    },
+    "bluebook-text": {
+      "id": "bluebook-text",
+      "source": "bluebook",
+      "locator": "Full extracted text; page mapping unavailable",
+      "selector": "text",
+      "passage": "FACT SHEET\nUSAF Fact Sheet 95-03\n\n\nUnidentified Flying Objects and Air Force\nProject Blue Book\nFrom 1947 to 1969, the Air Force investigated Unidentified Flying Objects under Project Blue Book.\nThe project, headquartered at Wright-Patterson Air Force Base, Ohio, was tenninated Dec. 17, 1969. Of\na total of 12,618 sightings reported to Project Blue Book, 701 remained \"unidentified.\"\n\nThe decision to discontinue UFO investigations was based on an evaluation of a report prepared by the\nUniversity of Colorado entitled, \"Scientific Study of Unidentified Flying Objects;\" a·review of the\nUniversity of Colorado's report by the National Academy of Sciences; previous UFO studies and Air\nForce experience investigating UFO reports during the 1940s, '50s and '60s.\n\nAs a result of these investigations, studies and experience gained from investigating UFO reports since\n1948, the conclusions of Project Blue Book were: (1) no UFO reported, investigated and evaluated by\nthe Air Force was ever an indication of threat to our national security; (2) there was no evidence\nsubmitted to or discovered by the Air Force that sightings categorized as \"unidentified\" represented\ntechnological developments or principles beyond the range of modem scientific knowledge; and (3)\nthere was no evidence indicating that sightings categorized as \"unidentified\" were extraterrestrial\nvehicles.\n\nWith the termination of Project Blue Book, the Air Force regulation establishing and controlling the\nprogram for investigating and analyzing UFOs was rescinded. Documentation regarding the former Blue\nBook investigation was pennanently transferred to the Modern Military Branch, National Archives and\nRecords Service, Eighth Street and Pennsylvania Avenue, N.W., Washington, D.C. 20408, and is\navailable for public review and analysis.\n\nSince the termination of Project Blue Book, nothing has occurred that would support a resumption of\nUFO investigations by the Air Force. Given the current environment of steadily decreasing defense\nbudgets, it is unlikely the Air Force would become involved in such a costly project in the foreseeable\nfuture.\n\nThere are a number of universities and professional scientific organizations that have considered UFO\nphenomena during periodic meetings and seminars. A list of private organizations interested in aerial\nphenomena may be found in Gale's Encyclopedia ofAssociations. Interest in and timely review of UFO\nreports by private groups ensures that sound evidence is not overlooked by the scientific community.\nPersons wishing to report UFO sightings should be advised to contact local law enforcement agencies.\n\nPoint of Contact\n\fNews media requiring Project Blue Book files should contact the National Archives Public Affairs\nOffice, (202)-501:.5525. Public queries should be addressed to the Project Blue Book archivist at (202)\n501-5385. For queries not related to Project Blue Book, contact the National Archives receptionist at\n(202) 501-5400.\n\n(Current as of June 1995)"
     },
     "aawsap-contract-5": {
       "id": "aawsap-contract-5",
@@ -1037,25 +1056,6 @@
       "selector": "ff:2",
       "passage": "W. A. Watters et al.\n\n                                                                                                                               Unidenti¯ed Aerial Phenomena (UAP) have resisted explanation and have received little formal scienti¯c\n                                                                                                                               attention for 75 years. A primary objective of the Galileo Project is to build an integrated software and\n                                                                                                                               instrumentation system designed to conduct a multimodal census of aerial phenomena and to recognize\n                                                                                                                               anomalies. Here we present key motivations for the study of UAP and address historical objections to this\n                                                                                                                               research. We describe an approach for highlighting outlier events in the high-dimensional parameter space\n                                                                                                                               of our census measurements. We provide a detailed roadmap for deciding measurement requirements,\n                                                                                                                               as well as a science traceability matrix (STM) for connecting sought-after physical parameters to\n                                                                                                                               observables and instrument requirements. We also discuss potential strategies for deciding where to locate\n                                                                                                                               instruments for development, testing, and ¯nal deployment. Our instrument package is multimodal and\n                                                                                                                               multispectral, consisting of (1) wide-¯eld cameras in multiple bands for targeting and tracking of aerial\n                                                                                                                               objects and deriving their positions and kinematics using triangulation; (2) narrow-¯eld instruments\n                                                                                                                               including cameras for characterizing morphology, spectra, polarimetry, and photometry; (3) passive\n                                                                                                                               multistatic arrays of antennas and receivers for radar-derived range and kinematics; (4) radio spectrum\n                                                                                                                               analyzers to measure radio and microwave emissions; (5) microphones for sampling acoustic emissions in\n\n\n                      J. Astron. Instrum. Downloaded from www.worldscientific.com\n                                                                                                                               the infrasonic through ultrasonic frequency bands; and (6) environmental sensors for characterizing\n                                                                                                                               ambient conditions (temperature, pressure, humidity, and wind velocity), as well as quasistatic electric and\n                                                                                                                               magnetic ¯elds, and energetic particles. The use of multispectral instruments and multiple sensor modal-\n                                                                                                                               ities will help to ensure that artifacts are recognized and that true detections are corroborated and veri-\n                                                                                                                               ¯able. Data processing pipelines are being developed that apply state-of-the-art techniques for multi-sensor\n                                                                                                                               data fusion, hypothesis tracking, semi-supervised classi¯cation, and outlier detection.\n\n                                                                                                                               Keywords: Aerial anomaly; anomaly detection; aerial object tracking; UAP; UFO; unidenti¯ed aerial\n                                                                                                                               phenomena; unidenti¯ed aerospace phenomena; unidenti¯ed anomalous phenomena.\n\n\n                                                                                                                    1. Introduction                                                    Force investigation of UAP from 1951 to 1953, has\n                                                                                                                    Unidenti¯ed Aerial Phenomena (UAP), also known                     many disadvantages that were noted long ago\n                                                                                                                    as Unidenti¯ed Flying Objects (UFOs) and Un-                       (Hartmann, 1972). One of these shortcomings is its\n                                                                                                                                                                                       inherent subjectivity (\\unidenti¯ed by whom?\"). It\n                                                                                                                    identi¯ed Aerospace Phenomena, have captured the\n\n\nby 74.104.150.80 on 05/31/23. Re-use and distribution is strictly not permitted, except for Open Access articles.\n                                                                                                                                                                                       is often unclear from sighting reports that an object\n                                                                                                                    public's imagination since the late 1940s but have so\n                                                                                                                                                                                       was necessarily °ying versus °oating or falling. Once\n                                                                                                                    far attracted very little scienti¯c interest. Since the\n                                                                                                                                                                                       identi¯ed, UFOs are commonly not \\objects\" at all,\n                                                                                                                    high water mark of scienti¯c attention in the late\n                                                                                                                                                                                       in the sense of materially substantial things, as in\n                                                                                                                    1960s, the technologies required to monitor the sky\n                                                                                                                                                                                       the case of light re°ected from clouds, optical\n                                                                                                                    and environment using every known measurement\n                                                                                                                                                                                       mirages, or radar signals re°ected from density\n                                                                                                                    modality have been dramatically enhanced. The\n                                                                                                                                                                                       boundaries in the atmosphere (Hardy, 1972). The\n                                                                                                                    advent of digital cameras and inexpensive single\n                                                                                                                                                                                       terms \\Unidenti¯ed Aerial Phenomenon\" and\n                                                                                                                    board computers has revolutionized our ability to\n                                                                                                                                                                                       \\Unidenti¯ed Aerospace Phenomena,\" which have\n                                                                                                                    construct systems of sensors able to measure nu-                   lately come into common usage, fare only somewhat\n                                                                                                                    merous properties of the atmosphere and of objects                 better and do not obviously encompass reports of\n                                                                                                                    that pass through it. Recent advances in machine                   UAP that can travel through water (Feindt, 2016).\n                                                                                                                    learning have produced powerful tools for charac-                  The astronomer J. Allen Hynek provided one of the\n                                                                                                                    terizing \\background\" conditions and for detecting                 most helpful de¯nitions of this topic (Hynek,\n                                                                                                                    outlier events. In spite of this, the past 50 years have           1972b):\n                                                                                                                    seen very few attempts by establishment scientists\n                                                                                                                    to design instrument systems for the express pur-                      \\Let me de¯ne the UFO phenomenon... as that\n                                                                                                                    pose of studying UAP. By contrast with most pre-                       phenomenon described by reports of visual or\n                                                                                                                    vious work on this topic, which has focused on the                     instrumental observations of lights or objects\n                                                                                                                    analysis of eyewitness reports or of observations                      in the sky (or near, or on the ground) whose\n                                                                                                                                                                                           presence, trajectories, and general character\n                                                                                                                    recorded using instruments not speci¯cally designed\n                                                                                                                                                                                           are not explainable in veri¯able physical terms,\n                                                                                                                    for scienti¯c analysis, the present study will focus on\n                                                                                                                                                                                           even after intensive study.\"\n                                                                                                                    collecting new data using calibrated instrumenta-\n                                                                                                                    tion under well-understood conditions.                             A di±culty with this de¯nition and with the acro-\n                                                                                                                         The term \\Unidenti¯ed Flying Object,\" coined                  nyms UFO and UAP is that they are not descrip-\n                                                                                                                    by Captain Edward Ruppelt who led the US Air                       tive: they do not refer to properties commonly\n\n                                                                                                                                                                               2340006-2"
     },
-    "gao-2": {
-      "id": "gao-2",
-      "source": "gao",
-      "locator": "PDF page 2 (file order)",
-      "selector": 2,
-      "passage": ":\nGAO\nUnited States\n¡eneral Accounting Office\nWashington, D.C. 20548\nNational Security and\nInternational Affairs Division\nB-262046\nJuly 28, 1995\nThe Honorable Steven H. Schiff\nHouse of Representatives\nDear Mr. Schiff:\nOn July 8, 1947, the Roswell Army Air Field (RIAF) public information\noffice in Roswell, New Mexico, reported the crash and recovery of a\n'flying disc.\" Army Air Forces personnel from the RAf's 509th Bomk\nGroup were credited with the recovery. The following day, the press\nreporte dear he Conceandit Re pral one had recovered crase t\nradar-tracking (weather) balloon, not a \"flying disc.\"\nAfter nearly 50 years, speculation continues on what crashed at Roswell.\nSome observers believe that the object was of extraterrestrial origin. In the\nuly 1994 Report of Air Force Research Regarding the Roswell Inciden\nhe Air Force did not dispute that something happened near Roswell, bu\nreported that the most likely source of the wreckage was from a\n- balloon-launched classified government project designed to determine the\nstate of Soviet nuclear weapons research. The debate on what crashed at\nRoswell continues.\nConcerned that the Department of Defense (DOD) may not have provided\nyou retire eat or repring in on the nes similau asked sato determine\nRoswell and identify any government records concerning the Roswell\ncrash.\nWe conducted an extensive search for government records related to the\ncrash near Roswell. We examined a wide range of classified and\nunclassified documents dating from July 1947 through the 1950s. These\nrecords came from numerous organizations in New Mexico and elsewhere\nthroughout DOD as well as the Federal Bureau of Investigation (FBI), the\nCentral Intelligence Agency (CLA), and the National Security Council. The\nfull scope and methodology of our work are detailed at the end of this\nreport.\nPage 1\nGAONSIAD 95-187 Government Records"
-    },
-    "fbi-roswell-5": {
-      "id": "fbi-roswell-5",
-      "source": "fbi-roswell",
-      "locator": "PDF page 5 (file order)",
-      "selector": 5,
-      "passage": "TELETYPE\nFBI DALLAS\n7-8-47\nDIRECTOR MD SAC, CINCINNATI\n6-17 PM\nURGENT\nFLYING DISCA INFORMATION CONCERNING.\nHEADQUARTESS\nEIGHTH AIR FORCE, TELEPHONICALLY ADVISED TUES OFFICE THAI AN OBJECT\nPURPORTINCTO BE A FLYING DISC. WAS RE COVERED NEAR, ROSWELL. NEU\nMEXICO, THIS DATE THE DISC IS HEXAGONAL IN SHAPE AND WAS SUSPENDED\nEROM A BALLON BY CABLE, WHICH EALLON WAS AFPROKIMATELY TWENTY\nFEET IN DIAMETER.\nFURTHER ADVISED THAT THE OBJECTORC\nFOUND RESEMBLES A HIGH ALTITUDE WEATHER BALLOON WITH A RADAR\nREFLECTOR, BUT TKAT TELEPHONIC CONVERSATION BETVEEN THEIR OFFICE\nAND WRIGHI FIELD HAD NOT SEE\nBORNE OUT IHIS BELIEE. DISC AND\nBALLOON BEING TRANSPORTED TO WRIGHT FIELD BY SPECIAL PLANE FOR EXAMINA?\nINEORMATION PROVIDED THIS OFFICE BECAUSE CE NATIONAL INTEREST IN CASE •\nEXAY AND FACT THAT NATIONAL BROADCASTING COMPANY, ASSOCIATED PRESS, AND\nOTHERS ATTEMPTING TO BREAK STORY OF LOCATION OF DISC TODAY.\nADVISED WOULD REQUEST WRIGHT FIELD TO ADVISE CINCINIATI\nOFFICE RESULTS OF EXAMINATION. NO FÜRTHER INVESTICATION BEING\nCONDUCTED.\nEND\nCLAXX ACK-IN ORDER\n1.A\nDÈ FBI CI MIW\nBPI\nH8\n8-35 PM O\n0-22 Pi OK FBI WASH DEAN\n-\nBECORDED\nK2-831+=\nEX-29. 23 MIL 221547",
-      "scan": {
-        "path": "assets/research-scans/fbi-roswell-p5.jpg",
-        "sha256": "05cf4baf1cef4b7c790f5d5bca019ec7235106c362e3d5e653a7ff88f5be7077",
-        "review": "Author visually checked the cited propositions against the original page; not independent authentication"
-      }
-    },
     "roswell-5": {
       "id": "roswell-5",
       "source": "roswell",
@@ -1217,6 +1217,26 @@
           ]
         },
         {
+          "id": "nuclear-age-01",
+          "kind": "record",
+          "text": "That July, the sky over New Mexico lit up for a different reason: on July 16, 1945, the Trinity test detonated the world’s first atomic bomb.",
+          "citations": [],
+          "contextCitations": [
+            "trinity"
+          ]
+        },
+        {
+          "id": "nuclear-age-02",
+          "kind": "record",
+          "text": "The nuclear age had begun, two years before Roswell’s name entered the flying-saucer story.",
+          "citations": [
+            "gao-2"
+          ],
+          "contextCitations": [
+            "trinity"
+          ]
+        },
+        {
           "id": "before-roswell-01",
           "kind": "record",
           "text": "The following year, reports of “ghost rockets” spread from southern Sweden across Scandinavia.",
@@ -1241,6 +1261,30 @@
             "ghost-rockets-3",
             "arnold-original-164"
           ]
+        },
+        {
+          "id": "summer-1947-01",
+          "kind": "record",
+          "text": "On June 24, 1947, Kenneth Arnold saw nine unfamiliar objects near Mount Rainier, an encounter that would help define the summer of the flying saucer.",
+          "citations": [
+            "arnold-original-164"
+          ]
+        },
+        {
+          "id": "summer-1947-02",
+          "kind": "record",
+          "text": "Two weeks later, on July 8, Roswell Army Air Field announced that it had recovered a “flying disc” in New Mexico.",
+          "citations": [
+            "gao-2"
+          ]
+        },
+        {
+          "id": "summer-1947-03",
+          "kind": "record",
+          "text": "The recovery was already moving through military and federal channels, with material expected to go to Wright Field for examination.",
+          "citations": [
+            "fbi-roswell-5"
+          ]
         }
       ],
       "paragraphs": [
@@ -1250,9 +1294,18 @@
           "wartime-03"
         ],
         [
+          "nuclear-age-01",
+          "nuclear-age-02"
+        ],
+        [
           "before-roswell-01",
           "before-roswell-02",
           "before-roswell-04"
+        ],
+        [
+          "summer-1947-01",
+          "summer-1947-02",
+          "summer-1947-03"
         ]
       ]
     },
@@ -1264,7 +1317,7 @@
         {
           "id": "amc-assessment-01",
           "kind": "assessment",
-          "text": "In September 1947, Air Materiel Command gave the reports a serious hearing: its assessment called the phenomenon real and found some of the reported behavior suggestive of controlled objects.",
+          "text": "By September 1947, Air Materiel Command was calling for a sustained investigation: its assessment called the phenomenon real and found some of the reported behavior suggestive of controlled objects.",
           "citations": [
             "amc1947-9"
           ]
@@ -1311,14 +1364,6 @@
           ]
         },
         {
-          "id": "overview-02",
-          "kind": "assessment",
-          "text": "By the end of the Air Force’s long investigation, its published summary counted 12,618 sightings and 701 cases left unidentified.",
-          "citations": [
-            "bluebook-text"
-          ]
-        },
-        {
           "id": "blue-book-inside-01",
           "kind": "claim",
           "text": "Years earlier, Edward Ruppelt had described the human difficulty behind those numbers: about a fifth of roughly eight hundred reports reviewed by his team came from reliable observers and still resisted a conclusion.",
@@ -1347,7 +1392,6 @@
           "institutional-record-05"
         ],
         [
-          "overview-02",
           "blue-book-inside-01",
           "blue-book-inside-03"
         ]
@@ -1429,6 +1473,32 @@
           "citations": [
             "u2-history-86"
           ]
+        },
+        {
+          "id": "space-age-01",
+          "kind": "record",
+          "text": "While investigators pursued unfamiliar objects, human technology was beginning to reach beyond the atmosphere: on October 4, 1957, the Soviet Union launched Sputnik 1, the first artificial satellite.",
+          "citations": [],
+          "contextCitations": [
+            "sputnik"
+          ]
+        },
+        {
+          "id": "space-age-02",
+          "kind": "record",
+          "text": "On April 12, 1961, Yuri Gagarin became the first human in space, orbiting Earth aboard Vostok 1.",
+          "citations": [],
+          "contextCitations": [
+            "gagarin"
+          ]
+        },
+        {
+          "id": "overview-02",
+          "kind": "assessment",
+          "text": "By the end of the Air Force’s long investigation, its published summary counted 12,618 sightings and 701 cases left unidentified.",
+          "citations": [
+            "bluebook-text"
+          ]
         }
       ],
       "paragraphs": [
@@ -1446,6 +1516,11 @@
           "classified-aviation-01",
           "classified-aviation-02",
           "classified-aviation-03"
+        ],
+        [
+          "space-age-01",
+          "space-age-02",
+          "overview-02"
         ]
       ]
     },
@@ -2770,5 +2845,25 @@
       "event-53b1c3273e6c",
       "event-2f0b79d096ce"
     ]
+  },
+  "contextReferences": {
+    "trinity": {
+      "title": "Trinity Site",
+      "author": "National Park Service",
+      "url": "https://home.nps.gov/whsa/learn/historyculture/trinity-site.htm",
+      "accessed": "2026-10-21"
+    },
+    "sputnik": {
+      "title": "The Dawn of the Space Age",
+      "author": "NASA",
+      "url": "https://www.nasa.gov/history/dawn-of-the-space-age/",
+      "accessed": "2026-10-21"
+    },
+    "gagarin": {
+      "title": "Yuri Gagarin: First Human in Space",
+      "author": "NASA",
+      "url": "https://science.nasa.gov/resource/yuri-gagarin-first-human-in-space/",
+      "accessed": "2026-10-21"
+    }
   }
 }

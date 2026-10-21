@@ -28,7 +28,9 @@ window.renderWhitepaper = async function(root = document, options = {}) {
     if (!response.ok) throw new Error('Research data could not be loaded.');
     const paper = await response.json();
     const sentences = paper.chapters.flatMap(chapter => chapter.sentences);
-    const evidenceNumbers = new Map(Object.keys(paper.evidence).map((id, i) => [id, i + 1]));
+    const contextReferences = paper.contextReferences || {};
+    const citationIds = [...new Set(sentences.flatMap(sentence => [...sentence.citations, ...(sentence.contextCitations || [])]))];
+    const evidenceNumbers = new Map(citationIds.map((id, i) => [id, i + 1]));
     const sourceNumbers = new Map(Object.keys(paper.sources).map((id, i) => [id, i + 1]));
     find('footer-version').textContent = `${paper.id} · v${paper.version}`;
     for (const chapter of paper.chapters) {
@@ -49,6 +51,13 @@ window.renderWhitepaper = async function(root = document, options = {}) {
             const citation = link(`[${evidenceNumbers.get(evidenceId)}]`, `#evidence-${evidenceId}`, 'citation');
             citation.setAttribute('aria-label', `Evidence ${evidenceNumbers.get(evidenceId)}: ${paper.sources[evidence.source].title}, ${evidence.locator}`);
             citation.title = `${paper.sources[evidence.source].title} · ${evidence.locator}`;
+            span.append(citation);
+          }
+          for (const referenceId of sentence.contextCitations || []) {
+            const reference = contextReferences[referenceId];
+            const citation = link(`[${evidenceNumbers.get(referenceId)}]`, `#context-${referenceId}`, 'citation');
+            citation.title = `${reference.author} · ${reference.title}`;
+            citation.setAttribute('aria-label', `Reference ${evidenceNumbers.get(referenceId)}: ${reference.title}`);
             span.append(citation);
           }
           paragraph.append(span);
@@ -104,6 +113,11 @@ window.renderWhitepaper = async function(root = document, options = {}) {
       const backlinks = el('p', undefined, 'backlinks'); backlinks.append(document.createTextNode('Cited by: '));
       for (const sentence of sentences.filter(sentence => sentence.citations.includes(evidence.id))) backlinks.append(link(sentence.id, `#${sentence.id}`));
       details.append(backlinks); find('passages').append(details);
+    }
+    for (const [id, reference] of Object.entries(contextReferences)) {
+      const block = el('div', undefined, 'source'); block.id = `context-${id}`;
+      block.append(el('h3', `[${evidenceNumbers.get(id)}] ${reference.title}`), el('p', `${reference.author} · Accessed ${reference.accessed}`, 'source-meta'), link('Open historical reference ↗', reference.url));
+      find('sources').append(block);
     }
     find('loading').hidden = true;
     find('publication').hidden = false;
