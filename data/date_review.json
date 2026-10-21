@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-20T21:27:43Z",
+  "generatedAt": "2026-10-21T00:24:54Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "3d342c827940516f58584e3b863419449957ce01"
+    "revision": "64a27ec347da9750071f97e2df754410c33721f5"
   },
-  "documentsWithCandidates": 19073,
+  "documentsWithCandidates": 19076,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -78490,6 +78490,21 @@
           "method": "unclassified-mention",
           "evidence": "Jimmy he says it was September 11 2001",
           "segment": 2836
+        }
+      ]
+    },
+    {
+      "documentId": "doc-a604c2bb997d",
+      "path": "Archives-for-the-Unexplained/documents/2020-04-04---FADE-TO-BLACK-Radio---Ep.-1209-FADE-to-BLACK-Jimmy-Church-w-Jason-Quitt-Quittspiracy-Part-3_419j7Xab47o---transcript-automated-.txt",
+      "candidates": [
+        {
+          "value": "1947-07-08",
+          "precision": "day",
+          "confidence": 0.72,
+          "kind": "relative_date",
+          "method": "relative-date-exclusion",
+          "evidence": "between July 8 1947 the Army Air Force",
+          "segment": 4
         }
       ]
     },
@@ -1562099,6 +1562114,21 @@
       ]
     },
     {
+      "documentId": "doc-d76fd186eee8",
+      "path": "National-Archives-UAP-Bulk/documents/17618564/40989272.txt",
+      "candidates": [
+        {
+          "value": "1972-03-06",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "other unrelated executive branch documents, by Executive Order 11652, issued on March 6, 1972 by President",
+          "segment": 97
+        }
+      ]
+    },
+    {
       "documentId": "doc-81d74713dd18",
       "path": "National-Archives-UAP-Bulk/documents/17618564/40989273.txt",
       "candidates": [
@@ -1575736,6 +1575766,21 @@
           "method": "unclassified-mention",
           "evidence": "Folha da Tarde, Porto Alegre, Rio Crande do Sul, Dec 7, 1957",
           "segment": 8
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2ee1b0fdd195",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-3/28975912.txt",
+      "candidates": [
+        {
+          "value": "1957-12-08",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "8 December 1957 Loving, Texas O Probably Balloon",
+          "segment": 4
         }
       ]
     },
