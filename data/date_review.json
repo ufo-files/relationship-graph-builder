@@ -1,14 +1,14 @@
 {
   "schema": "ufo-files-date-review/v1",
-  "generatedAt": "2026-10-21T14:55:56Z",
+  "generatedAt": "2026-10-21T20:51:14Z",
   "input": {
     "rootName": "machine-data",
     "transcriptsAreSourceOfTruth": true,
     "pairedLanguage": "en",
     "repository": "ufo-files/machine-data",
-    "revision": "2e08b6c518060eca93a30ef0fd946f488a31f268"
+    "revision": "5dd019da2adff0339503b721d77c3e3e753b60c1"
   },
-  "documentsWithCandidates": 19101,
+  "documentsWithCandidates": 19106,
   "records": [
     {
       "documentId": "doc-a5201c1d27d0",
@@ -1576403,6 +1576403,21 @@
       ]
     },
     {
+      "documentId": "doc-7896a9d4c998",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-3/28972118.txt",
+      "candidates": [
+        {
+          "value": "1957-10-12",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "12 October 1957 Philadelphia Airport, Penn!",
+          "segment": 1
+        }
+      ]
+    },
+    {
       "documentId": "doc-6d7c83c828d8",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-3/28975720.txt",
       "candidates": [
@@ -1578910,6 +1578925,21 @@
           "method": "unclassified-mention",
           "evidence": "information on her observation of 23 July 1965.",
           "segment": 14
+        }
+      ]
+    },
+    {
+      "documentId": "doc-2b30e4c5c1b1",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302540722.txt",
+      "candidates": [
+        {
+          "value": "1965-07-26",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "which appeared over Cumberland, Maryland, at 01:292 on July 26, 1965.",
+          "segment": 84
         }
       ]
     },
@@ -1588793,6 +1588823,93 @@
       ]
     },
     {
+      "documentId": "doc-2e86012af99e",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302578497.txt",
+      "candidates": [
+        {
+          "value": "1958-07-31",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "et2rence our telephone conversation of 31 July 1958: I was pleased to",
+          "segment": 42
+        },
+        {
+          "value": "1968-08-02",
+          "precision": "day",
+          "confidence": 0.98,
+          "kind": "administrative_date",
+          "method": "context-exclusion",
+          "evidence": "At 0900 hours, 2 August 1968, It Marano received a telephone call",
+          "segment": 106
+        },
+        {
+          "value": "1968-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "to UTO sighting of 28 July 1968 byr",
+          "segment": 108
+        },
+        {
+          "value": "1968-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Congressman's home district on the evening of 28 July 1968.",
+          "segment": 122
+        },
+        {
+          "value": "1968-08-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference the August 2, 1968, letter to you from Mr.",
+          "segment": 133
+        },
+        {
+          "value": "1963-07-23",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Pottstown, Pennsylvania, 23 July 1963",
+          "segment": 166
+        },
+        {
+          "value": "1968-08-02",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This replies to your letter of August 2, 1968.",
+          "segment": 171
+        },
+        {
+          "value": "1968-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "statement concerning UFO incidents reported on 28 July 1968 is",
+          "segment": 228
+        },
+        {
+          "value": "1968-07-28",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UPO Observation, 28 July 1968",
+          "segment": 295
+        }
+      ]
+    },
+    {
       "documentId": "doc-00bcdac6a773",
       "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302578522.txt",
       "candidates": [
@@ -1589188,6 +1589305,21 @@
           "method": "unclassified-mention",
           "evidence": "UPO Observation, 7 September 1968",
           "segment": 65
+        }
+      ]
+    },
+    {
+      "documentId": "doc-8d70b889c6aa",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302580318.txt",
+      "candidates": [
+        {
+          "value": "1968-10-09",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "UFO Observation, 9 October 1968",
+          "segment": 7
         }
       ]
     },
@@ -1589722,6 +1589854,39 @@
           "method": "unclassified-mention",
           "evidence": "UFO Observation, 17 January 1969",
           "segment": 135
+        }
+      ]
+    },
+    {
+      "documentId": "doc-6f7bdb48a562",
+      "path": "National-Archives-UAP-Bulk/documents/597821-pdfs-5/302581953.txt",
+      "candidates": [
+        {
+          "value": "1968-12-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "This replies to your letter postmarked December 14, 1968, in",
+          "segment": 17
+        },
+        {
+          "value": "1968-12-14",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "On December 14, 1968 I sent you some photographs of something which I",
+          "segment": 56
+        },
+        {
+          "value": "1969-10-18",
+          "precision": "day",
+          "confidence": 0.45,
+          "kind": "unknown",
+          "method": "unclassified-mention",
+          "evidence": "Reference your letter of 18 October 1969.",
+          "segment": 100
         }
       ]
     },
