@@ -17,3 +17,10 @@
 #publication{padding-top:24px}#caseStudies>section{padding-top:24px}#caseStudies>section:first-child{border-top:0}
 
 #overview{border-top:0}
+
+.narrative-paragraph{margin:0 0 22px;font:18px/1.85 var(--font)}
+.narrative-paragraph .sentence{font:inherit;margin:0}
+#research-notes{border-top:1px solid var(--line-strong,#ccc);padding:22px 0}
+#research-notes>summary{cursor:pointer;font-weight:700}
+@media(max-width:850px){.narrative-paragraph{font-size:17px}}
+@media print{.narrative-paragraph{font-size:11pt;line-height:1.7}}
