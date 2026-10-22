@@ -2566,11 +2566,14 @@ test("the production timeline publishes every accepted historical review and exc
     })()
   `, context));
 
+  // Some trusted structured documents use the supported runtime date fallback.
+  // Review policy is tested with explicit fixtures above; this checks aggregation.
+  const effectiveReview = vm.runInContext("reportedEventDateReview", context);
   const expectedReports = context.catalogFixture.documents.filter(document =>
     document.engine === "structured-database-extract"
     && document.documentDate
-    && document.reportedEventDateReview?.status === "published"
-    && (document.source === "UPDB-MUFON" || document.reportedEventDateReview.method === "analyst-review")
+    && effectiveReview(document).status === "published"
+    && (document.source === "UPDB-MUFON" || effectiveReview(document).method === "analyst-review")
   );
   const expectedHistorical = context.catalogFixture.documents.map(document =>
     vm.runInContext("historicalTimelineCandidate", context)(document)
