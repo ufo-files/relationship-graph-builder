@@ -10,18 +10,17 @@ on:
 permissions:
   contents: read
 
-concurrency:
-  group: relationship-graph-pages-deploy
-  # Do not cancel an active Pages deployment; cancellation can leave GitHub's
-  # next deployment queued behind cleanup of the canceled deployment.
-  cancel-in-progress: false
-
 jobs:
   deploy:
     if: >-
       github.event_name == 'workflow_dispatch' ||
       github.event.workflow_run.conclusion == 'success'
-    runs-on: ufo-agent-1-graph-builder
+    # Skipped rebuilds must not replace a successful deployment in the queue.
+    concurrency:
+      group: relationship-graph-pages-deploy
+      cancel-in-progress: false
+    # Deploy independently while the self-hosted runner rebuilds the catalog.
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       pages: write
