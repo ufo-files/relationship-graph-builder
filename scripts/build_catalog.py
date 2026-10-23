@@ -3986,11 +3986,12 @@ def build(
         )
 
     ranked = sorted(accepted_candidates.items(), key=publication_rank, reverse=True)
-    # Books have their own graph mode and are relatively sparse. Publish every
-    # accepted title instead of silently truncating the corpus at 250.
+    # Books have their own graph mode and do not consume the ranked entity
+    # allowance. Otherwise a large bibliography removes every mapped location,
+    # person, and organization from the other views.
     book_items = [item for item in ranked if item[1].category == "book"]
     book_keys = {key for key, _ in book_items}
-    non_book_limit = max(0, max_entities - len(book_items))
+    non_book_limit = max(0, max_entities)
     published_items = book_items + [item for item in ranked if item[0] not in book_keys][:non_book_limit]
     published_items.sort(key=publication_rank, reverse=True)
     published = dict(published_items)
@@ -4188,7 +4189,7 @@ def build(
             "astronomyClassification": "Versioned reviewed literal names and aliases; names with common non-astronomical uses require reviewed local context and remain reviewable when excluded",
             "denseSegmentLimit": 30,
             "maxEntities": max_entities,
-            "maxBooks": min(250, max_entities),
+            "maxBooks": None,
             "maxEdges": max_edges,
         },
         "counts": {

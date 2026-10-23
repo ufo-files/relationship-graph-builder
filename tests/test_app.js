@@ -2657,7 +2657,7 @@ test("README screenshots capture the Far Side during its foreground transit", ()
   assert.match(workflow, /- "data\/\*\*"/);
   assert.match(workflow, /- "!assets\/screenshots\/\*\*"/);
   assert.doesNotMatch(workflow, /workflow_run:/);
-  assert.match(workflow, /group: relationship-graph-screenshots\s+[\s\S]*cancel-in-progress: false/);
+  assert.match(workflow, /group: relationship-graph-screenshots-[^\n]+\n[\s\S]*cancel-in-progress: false/);
   assert.match(readme, /<table>[\s\S]*far-side-moon\.png[\s\S]*<\/table>/);
   assert.doesNotMatch(readme, /<p align="center">\s*<strong>Far Side of the Moon<\/strong>/);
 });

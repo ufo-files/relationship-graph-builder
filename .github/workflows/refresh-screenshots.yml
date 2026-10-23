@@ -15,6 +15,22 @@ on:
       - "!assets/screenshots/**"
       - "package.json"
       - "package-lock.json"
+      - "scripts/build_catalog.py"
+      - "scripts/capture_graph_screenshots.mjs"
+      - "scripts/serve_preview.py"
+      - ".github/workflows/refresh-screenshots.yml"
+  pull_request:
+    paths:
+      - "index.html"
+      - "*.js"
+      - "styles.css"
+      - "data/**"
+      - "vendor/**"
+      - "assets/**"
+      - "!assets/screenshots/**"
+      - "package.json"
+      - "package-lock.json"
+      - "scripts/build_catalog.py"
       - "scripts/capture_graph_screenshots.mjs"
       - "scripts/serve_preview.py"
       - ".github/workflows/refresh-screenshots.yml"
@@ -28,7 +44,7 @@ jobs:
     # Playwright's managed Chromium image is not available for this ARM64 host.
     runs-on: ubuntu-latest
     concurrency:
-      group: relationship-graph-screenshots
+      group: relationship-graph-screenshots-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'main' }}
       # Finish the current capture; GitHub keeps the latest pending refresh.
       cancel-in-progress: false
     permissions:
@@ -37,8 +53,9 @@ jobs:
       - name: Check out builder
         uses: actions/checkout@v7
         with:
-          ref: main
-          ssh-key: ${{ secrets.MAIN_AUTOMATION_DEPLOY_KEY }}
+          ref: ${{ github.event_name == 'pull_request' && github.ref || 'main' }}
+          persist-credentials: ${{ github.event_name != 'pull_request' }}
+          ssh-key: ${{ github.event_name != 'pull_request' && secrets.MAIN_AUTOMATION_DEPLOY_KEY || '' }}
 
       - name: Set up Node
         uses: actions/setup-node@v6
@@ -70,7 +87,16 @@ jobs:
           done
           npm run screenshots
 
+      - name: Upload PR screenshot preview
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: graph-screenshots
+          path: assets/screenshots
+          retention-days: 7
+
       - name: Commit refreshed screenshots
+        if: github.event_name != 'pull_request'
         shell: bash
         run: |
           if [ -z "$(git status --porcelain -- README.md assets/screenshots)" ]; then
