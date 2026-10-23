@@ -4324,6 +4324,7 @@ def build(
         **catalog, "documents": [], "documentShards": document_shards,
         "sourceFamilies": [], "sourceFamilyShards": family_shards,
     }
+    published_catalog = write_catalog_section_shards(published_catalog, output.parent)
     output.write_text(json.dumps(published_catalog, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     write_astronomy_bootstrap(output.with_name("astronomy.json"), catalog)
     write_clock_catalog(output.with_name("clock_times.json"), clock_observations, documents, catalog_input, catalog["generatedAt"])
@@ -4445,6 +4446,57 @@ def write_astronomy_bootstrap(path: Path, catalog: dict) -> None:
         json.dumps(astronomy_bootstrap_payload(catalog), ensure_ascii=False, separators=(",", ":")) + "\n",
         encoding="utf-8",
     )
+
+
+def write_catalog_section_shards(catalog: dict, data_dir: Path,
+                                 max_bytes: int = 80 * 1024 * 1024,
+                                 min_bytes: int = 1024 * 1024) -> dict:
+    """Move large section arrays out of the main catalog without dropping data."""
+    shard_dir = data_dir / "catalog-sections"
+    shard_dir.mkdir(parents=True, exist_ok=True)
+    published = dict(catalog)
+    manifest, expected = [], set()
+    for section in ("coverage", "astronomy", "craft", "species", "signals", "bloodTypes"):
+        original = catalog.get(section)
+        if not isinstance(original, dict):
+            continue
+        published[section] = dict(original)
+        for field, items in original.items():
+            if not isinstance(items, list) or not items:
+                continue
+            encoded = [json.dumps(item, ensure_ascii=False, separators=(",", ":")) for item in items]
+            if sum(len(item.encode("utf-8")) for item in encoded) < min_bytes:
+                continue
+            prefix = json.dumps({"schema": "ufo-files-catalog-section/v1", "section": section, "field": field},
+                                separators=(",", ":"))[:-1] + ',"items":['
+            suffix = "]}\n"
+            overhead = len((prefix + suffix).encode("utf-8"))
+            chunks, chunk, size = [], [], overhead
+            for item in encoded:
+                item_bytes = len(item.encode("utf-8"))
+                if overhead + item_bytes > max_bytes:
+                    raise ValueError(f"Catalog section {section}.{field} record exceeds shard byte limit {max_bytes}")
+                if chunk and size + 1 + item_bytes > max_bytes:
+                    chunks.append(chunk)
+                    chunk, size = [], overhead
+                size += item_bytes + bool(chunk)
+                chunk.append(item)
+            if chunk:
+                chunks.append(chunk)
+            for index, chunk in enumerate(chunks, 1):
+                path = shard_dir / f"{section}-{field}-{index:03d}.json"
+                raw = (prefix + ",".join(chunk) + suffix).encode("utf-8")
+                path.write_bytes(raw)
+                expected.add(path)
+                manifest.append({"section": section, "field": field,
+                                 "path": path.relative_to(data_dir).as_posix(), "items": len(chunk),
+                                 "bytes": len(raw), "version": hashlib.sha256(raw).hexdigest()})
+            published[section][field] = []
+    published["sectionShards"] = manifest
+    for stale in shard_dir.glob("*.json"):
+        if stale not in expected:
+            stale.unlink()
+    return published
 
 
 def write_source_family_shards(shard_dir: Path, families: list[dict], data_dir: Path,

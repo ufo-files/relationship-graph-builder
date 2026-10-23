@@ -7,7 +7,7 @@ from unittest.mock import patch
 from pathlib import Path
 
 from scripts.build_catalog import Candidate, astronomy_observations_for_segment, astronomy_target_summaries, attach_event_entities, build, case_records, classify_phrase, comparison_key, compile_astronomy_taxonomy, coverage_aggregate, craft_class_summaries, craft_measurements, craft_observations_for_segment, curated_discussion_matches, curated_events, duplicate_candidates, entity_key, epistemic_qualifiers_for_segment, extract_mentions, extract_title_mentions, git_blob_sha, inflation_risk, load_epistemic_qualifier_rules, load_registry, machine_data_paths, merge_events, normalized_date, overlay_curated_events, read_language_pair, read_portuguese_pair, reported_event_date_review, reviewed_event_titles, sentence_segments, significance_metrics, signal_frequency_summaries, signal_observations_for_segment, source_lineage_assignments, source_title_from_path, species_class_summaries, species_observations_for_segment, stable_id, temporal_candidates, validate_claim_source_blobs, write_document_shards, write_date_review_report, claim_source_paths
-from scripts.build_catalog import astronomy_bootstrap_payload, write_source_family_shards
+from scripts.build_catalog import astronomy_bootstrap_payload, write_source_family_shards, write_catalog_section_shards
 
 
 class ClassificationTests(unittest.TestCase):
@@ -2052,6 +2052,43 @@ class CatalogTests(unittest.TestCase):
         self.assertTrue(all(item.get("date") and item.get("precision") for item in decisions.values() if item["status"] == "published"))
         self.assertTrue(all(item.get("sourcePath") for item in decisions.values()))
         self.assertTrue(all(re.fullmatch(r"[0-9a-f]{40}", item.get("sourceBlobSha", "")) for item in decisions.values()))
+
+    def test_catalog_sections_round_trip_with_byte_limits_and_cleanup(self):
+        catalog = {"schema": "catalog", "entities": [{"id": "e1"}],
+                   "astronomy": {"scope": "unchanged", "observations": [
+                       {"id": str(i), "excerpt": "étoile 🛸" * 5} for i in range(9)]},
+                   "coverage": {"dimensions": [{"id": "source", "buckets": [1, 2]}]}}
+        original = json.loads(json.dumps(catalog))
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            published = write_catalog_section_shards(catalog, root, max_bytes=500, min_bytes=0)
+            manifest = published["sectionShards"]
+            self.assertGreater(len(manifest), 2)
+            self.assertEqual(catalog, original)
+            self.assertEqual(published["astronomy"]["observations"], [])
+            self.assertEqual(published["coverage"]["dimensions"], [])
+            self.assertEqual(published["astronomy"]["scope"], "unchanged")
+            self.assertEqual(published["entities"], catalog["entities"])
+            for shard in manifest:
+                raw = (root / shard["path"]).read_bytes()
+                self.assertLessEqual(len(raw), 500)
+                self.assertEqual(shard["bytes"], len(raw))
+                self.assertEqual(shard["version"], hashlib.sha256(raw).hexdigest())
+                payload = json.loads(raw)
+                self.assertEqual((payload["section"], payload["field"]), (shard["section"], shard["field"]))
+                self.assertEqual(shard["items"], len(payload["items"]))
+                published[shard["section"]][shard["field"]].extend(payload["items"])
+            del published["sectionShards"]
+            self.assertEqual(published, catalog)
+            small = {"astronomy": {"observations": catalog["astronomy"]["observations"][:1]}}
+            write_catalog_section_shards(small, root, max_bytes=500, min_bytes=0)
+            self.assertEqual(len(list((root / "catalog-sections").glob("*.json"))), 1)
+            result = write_catalog_section_shards(small, root)
+            self.assertEqual(result["sectionShards"], [])
+            self.assertEqual(list((root / "catalog-sections").glob("*.json")), [])
+            self.assertEqual(result["astronomy"], small["astronomy"])
+            with self.assertRaisesRegex(ValueError, "exceeds shard byte limit"):
+                write_catalog_section_shards(catalog, root, max_bytes=120, min_bytes=0)
 
     def test_source_family_shards_round_trip_with_byte_limits_and_cleanup(self):
         families = [{"id": str(i), "label": "étoile 🛸" * 3, "documentIds": ["a", "b"]} for i in range(8)]

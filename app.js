@@ -7293,6 +7293,29 @@ async function loadFullCatalogPayload() {
   if (!claimResponse.ok) throw new Error(`Claims ${claimResponse.status} ${claimResponse.statusText}`);
   if (!programResponse.ok) throw new Error(`Programs ${programResponse.status} ${programResponse.statusText}`);
   const catalog = await catalogResponse.json();
+  if (Array.isArray(catalog.sectionShards)) {
+    const payloads = await Promise.all(catalog.sectionShards.map(async shard => {
+      if (!Object.hasOwn(catalog, shard.section) || !Object.hasOwn(catalog[shard.section], shard.field)
+          || !Array.isArray(catalog[shard.section][shard.field]) || catalog[shard.section][shard.field].length) {
+        throw new Error(`Catalog section manifest invalid: ${shard.path}`);
+      }
+      const version = encodeURIComponent(shard.version || catalog.input?.revision || catalog.generatedAt || "current");
+      const response = await fetch(`data/${shard.path}?v=${version}`);
+      if (!response.ok) throw new Error(`Catalog section shard ${shard.path}: ${response.status} ${response.statusText}`);
+      const payload = await response.json();
+      if (payload.schema !== "ufo-files-catalog-section/v1" || payload.section !== shard.section
+          || payload.field !== shard.field || !Array.isArray(payload.items)) {
+        throw new Error(`Catalog section shard invalid: ${shard.path}`);
+      }
+      if (payload.items.length !== shard.items) throw new Error(`Catalog section shard count mismatch: ${shard.path}`);
+      return payload.items;
+    }));
+    // Promise.all preserves manifest order, including multiple parts of one array.
+    catalog.sectionShards.forEach((shard, index) => {
+      const destination = catalog[shard.section][shard.field];
+      for (const item of payloads[index]) destination.push(item);
+    });
+  }
   if (Array.isArray(catalog.documentShards) && catalog.documentShards.length) {
     const shardPayloads = await Promise.all(catalog.documentShards.map(async shard => {
       const shardVersion = encodeURIComponent(shard.version || catalog.input?.revision || catalog.generatedAt || "current");

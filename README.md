@@ -436,6 +436,11 @@ and summaries in `data/catalog.json`. Document records are emitted as compact
 source-specific payloads under `data/source-documents/` and loaded before the app
 initializes. A source is automatically split into numbered parts before any
 payload reaches 80 MiB, leaving margin below GitHub's 100 MB file limit.
+Large arrays in astronomy, craft, coverage, species, signal, and blood-type
+sections are likewise stored under `data/catalog-sections/`. The main catalog
+lists their paths, item counts, and content versions. The loader restores every
+array in manifest order before initializing the app; failed or incomplete
+shards stop initialization rather than presenting partial evidence.
 Pull requests run every corpus source as an independently named `source / …`
 check, plus the full-corpus integration build and browser/Python test suite. This
 makes source-specific ingestion failures visible without hiding them inside one
