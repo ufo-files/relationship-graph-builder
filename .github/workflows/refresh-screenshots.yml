@@ -1,24 +1,10 @@
 name: Refresh README graph screenshots
 
 on:
-  # Capture the committed app and catalog directly. Pages can publish through
-  # its built-in branch deployment while the separate deploy workflow is queued.
-  push:
+  workflow_run:
+    workflows: ["Rebuild graph from machine-data"]
+    types: [completed]
     branches: [main]
-    paths:
-      - "index.html"
-      - "*.js"
-      - "styles.css"
-      - "data/**"
-      - "vendor/**"
-      - "assets/**"
-      - "!assets/screenshots/**"
-      - "package.json"
-      - "package-lock.json"
-      - "scripts/build_catalog.py"
-      - "scripts/capture_graph_screenshots.mjs"
-      - "scripts/serve_preview.py"
-      - ".github/workflows/refresh-screenshots.yml"
   pull_request:
     paths:
       - "index.html"
@@ -41,6 +27,14 @@ permissions:
 
 jobs:
   refresh:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.event != 'pull_request')
+    outputs:
+      published: ${{ steps.publish.outputs.published }}
+      revision: ${{ steps.publish.outputs.revision }}
+      input-revision: ${{ steps.publish.outputs.input_revision }}
     # Playwright's managed Chromium image is not available for this ARM64 host.
     runs-on: ubuntu-latest
     concurrency:
@@ -96,10 +90,20 @@ jobs:
           retention-days: 7
 
       - name: Commit refreshed screenshots
+        id: publish
         if: github.event_name != 'pull_request'
         shell: bash
         run: |
+          input_revision="$(python3 -c 'import json; print(json.load(open("data/catalog.json"))["input"]["revision"])')"
+          echo "input_revision=$input_revision" >> "$GITHUB_OUTPUT"
           if [ -z "$(git status --porcelain -- README.md assets/screenshots)" ]; then
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD)" ]; then
+              echo "Main advanced during capture; refusing stale screenshots" >&2
+              exit 1
+            fi
+            echo "revision=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+            echo "published=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -108,14 +112,84 @@ jobs:
           git commit -m "Refresh README graph screenshots"
           for attempt in 1 2 3; do
             if git push origin HEAD:main; then
+              echo "revision=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+              echo "published=true" >> "$GITHUB_OUTPUT"
               exit 0
             fi
             git fetch origin main
             if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD^)" ]; then
-              echo "Main advanced after capture; refusing to publish stale screenshots"
-              exit 0
+              echo "Main advanced after capture; refusing to publish stale screenshots" >&2
+              exit 1
             fi
             sleep $((attempt * 2))
           done
           echo "Unable to publish the refreshed graph screenshots" >&2
+          exit 1
+
+  homepage:
+    name: Rebuild ufo-files.app after screenshots
+    needs: refresh
+    if: github.event_name != 'pull_request' && needs.refresh.outputs.published == 'true'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ufo-files-homepage-graph-refresh
+      cancel-in-progress: false
+    permissions:
+      contents: read
+    steps:
+      - name: Check out refresh script
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+          path: _graph
+          sparse-checkout: scripts
+
+      - name: Check out homepage
+        uses: actions/checkout@v7
+        with:
+          repository: ufo-files/homepage
+          ref: main
+          path: _homepage
+          fetch-depth: 0
+          ssh-key: ${{ secrets.HOMEPAGE_REFRESH_DEPLOY_KEY }}
+
+      - name: Prepare homepage request branch
+        working-directory: _homepage
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code origin refs/heads/graph-refresh-requests >/dev/null; then
+            git fetch origin graph-refresh-requests
+            git checkout -B graph-refresh-requests FETCH_HEAD
+            git merge --no-edit origin/main
+          else
+            git checkout -b graph-refresh-requests
+          fi
+
+      - name: Record completed graph snapshot
+        env:
+          GRAPH_REVISION: ${{ needs.refresh.outputs.revision }}
+          INPUT_REVISION: ${{ needs.refresh.outputs.input-revision }}
+          SNAPSHOT_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: python3 _graph/scripts/refresh_homepage.py _homepage
+
+      - name: Request homepage rebuild
+        working-directory: _homepage
+        shell: bash
+        run: |
+          git add data/graph-refresh-request.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Request homepage rebuild after graph screenshots"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:graph-refresh-requests; then
+              exit 0
+            fi
+            git fetch origin graph-refresh-requests
+            git rebase origin/graph-refresh-requests
+            sleep $((attempt * 2))
+          done
+          echo "Unable to request the homepage rebuild" >&2
           exit 1
