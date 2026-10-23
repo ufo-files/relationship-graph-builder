@@ -649,11 +649,15 @@ def signal_frequency_label(hertz: float) -> str:
     return f"{hertz:g} Hz"
 
 
-def blood_type_observations_for_segment(text: str, document_id: str, source: str, segment: int | str) -> list[dict]:
+def blood_type_observations_for_segment(
+    text: str, document_id: str, source: str, segment: int | str,
+    previous_text: str = "", next_text: str = "",
+) -> list[dict]:
     """Literal English ABO/Rh references, without inferring a person's phenotype.
 
     ABO letters need a blood/group cue; polarity words require nearby blood/Rh
     context. Bare A+/B- tokens without a blood cue are intentionally excluded.
+    Adjacent segments provide bounded context for subtitle-split references.
     Offsets refer to the original segment, including OCR spelling and whitespace.
     """
     pattern = re.compile(
@@ -677,8 +681,13 @@ def blood_type_observations_for_segment(text: str, document_id: str, source: str
             if re.match(r"a\s+[+−-]", match.group()):
                 continue
         if match.group("reverse"):
-            context = text[max(0, match.start() - 100):min(len(text), match.end() + 100)]
-            if not re.search(r"\b(?:blood|Rh|rhesus)\b", context, re.IGNORECASE):
+            # A positive hepatitis B result is not an ABO/Rh reference.
+            if re.search(r"\bhepatitis\s*$", text[:match.start()], re.IGNORECASE):
+                continue
+            left = (previous_text[-100:] + " " + text[:match.start()])[-100:]
+            right = (text[match.end():] + " " + next_text[:100])[:100]
+            context = left + match.group() + right
+            if not re.search(r"\b(?:blood|r[\s.-]*h|rhesus)\b", context, re.IGNORECASE):
                 continue
             if match.group("reverse") == "a" and not re.search(
                 r"\b(?:type|group|am|is|was|or)\s*$", text[max(0, match.start() - 20):match.start()], re.IGNORECASE
@@ -696,7 +705,7 @@ def blood_type_observations_for_segment(text: str, document_id: str, source: str
             "documentId": document_id, "source": source, "segment": segment,
             "start": match.start(), "end": match.end(), "matchedText": match.group(),
             "bloodType": blood_type, "abo": abo or "unspecified", "rh": rh,
-            "excerpt": text[max(0, match.start() - 180):min(len(text), match.end() + 220)],
+            "excerpt": context.strip() if match.group("reverse") else text[max(0, match.start() - 180):min(len(text), match.end() + 220)],
         })
     return observations
 
@@ -3907,7 +3916,11 @@ def build(
                         target_qualifiers.append(qualifier)
             qualifiers = epistemic_qualifiers_by_segment.get(sid, [])
             signal_observations.extend(signal_observations_for_segment(segment, doc_id, source, signal_segment))
-            blood_type_observations.extend(blood_type_observations_for_segment(segment, doc_id, source, signal_segment))
+            blood_type_observations.extend(blood_type_observations_for_segment(
+                segment, doc_id, source, signal_segment,
+                " ".join(segments[max(0, number - 2):number]),
+                " ".join(segments[number + 1:number + 3]),
+            ))
             clock_observations.extend(time_observations_for_segment(segment, doc_id, source, signal_segment))
             for topic, rows in topic_observations_for_segment(segment, doc_id, source, signal_segment).items():
                 topic_observations[topic].extend(rows)
