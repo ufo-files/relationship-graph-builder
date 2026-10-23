@@ -5,6 +5,12 @@ const vm = require("node:vm");
 
 function loadCatalogFixture() {
   const catalog = JSON.parse(fs.readFileSync("data/catalog.json", "utf8"));
+  for (const shard of catalog.sectionShards || []) {
+    const payload = JSON.parse(fs.readFileSync(`data/${shard.path}`, "utf8"));
+    assert.equal(payload.schema, "ufo-files-catalog-section/v1");
+    assert.equal(payload.items.length, shard.items);
+    for (const item of payload.items) catalog[shard.section][shard.field].push(item);
+  }
   if (Array.isArray(catalog.sourceFamilyShards)) {
     catalog.sourceFamilies = catalog.sourceFamilyShards.flatMap(shard => {
       const payload = JSON.parse(fs.readFileSync(`data/${shard.path}`, "utf8"));
@@ -64,6 +70,46 @@ test("startup loads and validates source-specific document shards", () => {
   assert.match(source, /shard\.version \|\| catalog\.input\?\.revision/);
   assert.match(source, /ufo-files-source-documents\/v1/);
   assert.match(source, /Document shard count mismatch/);
+});
+
+test("full catalog loader restores ordered section shards and rejects incomplete data", async () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const loader = source.slice(source.indexOf("async function loadFullCatalogPayload()"), source.indexOf("function installFullCatalog("));
+  const catalog = { astronomy: { scope: "unchanged", observations: [] }, sectionShards: [
+    { section: "astronomy", field: "observations", path: "catalog-sections/one.json", items: 1, version: "one" },
+    { section: "astronomy", field: "observations", path: "catalog-sections/two.json", items: 1, version: "two" }
+  ] };
+  let failure = "";
+  const urls = [];
+  const context = vm.createContext({ fetch: async url => {
+    urls.push(url);
+    const isShard = url.includes("catalog-sections/");
+    const items = [{ id: url.includes("one.json") ? "first" : "second", excerpt: "étoile" }];
+    return { ok: !(isShard && failure === "http"), status: 404, statusText: "Not Found",
+      json: async () => structuredClone(url === "data/catalog.json" ? catalog : isShard ? {
+        schema: failure === "schema" ? "wrong" : "ufo-files-catalog-section/v1",
+        section: failure === "section" ? "craft" : "astronomy", field: "observations",
+        items: failure === "count" ? [] : items
+      } : {}) };
+  } });
+  vm.runInContext(loader, context);
+  const result = await context.loadFullCatalogPayload();
+  assert.deepEqual(Array.from(result.catalog.astronomy.observations), [
+    { id: "first", excerpt: "étoile" }, { id: "second", excerpt: "étoile" }
+  ]);
+  assert.equal(result.catalog.astronomy.scope, "unchanged");
+  assert.ok(urls.includes("data/catalog-sections/one.json?v=one"));
+  for (const [mode, pattern] of [["http", /Catalog section shard.*404/], ["schema", /Catalog section shard invalid/],
+    ["section", /Catalog section shard invalid/], ["count", /Catalog section shard count mismatch/]]) {
+    failure = mode;
+    await assert.rejects(context.loadFullCatalogPayload(), pattern);
+  }
+  failure = "";
+  catalog.sectionShards[0].field = "missing";
+  await assert.rejects(context.loadFullCatalogPayload(), /Catalog section manifest invalid/);
+  delete catalog.sectionShards;
+  catalog.astronomy.observations = [{ id: "legacy" }];
+  assert.deepEqual((await context.loadFullCatalogPayload()).catalog.astronomy.observations, [{ id: "legacy" }]);
 });
 
 test("full catalog loader restores source families and rejects incomplete shards", async () => {
