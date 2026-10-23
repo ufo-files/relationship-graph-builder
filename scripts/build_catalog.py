@@ -2205,8 +2205,8 @@ def read_ocr(path: Path) -> tuple[dict, list[str]] | None:
         return read_multilingual_export(path)
     try:
         text = path.read_text(encoding="utf-8", errors="replace")
-    except OSError:
-        return None
+    except OSError as error:
+        raise ValueError(f"Cannot read source text: {path}") from error
     first, sep, body = text.partition("\n")
     if not sep:
         return None
@@ -2350,7 +2350,7 @@ def validate_input_tree(input_root: Path) -> None:
                 raise ValueError(f"Unsafe source input entry (symlink or special file): {relative}")
 
 
-def machine_data_paths(input_root: Path, paired_language: str = "en") -> list[Path]:
+def machine_data_paths(input_root: Path, paired_language: str = "en", required_paths: Iterable[Path] = ()) -> list[Path]:
     """Select one textual representation per collection.
 
     Collections with a ``paired`` tree are multilingual derived datasets. For
@@ -2365,8 +2365,16 @@ def machine_data_paths(input_root: Path, paired_language: str = "en") -> list[Pa
     }
     selected = []
     multilingual = {}
-    for path in input_root.rglob("*"):
-        if not path.is_file() or (path.suffix.lower() not in {".txt", ".tsv"} and path.name != "document.json"):
+    def walk_error(error):
+        raise ValueError("Cannot enumerate source input tree") from error
+
+    # Path.rglob suppresses filesystem errors, which can silently drop whole
+    # collections. A partial scan must never look like a complete rebuild.
+    paths = (Path(directory) / name
+             for directory, _, files in os.walk(input_root, onerror=walk_error)
+             for name in files)
+    for path in paths:
+        if path.suffix.lower() not in {".txt", ".tsv"} and path.name != "document.json":
             continue
         parts = path.relative_to(input_root).parts
         if set(parts) & SKIP_PARTS:
@@ -2405,7 +2413,9 @@ def machine_data_paths(input_root: Path, paired_language: str = "en") -> list[Pa
                 multilingual[key] = (rank, path)
             continue
         selected.append(path)
-    return sorted(selected + [entry[1] for entry in multilingual.values()])
+    # Reviewed claims remain bound to the exact archived text, even when a
+    # collection gains paired exports. Never silently substitute a translation.
+    return sorted(set(selected + [entry[1] for entry in multilingual.values()]) | set(required_paths))
 
 
 def read_tsv(path: Path) -> tuple[dict, list[str], int] | None:
@@ -3573,19 +3583,24 @@ def normalized_evidence_text(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
-def validate_claim_source_blobs(input_root: Path, claims_path: Path, documents: Iterable[dict]) -> None:
+def validate_claim_source_blobs(input_root: Path, claims_path: Path, documents: Iterable[dict], only_pinned: bool = False) -> None:
     """Fail when claim evidence is absent from or no longer bound to its source file."""
     catalog = json.loads(claims_path.read_text(encoding="utf-8"))
     document_paths = {document["id"]: document["path"] for document in documents}
     errors = []
     for claim in catalog.get("claims", []):
         evidence = claim.get("evidence") or {}
+        if only_pinned and not evidence.get("sourcePath"):
+            continue
         document_id = evidence.get("documentId")
         expected_sha = evidence.get("sourceBlobSha")
         relative_path = document_paths.get(document_id)
         prefix = claim.get("id") or "Unnamed claim"
         if not relative_path:
             errors.append(f"{prefix}: referenced document {document_id!r} is absent")
+            continue
+        if evidence.get("sourcePath") and evidence["sourcePath"] != relative_path:
+            errors.append(f"{prefix}: reviewed sourcePath does not match {relative_path}")
             continue
         if not isinstance(expected_sha, str) or not re.fullmatch(r"[0-9a-f]{40}", expected_sha):
             errors.append(f"{prefix}: sourceBlobSha must be a 40-character lowercase Git object ID")
@@ -3605,6 +3620,34 @@ def validate_claim_source_blobs(input_root: Path, claims_path: Path, documents: 
         raise ValueError("Claim evidence source validation failed:\n- " + "\n- ".join(errors))
 
 
+def claim_source_paths(input_root: Path, claims_path: Path | None) -> list[Path]:
+    """Resolve explicit reviewed sources and validate them before ingestion."""
+    if not claims_path:
+        return []
+    claims = json.loads(claims_path.read_text(encoding="utf-8")).get("claims", [])
+    documents = []
+    paths = []
+    for claim in claims:
+        evidence = claim.get("evidence") or {}
+        relative = evidence.get("sourcePath")
+        if not relative:
+            continue  # Legacy registries are still checked against the final catalog.
+        path = input_root / relative
+        if (Path(relative).is_absolute() or ".." in Path(relative).parts
+                or path.suffix.lower() != ".txt" or not path.is_file()
+                or not path.resolve().is_relative_to(input_root.resolve())):
+            raise ValueError(f"{claim.get('id')}: reviewed source is missing or unsafe: {relative}")
+        if stable_id("doc", relative) != evidence.get("documentId"):
+            raise ValueError(f"{claim.get('id')}: reviewed sourcePath does not match documentId")
+        documents.append({"id": evidence["documentId"], "path": relative})
+        paths.append(path)
+    validate_claim_source_blobs(input_root, claims_path, documents, only_pinned=True)
+    for path in set(paths):
+        if read_ocr(path) is None:
+            raise ValueError(f"Reviewed source cannot be ingested: {path.relative_to(input_root)}")
+    return paths
+
+
 def build(
     input_root: Path,
     output: Path,
@@ -3620,7 +3663,8 @@ def build(
     claims_path: Path | None = None,
     paired_language: str = "en",
 ) -> dict:
-    paths = machine_data_paths(input_root, paired_language)
+    validate_input_tree(input_root)
+    paths = machine_data_paths(input_root, paired_language, claim_source_paths(input_root, claims_path))
     data_dir = Path(__file__).resolve().parents[1] / "data"
     registry = load_registry([data_dir / "curated_entities.json", data_dir / "entity_aliases.json", data_dir / "book_catalog.json"])
     location_coordinates = json.loads((data_dir / "location_coordinates.json").read_text(encoding="utf-8"))
@@ -4278,15 +4322,49 @@ def build(
             "candidates": all_possible_duplicates,
         }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if date_review_report:
-        date_review_report.parent.mkdir(parents=True, exist_ok=True)
-        date_review_report.write_text(json.dumps({
-            "schema": "ufo-files-date-review/v1",
+        write_date_review_report(date_review_report, date_review, {
             "generatedAt": catalog["generatedAt"],
             "input": catalog_input,
-            "documentsWithCandidates": len(date_review),
-            "records": date_review,
-        }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        })
     return catalog
+
+
+def write_date_review_report(output: Path, records: list[dict], metadata: dict, max_bytes: int = 80 * 1024 * 1024) -> dict:
+    """Keep all review evidence in bounded shards and publish a small manifest."""
+    shard_dir = output.parent / output.stem.replace("_", "-")
+    shard_dir.mkdir(parents=True, exist_ok=True)
+    prefix, suffix = '{"schema":"ufo-files-date-review-records/v1","records":[', ']}\n'
+    overhead = len((prefix + suffix).encode("utf-8"))
+    manifest, expected = [], set()
+    chunk, size = [], overhead
+
+    def flush():
+        path = shard_dir / f"records-{len(manifest) + 1:03d}.json"
+        payload = (prefix + ",".join(chunk) + suffix).encode("utf-8")
+        path.write_bytes(payload)
+        expected.add(path)
+        manifest.append({"path": path.relative_to(output.parent).as_posix(), "records": len(chunk),
+                         "bytes": len(payload), "version": hashlib.sha256(payload).hexdigest()})
+
+    for record in records:
+        encoded = json.dumps(record, ensure_ascii=False, separators=(",", ":"))
+        record_bytes = len(encoded.encode("utf-8"))
+        if overhead + record_bytes > max_bytes:
+            raise ValueError(f"Date review record {record.get('documentId')} exceeds shard byte limit {max_bytes}")
+        if chunk and size + 1 + record_bytes > max_bytes:
+            flush()
+            chunk, size = [], overhead
+        size += record_bytes + bool(chunk)
+        chunk.append(encoded)
+    if chunk:
+        flush()
+    report = {"schema": "ufo-files-date-review/v2", **metadata,
+              "documentsWithCandidates": len(records), "recordShards": manifest}
+    output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    for stale in shard_dir.glob("*.json"):
+        if stale not in expected:
+            stale.unlink()
+    return report
 
 
 

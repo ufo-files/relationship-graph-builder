@@ -3,9 +3,10 @@ import json
 import re
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
-from scripts.build_catalog import Candidate, astronomy_observations_for_segment, astronomy_target_summaries, attach_event_entities, build, case_records, classify_phrase, comparison_key, compile_astronomy_taxonomy, coverage_aggregate, craft_class_summaries, craft_measurements, craft_observations_for_segment, curated_discussion_matches, curated_events, duplicate_candidates, entity_key, epistemic_qualifiers_for_segment, extract_mentions, extract_title_mentions, git_blob_sha, inflation_risk, load_epistemic_qualifier_rules, load_registry, machine_data_paths, merge_events, normalized_date, overlay_curated_events, read_language_pair, read_portuguese_pair, reported_event_date_review, reviewed_event_titles, sentence_segments, significance_metrics, signal_frequency_summaries, signal_observations_for_segment, source_lineage_assignments, source_title_from_path, species_class_summaries, species_observations_for_segment, stable_id, temporal_candidates, validate_claim_source_blobs, write_document_shards
+from scripts.build_catalog import Candidate, astronomy_observations_for_segment, astronomy_target_summaries, attach_event_entities, build, case_records, classify_phrase, comparison_key, compile_astronomy_taxonomy, coverage_aggregate, craft_class_summaries, craft_measurements, craft_observations_for_segment, curated_discussion_matches, curated_events, duplicate_candidates, entity_key, epistemic_qualifiers_for_segment, extract_mentions, extract_title_mentions, git_blob_sha, inflation_risk, load_epistemic_qualifier_rules, load_registry, machine_data_paths, merge_events, normalized_date, overlay_curated_events, read_language_pair, read_portuguese_pair, reported_event_date_review, reviewed_event_titles, sentence_segments, significance_metrics, signal_frequency_summaries, signal_observations_for_segment, source_lineage_assignments, source_title_from_path, species_class_summaries, species_observations_for_segment, stable_id, temporal_candidates, validate_claim_source_blobs, write_document_shards, write_date_review_report, claim_source_paths
 from scripts.build_catalog import astronomy_bootstrap_payload, write_source_family_shards
 
 
@@ -2126,6 +2127,75 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(catalog["astronomy"]["targets"][0]["observationIds"], observation_ids)
         self.assertEqual(payload["documents"], catalog["documents"])
 
+    def test_source_read_and_directory_scan_errors_cannot_silently_drop_documents(self):
+        from scripts.build_catalog import read_ocr
+        with patch.object(Path, "read_text", side_effect=OSError("Input/output error")):
+            with self.assertRaisesRegex(ValueError, "Cannot read source text"):
+                read_ocr(Path("source.txt"))
+        with tempfile.TemporaryDirectory() as directory:
+            def failed_walk(root, **kwargs):
+                kwargs["onerror"](OSError("Input/output error"))
+                return iter(())
+            with patch("scripts.build_catalog.validate_input_tree"), patch("scripts.build_catalog.os.walk", side_effect=failed_walk):
+                with self.assertRaisesRegex(ValueError, "Cannot enumerate source input tree"):
+                    machine_data_paths(Path(directory))
+
+    def test_reviewed_claim_sources_survive_collection_pairing(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "machine-data"
+            source = root / "Example" / "source.txt"
+            source.parent.mkdir(parents=True)
+            (source.parent / "paired").mkdir()
+            source.write_text(json.dumps({"schema": "ufo-files-archive-ocr/v1"}) + "\nThe pilot saw a light.")
+            relative = "Example/source.txt"
+            document_id = stable_id("doc", relative)
+            evidence = {"documentId": document_id, "sourcePath": relative,
+                        "sourceBlobSha": git_blob_sha(source), "excerpt": "The pilot saw a light."}
+            claims_path = Path(directory) / "claims.json"
+            claims_path.write_text(json.dumps({"claims": [{"id": "reviewed", "evidence": evidence}]}))
+            self.assertEqual(machine_data_paths(root), [])
+            required = claim_source_paths(root, claims_path)
+            self.assertEqual(machine_data_paths(root, required_paths=required), [source])
+            catalog = build(root, Path(directory) / "output/catalog.json", 100, 100, claims_path=claims_path)
+            self.assertEqual([doc["id"] for doc in catalog["documents"]], [document_id])
+            source.write_text("Changed source content.")
+            with self.assertRaisesRegex(ValueError, "source content changed"):
+                claim_source_paths(root, claims_path)
+
+    def test_reviewed_claim_source_paths_cannot_escape_or_change_identity(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "source.txt").write_text("Evidence")
+            claims_path = root / "claims.json"
+            for relative, message in [("../source.txt", "missing or unsafe"),
+                                      ("source.txt", "does not match documentId")]:
+                claims_path.write_text(json.dumps({"claims": [{"id": "reviewed", "evidence": {
+                    "sourcePath": relative, "documentId": "wrong-id"}}]}))
+                with self.assertRaisesRegex(ValueError, message):
+                    claim_source_paths(root, claims_path)
+
+    def test_date_review_shards_preserve_all_evidence_and_remove_stale_parts(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "date_review.json"
+            records = [{"documentId": f"doc-{i}", "candidates": [{"excerpt": "évidence " * 20}]} for i in range(7)]
+            report = write_date_review_report(output, records, {"input": {"revision": "reviewed"}}, max_bytes=600)
+            self.assertGreater(len(report["recordShards"]), 1)
+            restored = []
+            for shard in report["recordShards"]:
+                path = output.parent / shard["path"]
+                self.assertEqual(path.stat().st_size, shard["bytes"])
+                self.assertLessEqual(shard["bytes"], 600)
+                restored.extend(json.loads(path.read_text())["records"])
+            self.assertEqual(restored, records)
+            self.assertEqual(report["documentsWithCandidates"], len(records))
+            old_paths = [output.parent / shard["path"] for shard in report["recordShards"]]
+            write_date_review_report(output, records[:1], {}, max_bytes=600)
+            self.assertFalse(any(path.exists() for path in old_paths[1:]))
+            write_date_review_report(output, [], {}, max_bytes=600)
+            self.assertEqual(list((output.parent / "date-review").glob("*.json")), [])
+            with self.assertRaisesRegex(ValueError, "exceeds shard byte limit"):
+                write_date_review_report(output, records, {}, max_bytes=100)
+
     def test_claim_evidence_is_bound_to_the_reviewed_source_blob(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / "machine-data"
@@ -2234,7 +2304,8 @@ class CatalogTests(unittest.TestCase):
                 for bucket in dimension["buckets"] if bucket["label"] == "1970s"
             ))
             review = json.loads(review_path.read_text(encoding="utf-8"))
-            candidates = review["records"][0]["candidates"]
+            records = [record for shard in review["recordShards"] for record in json.loads((review_path.parent / shard["path"]).read_text())["records"]]
+            candidates = records[0]["candidates"]
             self.assertIn("administrative_date", {candidate["kind"] for candidate in candidates})
 
     def test_database_reports_publish_source_record_identifiers(self):
