@@ -8,6 +8,27 @@ build: reviewed English derivatives by default, or canonical Portuguese with
 translation review status. Failed translations are excluded, and Portuguese
 and English never enter entity or event counts as duplicate segments.
 
+## Nightly publication
+
+Production graph rebuilds start at midnight in `America/Los_Angeles` (including
+its daylight-saving transitions), or through an explicit manual run. Machine-data
+continues publishing independently; its pushes and builder code pushes do not
+start production catalog rebuilds. Pull requests retain validation checks.
+
+A successful rebuild triggers screenshot capture and publication. Only after
+those screenshots publish successfully does the workflow write a request to the
+homepage's managed `graph-refresh-requests` branch. The homepage then rebuilds
+its configured Pages production source and waits for deployment success. A
+failed rebuild or screenshot run stops that chain. Screenshot-only commits do
+not trigger another rebuild or another screenshot run.
+
+The `HOMEPAGE_REFRESH_DEPLOY_KEY` secret is a deploy key scoped to the homepage
+repository. It writes the request branch; protected `main` stays under its
+existing pull-request rules. Configure the homepage workflow before enabling
+the final stage. GitHub schedules may start after the requested minute when
+Actions is busy. The graph's legacy Pages main-branch publisher remains active;
+the artifact-based Deploy latest graph workflow is manual-only.
+
 ## Graph types
 
 These previews are regenerated from the latest machine-data catalog after every successful rebuild. The default view includes the full app chrome, while each graph-type preview focuses on the graph itself. Every image includes a 1px black border for contrast against light backgrounds.

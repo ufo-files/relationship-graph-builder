@@ -1,10 +1,8 @@
 name: Deploy latest graph to Pages
 
 on:
-  workflow_run:
-    workflows: ["Rebuild graph from machine-data"]
-    types: [completed]
-    branches: [main]
+  # Production uses Pages' configured main-branch publication. Keep this
+  # artifact deployment as an explicit operator fallback only.
   workflow_dispatch:
 
 permissions:

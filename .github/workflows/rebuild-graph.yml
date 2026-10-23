@@ -1,46 +1,9 @@
 name: Rebuild graph from machine-data
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/rebuild-graph.yml"
-      - ".machine-data-revision"
-      - ".nojekyll"
-      - "app.js"
-      - "whitepaper.*"
-      - "data/whitepaper.json"
-      - "data/whitepaper-research/**"
-      - "assets/**"
-      - "!assets/screenshots/**"
-      - "data/book_catalog.json"
-      - "data/astronomy_taxonomy.json"
-      - "data/milky-way-spiral-fit.json"
-      - "data/milky-way-spiral-tracers.csv"
-      - "data/milky-way-spiral-tracers-source.txt"
-      - "data/milky-way-vlbi-masers.csv"
-      - "data/milky-way-vlbi-masers-source.txt"
-      - "data/case_reviews.json"
-      - "data/curated_entities.json"
-      - "data/curated_events.json"
-      - "data/claims.json"
-      - "data/craft_icon_briefs.json"
-      - "data/craft_taxonomy.json"
-      - "data/species_taxonomy.json"
-      - "data/entity_aliases.json"
-      - "data/event_coverage_review.json"
-      - "data/event_title_reviews.json"
-      - "data/government_programs.json"
-      - "data/location_coordinates.json"
-      - "data/reported_event_date_reviews.json"
-      - "index.html"
-      - "map-globe.js"
-      - "solar-system.js"
-      - "scripts/**"
-      - "!scripts/capture_graph_screenshots.mjs"
-      - "styles.css"
-      - "tests/**"
-      - "vendor/**"
+  schedule:
+    - cron: "0 0 * * *"
+      timezone: America/Los_Angeles
   pull_request:
     paths:
       - ".github/workflows/rebuild-graph.yml"
@@ -80,17 +43,14 @@ on:
       - "tests/**"
       - "vendor/**"
   workflow_dispatch:
-  repository_dispatch:
-    types: [machine-data-updated]
 
 permissions:
   contents: read
 
 concurrency:
   group: relationship-graph-${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'rebuild' }}
-  # Machine-data can advance faster than a catalog build. Finish the active
-  # rebuild while GitHub retains only the newest pending request for this group;
-  # Pages deployment is deliberately handled by deploy-pages.yml.
+  # Nightly and manual builds finish without interruption. PR validation uses
+  # a separate group and never publishes production data.
   cancel-in-progress: false
 
 jobs:
@@ -116,7 +76,7 @@ jobs:
           PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           CURRENT_SHA: ${{ github.sha }}
         run: |
-          if [[ "$EVENT_NAME" == "repository_dispatch" || "$EVENT_NAME" == "workflow_dispatch" ]]; then
+          if [[ "$EVENT_NAME" == "schedule" || "$EVENT_NAME" == "workflow_dispatch" ]]; then
             echo "catalog=true" >> "$GITHUB_OUTPUT"
             echo "Catalog rebuild required: true (explicit rebuild event)" >> "$GITHUB_STEP_SUMMARY"
             exit 0

@@ -366,7 +366,7 @@ test("Programs PDF uses readable paginated inventory rows", () => {
   assert.equal(result.calls.find(call => /catalog coverage/.test(call.value)).y, 94);
 });
 
-test("Programs stays scrollable on dense mobile layouts and data-only edits trigger CI", () => {
+test("Programs stays scrollable on dense mobile layouts and data-only edits trigger PR validation", () => {
   const source = fs.readFileSync("app.js", "utf8");
   const styles = fs.readFileSync("styles.css", "utf8");
   const workflow = fs.readFileSync(".github/workflows/rebuild-graph.yml", "utf8");
@@ -376,7 +376,7 @@ test("Programs stays scrollable on dense mobile layouts and data-only edits trig
   assert.match(source, /chartWrap\.scrollTop = scrollTop; chartWrap\.scrollLeft = scrollLeft/);
   assert.match(source, /truncatedProgramLabel\(program\.name, labelWidth, state\.config\.labelSize\)/);
   assert.match(styles, /\.chart-wrap\.programs-mode \{ overflow: auto;/);
-  assert.equal(workflow.match(/data\/government_programs\.json/g)?.length, 2);
+  assert.equal(workflow.match(/data\/government_programs\.json/g)?.length, 1);
 
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   vm.runInContext(source.split("$$('.step-heading')")[0], context);
@@ -1873,7 +1873,7 @@ test("Galactic Entities defaults to a corpus-fitted Gaia neighborhood and retain
   assert.equal(fs.readFileSync("data/milky-way-spiral-tracers.csv", "utf8").includes("\r"), false);
   assert.equal(fs.readFileSync("data/milky-way-vlbi-masers.csv", "utf8").includes("\r"), false);
   const rebuildWorkflow = fs.readFileSync(".github/workflows/rebuild-graph.yml", "utf8");
-  assert.equal(rebuildWorkflow.match(/- "solar-system\.js"/g)?.length, 2);
+  assert.equal(rebuildWorkflow.match(/- "solar-system\.js"/g)?.length, 1);
   assert.match(rebuildWorkflow, /data\/milky-way-spiral-tracers\.csv/);
   assert.match(rebuildWorkflow, /data\/milky-way-vlbi-masers\.csv/);
   const tracerRows = fs.readFileSync("data/milky-way-spiral-tracers.csv", "utf8").trim().split(/\r?\n/);
@@ -2653,10 +2653,10 @@ test("README screenshots capture the Far Side during its foreground transit", ()
   assert.match(script, /label && !label\.hidden/);
   assert.match(script, /page\.locator\("\.stage"\)\.screenshot/);
   assert.match(workflow, /npm run screenshots/);
-  assert.match(workflow, /\n  push:\n\s+branches: \[main\]/);
+  assert.doesNotMatch(workflow, /\n  push:/);
   assert.match(workflow, /- "data\/\*\*"/);
   assert.match(workflow, /- "!assets\/screenshots\/\*\*"/);
-  assert.doesNotMatch(workflow, /workflow_run:/);
+  assert.match(workflow, /workflow_run:[\s\S]*workflows: \["Rebuild graph from machine-data"\]/);
   assert.match(workflow, /group: relationship-graph-screenshots-[^\n]+\n[\s\S]*cancel-in-progress: false/);
   assert.match(readme, /<table>[\s\S]*far-side-moon\.png[\s\S]*<\/table>/);
   assert.doesNotMatch(readme, /<p align="center">\s*<strong>Far Side of the Moon<\/strong>/);
