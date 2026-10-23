@@ -23,7 +23,31 @@ TIME_CUE = re.compile(r"\b(?:at|around|about|approximately|approx\.?|before|afte
 CITATION = re.compile(r"\b(?:Genesis|Exodus|Matthew|Mark|Luke|John|Acts|Romans|Revelation|verse|chapter|ratio|aspect ratio|odds)\s*$", re.I)
 
 
-def time_observations_for_segment(text: str, document_id: str, source: str, segment: int | str) -> list[dict]:
+NON_TIME_MIDNIGHT = re.compile(
+    r"\b(?:operation\s+[\"'“‘]?\s*midnight|midnight[\s\-‐‑–—]+climax)\b", re.I
+)
+SUBTITLE_TIMING = re.compile(r"\d{1,2}:\d{2}:\d{2}[,.]\d+\s*-->\s*\d{1,2}:\d{2}:\d{2}[,.]\d+")
+
+
+def midnight_is_program_name(text, match, context_segments=None, context_segment_index=None):
+    offset = 0
+    context = text
+    if context_segments is not None and context_segment_index is not None:
+        index = context_segment_index
+        def caption_context(items):
+            return " ".join(item for item in items if not SUBTITLE_TIMING.fullmatch(item.strip()))
+        previous = caption_context(context_segments[max(0, index - 4):index])[-80:]
+        following = caption_context(context_segments[index + 1:index + 5])[:80]
+        context = previous + " " + text + " " + following
+        offset = len(previous) + 1
+    start, end = offset + match.start(), offset + match.end()
+    return any(item.start() <= start and item.end() >= end for item in NON_TIME_MIDNIGHT.finditer(context))
+
+
+def time_observations_for_segment(
+    text: str, document_id: str, source: str, segment: int | str,
+    *, context_segments: list[str] | None = None, context_segment_index: int | None = None,
+) -> list[dict]:
     observations, occupied = [], []
     for notation, pattern in PATTERNS:
         for match in pattern.finditer(text):
@@ -38,6 +62,10 @@ def time_observations_for_segment(text: str, document_id: str, source: str, segm
             if re.match(r"\s*(?:-->|→)", following) or re.search(r"(?:-->|→)\s*$", previous):
                 continue
             if notation == "named":
+                if data["named"].lower() == "midnight" and midnight_is_program_name(
+                    text, match, context_segments, context_segment_index
+                ):
+                    continue
                 hour, minute = (12, 0) if data["named"].lower() == "noon" else (0, 0)
                 period, hour24 = ("pm", 12) if hour == 12 else ("am", 0)
             else:

@@ -37,6 +37,28 @@ class TimeMentionTests(unittest.TestCase):
                      '3.15 volts', 'Version 3.15', '2026-10-17']:
             self.assertEqual(self.extract(text), [], text)
 
+    def test_program_names_are_not_midnight_time_mentions(self):
+        for text in ['Operation Midnight Climax', 'operation midnight climax',
+                     'Midnight Climax, MKUltra, Mockingbird', 'Operation "Midnight Climax"',
+                     'Operation Midnight', 'Midnight–Climax']:
+            self.assertEqual(self.extract(text), [], text)
+        text = 'Operation Midnight Climax was discussed at midnight. The operation ended at noon.'
+        rows = self.extract(text)
+        self.assertEqual([row['matchedText'] for row in rows], ['midnight', 'noon'])
+        self.assertEqual(rows[0]['start'], text.rindex('midnight'))
+        self.assertEqual(rows[0]['hour24'], 0)
+        self.assertEqual(len(self.extract('At midnight the operation ended. A midnight operation began.')), 2)
+
+    def test_program_name_split_across_subtitle_captions(self):
+        segments = ['They called it Operation', '00:01:00,000 --> 00:01:02,000',
+                    'Midnight', '00:01:02,000 --> 00:01:04,000', 'Climax.',
+                    'The witness returned at midnight.']
+        rows = [row for index, text in enumerate(segments) for row in time_observations_for_segment(
+            text, 'doc-one', 'Example', index, context_segments=segments, context_segment_index=index)]
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]['segment'], 5)
+        self.assertEqual(rows[0]['matchedText'], 'midnight')
+
     def test_offsets_repeats_and_original_zone(self):
         text = 'At 10:30 PM EST. At 10:30 PM EST.'
         rows = self.extract(text)
@@ -53,7 +75,7 @@ class TimeMentionTests(unittest.TestCase):
             collection = root / 'Example'
             collection.mkdir(parents=True)
             metadata = {'schema': 'ufo-files-archive-ocr/v1', 'source_file': 'report.pdf'}
-            (collection / 'report.txt').write_text(json.dumps(metadata) + '\n\nNASA met at 4:30 PM. NASA met at noon.', encoding='utf-8')
+            (collection / 'report.txt').write_text(json.dumps(metadata) + '\n\nNASA met at 4:30 PM. NASA met at noon.\nOperation\nMidnight\nClimax.', encoding='utf-8')
             media = {'schema': 'ufo-files-archive-media-transcripts/v1', 'source_file': 'interview.mp4'}
             (collection / 'talk.source.json').write_text(json.dumps(media), encoding='utf-8')
             (collection / 'talk.tsv').write_text('start\tend\ttext\n33000\t38000\tNASA arrived at 5 AM.\n', encoding='utf-8')

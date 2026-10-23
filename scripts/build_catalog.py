@@ -3921,7 +3921,10 @@ def build(
                 " ".join(segments[max(0, number - 2):number]),
                 " ".join(segments[number + 1:number + 3]),
             ))
-            clock_observations.extend(time_observations_for_segment(segment, doc_id, source, signal_segment))
+            clock_observations.extend(time_observations_for_segment(
+                segment, doc_id, source, signal_segment,
+                context_segments=segments, context_segment_index=number,
+            ))
             for topic, rows in topic_observations_for_segment(segment, doc_id, source, signal_segment).items():
                 topic_observations[topic].extend(rows)
             observations, review_items = craft_observations_for_segment(segment, doc_id, source, signal_segment, craft_taxonomy)

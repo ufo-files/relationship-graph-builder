@@ -43,7 +43,10 @@ def build_clock_times(root: Path, output: Path, repository: str, revision: str, 
     for document, segments, ids in iter_corpus_documents(root, paired_language):
         documents.append(document)
         for number, text in enumerate(segments):
-            observations.extend(time_observations_for_segment(text, document["id"], document["source"], ids[number] if ids else number))
+            observations.extend(time_observations_for_segment(
+                text, document["id"], document["source"], ids[number] if ids else number,
+                context_segments=segments, context_segment_index=number,
+            ))
     if require_data and not documents:
         raise ValueError("No readable corpus documents")
     return write_clock_catalog(output, observations, documents,
