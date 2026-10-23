@@ -2000,6 +2000,24 @@ class ClassificationTests(unittest.TestCase):
 
 
 class CatalogTests(unittest.TestCase):
+    def test_books_do_not_exhaust_non_book_entity_allowance(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "machine-data"
+            source = root / "Example"
+            source.mkdir(parents=True)
+            metadata = {"schema": "ufo-files-archive-ocr/v1", "source_file": "roswell.pdf", "source_bytes": 100}
+            text = 'Roswell reports cited the book "The Invisible College", the book "Passport to Magonia", and the book "The Hynek UFO Report".'
+            (source / "roswell.txt").write_text(json.dumps(metadata) + "\n\n" + text)
+            catalog = build(root, Path(directory) / "catalog.json", 1, 100, require_data=True)
+            books = [entity for entity in catalog["entities"] if entity["category"] == "book"]
+            others = [entity for entity in catalog["entities"] if entity["category"] != "book"]
+            self.assertGreater(len(books), 1)
+            self.assertEqual(len(others), 1)
+            self.assertEqual(others[0]["canonicalName"], "Roswell")
+            self.assertIn("geo", others[0])
+            self.assertEqual(catalog["counts"]["mappedLocations"], 1)
+            self.assertIsNone(catalog["publicationPolicy"]["maxBooks"])
+
     def test_html_archive_transcript_is_read_and_selected(self):
         from scripts.build_catalog import read_ocr
         with tempfile.TemporaryDirectory() as directory:

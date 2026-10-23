@@ -215,7 +215,11 @@ try {
   await page.waitForFunction(() => Boolean(window.ufoGlobe));
   await page.evaluate(() => {
     const farSideName = "Far Side of the Moon";
-    const current = window.pendingGlobeRender;
+    // Empty catalogs do not emit a map payload. This illustrative preview
+    // still needs a visible globe and an explicit label size.
+    const current = window.pendingGlobeRender || { items: [], labelSize: 14, moonTransitSeconds: 5 };
+    prepareMapView();
+    document.querySelector("#emptyState").hidden = true;
     if (!window.ufoGlobe.nodes.some(node => node.userData.name === farSideName)) {
       const items = current.items.filter(item => item.name !== farSideName);
       items.splice(1, 0, {
