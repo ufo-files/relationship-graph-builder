@@ -5541,13 +5541,16 @@ function programCatalogWithCorpus(reviewedCatalog, graphCatalog) {
   const reviewByEntityId = new Map((reviewedCatalog.entityReviews || []).map(review => [review.entityId, review]));
   const duplicateDecisions = [...includedEntityIds].filter(entityId => reviewByEntityId.has(entityId));
   const missingDecisions = entities.filter(entity => !includedEntityIds.has(entity.id) && !reviewByEntityId.has(entity.id));
-  if (duplicateDecisions.length || missingDecisions.length) {
-    const details = [
-      duplicateDecisions.length ? `duplicate decisions: ${duplicateDecisions.join(", ")}` : "",
-      missingDecisions.length ? `corpus entities missing review decisions: ${missingDecisions.map(entity => entity.canonicalName || entity.name).join(", ")}` : ""
-    ].filter(Boolean).join("; ");
-    throw new Error(`Program review coverage invalid: ${details}`);
+  if (duplicateDecisions.length) {
+    throw new Error(`Program review coverage invalid: duplicate decisions: ${duplicateDecisions.join(", ")}`);
   }
+  // Corpus growth can surface candidates after the registry's review date.
+  // Keep them pending, never promote them to dated, reviewed program rows.
+  const pendingProgramReviews = missingDecisions.map(entity => ({
+    entityId: entity.id,
+    name: entity.canonicalName || entity.name,
+    disposition: "pending_review"
+  }));
   const mergedEntityIdsByProgram = new Map();
   (reviewedCatalog.entityReviews || []).filter(review => review.disposition === "merged" && review.programId && entityIds.has(review.entityId)).forEach(review => {
     const merged = mergedEntityIdsByProgram.get(review.programId) || [];
@@ -5564,7 +5567,9 @@ function programCatalogWithCorpus(reviewedCatalog, graphCatalog) {
     reviewedProgramCount: reviewedPrograms.length,
     reviewedIntervalCount: reviewedPrograms.flatMap(programIntervals).length,
     corpusProgramCount: entities.length,
-    reviewedEntityCount: entities.length,
+    reviewedEntityCount: entities.length - pendingProgramReviews.length,
+    pendingProgramReviews,
+    pendingReviewCount: pendingProgramReviews.length,
     excludedEntityCount: entities.filter(entity => reviewByEntityId.has(entity.id)).length
   };
 }
