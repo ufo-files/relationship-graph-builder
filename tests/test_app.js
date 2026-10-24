@@ -235,7 +235,7 @@ test("government program chronology is source-backed and preserves congressional
   assert.doesNotMatch(source, /MINI-NETWORK/);
 });
 
-test("Programs requires a reviewed disposition for every corpus candidate and dates every visible row", () => {
+test("Programs dates every visible row and keeps unreviewed corpus candidates pending", () => {
   const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
   const source = fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0];
   vm.runInContext(source, context);
@@ -249,7 +249,10 @@ test("Programs requires a reviewed disposition for every corpus candidate and da
   ]);
 
   assert.equal(result.corpusProgramCount, corpusEntities.length);
-  assert.equal(result.reviewedEntityCount, corpusEntities.length);
+  assert.equal(result.reviewedEntityCount, corpusEntities.filter(entity => reviewedEntityIds.has(entity.id)).length);
+  assert.equal(result.pendingReviewCount, corpusEntities.length - result.reviewedEntityCount);
+  assert.deepEqual(new Set(result.pendingProgramReviews.map(review => review.entityId)),
+    new Set(corpusEntities.filter(entity => !reviewedEntityIds.has(entity.id)).map(entity => entity.id)));
   assert.equal(
     result.excludedEntityCount,
     context.reviewedFixture.entityReviews.filter(review => corpusEntities.some(entity => entity.id === review.entityId)).length
@@ -266,7 +269,7 @@ test("Programs requires a reviewed disposition for every corpus candidate and da
   const staleReviewResult = JSON.parse(vm.runInContext(`JSON.stringify(programCatalogWithCorpus(staleReviewFixture, catalogFixture))`, context));
   assert.equal(staleReviewResult.excludedEntityCount, result.excludedEntityCount);
   assert.deepEqual(JSON.parse(vm.runInContext(`JSON.stringify(validateProgramCatalog(reviewedFixture))`, context)), []);
-  assert.ok(corpusEntities.every(entity => reviewedEntityIds.has(entity.id)));
+  assert.ok(corpusEntities.every(entity => reviewedEntityIds.has(entity.id) || result.pendingProgramReviews.some(review => review.entityId === entity.id)));
   assert.ok(result.programs.every(program => program.startDate && program.startPrecision));
   assert.ok(result.programs.every(program => program.sources.length && program.provenance === "reviewed_interval"));
   const aawsap = result.programs.find(program => program.id === "aawsap");
@@ -342,12 +345,48 @@ test("Programs retains reviewed intervals when corpus entities disappear and bin
 
   context.incompleteFixture = structuredClone(context.reviewedFixture);
   context.incompleteFixture.entityReviews = context.incompleteFixture.entityReviews.filter(review => review.entityId !== "ent-9d0b3e246063");
-  assert.throws(() => vm.runInContext(`programCatalogWithCorpus(incompleteFixture, catalogFixture)`, context), /corpus entities missing review decisions: Fastwalker/);
+  const pending = JSON.parse(vm.runInContext(`JSON.stringify(programCatalogWithCorpus(incompleteFixture, catalogFixture))`, context));
+  assert.deepEqual(pending.pendingProgramReviews, [{ entityId: "ent-9d0b3e246063", name: "Fastwalker", disposition: "pending_review" }]);
+  assert.deepEqual(pending.programs.map(program => program.id), context.reviewedFixture.programs.map(program => program.id));
 
   context.catalogFixture = { entities: [] };
   const absent = evaluate();
   assert.deepEqual(absent, present.map(program => ({ ...program, entityIds: [], documentCount: 0 })));
   assert.ok(absent.every(program => program.intervals.length && program.provenance === "reviewed_interval"));
+});
+
+test("Programs tolerates the six newly surfaced candidates and future corpus growth without inventing reviewed intervals", () => {
+  const context = vm.createContext({ location: { hash: "" }, URLSearchParams });
+  vm.runInContext(fs.readFileSync("app.js", "utf8").split("$$('.step-heading')")[0], context);
+  const registry = JSON.parse(fs.readFileSync("data/government_programs.json", "utf8"));
+  const names = ["Project Hessdalen", "Project Saucer", "Operation Trojan Horse", "Project Argus", "Operation Right", "Project Paperclip"];
+  context.registry = registry;
+  context.graph = { entities: [
+    { id: registry.programs[0].entityId, category: "program", canonicalName: registry.programs[0].name },
+    { id: registry.entityReviews[0].entityId, category: "program", canonicalName: registry.entityReviews[0].name },
+    ...names.map((canonicalName, index) => ({ id: `new-program-${index}`, canonicalName, category: "program" }))
+  ] };
+  const evaluate = () => JSON.parse(vm.runInContext("JSON.stringify(programCatalogWithCorpus(registry, graph))", context));
+  const result = evaluate();
+  assert.equal(result.corpusProgramCount, 8);
+  assert.equal(result.reviewedEntityCount, 2);
+  assert.equal(result.excludedEntityCount, 1);
+  assert.equal(result.pendingReviewCount, 6);
+  assert.deepEqual(result.pendingProgramReviews.map(review => review.name), names);
+  assert.ok(result.pendingProgramReviews.every(review => review.disposition === "pending_review" && !review.startDate));
+  assert.equal(result.programs.length, registry.programs.length);
+  assert.deepEqual(result.programs.map(({ entityIds, provenance, ...program }) => program), registry.programs);
+  assert.deepEqual(context.registry, registry);
+  context.graph.entities.push({ id: "future-program", category: "program", canonicalName: "Future corpus candidate" });
+  assert.equal(evaluate().pendingReviewCount, 7);
+  context.registry = structuredClone(registry);
+  context.registry.entityReviews.push({ entityId: "new-program-0", name: names[0], disposition: "not_government",
+    rationale: "Explicit test review decision.", sources: registry.entityReviews[0].sources });
+  const reviewed = evaluate();
+  assert.equal(reviewed.pendingReviewCount, 6);
+  assert.equal(reviewed.reviewedEntityCount, 3);
+  context.registry.entityReviews.push({ ...context.registry.entityReviews[0], entityId: registry.programs[0].entityId });
+  assert.throws(evaluate, /duplicate decisions/);
 });
 
 test("Programs PDF properties describe corpus coverage and active filters", () => {
