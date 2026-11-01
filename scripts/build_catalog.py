@@ -2649,8 +2649,13 @@ def classify_phrase(raw: str) -> tuple[str, float] | None:
 def alias_tokens(text: str) -> set[str]:
     # Match Python re.IGNORECASE's dotted/dotless I equivalence as well as
     # ordinary case folding. Extra candidates are harmless; omissions are not.
-    return {token.translate(str.maketrans({"İ": "I", "ı": "i"})).casefold()
-            for token in re.findall(r"\w+", text)}
+    translation = str.maketrans({"İ": "I", "ı": "i"})
+    tokens = {token.translate(translation).casefold() for token in re.findall(r"\w+", text)}
+    if "\u0345" in text:
+        # IGNORECASE equates combining ypogegrammeni (not a regex word
+        # character) with iota (a word character). Keep both tokenizations.
+        tokens.update(re.findall(r"\w+", text.translate(translation).casefold()))
+    return tokens
 
 
 class IndexedAliasPattern:

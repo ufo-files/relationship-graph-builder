@@ -4,6 +4,7 @@ from pathlib import Path
 import random
 import re
 import tempfile
+import time
 import unittest
 from unittest.mock import patch
 
@@ -11,18 +12,31 @@ from scripts.build_catalog import IndexedAliasPattern, build
 from scripts.benchmark_catalog import compare_outputs
 from scripts.extraction_runtime import (
     document_key, extraction_fingerprint, extract_one, read_checkpoint,
-    write_checkpoint,
+    write_checkpoint, iter_extracted_documents,
 )
+
+
+def delayed_extraction(path, context):
+    if path.stem == "0":
+        deadline = time.monotonic() + 15
+        while not (context["input_root"] / "8.done").exists():
+            if time.monotonic() >= deadline:
+                raise AssertionError("A slow first document prevented later work from being scheduled")
+            time.sleep(.02)
+    else:
+        path.with_suffix(".done").touch()
+    return {"name": path.name}, {}
 
 
 class AliasIndexTests(unittest.TestCase):
     def test_index_preserves_regex_boundaries_unicode_precedence_and_overlaps(self):
         aliases = ["a", "a a", "a a a", "a b", "a b a", "b a", "A B",
                    "U.S.", "NASA", "I", "İan", "Straße", "Σ", "foo", "(foo)",
-                   "foo-bar", "x+y", "!!!", "_foo", "étoile", "K"]
+                   "foo-bar", "x+y", "!!!", "_foo", "étoile", "K", "ι", "αιβ"]
         texts = [" ".join(items) for items in itertools.product(["a", "b", "A"], repeat=5)]
         texts += ["U.S.A. NASA-NASA NASA; x+y !!!", "I ı İ i İAN", "Straße STRAẞE Σ ς σ",
-                  "foo\u0345 foo-bar (foo)bar _foo étoile ÉTOILE K K", "a\n b\t a"]
+                  "foo\u0345 foo-bar (foo)bar _foo étoile ÉTOILE K K", "a\n b\t a",
+                  "\u0345 α\u0345β ι αιβ"]
         rng = random.Random(42)
         texts += [" ".join(rng.choices(aliases + ["unrelated", "foo\u0345"], k=20)) for _ in range(100)]
         for ignore_case in (False, True):
@@ -34,6 +48,16 @@ class AliasIndexTests(unittest.TestCase):
 
 
 class ExtractionCacheTests(unittest.TestCase):
+    def test_slow_first_document_does_not_idle_workers_or_reorder_output(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            paths = [root / f"{index}.txt" for index in range(9)]
+            stats = {"cacheHits": 0, "cacheMisses": 0}
+            results = list(iter_extracted_documents(paths, {"input_root": root}, delayed_extraction,
+                                                    "v1", None, 2, 0, stats))
+            self.assertEqual([path for path, _ in results], paths)
+            self.assertEqual([item["name"] for _, item in results], [p.name for p in paths])
+
     def test_dependency_contents_and_missing_sidecars_invalidate(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

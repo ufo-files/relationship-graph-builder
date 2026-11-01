@@ -16,6 +16,7 @@ from pathlib import Path
 import sys
 import tempfile
 import time
+import unicodedata
 
 
 CACHE_SCHEMA = "graph-document-extraction/v1"
@@ -43,7 +44,8 @@ def hash_files(paths, root: Path, seed: str) -> str:
 
 
 def extraction_fingerprint(scripts: Path, data: Path, rules: Path, language: str) -> str:
-    code = hash_files(scripts.glob("*.py"), scripts, CACHE_SCHEMA)
+    runtime = f"{CACHE_SCHEMA}:{sys.version}:{unicodedata.unidata_version}"
+    code = hash_files(scripts.glob("*.py"), scripts, runtime)
     config = hash_files((data / name for name in EXTRACTION_DATA), data, code)
     return hash_files([rules], rules.parent, config + language)
 
@@ -115,21 +117,23 @@ _CONTEXT = None
 _EXTRACT = None
 _FINGERPRINT = None
 _CACHE = None
+_SPOOL = None
 
 
-def initialize_worker(context, extract, fingerprint, cache):
-    global _CONTEXT, _EXTRACT, _FINGERPRINT, _CACHE
+def initialize_worker(context, extract, fingerprint, cache, spool):
+    global _CONTEXT, _EXTRACT, _FINGERPRINT, _CACHE, _SPOOL
     _CONTEXT, _EXTRACT, _FINGERPRINT, _CACHE = context, extract, fingerprint, cache
+    _SPOOL = spool
 
 
-def extract_one(path, context, extract, fingerprint, cache):
+def extract_one(path, context, extract, fingerprint, cache, spool=None):
     started = time.perf_counter()
     key = document_key(path, context["input_root"], fingerprint) if cache else None
     checkpoint = cache / key[:2] / (key + ".json.gz") if cache else None
     if checkpoint:
         hit, result = read_checkpoint(checkpoint, key)
         if hit:
-            return result, True, {"cacheRead": time.perf_counter() - started}
+            return ((checkpoint, key) if spool else result), True, {"cacheRead": time.perf_counter() - started}
     fingerprint_seconds = time.perf_counter() - started
     result, timings = extract(path, context)
     timings["fingerprint"] = fingerprint_seconds
@@ -140,17 +144,22 @@ def extract_one(path, context, extract, fingerprint, cache):
             raise ValueError(f"Input changed during extraction: {path}")
         write_checkpoint(checkpoint, key, result)
         timings["checkpointWrite"] = time.perf_counter() - started
-    return result, False, timings
+    elif spool:
+        key = hashlib.sha256(path.as_posix().encode()).hexdigest()
+        checkpoint = spool / (key + ".json.gz")
+        write_checkpoint(checkpoint, key, result)
+    return ((checkpoint, key) if spool else result), False, timings
 
 
 def worker_extract(path):
-    return extract_one(path, _CONTEXT, _EXTRACT, _FINGERPRINT, _CACHE)
+    return extract_one(path, _CONTEXT, _EXTRACT, _FINGERPRINT, _CACHE, _SPOOL)
 
 
 def iter_extracted_documents(paths, context, extract, fingerprint, cache,
                              workers, interval, stats):
     started = last_log = time.perf_counter()
     completed = 0
+    finished = 0
     totals = collections.Counter()
 
     def progress(path, force=False):
@@ -158,51 +167,70 @@ def iter_extracted_documents(paths, context, extract, fingerprint, cache,
         now = time.perf_counter()
         if interval and (force or now - last_log >= interval):
             elapsed = now - started
-            print(f"[catalog] {completed}/{len(paths)} documents merged; "
+            print(f"[catalog] {completed}/{len(paths)} documents merged; {finished} extracted; "
                   f"cache hits={stats['cacheHits']} misses={stats['cacheMisses']}; "
                   f"{completed / max(elapsed, .001):.2f} docs/s; "
                   f"elapsed={elapsed:.1f}s; current={path.relative_to(context['input_root'])}",
                   file=sys.stderr, flush=True)
             last_log = now
 
-    def accept(path, response):
-        nonlocal completed
+    def accept(response):
+        nonlocal finished
         result, hit, timings = response
-        completed += 1
+        finished += 1
         stats["cacheHits" if hit else "cacheMisses"] += 1
         totals.update(timings)
         stats["extractorSeconds"] = dict(totals)
-        progress(path, completed == len(paths))
-        return path, result
+        return result
 
     if not paths:
         return
     progress(paths[0], True)
     if workers == 1:
         for path in paths:
-            yield accept(path, extract_one(path, context, extract, fingerprint, cache))
+            result = accept(extract_one(path, context, extract, fingerprint, cache))
+            completed += 1
+            progress(path, completed == len(paths))
+            yield path, result
         return
-    # Spawn avoids inheriting the growing parent catalog. Only a small window of
-    # futures is submitted; completed documents cannot accumulate without bound.
-    with concurrent.futures.ProcessPoolExecutor(
-        max_workers=workers, mp_context=multiprocessing.get_context("spawn"),
-        initializer=initialize_worker, initargs=(context, extract, fingerprint, cache),
-    ) as executor:
-        remaining = iter(paths)
-        pending = collections.deque()
-        for path in remaining:
-            pending.append((path, executor.submit(worker_extract, path)))
-            if len(pending) >= workers * 2:
-                break
-        while pending:
-            path, future = pending.popleft()
-            while True:
-                try:
-                    response = future.result(timeout=interval or 30)
-                    break
-                except concurrent.futures.TimeoutError:
-                    progress(path)
-            yield accept(path, response)
-            next_path = next(remaining, None)
-            if next_path is not None:
-                pending.append((next_path, executor.submit(worker_extract, next_path)))
+    # Spawn avoids inheriting the growing parent catalog. Keep the work queue
+    # bounded but replenish it on ANY completion. Out-of-order evidence stays on
+    # disk, so one large document neither idles the pool nor fills parent memory.
+    with tempfile.TemporaryDirectory(prefix="graph-extraction-") as temporary:
+        with concurrent.futures.ProcessPoolExecutor(
+            max_workers=workers, mp_context=multiprocessing.get_context("spawn"),
+            initializer=initialize_worker,
+            initargs=(context, extract, fingerprint, cache, Path(temporary)),
+        ) as executor:
+            remaining = iter(enumerate(paths))
+            pending = {}
+            ready = {}
+
+            def submit_next():
+                item = next(remaining, None)
+                if item is not None:
+                    index, path = item
+                    pending[executor.submit(worker_extract, path)] = index
+
+            for _ in range(min(len(paths), workers * 2)):
+                submit_next()
+            while pending:
+                done, _ = concurrent.futures.wait(pending, timeout=interval or 30,
+                                                 return_when=concurrent.futures.FIRST_COMPLETED)
+                for future in done:
+                    index = pending.pop(future)
+                    ready[index] = accept(future.result())
+                    submit_next()
+                while completed in ready:
+                    checkpoint, key = ready.pop(completed)
+                    valid, result = read_checkpoint(checkpoint, key)
+                    if not valid:
+                        raise ValueError(f"Completed extraction checkpoint is unreadable: {checkpoint}")
+                    if not cache:
+                        checkpoint.unlink()
+                    path = paths[completed]
+                    completed += 1
+                    progress(path, completed == len(paths))
+                    yield path, result
+                if completed < len(paths):
+                    progress(paths[completed])

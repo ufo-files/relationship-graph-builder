@@ -24,7 +24,10 @@ four spawned workers, configurable through the `GRAPH_EXTRACTION_WORKERS`
 repository variable, and a persistent cache under the runner's tool-cache
 directory. PR builds use two workers without accessing the production cache.
 At most twice the worker count is submitted at once. Workers receive extraction
-configuration, not the parent's accumulated catalog. Large documents still
+configuration, not the parent's accumulated catalog. The queue is replenished
+whenever any worker finishes, so a slow document does not idle other workers.
+Out-of-order evidence waits on disk (in checkpoints, or a temporary spool when
+caching is disabled) until it can be merged in order. Large documents still
 require memory proportional to their own evidence, and global assembly still
 retains the catalog in memory.
 
@@ -48,7 +51,7 @@ Unreadable, truncated, or checksum-invalid entries are recomputed. Temporary
 Keys include document paths and contents, transcript sidecars, all files in a
 paired-document bundle, the selected language, extraction Python source, entity
 registries, extraction taxonomies, curated discussion events, and epistemic
-rules. Missing dependencies are represented in the key. Contents are checked
+rules, plus the Python and Unicode runtime versions. Missing dependencies are represented in the key. Contents are checked
 again before a new checkpoint is published. The input checkout should remain
 immutable throughout a build.
 
