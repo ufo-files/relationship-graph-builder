@@ -10,7 +10,7 @@ import unittest
 import zlib
 from unittest.mock import patch
 
-from scripts.build_catalog import IndexedAliasPattern, build
+from scripts.build_catalog import Candidate, IndexedAliasPattern, build, context_key, significance_metrics, write_clock_catalog
 from scripts.benchmark_catalog import compare_outputs
 from scripts.extraction_runtime import (
     document_key, extraction_fingerprint, extract_one, read_checkpoint,
@@ -50,6 +50,36 @@ class AliasIndexTests(unittest.TestCase):
 
 
 class ExtractionCacheTests(unittest.TestCase):
+    def test_shared_context_weights_detach_without_cross_source_leakage(self):
+        candidate = Candidate("NASA", "agency")
+        candidate.add("NASA", "shared", "A", "s1", "Same context", .99, .8)
+        key = context_key("Same context")
+        self.assertIs(candidate.context_document_weights[key], candidate.source_context_document_weights["A"][key])
+        candidate.add("NASA", "shared", "B", "s2", "Same context", .99, .2)
+        candidate.add("NASA", "second", "A", "s3", "Same context", .99, .5)
+        self.assertEqual(candidate.context_document_weights[key], {"shared": .2, "second": .5})
+        self.assertEqual(candidate.source_context_document_weights["A"][key], {"shared": .8, "second": .5})
+        self.assertEqual(candidate.source_context_document_weights["B"][key], {"shared": .2})
+        self.assertEqual(significance_metrics(candidate, "A")["epistemicAdjustedMentions"], 1.3)
+        self.assertEqual(significance_metrics(candidate, "B")["epistemicAdjustedMentions"], .2)
+
+    def test_clock_shards_roundtrip_and_remove_stale_parts(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            observations = [{"documentId": "doc", "excerpt": "é" * 700, "id": n} for n in range(12)]
+            documents = [{"id": "doc", "path": "doc.txt", "title": "Document", "source": "A"}]
+            payload = write_clock_catalog(root / "clock_times.json", observations, documents, {}, "now", max_bytes=4096)
+            restored = {"documents": [], "observations": []}
+            for part in payload["parts"]:
+                rows = json.loads((root / part["path"]).read_text())
+                self.assertEqual(len(rows), part["items"])
+                self.assertLessEqual((root / part["path"]).stat().st_size, 4096)
+                restored[part["field"]].extend(rows)
+            self.assertEqual(restored["observations"], observations)
+            self.assertEqual(restored["documents"], documents)
+            write_clock_catalog(root / "clock_times.json", [], documents, {}, "later", max_bytes=4096)
+            self.assertFalse(list((root / "clock-mentions").glob("*.json")))
+
     def test_malformed_envelopes_and_compression_errors_are_cache_misses(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "checkpoint.gz"

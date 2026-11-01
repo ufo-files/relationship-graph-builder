@@ -31,6 +31,23 @@ caching is disabled) until it can be merged in order. Large documents still
 require memory proportional to their own evidence, and global assembly still
 retains the catalog in memory.
 
+Aggregation stores context document membership in the existing weight maps,
+shares those maps for single-source contexts, and detaches them when another
+source appears. Normalized context strings are shared across entities. Empty
+qualifier containers are not allocated, and lineage transcript text is released
+after family assignment. These changes reduce memory pressure without changing
+evidence counts or weighting.
+Rejected and unpublished candidate state is released once its summary counts
+are retained. Duplicate detection precomputes normalized names and uses
+SequenceMatcher's upper bounds to skip pairs that cannot meet the existing
+thresholds; acronym checks and final similarity scores are unchanged.
+
+Clock catalogs that exceed 80 MiB are written as a small manifest plus bounded
+document/observation files under `data/clock-mentions`. The clock loader accepts
+both inline catalogs and manifests and checks shard and total counts before
+installing the catalog. Each shard is at most 20 MiB, keeping generated files
+below the repository's 95 MiB publishing limit.
+
 Progress is flushed to stderr every 30 seconds while parallel extraction runs,
 including the next document awaiting ordered merge, the merged document count,
 cache hits/misses, throughput, and elapsed time. `--progress-interval 0` disables

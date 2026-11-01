@@ -2790,14 +2790,11 @@ class Candidate:
     variants: collections.Counter = field(default_factory=collections.Counter)
     documents: set[str] = field(default_factory=set)
     sources: set[str] = field(default_factory=set)
-    segments: set[str] = field(default_factory=set)
     examples: list[dict] = field(default_factory=list)
     source_mentions: collections.Counter = field(default_factory=collections.Counter)
     source_documents: dict[str, set[str]] = field(default_factory=lambda: collections.defaultdict(set))
     context_mentions: collections.Counter = field(default_factory=collections.Counter)
-    context_documents: dict[str, set[str]] = field(default_factory=lambda: collections.defaultdict(set))
     source_context_mentions: dict[str, collections.Counter] = field(default_factory=lambda: collections.defaultdict(collections.Counter))
-    source_context_documents: dict[str, dict[str, set[str]]] = field(default_factory=lambda: collections.defaultdict(lambda: collections.defaultdict(set)))
     context_document_weights: dict[str, dict[str, float]] = field(default_factory=lambda: collections.defaultdict(dict))
     source_context_document_weights: dict[str, dict[str, dict[str, float]]] = field(default_factory=lambda: collections.defaultdict(lambda: collections.defaultdict(dict)))
     administrative_contexts: set[str] = field(default_factory=set)
@@ -2806,17 +2803,23 @@ class Candidate:
     title_documents: set[str] = field(default_factory=set)
 
     def add(self, raw: str, doc_id: str, source: str, segment_id: str, excerpt: str, confidence: float, evidence_weight: float = 1.0, qualifiers: list[dict] | None = None) -> None:
-        context = context_key(excerpt)
+        context = sys.intern(context_key(excerpt))
         self.variants[clean_space(raw)] += 1
         self.documents.add(doc_id)
         self.sources.add(source)
-        self.segments.add(segment_id)
         self.source_mentions[source] += 1
         self.source_documents[source].add(doc_id)
         self.context_mentions[context] += 1
-        self.context_documents[context].add(doc_id)
         self.source_context_mentions[source][context] += 1
-        self.source_context_documents[source][context].add(doc_id)
+        source_contexts = self.source_context_document_weights[source]
+        if context not in source_contexts:
+            source_contexts[context] = {}
+            if context not in self.context_document_weights:
+                # Most contexts belong to one source. Share its membership and
+                # weights until a second source requires a separate aggregate.
+                self.context_document_weights[context] = source_contexts[context]
+            else:
+                self.context_document_weights[context] = dict(self.context_document_weights[context])
         current_weight = self.context_document_weights[context].get(doc_id, 1.0)
         self.context_document_weights[context][doc_id] = min(current_weight, evidence_weight)
         source_weight = self.source_context_document_weights[source][context].get(doc_id, 1.0)
@@ -3014,20 +3017,20 @@ def significance_metrics(
 ) -> dict:
     repeated_contexts = {
         context
-        for context, documents in candidate.context_documents.items()
+        for context, documents in candidate.context_document_weights.items()
         if len(documents) >= REPEATED_CONTEXT_DOCUMENT_FLOOR
     }
     if source is None:
         mentions = candidate.mentions
         coverage_documents = candidate.documents
         context_mentions = candidate.context_mentions
-        context_documents = candidate.context_documents
+        context_documents = candidate.context_document_weights
         context_weights = candidate.context_document_weights
     else:
         mentions = candidate.source_mentions[source]
         coverage_documents = candidate.source_documents[source]
         context_mentions = candidate.source_context_mentions[source]
-        context_documents = candidate.source_context_documents[source]
+        context_documents = candidate.source_context_document_weights[source]
         context_weights = candidate.source_context_document_weights[source]
 
     adjusted_mentions = 0
@@ -3589,50 +3592,56 @@ def extract_title_mentions(title: str, registry: dict[str, tuple[str, str]]) -> 
 
 def duplicate_candidates(candidates: dict[str, Candidate], limit: int | None = 200) -> tuple[list[dict], int]:
     """Return likely but unresolved duplicates for human review; never merge them here."""
-    items = [candidate for candidate in candidates.values() if candidate.category != "date"]
     matches = []
-    buckets: dict[tuple[str, str], list[Candidate]] = collections.defaultdict(list)
-    for candidate in items:
+    buckets = collections.defaultdict(list)
+    for candidate in candidates.values():
+        if candidate.category == "date":
+            continue
         name = candidate.canonical if candidate.curated else candidate.variants.most_common(1)[0][0]
-        words = entity_key(name, candidate.category).split()
+        identity = entity_key(name, candidate.category)
+        words = identity.split()
         if not words:
             continue
+        initials = "".join(word[0] for word in words if word not in {"and", "of", "the"})
         anchor = words[-1][0] if candidate.category == "person" else words[0][0]
-        buckets[(candidate.category, anchor)].append(candidate)
+        buckets[(candidate.category, anchor)].append((candidate, name, identity, words, initials))
 
     for bucket in buckets.values():
-        for index, left in enumerate(bucket):
-            left_name = left.canonical if left.curated else left.variants.most_common(1)[0][0]
-            left_identity = entity_key(left_name, left.category)
-            left_words = left_identity.split()
-            for right in bucket[index + 1:]:
-                right_name = right.canonical if right.curated else right.variants.most_common(1)[0][0]
-                right_identity = entity_key(right_name, right.category)
-                right_words = right_identity.split()
-                left_initials = "".join(word[0] for word in left_words if word not in {"and", "of", "the"})
-                right_initials = "".join(word[0] for word in right_words if word not in {"and", "of", "the"})
+        for index, (left, left_name, left_identity, left_words, left_initials) in enumerate(bucket):
+            for right, right_name, right_identity, right_words, right_initials in bucket[index + 1:]:
                 reason = None
                 if len(left_words) >= 3 and left_initials == right_identity.replace(" ", ""):
                     reason = "acronym"
                 elif len(right_words) >= 3 and right_initials == left_identity.replace(" ", ""):
                     reason = "acronym"
+                matcher = None
                 if not reason:
-                    if abs(len(left_identity) - len(right_identity)) > max(4, int(max(len(left_identity), len(right_identity)) * 0.25)):
+                    longest = max(len(left_identity), len(right_identity))
+                    if abs(len(left_identity) - len(right_identity)) > max(4, int(longest * .25)):
                         continue
-                    similarity = difflib.SequenceMatcher(None, left_identity, right_identity).ratio()
-                    if left.category == "person" and left_words and right_words and left_words[-1] == right_words[-1] and similarity >= 0.86:
+                    person_match = left.category == "person" and left_words[-1] == right_words[-1]
+                    if not person_match and longest < 12:
+                        continue
+                    threshold = .86 if person_match else .92
+                    matcher = difflib.SequenceMatcher(None, left_identity, right_identity)
+                    # These bounds can only overestimate ratio(); they never
+                    # exclude a pair that the original thresholds would retain.
+                    if matcher.real_quick_ratio() < threshold or matcher.quick_ratio() < threshold:
+                        continue
+                    similarity = matcher.ratio()
+                    if person_match and similarity >= .86:
                         reason = "similar person name"
-                    elif max(len(left_identity), len(right_identity)) >= 12 and similarity >= 0.92:
+                    elif longest >= 12 and similarity >= .92:
                         reason = "similar name"
                 if not reason:
                     continue
-                similarity = difflib.SequenceMatcher(None, left_identity, right_identity).ratio()
+                if matcher is None:
+                    similarity = difflib.SequenceMatcher(None, left_identity, right_identity).ratio()
                 matches.append({
                     "category": left.category,
                     "left": {"name": left_name, "mentions": left.mentions, "documentCount": len(left.documents)},
                     "right": {"name": right_name, "mentions": right.mentions, "documentCount": len(right.documents)},
-                    "similarity": round(similarity, 3),
-                    "reason": reason,
+                    "similarity": round(similarity, 3), "reason": reason,
                     "aliasFile": "data/entity_aliases.json",
                 })
     ranked = sorted(
@@ -4088,8 +4097,9 @@ def build(
                         candidate.canonical = canonical
                     candidate.curated = candidate.curated or curated
                 claim_qualifiers = qualifiers_for_claim(qualifiers, raw, canonical, signal_segment)
-                existing_qualifiers = segment_entity_qualifiers[sid].setdefault(key, [])
-                existing_qualifiers.extend(item for item in claim_qualifiers if item not in existing_qualifiers)
+                if claim_qualifiers:
+                    existing_qualifiers = segment_entity_qualifiers[sid].setdefault(key, [])
+                    existing_qualifiers.extend(item for item in claim_qualifiers if item not in existing_qualifiers)
                 evidence_weight = min((item["evidenceWeight"] for item in claim_qualifiers), default=1.0)
                 candidate.add(raw, doc_id, source, sid, segment, confidence, evidence_weight, claim_qualifiers)
                 keys.append(key)
@@ -4105,7 +4115,12 @@ def build(
     assembly_started = time.perf_counter()
     if progress_interval:
         print("[catalog] extraction complete; assembling global relationships and writing catalogs", file=sys.stderr, flush=True)
+    candidate_count = len(candidates)
+    accepted_candidates = {key: value for key, value in candidates.items() if accepted(value)}
+    accepted_count = len(accepted_candidates)
+    candidates.clear()
     source_families, source_family_assignments = source_lineage_assignments(lineage_records)
+    lineage_records.clear()
     family_by_document = {
         document_id: assignment["id"]
         for document_id, assignment in source_family_assignments.items()
@@ -4120,7 +4135,6 @@ def build(
     events = merge_events(events)
     events = reviewed_event_titles(events, event_title_reviews or data_dir / "event_title_reviews.json")
     events = merge_events(events)
-    accepted_candidates = {key: value for key, value in candidates.items() if accepted(value)}
     all_possible_duplicates, possible_duplicate_count = duplicate_candidates(accepted_candidates, limit=None)
     possible_duplicates = all_possible_duplicates[:200]
     def publication_rank(item: tuple[str, Candidate]) -> tuple:
@@ -4147,6 +4161,10 @@ def build(
     published_items = book_items + [item for item in ranked if item[0] not in book_keys][:non_book_limit]
     published_items.sort(key=publication_rank, reverse=True)
     published = dict(published_items)
+    accepted_book_count = len(book_items)
+    accepted_candidates.clear()
+    ranked.clear()
+    book_items.clear()
     entity_ids = {key: stable_id("ent", key) for key in published}
     attach_event_entities(events, segment_entities, document_title_entities, registry, published, entity_ids)
     documents_by_id = {document["id"]: document for document in documents}
@@ -4242,8 +4260,8 @@ def build(
                 source = document_sources[document_id]
                 stat["segments"].add(sid)
                 shared_qualifiers = [
-                    item for item in segment_entity_qualifiers[sid].get(left, [])
-                    if item in segment_entity_qualifiers[sid].get(right, [])
+                    item for item in segment_entity_qualifiers.get(sid, {}).get(left, [])
+                    if item in segment_entity_qualifiers.get(sid, {}).get(right, [])
                 ]
                 evidence_weight = min((item["evidenceWeight"] for item in shared_qualifiers), default=1.0)
                 stat["weightedEvidence"] += evidence_weight
@@ -4347,15 +4365,15 @@ def build(
         "counts": {
             "documents": len(documents),
             "sources": len(sources),
-            "candidateEntities": len(candidates),
-            "acceptedEntities": len(accepted_candidates),
+            "candidateEntities": candidate_count,
+            "acceptedEntities": accepted_count,
             "publishedEntities": len(entities),
             "acceptedEdges": all_edge_count,
             "publishedEdges": len(edges),
             "possibleDuplicates": possible_duplicate_count,
             "mappedLocations": sum(1 for entity in entities if entity.get("geo")),
             "publishedBooks": sum(1 for entity in entities if entity["category"] == "book"),
-            "acceptedBookCandidates": sum(1 for candidate in accepted_candidates.values() if candidate.category == "book"),
+            "acceptedBookCandidates": accepted_book_count,
             "booksWithReviewedAuthors": sum(1 for entity in entities if entity["category"] == "book" and entity.get("authors")),
             "datedDocuments": sum(1 for document in documents if document.get("documentDate")),
             "publishedEvents": len(events),
@@ -4530,7 +4548,7 @@ def write_date_review_report(output: Path, records: list[dict], metadata: dict, 
 
 
 
-def write_clock_catalog(output: Path, observations: list[dict], documents: list[dict], catalog_input: dict, generated_at: str) -> dict:
+def write_clock_catalog(output: Path, observations: list[dict], documents: list[dict], catalog_input: dict, generated_at: str, max_bytes: int = 80 * 1024 * 1024) -> dict:
     ids = {item["documentId"] for item in observations}
     payload = {
         "schema": "ufo-files-clock-times/v1", "generatedAt": generated_at, "input": catalog_input,
@@ -4539,7 +4557,47 @@ def write_clock_catalog(output: Path, observations: list[dict], documents: list[
         "observations": observations,
     }
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    encoded = json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n"
+    shard_dir = output.parent / "clock-mentions"
+    expected = set()
+    if len(encoded.encode("utf-8")) > max_bytes:
+        del encoded
+        shard_dir.mkdir(parents=True, exist_ok=True)
+        parts = []
+        for field_name in ("documents", "observations"):
+            chunk, size, number = [], 3, 0
+
+            def flush():
+                nonlocal chunk, size, number
+                if not chunk:
+                    return
+                number += 1
+                path = shard_dir / f"{field_name}-{number:03d}.json"
+                path.write_text("[" + ",".join(chunk) + "]\n", encoding="utf-8")
+                expected.add(path)
+                parts.append({"path": path.relative_to(output.parent).as_posix(), "field": field_name, "items": len(chunk)})
+                chunk, size = [], 3
+
+            limit = min(max_bytes, 20 * 1024 * 1024)
+            for row in payload[field_name]:
+                item = json.dumps(row, ensure_ascii=False, separators=(",", ":"))
+                item_size = len(item.encode("utf-8")) + 1
+                if item_size + 3 > limit:
+                    raise ValueError("Clock record exceeds shard byte limit")
+                if size + item_size > limit:
+                    flush()
+                chunk.append(item)
+                size += item_size
+            flush()
+            payload[field_name] = []
+        payload["parts"] = parts
+        encoded = json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n"
+        if len(encoded.encode("utf-8")) > max_bytes:
+            raise ValueError("Clock manifest exceeds byte limit")
+    output.write_text(encoded, encoding="utf-8")
+    for stale in shard_dir.glob("*.json"):
+        if stale not in expected:
+            stale.unlink()
     return payload
 
 def source_shard_slug(source: str) -> str:

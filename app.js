@@ -4623,6 +4623,22 @@ async function ensureClockCatalog() {
     if (!response.ok) throw new Error(`Clock data ${response.status}`);
     const payload = await response.json();
     if (payload.schema !== "ufo-files-clock-times/v1" || !Array.isArray(payload.observations) || !Array.isArray(payload.documents)) throw new Error("Clock data invalid");
+    if (payload.parts != null) {
+      if (!Array.isArray(payload.parts)) throw new Error("Clock manifest invalid");
+      const loaded = await Promise.all(payload.parts.map(async part => {
+        if (!part || !["documents", "observations"].includes(part.field) || !Number.isSafeInteger(part.items) || part.items < 0
+            || typeof part.path !== "string" || !/^clock-mentions\/(documents|observations)-\d+\.json$/.test(part.path)) throw new Error("Clock manifest invalid");
+        const response = await fetch(`data/${part.path}`, { cache: "no-cache" });
+        if (!response.ok) throw new Error(`Clock shard ${response.status}`);
+        const rows = await response.json();
+        if (!Array.isArray(rows) || rows.length !== part.items) throw new Error("Clock shard count mismatch");
+        return rows;
+      }));
+      for (const field of ["documents", "observations"]) {
+        payload[field] = payload[field].concat(...loaded.filter((_, index) => payload.parts[index].field === field));
+      }
+      if (payload.documents.length !== payload.counts?.documents || payload.observations.length !== payload.counts?.mentions) throw new Error("Clock total count mismatch");
+    }
     state.clockCatalog = payload;
     return payload;
   })();
