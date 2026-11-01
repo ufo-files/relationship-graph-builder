@@ -191,6 +191,7 @@ jobs:
             --input-repository ufo-files/machine-data \
             --input-revision "$revision" \
             --paired-language en \
+            --workers 2 \
             --claims _empty-claims.json \
             --output _source-output/catalog.json \
             --duplicate-report _source-output/duplicate_candidates.json \
@@ -295,6 +296,7 @@ jobs:
             --input-repository ufo-files/machine-data \
             --input-revision "$revision" \
             --paired-language en \
+            --workers 2 \
             --require-data
 
       - name: Verify generated catalog file sizes
@@ -358,13 +360,41 @@ jobs:
       - name: Build catalog
         env:
           UPSTREAM_REVISION: ${{ steps.upstream.outputs.revision }}
+          EXTRACTION_CACHE: ${{ runner.tool_cache }}/graph-document-extraction
+          EXTRACTION_WORKERS: ${{ vars.GRAPH_EXTRACTION_WORKERS || '4' }}
         run: |
           python3 scripts/build_catalog.py \
             --input _machine-data \
             --input-repository ufo-files/machine-data \
             --input-revision "$UPSTREAM_REVISION" \
             --paired-language en \
+            --workers "$EXTRACTION_WORKERS" \
+            --cache-dir "$EXTRACTION_CACHE" \
+            --profile-report "$RUNNER_TEMP/catalog-profile.json" \
             --require-data
+
+      - name: Report catalog build timings
+        if: always()
+        shell: bash
+        run: |
+          if [ -f "$RUNNER_TEMP/catalog-profile.json" ]; then
+            python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          report = json.loads((Path(os.environ["RUNNER_TEMP"]) / "catalog-profile.json").read_text())
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as summary:
+              summary.write("## Catalog extraction performance\n\n")
+              summary.write(f"Workers: {report['workers']}; documents: {report['documents']}; "
+                            f"cache hits: {report['cacheHits']}; misses: {report['cacheMisses']}.\n\n")
+              summary.write(f"Total: {report['totalSeconds']:.1f}s; extraction and reduction: "
+                            f"{report['extractionAndReductionSeconds']:.1f}s; "
+                            f"global assembly: {report['assemblySeconds']:.1f}s.\n\n")
+              summary.write("Extractor times are summed worker seconds, not wall time.\n\n")
+              for name, seconds in sorted(report["extractorSeconds"].items(), key=lambda item: -item[1]):
+                  summary.write(f"- {name}: {seconds:.2f}s\n")
+          PY
+          fi
 
       - name: Verify generated catalog file sizes
         run: |

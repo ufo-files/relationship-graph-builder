@@ -14,9 +14,12 @@ import datetime as dt
 import difflib
 import functools
 import hashlib
+import heapq
 import json
 import os
 import stat
+import sys
+import time
 import re
 import unicodedata
 from dataclasses import dataclass, field
@@ -25,9 +28,11 @@ from typing import Iterable
 
 
 try:
+    from .extraction_runtime import extraction_fingerprint, iter_extracted_documents
     from .time_mentions import time_observations_for_segment
     from .topic_mentions import TOPICS, topic_observations_for_segment, write_topic_catalogs
 except ImportError:
+    from extraction_runtime import extraction_fingerprint, iter_extracted_documents
     from time_mentions import time_observations_for_segment
     from topic_mentions import TOPICS, topic_observations_for_segment, write_topic_catalogs
 
@@ -1332,7 +1337,16 @@ def compile_species_taxonomy(taxonomy: dict) -> dict:
         if len(token) >= 3 and token not in trigger_stopwords
     }
     context_patterns = [species_phrase_pattern(term) for term in taxonomy.get("contextTerms", [])]
-    return {"entries": entries, "triggerTokens": trigger_tokens, "contextPatterns": context_patterns}
+    by_token = collections.defaultdict(set)
+    unfiltered = set()
+    for index, (_, alias, _) in enumerate(entries):
+        tokens = alias_tokens(alias["phrase"])
+        if tokens:
+            by_token[max(tokens, key=lambda token: (len(token), token))].add(index)
+        else:
+            unfiltered.add(index)
+    return {"entries": entries, "triggerTokens": trigger_tokens, "contextPatterns": context_patterns,
+            "byToken": by_token, "unfiltered": unfiltered}
 
 
 def species_appearance_excerpt(context: str, match_terms: list[str], limit: int = 900) -> str:
@@ -1449,7 +1463,14 @@ def species_observations_for_segment(
     segment_index = context_segment_index if context_segment_index is not None else segment if isinstance(segment, int) else 0
     appearance_context_start = segment_index
     appearance_context_end = segment_index
-    for species_class, alias_definition, pattern in compiled["entries"]:
+    if "byToken" in compiled:
+        selected = set(compiled["unfiltered"])
+        for token in alias_tokens(text):
+            selected.update(compiled["byToken"].get(token, ()))
+        entries = (compiled["entries"][index] for index in sorted(selected))
+    else:
+        entries = compiled["entries"]
+    for species_class, alias_definition, pattern in entries:
         alias = alias_definition["phrase"]
         allowed_sources = alias_definition.get("sources")
         if allowed_sources and source not in allowed_sources:
@@ -2625,31 +2646,76 @@ def classify_phrase(raw: str) -> tuple[str, float] | None:
     return classify_person_name(raw)
 
 
+def alias_tokens(text: str) -> set[str]:
+    # Match Python re.IGNORECASE's dotted/dotless I equivalence as well as
+    # ordinary case folding. Extra candidates are harmless; omissions are not.
+    return {token.translate(str.maketrans({"İ": "I", "ı": "i"})).casefold()
+            for token in re.findall(r"\w+", text)}
+
+
+class IndexedAliasPattern:
+    """Narrow literal aliases by a required token, retaining regex precedence."""
+
+    def __init__(self, values: Iterable[str], ignore_case: bool):
+        entries = {}
+        for value in values:
+            value = clean_space(value)
+            if value:
+                pattern = r"\s+".join(re.escape(part) for part in value.split())
+                entries[pattern] = value
+        self.aliases = sorted(set(entries), key=len, reverse=True)
+        self.flags = re.IGNORECASE if ignore_case else 0
+        self.by_token = collections.defaultdict(set)
+        self.unfiltered = set()
+        for index, pattern in enumerate(self.aliases):
+            tokens = alias_tokens(entries[pattern])
+            if tokens:
+                # Any word in a complete literal alias must occur in the text.
+                self.by_token[max(tokens, key=lambda token: (len(token), token))].add(index)
+            else:
+                self.unfiltered.add(index)
+        self.patterns = [re.compile(r"(?<![\w-])(" + alias + r")(?![\w-])", self.flags)
+                         for alias in self.aliases]
+
+    def finditer(self, text: str, tokens: set[str] | None = None):
+        tokens = alias_tokens(text) if tokens is None else tokens
+        selected = set(self.unfiltered)
+        for token in tokens:
+            selected.update(self.by_token.get(token, ()))
+        pending = []
+        for index in selected:
+            match = self.patterns[index].search(text)
+            if match:
+                heapq.heappush(pending, (match.start(), index, match))
+        cursor = 0
+        while pending:
+            start, index, match = heapq.heappop(pending)
+            if start >= cursor:
+                yield match
+                cursor = match.end()
+            # Search again from the global cursor, not an alias-local finditer:
+            # an overlapping occurrence may become valid after another alias wins.
+            following = self.patterns[index].search(text, cursor)
+            if following:
+                heapq.heappush(pending, (following.start(), index, following))
+
+
 class EntityRegistry(dict[str, tuple[str, str]]):
     """Reviewed entity identities plus a compiled, boundary-aware alias matcher."""
 
-    pattern: re.Pattern | None = None
-    case_sensitive_pattern: re.Pattern | None = None
-    all_pattern: re.Pattern | None = None
+    pattern: IndexedAliasPattern | None = None
+    case_sensitive_pattern: IndexedAliasPattern | None = None
+    all_pattern: IndexedAliasPattern | None = None
     case_insensitive_keys: set[str] = set()
     title_case_sensitive_keys: set[str] = set()
     reject_generational_suffix_keys: set[str] = set()
-    book_pattern: re.Pattern | None = None
+    book_pattern: IndexedAliasPattern | None = None
     metadata: dict[tuple[str, str], dict] = {}
 
 
-def registry_alias_pattern(values: Iterable[str], *, ignore_case: bool) -> re.Pattern | None:
-    aliases = {
-        r"\s+".join(re.escape(part) for part in clean_space(value).split())
-        for value in values
-        if clean_space(value)
-    }
-    if not aliases:
-        return None
-    return re.compile(
-        r"(?<![\w-])(" + "|".join(sorted(aliases, key=len, reverse=True)) + r")(?![\w-])",
-        re.IGNORECASE if ignore_case else 0,
-    )
+def registry_alias_pattern(values: Iterable[str], *, ignore_case: bool) -> IndexedAliasPattern | None:
+    pattern = IndexedAliasPattern(values, ignore_case)
+    return pattern if pattern.aliases else None
 
 
 def load_registry(paths: Iterable[Path]) -> EntityRegistry:
@@ -3332,6 +3398,11 @@ def acronym_overlaps_person(match: re.Match, lookup: str, person_spans: list[tup
 
 def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list[tuple[str, str, str, float, bool]]:
     found: dict[str, tuple[str, str, str, float, bool]] = {}
+    tokens = alias_tokens(segment)
+
+    def matches(pattern):
+        return pattern.finditer(segment, tokens) if isinstance(pattern, IndexedAliasPattern) else pattern.finditer(segment)
+
     phrases = list(CAP_PHRASE.finditer(segment))
     classifications = {match.span(): classify_phrase(match.group(0)) for match in phrases}
     person_spans = [span for span, classification in classifications.items()
@@ -3350,7 +3421,7 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
     all_registry_pattern = getattr(registry, "all_pattern", None)
     all_registry_spans = [
         match.span()
-        for match in all_registry_pattern.finditer(segment)
+        for match in matches(all_registry_pattern)
     ] if all_registry_pattern else []
     registry_pattern = getattr(registry, "pattern", None)
     registry_patterns = (
@@ -3360,7 +3431,7 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
     for direct_pattern, suppress_nested in registry_patterns:
         if not direct_pattern:
             continue
-        for match in direct_pattern.finditer(segment):
+        for match in matches(direct_pattern):
             if suppress_nested and any(
                 match.start() >= start
                 and match.end() <= end
@@ -3402,8 +3473,8 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
                     continue
                 found[entity_key(raw, "book")] = (raw, raw, "book", 0.97, False)
     book_pattern = getattr(registry, "book_pattern", None)
-    if book_pattern:
-        for match in book_pattern.finditer(segment):
+    if book_pattern and BOOK_CONTEXT_CUE.search(segment):
+        for match in matches(book_pattern):
             context_start = max(segment.rfind(mark, 0, match.start()) for mark in ".!?;\n") + 1
             context_end_candidates = [segment.find(mark, match.end()) for mark in ".!?;\n"]
             context_end = min((end for end in context_end_candidates if end >= 0), default=len(segment))
@@ -3657,6 +3728,130 @@ def claim_source_paths(input_root: Path, claims_path: Path | None) -> list[Path]
     return paths
 
 
+def extract_document(path: Path, context: dict) -> tuple[dict | None, dict]:
+    """Extract independent evidence; global counting and graph assembly stay ordered."""
+    from time import perf_counter
+    timings = collections.Counter()
+
+    def measured(name, function, *args, **kwargs):
+        started = perf_counter()
+        value = function(*args, **kwargs)
+        timings[name] += perf_counter() - started
+        return value
+
+    result = _extract_document(path, context, measured)
+    return result, dict(timings)
+
+
+def _extract_document(path: Path, context: dict, measured) -> dict | None:
+    input_root = context["input_root"]
+    registry = context["registry"]
+    relative = path.relative_to(input_root).as_posix()
+    source = relative.split("/", 1)[0]
+    parsed = None
+    fmt = ""
+    duration = None
+    pair = read_language_pair(path) if path.name == "document.json" else None
+    segment_ids = None
+    document_fields = {}
+    if pair:
+        metadata, segments = pair["metadata"], pair["segments"]
+        parsed = (metadata, segments)
+        medium = pair["document"].get("medium")
+        fmt = "transcript" if medium == "media" else "web" if medium == "web-page" else "ocr"
+        relative = pair["canonical_path"].relative_to(input_root).as_posix()
+        source = relative.split("/", 1)[0]
+        segment_ids = pair["segment_ids"]
+        document_fields = {
+            "originalLanguage": pair["document"].get("canonical_language"),
+            "availableLanguages": pair["document"].get("available_languages", [pair["document"].get("canonical_language")]),
+            "translationAvailable": bool(pair["document"].get("translation_available")),
+            "translationReviewStatus": pair["document"].get("translation_review_status", "unavailable"),
+            "canonicalPath": pair["canonical_path"].relative_to(input_root).as_posix(),
+            "translationPath": (
+                pair["translation_path"].relative_to(input_root).as_posix()
+                if pair["translation_path"] else None
+            ),
+            "pairedDocumentId": pair["document"].get("document_id"),
+            "jurisdiction": metadata.get("jurisdiction"),
+            "countryCode": metadata.get("country_code"),
+        }
+    elif path.suffix.lower() == ".txt":
+        parsed = read_ocr(path)
+        if parsed:
+            metadata, segments = parsed
+            fmt = "web" if metadata.get("medium") == "web-page" else "ocr"
+            if metadata.get("schema") in PAIRED_SEARCH_SCHEMAS:
+                segment_ids = metadata.get("segment_ids")
+                pair_root = path.parent.parent.resolve()
+                canonical_value = metadata.get("canonical_path")
+                translation_value = metadata.get("translation_path")
+                canonical_path = pair_root / canonical_value if canonical_value else None
+                translation_path = pair_root / translation_value if translation_value else path
+                canonical_relative = (
+                    canonical_path.resolve().relative_to(input_root.resolve()).as_posix()
+                    if canonical_path and canonical_path.resolve().is_relative_to(pair_root)
+                    else None
+                )
+                translation_relative = (
+                    translation_path.resolve().relative_to(input_root.resolve()).as_posix()
+                    if translation_path.resolve().is_relative_to(pair_root)
+                    else relative
+                )
+                document_fields = {
+                    "originalLanguage": metadata.get("original_language"),
+                    "availableLanguages": metadata.get("available_languages") or [metadata.get("original_language"), "en"],
+                    "translationAvailable": bool(metadata.get("translation_available", True)),
+                    "translationReviewStatus": metadata.get("translation_review_status") or "unavailable",
+                    "canonicalPath": canonical_relative,
+                    "translationPath": translation_relative,
+                    "pairedDocumentId": metadata.get("document_id"),
+                    "jurisdiction": metadata.get("jurisdiction"),
+                    "countryCode": metadata.get("country_code"),
+                }
+    else:
+        media = read_tsv(path)
+        if media:
+            metadata, segments, duration = media
+            parsed = (metadata, segments)
+            fmt = "transcript"
+    if not parsed:
+        return None
+    metadata, segments = parsed
+    doc_id = document_fields.get("pairedDocumentId") or stable_id("doc", relative)
+    title_path = Path(str(metadata.get("source_file") or path.name))
+    source_title = clean_space(str(metadata.get("source_title") or "")) or source_title_from_path(title_path)
+    result = dict(relative=relative, source=source, metadata=metadata, segments=segments,
+                  duration=duration, fmt=fmt, segment_ids=segment_ids,
+                  document_fields=document_fields, doc_id=doc_id)
+    result["discussion"] = measured("discussion", curated_discussion_matches, segments, context["curated_event_items"])
+    result["temporal"] = measured("dates", temporal_candidates, segments, metadata, doc_id, segment_ids)
+    result["title_mentions"] = measured("entities", extract_title_mentions, source_title, registry)
+    result["jurisdiction_mentions"] = measured("entities", extract_title_mentions, clean_space(str(metadata.get("jurisdiction") or "")), registry)
+    result["evidence"] = []
+    for number, segment in enumerate(segments):
+        signal_segment = segment_ids[number] if segment_ids else number
+        evidence = {}
+        evidence["qualifiers"] = measured("qualifiers", epistemic_qualifiers_for_segment,
+            segment, signal_segment, context["epistemic_rules"],
+            segments[number + 1] if number + 1 < len(segments) else "",
+            segment_ids[number + 1] if segment_ids and number + 1 < len(segment_ids) else (number + 1 if number + 1 < len(segments) else None))
+        evidence["signals"] = measured("signals", signal_observations_for_segment, segment, doc_id, source, signal_segment)
+        evidence["blood"] = measured("blood", blood_type_observations_for_segment, segment, doc_id, source, signal_segment,
+            " ".join(segments[max(0, number - 2):number]), " ".join(segments[number + 1:number + 3]))
+        evidence["clock"] = measured("clock", time_observations_for_segment, segment, doc_id, source, signal_segment,
+            context_segments=segments, context_segment_index=number)
+        evidence["topics"] = measured("topics", topic_observations_for_segment, segment, doc_id, source, signal_segment)
+        evidence["craft"] = measured("craft", craft_observations_for_segment, segment, doc_id, source, signal_segment, context["craft_taxonomy"])
+        evidence["species"] = measured("species", species_observations_for_segment, segment, doc_id, source, signal_segment,
+            context["species_taxonomy"], context["compiled_species_taxonomy"], context_segments=segments, context_segment_index=number)
+        evidence["astronomy"] = measured("astronomy", astronomy_observations_for_segment, segment, doc_id, source, signal_segment,
+            context["astronomy_taxonomy"], context["compiled_astronomy_taxonomy"], context_segments=segments, context_segment_index=number)
+        evidence["mentions"] = measured("entities", extract_mentions, segment, registry)
+        result["evidence"].append(evidence)
+    return result
+
+
 def build(
     input_root: Path,
     output: Path,
@@ -3671,7 +3866,14 @@ def build(
     reported_event_date_reviews: Path | None = None,
     claims_path: Path | None = None,
     paired_language: str = "en",
+    workers: int = 1,
+    cache_dir: Path | None = None,
+    progress_interval: float = 30,
+    profile_report: Path | None = None,
 ) -> dict:
+    run_started = time.perf_counter()
+    if workers < 1 or progress_interval < 0:
+        raise ValueError("workers must be positive and progress_interval nonnegative")
     validate_input_tree(input_root)
     paths = machine_data_paths(input_root, paired_language, claim_source_paths(input_root, claims_path))
     data_dir = Path(__file__).resolve().parents[1] / "data"
@@ -3717,87 +3919,32 @@ def build(
     segment_entity_qualifiers: dict[str, dict[str, list[dict]]] = collections.defaultdict(dict)
     lineage_records: list[dict] = []
 
-    for path in paths:
-        relative = path.relative_to(input_root).as_posix()
-        source = relative.split("/", 1)[0]
-        parsed = None
-        fmt = ""
-        duration = None
-        pair = read_language_pair(path) if path.name == "document.json" else None
-        segment_ids = None
-        document_fields = {}
-        if pair:
-            metadata, segments = pair["metadata"], pair["segments"]
-            parsed = (metadata, segments)
-            medium = pair["document"].get("medium")
-            fmt = "transcript" if medium == "media" else "web" if medium == "web-page" else "ocr"
-            relative = pair["canonical_path"].relative_to(input_root).as_posix()
-            source = relative.split("/", 1)[0]
-            segment_ids = pair["segment_ids"]
-            document_fields = {
-                "originalLanguage": pair["document"].get("canonical_language"),
-                "availableLanguages": pair["document"].get("available_languages", [pair["document"].get("canonical_language")]),
-                "translationAvailable": bool(pair["document"].get("translation_available")),
-                "translationReviewStatus": pair["document"].get("translation_review_status", "unavailable"),
-                "canonicalPath": pair["canonical_path"].relative_to(input_root).as_posix(),
-                "translationPath": (
-                    pair["translation_path"].relative_to(input_root).as_posix()
-                    if pair["translation_path"] else None
-                ),
-                "pairedDocumentId": pair["document"].get("document_id"),
-                "jurisdiction": metadata.get("jurisdiction"),
-                "countryCode": metadata.get("country_code"),
-            }
-        elif path.suffix.lower() == ".txt":
-            parsed = read_ocr(path)
-            if parsed:
-                metadata, segments = parsed
-                fmt = "web" if metadata.get("medium") == "web-page" else "ocr"
-                if metadata.get("schema") in PAIRED_SEARCH_SCHEMAS:
-                    segment_ids = metadata.get("segment_ids")
-                    pair_root = path.parent.parent.resolve()
-                    canonical_value = metadata.get("canonical_path")
-                    translation_value = metadata.get("translation_path")
-                    canonical_path = pair_root / canonical_value if canonical_value else None
-                    translation_path = pair_root / translation_value if translation_value else path
-                    canonical_relative = (
-                        canonical_path.resolve().relative_to(input_root.resolve()).as_posix()
-                        if canonical_path and canonical_path.resolve().is_relative_to(pair_root)
-                        else None
-                    )
-                    translation_relative = (
-                        translation_path.resolve().relative_to(input_root.resolve()).as_posix()
-                        if translation_path.resolve().is_relative_to(pair_root)
-                        else relative
-                    )
-                    document_fields = {
-                        "originalLanguage": metadata.get("original_language"),
-                        "availableLanguages": metadata.get("available_languages") or [metadata.get("original_language"), "en"],
-                        "translationAvailable": bool(metadata.get("translation_available", True)),
-                        "translationReviewStatus": metadata.get("translation_review_status") or "unavailable",
-                        "canonicalPath": canonical_relative,
-                        "translationPath": translation_relative,
-                        "pairedDocumentId": metadata.get("document_id"),
-                        "jurisdiction": metadata.get("jurisdiction"),
-                        "countryCode": metadata.get("country_code"),
-                    }
-        else:
-            media = read_tsv(path)
-            if media:
-                metadata, segments, duration = media
-                parsed = (metadata, segments)
-                fmt = "transcript"
-        if not parsed:
+    context = dict(input_root=input_root, registry=registry, craft_taxonomy=craft_taxonomy,
+                   species_taxonomy=species_taxonomy, astronomy_taxonomy=astronomy_taxonomy,
+                   compiled_species_taxonomy=compiled_species_taxonomy,
+                   compiled_astronomy_taxonomy=compiled_astronomy_taxonomy,
+                   epistemic_rules=epistemic_rules, curated_event_items=curated_event_items)
+    fingerprint = extraction_fingerprint(Path(__file__).parent, data_dir,
+                                         input_root / "config" / "epistemic_qualifiers.json", paired_language)
+    stats = {"workers": workers, "documents": len(paths), "cacheHits": 0, "cacheMisses": 0,
+             "extractorSeconds": {}, "setupSeconds": time.perf_counter() - run_started}
+    extraction_started = time.perf_counter()
+    for path, extracted in iter_extracted_documents(paths, context, extract_document, fingerprint,
+                                                    cache_dir, workers, progress_interval, stats):
+        if extracted is None:
             continue
-        metadata, segments = parsed
-        doc_id = document_fields.get("pairedDocumentId") or stable_id("doc", relative)
-        for event_title, support in curated_discussion_matches(segments, curated_event_items).items():
+        relative, source = extracted["relative"], extracted["source"]
+        metadata, segments = extracted["metadata"], extracted["segments"]
+        duration, fmt = extracted["duration"], extracted["fmt"]
+        segment_ids, document_fields = extracted["segment_ids"], extracted["document_fields"]
+        doc_id = extracted["doc_id"]
+        for event_title, support in extracted["discussion"].items():
             curated_discussion_support[event_title].append({"documentId": doc_id, **support})
         words = sum(len(segment.split()) for segment in segments)
         title_path = Path(str(metadata.get("source_file") or path.name))
         source_title = clean_space(str(metadata.get("source_title") or "")) or source_title_from_path(title_path)
         title = source_title if metadata.get("source_title") else title_from_path(title_path)
-        document_date, document_events, review_candidates = temporal_candidates(segments, metadata, doc_id, segment_ids)
+        document_date, document_events, review_candidates = extracted["temporal"]
         document = {
             "id": doc_id,
             "title": title,
@@ -3860,7 +4007,7 @@ def build(
         source_counts[source] += 1
         source_words[source] += words
         title_sid = f"{doc_id}:title"
-        for raw, canonical, category, confidence, curated in extract_title_mentions(source_title, registry):
+        for raw, canonical, category, confidence, curated in extracted["title_mentions"]:
             key = f"{category}:{entity_key(canonical, category)}"
             document_title_entities[doc_id].append(key)
             candidate = candidates.get(key)
@@ -3874,7 +4021,7 @@ def build(
             candidate.title_documents.add(doc_id)
         jurisdiction = clean_space(str(metadata.get("jurisdiction") or ""))
         jurisdiction_sid = f"{doc_id}:metadata:jurisdiction"
-        for raw, canonical, category, confidence, curated in extract_title_mentions(jurisdiction, registry):
+        for raw, canonical, category, confidence, curated in extracted["jurisdiction_mentions"]:
             if category != "location":
                 continue
             key = f"{category}:{entity_key(canonical, category)}"
@@ -3897,13 +4044,8 @@ def build(
         for number, segment in enumerate(segments):
             sid = f"{doc_id}:{segment_ids[number]}" if segment_ids else f"{doc_id}:{number}"
             signal_segment = segment_ids[number] if segment_ids else number
-            detected_qualifiers = epistemic_qualifiers_for_segment(
-                segment,
-                signal_segment,
-                epistemic_rules,
-                segments[number + 1] if number + 1 < len(segments) else "",
-                segment_ids[number + 1] if segment_ids and number + 1 < len(segment_ids) else (number + 1 if number + 1 < len(segments) else None),
-            )
+            evidence = extracted["evidence"][number]
+            detected_qualifiers = evidence["qualifiers"]
             if detected_qualifiers:
                 document_qualifiers.extend(detected_qualifiers)
                 for qualifier in detected_qualifiers:
@@ -3915,36 +4057,21 @@ def build(
                     if qualifier not in target_qualifiers:
                         target_qualifiers.append(qualifier)
             qualifiers = epistemic_qualifiers_by_segment.get(sid, [])
-            signal_observations.extend(signal_observations_for_segment(segment, doc_id, source, signal_segment))
-            blood_type_observations.extend(blood_type_observations_for_segment(
-                segment, doc_id, source, signal_segment,
-                " ".join(segments[max(0, number - 2):number]),
-                " ".join(segments[number + 1:number + 3]),
-            ))
-            clock_observations.extend(time_observations_for_segment(
-                segment, doc_id, source, signal_segment,
-                context_segments=segments, context_segment_index=number,
-            ))
-            for topic, rows in topic_observations_for_segment(segment, doc_id, source, signal_segment).items():
+            signal_observations.extend(evidence["signals"])
+            blood_type_observations.extend(evidence["blood"])
+            clock_observations.extend(evidence["clock"])
+            for topic, rows in evidence["topics"].items():
                 topic_observations[topic].extend(rows)
-            observations, review_items = craft_observations_for_segment(segment, doc_id, source, signal_segment, craft_taxonomy)
+            observations, review_items = evidence["craft"]
             craft_observations.extend(observations)
             craft_candidates.extend(review_items)
-            species_matches, species_review_items = species_observations_for_segment(
-                segment, doc_id, source, signal_segment, species_taxonomy, compiled_species_taxonomy,
-                context_segments=segments,
-                context_segment_index=number,
-            )
+            species_matches, species_review_items = evidence["species"]
             species_observations.extend(species_matches)
             species_candidates.extend(species_review_items)
-            astronomy_matches, astronomy_review_items = astronomy_observations_for_segment(
-                segment, doc_id, source, signal_segment, astronomy_taxonomy, compiled_astronomy_taxonomy,
-                context_segments=segments,
-                context_segment_index=number,
-            )
+            astronomy_matches, astronomy_review_items = evidence["astronomy"]
             astronomy_observations.extend(astronomy_matches)
             astronomy_candidates.extend(astronomy_review_items)
-            mentions = extract_mentions(segment, registry)
+            mentions = evidence["mentions"]
             keys = []
             for raw, canonical, category, confidence, curated in mentions:
                 key = f"{category}:{entity_key(canonical, category)}"
@@ -3969,6 +4096,10 @@ def build(
             document["epistemicQualifiers"] = document_qualifiers
             document["epistemicQualifierCount"] = len(document_qualifiers)
 
+    stats["extractionAndReductionSeconds"] = time.perf_counter() - extraction_started
+    assembly_started = time.perf_counter()
+    if progress_interval:
+        print("[catalog] extraction complete; assembling global relationships and writing catalogs", file=sys.stderr, flush=True)
     source_families, source_family_assignments = source_lineage_assignments(lineage_records)
     family_by_document = {
         document_id: assignment["id"]
@@ -4344,6 +4475,14 @@ def build(
             "generatedAt": catalog["generatedAt"],
             "input": catalog_input,
         })
+    stats["assemblySeconds"] = time.perf_counter() - assembly_started
+    stats["totalSeconds"] = time.perf_counter() - run_started
+    if profile_report:
+        profile_report.parent.mkdir(parents=True, exist_ok=True)
+        profile_report.write_text(json.dumps(stats, indent=2) + "\n", encoding="utf-8")
+    if progress_interval:
+        print("[catalog] complete " + json.dumps(stats, sort_keys=True), file=sys.stderr, flush=True)
+
     return catalog
 
 
@@ -4630,6 +4769,10 @@ def main() -> None:
         default=Path(__file__).resolve().parents[1] / "data" / "claims.json",
         help="Validate claim evidence bindings against the input checkout.",
     )
+    parser.add_argument("--workers", type=int, default=1, help="Bounded document extraction processes (default: 1).")
+    parser.add_argument("--cache-dir", type=Path, help="Persistent document checkpoints; omit for uncached extraction.")
+    parser.add_argument("--progress-interval", type=float, default=30, help="Progress heartbeat seconds; 0 disables logging.")
+    parser.add_argument("--profile-report", type=Path, help="Write phase and summed worker extractor timings as JSON.")
     args = parser.parse_args()
     catalog = build(
         args.input.absolute(),
@@ -4644,6 +4787,8 @@ def main() -> None:
         reported_event_date_reviews=args.reported_event_date_reviews.resolve(),
         claims_path=args.claims.resolve(),
         paired_language=args.paired_language,
+        workers=args.workers, cache_dir=args.cache_dir,
+        progress_interval=args.progress_interval, profile_report=args.profile_report,
     )
     print(json.dumps({"output": str(args.output), **catalog["counts"]}, indent=2))
 
