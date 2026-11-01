@@ -1,4 +1,5 @@
 import itertools
+import gzip
 import json
 from pathlib import Path
 import random
@@ -6,6 +7,7 @@ import re
 import tempfile
 import time
 import unittest
+import zlib
 from unittest.mock import patch
 
 from scripts.build_catalog import IndexedAliasPattern, build
@@ -48,6 +50,15 @@ class AliasIndexTests(unittest.TestCase):
 
 
 class ExtractionCacheTests(unittest.TestCase):
+    def test_malformed_envelopes_and_compression_errors_are_cache_misses(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "checkpoint.gz"
+            with gzip.open(path, "wt") as stream:
+                json.dump({"payload": 42, "key": "key", "schema": "invalid", "sha256": "bad"}, stream)
+            self.assertEqual(read_checkpoint(path, "key"), (False, None))
+            with patch("scripts.extraction_runtime.gzip.open", side_effect=zlib.error("corrupt stream")):
+                self.assertEqual(read_checkpoint(path, "key"), (False, None))
+
     def test_slow_first_document_does_not_idle_workers_or_reorder_output(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

@@ -17,6 +17,7 @@ import sys
 import tempfile
 import time
 import unicodedata
+import zlib
 
 
 CACHE_SCHEMA = "graph-document-extraction/v1"
@@ -86,11 +87,12 @@ def read_checkpoint(path: Path, key: str):
         with gzip.open(path, "rt", encoding="utf-8") as stream:
             envelope = json.load(stream)
         payload = envelope["payload"]
-        if (envelope["schema"] != CACHE_SCHEMA or envelope["key"] != key
+        if (not isinstance(payload, str)
+                or envelope["schema"] != CACHE_SCHEMA or envelope["key"] != key
                 or hashlib.sha256(payload.encode()).hexdigest() != envelope["sha256"]):
             return False, None
         return True, json.loads(payload)
-    except (OSError, EOFError, ValueError, KeyError, TypeError):
+    except (OSError, EOFError, ValueError, KeyError, TypeError, zlib.error):
         return False, None
 
 
