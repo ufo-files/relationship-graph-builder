@@ -10,9 +10,11 @@ from __future__ import annotations
 
 import argparse
 import collections
+import contextlib
 import datetime as dt
 import difflib
 import functools
+import gc
 import hashlib
 import heapq
 import json
@@ -3866,6 +3868,21 @@ def _extract_document(path: Path, context: dict, measured) -> dict | None:
     return result
 
 
+@contextlib.contextmanager
+def catalog_gc_policy():
+    # Most graph containers survive until the entire build finishes. Repeated
+    # generation-2 scans page this live graph back in without reclaiming it.
+    # Keep young-generation collection for temporary cycles; restore the caller's
+    # policy on success or failure, after the build's local graph is released.
+    thresholds = gc.get_threshold()
+    gc.set_threshold(50_000, 10, 1_000_000)
+    try:
+        yield
+    finally:
+        gc.set_threshold(*thresholds)
+
+
+@catalog_gc_policy()
 def build(
     input_root: Path,
     output: Path,

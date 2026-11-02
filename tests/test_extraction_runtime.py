@@ -1,5 +1,6 @@
 import itertools
 import gzip
+import gc
 import json
 from pathlib import Path
 import random
@@ -10,7 +11,7 @@ import unittest
 import zlib
 from unittest.mock import patch
 
-from scripts.build_catalog import Candidate, IndexedAliasPattern, build, context_key, significance_metrics, write_clock_catalog
+from scripts.build_catalog import Candidate, IndexedAliasPattern, build, catalog_gc_policy, context_key, significance_metrics, write_clock_catalog
 from scripts.benchmark_catalog import compare_outputs
 from scripts.extraction_runtime import (
     document_key, extraction_fingerprint, extract_one, read_checkpoint,
@@ -28,6 +29,23 @@ def delayed_extraction(path, context):
     else:
         path.with_suffix(".done").touch()
     return {"name": path.name}, {}
+
+
+class CatalogGCPolicyTests(unittest.TestCase):
+    def test_restores_callers_policy_after_success_and_error(self):
+        original = gc.get_threshold()
+        enabled = gc.isenabled()
+        for fail in (False, True):
+            try:
+                with catalog_gc_policy():
+                    self.assertEqual(gc.isenabled(), enabled)
+                    self.assertGreater(gc.get_threshold()[2], original[2])
+                    if fail:
+                        raise RuntimeError("build failed")
+            except RuntimeError:
+                pass
+            self.assertEqual(gc.get_threshold(), original)
+            self.assertEqual(gc.isenabled(), enabled)
 
 
 class AliasIndexTests(unittest.TestCase):

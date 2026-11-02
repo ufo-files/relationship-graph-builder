@@ -37,6 +37,10 @@ source appears. Normalized context strings are shared across entities. Empty
 qualifier containers are not allocated, and lineage transcript text is released
 after family assignment. These changes reduce memory pressure without changing
 evidence counts or weighting.
+During a build, garbage collection keeps collecting young temporary objects but
+defers repeated full-generation scans of the live graph. The caller's original
+thresholds are restored on success or failure. Single-source CI jobs check out
+only their source directory instead of downloading every source.
 Rejected and unpublished candidate state is released once its summary counts
 are retained. Duplicate detection precomputes normalized names and uses
 SequenceMatcher's upper bounds to skip pairs that cannot meet the existing

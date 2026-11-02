@@ -108,6 +108,7 @@ jobs:
           if ! git diff --quiet "$base_sha" "$head_sha" -- \
             .machine-data-revision \
             scripts/build_catalog.py \
+            scripts/extraction_runtime.py \
             data/book_catalog.json \
             data/astronomy_taxonomy.json \
             data/case_reviews.json \
@@ -171,6 +172,7 @@ jobs:
           persist-credentials: false
           repository: ufo-files/machine-data
           path: _machine-data
+          sparse-checkout: ${{ matrix.source }}
 
       - name: Set up Python
         uses: actions/setup-python@v7
