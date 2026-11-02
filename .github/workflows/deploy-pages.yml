@@ -17,7 +17,7 @@ jobs:
     concurrency:
       group: relationship-graph-pages-deploy
       cancel-in-progress: false
-    # Deploy independently while the self-hosted runner rebuilds the catalog.
+    # Deploy independently while the hosted workflow rebuilds the catalog.
     runs-on: ubuntu-latest
     permissions:
       contents: read

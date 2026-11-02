@@ -247,7 +247,14 @@ class ExtractionCacheTests(unittest.TestCase):
                     "schema": "ufo-files-archive-media-transcripts/v1", "source_file": f"{number}.mp4",
                     "source_bytes": 128, "created_at": "2026-08-24T00:00:00Z", "backend": "test",
                 }))
-            for mode, workers, cache in [("serial", 1, None), ("cold", 2, root / "cache"), ("warm", 2, root / "cache")]:
+            preparation = root / "preparation"
+            prepared = build(root / "input", preparation / "catalog.json", 100, 100,
+                             require_data=True, workers=2, cache_dir=root / "prepared-cache",
+                             extract_only=True, progress_interval=0)
+            self.assertTrue(prepared["extractionOnly"])
+            self.assertEqual(prepared["counts"]["documents"], 3)
+            self.assertFalse(preparation.exists(), "Extraction must not publish partial catalogs")
+            for mode, workers, cache in [("serial", 1, None), ("cold", 2, root / "cache"), ("warm", 2, root / "cache"), ("prepared", 1, root / "prepared-cache")]:
                 output = root / mode
                 profile = root / f"{mode}-profile.json"
                 build(root / "input", output / "catalog.json", 100, 100, require_data=True,
@@ -256,7 +263,7 @@ class ExtractionCacheTests(unittest.TestCase):
                 if mode != "serial":
                     compare_outputs(root / "serial", output)
                 stats = json.loads(profile.read_text())
-                self.assertEqual(stats["cacheHits"], 3 if mode == "warm" else 0)
+                self.assertEqual(stats["cacheHits"], 3 if mode in {"warm", "prepared"} else 0)
 
 
 if __name__ == "__main__":

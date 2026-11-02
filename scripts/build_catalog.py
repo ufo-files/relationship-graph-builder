@@ -3901,10 +3901,13 @@ def build(
     cache_dir: Path | None = None,
     progress_interval: float = 30,
     profile_report: Path | None = None,
+    extract_only: bool = False,
 ) -> dict:
     run_started = time.perf_counter()
     if workers < 1 or progress_interval < 0:
         raise ValueError("workers must be positive and progress_interval nonnegative")
+    if extract_only and cache_dir is None:
+        raise ValueError("extract-only requires a cache directory")
     validate_input_tree(input_root)
     paths = machine_data_paths(input_root, paired_language, claim_source_paths(input_root, claims_path))
     data_dir = Path(__file__).resolve().parents[1] / "data"
@@ -3959,6 +3962,18 @@ def build(
                                          input_root / "config" / "epistemic_qualifiers.json", paired_language)
     stats = {"workers": workers, "documents": len(paths), "cacheHits": 0, "cacheMisses": 0,
              "extractorSeconds": {}, "setupSeconds": time.perf_counter() - run_started}
+    if extract_only:
+        if require_data and not paths:
+            raise ValueError("No input documents available for extraction")
+        for _path, _extracted in iter_extracted_documents(
+                paths, context, extract_document, fingerprint, cache_dir,
+                workers, progress_interval, stats):
+            pass
+        stats["totalSeconds"] = time.perf_counter() - run_started
+        if profile_report:
+            profile_report.parent.mkdir(parents=True, exist_ok=True)
+            profile_report.write_text(json.dumps(stats, indent=2) + "\n", encoding="utf-8")
+        return {"counts": {"documents": len(paths)}, "extractionOnly": True}
     extraction_started = time.perf_counter()
     for path, extracted in iter_extracted_documents(paths, context, extract_document, fingerprint,
                                                     cache_dir, workers, progress_interval, stats):
@@ -4850,6 +4865,7 @@ def main() -> None:
         help="Validate claim evidence bindings against the input checkout.",
     )
     parser.add_argument("--workers", type=int, default=1, help="Bounded document extraction processes (default: 1).")
+    parser.add_argument("--extract-only", action="store_true", help="Populate verified document checkpoints without assembling or publishing a catalog.")
     parser.add_argument("--cache-dir", type=Path, help="Persistent document checkpoints; omit for uncached extraction.")
     parser.add_argument("--progress-interval", type=float, default=30, help="Progress heartbeat seconds; 0 disables logging.")
     parser.add_argument("--profile-report", type=Path, help="Write phase and summed worker extractor timings as JSON.")
@@ -4868,7 +4884,7 @@ def main() -> None:
         claims_path=args.claims.resolve(),
         paired_language=args.paired_language,
         workers=args.workers, cache_dir=args.cache_dir,
-        progress_interval=args.progress_interval, profile_report=args.profile_report,
+        progress_interval=args.progress_interval, profile_report=args.profile_report, extract_only=args.extract_only,
     )
     print(json.dumps({"output": str(args.output), **catalog["counts"]}, indent=2))
 
