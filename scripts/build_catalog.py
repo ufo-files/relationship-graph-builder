@@ -2790,14 +2790,11 @@ class Candidate:
     variants: collections.Counter = field(default_factory=collections.Counter)
     documents: set[str] = field(default_factory=set)
     sources: set[str] = field(default_factory=set)
-    segments: set[str] = field(default_factory=set)
     examples: list[dict] = field(default_factory=list)
     source_mentions: collections.Counter = field(default_factory=collections.Counter)
     source_documents: dict[str, set[str]] = field(default_factory=lambda: collections.defaultdict(set))
     context_mentions: collections.Counter = field(default_factory=collections.Counter)
-    context_documents: dict[str, set[str]] = field(default_factory=lambda: collections.defaultdict(set))
     source_context_mentions: dict[str, collections.Counter] = field(default_factory=lambda: collections.defaultdict(collections.Counter))
-    source_context_documents: dict[str, dict[str, set[str]]] = field(default_factory=lambda: collections.defaultdict(lambda: collections.defaultdict(set)))
     context_document_weights: dict[str, dict[str, float]] = field(default_factory=lambda: collections.defaultdict(dict))
     source_context_document_weights: dict[str, dict[str, dict[str, float]]] = field(default_factory=lambda: collections.defaultdict(lambda: collections.defaultdict(dict)))
     administrative_contexts: set[str] = field(default_factory=set)
@@ -2806,17 +2803,23 @@ class Candidate:
     title_documents: set[str] = field(default_factory=set)
 
     def add(self, raw: str, doc_id: str, source: str, segment_id: str, excerpt: str, confidence: float, evidence_weight: float = 1.0, qualifiers: list[dict] | None = None) -> None:
-        context = context_key(excerpt)
+        context = sys.intern(context_key(excerpt))
         self.variants[clean_space(raw)] += 1
         self.documents.add(doc_id)
         self.sources.add(source)
-        self.segments.add(segment_id)
         self.source_mentions[source] += 1
         self.source_documents[source].add(doc_id)
         self.context_mentions[context] += 1
-        self.context_documents[context].add(doc_id)
         self.source_context_mentions[source][context] += 1
-        self.source_context_documents[source][context].add(doc_id)
+        source_contexts = self.source_context_document_weights[source]
+        if context not in source_contexts:
+            source_contexts[context] = {}
+            if context not in self.context_document_weights:
+                # Most contexts belong to one source. Share its membership and
+                # weights until a second source requires a separate aggregate.
+                self.context_document_weights[context] = source_contexts[context]
+            else:
+                self.context_document_weights[context] = dict(self.context_document_weights[context])
         current_weight = self.context_document_weights[context].get(doc_id, 1.0)
         self.context_document_weights[context][doc_id] = min(current_weight, evidence_weight)
         source_weight = self.source_context_document_weights[source][context].get(doc_id, 1.0)
@@ -3014,20 +3017,20 @@ def significance_metrics(
 ) -> dict:
     repeated_contexts = {
         context
-        for context, documents in candidate.context_documents.items()
+        for context, documents in candidate.context_document_weights.items()
         if len(documents) >= REPEATED_CONTEXT_DOCUMENT_FLOOR
     }
     if source is None:
         mentions = candidate.mentions
         coverage_documents = candidate.documents
         context_mentions = candidate.context_mentions
-        context_documents = candidate.context_documents
+        context_documents = candidate.context_document_weights
         context_weights = candidate.context_document_weights
     else:
         mentions = candidate.source_mentions[source]
         coverage_documents = candidate.source_documents[source]
         context_mentions = candidate.source_context_mentions[source]
-        context_documents = candidate.source_context_documents[source]
+        context_documents = candidate.source_context_document_weights[source]
         context_weights = candidate.source_context_document_weights[source]
 
     adjusted_mentions = 0
@@ -4088,8 +4091,9 @@ def build(
                         candidate.canonical = canonical
                     candidate.curated = candidate.curated or curated
                 claim_qualifiers = qualifiers_for_claim(qualifiers, raw, canonical, signal_segment)
-                existing_qualifiers = segment_entity_qualifiers[sid].setdefault(key, [])
-                existing_qualifiers.extend(item for item in claim_qualifiers if item not in existing_qualifiers)
+                if claim_qualifiers:
+                    existing_qualifiers = segment_entity_qualifiers[sid].setdefault(key, [])
+                    existing_qualifiers.extend(item for item in claim_qualifiers if item not in existing_qualifiers)
                 evidence_weight = min((item["evidenceWeight"] for item in claim_qualifiers), default=1.0)
                 candidate.add(raw, doc_id, source, sid, segment, confidence, evidence_weight, claim_qualifiers)
                 keys.append(key)
@@ -4106,6 +4110,7 @@ def build(
     if progress_interval:
         print("[catalog] extraction complete; assembling global relationships and writing catalogs", file=sys.stderr, flush=True)
     source_families, source_family_assignments = source_lineage_assignments(lineage_records)
+    lineage_records.clear()
     family_by_document = {
         document_id: assignment["id"]
         for document_id, assignment in source_family_assignments.items()
@@ -4242,8 +4247,8 @@ def build(
                 source = document_sources[document_id]
                 stat["segments"].add(sid)
                 shared_qualifiers = [
-                    item for item in segment_entity_qualifiers[sid].get(left, [])
-                    if item in segment_entity_qualifiers[sid].get(right, [])
+                    item for item in segment_entity_qualifiers.get(sid, {}).get(left, [])
+                    if item in segment_entity_qualifiers.get(sid, {}).get(right, [])
                 ]
                 evidence_weight = min((item["evidenceWeight"] for item in shared_qualifiers), default=1.0)
                 stat["weightedEvidence"] += evidence_weight
