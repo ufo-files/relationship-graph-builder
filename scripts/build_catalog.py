@@ -2625,6 +2625,26 @@ def classify_phrase(raw: str) -> tuple[str, float] | None:
     return classify_person_name(raw)
 
 
+def alias_tokens(text: str) -> set[str]:
+    # Python IGNORECASE also equates dotted/dotless I with ASCII I.
+    normalized = text.translate(str.maketrans({"İ": "I", "ı": "i"})).casefold()
+    return set(re.findall(r"\w+", normalized))
+
+
+def alias_trigger_tokens(values: Iterable[str]) -> set[str]:
+    # Any complete alias match necessarily contains its first word token.
+    tokens = set()
+    for value in values:
+        normalized = value.translate(str.maketrans({"İ": "I", "ı": "i"})).casefold()
+        match = re.search(r"\w+", normalized)
+        if match:
+            tokens.add(match.group())
+    return tokens
+
+
+KNOWN_TRIGGER_TOKENS = alias_trigger_tokens(KNOWN)
+
+
 class EntityRegistry(dict[str, tuple[str, str]]):
     """Reviewed entity identities plus a compiled, boundary-aware alias matcher."""
 
@@ -2708,6 +2728,12 @@ def load_registry(paths: Iterable[Path]) -> EntityRegistry:
     registry.reject_generational_suffix_keys = reject_generational_suffix_keys
     registry.book_pattern = registry_alias_pattern(book_aliases, ignore_case=True)
     registry.metadata = metadata
+    registry.trigger_tokens = {
+        "pattern": alias_trigger_tokens(matchable_aliases),
+        "case_sensitive_pattern": alias_trigger_tokens(case_sensitive_aliases),
+        "all_pattern": alias_trigger_tokens(case_sensitive_aliases),
+        "book_pattern": alias_trigger_tokens(book_aliases),
+    }
     return registry
 
 
@@ -3336,8 +3362,14 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
     classifications = {match.span(): classify_phrase(match.group(0)) for match in phrases}
     person_spans = [span for span, classification in classifications.items()
                     if classification and classification[0] == "person"]
+    tokens = alias_tokens(segment)
+    def matching_pattern(name):
+        pattern = getattr(registry, name, None)
+        triggers = getattr(registry, "trigger_tokens", {}).get(name)
+        return pattern if triggers is None or not triggers.isdisjoint(tokens) else None
+
     known_spans = []
-    for match in KNOWN_PATTERN.finditer(segment):
+    for match in KNOWN_PATTERN.finditer(segment) if not KNOWN_TRIGGER_TOKENS.isdisjoint(tokens) else ():
         raw = match.group(0)
         lookup = KNOWN_LOOKUP.get(known_lookup_key(raw))
         if lookup is None:
@@ -3347,14 +3379,14 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
         known_spans.append(match.span())
         canonical, category = KNOWN[lookup]
         found[entity_key(canonical, category)] = (raw, canonical, category, 0.99, True)
-    all_registry_pattern = getattr(registry, "all_pattern", None)
+    all_registry_pattern = matching_pattern("all_pattern")
     all_registry_spans = [
         match.span()
         for match in all_registry_pattern.finditer(segment)
     ] if all_registry_pattern else []
-    registry_pattern = getattr(registry, "pattern", None)
+    registry_pattern = matching_pattern("pattern")
     registry_patterns = (
-        (getattr(registry, "case_sensitive_pattern", None), False),
+        (matching_pattern("case_sensitive_pattern"), False),
         (registry_pattern, True),
     )
     for direct_pattern, suppress_nested in registry_patterns:
@@ -3401,7 +3433,7 @@ def extract_mentions(segment: str, registry: dict[str, tuple[str, str]]) -> list
                 if not supported_unreviewed_book_match(match, segment):
                     continue
                 found[entity_key(raw, "book")] = (raw, raw, "book", 0.97, False)
-    book_pattern = getattr(registry, "book_pattern", None)
+    book_pattern = matching_pattern("book_pattern")
     if book_pattern:
         for match in book_pattern.finditer(segment):
             context_start = max(segment.rfind(mark, 0, match.start()) for mark in ".!?;\n") + 1
