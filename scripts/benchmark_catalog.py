@@ -57,7 +57,14 @@ def main():
     args.output.mkdir(parents=True, exist_ok=True)
     claims = args.output / "empty-claims.json"
     claims.write_text('{"schema":"ufo-files-claims/v1","claims":[]}\n')
-    modes = ["baseline", "serial", "cold", "warm"] if args.mode == "all" else [args.mode]
+    # Every measured mode needs a baseline, and warm needs a priming build.
+    modes = {
+        "all": ["baseline", "serial", "cold", "warm"],
+        "baseline": ["baseline"],
+        "serial": ["baseline", "serial"],
+        "cold": ["baseline", "cold"],
+        "warm": ["baseline", "cold", "warm"],
+    }[args.mode]
     summary = {}
     for mode in modes:
         output = args.output / mode

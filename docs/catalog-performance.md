@@ -110,6 +110,8 @@ claims for a partial sample; full production validation must use the normal
 claims and `--require-data`. Choose a fresh output directory for each benchmark.
 Add `--profile` in a separate run to capture cProfile reports for the serial
 modes; do not compare profiled and unprofiled durations as speedup measurements.
+Selecting `--mode serial`, `cold`, or `warm` also creates the comparison
+baseline. Selecting `warm` first runs a cold build to populate its cache.
 
 Regression tests cover Unicode and overlapping aliases, ordered parallel output,
 cache invalidation, corrupt entries, input changes during extraction, and atomic

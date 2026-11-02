@@ -5,6 +5,8 @@ import json
 from pathlib import Path
 import random
 import re
+import subprocess
+import sys
 import tempfile
 import time
 import unittest
@@ -31,6 +33,36 @@ def delayed_extraction(path, context):
     return {"name": path.name}, {}
 
 
+class BenchmarkCLITests(unittest.TestCase):
+    def test_standalone_modes_create_baseline_and_prime_warm_cache(self):
+        repo = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "input" / "Example"
+            source.mkdir(parents=True)
+            transcript = source / "example.tsv"
+            transcript.write_text("start\tend\ttext\n0\t4000\tNASA and Avi Loeb discussed Mars.\n")
+            transcript.with_suffix(".source.json").write_text(json.dumps({
+                "schema": "ufo-files-archive-media-transcripts/v1",
+                "source_file": "example.mp4", "source_bytes": 128, "backend": "test",
+            }))
+            for mode in ("serial", "cold", "warm"):
+                with self.subTest(mode=mode):
+                    output = root / mode
+                    subprocess.run([
+                        sys.executable, str(repo / "scripts/benchmark_catalog.py"),
+                        "--input", str(root / "input"), "--output", str(output),
+                        "--baseline", "HEAD", "--mode", mode, "--workers", "2",
+                    ], cwd=repo, check=True, capture_output=True, text=True, timeout=120)
+                    result = json.loads((output / f"{mode}-result.json").read_text())
+                    self.assertGreater(result["equivalentFiles"], 0)
+                    self.assertTrue((output / "baseline/catalog.json").is_file())
+                    if mode == "warm":
+                        timings = json.loads((output / "warm-timings.json").read_text())
+                        self.assertEqual(timings["cacheHits"], 1)
+                        self.assertEqual(timings["cacheMisses"], 0)
+
+
 class CatalogGCPolicyTests(unittest.TestCase):
     def test_restores_callers_policy_after_success_and_error(self):
         original = gc.get_threshold()
@@ -39,7 +71,9 @@ class CatalogGCPolicyTests(unittest.TestCase):
             try:
                 with catalog_gc_policy():
                     self.assertEqual(gc.isenabled(), enabled)
-                    self.assertGreater(gc.get_threshold()[2], original[2])
+                    # Python 3.14 ignores threshold2; these thresholds remain
+                    # effective on both the two- and three-generation GCs.
+                    self.assertEqual(gc.get_threshold()[:2], (50_000, 10))
                     if fail:
                         raise RuntimeError("build failed")
             except RuntimeError:
