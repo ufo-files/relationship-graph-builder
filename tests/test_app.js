@@ -5200,3 +5200,32 @@ test("whitepaper connects Roswell to the opening and cites historical context se
     assert.ok(!paper.sources[id], "Web context must not masquerade as pinned corpus evidence");
   }
 });
+
+test("clock loader reassembles shards, retries failures, and retains inline compatibility", async () => {
+  const source = fs.readFileSync("app.js", "utf8");
+  const loader = source.slice(source.indexOf("async function ensureClockCatalog()"), source.indexOf("function filteredClockMentions("));
+  const documents = [{ id: "doc", title: "Interview" }];
+  const observations = Array.from({ length: 150000 }, (_, id) => ({ id, documentId: "doc" }));
+  const manifest = { schema: "ufo-files-clock-times/v1", documents: [], observations: [], counts: { documents: 1, mentions: observations.length }, parts: [
+    { path: "clock-mentions/documents-001.json", field: "documents", items: 1 },
+    { path: "clock-mentions/observations-001.json", field: "observations", items: observations.length }
+  ] };
+  let failed = true;
+  const state = {};
+  const context = vm.createContext({ state, fetch: async url => ({ ok: !(failed && url.includes("observations-")), status: 503,
+    json: async () => url === "data/clock_times.json" ? structuredClone(manifest) : url.includes("documents-") ? documents : observations }) });
+  vm.runInContext(loader, context);
+  await assert.rejects(context.ensureClockCatalog(), /Clock shard 503/);
+  assert.equal(state.clockPromise, null);
+  failed = false;
+  const result = await context.ensureClockCatalog();
+  assert.equal(result.observations.length, 150000);
+  assert.deepEqual(result.documents, documents);
+  assert.deepEqual(result.observations, observations);
+  state.clockCatalog = null; state.clockPromise = null;
+  manifest.parts[1].items = 1;
+  await assert.rejects(context.ensureClockCatalog(), /Clock shard count mismatch/);
+  delete manifest.parts;
+  manifest.documents = documents; manifest.observations = observations;
+  assert.equal((await context.ensureClockCatalog()).observations.length, 150000);
+});

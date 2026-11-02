@@ -59,12 +59,20 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       catalog: ${{ steps.detect.outputs.catalog }}
+      input_revision: ${{ steps.input.outputs.revision }}
     steps:
       - name: Check out builder comparison
         uses: actions/checkout@v7
         with:
           persist-credentials: false
           fetch-depth: 2
+
+      - name: Pin machine-data for every build stage
+        id: input
+        run: |
+          revision="$(git ls-remote https://github.com/ufo-files/machine-data.git refs/heads/main | cut -f1)"
+          test -n "$revision"
+          echo "revision=$revision" >> "$GITHUB_OUTPUT"
 
       - name: Detect catalog inputs
         id: detect
@@ -108,6 +116,8 @@ jobs:
           if ! git diff --quiet "$base_sha" "$head_sha" -- \
             .machine-data-revision \
             scripts/build_catalog.py \
+            scripts/extraction_runtime.py \
+            .github/workflows/rebuild-graph.yml \
             data/book_catalog.json \
             data/astronomy_taxonomy.json \
             data/case_reviews.json \
@@ -171,11 +181,12 @@ jobs:
           persist-credentials: false
           repository: ufo-files/machine-data
           path: _machine-data
+          sparse-checkout: ${{ matrix.source }}
 
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
-          python-version: "3.13"
+          python-version: "3.13.17"
 
       - name: Build ${{ matrix.source }} catalog
         shell: bash
@@ -191,6 +202,7 @@ jobs:
             --input-repository ufo-files/machine-data \
             --input-revision "$revision" \
             --paired-language en \
+            --workers 2 \
             --claims _empty-claims.json \
             --output _source-output/catalog.json \
             --duplicate-report _source-output/duplicate_candidates.json \
@@ -224,7 +236,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
-          python-version: "3.13"
+          python-version: "3.13.17"
 
       - name: Set up Node
         uses: actions/setup-node@v6
@@ -257,13 +269,87 @@ jobs:
         run: |
           node --test tests/test_app.js
 
-  catalog-validate:
+  extract:
     needs: [changes, validate]
+    if: needs.changes.outputs.catalog == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - name: Reserve disk for source data and checkpoint transfer
+        run: |
+          sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc \
+            /usr/local/.ghcup /opt/hostedtoolcache/CodeQL \
+            /usr/local/share/powershell /usr/share/swift /opt/az
+          sudo docker image prune --all --force
+          available_kib=$(df --output=avail / | tail -1)
+          if (( available_kib < 32 * 1024 * 1024 )); then
+            echo "Not enough disk for source data and checkpoint transfer" >&2
+            df -h
+            exit 1
+          fi
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+          repository: ufo-files/machine-data
+          ref: ${{ needs.changes.outputs.input_revision }}
+          path: _machine-data
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13.17"
+      - name: Extract independent document evidence
+        run: |
+          python3 scripts/build_catalog.py --input _machine-data \
+            --paired-language en --workers 4 --extract-only --require-data \
+            --cache-dir "$RUNNER_TEMP/extraction" \
+            --profile-report "$RUNNER_TEMP/extraction-profile.json"
+      - name: Package verified checkpoints
+        run: tar -cf "$RUNNER_TEMP/extraction.tar" -C "$RUNNER_TEMP/extraction" .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: document-extraction
+          path: ${{ runner.temp }}/extraction.tar
+          compression-level: 0
+          retention-days: 1
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: extraction-diagnostics
+          path: ${{ runner.temp }}/extraction-profile.json
+          retention-days: 7
+          if-no-files-found: ignore
+
+  catalog-validate:
+    needs: [changes, validate, extract]
     if: >-
       github.event_name == 'pull_request' &&
       needs.changes.outputs.catalog == 'true'
     runs-on: ubuntu-latest
     steps:
+      - name: Prepare memory for full-corpus validation
+        shell: bash
+        run: |
+          # The full graph exceeds the hosted runner's 16 GiB RAM. These SDKs
+          # are unused by this Python/Node job; reclaim space on this disposable VM.
+          sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc \
+            /usr/local/.ghcup /opt/hostedtoolcache/CodeQL \
+            /usr/local/share/powershell /usr/share/swift /opt/az
+          sudo docker image prune --all --force
+          available_kib=$(df --output=avail / | tail -1)
+          if (( available_kib < 48 * 1024 * 1024 )); then
+            echo "Not enough disk for 32 GiB swap and catalog working files" >&2
+            df -h
+            exit 1
+          fi
+          sudo fallocate -l 32G /catalog-validation.swap
+          sudo chmod 600 /catalog-validation.swap
+          sudo mkswap /catalog-validation.swap
+          sudo swapon /catalog-validation.swap
+          free -h
+          df -h
+
       - name: Check out builder
         uses: actions/checkout@v7
         with:
@@ -274,28 +360,64 @@ jobs:
         with:
           persist-credentials: false
           repository: ufo-files/machine-data
+          ref: ${{ needs.changes.outputs.input_revision }}
           path: _machine-data
 
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
-          python-version: "3.13"
+          python-version: "3.13.17"
 
       - name: Set up Node
         uses: actions/setup-node@v6
         with:
           node-version: "24"
 
+      - uses: actions/download-artifact@v4
+        with:
+          name: document-extraction
+          path: ${{ runner.temp }}/evidence-artifact
+      - name: Restore verified document checkpoints
+        run: |
+          mkdir -p "$RUNNER_TEMP/extraction"
+          tar -xf "$RUNNER_TEMP/evidence-artifact/extraction.tar" -C "$RUNNER_TEMP/extraction"
+          rm "$RUNNER_TEMP/evidence-artifact/extraction.tar"
+
       - name: Build catalog
         shell: bash
         run: |
           revision="$(git -C _machine-data rev-parse HEAD)"
-          python3 scripts/build_catalog.py \
+          # Leave RAM for the Actions agent. systemd propagates the build's exit
+          # status, owns all spawned workers, and stops them before the job timeout.
+          sudo systemd-run --wait --pipe --collect \
+            --unit="catalog-validation-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
+            --uid="$(id -u)" --gid="$(id -g)" \
+            --working-directory="$GITHUB_WORKSPACE" \
+            --setenv="PATH=$PATH" --setenv="LD_LIBRARY_PATH=${LD_LIBRARY_PATH:-}" \
+            --setenv=PYTHONUNBUFFERED=1 \
+            --property=MemoryHigh=11G --property=MemoryMax=12G \
+            --property=MemorySwapMax=32G --property=RuntimeMaxSec=19800 \
+            --property=TimeoutStopSec=30 \
+            "$(command -v python3)" scripts/build_catalog.py \
             --input _machine-data \
             --input-repository ufo-files/machine-data \
             --input-revision "$revision" \
             --paired-language en \
-            --require-data
+            --workers 1 \
+            --cache-dir "$RUNNER_TEMP/extraction" \
+            --profile-report "$RUNNER_TEMP/catalog-profile.json" \
+            --require-data 2>&1 | tee "$RUNNER_TEMP/catalog-build.log"
+
+      - name: Retain catalog build diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: catalog-validation-diagnostics
+          path: |
+            ${{ runner.temp }}/catalog-build.log
+            ${{ runner.temp }}/catalog-profile.json
+          if-no-files-found: ignore
+          retention-days: 7
 
       - name: Verify generated catalog file sizes
         run: |
@@ -317,54 +439,119 @@ jobs:
           node --test tests/test_app.js
 
   publish:
-    needs: [changes, validate]
+    needs: [changes, validate, extract]
     if: >-
       github.event_name != 'pull_request' &&
+      github.ref == 'refs/heads/main' &&
       needs.changes.outputs.catalog == 'true'
-    runs-on: ufo-agent-1-graph-builder
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
     permissions:
       contents: read
     steps:
+      - name: Prepare memory for full-corpus assembly
+        shell: bash
+        run: |
+          # The full graph exceeds the hosted runner's 16 GiB RAM. These SDKs
+          # are unused by this Python/Node job; reclaim space on this disposable VM.
+          sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc \
+            /usr/local/.ghcup /opt/hostedtoolcache/CodeQL \
+            /usr/local/share/powershell /usr/share/swift /opt/az
+          sudo docker image prune --all --force
+          available_kib=$(df --output=avail / | tail -1)
+          if (( available_kib < 48 * 1024 * 1024 )); then
+            echo "Not enough disk for 32 GiB swap and catalog working files" >&2
+            df -h
+            exit 1
+          fi
+          sudo fallocate -l 32G /catalog-validation.swap
+          sudo chmod 600 /catalog-validation.swap
+          sudo mkswap /catalog-validation.swap
+          sudo swapon /catalog-validation.swap
+          free -h
+          df -h
+
       - name: Check out builder
         uses: actions/checkout@v7
         with:
-          ref: main
+          ref: ${{ github.sha }}
           persist-credentials: false
-
-      - name: Resolve machine-data revision
-        id: upstream
-        shell: bash
-        run: |
-          revision="$(git ls-remote https://github.com/ufo-files/machine-data.git refs/heads/main | cut -f1)"
-          test -n "$revision"
-          echo "revision=$revision" >> "$GITHUB_OUTPUT"
 
       - name: Check out machine-data
         uses: actions/checkout@v7
         with:
           persist-credentials: false
           repository: ufo-files/machine-data
-          ref: ${{ steps.upstream.outputs.revision }}
+          ref: ${{ needs.changes.outputs.input_revision }}
           path: _machine-data
 
-      - name: Verify system Python
-        run: python3 --version
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13.17"
 
       - name: Set up Node
         uses: actions/setup-node@v6
         with:
           node-version: "24"
 
-      - name: Build catalog
-        env:
-          UPSTREAM_REVISION: ${{ steps.upstream.outputs.revision }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: document-extraction
+          path: ${{ runner.temp }}/evidence-artifact
+      - name: Restore verified document checkpoints
         run: |
-          python3 scripts/build_catalog.py \
+          mkdir -p "$RUNNER_TEMP/extraction"
+          tar -xf "$RUNNER_TEMP/evidence-artifact/extraction.tar" -C "$RUNNER_TEMP/extraction"
+          rm "$RUNNER_TEMP/evidence-artifact/extraction.tar"
+
+      - name: Build catalog
+        shell: bash
+        run: |
+          revision="$(git -C _machine-data rev-parse HEAD)"
+          # Leave RAM for the Actions agent. systemd propagates the build's exit
+          # status, owns all spawned workers, and stops them before the job timeout.
+          sudo systemd-run --wait --pipe --collect \
+            --unit="catalog-validation-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
+            --uid="$(id -u)" --gid="$(id -g)" \
+            --working-directory="$GITHUB_WORKSPACE" \
+            --setenv="PATH=$PATH" --setenv="LD_LIBRARY_PATH=${LD_LIBRARY_PATH:-}" \
+            --setenv=PYTHONUNBUFFERED=1 \
+            --property=MemoryHigh=11G --property=MemoryMax=12G \
+            --property=MemorySwapMax=32G --property=RuntimeMaxSec=19800 \
+            --property=TimeoutStopSec=30 \
+            "$(command -v python3)" scripts/build_catalog.py \
             --input _machine-data \
             --input-repository ufo-files/machine-data \
-            --input-revision "$UPSTREAM_REVISION" \
+            --input-revision "$revision" \
             --paired-language en \
-            --require-data
+            --workers 1 \
+            --cache-dir "$RUNNER_TEMP/extraction" \
+            --profile-report "$RUNNER_TEMP/catalog-profile.json" \
+            --require-data 2>&1 | tee "$RUNNER_TEMP/catalog-build.log"
+
+      - name: Report catalog build timings
+        if: always()
+        shell: bash
+        run: |
+          if [ -f "$RUNNER_TEMP/catalog-profile.json" ]; then
+            python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          report = json.loads((Path(os.environ["RUNNER_TEMP"]) / "catalog-profile.json").read_text())
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as summary:
+              summary.write("## Catalog extraction performance\n\n")
+              summary.write(f"Workers: {report['workers']}; documents: {report['documents']}; "
+                            f"cache hits: {report['cacheHits']}; misses: {report['cacheMisses']}.\n\n")
+              summary.write(f"Total: {report['totalSeconds']:.1f}s; extraction and reduction: "
+                            f"{report['extractionAndReductionSeconds']:.1f}s; "
+                            f"global assembly: {report['assemblySeconds']:.1f}s.\n\n")
+              summary.write("Extractor times are summed worker seconds, not wall time.\n\n")
+              for name, seconds in sorted(report["extractorSeconds"].items(), key=lambda item: -item[1]):
+                  summary.write(f"- {name}: {seconds:.2f}s\n")
+          PY
+          fi
 
       - name: Verify generated catalog file sizes
         run: |
@@ -387,11 +574,11 @@ jobs:
 
       - name: Commit refreshed catalog
         env:
-          UPSTREAM_REVISION: ${{ steps.upstream.outputs.revision }}
+          UPSTREAM_REVISION: ${{ needs.changes.outputs.input_revision }}
           PUBLISH_SSH_KEY: ${{ secrets.MAIN_AUTOMATION_DEPLOY_KEY }}
         shell: bash
         run: |
-          if [ -z "$(git status --porcelain -- data/catalog.json data/astronomy.json data/clock_times.json data/topic-mentions data/source-documents data/source-families data/duplicate_candidates.json data/date_review.json data/date-review data/catalog-sections)" ]; then
+          if [ -z "$(git status --porcelain -- data/catalog.json data/astronomy.json data/clock_times.json data/clock-mentions data/topic-mentions data/source-documents data/source-families data/duplicate_candidates.json data/date_review.json data/date-review data/catalog-sections)" ]; then
             exit 0
           fi
           # Materialize write authentication only after ingestion and validation.
@@ -406,7 +593,7 @@ jobs:
           git remote set-url origin "git@github.com:$GITHUB_REPOSITORY.git"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/catalog.json data/astronomy.json data/clock_times.json data/topic-mentions data/source-documents data/source-families data/duplicate_candidates.json data/date_review.json data/date-review data/catalog-sections
+          git add data/catalog.json data/astronomy.json data/clock_times.json data/clock-mentions data/topic-mentions data/source-documents data/source-families data/duplicate_candidates.json data/date_review.json data/date-review data/catalog-sections
           git commit -m "Rebuild graph from machine-data@${UPSTREAM_REVISION:0:7}"
           for attempt in 1 2 3; do
             if git push origin HEAD:main; then
