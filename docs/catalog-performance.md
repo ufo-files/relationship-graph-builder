@@ -41,6 +41,13 @@ During a build, garbage collection keeps collecting young temporary objects but
 defers repeated full-generation scans of the live graph. The caller's original
 thresholds are restored on success or failure. Single-source CI jobs check out
 only their source directory instead of downloading every source.
+Full-corpus PR validation reclaims unused SDK space on its disposable hosted VM
+and adds 32 GiB of swap. The build and its workers run in a systemd memory group
+with an 11 GiB soft limit and 12 GiB hard RAM limit, leaving memory for the Actions
+agent. This accommodates graph state larger than the runner's 16 GiB RAM without
+letting the build exhaust the entire VM. The build stops after 5.5 hours and
+retains its log and timing report as a seven-day diagnostic artifact, including
+on failure. This hosted cold build can be slower than the production warm build.
 Rejected and unpublished candidate state is released once its summary counts
 are retained. Duplicate detection precomputes normalized names and uses
 SequenceMatcher's upper bounds to skip pairs that cannot meet the existing

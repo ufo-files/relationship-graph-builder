@@ -267,6 +267,28 @@ jobs:
       needs.changes.outputs.catalog == 'true'
     runs-on: ubuntu-latest
     steps:
+      - name: Prepare memory for full-corpus validation
+        shell: bash
+        run: |
+          # The full graph exceeds the hosted runner's 16 GiB RAM. These SDKs
+          # are unused by this Python/Node job; reclaim space on this disposable VM.
+          sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc \
+            /usr/local/.ghcup /opt/hostedtoolcache/CodeQL \
+            /usr/local/share/powershell /usr/share/swift /opt/az
+          sudo docker image prune --all --force
+          available_kib=$(df --output=avail / | tail -1)
+          if (( available_kib < 48 * 1024 * 1024 )); then
+            echo "Not enough disk for 32 GiB swap and catalog working files" >&2
+            df -h
+            exit 1
+          fi
+          sudo fallocate -l 32G /catalog-validation.swap
+          sudo chmod 600 /catalog-validation.swap
+          sudo mkswap /catalog-validation.swap
+          sudo swapon /catalog-validation.swap
+          free -h
+          df -h
+
       - name: Check out builder
         uses: actions/checkout@v7
         with:
@@ -293,13 +315,36 @@ jobs:
         shell: bash
         run: |
           revision="$(git -C _machine-data rev-parse HEAD)"
-          python3 scripts/build_catalog.py \
+          # Leave RAM for the Actions agent. systemd propagates the build's exit
+          # status, owns all spawned workers, and stops them before the job timeout.
+          sudo systemd-run --wait --pipe --collect \
+            --unit="catalog-validation-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
+            --uid="$(id -u)" --gid="$(id -g)" \
+            --working-directory="$GITHUB_WORKSPACE" \
+            --setenv="PATH=$PATH" --setenv="LD_LIBRARY_PATH=${LD_LIBRARY_PATH:-}" \
+            --setenv=PYTHONUNBUFFERED=1 \
+            --property=MemoryHigh=11G --property=MemoryMax=12G \
+            --property=MemorySwapMax=32G --property=RuntimeMaxSec=19800 \
+            --property=TimeoutStopSec=30 \
+            "$(command -v python3)" scripts/build_catalog.py \
             --input _machine-data \
             --input-repository ufo-files/machine-data \
             --input-revision "$revision" \
             --paired-language en \
             --workers 2 \
-            --require-data
+            --profile-report "$RUNNER_TEMP/catalog-profile.json" \
+            --require-data 2>&1 | tee "$RUNNER_TEMP/catalog-build.log"
+
+      - name: Retain catalog build diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: catalog-validation-diagnostics
+          path: |
+            ${{ runner.temp }}/catalog-build.log
+            ${{ runner.temp }}/catalog-profile.json
+          if-no-files-found: ignore
+          retention-days: 7
 
       - name: Verify generated catalog file sizes
         run: |
